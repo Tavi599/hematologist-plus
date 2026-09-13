@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Ping Supabase API
+      - name: Query a reference table
         run: |
           set -a; . ./.env; set +a
-          # TODO(stage 2): query a real reference table instead, so the database itself is hit.
+          # A real REST query hits Postgres, which is what counts as project activity.
           status=$(curl -s -o /dev/null -w '%{http_code}' \
-            "$VITE_SUPABASE_URL/auth/v1/settings" \
+            "$VITE_SUPABASE_URL/rest/v1/classification_systems?select=id&limit=1" \
             -H "apikey: $VITE_SUPABASE_PUBLISHABLE_KEY")
           echo "Supabase responded with HTTP $status"
           test "$status" = "200"

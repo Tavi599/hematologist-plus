@@ -1,4 +1,5 @@
 import { createAsyncStoragePersister } from '@tanstack/query-async-storage-persister'
+import type { Query } from '@tanstack/react-query'
 import type { PersistQueryClientOptions } from '@tanstack/react-query-persist-client'
 import { createStore, del, get, set } from 'idb-keyval'
 
@@ -29,9 +30,15 @@ export function createPersistOptions(): Omit<PersistQueryClientOptions, 'queryCl
     }),
     maxAge: PERSIST_MAX_AGE_MS,
     buster: CATALOG_SCHEMA_VERSION,
-    dehydrateOptions: {
-      shouldDehydrateQuery: (query) =>
-        query.queryKey[0] === CATALOG_QUERY_ROOT && query.state.status === 'success',
-    },
+    dehydrateOptions: { shouldDehydrateQuery: shouldPersistQuery },
   }
+}
+
+/**
+ * Persist catalog queries that hold data. A failed refresh (offline) turns the status into
+ * 'error' but keeps the previous data; that copy must stay persisted, or the next offline
+ * start would have nothing to show.
+ */
+export function shouldPersistQuery(query: Pick<Query, 'queryKey' | 'state'>): boolean {
+  return query.queryKey[0] === CATALOG_QUERY_ROOT && query.state.data !== undefined
 }
