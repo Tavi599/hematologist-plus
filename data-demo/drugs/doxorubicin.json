@@ -1,0 +1,11 @@
+{
+  "$comment": "DEMO data for testing the data pipeline only. Not for clinical use; replaced by real data in stage 3.",
+  "id": "doxorubicin",
+  "name": { "uk": "ДЕМО Доксорубіцин", "en": "DEMO Doxorubicin" },
+  "atc_code": "L01DB01",
+  "review_rules": { "hepatic": true },
+  "presentations": [
+    { "key": "vial-10", "form": "vial", "strength_mg": 10, "volume_ml": 5 },
+    { "key": "vial-50", "form": "vial", "strength_mg": 50, "volume_ml": 25 }
+  ]
+}

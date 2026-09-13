@@ -54,15 +54,17 @@
 **Мета:** схема в Supabase, наповнення з файлів у репозиторії, читання даних сайтом (у тому числі офлайн).
 
 Задачі:
-- SQL-міграції: `hospitals`, `drugs`, `drug_presentations`, `drug_infusion_params`, `classification_systems`, `diseases`, `disease_codes`, `treatment_nodes`, `regimens`, `regimen_items`, `treatment_node_regimens`.
-- RLS: `anon` має лише `SELECT` на всіх таблицях; перевірити, що запис заборонено.
-- Zod-схеми для всіх сутностей, окремо детальна схема `print_forms`.
-- `data/` — формат файлів (JSON для даних, Markdown для статей).
-- `scripts/validate-data.ts`: валідація, перевірка посилань між сутностями (drug_id, regimen_id).
-- `scripts/sync-supabase.ts`: upsert із ключем `service_role`, режим «суха перевірка» (dry run) з показом змін.
-- `npm run db:types` — генерація TypeScript-типів.
-- Шар доступу до даних: TanStack Query + кеш у IndexedDB (офлайн), хелпер локалізованих полів із fallback.
-- `supabase-keep-alive.yml` — cron.
+- [x] SQL-міграція: `hospitals`, `drugs`, `drug_presentations`, `drug_infusion_params`, `classification_systems`, `diseases`, `disease_codes`, `treatment_nodes`, `regimens`, `regimen_items`, `treatment_node_regimens` ([supabase/migrations](../supabase/migrations)).
+- [ ] Застосувати міграцію до проєкту Supabase.
+- [x] RLS: `anon` лише `SELECT`, права на запис відкликано; тест перевіряє міграцію для кожної таблиці.
+- [ ] Перевірити на живій БД, що запис заборонено (`npm run db:check-rls`).
+- [x] Zod-схеми для всіх сутностей; схема `print_forms` (перелік форм). Детальний макет `template` — етап 5, за реальними бланками.
+- [x] Формат `data/` (JSON + Markdown-статті): [data-format.md](data-format.md). Демо-набір — `data-demo/`.
+- [x] `scripts/validate-data.ts`: валідація, посилання між сутностями, звіт про прогалини для розрахунку.
+- [x] `scripts/sync-supabase.ts`: суха перевірка з переліком змін, `--apply`, `--prune`; режим `--sql` (одна транзакція для SQL Editor без секретного ключа).
+- [x] ~~`npm run db:types`~~ — замість згенерованих типів типи рядків виводяться із Zod-схем, дані перевіряються при читанні; тест звіряє схеми з колонками міграцій.
+- [x] Шар доступу до даних: TanStack Query + IndexedDB (офлайн), `CatalogGate`; сторінка «Захворювання» показує перелік із БД.
+- [ ] `supabase-keep-alive.yml` — запит до реальної таблиці (після застосування міграції).
 
 ✅ Тестовий набір (1 лікарня, 3 препарати, 1 схема, 1 хвороба) заливається однією командою і читається сайтом; без мережі дані показуються з кешу.
 

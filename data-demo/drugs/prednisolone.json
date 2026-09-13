@@ -1,0 +1,7 @@
+{
+  "$comment": "DEMO data for testing the data pipeline only. Not for clinical use; replaced by real data in stage 3.",
+  "id": "prednisolone",
+  "name": { "uk": "ДЕМО Преднізолон", "en": "DEMO Prednisolone" },
+  "atc_code": "H02AB06",
+  "presentations": [{ "key": "tab-5", "form": "tablet", "strength_mg": 5 }]
+}

@@ -1,0 +1,68 @@
+{
+  "$comment": "DEMO data for testing the data pipeline only. Not for clinical use; replaced by real data in stage 3.",
+  "id": "r-chop-21",
+  "short_name": "R-CHOP-21",
+  "name": { "uk": "ДЕМО R-CHOP-21", "en": "DEMO R-CHOP-21" },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_bolus",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_bolus",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_mg": 2,
+      "days": [1]
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5]
+    }
+  ],
+  "print_forms": {
+    "version": 1,
+    "forms": [
+      {
+        "id": "infusion",
+        "kind": "infusion_sheet",
+        "title": "ДЕМО Інфузійний лист",
+        "itemIds": ["rituximab", "cyclophosphamide", "doxorubicin", "vincristine"]
+      },
+      {
+        "id": "tablets",
+        "kind": "multi_day_sheet",
+        "title": "ДЕМО Лист призначень",
+        "itemIds": ["prednisolone"]
+      }
+    ]
+  }
+}

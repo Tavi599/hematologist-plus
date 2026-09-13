@@ -18,12 +18,19 @@
   },
   "diseases": {
     "title": "Diseases",
-    "placeholder": "The list of diseases with ICD-10 codes will appear here."
+    "empty": "The list of diseases is empty so far."
   },
   "diseaseDetail": {
     "title": "Disease",
     "placeholder": "Article and treatment tree for “{{slug}}” will appear here.",
     "back": "Back to list"
+  },
+  "catalog": {
+    "loading": "Loading reference data…",
+    "notConfigured": "Database connection is not configured.",
+    "loadError": "Could not load reference data",
+    "offlineNoData": "You are offline and no reference data has been saved yet. Open the site online at least once.",
+    "staleData": "Could not refresh reference data; showing the saved copy."
   },
   "notFound": {
     "title": "Page not found",

@@ -8,7 +8,7 @@ Dose calculator for chemo-immunotherapy courses and a reference of hematological
 - **Data:** Supabase (read-only from the site)
 - **Hosting:** GitHub Pages
 
-Requirements: [docs/requirements.md](docs/requirements.md) · Plan: [docs/development-plan.md](docs/development-plan.md)
+Requirements: [docs/requirements.md](docs/requirements.md) · Plan: [docs/development-plan.md](docs/development-plan.md) · Data format: [docs/data-format.md](docs/data-format.md)
 
 ## Local development
 
@@ -29,6 +29,9 @@ npm run dev                  # http://localhost:5173/hematologist-plus/
 | `npm run typecheck` | TypeScript |
 | `npm run format` | Prettier |
 | `npm run pwa:assets` | Regenerate PWA icons from `public/icon.svg` |
+| `npm run data:validate` | Validate `data/` (`data:validate:demo` for `data-demo/`) |
+| `npm run data:sync` | Diff `data/` against Supabase; `-- --apply [--prune]` writes, `-- --sql <file>` emits SQL |
+| `npm run db:check-rls` | Check the public key is read-only |
 
 ## Deployment
 

@@ -1,0 +1,380 @@
+{
+  "classification_systems": [
+    {
+      "id": "icd-10",
+      "name": {
+        "uk": "МКХ-10 (ВООЗ)",
+        "en": "ICD-10 (WHO)"
+      },
+      "version": "2019",
+      "url": "https://icd.who.int/browse10/2019/en",
+      "sort_order": 0
+    }
+  ],
+  "hospitals": [
+    {
+      "id": "demo-hospital",
+      "institution_name": "ДЕМО: назва закладу",
+      "department_name": "ДЕМО: відділення гематології",
+      "head_of_department": "ДЕМО: Прізвище І. П.",
+      "doctors": ["ДЕМО: Прізвище І. П."],
+      "address": null,
+      "is_default": true,
+      "sort_order": 0
+    }
+  ],
+  "drugs": [
+    {
+      "id": "cyclophosphamide",
+      "name": {
+        "uk": "ДЕМО Циклофосфамід",
+        "en": "DEMO Cyclophosphamide"
+      },
+      "trade_names": [],
+      "atc_code": "L01AA01",
+      "max_single_dose_mg": null,
+      "review_rules": {
+        "renal": true
+      },
+      "notes": null,
+      "sort_order": 0
+    },
+    {
+      "id": "doxorubicin",
+      "name": {
+        "uk": "ДЕМО Доксорубіцин",
+        "en": "DEMO Doxorubicin"
+      },
+      "trade_names": [],
+      "atc_code": "L01DB01",
+      "max_single_dose_mg": null,
+      "review_rules": {
+        "hepatic": true
+      },
+      "notes": null,
+      "sort_order": 0
+    },
+    {
+      "id": "prednisolone",
+      "name": {
+        "uk": "ДЕМО Преднізолон",
+        "en": "DEMO Prednisolone"
+      },
+      "trade_names": [],
+      "atc_code": "H02AB06",
+      "max_single_dose_mg": null,
+      "review_rules": null,
+      "notes": null,
+      "sort_order": 0
+    },
+    {
+      "id": "rituximab",
+      "name": {
+        "uk": "ДЕМО Ритуксимаб",
+        "en": "DEMO Rituximab"
+      },
+      "trade_names": [],
+      "atc_code": "L01FA01",
+      "max_single_dose_mg": null,
+      "review_rules": null,
+      "notes": null,
+      "sort_order": 0
+    },
+    {
+      "id": "vincristine",
+      "name": {
+        "uk": "ДЕМО Вінкристин",
+        "en": "DEMO Vincristine"
+      },
+      "trade_names": [],
+      "atc_code": "L01CA02",
+      "max_single_dose_mg": 2,
+      "review_rules": {
+        "hepatic": true
+      },
+      "notes": null,
+      "sort_order": 0
+    }
+  ],
+  "drug_presentations": [
+    {
+      "id": "cyclophosphamide.vial-200",
+      "drug_id": "cyclophosphamide",
+      "form": "vial",
+      "strength_mg": 200,
+      "volume_ml": null,
+      "label": null,
+      "sort_order": 0
+    },
+    {
+      "id": "cyclophosphamide.vial-500",
+      "drug_id": "cyclophosphamide",
+      "form": "vial",
+      "strength_mg": 500,
+      "volume_ml": null,
+      "label": null,
+      "sort_order": 1
+    },
+    {
+      "id": "cyclophosphamide.vial-1000",
+      "drug_id": "cyclophosphamide",
+      "form": "vial",
+      "strength_mg": 1000,
+      "volume_ml": null,
+      "label": null,
+      "sort_order": 2
+    },
+    {
+      "id": "doxorubicin.vial-10",
+      "drug_id": "doxorubicin",
+      "form": "vial",
+      "strength_mg": 10,
+      "volume_ml": 5,
+      "label": null,
+      "sort_order": 0
+    },
+    {
+      "id": "doxorubicin.vial-50",
+      "drug_id": "doxorubicin",
+      "form": "vial",
+      "strength_mg": 50,
+      "volume_ml": 25,
+      "label": null,
+      "sort_order": 1
+    },
+    {
+      "id": "prednisolone.tab-5",
+      "drug_id": "prednisolone",
+      "form": "tablet",
+      "strength_mg": 5,
+      "volume_ml": null,
+      "label": null,
+      "sort_order": 0
+    },
+    {
+      "id": "rituximab.vial-100",
+      "drug_id": "rituximab",
+      "form": "vial",
+      "strength_mg": 100,
+      "volume_ml": 10,
+      "label": null,
+      "sort_order": 0
+    },
+    {
+      "id": "rituximab.vial-500",
+      "drug_id": "rituximab",
+      "form": "vial",
+      "strength_mg": 500,
+      "volume_ml": 50,
+      "label": null,
+      "sort_order": 1
+    },
+    {
+      "id": "vincristine.vial-1",
+      "drug_id": "vincristine",
+      "form": "vial",
+      "strength_mg": 1,
+      "volume_ml": 1,
+      "label": null,
+      "sort_order": 0
+    }
+  ],
+  "drug_infusion_params": [
+    {
+      "id": "rituximab.nacl",
+      "drug_id": "rituximab",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_min_mg_ml": 1,
+      "concentration_max_mg_ml": 4,
+      "stock_concentration_mg_ml": 10,
+      "bag_volumes_ml": [100, 250, 500],
+      "duration_min": null,
+      "is_default": true,
+      "notes": null,
+      "sort_order": 0
+    }
+  ],
+  "regimens": [
+    {
+      "id": "r-chop-21",
+      "short_name": "R-CHOP-21",
+      "name": {
+        "uk": "ДЕМО R-CHOP-21",
+        "en": "DEMO R-CHOP-21"
+      },
+      "description": null,
+      "cycle_length_days": 21,
+      "default_cycles": 6,
+      "sort_order": 0,
+      "print_forms": {
+        "version": 1,
+        "forms": [
+          {
+            "id": "infusion",
+            "kind": "infusion_sheet",
+            "title": "ДЕМО Інфузійний лист",
+            "itemIds": [
+              "r-chop-21.rituximab",
+              "r-chop-21.cyclophosphamide",
+              "r-chop-21.doxorubicin",
+              "r-chop-21.vincristine"
+            ],
+            "template": {}
+          },
+          {
+            "id": "tablets",
+            "kind": "multi_day_sheet",
+            "title": "ДЕМО Лист призначень",
+            "itemIds": ["r-chop-21.prednisolone"],
+            "template": {}
+          }
+        ]
+      }
+    }
+  ],
+  "regimen_items": [
+    {
+      "id": "r-chop-21.rituximab",
+      "regimen_id": "r-chop-21",
+      "drug_id": "rituximab",
+      "role": "main",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "cap_mg": null,
+      "days": [1],
+      "administrations_per_day": 1,
+      "duration_min": null,
+      "fallback_solvent": null,
+      "fallback_volume_ml": null,
+      "gap_before_min": null,
+      "notes": null,
+      "infusion_params_id": null,
+      "sort_order": 0
+    },
+    {
+      "id": "r-chop-21.cyclophosphamide",
+      "regimen_id": "r-chop-21",
+      "drug_id": "cyclophosphamide",
+      "role": "main",
+      "route": "iv_infusion",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "cap_mg": null,
+      "days": [1],
+      "administrations_per_day": 1,
+      "duration_min": null,
+      "fallback_solvent": null,
+      "fallback_volume_ml": null,
+      "gap_before_min": null,
+      "notes": null,
+      "infusion_params_id": null,
+      "sort_order": 1
+    },
+    {
+      "id": "r-chop-21.doxorubicin",
+      "regimen_id": "r-chop-21",
+      "drug_id": "doxorubicin",
+      "role": "main",
+      "route": "iv_bolus",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "cap_mg": null,
+      "days": [1],
+      "administrations_per_day": 1,
+      "duration_min": null,
+      "fallback_solvent": null,
+      "fallback_volume_ml": null,
+      "gap_before_min": null,
+      "notes": null,
+      "infusion_params_id": null,
+      "sort_order": 2
+    },
+    {
+      "id": "r-chop-21.vincristine",
+      "regimen_id": "r-chop-21",
+      "drug_id": "vincristine",
+      "role": "main",
+      "route": "iv_bolus",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_mg": 2,
+      "days": [1],
+      "administrations_per_day": 1,
+      "duration_min": null,
+      "fallback_solvent": null,
+      "fallback_volume_ml": null,
+      "gap_before_min": null,
+      "notes": null,
+      "infusion_params_id": null,
+      "sort_order": 3
+    },
+    {
+      "id": "r-chop-21.prednisolone",
+      "regimen_id": "r-chop-21",
+      "drug_id": "prednisolone",
+      "role": "main",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "cap_mg": null,
+      "days": [1, 2, 3, 4, 5],
+      "administrations_per_day": 1,
+      "duration_min": null,
+      "fallback_solvent": null,
+      "fallback_volume_ml": null,
+      "gap_before_min": null,
+      "notes": null,
+      "infusion_params_id": null,
+      "sort_order": 4
+    }
+  ],
+  "diseases": [
+    {
+      "id": "dlbcl",
+      "name": {
+        "uk": "ДЕМО Дифузна В-великоклітинна лімфома",
+        "en": "DEMO Diffuse large B-cell lymphoma"
+      },
+      "summary": null,
+      "sort_order": 0,
+      "article": {
+        "uk": "# ДЕМО-стаття\n\nТестовий текст для перевірки конвеєра даних. **Не для клінічного використання.**\n\n| Поле | Значення |\n|---|---|\n| МКХ-10 | C83.3 |\n",
+        "en": "# DEMO article\n\nTest text for checking the data pipeline. **Not for clinical use.**\n"
+      }
+    }
+  ],
+  "disease_codes": [
+    {
+      "id": "dlbcl.icd-10.c83.3",
+      "disease_id": "dlbcl",
+      "system_id": "icd-10",
+      "code": "C83.3",
+      "is_primary": true,
+      "sort_order": 0
+    }
+  ],
+  "treatment_nodes": [
+    {
+      "id": "dlbcl.first-line",
+      "disease_id": "dlbcl",
+      "parent_id": null,
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "description": null,
+      "sort_order": 0
+    }
+  ],
+  "treatment_node_regimens": [
+    {
+      "id": "dlbcl.first-line.r-chop-21",
+      "node_id": "dlbcl.first-line",
+      "regimen_id": "r-chop-21",
+      "notes": null,
+      "sort_order": 0
+    }
+  ]
+}

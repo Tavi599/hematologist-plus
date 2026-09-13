@@ -1,0 +1,17 @@
+{
+  "$comment": "DEMO data for testing the data pipeline only. Not for clinical use; replaced by real data in stage 3.",
+  "id": "dlbcl",
+  "name": {
+    "uk": "ДЕМО Дифузна В-великоклітинна лімфома",
+    "en": "DEMO Diffuse large B-cell lymphoma"
+  },
+  "codes": [{ "system_id": "icd-10", "code": "C83.3", "is_primary": true }],
+  "treatment": [
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": { "uk": "Перша лінія", "en": "First line" },
+      "regimens": [{ "regimen_id": "r-chop-21" }]
+    }
+  ]
+}

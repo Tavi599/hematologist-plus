@@ -1,0 +1,12 @@
+{
+  "$comment": "DEMO data for testing the data pipeline only. Not for clinical use; replaced by real data in stage 3.",
+  "id": "cyclophosphamide",
+  "name": { "uk": "ДЕМО Циклофосфамід", "en": "DEMO Cyclophosphamide" },
+  "atc_code": "L01AA01",
+  "review_rules": { "renal": true },
+  "presentations": [
+    { "key": "vial-200", "form": "vial", "strength_mg": 200 },
+    { "key": "vial-500", "form": "vial", "strength_mg": 500 },
+    { "key": "vial-1000", "form": "vial", "strength_mg": 1000 }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$comment": "DEMO data for testing the data pipeline only. Not for clinical use; replaced by real data in stage 3.",
+  "id": "rituximab",
+  "name": { "uk": "ДЕМО Ритуксимаб", "en": "DEMO Rituximab" },
+  "atc_code": "L01FA01",
+  "presentations": [
+    { "key": "vial-100", "form": "vial", "strength_mg": 100, "volume_ml": 10 },
+    { "key": "vial-500", "form": "vial", "strength_mg": 500, "volume_ml": 50 }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_min_mg_ml": 1,
+      "concentration_max_mg_ml": 4,
+      "stock_concentration_mg_ml": 10,
+      "bag_volumes_ml": [100, 250, 500],
+      "is_default": true
+    }
+  ]
+}

@@ -45,11 +45,14 @@ npm run lint         # oxlint
 npm run typecheck    # tsc -b --noEmit
 npm run format       # Prettier (format:check in CI)
 npm run pwa:assets   # regenerate PWA icons from public/icon.svg
-# planned (stage 2):
-npm run data:validate  # Zod-validate everything in data/
-npm run data:sync      # upsert data/ into Supabase (needs SUPABASE_SECRET_KEY in .env.local, never in the site)
-npm run db:types       # regenerate src/types/database.types.ts
+npm run data:validate        # validate data/ (add `-- --dir data-demo`, or use data:validate:demo)
+npm run data:sync            # dry run: diff data/ against Supabase (public key is enough)
+npm run data:sync -- --apply [--prune]      # write; needs SUPABASE_SECRET_KEY in .env.local, never in the site
+npm run data:sync -- --sql <file> [--prune] # one SQL transaction for the Supabase SQL editor (no key)
+npm run db:check-rls         # publishable key can read but not write every catalog table
 ```
+
+Data format and schema-change checklist: [docs/data-format.md](docs/data-format.md).
 
 Run all of lint, format:check, typecheck, test, build before declaring work done — CI runs the same.
 
@@ -57,6 +60,7 @@ Environment quirks (Windows dev machine):
 - Node is not on PATH in the Bash tool: prefix commands with `export PATH="/c/Program Files/nodejs:$PATH";`.
 - `.claude/launch.json` starts `preview`/`dev` via `node.exe node_modules/vite/bin/vite.js`. Open `/hematologist-plus/` — the base path applies in dev, preview and build.
 - The preview registers a service worker; after rebuilding, unregister it (or accept the update prompt) to see fresh code.
+- Scripts that used the network must end with `process.exitCode`, not `process.exit()` (libuv assertion crash on Windows).
 
 ## Structure
 
@@ -64,16 +68,16 @@ Environment quirks (Windows dev machine):
 .github/workflows/     ci.yml, deploy.yml, supabase-keep-alive.yml
 supabase/migrations/   SQL schema + RLS policies (one migration per change, never edit applied ones)
 data/                  source of truth for content (drugs, regimens, diseases, hospitals)
-scripts/               import-sources, validate-data, sync-supabase (Node, run outside the site)
+data-demo/             DEMO data set for pipeline tests — not for clinical use
+scripts/               validate-data, sync-supabase, check-rls, lib/ (tsx; run outside the site)
 docs/                  requirements.md, architecture/data-model notes
 src/
   app/                 router, providers, layout, language switcher
   pages/               CalculatorPage, DiseasesPage, DiseaseDetailPage
   features/            patient-form, regimen-picker, dose-table, print (multi-day-sheet, infusion-sheet)
   domain/              pure calculation logic — no React, no I/O
-  schemas/             Zod schemas (regimen, print template, patient input)
-  lib/                 supabase client, i18n, pwa, offline-cache, localized-field helpers
-  types/               generated DB types
+  schemas/             Zod schemas: catalog rows (source of DB row types), print forms, patient input
+  lib/                 supabase client, catalog fetch/index/query + IndexedDB persistence, i18n, localized helpers
   locales/{uk,en}/     UI strings
 ```
 
@@ -82,7 +86,8 @@ src/
 - **English only** for code, identifiers, file names, DB tables/columns, commit messages.
 - UI text never hardcoded — always via i18n keys in `src/locales/{uk,en}`. Both files must have the same keys.
 - DB tables `snake_case` plural; TS types `PascalCase`; files `kebab-case`, React components `PascalCase.tsx`.
-- Generated DB types are not edited by hand.
+- DB row types come from the Zod schemas in `src/schemas/catalog.ts` (no generated types). Catalog rows are validated on read; one invalid row fails the load so a course is never silently incomplete. A test checks schema keys against migration columns and RLS for every table.
+- Read reference data only via `useCatalog()` / `CatalogGate` (`src/lib/use-catalog.ts`); only `catalog` queries are persisted to IndexedDB.
 - Localized DB/content text is read only through `localize` / `resolveLocalized` from `src/lib/localized.ts`.
 - Tests sit next to the code (`*.test.ts(x)`); render components with `renderWithProviders` from `src/test/render.tsx`.
 - Service worker update is user-confirmed (`registerType: 'prompt'`) so an in-progress form is never lost to an auto-reload.
