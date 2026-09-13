@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 // GitHub Pages serves the site from /<repo>/; override with BASE_PATH if the repo is renamed.
 const BASE_PATH = process.env.BASE_PATH ?? '/hematologist-plus/'
 
-export default defineConfig(() => ({
+export default defineConfig({
   // Same base in dev, preview and build so local URLs match production.
   base: BASE_PATH,
   plugins: [
@@ -46,5 +46,12 @@ export default defineConfig(() => ({
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
     css: false,
+    coverage: {
+      provider: 'v8',
+      include: ['src/domain/**/*.ts'],
+      exclude: ['src/domain/**/*.test.ts', 'src/domain/index.ts', 'src/domain/types.ts'],
+      // Medical calculations: keep the bar high.
+      thresholds: { statements: 95, branches: 95, functions: 95, lines: 95 },
+    },
   },
-}))
+})

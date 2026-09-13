@@ -40,13 +40,14 @@ npm run dev          # http://localhost:5173/hematologist-plus/
 npm run build        # tsc -b && vite build → dist/
 npm run preview      # serve dist at http://localhost:4173/hematologist-plus/
 npm test             # Vitest (jsdom)
+npm run test:coverage  # with coverage; src/domain must stay ≥ 95%
 npm run lint         # oxlint
 npm run typecheck    # tsc -b --noEmit
 npm run format       # Prettier (format:check in CI)
 npm run pwa:assets   # regenerate PWA icons from public/icon.svg
 # planned (stage 2):
 npm run data:validate  # Zod-validate everything in data/
-npm run data:sync      # upsert data/ into Supabase (needs SUPABASE_SERVICE_ROLE_KEY, never in the site)
+npm run data:sync      # upsert data/ into Supabase (needs SUPABASE_SECRET_KEY in .env.local, never in the site)
 npm run db:types       # regenerate src/types/database.types.ts
 ```
 
@@ -95,16 +96,18 @@ src/
 
 ## Domain rules (medical — correctness first)
 
-- Calculation code lives in `src/domain/` as pure functions with unit tests. Every rule change needs a test with a worked example.
+- Calculation code lives in `src/domain/` as pure functions with unit tests. Every rule change needs a test with a worked example. Coverage threshold for `src/domain` is 95% (`npm run test:coverage`).
+- **Not calibrated yet.** All tunable defaults live in `src/domain/config.ts` (`DOMAIN_DEFAULTS`); unconfirmed rules are marked `CALIBRATION:` in code. Calibration against real prescription-sheet templates happens in stage 5 — see [docs/calibration.md](docs/calibration.md). Change a default there and in the table, never inline in a formula.
+- Invalid inputs throw `DomainInputError` (with `field`); clinical concerns are returned as `DomainWarning`s and never alter a dose.
 - BSA: **Mosteller**. Every dose is computed **twice**: on actual BSA and on BSA capped at 2.0 m²; both are shown.
-- Dose units: `mg_m2`, `mg_kg`, `mg_flat` (with optional `dose_cap_mg`), `auc` (Calvert: dose = AUC × (GFR + 25), GFR via Cockcroft-Gault).
-- Rounding to 1 mg; vial-content limit overrides when it applies (exact rule is an open question — see requirements). The **unrounded** dose is printed as a note on the 2nd page of the .docx.
+- Dose units: `mg_m2`, `mg_kg`, `mg_flat` (with optional `capMg`), `auc` (Calvert: dose = AUC × (GFR + 25), GFR via Cockcroft-Gault).
+- Rounding to 1 mg; vial-content snapping overrides when enabled (disabled until calibration). The **unrounded** dose is printed as a note on the 2nd page of the .docx.
 - Vial/tablet counts per day and per course.
 - Dose reduction: manual % per course and per drug. Automatic checks only **suggest** reductions — never change a dose silently.
 - Solvent volume and infusion rate are calculated from drug infusion params (fallback: values from the regimen template).
 - Drugs in a course can be disabled or added by the user.
 - Calendar dates derive from course start date; infusion times are auto-scheduled from day start + durations and can be shifted manually.
-- The UI shows the calculation chain for each dose (BSA → per-unit dose → reduction → cap → rounding).
+- The UI shows the calculation chain for each dose (`CalculationStep[]`: BSA → per-unit dose → cap → reduction → rounding).
 - Never invent clinical values (doses, caps, concentrations). If data is missing, surface it to the user and ask.
 
 ## Print forms
