@@ -11,7 +11,7 @@
 **Мета:** порожній, але робочий сайт, який сам збирається і публікується на GitHub Pages.
 
 Задачі:
-- [ ] 🧑‍⚕️ Створити репозиторій GitHub `hematologist-plus` (публічний), перший push, увімкнути Pages (Source: GitHub Actions).
+- [x] Репозиторій https://github.com/Tavi599/hematologist-plus (публічний), перший push, Pages увімкнено (Source: GitHub Actions). Сайт: https://tavi599.github.io/hematologist-plus/
 - [ ] 🧑‍⚕️ Акаунт та проєкт Supabase (потрібен до етапу 2).
 - [x] `git init`, `.gitignore`, `.editorconfig`, `.gitattributes`, README.
 - [x] Vite + React + TypeScript (strict), oxlint, Prettier.
