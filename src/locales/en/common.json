@@ -1,0 +1,38 @@
+{
+  "app": {
+    "name": "Hematologist+",
+    "disclaimer": "Decision-support tool. Final dosing and prescribing decisions rest with the physician."
+  },
+  "nav": {
+    "calculator": "Calculator",
+    "diseases": "Diseases"
+  },
+  "language": {
+    "label": "Language",
+    "uk": "Укр",
+    "en": "Eng"
+  },
+  "calculator": {
+    "title": "Dose calculator",
+    "placeholder": "Patient form, regimen selection and dose calculation will appear here."
+  },
+  "diseases": {
+    "title": "Diseases",
+    "placeholder": "The list of diseases with ICD-10 codes will appear here."
+  },
+  "diseaseDetail": {
+    "title": "Disease",
+    "placeholder": "Article and treatment tree for “{{slug}}” will appear here.",
+    "back": "Back to list"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "home": "Go home"
+  },
+  "pwa": {
+    "updateAvailable": "A new version of the app is available.",
+    "reload": "Reload",
+    "offlineReady": "The app is ready to work offline.",
+    "close": "Close"
+  }
+}
