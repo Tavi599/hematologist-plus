@@ -22,7 +22,7 @@ Staged development plan: [docs/development-plan.md](docs/development-plan.md). C
 ## Architecture
 
 - **Hosting:** GitHub Pages, public repo. Static SPA only — no server code.
-- **Database:** Supabase free tier. The site is **read-only** against the DB (RLS: `anon` → `SELECT` only). No auth, no login.
+- **Database:** Supabase free tier. The site is **read-only** against the DB (publishable key; RLS: `anon` role → `SELECT` only). No auth, no login.
 - **Content updates** happen outside the site: admin supplies source files → converted into `data/` → validated → synced to Supabase by scripts using the `service_role` key.
 - **All logic runs in the browser:** calculation, schedule building, .docx generation.
 - **PWA / offline:** app shell and reference data cached (IndexedDB); calculator and printing must work offline.
@@ -120,7 +120,8 @@ src/
 ## Data and privacy
 
 - **No patient data is ever sent to Supabase or any external service**, logged, or cached in the service worker. Patient input lives in component state only.
-- Only the public `anon` key may appear in frontend code / build env. `service_role` key is used only by `scripts/` from local env or GitHub secrets.
+- Supabase project `hematologist-plus` (ref `lenftpktjlxpqaajgqtm`, Frankfurt). URL + **publishable** key are committed in `.env` (browser-safe by design). The **secret** key is used only by `scripts/`, read from git-ignored `.env.local` or GitHub secrets — never committed, never in `VITE_*` vars.
+- Every table in an exposed schema must have RLS enabled in the same migration that creates it; the publishable key would otherwise expose it.
 - Diseases: WHO ICD-10 by default; additional classifications plug in via `classification_systems` / `disease_codes`.
 
 ## Workflow notes

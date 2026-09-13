@@ -12,7 +12,7 @@
 
 Задачі:
 - [x] Репозиторій https://github.com/Tavi599/hematologist-plus (публічний), перший push, Pages увімкнено (Source: GitHub Actions). Сайт: https://tavi599.github.io/hematologist-plus/
-- [ ] 🧑‍⚕️ Акаунт та проєкт Supabase (потрібен до етапу 2).
+- [x] Проєкт Supabase `hematologist-plus` (Frankfurt), публічні параметри підключення в `.env`, keep-alive кожні 3 дні.
 - [x] `git init`, `.gitignore`, `.editorconfig`, `.gitattributes`, README.
 - [x] Vite + React + TypeScript (strict), oxlint, Prettier.
 - [x] `HashRouter` і заглушки сторінок: `CalculatorPage`, `DiseasesPage`, `DiseaseDetailPage`, `NotFoundPage`.
@@ -21,7 +21,7 @@
 - [x] Оболонка PWA (`vite-plugin-pwa`): маніфест, іконки, кешування статики, оновлення за згодою користувача.
 - [x] Vitest і перші тести (9 тестів).
 - [x] GitHub Actions: `ci.yml` (lint, format, typecheck, test, build) і `deploy.yml` (публікація на Pages).
-- [x] Підключення Supabase-клієнта через env (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`).
+- [x] Підключення Supabase-клієнта через env (`VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`).
 
 ✅ Сайт відкривається за адресою `https://<user>.github.io/<repo>/`, мови перемикаються, сайт встановлюється як PWA, CI зелений.
 

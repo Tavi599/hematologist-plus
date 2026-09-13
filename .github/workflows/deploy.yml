@@ -31,9 +31,7 @@ jobs:
       - run: npm run build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
-          # Public read-only values; configure in Settings → Secrets and variables → Actions → Variables.
-          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
+          # Supabase URL and publishable key come from the committed .env file.
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

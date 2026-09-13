@@ -24,8 +24,8 @@ dist-ssr
 *.sw?
 
 # Environment
-.env
-.env.*
+.env.local
+.env.*.local
 !.env.example
 
 # PWA dev output, test coverage

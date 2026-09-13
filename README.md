@@ -16,7 +16,6 @@ Requires Node.js 24+.
 
 ```bash
 npm install
-cp .env.example .env.local   # optional until Supabase is set up
 npm run dev                  # http://localhost:5173/hematologist-plus/
 ```
 
@@ -35,8 +34,10 @@ npm run dev                  # http://localhost:5173/hematologist-plus/
 
 Push to `main` → GitHub Actions builds and publishes to Pages.
 
-One-time setup in the GitHub repository:
-1. **Settings → Pages → Source:** GitHub Actions.
-2. **Settings → Secrets and variables → Actions → Variables:** `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` (public read-only values).
+Pages source is set to GitHub Actions. Site: https://tavi599.github.io/hematologist-plus/
+
+Supabase URL and the browser-safe publishable key live in the committed `.env`. Secrets (e.g. `SUPABASE_SECRET_KEY` for data sync scripts) go only into git-ignored `.env.local` — see `.env.example`.
+
+`supabase-keep-alive.yml` pings the project every 3 days so the free tier is not paused.
 
 `BASE_PATH` defaults to `/hematologist-plus/` and is set from the repository name in CI.
