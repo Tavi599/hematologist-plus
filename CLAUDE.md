@@ -54,6 +54,8 @@ npm run db:check-rls         # publishable key can read but not write every cata
 
 Data format and schema-change checklist: [docs/data-format.md](docs/data-format.md).
 
+Importing a source list: `npx tsx scripts/import-sources/drugs-from-lists.ts <file.xlsx> [--write]`. Importers never guess: unknown names, ambiguous strengths and values that disagree between files are reported and left out. Registry flags (Нацперелік / ДЕЦ / керований доступ) are not imported at all.
+
 Run all of lint, format:check, typecheck, test, build before declaring work done — CI runs the same.
 
 Environment quirks (Windows dev machine):
@@ -69,7 +71,7 @@ Environment quirks (Windows dev machine):
 supabase/migrations/   SQL schema + RLS policies (one migration per change, never edit applied ones)
 data/                  source of truth for content (drugs, regimens, diseases, hospitals)
 data-demo/             DEMO data set for pipeline tests — not for clinical use
-scripts/               validate-data, sync-supabase, check-rls, lib/ (tsx; run outside the site)
+scripts/               validate-data, sync-supabase, check-rls, import-sources/ (xlsx → data/), lib/ (tsx)
 docs/                  requirements.md, architecture/data-model notes
 src/
   app/                 router, providers, layout, language switcher
