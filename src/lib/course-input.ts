@@ -1,5 +1,5 @@
 import type { CourseDrug } from '../domain'
-import type { Drug, DrugInfusionParams, RegimenItem } from '../schemas/catalog'
+import type { Drug, DrugInfusionParams, DrugPresentation, RegimenItem } from '../schemas/catalog'
 import type { CatalogIndex } from './catalog-index'
 
 /** A regimen item ready for both the calculation and the table that shows it. */
@@ -36,9 +36,9 @@ export function buildCourseItemsFrom(catalog: CatalogIndex, items: RegimenItem[]
     const drug = catalog.drugs.get(item.drug_id)
     if (!drug) return []
     const params = resolveInfusionParams(catalog, item)
-    const presentations = (catalog.presentationsByDrug.get(item.drug_id) ?? []).map(
-      (presentation) => ({ id: presentation.id, strengthMg: presentation.strength_mg }),
-    )
+    const presentations = (catalog.presentationsByDrug.get(item.drug_id) ?? [])
+      .filter((presentation) => fitsRoute(presentation.form, item.route))
+      .map((presentation) => ({ id: presentation.id, strengthMg: presentation.strength_mg }))
     const infusion = buildInfusionParams(item, params)
     const capMg = item.cap_mg ?? drug.max_single_dose_mg
     const durationMin = item.duration_min ?? params?.duration_min ?? null
@@ -126,4 +126,16 @@ export function customCourseItem(params: {
     notes: null,
     sort_order: params.sortOrder,
   }
+}
+
+const ORAL_FORMS = new Set<DrugPresentation['form']>(['tablet', 'capsule'])
+const PARENTERAL_FORMS = new Set<DrugPresentation['form']>(['vial', 'ampoule', 'syringe'])
+
+/**
+ * A tablet cannot be given intravenously and an ampoule cannot be swallowed, so the vial/tablet
+ * count uses only the packs that match the route of this item.
+ */
+export function fitsRoute(form: DrugPresentation['form'], route: RegimenItem['route']): boolean {
+  if (form === 'other') return false
+  return route === 'oral' ? ORAL_FORMS.has(form) : PARENTERAL_FORMS.has(form)
 }

@@ -1,0 +1,20 @@
+{
+  "id": "dlbcl",
+  "name": {
+    "uk": "Дифузна В-великоклітинна лімфома",
+    "en": "Diffuse large B-cell lymphoma"
+  },
+  "summary": {
+    "uk": "Агресивна В-клітинна неходжкінська лімфома; найчастіша лімфома в дорослих.",
+    "en": "Aggressive B-cell non-Hodgkin lymphoma; the most common lymphoma in adults."
+  },
+  "codes": [{ "system_id": "icd-10", "code": "C83.3", "is_primary": true }],
+  "treatment": [
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": { "uk": "Перша лінія", "en": "First line" },
+      "regimens": [{ "regimen_id": "r-chop-21" }]
+    }
+  ]
+}

@@ -3,7 +3,12 @@ import { describe, expect, it } from 'vitest'
 import { calculateCourse } from '../domain'
 import { indexCatalog } from './catalog-index'
 import { demoCatalog } from './catalog.fixture'
-import { buildCourseItems, resolveInfusionParams } from './course-input'
+import {
+  buildCourseItems,
+  buildCourseItemsFrom,
+  fitsRoute,
+  resolveInfusionParams,
+} from './course-input'
 
 const index = () => indexCatalog(demoCatalog())
 
@@ -124,5 +129,42 @@ describe('regimen calculation end to end', () => {
     expect(course.drugs.map((drug) => drug.doseMg)).toEqual([750, 1500, 100, 2, 100])
     expect(course.days.map((day) => day.day)).toEqual([1, 2, 3, 4, 5])
     expect(course.drugs[3]?.warnings.map((warning) => warning.code)).toEqual(['dose.capped'])
+  })
+})
+
+describe('fitsRoute', () => {
+  it('keeps only packs that match the route', () => {
+    expect(fitsRoute('tablet', 'oral')).toBe(true)
+    expect(fitsRoute('capsule', 'oral')).toBe(true)
+    expect(fitsRoute('ampoule', 'oral')).toBe(false)
+    expect(fitsRoute('vial', 'iv_infusion')).toBe(true)
+    expect(fitsRoute('ampoule', 'subcutaneous')).toBe(true)
+    expect(fitsRoute('tablet', 'iv_bolus')).toBe(false)
+    expect(fitsRoute('other', 'oral')).toBe(false)
+  })
+
+  it('counts oral prednisolone in tablets, not in ampoules', () => {
+    const catalog = demoCatalog()
+    catalog.drugs.push({ ...catalog.drugs[0]!, id: 'prednisolone-mix' })
+    const oral = catalog.regimen_items.find((row) => row.route === 'oral')!
+    catalog.drug_presentations.push(
+      {
+        ...catalog.drug_presentations[0]!,
+        id: 'p.amp',
+        drug_id: oral.drug_id,
+        form: 'ampoule',
+        strength_mg: 30,
+      },
+      {
+        ...catalog.drug_presentations[0]!,
+        id: 'p.tab',
+        drug_id: oral.drug_id,
+        form: 'tablet',
+        strength_mg: 5,
+      },
+    )
+    const built = buildCourseItemsFrom(indexCatalog(catalog), [oral])[0]!
+    expect(built.courseDrug.presentations?.map((p) => p.id)).not.toContain('p.amp')
+    expect(built.courseDrug.presentations?.map((p) => p.id)).toContain('p.tab')
   })
 })

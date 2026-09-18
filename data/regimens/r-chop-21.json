@@ -1,0 +1,142 @@
+{
+  "$comment": "Параметри взято з протоколу NSSG Oxford L.80 R-CHOP-21 (вер. 2.1, вересень 2024). Премедикація хлорфенаміном і супровід (омепразол, метоклопрамід, філграстим) не внесені: цих препаратів немає в довіднику відділення або доза задана в МО. Перевірте відповідність практиці відділення.",
+  "id": "r-chop-21",
+  "short_name": "R-CHOP-21",
+  "name": {
+    "uk": "R-CHOP-21",
+    "en": "R-CHOP-21"
+  },
+  "description": {
+    "uk": "Ритуксимаб, циклофосфамід, доксорубіцин, вінкристин, преднізолон. Цикл 21 день.",
+    "en": "Rituximab, cyclophosphamide, doxorubicin, vincristine, prednisolone. 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.80 R-CHOP-21",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-80-r-chop-21.pdf",
+      "version": "2.1 (09.2024)",
+      "checkedOn": "2026-09-18"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до ритуксимабу",
+        "en": "At least 30 minutes before rituximab"
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Уранці під час їди; у день 1 — не пізніше ніж за 30 хв до ритуксимабу",
+        "en": "In the morning with food; on day 1 at least 30 minutes before rituximab"
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Максимальна швидкість 400 мг/год; спостереження 30 хв перед наступними інфузіями",
+        "en": "Maximum rate 400 mg/h; observe for 30 minutes before the next infusions"
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_bolus",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_mg": 2,
+      "days": [1],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "Пацієнтам понад 70 років розгляньте обмеження дози до 1 мг",
+        "en": "In patients over 70 consider capping the dose at 1 mg"
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_bolus",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "ondansetron-d1",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "administrations_per_day": 2
+    },
+    {
+      "key": "ondansetron-d2",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [2]
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл; зменшити дозу при нирковій недостатності",
+        "en": "Tumour lysis prophylaxis, cycle 1; reduce the dose in renal impairment"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і 3 місяці після",
+        "en": "Antiviral prophylaxis during treatment and for 3 months after"
+      }
+    }
+  ]
+}

@@ -14,6 +14,7 @@ import {
   routeSchema,
   solventSchema,
   sortOrderSchema,
+  sourcesSchema,
   treatmentNodeKindSchema,
 } from '../../src/schemas/common'
 import { EMPTY_PRINT_FORMS, printFormsFileSchema } from '../../src/schemas/print-forms'
@@ -67,6 +68,7 @@ export const drugFileSchema = z.strictObject({
   review_rules: reviewRulesSchema.nullable().default(null),
   notes: optionalLocalized,
   sort_order: sortOrder,
+  sources: sourcesSchema.default([]),
   presentations: z
     .array(
       z.strictObject({
@@ -90,6 +92,7 @@ export const drugFileSchema = z.strictObject({
         duration_min: optionalNonNegativeInt,
         is_default: z.boolean().default(false),
         notes: optionalLocalized,
+        sources: sourcesSchema.default([]),
       }),
     )
     .default([]),
@@ -104,6 +107,7 @@ export const regimenFileSchema = z.strictObject({
   cycle_length_days: positiveNumberSchema.int().nullable().default(null),
   default_cycles: positiveNumberSchema.int().nullable().default(null),
   sort_order: sortOrder,
+  sources: sourcesSchema.default([]),
   /** Administration order = array order. */
   items: z
     .array(

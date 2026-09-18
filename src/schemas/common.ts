@@ -60,6 +60,20 @@ export const doseUnitSchema = z.enum(DOSE_UNITS)
 export const TREATMENT_NODE_KINDS = ['treatment', 'line', 'stage', 'group'] as const
 export const treatmentNodeKindSchema = z.enum(TREATMENT_NODE_KINDS)
 
+/**
+ * Where a clinical value comes from. Every dose, cap and dilution parameter that is not
+ * the hospital’s own must name its protocol and the date it was checked.
+ */
+export const sourceSchema = z.strictObject({
+  name: nonEmptyTextSchema,
+  url: z.url().optional(),
+  /** Document version or revision date as printed in the source. */
+  version: z.string().optional(),
+  checkedOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'YYYY-MM-DD'),
+})
+
+export const sourcesSchema = z.array(sourceSchema)
+
 /** Drug-specific organ-function checks; same shape as ReviewRules in src/domain/warnings.ts. */
 export const reviewRulesSchema = z.strictObject({
   renal: z.union([z.boolean(), z.strictObject({ belowMlMin: positiveNumberSchema })]).optional(),

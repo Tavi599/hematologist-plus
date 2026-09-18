@@ -37,7 +37,8 @@
         "renal": true
       },
       "notes": null,
-      "sort_order": 0
+      "sort_order": 0,
+      "sources": []
     },
     {
       "id": "doxorubicin",
@@ -52,7 +53,8 @@
         "hepatic": true
       },
       "notes": null,
-      "sort_order": 0
+      "sort_order": 0,
+      "sources": []
     },
     {
       "id": "prednisolone",
@@ -65,7 +67,8 @@
       "max_single_dose_mg": null,
       "review_rules": null,
       "notes": null,
-      "sort_order": 0
+      "sort_order": 0,
+      "sources": []
     },
     {
       "id": "rituximab",
@@ -78,7 +81,8 @@
       "max_single_dose_mg": null,
       "review_rules": null,
       "notes": null,
-      "sort_order": 0
+      "sort_order": 0,
+      "sources": []
     },
     {
       "id": "vincristine",
@@ -93,7 +97,8 @@
         "hepatic": true
       },
       "notes": null,
-      "sort_order": 0
+      "sort_order": 0,
+      "sources": []
     }
   ],
   "drug_presentations": [
@@ -191,6 +196,7 @@
       "duration_min": null,
       "is_default": true,
       "notes": null,
+      "sources": [],
       "sort_order": 0
     }
   ],
@@ -206,6 +212,7 @@
       "cycle_length_days": 21,
       "default_cycles": 6,
       "sort_order": 0,
+      "sources": [],
       "print_forms": {
         "version": 1,
         "forms": [

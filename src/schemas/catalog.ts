@@ -11,6 +11,7 @@ import {
   presentationFormSchema,
   reviewRulesSchema,
   routeSchema,
+  sourcesSchema,
   solventSchema,
   sortOrderSchema,
   treatmentNodeKindSchema,
@@ -45,6 +46,7 @@ export const drugRowSchema = z.strictObject({
   review_rules: reviewRulesSchema.nullable(),
   notes: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
+  sources: sourcesSchema,
 })
 
 export const drugPresentationRowSchema = z.strictObject({
@@ -70,6 +72,7 @@ export const drugInfusionParamsRowSchema = z
     is_default: z.boolean(),
     notes: localizedTextSchema.nullable(),
     sort_order: sortOrderSchema,
+    sources: sourcesSchema,
   })
   .refine(
     (row) =>
@@ -88,6 +91,7 @@ export const regimenRowSchema = z.strictObject({
   default_cycles: positiveNumberSchema.int().nullable(),
   print_forms: printFormsRowSchema,
   sort_order: sortOrderSchema,
+  sources: sourcesSchema,
 })
 
 export const regimenItemRowSchema = z.strictObject({
@@ -207,7 +211,7 @@ export type TreatmentNodeRegimen = CatalogRow<'treatment_node_regimens'>
  * Bump when the catalog shape changes incompatibly: invalidates offline caches.
  * Keep in step with new migrations that change columns.
  */
-export const CATALOG_SCHEMA_VERSION = '1'
+export const CATALOG_SCHEMA_VERSION = '2'
 
 export function emptyCatalog(): CatalogRows {
   return Object.fromEntries(CATALOG_TABLES.map((table) => [table, []])) as unknown as CatalogRows

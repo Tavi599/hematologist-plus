@@ -26,6 +26,12 @@ function tableColumns(): Map<string, string[]> {
     ].map((column) => column[1]!)
     tables.set(match[1]!, columns)
   }
+  // Later migrations add columns to the tables created above.
+  for (const match of sql.matchAll(
+    /alter table public\.(\w+)\s+add column ([a-z_]+) (?:text|jsonb|numeric|integer|smallint|boolean)\b/g,
+  )) {
+    tables.get(match[1]!)?.push(match[2]!)
+  }
   return tables
 }
 
@@ -86,6 +92,7 @@ describe('shared schemas', () => {
       is_default: true,
       notes: null,
       sort_order: 0,
+      sources: [{ name: 'SmPC', checkedOn: '2026-09-18' }],
     }
     expect(drugInfusionParamsRowSchema.safeParse(row).success).toBe(false)
     expect(
