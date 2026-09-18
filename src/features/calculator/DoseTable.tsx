@@ -23,6 +23,7 @@ import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import { DEFAULT_DOSE_CHOICE, type CourseItem } from '../../lib/course-input'
 import { CalculationChain } from './CalculationChain'
+import { SourceNotes } from './SourceNotes'
 import { WarningList } from './WarningList'
 
 export interface DoseTableProps {
@@ -339,7 +340,6 @@ function DoseRow({
               variant="subtle"
               aria-label={t('calculator.doses.chain')}
               onClick={onExpand}
-              disabled={!result}
             >
               {expanded ? '−' : '+'}
             </ActionIcon>
@@ -356,21 +356,30 @@ function DoseRow({
           </Group>
         </Table.Td>
       </Table.Tr>
-      {result && (
-        <Table.Tr>
-          <Table.Td colSpan={10} p={0} style={{ border: expanded ? undefined : 'none' }}>
-            <Collapse expanded={expanded}>
-              <Stack gap="xs" p="md">
-                <Text size="sm" fw={500}>
-                  {t('calculator.doses.chain')}
-                </Text>
-                <CalculationChain steps={result.steps} />
-                <WarningList warnings={result.warnings} compact />
-              </Stack>
-            </Collapse>
-          </Table.Td>
-        </Table.Tr>
-      )}
+      <Table.Tr>
+        <Table.Td colSpan={10} p={0} style={{ border: expanded ? undefined : 'none' }}>
+          <Collapse expanded={expanded}>
+            <Stack gap="xs" p="md">
+              {result && (
+                <>
+                  <Text size="sm" fw={500}>
+                    {t('calculator.doses.chain')}
+                  </Text>
+                  <CalculationChain steps={result.steps} />
+                  <WarningList warnings={result.warnings} compact />
+                </>
+              )}
+              <SourceNotes
+                sources={[
+                  ...(chosen.source ? [chosen.source] : []),
+                  ...item.drug.sources,
+                  ...(item.infusionParams?.sources ?? []),
+                ]}
+              />
+            </Stack>
+          </Collapse>
+        </Table.Td>
+      </Table.Tr>
     </>
   )
 }

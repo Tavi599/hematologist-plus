@@ -35,6 +35,12 @@ describe('App shell', () => {
     expect(localStorage.getItem(LANGUAGE_STORAGE_KEY)).toBe('en')
   })
 
+  it('navigates to the sources page', () => {
+    renderWithProviders(<App />)
+    fireEvent.click(screen.getByRole('link', { name: 'Джерела' }))
+    expect(screen.getByRole('heading', { name: 'Джерела' })).toBeInTheDocument()
+  })
+
   it('renders the not-found page for unknown routes', () => {
     renderWithProviders(<App />, { route: '/nope' })
     expect(screen.getByRole('heading', { name: 'Сторінку не знайдено' })).toBeInTheDocument()

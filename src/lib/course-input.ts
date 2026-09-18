@@ -1,5 +1,6 @@
 import type { CourseDrug } from '../domain'
 import type { Drug, DrugInfusionParams, DrugPresentation, RegimenItem } from '../schemas/catalog'
+import type { Source } from '../schemas/common'
 import type { CatalogIndex } from './catalog-index'
 
 /** A regimen item ready for both the calculation and the table that shows it. */
@@ -26,7 +27,8 @@ export interface DoseChoice {
   doseValue: number
   doseUnit: RegimenItem['dose_unit']
   capMg: number | null
-  url?: string
+  /** The document this dose comes from, shown next to the calculation chain. */
+  source?: Source
 }
 
 export const DEFAULT_DOSE_CHOICE = 'default'
@@ -41,7 +43,7 @@ export function doseChoices(catalog: CatalogIndex, item: RegimenItem): DoseChoic
       doseValue: item.dose_value,
       doseUnit: item.dose_unit,
       capMg: item.cap_mg,
-      ...(regimenSource?.url === undefined ? {} : { url: regimenSource.url }),
+      ...(regimenSource === undefined ? {} : { source: regimenSource }),
     },
     ...item.dose_options.map((option) => ({
       id: option.source.name,
@@ -49,7 +51,7 @@ export function doseChoices(catalog: CatalogIndex, item: RegimenItem): DoseChoic
       doseValue: option.dose_value,
       doseUnit: option.dose_unit,
       capMg: option.cap_mg,
-      ...(option.source.url === undefined ? {} : { url: option.source.url }),
+      source: option.source,
     })),
   ]
 }

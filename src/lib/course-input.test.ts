@@ -108,6 +108,7 @@ describe('dose choices', () => {
         doseValue: 40,
         doseUnit: 'mg_m2',
         capMg: null,
+        source: { name: 'ДЕМО: інший протокол', checkedOn: '2026-09-19' },
       },
     ])
   })
@@ -131,6 +132,7 @@ describe('dose choices', () => {
     catalog.regimens[0]!.sources = [{ name: 'DEMO protocol', checkedOn: '2026-09-19' }]
     const first = buildCourseItems(indexCatalog(catalog), 'r-chop-21')[0]!
     expect(first.doseChoices[0]?.label).toBe('DEMO protocol')
+    expect(first.doseChoices[0]?.source?.checkedOn).toBe('2026-09-19')
   })
 })
 

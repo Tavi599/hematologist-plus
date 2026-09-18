@@ -5,7 +5,8 @@
   },
   "nav": {
     "calculator": "Calculator",
-    "diseases": "Diseases"
+    "diseases": "Diseases",
+    "sources": "Sources"
   },
   "language": {
     "label": "Language",
@@ -209,5 +210,21 @@
     "review.highBilirubin": "Bilirubin {{value}} µmol/L is above {{threshold}}. Consider a reduction.",
     "title": "Note",
     "noDoseChange": "Warnings never change a dose — the decision rests with the physician."
+  },
+  "sources": {
+    "title": "Sources",
+    "intro": "The official designs and protocols the calculation rests on. Every dose, dilution and rate names its document and the date it was checked.",
+    "empty": "No sources in the catalog yet.",
+    "document": "Document",
+    "version": "Version",
+    "checkedOn": "Checked",
+    "usedFor": "Used for",
+    "kind": {
+      "regimen": "regimen",
+      "dose": "dose",
+      "drug": "drug",
+      "infusion": "dilution"
+    },
+    "itemTitle": "Sources behind this item"
   }
 }

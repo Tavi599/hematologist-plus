@@ -84,6 +84,8 @@ export const sourceSchema = z.strictObject({
 
 export const sourcesSchema = z.array(sourceSchema)
 
+export type Source = z.infer<typeof sourceSchema>
+
 /**
  * The same dose as another protocol writes it. A regimen item keeps its own dose as the default
  * and lists the alternatives here, so the physician chooses the protocol instead of retyping mg.
