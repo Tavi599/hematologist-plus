@@ -215,7 +215,7 @@ export type TreatmentNodeRegimen = CatalogRow<'treatment_node_regimens'>
  * Bump when the catalog shape changes incompatibly: invalidates offline caches.
  * Keep in step with new migrations that change columns.
  */
-export const CATALOG_SCHEMA_VERSION = '2'
+export const CATALOG_SCHEMA_VERSION = '3'
 
 export function emptyCatalog(): CatalogRows {
   return Object.fromEntries(CATALOG_TABLES.map((table) => [table, []])) as unknown as CatalogRows
