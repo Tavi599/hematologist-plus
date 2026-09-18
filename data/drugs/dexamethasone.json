@@ -17,5 +17,24 @@
       "form": "tablet",
       "strength_mg": 20
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [100],
+      "is_default": true,
+      "duration_min": 30,
+      "notes": {
+        "uk": "Разом із димедролом перед ритуксимабом",
+        "en": "With diphenhydramine before rituximab"
+      },
+      "sources": [
+        {
+          "name": "Дизайн відділення «Ритуксимаб» (Google Таблиці)",
+          "checkedOn": "2026-09-19"
+        }
+      ]
+    }
   ]
 }

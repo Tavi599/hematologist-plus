@@ -22,6 +22,10 @@
     {
       "name": "Дизайн відділення «Ритуксимаб» (Google Таблиці)",
       "checkedOn": "2026-09-19"
+    },
+    {
+      "name": "Дизайн відділення «CHOEP» (Google Таблиці)",
+      "checkedOn": "2026-09-19"
     }
   ],
   "items": [
@@ -48,6 +52,19 @@
       "notes": {
         "uk": "Уранці під час їди; у день 1 — не пізніше ніж за 30 хв до ритуксимабу",
         "en": "In the morning with food; on day 1 at least 30 minutes before rituximab"
+      }
+    },
+    {
+      "key": "omeprazole",
+      "drug_id": "omeprazole",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "У 20–40 мл 0,9% NaCl, в/в струминно повільно",
+        "en": "In 20-40 mL 0.9% NaCl, slow IV push"
       }
     },
     {
@@ -89,8 +106,6 @@
       "dose_value": 375,
       "dose_unit": "mg_m2",
       "days": [1],
-      "fallback_solvent": "sodium_chloride_0_9",
-      "fallback_volume_ml": 500,
       "notes": {
         "uk": "Максимальна швидкість 400 мг/год; спостереження 30 хв перед наступними інфузіями",
         "en": "Maximum rate 400 mg/h; observe for 30 minutes before the next infusions"
@@ -99,7 +114,7 @@
     {
       "key": "doxorubicin",
       "drug_id": "doxorubicin",
-      "route": "iv_bolus",
+      "route": "iv_infusion",
       "dose_value": 50,
       "dose_unit": "mg_m2",
       "days": [1]
@@ -112,9 +127,6 @@
       "dose_unit": "mg_m2",
       "cap_mg": 2,
       "days": [1],
-      "duration_min": 10,
-      "fallback_solvent": "sodium_chloride_0_9",
-      "fallback_volume_ml": 50,
       "notes": {
         "uk": "Пацієнтам понад 70 років розгляньте обмеження дози до 1 мг",
         "en": "In patients over 70 consider capping the dose at 1 mg"
@@ -123,7 +135,7 @@
     {
       "key": "cyclophosphamide",
       "drug_id": "cyclophosphamide",
-      "route": "iv_bolus",
+      "route": "iv_infusion",
       "dose_value": 750,
       "dose_unit": "mg_m2",
       "days": [1]
@@ -132,7 +144,7 @@
       "key": "ondansetron-d1",
       "drug_id": "ondansetron",
       "role": "supportive",
-      "route": "oral",
+      "route": "iv_bolus",
       "dose_value": 8,
       "dose_unit": "mg_flat",
       "days": [1],
@@ -142,7 +154,7 @@
       "key": "ondansetron-d2",
       "drug_id": "ondansetron",
       "role": "supportive",
-      "route": "oral",
+      "route": "iv_bolus",
       "dose_value": 8,
       "dose_unit": "mg_flat",
       "days": [2]

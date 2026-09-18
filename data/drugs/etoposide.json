@@ -18,5 +18,20 @@
       "strength_mg": 200,
       "volume_ml": 10
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [500],
+      "is_default": true,
+      "duration_min": 60,
+      "sources": [
+        {
+          "name": "Дизайн відділення «CHOEP» (Google Таблиці)",
+          "checkedOn": "2026-09-19"
+        }
+      ]
+    }
   ]
 }
