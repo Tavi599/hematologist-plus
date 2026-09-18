@@ -57,6 +57,16 @@ export const itemRoleSchema = z.enum(ITEM_ROLES)
 export const DOSE_UNITS = ['mg_m2', 'mg_kg', 'mg_flat', 'auc'] as const
 export const doseUnitSchema = z.enum(DOSE_UNITS)
 
+/**
+ * How the drug can actually be obtained. A regimen is never left out of the catalog because one
+ * of its drugs is missing — the drug is marked instead, and regimens can be filtered by this.
+ *   department  — in the department's own procurement list
+ *   registered  — registered in Ukraine, obtainable, but not on the department's list
+ *   unavailable — not registered in Ukraine or otherwise not obtainable
+ */
+export const DRUG_AVAILABILITY = ['department', 'registered', 'unavailable'] as const
+export const drugAvailabilitySchema = z.enum(DRUG_AVAILABILITY)
+
 export const TREATMENT_NODE_KINDS = ['treatment', 'line', 'stage', 'group'] as const
 export const treatmentNodeKindSchema = z.enum(TREATMENT_NODE_KINDS)
 

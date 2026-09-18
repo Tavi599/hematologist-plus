@@ -2,6 +2,7 @@ import { z } from 'zod'
 
 import {
   doseUnitSchema,
+  drugAvailabilitySchema,
   idSchema,
   itemRoleSchema,
   localizedTextSchema,
@@ -47,6 +48,7 @@ export const drugRowSchema = z.strictObject({
   notes: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
   sources: sourcesSchema,
+  availability: drugAvailabilitySchema,
 })
 
 export const drugPresentationRowSchema = z.strictObject({

@@ -113,6 +113,20 @@ export function checkCatalog(rows: CatalogRows): CatalogIssue[] {
     }
   }
 
+  // A regimen is kept even when a drug cannot be obtained; the report says which ones.
+  const drugById = new Map(rows.drugs.map((drug) => [drug.id, drug]))
+  const blockedByRegimen = new Map<string, string[]>()
+  for (const item of rows.regimen_items) {
+    if (drugById.get(item.drug_id)?.availability !== 'unavailable') continue
+    blockedByRegimen.set(item.regimen_id, [
+      ...(blockedByRegimen.get(item.regimen_id) ?? []),
+      item.drug_id,
+    ])
+  }
+  for (const [regimenId, drugIds] of blockedByRegimen) {
+    warning('regimens', regimenId, `drugs not obtainable: ${[...new Set(drugIds)].join(', ')}`)
+  }
+
   for (const regimen of rows.regimens) {
     const forms = regimen.print_forms?.forms ?? []
     for (const form of forms) {

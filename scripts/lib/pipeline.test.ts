@@ -209,6 +209,14 @@ describe('checkCatalog', () => {
     expect(warnings).toContain('no presentations: vial/tablet counts cannot be calculated')
     expect(warnings).toContain('drug has several infusion params but none is default')
   })
+
+  it('keeps a regimen whose drug cannot be obtained and names the drug', () => {
+    const rows = loadDemo()
+    rows.drugs.find((drug) => drug.id === 'rituximab')!.availability = 'unavailable'
+    const issues = checkCatalog(rows)
+    expect(issues.filter((issue) => issue.severity === 'error')).toEqual([])
+    expect(issues.map((issue) => issue.message)).toContain('drugs not obtainable: rituximab')
+  })
 })
 
 describe('diff', () => {

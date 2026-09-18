@@ -54,6 +54,7 @@ data/
 | `max_single_dose_mg` | число > 0 | максимальна разова доза, якщо не задана в схемі (`cap_mg`) |
 | `review_rules` | `{ renal, hepatic, elderly }` | підказки щодо редукції: `true` (загальний поріг) або `{ "belowMlMin": 30 }`, `{ "aboveUmolL": 51 }`, `{ "fromAgeYears": 75 }` |
 | `notes` | локал. | |
+| `availability` | `department` / `registered` / `unavailable` | як препарат можна дістати: є в переліку відділення · зареєстрований в Україні · недоступний. Типово `registered`. Схема з недоступним препаратом залишається в довіднику — її позначає `regimenAvailability()` і про неї попереджає валідація |
 | `presentations[]` | | `key`, `form` (`vial`, `ampoule`, `tablet`, `capsule`, `syringe`, `other`), `strength_mg`, `volume_ml` (для розчинів), `label` |
 | `infusion_params[]` | | `key`, `solvent` (`sodium_chloride_0_9`, `glucose_5`, `water_for_injection`), `concentration_min_mg_ml`, `concentration_max_mg_ml`, `stock_concentration_mg_ml` (концентрат після розведення у флаконі), `bag_volumes_ml` (наявні об'єми розчинника), `duration_min`, `is_default` (один на препарат) |
 

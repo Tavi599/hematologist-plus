@@ -1,5 +1,5 @@
 {
-  "$comment": "Параметри взято з протоколу NSSG Oxford L.80 R-CHOP-21 (вер. 2.1, вересень 2024). Премедикація хлорфенаміном і супровід (омепразол, метоклопрамід, філграстим) не внесені: цих препаратів немає в довіднику відділення або доза задана в МО. Перевірте відповідність практиці відділення.",
+  "$comment": "Цитостатичні дози — протокол NSSG Oxford L.80 R-CHOP-21 (вер. 2.1, вересень 2024). Премедикація — дизайн відділення «Ритуксимаб» (дексаметазон 16 мг + димедрол 1% 3,0 мл у 100 мл NaCl, омепразол 40 мг в/в): британський хлорфенамін замінено на димедрол, як прийнято у відділенні. Омепразол і метоклопрамід ще не заведені в довідник, філграстим дозується в МО — їх тут немає.",
   "id": "r-chop-21",
   "short_name": "R-CHOP-21",
   "name": {
@@ -18,6 +18,10 @@
       "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-80-r-chop-21.pdf",
       "version": "2.1 (09.2024)",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "Дизайн відділення «Ритуксимаб» (Google Таблиці)",
+      "checkedOn": "2026-09-19"
     }
   ],
   "items": [
@@ -44,6 +48,38 @@
       "notes": {
         "uk": "Уранці під час їди; у день 1 — не пізніше ніж за 30 хв до ритуксимабу",
         "en": "In the morning with food; on day 1 at least 30 minutes before rituximab"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 16,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Разом із димедролом у 100 мл 0,9% NaCl, в/в крапельно 200 мл/год, до ритуксимабу",
+        "en": "With diphenhydramine in 100 mL 0.9% NaCl, IV 200 mL/h, before rituximab"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 30,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% — 3,0 мл; у тому самому флаконі, що й дексаметазон (замість хлорфенаміну протоколу)",
+        "en": "Diphenhydramine 1% 3.0 mL, in the same bag as dexamethasone (replaces the protocol's chlorphenamine)"
       }
     },
     {
