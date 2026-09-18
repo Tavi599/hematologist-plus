@@ -1,5 +1,6 @@
 export * from './bsa'
 export * from './config'
+export * from './course'
 export * from './dosing'
 export * from './infusion'
 export * from './math'

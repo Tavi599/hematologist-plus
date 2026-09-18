@@ -14,7 +14,105 @@
   },
   "calculator": {
     "title": "Калькулятор доз",
-    "placeholder": "Форма пацієнта, вибір схеми та розрахунок доз з'являться тут."
+    "patient": {
+      "title": "Пацієнт",
+      "note": "Дані пацієнта нікуди не надсилаються і не зберігаються: вони живуть лише у цій вкладці браузера.",
+      "fullName": "Прізвище, ім'я, по батькові",
+      "recordNumber": "№ історії хвороби",
+      "birthDate": "Дата народження",
+      "ageYears": "Вік, років",
+      "sex": "Стать",
+      "male": "Чоловіча",
+      "female": "Жіноча",
+      "heightCm": "Зріст, см",
+      "weightKg": "Вага, кг",
+      "serumCreatinine": "Креатинін",
+      "creatinineUnit": "Одиниці креатиніну",
+      "bilirubinUmolL": "Білірубін, мкмоль/л",
+      "optional": "необов'язково",
+      "invalid": "Перевірте значення",
+      "required": "Заповніть поле",
+      "summary": "BSA {{bsa}} м² · кліренс креатиніну {{crcl}}",
+      "summaryNoCrcl": "BSA {{bsa}} м² · кліренс креатиніну не розрахований (немає креатиніну)",
+      "incomplete": "Заповніть зріст, вагу, вік і стать, щоб побачити розрахунок."
+    },
+    "course": {
+      "title": "Курс",
+      "regimen": "Схема",
+      "regimenPlaceholder": "Оберіть схему",
+      "noRegimens": "У довіднику ще немає схем.",
+      "startDate": "Дата початку курсу",
+      "dayStart": "Початок дня",
+      "bsaVariant": "Дози за BSA",
+      "bsaActual": "фактична",
+      "bsaCapped": "обмежена 2,0 м²",
+      "coursePercent": "Редукція на курс, %",
+      "cycle": "Цикл {{days}} дн., курсів: {{cycles}}"
+    },
+    "hospital": {
+      "title": "Шапка бланка",
+      "institution": "Заклад",
+      "department": "Відділення",
+      "head": "Завідувач",
+      "doctor": "Лікар",
+      "select": "Заклад із довідника",
+      "none": "У довіднику немає закладів; заповніть поля вручну."
+    },
+    "doses": {
+      "title": "Дози",
+      "drug": "Препарат",
+      "scheme": "За схемою",
+      "days": "Дні",
+      "doseActual": "Доза (BSA факт.)",
+      "doseCapped": "Доза (BSA 2,0)",
+      "reduction": "Редукція, %",
+      "unrounded": "без округлення {{value}} мг",
+      "units": "Флакони / таблетки",
+      "unitsValue": "{{count}} × {{strength}} мг",
+      "waste": "залишок {{value}} мг",
+      "infusion": "Розведення",
+      "infusionValue": "{{solvent}} {{bag}} мл, разом {{total}} мл, {{concentration}} мг/мл",
+      "infusionRate": "{{rate}} мл/год · {{drops}} крап/хв",
+      "infusionMissing": "Немає параметрів розведення",
+      "noPresentations": "Немає фасувань",
+      "enabled": "Препарат у курсі",
+      "chain": "Як порахували",
+      "perAdministration": "на одне введення",
+      "timesPerDay": "{{count}} введення на день",
+      "empty": "У цій схемі немає препаратів.",
+      "addTitle": "Додати препарат",
+      "addDrug": "Препарат",
+      "addDose": "Доза",
+      "addUnit": "Одиниці",
+      "addDays": "Дні курсу",
+      "addDaysPlaceholder": "1, 8, 15",
+      "addDuration": "Тривалість введення, хв",
+      "addSubmit": "Додати",
+      "addInvalidDays": "Вкажіть дні курсу числами через кому",
+      "custom": "додано вручну",
+      "remove": "Прибрати"
+    },
+    "schedule": {
+      "title": "Розклад",
+      "day": "День {{day}}",
+      "time": "Час",
+      "drug": "Препарат",
+      "shift": "Зсув, хв",
+      "nextDay": "наступного дня",
+      "bolus": "струминно",
+      "noDuration": "тривалість не вказана"
+    },
+    "supply": {
+      "title": "Потреба на курс",
+      "presentation": "Фасування",
+      "count": "Кількість",
+      "perCourse": "на курс",
+      "empty": "Немає даних про фасування."
+    },
+    "error": {
+      "title": "Не вдалося порахувати",
+      "field": "Поле: {{field}}"
+    }
   },
   "diseases": {
     "title": "Захворювання",
@@ -41,5 +139,67 @@
     "reload": "Оновити",
     "offlineReady": "Застосунок готовий до роботи без мережі.",
     "close": "Закрити"
+  },
+  "units": {
+    "mg": "мг",
+    "m2": "м²",
+    "ml": "мл",
+    "ml_h": "мл/год",
+    "mg_ml": "мг/мл",
+    "ml_min": "мл/хв",
+    "gtt_min": "крап/хв",
+    "mg_m2": "мг/м²",
+    "mg_kg": "мг/кг",
+    "mg_flat": "мг",
+    "auc": "AUC",
+    "min": "хв",
+    "umol_l": "мкмоль/л",
+    "mg_dl": "мг/дл"
+  },
+  "route": {
+    "iv_infusion": "в/в інфузія",
+    "iv_bolus": "в/в струминно",
+    "subcutaneous": "підшкірно",
+    "intramuscular": "внутрішньом'язово",
+    "oral": "перорально",
+    "intrathecal": "інтратекально"
+  },
+  "role": {
+    "main": "основний",
+    "premedication": "премедикація",
+    "supportive": "супровідна терапія"
+  },
+  "solvent": {
+    "sodium_chloride_0_9": "NaCl 0,9%",
+    "glucose_5": "глюкоза 5%",
+    "water_for_injection": "вода для ін'єкцій"
+  },
+  "step": {
+    "bsa.mosteller": "BSA за Mosteller: √({{heightCm}} см × {{weightKg}} кг / 3600)",
+    "bsa.cap": "BSA для розрахунку (межа {{capM2}} м²)",
+    "dose.perBsa": "{{doseMgM2}} мг/м² × {{bsaM2}} м²",
+    "dose.perWeight": "{{doseMgKg}} мг/кг × {{weightKg}} кг",
+    "dose.flat": "Фіксована доза",
+    "dose.cap": "Обмеження максимальною дозою {{capMg}} мг",
+    "dose.reduction": "Редукція {{reductionPercent}}%",
+    "renal.cockcroftGault": "Кліренс креатиніну за Cockcroft-Gault (креатинін {{serumCreatinineMgDl}} мг/дл, коефіцієнт статі {{sexFactor}})",
+    "renal.calvert": "Calvert: AUC {{targetAuc}} × (GFR {{gfrUsedMlMin}} + 25)",
+    "rounding.step": "Округлення до {{stepMg}} мг (було {{unroundedMg}} мг)",
+    "rounding.vial": "Округлення за вмістом флакона (було {{unroundedMg}} мг)",
+    "infusion.volume": "Об'єм: {{bagVolumeMl}} мл розчинника + {{drugVolumeMl}} мл препарату",
+    "infusion.concentration": "Концентрація для дози {{doseMg}} мг",
+    "infusion.rate": "Швидкість за {{durationMin}} хв ({{rateGttMin}} крап/хв, крапельниця {{dropFactor}} крап/мл)"
+  },
+  "warning": {
+    "input.outOfRange": "{{field}}: значення {{value}} поза межами {{min}}–{{max}}. Перевірте введені дані.",
+    "bsa.capped": "Фактична BSA {{actualM2}} м² перевищує {{capM2}} м². Показані обидва варіанти доз.",
+    "dose.capped": "Доза обмежена максимальною ({{capMg}} мг); за схемою було б {{baseMg}} мг.",
+    "carboplatin.gfrCapped": "GFR обмежено {{capMlMin}} мл/хв для формули Calvert.",
+    "infusion.concentrationOutOfRange": "Концентрація {{concentrationMgMl}} мг/мл поза допустимими межами. Перевірте об'єм розчинника.",
+    "review.lowCreatinineClearance": "Кліренс креатиніну {{value}} мл/хв нижче {{threshold}}. Розгляньте редукцію.",
+    "review.elderly": "Вік {{value}} років ({{threshold}}+). Розгляньте редукцію.",
+    "review.highBilirubin": "Білірубін {{value}} мкмоль/л вище {{threshold}}. Розгляньте редукцію.",
+    "title": "Зверніть увагу",
+    "noDoseChange": "Попередження не змінюють дозу — рішення за лікарем."
   }
 }

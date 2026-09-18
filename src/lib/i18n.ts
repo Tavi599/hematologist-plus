@@ -36,6 +36,12 @@ i18n.on('languageChanged', (lng) => {
   document.documentElement.lang = lng
 })
 
+/**
+ * Translation of keys built at runtime (step.<key>, warning.<code>, units.<unit>),
+ * which the typed i18next signature cannot check.
+ */
+export type DynamicTranslate = (key: string, options?: Record<string, unknown>) => string
+
 export function currentLanguage(): Language {
   const lng = i18n.resolvedLanguage
   return SUPPORTED_LANGUAGES.includes(lng as Language) ? (lng as Language) : DEFAULT_LANGUAGE

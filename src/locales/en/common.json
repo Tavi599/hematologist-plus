@@ -14,7 +14,105 @@
   },
   "calculator": {
     "title": "Dose calculator",
-    "placeholder": "Patient form, regimen selection and dose calculation will appear here."
+    "patient": {
+      "title": "Patient",
+      "note": "Patient data is never sent anywhere and never stored: it lives only in this browser tab.",
+      "fullName": "Full name",
+      "recordNumber": "Record number",
+      "birthDate": "Date of birth",
+      "ageYears": "Age, years",
+      "sex": "Sex",
+      "male": "Male",
+      "female": "Female",
+      "heightCm": "Height, cm",
+      "weightKg": "Weight, kg",
+      "serumCreatinine": "Creatinine",
+      "creatinineUnit": "Creatinine units",
+      "bilirubinUmolL": "Bilirubin, µmol/L",
+      "optional": "optional",
+      "invalid": "Check this value",
+      "required": "Fill in this field",
+      "summary": "BSA {{bsa}} m² · creatinine clearance {{crcl}}",
+      "summaryNoCrcl": "BSA {{bsa}} m² · creatinine clearance not calculated (no creatinine)",
+      "incomplete": "Fill in height, weight, age and sex to see the calculation."
+    },
+    "course": {
+      "title": "Course",
+      "regimen": "Regimen",
+      "regimenPlaceholder": "Select a regimen",
+      "noRegimens": "There are no regimens in the catalog yet.",
+      "startDate": "Course start date",
+      "dayStart": "Day starts at",
+      "bsaVariant": "Doses by BSA",
+      "bsaActual": "actual",
+      "bsaCapped": "capped at 2.0 m²",
+      "coursePercent": "Course reduction, %",
+      "cycle": "Cycle {{days}} days, cycles: {{cycles}}"
+    },
+    "hospital": {
+      "title": "Sheet header",
+      "institution": "Institution",
+      "department": "Department",
+      "head": "Head of department",
+      "doctor": "Physician",
+      "select": "Institution from the catalog",
+      "none": "No institutions in the catalog; fill the fields in manually."
+    },
+    "doses": {
+      "title": "Doses",
+      "drug": "Drug",
+      "scheme": "Per regimen",
+      "days": "Days",
+      "doseActual": "Dose (actual BSA)",
+      "doseCapped": "Dose (BSA 2.0)",
+      "reduction": "Reduction, %",
+      "unrounded": "unrounded {{value}} mg",
+      "units": "Vials / tablets",
+      "unitsValue": "{{count}} × {{strength}} mg",
+      "waste": "waste {{value}} mg",
+      "infusion": "Dilution",
+      "infusionValue": "{{solvent}} {{bag}} mL, total {{total}} mL, {{concentration}} mg/mL",
+      "infusionRate": "{{rate}} mL/h · {{drops}} drops/min",
+      "infusionMissing": "No dilution parameters",
+      "noPresentations": "No presentations",
+      "enabled": "Drug included",
+      "chain": "How it was calculated",
+      "perAdministration": "per administration",
+      "timesPerDay": "{{count}} administrations a day",
+      "empty": "This regimen has no drugs.",
+      "addTitle": "Add a drug",
+      "addDrug": "Drug",
+      "addDose": "Dose",
+      "addUnit": "Units",
+      "addDays": "Course days",
+      "addDaysPlaceholder": "1, 8, 15",
+      "addDuration": "Infusion duration, min",
+      "addSubmit": "Add",
+      "addInvalidDays": "List the course days as comma-separated numbers",
+      "custom": "added manually",
+      "remove": "Remove"
+    },
+    "schedule": {
+      "title": "Schedule",
+      "day": "Day {{day}}",
+      "time": "Time",
+      "drug": "Drug",
+      "shift": "Shift, min",
+      "nextDay": "next day",
+      "bolus": "bolus",
+      "noDuration": "duration not set"
+    },
+    "supply": {
+      "title": "Need for the course",
+      "presentation": "Presentation",
+      "count": "Count",
+      "perCourse": "per course",
+      "empty": "No presentation data."
+    },
+    "error": {
+      "title": "Calculation failed",
+      "field": "Field: {{field}}"
+    }
   },
   "diseases": {
     "title": "Diseases",
@@ -41,5 +139,67 @@
     "reload": "Reload",
     "offlineReady": "The app is ready to work offline.",
     "close": "Close"
+  },
+  "units": {
+    "mg": "mg",
+    "m2": "m²",
+    "ml": "mL",
+    "ml_h": "mL/h",
+    "mg_ml": "mg/mL",
+    "ml_min": "mL/min",
+    "gtt_min": "drops/min",
+    "mg_m2": "mg/m²",
+    "mg_kg": "mg/kg",
+    "mg_flat": "mg",
+    "auc": "AUC",
+    "min": "min",
+    "umol_l": "µmol/L",
+    "mg_dl": "mg/dL"
+  },
+  "route": {
+    "iv_infusion": "IV infusion",
+    "iv_bolus": "IV bolus",
+    "subcutaneous": "subcutaneous",
+    "intramuscular": "intramuscular",
+    "oral": "oral",
+    "intrathecal": "intrathecal"
+  },
+  "role": {
+    "main": "main",
+    "premedication": "premedication",
+    "supportive": "supportive"
+  },
+  "solvent": {
+    "sodium_chloride_0_9": "NaCl 0.9%",
+    "glucose_5": "glucose 5%",
+    "water_for_injection": "water for injection"
+  },
+  "step": {
+    "bsa.mosteller": "Mosteller BSA: √({{heightCm}} cm × {{weightKg}} kg / 3600)",
+    "bsa.cap": "BSA used (cap {{capM2}} m²)",
+    "dose.perBsa": "{{doseMgM2}} mg/m² × {{bsaM2}} m²",
+    "dose.perWeight": "{{doseMgKg}} mg/kg × {{weightKg}} kg",
+    "dose.flat": "Flat dose",
+    "dose.cap": "Limited by the maximum dose of {{capMg}} mg",
+    "dose.reduction": "Reduction {{reductionPercent}}%",
+    "renal.cockcroftGault": "Cockcroft-Gault creatinine clearance (creatinine {{serumCreatinineMgDl}} mg/dL, sex factor {{sexFactor}})",
+    "renal.calvert": "Calvert: AUC {{targetAuc}} × (GFR {{gfrUsedMlMin}} + 25)",
+    "rounding.step": "Rounded to {{stepMg}} mg (was {{unroundedMg}} mg)",
+    "rounding.vial": "Rounded to whole vials (was {{unroundedMg}} mg)",
+    "infusion.volume": "Volume: {{bagVolumeMl}} mL of solvent + {{drugVolumeMl}} mL of drug",
+    "infusion.concentration": "Concentration for a {{doseMg}} mg dose",
+    "infusion.rate": "Rate over {{durationMin}} min ({{rateGttMin}} drops/min, giving set {{dropFactor}} drops/mL)"
+  },
+  "warning": {
+    "input.outOfRange": "{{field}}: {{value}} is outside {{min}}–{{max}}. Check the entered data.",
+    "bsa.capped": "Actual BSA {{actualM2}} m² exceeds {{capM2}} m². Both dose variants are shown.",
+    "dose.capped": "Dose limited by the maximum ({{capMg}} mg); the regimen would give {{baseMg}} mg.",
+    "carboplatin.gfrCapped": "GFR capped at {{capMlMin}} mL/min for the Calvert formula.",
+    "infusion.concentrationOutOfRange": "Concentration {{concentrationMgMl}} mg/mL is outside the allowed range. Check the solvent volume.",
+    "review.lowCreatinineClearance": "Creatinine clearance {{value}} mL/min is below {{threshold}}. Consider a reduction.",
+    "review.elderly": "Age {{value}} years ({{threshold}}+). Consider a reduction.",
+    "review.highBilirubin": "Bilirubin {{value}} µmol/L is above {{threshold}}. Consider a reduction.",
+    "title": "Note",
+    "noDoseChange": "Warnings never change a dose — the decision rests with the physician."
   }
 }

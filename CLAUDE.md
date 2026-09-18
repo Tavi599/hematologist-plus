@@ -74,7 +74,7 @@ docs/                  requirements.md, architecture/data-model notes
 src/
   app/                 router, providers, layout, language switcher
   pages/               CalculatorPage, DiseasesPage, DiseaseDetailPage
-  features/            patient-form, regimen-picker, dose-table, print (multi-day-sheet, infusion-sheet)
+  features/            calculator/ (patient form, dose table, schedule, supply, header), catalog/; print later
   domain/              pure calculation logic — no React, no I/O
   schemas/             Zod schemas: catalog rows (source of DB row types), print forms, patient input
   lib/                 supabase client, catalog fetch/index/query + IndexedDB persistence, i18n, localized helpers
@@ -88,6 +88,8 @@ src/
 - DB tables `snake_case` plural; TS types `PascalCase`; files `kebab-case`, React components `PascalCase.tsx`.
 - DB row types come from the Zod schemas in `src/schemas/catalog.ts` (no generated types). Catalog rows are validated on read; one invalid row fails the load so a course is never silently incomplete. A test checks schema keys against migration columns and RLS for every table.
 - Read reference data only via `useCatalog()` / `CatalogGate` (`src/lib/use-catalog.ts`); only `catalog` queries are persisted to IndexedDB.
+- A whole course is calculated by `calculateCourse` (`src/domain/course.ts`); catalog rows become its input in `buildCourseItems` (`src/lib/course-input.ts`). The selected regimen lives in the URL (`#/calculator?regimen=<id>`), never in duplicated state.
+- Keys built at runtime (`step.*`, `warning.*`, `units.*`) are translated through `DynamicTranslate` from `src/lib/i18n.ts`.
 - Localized DB/content text is read only through `localize` / `resolveLocalized` from `src/lib/localized.ts`.
 - Tests sit next to the code (`*.test.ts(x)`); render components with `renderWithProviders` from `src/test/render.tsx`.
 - Service worker update is user-confirmed (`registerType: 'prompt'`) so an in-progress form is never lost to an auto-reload.

@@ -1,0 +1,129 @@
+import type { CourseDrug } from '../domain'
+import type { Drug, DrugInfusionParams, RegimenItem } from '../schemas/catalog'
+import type { CatalogIndex } from './catalog-index'
+
+/** A regimen item ready for both the calculation and the table that shows it. */
+export interface CourseItem {
+  item: RegimenItem
+  drug: Drug
+  infusionParams: DrugInfusionParams | null
+  /** What the calculation engine needs; `infusion` is set only when a volume can be derived. */
+  courseDrug: CourseDrug
+  /** Infusion that cannot be calculated: no catalog parameters and no fallback in the regimen. */
+  missingInfusionData: boolean
+}
+
+/** Infusion parameters of a drug: the one the item points at, else the default, else the only one. */
+export function resolveInfusionParams(
+  catalog: CatalogIndex,
+  item: RegimenItem,
+): DrugInfusionParams | null {
+  const all = catalog.infusionParamsByDrug.get(item.drug_id) ?? []
+  if (item.infusion_params_id !== null) {
+    return all.find((params) => params.id === item.infusion_params_id) ?? null
+  }
+  return all.find((params) => params.is_default) ?? (all.length === 1 ? all[0]! : null)
+}
+
+/** Builds the calculation input for every item of a regimen, in administration order. */
+export function buildCourseItems(catalog: CatalogIndex, regimenId: string): CourseItem[] {
+  return buildCourseItemsFrom(catalog, catalog.itemsByRegimen.get(regimenId) ?? [])
+}
+
+/** Same for an arbitrary list of items, including drugs the physician added by hand. */
+export function buildCourseItemsFrom(catalog: CatalogIndex, items: RegimenItem[]): CourseItem[] {
+  return items.flatMap((item) => {
+    const drug = catalog.drugs.get(item.drug_id)
+    if (!drug) return []
+    const params = resolveInfusionParams(catalog, item)
+    const presentations = (catalog.presentationsByDrug.get(item.drug_id) ?? []).map(
+      (presentation) => ({ id: presentation.id, strengthMg: presentation.strength_mg }),
+    )
+    const infusion = buildInfusionParams(item, params)
+    const capMg = item.cap_mg ?? drug.max_single_dose_mg
+    const durationMin = item.duration_min ?? params?.duration_min ?? null
+
+    const courseDrug: CourseDrug = {
+      id: item.id,
+      dose: { value: item.dose_value, unit: item.dose_unit, ...(capMg === null ? {} : { capMg }) },
+      days: item.days,
+      administrationsPerDay: item.administrations_per_day,
+      ...(durationMin === null ? {} : { durationMin }),
+      ...(item.gap_before_min === null ? {} : { gapBeforeMin: item.gap_before_min }),
+      ...(infusion ? { infusion } : {}),
+      ...(presentations.length > 0 ? { presentations } : {}),
+      ...(drug.review_rules ? { reviewRules: drug.review_rules } : {}),
+    }
+
+    return [
+      {
+        item,
+        drug,
+        infusionParams: params,
+        courseDrug,
+        missingInfusionData: item.route === 'iv_infusion' && !infusion,
+      },
+    ]
+  })
+}
+
+function buildInfusionParams(
+  item: RegimenItem,
+  params: DrugInfusionParams | null,
+): CourseDrug['infusion'] {
+  if (item.route !== 'iv_infusion') return undefined
+  // Fallback volume from the regimen template is used when the catalog has no bag volumes.
+  const bagVolumesMl =
+    params && params.bag_volumes_ml.length > 0
+      ? params.bag_volumes_ml
+      : item.fallback_volume_ml === null
+        ? []
+        : [item.fallback_volume_ml]
+  if (bagVolumesMl.length === 0) return undefined
+
+  return {
+    bagVolumesMl,
+    ...(params?.concentration_min_mg_ml === null || params?.concentration_min_mg_ml === undefined
+      ? {}
+      : { concentrationMinMgMl: params.concentration_min_mg_ml }),
+    ...(params?.concentration_max_mg_ml === null || params?.concentration_max_mg_ml === undefined
+      ? {}
+      : { concentrationMaxMgMl: params.concentration_max_mg_ml }),
+    ...(params?.stock_concentration_mg_ml === null ||
+    params?.stock_concentration_mg_ml === undefined
+      ? {}
+      : { stockConcentrationMgMl: params.stock_concentration_mg_ml }),
+  }
+}
+
+/** A drug the physician added to the course by hand, shaped like a regimen item. */
+export function customCourseItem(params: {
+  id: string
+  drugId: string
+  doseValue: number
+  doseUnit: RegimenItem['dose_unit']
+  days: number[]
+  route: RegimenItem['route']
+  durationMin?: number | null
+  sortOrder: number
+}): RegimenItem {
+  return {
+    id: params.id,
+    regimen_id: '',
+    drug_id: params.drugId,
+    role: 'main',
+    route: params.route,
+    dose_value: params.doseValue,
+    dose_unit: params.doseUnit,
+    cap_mg: null,
+    days: params.days,
+    administrations_per_day: 1,
+    infusion_params_id: null,
+    duration_min: params.durationMin ?? null,
+    fallback_solvent: null,
+    fallback_volume_ml: null,
+    gap_before_min: null,
+    notes: null,
+    sort_order: params.sortOrder,
+  }
+}
