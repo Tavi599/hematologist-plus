@@ -1,0 +1,25 @@
+{
+  "$comment": "Імпортовано з Список_препаратів_з_доз,_ДЕЦ,_кер_дост.xlsx 2026-09-18. Взято лише МНН і фасування; параметри розведення та максимальні дози додаються окремо.",
+  "id": "tacrolimus",
+  "name": {
+    "uk": "Такролімус",
+    "en": "Tacrolimus"
+  },
+  "presentations": [
+    {
+      "key": "s0-5",
+      "form": "tablet",
+      "strength_mg": 0.5
+    },
+    {
+      "key": "s1",
+      "form": "tablet",
+      "strength_mg": 1
+    },
+    {
+      "key": "s5",
+      "form": "tablet",
+      "strength_mg": 5
+    }
+  ]
+}
