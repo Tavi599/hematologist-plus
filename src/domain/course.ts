@@ -58,6 +58,11 @@ export interface CourseAdjustments {
   coursePercent?: number
   /** Per-drug reduction by item id, %; replaces the course reduction for that drug. */
   drugPercent?: Record<string, number>
+  /**
+   * Dose the physician typed by hand, mg, by item id. It replaces the calculated dose of that
+   * drug entirely — vials, solvent and rate follow it — and the chain shows what was calculated.
+   */
+  doseOverrideMg?: Record<string, number>
   /** Item ids the physician switched off. */
   disabledIds?: string[]
   /** Manual time shift by item id, min; later administrations of the day move with it. */
@@ -163,6 +168,9 @@ export function calculateCourse(
       variant,
       gfrMlMin: renal?.mlMin,
       reviewContext,
+      ...(adjustments.doseOverrideMg?.[drug.id] === undefined
+        ? {}
+        : { overrideMg: adjustments.doseOverrideMg[drug.id] }),
       reduction: {
         ...(adjustments.coursePercent === undefined
           ? {}
@@ -197,6 +205,8 @@ interface DrugContext {
   gfrMlMin: number | undefined
   reviewContext: { ageYears: number; creatinineClearanceMlMin?: number; bilirubinUmolL?: number }
   reduction: { coursePercent?: number; drugPercent?: number }
+  /** Dose typed by the physician for this drug, mg. */
+  overrideMg?: number
 }
 
 function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult {
@@ -224,7 +234,12 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
     actual: roundDose(variants.actual.doseMg, roundingOptions),
     capped: roundDose(variants.capped.doseMg, roundingOptions),
   }
-  const doseMg = rounded[variant].roundedMg
+  const calculatedMg = rounded[variant].roundedMg
+  const overrideMg = context.overrideMg
+  if (overrideMg !== undefined && (!Number.isFinite(overrideMg) || overrideMg <= 0)) {
+    throw new DomainInputError(`${drug.id}.doseOverrideMg`, 'must be a positive number of mg')
+  }
+  const doseMg = overrideMg ?? calculatedMg
 
   const pack =
     drug.presentations && drug.presentations.length > 0
@@ -267,6 +282,16 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
       ...bsa.steps,
       ...variants[variant].steps,
       ...rounded[variant].steps,
+      ...(overrideMg === undefined
+        ? []
+        : [
+            {
+              key: 'dose.manual' as const,
+              value: overrideMg,
+              unit: 'mg' as const,
+              params: { calculatedMg },
+            },
+          ]),
       ...(infusion?.steps ?? []),
     ],
   }

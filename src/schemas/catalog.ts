@@ -1,6 +1,7 @@
 import { z } from 'zod'
 
 import {
+  doseOptionsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
   idSchema,
@@ -115,6 +116,7 @@ export const regimenItemRowSchema = z.strictObject({
   gap_before_min: nonNegativeIntSchema.nullable(),
   notes: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
+  dose_options: doseOptionsSchema,
 })
 
 export const classificationSystemRowSchema = z.strictObject({

@@ -117,6 +117,36 @@ describe('calculateCourse', () => {
     expect(course.drugs[1]?.doseMg).toBe(50) // per-drug 50% replaces the course 25%
   })
 
+  it('takes a dose typed by hand over the calculated one', () => {
+    const course = calculateCourse(patient, [rituximab, prednisolone], {
+      ...adjustments,
+      coursePercent: 25,
+      doseOverrideMg: { 'r.rituximab': 700 },
+    })
+    const drug = course.drugs[0]!
+    expect(drug.doseMg).toBe(700)
+    // Vials, solvent and rate follow the typed dose, the chain keeps what was calculated.
+    expect(drug.pack?.totalMg).toBe(700)
+    expect(drug.infusion?.drugVolumeMl).toBe(70) // 700 mg at 10 mg/mL
+    expect(drug.steps.at(-1)?.key).not.toBe('dose.manual')
+    expect(drug.steps.find((step) => step.key === 'dose.manual')).toEqual({
+      key: 'dose.manual',
+      value: 700,
+      unit: 'mg',
+      params: { calculatedMg: 563 },
+    })
+    expect(course.drugs[1]?.doseMg).toBe(75) // other drugs keep the course reduction
+  })
+
+  it('rejects a hand-typed dose that is not a positive number of mg', () => {
+    expect(() =>
+      calculateCourse(patient, [rituximab], {
+        ...adjustments,
+        doseOverrideMg: { 'r.rituximab': 0 },
+      }),
+    ).toThrow(DomainInputError)
+  })
+
   it('leaves switched-off drugs out of doses, days and totals', () => {
     const course = calculateCourse(patient, [rituximab, prednisolone], {
       ...adjustments,

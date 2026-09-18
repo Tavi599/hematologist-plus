@@ -73,6 +73,7 @@ data/
 | Поле | |
 |---|---|
 | `key`, `drug_id` | препарат із `drugs/` |
+| `dose_options[]` | та сама доза за іншими протоколами: `dose_value`, `dose_unit`, `cap_mg`, `notes`, `source` (`name`, `url`, `version`, `checkedOn`). Лікар вибирає джерело дози в калькуляторі; доза самої схеми завжди перша. Імена джерел у межах позиції не повторюються |
 | `role` | `main` (типово), `premedication`, `supportive` |
 | `route` | `iv_infusion`, `iv_bolus`, `subcutaneous`, `intramuscular`, `oral`, `intrathecal` |
 | `dose_value`, `dose_unit` | доза **на одне введення**; одиниці `mg_m2`, `mg_kg`, `mg_flat`, `auc` |

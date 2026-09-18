@@ -1,6 +1,7 @@
 import { z } from 'zod'
 
 import {
+  doseOptionsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
   idSchema,
@@ -130,6 +131,8 @@ export const regimenFileSchema = z.strictObject({
         fallback_volume_ml: optionalPositive,
         gap_before_min: optionalNonNegativeInt,
         notes: optionalLocalized,
+        /** Same dose as written by other protocols; the physician picks one in the calculator. */
+        dose_options: doseOptionsSchema.default([]),
       }),
     )
     .min(1),

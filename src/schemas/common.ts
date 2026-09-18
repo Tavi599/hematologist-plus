@@ -84,6 +84,21 @@ export const sourceSchema = z.strictObject({
 
 export const sourcesSchema = z.array(sourceSchema)
 
+/**
+ * The same dose as another protocol writes it. A regimen item keeps its own dose as the default
+ * and lists the alternatives here, so the physician chooses the protocol instead of retyping mg.
+ */
+export const doseOptionSchema = z.strictObject({
+  dose_value: positiveNumberSchema,
+  dose_unit: doseUnitSchema,
+  cap_mg: positiveNumberSchema.nullable().default(null),
+  notes: localizedTextSchema.nullable().default(null),
+  /** Where this dose comes from; `name` is what the physician picks in the list. */
+  source: sourceSchema,
+})
+
+export const doseOptionsSchema = z.array(doseOptionSchema)
+
 /** Drug-specific organ-function checks; same shape as ReviewRules in src/domain/warnings.ts. */
 export const reviewRulesSchema = z.strictObject({
   renal: z.union([z.boolean(), z.strictObject({ belowMlMin: positiveNumberSchema })]).optional(),

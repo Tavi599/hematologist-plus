@@ -1,5 +1,5 @@
 {
-  "$comment": "Цитостатичні дози — протокол NSSG Oxford L.80 R-CHOP-21 (вер. 2.1, вересень 2024). Премедикація — дизайн відділення «Ритуксимаб» (дексаметазон 16 мг + димедрол 1% 3,0 мл у 100 мл NaCl, омепразол 40 мг в/в): британський хлорфенамін замінено на димедрол, як прийнято у відділенні. Омепразол і метоклопрамід ще не заведені в довідник, філграстим дозується в МО — їх тут немає.",
+  "$comment": "Цитостатичні дози — протокол NSSG Oxford L.80 R-CHOP-21 (вер. 2.1, вересень 2024). Премедикація — практика відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл (50 мг) у 100 мл NaCl, омепразол 40 мг в/в (хлорфенамін британського протоколу у відділенні не застосовується). Дози премедикації коригуються на місці — у калькуляторі для цього є поле ручної дози. Омепразол і метоклопрамід ще не заведені в довідник, філграстим дозується в МО.",
   "id": "r-chop-21",
   "short_name": "R-CHOP-21",
   "name": {
@@ -55,7 +55,7 @@
       "drug_id": "dexamethasone",
       "role": "premedication",
       "route": "iv_infusion",
-      "dose_value": 16,
+      "dose_value": 20,
       "dose_unit": "mg_flat",
       "days": [1],
       "duration_min": 30,
@@ -71,15 +71,15 @@
       "drug_id": "diphenhydramine",
       "role": "premedication",
       "route": "iv_infusion",
-      "dose_value": 30,
+      "dose_value": 50,
       "dose_unit": "mg_flat",
       "days": [1],
       "duration_min": 30,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 100,
       "notes": {
-        "uk": "Димедрол 1% — 3,0 мл; у тому самому флаконі, що й дексаметазон (замість хлорфенаміну протоколу)",
-        "en": "Diphenhydramine 1% 3.0 mL, in the same bag as dexamethasone (replaces the protocol's chlorphenamine)"
+        "uk": "Димедрол 1% — 5,0 мл; у тому самому флаконі, що й дексаметазон (замість хлорфенаміну протоколу)",
+        "en": "Diphenhydramine 1% 5.0 mL, in the same bag as dexamethasone (replaces the protocol's chlorphenamine)"
       }
     },
     {

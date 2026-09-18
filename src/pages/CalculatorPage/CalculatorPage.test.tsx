@@ -61,23 +61,58 @@ describe('CalculatorPage', () => {
     expect(screen.getByText(/88,9 мл\/хв/)).toBeInTheDocument()
   })
 
-  it('applies a course reduction and lets a drug be switched off', async () => {
+  it('reduces one drug only when it is marked and lets a drug be switched off', async () => {
     renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
     expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
     await fillPatient()
 
-    await act(async () => {
-      fireEvent.change(screen.getByLabelText('Редукція на курс, %'), { target: { value: '25' } })
-    })
     const rituximab = within(screen.getByRole('table', { name: 'Дози' }))
       .getByText('ДЕМО Ритуксимаб')
       .closest('tr')!
+    // No percent field until the drug is marked as needing a reduction.
+    expect(within(rituximab).queryByLabelText(/^Редукція, %/)).not.toBeInTheDocument()
+    await act(async () => {
+      fireEvent.click(within(rituximab).getByLabelText('потрібна: ДЕМО Ритуксимаб'))
+    })
+    await act(async () => {
+      fireEvent.change(within(rituximab).getByLabelText('Редукція, %: ДЕМО Ритуксимаб'), {
+        target: { value: '25' },
+      })
+    })
     expect(within(rituximab).getAllByText('563 мг')).toHaveLength(2) // 750 − 25% = 562.5
 
     await act(async () => {
       fireEvent.click(within(rituximab).getByRole('switch'))
     })
     expect(screen.queryByText(/NaCl 0,9% 250 мл/)).not.toBeInTheDocument()
+  })
+
+  it('shows the composition of the regimen before the patient data is entered', async () => {
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
+
+    const table = within(await screen.findByRole('table', { name: 'Дози' }))
+    expect(table.getByText('ДЕМО Ритуксимаб')).toBeInTheDocument()
+    // The drugs can be switched off and marked for reduction without any patient data.
+    expect(table.getAllByRole('switch').length).toBeGreaterThan(1)
+    expect(table.getByLabelText('потрібна: ДЕМО Ритуксимаб')).toBeInTheDocument()
+  })
+
+  it('takes a dose typed by hand for one drug', async () => {
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
+    await fillPatient()
+
+    const rituximab = within(screen.getByRole('table', { name: 'Дози' }))
+      .getByText('ДЕМО Ритуксимаб')
+      .closest('tr')!
+    await act(async () => {
+      fireEvent.change(within(rituximab).getByLabelText('Доза вручну, мг: ДЕМО Ритуксимаб'), {
+        target: { value: '700' },
+      })
+    })
+    expect(within(rituximab).getAllByText('700 мг')).toHaveLength(2)
+    expect(within(rituximab).getByText('вручну')).toBeInTheDocument()
   })
 
   it('shows the calculation chain for a dose', async () => {

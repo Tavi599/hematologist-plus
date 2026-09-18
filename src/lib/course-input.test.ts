@@ -6,6 +6,7 @@ import { demoCatalog } from './catalog.fixture'
 import {
   buildCourseItems,
   buildCourseItemsFrom,
+  DEFAULT_DOSE_CHOICE,
   fitsRoute,
   resolveInfusionParams,
 } from './course-input'
@@ -86,6 +87,50 @@ describe('buildCourseItems', () => {
 
   it('returns an empty list for an unknown regimen', () => {
     expect(buildCourseItems(index(), 'nope')).toEqual([])
+  })
+})
+
+describe('dose choices', () => {
+  it('offers the regimen dose first and the alternatives after it', () => {
+    const prednisolone = buildCourseItems(index(), 'r-chop-21').at(-1)!
+    expect(prednisolone.doseChoiceId).toBe(DEFAULT_DOSE_CHOICE)
+    expect(prednisolone.doseChoices).toEqual([
+      {
+        id: DEFAULT_DOSE_CHOICE,
+        label: null,
+        doseValue: 100,
+        doseUnit: 'mg_flat',
+        capMg: null,
+      },
+      {
+        id: 'ДЕМО: інший протокол',
+        label: 'ДЕМО: інший протокол',
+        doseValue: 40,
+        doseUnit: 'mg_m2',
+        capMg: null,
+      },
+    ])
+  })
+
+  it('calculates with the protocol the physician picked', () => {
+    const items = buildCourseItems(index(), 'r-chop-21', {
+      'r-chop-21.prednisolone': 'ДЕМО: інший протокол',
+    })
+    const prednisolone = items.at(-1)!
+    expect(prednisolone.doseChoiceId).toBe('ДЕМО: інший протокол')
+    expect(prednisolone.courseDrug.dose).toEqual({ value: 40, unit: 'mg_m2' })
+  })
+
+  it('falls back to the regimen dose when the choice is unknown', () => {
+    const items = buildCourseItems(index(), 'r-chop-21', { 'r-chop-21.prednisolone': 'nope' })
+    expect(items.at(-1)!.courseDrug.dose).toEqual({ value: 100, unit: 'mg_flat' })
+  })
+
+  it('names the regimen source in the first choice when the regimen has one', () => {
+    const catalog = demoCatalog()
+    catalog.regimens[0]!.sources = [{ name: 'DEMO protocol', checkedOn: '2026-09-19' }]
+    const first = buildCourseItems(indexCatalog(catalog), 'r-chop-21')[0]!
+    expect(first.doseChoices[0]?.label).toBe('DEMO protocol')
   })
 })
 

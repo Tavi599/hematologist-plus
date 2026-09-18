@@ -42,11 +42,12 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     startDate: todayIso(),
     dayStart: '09:00',
     bsaVariant: 'actual' as CourseSettingsValue['bsaVariant'],
-    coursePercent: 0,
   })
   const [customItems, setCustomItems] = useState<RegimenItem[]>([])
   const [disabledIds, setDisabledIds] = useState<string[]>([])
   const [drugPercent, setDrugPercent] = useState<Record<string, number>>({})
+  const [doseOverrideMg, setDoseOverrideMg] = useState<Record<string, number>>({})
+  const [chosenDoses, setChosenDoses] = useState<Record<string, string>>({})
   const [shiftMin, setShiftMin] = useState<Record<string, number>>({})
   const [header, setHeader] = useState(emptyHeader)
 
@@ -70,10 +71,10 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
 
   const items = useMemo(
     () => [
-      ...(regimenId ? buildCourseItems(catalog, regimenId) : []),
-      ...buildCourseItemsFrom(catalog, customItems),
+      ...(regimenId ? buildCourseItems(catalog, regimenId, chosenDoses) : []),
+      ...buildCourseItemsFrom(catalog, customItems, chosenDoses),
     ],
-    [catalog, regimenId, customItems],
+    [catalog, regimenId, customItems, chosenDoses],
   )
 
   const { course, error } = useMemo<{ course: CourseResult | null; error: unknown }>(() => {
@@ -95,8 +96,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
             startDateIso: courseSettings.startDate,
             dayStart: courseSettings.dayStart,
             bsaVariant: courseSettings.bsaVariant,
-            coursePercent: courseSettings.coursePercent,
             drugPercent,
+            doseOverrideMg,
             disabledIds,
             shiftMin,
           },
@@ -106,14 +107,21 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     } catch (thrown) {
       return { course: null, error: thrown }
     }
-  }, [patient, items, courseSettings, drugPercent, disabledIds, shiftMin])
+  }, [patient, items, courseSettings, drugPercent, doseOverrideMg, disabledIds, shiftMin])
 
   return (
     <Stack>
       <PatientForm onChange={setPatient} />
       <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
 
-      {!patient && <Text c="dimmed">{t('calculator.patient.incomplete')}</Text>}
+      {!patient && items.length > 0 && (
+        <Alert color="blue" variant="light">
+          {t('calculator.patient.incomplete')}
+        </Alert>
+      )}
+      {!patient && items.length === 0 && (
+        <Text c="dimmed">{t('calculator.patient.incomplete')}</Text>
+      )}
 
       {error !== null && (
         <Alert color="red" title={t('calculator.error.title')}>
@@ -147,12 +155,13 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
         </>
       )}
 
-      {items.length > 0 && course && (
+      {items.length > 0 && (
         <DoseTable
           items={items}
           course={course}
           disabledIds={disabledIds}
           drugPercent={drugPercent}
+          doseOverrideMg={doseOverrideMg}
           customIds={customItems.map((item) => item.id)}
           onToggle={(id, enabled) =>
             setDisabledIds((current) =>
@@ -160,7 +169,19 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
             )
           }
           onReduction={(id, percent) =>
-            setDrugPercent((current) => ({ ...current, [id]: percent }))
+            setDrugPercent((current) => {
+              const { [id]: _removed, ...rest } = current
+              return percent === null ? rest : { ...rest, [id]: percent }
+            })
+          }
+          onDoseChoice={(id, choiceId) =>
+            setChosenDoses((current) => ({ ...current, [id]: choiceId }))
+          }
+          onDoseOverride={(id, doseMg) =>
+            setDoseOverrideMg((current) => {
+              const { [id]: _removed, ...rest } = current
+              return doseMg === null ? rest : { ...rest, [id]: doseMg }
+            })
           }
           onRemove={(id) => setCustomItems((current) => current.filter((item) => item.id !== id))}
         />

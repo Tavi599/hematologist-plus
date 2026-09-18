@@ -7,10 +7,51 @@ export interface CourseItem {
   item: RegimenItem
   drug: Drug
   infusionParams: DrugInfusionParams | null
+  /** The dose as this regimen writes it plus the same dose from other protocols. */
+  doseChoices: DoseChoice[]
+  /** Id of the choice the calculation used. */
+  doseChoiceId: string
   /** What the calculation engine needs; `infusion` is set only when a volume can be derived. */
   courseDrug: CourseDrug
   /** Infusion that cannot be calculated: no catalog parameters and no fallback in the regimen. */
   missingInfusionData: boolean
+}
+
+/** One dose the physician can pick for an item: the regimen's own, or another protocol's. */
+export interface DoseChoice {
+  /** `DEFAULT_DOSE_CHOICE` for the dose written in the regimen, otherwise the source name. */
+  id: string
+  /** Name of the protocol; null for the regimen's own dose when the regimen names no source. */
+  label: string | null
+  doseValue: number
+  doseUnit: RegimenItem['dose_unit']
+  capMg: number | null
+  url?: string
+}
+
+export const DEFAULT_DOSE_CHOICE = 'default'
+
+/** The regimen's own dose first, then every alternative recorded for the item. */
+export function doseChoices(catalog: CatalogIndex, item: RegimenItem): DoseChoice[] {
+  const regimenSource = catalog.regimens.get(item.regimen_id)?.sources[0]
+  return [
+    {
+      id: DEFAULT_DOSE_CHOICE,
+      label: regimenSource?.name ?? null,
+      doseValue: item.dose_value,
+      doseUnit: item.dose_unit,
+      capMg: item.cap_mg,
+      ...(regimenSource?.url === undefined ? {} : { url: regimenSource.url }),
+    },
+    ...item.dose_options.map((option) => ({
+      id: option.source.name,
+      label: option.source.name,
+      doseValue: option.dose_value,
+      doseUnit: option.dose_unit,
+      capMg: option.cap_mg,
+      ...(option.source.url === undefined ? {} : { url: option.source.url }),
+    })),
+  ]
 }
 
 /** Infusion parameters of a drug: the one the item points at, else the default, else the only one. */
@@ -26,26 +67,40 @@ export function resolveInfusionParams(
 }
 
 /** Builds the calculation input for every item of a regimen, in administration order. */
-export function buildCourseItems(catalog: CatalogIndex, regimenId: string): CourseItem[] {
-  return buildCourseItemsFrom(catalog, catalog.itemsByRegimen.get(regimenId) ?? [])
+export function buildCourseItems(
+  catalog: CatalogIndex,
+  regimenId: string,
+  chosenDoses?: Record<string, string>,
+): CourseItem[] {
+  return buildCourseItemsFrom(catalog, catalog.itemsByRegimen.get(regimenId) ?? [], chosenDoses)
 }
 
 /** Same for an arbitrary list of items, including drugs the physician added by hand. */
-export function buildCourseItemsFrom(catalog: CatalogIndex, items: RegimenItem[]): CourseItem[] {
+export function buildCourseItemsFrom(
+  catalog: CatalogIndex,
+  items: RegimenItem[],
+  chosenDoses?: Record<string, string>,
+): CourseItem[] {
   return items.flatMap((item) => {
     const drug = catalog.drugs.get(item.drug_id)
     if (!drug) return []
+    const choices = doseChoices(catalog, item)
+    const chosen = choices.find((choice) => choice.id === chosenDoses?.[item.id]) ?? choices[0]!
     const params = resolveInfusionParams(catalog, item)
     const presentations = (catalog.presentationsByDrug.get(item.drug_id) ?? [])
       .filter((presentation) => fitsRoute(presentation.form, item.route))
       .map((presentation) => ({ id: presentation.id, strengthMg: presentation.strength_mg }))
     const infusion = buildInfusionParams(item, params)
-    const capMg = item.cap_mg ?? drug.max_single_dose_mg
+    const capMg = chosen.capMg ?? drug.max_single_dose_mg
     const durationMin = item.duration_min ?? params?.duration_min ?? null
 
     const courseDrug: CourseDrug = {
       id: item.id,
-      dose: { value: item.dose_value, unit: item.dose_unit, ...(capMg === null ? {} : { capMg }) },
+      dose: {
+        value: chosen.doseValue,
+        unit: chosen.doseUnit,
+        ...(capMg === null ? {} : { capMg }),
+      },
       days: item.days,
       administrationsPerDay: item.administrations_per_day,
       ...(durationMin === null ? {} : { durationMin }),
@@ -60,6 +115,8 @@ export function buildCourseItemsFrom(catalog: CatalogIndex, items: RegimenItem[]
         item,
         drug,
         infusionParams: params,
+        doseChoices: choices,
+        doseChoiceId: chosen.id,
         courseDrug,
         missingInfusionData: item.route === 'iv_infusion' && !infusion,
       },
@@ -125,6 +182,7 @@ export function customCourseItem(params: {
     gap_before_min: null,
     notes: null,
     sort_order: params.sortOrder,
+    dose_options: [],
   }
 }
 

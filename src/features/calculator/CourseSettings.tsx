@@ -1,4 +1,4 @@
-import { Card, Group, NumberInput, Select, Stack, Text, TextInput, Title } from '@mantine/core'
+import { Card, Group, Select, Stack, Text, TextInput, Title } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
 
 import type { BsaVariant } from '../../domain'
@@ -11,7 +11,6 @@ export interface CourseSettingsValue {
   startDate: string
   dayStart: string
   bsaVariant: BsaVariant
-  coursePercent: number
 }
 
 /** Regimen choice and the settings that apply to the whole course. */
@@ -87,13 +86,6 @@ export function CourseSettings({
             onChange={(variant) =>
               patch({ bsaVariant: (variant as BsaVariant | null) ?? 'actual' })
             }
-          />
-          <NumberInput
-            label={t('calculator.course.coursePercent')}
-            min={0}
-            max={100}
-            value={value.coursePercent}
-            onChange={(percent) => patch({ coursePercent: Number(percent) || 0 })}
           />
         </Group>
       </Stack>

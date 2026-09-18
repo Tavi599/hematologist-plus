@@ -2,7 +2,10 @@
   "$comment": "DEMO data for testing the data pipeline only. Not for clinical use; replaced by real data in stage 3.",
   "id": "r-chop-21",
   "short_name": "R-CHOP-21",
-  "name": { "uk": "ДЕМО R-CHOP-21", "en": "DEMO R-CHOP-21" },
+  "name": {
+    "uk": "ДЕМО R-CHOP-21",
+    "en": "DEMO R-CHOP-21"
+  },
   "cycle_length_days": 21,
   "default_cycles": 6,
   "items": [
@@ -45,7 +48,17 @@
       "route": "oral",
       "dose_value": 100,
       "dose_unit": "mg_flat",
-      "days": [1, 2, 3, 4, 5]
+      "days": [1, 2, 3, 4, 5],
+      "dose_options": [
+        {
+          "dose_value": 40,
+          "dose_unit": "mg_m2",
+          "source": {
+            "name": "ДЕМО: інший протокол",
+            "checkedOn": "2026-09-19"
+          }
+        }
+      ]
     }
   ],
   "print_forms": {

@@ -113,6 +113,13 @@ export function checkCatalog(rows: CatalogRows): CatalogIssue[] {
     }
   }
 
+  for (const item of rows.regimen_items) {
+    const names = item.dose_options.map((option) => option.source.name)
+    if (new Set(names).size !== names.length) {
+      error('regimen_items', item.id, 'dose_options: two alternatives from the same source')
+    }
+  }
+
   // A regimen is kept even when a drug cannot be obtained; the report says which ones.
   const drugById = new Map(rows.drugs.map((drug) => [drug.id, drug]))
   const blockedByRegimen = new Map<string, string[]>()
