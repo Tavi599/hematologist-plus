@@ -23,9 +23,13 @@ import { printFormsRowSchema } from './print-forms'
 /**
  * Row schemas of the catalog tables, exactly as returned by Supabase.
  * Keys must match the columns in supabase/migrations (checked by catalog.test.ts).
+ *
+ * Deliberately NOT strict: the database is shared with app versions that are already
+ * installed. A migration that adds a column must not make every older client reject
+ * every row — unknown columns are dropped instead.
  */
 
-export const hospitalRowSchema = z.strictObject({
+export const hospitalRowSchema = z.object({
   id: idSchema,
   institution_name: nonEmptyTextSchema,
   department_name: nonEmptyTextSchema,
@@ -36,7 +40,7 @@ export const hospitalRowSchema = z.strictObject({
   sort_order: sortOrderSchema,
 })
 
-export const drugRowSchema = z.strictObject({
+export const drugRowSchema = z.object({
   id: idSchema,
   name: localizedTextSchema,
   trade_names: z.array(nonEmptyTextSchema),
@@ -52,7 +56,7 @@ export const drugRowSchema = z.strictObject({
   availability: drugAvailabilitySchema,
 })
 
-export const drugPresentationRowSchema = z.strictObject({
+export const drugPresentationRowSchema = z.object({
   id: idSchema,
   drug_id: idSchema,
   form: presentationFormSchema,
@@ -85,7 +89,7 @@ export const drugInfusionParamsRowSchema = z
     { message: 'concentration_min_mg_ml must not exceed concentration_max_mg_ml' },
   )
 
-export const regimenRowSchema = z.strictObject({
+export const regimenRowSchema = z.object({
   id: idSchema,
   short_name: nonEmptyTextSchema,
   name: localizedTextSchema,
@@ -97,7 +101,7 @@ export const regimenRowSchema = z.strictObject({
   sources: sourcesSchema,
 })
 
-export const regimenItemRowSchema = z.strictObject({
+export const regimenItemRowSchema = z.object({
   id: idSchema,
   regimen_id: idSchema,
   drug_id: idSchema,
@@ -119,7 +123,7 @@ export const regimenItemRowSchema = z.strictObject({
   dose_options: doseOptionsSchema,
 })
 
-export const classificationSystemRowSchema = z.strictObject({
+export const classificationSystemRowSchema = z.object({
   id: idSchema,
   name: localizedTextSchema,
   version: z.string().nullable(),
@@ -127,7 +131,7 @@ export const classificationSystemRowSchema = z.strictObject({
   sort_order: sortOrderSchema,
 })
 
-export const diseaseRowSchema = z.strictObject({
+export const diseaseRowSchema = z.object({
   id: idSchema,
   name: localizedTextSchema,
   summary: localizedTextSchema.nullable(),
@@ -136,7 +140,7 @@ export const diseaseRowSchema = z.strictObject({
   sort_order: sortOrderSchema,
 })
 
-export const diseaseCodeRowSchema = z.strictObject({
+export const diseaseCodeRowSchema = z.object({
   id: idSchema,
   disease_id: idSchema,
   system_id: idSchema,
@@ -145,7 +149,7 @@ export const diseaseCodeRowSchema = z.strictObject({
   sort_order: sortOrderSchema,
 })
 
-export const treatmentNodeRowSchema = z.strictObject({
+export const treatmentNodeRowSchema = z.object({
   id: idSchema,
   disease_id: idSchema,
   parent_id: idSchema.nullable(),
@@ -155,7 +159,7 @@ export const treatmentNodeRowSchema = z.strictObject({
   sort_order: sortOrderSchema,
 })
 
-export const treatmentNodeRegimenRowSchema = z.strictObject({
+export const treatmentNodeRegimenRowSchema = z.object({
   id: idSchema,
   node_id: idSchema,
   regimen_id: idSchema,

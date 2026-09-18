@@ -46,6 +46,18 @@ describe('database schema', () => {
     expect(tables.get(table)).toEqual(Object.keys(catalogRowSchemas[table].shape))
   })
 
+  it.each(CATALOG_TABLES)('%s accepts a column added by a later migration', (table) => {
+    // An installed app must keep reading the database after a migration adds a column,
+    // otherwise every client breaks until the user accepts the update.
+    const row = Object.fromEntries(
+      Object.entries(catalogRowSchemas[table].shape).map(([key]) => [key, undefined]),
+    )
+    const parsed = catalogRowSchemas[table].safeParse({ ...row, column_from_the_future: 'x' })
+    expect(parsed.error?.issues.some((issue) => issue.path[0] === 'column_from_the_future')).toBe(
+      false,
+    )
+  })
+
   it.each(CATALOG_TABLES)(
     '%s has RLS, a read policy and no write grants for API roles',
     (table) => {

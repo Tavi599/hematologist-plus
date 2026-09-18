@@ -226,5 +226,10 @@
       "infusion": "dilution"
     },
     "itemTitle": "Sources behind this item"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "body": "The page could not be shown. Usually the saved offline copy of the catalog, written by an earlier version, is the cause. Clear it and reload: no patient data is stored anywhere, so nothing is lost.",
+    "reset": "Clear the saved copy and reload"
   }
 }

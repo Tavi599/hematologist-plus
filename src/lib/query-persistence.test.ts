@@ -1,7 +1,9 @@
 import { dehydrate, QueryClient } from '@tanstack/react-query'
 import { describe, expect, it } from 'vitest'
 
-import { shouldPersistQuery } from './query-persistence'
+import { emptyCatalog } from '../schemas/catalog'
+import { demoCatalog } from './catalog.fixture'
+import { keepOnlyReadableCatalog, shouldPersistQuery } from './query-persistence'
 import { CATALOG_QUERY_ROOT } from './use-catalog'
 
 const persistedKeys = (client: QueryClient) =>
@@ -40,5 +42,29 @@ describe('shouldPersistQuery', () => {
       })
       .catch(() => undefined)
     expect(persistedKeys(client)).toEqual([])
+  })
+})
+
+describe('keepOnlyReadableCatalog', () => {
+  it('keeps a copy this version can read', () => {
+    const catalog = demoCatalog()
+    expect(keepOnlyReadableCatalog(catalog)).toBe(catalog)
+    expect(keepOnlyReadableCatalog(emptyCatalog())).toEqual(emptyCatalog())
+  })
+
+  it('drops a copy written before a column was added', () => {
+    const catalog = demoCatalog() as unknown as Record<string, unknown[] | undefined>
+    // A copy from a version that did not know about dose_options yet.
+    catalog.regimen_items = (catalog.regimen_items ?? []).map((row) => {
+      const { dose_options: _dropped, ...rest } = row as { dose_options: unknown }
+      return rest
+    })
+    expect(keepOnlyReadableCatalog(catalog)).toBeUndefined()
+  })
+
+  it('drops anything that is not a catalog', () => {
+    expect(keepOnlyReadableCatalog(null)).toBeUndefined()
+    expect(keepOnlyReadableCatalog('nope')).toBeUndefined()
+    expect(keepOnlyReadableCatalog({ drugs: 'not an array' })).toBeUndefined()
   })
 })
