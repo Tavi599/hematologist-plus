@@ -180,6 +180,22 @@ describe('calculateCourse', () => {
     expect(course.drugs[0]?.packTotals).toEqual([])
   })
 
+  it('warns when no bag gives an allowed concentration', () => {
+    // 750 mg cannot reach 1 mg/mL in a 100 mL bag without passing 4 mg/mL: the nurse has to be
+    // told, but the calculation still names the bag that is at least not over-concentrated.
+    const dense: CourseDrug = {
+      ...rituximab,
+      infusion: { concentrationMinMgMl: 4, concentrationMaxMgMl: 5, bagVolumesMl: [500] },
+    }
+    const course = calculateCourse(patient, [dense], adjustments)
+
+    expect(course.drugs[0]?.infusion?.issue).toBe('concentration_out_of_range')
+    expect(course.drugs[0]?.warnings).toContainEqual({
+      code: 'infusion.concentrationOutOfRange',
+      params: { concentration: 1.5, unit: 'mg_ml' },
+    })
+  })
+
   it('needs creatinine for AUC doses and then uses Calvert', () => {
     const carboplatin: CourseDrug = {
       id: 'r.carboplatin',

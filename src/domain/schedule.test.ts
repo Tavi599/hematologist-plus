@@ -160,4 +160,17 @@ describe('scheduleAdministrations', () => {
       ]),
     ).toThrow(DomainInputError)
   })
+
+  it('validates the offset and the interval of the support of the day', () => {
+    expect(() =>
+      scheduleAdministrations('09:00', [
+        { id: 'x', block: 'day_support' as const, durationMin: 0, anchorOffsetMin: -30.5 },
+      ]),
+    ).toThrow(DomainInputError)
+    expect(() =>
+      scheduleAdministrations('09:00', [
+        { id: 'x', block: 'day_support' as const, durationMin: 0, intervalMin: -480 },
+      ]),
+    ).toThrow(DomainInputError)
+  })
 })

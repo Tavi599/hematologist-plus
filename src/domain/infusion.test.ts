@@ -131,4 +131,12 @@ describe('rate raised in steps', () => {
     expect(() => rampSchedule(100, { ...first, maxMlH: 10 })).toThrow(DomainInputError)
     expect(() => rampSchedule(100, { ...first, startMlH: 0 })).toThrow(DomainInputError)
   })
+
+  it('refuses a ramp that would take hundreds of steps', () => {
+    // A rate capped at 2 mL/h empties a 500 mL bag in days; a sheet with 200+ rate lines is a
+    // sign the parameters are wrong, not something to print.
+    expect(() => rampSchedule(500, { startMlH: 1, stepMlH: 0.5, everyMin: 1, maxMlH: 2 })).toThrow(
+      DomainInputError,
+    )
+  })
 })

@@ -56,7 +56,10 @@ Data format and schema-change checklist: [docs/data-format.md](docs/data-format.
 
 Importing a source list: `npx tsx scripts/import-sources/drugs-from-lists.ts <file.xlsx> [--write]`. Importers never guess: unknown names, ambiguous strengths and values that disagree between files are reported and left out. Registry flags (Нацперелік / ДЕЦ / керований доступ) are not imported at all.
 
-Run all of lint, format:check, typecheck, test, build before declaring work done — CI runs the same.
+Run all of lint, format:check, typecheck, **test:coverage** (not just `test` — the 95% branch
+threshold is what CI enforces), data:validate, data:validate:demo and build before declaring work
+done. CI runs the same, and a red build means the deployed site keeps serving the previous
+version while the database already has the new columns.
 
 Environment quirks (Windows dev machine):
 - Node is not on PATH in the Bash tool: prefix commands with `export PATH="/c/Program Files/nodejs:$PATH";`.

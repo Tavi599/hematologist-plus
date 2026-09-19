@@ -8,6 +8,13 @@ const rituximab = [
   { id: 'ritux-500', strengthAmount: 500 },
 ]
 
+// Strengths this small next to a dose this large blow past the lookup table (see MAX_TABLE_SIZE);
+// the fallback must still cover the dose instead of throwing.
+const tinyPacks = [
+  { id: 'tiny-0.3', strengthAmount: 0.3 },
+  { id: 'tiny-0.5', strengthAmount: 0.5 },
+]
+
 describe('selectPresentations', () => {
   it('covers the dose with least waste, then fewest vials', () => {
     // 682 mg → 700 mg = 500 + 2 × 100 (3 vials), not 7 × 100
@@ -71,6 +78,14 @@ describe('selectPresentations', () => {
     )
     expect(() => selectPresentations(-1, rituximab)).toThrow(DomainInputError)
   })
+
+  it('falls back to the largest pack when the combination table would be too big', () => {
+    const selection = selectPresentations(25000, tinyPacks)
+    expect(selection.items).toEqual([{ presentation: tinyPacks[1], count: 50000 }])
+    expect(selection.totalAmount).toBe(25000)
+    expect(selection.wasteAmount).toBe(0)
+    expect(selection.unitCount).toBe(50000)
+  })
 })
 
 describe('nearestWholeUnitAmounts', () => {
@@ -80,6 +95,10 @@ describe('nearestWholeUnitAmounts', () => {
 
   it('returns null below when the dose is smaller than any vial', () => {
     expect(nearestWholeUnitAmounts(50, rituximab)).toEqual({ below: null, above: 100 })
+  })
+
+  it('has no lower amount when the combination table would be too big', () => {
+    expect(nearestWholeUnitAmounts(25000, tinyPacks)).toEqual({ below: null, above: 25000 })
   })
 })
 
