@@ -1,0 +1,24 @@
+{
+  "id": "multiple-myeloma",
+  "name": {
+    "uk": "Множинна мієлома",
+    "en": "Multiple myeloma"
+  },
+  "summary": {
+    "uk": "Пухлина плазматичних клітин із моноклональним білком, ураженням кісток, нирок і анемією.",
+    "en": "Plasma cell tumour with a monoclonal protein, bone lesions, renal impairment and anaemia."
+  },
+  "codes": [{ "system_id": "icd-10", "code": "C90.0", "is_primary": true }],
+  "treatment": [
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": { "uk": "Перша лінія", "en": "First line" },
+      "description": {
+        "uk": "Індукція трикомпонентною схемою; у придатних пацієнтів далі — високі дози мелфалану з аутологічною трансплантацією.",
+        "en": "Triplet induction; in fit patients followed by high-dose melphalan with autologous transplantation."
+      },
+      "regimens": [{ "regimen_id": "vcd" }, { "regimen_id": "vrd" }]
+    }
+  ]
+}

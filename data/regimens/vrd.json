@@ -1,0 +1,126 @@
+{
+  "$comment": "Дози — протокол NSSG Oxford MM.6 VRD (вер. 1.7, червень 2019). Тромбопрофілактика (аспірин або НМГ) обов'язкова з леналідомідом, але її не внесено: вибір препарата залежить від ризику, а доза — не за площею тіла.",
+  "id": "vrd",
+  "short_name": "VRD",
+  "name": {
+    "uk": "VRD",
+    "en": "VRD"
+  },
+  "description": {
+    "uk": "Бортезоміб, леналідомід, дексаметазон. Цикл 21 день.",
+    "en": "Bortezomib, lenalidomide, dexamethasone. 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.6 VRD",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-6-bortezomib-len-dex.pdf",
+      "version": "1.7 (06.2019)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [
+        1,
+        4,
+        8,
+        11
+      ],
+      "notes": {
+        "uk": "Підшкірно; між дозами щонайменше 72 години. Можливий і щотижневий режим — дні 1, 8, 15.",
+        "en": "Subcutaneous; at least 72 hours between doses. A weekly schedule on days 1, 8 and 15 is also used."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "notes": {
+        "uk": "Бажано на ніч",
+        "en": "Preferably at night"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        4,
+        5,
+        8,
+        9,
+        11,
+        12
+      ],
+      "notes": {
+        "uk": "У день введення бортезомібу і наступного дня",
+        "en": "On the day of and the day after each bortezomib dose"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування",
+        "en": "Antiviral prophylaxis during treatment"
+      }
+    }
+  ]
+}

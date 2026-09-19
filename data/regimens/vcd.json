@@ -1,0 +1,133 @@
+{
+  "$comment": "Дози — протокол NSSG Oxford MM.12 CyBorDex (вер. 3.0, вересень 2024). Ко-тримоксазол не внесений: його немає в довіднику відділення. Циклофосфамід тут пероральний, тож рахується в таблетках — звірте з наявними у відділенні формами.",
+  "id": "vcd",
+  "short_name": "VCD",
+  "name": {
+    "uk": "VCD (CyBorDex)",
+    "en": "VCD (CyBorDex)"
+  },
+  "description": {
+    "uk": "Бортезоміб, циклофосфамід, дексаметазон. Цикл 21 день.",
+    "en": "Bortezomib, cyclophosphamide, dexamethasone. 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.12 CyBorDex (VCD)",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-12-cy-bor-dex.pdf",
+      "version": "3.0 (09.2024)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [
+        1,
+        8,
+        15
+      ],
+      "notes": {
+        "uk": "Підшкірно, струминно за 3–5 хвилин",
+        "en": "Subcutaneous bolus over 3 to 5 minutes"
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 500,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        8,
+        15
+      ],
+      "notes": {
+        "uk": "Перорально або внутрішньовенно; альтернатива — 50 мг щодня в дні 1–21",
+        "en": "Oral or intravenous; the alternative is 50 mg daily on days 1-21"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        8,
+        9,
+        15,
+        16
+      ],
+      "notes": {
+        "uk": "У день введення бортезомібу і наступного дня",
+        "en": "On the day of and the day after each bortezomib dose"
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл",
+        "en": "Tumour lysis prophylaxis, cycle 1"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Впродовж лікування і 3 місяці після; при КК < 10 мл/хв — 200 мг двічі на добу",
+        "en": "During treatment and for 3 months after; 200 mg twice a day if CrCl < 10 mL/min"
+      }
+    }
+  ]
+}
