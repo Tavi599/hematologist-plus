@@ -17,13 +17,17 @@ export function diseaseCodeId(diseaseId: string, systemId: string, code: string)
 
 /** Converts the authoring format into rows of every table. Pure; no validation. */
 /**
- * Where a row goes when the file does not say: chemotherapy and premedication into the hourly
- * chain, supportive injections onto the infusion sheet next to it, tablets onto the inpatient
- * sheet where no shift of an infusion can move them.
+ * Where a row goes when the file does not say. Anything swallowed goes to the inpatient sheet,
+ * prednisolone of a CHOP included: tablets are given on the ward round and must not move when
+ * an infusion is shifted. The exception is premedication, which is taken before the drip and
+ * belongs to it. Supportive injections hang off the infusion of the day; the chemotherapy and
+ * its premedication form the hourly chain.
  */
 function defaultBlock(role: string, route: string): 'infusion' | 'day_support' | 'ward' {
-  if (role !== 'supportive') return 'infusion'
-  return route === 'oral' ? 'ward' : 'day_support'
+  // A premedication tablet is swallowed half an hour before the drip and has to move with it.
+  if (role === 'premedication') return 'infusion'
+  if (route === 'oral') return 'ward'
+  return role === 'supportive' ? 'day_support' : 'infusion'
 }
 
 export function flattenDataSet(data: DataSet): SyncRows {

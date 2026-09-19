@@ -19,8 +19,11 @@ describe('groupCourseItems', () => {
   it('keeps premedication with the drug it precedes', () => {
     const groups = grouped((rows) => {
       const items = rows.regimen_items
-      items.find((row) => row.drug_id === 'prednisolone')!.role = 'premedication'
-      items.find((row) => row.drug_id === 'prednisolone')!.sort_order = -1
+      const prednisolone = items.find((row) => row.drug_id === 'prednisolone')!
+      // Premedication is taken before the drip, so it is timed with it even as a tablet.
+      prednisolone.role = 'premedication'
+      prednisolone.block = 'infusion'
+      prednisolone.sort_order = -1
     })
     expect(groups[0]).toEqual({
       kind: 'premedicated',
@@ -44,7 +47,10 @@ describe('groupCourseItems', () => {
 
   it('shows premedication that has no drug after it', () => {
     const groups = grouped((rows) => {
-      for (const row of rows.regimen_items) row.role = 'premedication'
+      for (const row of rows.regimen_items) {
+        row.role = 'premedication'
+        row.block = 'infusion'
+      }
     })
     expect(groups).toHaveLength(1)
     expect(groups[0]?.kind).toBe('premedicated')
