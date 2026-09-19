@@ -8,13 +8,50 @@
     "uk": "Агресивна В-клітинна неходжкінська лімфома; найчастіша лімфома в дорослих.",
     "en": "Aggressive B-cell non-Hodgkin lymphoma; the most common lymphoma in adults."
   },
-  "codes": [{ "system_id": "icd-10", "code": "C83.3", "is_primary": true }],
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C83.3",
+      "is_primary": true
+    }
+  ],
   "treatment": [
     {
       "key": "first-line",
       "kind": "line",
-      "title": { "uk": "Перша лінія", "en": "First line" },
-      "regimens": [{ "regimen_id": "r-chop-21" }]
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "regimens": [
+        {
+          "regimen_id": "r-chop-21"
+        },
+        {
+          "regimen_id": "r-mini-chop"
+        }
+      ],
+      "description": {
+        "uk": "R-CHOP-21 — стандарт; R-mini-CHOP — для пацієнтів понад 80 років або зі зниженим функціональним станом.",
+        "en": "R-CHOP-21 is the standard; R-mini-CHOP is for patients over 80 or with a poor performance status."
+      }
+    },
+    {
+      "key": "salvage",
+      "kind": "line",
+      "title": {
+        "uk": "Друга лінія (сальвадж)",
+        "en": "Second line (salvage)"
+      },
+      "description": {
+        "uk": "Мета — досягти відповіді й перейти до високодозової терапії з аутологічною трансплантацією у придатних пацієнтів.",
+        "en": "The aim is a response followed by high-dose therapy with autologous transplantation in fit patients."
+      },
+      "regimens": [
+        {
+          "regimen_id": "r-eshap"
+        }
+      ]
     }
   ]
 }

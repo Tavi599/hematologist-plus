@@ -1,0 +1,237 @@
+{
+  "$comment": "Дози — протокол NSSG Oxford L.35 E-SHAP / R-ESHAP. Ритуксимаб — лише для CD20-позитивних лімфом (варіант R-ESHAP), інакше вимкніть його в калькуляторі. Амбулаторний варіант цисплатину (100 мг/м² безперервно за 96 годин) не внесений. Гідратація 0,9% NaCl 500 мл до кожного введення цисплатину і щонайменше 500 мл рідини після — у рядки схеми не входить.",
+  "id": "r-eshap",
+  "short_name": "R-ESHAP",
+  "name": {
+    "uk": "E-SHAP / R-ESHAP",
+    "en": "E-SHAP / R-ESHAP"
+  },
+  "description": {
+    "uk": "Етопозид, метилпреднізолон, цисплатин, цитарабін ± ритуксимаб. Цикл 21–28 днів.",
+    "en": "Etoposide, methylprednisolone, cisplatin, cytarabine, with or without rituximab. 21-28 day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.35 E-SHAP / R-ESHAP",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-35-e-shap-and-r-eshap.pdf",
+      "version": "перевірено 2026-09-19",
+      "checkedOn": "2026-09-19"
+    },
+    {
+      "name": "Дизайн відділення «Ритуксимаб» (Google Таблиці)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [
+        1
+      ],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до ритуксимабу",
+        "en": "At least 30 minutes before rituximab"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [
+        1
+      ],
+      "notes": {
+        "uk": "Премедикація за практикою відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл у 100 мл 0,9% NaCl; у протоколі — хлорфенамін 10 мг в/в",
+        "en": "Department premedication: dexamethasone 20 mg with diphenhydramine 50 mg in 100 mL 0.9% NaCl; the protocol uses chlorphenamine 10 mg IV"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1
+      ],
+      "notes": {
+        "uk": "Премедикація за практикою відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл у 100 мл 0,9% NaCl; у протоколі — хлорфенамін 10 мг в/в",
+        "en": "Department premedication: dexamethasone 20 mg with diphenhydramine 50 mg in 100 mL 0.9% NaCl; the protocol uses chlorphenamine 10 mg IV"
+      }
+    },
+    {
+      "key": "methylprednisolone",
+      "drug_id": "methylprednisolone",
+      "route": "iv_infusion",
+      "dose_value": 500,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "duration_min": 15,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl за 15 хв; у день 1 — не пізніше ніж за 30 хв до ритуксимабу. Можливий і пероральний прийом.",
+        "en": "In 100 mL 0.9% NaCl over 15 minutes; on day 1 at least 30 minutes before rituximab. Oral administration is also possible."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [
+        1
+      ],
+      "notes": {
+        "uk": "Лише у варіанті R-ESHAP (CD20-позитивні лімфоми); максимальна швидкість 400 мг/год",
+        "en": "Only in R-ESHAP (CD20-positive lymphoma); maximum rate 400 mg/h"
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 40,
+      "dose_unit": "mg_m2",
+      "days": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "duration_min": 60,
+      "notes": {
+        "uk": "У 250–500 мл 0,9% NaCl за 1 годину; концентрація 0,2–0,4 мг/мл",
+        "en": "In 250-500 mL 0.9% NaCl over 1 hour; concentration 0.2-0.4 mg/mL"
+      }
+    },
+    {
+      "key": "cisplatin",
+      "drug_id": "cisplatin",
+      "route": "iv_infusion",
+      "dose_value": 25,
+      "dose_unit": "mg_m2",
+      "days": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "duration_min": 1320,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "У стаціонарі: 25 мг/м² у 1 л 0,9% NaCl за 22 години щодня в дні 1–4 (разом 100 мг/м²). Потрібна гідратація до і після введення.",
+        "en": "Inpatient: 25 mg/m2 in 1 L 0.9% NaCl over 22 hours on days 1-4 (100 mg/m2 in total). Pre- and post-hydration are required."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [
+        5
+      ],
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl за 3 години",
+        "en": "In 250 mL 0.9% NaCl over 3 hours"
+      }
+    },
+    {
+      "key": "ondansetron",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "administrations_per_day": 2
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл",
+        "en": "Tumour lysis prophylaxis, cycle 1"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Впродовж лікування і 3 місяці після",
+        "en": "During treatment and for 3 months after"
+      }
+    }
+  ]
+}
