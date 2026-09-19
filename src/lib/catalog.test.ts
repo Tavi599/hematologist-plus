@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 
-import { CATALOG_TABLES, emptyCatalog, type CatalogTable } from '../schemas/catalog'
+import { CATALOG_TABLES, emptyCatalog, type SyncTable } from '../schemas/catalog'
 import { CatalogLoadError, createSupabaseTableFetcher, fetchCatalog } from './catalog'
 import { ICD10_SYSTEM_ID, indexCatalog, primaryCode } from './catalog-index'
 import { demoCatalog } from './catalog.fixture'
@@ -8,16 +8,18 @@ import { demoCatalog } from './catalog.fixture'
 describe('fetchCatalog', () => {
   it('loads and validates every table', async () => {
     const catalog = demoCatalog()
-    const fetchTable = vi.fn(async (table: CatalogTable) => catalog[table])
-    await expect(fetchCatalog(fetchTable)).resolves.toEqual(catalog)
+    const fetchTable = vi.fn(async (table: SyncTable) => catalog[table as keyof typeof catalog])
+    // Article text needs a session and is never part of the catalog the site loads.
+    const { disease_articles: _private, ...publicTables } = catalog as Record<string, unknown>
+    await expect(fetchCatalog(fetchTable)).resolves.toEqual(publicTables)
     expect(fetchTable.mock.calls.map(([table]) => table).sort()).toEqual([...CATALOG_TABLES].sort())
   })
 
   it('fails the whole load on one invalid row instead of dropping it', async () => {
     const catalog = demoCatalog()
     const broken = { ...catalog.regimen_items[0]!, dose_unit: 'mg_per_day' }
-    const fetchTable = async (table: CatalogTable) =>
-      table === 'regimen_items' ? [broken] : catalog[table]
+    const fetchTable = async (table: SyncTable) =>
+      table === 'regimen_items' ? [broken] : catalog[table as keyof typeof catalog]
     await expect(fetchCatalog(fetchTable)).rejects.toThrow(
       /^regimen_items: invalid data at 0\.dose_unit/,
     )

@@ -5,7 +5,7 @@ import { join } from 'node:path'
 
 import { afterEach, describe, expect, it } from 'vitest'
 
-import type { CatalogRows } from '../../src/schemas/catalog'
+import type { SyncRows } from '../../src/schemas/catalog'
 import { checkCatalog } from './check-catalog'
 import { diffTable, hasChanges, stableStringify } from './diff'
 import { parseArgs } from './env'
@@ -14,7 +14,7 @@ import { loadDataDir } from './load-data'
 import { DEMO_CATALOG_FIXTURE, demoCatalogJson } from './snapshot'
 import { catalogToSql } from './sql'
 
-function loadDemo(): CatalogRows {
+function loadDemo(): SyncRows {
   const { data, issues } = loadDataDir('data-demo')
   expect(issues).toEqual([])
   return flattenDataSet(data)
@@ -51,7 +51,12 @@ describe('demo data set', () => {
       infusion_params_id: null,
       cap_mg: null,
     })
-    expect(rows.diseases[0]?.article?.uk).toContain('ДЕМО')
+    expect(rows.disease_articles[0]).toMatchObject({
+      id: 'dlbcl.uk',
+      disease_id: 'dlbcl',
+      language: 'uk',
+    })
+    expect(rows.disease_articles[0]?.body).toContain('ДЕМО')
     expect(rows.disease_codes[0]?.id).toBe('dlbcl.icd-10.c83.3')
     expect(rows.treatment_node_regimens[0]).toMatchObject({
       id: 'dlbcl.first-line.r-chop-21',
@@ -133,7 +138,7 @@ describe('loadDataDir', () => {
 })
 
 describe('checkCatalog', () => {
-  const errors = (rows: CatalogRows) =>
+  const errors = (rows: SyncRows) =>
     checkCatalog(rows)
       .filter((issue) => issue.severity === 'error')
       .map((issue) => `${issue.table} ${issue.id}: ${issue.message}`)
@@ -273,6 +278,7 @@ describe('catalogToSql', () => {
       'disease_codes',
       'treatment_nodes',
       'treatment_node_regimens',
+      'disease_articles',
     ])
     expect(sql.startsWith('-- Generated')).toBe(true)
     expect(sql).toMatch(/^begin;$[\s\S]*^commit;$/m)
@@ -283,7 +289,7 @@ describe('catalogToSql', () => {
   it('deletes stale rows children-first only with prune', () => {
     const sql = catalogToSql(loadDemo(), { prune: true })
     const deletes = [...sql.matchAll(/^delete from public\.(\w+)/gm)].map((match) => match[1])
-    expect(deletes[0]).toBe('treatment_node_regimens')
+    expect(deletes[0]).toBe('disease_articles')
     expect(deletes.at(-1)).toBe('classification_systems')
     expect(sql.indexOf('delete from')).toBeGreaterThan(sql.lastIndexOf('insert into'))
   })

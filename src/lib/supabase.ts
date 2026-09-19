@@ -8,9 +8,12 @@ export const isSupabaseConfigured = Boolean(url && publishableKey)
 /**
  * Read-only client (publishable key, RLS allows SELECT only).
  * Null when VITE_SUPABASE_URL / VITE_SUPABASE_PUBLISHABLE_KEY are missing.
+ *
+ * The session is kept so a signed-in physician is not asked again on every visit; it unlocks the
+ * article text and nothing else. No patient data ever reaches this client.
  */
 export const supabase: SupabaseClient | null = isSupabaseConfigured
   ? createClient(url!, publishableKey!, {
-      auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false },
     })
   : null

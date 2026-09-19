@@ -135,10 +135,25 @@ export const diseaseRowSchema = z.object({
   id: idSchema,
   name: localizedTextSchema,
   summary: localizedTextSchema.nullable(),
-  /** Markdown article per language. */
-  article: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
 })
+
+/**
+ * Article text of a disease. Read only with a signed-in session (see the RLS policy), so it is
+ * never part of the public catalog and never persisted next to it.
+ */
+export const diseaseArticleRowSchema = z.object({
+  id: idSchema,
+  disease_id: idSchema,
+  language: z.enum(['uk', 'en']),
+  body: nonEmptyTextSchema,
+  sort_order: sortOrderSchema,
+})
+
+/** Tables that require a session; they are not part of the catalog and are not cached offline. */
+export const PRIVATE_TABLES = ['disease_articles'] as const
+export type PrivateTable = (typeof PRIVATE_TABLES)[number]
+export type DiseaseArticle = z.infer<typeof diseaseArticleRowSchema>
 
 export const diseaseCodeRowSchema = z.object({
   id: idSchema,
@@ -198,7 +213,20 @@ export const catalogRowSchemas = {
   treatment_node_regimens: treatmentNodeRegimenRowSchema,
 } as const satisfies Record<CatalogTable, z.ZodObject>
 
+/** Catalog plus the tables that need a session; what the content pipeline writes. */
+export const SYNC_TABLES = [...CATALOG_TABLES, ...PRIVATE_TABLES] as const
+export type SyncTable = (typeof SYNC_TABLES)[number]
+
+export const syncRowSchemas = {
+  ...catalogRowSchemas,
+  disease_articles: diseaseArticleRowSchema,
+} as const satisfies Record<SyncTable, z.ZodObject>
+
 export type CatalogRow<T extends CatalogTable> = z.infer<(typeof catalogRowSchemas)[T]>
+export type SyncRow<T extends SyncTable> = z.infer<(typeof syncRowSchemas)[T]>
+
+/** Every table the pipeline fills: the public catalog and the private article text. */
+export type SyncRows = { [T in SyncTable]: SyncRow<T>[] }
 
 /** The whole reference catalog: every table as an array of rows. */
 export type CatalogRows = { [T in CatalogTable]: CatalogRow<T>[] }
@@ -220,6 +248,10 @@ export type TreatmentNodeRegimen = CatalogRow<'treatment_node_regimens'>
  * Keep in step with new migrations that change columns.
  */
 export const CATALOG_SCHEMA_VERSION = '3'
+
+export function emptySyncRows(): SyncRows {
+  return { ...emptyCatalog(), disease_articles: [] }
+}
 
 export function emptyCatalog(): CatalogRows {
   return Object.fromEntries(CATALOG_TABLES.map((table) => [table, []])) as unknown as CatalogRows

@@ -1,9 +1,9 @@
-import { CATALOG_TABLES, type CatalogRows, type CatalogTable } from '../../src/schemas/catalog'
+import { SYNC_TABLES, type SyncRows, type SyncTable } from '../../src/schemas/catalog'
 
 type Row = { id: string } & Record<string, unknown>
 
 export interface TableDiff {
-  table: CatalogTable
+  table: SyncTable
   inserts: Row[]
   updates: Row[]
   /** Ids present in the database but not in data/. Deleted only with --prune. */
@@ -22,7 +22,7 @@ export function stableStringify(value: unknown): string {
   return JSON.stringify(value)
 }
 
-export function diffTable(table: CatalogTable, desired: Row[], existing: Row[]): TableDiff {
+export function diffTable(table: SyncTable, desired: Row[], existing: Row[]): TableDiff {
   const existingById = new Map(existing.map((row) => [row.id, row]))
   const desiredIds = new Set(desired.map((row) => row.id))
   const inserts: Row[] = []
@@ -43,11 +43,8 @@ export function diffTable(table: CatalogTable, desired: Row[], existing: Row[]):
   return { table, inserts, updates, deletes }
 }
 
-export function diffCatalog(
-  desired: CatalogRows,
-  existing: Record<CatalogTable, Row[]>,
-): TableDiff[] {
-  return CATALOG_TABLES.map((table) =>
+export function diffCatalog(desired: SyncRows, existing: Record<SyncTable, Row[]>): TableDiff[] {
+  return SYNC_TABLES.map((table) =>
     diffTable(table, desired[table] as unknown as Row[], existing[table]),
   )
 }

@@ -21,9 +21,9 @@ describe('App shell', () => {
     expect(screen.getByRole('heading', { name: 'Захворювання' })).toBeInTheDocument()
   })
 
-  it('shows disease detail for a slug route', () => {
+  it('shows disease detail for a slug route', async () => {
     renderWithProviders(<App />, { route: '/diseases/dlbcl' })
-    expect(screen.getByText(/«dlbcl»/)).toBeInTheDocument()
+    expect(await screen.findByRole('link', { name: /Захворювання/ })).toBeInTheDocument()
   })
 
   it('switches the interface language and remembers the choice', async () => {

@@ -1,4 +1,4 @@
-import { CATALOG_TABLES, catalogRowSchemas, type CatalogRows } from '../../src/schemas/catalog'
+import { SYNC_TABLES, syncRowSchemas, type SyncRows } from '../../src/schemas/catalog'
 
 export interface CatalogIssue {
   severity: 'error' | 'warning'
@@ -11,17 +11,17 @@ export interface CatalogIssue {
  * Validates rows against the row schemas and checks what the database would reject
  * (references, uniqueness) plus gaps that block a full calculation (warnings).
  */
-export function checkCatalog(rows: CatalogRows): CatalogIssue[] {
+export function checkCatalog(rows: SyncRows): CatalogIssue[] {
   const issues: CatalogIssue[] = []
   const error = (table: string, id: string, message: string) =>
     issues.push({ severity: 'error', table, id, message })
   const warning = (table: string, id: string, message: string) =>
     issues.push({ severity: 'warning', table, id, message })
 
-  for (const table of CATALOG_TABLES) {
+  for (const table of SYNC_TABLES) {
     const seen = new Set<string>()
     for (const row of rows[table]) {
-      const result = catalogRowSchemas[table].safeParse(row)
+      const result = syncRowSchemas[table].safeParse(row)
       if (!result.success) {
         for (const issue of result.error.issues) {
           error(table, row.id, `${issue.path.join('.') || '(row)'}: ${issue.message}`)

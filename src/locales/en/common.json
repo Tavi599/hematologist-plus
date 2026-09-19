@@ -124,12 +124,23 @@
   },
   "diseases": {
     "title": "Diseases",
-    "empty": "The list of diseases is empty so far."
+    "empty": "The list of diseases is empty so far.",
+    "search": "Search",
+    "searchPlaceholder": "Name, ICD-10 code or summary",
+    "notFound": "Nothing found.",
+    "chapter": "ICD-10 chapter: {{letter}}"
   },
   "diseaseDetail": {
     "title": "Disease",
     "placeholder": "Article and treatment tree for “{{slug}}” will appear here.",
-    "back": "Back to list"
+    "back": "Back to list",
+    "calculate": "Calculate",
+    "noTreatment": "The treatment tree for this disease is not filled in yet.",
+    "codes": "Codes",
+    "treatment": "Treatment",
+    "article": "Article",
+    "summary": "Summary",
+    "otherLanguage": "The article is available in another language only."
   },
   "catalog": {
     "loading": "Loading reference data…",
@@ -231,5 +242,27 @@
     "title": "Something went wrong",
     "body": "The page could not be shown. Usually the saved offline copy of the catalog, written by an earlier version, is the cause. Clear it and reload: no patient data is stored anywhere, so nothing is lost.",
     "reset": "Clear the saved copy and reload"
+  },
+  "auth": {
+    "title": "Department sign-in",
+    "hint": "Articles are available to signed-in users only. Accounts are created by the administrator; there is no self-registration.",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signedInAs": "Signed in as {{email}}",
+    "articleLocked": "The article text is available after signing in.",
+    "articleEmpty": "There is no article for this disease yet."
+  },
+  "treatmentKind": {
+    "treatment": "treatment",
+    "line": "line",
+    "stage": "stage",
+    "group": "group"
+  },
+  "availability": {
+    "department": "in the department",
+    "registered": "registered in Ukraine",
+    "unavailable": "not obtainable"
   }
 }

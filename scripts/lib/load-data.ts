@@ -30,7 +30,15 @@ export interface LoadResult {
  *   diseases/<id>/disease.json (+ article.uk.md, article.en.md)
  * Invalid files are reported and skipped, so all problems are listed in one run.
  */
-export function loadDataDir(dir: string): LoadResult {
+export interface LoadOptions {
+  /**
+   * Where article Markdown lives. Article text is department-only and is kept outside the public
+   * repository; without this the articles are read from the data directory itself (demo sets).
+   */
+  contentDir?: string
+}
+
+export function loadDataDir(dir: string, options: LoadOptions = {}): LoadResult {
   const issues: FileIssue[] = []
   const rel = (file: string) => relative(dir, file).replaceAll('\\', '/')
 
@@ -134,7 +142,11 @@ export function loadDataDir(dir: string): LoadResult {
     const parsed = parseFile(file, diseaseFileSchema)
     if (!parsed) continue
     checkIdMatchesName(file, parsed.id, name)
-    const disease: DiseaseFile = { ...parsed, article: readArticle(join(diseasesDir, name)) }
+    const articleDir =
+      options.contentDir === undefined
+        ? join(diseasesDir, name)
+        : join(options.contentDir, 'diseases', name)
+    const disease: DiseaseFile = { ...parsed, article: readArticle(articleDir) }
     data.diseases.push(disease)
   }
 
@@ -151,3 +163,17 @@ function readArticle(diseaseDir: string): DiseaseFile['article'] {
   }
   return Object.keys(article).length > 0 ? article : null
 }
+
+/**
+ * Article text is department-only, so it lives outside this repository. `--content <dir>` (or
+ * CONTENT_DIR) points at that checkout; without it the articles of `data/` are simply absent and
+ * the run reports how many were found.
+ */
+export function contentOptions(options: Map<string, string>, dir: string): LoadOptions {
+  if (dir !== 'data') return {}
+  const contentDir = options.get('content') ?? process.env.CONTENT_DIR
+  return contentDir === undefined ? { contentDir: MISSING_CONTENT_DIR } : { contentDir }
+}
+
+/** A directory that cannot exist, so no article is read from the public repository by mistake. */
+export const MISSING_CONTENT_DIR = '<no-content-dir>'

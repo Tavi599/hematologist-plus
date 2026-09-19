@@ -4,7 +4,13 @@ import type { DoseUnit } from '../domain/types'
 import type { ReviewRules } from '../domain/warnings'
 import type { Language } from '../lib/i18n'
 import type { LocalizedText } from '../lib/localized'
-import { CATALOG_TABLES, catalogRowSchemas, drugInfusionParamsRowSchema } from './catalog'
+import {
+  CATALOG_TABLES,
+  catalogRowSchemas,
+  diseaseArticleRowSchema,
+  drugInfusionParamsRowSchema,
+  PRIVATE_TABLES,
+} from './catalog'
 import { DOSE_UNITS, localizedTextSchema, reviewRulesSchema } from './common'
 import { printFormsRowSchema } from './print-forms'
 
@@ -32,14 +38,40 @@ function tableColumns(): Map<string, string[]> {
   )) {
     tables.get(match[1]!)?.push(match[2]!)
   }
+  // ... and later migrations drop columns again.
+  for (const match of sql.matchAll(/alter table public\.(\w+) drop column ([a-z_]+);/g)) {
+    const columns = tables.get(match[1]!)
+    if (columns) {
+      tables.set(
+        match[1]!,
+        columns.filter((column) => column !== match[2]),
+      )
+    }
+  }
   return tables
 }
 
 describe('database schema', () => {
   const tables = tableColumns()
 
-  it('defines exactly the catalog tables', () => {
-    expect([...tables.keys()].sort()).toEqual([...CATALOG_TABLES].sort())
+  it('defines exactly the catalog tables and the private ones', () => {
+    expect([...tables.keys()].sort()).toEqual([...CATALOG_TABLES, ...PRIVATE_TABLES].sort())
+  })
+
+  it.each(PRIVATE_TABLES)('%s is readable only with a session', (table) => {
+    expect(sql).toContain(`alter table public.${table} enable row level security;`)
+    // A policy for anon, or a grant to anon, would put article text on the public site.
+    expect(sql).toMatch(
+      new RegExp(`create policy "[^"]+" on public\\.${table} for select to authenticated`),
+    )
+    expect(sql).not.toMatch(new RegExp(`create policy "[^"]+" on public\\.${table}[^;]*anon`))
+    expect(sql).not.toMatch(new RegExp(`grant [^;]*on public\\.${table}[^;]*to [^;]*anon`))
+    expect(sql).toContain(`grant select on public.${table} to authenticated;`)
+  })
+
+  it('keeps article columns out of the public tables', () => {
+    expect(diseaseArticleRowSchema.shape.body).toBeDefined()
+    expect(Object.keys(catalogRowSchemas.diseases.shape)).not.toContain('article')
   })
 
   it.each(CATALOG_TABLES)('%s columns match the Zod row schema', (table) => {

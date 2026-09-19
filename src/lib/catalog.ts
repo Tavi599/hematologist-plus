@@ -5,11 +5,11 @@ import {
   CATALOG_TABLES,
   catalogRowSchemas,
   type CatalogRows,
-  type CatalogTable,
+  type SyncTable,
 } from '../schemas/catalog'
 
 /** Returns every row of a table. Injected so tests and scripts can supply their own source. */
-export type TableFetcher = (table: CatalogTable) => Promise<unknown[]>
+export type TableFetcher = (table: SyncTable) => Promise<unknown[]>
 
 /** PostgREST caps responses (1000 rows by default), so tables are read page by page. */
 export const PAGE_SIZE = 1000
@@ -34,9 +34,9 @@ export function createSupabaseTableFetcher(
 }
 
 export class CatalogLoadError extends Error {
-  readonly table: CatalogTable
+  readonly table: SyncTable
 
-  constructor(table: CatalogTable, message: string) {
+  constructor(table: SyncTable, message: string) {
     super(`${table}: ${message}`)
     this.name = 'CatalogLoadError'
     this.table = table

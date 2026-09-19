@@ -365,11 +365,7 @@
         "en": "DEMO Diffuse large B-cell lymphoma"
       },
       "summary": null,
-      "sort_order": 0,
-      "article": {
-        "uk": "# ДЕМО-стаття\n\nТестовий текст для перевірки конвеєра даних. **Не для клінічного використання.**\n\n| Поле | Значення |\n|---|---|\n| МКХ-10 | C83.3 |\n",
-        "en": "# DEMO article\n\nTest text for checking the data pipeline. **Not for clinical use.**\n"
-      }
+      "sort_order": 0
     }
   ],
   "disease_codes": [
@@ -403,6 +399,22 @@
       "regimen_id": "r-chop-21",
       "notes": null,
       "sort_order": 0
+    }
+  ],
+  "disease_articles": [
+    {
+      "id": "dlbcl.uk",
+      "disease_id": "dlbcl",
+      "language": "uk",
+      "body": "# ДЕМО-стаття\n\nТестовий текст для перевірки конвеєра даних. **Не для клінічного використання.**\n\n| Поле | Значення |\n|---|---|\n| МКХ-10 | C83.3 |\n",
+      "sort_order": 0
+    },
+    {
+      "id": "dlbcl.en",
+      "disease_id": "dlbcl",
+      "language": "en",
+      "body": "# DEMO article\n\nTest text for checking the data pipeline. **Not for clinical use.**\n",
+      "sort_order": 1
     }
   ]
 }

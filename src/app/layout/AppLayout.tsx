@@ -5,6 +5,7 @@ import { NavLink, Outlet } from 'react-router'
 import { routes } from '../routes'
 import classes from './AppLayout.module.css'
 import { LanguageSwitcher } from './LanguageSwitcher'
+import { SessionBadge } from './SessionBadge'
 import { PwaUpdatePrompt } from './PwaUpdatePrompt'
 
 export function AppLayout() {
@@ -35,7 +36,10 @@ export function AppLayout() {
                 </Group>
               </nav>
             </Group>
-            <LanguageSwitcher />
+            <Group gap="xs" wrap="nowrap">
+              <SessionBadge />
+              <LanguageSwitcher />
+            </Group>
           </Group>
         </Container>
       </AppShell.Header>

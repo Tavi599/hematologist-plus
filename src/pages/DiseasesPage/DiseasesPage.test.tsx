@@ -38,3 +38,33 @@ describe('DiseasesPage', () => {
     expect(await screen.findByText('Перелік захворювань поки порожній.')).toBeInTheDocument()
   })
 })
+
+describe('DiseasesPage search', () => {
+  beforeEach(async () => {
+    await act(() => i18n.changeLanguage('uk'))
+    const catalog = demoCatalog()
+    source.fetchTable.mockReset()
+    source.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
+  })
+
+  it('filters by name and by ICD-10 code', async () => {
+    const { fireEvent } = await import('@testing-library/react')
+    renderWithProviders(<DiseasesPage />)
+    const search = await screen.findByLabelText('Пошук')
+
+    await act(async () => {
+      fireEvent.change(search, { target: { value: 'c83' } })
+    })
+    expect(screen.getByText('C83.3')).toBeInTheDocument()
+
+    await act(async () => {
+      fireEvent.change(search, { target: { value: 'лейкоз' } })
+    })
+    expect(screen.getByText('Нічого не знайдено.')).toBeInTheDocument()
+  })
+
+  it('groups by ICD-10 chapter', async () => {
+    renderWithProviders(<DiseasesPage />)
+    expect(await screen.findByText('Клас МКХ-10: C')).toBeInTheDocument()
+  })
+})

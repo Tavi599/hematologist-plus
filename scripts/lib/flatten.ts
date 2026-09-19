@@ -1,4 +1,4 @@
-import type { CatalogRows, TreatmentNode, TreatmentNodeRegimen } from '../../src/schemas/catalog'
+import type { SyncRows, TreatmentNode, TreatmentNodeRegimen } from '../../src/schemas/catalog'
 import type { DataSet, TreatmentNodeFile } from './data-files'
 
 /** Full id of a child entity: `<parent id>.<local key>`. */
@@ -15,9 +15,9 @@ export function diseaseCodeId(diseaseId: string, systemId: string, code: string)
   return `${diseaseId}.${systemId}.${normalized}`
 }
 
-/** Converts the authoring format into rows of every catalog table. Pure; no validation. */
-export function flattenDataSet(data: DataSet): CatalogRows {
-  const rows: CatalogRows = {
+/** Converts the authoring format into rows of every table. Pure; no validation. */
+export function flattenDataSet(data: DataSet): SyncRows {
+  const rows: SyncRows = {
     classification_systems: data.classificationSystems.map((system) => ({ ...system })),
     hospitals: data.hospitals.map((hospital) => ({ ...hospital })),
     drugs: [],
@@ -29,6 +29,7 @@ export function flattenDataSet(data: DataSet): CatalogRows {
     disease_codes: [],
     treatment_nodes: [],
     treatment_node_regimens: [],
+    disease_articles: [],
   }
 
   for (const drug of data.drugs) {
@@ -77,8 +78,19 @@ export function flattenDataSet(data: DataSet): CatalogRows {
   }
 
   for (const disease of data.diseases) {
-    const { codes, treatment, $comment: _comment, ...diseaseRow } = disease
+    const { codes, treatment, article, $comment: _comment, ...diseaseRow } = disease
     rows.diseases.push(diseaseRow)
+    // Article text lives in its own table: the public catalog must not carry it.
+    for (const [language, body] of Object.entries(article ?? {})) {
+      if (typeof body !== 'string' || body.trim() === '') continue
+      rows.disease_articles.push({
+        id: childId(disease.id, language),
+        disease_id: disease.id,
+        language: language as 'uk' | 'en',
+        body,
+        sort_order: language === 'uk' ? 0 : 1,
+      })
+    }
     codes.forEach((code, index) => {
       rows.disease_codes.push({
         id: diseaseCodeId(disease.id, code.system_id, code.code),

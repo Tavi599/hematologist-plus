@@ -15,12 +15,12 @@ import { writeFileSync } from 'node:fs'
 import { createClient } from '@supabase/supabase-js'
 
 import { createSupabaseTableFetcher } from '../src/lib/catalog'
-import { CATALOG_TABLES, type CatalogTable } from '../src/schemas/catalog'
+import { SYNC_TABLES, type SyncTable } from '../src/schemas/catalog'
 import { checkCatalog } from './lib/check-catalog'
 import { diffCatalog, hasChanges, type TableDiff } from './lib/diff'
 import { loadEnv, parseArgs, requireEnv } from './lib/env'
 import { flattenDataSet } from './lib/flatten'
-import { loadDataDir } from './lib/load-data'
+import { contentOptions, loadDataDir } from './lib/load-data'
 import { printCatalogIssues, printFileIssues } from './lib/report'
 import { catalogToSql } from './lib/sql'
 
@@ -33,7 +33,7 @@ async function main() {
   const apply = flags.has('apply')
   const prune = flags.has('prune')
 
-  const { data, issues: fileIssues } = loadDataDir(dir)
+  const { data, issues: fileIssues } = loadDataDir(dir, contentOptions(options, dir))
   const rows = flattenDataSet(data)
   const catalogIssues = checkCatalog(rows)
   printFileIssues(fileIssues)
@@ -60,8 +60,8 @@ async function main() {
 
   const fetchTable = createSupabaseTableFetcher(client)
   const existing = Object.fromEntries(
-    await Promise.all(CATALOG_TABLES.map(async (table) => [table, await fetchTable(table)])),
-  ) as Record<CatalogTable, ({ id: string } & Record<string, unknown>)[]>
+    await Promise.all(SYNC_TABLES.map(async (table) => [table, await fetchTable(table)])),
+  ) as Record<SyncTable, ({ id: string } & Record<string, unknown>)[]>
 
   const diffs = diffCatalog(rows, existing)
   printDiff(diffs, prune)

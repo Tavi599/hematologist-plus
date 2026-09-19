@@ -3,17 +3,18 @@
  *
  *   npm run data:validate                  validates data/
  *   npm run data:validate -- --dir <path>  validates another directory
+ *   npm run data:validate -- --content <dir>  reads article text from a private checkout
  */
 import { checkCatalog } from './lib/check-catalog'
 import { parseArgs } from './lib/env'
 import { flattenDataSet } from './lib/flatten'
-import { loadDataDir } from './lib/load-data'
+import { contentOptions, loadDataDir } from './lib/load-data'
 import { printCatalogIssues, printFileIssues } from './lib/report'
 
 const { options } = parseArgs(process.argv.slice(2))
 const dir = options.get('dir') ?? 'data'
 
-const { data, issues: fileIssues } = loadDataDir(dir)
+const { data, issues: fileIssues } = loadDataDir(dir, contentOptions(options, dir))
 const rows = flattenDataSet(data)
 const catalogIssues = checkCatalog(rows)
 
