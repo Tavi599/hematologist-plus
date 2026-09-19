@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router'
 
 import { calculateCourse, DomainInputError, type CourseResult } from '../../domain'
 import { AddDrugForm } from '../../features/calculator/AddDrugForm'
+import { CourseExport } from '../../features/calculator/CourseExport'
 import { CourseSettings, type CourseSettingsValue } from '../../features/calculator/CourseSettings'
 import { DoseTable } from '../../features/calculator/DoseTable'
 import { emptyHeader } from '../../features/calculator/header'
@@ -18,6 +19,7 @@ import type { CatalogIndex } from '../../lib/catalog-index'
 import { buildCourseItems, buildCourseItemsFrom } from '../../lib/course-input'
 import { formatNumber } from '../../lib/format'
 import { currentLanguage } from '../../lib/i18n'
+import { localize } from '../../lib/localized'
 import type { RegimenItem } from '../../schemas/catalog'
 import { todayIso, type PatientInput } from '../../schemas/patient'
 
@@ -110,6 +112,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       return { course: null, error: thrown }
     }
   }, [patient, items, courseSettings, drugPercent, doseOverrideAmount, disabledIds, shiftMin])
+
+  const regimen = regimenId === null ? undefined : catalog.regimens.get(regimenId)
 
   return (
     <Stack>
@@ -204,6 +208,17 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
             onShift={(id, minutes) => setShiftMin((current) => ({ ...current, [id]: minutes }))}
           />
           <SupplyTable catalog={catalog} course={course} />
+          {patient && (
+            <CourseExport
+              items={items}
+              course={course}
+              patient={patient}
+              regimenName={regimen ? localize(regimen.name, language) : null}
+              cycleNumber={courseSettings.cycleNumber}
+              startDate={courseSettings.startDate}
+              header={header}
+            />
+          )}
         </>
       )}
 

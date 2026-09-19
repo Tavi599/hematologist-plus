@@ -133,6 +133,24 @@
       "perCourse": "per course",
       "empty": "No presentation data."
     },
+    "export": {
+      "title": "Export to Excel",
+      "button": "Download .xlsx",
+      "hint": "A sheet for every day with an administration plus the inpatient sheet. The file is built in the browser: patient data is never sent anywhere.",
+      "infusionTitle": "Infusion sheet",
+      "wardTitle": "Inpatient prescription sheet",
+      "wardSheet": "Inpatient sheet",
+      "number": "No.",
+      "dose": "Dose",
+      "rate": "Rate",
+      "route": "Route",
+      "dayStart": "start",
+      "patientData": "Age, sex, height, weight",
+      "years": "y",
+      "cm": "cm",
+      "kg": "kg",
+      "fileName": "Prescription sheet {{date}}"
+    },
     "error": {
       "title": "Calculation failed",
       "field": "Field: {{field}}"

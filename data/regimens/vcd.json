@@ -75,10 +75,10 @@
       "drug_id": "aciclovir",
       "role": "supportive",
       "route": "oral",
-      "dose_value": 200,
+      "dose_value": 400,
       "dose_unit": "mg_flat",
       "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
-      "administrations_per_day": 3,
+      "administrations_per_day": 2,
       "notes": {
         "uk": "Впродовж лікування і 3 місяці після; при КК < 10 мл/хв — 200 мг двічі на добу",
         "en": "During treatment and for 3 months after; 200 mg twice a day if CrCl < 10 mL/min"
