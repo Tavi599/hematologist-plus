@@ -1,0 +1,68 @@
+{
+  "$comment": "Дози — протокол NSSG Oxford L.9 Brentuximab vedotin monotherapy (вер. 4.0, вересень 2025). Ацикловір — за стандартом відділення 400 мг двічі на добу (у протоколі 200 мг тричі).",
+  "id": "brentuximab-mono",
+  "short_name": "Брентуксимаб",
+  "name": {
+    "uk": "Брентуксимаб ведотин у монорежимі",
+    "en": "Brentuximab vedotin monotherapy"
+  },
+  "description": {
+    "uk": "Брентуксимаб ведотин 1,8 мг/кг кожні 21 день, до 16 циклів.",
+    "en": "Brentuximab vedotin 1.8 mg/kg every 21 days, up to 16 cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 16,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.9 Brentuximab vedotin monotherapy",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-9-brentuximab-vedotin.pdf",
+      "version": "4.0 (09.2025)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "brentuximab-vedotin",
+      "drug_id": "brentuximab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.8,
+      "dose_unit": "mg_kg",
+      "cap_amount": 180,
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 150,
+      "notes": {
+        "uk": "У 150 мл 0,9% NaCl за 30 хвилин; кінцева концентрація 0,4–1,2 мг/мл",
+        "en": "In 150 mL of 0.9% sodium chloride over 30 minutes; final concentration 0.4 to 1.2 mg/mL"
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл",
+        "en": "Tumour lysis prophylaxis, cycle 1"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Впродовж лікування і 3 місяці після",
+        "en": "During treatment and for 3 months after"
+      }
+    }
+  ]
+}

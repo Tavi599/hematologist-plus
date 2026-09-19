@@ -1,0 +1,40 @@
+{
+  "$comment": "Дози — протокол NSSG Oxford L.90 Nivolumab (вер. 3.0, липень 2022). Внесено ліцензовану схему 240 мг кожні 2 тижні. Протокол дає й другий варіант — 480 мг кожні 4 тижні (поза інструкцією, дозволений критеріями Blueteq); він не внесений окремою схемою. Тривалість лікування — до прогресування або непереносимої токсичності, максимум 2 роки.",
+  "id": "nivolumab",
+  "short_name": "Ніволумаб",
+  "name": {
+    "uk": "Ніволумаб у монорежимі",
+    "en": "Nivolumab monotherapy"
+  },
+  "description": {
+    "uk": "Ніволумаб 240 мг внутрішньовенно кожні 2 тижні.",
+    "en": "Nivolumab 240 mg intravenously every two weeks."
+  },
+  "cycle_length_days": 14,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.90 Nivolumab",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-90-nivolumab.pdf",
+      "version": "3.0 (07.2022)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "nivolumab",
+      "drug_id": "nivolumab",
+      "route": "iv_infusion",
+      "dose_value": 240,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl за 30 хвилин. Альтернатива протоколу — 480 мг кожні 4 тижні",
+        "en": "In 100 mL of 0.9% sodium chloride over 30 minutes. The protocol's alternative is 480 mg every 4 weeks"
+      }
+    }
+  ]
+}

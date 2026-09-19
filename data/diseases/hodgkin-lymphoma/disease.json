@@ -30,6 +30,9 @@
       "regimens": [
         {
           "regimen_id": "abvd"
+        },
+        {
+          "regimen_id": "bv-avd"
         }
       ]
     },
@@ -41,10 +44,16 @@
         "en": "Relapsed and refractory"
       },
       "description": {
-        "uk": "Пембролізумаб — за протоколом для рецидивної або рефрактерної класичної лімфоми Ходжкіна після щонайменше двох ліній терапії.",
-        "en": "Pembrolizumab, per protocol, for relapsed or refractory classical Hodgkin lymphoma after at least two lines of therapy."
+        "uk": "Перелік неповний: лінії терапії ще треба звірити з настановою NCCN, а схеми сальважу (IGEV, ICE, DHAP, GDP, GVD) у довідник не внесені.",
+        "en": "The list is incomplete: the lines still have to be checked against the NCCN guideline, and the salvage regimens (IGEV, ICE, DHAP, GDP, GVD) are not in the catalog yet."
       },
       "regimens": [
+        {
+          "regimen_id": "brentuximab-mono"
+        },
+        {
+          "regimen_id": "nivolumab"
+        },
         {
           "regimen_id": "pembrolizumab"
         }

@@ -1,0 +1,129 @@
+{
+  "$comment": "Дози — протокол NSSG Oxford L.154 BV-AVD (вер. 1.0, травень 2025). Порядок у протоколі: спочатку AVD, потім брентуксимаб ведотин. Дакарбазин протокол дає за 1–2 години — внесено 120 хвилин (повільніший край діапазону). НЕ ВНЕСЕНО: обов'язкову первинну профілактику Г-КСФ (філграстим 0,5 млн МО/кг у дні 3–7 і 17–21) — у довіднику філграстим ведеться в мікрограмах, а перерахунок МО ↔ мкг програма свідомо не робить; додайте рядок вручну або підтвердіть дозу в мкг. Ко-тримоксазол (480 мг тричі на тиждень) теж не внесено: його немає в довіднику відділення. Ацикловір — за стандартом відділення 400 мг двічі на добу (у протоколі 200 мг тричі).",
+  "id": "bv-avd",
+  "short_name": "BV-AVD",
+  "name": {
+    "uk": "BV-AVD (A+AVD)",
+    "en": "BV-AVD (A+AVD)"
+  },
+  "description": {
+    "uk": "Брентуксимаб ведотин, доксорубіцин, вінбластин, дакарбазин. Цикл 28 днів, 6 циклів.",
+    "en": "Brentuximab vedotin, doxorubicin, vinblastine, dacarbazine. 28-day cycle, six cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.154 BV-AVD",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-154-bv-avd.pdf",
+      "version": "1.0 (05.2025)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "ondansetron-d1",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1, 15],
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Двічі на добу в дні введення",
+        "en": "Twice a day on the days of administration"
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_bolus",
+      "dose_value": 25,
+      "dose_unit": "mg_m2",
+      "days": [1, 15],
+      "notes": {
+        "uk": "Струминно",
+        "en": "Bolus injection"
+      }
+    },
+    {
+      "key": "vinblastine",
+      "drug_id": "vinblastine",
+      "route": "iv_infusion",
+      "dose_value": 6,
+      "dose_unit": "mg_m2",
+      "days": [1, 15],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У цьому протоколі верхньої межі дози вінбластину немає",
+        "en": "This protocol sets no ceiling on the vinblastine dose"
+      }
+    },
+    {
+      "key": "dacarbazine",
+      "drug_id": "dacarbazine",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1, 15],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "За 1–2 години, захищати від світла під час введення",
+        "en": "Over 1 to 2 hours, protect from light during administration"
+      }
+    },
+    {
+      "key": "brentuximab-vedotin",
+      "drug_id": "brentuximab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.2,
+      "dose_unit": "mg_kg",
+      "cap_amount": 120,
+      "days": [1, 15],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Після AVD. Кінцева концентрація 0,4–1,2 мг/мл",
+        "en": "After AVD. Final concentration 0.4 to 1.2 mg/mL"
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл",
+        "en": "Tumour lysis prophylaxis, cycle 1"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Впродовж лікування і 3 місяці після",
+        "en": "During treatment and for 3 months after"
+      }
+    }
+  ]
+}
