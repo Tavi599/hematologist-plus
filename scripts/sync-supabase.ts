@@ -15,7 +15,7 @@ import { writeFileSync } from 'node:fs'
 import { createClient } from '@supabase/supabase-js'
 
 import { createSupabaseTableFetcher } from '../src/lib/catalog'
-import { SYNC_TABLES, type SyncTable } from '../src/schemas/catalog'
+import { PRIVATE_TABLES, SYNC_TABLES, type SyncTable } from '../src/schemas/catalog'
 import { checkCatalog } from './lib/check-catalog'
 import { diffCatalog, hasChanges, type TableDiff } from './lib/diff'
 import { loadEnv, parseArgs, requireEnv } from './lib/env'
@@ -25,6 +25,10 @@ import { printCatalogIssues, printFileIssues } from './lib/report'
 import { catalogToSql } from './lib/sql'
 
 const CHUNK_SIZE = 500
+
+function isPrivate(table: SyncTable): boolean {
+  return (PRIVATE_TABLES as readonly string[]).includes(table)
+}
 
 async function main() {
   loadEnv()
@@ -59,9 +63,30 @@ async function main() {
   })
 
   const fetchTable = createSupabaseTableFetcher(client)
+  const unreadable: SyncTable[] = []
   const existing = Object.fromEntries(
-    await Promise.all(SYNC_TABLES.map(async (table) => [table, await fetchTable(table)])),
+    await Promise.all(
+      SYNC_TABLES.map(async (table) => {
+        try {
+          return [table, await fetchTable(table)]
+        } catch (cause) {
+          // Private tables are invisible to the publishable key by design. Without a key that can
+          // read them the diff cannot tell new rows from unchanged ones, so everything is written
+          // (upsert) and nothing is pruned.
+          if (!isPrivate(table)) throw cause
+          unreadable.push(table)
+          return [table, []]
+        }
+      }),
+    ),
   ) as Record<SyncTable, ({ id: string } & Record<string, unknown>)[]>
+
+  if (unreadable.length > 0) {
+    console.log(
+      `Not readable with this key (written blind, never pruned): ${unreadable.join(', ')}.
+`,
+    )
+  }
 
   const diffs = diffCatalog(rows, existing)
   printDiff(diffs, prune)

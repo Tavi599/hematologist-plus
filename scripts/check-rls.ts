@@ -6,7 +6,7 @@
  */
 import { createClient } from '@supabase/supabase-js'
 
-import { CATALOG_TABLES } from '../src/schemas/catalog'
+import { CATALOG_TABLES, PRIVATE_TABLES } from '../src/schemas/catalog'
 import { loadEnv, requireEnv } from './lib/env'
 
 loadEnv()
@@ -40,6 +40,15 @@ for (const table of CATALOG_TABLES) {
     .join(', ')
   console.log(`${ok ? '✓' : '✗'} ${table.padEnd(26)} ${detail}`)
   if (read.error) console.log(`    read error: ${read.error.message}`)
+}
+
+// Article text must be invisible without a session: a readable row here would mean the text
+// is already on the public site.
+for (const table of PRIVATE_TABLES) {
+  const read = await client.from(table).select('id').limit(1)
+  const hidden = read.error !== null || (read.data?.length ?? 0) === 0
+  failed ||= !hidden
+  console.log(`${hidden ? '✓' : '✗'} ${table.padEnd(26)} not readable without a session`)
 }
 
 console.log(failed ? '\nRLS check failed.' : '\nRLS check passed: read-only for the public key.')
