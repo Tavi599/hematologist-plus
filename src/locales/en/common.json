@@ -6,7 +6,8 @@
   "nav": {
     "calculator": "Calculator",
     "diseases": "Diseases",
-    "sources": "Sources"
+    "sources": "Sources",
+    "proposals": "Proposals"
   },
   "language": {
     "label": "Language",
@@ -275,6 +276,40 @@
     "title": "Something went wrong",
     "body": "The page could not be shown. Usually the saved offline copy of the catalog, written by an earlier version, is the cause. Clear it and reload: no patient data is stored anywhere, so nothing is lost.",
     "reset": "Clear the saved copy and reload"
+  },
+  "proposals": {
+    "title": "Proposals",
+    "intro": "What to add or fix in the catalog. A proposal is seen by you and by the owner of the project; the answer appears on the same card.",
+    "signInReason": "Sign in with the department account to send a proposal.",
+    "newTitle": "New proposal",
+    "noPatientData": "Nothing about a patient here: no name, no case number, no date of birth. The text is stored on the server.",
+    "kind": "About",
+    "subject": "In short",
+    "body": "Description",
+    "bodyHint": "What exactly is needed: a regimen (with its protocol if you have it), a drug, an article, a mistake in the calculation.",
+    "send": "Send",
+    "sent": "Sent.",
+    "listMine": "My proposals",
+    "listAll": "All proposals",
+    "empty": "Nothing yet.",
+    "status": "Status",
+    "decision": "Decision",
+    "save": "Save",
+    "kinds": {
+      "regimen": "Regimen",
+      "drug": "Drug",
+      "disease": "Disease",
+      "article": "Article",
+      "bug": "Bug",
+      "other": "Other"
+    },
+    "statuses": {
+      "new": "New",
+      "accepted": "Accepted",
+      "in_progress": "In progress",
+      "done": "Done",
+      "declined": "Declined"
+    }
   },
   "auth": {
     "title": "Department sign-in",

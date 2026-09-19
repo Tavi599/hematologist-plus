@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next'
 
 import { signIn } from '../../lib/auth'
 
-/** Sign-in for the department: the only thing behind it is the article text. */
-export function SignInPanel() {
+/** Sign-in for the department: article text and the proposals window are behind it. */
+export function SignInPanel({ reason }: { reason?: string } = {}) {
   const { t } = useTranslation()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -27,7 +27,7 @@ export function SignInPanel() {
         <Stack gap="sm">
           <Text fw={500}>{t('auth.title')}</Text>
           <Text size="sm" c="dimmed">
-            {t('auth.hint')}
+            {reason ?? t('auth.hint')}
           </Text>
           {error !== null && (
             <Alert color="red" variant="light">

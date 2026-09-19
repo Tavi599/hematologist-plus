@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { supabase } from './supabase'
 
 export interface SessionUser {
+  id: string
   email: string
 }
 
@@ -19,11 +20,11 @@ export function useSessionUser(): { user: SessionUser | null; loading: boolean }
     let active = true
     void supabase.auth.getSession().then(({ data }) => {
       if (!active) return
-      setUser(toUser(data.session?.user.email))
+      setUser(toUser(data.session?.user))
       setLoading(false)
     })
     const { data } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(toUser(session?.user.email))
+      setUser(toUser(session?.user))
       setLoading(false)
     })
     return () => {
@@ -35,8 +36,8 @@ export function useSessionUser(): { user: SessionUser | null; loading: boolean }
   return { user, loading }
 }
 
-function toUser(email: string | undefined): SessionUser | null {
-  return email === undefined ? null : { email }
+function toUser(user: { id: string; email?: string } | undefined): SessionUser | null {
+  return user?.email === undefined ? null : { id: user.id, email: user.email }
 }
 
 export async function signIn(email: string, password: string): Promise<void> {

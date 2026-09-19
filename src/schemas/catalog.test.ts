@@ -5,6 +5,7 @@ import type { ReviewRules } from '../domain/warnings'
 import type { Language } from '../lib/i18n'
 import type { LocalizedText } from '../lib/localized'
 import {
+  APP_TABLES,
   CATALOG_TABLES,
   catalogRowSchemas,
   diseaseArticleRowSchema,
@@ -19,6 +20,7 @@ import {
   SCHEDULE_BLOCKS,
 } from './common'
 import { printFormsRowSchema } from './print-forms'
+import { proposalRowSchema } from './proposals'
 
 const migrations = import.meta.glob<string>('/supabase/migrations/*.sql', {
   query: '?raw',
@@ -34,13 +36,15 @@ function tableColumns(): Map<string, string[]> {
   const tables = new Map<string, string[]>()
   for (const match of sql.matchAll(/create table public\.(\w+) \(\n([\s\S]*?)\n\);/g)) {
     const columns = [
-      ...match[2]!.matchAll(/^ {2}([a-z_]+) (?:text|jsonb|numeric|integer|smallint|boolean)\b/gm),
+      ...match[2]!.matchAll(
+        /^ {2}([a-z_]+) (?:text|jsonb|numeric|integer|smallint|boolean|uuid|timestamptz)\b/gm,
+      ),
     ].map((column) => column[1]!)
     tables.set(match[1]!, columns)
   }
   // Later migrations add columns to the tables created above.
   for (const match of sql.matchAll(
-    /alter table public\.(\w+)\s+add column ([a-z_]+) (?:text|jsonb|numeric|integer|smallint|boolean)\b/g,
+    /alter table public\.(\w+)\s+add column ([a-z_]+) (?:text|jsonb|numeric|integer|smallint|boolean|uuid|timestamptz)\b/g,
   )) {
     tables.get(match[1]!)?.push(match[2]!)
   }
@@ -60,8 +64,28 @@ function tableColumns(): Map<string, string[]> {
 describe('database schema', () => {
   const tables = tableColumns()
 
-  it('defines exactly the catalog tables and the private ones', () => {
-    expect([...tables.keys()].sort()).toEqual([...CATALOG_TABLES, ...PRIVATE_TABLES].sort())
+  it('defines exactly the catalog tables, the private ones and the app tables', () => {
+    expect([...tables.keys()].sort()).toEqual(
+      [...CATALOG_TABLES, ...PRIVATE_TABLES, ...APP_TABLES].sort(),
+    )
+  })
+
+  it.each(APP_TABLES)('%s is written by the app and closed to anon', (table) => {
+    expect(sql).toContain(`alter table public.${table} enable row level security;`)
+    expect(sql).not.toMatch(new RegExp(`create policy "[^"]+" on public\\.${table}[^;]*anon`))
+    expect(sql).not.toMatch(new RegExp(`grant [^;]*on public\\.${table}[^;]*to [^;]*anon`))
+  })
+
+  it('lets a colleague write only their own proposal', () => {
+    // The whole point of the table: the author is taken from the session, never from the form,
+    // and a decision cannot be written by the person who asked for it.
+    expect(sql).toContain(
+      'create policy "Write own" on public.proposals for insert to authenticated with check (\n  author_id = (select auth.uid()) and status = \'new\' and decision_note is null\n);',
+    )
+    expect(sql).toContain(
+      'create policy "Admin decides" on public.proposals for update to authenticated\n  using (public.is_admin()) with check (public.is_admin());',
+    )
+    expect(Object.keys(proposalRowSchema.shape)).toEqual(tables.get('proposals'))
   })
 
   it.each(PRIVATE_TABLES)('%s is readable only with a session', (table) => {

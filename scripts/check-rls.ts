@@ -6,7 +6,7 @@
  */
 import { createClient } from '@supabase/supabase-js'
 
-import { CATALOG_TABLES, PRIVATE_TABLES } from '../src/schemas/catalog'
+import { APP_TABLES, CATALOG_TABLES, PRIVATE_TABLES } from '../src/schemas/catalog'
 import { loadEnv, requireEnv } from './lib/env'
 
 loadEnv()
@@ -49,6 +49,18 @@ for (const table of PRIVATE_TABLES) {
   const hidden = read.error !== null || (read.data?.length ?? 0) === 0
   failed ||= !hidden
   console.log(`${hidden ? '✓' : '✗'} ${table.padEnd(26)} not readable without a session`)
+}
+
+// The proposals window is the one thing the site writes to, and only with a session. Without
+// one, nothing may be read from it and nothing may be written into it.
+for (const table of APP_TABLES) {
+  const read = await client.from(table).select('*').limit(1)
+  const write = await client.from(table).insert({})
+  const hidden = read.error !== null || (read.data?.length ?? 0) === 0
+  const closed = write.error !== null
+  failed ||= !hidden || !closed
+  const detail = `${hidden ? 'read blocked' : 'READABLE'}, ${closed ? 'insert blocked' : 'WRITABLE'}`
+  console.log(`${hidden && closed ? '✓' : '✗'} ${table.padEnd(26)} ${detail} without a session`)
 }
 
 console.log(failed ? '\nRLS check failed.' : '\nRLS check passed: read-only for the public key.')

@@ -167,6 +167,13 @@ export const diseaseArticleRowSchema = z.object({
   sort_order: sortOrderSchema,
 })
 
+/**
+ * Tables the app itself writes to: the proposals a colleague sends and the list of who may
+ * review them. They are never synced from data/ and never cached offline.
+ */
+export const APP_TABLES = ['admins', 'proposals'] as const
+export type AppTable = (typeof APP_TABLES)[number]
+
 /** Tables that require a session; they are not part of the catalog and are not cached offline. */
 export const PRIVATE_TABLES = ['disease_articles'] as const
 export type PrivateTable = (typeof PRIVATE_TABLES)[number]
