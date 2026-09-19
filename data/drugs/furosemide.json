@@ -1,0 +1,23 @@
+{
+  "$comment": "Додано 2026-09-19 за дизайнами відділення (HD ARA-C, CHOEP): фуросемід 20 мг в/в струминно під контролем ваги й діурезу. Фасування — стандартні зареєстровані в Україні форми; звірити з Держреєстром.",
+  "id": "furosemide",
+  "name": {
+    "uk": "Фуросемід",
+    "en": "Furosemide"
+  },
+  "trade_names": ["Лазикс"],
+  "availability": "department",
+  "presentations": [
+    {
+      "key": "amp-20",
+      "form": "ampoule",
+      "strength_mg": 20,
+      "volume_ml": 2
+    },
+    {
+      "key": "tab-40",
+      "form": "tablet",
+      "strength_mg": 40
+    }
+  ]
+}

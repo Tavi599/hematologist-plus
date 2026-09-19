@@ -32,9 +32,7 @@
       "route": "oral",
       "dose_value": 1000,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Не пізніше ніж за 30 хв до ритуксимабу",
         "en": "At least 30 minutes before rituximab"
@@ -47,9 +45,7 @@
       "route": "iv_infusion",
       "dose_value": 20,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Премедикація за практикою відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл у 100 мл 0,9% NaCl; у протоколі — хлорфенамін 10 мг в/в",
         "en": "Department premedication: dexamethasone 20 mg with diphenhydramine 50 mg in 100 mL 0.9% NaCl; the protocol uses chlorphenamine 10 mg IV"
@@ -62,9 +58,7 @@
       "route": "iv_infusion",
       "dose_value": 50,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Премедикація за практикою відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл у 100 мл 0,9% NaCl; у протоколі — хлорфенамін 10 мг в/в",
         "en": "Department premedication: dexamethasone 20 mg with diphenhydramine 50 mg in 100 mL 0.9% NaCl; the protocol uses chlorphenamine 10 mg IV"
@@ -76,13 +70,7 @@
       "route": "iv_infusion",
       "dose_value": 500,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [1, 2, 3, 4, 5],
       "duration_min": 15,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 100,
@@ -97,9 +85,7 @@
       "route": "iv_infusion",
       "dose_value": 375,
       "dose_unit": "mg_m2",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Лише у варіанті R-ESHAP (CD20-позитивні лімфоми); максимальна швидкість 400 мг/год",
         "en": "Only in R-ESHAP (CD20-positive lymphoma); maximum rate 400 mg/h"
@@ -111,12 +97,7 @@
       "route": "iv_infusion",
       "dose_value": 40,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4
-      ],
+      "days": [1, 2, 3, 4],
       "duration_min": 60,
       "notes": {
         "uk": "У 250–500 мл 0,9% NaCl за 1 годину; концентрація 0,2–0,4 мг/мл",
@@ -129,12 +110,7 @@
       "route": "iv_infusion",
       "dose_value": 25,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4
-      ],
+      "days": [1, 2, 3, 4],
       "duration_min": 1320,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 1000,
@@ -149,9 +125,7 @@
       "route": "iv_infusion",
       "dose_value": 2000,
       "dose_unit": "mg_m2",
-      "days": [
-        5
-      ],
+      "days": [5],
       "duration_min": 180,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 250,
@@ -167,13 +141,7 @@
       "route": "iv_bolus",
       "dose_value": 8,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [1, 2, 3, 4, 5],
       "administrations_per_day": 2
     },
     {
@@ -183,15 +151,7 @@
       "route": "oral",
       "dose_value": 300,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7],
       "notes": {
         "uk": "Профілактика синдрому лізису пухлини, 1-й цикл",
         "en": "Tumour lysis prophylaxis, cycle 1"
@@ -204,29 +164,7 @@
       "route": "oral",
       "dose_value": 200,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
       "administrations_per_day": 3,
       "notes": {
         "uk": "Впродовж лікування і 3 місяці після",

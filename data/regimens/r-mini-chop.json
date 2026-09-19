@@ -32,9 +32,7 @@
       "route": "oral",
       "dose_value": 1000,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Не пізніше ніж за 30 хв до ритуксимабу",
         "en": "At least 30 minutes before rituximab"
@@ -47,9 +45,7 @@
       "route": "iv_bolus",
       "dose_value": 40,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "За практикою відділення",
         "en": "Department practice"
@@ -61,13 +57,7 @@
       "route": "oral",
       "dose_value": 40,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [1, 2, 3, 4, 5],
       "notes": {
         "uk": "Уранці під час їди; у день 1 — не пізніше ніж за 30 хв до ритуксимабу. За рішенням лікаря можна замінити дексаметазоном.",
         "en": "In the morning with food; on day 1 at least 30 minutes before rituximab. Dexamethasone may be used instead at the consultant's discretion."
@@ -80,9 +70,7 @@
       "route": "iv_infusion",
       "dose_value": 20,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Премедикація за практикою відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл у 100 мл 0,9% NaCl; у протоколі — хлорфенамін 10 мг в/в",
         "en": "Department premedication: dexamethasone 20 mg with diphenhydramine 50 mg in 100 mL 0.9% NaCl; the protocol uses chlorphenamine 10 mg IV"
@@ -95,9 +83,7 @@
       "route": "iv_infusion",
       "dose_value": 50,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Премедикація за практикою відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл у 100 мл 0,9% NaCl; у протоколі — хлорфенамін 10 мг в/в",
         "en": "Department premedication: dexamethasone 20 mg with diphenhydramine 50 mg in 100 mL 0.9% NaCl; the protocol uses chlorphenamine 10 mg IV"
@@ -109,9 +95,7 @@
       "route": "iv_infusion",
       "dose_value": 375,
       "dose_unit": "mg_m2",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Максимальна швидкість 400 мг/год",
         "en": "Maximum rate 400 mg/h"
@@ -123,9 +107,7 @@
       "route": "iv_infusion",
       "dose_value": 25,
       "dose_unit": "mg_m2",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "У протоколі — струминно; у відділенні вводять інфузійно в 250 мл 0,9% NaCl",
         "en": "The protocol gives a bolus; the department infuses it in 250 mL 0.9% NaCl"
@@ -137,9 +119,7 @@
       "route": "iv_infusion",
       "dose_value": 1,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Фіксована доза 1 мг, не за площею тіла",
         "en": "Fixed 1 mg dose, not by body surface area"
@@ -151,9 +131,7 @@
       "route": "iv_infusion",
       "dose_value": 400,
       "dose_unit": "mg_m2",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "У протоколі — струминно; у відділенні вводять інфузійно в 500 мл 0,9% NaCl",
         "en": "The protocol gives a bolus; the department infuses it in 500 mL 0.9% NaCl"
@@ -166,9 +144,7 @@
       "route": "iv_bolus",
       "dose_value": 8,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "administrations_per_day": 2
     },
     {
@@ -178,12 +154,7 @@
       "route": "oral",
       "dose_value": 10,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4
-      ],
+      "days": [1, 2, 3, 4],
       "administrations_per_day": 3,
       "notes": {
         "uk": "10–20 мг тричі на добу",
@@ -197,15 +168,7 @@
       "route": "oral",
       "dose_value": 300,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7],
       "notes": {
         "uk": "Профілактика синдрому лізису пухлини, 1-й цикл",
         "en": "Tumour lysis prophylaxis, cycle 1"
@@ -218,29 +181,7 @@
       "route": "oral",
       "dose_value": 200,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
       "administrations_per_day": 3,
       "notes": {
         "uk": "Впродовж лікування і 3 місяці після",

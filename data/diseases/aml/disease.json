@@ -1,0 +1,34 @@
+{
+  "id": "aml",
+  "name": {
+    "uk": "Гострий мієлоїдний лейкоз",
+    "en": "Acute myeloid leukaemia"
+  },
+  "summary": {
+    "uk": "Клональна проліферація мієлоїдних бластів; потребує невідкладного обстеження й лікування.",
+    "en": "Clonal proliferation of myeloid blasts; needs urgent work-up and treatment."
+  },
+  "codes": [{ "system_id": "icd-10", "code": "C92.0", "is_primary": true }],
+  "treatment": [
+    {
+      "key": "consolidation",
+      "kind": "line",
+      "title": { "uk": "Консолідація", "en": "Consolidation" },
+      "description": {
+        "uk": "Після досягнення ремісії; вибір залежить від групи ризику й придатності до трансплантації.",
+        "en": "After remission is achieved; the choice depends on the risk group and transplant eligibility."
+      },
+      "regimens": [{ "regimen_id": "hd-ara-c" }]
+    },
+    {
+      "key": "unfit",
+      "kind": "group",
+      "title": { "uk": "Непридатні до інтенсивної терапії", "en": "Unfit for intensive therapy" },
+      "description": {
+        "uk": "Гіпометилювальні засоби, за можливості з венетоклаксом.",
+        "en": "Hypomethylating agents, with venetoclax where available."
+      },
+      "regimens": [{ "regimen_id": "azacitidine-mono" }]
+    }
+  ]
+}
