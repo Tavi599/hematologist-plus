@@ -1,0 +1,24 @@
+{
+  "id": "mds",
+  "name": {
+    "uk": "Мієлодиспластичний синдром",
+    "en": "Myelodysplastic syndrome"
+  },
+  "summary": {
+    "uk": "Клональна хвороба стовбурової клітини: цитопенії, дисплазія, ризик переходу в гострий мієлоїдний лейкоз.",
+    "en": "Clonal stem cell disorder: cytopenias, dysplasia and a risk of progression to acute myeloid leukaemia."
+  },
+  "codes": [{ "system_id": "icd-10", "code": "D46", "is_primary": true }],
+  "treatment": [
+    {
+      "key": "higher-risk",
+      "kind": "group",
+      "title": { "uk": "Вищий ризик (IPSS-R)", "en": "Higher risk (IPSS-R)" },
+      "description": {
+        "uk": "Гіпометилювальні засоби; у придатних кандидатів обговорюють алогенну трансплантацію.",
+        "en": "Hypomethylating agents; allogeneic transplantation is discussed in suitable candidates."
+      },
+      "regimens": [{ "regimen_id": "azacitidine-mono" }]
+    }
+  ]
+}

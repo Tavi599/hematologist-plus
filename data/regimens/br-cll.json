@@ -1,0 +1,228 @@
+{
+  "$comment": "Дози — протокол NSSG Oxford L.44 Bendamustine-Rituximab [CLL]. Ритуксимаб і бендамустин мають альтернативні дози (цикли 2–6 та рецидив) — обирайте в калькуляторі у списку джерела дози. Ко-тримоксазол не внесений: його немає в довіднику відділення.",
+  "id": "br-cll",
+  "short_name": "BR (ХЛЛ)",
+  "name": {
+    "uk": "BR при ХЛЛ",
+    "en": "BR for CLL"
+  },
+  "description": {
+    "uk": "Ритуксимаб у день 1, бендамустин у дні 1–2. Цикл 28 днів, до 6 циклів.",
+    "en": "Rituximab on day 1, bendamustine on days 1-2. 28-day cycle, up to 6 cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.44 Bendamustine-Rituximab [CLL]",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-44-bendamustine-70-r-cll.pdf",
+      "version": "перевірено 2026-09-19",
+      "checkedOn": "2026-09-19"
+    },
+    {
+      "name": "Дизайн відділення «Ритуксимаб» (Google Таблиці)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [
+        1
+      ],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до ритуксимабу",
+        "en": "At least 30 minutes before rituximab"
+      }
+    },
+    {
+      "key": "omeprazole",
+      "drug_id": "omeprazole",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [
+        1
+      ],
+      "notes": {
+        "uk": "За практикою відділення",
+        "en": "Department practice"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [
+        1
+      ],
+      "notes": {
+        "uk": "Премедикація за практикою відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл у 100 мл 0,9% NaCl; у протоколі — гідрокортизон 100 мг і хлорфенамін 10 мг в/в",
+        "en": "Department premedication: dexamethasone 20 mg with diphenhydramine 50 mg in 100 mL 0.9% NaCl; the protocol uses hydrocortisone 100 mg and chlorphenamine 10 mg IV"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1
+      ],
+      "notes": {
+        "uk": "Премедикація за практикою відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл у 100 мл 0,9% NaCl; у протоколі — гідрокортизон 100 мг і хлорфенамін 10 мг в/в",
+        "en": "Department premedication: dexamethasone 20 mg with diphenhydramine 50 mg in 100 mL 0.9% NaCl; the protocol uses hydrocortisone 100 mg and chlorphenamine 10 mg IV"
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [
+        1
+      ],
+      "notes": {
+        "uk": "Цикл 1. Якщо лімфоцитів > 25×10⁹/л — 50 мг/м² (або 100 мг) у день 1, решту 325 мг/м² у день 2.",
+        "en": "Cycle 1. If lymphocytes exceed 25 x 10^9/L give 50 mg/m2 (or 100 mg flat) on day 1 and the remaining 325 mg/m2 on day 2."
+      },
+      "dose_options": [
+        {
+          "dose_value": 500,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Доза ритуксимабу для 2–6 циклів",
+            "en": "Rituximab dose for cycles 2-6"
+          },
+          "source": {
+            "name": "NSSG L.44 — цикли 2–6",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-44-bendamustine-70-r-cll.pdf",
+            "checkedOn": "2026-09-19"
+          }
+        }
+      ]
+    },
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 90,
+      "dose_unit": "mg_m2",
+      "days": [
+        1,
+        2
+      ],
+      "duration_min": 45,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Перша лінія; 30–60 хвилин",
+        "en": "First line; over 30-60 minutes"
+      },
+      "dose_options": [
+        {
+          "dose_value": 70,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Доза бендамустину при рецидиві ХЛЛ",
+            "en": "Bendamustine dose for relapsed CLL"
+          },
+          "source": {
+            "name": "NSSG L.44 — рецидив",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-44-bendamustine-70-r-cll.pdf",
+            "checkedOn": "2026-09-19"
+          }
+        }
+      ]
+    },
+    {
+      "key": "ondansetron",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2
+      ],
+      "administrations_per_day": 2
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "notes": {
+        "uk": "Профілактика лізису пухлини, 1-й цикл; у дні бендамустину не дають",
+        "en": "Tumour lysis prophylaxis, cycle 1; omitted on bendamustine days"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Впродовж лікування і 3 місяці після",
+        "en": "During treatment and for 3 months after"
+      }
+    }
+  ]
+}
