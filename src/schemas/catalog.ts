@@ -1,6 +1,7 @@
 import { z } from 'zod'
 
 import {
+  amountUnitSchema,
   doseOptionsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
@@ -48,22 +49,28 @@ export const drugRowSchema = z.object({
     .string()
     .regex(/^[A-Z][0-9]{2}[A-Z]{2}[0-9]{2}$/, 'ATC code like L01XC02')
     .nullable(),
-  max_single_dose_mg: positiveNumberSchema.nullable(),
   review_rules: reviewRulesSchema.nullable(),
   notes: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
   sources: sourcesSchema,
   availability: drugAvailabilitySchema,
+  /** Unit the pack strengths and caps of this drug are in. */
+  amount_unit: amountUnitSchema,
+  /** Dose units this drug is officially prescribed in; empty means unrestricted. */
+  dose_units: z.array(doseUnitSchema),
+  /** Maximum absolute dose per administration, in `amount_unit`. */
+  max_single_dose_amount: positiveNumberSchema.nullable(),
 })
 
 export const drugPresentationRowSchema = z.object({
   id: idSchema,
   drug_id: idSchema,
   form: presentationFormSchema,
-  strength_mg: positiveNumberSchema,
   volume_ml: positiveNumberSchema.nullable(),
   label: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
+  strength_amount: positiveNumberSchema,
+  strength_unit: amountUnitSchema,
 })
 
 export const drugInfusionParamsRowSchema = z
@@ -110,7 +117,6 @@ export const regimenItemRowSchema = z.object({
   /** Dose per administration. */
   dose_value: positiveNumberSchema,
   dose_unit: doseUnitSchema,
-  cap_mg: positiveNumberSchema.nullable(),
   days: z.array(nonNegativeIntSchema).min(1),
   administrations_per_day: positiveNumberSchema.int(),
   infusion_params_id: idSchema.nullable(),
@@ -121,6 +127,8 @@ export const regimenItemRowSchema = z.object({
   notes: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
   dose_options: doseOptionsSchema,
+  /** Maximum absolute dose per administration, in the dose's amount unit. */
+  cap_amount: positiveNumberSchema.nullable(),
 })
 
 export const classificationSystemRowSchema = z.object({
@@ -247,7 +255,7 @@ export type TreatmentNodeRegimen = CatalogRow<'treatment_node_regimens'>
  * Bump when the catalog shape changes incompatibly: invalidates offline caches.
  * Keep in step with new migrations that change columns.
  */
-export const CATALOG_SCHEMA_VERSION = '3'
+export const CATALOG_SCHEMA_VERSION = '4'
 
 export function emptySyncRows(): SyncRows {
   return { ...emptyCatalog(), disease_articles: [] }

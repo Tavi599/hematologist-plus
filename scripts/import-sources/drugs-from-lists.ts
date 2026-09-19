@@ -29,7 +29,7 @@ interface SourceRow {
 interface Presentation {
   key: string
   form: PresentationForm
-  strength_mg: number
+  strength_amount: number
   volume_ml?: number
 }
 
@@ -92,18 +92,18 @@ export function collectRows(files: string[]): { rows: SourceRow[]; issues: Impor
 }
 
 /** Obvious mechanical errors: a tablet of 5 g, an ampoule of a microgram. */
-function implausible(form: PresentationForm, strengthMg: number): string | null {
+function implausible(form: PresentationForm, strengthAmount: number): string | null {
   if (form === 'tablet' || form === 'capsule') {
-    if (strengthMg > 2000) return `таблетка/капсула ${strengthMg} мг — завелика`
-    if (strengthMg < 0.1) return `таблетка/капсула ${strengthMg} мг — замала`
+    if (strengthAmount > 2000) return `таблетка/капсула ${strengthAmount} мг — завелика`
+    if (strengthAmount < 0.1) return `таблетка/капсула ${strengthAmount} мг — замала`
   }
-  if (strengthMg > 10_000) return `${strengthMg} мг на одиницю — завелика`
-  if (strengthMg <= 0) return 'дозування не додатне'
+  if (strengthAmount > 10_000) return `${strengthAmount} мг на одиницю — завелика`
+  if (strengthAmount <= 0) return 'дозування не додатне'
   return null
 }
 
-function presentationKey(strengthMg: number, volumeMl?: number): string {
-  const strength = String(strengthMg).replace('.', '-')
+function presentationKey(strengthAmount: number, volumeMl?: number): string {
+  const strength = String(strengthAmount).replace('.', '-')
   return volumeMl === undefined
     ? `s${strength}`
     : `s${strength}-v${String(volumeMl).replace('.', '-')}`
@@ -168,12 +168,12 @@ export function buildDrugs(rows: SourceRow[]): {
     const entry = drugs.get(name.id) ?? { name, presentations: [], sources: new Set<string>() }
     entry.sources.add(row.file)
     for (const strength of parsed.strengths) {
-      const problem = implausible(form, strength.strengthMg)
+      const problem = implausible(form, strength.strengthAmount)
       if (problem) {
         issues.push({ kind: 'implausible', drug: name.uk, detail: problem, where })
         continue
       }
-      const key = `${name.id}|${form}|${strength.strengthMg}`
+      const key = `${name.id}|${form}|${strength.strengthAmount}`
       const previous = seen.get(key)
       // One list gives "450 мг", another "450 мг/45 мл": that is the same pack described
       // in more detail. Only two different volumes are a real disagreement.
@@ -186,7 +186,7 @@ export function buildDrugs(rows: SourceRow[]): {
         issues.push({
           kind: 'conflict',
           drug: name.uk,
-          detail: `${strength.strengthMg} мг: об'єм ${previous.volumeMl} мл проти ${strength.volumeMl} мл (${previous.where})`,
+          detail: `${strength.strengthAmount} мг: об'єм ${previous.volumeMl} мл проти ${strength.volumeMl} мл (${previous.where})`,
           where,
         })
         continue
@@ -194,7 +194,7 @@ export function buildDrugs(rows: SourceRow[]): {
       const volumeMl = strength.volumeMl ?? previous?.volumeMl
       seen.set(key, { ...(volumeMl === undefined ? {} : { volumeMl }), where })
 
-      const presentationId = presentationKey(strength.strengthMg)
+      const presentationId = presentationKey(strength.strengthAmount)
       const existing = entry.presentations.find((item) => item.key === presentationId)
       if (existing) {
         if (volumeMl !== undefined) existing.volume_ml = volumeMl
@@ -203,7 +203,7 @@ export function buildDrugs(rows: SourceRow[]): {
       entry.presentations.push({
         key: presentationId,
         form,
-        strength_mg: strength.strengthMg,
+        strength_amount: strength.strengthAmount,
         ...(volumeMl === undefined ? {} : { volume_ml: volumeMl }),
       })
     }
@@ -211,7 +211,7 @@ export function buildDrugs(rows: SourceRow[]): {
   }
 
   for (const entry of drugs.values()) {
-    entry.presentations.sort((a, b) => a.strength_mg - b.strength_mg)
+    entry.presentations.sort((a, b) => a.strength_amount - b.strength_amount)
   }
   return { drugs, issues }
 }

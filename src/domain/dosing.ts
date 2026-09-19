@@ -1,14 +1,18 @@
 import type { BsaResult } from './bsa'
 import { assertPercent, assertPositive } from './math'
 import { calvertDose } from './renal'
-import { DomainInputError, type CalculationStep, type DoseUnit } from './types'
+import { amountUnitOf, doseBasisOf } from './units'
+import { DomainInputError, type AmountUnit, type CalculationStep, type DoseUnit } from './types'
 
 /** Dose as written in a regimen item. */
 export interface DoseSpec {
   value: number
   unit: DoseUnit
-  /** Maximum absolute dose per administration, mg (e.g. vincristine 2 mg). */
-  capMg?: number
+  /**
+   * Maximum absolute dose per administration, in the same amount unit as the dose
+   * (e.g. vincristine 2 mg, bleomycin 30 000 IU).
+   */
+  capAmount?: number
 }
 
 export interface DoseContext {
@@ -26,14 +30,16 @@ export interface DoseReduction {
 }
 
 export interface DoseResult {
-  /** Full dose from the regimen before any cap or reduction, mg. */
-  baseMg: number
-  /** Dose after the absolute cap, mg. */
-  cappedMg: number
+  /** The unit every amount in this result is in. */
+  unit: AmountUnit
+  /** Full dose from the regimen before any cap or reduction. */
+  baseAmount: number
+  /** Dose after the absolute cap. */
+  cappedAmount: number
   isCapped: boolean
   reductionPercent: number
-  /** Final unrounded dose, mg — printed as a note next to the rounded value. */
-  doseMg: number
+  /** Final unrounded dose — printed as a note next to the rounded value. */
+  doseAmount: number
   steps: CalculationStep[]
 }
 
@@ -54,65 +60,66 @@ export function calculateDose(
   reduction?: DoseReduction,
 ): DoseResult {
   assertPositive('dose.value', spec.value)
-  if (spec.capMg !== undefined) assertPositive('dose.capMg', spec.capMg)
+  if (spec.capAmount !== undefined) assertPositive('dose.capAmount', spec.capAmount)
 
+  const unit = amountUnitOf(spec.unit)
   const steps: CalculationStep[] = []
-  let baseMg: number
+  let baseAmount: number
 
-  switch (spec.unit) {
-    case 'mg_m2':
+  switch (doseBasisOf(spec.unit)) {
+    case 'm2':
       assertPositive('bsaM2', context.bsaM2)
-      baseMg = spec.value * context.bsaM2
+      baseAmount = spec.value * context.bsaM2
       steps.push({
         key: 'dose.perBsa',
-        value: baseMg,
-        unit: 'mg',
-        params: { doseMgM2: spec.value, bsaM2: context.bsaM2 },
+        value: baseAmount,
+        unit,
+        params: { doseValue: spec.value, doseUnit: spec.unit, bsaM2: context.bsaM2 },
       })
       break
-    case 'mg_kg':
+    case 'kg':
       assertPositive('weightKg', context.weightKg)
-      baseMg = spec.value * context.weightKg
+      baseAmount = spec.value * context.weightKg
       steps.push({
         key: 'dose.perWeight',
-        value: baseMg,
-        unit: 'mg',
-        params: { doseMgKg: spec.value, weightKg: context.weightKg },
+        value: baseAmount,
+        unit,
+        params: { doseValue: spec.value, doseUnit: spec.unit, weightKg: context.weightKg },
       })
       break
-    case 'mg_flat':
-      baseMg = spec.value
-      steps.push({ key: 'dose.flat', value: baseMg, unit: 'mg' })
+    case 'flat':
+      baseAmount = spec.value
+      steps.push({ key: 'dose.flat', value: baseAmount, unit })
       break
     case 'auc': {
       if (context.gfrMlMin === undefined) {
         throw new DomainInputError('gfrMlMin', 'is required for AUC-based doses')
       }
       const calvert = calvertDose(spec.value, context.gfrMlMin)
-      baseMg = calvert.doseMg
+      baseAmount = calvert.doseMg
       steps.push(...calvert.steps)
       break
     }
   }
 
-  const isCapped = spec.capMg !== undefined && baseMg > spec.capMg
-  const cappedMg = isCapped ? spec.capMg! : baseMg
-  if (spec.capMg !== undefined) {
+  const isCapped = spec.capAmount !== undefined && baseAmount > spec.capAmount
+  const cappedAmount = isCapped ? spec.capAmount! : baseAmount
+  if (spec.capAmount !== undefined) {
     steps.push({
       key: 'dose.cap',
-      value: cappedMg,
-      unit: 'mg',
-      params: { capMg: spec.capMg, isCapped },
+      value: cappedAmount,
+      unit,
+      params: { capAmount: spec.capAmount, unit, isCapped },
     })
   }
 
   const reductionPercent = effectiveReductionPercent(reduction)
-  const doseMg = cappedMg * (1 - reductionPercent / 100)
+  const doseAmount = cappedAmount * (1 - reductionPercent / 100)
   if (reductionPercent > 0) {
-    steps.push({ key: 'dose.reduction', value: doseMg, unit: 'mg', params: { reductionPercent } })
+    steps.push({ key: 'dose.reduction', value: doseAmount, unit, params: { reductionPercent } })
   }
 
-  return { baseMg, cappedMg, isCapped, reductionPercent, doseMg, steps }
+  return { unit, baseAmount, cappedAmount, isCapped, reductionPercent, doseAmount, steps }
 }
 
 export interface DoseVariants {
@@ -133,8 +140,8 @@ export function calculateDoseVariants(
 ): DoseVariants {
   const actual = calculateDose(spec, { ...context, bsaM2: bsa.actualM2 }, reduction)
   const capped =
-    spec.unit === 'mg_m2' && bsa.isCapped
+    doseBasisOf(spec.unit) === 'm2' && bsa.isCapped
       ? calculateDose(spec, { ...context, bsaM2: bsa.cappedM2 }, reduction)
       : actual
-  return { actual, capped, differs: actual.doseMg !== capped.doseMg }
+  return { actual, capped, differs: actual.doseAmount !== capped.doseAmount }
 }

@@ -88,9 +88,9 @@ describe('indexCatalog', () => {
       'vincristine',
       'prednisolone',
     ])
-    expect(index.presentationsByDrug.get('cyclophosphamide')?.map((p) => p.strength_mg)).toEqual([
-      200, 500, 1000,
-    ])
+    expect(
+      index.presentationsByDrug.get('cyclophosphamide')?.map((p) => p.strength_amount),
+    ).toEqual([200, 500, 1000])
     expect(index.rootNodesByDisease.get('dlbcl')?.map((node) => node.id)).toEqual([
       'dlbcl.first-line',
     ])

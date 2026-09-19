@@ -15,30 +15,30 @@ const reason = (input: string) => {
 
 describe('parseStrength', () => {
   it('reads plain masses', () => {
-    expect(ok('100 мг')).toEqual([{ strengthMg: 100 }])
-    expect(ok('2,5 мг')).toEqual([{ strengthMg: 2.5 }])
-    expect(ok('1000 мг ')).toEqual([{ strengthMg: 1000 }])
-    expect(ok('100 мг, 200 мг')).toEqual([{ strengthMg: 100 }, { strengthMg: 200 }])
+    expect(ok('100 мг')).toEqual([{ strengthAmount: 100 }])
+    expect(ok('2,5 мг')).toEqual([{ strengthAmount: 2.5 }])
+    expect(ok('1000 мг ')).toEqual([{ strengthAmount: 1000 }])
+    expect(ok('100 мг, 200 мг')).toEqual([{ strengthAmount: 100 }, { strengthAmount: 200 }])
     expect(ok('80 мг, 125 мг (3 таб/в упаковці)')).toEqual([
-      { strengthMg: 80 },
-      { strengthMg: 125 },
+      { strengthAmount: 80 },
+      { strengthAmount: 125 },
     ])
   })
 
   it('reads a mass held in a given volume', () => {
-    expect(ok('50 мг/2 мл')).toEqual([{ strengthMg: 50, volumeMl: 2 }])
-    expect(ok('300 мкг/0,5 мл')).toEqual([{ strengthMg: 0.3, volumeMl: 0.5 }])
-    expect(ok('450 мг/45 мл')).toEqual([{ strengthMg: 450, volumeMl: 45 }])
+    expect(ok('50 мг/2 мл')).toEqual([{ strengthAmount: 50, volumeMl: 2 }])
+    expect(ok('300 мкг/0,5 мл')).toEqual([{ strengthAmount: 0.3, volumeMl: 0.5 }])
+    expect(ok('450 мг/45 мл')).toEqual([{ strengthAmount: 450, volumeMl: 45 }])
   })
 
   it('multiplies a concentration by the pack volume', () => {
-    expect(ok('20 мг/мл по 10 мл')).toEqual([{ strengthMg: 200, volumeMl: 10 }])
-    expect(ok('10 мг/мл, 4 мл')).toEqual([{ strengthMg: 40, volumeMl: 4 }])
-    expect(ok('10 мг/мл 100 мл')).toEqual([{ strengthMg: 1000, volumeMl: 100 }])
+    expect(ok('20 мг/мл по 10 мл')).toEqual([{ strengthAmount: 200, volumeMl: 10 }])
+    expect(ok('10 мг/мл, 4 мл')).toEqual([{ strengthAmount: 40, volumeMl: 4 }])
+    expect(ok('10 мг/мл 100 мл')).toEqual([{ strengthAmount: 1000, volumeMl: 100 }])
   })
 
   it('derives the volume when a mass and a concentration are both given', () => {
-    expect(ok('8 мг, 2 мг/мл')).toEqual([{ strengthMg: 8, volumeMl: 4 }])
+    expect(ok('8 мг, 2 мг/мл')).toEqual([{ strengthAmount: 8, volumeMl: 4 }])
   })
 
   it('refuses what it cannot know', () => {
@@ -72,8 +72,8 @@ describe('parseForm', () => {
 
 describe('source lists quirks', () => {
   it('prefers the mass in brackets when the label leads with IU', () => {
-    expect(ok('30 млн МО (300 мкг)')).toEqual([{ strengthMg: 0.3 }])
-    expect(ok('48 млн МО (480 мкг)')).toEqual([{ strengthMg: 0.48 }])
+    expect(ok('30 млн МО (300 мкг)')).toEqual([{ strengthAmount: 0.3 }])
+    expect(ok('48 млн МО (480 мкг)')).toEqual([{ strengthAmount: 0.48 }])
   })
 
   it('understands the short form names used in the order lists', () => {

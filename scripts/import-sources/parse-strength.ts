@@ -5,7 +5,7 @@
  */
 
 export interface ParsedStrength {
-  strengthMg: number
+  strengthAmount: number
   /** Volume of the vial/ampoule, mL; absent for tablets and powders. */
   volumeMl?: number
 }
@@ -47,8 +47,8 @@ export function parseStrength(input: string): StrengthResult {
 
   // "50 мг/2 мл": the whole vial holds 50 mg.
   if (inVolume) {
-    const strengthMg = toNumber(inVolume[1]!) * MASS_UNITS[inVolume[2]!]!
-    return { ok: true, strengths: [{ strengthMg, volumeMl: toNumber(inVolume[3]!) }] }
+    const strengthAmount = toNumber(inVolume[1]!) * MASS_UNITS[inVolume[2]!]!
+    return { ok: true, strengths: [{ strengthAmount, volumeMl: toNumber(inVolume[3]!) }] }
   }
 
   if (perMl) {
@@ -56,24 +56,25 @@ export function parseStrength(input: string): StrengthResult {
     const volume = volumeAfter ? toNumber(volumeAfter[1]!) : null
     // "20 мг/мл по 10 мл": concentration × pack volume.
     if (volume !== null) {
-      return { ok: true, strengths: [{ strengthMg: concentration * volume, volumeMl: volume }] }
+      return { ok: true, strengths: [{ strengthAmount: concentration * volume, volumeMl: volume }] }
     }
     // "4 мг, 2 мг/мл": the ampoule holds 4 mg, so its volume follows from the concentration.
     const mass = text.match(re(`(?:^|[^/\\d])(${NUMBER})\\s*(мг|мкг|г)(?!\\s*/)`))
     if (mass) {
-      const strengthMg = toNumber(mass[1]!) * MASS_UNITS[mass[2]!]!
-      return { ok: true, strengths: [{ strengthMg, volumeMl: strengthMg / concentration }] }
+      const strengthAmount = toNumber(mass[1]!) * MASS_UNITS[mass[2]!]!
+      return { ok: true, strengths: [{ strengthAmount, volumeMl: strengthAmount / concentration }] }
     }
     return { ok: false, reason: 'лише концентрація, невідомий об’єм' }
   }
 
   // Plain masses, possibly several: "100 мг, 200 мг".
   const masses = [...text.matchAll(re(`(${NUMBER})\\s*(мг|мкг|г)${END}`, 'g'))].map((match) => ({
-    strengthMg: toNumber(match[1]!) * MASS_UNITS[match[2]!]!,
+    strengthAmount: toNumber(match[1]!) * MASS_UNITS[match[2]!]!,
   }))
   if (masses.length > 0) {
     const unique = masses.filter(
-      (mass, index) => masses.findIndex((other) => other.strengthMg === mass.strengthMg) === index,
+      (mass, index) =>
+        masses.findIndex((other) => other.strengthAmount === mass.strengthAmount) === index,
     )
     return { ok: true, strengths: unique }
   }

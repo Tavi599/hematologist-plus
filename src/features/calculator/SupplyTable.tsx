@@ -4,12 +4,13 @@ import { useTranslation } from 'react-i18next'
 import type { CourseResult } from '../../domain'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { formatNumber } from '../../lib/format'
-import { currentLanguage } from '../../lib/i18n'
+import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 
 /** Vials and tablets needed for the whole course. */
 export function SupplyTable({ catalog, course }: { catalog: CatalogIndex; course: CourseResult }) {
   const { t } = useTranslation()
+  const tu = t as unknown as DynamicTranslate
   const language = currentLanguage()
   const presentations = new Map(
     catalog.rows.drug_presentations.map((presentation) => [presentation.id, presentation]),
@@ -39,7 +40,12 @@ export function SupplyTable({ catalog, course }: { catalog: CatalogIndex; course
                   <Table.Tr key={entry.presentation.id}>
                     <Table.Td>
                       {drug ? localize(drug.name, language) : entry.presentation.id}{' '}
-                      {formatNumber(entry.presentation.strengthMg, language, 2)} {t('units.mg')}
+                      {formatNumber(
+                        row ? row.strength_amount : entry.presentation.strengthAmount,
+                        language,
+                        2,
+                      )}{' '}
+                      {tu(`units.${row?.strength_unit ?? 'mg'}`)}
                     </Table.Td>
                     <Table.Td>{entry.count}</Table.Td>
                   </Table.Tr>

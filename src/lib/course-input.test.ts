@@ -38,8 +38,8 @@ describe('buildCourseItems', () => {
         stockConcentrationMgMl: 10,
       },
       presentations: [
-        { id: 'rituximab.vial-100', strengthMg: 100 },
-        { id: 'rituximab.vial-500', strengthMg: 500 },
+        { id: 'rituximab.vial-100', strengthAmount: 100, unit: 'mg' },
+        { id: 'rituximab.vial-500', strengthAmount: 500, unit: 'mg' },
       ],
     })
     expect(rituximab.missingInfusionData).toBe(false)
@@ -47,7 +47,7 @@ describe('buildCourseItems', () => {
 
   it('takes the absolute cap and review rules from the drug when the regimen has none', () => {
     const vincristine = buildCourseItems(index(), 'r-chop-21')[3]!
-    expect(vincristine.courseDrug.dose).toEqual({ value: 1.4, unit: 'mg_m2', capMg: 2 })
+    expect(vincristine.courseDrug.dose).toEqual({ value: 1.4, unit: 'mg_m2', capAmount: 2 })
     expect(vincristine.courseDrug.reviewRules).toEqual({ hepatic: true })
   })
 
@@ -100,14 +100,14 @@ describe('dose choices', () => {
         label: null,
         doseValue: 100,
         doseUnit: 'mg_flat',
-        capMg: null,
+        capAmount: null,
       },
       {
         id: 'ДЕМО: інший протокол',
         label: 'ДЕМО: інший протокол',
         doseValue: 40,
         doseUnit: 'mg_m2',
-        capMg: null,
+        capAmount: null,
         source: { name: 'ДЕМО: інший протокол', checkedOn: '2026-09-19' },
       },
     ])
@@ -173,7 +173,7 @@ describe('regimen calculation end to end', () => {
       { startDateIso: '2026-09-21' },
     )
 
-    expect(course.drugs.map((drug) => drug.doseMg)).toEqual([750, 1500, 100, 2, 100])
+    expect(course.drugs.map((drug) => drug.doseAmount)).toEqual([750, 1500, 100, 2, 100])
     expect(course.days.map((day) => day.day)).toEqual([1, 2, 3, 4, 5])
     expect(course.drugs[3]?.warnings.map((warning) => warning.code)).toEqual(['dose.capped'])
   })
@@ -200,14 +200,14 @@ describe('fitsRoute', () => {
         id: 'p.amp',
         drug_id: oral.drug_id,
         form: 'ampoule',
-        strength_mg: 30,
+        strength_amount: 30,
       },
       {
         ...catalog.drug_presentations[0]!,
         id: 'p.tab',
         drug_id: oral.drug_id,
         form: 'tablet',
-        strength_mg: 5,
+        strength_amount: 5,
       },
     )
     const built = buildCourseItemsFrom(indexCatalog(catalog), [oral])[0]!

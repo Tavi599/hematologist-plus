@@ -26,7 +26,7 @@ export interface DoseChoice {
   label: string | null
   doseValue: number
   doseUnit: RegimenItem['dose_unit']
-  capMg: number | null
+  capAmount: number | null
   /** The document this dose comes from, shown next to the calculation chain. */
   source?: Source
 }
@@ -42,7 +42,7 @@ export function doseChoices(catalog: CatalogIndex, item: RegimenItem): DoseChoic
       label: regimenSource?.name ?? null,
       doseValue: item.dose_value,
       doseUnit: item.dose_unit,
-      capMg: item.cap_mg,
+      capAmount: item.cap_amount,
       ...(regimenSource === undefined ? {} : { source: regimenSource }),
     },
     ...item.dose_options.map((option) => ({
@@ -50,7 +50,7 @@ export function doseChoices(catalog: CatalogIndex, item: RegimenItem): DoseChoic
       label: option.source.name,
       doseValue: option.dose_value,
       doseUnit: option.dose_unit,
-      capMg: option.cap_mg,
+      capAmount: option.cap_amount,
       source: option.source,
     })),
   ]
@@ -91,9 +91,13 @@ export function buildCourseItemsFrom(
     const params = resolveInfusionParams(catalog, item)
     const presentations = (catalog.presentationsByDrug.get(item.drug_id) ?? [])
       .filter((presentation) => fitsRoute(presentation.form, item.route))
-      .map((presentation) => ({ id: presentation.id, strengthMg: presentation.strength_mg }))
+      .map((presentation) => ({
+        id: presentation.id,
+        strengthAmount: presentation.strength_amount,
+        unit: presentation.strength_unit,
+      }))
     const infusion = buildInfusionParams(item, params)
-    const capMg = chosen.capMg ?? drug.max_single_dose_mg
+    const capAmount = chosen.capAmount ?? drug.max_single_dose_amount
     const durationMin = item.duration_min ?? params?.duration_min ?? null
 
     const courseDrug: CourseDrug = {
@@ -101,7 +105,7 @@ export function buildCourseItemsFrom(
       dose: {
         value: chosen.doseValue,
         unit: chosen.doseUnit,
-        ...(capMg === null ? {} : { capMg }),
+        ...(capAmount === null ? {} : { capAmount }),
       },
       days: item.days,
       administrationsPerDay: item.administrations_per_day,
@@ -174,7 +178,7 @@ export function customCourseItem(params: {
     route: params.route,
     dose_value: params.doseValue,
     dose_unit: params.doseUnit,
-    cap_mg: null,
+    cap_amount: null,
     days: params.days,
     administrations_per_day: 1,
     infusion_params_id: null,

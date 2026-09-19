@@ -3,7 +3,7 @@
   "id": "vincristine",
   "name": { "uk": "ДЕМО Вінкристин", "en": "DEMO Vincristine" },
   "atc_code": "L01CA02",
-  "max_single_dose_mg": 2,
+  "max_single_dose_amount": 2,
   "review_rules": { "hepatic": true },
-  "presentations": [{ "key": "vial-1", "form": "vial", "strength_mg": 1, "volume_ml": 1 }]
+  "presentations": [{ "key": "vial-1", "form": "vial", "strength_amount": 1, "volume_ml": 1 }]
 }

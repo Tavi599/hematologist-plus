@@ -4,8 +4,8 @@
   "name": { "uk": "ДЕМО Ритуксимаб", "en": "DEMO Rituximab" },
   "atc_code": "L01FA01",
   "presentations": [
-    { "key": "vial-100", "form": "vial", "strength_mg": 100, "volume_ml": 10 },
-    { "key": "vial-500", "form": "vial", "strength_mg": 500, "volume_ml": 50 }
+    { "key": "vial-100", "form": "vial", "strength_amount": 100, "volume_ml": 10 },
+    { "key": "vial-500", "form": "vial", "strength_amount": 500, "volume_ml": 50 }
   ],
   "infusion_params": [
     {

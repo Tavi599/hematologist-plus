@@ -46,7 +46,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [customItems, setCustomItems] = useState<RegimenItem[]>([])
   const [disabledIds, setDisabledIds] = useState<string[]>([])
   const [drugPercent, setDrugPercent] = useState<Record<string, number>>({})
-  const [doseOverrideMg, setDoseOverrideMg] = useState<Record<string, number>>({})
+  const [doseOverrideAmount, setDoseOverrideAmount] = useState<Record<string, number>>({})
   const [chosenDoses, setChosenDoses] = useState<Record<string, string>>({})
   const [shiftMin, setShiftMin] = useState<Record<string, number>>({})
   const [header, setHeader] = useState(emptyHeader)
@@ -97,7 +97,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
             dayStart: courseSettings.dayStart,
             bsaVariant: courseSettings.bsaVariant,
             drugPercent,
-            doseOverrideMg,
+            doseOverrideAmount,
             disabledIds,
             shiftMin,
           },
@@ -107,7 +107,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     } catch (thrown) {
       return { course: null, error: thrown }
     }
-  }, [patient, items, courseSettings, drugPercent, doseOverrideMg, disabledIds, shiftMin])
+  }, [patient, items, courseSettings, drugPercent, doseOverrideAmount, disabledIds, shiftMin])
 
   return (
     <Stack>
@@ -161,7 +161,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           course={course}
           disabledIds={disabledIds}
           drugPercent={drugPercent}
-          doseOverrideMg={doseOverrideMg}
+          doseOverrideAmount={doseOverrideAmount}
           customIds={customItems.map((item) => item.id)}
           onToggle={(id, enabled) =>
             setDisabledIds((current) =>
@@ -178,7 +178,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
             setChosenDoses((current) => ({ ...current, [id]: choiceId }))
           }
           onDoseOverride={(id, doseMg) =>
-            setDoseOverrideMg((current) => {
+            setDoseOverrideAmount((current) => {
               const { [id]: _removed, ...rest } = current
               return doseMg === null ? rest : { ...rest, [id]: doseMg }
             })

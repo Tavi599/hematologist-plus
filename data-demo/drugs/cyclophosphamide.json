@@ -5,8 +5,8 @@
   "atc_code": "L01AA01",
   "review_rules": { "renal": true },
   "presentations": [
-    { "key": "vial-200", "form": "vial", "strength_mg": 200 },
-    { "key": "vial-500", "form": "vial", "strength_mg": 500 },
-    { "key": "vial-1000", "form": "vial", "strength_mg": 1000 }
+    { "key": "vial-200", "form": "vial", "strength_amount": 200 },
+    { "key": "vial-500", "form": "vial", "strength_amount": 500 },
+    { "key": "vial-1000", "form": "vial", "strength_amount": 1000 }
   ]
 }

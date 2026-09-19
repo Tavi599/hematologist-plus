@@ -2,8 +2,17 @@ export type Sex = 'male' | 'female'
 
 export type CreatinineUnit = 'umol_l' | 'mg_dl'
 
-/** How a regimen expresses a dose. */
-export type DoseUnit = 'mg_m2' | 'mg_kg' | 'mg_flat' | 'auc'
+/**
+ * The unit a drug is measured in. Mass (mg, mcg) and biological activity (iu, miu) are never
+ * converted into each other: the factor is a property of the drug, not arithmetic.
+ */
+export type AmountUnit = 'mg' | 'mcg' | 'iu' | 'miu'
+
+/** What a dose is proportional to. */
+export type DoseBasis = 'm2' | 'kg' | 'flat'
+
+/** How a regimen expresses a dose: amount unit + basis, or the Calvert AUC (milligrams). */
+export type DoseUnit = `${AmountUnit}_${DoseBasis}` | 'auc'
 
 /**
  * One step of a calculation chain, shown to the physician next to the result.

@@ -19,8 +19,8 @@ const rituximab: CourseDrug = {
   days: [1],
   durationMin: 240,
   presentations: [
-    { id: 'v100', strengthMg: 100 },
-    { id: 'v500', strengthMg: 500 },
+    { id: 'v100', strengthAmount: 100 },
+    { id: 'v500', strengthAmount: 500 },
   ],
   infusion: {
     concentrationMinMgMl: 1,
@@ -34,7 +34,7 @@ const prednisolone: CourseDrug = {
   id: 'r.prednisolone',
   dose: { value: 100, unit: 'mg_flat' },
   days: [1, 2, 3],
-  presentations: [{ id: 't5', strengthMg: 5 }],
+  presentations: [{ id: 't5', strengthAmount: 5 }],
 }
 
 const adjustments = { startDateIso: '2026-09-21' }
@@ -49,19 +49,21 @@ describe('calculateCourse', () => {
 
     const [rtx, pred] = course.drugs
     // 375 mg/m² × 2.0 m² = 750 mg.
-    expect(rtx?.doseMg).toBe(750)
+    expect(rtx?.doseAmount).toBe(750)
     expect(rtx?.variants.differs).toBe(false)
     // Least waste covering 750 mg: 500 + 3 × 100 = 800 mg.
-    expect(rtx?.pack).toMatchObject({ totalMg: 800, wasteMg: 50, unitCount: 4 })
+    expect(rtx?.pack).toMatchObject({ totalAmount: 800, wasteAmount: 50, unitCount: 4 })
     // 750 mg of a 10 mg/mL concentrate = 75 mL; the 100 mL bag would exceed 4 mg/mL.
     expect(rtx?.infusion).toMatchObject({ bagVolumeMl: 250, drugVolumeMl: 75, totalVolumeMl: 325 })
-    expect(rtx?.infusion?.concentrationMgMl).toBeCloseTo(2.308, 3)
+    expect(rtx?.infusion?.concentrationPerMl).toBeCloseTo(2.308, 3)
     expect(rtx?.infusion?.rateMlH).toBeCloseTo(81.25, 2)
     expect(rtx?.administrationsInCourse).toBe(1)
 
-    expect(pred?.doseMg).toBe(100)
+    expect(pred?.doseAmount).toBe(100)
     expect(pred?.administrationsInCourse).toBe(3)
-    expect(pred?.packTotals).toEqual([{ presentation: { id: 't5', strengthMg: 5 }, count: 60 }])
+    expect(pred?.packTotals).toEqual([
+      { presentation: { id: 't5', strengthAmount: 5, unit: 'mg' }, count: 60 },
+    ])
 
     expect(course.days.map((day) => `${day.day}:${day.date}`)).toEqual([
       '1:2026-09-21',
@@ -74,9 +76,9 @@ describe('calculateCourse', () => {
     ])
     expect(course.days[1]?.administrations.map((a) => a.drugId)).toEqual(['r.prednisolone'])
     expect(course.presentationTotals).toEqual([
-      { presentation: { id: 'v500', strengthMg: 500 }, count: 1 },
-      { presentation: { id: 'v100', strengthMg: 100 }, count: 3 },
-      { presentation: { id: 't5', strengthMg: 5 }, count: 60 },
+      { presentation: { id: 'v500', strengthAmount: 500, unit: 'mg' }, count: 1 },
+      { presentation: { id: 'v100', strengthAmount: 100, unit: 'mg' }, count: 3 },
+      { presentation: { id: 't5', strengthAmount: 5, unit: 'mg' }, count: 60 },
     ])
     expect(course.warnings).toEqual([])
     expect(rtx?.steps.map((step) => step.key)).toEqual([
@@ -99,11 +101,11 @@ describe('calculateCourse', () => {
     expect(actual.bsa.isCapped).toBe(true)
     expect(actual.warnings).toEqual([expect.objectContaining({ code: 'bsa.capped' })])
     expect(actual.drugs[0]?.variants.differs).toBe(true)
-    expect(actual.drugs[0]?.doseMg).toBe(840) // 375 × 2.2392 = 839.7 → 840 mg
-    expect(actual.drugs[0]?.rounded.capped.roundedMg).toBe(750)
-    expect(capped.drugs[0]?.doseMg).toBe(750)
-    expect(capped.drugs[0]?.pack?.totalMg).toBe(800)
-    expect(actual.drugs[0]?.pack?.totalMg).toBe(900)
+    expect(actual.drugs[0]?.doseAmount).toBe(840) // 375 × 2.2392 = 839.7 → 840 mg
+    expect(actual.drugs[0]?.rounded.capped.roundedAmount).toBe(750)
+    expect(capped.drugs[0]?.doseAmount).toBe(750)
+    expect(capped.drugs[0]?.pack?.totalAmount).toBe(800)
+    expect(actual.drugs[0]?.pack?.totalAmount).toBe(900)
   })
 
   it('applies course and per-drug reductions', () => {
@@ -112,37 +114,37 @@ describe('calculateCourse', () => {
       coursePercent: 25,
       drugPercent: { 'r.prednisolone': 50 },
     })
-    expect(course.drugs[0]?.doseMg).toBe(563) // 750 − 25% = 562.5 → 563 mg
+    expect(course.drugs[0]?.doseAmount).toBe(563) // 750 − 25% = 562.5 → 563 mg
     expect(course.drugs[0]?.variants.actual.reductionPercent).toBe(25)
-    expect(course.drugs[1]?.doseMg).toBe(50) // per-drug 50% replaces the course 25%
+    expect(course.drugs[1]?.doseAmount).toBe(50) // per-drug 50% replaces the course 25%
   })
 
   it('takes a dose typed by hand over the calculated one', () => {
     const course = calculateCourse(patient, [rituximab, prednisolone], {
       ...adjustments,
       coursePercent: 25,
-      doseOverrideMg: { 'r.rituximab': 700 },
+      doseOverrideAmount: { 'r.rituximab': 700 },
     })
     const drug = course.drugs[0]!
-    expect(drug.doseMg).toBe(700)
+    expect(drug.doseAmount).toBe(700)
     // Vials, solvent and rate follow the typed dose, the chain keeps what was calculated.
-    expect(drug.pack?.totalMg).toBe(700)
+    expect(drug.pack?.totalAmount).toBe(700)
     expect(drug.infusion?.drugVolumeMl).toBe(70) // 700 mg at 10 mg/mL
     expect(drug.steps.at(-1)?.key).not.toBe('dose.manual')
     expect(drug.steps.find((step) => step.key === 'dose.manual')).toEqual({
       key: 'dose.manual',
       value: 700,
       unit: 'mg',
-      params: { calculatedMg: 563 },
+      params: { calculated: 563, unit: 'mg' },
     })
-    expect(course.drugs[1]?.doseMg).toBe(75) // other drugs keep the course reduction
+    expect(course.drugs[1]?.doseAmount).toBe(75) // other drugs keep the course reduction
   })
 
   it('rejects a hand-typed dose that is not a positive number of mg', () => {
     expect(() =>
       calculateCourse(patient, [rituximab], {
         ...adjustments,
-        doseOverrideMg: { 'r.rituximab': 0 },
+        doseOverrideAmount: { 'r.rituximab': 0 },
       }),
     ).toThrow(DomainInputError)
   })
@@ -155,20 +157,20 @@ describe('calculateCourse', () => {
     expect(course.drugs.map((drug) => drug.id)).toEqual(['r.prednisolone'])
     expect(course.days[0]?.administrations.map((a) => a.drugId)).toEqual(['r.prednisolone'])
     expect(course.presentationTotals).toEqual([
-      { presentation: { id: 't5', strengthMg: 5 }, count: 60 },
+      { presentation: { id: 't5', strengthAmount: 5, unit: 'mg' }, count: 60 },
     ])
   })
 
   it('warns when the absolute cap or a review rule applies', () => {
     const vincristine: CourseDrug = {
       id: 'r.vincristine',
-      dose: { value: 1.4, unit: 'mg_m2', capMg: 2 },
+      dose: { value: 1.4, unit: 'mg_m2', capAmount: 2 },
       days: [1],
       reviewRules: { renal: true, elderly: { fromAgeYears: 60 } },
     }
     const course = calculateCourse({ ...patient, serumCreatinine: 200 }, [vincristine], adjustments)
 
-    expect(course.drugs[0]?.doseMg).toBe(2) // 1.4 × 2.0 = 2.8 mg → capped at 2 mg
+    expect(course.drugs[0]?.doseAmount).toBe(2) // 1.4 × 2.0 = 2.8 mg → capped at 2 mg
     expect(course.drugs[0]?.warnings.map((warning) => warning.code)).toEqual([
       'review.lowCreatinineClearance',
       'review.elderly',
@@ -191,7 +193,7 @@ describe('calculateCourse', () => {
     )
     const course = calculateCourse(patient, [carboplatin], adjustments)
     // AUC 5 × (88.89 + 25) = 569.4 mg → 569 mg.
-    expect(course.drugs[0]?.doseMg).toBe(569)
+    expect(course.drugs[0]?.doseAmount).toBe(569)
   })
 
   it('schedules several administrations a day and shifts the rest of the day with them', () => {
@@ -209,9 +211,9 @@ describe('calculateCourse', () => {
     ])
     expect(course.drugs[1]?.administrationsInCourse).toBe(6)
     expect(course.days[0]?.presentations).toEqual([
-      { presentation: { id: 'v500', strengthMg: 500 }, count: 1 },
-      { presentation: { id: 'v100', strengthMg: 100 }, count: 3 },
-      { presentation: { id: 't5', strengthMg: 5 }, count: 40 },
+      { presentation: { id: 'v500', strengthAmount: 500, unit: 'mg' }, count: 1 },
+      { presentation: { id: 'v100', strengthAmount: 100, unit: 'mg' }, count: 3 },
+      { presentation: { id: 't5', strengthAmount: 5, unit: 'mg' }, count: 40 },
     ])
   })
 
@@ -223,6 +225,67 @@ describe('calculateCourse', () => {
         params: expect.objectContaining({ field: 'weightKg' }),
       }),
     ])
+  })
+
+  it('keeps a drug measured in international units in its own unit', () => {
+    // Bleomycin is prescribed and packaged in IU; 10 000 IU/m² × 2.0 m² = 20 000 IU,
+    // covered by two 15 000 IU vials (one alone is not enough).
+    const bleomycin: CourseDrug = {
+      id: 'r.bleomycin',
+      dose: { value: 10_000, unit: 'iu_m2' },
+      days: [1, 15],
+      durationMin: 30,
+      presentations: [{ id: 'v15000', strengthAmount: 15_000 }],
+      infusion: { bagVolumesMl: [100] },
+    }
+    const course = calculateCourse(patient, [bleomycin], adjustments)
+    const result = course.drugs[0]!
+
+    expect(result.amountUnit).toBe('iu')
+    expect(result.doseAmount).toBe(20_000)
+    expect(result.pack?.items).toEqual([
+      { presentation: { id: 'v15000', strengthAmount: 15_000, unit: 'iu' }, count: 2 },
+    ])
+    expect(result.pack?.wasteAmount).toBe(10_000)
+    expect(result.infusion?.concentrationPerMl).toBe(200)
+    expect(result.infusion?.concentrationUnit).toBe('iu')
+    expect(result.steps.some((step) => step.unit === 'iu')).toBe(true)
+  })
+
+  it('counts a pack labelled in another unit of the same kind', () => {
+    // Filgrastim is dosed in micrograms and comes in 300 mcg syringes; a 0.3 mg pack is the same.
+    const filgrastim: CourseDrug = {
+      id: 'r.filgrastim',
+      dose: { value: 5, unit: 'mcg_kg' },
+      days: [6],
+      presentations: [{ id: 's03', strengthAmount: 0.3, unit: 'mg' }],
+    }
+    const result = calculateCourse(patient, [filgrastim], adjustments).drugs[0]!
+
+    expect(result.amountUnit).toBe('mcg')
+    expect(result.doseAmount).toBe(400)
+    expect(result.pack?.items).toEqual([
+      { presentation: { id: 's03', strengthAmount: 300, unit: 'mcg' }, count: 2 },
+    ])
+  })
+
+  it('refuses mg/mL dilution limits for a drug measured in units of activity', () => {
+    const wrong: CourseDrug = {
+      id: 'r.wrong',
+      dose: { value: 10_000, unit: 'iu_flat' },
+      days: [1],
+      infusion: { bagVolumesMl: [100], concentrationMaxMgMl: 4 },
+    }
+    expect(() => calculateCourse(patient, [wrong], adjustments)).toThrow(DomainInputError)
+  })
+
+  it('rejects a manual dose that is not a positive number', () => {
+    expect(() =>
+      calculateCourse(patient, [prednisolone], {
+        ...adjustments,
+        doseOverrideAmount: { 'r.prednisolone': 0 },
+      }),
+    ).toThrow(/doseOverrideAmount/)
   })
 
   it('rejects malformed course input', () => {
@@ -243,7 +306,7 @@ describe('calculateCourse', () => {
     const course = calculateCourse(withoutCreatinine, [bare], adjustments)
 
     expect(course.creatinineClearanceMlMin).toBeNull()
-    expect(course.drugs[0]?.doseMg).toBe(800)
+    expect(course.drugs[0]?.doseAmount).toBe(800)
     expect(course.drugs[0]?.infusion).toBeNull()
     expect(course.presentationTotals).toEqual([])
   })

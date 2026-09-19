@@ -5,7 +5,7 @@
   "atc_code": "L01DB01",
   "review_rules": { "hepatic": true },
   "presentations": [
-    { "key": "vial-10", "form": "vial", "strength_mg": 10, "volume_ml": 5 },
-    { "key": "vial-50", "form": "vial", "strength_mg": 50, "volume_ml": 25 }
+    { "key": "vial-10", "form": "vial", "strength_amount": 10, "volume_ml": 5 },
+    { "key": "vial-50", "form": "vial", "strength_amount": 50, "volume_ml": 25 }
   ]
 }

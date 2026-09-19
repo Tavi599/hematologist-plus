@@ -1,6 +1,7 @@
 import { z } from 'zod'
 
 import {
+  amountUnitSchema,
   doseOptionsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
@@ -66,7 +67,11 @@ export const drugFileSchema = z.strictObject({
     .regex(/^[A-Z][0-9]{2}[A-Z]{2}[0-9]{2}$/, 'ATC code like L01XC02')
     .nullable()
     .default(null),
-  max_single_dose_mg: optionalPositive,
+  /** Unit this drug is measured in: its pack strengths, caps and doses. */
+  amount_unit: amountUnitSchema.default('mg'),
+  /** Dose units the drug is officially prescribed in; empty means every unit of its kind. */
+  dose_units: z.array(doseUnitSchema).default([]),
+  max_single_dose_amount: optionalPositive,
   review_rules: reviewRulesSchema.nullable().default(null),
   notes: optionalLocalized,
   sort_order: sortOrder,
@@ -77,7 +82,9 @@ export const drugFileSchema = z.strictObject({
       z.strictObject({
         key: keySchema,
         form: presentationFormSchema,
-        strength_mg: positiveNumberSchema,
+        strength_amount: positiveNumberSchema,
+        /** Defaults to the drug's amount_unit; set it only for a pack labelled differently. */
+        strength_unit: amountUnitSchema.optional(),
         volume_ml: optionalPositive,
         label: optionalLocalized,
       }),
@@ -121,7 +128,7 @@ export const regimenFileSchema = z.strictObject({
         route: routeSchema,
         dose_value: positiveNumberSchema,
         dose_unit: doseUnitSchema,
-        cap_mg: optionalPositive,
+        cap_amount: optionalPositive,
         days: z.array(nonNegativeIntSchema).min(1),
         administrations_per_day: positiveNumberSchema.int().default(1),
         /** Key of one of the drug's infusion_params; the drug default is used when omitted. */

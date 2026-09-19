@@ -11,7 +11,14 @@ import {
 import { cockcroftGault } from './renal'
 import { roundDose, type RoundingResult } from './rounding'
 import { courseDayDates, scheduleAdministrations, type ScheduledAdministration } from './schedule'
-import { DomainInputError, type CalculationStep, type CreatinineUnit, type Sex } from './types'
+import { amountUnitOf, convertAmount } from './units'
+import {
+  DomainInputError,
+  type AmountUnit,
+  type CalculationStep,
+  type CreatinineUnit,
+  type Sex,
+} from './types'
 import {
   checkPatientInputs,
   suggestDoseReview,
@@ -59,10 +66,11 @@ export interface CourseAdjustments {
   /** Per-drug reduction by item id, %; replaces the course reduction for that drug. */
   drugPercent?: Record<string, number>
   /**
-   * Dose the physician typed by hand, mg, by item id. It replaces the calculated dose of that
-   * drug entirely — vials, solvent and rate follow it — and the chain shows what was calculated.
+   * Dose the physician typed by hand, in the drug's own unit, by item id. It replaces the
+   * calculated dose entirely — vials, solvent and rate follow it — and the chain shows what
+   * was calculated.
    */
-  doseOverrideMg?: Record<string, number>
+  doseOverrideAmount?: Record<string, number>
   /** Item ids the physician switched off. */
   disabledIds?: string[]
   /** Manual time shift by item id, min; later administrations of the day move with it. */
@@ -74,8 +82,10 @@ export interface CourseDrugResult {
   /** Doses on actual BSA and on BSA capped at 2.0 m², both shown to the physician. */
   variants: DoseVariants
   rounded: Record<BsaVariant, RoundingResult>
-  /** Rounded dose of the selected BSA variant, mg — the one used below and for printing. */
-  doseMg: number
+  /** Unit every amount of this drug is in (from its dose unit). */
+  amountUnit: AmountUnit
+  /** Rounded dose of the selected BSA variant — the one used below and for printing. */
+  doseAmount: number
   administrationsPerDay: number
   administrationsInCourse: number
   /** Whole vials/tablets for one administration; null without presentations. */
@@ -168,9 +178,9 @@ export function calculateCourse(
       variant,
       gfrMlMin: renal?.mlMin,
       reviewContext,
-      ...(adjustments.doseOverrideMg?.[drug.id] === undefined
+      ...(adjustments.doseOverrideAmount?.[drug.id] === undefined
         ? {}
-        : { overrideMg: adjustments.doseOverrideMg[drug.id] }),
+        : { overrideAmount: adjustments.doseOverrideAmount[drug.id] }),
       reduction: {
         ...(adjustments.coursePercent === undefined
           ? {}
@@ -205,8 +215,8 @@ interface DrugContext {
   gfrMlMin: number | undefined
   reviewContext: { ageYears: number; creatinineClearanceMlMin?: number; bilirubinUmolL?: number }
   reduction: { coursePercent?: number; drugPercent?: number }
-  /** Dose typed by the physician for this drug, mg. */
-  overrideMg?: number
+  /** Dose typed by the physician for this drug, in the drug's own unit. */
+  overrideAmount?: number
 }
 
 function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult {
@@ -229,25 +239,41 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
     },
     context.reduction,
   )
-  const roundingOptions = drug.presentations ? { presentations: drug.presentations } : {}
+  // Pack strengths are stored in the unit of the drug, the dose in the unit the regimen writes.
+  // They are almost always the same; when they are not, only an exact conversion is allowed.
+  const amountUnit = amountUnitOf(drug.dose.unit)
+  const presentations = drug.presentations?.map((presentation) => ({
+    ...presentation,
+    strengthAmount: convertAmount(
+      presentation.strengthAmount,
+      presentation.unit ?? amountUnit,
+      amountUnit,
+    ),
+    unit: amountUnit,
+  }))
+  const roundingOptions = { unit: amountUnit, ...(presentations ? { presentations } : {}) }
   const rounded: Record<BsaVariant, RoundingResult> = {
-    actual: roundDose(variants.actual.doseMg, roundingOptions),
-    capped: roundDose(variants.capped.doseMg, roundingOptions),
+    actual: roundDose(variants.actual.doseAmount, roundingOptions),
+    capped: roundDose(variants.capped.doseAmount, roundingOptions),
   }
-  const calculatedMg = rounded[variant].roundedMg
-  const overrideMg = context.overrideMg
-  if (overrideMg !== undefined && (!Number.isFinite(overrideMg) || overrideMg <= 0)) {
-    throw new DomainInputError(`${drug.id}.doseOverrideMg`, 'must be a positive number of mg')
+  const calculatedAmount = rounded[variant].roundedAmount
+  const overrideAmount = context.overrideAmount
+  if (overrideAmount !== undefined && (!Number.isFinite(overrideAmount) || overrideAmount <= 0)) {
+    throw new DomainInputError(
+      `${drug.id}.doseOverrideAmount`,
+      `must be a positive number of ${amountUnit}`,
+    )
   }
-  const doseMg = overrideMg ?? calculatedMg
+  const doseAmount = overrideAmount ?? calculatedAmount
 
   const pack =
-    drug.presentations && drug.presentations.length > 0
-      ? selectPresentations(doseMg, drug.presentations)
+    presentations && presentations.length > 0
+      ? selectPresentations(doseAmount, presentations)
       : null
   const infusion = drug.infusion
     ? calculateInfusion({
-        doseMg,
+        doseAmount,
+        amountUnit,
         params: drug.infusion,
         ...(drug.durationMin === undefined ? {} : { durationMin: drug.durationMin }),
       })
@@ -257,13 +283,20 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
   if (variants[variant].isCapped) {
     warnings.push({
       code: 'dose.capped',
-      params: { capMg: drug.dose.capMg ?? 0, baseMg: variants[variant].baseMg },
+      params: {
+        capAmount: drug.dose.capAmount ?? 0,
+        baseAmount: variants[variant].baseAmount,
+        unit: amountUnit,
+      },
     })
   }
   if (infusion?.issue === 'concentration_out_of_range') {
     warnings.push({
       code: 'infusion.concentrationOutOfRange',
-      params: { concentrationMgMl: infusion.concentrationMgMl },
+      params: {
+        concentration: infusion.concentrationPerMl,
+        unit: `${infusion.concentrationUnit}_ml`,
+      },
     })
   }
 
@@ -271,7 +304,8 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
     id: drug.id,
     variants,
     rounded,
-    doseMg,
+    amountUnit,
+    doseAmount,
     administrationsPerDay,
     administrationsInCourse: drug.days.length * administrationsPerDay,
     pack,
@@ -282,14 +316,14 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
       ...bsa.steps,
       ...variants[variant].steps,
       ...rounded[variant].steps,
-      ...(overrideMg === undefined
+      ...(overrideAmount === undefined
         ? []
         : [
             {
               key: 'dose.manual' as const,
-              value: overrideMg,
-              unit: 'mg' as const,
-              params: { calculatedMg },
+              value: overrideAmount,
+              unit: amountUnit,
+              params: { calculated: calculatedAmount, unit: amountUnit },
             },
           ]),
       ...(infusion?.steps ?? []),
@@ -344,8 +378,8 @@ export const DEFAULT_DAY_START = '09:00'
 function scaleSelection(selection: PackSelection, factor: number): PackSelection {
   return {
     items: selection.items.map((item) => ({ ...item, count: item.count * factor })),
-    totalMg: selection.totalMg * factor,
-    wasteMg: selection.wasteMg * factor,
+    totalAmount: selection.totalAmount * factor,
+    wasteAmount: selection.wasteAmount * factor,
     unitCount: selection.unitCount * factor,
   }
 }

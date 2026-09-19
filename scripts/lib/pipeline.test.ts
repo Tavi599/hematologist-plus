@@ -49,7 +49,7 @@ describe('demo data set', () => {
       role: 'main',
       administrations_per_day: 1,
       infusion_params_id: null,
-      cap_mg: null,
+      cap_amount: null,
     })
     expect(rows.disease_articles[0]).toMatchObject({
       id: 'dlbcl.uk',
@@ -116,7 +116,7 @@ describe('loadDataDir', () => {
       expect.stringMatching(/^hospitals\.json: invalid JSON/),
       'drugs/a.json: id "b" must match the name "a"',
       expect.stringMatching(/^drugs\/c\.json: presentations\.0\.form/),
-      expect.stringMatching(/^drugs\/c\.json: presentations\.0\.strength_mg/),
+      expect.stringMatching(/^drugs\/c\.json: presentations.0.strength_amount/),
       'regimens/r.json: duplicate item key "a"',
       'regimens/r.json: print form "f": unknown item "zzz"',
       'diseases/empty: missing disease.json',
@@ -190,6 +190,45 @@ describe('checkCatalog', () => {
       'treatment_node_regimens dup-link: regimen linked twice',
       'treatment_node_regimens bad-link: node_id "n" does not exist in treatment_nodes',
       'treatment_node_regimens bad-link: regimen_id "r" does not exist in regimens',
+    ])
+  })
+
+  it('refuses units that do not match the drug', () => {
+    const rows = loadDemo()
+    const bleomycin = { ...rows.drugs[0]!, id: 'bleomycin', amount_unit: 'iu' as const }
+    rows.drugs.push(bleomycin)
+    rows.drug_presentations.push({
+      ...rows.drug_presentations[0]!,
+      id: 'bleomycin.vial',
+      drug_id: 'bleomycin',
+      strength_amount: 15,
+      strength_unit: 'mg',
+    })
+    rows.drug_infusion_params.push({
+      ...rows.drug_infusion_params[0]!,
+      id: 'bleomycin.nacl',
+      drug_id: 'bleomycin',
+      concentration_max_mg_ml: 4,
+    })
+    rows.regimen_items.push({
+      ...rows.regimen_items[0]!,
+      id: 'r-chop-21.bleomycin',
+      drug_id: 'bleomycin',
+      dose_unit: 'mg_m2',
+    })
+
+    expect(errors(rows)).toEqual([
+      'drug_presentations bleomycin.vial: strength in mg, but bleomycin is measured in iu',
+      'drug_infusion_params bleomycin.nacl: mg/mL parameters cannot describe bleomycin, which is measured in iu',
+      'regimen_items r-chop-21.bleomycin: dose_unit "mg_m2" does not match bleomycin, which is measured in iu',
+    ])
+  })
+
+  it('holds a drug to the units it is officially prescribed in', () => {
+    const rows = loadDemo()
+    rows.drugs.find((drug) => drug.id === 'prednisolone')!.dose_units = ['mg_m2']
+    expect(errors(rows)).toEqual([
+      'regimen_items r-chop-21.prednisolone: dose_unit "mg_flat" is not one of the units prednisolone is prescribed in (mg_m2)',
     ])
   })
 

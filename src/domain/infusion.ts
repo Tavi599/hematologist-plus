@@ -1,8 +1,9 @@
 import { DOMAIN_DEFAULTS } from './config'
 import { assertPositive } from './math'
-import { DomainInputError, type CalculationStep } from './types'
+import { convertAmount, isMassUnit } from './units'
+import { DomainInputError, type AmountUnit, type CalculationStep } from './types'
 
-/** Dilution parameters of a drug, from the drug catalog. */
+/** Dilution parameters of a drug, from the drug catalog. Concentration limits are mg/mL. */
 export interface InfusionParams {
   /** Lowest allowed final concentration, mg/mL. */
   concentrationMinMgMl?: number
@@ -10,7 +11,7 @@ export interface InfusionParams {
   concentrationMaxMgMl?: number
   /** Available carrier bag volumes, mL (e.g. 100, 250, 500). */
   bagVolumesMl: number[]
-  /** Concentration of the drug concentrate/reconstituted solution; adds drug volume to the bag. */
+  /** Concentration of the drug concentrate/reconstituted solution, mg/mL; adds drug volume. */
   stockConcentrationMgMl?: number
 }
 
@@ -20,7 +21,10 @@ export interface InfusionResult {
   bagVolumeMl: number
   drugVolumeMl: number
   totalVolumeMl: number
-  concentrationMgMl: number
+  /** Final concentration in the dose's own unit per mL. */
+  concentrationPerMl: number
+  /** Unit of `concentrationPerMl`, e.g. 'mg' → mg/mL. */
+  concentrationUnit: AmountUnit
   /** null for undefined duration (bolus / not specified). */
   rateMlH: number | null
   rateGttMin: number | null
@@ -29,7 +33,9 @@ export interface InfusionResult {
 }
 
 export interface InfusionInput {
-  doseMg: number
+  doseAmount: number
+  /** Unit of `doseAmount`; defaults to milligrams. */
+  amountUnit?: AmountUnit
   params: InfusionParams
   durationMin?: number
   dropFactorGttPerMl?: number
@@ -38,11 +44,16 @@ export interface InfusionInput {
 /**
  * Chooses the smallest carrier bag that keeps the final concentration within limits
  * and derives the infusion rate. If no bag fits, the closest compromise is returned with an issue.
+ *
+ * Concentration limits in the catalog are milligrams per millilitre, so they apply only to a
+ * drug measured by mass. A drug measured in units of activity may carry bag volumes but no
+ * limits — its volume comes from the protocol, never from a concentration we made up.
  */
 export function calculateInfusion(input: InfusionInput): InfusionResult {
-  const { doseMg, params } = input
+  const { doseAmount, params } = input
+  const amountUnit = input.amountUnit ?? 'mg'
   const dropFactor = input.dropFactorGttPerMl ?? DOMAIN_DEFAULTS.dropFactorGttPerMl
-  assertPositive('doseMg', doseMg)
+  assertPositive('doseAmount', doseAmount)
   assertPositive('dropFactorGttPerMl', dropFactor)
   if (params.bagVolumesMl.length === 0) {
     throw new DomainInputError('bagVolumesMl', 'at least one bag volume is required')
@@ -51,6 +62,18 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
   if (params.stockConcentrationMgMl !== undefined) {
     assertPositive('stockConcentrationMgMl', params.stockConcentrationMgMl)
   }
+
+  const usesMgPerMl =
+    params.concentrationMinMgMl !== undefined ||
+    params.concentrationMaxMgMl !== undefined ||
+    params.stockConcentrationMgMl !== undefined
+  if (usesMgPerMl && !isMassUnit(amountUnit)) {
+    throw new DomainInputError(
+      'concentrationMgMl',
+      `mg/mL parameters cannot be applied to a dose in ${amountUnit}`,
+    )
+  }
+  const doseMg = isMassUnit(amountUnit) ? convertAmount(doseAmount, amountUnit, 'mg') : doseAmount
 
   const drugVolumeMl = params.stockConcentrationMgMl ? doseMg / params.stockConcentrationMgMl : 0
   const bags = [...params.bagVolumesMl].sort((a, b) => a - b)
@@ -71,7 +94,7 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
   }
 
   const totalVolumeMl = bagVolumeMl + drugVolumeMl
-  const concentrationMgMl = concentrationFor(bagVolumeMl)
+  const concentrationPerMl = doseAmount / totalVolumeMl
 
   let rateMlH: number | null = null
   let rateGttMin: number | null = null
@@ -90,10 +113,11 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
     },
     {
       key: 'infusion.concentration',
-      value: concentrationMgMl,
-      unit: 'mg_ml',
+      value: concentrationPerMl,
+      unit: `${amountUnit}_ml`,
       params: {
-        doseMg,
+        dose: doseAmount,
+        unit: amountUnit,
         ...(params.concentrationMinMgMl !== undefined && { minMgMl: params.concentrationMinMgMl }),
         ...(params.concentrationMaxMgMl !== undefined && { maxMgMl: params.concentrationMaxMgMl }),
       },
@@ -112,7 +136,8 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
     bagVolumeMl,
     drugVolumeMl,
     totalVolumeMl,
-    concentrationMgMl,
+    concentrationPerMl,
+    concentrationUnit: amountUnit,
     rateMlH,
     rateGttMin,
     issue,

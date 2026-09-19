@@ -1,12 +1,14 @@
 import { DOMAIN_DEFAULTS } from './config'
 import { assertNonNegative, assertPercent, roundToStep } from './math'
 import { nearestWholeUnitAmounts, type Presentation } from './presentations'
-import type { CalculationStep } from './types'
+import type { AmountUnit, CalculationStep } from './types'
 
 export interface RoundingOptions {
-  /** Rounding step, mg. */
-  stepMg?: number
-  /** Presentations available for vial snapping. */
+  /** Unit the dose is in; decides the default rounding step. */
+  unit?: AmountUnit
+  /** Rounding step, in `unit`. */
+  step?: number
+  /** Presentations available for vial snapping, strengths in `unit`. */
   presentations?: Presentation[]
   /** Snap to whole-vial amount if within this %; `null` disables snapping. */
   vialTolerancePercent?: number | null
@@ -15,8 +17,9 @@ export interface RoundingOptions {
 export type RoundingMethod = 'step' | 'vial'
 
 export interface RoundingResult {
-  unroundedMg: number
-  roundedMg: number
+  unit: AmountUnit
+  unroundedAmount: number
+  roundedAmount: number
   method: RoundingMethod
   /** Signed deviation of the rounded dose from the unrounded one, %. */
   deviationPercent: number
@@ -24,47 +27,49 @@ export interface RoundingResult {
 }
 
 /**
- * Rounds a dose to `stepMg` (default 1 mg). When vial snapping is enabled and the
- * nearest whole-vial amount is within tolerance, that amount wins.
+ * Rounds a dose to the step of its unit (1 mg by default). When vial snapping is enabled and
+ * the nearest whole-vial amount is within tolerance, that amount wins.
  * CALIBRATION: the department's vial rule is unconfirmed; snapping is off by default.
  */
-export function roundDose(doseMg: number, options: RoundingOptions = {}): RoundingResult {
-  assertNonNegative('doseMg', doseMg)
-  const stepMg = options.stepMg ?? DOMAIN_DEFAULTS.doseRoundingStepMg
+export function roundDose(doseAmount: number, options: RoundingOptions = {}): RoundingResult {
+  assertNonNegative('doseAmount', doseAmount)
+  const unit = options.unit ?? 'mg'
+  const step = options.step ?? DOMAIN_DEFAULTS.doseRoundingStep[unit]
   const tolerance = options.vialTolerancePercent ?? DOMAIN_DEFAULTS.vialRoundingTolerancePercent
 
-  let roundedMg = roundToStep(doseMg, stepMg)
+  let roundedAmount = roundToStep(doseAmount, step)
   let method: RoundingMethod = 'step'
 
-  if (tolerance !== null && options.presentations?.length && doseMg > 0) {
+  if (tolerance !== null && options.presentations?.length && doseAmount > 0) {
     assertPercent('vialTolerancePercent', tolerance)
-    const candidate = nearestVialAmount(doseMg, options.presentations)
-    if (Math.abs(candidate - doseMg) / doseMg <= tolerance / 100) {
-      roundedMg = candidate
+    const candidate = nearestVialAmount(doseAmount, options.presentations)
+    if (Math.abs(candidate - doseAmount) / doseAmount <= tolerance / 100) {
+      roundedAmount = candidate
       method = 'vial'
     }
   }
 
-  const deviationPercent = doseMg === 0 ? 0 : ((roundedMg - doseMg) / doseMg) * 100
+  const deviationPercent = doseAmount === 0 ? 0 : ((roundedAmount - doseAmount) / doseAmount) * 100
 
   return {
-    unroundedMg: doseMg,
-    roundedMg,
+    unit,
+    unroundedAmount: doseAmount,
+    roundedAmount,
     method,
     deviationPercent,
     steps: [
       {
         key: method === 'vial' ? 'rounding.vial' : 'rounding.step',
-        value: roundedMg,
-        unit: 'mg',
-        params: { unroundedMg: doseMg, stepMg, deviationPercent },
+        value: roundedAmount,
+        unit,
+        params: { unrounded: doseAmount, step, unit, deviationPercent },
       },
     ],
   }
 }
 
 /** Closest amount to the dose that is an exact sum of whole vials; ties go up. */
-function nearestVialAmount(doseMg: number, presentations: Presentation[]): number {
-  const { below, above } = nearestWholeUnitAmounts(doseMg, presentations)
-  return below !== null && doseMg - below < above - doseMg ? below : above
+function nearestVialAmount(doseAmount: number, presentations: Presentation[]): number {
+  const { below, above } = nearestWholeUnitAmounts(doseAmount, presentations)
+  return below !== null && doseAmount - below < above - doseAmount ? below : above
 }

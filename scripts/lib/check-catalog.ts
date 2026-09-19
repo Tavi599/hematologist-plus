@@ -1,4 +1,6 @@
+import { amountUnitOf, isMassUnit, sameFamily } from '../../src/domain'
 import { SYNC_TABLES, syncRowSchemas, type SyncRows } from '../../src/schemas/catalog'
+import type { DoseUnit } from '../../src/domain'
 
 export interface CatalogIssue {
   severity: 'error' | 'warning'
@@ -72,6 +74,64 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
     if (!presentationCount.has(drug.id)) {
       warning('drugs', drug.id, 'no presentations: vial/tablet counts cannot be calculated')
     }
+  }
+
+  // Units must line up: a pack in IU cannot fill a dose in mg, and mg/mL dilution limits
+  // say nothing about a drug measured in units of biological activity.
+  for (const row of rows.drug_presentations) {
+    const drug = drugs.get(row.drug_id)
+    if (drug && !sameFamily(row.strength_unit, drug.amount_unit)) {
+      error(
+        'drug_presentations',
+        row.id,
+        `strength in ${row.strength_unit}, but ${drug.id} is measured in ${drug.amount_unit}`,
+      )
+    }
+  }
+  for (const row of rows.drug_infusion_params) {
+    const drug = drugs.get(row.drug_id)
+    const usesMgPerMl =
+      row.concentration_min_mg_ml !== null ||
+      row.concentration_max_mg_ml !== null ||
+      row.stock_concentration_mg_ml !== null
+    if (drug && usesMgPerMl && !isMassUnit(drug.amount_unit)) {
+      error(
+        'drug_infusion_params',
+        row.id,
+        `mg/mL parameters cannot describe ${drug.id}, which is measured in ${drug.amount_unit}`,
+      )
+    }
+  }
+  const checkDoseUnit = (itemId: string, field: string, unit: DoseUnit, drugId: string) => {
+    const drug = drugs.get(drugId)
+    if (!drug) return
+    if (drug.dose_units.length > 0 && !drug.dose_units.includes(unit)) {
+      error(
+        'regimen_items',
+        itemId,
+        `${field} "${unit}" is not one of the units ${drug.id} is prescribed in (${drug.dose_units.join(', ')})`,
+      )
+      return
+    }
+    if (unit === 'auc') {
+      if (drug.amount_unit !== 'mg') {
+        error('regimen_items', itemId, `${field}: the Calvert formula is milligrams only`)
+      }
+      return
+    }
+    if (!sameFamily(amountUnitOf(unit), drug.amount_unit)) {
+      error(
+        'regimen_items',
+        itemId,
+        `${field} "${unit}" does not match ${drug.id}, which is measured in ${drug.amount_unit}`,
+      )
+    }
+  }
+  for (const item of rows.regimen_items) {
+    checkDoseUnit(item.id, 'dose_unit', item.dose_unit, item.drug_id)
+    item.dose_options.forEach((option, index) => {
+      checkDoseUnit(item.id, `dose_options.${index}.dose_unit`, option.dose_unit, item.drug_id)
+    })
   }
 
   for (const item of rows.regimen_items) {

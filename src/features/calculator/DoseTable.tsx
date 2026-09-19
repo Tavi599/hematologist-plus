@@ -18,8 +18,9 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { CourseDrugResult, CourseResult } from '../../domain'
+import { amountUnitOf, isMassUnit } from '../../domain'
 import { formatNumber } from '../../lib/format'
-import { currentLanguage } from '../../lib/i18n'
+import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import { DEFAULT_DOSE_CHOICE, type CourseItem } from '../../lib/course-input'
 import { CalculationChain } from './CalculationChain'
@@ -32,11 +33,11 @@ export interface DoseTableProps {
   course: CourseResult | null
   disabledIds: string[]
   drugPercent: Record<string, number>
-  doseOverrideMg: Record<string, number>
+  doseOverrideAmount: Record<string, number>
   onToggle: (itemId: string, enabled: boolean) => void
   /** `null` switches the reduction off for this drug. */
   onReduction: (itemId: string, percent: number | null) => void
-  onDoseOverride: (itemId: string, doseMg: number | null) => void
+  onDoseOverride: (itemId: string, doseAmount: number | null) => void
   onDoseChoice: (itemId: string, choiceId: string) => void
   onRemove: (itemId: string) => void
   customIds: string[]
@@ -111,7 +112,7 @@ function DoseRow({
   onExpand,
   disabledIds,
   drugPercent,
-  doseOverrideMg,
+  doseOverrideAmount,
   onToggle,
   onReduction,
   onDoseOverride,
@@ -128,13 +129,16 @@ function DoseRow({
   const language = currentLanguage()
   const id = item.item.id
   const enabled = !disabledIds.includes(id)
-  const manualMg = doseOverrideMg[id]
+  const manualAmount = doseOverrideAmount[id]
   const chosen =
     item.doseChoices.find((choice) => choice.id === item.doseChoiceId) ?? item.doseChoices[0]!
   const reduced = drugPercent[id] !== undefined
   // The drug's own organ-function rules fired: this is the drug that may need reducing.
   const suggested = result?.warnings.some((warning) => warning.code.startsWith('review.')) ?? false
-  const mg = (value: number) => `${formatNumber(value, language, 1)} ${t('units.mg')}`
+  const tu = t as unknown as DynamicTranslate
+  const unit = amountUnitOf(chosen.doseUnit)
+  const unitName = tu(`units.${unit}`)
+  const amount = (value: number) => `${formatNumber(value, language, 1)} ${unitName}`
 
   return (
     <>
@@ -156,7 +160,7 @@ function DoseRow({
         </Table.Td>
         <Table.Td>
           <Text>
-            {formatNumber(chosen.doseValue, language, 2)} {t(`units.${chosen.doseUnit}`)}
+            {formatNumber(chosen.doseValue, language, 2)} {tu(`units.${chosen.doseUnit}`)}
           </Text>
           <Text size="xs" c="dimmed">
             {t('calculator.doses.days')}: {item.item.days.join(', ')}
@@ -180,10 +184,10 @@ function DoseRow({
                 })),
                 { value: MANUAL_CHOICE, label: t('calculator.doses.doseSourceManual') },
               ]}
-              value={manualMg === undefined ? item.doseChoiceId : MANUAL_CHOICE}
+              value={manualAmount === undefined ? item.doseChoiceId : MANUAL_CHOICE}
               onChange={(value) => {
                 if (value === null) return
-                if (value === MANUAL_CHOICE) onDoseOverride(id, result?.doseMg ?? null)
+                if (value === MANUAL_CHOICE) onDoseOverride(id, result?.doseAmount ?? null)
                 else {
                   onDoseOverride(id, null)
                   onDoseChoice(id, value)
@@ -198,9 +202,11 @@ function DoseRow({
             <>
               <Group gap={6} wrap="nowrap">
                 <Text fw={600}>
-                  {mg(manualMg === undefined ? result.rounded.actual.roundedMg : manualMg)}
+                  {amount(
+                    manualAmount === undefined ? result.rounded.actual.roundedAmount : manualAmount,
+                  )}
                 </Text>
-                {manualMg !== undefined && (
+                {manualAmount !== undefined && (
                   <Badge size="xs" variant="light" color="blue">
                     {t('calculator.doses.manualDoseBadge')}
                   </Badge>
@@ -208,7 +214,8 @@ function DoseRow({
               </Group>
               <Text size="xs" c="dimmed">
                 {t('calculator.doses.unrounded', {
-                  value: formatNumber(result.rounded.actual.unroundedMg, language, 2),
+                  value: formatNumber(result.rounded.actual.unroundedAmount, language, 2),
+                  unit: unitName,
                 })}
               </Text>
             </>
@@ -219,10 +226,12 @@ function DoseRow({
         <Table.Td>
           {result ? (
             <Text
-              fw={result.variants.differs && manualMg === undefined ? 600 : 400}
-              c={result.variants.differs && manualMg === undefined ? undefined : 'dimmed'}
+              fw={result.variants.differs && manualAmount === undefined ? 600 : 400}
+              c={result.variants.differs && manualAmount === undefined ? undefined : 'dimmed'}
             >
-              {mg(manualMg === undefined ? result.rounded.capped.roundedMg : manualMg)}
+              {amount(
+                manualAmount === undefined ? result.rounded.capped.roundedAmount : manualAmount,
+              )}
             </Text>
           ) : (
             <Text c="dimmed">—</Text>
@@ -265,11 +274,11 @@ function DoseRow({
           <NumberInput
             size="xs"
             min={0}
-            step={0.5}
+            step={isMassUnit(unit) ? 0.5 : 1}
             disabled={!enabled}
-            value={manualMg ?? ''}
+            value={manualAmount ?? ''}
             placeholder={
-              result ? formatNumber(result.rounded['actual'].roundedMg, language, 1) : undefined
+              result ? formatNumber(result.rounded['actual'].roundedAmount, language, 1) : undefined
             }
             onChange={(value) => onDoseOverride(id, Number(value) > 0 ? Number(value) : null)}
             aria-label={`${t('calculator.doses.manualDose')}: ${localize(item.drug.name, language)}`}
@@ -282,13 +291,15 @@ function DoseRow({
                 <Text key={entry.presentation.id} size="sm">
                   {t('calculator.doses.unitsValue', {
                     count: entry.count,
-                    strength: formatNumber(entry.presentation.strengthMg, language, 2),
+                    strength: formatNumber(entry.presentation.strengthAmount, language, 2),
+                    unit: unitName,
                   })}
                 </Text>
               ))}
               <Text size="xs" c="dimmed">
                 {t('calculator.doses.waste', {
-                  value: formatNumber(result.pack.wasteMg, language, 1),
+                  value: formatNumber(result.pack.wasteAmount, language, 1),
+                  unit: unitName,
                 })}
               </Text>
             </Stack>
@@ -312,7 +323,8 @@ function DoseRow({
                     : t('solvent.sodium_chloride_0_9'),
                   bag: formatNumber(result.infusion.bagVolumeMl, language, 0),
                   total: formatNumber(result.infusion.totalVolumeMl, language, 1),
-                  concentration: formatNumber(result.infusion.concentrationMgMl, language, 2),
+                  concentration: formatNumber(result.infusion.concentrationPerMl, language, 2),
+                  unit: tu(`units.${result.infusion.concentrationUnit}_ml`),
                 })}
               </Text>
               {result.infusion.rateMlH !== null && result.infusion.rateGttMin !== null && (

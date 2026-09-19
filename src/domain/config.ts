@@ -1,3 +1,5 @@
+import type { AmountUnit } from './types'
+
 /**
  * Default parameters of the calculation engine.
  *
@@ -19,8 +21,8 @@ export const DOMAIN_DEFAULTS = {
   /** GFR ceiling used in the Calvert formula (FDA carboplatin guidance), mL/min. */
   carboplatinGfrCapMlMin: 125,
 
-  /** Dose rounding step, mg. */
-  doseRoundingStepMg: 1,
+  /** Dose rounding step per unit the drug is measured in. */
+  doseRoundingStep: { mg: 1, mcg: 1, iu: 1, miu: 0.1 } as Record<AmountUnit, number>,
 
   /**
    * Snap the dose to an amount made of whole vials when the difference is within

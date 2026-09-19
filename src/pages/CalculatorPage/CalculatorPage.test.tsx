@@ -107,7 +107,7 @@ describe('CalculatorPage', () => {
       .getByText('ДЕМО Ритуксимаб')
       .closest('tr')!
     await act(async () => {
-      fireEvent.change(within(rituximab).getByLabelText('Доза вручну, мг: ДЕМО Ритуксимаб'), {
+      fireEvent.change(within(rituximab).getByLabelText('Доза вручну: ДЕМО Ритуксимаб'), {
         target: { value: '700' },
       })
     })

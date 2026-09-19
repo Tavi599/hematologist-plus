@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next'
 
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { customCourseItem } from '../../lib/course-input'
-import { currentLanguage } from '../../lib/i18n'
+import { allowedDoseUnits } from '../../lib/drug-units'
+import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
-import { DOSE_UNITS } from '../../schemas/common'
 import type { RegimenItem } from '../../schemas/catalog'
 import { parseDays } from './parse-days'
 
@@ -21,6 +21,7 @@ export function AddDrugForm({
   sortOrder: number
 }) {
   const { t } = useTranslation()
+  const tu = t as unknown as DynamicTranslate
   const language = currentLanguage()
   const [drugId, setDrugId] = useState<string | null>(null)
   const [doseValue, setDoseValue] = useState<number | string>('')
@@ -28,6 +29,10 @@ export function AddDrugForm({
   const [days, setDays] = useState('1')
   const [durationMin, setDurationMin] = useState<number | string>('')
 
+  const drug = drugId === null ? undefined : catalog.drugs.get(drugId)
+  // The drug decides the units: a dose in mg for a drug measured in IU cannot be calculated.
+  const unitOptions = allowedDoseUnits(drug)
+  const effectiveUnit = unitOptions.includes(doseUnit) ? doseUnit : unitOptions[0]!
   const parsedDays = parseDays(days)
   const dose = Number(doseValue)
   const canAdd = drugId !== null && parsedDays !== null && dose > 0
@@ -41,7 +46,7 @@ export function AddDrugForm({
         id: `custom.${drugId}.${sortOrder}`,
         drugId,
         doseValue: dose,
-        doseUnit,
+        doseUnit: effectiveUnit,
         days: parsedDays,
         route: hasInfusion ? 'iv_infusion' : 'oral',
         durationMin: Number(durationMin) || null,
@@ -80,10 +85,10 @@ export function AddDrugForm({
         <Select
           label={t('calculator.doses.addUnit')}
           allowDeselect={false}
-          value={doseUnit}
+          value={effectiveUnit}
           onChange={(unit) => setDoseUnit((unit as RegimenItem['dose_unit'] | null) ?? 'mg_flat')}
-          data={DOSE_UNITS.map((unit) => ({ value: unit, label: t(`units.${unit}`) }))}
-          w={120}
+          data={unitOptions.map((unit) => ({ value: unit, label: tu(`units.${unit}`) }))}
+          w={140}
         />
         <TextInput
           label={t('calculator.doses.addDays')}

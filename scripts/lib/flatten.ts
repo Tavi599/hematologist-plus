@@ -35,11 +35,13 @@ export function flattenDataSet(data: DataSet): SyncRows {
   for (const drug of data.drugs) {
     const { presentations, infusion_params, $comment: _comment, ...drugRow } = drug
     rows.drugs.push(drugRow)
-    presentations.forEach(({ key, ...presentation }, index) => {
+    presentations.forEach(({ key, strength_unit, ...presentation }, index) => {
       rows.drug_presentations.push({
         id: childId(drug.id, key),
         drug_id: drug.id,
         ...presentation,
+        // A pack is labelled in the drug's own unit unless the file says otherwise.
+        strength_unit: strength_unit ?? drug.amount_unit,
         sort_order: index,
       })
     })

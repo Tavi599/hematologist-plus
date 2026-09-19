@@ -11,7 +11,7 @@ import {
   drugInfusionParamsRowSchema,
   PRIVATE_TABLES,
 } from './catalog'
-import { DOSE_UNITS, localizedTextSchema, reviewRulesSchema } from './common'
+import { AMOUNT_UNITS, DOSE_UNITS, localizedTextSchema, reviewRulesSchema } from './common'
 import { printFormsRowSchema } from './print-forms'
 
 const migrations = import.meta.glob<string>('/supabase/migrations/*.sql', {
@@ -67,6 +67,22 @@ describe('database schema', () => {
     expect(sql).not.toMatch(new RegExp(`create policy "[^"]+" on public\\.${table}[^;]*anon`))
     expect(sql).not.toMatch(new RegExp(`grant [^;]*on public\\.${table}[^;]*to [^;]*anon`))
     expect(sql).toContain(`grant select on public.${table} to authenticated;`)
+  })
+
+  it('lets the database store every unit the code knows', () => {
+    // A unit added here but not in the check constraint would be refused on write, and one
+    // stored by a newer client would be refused on read. Both lists must stay identical.
+    const doseUnits =
+      sql.match(/regimen_items_dose_unit_check check \(dose_unit in \(([\s\S]*?)\)\);/)?.[1] ?? ''
+    expect([...doseUnits.matchAll(/'([a-z0-9_]+)'/g)].map((m) => m[1]).sort()).toEqual(
+      [...DOSE_UNITS].sort(),
+    )
+    for (const column of ['amount_unit', 'strength_unit']) {
+      const units = sql.match(new RegExp(`check \\(${column} in \\(([^)]*)\\)`))?.[1] ?? ''
+      expect([...units.matchAll(/'([a-z]+)'/g)].map((m) => m[1]).sort()).toEqual(
+        [...AMOUNT_UNITS].sort(),
+      )
+    }
   })
 
   it('keeps article columns out of the public tables', () => {

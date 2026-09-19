@@ -54,7 +54,33 @@ export const routeSchema = z.enum(ROUTES)
 export const ITEM_ROLES = ['main', 'premedication', 'supportive'] as const
 export const itemRoleSchema = z.enum(ITEM_ROLES)
 
-export const DOSE_UNITS = ['mg_m2', 'mg_kg', 'mg_flat', 'auc'] as const
+/**
+ * The unit a drug is measured in. Milligrams for most, but bleomycin and interferon are dosed
+ * in international units and filgrastim in micrograms. Mass (mg, mcg) and biological activity
+ * (iu, miu) are never converted into each other: the factor is drug-specific, not arithmetic.
+ */
+export const AMOUNT_UNITS = ['mg', 'mcg', 'iu', 'miu'] as const
+export const amountUnitSchema = z.enum(AMOUNT_UNITS)
+
+/**
+ * How a regimen expresses a dose: the amount unit plus the basis (per m², per kg, flat).
+ * `auc` is the Calvert formula, which is defined in milligrams only.
+ */
+export const DOSE_UNITS = [
+  'mg_m2',
+  'mg_kg',
+  'mg_flat',
+  'mcg_m2',
+  'mcg_kg',
+  'mcg_flat',
+  'iu_m2',
+  'iu_kg',
+  'iu_flat',
+  'miu_m2',
+  'miu_kg',
+  'miu_flat',
+  'auc',
+] as const
 export const doseUnitSchema = z.enum(DOSE_UNITS)
 
 /**
@@ -93,7 +119,7 @@ export type Source = z.infer<typeof sourceSchema>
 export const doseOptionSchema = z.strictObject({
   dose_value: positiveNumberSchema,
   dose_unit: doseUnitSchema,
-  cap_mg: positiveNumberSchema.nullable().default(null),
+  cap_amount: positiveNumberSchema.nullable().default(null),
   notes: localizedTextSchema.nullable().default(null),
   /** Where this dose comes from; `name` is what the physician picks in the list. */
   source: sourceSchema,

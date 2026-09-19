@@ -1,10 +1,16 @@
 import { assertNonNegative, assertPositive } from './math'
-import { DomainInputError } from './types'
+import { DomainInputError, type AmountUnit } from './types'
 
-/** A pack unit that cannot be split: a vial, a tablet, a pre-filled syringe. */
+/**
+ * A pack unit that cannot be split: a vial, a tablet, a pre-filled syringe.
+ * The strength is in the same unit as the dose it is counted against; converting a pack
+ * strength into that unit is the caller's job (see calculateCourse).
+ */
 export interface Presentation {
   id: string
-  strengthMg: number
+  strengthAmount: number
+  /** Unit of `strengthAmount` as the catalog holds it; defaults to the dose's unit. */
+  unit?: AmountUnit
 }
 
 export interface PresentationCount {
@@ -14,14 +20,14 @@ export interface PresentationCount {
 
 export interface PackSelection {
   items: PresentationCount[]
-  totalMg: number
-  wasteMg: number
+  totalAmount: number
+  wasteAmount: number
   unitCount: number
 }
 
-// Amounts are compared in micrograms so that 3.5 mg or 0.5 mg strengths are exact integers,
-// then divided by the GCD of all strengths to keep the lookup table small.
-const MG_TO_UG = 1000
+// Amounts are compared in thousandths of the unit so that 3.5 mg or 0.5 mg strengths are exact
+// integers, then divided by the GCD of all strengths to keep the lookup table small.
+const AMOUNT_SCALE = 1000
 const MAX_TABLE_SIZE = 200_000
 
 function gcd(a: number, b: number): number {
@@ -29,13 +35,13 @@ function gcd(a: number, b: number): number {
   return a
 }
 
-function toUg(mg: number): number {
-  return Math.round(mg * MG_TO_UG)
+function toScaled(amount: number): number {
+  return Math.round(amount * AMOUNT_SCALE)
 }
 
 interface VialTable {
-  /** Size of one table cell, µg. */
-  cellUg: number
+  /** Size of one table cell, in scaled units. */
+  cell: number
   /** Strength of each presentation in cells. */
   units: number[]
   /** fewest[a] = fewest units summing exactly to a cells (Infinity if impossible). */
@@ -48,14 +54,16 @@ function validatePresentations(presentations: Presentation[]): void {
   if (presentations.length === 0) {
     throw new DomainInputError('presentations', 'at least one presentation is required')
   }
-  presentations.forEach((p) => assertPositive(`presentations.${p.id}.strengthMg`, p.strengthMg))
+  presentations.forEach((p) =>
+    assertPositive(`presentations.${p.id}.strengthAmount`, p.strengthAmount),
+  )
 }
 
-function buildTable(presentations: Presentation[], upToMg: number): VialTable | null {
-  const strengthsUg = presentations.map((p) => toUg(p.strengthMg))
-  const cellUg = strengthsUg.reduce(gcd)
-  const units = strengthsUg.map((s) => s / cellUg)
-  const size = Math.ceil(toUg(upToMg) / cellUg) + Math.max(...units)
+function buildTable(presentations: Presentation[], upToAmount: number): VialTable | null {
+  const strengths = presentations.map((p) => toScaled(p.strengthAmount))
+  const cell = strengths.reduce(gcd)
+  const units = strengths.map((s) => s / cell)
+  const size = Math.ceil(toScaled(upToAmount) / cell) + Math.max(...units)
   if (size > MAX_TABLE_SIZE) return null
 
   const fewest = new Array<number>(size + 1).fill(Infinity)
@@ -70,14 +78,14 @@ function buildTable(presentations: Presentation[], upToMg: number): VialTable | 
       }
     }
   }
-  return { cellUg, units, fewest, last }
+  return { cell, units, fewest, last }
 }
 
 function selectionFromCells(
   table: VialTable,
   cells: number,
   presentations: Presentation[],
-  doseMg: number,
+  doseAmount: number,
 ): PackSelection {
   const counts = new Array<number>(presentations.length).fill(0)
   for (let amount = cells; amount > 0; amount -= table.units[table.last[amount]!]!) {
@@ -86,43 +94,46 @@ function selectionFromCells(
   const items = presentations
     .map((presentation, index) => ({ presentation, count: counts[index]! }))
     .filter((item) => item.count > 0)
-    .sort((a, b) => b.presentation.strengthMg - a.presentation.strengthMg)
-  const totalUg = cells * table.cellUg
+    .sort((a, b) => b.presentation.strengthAmount - a.presentation.strengthAmount)
+  const totalScaled = cells * table.cell
 
   return {
     items,
-    totalMg: totalUg / MG_TO_UG,
-    wasteMg: Math.max(0, totalUg - toUg(doseMg)) / MG_TO_UG,
+    totalAmount: totalScaled / AMOUNT_SCALE,
+    wasteAmount: Math.max(0, totalScaled - toScaled(doseAmount)) / AMOUNT_SCALE,
     unitCount: items.reduce((sum, item) => sum + item.count, 0),
   }
 }
 
 /**
- * Picks whole units covering `doseMg` with the least waste, then the fewest units.
+ * Picks whole units covering `doseAmount` with the least waste, then the fewest units.
  * Units opened for one administration are not shared with another.
  */
-export function selectPresentations(doseMg: number, presentations: Presentation[]): PackSelection {
-  assertNonNegative('doseMg', doseMg)
+export function selectPresentations(
+  doseAmount: number,
+  presentations: Presentation[],
+): PackSelection {
+  assertNonNegative('doseAmount', doseAmount)
   validatePresentations(presentations)
-  if (doseMg === 0) return { items: [], totalMg: 0, wasteMg: 0, unitCount: 0 }
+  if (doseAmount === 0) return { items: [], totalAmount: 0, wasteAmount: 0, unitCount: 0 }
 
-  const table = buildTable(presentations, doseMg)
+  const table = buildTable(presentations, doseAmount)
   if (!table) {
     // Not expected for real drugs: fall back to the largest strength only.
-    const largest = presentations.reduce((a, b) => (b.strengthMg > a.strengthMg ? b : a))
-    const count = Math.ceil(doseMg / largest.strengthMg)
-    const totalMg = count * largest.strengthMg
+    const largest = presentations.reduce((a, b) => (b.strengthAmount > a.strengthAmount ? b : a))
+    const count = Math.ceil(doseAmount / largest.strengthAmount)
+    const totalAmount = count * largest.strengthAmount
     return {
       items: [{ presentation: largest, count }],
-      totalMg,
-      wasteMg: totalMg - doseMg,
+      totalAmount,
+      wasteAmount: totalAmount - doseAmount,
       unitCount: count,
     }
   }
 
-  let cells = Math.ceil(toUg(doseMg) / table.cellUg)
+  let cells = Math.ceil(toScaled(doseAmount) / table.cell)
   while (table.fewest[cells] === Infinity) cells++
-  return selectionFromCells(table, cells, presentations, doseMg)
+  return selectionFromCells(table, cells, presentations, doseAmount)
 }
 
 /**
@@ -130,19 +141,19 @@ export function selectPresentations(doseMg: number, presentations: Presentation[
  * `below` is null when no positive combination fits under the dose.
  */
 export function nearestWholeUnitAmounts(
-  doseMg: number,
+  doseAmount: number,
   presentations: Presentation[],
 ): { below: number | null; above: number } {
-  assertPositive('doseMg', doseMg)
+  assertPositive('doseAmount', doseAmount)
   validatePresentations(presentations)
 
-  const above = selectPresentations(doseMg, presentations).totalMg
-  const table = buildTable(presentations, doseMg)
+  const above = selectPresentations(doseAmount, presentations).totalAmount
+  const table = buildTable(presentations, doseAmount)
   if (!table) return { below: null, above }
 
-  let cells = Math.floor(toUg(doseMg) / table.cellUg)
+  let cells = Math.floor(toScaled(doseAmount) / table.cell)
   while (cells > 0 && table.fewest[cells] === Infinity) cells--
-  return { below: cells > 0 ? (cells * table.cellUg) / MG_TO_UG : null, above }
+  return { below: cells > 0 ? (cells * table.cell) / AMOUNT_SCALE : null, above }
 }
 
 /** Sums unit counts per presentation, e.g. per-administration selections into a course total. */
@@ -155,5 +166,7 @@ export function sumSelections(selections: PackSelection[]): PresentationCount[] 
       else totals.set(presentation.id, { presentation, count })
     }
   }
-  return [...totals.values()].sort((a, b) => b.presentation.strengthMg - a.presentation.strengthMg)
+  return [...totals.values()].sort(
+    (a, b) => b.presentation.strengthAmount - a.presentation.strengthAmount,
+  )
 }
