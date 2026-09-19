@@ -46,6 +46,8 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
     css: false,
+    // A page test renders the whole Mantine tree; the CI runner needs more than the 5 s default.
+    testTimeout: 20000,
     coverage: {
       provider: 'v8',
       include: ['src/domain/**/*.ts'],
