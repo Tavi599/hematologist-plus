@@ -32,15 +32,7 @@
       "route": "intramuscular",
       "dose_value": 8,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7],
       "notes": {
         "uk": "За 30 хв до азацитидину; за практикою відділення — внутрішньом'язово. З 3-го циклу можна не давати, якщо нудоти не було.",
         "en": "30 minutes before azacitidine; given intramuscularly in the department. May be omitted from cycle 3 if there was no nausea."
@@ -52,15 +44,7 @@
       "route": "subcutaneous",
       "dose_value": 75,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7],
       "notes": {
         "uk": "Дозу понад 4 мл ділять на два шприци й вводять у дві різні ділянки; ділянки чергують, відступ ≥ 2,5 см від попередньої.",
         "en": "Doses over 4 mL are split between two syringes and two sites; rotate sites, at least 2.5 cm from the previous one."
@@ -73,15 +57,7 @@
       "route": "oral",
       "dose_value": 300,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7],
       "notes": {
         "uk": "Профілактика синдрому лізису пухлини",
         "en": "Tumour lysis prophylaxis"
@@ -95,34 +71,8 @@
       "dose_value": 200,
       "dose_unit": "mg_flat",
       "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
       ],
       "administrations_per_day": 3,
       "notes": {

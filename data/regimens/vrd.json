@@ -27,12 +27,7 @@
       "route": "subcutaneous",
       "dose_value": 1.3,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        4,
-        8,
-        11
-      ],
+      "days": [1, 4, 8, 11],
       "notes": {
         "uk": "Підшкірно; між дозами щонайменше 72 години. Можливий і щотижневий режим — дні 1, 8, 15.",
         "en": "Subcutaneous; at least 72 hours between doses. A weekly schedule on days 1, 8 and 15 is also used."
@@ -44,22 +39,7 @@
       "route": "oral",
       "dose_value": 25,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
       "notes": {
         "uk": "Бажано на ніч",
         "en": "Preferably at night"
@@ -71,16 +51,7 @@
       "route": "oral",
       "dose_value": 20,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        4,
-        5,
-        8,
-        9,
-        11,
-        12
-      ],
+      "days": [1, 2, 4, 5, 8, 9, 11, 12],
       "notes": {
         "uk": "У день введення бортезомібу і наступного дня",
         "en": "On the day of and the day after each bortezomib dose"
@@ -93,29 +64,7 @@
       "route": "oral",
       "dose_value": 200,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
       "administrations_per_day": 3,
       "notes": {
         "uk": "Противірусна профілактика впродовж лікування",

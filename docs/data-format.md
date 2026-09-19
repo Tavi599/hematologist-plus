@@ -16,8 +16,8 @@ data/
   drugs/<id>.json                препарат + фасування + параметри розведення
   regimens/<id>.json             схема + препарати курсу + друковані форми
   diseases/<id>/disease.json     хвороба + коди + дерево лікування
-  diseases/<id>/article.uk.md    стаття (Markdown), необов'язково
-  diseases/<id>/article.en.md
+  <content>/diseases/<id>/article.uk.md   стаття (Markdown) — у приватному репозиторії, шлях через --content
+  <content>/diseases/<id>/article.en.md
 ```
 
 ## Загальні правила

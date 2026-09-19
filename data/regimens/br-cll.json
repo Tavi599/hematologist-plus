@@ -32,9 +32,7 @@
       "route": "oral",
       "dose_value": 1000,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Не пізніше ніж за 30 хв до ритуксимабу",
         "en": "At least 30 minutes before rituximab"
@@ -47,9 +45,7 @@
       "route": "iv_bolus",
       "dose_value": 40,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "За практикою відділення",
         "en": "Department practice"
@@ -62,9 +58,7 @@
       "route": "iv_infusion",
       "dose_value": 20,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Премедикація за практикою відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл у 100 мл 0,9% NaCl; у протоколі — гідрокортизон 100 мг і хлорфенамін 10 мг в/в",
         "en": "Department premedication: dexamethasone 20 mg with diphenhydramine 50 mg in 100 mL 0.9% NaCl; the protocol uses hydrocortisone 100 mg and chlorphenamine 10 mg IV"
@@ -77,9 +71,7 @@
       "route": "iv_infusion",
       "dose_value": 50,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Премедикація за практикою відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл у 100 мл 0,9% NaCl; у протоколі — гідрокортизон 100 мг і хлорфенамін 10 мг в/в",
         "en": "Department premedication: dexamethasone 20 mg with diphenhydramine 50 mg in 100 mL 0.9% NaCl; the protocol uses hydrocortisone 100 mg and chlorphenamine 10 mg IV"
@@ -91,9 +83,7 @@
       "route": "iv_infusion",
       "dose_value": 375,
       "dose_unit": "mg_m2",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "Цикл 1. Якщо лімфоцитів > 25×10⁹/л — 50 мг/м² (або 100 мг) у день 1, решту 325 мг/м² у день 2.",
         "en": "Cycle 1. If lymphocytes exceed 25 x 10^9/L give 50 mg/m2 (or 100 mg flat) on day 1 and the remaining 325 mg/m2 on day 2."
@@ -120,10 +110,7 @@
       "route": "iv_infusion",
       "dose_value": 90,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2
-      ],
+      "days": [1, 2],
       "duration_min": 45,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
@@ -154,10 +141,7 @@
       "route": "iv_bolus",
       "dose_value": 8,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2
-      ],
+      "days": [1, 2],
       "administrations_per_day": 2
     },
     {
@@ -167,15 +151,7 @@
       "route": "oral",
       "dose_value": 300,
       "dose_unit": "mg_flat",
-      "days": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
+      "days": [3, 4, 5, 6, 7, 8, 9],
       "notes": {
         "uk": "Профілактика лізису пухлини, 1-й цикл; у дні бендамустину не дають",
         "en": "Tumour lysis prophylaxis, cycle 1; omitted on bendamustine days"
@@ -189,34 +165,8 @@
       "dose_value": 200,
       "dose_unit": "mg_flat",
       "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
       ],
       "administrations_per_day": 3,
       "notes": {
