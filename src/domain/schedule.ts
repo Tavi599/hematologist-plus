@@ -73,6 +73,12 @@ export interface AdministrationInput {
   anchorOffsetMin?: number
   /** `day_support`: minutes between the repeats of this drug within the day (q8h = 480). */
   intervalMin?: number
+  /**
+   * `infusion`: this is a drug of the regimen itself, not its premedication. The support of
+   * the day is timed from the first of these — 30 min before the cytostatic, not before the
+   * premedication that precedes it.
+   */
+  isMain?: boolean
   /** 0-based number of this administration within the day. */
   occurrence?: number
 }
@@ -90,7 +96,7 @@ export interface ScheduledAdministration {
 
 /**
  * Places the `infusion` rows one after another from `dayStart` (HH:MM), then hangs the
- * `day_support` rows off the start of the first infusion — ondansetron before the cytostatic
+ * `day_support` rows off the start of the day's first cytostatic — ondansetron before the cytostatic
  * and every 8 hours after it, so they follow when the infusion is shifted.
  *
  * `ward` rows get no time at all: tablets are given on the ward round, and moving an infusion
@@ -104,18 +110,20 @@ export function scheduleAdministrations(
 ): ScheduledAdministration[] {
   const dayStartMin = parseTime(dayStart)
   let cursor = dayStartMin
-  let anchorMin: number | null = null
+  let firstStart: number | null = null
+  let firstMainStart: number | null = null
   const scheduled: ScheduledAdministration[] = []
 
   for (const item of items) {
     if (item.block !== 'infusion') continue
     const startMin = Math.max(0, cursor + (item.gapBeforeMin ?? 0) + shiftOf(item))
     cursor = startMin + durationOf(item)
-    anchorMin ??= startMin
+    firstStart ??= startMin
+    if (item.isMain) firstMainStart ??= startMin
     scheduled.push(placed(item.id, startMin, durationOf(item)))
   }
 
-  const anchor = anchorMin ?? dayStartMin
+  const anchor = firstMainStart ?? firstStart ?? dayStartMin
   for (const item of items) {
     if (item.block !== 'day_support') continue
     const offset = item.anchorOffsetMin ?? 0

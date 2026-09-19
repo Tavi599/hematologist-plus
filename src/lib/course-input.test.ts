@@ -29,6 +29,7 @@ describe('buildCourseItems', () => {
     expect(rituximab.courseDrug).toEqual({
       id: 'r-chop-21.rituximab',
       block: 'infusion',
+      isMain: true,
       dose: { value: 375, unit: 'mg_m2' },
       days: [1],
       administrationsPerDay: 1,

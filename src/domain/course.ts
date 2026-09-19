@@ -61,6 +61,8 @@ export interface CourseDrug {
   anchorOffsetMin?: number
   /** `day_support`: minutes between the repeats within one day (q8h = 480). */
   intervalMin?: number
+  /** A drug of the regimen itself: the support of the day is timed from the first of these. */
+  isMain?: boolean
   /** Set only for infusions; without it no solvent volume is calculated. */
   infusion?: InfusionParams
   presentations?: Presentation[]
@@ -373,6 +375,7 @@ function buildDays(
         return {
           id,
           block: drug.block ?? 'infusion',
+          ...(drug.isMain === undefined ? {} : { isMain: drug.isMain }),
           durationMin: ramp
             ? (isFirstEver ? ramp.first : ramp.next).durationMin
             : (drug.durationMin ?? 0),

@@ -82,15 +82,15 @@ describe('scheduleAdministrations', () => {
         occurrence: 1,
       },
       { id: 'premed', block: 'infusion' as const, durationMin: 30 },
-      { id: 'doxorubicin', block: 'infusion' as const, durationMin: 60 },
+      { id: 'doxorubicin', block: 'infusion' as const, durationMin: 60, isMain: true },
       { id: 'aciclovir', block: 'ward' as const, durationMin: 0 },
     ])
 
     expect(schedule.map(({ id, start }) => ({ id, start }))).toEqual([
-      { id: 'ondansetron#1', start: '08:30' },
+      { id: 'ondansetron#1', start: '09:00' },
       { id: 'premed', start: '09:00' },
       { id: 'doxorubicin', start: '09:30' },
-      { id: 'ondansetron#2', start: '16:30' },
+      { id: 'ondansetron#2', start: '17:00' },
     ])
     // The tablet is not in the grid at all, so no shift can move it.
     expect(untimedIds(schedule as never)).toEqual([])
@@ -99,7 +99,13 @@ describe('scheduleAdministrations', () => {
   it('moves the support with the infusion it is anchored to', () => {
     const items = [
       { id: 'ondansetron', block: 'day_support' as const, durationMin: 0, anchorOffsetMin: -30 },
-      { id: 'doxorubicin', block: 'infusion' as const, durationMin: 60, shiftMin: 120 },
+      {
+        id: 'doxorubicin',
+        block: 'infusion' as const,
+        durationMin: 60,
+        shiftMin: 120,
+        isMain: true,
+      },
     ]
     const schedule = scheduleAdministrations('09:00', items)
     expect(schedule.map(({ id, start }) => ({ id, start }))).toEqual([

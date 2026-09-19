@@ -115,6 +115,7 @@ export function buildCourseItemsFrom(
       ...(presentations.length > 0 ? { presentations } : {}),
       ...(drug.review_rules ? { reviewRules: drug.review_rules } : {}),
       block: item.block,
+      isMain: item.role === 'main',
       ...(item.anchor_offset_min === null ? {} : { anchorOffsetMin: item.anchor_offset_min }),
       ...(item.interval_min === null ? {} : { intervalMin: item.interval_min }),
     }
