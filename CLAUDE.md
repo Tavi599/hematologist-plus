@@ -136,6 +136,7 @@ src/
 - **No patient data is ever sent to Supabase or any external service**, logged, or cached in the service worker. Patient input lives in component state only.
 - Supabase project `hematologist-plus` (ref `lenftpktjlxpqaajgqtm`, Frankfurt). URL + **publishable** key are committed in `.env` (browser-safe by design). The **secret** key is used only by `scripts/`, read from git-ignored `.env.local` or GitHub secrets — never committed, never in `VITE_*` vars.
 - Every table in an exposed schema must have RLS enabled in the same migration that creates it; the publishable key would otherwise expose it.
+- **Deploy before migrating.** Push the code and wait for the Pages deploy, then run the SQL: a copy of the app installed on a phone keeps its old code until the user accepts an update, and it has to survive the new column. Row schemas are `z.object` for exactly this reason — never make one strict. A copy that is too old anyway gets a "reinstall the app" button (`reinstallApp` in `src/lib/app-refresh.ts`), which drops the offline catalog, unregisters the service worker and reloads.
 - Diseases: WHO ICD-10 by default; additional classifications plug in via `classification_systems` / `disease_codes`.
 
 ## Workflow notes

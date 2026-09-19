@@ -1,8 +1,9 @@
-import { Alert, Center, Loader, Stack } from '@mantine/core'
+import { Alert, Button, Center, Loader, Stack, Text } from '@mantine/core'
 import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { CatalogIndex } from '../../lib/catalog-index'
+import { reinstallApp } from '../../lib/app-refresh'
 import { isCatalogConfigured, useCatalog } from '../../lib/use-catalog'
 
 /**
@@ -29,7 +30,13 @@ export function CatalogGate({ children }: { children: (catalog: CatalogIndex) =>
   if (query.isError) {
     return (
       <Alert color="red" title={t('catalog.loadError')}>
-        {query.error.message}
+        <Stack gap="xs" align="flex-start">
+          <Text size="sm">{query.error.message}</Text>
+          <Text size="sm">{t('catalog.loadErrorHint')}</Text>
+          <Button size="xs" variant="white" onClick={() => void reinstallApp()}>
+            {t('catalog.reinstall')}
+          </Button>
+        </Stack>
       </Alert>
     )
   }

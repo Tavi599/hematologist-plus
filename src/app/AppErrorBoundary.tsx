@@ -2,7 +2,7 @@ import { Alert, Button, Code, Container, Stack, Text } from '@mantine/core'
 import { Component, type ErrorInfo, type ReactNode } from 'react'
 import { withTranslation, type WithTranslation } from 'react-i18next'
 
-import { clearPersistedCatalog } from '../lib/query-persistence'
+import { reinstallApp } from '../lib/app-refresh'
 
 interface State {
   error: Error | null
@@ -38,7 +38,7 @@ class ErrorBoundary extends Component<WithTranslation & { children: ReactNode },
             <Code block>{error.message}</Code>
             <Button
               onClick={() => {
-                void clearPersistedCatalog().finally(() => window.location.reload())
+                void reinstallApp()
               }}
             >
               {t('error.reset')}

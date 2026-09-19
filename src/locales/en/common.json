@@ -163,7 +163,9 @@
     "notConfigured": "Database connection is not configured.",
     "loadError": "Could not load reference data",
     "offlineNoData": "You are offline and no reference data has been saved yet. Open the site online at least once.",
-    "staleData": "Could not refresh reference data; showing the saved copy."
+    "staleData": "Could not refresh reference data; showing the saved copy.",
+    "loadErrorHint": "Usually an old copy of the app saved on this device: it cannot read the updated catalog. Press \"Reinstall the app\" and it will be fetched again from the server.",
+    "reinstall": "Reinstall the app"
   },
   "notFound": {
     "title": "Page not found",
