@@ -6,18 +6,32 @@
     "en": "Filgrastim"
   },
   "availability": "department",
+  "dose_units": ["mcg_kg", "mcg_flat"],
+  "notes": {
+    "uk": "Фасування в переліку відділення позначені і в мкг, і в МО: 300 мкг = 30 млн МО, 480 мкг = 48 млн МО.",
+    "en": "The department list labels the packs both ways: 300 mcg = 30 million IU, 480 mcg = 48 million IU."
+  },
+  "sources": [
+    {
+      "name": "Перелік препаратів відділення на 2027 рік",
+      "version": "Список_препаратів_на_2027_розрахунок1.xlsx",
+      "checkedOn": "2026-09-20"
+    }
+  ],
   "presentations": [
     {
       "key": "s0-3",
-      "form": "vial",
+      "form": "syringe",
       "strength_amount": 0.3,
-      "volume_ml": 0.5
+      "volume_ml": 0.5,
+      "label": { "uk": "300 мкг (30 млн МО) / 0,5 мл", "en": "300 mcg (30 million IU) / 0.5 mL" }
     },
     {
       "key": "s0-48",
-      "form": "vial",
+      "form": "syringe",
       "strength_amount": 0.48,
-      "volume_ml": 0.5
+      "volume_ml": 0.5,
+      "label": { "uk": "480 мкг (48 млн МО) / 0,5 мл", "en": "480 mcg (48 million IU) / 0.5 mL" }
     }
   ]
 }

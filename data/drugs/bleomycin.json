@@ -1,0 +1,53 @@
+{
+  "$comment": "Фасування 15 000 МО підтверджене переліком відділення на 2027 рік (64 флакони на 4 пацієнтів: «10 од/м² Д1,15 → 2 фл./введ.»).",
+  "id": "bleomycin",
+  "name": {
+    "uk": "Блеоміцин",
+    "en": "Bleomycin"
+  },
+  "atc_code": "L01DC01",
+  "availability": "department",
+  "amount_unit": "iu",
+  "dose_units": ["iu_m2", "iu_flat"],
+  "notes": {
+    "uk": "Кумулятивна доза за життя 400 000 МО (ризик пневмоніту) — калькулятор її не контролює.",
+    "en": "Lifetime cumulative dose 400 000 IU (pneumonitis risk) — not tracked by the calculator."
+  },
+  "sources": [
+    {
+      "name": "Перелік препаратів відділення на 2027 рік",
+      "version": "Список_препаратів_на_2027_розрахунок1.xlsx",
+      "checkedOn": "2026-09-20"
+    },
+    {
+      "name": "NSSG Oxford Haematology, L.8 A(B)VD",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-8-abvd.pdf",
+      "version": "5.0 (09.2024)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s15000",
+      "form": "vial",
+      "strength_amount": 15000
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [100],
+      "duration_min": 60,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "NSSG Oxford Haematology, L.8 A(B)VD",
+          "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-8-abvd.pdf",
+          "version": "5.0 (09.2024)",
+          "checkedOn": "2026-09-19"
+        }
+      ]
+    }
+  ]
+}

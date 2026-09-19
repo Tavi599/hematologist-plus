@@ -1,0 +1,31 @@
+{
+  "$comment": "Фасування з переліку відділення на 2027: 20%, 100 мл = 20 г білка у флаконі (20 000 мг).",
+  "id": "albumin-human",
+  "name": {
+    "uk": "Альбумін людини",
+    "en": "Human albumin"
+  },
+  "atc_code": "B05AA01",
+  "availability": "department",
+  "dose_units": ["mg_flat"],
+  "notes": {
+    "uk": "Доза в грамах: 20 000 мг = 20 г = один флакон 20% по 100 мл.",
+    "en": "Dosed in grams: 20 000 mg = 20 g = one 20% 100 mL vial."
+  },
+  "sources": [
+    {
+      "name": "Перелік препаратів відділення на 2027 рік",
+      "version": "Список_препаратів_на_2027_розрахунок1.xlsx",
+      "checkedOn": "2026-09-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s20-100",
+      "form": "vial",
+      "strength_amount": 20000,
+      "volume_ml": 100,
+      "label": { "uk": "20% по 100 мл (20 г)", "en": "20% 100 mL (20 g)" }
+    }
+  ]
+}

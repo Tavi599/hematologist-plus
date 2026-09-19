@@ -1,0 +1,27 @@
+{
+  "$comment": "Фасування з переліку відділення (Список_препаратів_з_доз,_ДЕЦ,_кер_дост.xlsx). У переліку на 2027 позначено «Не замовляється», тому availability = registered.",
+  "id": "interferon-alfa-2b",
+  "name": {
+    "uk": "Інтерферон альфа-2b",
+    "en": "Interferon alfa-2b"
+  },
+  "atc_code": "L03AB05",
+  "availability": "registered",
+  "amount_unit": "miu",
+  "dose_units": ["miu_flat", "miu_m2"],
+  "sources": [
+    {
+      "name": "Перелік препаратів відділення (дози, ДЕЦ, керований доступ)",
+      "version": "Список_препаратів_з_доз,_ДЕЦ,_кер_дост.xlsx",
+      "checkedOn": "2026-09-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s3",
+      "form": "vial",
+      "strength_amount": 3,
+      "label": { "uk": "3 млн МО", "en": "3 million IU" }
+    }
+  ]
+}

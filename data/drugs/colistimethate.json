@@ -1,0 +1,33 @@
+{
+  "$comment": "Фасування з переліку відділення на 2027 (Список_препаратів_на_2027_розрахунок1.xlsx, рядки «Колістин» і «Колістиметат натрію»). Дозується в мільйонах МО, тому amount_unit = miu.",
+  "id": "colistimethate",
+  "name": {
+    "uk": "Колістиметат натрію",
+    "en": "Colistimethate sodium"
+  },
+  "atc_code": "J01XB01",
+  "availability": "department",
+  "amount_unit": "miu",
+  "dose_units": ["miu_flat"],
+  "sources": [
+    {
+      "name": "Перелік препаратів відділення на 2027 рік",
+      "version": "Список_препаратів_на_2027_розрахунок1.xlsx",
+      "checkedOn": "2026-09-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s1",
+      "form": "vial",
+      "strength_amount": 1,
+      "label": { "uk": "1 млн МО", "en": "1 million IU" }
+    },
+    {
+      "key": "s2",
+      "form": "vial",
+      "strength_amount": 2,
+      "label": { "uk": "2 млн МО", "en": "2 million IU" }
+    }
+  ]
+}

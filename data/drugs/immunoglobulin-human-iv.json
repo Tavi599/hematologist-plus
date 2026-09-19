@@ -1,0 +1,31 @@
+{
+  "$comment": "Фасування з переліків відділення: 10%, 100 мл = 10 г білка у флаконі (10 000 мг).",
+  "id": "immunoglobulin-human-iv",
+  "name": {
+    "uk": "Імуноглобулін людини нормальний для в/в введення",
+    "en": "Human normal immunoglobulin for intravenous use"
+  },
+  "atc_code": "J06BA02",
+  "availability": "department",
+  "dose_units": ["mg_kg", "mg_flat"],
+  "notes": {
+    "uk": "Доза зазвичай у г/кг: 0,4 г/кг = 400 мг/кг.",
+    "en": "Usually dosed in g/kg: 0.4 g/kg = 400 mg/kg."
+  },
+  "sources": [
+    {
+      "name": "Перелік препаратів відділення (дози, ДЕЦ, керований доступ)",
+      "version": "Список_препаратів_з_доз,_ДЕЦ,_кер_дост.xlsx",
+      "checkedOn": "2026-09-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s10-100",
+      "form": "vial",
+      "strength_amount": 10000,
+      "volume_ml": 100,
+      "label": { "uk": "10% по 100 мл (10 г)", "en": "10% 100 mL (10 g)" }
+    }
+  ]
+}
