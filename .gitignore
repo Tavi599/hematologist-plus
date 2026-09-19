@@ -34,3 +34,8 @@ coverage
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Source documents (protocols, guidelines): read for their numbers, never committed.
+# NCCN and similar copies are watermarked with the account that downloaded them.
+sources/
+*.pdf
