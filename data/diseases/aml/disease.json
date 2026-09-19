@@ -8,27 +8,61 @@
     "uk": "Клональна проліферація мієлоїдних бластів; потребує невідкладного обстеження й лікування.",
     "en": "Clonal proliferation of myeloid blasts; needs urgent work-up and treatment."
   },
-  "codes": [{ "system_id": "icd-10", "code": "C92.0", "is_primary": true }],
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C92.0",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Acute%20myeloid%20leukaemia"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Acute%20myeloid%20leukaemia"
+    }
+  ],
   "treatment": [
     {
       "key": "consolidation",
       "kind": "line",
-      "title": { "uk": "Консолідація", "en": "Consolidation" },
+      "title": {
+        "uk": "Консолідація",
+        "en": "Consolidation"
+      },
       "description": {
         "uk": "Після досягнення ремісії; вибір залежить від групи ризику й придатності до трансплантації.",
         "en": "After remission is achieved; the choice depends on the risk group and transplant eligibility."
       },
-      "regimens": [{ "regimen_id": "hd-ara-c" }]
+      "regimens": [
+        {
+          "regimen_id": "hd-ara-c"
+        }
+      ]
     },
     {
       "key": "unfit",
       "kind": "group",
-      "title": { "uk": "Непридатні до інтенсивної терапії", "en": "Unfit for intensive therapy" },
+      "title": {
+        "uk": "Непридатні до інтенсивної терапії",
+        "en": "Unfit for intensive therapy"
+      },
       "description": {
         "uk": "Гіпометилювальні засоби, за можливості з венетоклаксом.",
         "en": "Hypomethylating agents, with venetoclax where available."
       },
-      "regimens": [{ "regimen_id": "azacitidine-mono" }]
+      "regimens": [
+        {
+          "regimen_id": "azacitidine-mono"
+        }
+      ]
     }
   ]
 }

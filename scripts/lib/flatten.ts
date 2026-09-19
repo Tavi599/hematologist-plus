@@ -95,8 +95,9 @@ export function flattenDataSet(data: DataSet): SyncRows {
   }
 
   for (const disease of data.diseases) {
-    const { codes, treatment, article, $comment: _comment, ...diseaseRow } = disease
-    rows.diseases.push(diseaseRow)
+    const { codes, treatment, article, references, $comment: _comment, ...diseaseRow } = disease
+    // The column is named references_json: "references" is reserved in Postgres.
+    rows.diseases.push({ ...diseaseRow, references_json: references })
     // Article text lives in its own table: the public catalog must not carry it.
     for (const [language, body] of Object.entries(article ?? {})) {
       if (typeof body !== 'string' || body.trim() === '') continue

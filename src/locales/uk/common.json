@@ -174,7 +174,9 @@
     "treatment": "Лікування",
     "article": "Стаття",
     "summary": "Стисло",
-    "otherLanguage": "Статтю доступно лише іншою мовою."
+    "otherLanguage": "Статтю доступно лише іншою мовою.",
+    "references": "Що кажуть настанови",
+    "referencesNote": "Посилання відкриваються на сайтах настанов. NCCN і UpToDate потребують власного входу; програма їхній текст не зберігає."
   },
   "catalog": {
     "loading": "Завантаження довідників…",
@@ -238,6 +240,13 @@
     "main": "основний",
     "premedication": "премедикація",
     "supportive": "супровідна терапія"
+  },
+  "reference": {
+    "nccn": "Що каже NCCN",
+    "uptodate": "UpToDate",
+    "eviq": "eviQ",
+    "nssg": "NSSG Oxford",
+    "other": "Джерело"
   },
   "solvent": {
     "sodium_chloride_0_9": "NaCl 0,9%",

@@ -8,17 +8,47 @@
     "uk": "Найчастіша індолентна В-клітинна лімфома; перебіг тривалий, із рецидивами.",
     "en": "The most common indolent B-cell lymphoma; a long relapsing course."
   },
-  "codes": [{ "system_id": "icd-10", "code": "C82", "is_primary": true }],
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C82",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Follicular%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Follicular%20lymphoma"
+    }
+  ],
   "treatment": [
     {
       "key": "first-line",
       "kind": "line",
-      "title": { "uk": "Перша лінія", "en": "First line" },
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
       "description": {
         "uk": "Лікування починають за наявності показань (критерії GELF/BNLI); безсимптомну хворобу спостерігають.",
         "en": "Treatment starts when there is an indication (GELF/BNLI criteria); asymptomatic disease is watched."
       },
-      "regimens": [{ "regimen_id": "r-cvp" }, { "regimen_id": "br" }]
+      "regimens": [
+        {
+          "regimen_id": "r-cvp"
+        },
+        {
+          "regimen_id": "br"
+        }
+      ]
     }
   ]
 }

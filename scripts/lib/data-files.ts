@@ -4,6 +4,7 @@ import {
   amountUnitSchema,
   rateRampSchema,
   scheduleBlockSchema,
+  diseaseReferencesSchema,
   doseOptionsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
@@ -194,6 +195,8 @@ export const diseaseFileSchema = z.strictObject({
       }),
     )
     .default([]),
+  /** Guideline pages the physician opens next; the app only links out, never copies them. */
+  references: diseaseReferencesSchema.default([]),
   treatment: z.array(treatmentNodeFileSchema).default([]),
 })
 

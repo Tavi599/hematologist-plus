@@ -8,17 +8,47 @@
     "uk": "В-клітинна лімфома з t(11;14) і циклін D1; перебіг здебільшого агресивний.",
     "en": "B-cell lymphoma with t(11;14) and cyclin D1; usually an aggressive course."
   },
-  "codes": [{ "system_id": "icd-10", "code": "C83.1", "is_primary": true }],
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C83.1",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Mantle%20cell%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Mantle%20cell%20lymphoma"
+    }
+  ],
   "treatment": [
     {
       "key": "first-line",
       "kind": "line",
-      "title": { "uk": "Перша лінія", "en": "First line" },
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
       "description": {
         "uk": "Вибір залежить від віку та придатності до інтенсивної терапії з аутологічною трансплантацією.",
         "en": "The choice depends on age and fitness for intensive therapy with autologous transplantation."
       },
-      "regimens": [{ "regimen_id": "br" }, { "regimen_id": "r-chop-21" }]
+      "regimens": [
+        {
+          "regimen_id": "br"
+        },
+        {
+          "regimen_id": "r-chop-21"
+        }
+      ]
     }
   ]
 }

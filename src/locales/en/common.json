@@ -174,7 +174,9 @@
     "treatment": "Treatment",
     "article": "Article",
     "summary": "Summary",
-    "otherLanguage": "The article is available in another language only."
+    "otherLanguage": "The article is available in another language only.",
+    "references": "What the guidelines say",
+    "referencesNote": "The links open on the guideline sites. NCCN and UpToDate need your own sign-in; the app stores none of their text."
   },
   "catalog": {
     "loading": "Loading reference data…",
@@ -238,6 +240,13 @@
     "main": "main",
     "premedication": "premedication",
     "supportive": "supportive"
+  },
+  "reference": {
+    "nccn": "What NCCN says",
+    "uptodate": "UpToDate",
+    "eviq": "eviQ",
+    "nssg": "NSSG Oxford",
+    "other": "Source"
   },
   "solvent": {
     "sodium_chloride_0_9": "NaCl 0.9%",

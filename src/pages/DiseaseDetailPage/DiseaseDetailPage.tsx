@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router'
 import { routes } from '../../app/routes'
 import { SignInPanel } from '../../features/auth/SignInPanel'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
+import { DiseaseReferences } from '../../features/catalog/DiseaseReferences'
 import { TreatmentTree } from '../../features/catalog/TreatmentTree'
 import { useDiseaseArticles } from '../../lib/articles'
 import { isAuthConfigured, useSessionUser } from '../../lib/auth'
@@ -53,6 +54,7 @@ function DiseaseDetail({ catalog, slug }: { catalog: CatalogIndex; slug: string 
         </Group>
       )}
       {disease.summary !== null && <Text>{localize(disease.summary, language)}</Text>}
+      <DiseaseReferences disease={disease} />
 
       <Card withBorder component="section">
         <Stack gap="sm">

@@ -8,17 +8,44 @@
     "uk": "Клональна хвороба стовбурової клітини: цитопенії, дисплазія, ризик переходу в гострий мієлоїдний лейкоз.",
     "en": "Clonal stem cell disorder: cytopenias, dysplasia and a risk of progression to acute myeloid leukaemia."
   },
-  "codes": [{ "system_id": "icd-10", "code": "D46", "is_primary": true }],
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "D46",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1446"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Myelodysplastic%20syndrome"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Myelodysplastic%20syndrome"
+    }
+  ],
   "treatment": [
     {
       "key": "higher-risk",
       "kind": "group",
-      "title": { "uk": "Вищий ризик (IPSS-R)", "en": "Higher risk (IPSS-R)" },
+      "title": {
+        "uk": "Вищий ризик (IPSS-R)",
+        "en": "Higher risk (IPSS-R)"
+      },
       "description": {
         "uk": "Гіпометилювальні засоби; у придатних кандидатів обговорюють алогенну трансплантацію.",
         "en": "Hypomethylating agents; allogeneic transplantation is discussed in suitable candidates."
       },
-      "regimens": [{ "regimen_id": "azacitidine-mono" }]
+      "regimens": [
+        {
+          "regimen_id": "azacitidine-mono"
+        }
+      ]
     }
   ]
 }

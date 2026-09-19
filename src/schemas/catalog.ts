@@ -7,6 +7,7 @@ import {
   doseOptionsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
+  diseaseReferencesSchema,
   idSchema,
   itemRoleSchema,
   localizedTextSchema,
@@ -153,6 +154,8 @@ export const diseaseRowSchema = z.object({
   name: localizedTextSchema,
   summary: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
+  /** Defaulted so a client that already knows the column can still read a database without it. */
+  references_json: diseaseReferencesSchema.default([]),
 })
 
 /**
@@ -271,7 +274,7 @@ export type TreatmentNodeRegimen = CatalogRow<'treatment_node_regimens'>
  * Bump when the catalog shape changes incompatibly: invalidates offline caches.
  * Keep in step with new migrations that change columns.
  */
-export const CATALOG_SCHEMA_VERSION = '5'
+export const CATALOG_SCHEMA_VERSION = '6'
 
 export function emptySyncRows(): SyncRows {
   return { ...emptyCatalog(), disease_articles: [] }

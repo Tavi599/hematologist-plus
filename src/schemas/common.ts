@@ -128,6 +128,22 @@ export const doseOptionSchema = z.strictObject({
 export const doseOptionsSchema = z.array(doseOptionSchema)
 
 /**
+ * Where a physician reads more about a disease. The app only links out: guideline text is
+ * copyrighted and is never copied into the catalog.
+ */
+export const REFERENCE_KINDS = ['nccn', 'uptodate', 'eviq', 'nssg', 'other'] as const
+export const referenceKindSchema = z.enum(REFERENCE_KINDS)
+
+export const diseaseReferenceSchema = z.strictObject({
+  kind: referenceKindSchema,
+  url: z.url(),
+  /** Shown instead of the name of the source, for a link that needs saying what it is. */
+  label: localizedTextSchema.nullable().default(null),
+})
+
+export const diseaseReferencesSchema = z.array(diseaseReferenceSchema)
+
+/**
  * Where a row of the course is timed and printed.
  *   infusion    — the hourly chain of the infusion sheet; shifting one row moves the rest
  *   day_support — the infusion sheet, timed from the day's first chained drug (ondansetron

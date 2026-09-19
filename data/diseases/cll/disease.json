@@ -8,17 +8,44 @@
     "uk": "Клональна проліферація зрілих В-лімфоцитів; часто виявляють випадково за лімфоцитозом.",
     "en": "Clonal proliferation of mature B lymphocytes; often found incidentally as lymphocytosis."
   },
-  "codes": [{ "system_id": "icd-10", "code": "C91.1", "is_primary": true }],
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C91.1",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1478"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Chronic%20lymphocytic%20leukaemia"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Chronic%20lymphocytic%20leukaemia"
+    }
+  ],
   "treatment": [
     {
       "key": "first-line",
       "kind": "line",
-      "title": { "uk": "Перша лінія", "en": "First line" },
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
       "description": {
         "uk": "Лікування починають за показаннями iwCLL; безсимптомну хворобу спостерігають. Перед вибором схеми визначають del(17p)/TP53.",
         "en": "Treatment starts on iwCLL indications; asymptomatic disease is watched. del(17p)/TP53 status is checked before choosing."
       },
-      "regimens": [{ "regimen_id": "br-cll" }]
+      "regimens": [
+        {
+          "regimen_id": "br-cll"
+        }
+      ]
     }
   ]
 }

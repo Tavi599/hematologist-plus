@@ -15,6 +15,20 @@
       "is_primary": true
     }
   ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1445"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Multiple%20myeloma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Multiple%20myeloma"
+    }
+  ],
   "treatment": [
     {
       "key": "first-line",
