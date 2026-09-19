@@ -1,0 +1,95 @@
+{
+  "$comment": "Дози — протокол NSSG Oxford MM.22 Pomalidomide (Imnovid) (вер. 2.0, червень 2023). Дексаметазон 40 мг — для пацієнтів ≤ 75 років; старшим протокол дає 20 мг (внесено як альтернативну дозу). Кларитроміцин 500 мг двічі на добу протокол подає як «розглянути» — не внесено. Ацикловір — за стандартом відділення 400 мг двічі на добу (у протоколі 200 мг тричі).",
+  "id": "pom-dex",
+  "short_name": "Pom-Dex",
+  "name": {
+    "uk": "Помалідомід + дексаметазон",
+    "en": "Pomalidomide + dexamethasone"
+  },
+  "description": {
+    "uk": "Помалідомід із дексаметазоном. Цикл 28 днів, до прогресування.",
+    "en": "Pomalidomide with dexamethasone. 28-day cycle, until progression."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.22 Pomalidomide (Imnovid)",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-22-pomalidomide-dex.pdf",
+      "version": "2.0 (06.2023)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "pomalidomide",
+      "drug_id": "pomalidomide",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "На ніч, дні 1–21",
+        "en": "Nocte, days 1 to 21"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Для пацієнтів, старших за 75 років",
+            "en": "For patients older than 75"
+          },
+          "source": {
+            "name": "NSSG Oxford MM.22: вік > 75 років",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-22-pomalidomide-dex.pdf",
+            "version": "2.0 (06.2023)",
+            "checkedOn": "2026-09-19"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "40 мг для пацієнтів ≤ 75 років; старшим — 20 мг. Дексаметазон не відміняють",
+        "en": "40 mg for patients aged 75 or under, 20 mg above that. Dexamethasone is not stopped"
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл; починати напередодні",
+        "en": "Tumour lysis prophylaxis, cycle 1; start the day before"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Профілактика впродовж лікування; при КК < 10 мл/хв — 200 мг двічі на добу",
+        "en": "Prophylaxis during treatment; 200 mg twice a day if CrCl < 10 mL/min"
+      }
+    }
+  ]
+}

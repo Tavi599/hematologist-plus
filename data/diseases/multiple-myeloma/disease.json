@@ -8,17 +8,76 @@
     "uk": "Пухлина плазматичних клітин із моноклональним білком, ураженням кісток, нирок і анемією.",
     "en": "Plasma cell tumour with a monoclonal protein, bone lesions, renal impairment and anaemia."
   },
-  "codes": [{ "system_id": "icd-10", "code": "C90.0", "is_primary": true }],
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C90.0",
+      "is_primary": true
+    }
+  ],
   "treatment": [
     {
       "key": "first-line",
       "kind": "line",
-      "title": { "uk": "Перша лінія", "en": "First line" },
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
       "description": {
         "uk": "Індукція трикомпонентною схемою; у придатних пацієнтів далі — високі дози мелфалану з аутологічною трансплантацією.",
         "en": "Triplet induction; in fit patients followed by high-dose melphalan with autologous transplantation."
       },
-      "regimens": [{ "regimen_id": "vcd" }, { "regimen_id": "vrd" }]
+      "regimens": [
+        {
+          "regimen_id": "vcd"
+        },
+        {
+          "regimen_id": "vrd"
+        },
+        {
+          "regimen_id": "vtd"
+        }
+      ]
+    },
+    {
+      "key": "relapsed",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив і рефрактерний перебіг",
+        "en": "Relapsed and refractory"
+      },
+      "description": {
+        "uk": "Вибір схеми залежить від того, що пацієнт уже отримував і скільки минуло часу до рецидиву.",
+        "en": "The choice depends on previous therapy and on how long the response lasted."
+      },
+      "regimens": [
+        {
+          "regimen_id": "pom-dex"
+        },
+        {
+          "regimen_id": "bortezomib-mono"
+        },
+        {
+          "regimen_id": "vad"
+        }
+      ]
+    },
+    {
+      "key": "supportive",
+      "kind": "group",
+      "title": {
+        "uk": "Супровідна терапія",
+        "en": "Supportive care"
+      },
+      "description": {
+        "uk": "Профілактика кісткових ускладнень паралельно з протипухлинним лікуванням.",
+        "en": "Prevention of skeletal events alongside antimyeloma treatment."
+      },
+      "regimens": [
+        {
+          "regimen_id": "bone-protection"
+        }
+      ]
     }
   ]
 }

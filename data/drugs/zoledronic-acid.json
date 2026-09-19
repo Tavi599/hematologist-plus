@@ -25,5 +25,26 @@
       "strength_amount": 4,
       "volume_ml": 5
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [100],
+      "duration_min": 15,
+      "is_default": true,
+      "notes": {
+        "uk": "4 мг у 100 мл 0,9% NaCl або 5% глюкози, інфузія не швидше ніж за 15 хвилин",
+        "en": "4 mg in 100 mL of 0.9% sodium chloride or 5% glucose, infused over no less than 15 minutes"
+      },
+      "sources": [
+        {
+          "name": "NSSG Oxford Haematology, MM.3 Bone protection in myeloma",
+          "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-3-bone-protection-in-myeloma.pdf",
+          "version": "4.0 (06.2025)",
+          "checkedOn": "2026-09-19"
+        }
+      ]
+    }
   ]
 }

@@ -1,0 +1,94 @@
+{
+  "$comment": "Дози — протокол NSSG Oxford VAD (вер. 3.1, січень 2009; у самому документі термін перегляду — 2010 рік, тобто протокол застарілий і його варто звірити з чиннішим джерелом). Вінкристин і доксорубіцин подані як добова доза безперервної інфузії: у протоколі це 1,6 мг вінкристину і 36 мг/м² доксорубіцину на курс, по 0,4 мг і 9 мг/м² на добу впродовж 4 днів. Протокол дозволяє змішувати їх в одному інфузаторі (до 96 мл 0,9% NaCl) — у довіднику вони йдуть окремими рядками.",
+  "id": "vad",
+  "short_name": "VAD",
+  "name": {
+    "uk": "VAD",
+    "en": "VAD"
+  },
+  "description": {
+    "uk": "Вінкристин, доксорубіцин, дексаметазон. Цикл 21 день, безперервна інфузія 4 доби.",
+    "en": "Vincristine, doxorubicin, dexamethasone. 21-day cycle, four days of continuous infusion."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, Chemotherapy protocol: VAD",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/vad.pdf",
+      "version": "3.1 (01.2009)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 0.4,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 96,
+      "notes": {
+        "uk": "Безперервна інфузія: 0,4 мг на добу, разом 1,6 мг на курс",
+        "en": "Continuous infusion: 0.4 mg per day, 1.6 mg per course"
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 9,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 96,
+      "notes": {
+        "uk": "Безперервна інфузія: 9 мг/м² на добу, разом 36 мг/м² на курс",
+        "en": "Continuous infusion: 9 mg/m² per day, 36 mg/m² per course"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 12, 13, 14, 15],
+      "notes": {
+        "uk": "Дні 1–4 і 12–15",
+        "en": "Days 1 to 4 and 12 to 15"
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл",
+        "en": "Tumour lysis prophylaxis, cycle 1"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Протокол радить його за наявності герпетичної інфекції на тлі хіміотерапії в анамнезі",
+        "en": "The protocol suggests it after a previous herpetic infection on chemotherapy"
+      }
+    }
+  ]
+}

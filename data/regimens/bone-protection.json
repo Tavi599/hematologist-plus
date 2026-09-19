@@ -1,0 +1,38 @@
+{
+  "$comment": "Дози — протокол NSSG Oxford MM.3 Bone protection in myeloma (вер. 4.0, червень 2025). Золедронова кислота — препарат першого вибору: 4 мг у 100 мл 0,9% NaCl або 5% глюкози, інфузія не швидше ніж за 15 хвилин, кожні 4 тижні. Протокол прямо радить уникати ібандронату, тому ібандронова кислота сюди не внесена, хоча вона є в переліку відділення. Памідронат (30 мг у 250 мл за 30 хв) і клодронат натрію як альтернативи не внесені: їх немає в довіднику відділення. Зниження дози за кліренсом креатиніну — у примітці до позиції; автоматично доза не змінюється.",
+  "id": "bone-protection",
+  "short_name": "Золедронова кислота",
+  "name": {
+    "uk": "Кістковий захист (золедронова кислота)",
+    "en": "Bone protection (zoledronic acid)"
+  },
+  "description": {
+    "uk": "Золедронова кислота 4 мг кожні 4 тижні: профілактика кісткових ускладнень мієломи.",
+    "en": "Zoledronic acid 4 mg every 4 weeks: prevention of skeletal events in myeloma."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 12,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.3 Bone protection in myeloma",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-3-bone-protection-in-myeloma.pdf",
+      "version": "4.0 (06.2025)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "zoledronic-acid",
+      "drug_id": "zoledronic-acid",
+      "route": "iv_infusion",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 15,
+      "notes": {
+        "uk": "Інфузія не менше 15 хвилин, кожні 4 тижні. За кліренсом креатиніну: 50–60 мл/хв — 3,5 мг; 40–49 — 3,3 мг; 30–39 — 3,0 мг; нижче 30 мл/хв не рекомендовано",
+        "en": "Infusion over at least 15 minutes, every 4 weeks. By creatinine clearance: 50 to 60 mL/min 3.5 mg, 40 to 49 3.3 mg, 30 to 39 3.0 mg, below 30 mL/min not recommended"
+      }
+    }
+  ]
+}

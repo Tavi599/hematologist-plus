@@ -1,0 +1,40 @@
+{
+  "$comment": "Дози — протокол NSSG Oxford L.105 Pembrolizumab monotherapy (вер. 5.0, липень 2026). Внесено внутрішньовенну схему 200 мг: протокол задає цикл 6 тижнів із введеннями в дні 1 і 22, що дорівнює введенню кожні 3 тижні. Протокол дає ще два варіанти, не внесені окремо: 400 мг в/в раз на 6 тижнів і підшкірно 790 мг (у протоколі позначено як бажаний шлях). Премедикація не потрібна; при об'ємному ураженні протокол радить попередню гідратацію 0,9% NaCl.",
+  "id": "pembrolizumab",
+  "short_name": "Пембролізумаб",
+  "name": {
+    "uk": "Пембролізумаб (Кітруда) у монорежимі",
+    "en": "Pembrolizumab (Keytruda) monotherapy"
+  },
+  "description": {
+    "uk": "Пембролізумаб 200 мг внутрішньовенно кожні 3 тижні (цикл протоколу — 6 тижнів, дні 1 і 22).",
+    "en": "Pembrolizumab 200 mg intravenously every 3 weeks (the protocol's cycle is 6 weeks, days 1 and 22)."
+  },
+  "cycle_length_days": 42,
+  "default_cycles": 17,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.105 Pembrolizumab monotherapy",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-105-pembrolizumab.pdf",
+      "version": "5.0 (07.2026)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "pembrolizumab",
+      "drug_id": "pembrolizumab",
+      "route": "iv_infusion",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 22],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl за 30 хвилин. Альтернативи протоколу: 400 мг раз на 6 тижнів або 790 мг підшкірно",
+        "en": "In 100 mL of 0.9% sodium chloride over 30 minutes. The protocol's alternatives: 400 mg every 6 weeks, or 790 mg subcutaneously"
+      }
+    }
+  ]
+}
