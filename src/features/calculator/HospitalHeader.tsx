@@ -28,6 +28,8 @@ export function HospitalHeader({
       hospitalId: hospital.id,
       institution: hospital.institution_name,
       department: hospital.department_name,
+      address: hospital.address ?? '',
+      registryCode: hospital.registry_code ?? '',
       head: hospital.head_of_department ?? '',
       doctor: hospital.doctors[0] ?? '',
     })
@@ -40,6 +42,8 @@ export function HospitalHeader({
       hospitalId,
       institution: hospital.institution_name,
       department: hospital.department_name,
+      address: hospital.address ?? '',
+      registryCode: hospital.registry_code ?? '',
       head: hospital.head_of_department ?? '',
       doctor: hospital.doctors[0] ?? '',
     })
@@ -76,6 +80,18 @@ export function HospitalHeader({
             label={t('calculator.hospital.department')}
             value={value.department}
             onChange={(event) => patch({ department: event.currentTarget.value })}
+          />
+        </Group>
+        <Group grow align="flex-start" wrap="wrap">
+          <TextInput
+            label={t('calculator.hospital.address')}
+            value={value.address}
+            onChange={(event) => patch({ address: event.currentTarget.value })}
+          />
+          <TextInput
+            label={t('calculator.hospital.registryCode')}
+            value={value.registryCode}
+            onChange={(event) => patch({ registryCode: event.currentTarget.value })}
           />
         </Group>
         <Group grow align="flex-start" wrap="wrap">

@@ -40,6 +40,7 @@ const sortOrder = sortOrderSchema.default(0)
 
 export const hospitalsFileSchema = z.array(
   z.strictObject({
+    $comment: z.string().optional(),
     id: idSchema,
     institution_name: nonEmptyTextSchema,
     department_name: nonEmptyTextSchema,
@@ -48,6 +49,8 @@ export const hospitalsFileSchema = z.array(
     address: optionalText,
     is_default: z.boolean().default(false),
     sort_order: sortOrder,
+    /** Код за ЄДРПОУ, printed in the header of the blanks. */
+    registry_code: optionalText,
   }),
 )
 

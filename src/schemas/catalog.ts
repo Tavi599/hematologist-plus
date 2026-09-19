@@ -42,6 +42,8 @@ export const hospitalRowSchema = z.object({
   address: z.string().nullable(),
   is_default: z.boolean(),
   sort_order: sortOrderSchema,
+  /** Defaulted so this build can read a database where the migration has not run yet. */
+  registry_code: z.string().nullable().default(null),
 })
 
 export const drugRowSchema = z.object({

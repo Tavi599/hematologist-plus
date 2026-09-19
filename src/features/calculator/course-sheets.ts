@@ -184,6 +184,15 @@ function headerLines(input: CourseSheetsInput): [string, string][] {
   const { t, language, patient, header, course } = input
   const lines: [string, string][] = [
     [t('calculator.hospital.institution'), header.institution || EMPTY],
+    [
+      t('calculator.hospital.address'),
+      [
+        header.address,
+        header.registryCode && `${t('calculator.hospital.registryCode')} ${header.registryCode}`,
+      ]
+        .filter(Boolean)
+        .join(' · ') || EMPTY,
+    ],
     [t('calculator.hospital.department'), header.department || EMPTY],
     [t('calculator.patient.fullName'), patient.fullName || EMPTY],
     [t('calculator.patient.recordNumber'), patient.recordNumber || EMPTY],

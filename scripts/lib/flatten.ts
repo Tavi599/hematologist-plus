@@ -33,7 +33,7 @@ function defaultBlock(role: string, route: string): 'infusion' | 'day_support' |
 export function flattenDataSet(data: DataSet): SyncRows {
   const rows: SyncRows = {
     classification_systems: data.classificationSystems.map((system) => ({ ...system })),
-    hospitals: data.hospitals.map((hospital) => ({ ...hospital })),
+    hospitals: data.hospitals.map(({ $comment: _comment, ...hospital }) => hospital),
     drugs: [],
     drug_presentations: [],
     drug_infusion_params: [],
