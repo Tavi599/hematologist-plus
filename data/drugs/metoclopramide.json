@@ -1,0 +1,25 @@
+{
+  "$comment": "Додано 2026-09-19 як супровідну терапію протоколів NSSG Oxford. Фасування — стандартні зареєстровані в Україні форми; звірити з Держреєстром перед калібровкою.",
+  "id": "metoclopramide",
+  "name": {
+    "uk": "Метоклопрамід",
+    "en": "Metoclopramide"
+  },
+  "trade_names": [
+    "Церукал"
+  ],
+  "availability": "department",
+  "presentations": [
+    {
+      "key": "amp-10",
+      "form": "ampoule",
+      "strength_mg": 10,
+      "volume_ml": 2
+    },
+    {
+      "key": "tab-10",
+      "form": "tablet",
+      "strength_mg": 10
+    }
+  ]
+}

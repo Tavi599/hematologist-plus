@@ -1,0 +1,215 @@
+{
+  "$comment": "Протокол NSSG Oxford L.8 A(B)VD (вер. 5.0, вересень 2024). Блеоміцин 10 000 МО/м² у 100 мл 0,9% NaCl за 1 год у днi 1 і 15 НЕ внесений: дозу задано в МО, а калькулятор працює в мг. Також не внесені ко-тримоксазол, ністатин і апрепітант (немає у довіднику або доза не в мг). Дексаметазон, ондансетрон і метоклопрамід — за протоколом; шлях введення ондансетрону змінено на в/в за практикою відділення.",
+  "id": "abvd",
+  "short_name": "ABVD",
+  "name": {
+    "uk": "A(B)VD",
+    "en": "A(B)VD"
+  },
+  "description": {
+    "uk": "Доксорубіцин, (блеоміцин), вінбластин, дакарбазин. Цикл 28 днів, дні 1 і 15.",
+    "en": "Doxorubicin, (bleomycin), vinblastine, dacarbazine. 28-day cycle, days 1 and 15."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.8 A(B)VD",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-8-abvd.pdf",
+      "version": "5.0 (09.2024)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "ondansetron-d1",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        15
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "У відділенні ондансетрон вводять в/в струминно",
+        "en": "Given intravenously in the department"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 12,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        15
+      ]
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 25,
+      "dose_unit": "mg_m2",
+      "days": [
+        1,
+        15
+      ]
+    },
+    {
+      "key": "vinblastine",
+      "drug_id": "vinblastine",
+      "route": "iv_infusion",
+      "dose_value": 6,
+      "dose_unit": "mg_m2",
+      "days": [
+        1,
+        15
+      ],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "Обмеження разової дози протоколом не передбачене",
+        "en": "No ceiling for vinblastine in this protocol"
+      }
+    },
+    {
+      "key": "dacarbazine",
+      "drug_id": "dacarbazine",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [
+        1,
+        15
+      ],
+      "duration_min": 90,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "1–2 години; захищати від світла під час введення",
+        "en": "Over 1-2 hours; protect from light during administration"
+      }
+    },
+    {
+      "key": "dexamethasone-d2",
+      "drug_id": "dexamethasone",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [
+        2,
+        3,
+        16,
+        17
+      ],
+      "administrations_per_day": 2
+    },
+    {
+      "key": "ondansetron-d2",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [
+        2,
+        16
+      ]
+    },
+    {
+      "key": "metoclopramide",
+      "drug_id": "metoclopramide",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        15,
+        16,
+        17,
+        18
+      ],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "10–20 мг тричі на добу; у довіднику взято нижню межу",
+        "en": "10-20 mg three times a day; the lower bound is used here"
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл",
+        "en": "Tumour lysis prophylaxis, cycle 1"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Впродовж лікування і 3 місяці після",
+        "en": "During treatment and for 3 months after"
+      }
+    }
+  ]
+}
