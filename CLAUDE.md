@@ -116,7 +116,8 @@ src/
 - Dose reduction: manual % per course and per drug. Automatic checks only **suggest** reductions — never change a dose silently.
 - Solvent volume and infusion rate are calculated from drug infusion params (fallback: values from the regimen template).
 - Drugs in a course can be disabled or added by the user.
-- Calendar dates derive from course start date; infusion times are auto-scheduled from day start + durations and can be shifted manually.
+- Calendar dates derive from course start date. Every row belongs to a block (`regimen_items.block`): `infusion` rows form the hourly chain of the infusion sheet and a manual shift moves the rest of the chain with them; `day_support` rows hang off the start of the day's first cytostatic (ondansetron 30 min before it, then every `interval_min`); `ward` rows are the inpatient sheet and get no clock time at all, so shifting an infusion never moves a tablet.
+- An infusion may be given at a rising rate (`drug_infusion_params.rate_ramp`, mL/h). Then the duration follows from the volume instead of the regimen, and which of the two ramps applies (first infusion or a later one) comes from the course's cycle number.
 - The UI shows the calculation chain for each dose (`CalculationStep[]`: BSA → per-unit dose → cap → reduction → rounding).
 - Never invent clinical values (doses, caps, concentrations). If data is missing, surface it to the user and ask.
 

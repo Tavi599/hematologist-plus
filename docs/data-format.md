@@ -58,7 +58,7 @@ data/
 | `notes` | локал. | |
 | `availability` | `department` / `registered` / `unavailable` | як препарат можна дістати: є в переліку відділення · зареєстрований в Україні · недоступний. Типово `registered`. Схема з недоступним препаратом залишається в довіднику — її позначає `regimenAvailability()` і про неї попереджає валідація |
 | `presentations[]` | | `key`, `form` (`vial`, `ampoule`, `tablet`, `capsule`, `syringe`, `other`), `strength_amount`, `strength_unit` (типово `amount_unit` препарату), `volume_ml` (для розчинів), `label` |
-| `infusion_params[]` | | `key`, `solvent` (`sodium_chloride_0_9`, `glucose_5`, `water_for_injection`), `concentration_min_mg_ml`, `concentration_max_mg_ml`, `stock_concentration_mg_ml` (концентрат після розведення у флаконі) — лише для препаратів у мг/мкг: мг/мл нічого не кажуть про препарат у МО, `bag_volumes_ml` (наявні об'єми розчинника), `duration_min`, `is_default` (один на препарат) |
+| `infusion_params[]` | | `key`, `solvent` (`sodium_chloride_0_9`, `glucose_5`, `water_for_injection`), `concentration_min_mg_ml`, `concentration_max_mg_ml`, `stock_concentration_mg_ml` (концентрат після розведення у флаконі) — лише для препаратів у мг/мкг: мг/мл нічого не кажуть про препарат у МО, `bag_volumes_ml` (наявні об'єми розчинника), `duration_min`, `is_default` (один на препарат), `rate_ramp` (швидкість сходинками: `{"first": {"start_ml_h", "step_ml_h", "every_min", "max_ml_h"}, "next": …}` — тривалість інфузії тоді рахується з об'єму, а не береться зі схеми) |
 
 ## regimens/&lt;id&gt;.json
 
@@ -78,6 +78,9 @@ data/
 | `dose_options[]` | та сама доза за іншими протоколами: `dose_value`, `dose_unit`, `cap_amount`, `notes`, `source` (`name`, `url`, `version`, `checkedOn`). Лікар вибирає джерело дози в калькуляторі; доза самої схеми завжди перша. Імена джерел у межах позиції не повторюються |
 | `role` | `main` (типово), `premedication`, `supportive` |
 | `route` | `iv_infusion`, `iv_bolus`, `subcutaneous`, `intramuscular`, `oral`, `intrathecal` |
+| `block` | у якому блоці листа рядок і як йому призначається час: `infusion` (погодинний ланцюжок інфузійного листа), `day_support` (супровід у день введення, час від початку першого цитостатика), `ward` (стаціонарний лист — лише кількість на день, без годин). Якщо не вказано, виводиться автоматично: премедикація → `infusion`; усе пероральне → `ward`; інша супровідна терапія → `day_support`; решта → `infusion` |
+| `interval_min` | хвилин між введеннями в межах доби (кожні 8 год = 480) |
+| `anchor_offset_min` | для `day_support`: хвилин від початку першого цитостатика дня; відʼємне — перед ним (за 30 хв = `-30`) |
 | `dose_value`, `dose_unit` | доза **на одне введення**; одиниці — `<одиниця>_m2`, `<одиниця>_kg`, `<одиниця>_flat` для `mg`, `mcg`, `iu`, `miu` (напр. `iu_m2`, `mcg_kg`), або `auc` (формула Калверта, лише міліграми). Одиниця дози має збігатися з родом `amount_unit` препарату: маса (`mg`, `mcg`) і біологічна активність (`iu`, `miu`) між собою не перераховуються |
 | `cap_amount` | максимальна доза в цій схемі, в одиниці дози |
 | `days` | дні курсу, `[1, 2, 3, 4, 5]` |
