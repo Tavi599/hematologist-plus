@@ -10,13 +10,19 @@ import {
 } from './presentations'
 import { cockcroftGault } from './renal'
 import { roundDose, type RoundingResult } from './rounding'
-import { courseDayDates, scheduleAdministrations, type ScheduledAdministration } from './schedule'
+import {
+  courseDayDates,
+  scheduleAdministrations,
+  untimedIds,
+  type ScheduledAdministration,
+} from './schedule'
 import { amountUnitOf, convertAmount } from './units'
 import {
   DomainInputError,
   type AmountUnit,
   type CalculationStep,
   type CreatinineUnit,
+  type ScheduleBlock,
   type Sex,
 } from './types'
 import {
@@ -49,6 +55,12 @@ export interface CourseDrug {
   administrationsPerDay?: number
   durationMin?: number
   gapBeforeMin?: number
+  /** Which sheet this row belongs to and how its time is set; `infusion` by default. */
+  block?: ScheduleBlock
+  /** `day_support`: minutes from the day's first chained drug; negative is before it. */
+  anchorOffsetMin?: number
+  /** `day_support`: minutes between the repeats within one day (q8h = 480). */
+  intervalMin?: number
   /** Set only for infusions; without it no solvent volume is calculated. */
   infusion?: InfusionParams
   presentations?: Presentation[]
@@ -60,6 +72,11 @@ export interface CourseAdjustments {
   startDateIso: string
   /** Start of the treatment day, HH:MM. */
   dayStart?: string
+  /**
+   * Which cycle of the regimen this is. Only the first infusion of a drug given at a rising
+   * rate is slower; from cycle 2 the faster restart applies.
+   */
+  cycleNumber?: number
   bsaVariant?: BsaVariant
   /** Reduction applied to every drug, %. */
   coursePercent?: number
@@ -107,6 +124,8 @@ export interface CourseDayResult {
   day: number
   date: string
   administrations: CourseAdministrationResult[]
+  /** Drugs of this day that carry no clock time: the inpatient sheet. */
+  untimed: string[]
   presentations: PresentationCount[]
 }
 
@@ -341,27 +360,42 @@ function buildDays(
 
   return courseDayDates(adjustments.startDateIso, dayNumbers).map(({ day, date }) => {
     const onDay = drugs.filter((drug) => drug.days.includes(day))
+    const drugOfInput = new Map<string, string>()
     const inputs = onDay.flatMap((drug) => {
       const result = results.get(drug.id)!
-      return Array.from({ length: result.administrationsPerDay }, (_, index) => ({
-        drugId: drug.id,
-        id: result.administrationsPerDay === 1 ? drug.id : `${drug.id}#${index + 1}`,
-        durationMin: drug.durationMin ?? 0,
-        ...(drug.gapBeforeMin === undefined ? {} : { gapBeforeMin: drug.gapBeforeMin }),
-        ...(adjustments.shiftMin?.[drug.id] === undefined
-          ? {}
-          : { shiftMin: adjustments.shiftMin[drug.id] }),
-      }))
+      return Array.from({ length: result.administrationsPerDay }, (_, index) => {
+        const id = result.administrationsPerDay === 1 ? drug.id : `${drug.id}#${index + 1}`
+        drugOfInput.set(id, drug.id)
+        const ramp = result.infusion?.ramp
+        // Only the very first infusion of the drug is the slow one, and only in cycle 1.
+        const isFirstEver =
+          (adjustments.cycleNumber ?? 1) === 1 && day === Math.min(...drug.days) && index === 0
+        return {
+          id,
+          block: drug.block ?? 'infusion',
+          durationMin: ramp
+            ? (isFirstEver ? ramp.first : ramp.next).durationMin
+            : (drug.durationMin ?? 0),
+          occurrence: index,
+          ...(drug.gapBeforeMin === undefined ? {} : { gapBeforeMin: drug.gapBeforeMin }),
+          ...(drug.anchorOffsetMin === undefined ? {} : { anchorOffsetMin: drug.anchorOffsetMin }),
+          ...(drug.intervalMin === undefined ? {} : { intervalMin: drug.intervalMin }),
+          ...(adjustments.shiftMin?.[drug.id] === undefined
+            ? {}
+            : { shiftMin: adjustments.shiftMin[drug.id] }),
+        }
+      })
     })
 
-    const scheduled = scheduleAdministrations(dayStart, inputs)
     return {
       day,
       date,
-      administrations: scheduled.map((item, index) => ({
+      administrations: scheduleAdministrations(dayStart, inputs).map((item) => ({
         ...item,
-        drugId: inputs[index]!.drugId,
+        drugId: drugOfInput.get(item.id)!,
       })),
+      // Tablets and everything else on the inpatient sheet: a count for the day, no clock time.
+      untimed: [...new Set(untimedIds(inputs).map((id) => drugOfInput.get(id)!))],
       presentations: sumSelections(
         onDay.flatMap((drug) => {
           const result = results.get(drug.id)!

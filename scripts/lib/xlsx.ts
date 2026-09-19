@@ -39,6 +39,17 @@ export function readWorkbook(file: string): Sheet[] {
   return sheets
 }
 
+/**
+ * The date the workbook itself was last saved (docProps/core.xml), not the date the copy on
+ * this machine was written. A list of drugs is only as fresh as the day its author saved it,
+ * so every value taken from one carries this date.
+ */
+export function readWorkbookModified(file: string): string | null {
+  const core = readZip(readFileSync(file)).get('docProps/core.xml')
+  const match = core?.toString('utf8').match(/<dcterms:modified[^>]*>([^<]+)</)
+  return match?.[1]?.slice(0, 10) ?? null
+}
+
 function attribute(tag: string, name: string): string | null {
   const match = tag.match(new RegExp(`${name.replace(':', '\\:')}="([^"]*)"`))
   return match?.[1] ?? null

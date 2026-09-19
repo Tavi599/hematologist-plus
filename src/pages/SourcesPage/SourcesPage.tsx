@@ -1,4 +1,4 @@
-import { Anchor, Badge, Card, Group, Stack, Table, Text, Title } from '@mantine/core'
+import { Alert, Anchor, Badge, Card, Group, Stack, Table, Text, Title } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
 
 import { CatalogGate } from '../../features/catalog/CatalogGate'
@@ -14,6 +14,9 @@ export function SourcesPage() {
     <Stack>
       <Title order={1}>{t('sources.title')}</Title>
       <Text c="dimmed">{t('sources.intro')}</Text>
+      <Alert color="yellow" variant="light" title={t('sources.staleTitle')}>
+        {t('sources.stale')}
+      </Alert>
       <CatalogGate>{(catalog) => <SourceTable catalog={catalog} />}</CatalogGate>
     </Stack>
   )

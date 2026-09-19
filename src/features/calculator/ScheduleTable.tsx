@@ -38,6 +38,9 @@ export function ScheduleTable({
         <Title order={2} size="h4">
           {t('calculator.schedule.title')}
         </Title>
+        <Text size="xs" c="dimmed">
+          {t('calculator.schedule.wardNote')}
+        </Text>
         {course.days.map((day) => (
           <Stack key={day.day} gap={4}>
             <Text fw={500}>
@@ -83,6 +86,11 @@ export function ScheduleTable({
                 </Table.Tbody>
               </Table>
             </Table.ScrollContainer>
+            {day.untimed.length > 0 && (
+              <Text size="xs" c="dimmed">
+                {t('calculator.schedule.ward')}: {day.untimed.map(nameOf).join(', ')}
+              </Text>
+            )}
           </Stack>
         ))}
       </Stack>

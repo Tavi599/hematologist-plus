@@ -3,6 +3,72 @@ import { assertPositive } from './math'
 import { convertAmount, isMassUnit } from './units'
 import { DomainInputError, type AmountUnit, type CalculationStep } from './types'
 
+/**
+ * A rate that is raised in steps instead of running at one speed (rituximab and the other
+ * antibodies), in millilitres per hour. The duration of the infusion follows from the volume.
+ */
+export interface RateSteps {
+  startMlH: number
+  stepMlH: number
+  /** How often the rate is raised, min. */
+  everyMin: number
+  maxMlH: number
+}
+
+export interface RateRamp {
+  /** The patient's first infusion of this drug. */
+  first: RateSteps
+  /** Every later infusion; the same as `first` when the drug has no faster restart. */
+  next?: RateSteps
+}
+
+export interface RampStep {
+  fromMin: number
+  toMin: number
+  rateMlH: number
+  volumeMl: number
+}
+
+export interface RampResult {
+  durationMin: number
+  steps: RampStep[]
+}
+
+/**
+ * Time to give `totalVolumeMl` at a rate that starts at `startMlH` and is raised by `stepMlH`
+ * every `everyMin` up to `maxMlH`. The last step is cut short when the bag runs out inside it.
+ */
+export function rampSchedule(totalVolumeMl: number, ramp: RateSteps): RampResult {
+  assertPositive('totalVolumeMl', totalVolumeMl)
+  assertPositive('rateRamp.startMlH', ramp.startMlH)
+  assertPositive('rateRamp.stepMlH', ramp.stepMlH)
+  assertPositive('rateRamp.everyMin', ramp.everyMin)
+  assertPositive('rateRamp.maxMlH', ramp.maxMlH)
+  if (ramp.maxMlH < ramp.startMlH) {
+    throw new DomainInputError('rateRamp.maxMlH', 'must not be below the starting rate')
+  }
+
+  const steps: RampStep[] = []
+  let remaining = totalVolumeMl
+  let minute = 0
+  let rate = ramp.startMlH
+
+  while (remaining > 0) {
+    const atFullStep = (rate * ramp.everyMin) / 60
+    const minutes = remaining <= atFullStep ? (remaining / rate) * 60 : ramp.everyMin
+    const volume = Math.min(remaining, atFullStep)
+    steps.push({ fromMin: minute, toMin: minute + minutes, rateMlH: rate, volumeMl: volume })
+    remaining -= volume
+    minute += minutes
+    rate = Math.min(ramp.maxMlH, rate + ramp.stepMlH)
+    if (steps.length > 200) {
+      throw new DomainInputError('rateRamp', 'more than 200 steps: check the rates')
+    }
+  }
+
+  return { durationMin: Math.ceil(minute), steps }
+}
+
 /** Dilution parameters of a drug, from the drug catalog. Concentration limits are mg/mL. */
 export interface InfusionParams {
   /** Lowest allowed final concentration, mg/mL. */
@@ -13,6 +79,8 @@ export interface InfusionParams {
   bagVolumesMl: number[]
   /** Concentration of the drug concentrate/reconstituted solution, mg/mL; adds drug volume. */
   stockConcentrationMgMl?: number
+  /** When set, the rate is raised in steps and the duration follows from the volume. */
+  rateRamp?: RateRamp
 }
 
 export type InfusionIssue = 'concentration_out_of_range'
@@ -25,10 +93,12 @@ export interface InfusionResult {
   concentrationPerMl: number
   /** Unit of `concentrationPerMl`, e.g. 'mg' → mg/mL. */
   concentrationUnit: AmountUnit
-  /** null for undefined duration (bolus / not specified). */
+  /** Rate for the whole infusion; null for a bolus, or when the rate is raised in steps. */
   rateMlH: number | null
   rateGttMin: number | null
   issue: InfusionIssue | null
+  /** Set when the drug is given at a rising rate; the duration comes from here, not from the regimen. */
+  ramp: { first: RampResult; next: RampResult } | null
   steps: CalculationStep[]
 }
 
@@ -96,9 +166,16 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
   const totalVolumeMl = bagVolumeMl + drugVolumeMl
   const concentrationPerMl = doseAmount / totalVolumeMl
 
+  const ramp = params.rateRamp
+    ? {
+        first: rampSchedule(totalVolumeMl, params.rateRamp.first),
+        next: rampSchedule(totalVolumeMl, params.rateRamp.next ?? params.rateRamp.first),
+      }
+    : null
+
   let rateMlH: number | null = null
   let rateGttMin: number | null = null
-  if (input.durationMin !== undefined) {
+  if (ramp === null && input.durationMin !== undefined) {
     assertPositive('durationMin', input.durationMin)
     rateMlH = totalVolumeMl / (input.durationMin / 60)
     rateGttMin = (rateMlH * dropFactor) / 60
@@ -123,6 +200,21 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
       },
     },
   ]
+  if (ramp !== null && params.rateRamp !== undefined) {
+    const first = params.rateRamp.first
+    steps.push({
+      key: 'infusion.ramp',
+      value: ramp.first.durationMin,
+      unit: 'min',
+      params: {
+        startMlH: first.startMlH,
+        stepMlH: first.stepMlH,
+        everyMin: first.everyMin,
+        maxMlH: first.maxMlH,
+        nextDurationMin: ramp.next.durationMin,
+      },
+    })
+  }
   if (rateMlH !== null && rateGttMin !== null) {
     steps.push({
       key: 'infusion.rate',
@@ -138,6 +230,7 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
     totalVolumeMl,
     concentrationPerMl,
     concentrationUnit: amountUnit,
+    ramp,
     rateMlH,
     rateGttMin,
     issue,

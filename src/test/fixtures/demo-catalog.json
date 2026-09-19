@@ -216,6 +216,7 @@
       "concentration_min_mg_ml": 1,
       "concentration_max_mg_ml": 4,
       "stock_concentration_mg_ml": 10,
+      "rate_ramp": null,
       "bag_volumes_ml": [100, 250, 500],
       "duration_min": null,
       "is_default": true,
@@ -273,6 +274,8 @@
       "dose_value": 375,
       "dose_unit": "mg_m2",
       "cap_amount": null,
+      "interval_min": null,
+      "anchor_offset_min": null,
       "days": [1],
       "administrations_per_day": 1,
       "duration_min": null,
@@ -282,6 +285,7 @@
       "notes": null,
       "dose_options": [],
       "infusion_params_id": null,
+      "block": "infusion",
       "sort_order": 0
     },
     {
@@ -293,6 +297,8 @@
       "dose_value": 750,
       "dose_unit": "mg_m2",
       "cap_amount": null,
+      "interval_min": null,
+      "anchor_offset_min": null,
       "days": [1],
       "administrations_per_day": 1,
       "duration_min": null,
@@ -302,6 +308,7 @@
       "notes": null,
       "dose_options": [],
       "infusion_params_id": null,
+      "block": "infusion",
       "sort_order": 1
     },
     {
@@ -313,6 +320,8 @@
       "dose_value": 50,
       "dose_unit": "mg_m2",
       "cap_amount": null,
+      "interval_min": null,
+      "anchor_offset_min": null,
       "days": [1],
       "administrations_per_day": 1,
       "duration_min": null,
@@ -322,6 +331,7 @@
       "notes": null,
       "dose_options": [],
       "infusion_params_id": null,
+      "block": "infusion",
       "sort_order": 2
     },
     {
@@ -333,6 +343,8 @@
       "dose_value": 1.4,
       "dose_unit": "mg_m2",
       "cap_amount": 2,
+      "interval_min": null,
+      "anchor_offset_min": null,
       "days": [1],
       "administrations_per_day": 1,
       "duration_min": null,
@@ -342,6 +354,7 @@
       "notes": null,
       "dose_options": [],
       "infusion_params_id": null,
+      "block": "infusion",
       "sort_order": 3
     },
     {
@@ -353,6 +366,8 @@
       "dose_value": 100,
       "dose_unit": "mg_flat",
       "cap_amount": null,
+      "interval_min": null,
+      "anchor_offset_min": null,
       "days": [1, 2, 3, 4, 5],
       "administrations_per_day": 1,
       "duration_min": null,
@@ -373,6 +388,7 @@
         }
       ],
       "infusion_params_id": null,
+      "block": "infusion",
       "sort_order": 4
     }
   ],

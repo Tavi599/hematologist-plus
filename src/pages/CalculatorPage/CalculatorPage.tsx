@@ -42,6 +42,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     startDate: todayIso(),
     dayStart: '09:00',
     bsaVariant: 'actual' as CourseSettingsValue['bsaVariant'],
+    cycleNumber: 1,
   })
   const [customItems, setCustomItems] = useState<RegimenItem[]>([])
   const [disabledIds, setDisabledIds] = useState<string[]>([])
@@ -96,6 +97,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
             startDateIso: courseSettings.startDate,
             dayStart: courseSettings.dayStart,
             bsaVariant: courseSettings.bsaVariant,
+            cycleNumber: courseSettings.cycleNumber,
             drugPercent,
             doseOverrideAmount,
             disabledIds,

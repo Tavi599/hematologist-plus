@@ -2,6 +2,8 @@ import { z } from 'zod'
 
 import {
   amountUnitSchema,
+  rateRampSchema,
+  scheduleBlockSchema,
   doseOptionsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
@@ -74,7 +76,7 @@ export const drugPresentationRowSchema = z.object({
 })
 
 export const drugInfusionParamsRowSchema = z
-  .strictObject({
+  .object({
     id: idSchema,
     drug_id: idSchema,
     solvent: solventSchema,
@@ -87,6 +89,7 @@ export const drugInfusionParamsRowSchema = z
     notes: localizedTextSchema.nullable(),
     sort_order: sortOrderSchema,
     sources: sourcesSchema,
+    rate_ramp: rateRampSchema.nullable(),
   })
   .refine(
     (row) =>
@@ -129,6 +132,12 @@ export const regimenItemRowSchema = z.object({
   dose_options: doseOptionsSchema,
   /** Maximum absolute dose per administration, in the dose's amount unit. */
   cap_amount: positiveNumberSchema.nullable(),
+  /** Which sheet the row belongs to and how its time is set. */
+  block: scheduleBlockSchema,
+  /** Minutes between administrations within a day (q8h = 480). */
+  interval_min: positiveNumberSchema.int().nullable(),
+  /** day_support: minutes from the start of the day's first chained drug; negative is before it. */
+  anchor_offset_min: z.number().int().nullable(),
 })
 
 export const classificationSystemRowSchema = z.object({
@@ -255,7 +264,7 @@ export type TreatmentNodeRegimen = CatalogRow<'treatment_node_regimens'>
  * Bump when the catalog shape changes incompatibly: invalidates offline caches.
  * Keep in step with new migrations that change columns.
  */
-export const CATALOG_SCHEMA_VERSION = '4'
+export const CATALOG_SCHEMA_VERSION = '5'
 
 export function emptySyncRows(): SyncRows {
   return { ...emptyCatalog(), disease_articles: [] }

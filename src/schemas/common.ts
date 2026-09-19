@@ -127,6 +127,34 @@ export const doseOptionSchema = z.strictObject({
 
 export const doseOptionsSchema = z.array(doseOptionSchema)
 
+/**
+ * Where a row of the course is timed and printed.
+ *   infusion    — the hourly chain of the infusion sheet; shifting one row moves the rest
+ *   day_support — the infusion sheet, timed from the day's first chained drug (ondansetron
+ *                 30 min before the cytostatic and then every 8 hours)
+ *   ward        — the inpatient sheet: a count per day, never placed in the hourly grid,
+ *                 so tablets keep their time when an infusion is shifted
+ */
+export const SCHEDULE_BLOCKS = ['infusion', 'day_support', 'ward'] as const
+export const scheduleBlockSchema = z.enum(SCHEDULE_BLOCKS)
+
+/**
+ * A rate that is raised in steps instead of running at one speed, in mL/h: rituximab and the
+ * other antibodies. `first` is the patient's first infusion of that drug, `next` every later one.
+ */
+export const rateStepsSchema = z.strictObject({
+  start_ml_h: positiveNumberSchema,
+  step_ml_h: positiveNumberSchema,
+  every_min: positiveNumberSchema.int(),
+  max_ml_h: positiveNumberSchema,
+})
+
+export const rateRampSchema = z.strictObject({
+  first: rateStepsSchema,
+  /** Null when later infusions are given exactly like the first one. */
+  next: rateStepsSchema.nullable().default(null),
+})
+
 /** Drug-specific organ-function checks; same shape as ReviewRules in src/domain/warnings.ts. */
 export const reviewRulesSchema = z.strictObject({
   renal: z.union([z.boolean(), z.strictObject({ belowMlMin: positiveNumberSchema })]).optional(),

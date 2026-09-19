@@ -142,7 +142,9 @@
       "dose_value": 8,
       "dose_unit": "mg_flat",
       "days": [1, 2],
-      "administrations_per_day": 2
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480
     },
     {
       "key": "allopurinol",

@@ -1,6 +1,13 @@
 import { describe, expect, it } from 'vitest'
 
-import { addDays, courseDayDates, formatTime, parseTime, scheduleAdministrations } from './schedule'
+import {
+  addDays,
+  courseDayDates,
+  formatTime,
+  parseTime,
+  scheduleAdministrations,
+  untimedIds,
+} from './schedule'
 import { DomainInputError } from './types'
 
 describe('course dates', () => {
@@ -42,10 +49,10 @@ describe('time helpers', () => {
 describe('scheduleAdministrations', () => {
   it('places administrations sequentially with gaps and manual shifts', () => {
     const schedule = scheduleAdministrations('09:00', [
-      { id: 'premed', durationMin: 30 },
-      { id: 'rituximab', durationMin: 240, gapBeforeMin: 30 },
-      { id: 'cyclophosphamide', durationMin: 60, shiftMin: 15 },
-      { id: 'vincristine', durationMin: 0 },
+      { id: 'premed', block: 'infusion' as const, durationMin: 30 },
+      { id: 'rituximab', block: 'infusion' as const, durationMin: 240, gapBeforeMin: 30 },
+      { id: 'cyclophosphamide', block: 'infusion' as const, durationMin: 60, shiftMin: 15 },
+      { id: 'vincristine', block: 'infusion' as const, durationMin: 0 },
     ])
     expect(schedule.map(({ id, start, end }) => ({ id, start, end }))).toEqual([
       { id: 'premed', start: '09:00', end: '09:30' },
@@ -55,25 +62,96 @@ describe('scheduleAdministrations', () => {
     ])
   })
 
+  it('hangs the support of the day off the first infusion, not off the chain', () => {
+    const schedule = scheduleAdministrations('09:00', [
+      // Ondansetron 30 min before the cytostatic and then every 8 hours.
+      {
+        id: 'ondansetron#1',
+        block: 'day_support' as const,
+        durationMin: 0,
+        anchorOffsetMin: -30,
+        intervalMin: 480,
+        occurrence: 0,
+      },
+      {
+        id: 'ondansetron#2',
+        block: 'day_support' as const,
+        durationMin: 0,
+        anchorOffsetMin: -30,
+        intervalMin: 480,
+        occurrence: 1,
+      },
+      { id: 'premed', block: 'infusion' as const, durationMin: 30 },
+      { id: 'doxorubicin', block: 'infusion' as const, durationMin: 60 },
+      { id: 'aciclovir', block: 'ward' as const, durationMin: 0 },
+    ])
+
+    expect(schedule.map(({ id, start }) => ({ id, start }))).toEqual([
+      { id: 'ondansetron#1', start: '08:30' },
+      { id: 'premed', start: '09:00' },
+      { id: 'doxorubicin', start: '09:30' },
+      { id: 'ondansetron#2', start: '16:30' },
+    ])
+    // The tablet is not in the grid at all, so no shift can move it.
+    expect(untimedIds(schedule as never)).toEqual([])
+  })
+
+  it('moves the support with the infusion it is anchored to', () => {
+    const items = [
+      { id: 'ondansetron', block: 'day_support' as const, durationMin: 0, anchorOffsetMin: -30 },
+      { id: 'doxorubicin', block: 'infusion' as const, durationMin: 60, shiftMin: 120 },
+    ]
+    const schedule = scheduleAdministrations('09:00', items)
+    expect(schedule.map(({ id, start }) => ({ id, start }))).toEqual([
+      { id: 'ondansetron', start: '10:30' },
+      { id: 'doxorubicin', start: '11:00' },
+    ])
+    expect(untimedIds(items)).toEqual([])
+  })
+
+  it('leaves the inpatient sheet out of the hourly grid', () => {
+    const items = [
+      { id: 'aciclovir', block: 'ward' as const, durationMin: 0 },
+      { id: 'allopurinol', block: 'ward' as const, durationMin: 0 },
+    ]
+    expect(scheduleAdministrations('09:00', items)).toEqual([])
+    expect(untimedIds(items)).toEqual(['aciclovir', 'allopurinol'])
+  })
+
+  it('falls back to the start of the day when nothing is infused', () => {
+    const [item] = scheduleAdministrations('09:00', [
+      { id: 'ondansetron', block: 'day_support' as const, durationMin: 0, anchorOffsetMin: 60 },
+    ])
+    expect(item?.start).toBe('10:00')
+  })
+
   it('reports administrations running past midnight', () => {
-    const [item] = scheduleAdministrations('22:00', [{ id: 'long', durationMin: 180 }])
+    const [item] = scheduleAdministrations('22:00', [
+      { id: 'long', block: 'infusion' as const, durationMin: 180 },
+    ])
     expect(item).toMatchObject({ start: '22:00', end: '01:00', startDayOffset: 0, endDayOffset: 1 })
   })
 
   it('never starts before midnight of the course day', () => {
-    const [item] = scheduleAdministrations('00:30', [{ id: 'x', durationMin: 10, shiftMin: -60 }])
+    const [item] = scheduleAdministrations('00:30', [
+      { id: 'x', block: 'infusion' as const, durationMin: 10, shiftMin: -60 },
+    ])
     expect(item?.startMin).toBe(0)
   })
 
   it('validates durations and shifts', () => {
-    expect(() => scheduleAdministrations('09:00', [{ id: 'x', durationMin: -1 }])).toThrow(
-      DomainInputError,
-    )
     expect(() =>
-      scheduleAdministrations('09:00', [{ id: 'x', durationMin: 10, gapBeforeMin: -5 }]),
+      scheduleAdministrations('09:00', [{ id: 'x', block: 'infusion' as const, durationMin: -1 }]),
     ).toThrow(DomainInputError)
     expect(() =>
-      scheduleAdministrations('09:00', [{ id: 'x', durationMin: 10, shiftMin: Infinity }]),
+      scheduleAdministrations('09:00', [
+        { id: 'x', block: 'infusion' as const, durationMin: 10, gapBeforeMin: -5 },
+      ]),
+    ).toThrow(DomainInputError)
+    expect(() =>
+      scheduleAdministrations('09:00', [
+        { id: 'x', block: 'infusion' as const, durationMin: 10, shiftMin: Infinity },
+      ]),
     ).toThrow(DomainInputError)
   })
 })

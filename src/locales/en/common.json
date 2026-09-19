@@ -45,6 +45,8 @@
       "onlyObtainable": "Only regimens of obtainable drugs",
       "regimenPlaceholder": "Select a regimen",
       "noRegimens": "There are no regimens in the catalog yet.",
+      "cycleNumber": "Cycle no.",
+      "cycleNumberHint": "the first antibody infusion is the slow one",
       "startDate": "Course start date",
       "dayStart": "Day starts at",
       "bsaVariant": "Doses by BSA",
@@ -84,12 +86,20 @@
       "infusion": "Dilution",
       "infusionValue": "{{solvent}} {{bag}} mL, total {{total}} mL, {{concentration}} {{unit}}",
       "infusionRate": "{{rate}} mL/h · {{drops}} drops/min",
+      "infusionRamp": "In steps: {{start}} mL/h, +{{step}} every {{every}} min, up to {{max}} mL/h",
+      "infusionRampDuration": "first infusion ≈{{first}} min, later ≈{{next}} min",
       "infusionMissing": "No dilution parameters",
       "noPresentations": "No presentations",
       "enabled": "Drug included",
       "chain": "How it was calculated",
       "perAdministration": "per administration",
       "timesPerDay": "{{count}} administrations a day",
+      "block": {
+        "premedicated": "Drug with its premedication",
+        "chemo": "Chemotherapy and antibodies",
+        "day_support": "Support on the infusion day (infusion sheet)",
+        "ward": "Support on the inpatient sheet"
+      },
       "empty": "This regimen has no drugs.",
       "addTitle": "Add a drug",
       "addDrug": "Drug",
@@ -111,7 +121,9 @@
       "shift": "Shift, min",
       "nextDay": "next day",
       "bolus": "bolus",
-      "noDuration": "duration not set"
+      "noDuration": "duration not set",
+      "ward": "On the inpatient sheet",
+      "wardNote": "A shift moves the infusions and the support hung off them. Rows of the inpatient sheet have no clock time and never move."
     },
     "supply": {
       "title": "Need for the course",
@@ -226,6 +238,7 @@
     "dose.manual": "Manual dose (calculated {{calculated}} {{unit}})",
     "infusion.volume": "Volume: {{bagVolumeMl}} mL of solvent + {{drugVolumeMl}} mL of drug",
     "infusion.concentration": "Concentration for a {{dose}} {{unit}} dose",
+    "infusion.ramp": "Rate raised in steps: {{startMlH}} mL/h, +{{stepMlH}} every {{everyMin}} min, up to {{maxMlH}} mL/h (later infusions {{nextDurationMin}} min)",
     "infusion.rate": "Rate over {{durationMin}} min ({{rateGttMin}} drops/min, giving set {{dropFactor}} drops/mL)"
   },
   "warning": {
@@ -244,6 +257,8 @@
     "title": "Sources",
     "intro": "The official designs and protocols the calculation rests on. Every dose, dilution and rate names its document and the date it was checked.",
     "empty": "No sources in the catalog yet.",
+    "staleTitle": "The data may be out of date",
+    "stale": "Every document shows its own date (version) and the date its values were taken. Drug lists and registration details go stale: check the pack against the State Register of Medicinal Products of Ukraine (drlz.com.ua) before ordering, and the dose against the current protocol.",
     "document": "Document",
     "version": "Version",
     "checkedOn": "Checked",

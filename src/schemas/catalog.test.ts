@@ -1,6 +1,6 @@
 import { describe, expect, expectTypeOf, it } from 'vitest'
 
-import type { DoseUnit } from '../domain/types'
+import type { DoseUnit, ScheduleBlock } from '../domain/types'
 import type { ReviewRules } from '../domain/warnings'
 import type { Language } from '../lib/i18n'
 import type { LocalizedText } from '../lib/localized'
@@ -11,7 +11,13 @@ import {
   drugInfusionParamsRowSchema,
   PRIVATE_TABLES,
 } from './catalog'
-import { AMOUNT_UNITS, DOSE_UNITS, localizedTextSchema, reviewRulesSchema } from './common'
+import {
+  AMOUNT_UNITS,
+  DOSE_UNITS,
+  localizedTextSchema,
+  reviewRulesSchema,
+  SCHEDULE_BLOCKS,
+} from './common'
 import { printFormsRowSchema } from './print-forms'
 
 const migrations = import.meta.glob<string>('/supabase/migrations/*.sql', {
@@ -124,6 +130,7 @@ describe('database schema', () => {
 describe('shared schemas', () => {
   it('keep types in step with the domain and i18n', () => {
     expectTypeOf<(typeof DOSE_UNITS)[number]>().toEqualTypeOf<DoseUnit>()
+    expectTypeOf<(typeof SCHEDULE_BLOCKS)[number]>().toEqualTypeOf<ScheduleBlock>()
     expectTypeOf<
       keyof NonNullable<ReturnType<typeof localizedTextSchema.parse>>
     >().toEqualTypeOf<Language>()
@@ -153,6 +160,7 @@ describe('shared schemas', () => {
       notes: null,
       sort_order: 0,
       sources: [{ name: 'SmPC', checkedOn: '2026-09-18' }],
+      rate_ramp: null,
     }
     expect(drugInfusionParamsRowSchema.safeParse(row).success).toBe(false)
     expect(

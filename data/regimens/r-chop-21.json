@@ -148,7 +148,9 @@
       "dose_value": 8,
       "dose_unit": "mg_flat",
       "days": [1],
-      "administrations_per_day": 2
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480
     },
     {
       "key": "ondansetron-d2",
@@ -157,7 +159,8 @@
       "route": "iv_bolus",
       "dose_value": 8,
       "dose_unit": "mg_flat",
-      "days": [2]
+      "days": [2],
+      "anchor_offset_min": -30
     },
     {
       "key": "allopurinol",

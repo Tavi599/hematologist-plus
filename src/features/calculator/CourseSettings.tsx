@@ -1,4 +1,15 @@
-import { Badge, Card, Checkbox, Group, Select, Stack, Text, TextInput, Title } from '@mantine/core'
+import {
+  Badge,
+  Card,
+  Checkbox,
+  Group,
+  NumberInput,
+  Select,
+  Stack,
+  Text,
+  TextInput,
+  Title,
+} from '@mantine/core'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -14,6 +25,8 @@ export interface CourseSettingsValue {
   startDate: string
   dayStart: string
   bsaVariant: BsaVariant
+  /** Which cycle of the regimen this is; the first infusion of an antibody is the slow one. */
+  cycleNumber: number
 }
 
 /** Regimen choice and the settings that apply to the whole course. */
@@ -116,6 +129,14 @@ export function CourseSettings({
             label={t('calculator.course.dayStart')}
             value={value.dayStart}
             onChange={(event) => patch({ dayStart: event.currentTarget.value })}
+          />
+          <NumberInput
+            label={t('calculator.course.cycleNumber')}
+            description={t('calculator.course.cycleNumberHint')}
+            min={1}
+            max={99}
+            value={value.cycleNumber}
+            onChange={(next) => patch({ cycleNumber: Math.max(1, Number(next) || 1) })}
           />
           <Select
             label={t('calculator.course.bsaVariant')}

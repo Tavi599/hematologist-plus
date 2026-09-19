@@ -2,6 +2,8 @@ import { z } from 'zod'
 
 import {
   amountUnitSchema,
+  rateRampSchema,
+  scheduleBlockSchema,
   doseOptionsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
@@ -32,6 +34,7 @@ const optionalText = z.string().nullable().default(null)
 const optionalLocalized = localizedTextSchema.nullable().default(null)
 const optionalPositive = positiveNumberSchema.nullable().default(null)
 const optionalNonNegativeInt = nonNegativeIntSchema.nullable().default(null)
+const optionalPositiveInt = positiveNumberSchema.int().nullable().default(null)
 const sortOrder = sortOrderSchema.default(0)
 
 export const hospitalsFileSchema = z.array(
@@ -98,6 +101,8 @@ export const drugFileSchema = z.strictObject({
         concentration_min_mg_ml: optionalPositive,
         concentration_max_mg_ml: optionalPositive,
         stock_concentration_mg_ml: optionalPositive,
+        /** Rate raised in steps (mL/h) instead of one speed; see rateRampSchema. */
+        rate_ramp: rateRampSchema.nullable().default(null),
         bag_volumes_ml: z.array(positiveNumberSchema).default([]),
         duration_min: optionalNonNegativeInt,
         is_default: z.boolean().default(false),
@@ -129,6 +134,12 @@ export const regimenFileSchema = z.strictObject({
         dose_value: positiveNumberSchema,
         dose_unit: doseUnitSchema,
         cap_amount: optionalPositive,
+        /** Sheet and timing; derived from role and route when omitted (see flatten.ts). */
+        block: scheduleBlockSchema.optional(),
+        /** Minutes between the repeats within a day (q8h = 480). */
+        interval_min: optionalPositiveInt,
+        /** day_support: minutes from the day's first chained drug; negative is before it. */
+        anchor_offset_min: z.number().int().nullable().default(null),
         days: z.array(nonNegativeIntSchema).min(1),
         administrations_per_day: positiveNumberSchema.int().default(1),
         /** Key of one of the drug's infusion_params; the drug default is used when omitted. */

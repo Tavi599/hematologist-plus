@@ -16,6 +16,16 @@ export function diseaseCodeId(diseaseId: string, systemId: string, code: string)
 }
 
 /** Converts the authoring format into rows of every table. Pure; no validation. */
+/**
+ * Where a row goes when the file does not say: chemotherapy and premedication into the hourly
+ * chain, supportive injections onto the infusion sheet next to it, tablets onto the inpatient
+ * sheet where no shift of an infusion can move them.
+ */
+function defaultBlock(role: string, route: string): 'infusion' | 'day_support' | 'ward' {
+  if (role !== 'supportive') return 'infusion'
+  return route === 'oral' ? 'ward' : 'day_support'
+}
+
 export function flattenDataSet(data: DataSet): SyncRows {
   const rows: SyncRows = {
     classification_systems: data.classificationSystems.map((system) => ({ ...system })),
@@ -67,13 +77,14 @@ export function flattenDataSet(data: DataSet): SyncRows {
         })),
       },
     })
-    items.forEach(({ key, infusion_params_key, ...item }, index) => {
+    items.forEach(({ key, infusion_params_key, block, ...item }, index) => {
       rows.regimen_items.push({
         id: childId(regimen.id, key),
         regimen_id: regimen.id,
         ...item,
         infusion_params_id:
           infusion_params_key === null ? null : childId(item.drug_id, infusion_params_key),
+        block: block ?? defaultBlock(item.role, item.route),
         sort_order: index,
       })
     })

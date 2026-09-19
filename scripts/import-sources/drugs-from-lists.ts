@@ -11,9 +11,9 @@
  * between files are reported instead of being written.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
-import { join } from 'node:path'
+import { basename, join } from 'node:path'
 
-import { readWorkbook, type CellValue } from '../lib/xlsx'
+import { readWorkbook, readWorkbookModified, type CellValue } from '../lib/xlsx'
 import { findDrugName, type DrugName } from './drug-names'
 import { parseForm, parseStrength, type PresentationForm } from './parse-strength'
 
@@ -219,12 +219,20 @@ export function buildDrugs(rows: SourceRow[]): {
 function drugFile(
   entry: { name: DrugName; presentations: Presentation[]; sources: Set<string> },
   today: string,
+  modified: Map<string, string | null>,
 ): string {
+  const files = [...entry.sources]
   const body = {
-    $comment: `Імпортовано з ${[...entry.sources].join(', ')} ${today}. Взято лише МНН і фасування; параметри розведення та максимальні дози додаються окремо.`,
+    $comment: `Імпортовано з ${files.join(', ')} ${today}. Взято лише МНН і фасування; параметри розведення та максимальні дози додаються окремо.`,
     id: entry.name.id,
     name: { uk: entry.name.uk, en: entry.name.en },
     ...(entry.name.tradeNames ? { trade_names: entry.name.tradeNames } : {}),
+    // The list is only as fresh as the day its author saved it; both dates are shown to the user.
+    sources: files.map((file) => ({
+      name: `Перелік препаратів відділення: ${file}`,
+      ...(modified.get(file) ? { version: `файл від ${modified.get(file)}` } : {}),
+      checkedOn: today,
+    })),
     presentations: entry.presentations,
   }
   return JSON.stringify(body, null, 2) + '\n'
@@ -244,6 +252,9 @@ function main() {
   const built = buildDrugs(collected.rows)
   const issues = [...collected.issues, ...built.issues]
   const today = new Date().toISOString().slice(0, 10)
+  const modified = new Map(
+    files.map((file) => [basename(file), readWorkbookModified(file)] as const),
+  )
 
   console.log(`Рядків прочитано: ${collected.rows.length}; препаратів: ${built.drugs.size}`)
 
@@ -281,7 +292,7 @@ function main() {
   let written = 0
   for (const entry of built.drugs.values()) {
     const file = join(directory, `${entry.name.id}.json`)
-    const content = drugFile(entry, today)
+    const content = drugFile(entry, today, modified)
     // Keep files that were edited by hand after the import untouched unless they changed.
     if (existsSync(file) && readFileSync(file, 'utf8') === content) continue
     writeFileSync(file, content)

@@ -112,7 +112,9 @@
       "dose_value": 8,
       "dose_unit": "mg_flat",
       "days": [1, 2],
-      "administrations_per_day": 2
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480
     },
     {
       "key": "metoclopramide",
@@ -121,11 +123,11 @@
       "route": "oral",
       "dose_value": 10,
       "dose_unit": "mg_flat",
-      "days": [1, 2, 3, 4, 5],
+      "days": [3, 4, 5],
       "administrations_per_day": 3,
       "notes": {
-        "uk": "10–20 мг тричі на добу",
-        "en": "10-20 mg three times a day"
+        "uk": "Лише в дні без ондансетрону; 10–20 мг тричі на добу, у довіднику взято нижню межу",
+        "en": "Only on days without ondansetron; 10-20 mg three times a day, the lower bound is used here"
       }
     },
     {

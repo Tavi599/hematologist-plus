@@ -1,5 +1,5 @@
 import { assertNonNegative } from './math'
-import { DomainInputError } from './types'
+import { DomainInputError, type ScheduleBlock } from './types'
 
 const ISO_DATE = /^(\d{4})-(\d{2})-(\d{2})$/
 const TIME = /^([01]?\d|2[0-3]):([0-5]\d)$/
@@ -58,12 +58,23 @@ export function formatTime(minutes: number): { time: string; dayOffset: number }
 
 export interface AdministrationInput {
   id: string
+  /** Which block the row belongs to; only `infusion` rows form the hourly chain. */
+  block: ScheduleBlock
   /** 0 for bolus / push. */
   durationMin: number
   /** Pause before this administration (e.g. premedication → chemo), min. */
   gapBeforeMin?: number
-  /** Manual shift by the physician, min; later administrations move with it. */
+  /** Manual shift by the physician, min; later administrations of the chain move with it. */
   shiftMin?: number
+  /**
+   * `day_support`: minutes from the start of the day's first chained drug; negative is before it
+   * (ondansetron 30 min before the cytostatic).
+   */
+  anchorOffsetMin?: number
+  /** `day_support`: minutes between the repeats of this drug within the day (q8h = 480). */
+  intervalMin?: number
+  /** 0-based number of this administration within the day. */
+  occurrence?: number
 }
 
 export interface ScheduledAdministration {
@@ -78,35 +89,79 @@ export interface ScheduledAdministration {
 }
 
 /**
- * Places administrations one after another from `dayStart` (HH:MM) in the given order.
+ * Places the `infusion` rows one after another from `dayStart` (HH:MM), then hangs the
+ * `day_support` rows off the start of the first infusion — ondansetron before the cytostatic
+ * and every 8 hours after it, so they follow when the infusion is shifted.
+ *
+ * `ward` rows get no time at all: tablets are given on the ward round, and moving an infusion
+ * must not move them. They are returned by `untimedIds` instead.
+ *
  * CALIBRATION: default gaps and whether infusions may run in parallel will be taken from real sheets.
  */
 export function scheduleAdministrations(
   dayStart: string,
   items: AdministrationInput[],
 ): ScheduledAdministration[] {
-  let cursor = parseTime(dayStart)
+  const dayStartMin = parseTime(dayStart)
+  let cursor = dayStartMin
+  let anchorMin: number | null = null
+  const scheduled: ScheduledAdministration[] = []
 
-  return items.map((item) => {
-    assertNonNegative(`${item.id}.durationMin`, item.durationMin)
-    assertNonNegative(`${item.id}.gapBeforeMin`, item.gapBeforeMin ?? 0)
-    const shift = item.shiftMin ?? 0
-    if (!Number.isFinite(shift)) throw new DomainInputError(`${item.id}.shiftMin`, 'must be finite')
+  for (const item of items) {
+    if (item.block !== 'infusion') continue
+    const startMin = Math.max(0, cursor + (item.gapBeforeMin ?? 0) + shiftOf(item))
+    cursor = startMin + durationOf(item)
+    anchorMin ??= startMin
+    scheduled.push(placed(item.id, startMin, durationOf(item)))
+  }
 
-    const startMin = Math.max(0, cursor + (item.gapBeforeMin ?? 0) + shift)
-    const endMin = startMin + item.durationMin
-    cursor = endMin
-
-    const start = formatTime(startMin)
-    const end = formatTime(endMin)
-    return {
-      id: item.id,
-      startMin,
-      endMin,
-      start: start.time,
-      end: end.time,
-      startDayOffset: start.dayOffset,
-      endDayOffset: end.dayOffset,
+  const anchor = anchorMin ?? dayStartMin
+  for (const item of items) {
+    if (item.block !== 'day_support') continue
+    const offset = item.anchorOffsetMin ?? 0
+    if (!Number.isInteger(offset)) {
+      throw new DomainInputError(`${item.id}.anchorOffsetMin`, 'must be a whole number of minutes')
     }
-  })
+    const interval = item.intervalMin ?? 0
+    assertNonNegative(`${item.id}.intervalMin`, interval)
+    const startMin = Math.max(
+      0,
+      anchor + offset + interval * (item.occurrence ?? 0) + shiftOf(item),
+    )
+    scheduled.push(placed(item.id, startMin, durationOf(item)))
+  }
+
+  return scheduled.sort((a, b) => a.startMin - b.startMin || (a.id < b.id ? -1 : 1))
+}
+
+/** Ids of the rows that are not placed in the hourly grid: the inpatient sheet. */
+export function untimedIds(items: AdministrationInput[]): string[] {
+  return items.filter((item) => item.block === 'ward').map((item) => item.id)
+}
+
+function durationOf(item: AdministrationInput): number {
+  assertNonNegative(`${item.id}.durationMin`, item.durationMin)
+  return item.durationMin
+}
+
+function shiftOf(item: AdministrationInput): number {
+  assertNonNegative(`${item.id}.gapBeforeMin`, item.gapBeforeMin ?? 0)
+  const shift = item.shiftMin ?? 0
+  if (!Number.isFinite(shift)) throw new DomainInputError(`${item.id}.shiftMin`, 'must be finite')
+  return shift
+}
+
+function placed(id: string, startMin: number, durationMin: number): ScheduledAdministration {
+  const endMin = startMin + durationMin
+  const start = formatTime(startMin)
+  const end = formatTime(endMin)
+  return {
+    id,
+    startMin,
+    endMin,
+    start: start.time,
+    end: end.time,
+    startDayOffset: start.dayOffset,
+    endDayOffset: end.dayOffset,
+  }
 }

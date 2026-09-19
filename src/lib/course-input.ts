@@ -114,6 +114,9 @@ export function buildCourseItemsFrom(
       ...(infusion ? { infusion } : {}),
       ...(presentations.length > 0 ? { presentations } : {}),
       ...(drug.review_rules ? { reviewRules: drug.review_rules } : {}),
+      block: item.block,
+      ...(item.anchor_offset_min === null ? {} : { anchorOffsetMin: item.anchor_offset_min }),
+      ...(item.interval_min === null ? {} : { intervalMin: item.interval_min }),
     }
 
     return [
@@ -156,6 +159,14 @@ function buildInfusionParams(
     params?.stock_concentration_mg_ml === undefined
       ? {}
       : { stockConcentrationMgMl: params.stock_concentration_mg_ml }),
+    ...(params?.rate_ramp
+      ? {
+          rateRamp: {
+            first: toRateSteps(params.rate_ramp.first),
+            ...(params.rate_ramp.next === null ? {} : { next: toRateSteps(params.rate_ramp.next) }),
+          },
+        }
+      : {}),
   }
 }
 
@@ -189,6 +200,25 @@ export function customCourseItem(params: {
     notes: null,
     sort_order: params.sortOrder,
     dose_options: [],
+    // A drug added by hand is placed like the rest of its kind: tablets on the ward sheet.
+    block: params.route === 'oral' ? 'ward' : 'infusion',
+    interval_min: null,
+    anchor_offset_min: null,
+  }
+}
+
+/** The database writes the rate steps in snake_case; the calculation engine speaks camelCase. */
+function toRateSteps(steps: {
+  start_ml_h: number
+  step_ml_h: number
+  every_min: number
+  max_ml_h: number
+}) {
+  return {
+    startMlH: steps.start_ml_h,
+    stepMlH: steps.step_ml_h,
+    everyMin: steps.every_min,
+    maxMlH: steps.max_ml_h,
   }
 }
 

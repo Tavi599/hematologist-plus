@@ -6,6 +6,18 @@
     "en": "Rituximab"
   },
   "availability": "department",
+  "sources": [
+    {
+      "name": "Перелік препаратів відділення: Список_препаратів_з_доз,_ДЕЦ,_кер_дост.xlsx",
+      "version": "файл від 2026-09-14",
+      "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
+      "version": "файл від 2026-09-14",
+      "checkedOn": "2026-09-18"
+    }
+  ],
   "presentations": [
     {
       "key": "s100",
@@ -24,14 +36,32 @@
       "solvent": "sodium_chloride_0_9",
       "bag_volumes_ml": [500],
       "is_default": true,
+      "rate_ramp": {
+        "first": {
+          "start_ml_h": 25,
+          "step_ml_h": 25,
+          "every_min": 30,
+          "max_ml_h": 200
+        },
+        "next": {
+          "start_ml_h": 50,
+          "step_ml_h": 50,
+          "every_min": 30,
+          "max_ml_h": 200
+        }
+      },
       "notes": {
-        "uk": "Початкова швидкість 50 мл/год, пришвидшувати кожні 30 хв на 50 мл/год до 200 мл/год",
-        "en": "Start at 50 mL/h, increase by 50 mL/h every 30 min up to 200 mL/h"
+        "uk": "Перше введення: 25 мл/год, +25 мл/год кожні 30 хв до 200 мл/год. Наступні: 50 мл/год, +50 мл/год кожні 30 хв до 200 мл/год",
+        "en": "First infusion: 25 mL/h, +25 mL/h every 30 min up to 200 mL/h. Later: 50 mL/h, +50 mL/h every 30 min up to 200 mL/h"
       },
       "sources": [
         {
           "name": "Дизайн відділення «Ритуксимаб» (Google Таблиці)",
           "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "Практика відділення: швидкість першого і наступних введень",
+          "checkedOn": "2026-09-20"
         }
       ]
     }

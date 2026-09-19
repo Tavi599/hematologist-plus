@@ -14,7 +14,7 @@ import {
   Text,
   Title,
 } from '@mantine/core'
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { CourseDrugResult, CourseResult } from '../../domain'
@@ -23,6 +23,7 @@ import { formatNumber } from '../../lib/format'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import { DEFAULT_DOSE_CHOICE, type CourseItem } from '../../lib/course-input'
+import { groupCourseItems } from '../../lib/dose-groups'
 import { CalculationChain } from './CalculationChain'
 import { SourceNotes } from './SourceNotes'
 import { WarningList } from './WarningList'
@@ -88,15 +89,26 @@ export function DoseTable(props: DoseTableProps) {
             </Table.Tr>
           </Table.Thead>
           <Table.Tbody>
-            {items.map((item) => (
-              <DoseRow
-                key={item.item.id}
-                item={item}
-                result={resultById.get(item.item.id)}
-                expanded={expanded === item.item.id}
-                onExpand={() => setExpanded(expanded === item.item.id ? null : item.item.id)}
-                {...props}
-              />
+            {groupCourseItems(items).map((group) => (
+              <Fragment key={group.key}>
+                <Table.Tr bg="var(--mantine-color-default-hover)">
+                  <Table.Td colSpan={10} py={6}>
+                    <Text size="xs" fw={600} tt="uppercase" c="dimmed">
+                      {t(`calculator.doses.block.${group.kind}`)}
+                    </Text>
+                  </Table.Td>
+                </Table.Tr>
+                {group.items.map((item) => (
+                  <DoseRow
+                    key={item.item.id}
+                    item={item}
+                    result={resultById.get(item.item.id)}
+                    expanded={expanded === item.item.id}
+                    onExpand={() => setExpanded(expanded === item.item.id ? null : item.item.id)}
+                    {...props}
+                  />
+                ))}
+              </Fragment>
             ))}
           </Table.Tbody>
         </Table>
@@ -327,6 +339,24 @@ function DoseRow({
                   unit: tu(`units.${result.infusion.concentrationUnit}_ml`),
                 })}
               </Text>
+              {result.infusion.ramp && item.infusionParams?.rate_ramp && (
+                <>
+                  <Text size="xs" c="dimmed">
+                    {t('calculator.doses.infusionRamp', {
+                      start: item.infusionParams.rate_ramp.first.start_ml_h,
+                      step: item.infusionParams.rate_ramp.first.step_ml_h,
+                      every: item.infusionParams.rate_ramp.first.every_min,
+                      max: item.infusionParams.rate_ramp.first.max_ml_h,
+                    })}
+                  </Text>
+                  <Text size="xs" c="dimmed">
+                    {t('calculator.doses.infusionRampDuration', {
+                      first: result.infusion.ramp.first.durationMin,
+                      next: result.infusion.ramp.next.durationMin,
+                    })}
+                  </Text>
+                </>
+              )}
               {result.infusion.rateMlH !== null && result.infusion.rateGttMin !== null && (
                 <Text size="xs" c="dimmed">
                   {t('calculator.doses.infusionRate', {
