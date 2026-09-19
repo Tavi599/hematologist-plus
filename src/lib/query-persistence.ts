@@ -12,7 +12,25 @@ export const PERSIST_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000
 /** Drops the offline copy so the next start refetches everything. */
 export async function clearPersistedCatalog(): Promise<void> {
   if (!isIndexedDbAvailable()) return
-  await del(PERSIST_KEY, createStore(DB_NAME, STORE_NAME))
+  await withStorageTimeout(del(PERSIST_KEY, createStore(DB_NAME, STORE_NAME)), undefined)
+}
+
+/**
+ * A store that never answers must not hold the app hostage. IndexedDB can hang instead of
+ * failing — a delete left pending by a closed tab, a browser refusing storage — and the catalog
+ * query stays paused until the copy is restored. After this long the app carries on as if there
+ * were no offline copy, which still leaves it working online.
+ */
+export const STORAGE_TIMEOUT_MS = 5000
+
+export function withStorageTimeout<T>(operation: Promise<T>, fallback: T): Promise<T> {
+  let timer: ReturnType<typeof setTimeout> | undefined
+  return Promise.race([
+    operation.catch(() => fallback),
+    new Promise<T>((resolve) => {
+      timer = setTimeout(() => resolve(fallback), STORAGE_TIMEOUT_MS)
+    }),
+  ]).finally(() => clearTimeout(timer))
 }
 
 const DB_NAME = 'hematologist-plus'
@@ -32,9 +50,13 @@ export function createPersistOptions(): Omit<PersistQueryClientOptions, 'queryCl
   return {
     persister: createAsyncStoragePersister({
       storage: {
-        getItem: (key) => get<string>(key, store).then((value) => value ?? null),
-        setItem: (key, value) => set(key, value, store),
-        removeItem: (key) => del(key, store),
+        getItem: (key) =>
+          withStorageTimeout<string | null>(
+            get<string>(key, store).then((value) => value ?? null),
+            null,
+          ),
+        setItem: (key, value) => withStorageTimeout(set(key, value, store), undefined),
+        removeItem: (key) => withStorageTimeout(del(key, store), undefined),
       },
       key: PERSIST_KEY,
     }),

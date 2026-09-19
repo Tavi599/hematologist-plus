@@ -1,9 +1,14 @@
 import { dehydrate, QueryClient } from '@tanstack/react-query'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { emptyCatalog } from '../schemas/catalog'
 import { demoCatalog } from './catalog.fixture'
-import { keepOnlyReadableCatalog, shouldPersistQuery } from './query-persistence'
+import {
+  keepOnlyReadableCatalog,
+  shouldPersistQuery,
+  STORAGE_TIMEOUT_MS,
+  withStorageTimeout,
+} from './query-persistence'
 import { CATALOG_QUERY_ROOT } from './use-catalog'
 
 const persistedKeys = (client: QueryClient) =>
@@ -66,5 +71,30 @@ describe('keepOnlyReadableCatalog', () => {
     expect(keepOnlyReadableCatalog(null)).toBeUndefined()
     expect(keepOnlyReadableCatalog('nope')).toBeUndefined()
     expect(keepOnlyReadableCatalog({ drugs: 'not an array' })).toBeUndefined()
+  })
+})
+
+describe('withStorageTimeout', () => {
+  it('passes the value through when the store answers', async () => {
+    await expect(withStorageTimeout(Promise.resolve('copy'), null)).resolves.toBe('copy')
+  })
+
+  it('gives up on a store that never answers', async () => {
+    vi.useFakeTimers()
+    try {
+      // A pending IndexedDB delete left behind by a closed tab blocks every open on that
+      // database; without the timeout the catalog query would stay paused for ever.
+      const pending = withStorageTimeout(new Promise<string | null>(() => {}), null)
+      await vi.advanceTimersByTimeAsync(STORAGE_TIMEOUT_MS)
+      await expect(pending).resolves.toBeNull()
+    } finally {
+      vi.useRealTimers()
+    }
+  })
+
+  it('treats a failing store as an empty one', async () => {
+    await expect(
+      withStorageTimeout(Promise.reject(new Error('no quota')), null),
+    ).resolves.toBeNull()
   })
 })
