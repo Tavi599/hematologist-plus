@@ -51,12 +51,14 @@ data/
 | `name` | локал. | МНН |
 | `trade_names` | масив рядків | |
 | `atc_code` | `L01FA01` | |
-| `max_single_dose_mg` | число > 0 | максимальна разова доза, якщо не задана в схемі (`cap_mg`) |
+| `amount_unit` | `mg` / `mcg` / `iu` / `miu` | одиниця, в якій вимірюється препарат: фасування, межі й дози. Типово `mg`. `iu` — міжнародні одиниці (блеоміцин), `miu` — мільйони МО (колістиметат, інтерферон) |
+| `dose_units` | масив | одиниці, в яких препарат офіційно призначають (напр. `["mcg_kg"]` для філграстиму). Порожній масив — будь-яка одиниця того самого роду. Схема, що виходить за цей перелік, не проходить валідацію |
+| `max_single_dose_amount` | число > 0 | максимальна разова доза в `amount_unit`, якщо не задана в схемі (`cap_amount`) |
 | `review_rules` | `{ renal, hepatic, elderly }` | підказки щодо редукції: `true` (загальний поріг) або `{ "belowMlMin": 30 }`, `{ "aboveUmolL": 51 }`, `{ "fromAgeYears": 75 }` |
 | `notes` | локал. | |
 | `availability` | `department` / `registered` / `unavailable` | як препарат можна дістати: є в переліку відділення · зареєстрований в Україні · недоступний. Типово `registered`. Схема з недоступним препаратом залишається в довіднику — її позначає `regimenAvailability()` і про неї попереджає валідація |
-| `presentations[]` | | `key`, `form` (`vial`, `ampoule`, `tablet`, `capsule`, `syringe`, `other`), `strength_mg`, `volume_ml` (для розчинів), `label` |
-| `infusion_params[]` | | `key`, `solvent` (`sodium_chloride_0_9`, `glucose_5`, `water_for_injection`), `concentration_min_mg_ml`, `concentration_max_mg_ml`, `stock_concentration_mg_ml` (концентрат після розведення у флаконі), `bag_volumes_ml` (наявні об'єми розчинника), `duration_min`, `is_default` (один на препарат) |
+| `presentations[]` | | `key`, `form` (`vial`, `ampoule`, `tablet`, `capsule`, `syringe`, `other`), `strength_amount`, `strength_unit` (типово `amount_unit` препарату), `volume_ml` (для розчинів), `label` |
+| `infusion_params[]` | | `key`, `solvent` (`sodium_chloride_0_9`, `glucose_5`, `water_for_injection`), `concentration_min_mg_ml`, `concentration_max_mg_ml`, `stock_concentration_mg_ml` (концентрат після розведення у флаконі) — лише для препаратів у мг/мкг: мг/мл нічого не кажуть про препарат у МО, `bag_volumes_ml` (наявні об'єми розчинника), `duration_min`, `is_default` (один на препарат) |
 
 ## regimens/&lt;id&gt;.json
 
@@ -73,11 +75,11 @@ data/
 | Поле | |
 |---|---|
 | `key`, `drug_id` | препарат із `drugs/` |
-| `dose_options[]` | та сама доза за іншими протоколами: `dose_value`, `dose_unit`, `cap_mg`, `notes`, `source` (`name`, `url`, `version`, `checkedOn`). Лікар вибирає джерело дози в калькуляторі; доза самої схеми завжди перша. Імена джерел у межах позиції не повторюються |
+| `dose_options[]` | та сама доза за іншими протоколами: `dose_value`, `dose_unit`, `cap_amount`, `notes`, `source` (`name`, `url`, `version`, `checkedOn`). Лікар вибирає джерело дози в калькуляторі; доза самої схеми завжди перша. Імена джерел у межах позиції не повторюються |
 | `role` | `main` (типово), `premedication`, `supportive` |
 | `route` | `iv_infusion`, `iv_bolus`, `subcutaneous`, `intramuscular`, `oral`, `intrathecal` |
-| `dose_value`, `dose_unit` | доза **на одне введення**; одиниці `mg_m2`, `mg_kg`, `mg_flat`, `auc` |
-| `cap_mg` | максимальна доза в цій схемі |
+| `dose_value`, `dose_unit` | доза **на одне введення**; одиниці — `<одиниця>_m2`, `<одиниця>_kg`, `<одиниця>_flat` для `mg`, `mcg`, `iu`, `miu` (напр. `iu_m2`, `mcg_kg`), або `auc` (формула Калверта, лише міліграми). Одиниця дози має збігатися з родом `amount_unit` препарату: маса (`mg`, `mcg`) і біологічна активність (`iu`, `miu`) між собою не перераховуються |
+| `cap_amount` | максимальна доза в цій схемі, в одиниці дози |
 | `days` | дні курсу, `[1, 2, 3, 4, 5]` |
 | `administrations_per_day` | кількість введень на день (типово 1) |
 | `infusion_params_key` | які `infusion_params` препарату використати (типово — `is_default`) |

@@ -133,6 +133,25 @@ describe('CalculatorPage', () => {
     expect(details.getByText(/Округлення до 1 мг/)).toBeInTheDocument()
   })
 
+  it('narrows the regimen list by disease and by what can be obtained', async () => {
+    const catalog = demoCatalog()
+    catalog.drugs.find((drug) => drug.id === 'rituximab')!.availability = 'unavailable'
+    source.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
+    renderWithProviders(<CalculatorPage />)
+
+    const regimen = await screen.findByRole('combobox', { name: 'Схема' })
+    await act(async () => fireEvent.click(regimen))
+    expect(await screen.findByText('R-CHOP-21 — ДЕМО R-CHOP-21')).toBeInTheDocument()
+    expect(screen.getByText('недоступний')).toBeInTheDocument()
+
+    // The regimen is kept unless the physician asks for obtainable ones only.
+    await act(async () =>
+      fireEvent.click(screen.getByLabelText('Лише схеми з доступних препаратів')),
+    )
+    await act(async () => fireEvent.click(regimen))
+    expect(screen.queryByText('R-CHOP-21 — ДЕМО R-CHOP-21')).not.toBeInTheDocument()
+  })
+
   it('asks for the patient data before calculating', async () => {
     renderWithProviders(<CalculatorPage />)
     expect(

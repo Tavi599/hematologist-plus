@@ -1,8 +1,11 @@
-import { Card, Group, Select, Stack, Text, TextInput, Title } from '@mantine/core'
+import { Badge, Card, Checkbox, Group, Select, Stack, Text, TextInput, Title } from '@mantine/core'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { BsaVariant } from '../../domain'
+import { regimenAvailability } from '../../lib/availability'
 import type { CatalogIndex } from '../../lib/catalog-index'
+import { filterRegimens, NO_REGIMEN_FILTER, type RegimenFilter } from '../../lib/regimen-filter'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 
@@ -26,14 +29,18 @@ export function CourseSettings({
   const { t } = useTranslation()
   const language = currentLanguage()
   const patch = (next: Partial<CourseSettingsValue>) => onChange({ ...value, ...next })
+  const [filter, setFilter] = useState<RegimenFilter>(NO_REGIMEN_FILTER)
 
-  const regimens = [...catalog.regimens.values()]
-    .map((regimen) => ({
-      value: regimen.id,
-      label: `${regimen.short_name} — ${localize(regimen.name, language)}`,
-      sort: regimen.sort_order,
-    }))
-    .sort((a, b) => a.sort - b.sort || a.label.localeCompare(b.label))
+  const regimens = filterRegimens(catalog, filter).map((regimen) => ({
+    value: regimen.id,
+    label: `${regimen.short_name} — ${localize(regimen.name, language)}`,
+  }))
+  const availability = new Map(
+    regimens.map((option) => [option.value, regimenAvailability(catalog, option.value)]),
+  )
+  const diseases = [...catalog.diseases.values()]
+    .map((disease) => ({ value: disease.id, label: localize(disease.name, language) }))
+    .sort((a, b) => a.label.localeCompare(b.label))
 
   const selected = value.regimenId ? catalog.regimens.get(value.regimenId) : undefined
 
@@ -44,6 +51,27 @@ export function CourseSettings({
           {t('calculator.course.title')}
         </Title>
 
+        <Group align="flex-end" wrap="wrap" gap="sm">
+          <Select
+            label={t('calculator.course.disease')}
+            placeholder={t('calculator.course.diseaseAll')}
+            data={diseases}
+            value={filter.diseaseId}
+            onChange={(diseaseId) => setFilter({ ...filter, diseaseId })}
+            searchable
+            clearable
+            style={{ minWidth: 240 }}
+          />
+          <Checkbox
+            mb={8}
+            label={t('calculator.course.onlyObtainable')}
+            checked={filter.onlyObtainable}
+            onChange={(event) =>
+              setFilter({ ...filter, onlyObtainable: event.currentTarget.checked })
+            }
+          />
+        </Group>
+
         <Select
           label={t('calculator.course.regimen')}
           placeholder={t('calculator.course.regimenPlaceholder')}
@@ -52,6 +80,20 @@ export function CourseSettings({
           data={regimens}
           value={value.regimenId}
           onChange={(regimenId) => patch({ regimenId })}
+          renderOption={({ option }) => (
+            <Group gap="xs" wrap="nowrap" justify="space-between" w="100%">
+              <span>{option.label}</span>
+              {availability.get(option.value) !== 'department' && (
+                <Badge
+                  size="xs"
+                  variant="light"
+                  color={availability.get(option.value) === 'unavailable' ? 'red' : 'yellow'}
+                >
+                  {t(`availability.${availability.get(option.value)!}`)}
+                </Badge>
+              )}
+            </Group>
+          )}
         />
         {selected?.cycle_length_days && (
           <Text size="xs" c="dimmed">

@@ -109,8 +109,9 @@ src/
 - **Not calibrated yet.** All tunable defaults live in `src/domain/config.ts` (`DOMAIN_DEFAULTS`); unconfirmed rules are marked `CALIBRATION:` in code. Calibration against real prescription-sheet templates happens in stage 5 — see [docs/calibration.md](docs/calibration.md). Change a default there and in the table, never inline in a formula.
 - Invalid inputs throw `DomainInputError` (with `field`); clinical concerns are returned as `DomainWarning`s and never alter a dose.
 - BSA: **Mosteller**. Every dose is computed **twice**: on actual BSA and on BSA capped at 2.0 m²; both are shown.
-- Dose units: `mg_m2`, `mg_kg`, `mg_flat` (with optional `capMg`), `auc` (Calvert: dose = AUC × (GFR + 25), GFR via Cockcroft-Gault).
-- Rounding to 1 mg; vial-content snapping overrides when enabled (disabled until calibration). The **unrounded** dose is printed as a note on the 2nd page of the .docx.
+- Every drug states the unit it is measured in (`drugs.amount_unit`: `mg`, `mcg`, `iu`, `miu`) and the dose units it is officially prescribed in (`drugs.dose_units`). Dose units are `<unit>_m2`, `<unit>_kg`, `<unit>_flat` (with optional `capAmount`), plus `auc` (Calvert: dose = AUC × (GFR + 25), GFR via Cockcroft-Gault; milligrams only).
+- Mass (`mg`, `mcg`) and biological activity (`iu`, `miu`) never convert into each other — how many IU a milligram holds is a property of the drug, not arithmetic. Inside one kind the conversion is exact (`convertAmount` in `src/domain/units.ts`). mg/mL dilution limits apply only to drugs measured by mass.
+- Rounding to the step of the dose unit (`DOMAIN_DEFAULTS.doseRoundingStep`, 1 mg by default); vial-content snapping overrides when enabled (disabled until calibration). The **unrounded** dose is printed as a note on the 2nd page of the .docx.
 - Vial/tablet counts per day and per course.
 - Dose reduction: manual % per course and per drug. Automatic checks only **suggest** reductions — never change a dose silently.
 - Solvent volume and infusion rate are calculated from drug infusion params (fallback: values from the regimen template).
