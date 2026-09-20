@@ -48,6 +48,8 @@ export const ROUTES = [
   'intramuscular',
   'oral',
   'intrathecal',
+  /** Drops, ointments, gels — applied where they act, and counted by the pack, not by BSA. */
+  'topical',
 ] as const
 export const routeSchema = z.enum(ROUTES)
 
@@ -82,6 +84,23 @@ export const DOSE_UNITS = [
   'auc',
 ] as const
 export const doseUnitSchema = z.enum(DOSE_UNITS)
+
+/**
+ * What one drug's label says its mass is worth in biological activity, for the few drugs sold
+ * and prescribed both ways — filgrastim is written as 300 mcg or as 30 million IU for the same
+ * syringe. This is the only bridge between mass and activity, and it is a fact read off the
+ * pack, never a calculation: without it the two families stay strictly apart.
+ */
+export const unitEquivalenceSchema = z
+  .strictObject({
+    amount: positiveNumberSchema,
+    amount_unit: z.enum(['mg', 'mcg']),
+    activity: positiveNumberSchema,
+    activity_unit: z.enum(['iu', 'miu']),
+  })
+  .describe('e.g. 300 mcg = 30 miu for filgrastim')
+
+export type UnitEquivalence = z.infer<typeof unitEquivalenceSchema>
 
 /**
  * How the drug can actually be obtained. A regimen is never left out of the catalog because one

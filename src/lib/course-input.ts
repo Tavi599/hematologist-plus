@@ -1,4 +1,4 @@
-import type { CourseDrug } from '../domain'
+import { amountUnitOf, convertAmount, type CourseDrug } from '../domain'
 import type { Drug, DrugInfusionParams, DrugPresentation, RegimenItem } from '../schemas/catalog'
 import type { Source } from '../schemas/common'
 import type { CatalogIndex } from './catalog-index'
@@ -97,7 +97,18 @@ export function buildCourseItemsFrom(
         unit: presentation.strength_unit,
       }))
     const infusion = buildInfusionParams(item, params)
-    const capAmount = chosen.capAmount ?? drug.max_single_dose_amount
+    // The regimen's own cap is already in the dose's unit; the drug's maximum is in the unit the
+    // drug is measured in, which is not always the same one.
+    const capAmount =
+      chosen.capAmount ??
+      (drug.max_single_dose_amount === null
+        ? null
+        : convertAmount(
+            drug.max_single_dose_amount,
+            drug.amount_unit,
+            amountUnitOf(chosen.doseUnit),
+            drug.unit_equivalence,
+          ))
     const durationMin = item.duration_min ?? params?.duration_min ?? null
 
     const courseDrug: CourseDrug = {
@@ -114,6 +125,7 @@ export function buildCourseItemsFrom(
       ...(infusion ? { infusion } : {}),
       ...(presentations.length > 0 ? { presentations } : {}),
       ...(drug.review_rules ? { reviewRules: drug.review_rules } : {}),
+      ...(drug.unit_equivalence ? { unitEquivalence: drug.unit_equivalence } : {}),
       block: item.block,
       isMain: item.role === 'main',
       ...(item.anchor_offset_min === null ? {} : { anchorOffsetMin: item.anchor_offset_min }),
@@ -232,5 +244,8 @@ const PARENTERAL_FORMS = new Set<DrugPresentation['form']>(['vial', 'ampoule', '
  */
 export function fitsRoute(form: DrugPresentation['form'], route: RegimenItem['route']): boolean {
   if (form === 'other') return false
+  // A bottle of drops or a tube of ointment is not used up one pack per administration, so no
+  // pack is counted against a topical order. The need for the course is a separate question.
+  if (route === 'topical') return false
   return route === 'oral' ? ORAL_FORMS.has(form) : PARENTERAL_FORMS.has(form)
 }

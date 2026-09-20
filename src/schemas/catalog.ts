@@ -21,6 +21,7 @@ import {
   solventSchema,
   sortOrderSchema,
   treatmentNodeKindSchema,
+  unitEquivalenceSchema,
 } from './common'
 import { printFormsRowSchema } from './print-forms'
 
@@ -65,6 +66,8 @@ export const drugRowSchema = z.object({
   dose_units: z.array(doseUnitSchema),
   /** Maximum absolute dose per administration, in `amount_unit`. */
   max_single_dose_amount: positiveNumberSchema.nullable(),
+  /** What the label says this drug's mass is worth in activity; null for all but a few drugs. */
+  unit_equivalence: unitEquivalenceSchema.nullable().default(null),
 })
 
 export const drugPresentationRowSchema = z.object({
@@ -276,7 +279,7 @@ export type TreatmentNodeRegimen = CatalogRow<'treatment_node_regimens'>
  * Bump when the catalog shape changes incompatibly: invalidates offline caches.
  * Keep in step with new migrations that change columns.
  */
-export const CATALOG_SCHEMA_VERSION = '6'
+export const CATALOG_SCHEMA_VERSION = '7'
 
 export function emptySyncRows(): SyncRows {
   return { ...emptyCatalog(), disease_articles: [] }

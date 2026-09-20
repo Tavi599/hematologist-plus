@@ -80,11 +80,11 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
   // say nothing about a drug measured in units of biological activity.
   for (const row of rows.drug_presentations) {
     const drug = drugs.get(row.drug_id)
-    if (drug && !sameFamily(row.strength_unit, drug.amount_unit)) {
+    if (drug && !sameFamily(row.strength_unit, drug.amount_unit) && !drug.unit_equivalence) {
       error(
         'drug_presentations',
         row.id,
-        `strength in ${row.strength_unit}, but ${drug.id} is measured in ${drug.amount_unit}`,
+        `strength in ${row.strength_unit}, but ${drug.id} is measured in ${drug.amount_unit} and states no equivalence between mass and activity`,
       )
     }
   }
@@ -119,11 +119,11 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
       }
       return
     }
-    if (!sameFamily(amountUnitOf(unit), drug.amount_unit)) {
+    if (!sameFamily(amountUnitOf(unit), drug.amount_unit) && !drug.unit_equivalence) {
       error(
         'regimen_items',
         itemId,
-        `${field} "${unit}" does not match ${drug.id}, which is measured in ${drug.amount_unit}`,
+        `${field} "${unit}" does not match ${drug.id}, which is measured in ${drug.amount_unit} and states no equivalence between mass and activity`,
       )
     }
   }

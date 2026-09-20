@@ -48,4 +48,36 @@ describe('amount units', () => {
     expect(() => convertAmount(15, 'mg', 'iu')).toThrow(DomainInputError)
     expect(() => convertAmount(1, 'miu', 'mcg')).toThrow(/not interchangeable/)
   })
+  it('crosses between mass and activity only by the number on the label of that drug', () => {
+    // Filgrastim: the same syringe is labelled 300 mcg and 30 million IU.
+    const filgrastim = {
+      amount: 300,
+      amount_unit: 'mcg' as const,
+      activity: 30,
+      activity_unit: 'miu' as const,
+    }
+    expect(convertAmount(480, 'mcg', 'miu', filgrastim)).toBe(48)
+    expect(convertAmount(48, 'miu', 'mcg', filgrastim)).toBe(480)
+    expect(convertAmount(0.3, 'mg', 'miu', filgrastim)).toBe(30)
+    expect(convertAmount(30_000_000, 'iu', 'mcg', filgrastim)).toBe(300)
+    // The same drug still converts inside a family exactly as before.
+    expect(convertAmount(480, 'mcg', 'mg', filgrastim)).toBe(0.48)
+  })
+
+  it('refuses an equivalence that is not a mass on one side and an activity on the other', () => {
+    const wrong = {
+      amount: 1,
+      amount_unit: 'iu' as const,
+      activity: 1,
+      activity_unit: 'miu' as const,
+    }
+    expect(() => convertAmount(1, 'mg', 'iu', wrong)).toThrow(/mass unit and an activity unit/)
+    const zero = {
+      amount: 0,
+      amount_unit: 'mcg' as const,
+      activity: 30,
+      activity_unit: 'miu' as const,
+    }
+    expect(() => convertAmount(1, 'mg', 'iu', zero)).toThrow(/must be positive/)
+  })
 })

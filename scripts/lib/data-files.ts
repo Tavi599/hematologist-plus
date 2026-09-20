@@ -22,6 +22,7 @@ import {
   sortOrderSchema,
   sourcesSchema,
   treatmentNodeKindSchema,
+  unitEquivalenceSchema,
 } from '../../src/schemas/common'
 import { EMPTY_PRINT_FORMS, printFormsFileSchema } from '../../src/schemas/print-forms'
 
@@ -79,6 +80,8 @@ export const drugFileSchema = z.strictObject({
   /** Dose units the drug is officially prescribed in; empty means every unit of its kind. */
   dose_units: z.array(doseUnitSchema).default([]),
   max_single_dose_amount: optionalPositive,
+  /** Only for a drug sold and prescribed both by mass and by activity, e.g. filgrastim. */
+  unit_equivalence: unitEquivalenceSchema.nullable().default(null),
   review_rules: reviewRulesSchema.nullable().default(null),
   notes: optionalLocalized,
   sort_order: sortOrder,

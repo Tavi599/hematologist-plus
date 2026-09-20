@@ -190,6 +190,9 @@ describe('fitsRoute', () => {
     expect(fitsRoute('ampoule', 'subcutaneous')).toBe(true)
     expect(fitsRoute('tablet', 'iv_bolus')).toBe(false)
     expect(fitsRoute('other', 'oral')).toBe(false)
+    // Drops, ointments and gels: a bottle is not used up per administration, so none is counted.
+    expect(fitsRoute('vial', 'topical')).toBe(false)
+    expect(fitsRoute('tablet', 'topical')).toBe(false)
   })
 
   it('counts oral prednisolone in tablets, not in ampoules', () => {

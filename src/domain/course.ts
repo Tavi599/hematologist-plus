@@ -16,7 +16,7 @@ import {
   untimedIds,
   type ScheduledAdministration,
 } from './schedule'
-import { amountUnitOf, convertAmount } from './units'
+import { amountUnitOf, convertAmount, type UnitEquivalence } from './units'
 import {
   DomainInputError,
   type AmountUnit,
@@ -67,6 +67,8 @@ export interface CourseDrug {
   infusion?: InfusionParams
   presentations?: Presentation[]
   reviewRules?: ReviewRules
+  /** What this drug's label says its mass is worth in activity; the only bridge between them. */
+  unitEquivalence?: UnitEquivalence | null
 }
 
 export interface CourseAdjustments {
@@ -269,6 +271,7 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
       presentation.strengthAmount,
       presentation.unit ?? amountUnit,
       amountUnit,
+      drug.unitEquivalence,
     ),
     unit: amountUnit,
   }))

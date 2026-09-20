@@ -40,6 +40,58 @@ const prednisolone: CourseDrug = {
 const adjustments = { startDateIso: '2026-09-21' }
 
 describe('calculateCourse', () => {
+  it('puts day 0 on the day before the course starts', () => {
+    // A day 0 is optional and is for what has to be done before the regimen proper: the
+    // hydration that runs the evening before the first cytostatic.
+    const hydration: CourseDrug = {
+      id: 'r.hydration',
+      dose: { value: 1000, unit: 'mg_flat' },
+      days: [0, 1],
+      block: 'day_support',
+    }
+    const course = calculateCourse(patient, [hydration, rituximab], adjustments)
+
+    expect(course.days.map((day) => [day.day, day.date])).toEqual([
+      [0, '2026-09-20'],
+      [1, '2026-09-21'],
+    ])
+    // Day 0 has no infusion of the regimen to hang off, so its support starts the day itself.
+    expect(course.days[0]?.administrations.map((item) => item.start)).toEqual(['09:00'])
+  })
+
+  it('converts a dose written in units of activity into the packs the drug is measured in', () => {
+    // Filgrastim is prescribed either way; the same syringe reads 300 mcg and 30 million IU.
+    const filgrastim: CourseDrug = {
+      id: 'r.filgrastim',
+      dose: { value: 48, unit: 'miu_flat' },
+      days: [1],
+      presentations: [
+        { id: 's300', strengthAmount: 300, unit: 'mcg' },
+        { id: 's480', strengthAmount: 480, unit: 'mcg' },
+      ],
+      unitEquivalence: { amount: 300, amount_unit: 'mcg', activity: 30, activity_unit: 'miu' },
+    }
+    const course = calculateCourse(patient, [filgrastim], adjustments)
+    const result = course.drugs[0]!
+
+    expect(result.doseAmount).toBe(48)
+    expect(result.amountUnit).toBe('miu')
+    // 480 mcg is 48 million IU, so one syringe covers the dose exactly.
+    expect(result.pack?.items.map((item) => [item.presentation.id, item.count])).toEqual([
+      ['s480', 1],
+    ])
+  })
+
+  it('refuses a pack in another family when the drug says nothing about what it is worth', () => {
+    const bleomycin: CourseDrug = {
+      id: 'r.bleomycin',
+      dose: { value: 15, unit: 'iu_flat' },
+      days: [1],
+      presentations: [{ id: 'v15', strengthAmount: 15, unit: 'mg' }],
+    }
+    expect(() => calculateCourse(patient, [bleomycin], adjustments)).toThrow(DomainInputError)
+  })
+
   it('calculates doses, vials, infusion and the day calendar', () => {
     const course = calculateCourse(patient, [rituximab, prednisolone], adjustments)
 

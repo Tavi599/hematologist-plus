@@ -6,10 +6,17 @@
     "en": "Filgrastim"
   },
   "availability": "department",
-  "dose_units": ["mcg_kg", "mcg_flat"],
+  "amount_unit": "mcg",
+  "dose_units": ["mcg_kg", "mcg_flat", "miu_kg", "miu_flat"],
+  "unit_equivalence": {
+    "amount": 300,
+    "amount_unit": "mcg",
+    "activity": 30,
+    "activity_unit": "miu"
+  },
   "notes": {
-    "uk": "Фасування в переліку відділення позначені і в мкг, і в МО: 300 мкг = 30 млн МО, 480 мкг = 48 млн МО.",
-    "en": "The department list labels the packs both ways: 300 mcg = 30 million IU, 480 mcg = 48 million IU."
+    "uk": "Фасування в переліку відділення позначені і в мкг, і в МО: 300 мкг = 30 млн МО, 480 мкг = 48 млн МО. Дозу можна писати в будь-яких із цих одиниць — перерахунок іде за цим співвідношенням із маркування, не арифметично.",
+    "en": "The department list labels the packs both ways: 300 mcg = 30 million IU, 480 mcg = 48 million IU. A dose may be written in either unit; the conversion uses this label ratio, not arithmetic."
   },
   "sources": [
     {
@@ -22,14 +29,14 @@
     {
       "key": "s0-3",
       "form": "syringe",
-      "strength_amount": 0.3,
+      "strength_amount": 300,
       "volume_ml": 0.5,
       "label": { "uk": "300 мкг (30 млн МО) / 0,5 мл", "en": "300 mcg (30 million IU) / 0.5 mL" }
     },
     {
       "key": "s0-48",
       "form": "syringe",
-      "strength_amount": 0.48,
+      "strength_amount": 480,
       "volume_ml": 0.5,
       "label": { "uk": "480 мкг (48 млн МО) / 0,5 мл", "en": "480 mcg (48 million IU) / 0.5 mL" }
     }

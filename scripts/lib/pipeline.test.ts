@@ -218,10 +218,36 @@ describe('checkCatalog', () => {
     })
 
     expect(errors(rows)).toEqual([
-      'drug_presentations bleomycin.vial: strength in mg, but bleomycin is measured in iu',
+      'drug_presentations bleomycin.vial: strength in mg, but bleomycin is measured in iu and states no equivalence between mass and activity',
       'drug_infusion_params bleomycin.nacl: mg/mL parameters cannot describe bleomycin, which is measured in iu',
-      'regimen_items r-chop-21.bleomycin: dose_unit "mg_m2" does not match bleomycin, which is measured in iu',
+      'regimen_items r-chop-21.bleomycin: dose_unit "mg_m2" does not match bleomycin, which is measured in iu and states no equivalence between mass and activity',
     ])
+  })
+
+  it('lets mass and activity cross only for a drug whose label says what it is worth', () => {
+    const rows = loadDemo()
+    // Filgrastim is sold as 300 mcg and as 30 million IU: the same syringe, both numbers printed.
+    const filgrastim = {
+      ...rows.drugs[0]!,
+      id: 'filgrastim',
+      amount_unit: 'mcg' as const,
+      dose_units: [],
+      unit_equivalence: {
+        amount: 300,
+        amount_unit: 'mcg' as const,
+        activity: 30,
+        activity_unit: 'miu' as const,
+      },
+    }
+    rows.drugs.push(filgrastim)
+    rows.regimen_items.push({
+      ...rows.regimen_items[0]!,
+      id: 'r-chop-21.filgrastim',
+      drug_id: 'filgrastim',
+      dose_unit: 'miu_flat',
+    })
+
+    expect(errors(rows)).toEqual([])
   })
 
   it('holds a drug to the units it is officially prescribed in', () => {
