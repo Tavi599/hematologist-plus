@@ -37,6 +37,11 @@ function installDomStubs() {
     disconnect() {}
   }
   window.ResizeObserver = ResizeObserverStub
+
+  // A dropdown scrolls its selected option into view on a timer. jsdom has no scrolling, so the
+  // timer throws after the test that opened the dropdown has finished — an unhandled error that
+  // fails the whole run while every test passes.
+  Element.prototype.scrollIntoView = () => {}
 }
 
 // The PWA virtual module exists only inside the Vite build.
