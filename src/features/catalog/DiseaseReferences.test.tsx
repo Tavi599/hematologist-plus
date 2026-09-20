@@ -43,7 +43,7 @@ describe('DiseaseReferences', () => {
     expect(nccn.getAttribute('rel')).toContain('noopener')
     expect(screen.getByRole('link', { name: 'UpToDate' })).toBeInTheDocument()
     // A guideline is only worth reading against a known edition.
-    expect(screen.getByText(/Що каже NCCN 2.2026 — 01.07.2026/)).toBeInTheDocument()
+    expect(screen.getByText(/Версія настанови: NCCN 2.2026 — 01.07.2026/)).toBeInTheDocument()
   })
 
   it('prefers a label written for the link', () => {

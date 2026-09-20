@@ -53,7 +53,11 @@ export function DiseaseReferences({ disease }: { disease: Disease }) {
             list: dated
               .map(
                 (reference) =>
-                  `${tu(`reference.${reference.kind}`)} ${reference.version ?? ''} — ${formatDate(reference.updated!, language)}`,
+                  // The plain name of the source, not the wording of its button: "NCCN 2.2026",
+                  // not "What NCCN says 2.2026".
+                  [tu(`referenceName.${reference.kind}`), reference.version]
+                    .filter(Boolean)
+                    .join(' ') + ` — ${formatDate(reference.updated!, language)}`,
               )
               .join('; '),
           })}
