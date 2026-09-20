@@ -142,6 +142,16 @@ describe('buildCourseSheets', () => {
     ).toHaveLength(2)
   })
 
+  it('leaves a ruled, empty box at the foot of every sheet for a handwritten note', () => {
+    for (const sheet of sheets()) {
+      const last = sheet.rows.length
+      expect(sheet.rows[last - 1]!.every((cell) => (text(cell) ?? '') === '')).toBe(true)
+      expect(sheet.merges).toContain(`A${last}:Z${last}`)
+      // Tall enough to write a line in; the department writes its notes by hand.
+      expect(sheet.heights!.at(-1)).toBeGreaterThanOrEqual(30)
+    }
+  })
+
   it('always rules at least as many lines as the printed blank', () => {
     const [day] = sheets()
     // 4 header rows, 12 two-row bands, one note line at the foot.

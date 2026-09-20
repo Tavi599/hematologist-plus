@@ -99,11 +99,17 @@ const TITLE_FORMAT: XlsxFormat = {
   align: 'center',
   valign: 'center',
 }
+/**
+ * The box at the foot of every sheet: left empty on purpose. In the blank we were given it
+ * carried a printed warning, but the department writes its notes by hand, so the app prints the
+ * ruled space and nothing in it — tall enough for a line of handwriting.
+ */
 const NOTE_FORMAT: XlsxFormat = {
   font: { size: 12, bold: true },
   box: { left: 'medium', right: 'medium', top: 'medium', bottom: 'medium' },
   valign: 'center',
 }
+const NOTE_HEIGHT = 34
 
 /** Every sixth hour is ruled off, the way the department's own sheet marks the shift. */
 const GROUP_EVERY = 6
@@ -183,7 +189,7 @@ function daySheet(input: CourseSheetsInput, day: CourseResult['days'][number]): 
 
   rows.push([{ value: null, format: NOTE_FORMAT }, ...spread('', 25, NOTE_FORMAT)])
   merges.push(`A${rows.length}:${lastColumn}${rows.length}`)
-  heights.push(19.5)
+  heights.push(NOTE_HEIGHT)
 
   return {
     name: dayTabName(input, day),
@@ -322,7 +328,7 @@ function wardSheet(
 
   rows.push([{ value: null, format: NOTE_FORMAT }, ...spread('', 25, NOTE_FORMAT)])
   merges.push(`A${rows.length}:${lastColumn}${rows.length}`)
-  heights.push(19.5)
+  heights.push(NOTE_HEIGHT)
 
   const name = t('calculator.export.wardSheet')
   return {
