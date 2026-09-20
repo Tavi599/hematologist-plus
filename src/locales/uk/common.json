@@ -53,6 +53,9 @@
       "bsaVariant": "Дози за BSA",
       "bsaActual": "фактична",
       "bsaCapped": "обмежена 2,0 м²",
+      "bsaEntered": "введена вручну",
+      "bsaM2": "BSA, м²",
+      "bsaM2Hint": "використовується замість розрахованої за зростом і вагою",
       "coursePercent": "Редукція на курс, %",
       "cycle": "Цикл {{days}} дн., курсів: {{cycles}}"
     },
@@ -74,6 +77,7 @@
       "days": "Дні",
       "doseActual": "Доза (BSA факт.)",
       "doseCapped": "Доза (BSA 2,0)",
+      "doseEntered": "Доза (BSA вручну)",
       "reduction": "Редукція, %",
       "reductionNeeded": "потрібна",
       "reductionSuggested": "є підстави",
@@ -264,6 +268,7 @@
   },
   "step": {
     "bsa.mosteller": "BSA за Mosteller: √({{heightCm}} см × {{weightKg}} кг / 3600)",
+    "bsa.entered": "BSA введена вручну: {{value}} м²",
     "bsa.cap": "BSA для розрахунку (межа {{capM2}} м²)",
     "dose.perBsa": "{{doseValue}} {{doseUnit}} × {{bsaM2}} м²",
     "dose.perWeight": "{{doseValue}} {{doseUnit}} × {{weightKg}} кг",
@@ -283,6 +288,7 @@
   "warning": {
     "input.outOfRange": "{{field}}: значення {{value}} поза межами {{min}}–{{max}}. Перевірте введені дані.",
     "bsa.capped": "Фактична BSA {{actualM2}} м² перевищує {{capM2}} м². Показані обидва варіанти доз.",
+    "bsa.enteredDiffers": "Введена BSA {{enteredM2}} м² відрізняється від розрахованої за зростом і вагою ({{calculatedM2}} м²) на {{differencePercent}}%. Перевірте значення.",
     "dose.capped": "Доза обмежена максимальною ({{capAmount}} {{unit}}); за схемою було б {{baseAmount}} {{unit}}.",
     "carboplatin.gfrCapped": "GFR обмежено {{capMlMin}} мл/хв для формули Calvert.",
     "infusion.concentrationOutOfRange": "Концентрація {{concentration}} {{unit}} поза допустимими межами. Перевірте об'єм розчинника.",

@@ -1,4 +1,5 @@
-import { calculateBsa, type BsaResult } from './bsa'
+import { calculateBsa, enteredBsa, mostellerBsa, type BsaResult } from './bsa'
+import { DOMAIN_DEFAULTS } from './config'
 import { calculateDoseVariants, type DoseSpec, type DoseVariants } from './dosing'
 import { calculateInfusion, type InfusionParams, type InfusionResult } from './infusion'
 import {
@@ -82,6 +83,8 @@ export interface CourseAdjustments {
    */
   cycleNumber?: number
   bsaVariant?: BsaVariant
+  /** BSA entered by the physician, m²; replaces Mosteller for the whole course. */
+  bsaM2?: number
   /** Reduction applied to every drug, %. */
   coursePercent?: number
   /** Per-drug reduction by item id, %; replaces the course reduction for that drug. */
@@ -160,7 +163,10 @@ export function calculateCourse(
   const enabled = drugs.filter((drug) => !disabled.has(drug.id))
   assertUniqueIds(enabled)
 
-  const bsa = calculateBsa(patient.heightCm, patient.weightKg)
+  const bsa =
+    adjustments.bsaM2 === undefined
+      ? calculateBsa(patient.heightCm, patient.weightKg)
+      : enteredBsa(adjustments.bsaM2)
   const renal =
     patient.serumCreatinine === undefined
       ? null
@@ -186,6 +192,22 @@ export function calculateCourse(
       code: 'bsa.capped',
       params: { actualM2: bsa.actualM2, capM2: bsa.capM2 },
     })
+  }
+  // A hand-entered BSA is used as given, but a typed digit is worth catching: say so when it
+  // disagrees with the height and weight on the same form.
+  if (adjustments.bsaM2 !== undefined) {
+    const mosteller = mostellerBsa(patient.heightCm, patient.weightKg)
+    const differencePercent = Math.abs((adjustments.bsaM2 - mosteller) / mosteller) * 100
+    if (differencePercent > DOMAIN_DEFAULTS.enteredBsaDifferencePercent) {
+      warnings.push({
+        code: 'bsa.enteredDiffers',
+        params: {
+          enteredM2: adjustments.bsaM2,
+          calculatedM2: mosteller,
+          differencePercent,
+        },
+      })
+    }
   }
 
   const reviewContext = {

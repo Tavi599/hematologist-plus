@@ -40,6 +40,47 @@ const prednisolone: CourseDrug = {
 const adjustments = { startDateIso: '2026-09-21' }
 
 describe('calculateCourse', () => {
+  it('uses the BSA the physician typed instead of the one Mosteller gives', () => {
+    // Mosteller on 180 cm / 80 kg is exactly 2.0; the physician enters 1.7 for an amputee.
+    const course = calculateCourse(patient, [rituximab], { ...adjustments, bsaM2: 1.7 })
+
+    expect(course.bsa.actualM2).toBe(1.7)
+    expect(course.bsa.entered).toBe(true)
+    expect(course.bsa.isCapped).toBe(false)
+    // 375 mg/m² × 1.7 = 637.5 → 638 mg after rounding to the step.
+    expect(course.drugs[0]?.doseAmount).toBe(638)
+  })
+
+  it('still derives the capped variant from an entered BSA', () => {
+    const course = calculateCourse(patient, [rituximab], { ...adjustments, bsaM2: 2.4 })
+
+    expect(course.bsa.cappedM2).toBe(2)
+    expect(course.bsa.isCapped).toBe(true)
+    expect(course.warnings.some((warning) => warning.code === 'bsa.capped')).toBe(true)
+  })
+
+  it('questions an entered BSA that disagrees with the height and weight on the form', () => {
+    // A typed digit: 12.0 instead of 2.0. The dose is still calculated from what was entered.
+    const course = calculateCourse(patient, [rituximab], { ...adjustments, bsaM2: 1.2 })
+    const warning = course.warnings.find((item) => item.code === 'bsa.enteredDiffers')
+
+    expect(warning).toBeDefined()
+    expect(warning?.params.enteredM2).toBe(1.2)
+    expect(warning?.params.calculatedM2).toBe(2)
+    expect(course.bsa.actualM2).toBe(1.2)
+  })
+
+  it('says nothing when the entered BSA matches the calculated one', () => {
+    const course = calculateCourse(patient, [rituximab], { ...adjustments, bsaM2: 2.05 })
+    expect(course.warnings.some((warning) => warning.code === 'bsa.enteredDiffers')).toBe(false)
+  })
+
+  it('refuses an entered BSA that is not a positive number', () => {
+    expect(() => calculateCourse(patient, [rituximab], { ...adjustments, bsaM2: 0 })).toThrow(
+      DomainInputError,
+    )
+  })
+
   it('puts day 0 on the day before the course starts', () => {
     // A day 0 is optional and is for what has to be done before the regimen proper: the
     // hydration that runs the evening before the first cytostatic.

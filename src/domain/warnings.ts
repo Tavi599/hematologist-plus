@@ -3,6 +3,7 @@ import { DOMAIN_DEFAULTS } from './config'
 export type WarningCode =
   | 'input.outOfRange'
   | 'bsa.capped'
+  | 'bsa.enteredDiffers'
   | 'dose.capped'
   | 'carboplatin.gfrCapped'
   | 'infusion.concentrationOutOfRange'

@@ -53,6 +53,9 @@
       "bsaVariant": "Doses by BSA",
       "bsaActual": "actual",
       "bsaCapped": "capped at 2.0 m²",
+      "bsaEntered": "entered by hand",
+      "bsaM2": "BSA, m²",
+      "bsaM2Hint": "used instead of the one calculated from height and weight",
       "coursePercent": "Course reduction, %",
       "cycle": "Cycle {{days}} days, cycles: {{cycles}}"
     },
@@ -74,6 +77,7 @@
       "days": "Days",
       "doseActual": "Dose (actual BSA)",
       "doseCapped": "Dose (BSA 2.0)",
+      "doseEntered": "Dose (BSA entered)",
       "reduction": "Reduction, %",
       "reductionNeeded": "needed",
       "reductionSuggested": "review suggests",
@@ -264,6 +268,7 @@
   },
   "step": {
     "bsa.mosteller": "Mosteller BSA: √({{heightCm}} cm × {{weightKg}} kg / 3600)",
+    "bsa.entered": "BSA entered by hand: {{value}} m²",
     "bsa.cap": "BSA used (cap {{capM2}} m²)",
     "dose.perBsa": "{{doseValue}} {{doseUnit}} × {{bsaM2}} m²",
     "dose.perWeight": "{{doseValue}} {{doseUnit}} × {{weightKg}} kg",
@@ -283,6 +288,7 @@
   "warning": {
     "input.outOfRange": "{{field}}: {{value}} is outside {{min}}–{{max}}. Check the entered data.",
     "bsa.capped": "Actual BSA {{actualM2}} m² exceeds {{capM2}} m². Both dose variants are shown.",
+    "bsa.enteredDiffers": "The entered BSA {{enteredM2}} m² differs from the one calculated from height and weight ({{calculatedM2}} m²) by {{differencePercent}}%. Check the value.",
     "dose.capped": "Dose limited by the maximum ({{capAmount}} {{unit}}); the regimen would give {{baseAmount}} {{unit}}.",
     "carboplatin.gfrCapped": "GFR capped at {{capMlMin}} mL/min for the Calvert formula.",
     "infusion.concentrationOutOfRange": "Concentration {{concentration}} {{unit}} is outside the allowed range. Check the solvent volume.",

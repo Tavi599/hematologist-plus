@@ -24,10 +24,19 @@ export interface CourseSettingsValue {
   regimenId: string | null
   startDate: string
   dayStart: string
-  bsaVariant: BsaVariant
+  bsaVariant: BsaSource
+  /** BSA typed by the physician, m²; used only when `bsaVariant` is `entered`. */
+  bsaM2: number | null
   /** Which cycle of the regimen this is; the first infusion of an antibody is the slow one. */
   cycleNumber: number
 }
+
+/**
+ * Where the BSA for the doses comes from: the two calculated variants, or a value the physician
+ * types in — for a patient Mosteller does not describe (amputation, gross oedema) or to keep the
+ * BSA of the previous cycle.
+ */
+export type BsaSource = BsaVariant | 'entered'
 
 /** Regimen choice and the settings that apply to the whole course. */
 export function CourseSettings({
@@ -144,12 +153,26 @@ export function CourseSettings({
             data={[
               { value: 'actual', label: t('calculator.course.bsaActual') },
               { value: 'capped', label: t('calculator.course.bsaCapped') },
+              { value: 'entered', label: t('calculator.course.bsaEntered') },
             ]}
             value={value.bsaVariant}
-            onChange={(variant) =>
-              patch({ bsaVariant: (variant as BsaVariant | null) ?? 'actual' })
-            }
+            onChange={(variant) => patch({ bsaVariant: (variant as BsaSource | null) ?? 'actual' })}
           />
+          {value.bsaVariant === 'entered' && (
+            <NumberInput
+              label={t('calculator.course.bsaM2')}
+              description={t('calculator.course.bsaM2Hint')}
+              min={0.1}
+              max={4}
+              step={0.01}
+              decimalScale={2}
+              value={value.bsaM2 ?? ''}
+              onChange={(next) => {
+                const entered = Number(next)
+                patch({ bsaM2: Number.isFinite(entered) && entered > 0 ? entered : null })
+              }}
+            />
+          )}
         </Group>
       </Stack>
     </Card>

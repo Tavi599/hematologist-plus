@@ -12,6 +12,13 @@ export const DOMAIN_DEFAULTS = {
   /** Upper BSA limit for the second ("capped") dose variant, m². */
   bsaCapM2: 2.0,
 
+  /**
+   * How far a hand-entered BSA may sit from the one Mosteller gives for the same height and
+   * weight before it is questioned, %. Meant to catch a typed digit, not to argue with a
+   * deliberate choice: it only warns.
+   */
+  enteredBsaDifferencePercent: 10,
+
   /** µmol/L → mg/dL divisor for serum creatinine. */
   creatinineUmolPerMgDl: 88.4,
 

@@ -44,6 +44,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     startDate: todayIso(),
     dayStart: '09:00',
     bsaVariant: 'actual' as CourseSettingsValue['bsaVariant'],
+    bsaM2: null as number | null,
     cycleNumber: 1,
   })
   const [customItems, setCustomItems] = useState<RegimenItem[]>([])
@@ -98,7 +99,13 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           {
             startDateIso: courseSettings.startDate,
             dayStart: courseSettings.dayStart,
-            bsaVariant: courseSettings.bsaVariant,
+            // 'entered' is a source, not a third dose column: the typed BSA replaces Mosteller
+            // and the two columns stay actual / capped as before.
+            bsaVariant:
+              courseSettings.bsaVariant === 'entered' ? 'actual' : courseSettings.bsaVariant,
+            ...(courseSettings.bsaVariant === 'entered' && courseSettings.bsaM2 !== null
+              ? { bsaM2: courseSettings.bsaM2 }
+              : {}),
             cycleNumber: courseSettings.cycleNumber,
             drugPercent,
             doseOverrideAmount,

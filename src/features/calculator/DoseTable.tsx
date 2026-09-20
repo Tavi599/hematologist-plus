@@ -79,7 +79,13 @@ export function DoseTable(props: DoseTableProps) {
               <Table.Th w={52}>{t('calculator.doses.enabled')}</Table.Th>
               <Table.Th>{t('calculator.doses.drug')}</Table.Th>
               <Table.Th>{t('calculator.doses.scheme')}</Table.Th>
-              <Table.Th>{t('calculator.doses.doseActual')}</Table.Th>
+              <Table.Th>
+                {t(
+                  course?.bsa.entered
+                    ? 'calculator.doses.doseEntered'
+                    : 'calculator.doses.doseActual',
+                )}
+              </Table.Th>
               <Table.Th>{t('calculator.doses.doseCapped')}</Table.Th>
               <Table.Th w={110}>{t('calculator.doses.reduction')}</Table.Th>
               <Table.Th w={120}>{t('calculator.doses.manualDose')}</Table.Th>
