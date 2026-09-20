@@ -139,6 +139,14 @@ export const diseaseReferenceSchema = z.strictObject({
   url: z.url(),
   /** Shown instead of the name of the source, for a link that needs saying what it is. */
   label: localizedTextSchema.nullable().default(null),
+  /** Edition the article was written against, as the source itself numbers it, e.g. '2.2026'. */
+  version: z.string().nullable().default(null),
+  /** The day that edition was issued — what the reader checks before trusting the article. */
+  updated: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, 'YYYY-MM-DD')
+    .nullable()
+    .default(null),
 })
 
 export const diseaseReferencesSchema = z.array(diseaseReferenceSchema)

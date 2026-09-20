@@ -18,29 +18,45 @@ describe('DiseaseReferences', () => {
     renderWithProviders(
       <DiseaseReferences
         disease={disease([
-          { kind: 'nccn', url: 'https://www.nccn.org/guidelines/x', label: null },
+          {
+            kind: 'nccn',
+            url: 'https://www.nccn.org/guidelines/x',
+            label: null,
+            version: '2.2026',
+            updated: '2026-07-01',
+          },
           {
             kind: 'uptodate',
             url: 'https://www.uptodate.com/contents/search?search=y',
             label: null,
+            version: null,
+            updated: null,
           },
         ])}
       />,
     )
 
-    const nccn = screen.getByRole('link', { name: 'Що каже NCCN' })
+    const nccn = screen.getByRole('link', { name: 'Що каже NCCN · 2.2026' })
     expect(nccn).toHaveAttribute('href', 'https://www.nccn.org/guidelines/x')
     expect(nccn).toHaveAttribute('target', '_blank')
     // The guideline sites must not be able to reach back into the app through window.opener.
     expect(nccn.getAttribute('rel')).toContain('noopener')
     expect(screen.getByRole('link', { name: 'UpToDate' })).toBeInTheDocument()
+    // A guideline is only worth reading against a known edition.
+    expect(screen.getByText(/Що каже NCCN 2.2026 — 01.07.2026/)).toBeInTheDocument()
   })
 
   it('prefers a label written for the link', () => {
     renderWithProviders(
       <DiseaseReferences
         disease={disease([
-          { kind: 'other', url: 'https://example.org/', label: { uk: 'Наказ МОЗ', en: null } },
+          {
+            kind: 'other',
+            url: 'https://example.org/',
+            label: { uk: 'Наказ МОЗ', en: null },
+            version: null,
+            updated: null,
+          },
         ])}
       />,
     )

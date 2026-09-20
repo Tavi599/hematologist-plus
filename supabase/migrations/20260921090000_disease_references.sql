@@ -5,4 +5,4 @@ alter table public.diseases
   add column references_json jsonb not null default '[]'::jsonb;
 
 comment on column public.diseases.references_json is
-  'External guideline links: [{"kind":"nccn|uptodate|eviq|nssg|other","url":"https://...","label":{"uk":"...","en":"..."}}]. No article text is copied from them.';
+  'External guideline links: [{"kind":"nccn|uptodate|eviq|nssg|other","url":"https://...","label":{"uk":"...","en":"..."},"version":"2.2026","updated":"2026-07-01"}]. No article text is copied from them.';
