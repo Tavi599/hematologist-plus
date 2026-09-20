@@ -104,6 +104,15 @@ describe('buildXlsx', () => {
     expect(sheet).toContain('<printOptions horizontalCentered="1" gridLines="1"/>')
   })
 
+  it('holds a sheet meant as one blank on one page', () => {
+    const sheet = unzip(buildXlsx([{ name: 'S', rows: [['x']], onePage: true }])).get(
+      'xl/worksheets/sheet1.xml',
+    )
+
+    // A blank ruled a line too far prints a shade smaller, not over two sheets of paper.
+    expect(sheet).toContain('fitToWidth="1" fitToHeight="1" orientation="landscape"')
+  })
+
   it('writes each font, border and format once however many cells share it', () => {
     const bold = { font: { size: 16, bold: true }, box: { left: 'thin' as const }, wrap: true }
     const styles = unzip(

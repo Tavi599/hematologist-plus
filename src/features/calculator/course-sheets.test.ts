@@ -7,6 +7,7 @@ import { buildCourseItems } from '../../lib/course-input'
 import type { XlsxCell, XlsxInput, XlsxSheet } from '../../lib/xlsx-writer'
 import {
   buildCourseSheets,
+  pageFill,
   SHEET_HOURS,
   WARD_DAY_COLUMNS,
   type CourseSheetsInput,
@@ -152,12 +153,64 @@ describe('buildCourseSheets', () => {
     }
   })
 
-  it('always rules at least as many lines as the printed blank', () => {
-    const [day] = sheets()
-    // 4 header rows, 12 two-row bands, one note line at the foot.
-    expect(day!.rows).toHaveLength(4 + 12 * 2 + 1)
-    expect(day!.heights).toHaveLength(day!.rows.length)
-    expect(orders(day!, 4).filter((line) => line !== '').length).toBeLessThanOrEqual(12)
+  it('rules the blank down to the foot of the page, not to a fixed number of lines', () => {
+    const built = sheets()
+    const [day] = built
+    const ward = built.at(-1)!
+
+    for (const sheet of built) {
+      expect(sheet.heights).toHaveLength(sheet.rows.length)
+      // The table reaches the foot of the page and stops there: no strip of bare paper under it,
+      // and no last rule carried onto a second sheet.
+      expect(pageFill(sheet)).toBeLessThanOrEqual(1)
+      expect(pageFill(sheet)).toBeGreaterThan(0.9)
+      expect(sheet.onePage).toBe(true)
+    }
+    // The inpatient sheet carries the printed stamp of form №003-4/о, so fewer order lines fit
+    // on it — the blank follows the page it is printed on, not a number fixed in the code.
+    expect(day!.rows.length).toBeGreaterThan(ward.rows.length)
+    // Every order has a ruled line, and there are empty ones left over to write into by hand.
+    const written = orders(day!, 4).filter((line) => line !== '').length
+    expect(written).toBeGreaterThan(0)
+    expect(written).toBeLessThan((day!.rows.length - 5) / 2)
+  })
+
+  it('writes every hour and date so it fits the column it stands over', () => {
+    const built = sheets()
+    const hour = built[0]!.rows[3]![2] as XlsxCell
+    const date = built.at(-1)!.rows[4]![2] as XlsxCell
+
+    expect(date.value).toBe('21.09')
+    // Wrapped in a column five characters wide, a date loses its month over the edge of the row.
+    expect(hour.format!.wrap).toBeFalsy()
+    expect(date.format!.wrap).toBeFalsy()
+    expect(date.format!.align).toBe('center')
+    // The long printed headings of form No 003-4/o are set in the smaller type for the same reason.
+    const record = built.at(-1)!.rows[2]![0] as XlsxCell
+    expect(record.format!.wrap).toBeFalsy()
+    expect(record.format!.font!.size).toBe(10)
+  })
+
+  it('runs a course with more orders than the blank has lines onto a second page', () => {
+    const base = buildCourseItems(indexCatalog(demoCatalog()), 'r-chop-21')
+    const ward = base.find((item) => item.item.block === 'ward')!
+    const crowd = Array.from({ length: 20 }, (_unused, index) => ({
+      ...ward,
+      item: { ...ward.item, id: `${ward.item.id}.${index}` },
+      courseDrug: { ...ward.courseDrug, id: `${ward.item.id}.${index}` },
+    }))
+    const items = [...base.filter((item) => item.item.block !== 'ward'), ...crowd]
+    const course = calculateCourse(
+      { ageYears: 60, sex: 'male', heightCm: 180, weightKg: 80 },
+      items.map((item) => item.courseDrug),
+      { startDateIso: '2026-09-21' },
+    )
+
+    const sheet = sheets({ items, course }).at(-1)!
+    // Every order keeps its own ruled line; the sheet is not squeezed to fit one page.
+    expect(orders(sheet, 5).filter((line) => line !== '')).toHaveLength(20)
+    expect(sheet.onePage).toBe(false)
+    expect(pageFill(sheet)).toBeGreaterThan(1)
   })
 
   it('leaves the second row of each band free for the nurse to sign off in', () => {

@@ -44,14 +44,37 @@ export const SHEET_HOURS = [
 /** Date columns of the inpatient sheet; the blank has exactly this many. */
 export const WARD_DAY_COLUMNS = 24
 
-/** Order lines the blank is ruled for. A longer day simply grows the table. */
-const BLANK_ROWS = 12
-
 /** Two columns of orders before the grid: what is given, and how. */
 const ORDER_COLUMNS = 2
 const ORDER_WIDTH = 34.2
 const HOW_WIDTH = 16.9
 const GRID_WIDTH = 5
+
+/** Each order takes two ruled rows: the prescription above, the nurse's sign-off below. */
+const BAND_ROW_HEIGHT = 23.25
+const BAND_HEIGHT = BAND_ROW_HEIGHT * 2
+
+/**
+ * The paper: A4 landscape with the margins the writer prints on every sheet.
+ *
+ * Excel scales these sheets to the width of the page (`fitToWidth`), so the scale follows from
+ * the columns alone — and from the scale follows how much of the page one ruled line takes. That
+ * is what lets the blank be ruled down to the foot of the page instead of to a fixed number of
+ * lines: a sheet with a taller heading simply gets fewer lines, and the space left under the
+ * table is the same margin as above it.
+ */
+const PAGE_WIDTH_PT = 841.9
+const PAGE_HEIGHT_PT = 595.3
+const MARGIN_SIDE_PT = 28.8
+const MARGIN_EDGE_PT = 36
+
+/**
+ * How wide one unit of column width prints, in points. Excel measures a column in characters of
+ * the workbook's own font, so this is a property of the sheet rather than of the format, and the
+ * figure here is measured off a printed sheet (Arial 11). It does not have to be exact: a sheet
+ * ruled a line too far is printed a per cent smaller (`onePage`), not broken over two pages.
+ */
+const POINTS_PER_WIDTH_UNIT = 7.9
 
 /**
  * Text the blank itself carries. It is Ukrainian whatever language the app is showing, because
@@ -85,14 +108,23 @@ type XlsxLineSet = Required<XlsxBox>
 const THIN: XlsxLineSet = { left: 'thin', right: 'thin', top: 'thin', bottom: 'thin' }
 
 const ARIAL_12 = { size: 12 }
-const HEADER_FORMAT: XlsxFormat = { font: ARIAL_12, box: THIN, valign: 'top', wrap: true }
+const ARIAL_10 = { size: 10 }
+/**
+ * A heading cell holds one line and is centred in it. Wrapping is off on purpose: a wrapped line
+ * that outgrows its row is simply cut off by Excel, and a heading that reads «Номер медичної
+ * карти» where the blank says «Номер медичної карти стаціонарного пацієнта» is worse than a
+ * heading set a point smaller.
+ */
+const HEADER_FORMAT: XlsxFormat = { font: ARIAL_12, box: THIN, valign: 'center' }
+/** The same, for the long printed headings of form №003-4/о, which need the smaller type. */
+const LABEL_FORMAT: XlsxFormat = { font: ARIAL_10, box: THIN, valign: 'center' }
 const NAME_FORMAT: XlsxFormat = {
   font: { size: 13, bold: true },
   box: THIN,
   valign: 'top',
   wrap: true,
 }
-const STAMP_FORMAT: XlsxFormat = { font: { size: 10 }, box: THIN, valign: 'top', wrap: true }
+const STAMP_FORMAT: XlsxFormat = { font: ARIAL_10, box: THIN, valign: 'top', wrap: true }
 const TITLE_FORMAT: XlsxFormat = {
   font: { size: 13, bold: true },
   box: THIN,
@@ -126,6 +158,7 @@ export function buildCourseSheets(input: CourseSheetsInput): XlsxSheet[] {
 function daySheet(input: CourseSheetsInput, day: CourseResult['days'][number]): XlsxSheet {
   const { language, patient, course } = input
   const lastColumn = columnName(ORDER_COLUMNS + SHEET_HOURS.length - 1)
+  const widths = [ORDER_WIDTH, HOW_WIDTH, ...SHEET_HOURS.map(() => GRID_WIDTH)]
   const rows: XlsxInput[][] = []
   const merges: string[] = []
   const heights: number[] = []
@@ -144,7 +177,8 @@ function daySheet(input: CourseSheetsInput, day: CourseResult['days'][number]): 
     ...spread('', 24, HEADER_FORMAT),
   ])
   merges.push('A1:A2', 'C1:O1', 'P1:Z1', 'C2:Z2')
-  heights.push(15, 15)
+  // Two rows deep, so a long patient name has a second line to wrap onto.
+  heights.push(17, 17)
 
   // Row 3: the measurements the nurse checks a dose against.
   rows.push([
@@ -164,22 +198,19 @@ function daySheet(input: CourseSheetsInput, day: CourseResult['days'][number]): 
 
   // Row 4: the hour ruler.
   rows.push([
-    { value: BLANK.orders, format: gridHeadFormat(false) },
-    { value: null, format: gridHeadFormat(false) },
-    ...SHEET_HOURS.map((hour, index) => ({
-      value: hourLabel(hour),
-      format: gridHeadFormat(isGroupEnd(index)),
-    })),
+    { value: BLANK.orders, format: ORDER_HEAD_FORMAT },
+    { value: null, format: ORDER_HEAD_FORMAT },
+    ...SHEET_HOURS.map((hour) => ({ value: hourLabel(hour), format: RULER_FORMAT })),
   ])
   merges.push('A4:B4')
   heights.push(15.6)
 
   const orders = dayOrders(input, day)
-  appendBands(
+  const ruled = appendBands(
     rows,
     merges,
     heights,
-    SHEET_HOURS.length,
+    widths,
     orders.map((order) => ({
       what: order.what,
       how: order.how,
@@ -193,10 +224,11 @@ function daySheet(input: CourseSheetsInput, day: CourseResult['days'][number]): 
 
   return {
     name: dayTabName(input, day),
-    widths: [ORDER_WIDTH, HOW_WIDTH, ...SHEET_HOURS.map(() => GRID_WIDTH)],
+    widths,
     heights,
     rows,
     merges,
+    onePage: orders.length <= ruled,
   }
 }
 
@@ -261,6 +293,11 @@ function wardSheet(
 ): XlsxSheet {
   const { language, patient, header, t } = input
   const lastColumn = columnName(ORDER_COLUMNS + WARD_DAY_COLUMNS - 1)
+  const widths = [
+    ORDER_WIDTH,
+    HOW_WIDTH,
+    ...Array.from({ length: WARD_DAY_COLUMNS }, () => GRID_WIDTH),
+  ]
   const rows: XlsxInput[][] = []
   const merges: string[] = []
   const heights: number[] = []
@@ -276,44 +313,46 @@ function wardSheet(
     ...spread('', 9, STAMP_FORMAT),
   ])
   merges.push('A1:F1', 'Q1:Z1')
-  heights.push(66)
+  // Six printed lines of the form's designation at ten points, and the stamp beside it: the box
+  // is ruled to hold them whole, down to the order the form was approved by.
+  heights.push(84)
 
   rows.push([{ value: BLANK.wardHeading, format: TITLE_FORMAT }, ...spread('', 25, TITLE_FORMAT)])
   merges.push(`A2:${lastColumn}2`)
   heights.push(18)
 
   rows.push([
-    { value: BLANK.wardRecord, format: HEADER_FORMAT },
-    { value: patient.recordNumber || null, format: HEADER_FORMAT },
-    ...spread(BLANK.wardPatient, 3, HEADER_FORMAT),
-    ...spread(patient.fullName || '', 16, HEADER_FORMAT),
-    ...spread(BLANK.wardRoom, 3, HEADER_FORMAT),
-    ...spread('', 2, HEADER_FORMAT),
+    { value: BLANK.wardRecord, format: LABEL_FORMAT },
+    { value: patient.recordNumber || null, format: LABEL_FORMAT },
+    ...spread(BLANK.wardPatient, 3, LABEL_FORMAT),
+    ...spread(patient.fullName || '', 16, LABEL_FORMAT),
+    ...spread(BLANK.wardRoom, 3, LABEL_FORMAT),
+    ...spread('', 2, LABEL_FORMAT),
   ])
   merges.push('C3:E3', 'F3:U3', 'V3:X3', 'Y3:Z3')
   heights.push(15)
 
-  rows.push([{ value: BLANK.wardMode, format: HEADER_FORMAT }, ...spread('', 25, HEADER_FORMAT)])
+  rows.push([{ value: BLANK.wardMode, format: LABEL_FORMAT }, ...spread('', 25, LABEL_FORMAT)])
   merges.push(`B4:${lastColumn}4`)
   heights.push(15.75)
 
   rows.push([
-    { value: BLANK.wardOrders, format: gridHeadFormat(false) },
-    { value: null, format: gridHeadFormat(false) },
+    { value: BLANK.wardOrders, format: ORDER_HEAD_FORMAT },
+    { value: null, format: ORDER_HEAD_FORMAT },
     ...Array.from({ length: WARD_DAY_COLUMNS }, (_unused, index) => ({
-      value: days[index] ? formatDate(days[index]!.date, language).slice(0, 5) : '',
-      format: gridHeadFormat(isGroupEnd(index)),
+      value: days[index] ? dayAndMonth(days[index]!.date, language) : '',
+      format: RULER_FORMAT,
     })),
   ])
   merges.push('A5:B5')
-  heights.push(24)
+  heights.push(19.5)
 
   const resultById = new Map(input.course.drugs.map((drug) => [drug.id, drug]))
-  appendBands(
+  const ruled = appendBands(
     rows,
     merges,
     heights,
-    WARD_DAY_COLUMNS,
+    widths,
     wardItems.map((item) => {
       const result = resultById.get(item.item.id)
       return {
@@ -333,10 +372,11 @@ function wardSheet(
   const name = t('calculator.export.wardSheet')
   return {
     name: pages > 1 ? `${name} ${page + 1}` : name,
-    widths: [ORDER_WIDTH, HOW_WIDTH, ...Array.from({ length: WARD_DAY_COLUMNS }, () => GRID_WIDTH)],
+    widths,
     heights,
     rows,
     merges,
+    onePage: wardItems.length <= ruled,
   }
 }
 
@@ -350,17 +390,20 @@ interface Band {
 
 /**
  * Each order takes two ruled rows: the prescription is written across both, the mark goes in the
- * upper one and the lower one is left for the nurse to sign the administration off in. The table
- * always has at least as many lines as the printed blank, so a short day still looks like it.
+ * upper one and the lower one is left for the nurse to sign the administration off in. The blank
+ * is ruled to the foot of the page — a short course does not leave a strip of bare paper under
+ * the table, and the ward has empty lines to write a new order into by hand.
  */
 function appendBands(
   rows: XlsxInput[][],
   merges: string[],
   heights: number[],
-  width: number,
+  widths: number[],
   bands: Band[],
-): void {
-  const count = Math.max(BLANK_ROWS, bands.length)
+): number {
+  const width = widths.length - ORDER_COLUMNS
+  const ruled = blankBands(widths, heights)
+  const count = Math.max(ruled, bands.length)
   for (let index = 0; index < count; index++) {
     const band = bands[index]
     const top = rows.length + 1
@@ -381,8 +424,32 @@ function appendBands(
       })),
     ])
     merges.push(`A${top}:A${top + 1}`, `B${top}:B${top + 1}`)
-    heights.push(23.25, 23.25)
+    heights.push(BAND_ROW_HEIGHT, BAND_ROW_HEIGHT)
   }
+  return ruled
+}
+
+/** How many order lines are left on the page once the heading and the note box have their share. */
+function blankBands(widths: number[], headingHeights: number[]): number {
+  const heading = headingHeights.reduce((sum, height) => sum + height, 0)
+  const room = pagePoints(widths) - heading - NOTE_HEIGHT
+  return Math.max(1, Math.floor(room / BAND_HEIGHT))
+}
+
+/** How many points of a sheet's own height go on one printed page, at the scale Excel prints it. */
+function pagePoints(widths: number[]): number {
+  const sheetWidth = widths.reduce((sum, width) => sum + width, 0) * POINTS_PER_WIDTH_UNIT
+  const scale = (PAGE_WIDTH_PT - 2 * MARGIN_SIDE_PT) / sheetWidth
+  return (PAGE_HEIGHT_PT - 2 * MARGIN_EDGE_PT) / scale
+}
+
+/**
+ * How much of one printed page a built sheet fills: 1 is the full page between the margins.
+ * Above 1 the table runs onto a second sheet of paper.
+ */
+export function pageFill(sheet: XlsxSheet): number {
+  const height = (sheet.heights ?? []).reduce((sum, value) => sum + value, 0)
+  return height / pagePoints(sheet.widths ?? [])
 }
 
 /** The cells a merged range covers still have to exist, or its borders break up. */
@@ -449,6 +516,11 @@ function dateLine(iso: string): string {
   return year && month && day ? `Дата: ${day} / ${month} / ${year}р.` : `Дата: ${iso}`
 }
 
+/** A date column of the inpatient sheet: day and month, the way the ward writes it by hand. */
+function dayAndMonth(iso: string, language: Language): string {
+  return formatDate(iso, language).slice(0, 5)
+}
+
 function dayTabName(input: CourseSheetsInput, day: CourseResult['days'][number]): string {
   const prefix = input.regimenName ?? input.t('calculator.schedule.day', { day: day.day })
   return input.regimenName === null ? prefix : `${prefix} д${day.day}`
@@ -464,14 +536,20 @@ function isGroupEnd(column: number): boolean {
   return (column + 1) % GROUP_EVERY === 0
 }
 
-function gridHeadFormat(groupEnd: boolean): XlsxFormat {
-  return {
-    font: ARIAL_12,
-    box: { left: 'medium', right: 'medium', top: 'medium', bottom: 'medium' },
-    align: groupEnd ? 'center' : 'left',
-    valign: 'top',
-    wrap: true,
-  }
+const MEDIUM: XlsxLineSet = { left: 'medium', right: 'medium', top: 'medium', bottom: 'medium' }
+
+/** The «Призначення … / Час» cell over the two order columns. */
+const ORDER_HEAD_FORMAT: XlsxFormat = { font: ARIAL_12, box: MEDIUM, valign: 'center' }
+
+/**
+ * One hour or one date over the grid. Set in the smaller type and centred without wrapping: a
+ * date wrapped in a column five characters wide loses its month to the edge of the row.
+ */
+const RULER_FORMAT: XlsxFormat = {
+  font: ARIAL_10,
+  box: MEDIUM,
+  align: 'center',
+  valign: 'center',
 }
 
 function orderFormat(groupEnd: boolean): XlsxFormat {
