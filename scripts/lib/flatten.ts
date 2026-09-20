@@ -1,3 +1,4 @@
+import { ARTICLE_SECTIONS, type ArticleSection } from '../../src/schemas/common'
 import type { SyncRows, TreatmentNode, TreatmentNodeRegimen } from '../../src/schemas/catalog'
 import type { DataSet, TreatmentNodeFile } from './data-files'
 
@@ -98,16 +99,21 @@ export function flattenDataSet(data: DataSet): SyncRows {
     const { codes, treatment, article, references, $comment: _comment, ...diseaseRow } = disease
     // The column is named references_json: "references" is reserved in Postgres.
     rows.diseases.push({ ...diseaseRow, references_json: references })
-    // Article text lives in its own table: the public catalog must not carry it.
-    for (const [language, body] of Object.entries(article ?? {})) {
-      if (typeof body !== 'string' || body.trim() === '') continue
-      rows.disease_articles.push({
-        id: childId(disease.id, language),
-        disease_id: disease.id,
-        language: language as 'uk' | 'en',
-        body,
-        sort_order: language === 'uk' ? 0 : 1,
-      })
+    // Article text lives in its own table: the public catalog must not carry it. One row per
+    // source and language; the department's own write-up keeps the id it already has.
+    for (const [section, byLanguage] of Object.entries(article ?? {})) {
+      for (const [language, body] of Object.entries(byLanguage ?? {})) {
+        if (typeof body !== 'string' || body.trim() === '') continue
+        rows.disease_articles.push({
+          id: childId(disease.id, section === 'own' ? language : `${section}.${language}`),
+          disease_id: disease.id,
+          language: language as 'uk' | 'en',
+          body,
+          section: section as ArticleSection,
+          sort_order:
+            ARTICLE_SECTIONS.indexOf(section as ArticleSection) * 2 + (language === 'uk' ? 0 : 1),
+        })
+      }
     }
     codes.forEach((code, index) => {
       rows.disease_codes.push({

@@ -2,6 +2,7 @@ import { z } from 'zod'
 
 import {
   amountUnitSchema,
+  type ArticleSection,
   rateRampSchema,
   scheduleBlockSchema,
   diseaseReferencesSchema,
@@ -211,8 +212,12 @@ export type ClassificationSystemsFile = z.infer<typeof classificationSystemsFile
 export type DrugFile = z.infer<typeof drugFileSchema>
 export type RegimenFile = z.infer<typeof regimenFileSchema>
 export type DiseaseFile = z.infer<typeof diseaseFileSchema> & {
-  /** Markdown from article.<lang>.md next to disease.json. */
-  article: z.infer<typeof localizedTextSchema> | null
+  /**
+   * Markdown next to disease.json, by source: `own` from article.<lang>.md, the rest from
+   * article.<source>.<lang>.md. Department-only text, so it is read from the private content
+   * directory, never from this repository.
+   */
+  article: Partial<Record<ArticleSection, z.infer<typeof localizedTextSchema>>> | null
 }
 export type { TreatmentNodeFile }
 

@@ -3,6 +3,7 @@ import { basename, join, relative } from 'node:path'
 
 import type { z } from 'zod'
 
+import { ARTICLE_SECTIONS } from '../../src/schemas/common'
 import {
   classificationSystemsFileSchema,
   diseaseFileSchema,
@@ -153,13 +154,22 @@ export function loadDataDir(dir: string, options: LoadOptions = {}): LoadResult 
   return { data, issues }
 }
 
+/**
+ * `article.<lang>.md` is the department's own write-up; `article.<source>.<lang>.md` is what it
+ * wrote from that guideline (`article.nccn.uk.md`). Each becomes its own row, so the reader can
+ * ask what one source says without the others in the way.
+ */
 function readArticle(diseaseDir: string): DiseaseFile['article'] {
   const article: NonNullable<DiseaseFile['article']> = {}
-  for (const language of ['uk', 'en'] as const) {
-    const file = join(diseaseDir, `article.${language}.md`)
-    if (!existsSync(file)) continue
-    const text = readFileSync(file, 'utf8').replace(/^\uFEFF/, '')
-    if (text.trim() !== '') article[language] = text
+  for (const section of ARTICLE_SECTIONS) {
+    const infix = section === 'own' ? '' : `${section}.`
+    for (const language of ['uk', 'en'] as const) {
+      const file = join(diseaseDir, `article.${infix}${language}.md`)
+      if (!existsSync(file)) continue
+      const text = readFileSync(file, 'utf8').replace(/^\uFEFF/, '')
+      if (text.trim() === '') continue
+      article[section] = { ...article[section], [language]: text }
+    }
   }
   return Object.keys(article).length > 0 ? article : null
 }

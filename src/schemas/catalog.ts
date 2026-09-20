@@ -20,6 +20,7 @@ import {
   sourcesSchema,
   solventSchema,
   sortOrderSchema,
+  articleSectionSchema,
   treatmentNodeKindSchema,
   unitEquivalenceSchema,
 } from './common'
@@ -173,6 +174,8 @@ export const diseaseArticleRowSchema = z.object({
   language: z.enum(['uk', 'en']),
   body: nonEmptyTextSchema,
   sort_order: sortOrderSchema,
+  /** Which source this text was written from; defaulted for a database without the column. */
+  section: articleSectionSchema.default('own'),
 })
 
 /**
@@ -279,7 +282,7 @@ export type TreatmentNodeRegimen = CatalogRow<'treatment_node_regimens'>
  * Bump when the catalog shape changes incompatibly: invalidates offline caches.
  * Keep in step with new migrations that change columns.
  */
-export const CATALOG_SCHEMA_VERSION = '7'
+export const CATALOG_SCHEMA_VERSION = '8'
 
 export function emptySyncRows(): SyncRows {
   return { ...emptyCatalog(), disease_articles: [] }

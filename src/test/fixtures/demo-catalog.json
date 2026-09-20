@@ -407,7 +407,15 @@
       },
       "summary": null,
       "sort_order": 0,
-      "references_json": []
+      "references_json": [
+        {
+          "kind": "nccn",
+          "url": "https://www.nccn.org/guidelines/demo",
+          "label": null,
+          "version": "1.2026",
+          "updated": "2026-01-15"
+        }
+      ]
     }
   ],
   "disease_codes": [
@@ -449,6 +457,7 @@
       "disease_id": "dlbcl",
       "language": "uk",
       "body": "# ДЕМО-стаття\n\nТестовий текст для перевірки конвеєра даних. **Не для клінічного використання.**\n\n| Поле | Значення |\n|---|---|\n| МКХ-10 | C83.3 |\n",
+      "section": "own",
       "sort_order": 0
     },
     {
@@ -456,7 +465,16 @@
       "disease_id": "dlbcl",
       "language": "en",
       "body": "# DEMO article\n\nTest text for checking the data pipeline. **Not for clinical use.**\n",
+      "section": "own",
       "sort_order": 1
+    },
+    {
+      "id": "dlbcl.nccn.uk",
+      "disease_id": "dlbcl",
+      "language": "uk",
+      "body": "# ДЕМО: що каже NCCN\n\nТестовий текст для перевірки конвеєра даних. **Не для клінічного використання.**\nЦе наш власний конспект, а не текст настанови.\n",
+      "section": "nccn",
+      "sort_order": 2
     }
   ]
 }

@@ -5,13 +5,34 @@
     "uk": "ДЕМО Дифузна В-великоклітинна лімфома",
     "en": "DEMO Diffuse large B-cell lymphoma"
   },
-  "codes": [{ "system_id": "icd-10", "code": "C83.3", "is_primary": true }],
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C83.3",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/demo",
+      "version": "1.2026",
+      "updated": "2026-01-15"
+    }
+  ],
   "treatment": [
     {
       "key": "first-line",
       "kind": "line",
-      "title": { "uk": "Перша лінія", "en": "First line" },
-      "regimens": [{ "regimen_id": "r-chop-21" }]
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "regimens": [
+        {
+          "regimen_id": "r-chop-21"
+        }
+      ]
     }
   ]
 }

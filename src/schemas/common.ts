@@ -169,6 +169,16 @@ export const diseaseReferenceSchema = z.strictObject({
 })
 
 export const diseaseReferencesSchema = z.array(diseaseReferenceSchema)
+export type DiseaseReference = z.infer<typeof diseaseReferenceSchema>
+
+/**
+ * Which part of a disease's article a row holds. `own` is the department's own write-up; the
+ * rest are what the department wrote from that guideline, kept apart so a reader can ask what
+ * one source says without the others in the way. The text never leaves the private table.
+ */
+export const ARTICLE_SECTIONS = ['own', ...REFERENCE_KINDS] as const
+export const articleSectionSchema = z.enum(ARTICLE_SECTIONS)
+export type ArticleSection = z.infer<typeof articleSectionSchema>
 
 /**
  * Where a row of the course is timed and printed.

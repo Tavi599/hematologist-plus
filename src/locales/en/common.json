@@ -170,9 +170,10 @@
     "article": "Article",
     "summary": "Summary",
     "otherLanguage": "The article is available in another language only.",
-    "references": "What the guidelines say",
+    "references": "What the sources say",
+    "sourceOwn": "Our article",
     "referencesUpdated": "Guideline edition: {{list}}.",
-    "referencesNote": "The links open on the guideline sites. NCCN and UpToDate need your own sign-in; the app stores none of their text."
+    "referencesNote": "These texts are written in the department from the named guidelines and open only after sign-in. The guidelines’ own text is neither stored nor linked to."
   },
   "catalog": {
     "loading": "Loading reference data…",
@@ -364,7 +365,7 @@
     "signOut": "Sign out",
     "signedInAs": "Signed in as {{email}}",
     "articleLocked": "The article text is available after signing in.",
-    "articleEmpty": "There is no article for this disease yet."
+    "articleEmpty": "Nothing written for this source yet."
   },
   "treatmentKind": {
     "treatment": "treatment",

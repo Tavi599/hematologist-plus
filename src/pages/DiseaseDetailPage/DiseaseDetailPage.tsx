@@ -1,15 +1,18 @@
 import { Alert, Anchor, Badge, Card, Group, Loader, Stack, Text, Title } from '@mantine/core'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router'
 
 import { routes } from '../../app/routes'
 import { SignInPanel } from '../../features/auth/SignInPanel'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
-import { DiseaseReferences } from '../../features/catalog/DiseaseReferences'
+import { ArticleSources } from '../../features/catalog/ArticleSources'
 import { TreatmentTree } from '../../features/catalog/TreatmentTree'
 import { useDiseaseArticles } from '../../lib/articles'
 import { isAuthConfigured, useSessionUser } from '../../lib/auth'
 import type { CatalogIndex } from '../../lib/catalog-index'
+import type { Disease } from '../../schemas/catalog'
+import type { ArticleSection } from '../../schemas/common'
 import { currentLanguage } from '../../lib/i18n'
 import { localize, resolveLocalized } from '../../lib/localized'
 import { Markdown } from './Markdown'
@@ -54,7 +57,6 @@ function DiseaseDetail({ catalog, slug }: { catalog: CatalogIndex; slug: string 
         </Group>
       )}
       {disease.summary !== null && <Text>{localize(disease.summary, language)}</Text>}
-      <DiseaseReferences disease={disease} />
 
       <Card withBorder component="section">
         <Stack gap="sm">
@@ -65,18 +67,21 @@ function DiseaseDetail({ catalog, slug }: { catalog: CatalogIndex; slug: string 
         </Stack>
       </Card>
 
-      <ArticleSection diseaseId={disease.id} />
+      <ArticleSection disease={disease} />
     </Stack>
   )
 }
 
-function ArticleSection({ diseaseId }: { diseaseId: string }) {
+function ArticleSection({ disease }: { disease: Disease }) {
   const { t } = useTranslation()
   const language = currentLanguage()
   const { user, loading } = useSessionUser()
-  const articles = useDiseaseArticles(diseaseId, user !== null)
+  const articles = useDiseaseArticles(disease.id, user !== null)
+  const [section, setSection] = useState<ArticleSection>('own')
 
   if (!isAuthConfigured) return null
+
+  const forSection = (articles.data ?? []).filter((row) => row.section === section)
 
   return (
     <Card withBorder component="section">
@@ -84,6 +89,7 @@ function ArticleSection({ diseaseId }: { diseaseId: string }) {
         <Title order={2} size="h4">
           {t('diseaseDetail.article')}
         </Title>
+        <ArticleSources disease={disease} value={section} onChange={setSection} />
         {loading ? (
           <Loader size="sm" />
         ) : user === null ? (
@@ -100,7 +106,7 @@ function ArticleSection({ diseaseId }: { diseaseId: string }) {
         ) : (
           <ArticleBody
             resolved={resolveLocalized(
-              Object.fromEntries(articles.data.map((row) => [row.language, row.body])),
+              Object.fromEntries(forSection.map((row) => [row.language, row.body])),
               language,
             )}
           />

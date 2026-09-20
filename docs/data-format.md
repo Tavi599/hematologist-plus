@@ -16,9 +16,15 @@ data/
   drugs/<id>.json                препарат + фасування + параметри розведення
   regimens/<id>.json             схема + препарати курсу + друковані форми
   diseases/<id>/disease.json     хвороба + коди + дерево лікування
-  <content>/diseases/<id>/article.uk.md   стаття (Markdown) — у приватному репозиторії, шлях через --content
+  <content>/diseases/<id>/article.uk.md   наша стаття (Markdown) — у приватному репозиторії, шлях через --content
   <content>/diseases/<id>/article.en.md
+  <content>/diseases/<id>/article.nccn.uk.md      що ми написали за настановою NCCN
+  <content>/diseases/<id>/article.uptodate.uk.md  те саме для UpToDate, eviq, nssg, other
 ```
+
+Кожен файл стає окремим рядком `disease_articles` з полем `section` (`own` для `article.<lang>.md`,
+інакше — назва джерела). У програмі це кнопки під хворобою: вони перемикають розділ статті
+всередині застосунку і **нікуди не ведуть**. Джерело, версія й дата — у `references` хвороби.
 
 ## Загальні правила
 
