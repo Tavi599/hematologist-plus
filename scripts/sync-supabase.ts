@@ -5,8 +5,8 @@
  *   npm run data:sync -- --apply            write inserts and updates
  *   npm run data:sync -- --apply --prune    also delete rows that are no longer in data/
  *   npm run data:sync -- --dir <path>       use another data directory (e.g. data-demo)
- *   npm run data:sync -- --sql <file>       write one SQL transaction for the Supabase SQL editor
- *                                           instead of connecting (add --prune to delete stale rows)
+ *   npm run data:sync -- --sql <file>       write one SQL transaction with just the changes, for
+ *                                           the Supabase SQL editor (add --prune to delete stale rows)
  *
  * Dry run needs only the public .env. Writing needs SUPABASE_SECRET_KEY in .env.local.
  */
@@ -15,7 +15,7 @@ import { writeFileSync } from 'node:fs'
 import { createClient } from '@supabase/supabase-js'
 
 import { createSupabaseTableFetcher } from '../src/lib/catalog'
-import { PRIVATE_TABLES, SYNC_TABLES, type SyncTable } from '../src/schemas/catalog'
+import { PRIVATE_TABLES, SYNC_TABLES, type SyncRows, type SyncTable } from '../src/schemas/catalog'
 import { checkCatalog } from './lib/check-catalog'
 import { diffCatalog, hasChanges, type TableDiff } from './lib/diff'
 import { loadEnv, parseArgs, requireEnv } from './lib/env'
@@ -47,12 +47,6 @@ async function main() {
   }
 
   const sqlFile = options.get('sql')
-  if (sqlFile) {
-    writeFileSync(sqlFile, catalogToSql(rows, { prune }))
-    console.log(`\nWrote ${sqlFile}${prune ? ' (including deletes of stale rows)' : ''}.`)
-    return
-  }
-
   const url = requireEnv('VITE_SUPABASE_URL', 'Expected in .env.')
   const key = apply
     ? requireEnv('SUPABASE_SECRET_KEY', 'Put the secret key into .env.local (see .env.example).')
@@ -93,6 +87,17 @@ async function main() {
 
   if (!hasChanges(diffs, prune)) {
     console.log('\nDatabase is up to date.')
+    return
+  }
+
+  // A file for the SQL editor carries only what differs. The whole catalog is a quarter of a
+  // megabyte of upserts nobody can read before running them; the changes are a few kilobytes.
+  if (sqlFile) {
+    const changed = Object.fromEntries(
+      diffs.map((diff) => [diff.table, [...diff.inserts, ...diff.updates]]),
+    ) as Partial<SyncRows>
+    writeFileSync(sqlFile, catalogToSql(rows, { prune, changed }))
+    console.log(`\nWrote ${sqlFile}${prune ? ' (including deletes of stale rows)' : ''}.`)
     return
   }
   if (!apply) {
