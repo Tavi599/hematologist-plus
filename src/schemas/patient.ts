@@ -8,13 +8,7 @@ import { z } from 'zod'
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/
 const TIME_PATTERN = /^([01]\d|2[0-3]):[0-5]\d$/
 
-/** Number inputs hand over a number or an empty string. */
-const requiredNumber = (min: number, max: number) =>
-  z
-    .union([z.number(), z.string().trim().min(1)])
-    .transform(Number)
-    .pipe(z.number().min(min).max(max))
-
+/** Number inputs hand over a number or an empty string; an empty one reads as «not given». */
 const optionalNumber = (min: number, max: number) =>
   z.union([
     z.literal('').transform(() => null),
@@ -27,16 +21,23 @@ const optionalNumber = (min: number, max: number) =>
 
 export const CREATININE_UNITS = ['umol_l', 'mg_dl'] as const
 
-/** Wide hard limits; clinically implausible values are surfaced as warnings by the domain. */
+/**
+ * Wide hard limits; clinically implausible values are surfaced as warnings by the domain.
+ *
+ * Height, weight and age may be left empty: a course of drugs dosed per square metre can be
+ * calculated from a BSA the physician types in, and the printed sheet simply leaves the line for
+ * the ward to fill in by hand. What is genuinely needed is asked for where it is needed — a dose
+ * per kilogram or by AUC names the missing field instead of the form refusing to start.
+ */
 export const patientFormSchema = z.object({
   /** Identification, used only for the printed sheets. */
   fullName: z.string().trim(),
   recordNumber: z.string().trim(),
   birthDate: z.union([z.literal(''), z.string().regex(DATE_PATTERN)]),
-  ageYears: requiredNumber(0, 130),
+  ageYears: optionalNumber(0, 130),
   sex: z.enum(['male', 'female']),
-  heightCm: requiredNumber(50, 300),
-  weightKg: requiredNumber(1, 500),
+  heightCm: optionalNumber(50, 300),
+  weightKg: optionalNumber(1, 500),
   serumCreatinine: optionalNumber(0.01, 5000),
   creatinineUnit: z.enum(CREATININE_UNITS),
   bilirubinUmolL: optionalNumber(0.1, 2000),

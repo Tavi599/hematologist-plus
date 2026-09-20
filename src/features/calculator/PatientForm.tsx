@@ -34,7 +34,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
     mode: 'onChange',
     resolver: zodResolver(patientFormSchema),
   })
-  const { control, formState, register, setValue, watch } = form
+  const { control, formState, getValues, register, setValue, watch } = form
 
   const onChangeRef = useRef(onChange)
   onChangeRef.current = onChange
@@ -43,6 +43,9 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
       const parsed = patientFormSchema.safeParse(values)
       onChangeRef.current(parsed.success ? parsed.data : null)
     }
+    // An untouched form is already a valid one: every measurement is optional, so the parent
+    // hears about it straight away and can calculate from a BSA entered on the course card.
+    report(getValues())
     // The subscription is how react-hook-form reports every change; this component is
     // intentionally not memoized by the React Compiler.
     // oxlint-disable-next-line react/incompatible-library
@@ -54,7 +57,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
       report(values as PatientFormValues)
     })
     return () => subscription.unsubscribe()
-  }, [watch, setValue])
+  }, [getValues, watch, setValue])
 
   const invalid = (field: keyof PatientFormValues) =>
     formState.errors[field] ? t('calculator.patient.invalid') : null
@@ -133,6 +136,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
               <NumberInput
                 {...field}
                 label={t('calculator.patient.heightCm')}
+                description={t('calculator.patient.orEnterBsa')}
                 min={50}
                 max={300}
                 error={invalid('heightCm')}
@@ -146,6 +150,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
               <NumberInput
                 {...field}
                 label={t('calculator.patient.weightKg')}
+                description={t('calculator.patient.orEnterBsa')}
                 min={1}
                 max={500}
                 decimalScale={1}

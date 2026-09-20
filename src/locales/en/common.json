@@ -36,7 +36,8 @@
       "required": "Fill in this field",
       "summary": "BSA {{bsa}} m² · creatinine clearance {{crcl}}",
       "summaryNoCrcl": "BSA {{bsa}} m² · creatinine clearance not calculated (no creatinine)",
-      "incomplete": "Fill in height, weight, age and sex to see the calculation."
+      "incomplete": "Fill in height and weight — or enter the BSA by hand — to see the calculation.",
+      "orEnterBsa": "or enter the BSA by hand"
     },
     "course": {
       "title": "Course",
@@ -297,7 +298,9 @@
     "review.elderly": "Age {{value}} years ({{threshold}}+). Consider a reduction.",
     "review.highBilirubin": "Bilirubin {{value}} µmol/L is above {{threshold}}. Consider a reduction.",
     "title": "Note",
-    "noDoseChange": "Warnings never change a dose — the decision rests with the physician."
+    "noDoseChange": "Warnings never change a dose — the decision rests with the physician.",
+    "review.clearanceUnknown": "Creatinine clearance not calculated: {{field}} is missing. Check renal function separately.",
+    "review.ageUnknown": "Age is not given, so the age-based review hints are not shown."
   },
   "sources": {
     "title": "Sources",

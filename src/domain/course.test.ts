@@ -75,6 +75,71 @@ describe('calculateCourse', () => {
     expect(course.warnings.some((warning) => warning.code === 'bsa.enteredDiffers')).toBe(false)
   })
 
+  it('calculates from an entered BSA alone, with no height and no weight', () => {
+    // The physician has the BSA from the previous cycle's sheet and nothing else on the form.
+    const bare: CoursePatient = { sex: 'male' }
+    const course = calculateCourse(bare, [rituximab], { ...adjustments, bsaM2: 1.8 })
+
+    expect(course.bsa.actualM2).toBe(1.8)
+    // Nothing to compare the typed figure against, so nothing is claimed about it.
+    expect(course.warnings.some((warning) => warning.code === 'bsa.enteredDiffers')).toBe(false)
+    // 375 mg/m² × 1.8 = 675 mg.
+    expect(course.drugs[0]?.doseAmount).toBe(675)
+  })
+
+  it('names the measurement it needs when the BSA is not entered', () => {
+    const noHeight: CoursePatient = { sex: 'male', weightKg: 80 }
+    const noWeight: CoursePatient = { sex: 'male', heightCm: 180 }
+
+    expect(() => calculateCourse(noHeight, [rituximab], adjustments)).toThrow(
+      expect.objectContaining({ field: 'heightCm' }),
+    )
+    expect(() => calculateCourse(noWeight, [rituximab], adjustments)).toThrow(
+      expect.objectContaining({ field: 'weightKg' }),
+    )
+  })
+
+  it('needs the weight for a dose per kilogram, whatever the BSA', () => {
+    const perKilogram: CourseDrug = {
+      id: 'r.cytarabine',
+      dose: { value: 2, unit: 'mg_kg' },
+      days: [1],
+    }
+    expect(() =>
+      calculateCourse({ sex: 'male' }, [perKilogram], { ...adjustments, bsaM2: 1.8 }),
+    ).toThrow(expect.objectContaining({ field: 'weightKg' }))
+  })
+
+  it('says so instead of passing off a missing clearance as no concern', () => {
+    // Creatinine without an age: Cockcroft-Gault cannot be evaluated, and the physician is told.
+    const noAge: CoursePatient = { sex: 'male', weightKg: 80, serumCreatinine: 88.4 }
+    const course = calculateCourse(noAge, [rituximab], { ...adjustments, bsaM2: 1.8 })
+    const warning = course.warnings.find((item) => item.code === 'review.clearanceUnknown')
+
+    expect(course.creatinineClearanceMlMin).toBeNull()
+    expect(warning?.params.field).toBe('ageYears')
+
+    const noWeight: CoursePatient = { sex: 'male', ageYears: 60, serumCreatinine: 88.4 }
+    expect(
+      calculateCourse(noWeight, [rituximab], { ...adjustments, bsaM2: 1.8 }).warnings.find(
+        (item) => item.code === 'review.clearanceUnknown',
+      )?.params.field,
+    ).toBe('weightKg')
+  })
+
+  it('says when an age-based review hint cannot be given', () => {
+    const elderlyRule: CourseDrug = { ...rituximab, reviewRules: { elderly: true } }
+    const course = calculateCourse({ sex: 'male' }, [elderlyRule], {
+      ...adjustments,
+      bsaM2: 1.8,
+    })
+
+    expect(course.warnings.some((warning) => warning.code === 'review.ageUnknown')).toBe(true)
+    // With an age on the form there is nothing to say: the hint itself is shown or it is not.
+    const withAge = calculateCourse({ ...patient, ageYears: 60 }, [elderlyRule], adjustments)
+    expect(withAge.warnings.some((warning) => warning.code === 'review.ageUnknown')).toBe(false)
+  })
+
   it('refuses an entered BSA that is not a positive number', () => {
     expect(() => calculateCourse(patient, [rituximab], { ...adjustments, bsaM2: 0 })).toThrow(
       DomainInputError,

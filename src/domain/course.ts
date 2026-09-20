@@ -37,10 +37,13 @@ import {
 export type BsaVariant = 'actual' | 'capped'
 
 export interface CoursePatient {
-  ageYears: number
+  /** Needed for the creatinine clearance and for the age-based review hints. */
+  ageYears?: number
   sex: Sex
-  heightCm: number
-  weightKg: number
+  /** Needed for the Mosteller BSA; not needed at all when the BSA is entered by hand. */
+  heightCm?: number
+  /** Needed for the Mosteller BSA, for doses per kilogram and for the creatinine clearance. */
+  weightKg?: number
   serumCreatinine?: number
   creatinineUnit?: CreatinineUnit
   bilirubinUmolL?: number
@@ -164,11 +167,13 @@ export function calculateCourse(
   assertUniqueIds(enabled)
 
   const bsa =
-    adjustments.bsaM2 === undefined
-      ? calculateBsa(patient.heightCm, patient.weightKg)
-      : enteredBsa(adjustments.bsaM2)
+    adjustments.bsaM2 === undefined ? mostellerFor(patient) : enteredBsa(adjustments.bsaM2)
+  // Cockcroft-Gault needs an age and a weight. Without them there is no clearance to check
+  // against — said out loud below, never passed off as «no concern».
   const renal =
-    patient.serumCreatinine === undefined
+    patient.serumCreatinine === undefined ||
+    patient.ageYears === undefined ||
+    patient.weightKg === undefined
       ? null
       : cockcroftGault({
           ageYears: patient.ageYears,
@@ -193,9 +198,22 @@ export function calculateCourse(
       params: { actualM2: bsa.actualM2, capM2: bsa.capM2 },
     })
   }
+  if (patient.serumCreatinine !== undefined && renal === null) {
+    warnings.push({
+      code: 'review.clearanceUnknown',
+      params: { field: patient.ageYears === undefined ? 'ageYears' : 'weightKg' },
+    })
+  }
+  if (patient.ageYears === undefined && enabled.some((drug) => drug.reviewRules?.elderly)) {
+    warnings.push({ code: 'review.ageUnknown', params: {} })
+  }
   // A hand-entered BSA is used as given, but a typed digit is worth catching: say so when it
   // disagrees with the height and weight on the same form.
-  if (adjustments.bsaM2 !== undefined) {
+  if (
+    adjustments.bsaM2 !== undefined &&
+    patient.heightCm !== undefined &&
+    patient.weightKg !== undefined
+  ) {
     const mosteller = mostellerBsa(patient.heightCm, patient.weightKg)
     const differencePercent = Math.abs((adjustments.bsaM2 - mosteller) / mosteller) * 100
     if (differencePercent > DOMAIN_DEFAULTS.enteredBsaDifferencePercent) {
@@ -211,7 +229,7 @@ export function calculateCourse(
   }
 
   const reviewContext = {
-    ageYears: patient.ageYears,
+    ...(patient.ageYears === undefined ? {} : { ageYears: patient.ageYears }),
     ...(renal ? { creatinineClearanceMlMin: renal.mlMin } : {}),
     ...(patient.bilirubinUmolL === undefined ? {} : { bilirubinUmolL: patient.bilirubinUmolL }),
   }
@@ -253,12 +271,27 @@ export function calculateCourse(
   }
 }
 
+/**
+ * BSA from height and weight. Both are needed here and nowhere else in the course: a physician
+ * who has the BSA on the previous cycle's sheet types it in instead, and the calculation runs
+ * without them.
+ */
+function mostellerFor(patient: CoursePatient): BsaResult {
+  if (patient.heightCm === undefined || patient.weightKg === undefined) {
+    throw new DomainInputError(
+      patient.heightCm === undefined ? 'heightCm' : 'weightKg',
+      'is required unless the BSA is entered by hand',
+    )
+  }
+  return calculateBsa(patient.heightCm, patient.weightKg)
+}
+
 interface DrugContext {
   patient: CoursePatient
   bsa: BsaResult
   variant: BsaVariant
   gfrMlMin: number | undefined
-  reviewContext: { ageYears: number; creatinineClearanceMlMin?: number; bilirubinUmolL?: number }
+  reviewContext: { ageYears?: number; creatinineClearanceMlMin?: number; bilirubinUmolL?: number }
   reduction: { coursePercent?: number; drugPercent?: number }
   /** Dose typed by the physician for this drug, in the drug's own unit. */
   overrideAmount?: number

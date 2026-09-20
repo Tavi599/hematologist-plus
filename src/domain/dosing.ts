@@ -17,7 +17,8 @@ export interface DoseSpec {
 
 export interface DoseContext {
   bsaM2: number
-  weightKg: number
+  /** Required for `<unit>_kg` doses; a course of m²-dosed drugs is calculated without it. */
+  weightKg?: number
   /** Required for `auc` doses. */
   gfrMlMin?: number
 }
@@ -78,6 +79,9 @@ export function calculateDose(
       })
       break
     case 'kg':
+      if (context.weightKg === undefined) {
+        throw new DomainInputError('weightKg', 'is required for a dose per kilogram')
+      }
       assertPositive('weightKg', context.weightKg)
       baseAmount = spec.value * context.weightKg
       steps.push({

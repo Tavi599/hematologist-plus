@@ -175,6 +175,28 @@ describe('buildCourseSheets', () => {
     expect(written).toBeLessThan((day!.rows.length - 5) / 2)
   })
 
+  it('leaves the measurement blank on the sheet when the form has none', () => {
+    // A course calculated from a BSA entered by hand: the ward writes the height and weight in.
+    const patient = {
+      fullName: '',
+      recordNumber: '',
+      birthDate: '',
+      ageYears: null,
+      sex: 'male' as const,
+      heightCm: null,
+      weightKg: null,
+      serumCreatinine: null,
+      creatinineUnit: 'umol_l' as const,
+      bilirubinUmolL: null,
+    }
+    const [day] = sheets({ patient })
+    const measurements = day!.rows[2]!.map(text).filter((value) => value !== null)
+
+    expect(measurements).toContain('Вік: ')
+    expect(measurements).toContain('Маса тіла: ')
+    expect(measurements).toContain('Зріст: ')
+  })
+
   it('writes every hour and date so it fits the column it stands over', () => {
     const built = sheets()
     const hour = built[0]!.rows[3]![2] as XlsxCell

@@ -8,6 +8,8 @@ export type WarningCode =
   | 'carboplatin.gfrCapped'
   | 'infusion.concentrationOutOfRange'
   | 'review.lowCreatinineClearance'
+  | 'review.clearanceUnknown'
+  | 'review.ageUnknown'
   | 'review.elderly'
   | 'review.highBilirubin'
 

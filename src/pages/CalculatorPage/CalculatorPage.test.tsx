@@ -152,10 +152,30 @@ describe('CalculatorPage', () => {
     expect(screen.queryByText('R-CHOP-21 — ДЕМО R-CHOP-21')).not.toBeInTheDocument()
   })
 
-  it('asks for the patient data before calculating', async () => {
+  it('asks for the measurements before calculating', async () => {
     renderWithProviders(<CalculatorPage />)
     expect(
-      await screen.findByText('Заповніть зріст, вагу, вік і стать, щоб побачити розрахунок.'),
+      await screen.findByText(
+        'Заповніть зріст і вагу — або введіть BSA вручну, щоб побачити розрахунок.',
+      ),
     ).toBeInTheDocument()
+  })
+
+  it('calculates on a BSA entered by hand, with no height and no weight', async () => {
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    const source = await screen.findByRole('combobox', { name: 'Дози за BSA' })
+
+    await act(async () => fireEvent.click(source))
+    await act(async () => fireEvent.click(await screen.findByText('введена вручну')))
+    await act(async () =>
+      fireEvent.change(screen.getByLabelText('BSA, м²'), { target: { value: '1.75' } }),
+    )
+
+    // 375 mg/m² × 1.75 m² = 656.25 → 656 mg, from the typed BSA alone.
+    const table = screen.getByRole('table', { name: 'Дози' })
+    const rituximab = within(table).getByText('ДЕМО Ритуксимаб').closest('tr')!
+    expect(within(rituximab).getAllByText('656 мг')).toHaveLength(2)
+    expect(screen.getByLabelText('Зріст, см')).toHaveValue('')
+    expect(screen.getByLabelText('Вага, кг')).toHaveValue('')
   })
 })

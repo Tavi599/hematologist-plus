@@ -81,16 +81,26 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     [catalog, regimenId, customItems, chosenDoses],
   )
 
+  /**
+   * A BSA typed in by hand is enough to calculate on its own: it is what every dose per square
+   * metre is taken from. Height and weight are then no longer asked for — what still genuinely
+   * needs them (a dose per kilogram, a creatinine clearance) says so by name when it is missing.
+   */
+  const enteredBsaM2 = courseSettings.bsaVariant === 'entered' ? courseSettings.bsaM2 : null
+  const measured =
+    patient !== null &&
+    (enteredBsaM2 !== null || (patient.heightCm !== null && patient.weightKg !== null))
+
   const { course, error } = useMemo<{ course: CourseResult | null; error: unknown }>(() => {
-    if (!patient || items.length === 0) return { course: null, error: null }
+    if (!patient || !measured || items.length === 0) return { course: null, error: null }
     try {
       return {
         course: calculateCourse(
           {
-            ageYears: patient.ageYears,
+            ageYears: patient.ageYears ?? undefined,
             sex: patient.sex,
-            heightCm: patient.heightCm,
-            weightKg: patient.weightKg,
+            heightCm: patient.heightCm ?? undefined,
+            weightKg: patient.weightKg ?? undefined,
             serumCreatinine: patient.serumCreatinine ?? undefined,
             creatinineUnit: patient.creatinineUnit,
             bilirubinUmolL: patient.bilirubinUmolL ?? undefined,
@@ -118,7 +128,16 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     } catch (thrown) {
       return { course: null, error: thrown }
     }
-  }, [patient, items, courseSettings, drugPercent, doseOverrideAmount, disabledIds, shiftMin])
+  }, [
+    patient,
+    measured,
+    items,
+    courseSettings,
+    drugPercent,
+    doseOverrideAmount,
+    disabledIds,
+    shiftMin,
+  ])
 
   const regimen = regimenId === null ? undefined : catalog.regimens.get(regimenId)
 
@@ -127,12 +146,12 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       <PatientForm onChange={setPatient} />
       <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
 
-      {!patient && items.length > 0 && (
+      {!measured && items.length > 0 && (
         <Alert color="blue" variant="light">
           {t('calculator.patient.incomplete')}
         </Alert>
       )}
-      {!patient && items.length === 0 && (
+      {!measured && items.length === 0 && (
         <Text c="dimmed">{t('calculator.patient.incomplete')}</Text>
       )}
 

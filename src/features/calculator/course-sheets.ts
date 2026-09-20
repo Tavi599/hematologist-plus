@@ -184,9 +184,9 @@ function daySheet(input: CourseSheetsInput, day: CourseResult['days'][number]): 
   rows.push([
     { value: dateLine(day.date), format: HEADER_FORMAT },
     { value: null, format: HEADER_FORMAT },
-    ...spread(`${BLANK.age}${formatAmount(patient.ageYears, language)}`, 4, HEADER_FORMAT),
-    ...spread(`${BLANK.weight}${formatAmount(patient.weightKg, language, 1)}`, 6, HEADER_FORMAT),
-    ...spread(`${BLANK.height}${formatAmount(patient.heightCm, language, 1)}`, 6, HEADER_FORMAT),
+    ...spread(`${BLANK.age}${given(patient.ageYears, language)}`, 4, HEADER_FORMAT),
+    ...spread(`${BLANK.weight}${given(patient.weightKg, language, 1)}`, 6, HEADER_FORMAT),
+    ...spread(`${BLANK.height}${given(patient.heightCm, language, 1)}`, 6, HEADER_FORMAT),
     ...spread(
       `${BLANK.bodySurface}${formatAmount(course.bsa.actualM2, language, 2)} ${input.t('units.m2')}`,
       8,
@@ -514,6 +514,15 @@ function stampLines(header: HeaderValue): string {
 function dateLine(iso: string): string {
   const [year, month, day] = iso.split('-')
   return year && month && day ? `Дата: ${day} / ${month} / ${year}р.` : `Дата: ${iso}`
+}
+
+/**
+ * A measurement of the patient, or the blank space for one. Height, weight and age may be absent
+ * — a course calculated from a BSA entered by hand needs none of them — and then the sheet prints
+ * the printed label alone, for the ward to write into.
+ */
+function given(value: number | null, language: Language, decimals = 0): string {
+  return value === null ? '' : formatAmount(value, language, decimals)
 }
 
 /** A date column of the inpatient sheet: day and month, the way the ward writes it by hand. */
