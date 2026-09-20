@@ -152,6 +152,24 @@ describe('CalculatorPage', () => {
     expect(screen.queryByText('R-CHOP-21 — ДЕМО R-CHOP-21')).not.toBeInTheDocument()
   })
 
+  it('opens a regimen with the cytostatics on and the supportive therapy off', async () => {
+    const catalog = demoCatalog()
+    catalog.regimen_items.find((row) => row.id === 'r-chop-21.prednisolone')!.role = 'supportive'
+    source.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    await screen.findByRole('combobox', { name: 'Схема' })
+    await fillPatient()
+
+    // What a patient actually gets of the supportive therapy is decided at the bedside.
+    expect(screen.getByLabelText('Препарат у курсі: ДЕМО Преднізолон')).not.toBeChecked()
+    expect(screen.getByLabelText('Препарат у курсі: ДЕМО Ритуксимаб')).toBeChecked()
+    // Switched off means out of the course, not merely unticked: nothing to order for it, and
+    // no line for it on the sheet.
+    const supply = screen.getByRole('table', { name: 'Потреба на курс' })
+    expect(within(supply).queryByText(/Преднізолон/)).not.toBeInTheDocument()
+    expect(within(supply).getAllByText(/Ритуксимаб/).length).toBeGreaterThan(0)
+  })
+
   it('asks for the measurements before calculating', async () => {
     renderWithProviders(<CalculatorPage />)
     expect(

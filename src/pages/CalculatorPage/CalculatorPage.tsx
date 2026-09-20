@@ -16,7 +16,7 @@ import { SupplyTable } from '../../features/calculator/SupplyTable'
 import { WarningList } from '../../features/calculator/WarningList'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
 import type { CatalogIndex } from '../../lib/catalog-index'
-import { buildCourseItems, buildCourseItemsFrom } from '../../lib/course-input'
+import { buildCourseItems, buildCourseItemsFrom, type CourseItem } from '../../lib/course-input'
 import { formatNumber } from '../../lib/format'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
@@ -32,6 +32,14 @@ export function CalculatorPage() {
       <CatalogGate>{(catalog) => <Calculator catalog={catalog} />}</CatalogGate>
     </Stack>
   )
+}
+
+/** Ids of the regimen's own premedication and supportive therapy — everything but the drugs. */
+function optionalIds(items: CourseItem[], custom: RegimenItem[]): string[] {
+  const added = new Set(custom.map((item) => item.id))
+  return items
+    .filter((item) => !added.has(item.item.id) && item.item.role !== 'main')
+    .map((item) => item.item.id)
 }
 
 function Calculator({ catalog }: { catalog: CatalogIndex }) {
@@ -80,6 +88,16 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     ],
     [catalog, regimenId, customItems, chosenDoses],
   )
+
+  // A regimen opens with its cytostatics on and its premedication and supportive therapy off:
+  // what a patient actually gets of those is decided at the bedside, and the physician switches
+  // on what this course needs. A drug added by hand is never switched off — it was added on
+  // purpose — and the switches a physician has set are kept until another regimen is chosen.
+  const [toggledRegimen, setToggledRegimen] = useState<string | null | undefined>(undefined)
+  if (regimenId !== toggledRegimen) {
+    setToggledRegimen(regimenId)
+    setDisabledIds(optionalIds(items, customItems))
+  }
 
   /**
    * A BSA typed in by hand is enough to calculate on its own: it is what every dose per square
