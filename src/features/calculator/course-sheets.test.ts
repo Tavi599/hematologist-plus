@@ -165,7 +165,9 @@ describe('buildCourseSheets', () => {
 
     expect(stamp).toContain('КНП «Медичний центр міста Києва»')
     expect(stamp).toContain('вул. Чорних Запорожців')
-    expect(stamp).toContain('Код за ЄДРПОУ: 42751893')
+    expect(stamp).toContain('Код за ЄДРПОУ 42751893')
+    // The stamp box is wide enough for the institution's current, much longer name.
+    expect(ward.merges).toContain('A1:F1')
     expect(String(text(ward.rows[0]![16] ?? null))).toContain('№003-4/о')
     expect(String(text(ward.rows[1]![0] ?? null))).toBe('ЛИСТОК ЛІКАРСЬКИХ ПРИЗНАЧЕНЬ')
   })

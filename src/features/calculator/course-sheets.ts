@@ -74,7 +74,7 @@ const BLANK = {
   wardPatient: 'П.І.Б. пацієнта: ',
   wardRoom: 'Номер палати:',
   wardMode: 'Режим: палатний            Дієта: стіл №5',
-  registryCode: 'Код за ЄДРПОУ: ',
+  registryCode: 'Код за ЄДРПОУ ',
   rate: 'V= ',
   perDay: ' р/добу',
 } as const
@@ -259,16 +259,18 @@ function wardSheet(
   const merges: string[] = []
   const heights: number[] = []
 
-  // Row 1: the department's stamp on the left, the form's own designation on the right.
+  // Row 1: the department's stamp on the left, the form's own designation on the right. The
+  // stamp box is wider and taller than in the blank we were given: the institution has been
+  // renamed since, and the new name is long enough to be clipped by the old five-line box.
   rows.push([
     { value: stampLines(header), format: STAMP_FORMAT },
-    ...spread('', 3, STAMP_FORMAT),
-    ...spread('', 12, STAMP_FORMAT),
+    ...spread('', 5, STAMP_FORMAT),
+    ...spread('', 10, STAMP_FORMAT),
     { value: BLANK.wardForm, format: STAMP_FORMAT },
     ...spread('', 9, STAMP_FORMAT),
   ])
-  merges.push('A1:D1', 'Q1:Z1')
-  heights.push(54)
+  merges.push('A1:F1', 'Q1:Z1')
+  heights.push(66)
 
   rows.push([{ value: BLANK.wardHeading, format: TITLE_FORMAT }, ...spread('', 25, TITLE_FORMAT)])
   merges.push(`A2:${lastColumn}2`)
