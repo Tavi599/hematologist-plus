@@ -24,7 +24,7 @@ describe('buildXlsx', () => {
   it('writes the parts a spreadsheet program needs to open the file', () => {
     const file = buildXlsx([
       { name: 'День 1', rows: [['а']] },
-      { name: 'Стаціонар', rows: [['б']] },
+      { name: 'Стацлист', rows: [['б']] },
     ])
     const entries = unzip(file)
 
@@ -50,33 +50,81 @@ describe('buildXlsx', () => {
 
   it('writes text as inline strings, numbers as numbers and escapes markup', () => {
     const sheet = unzip(
-      buildXlsx([{ name: 'S', rows: [['NaCl 0,9% <500 мл>', 750, { value: 2, style: 'cell' }]] }]),
+      buildXlsx([
+        { name: 'S', rows: [['NaCl 0,9% <500 мл>', 750, { value: 2, format: { wrap: true } }]] },
+      ]),
     ).get('xl/worksheets/sheet1.xml')
 
     expect(sheet).toContain(
       '<c r="A1" t="inlineStr"><is><t xml:space="preserve">NaCl 0,9% &lt;500 мл&gt;</t></is></c>',
     )
     expect(sheet).toContain('<c r="B1"><v>750</v></c>')
-    expect(sheet).toContain('<c r="C1" s="4"><v>2</v></c>')
+    expect(sheet).toContain('<c r="C1" s="1"><v>2</v></c>')
   })
 
-  it('keeps an empty cell that carries a border and drops one that does not', () => {
+  it('keeps the line break inside a cell and drops characters Excel refuses', () => {
+    const sheet = unzip(
+      buildXlsx([{ name: 'S', rows: [[{ value: 'Цитарабін\n0,9% NaCl', format: {} }]] }]),
+    ).get('xl/worksheets/sheet1.xml')
+
+    expect(sheet).toContain('>Цитарабін\n0,9% NaCl</t>')
+  })
+
+  it('keeps an empty cell that carries a format and drops one that does not', () => {
     // The hour grid is mostly empty; without the cells the ruled columns disappear.
     const sheet = unzip(
-      buildXlsx([{ name: 'S', rows: [[null, { value: null, style: 'mark' }, 'x']] }]),
+      buildXlsx([
+        { name: 'S', rows: [[null, { value: null, format: { box: { left: 'thin' } } }, 'x']] },
+      ]),
     ).get('xl/worksheets/sheet1.xml')
 
     expect(sheet).not.toContain('r="A1"')
-    expect(sheet).toContain('<c r="B1" s="5"/>')
+    expect(sheet).toContain('<c r="B1" s="1"/>')
   })
 
-  it('writes column widths and merged ranges', () => {
+  it('writes column widths, row heights and merged ranges', () => {
     const sheet = unzip(
-      buildXlsx([{ name: 'S', widths: [4, 26], rows: [['x']], merges: ['A1:G1'] }]),
+      buildXlsx([
+        { name: 'S', widths: [4, 26], heights: [15, 23.25], rows: [['x'], []], merges: ['A1:G1'] },
+      ]),
     ).get('xl/worksheets/sheet1.xml')
 
     expect(sheet).toContain('<col min="2" max="2" width="26" customWidth="1"/>')
+    expect(sheet).toContain('<row r="1" ht="15" customHeight="1">')
+    // The second row has a height but no cells; it still has to be written or the blank shrinks.
+    expect(sheet).toContain('<row r="2" ht="23.25" customHeight="1"></row>')
     expect(sheet).toContain('<mergeCells count="1"><mergeCell ref="A1:G1"/></mergeCells>')
+  })
+
+  it('sets up the page so a wide sheet prints whole instead of losing a column', () => {
+    const sheet = unzip(buildXlsx([{ name: 'S', rows: [['x']] }])).get('xl/worksheets/sheet1.xml')
+
+    expect(sheet).toContain('<pageSetUpPr fitToPage="1"/>')
+    expect(sheet).toContain('fitToWidth="1" fitToHeight="0" orientation="landscape"')
+    expect(sheet).toContain('<printOptions horizontalCentered="1" gridLines="1"/>')
+  })
+
+  it('writes each font, border and format once however many cells share it', () => {
+    const bold = { font: { size: 16, bold: true }, box: { left: 'thin' as const }, wrap: true }
+    const styles = unzip(
+      buildXlsx([
+        {
+          name: 'S',
+          rows: [
+            [
+              { value: '+', format: bold },
+              { value: '+', format: bold },
+            ],
+          ],
+        },
+      ]),
+    ).get('xl/styles.xml')
+
+    expect(styles).toContain('<fonts count="2">')
+    expect(styles).toContain('<b/><sz val="16"/><name val="Arial"/>')
+    expect(styles).toContain('<borders count="2">')
+    expect(styles).toContain('<cellXfs count="2">')
+    expect(styles).toContain('<alignment wrapText="1"/>')
   })
 
   it('refuses a workbook without sheets', () => {

@@ -138,19 +138,8 @@
     "export": {
       "title": "Export to Excel",
       "button": "Download .xlsx",
-      "hint": "A sheet for every day with an administration plus the inpatient sheet. The file is built in the browser: patient data is never sent anywhere.",
-      "infusionTitle": "Infusion sheet",
-      "wardTitle": "Inpatient prescription sheet",
+      "hint": "The department blanks: a sheet for every day with an administration plus the inpatient prescription list (form 003-4/o). The file is built in the browser: patient data is never sent anywhere.",
       "wardSheet": "Inpatient sheet",
-      "number": "No.",
-      "dose": "Dose",
-      "rate": "Rate",
-      "route": "Route",
-      "dayStart": "start",
-      "patientData": "Age, sex, height, weight",
-      "years": "y",
-      "cm": "cm",
-      "kg": "kg",
       "fileName": "Prescription sheet {{date}}"
     },
     "error": {
@@ -237,6 +226,14 @@
     "intramuscular": "intramuscular",
     "oral": "oral",
     "intrathecal": "intrathecal"
+  },
+  "routeShort": {
+    "iv_infusion": "IV inf.",
+    "iv_bolus": "IV push",
+    "subcutaneous": "SC",
+    "intramuscular": "IM",
+    "oral": "PO",
+    "intrathecal": "IT"
   },
   "role": {
     "main": "main",
