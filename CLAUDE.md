@@ -66,6 +66,10 @@ Environment quirks (Windows dev machine):
 - `.claude/launch.json` starts `preview`/`dev` via `node.exe node_modules/vite/bin/vite.js`. Open `/hematologist-plus/` — the base path applies in dev, preview and build.
 - The preview registers a service worker; after rebuilding, unregister it (or accept the update prompt) to see fresh code.
 - Scripts that used the network must end with `process.exitCode`, not `process.exit()` (libuv assertion crash on Windows).
+- **Never pipe text through `clip.exe`.** It reads the OEM codepage, so every Ukrainian string
+  becomes mojibake — and a paste into the Supabase SQL editor writes that mojibake to the live
+  database. Use PowerShell instead: `Set-Clipboard -Value ([System.IO.File]::ReadAllText($path, [System.Text.Encoding]::UTF8))`,
+  and check the pasted text for Cyrillic before running it.
 
 ## Structure
 
