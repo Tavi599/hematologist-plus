@@ -24,5 +24,28 @@
       "form": "vial",
       "strength_amount": 10
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [50],
+      "duration_min": 10,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "NSSG Oxford Haematology, L.8 A(B)VD",
+          "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-8-abvd.pdf",
+          "version": "5.0 (09.2024)",
+          "checkedOn": "2026-10-02"
+        },
+        {
+          "name": "NSSG Oxford Haematology, L.154 BV-AVD",
+          "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-154-bv-avd.pdf",
+          "version": "1.0 (05.2025)",
+          "checkedOn": "2026-10-02"
+        }
+      ]
+    }
   ]
 }

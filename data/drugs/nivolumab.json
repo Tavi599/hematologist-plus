@@ -26,5 +26,22 @@
       "strength_amount": 100,
       "volume_ml": 10
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [100],
+      "duration_min": 30,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "NSSG Oxford Haematology, L.90 Nivolumab",
+          "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-90-nivolumab.pdf",
+          "version": "3.0 (07.2022)",
+          "checkedOn": "2026-10-02"
+        }
+      ]
+    }
   ]
 }

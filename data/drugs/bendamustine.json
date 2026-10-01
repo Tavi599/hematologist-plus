@@ -34,5 +34,26 @@
       "form": "vial",
       "strength_amount": 100
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [500],
+      "duration_min": 60,
+      "is_default": true,
+      "notes": {
+        "uk": "Протокол дозволяє 30–60 хвилин; взято 60 — повільніший край діапазону.",
+        "en": "The protocol allows 30–60 minutes; the slower end is used."
+      },
+      "sources": [
+        {
+          "name": "NSSG Oxford Haematology, L.45 Bendamustine-Rituximab (BR) [NHL]",
+          "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-45-bendamustine-r-nhl.pdf",
+          "version": "3.0 (09.2025)",
+          "checkedOn": "2026-10-02"
+        }
+      ]
+    }
   ]
 }

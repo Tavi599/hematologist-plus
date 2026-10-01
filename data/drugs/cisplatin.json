@@ -30,5 +30,26 @@
       "strength_amount": 50,
       "volume_ml": 50
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [1000],
+      "duration_min": 1320,
+      "is_default": true,
+      "notes": {
+        "uk": "Стаціонарний варіант R-ESHAP: 25 мг/м² у 1 л 0,9% NaCl за 22 години щодня, дні 1–4. Амбулаторний варіант (100 мг/м² помпою за 96 годин) не вноситься.",
+        "en": "The inpatient R-ESHAP option: 25 mg/m² in 1 L of 0.9% sodium chloride over 22 hours daily, days 1–4. The outpatient pump option (100 mg/m² over 96 hours) is not entered."
+      },
+      "sources": [
+        {
+          "name": "NSSG Oxford Haematology, L.35 E-SHAP / R-ESHAP",
+          "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-35-e-shap-and-r-eshap.pdf",
+          "version": "3.1 (09.2024)",
+          "checkedOn": "2026-10-02"
+        }
+      ]
+    }
   ]
 }
