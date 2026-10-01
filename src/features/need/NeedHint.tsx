@@ -7,6 +7,7 @@ import { formatNumber } from '../../lib/format'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import type { NeedLine } from './need-lines'
+import { decimalInput } from '../../lib/decimal-input'
 import { estimateCoursePacks, packsOf, regimensWithDrug, suggestedRegimen } from './need-estimate'
 
 /**
@@ -78,6 +79,7 @@ export function NeedHint({
           min={0.5}
           max={3}
           step={0.01}
+          {...decimalInput()}
           decimalScale={2}
           w={200}
         />

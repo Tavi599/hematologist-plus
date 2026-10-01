@@ -14,6 +14,7 @@ import { useEffect, useRef } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 
+import { decimalInput } from '../../lib/decimal-input'
 import {
   ageFromBirthDate,
   CREATININE_UNITS,
@@ -153,6 +154,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
                 description={t('calculator.patient.orEnterBsa')}
                 min={1}
                 max={500}
+                {...decimalInput()}
                 decimalScale={1}
                 error={invalid('weightKg')}
               />
@@ -170,6 +172,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
                 value={field.value ?? ''}
                 label={t('calculator.patient.serumCreatinine')}
                 description={t('calculator.patient.optional')}
+                {...decimalInput()}
                 decimalScale={2}
                 error={invalid('serumCreatinine')}
               />
@@ -196,6 +199,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
                 value={field.value ?? ''}
                 label={t('calculator.patient.bilirubinUmolL')}
                 description={t('calculator.patient.optional')}
+                {...decimalInput()}
                 decimalScale={1}
                 error={invalid('bilirubinUmolL')}
               />

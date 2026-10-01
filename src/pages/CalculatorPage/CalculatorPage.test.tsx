@@ -17,7 +17,7 @@ async function fillPatient() {
     set('Вік, років', '60')
     set('Зріст, см', '180')
     set('Вага, кг', '80')
-    set('Креатинін', '88.4')
+    set('Креатинін', '88,4')
   })
 }
 
@@ -186,7 +186,7 @@ describe('CalculatorPage', () => {
     await act(async () => fireEvent.click(source))
     await act(async () => fireEvent.click(await screen.findByText('введена вручну')))
     await act(async () =>
-      fireEvent.change(screen.getByLabelText('BSA, м²'), { target: { value: '1.75' } }),
+      fireEvent.change(screen.getByLabelText('BSA, м²'), { target: { value: '1,75' } }),
     )
 
     // 375 mg/m² × 1.75 m² = 656.25 → 656 mg, from the typed BSA alone.

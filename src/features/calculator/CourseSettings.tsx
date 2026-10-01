@@ -18,6 +18,7 @@ import { regimenAvailability } from '../../lib/availability'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { filterRegimens, NO_REGIMEN_FILTER, type RegimenFilter } from '../../lib/regimen-filter'
 import { currentLanguage } from '../../lib/i18n'
+import { decimalInput } from '../../lib/decimal-input'
 import { localize } from '../../lib/localized'
 
 export interface CourseSettingsValue {
@@ -165,6 +166,7 @@ export function CourseSettings({
               min={0.1}
               max={4}
               step={0.01}
+              {...decimalInput()}
               decimalScale={2}
               value={value.bsaM2 ?? ''}
               onChange={(next) => {

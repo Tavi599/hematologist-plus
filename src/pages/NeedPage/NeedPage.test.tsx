@@ -35,8 +35,10 @@ describe('NeedPage', () => {
     expect(screen.getByRole('combobox', { name: 'Фасування' })).toHaveValue(
       'ДЕМО Ритуксимаб 100 мг',
     )
-    // 375 mg/m² × 2.0 m² = 750 mg: one 500 mg vial and three of 100 mg.
-    await type('BSA для підрахунку, м²', '2')
+    // Typed the way Ukrainian writes a fraction: a comma, not a point. Read as 19 m² instead of
+    // 1,9 it would ask for fourteen vials rather than four.
+    // 375 mg/m² × 1.9 m² = 713 mg: one 500 mg vial and three of 100 mg.
+    await type('BSA для підрахунку, м²', '1,9')
     expect(await screen.findByText('1 × 500 мг + 3 × 100 мг')).toBeInTheDocument()
 
     // Only the pack the line is about is taken; the other strength stays a hint.
