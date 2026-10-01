@@ -67,14 +67,20 @@ const FORM = {
   phone: 'тел. відповідального фахівця',
 } as const
 
-/** Characters of the workbook font, measured off the форми the department filled in. */
-const WIDTHS = [25.75, 7.875, 16.5, 25.25, 20.625, 17.625, 14.375, 20.5, 15.375]
+/**
+ * Characters of the workbook font. The proportions are those of the форми the department filled
+ * in, each column a tenth wider: the heading of a graph then stands clear of its rules instead
+ * of touching them, and a drug named in full fits its line. The sheet is printed to the width of
+ * the page either way, so the room is paid for in a per cent of print size, not in a second page.
+ */
+const WIDTHS = [30, 10, 18, 27, 22.5, 19.5, 16, 22.5, 17]
 const COLUMNS = WIDTHS.length
 
 const APPENDIX_HEIGHT = 44.25
 const TITLE_HEIGHT = 42
-const HEAD_HEIGHT = 80.45
-const DATA_HEIGHT = 15
+/** Room for the tallest heading to wrap with a line of air above and below it. */
+const HEAD_HEIGHT = 96
+const DATA_HEIGHT = 21
 /** The gap under the table, then one row per signatory, then the telephone line. */
 const SIGNATURE_HEIGHTS = [31.5, 39, 35.25, 28.5, DATA_HEIGHT]
 
@@ -93,16 +99,19 @@ const HEAD_FORMAT: XlsxFormat = {
   valign: 'center',
   wrap: true,
 }
-/** The drug stands at the head of its line, as the form's own lines have it: bold, top left. */
+/**
+ * The drug stands at the head of its line, bold, as the form's own lines have it. It sits in the
+ * middle of the taller line rather than at its top, where it would hang over the empty half.
+ */
 const NAME_FORMAT: XlsxFormat = {
   font: { ...TIMES_11, bold: true },
   box: THIN,
   align: 'left',
-  valign: 'top',
+  valign: 'center',
 }
 const CELL_FORMAT: XlsxFormat = { font: TIMES_11, box: THIN, align: 'center', valign: 'center' }
 /** The last graph is the department of health's to fill in, so it is left as it is typed. */
-const PROPOSED_FORMAT: XlsxFormat = { font: TIMES_11, box: THIN }
+const PROPOSED_FORMAT: XlsxFormat = { font: TIMES_11, box: THIN, valign: 'center' }
 const SIGNATURE_FORMAT: XlsxFormat = { font: TIMES_12, valign: 'center' }
 const NAME_PLACE_FORMAT: XlsxFormat = { font: TIMES_12, align: 'center', valign: 'center' }
 
