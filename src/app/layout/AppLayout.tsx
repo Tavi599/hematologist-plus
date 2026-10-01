@@ -24,11 +24,11 @@ export function AppLayout() {
       <AppShell.Header>
         <Container size="xl" h="100%">
           <Group h="100%" justify="space-between" wrap="nowrap">
-            <Group gap="lg" wrap="nowrap">
+            <Group gap="lg" wrap="nowrap" className={classes.navGroup}>
               <Text fw={700} c="red.8" size="lg" visibleFrom="sm">
                 {t('app.name')}
               </Text>
-              <nav aria-label="main">
+              <nav aria-label="main" className={classes.nav}>
                 <Group gap={4} wrap="nowrap">
                   {navItems.map((item) => (
                     <NavLink key={item.to} to={item.to} className={classes.link}>

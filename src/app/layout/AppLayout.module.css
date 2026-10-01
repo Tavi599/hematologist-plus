@@ -16,3 +16,27 @@
     color: var(--mantine-color-red-8);
   }
 }
+
+/**
+ * On a phone the navigation is wider than the screen, and a link that runs off the edge is a
+ * page nobody can reach. It scrolls sideways instead — the bar itself, not the page.
+ */
+.navGroup {
+  min-width: 0;
+}
+
+.nav {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.link {
+  white-space: nowrap;
+}
