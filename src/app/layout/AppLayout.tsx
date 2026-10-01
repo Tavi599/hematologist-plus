@@ -13,6 +13,7 @@ export function AppLayout() {
 
   const navItems = [
     { to: routes.calculator, label: t('nav.calculator') },
+    { to: routes.need, label: t('nav.need') },
     { to: routes.diseases, label: t('nav.diseases') },
     { to: routes.sources, label: t('nav.sources') },
     { to: routes.proposals, label: t('nav.proposals') },

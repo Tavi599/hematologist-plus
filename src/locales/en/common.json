@@ -7,7 +7,8 @@
     "calculator": "Calculator",
     "diseases": "Diseases",
     "sources": "Sources",
-    "proposals": "Proposals"
+    "proposals": "Proposals",
+    "need": "Drug need"
   },
   "language": {
     "label": "Language",
@@ -150,6 +151,51 @@
     "error": {
       "title": "Calculation failed",
       "field": "Field: {{field}}"
+    }
+  },
+  "need": {
+    "title": "Drug need",
+    "lead": "The Ministry's distribution form, «Узагальнена інформація щодо розподілу лікарських засобів, медичних виробів до проєкту наказу». It needs nothing about any patient — it counts how many there are.",
+    "form": {
+      "title": "Graphs of the form",
+      "line": "Line {{number}}",
+      "remove": "Remove the line",
+      "drug": "Drug",
+      "presentation": "Pack",
+      "name": "Name as the order writes it",
+      "nameHint": "trade name and strength, as in the order",
+      "order": "Distributed by order",
+      "patients": "Patients",
+      "courses": "Courses per patient",
+      "perCourse": "Packs per course",
+      "stock": "Stock",
+      "monthlyUse": "Average monthly use",
+      "total": "100 % need",
+      "months": "Months covered",
+      "proposed": "Proposed for distribution",
+      "proposedHint": "the whole need unless typed over",
+      "add": "Add a line"
+    },
+    "hint": {
+      "title": "Hint for the count",
+      "notPrinted": "not written to the file",
+      "lead": "How many packs one course takes. The regimens need not have anything to do with each other: the form is filled in drug by drug. A pack other than the line's own is shown only for orientation.",
+      "bsa": "BSA for the count, m²",
+      "bsaHint": "a typical body surface of the department's patients",
+      "empty": "Choose a drug in a line of the form and a regimen to count by appears here.",
+      "regimen": "Regimen",
+      "needBsa": "Enter a BSA to count",
+      "missing": "Cannot be counted without: {{field}}",
+      "perCourse": "Per course",
+      "take": "Take {{packs}} into the line",
+      "noRegimen": "No regimen of the catalog gives this drug — enter the need by hand."
+    },
+    "export": {
+      "title": "File to hand in",
+      "hint": "The distribution form as .xlsx, printed A4 landscape. The hint for the count is not written to the file.",
+      "button": "Download .xlsx",
+      "fileName": "Need {{date}}",
+      "sheet": "Need"
     }
   },
   "diseases": {

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import type { CourseResult } from '../../domain'
 import type { CourseItem } from '../../lib/course-input'
 import { currentLanguage } from '../../lib/i18n'
+import { saveFile } from '../../lib/save-file'
 import { buildXlsx, XLSX_MEDIA_TYPE } from '../../lib/xlsx-writer'
 import type { PatientInput } from '../../schemas/patient'
 import { buildCourseSheets, type Translate } from './course-sheets'
@@ -42,6 +43,7 @@ export function CourseExport(props: CourseExportProps) {
     saveFile(
       `${t('calculator.export.fileName', { date: props.startDate })}.xlsx`,
       buildXlsx(sheets),
+      XLSX_MEDIA_TYPE,
     )
   }
 
@@ -58,15 +60,4 @@ export function CourseExport(props: CourseExportProps) {
       </Stack>
     </Card>
   )
-}
-
-function saveFile(name: string, data: Uint8Array): void {
-  const url = URL.createObjectURL(new Blob([data as BlobPart], { type: XLSX_MEDIA_TYPE }))
-  const link = document.createElement('a')
-  link.href = url
-  link.download = name
-  document.body.append(link)
-  link.click()
-  link.remove()
-  URL.revokeObjectURL(url)
 }
