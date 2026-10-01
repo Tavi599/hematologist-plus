@@ -152,6 +152,23 @@ describe('CalculatorPage', () => {
     expect(screen.queryByText('R-CHOP-21 — ДЕМО R-CHOP-21')).not.toBeInTheDocument()
   })
 
+  it('makes a printable sheet out of lines written by hand, with no regimen at all', async () => {
+    renderWithProviders(<CalculatorPage />)
+    await screen.findByRole('combobox', { name: 'Схема' })
+
+    // Nothing is calculated and nothing is on paper yet, so there is nothing to download.
+    expect(screen.queryByRole('button', { name: 'Завантажити .xlsx' })).not.toBeInTheDocument()
+
+    await act(async () => fireEvent.click(screen.getByRole('button', { name: 'Додати рядок' })))
+    await act(async () =>
+      fireEvent.change(screen.getByLabelText('Призначення'), {
+        target: { value: 'Sol. NaCl 0,9% — 400,0 в/в крапельно' },
+      }),
+    )
+
+    expect(screen.getByRole('button', { name: 'Завантажити .xlsx' })).toBeInTheDocument()
+  })
+
   it('opens a regimen with the cytostatics on and the supportive therapy off', async () => {
     const catalog = demoCatalog()
     catalog.regimen_items.find((row) => row.id === 'r-chop-21.prednisolone')!.role = 'supportive'

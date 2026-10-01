@@ -31,6 +31,7 @@ function sheets(overrides: Partial<CourseSheetsInput> = {}): XlsxSheet[] {
   return buildCourseSheets({
     items,
     course,
+    startDateIso: '2026-09-21',
     patient: {
       fullName: 'Тестовий Пацієнт',
       recordNumber: '123/26',
@@ -299,6 +300,97 @@ describe('buildCourseSheets', () => {
     )
 
     expect(sheets({ items, course })).toHaveLength(1)
+  })
+
+  it('prints a line written by hand as it was typed, marked at its own hour', () => {
+    const built = sheets({
+      manualRows: [
+        {
+          id: 'manual-1',
+          what: 'Sol. NaCl 0,9% — 400,0 в/в крапельно',
+          how: 'в/в крап. 120 мл/год',
+          days: [1],
+          hour: 14,
+          block: 'infusion',
+        },
+      ],
+    })
+    const band = bandStartingWith(built[0]!, 'Sol. NaCl')!
+    expect(String(text(band[1] ?? null))).toBe('в/в крап. 120 мл/год')
+    // The hours run 9…24 then 1…8, so 14:00 is the sixth column of the grid.
+    expect(text(band[2 + SHEET_HOURS.indexOf(14)] ?? null)).toBe('+')
+    expect(text(band[2 + SHEET_HOURS.indexOf(15)] ?? null)).toBeNull()
+  })
+
+  it('makes a sheet for a day the course gives nothing on, when a line was written for it', () => {
+    const built = sheets({
+      manualRows: [
+        { id: 'manual-1', what: 'Контроль ЗАК', how: '', days: [4], hour: 9, block: 'infusion' },
+      ],
+    })
+    // The demo regimen gives on day 1 and days 1-5 on the ward; day 4 has no administration.
+    const day4 = built.find((sheet) => String(text(sheet.rows[2]![0] ?? null)).includes('24 / 09'))
+    expect(day4).toBeDefined()
+    expect(orders(day4!, 4)).toContain('Контроль ЗАК')
+  })
+
+  it('puts a hand-written line of the inpatient sheet in its date columns, with no hour', () => {
+    const built = sheets({
+      manualRows: [
+        {
+          id: 'manual-1',
+          what: 'Контроль маси тіла',
+          how: '',
+          days: [2, 3],
+          hour: null,
+          block: 'ward',
+        },
+      ],
+    })
+    const ward = built.at(-1)!
+    const band = bandStartingWith(ward, 'Контроль маси')!
+    expect(text(band[2] ?? null)).toBeNull()
+    expect(text(band[3] ?? null)).toBe('+')
+    expect(text(band[4] ?? null)).toBe('+')
+    expect(text(band[5] ?? null)).toBeNull()
+  })
+
+  it('makes the sheets of a course that was written out entirely by hand', () => {
+    const built = sheets({
+      items: [],
+      course: null,
+      regimenName: null,
+      manualRows: [
+        {
+          id: 'manual-1',
+          what: 'Sol. Glucosae 5% — 400,0',
+          how: 'в/в крап.',
+          days: [1],
+          hour: 10,
+          block: 'infusion',
+        },
+        {
+          id: 'manual-2',
+          what: 'Омепразол 20 мг',
+          how: 'р.о.',
+          days: [1, 2],
+          hour: null,
+          block: 'ward',
+        },
+      ],
+    })
+    expect(built).toHaveLength(2)
+    expect(orders(built[0]!, 4)).toContain('Sol. Glucosae 5% — 400,0')
+    // Nothing was calculated, so the body surface of the heading is left empty rather than noughted.
+    expect(String(text(built[0]!.rows[2]![18] ?? null))).toBe('S тіла: ')
+    expect(bandStartingWith(built[1]!, 'Омепразол')).toBeDefined()
+  })
+
+  it('leaves a line with nothing written in it off the paper', () => {
+    const built = sheets({
+      manualRows: [{ id: 'manual-1', what: '   ', how: 'р.о.', days: [1], hour: 9, block: 'ward' }],
+    })
+    expect(bandStartingWith(built.at(-1)!, 'р.о.')).toBeUndefined()
   })
 
   it('names the patient and the day on every sheet of the course', () => {

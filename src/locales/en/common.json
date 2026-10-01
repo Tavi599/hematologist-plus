@@ -122,6 +122,21 @@
       "custom": "added manually",
       "remove": "Remove"
     },
+    "manual": {
+      "title": "Lines written by hand",
+      "lead": "An order the catalog does not hold: printed as it is typed, never calculated. A whole sheet can be made this way, with no regimen at all.",
+      "what": "Order",
+      "whatPlaceholder": "Sol. NaCl 0,9% — 400,0 IV drip",
+      "how": "How it is given",
+      "howPlaceholder": "IV drip 120 mL/h",
+      "block": "Sheet",
+      "blockInfusion": "Hourly sheet",
+      "blockWard": "Inpatient sheet (№003-4/о)",
+      "hour": "Hour",
+      "hourNone": "no time",
+      "add": "Add a line",
+      "remove": "Remove the line"
+    },
     "schedule": {
       "title": "Schedule",
       "day": "Day {{day}}",

@@ -1,4 +1,9 @@
-import type { CourseDrugResult, CourseResult } from '../../domain'
+import {
+  addDays,
+  type CourseAdministrationResult,
+  type CourseDrugResult,
+  type CourseResult,
+} from '../../domain'
 import type { CourseItem } from '../../lib/course-input'
 import { formatAmount, formatDate } from '../../lib/format'
 import type { Language } from '../../lib/i18n'
@@ -7,6 +12,7 @@ import type { XlsxBox, XlsxFormat, XlsxInput, XlsxSheet } from '../../lib/xlsx-w
 import { columnName } from '../../lib/xlsx-writer'
 import type { PatientInput } from '../../schemas/patient'
 import type { HeaderValue } from './header'
+import { manualDayNumbers, manualRowsOn, manualWardRows, type ManualRow } from './manual-rows'
 
 /**
  * The calculated course on the department's own blanks: one sheet per day with an infusion, laid
@@ -25,14 +31,31 @@ export type Translate = (key: string, params?: Record<string, unknown>) => strin
 
 export interface CourseSheetsInput {
   items: CourseItem[]
-  course: CourseResult
+  /**
+   * The calculated course, or null when there is nothing to calculate: a sheet written out by
+   * hand is still a sheet, and the department asked for one it can make without a regimen.
+   */
+  course: CourseResult | null
   patient: PatientInput
+  /** Day 1 of the course, YYYY-MM-DD: the dates of days only a hand-written line falls on. */
+  startDateIso: string
   /** Name of the regimen as chosen in the calculator; null for a course put together by hand. */
   regimenName: string | null
   cycleNumber: number
   header: HeaderValue
+  /** Orders written out by hand; printed as typed, never calculated. */
+  manualRows?: ManualRow[]
   language: Language
   t: Translate
+}
+
+/** A day the sheets cover: one of the course's own, or one only a hand-written order falls on. */
+interface SheetDay {
+  day: number
+  date: string
+  administrations: CourseAdministrationResult[]
+  /** Ids of the day's drugs that carry no clock time. */
+  untimed: string[]
 }
 
 /** Hours of the department's sheet: 9…24 then 1…8, so the working day comes first. */
@@ -147,15 +170,42 @@ const NOTE_HEIGHT = 34
 const GROUP_EVERY = 6
 
 export function buildCourseSheets(input: CourseSheetsInput): XlsxSheet[] {
-  const days = input.course.days
-    .filter((day) => day.administrations.length > 0)
+  const manual = input.manualRows ?? []
+  const days = sheetDays(input)
+    .filter(
+      (day) =>
+        day.administrations.length > 0 || manualRowsOn(manual, 'infusion', day.day).length > 0,
+    )
     .map((day) => daySheet(input, day))
   return [...days, ...wardSheets(input)]
 }
 
+/**
+ * Every day either sheet has to show. A day the course gives nothing on still gets its column —
+ * and its own sheet, when the physician wrote an order into it by hand.
+ */
+function sheetDays(input: CourseSheetsInput): SheetDay[] {
+  const days = new Map<number, SheetDay>(
+    (input.course?.days ?? []).map((day) => [
+      day.day,
+      { day: day.day, date: day.date, administrations: day.administrations, untimed: day.untimed },
+    ]),
+  )
+  for (const day of manualDayNumbers(input.manualRows ?? [])) {
+    if (days.has(day)) continue
+    days.set(day, {
+      day,
+      date: addDays(input.startDateIso, day - 1),
+      administrations: [],
+      untimed: [],
+    })
+  }
+  return [...days.values()].sort((a, b) => a.day - b.day)
+}
+
 /* ------------------------------------------------------------------ the day sheet ---------- */
 
-function daySheet(input: CourseSheetsInput, day: CourseResult['days'][number]): XlsxSheet {
+function daySheet(input: CourseSheetsInput, day: SheetDay): XlsxSheet {
   const { language, patient, course } = input
   const lastColumn = columnName(ORDER_COLUMNS + SHEET_HOURS.length - 1)
   const widths = [ORDER_WIDTH, HOW_WIDTH, ...SHEET_HOURS.map(() => GRID_WIDTH)]
@@ -187,11 +237,7 @@ function daySheet(input: CourseSheetsInput, day: CourseResult['days'][number]): 
     ...spread(`${BLANK.age}${given(patient.ageYears, language)}`, 4, HEADER_FORMAT),
     ...spread(`${BLANK.weight}${given(patient.weightKg, language, 1)}`, 6, HEADER_FORMAT),
     ...spread(`${BLANK.height}${given(patient.heightCm, language, 1)}`, 6, HEADER_FORMAT),
-    ...spread(
-      `${BLANK.bodySurface}${formatAmount(course.bsa.actualM2, language, 2)} ${input.t('units.m2')}`,
-      8,
-      HEADER_FORMAT,
-    ),
+    ...spread(`${BLANK.bodySurface}${bodySurface(course, language, input.t)}`, 8, HEADER_FORMAT),
   ])
   merges.push('C3:F3', 'G3:L3', 'M3:R3', 'S3:Z3')
   heights.push(16.8)
@@ -205,7 +251,7 @@ function daySheet(input: CourseSheetsInput, day: CourseResult['days'][number]): 
   merges.push('A4:B4')
   heights.push(15.6)
 
-  const orders = dayOrders(input, day)
+  const orders = [...dayOrders(input, day), ...manualOrders(input, day)]
   const ruled = appendBands(
     rows,
     merges,
@@ -243,9 +289,9 @@ interface Order {
  * One line per drug, not per administration: a drug given four times a day is one order with
  * four marks, exactly as the ward writes it.
  */
-function dayOrders(input: CourseSheetsInput, day: CourseResult['days'][number]): Order[] {
+function dayOrders(input: CourseSheetsInput, day: SheetDay): Order[] {
   const byId = new Map(input.items.map((item) => [item.item.id, item]))
-  const resultById = new Map(input.course.drugs.map((drug) => [drug.id, drug]))
+  const resultById = new Map((input.course?.drugs ?? []).map((drug) => [drug.id, drug]))
   const orders = new Map<string, Order>()
 
   for (const administration of day.administrations) {
@@ -266,6 +312,15 @@ function dayOrders(input: CourseSheetsInput, day: CourseResult['days'][number]):
   return [...orders.values()]
 }
 
+/** The hand-written lines of this day, printed as typed and marked at the hour they were given. */
+function manualOrders(input: CourseSheetsInput, day: SheetDay): Order[] {
+  return manualRowsOn(input.manualRows ?? [], 'infusion', day.day).map((row) => ({
+    what: row.what,
+    how: row.how,
+    hours: row.hour === null ? new Set<number>() : new Set([row.hour]),
+  }))
+}
+
 /* ------------------------------------------------------------- the inpatient sheet --------- */
 
 /**
@@ -275,11 +330,13 @@ function dayOrders(input: CourseSheetsInput, day: CourseResult['days'][number]):
  */
 function wardSheets(input: CourseSheetsInput): XlsxSheet[] {
   const wardItems = input.items.filter((item) => item.item.block === 'ward')
-  if (wardItems.length === 0) return []
+  const manual = manualWardRows(input.manualRows ?? [])
+  if (wardItems.length === 0 && manual.length === 0) return []
 
-  const pages: CourseResult['days'][] = []
-  for (let start = 0; start < input.course.days.length; start += WARD_DAY_COLUMNS) {
-    pages.push(input.course.days.slice(start, start + WARD_DAY_COLUMNS))
+  const all = sheetDays(input)
+  const pages: SheetDay[][] = []
+  for (let start = 0; start < all.length; start += WARD_DAY_COLUMNS) {
+    pages.push(all.slice(start, start + WARD_DAY_COLUMNS))
   }
   return pages.map((days, index) => wardSheet(input, wardItems, days, index, pages.length))
 }
@@ -287,7 +344,7 @@ function wardSheets(input: CourseSheetsInput): XlsxSheet[] {
 function wardSheet(
   input: CourseSheetsInput,
   wardItems: CourseItem[],
-  days: CourseResult['days'],
+  days: SheetDay[],
   page: number,
   pages: number,
 ): XlsxSheet {
@@ -347,13 +404,9 @@ function wardSheet(
   merges.push('A5:B5')
   heights.push(19.5)
 
-  const resultById = new Map(input.course.drugs.map((drug) => [drug.id, drug]))
-  const ruled = appendBands(
-    rows,
-    merges,
-    heights,
-    widths,
-    wardItems.map((item) => {
+  const resultById = new Map((input.course?.drugs ?? []).map((drug) => [drug.id, drug]))
+  const bands = [
+    ...wardItems.map((item) => {
       const result = resultById.get(item.item.id)
       return {
         what: whatLine(item.item.id, item, result, input),
@@ -363,7 +416,17 @@ function wardSheet(
         ),
       }
     }),
-  )
+    // A hand-written line is marked on the days it was written for, whatever the course does.
+    ...manualWardRows(input.manualRows ?? []).map((row) => ({
+      what: row.what,
+      how: row.how,
+      marks: Array.from({ length: WARD_DAY_COLUMNS }, (_unused, index) => {
+        const day = days[index]
+        return day && row.days.includes(day.day) ? MARK : null
+      }),
+    })),
+  ]
+  const ruled = appendBands(rows, merges, heights, widths, bands)
 
   rows.push([{ value: null, format: NOTE_FORMAT }, ...spread('', 25, NOTE_FORMAT)])
   merges.push(`A${rows.length}:${lastColumn}${rows.length}`)
@@ -376,7 +439,7 @@ function wardSheet(
     heights,
     rows,
     merges,
-    onePage: wardItems.length <= ruled,
+    onePage: bands.length <= ruled,
   }
 }
 
@@ -521,6 +584,11 @@ function dateLine(iso: string): string {
  * — a course calculated from a BSA entered by hand needs none of them — and then the sheet prints
  * the printed label alone, for the ward to write into.
  */
+/** The body surface the sheet was made on; blank when there was nothing to calculate. */
+function bodySurface(course: CourseResult | null, language: Language, t: Translate): string {
+  return course === null ? '' : `${formatAmount(course.bsa.actualM2, language, 2)} ${t('units.m2')}`
+}
+
 function given(value: number | null, language: Language, decimals = 0): string {
   return value === null ? '' : formatAmount(value, language, decimals)
 }
@@ -530,7 +598,7 @@ function dayAndMonth(iso: string, language: Language): string {
   return formatDate(iso, language).slice(0, 5)
 }
 
-function dayTabName(input: CourseSheetsInput, day: CourseResult['days'][number]): string {
+function dayTabName(input: CourseSheetsInput, day: SheetDay): string {
   const prefix = input.regimenName ?? input.t('calculator.schedule.day', { day: day.day })
   return input.regimenName === null ? prefix : `${prefix} д${day.day}`
 }

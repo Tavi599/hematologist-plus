@@ -9,15 +9,18 @@ import { buildXlsx, XLSX_MEDIA_TYPE } from '../../lib/xlsx-writer'
 import type { PatientInput } from '../../schemas/patient'
 import { buildCourseSheets, type Translate } from './course-sheets'
 import type { HeaderValue } from './header'
+import type { ManualRow } from './manual-rows'
 
 export interface CourseExportProps {
   items: CourseItem[]
-  course: CourseResult
+  /** Null when nothing was calculated: a sheet written out by hand is still printed. */
+  course: CourseResult | null
   patient: PatientInput
   regimenName: string | null
   cycleNumber: number
   startDate: string
   header: HeaderValue
+  manualRows?: ManualRow[]
 }
 
 /**
@@ -33,7 +36,9 @@ export function CourseExport(props: CourseExportProps) {
       items: props.items,
       course: props.course,
       patient: props.patient,
+      startDateIso: props.startDate,
       regimenName: props.regimenName,
+      manualRows: props.manualRows ?? [],
       cycleNumber: props.cycleNumber,
       header: props.header,
       language,

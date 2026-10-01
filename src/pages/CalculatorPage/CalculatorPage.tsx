@@ -10,6 +10,8 @@ import { CourseSettings, type CourseSettingsValue } from '../../features/calcula
 import { DoseTable } from '../../features/calculator/DoseTable'
 import { emptyHeader } from '../../features/calculator/header'
 import { HospitalHeader } from '../../features/calculator/HospitalHeader'
+import { ManualRows } from '../../features/calculator/ManualRows'
+import type { ManualRow } from '../../features/calculator/manual-rows'
 import { PatientForm } from '../../features/calculator/PatientForm'
 import { ScheduleTable } from '../../features/calculator/ScheduleTable'
 import { SupplyTable } from '../../features/calculator/SupplyTable'
@@ -62,6 +64,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [chosenDoses, setChosenDoses] = useState<Record<string, string>>({})
   const [shiftMin, setShiftMin] = useState<Record<string, number>>({})
   const [header, setHeader] = useState(emptyHeader)
+  const [manualRows, setManualRows] = useState<ManualRow[]>([])
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
   const regimenId = searchParams.get('regimen')
@@ -243,6 +246,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
         onAdd={(item) => setCustomItems((current) => [...current, item])}
       />
 
+      <ManualRows rows={manualRows} onChange={setManualRows} />
+
       {course && (
         <>
           <ScheduleTable
@@ -252,18 +257,22 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
             onShift={(id, minutes) => setShiftMin((current) => ({ ...current, [id]: minutes }))}
           />
           <SupplyTable catalog={catalog} course={course} />
-          {patient && (
-            <CourseExport
-              items={items}
-              course={course}
-              patient={patient}
-              regimenName={regimen ? localize(regimen.name, language) : null}
-              cycleNumber={courseSettings.cycleNumber}
-              startDate={courseSettings.startDate}
-              header={header}
-            />
-          )}
         </>
+      )}
+
+      {/* A sheet of hand-written lines alone is still a sheet, so the export does not wait for
+          a calculation — only for someone to put something on the paper. */}
+      {patient && (course !== null || manualRows.some((row) => row.what.trim() !== '')) && (
+        <CourseExport
+          items={items}
+          course={course}
+          patient={patient}
+          regimenName={regimen ? localize(regimen.name, language) : null}
+          cycleNumber={courseSettings.cycleNumber}
+          startDate={courseSettings.startDate}
+          header={header}
+          manualRows={manualRows}
+        />
       )}
 
       <HospitalHeader catalog={catalog} value={header} onChange={setHeader} />
