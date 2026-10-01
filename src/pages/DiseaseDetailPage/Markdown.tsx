@@ -2,6 +2,8 @@ import { Anchor, Table, Text, Title } from '@mantine/core'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
+import { headingId, headingText } from './headings'
+
 /**
  * Article Markdown. Tables and lists are what the articles use most, so they get Mantine styling;
  * raw HTML stays disabled (react-markdown does not render it by default).
@@ -12,13 +14,20 @@ export function Markdown({ children }: { children: string }) {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
+          // The id is what the contents scrolls to; it is derived from the heading itself,
+          // exactly as the contents derives it.
           h1: ({ children: text }) => (
-            <Title order={2} size="h3">
+            <Title order={2} size="h3" id={headingId(headingText(text))}>
               {text}
             </Title>
           ),
           h2: ({ children: text }) => (
-            <Title order={3} size="h4">
+            <Title order={3} size="h4" id={headingId(headingText(text))}>
+              {text}
+            </Title>
+          ),
+          h3: ({ children: text }) => (
+            <Title order={4} size="h5" id={headingId(headingText(text))}>
               {text}
             </Title>
           ),

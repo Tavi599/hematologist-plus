@@ -15,6 +15,7 @@ import type { Disease } from '../../schemas/catalog'
 import type { ArticleSection } from '../../schemas/common'
 import { currentLanguage } from '../../lib/i18n'
 import { localize, resolveLocalized } from '../../lib/localized'
+import { ArticleContents } from './ArticleContents'
 import { Markdown } from './Markdown'
 
 export function DiseaseDetailPage() {
@@ -126,6 +127,7 @@ function ArticleBody({ resolved }: { resolved: ReturnType<typeof resolveLocalize
           {t('diseaseDetail.otherLanguage')}
         </Alert>
       )}
+      <ArticleContents markdown={resolved.text} />
       <Markdown>{resolved.text}</Markdown>
     </>
   )
