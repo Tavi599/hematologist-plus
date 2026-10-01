@@ -43,13 +43,31 @@ export function NeedLines({
     onChange(lines.map((line) => (line.key === key ? { ...line, ...next } : line)))
   }
 
+  const nameOf = (presentationId: string | null): string => {
+    const presentation = catalog.rows.drug_presentations.find((row) => row.id === presentationId)
+    return presentation === undefined ? '' : catalogName(catalog, presentation, language, unitLabel)
+  }
+
   const chooseDrug = (line: NeedLine, drugId: string | null) => {
     const presentation = drugId ? catalog.presentationsByDrug.get(drugId)?.[0] : undefined
     patch(line.key, {
       drugId,
       presentationId: presentation?.id ?? null,
       regimenId: null,
-      name: presentation ? catalogName(catalog, presentation, language, unitLabel) : '',
+      name: nameOf(presentation?.id ?? null),
+    })
+  }
+
+  /**
+   * The name follows the pack it was taken from — a line about the 500 mg vial must not go on
+   * saying 100 mg. A name the physician wrote themselves is theirs, and is left alone.
+   */
+  const choosePresentation = (line: NeedLine, presentationId: string | null) => {
+    const written = line.name.trim()
+    const wasOurs = written === '' || written === nameOf(line.presentationId)
+    patch(line.key, {
+      presentationId,
+      ...(wasOurs ? { name: nameOf(presentationId) } : {}),
     })
   }
 
@@ -100,7 +118,7 @@ export function NeedLines({
                     label={t('need.form.presentation')}
                     data={presentations}
                     value={line.presentationId}
-                    onChange={(value) => patch(line.key, { presentationId: value })}
+                    onChange={(value) => choosePresentation(line, value)}
                     disabled={presentations.length === 0}
                     w={200}
                   />

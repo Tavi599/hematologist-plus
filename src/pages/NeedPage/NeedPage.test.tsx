@@ -53,6 +53,24 @@ describe('NeedPage', () => {
     expect(screen.getByText('9')).toBeInTheDocument()
   })
 
+  it('renames the line when the pack changes, unless the name was written by hand', async () => {
+    renderWithProviders(<NeedPage />)
+    await pick('Препарат', 'ДЕМО Ритуксимаб')
+    expect(screen.getByLabelText('Назва в наказі')).toHaveValue('ДЕМО Ритуксимаб 100 мг')
+
+    await pick('Фасування', 'ДЕМО Ритуксимаб 500 мг')
+    expect(screen.getByLabelText('Назва в наказі')).toHaveValue('ДЕМО Ритуксимаб 500 мг')
+
+    // The order names a brand, so a name typed by hand stays whatever the pack becomes.
+    await act(async () =>
+      fireEvent.change(screen.getByLabelText('Назва в наказі'), {
+        target: { value: 'Мабтера 500 мг' },
+      }),
+    )
+    await pick('Фасування', 'ДЕМО Ритуксимаб 100 мг')
+    expect(screen.getByLabelText('Назва в наказі')).toHaveValue('Мабтера 500 мг')
+  })
+
   it('says what the hint cannot count instead of counting it anyway', async () => {
     renderWithProviders(<NeedPage />)
     await pick('Препарат', 'ДЕМО Ритуксимаб')
