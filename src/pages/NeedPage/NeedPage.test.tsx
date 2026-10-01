@@ -71,6 +71,17 @@ describe('NeedPage', () => {
     expect(screen.getByLabelText('Назва в наказі')).toHaveValue('Мабтера 500 мг')
   })
 
+  it('works out the body surface from a height and a weight, so nothing has to be typed twice', async () => {
+    renderWithProviders(<NeedPage />)
+    await pick('Препарат', 'ДЕМО Ритуксимаб')
+
+    // 180 cm × 80 kg → √(180 × 80 / 3600) = 2,00 m².
+    await type('Зріст, см', '180')
+    await type('Вага, кг', '80')
+    expect(screen.getByLabelText('BSA для підрахунку, м²')).toHaveValue('2')
+    expect(await screen.findByText('1 × 500 мг + 3 × 100 мг')).toBeInTheDocument()
+  })
+
   it('says what the hint cannot count instead of counting it anyway', async () => {
     renderWithProviders(<NeedPage />)
     await pick('Препарат', 'ДЕМО Ритуксимаб')

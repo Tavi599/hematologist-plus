@@ -1,4 +1,4 @@
-import { Badge, Button, Card, Group, NumberInput, Select, Stack, Text, Title } from '@mantine/core'
+import { Badge, Button, Card, Group, Select, Stack, Text, Title } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
 
 import type { PresentationCount } from '../../domain'
@@ -6,8 +6,8 @@ import type { CatalogIndex } from '../../lib/catalog-index'
 import { formatNumber } from '../../lib/format'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
+import { BsaPicker } from './BsaPicker'
 import type { NeedLine } from './need-lines'
-import { decimalInput } from '../../lib/decimal-input'
 import { estimateCoursePacks, packsOf, regimensWithDrug, suggestedRegimen } from './need-estimate'
 
 /**
@@ -69,20 +69,7 @@ export function NeedHint({
           {t('need.hint.lead')}
         </Text>
 
-        <NumberInput
-          label={t('need.hint.bsa')}
-          description={t('need.hint.bsaHint')}
-          value={bsaM2 ?? ''}
-          onChange={(value) =>
-            onBsaChange(value === '' ? null : typeof value === 'number' ? value : Number(value))
-          }
-          min={0.5}
-          max={3}
-          step={0.01}
-          {...decimalInput()}
-          decimalScale={2}
-          w={200}
-        />
+        <BsaPicker value={bsaM2} onChange={onBsaChange} />
 
         {drugLines.length === 0 ? (
           <Text c="dimmed">{t('need.hint.empty')}</Text>
