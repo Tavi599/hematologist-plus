@@ -1,0 +1,184 @@
+{
+  "$comment": "Для лімфоми Ходжкіна той самий протокол дає схему без ритуксимабу (Gem-Ox) — у калькуляторі позицію ритуксимабу просто вимикають. Ко-тримоксазол у довіднику відсутній, тому лишився в описі.",
+  "id": "r-gem-ox",
+  "short_name": "R-GemOx",
+  "name": {
+    "uk": "R-GemOx (ритуксимаб, гемцитабін, оксаліплатин)",
+    "en": "R-GemOx (rituximab, gemcitabine, oxaliplatin)"
+  },
+  "description": {
+    "uk": "Рецидивна або рефрактерна дифузна В-великоклітинна лімфома в пацієнтів, яким не підходить високодозова терапія. Для лімфоми Ходжкіна той самий протокол дає Gem-Ox без ритуксимабу — тоді позицію ритуксимабу вимикають; саме поєднання гемцитабіну з оксаліплатином протокол позначає як застосування поза інструкцією. Цикл 21 день, максимум 6 циклів. Оксаліплатин протипоказаний при сенсорній нейропатії з порушенням функції до початку лікування, при ШКФ нижче 30 мл/хв і якщо пацієнт отримував оксаліплатин протягом останніх 12 місяців. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень (понеділок, середа, п'ятниця) на весь час лікування й щонайменше 3 місяці після; у довіднику цього препарату немає.",
+    "en": "Relapsed or refractory diffuse large B-cell lymphoma in patients unfit for high-dose therapy. For Hodgkin lymphoma the same protocol gives Gem-Ox without the rituximab, in which case the rituximab row is switched off; the gemcitabine-oxaliplatin pairing itself is marked off-label. A 21-day cycle, six cycles at most. Oxaliplatin is contraindicated with sensory neuropathy impairing function before the first course, below a GFR of 30 mL/min, and within 12 months of previous oxaliplatin. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week (Monday, Wednesday, Friday) throughout treatment and for at least three months after; it is not in the catalogue."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.100 R-GemOx",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-100-r-gem-ox.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає хлорфенамін 10 мг внутрішньовенно, якого в довіднику немає.",
+        "en": "At least 30 minutes before the rituximab. The protocol adds chlorphenamine 10 mg intravenously, which is not in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають інші введення. Якщо перше введення пройшло добре, з циклу 2 можна перейти на пришвидшену інфузію.",
+        "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before any other infusion starts. If the first dose was tolerated, a rapid infusion may be used from cycle 2."
+      }
+    },
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl за 30 хвилин.",
+        "en": "In 250 mL of 0.9% sodium chloride over 30 minutes."
+      }
+    },
+    {
+      "key": "oxaliplatin",
+      "drug_id": "oxaliplatin",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 120,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 250-500 мл 5% глюкози за 2 години, концентрація 0,2-0,7 мг/мл.",
+        "en": "In 250 to 500 mL of 5% glucose over 2 hours, at 0.2 to 0.7 mg/mL."
+      }
+    },
+    {
+      "key": "ondansetron",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Помірний еметогенний ризик.",
+        "en": "The moderately emetogenic days."
+      }
+    },
+    {
+      "key": "metoclopramide",
+      "drug_id": "metoclopramide",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Протокол дозволяє 10-20 мг тричі на добу; взято нижню межу. При проривній нудоті приймають за потреби.",
+        "en": "The protocol allows 10 to 20 mg three times a day; the lower bound is used. For breakthrough nausea it is taken as needed."
+      },
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Верхня межа діапазону",
+            "en": "The upper bound of the range"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.100 R-GemOx",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-100-r-gem-ox.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини разом із гідратацією, 7 днів у першому циклі. При високому ризику розглядають расбуриказу. При нирковій недостатності дозу зменшують.",
+        "en": "Tumour lysis prophylaxis with hydration, for 7 days in the first cycle. At high risk, rasburicase is considered. The dose is reduced in renal impairment."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Противірусна профілактика на весь час лікування і ще 3 місяці після його завершення.",
+        "en": "Antiviral prophylaxis throughout treatment and for three months after it ends."
+      }
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "miu_kg",
+      "days": [5, 6, 7, 8, 9, 10, 11],
+      "notes": {
+        "uk": "З дня 5, 7 днів.",
+        "en": "From day 5, for 7 days."
+      }
+    },
+    {
+      "key": "omeprazole",
+      "drug_id": "omeprazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "За потреби, на весь час лікування. Альтернатива протоколу — фамотидин 20 мг двічі на добу, якого в довіднику немає.",
+        "en": "If required, throughout treatment. The protocol's alternative is famotidine 20 mg twice daily, which is not in the catalogue."
+      }
+    }
+  ]
+}

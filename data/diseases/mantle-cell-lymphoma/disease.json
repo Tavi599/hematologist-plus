@@ -52,7 +52,12 @@
       "description": {
         "uk": "До 65 років (за рішенням лікаря — до 70) перевагу має індукція, що містить ковалентний інгібітор BTK: R-CHOP з ібрутинібом у чергуванні з R-DHAP або R-DHAOx, далі 2 роки ібрутинібу і 3 роки підтримки ритуксимабом. Альтернатива — індукція з високими дозами цитарабіну (R-DHAP, R-CHOP/R-DHAP, R-maxi-CHOP/R-HD-цитарабін) з аутологічною трансплантацією і 3 роками підтримки ритуксимабом. Цих схем у довіднику ще немає.",
         "en": "Under 65 (up to 70 at the physician's discretion) induction containing a covalent BTK inhibitor is preferred: R-CHOP with ibrutinib alternating with R-DHAP or R-DHAOx, then two years of ibrutinib and three years of rituximab maintenance. The alternative is high-dose cytarabine induction (R-DHAP, R-CHOP/R-DHAP, R-maxi-CHOP/R-HD-cytarabine) with autologous transplantation and three years of rituximab maintenance. These regimens are not in the catalog yet."
-      }
+      },
+      "regimens": [
+        {
+          "regimen_id": "r-dhaox"
+        }
+      ]
     },
     {
       "key": "first-line-elderly",
@@ -85,6 +90,13 @@
             "uk": "Підтримка, 2 роки",
             "en": "Maintenance, 2 years"
           }
+        },
+        {
+          "regimen_id": "r-bac",
+          "notes": {
+            "uk": "Поза інструкцією",
+            "en": "Off-label"
+          }
         }
       ]
     },
@@ -109,6 +121,16 @@
         },
         {
           "regimen_id": "r-ice"
+        },
+        {
+          "regimen_id": "r-bac",
+          "notes": {
+            "uk": "Поза інструкцією",
+            "en": "Off-label"
+          }
+        },
+        {
+          "regimen_id": "r-dhaox"
         }
       ]
     }

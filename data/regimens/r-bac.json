@@ -1,0 +1,190 @@
+{
+  "$comment": "Протокол сам позначає обидва показання як застосування поза інструкцією. Схема взята з протоколу мережі, а не з публікації, тому поля evidence тут немає — але про позаінструкційність сказано в описі. Ко-тримоксазол і очні краплі зі стероїдом у довіднику відсутні, тому вони лишилися в описі.",
+  "id": "r-bac",
+  "short_name": "R-BAC",
+  "name": {
+    "uk": "R-BAC (ритуксимаб, бендамустин, цитарабін)",
+    "en": "R-BAC (rituximab, bendamustine, cytarabine)"
+  },
+  "description": {
+    "uk": "Мантійноклітинна лімфома: перша лінія в літніх пацієнтів, яким не підходить антрациклінова хіміотерапія, або рецидив після інгібітора BTK, коли CAR-T чи клінічне дослідження недоступні. Протокол позначає обидва показання як застосування поза інструкцією. Цикл 28 днів, максимум 6 циклів. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень (понеділок, середа, п'ятниця) на весь час лікування й щонайменше 3 місяці після; у періоди нейтропенії дозу можна зменшити до двох разів на тиждень. Для профілактики цитарабінового кон'юнктивіту — очні краплі зі стероїдом (преднізолон 0,5% або дексаметазон 0,1%) по краплі в кожне око 4 рази на добу з дня 2 і ще 5 днів після останньої дози цитарабіну. Жодного з цих двох засобів у довіднику немає, тому окремих позицій для них у схемі теж немає.",
+    "en": "Mantle cell lymphoma: first line in older patients unsuitable for anthracycline chemotherapy, or relapse after a BTK inhibitor where CAR-T or a trial is not available. The protocol marks both indications as off-label. A 28-day cycle, six cycles at most. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week (Monday, Wednesday, Friday) throughout treatment and for at least three months after; during neutropenia the dose may drop to twice weekly. Against cytarabine conjunctivitis, steroid eye drops (prednisolone 0.5% or dexamethasone 0.1%), one drop in each eye four times a day from day 2 and for five days after the last cytarabine. Neither is in the catalogue, so neither has a row of its own here."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.19 R-BAC",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-19-r-bac.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає гідрокортизон 100 мг і хлорфенамін 10 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "At least 30 minutes before the rituximab. The protocol adds hydrocortisone 100 mg and chlorphenamine 10 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають інші введення. Якщо перше введення пройшло добре, з циклу 2 можна перейти на пришвидшену інфузію.",
+        "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before any other infusion starts. If the first dose was tolerated, a rapid infusion may be used from cycle 2."
+      }
+    },
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 70,
+      "dose_unit": "mg_m2",
+      "days": [2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl за 30-60 хвилин; у довіднику взято повільніший край діапазону.",
+        "en": "In 500 mL of 0.9% sodium chloride over 30 to 60 minutes; the catalogue takes the slower end."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 500,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl за 2 години. У дні, коли дають бендамустин, цитарабін вводять через 2 години після нього (протокол у цьому місці пише «у дні 1 і 2», рахуючи від першого дня бендамустину, — звірте з листом призначень).",
+        "en": "In 250 mL of 0.9% sodium chloride over 2 hours. On the bendamustine days it goes in 2 hours after it (at this point the protocol writes \"on days 1 and 2\", counting from the first bendamustine day; check against the prescription sheet)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 800,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "З циклу 2 для пацієнтів молодших за 70 років, якщо перший цикл перенесено добре",
+            "en": "From cycle 2 in patients under 70 where the first cycle was well tolerated"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.19 R-BAC",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-19-r-bac.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "ondansetron",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [2, 3],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Дні 2-3 — помірний еметогенний ризик.",
+        "en": "Days 2 and 3, the moderately emetogenic ones."
+      }
+    },
+    {
+      "key": "metoclopramide",
+      "drug_id": "metoclopramide",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [2, 3, 4, 5, 6, 7],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Протокол дозволяє 10-20 мг тричі на добу; взято нижню межу. При проривній нудоті приймають за потреби.",
+        "en": "The protocol allows 10 to 20 mg three times a day; the lower bound is used. For breakthrough nausea it is taken as needed."
+      },
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Верхня межа діапазону",
+            "en": "The upper bound of the range"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.19 R-BAC",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-19-r-bac.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [4, 5, 6, 7, 8, 9, 10],
+      "notes": {
+        "uk": "Низький ризик лізису пухлини: з дня 4, 7 днів, разом із гідратацією. При проміжному ризику починають за 3 дні до бендамустину, у дні бендамустину пропускають і відновлюють з дня 4 — разом 10 днів; такий розклад виставляють вручну. При високому ризику замість алопуринолу дають расбуриказу 3 мг у дні хіміотерапії. У дні бендамустину алопуринол не дають — вони взаємодіють. При нирковій недостатності дозу зменшують.",
+        "en": "Low tumour lysis risk: from day 4 for 7 days, with hydration. At intermediate risk it starts 3 days before the bendamustine, is omitted on the bendamustine days and resumes from day 4, for 10 days in all; that schedule is set by hand. At high risk rasburicase 3 mg on the chemotherapy days replaces it. Allopurinol is never given on a bendamustine day: the two interact. The dose is reduced in renal impairment."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Противірусна профілактика на весь час лікування і ще 3 місяці після його завершення.",
+        "en": "Antiviral prophylaxis throughout treatment and for three months after it ends."
+      }
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "miu_kg",
+      "days": [7, 8, 9, 10, 11, 12, 13],
+      "notes": {
+        "uk": "З дня 7: щодня 7 днів або через день 5 введень — другий варіант виставляють вручну.",
+        "en": "From day 7: daily for 7 days, or every other day for 5 doses, which is set by hand."
+      }
+    }
+  ]
+}
