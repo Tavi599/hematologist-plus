@@ -105,8 +105,9 @@ describe('dose choices', () => {
         capAmount: null,
       },
       {
-        id: 'ДЕМО: інший протокол',
+        id: '40-mg_m2',
         label: 'ДЕМО: інший протокол',
+        note: null,
         doseValue: 40,
         doseUnit: 'mg_m2',
         capAmount: null,
@@ -115,12 +116,67 @@ describe('dose choices', () => {
     ])
   })
 
+  it('tells two doses of one protocol apart by their dose, not by its name', () => {
+    const catalog = demoCatalog()
+    const item = catalog.regimen_items.find((row) => row.id === 'r-chop-21.prednisolone')!
+    const source = { name: 'ДЕМО: один протокол', checkedOn: '2026-09-19' }
+    item.dose_options = [
+      {
+        dose_value: 60,
+        dose_unit: 'mg_m2',
+        cap_amount: null,
+        notes: { uk: 'Старші 70 років' },
+        source,
+      },
+      {
+        dose_value: 80,
+        dose_unit: 'mg_m2',
+        cap_amount: null,
+        notes: { uk: 'До 70 років' },
+        source,
+      },
+    ]
+    const choices = buildCourseItems(indexCatalog(catalog), 'r-chop-21').at(-1)!.doseChoices
+    expect(choices.map((choice) => choice.id)).toEqual([
+      DEFAULT_DOSE_CHOICE,
+      '60-mg_m2',
+      '80-mg_m2',
+    ])
+    expect(choices[2]?.note).toEqual({ uk: 'До 70 років' })
+  })
+
+  it('calculates with an alternative that shares its document with another', () => {
+    const catalog = demoCatalog()
+    const item = catalog.regimen_items.find((row) => row.id === 'r-chop-21.prednisolone')!
+    const source = { name: 'ДЕМО: один протокол', checkedOn: '2026-09-19' }
+    item.dose_options = [
+      {
+        dose_value: 60,
+        dose_unit: 'mg_m2',
+        cap_amount: null,
+        notes: { uk: 'Старші 70 років' },
+        source,
+      },
+      {
+        dose_value: 80,
+        dose_unit: 'mg_m2',
+        cap_amount: null,
+        notes: { uk: 'До 70 років' },
+        source,
+      },
+    ]
+    const items = buildCourseItems(indexCatalog(catalog), 'r-chop-21', {
+      'r-chop-21.prednisolone': '80-mg_m2',
+    })
+    expect(items.at(-1)!.courseDrug.dose).toEqual({ value: 80, unit: 'mg_m2' })
+  })
+
   it('calculates with the protocol the physician picked', () => {
     const items = buildCourseItems(index(), 'r-chop-21', {
-      'r-chop-21.prednisolone': 'ДЕМО: інший протокол',
+      'r-chop-21.prednisolone': '40-mg_m2',
     })
     const prednisolone = items.at(-1)!
-    expect(prednisolone.doseChoiceId).toBe('ДЕМО: інший протокол')
+    expect(prednisolone.doseChoiceId).toBe('40-mg_m2')
     expect(prednisolone.courseDrug.dose).toEqual({ value: 40, unit: 'mg_m2' })
   })
 

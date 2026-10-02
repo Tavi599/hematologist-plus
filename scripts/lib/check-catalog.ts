@@ -174,9 +174,30 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
   }
 
   for (const item of rows.regimen_items) {
-    const names = item.dose_options.map((option) => option.source.name)
-    if (new Set(names).size !== names.length) {
-      error('regimen_items', item.id, 'dose_options: two alternatives from the same source')
+    // One document often writes several doses for one drug — a phase of the disease, a platelet
+    // count, another indication. What must not repeat is the dose itself: the physician picks an
+    // alternative by its value, and two equal values would be the same line twice.
+    const doses = item.dose_options.map((option) => `${option.dose_value} ${option.dose_unit}`)
+    if (new Set(doses).size !== doses.length) {
+      error('regimen_items', item.id, 'dose_options: the same dose listed twice')
+    }
+    if (doses.includes(`${item.dose_value} ${item.dose_unit}`)) {
+      error('regimen_items', item.id, "dose_options: an alternative repeats the item's own dose")
+    }
+    // Two doses from one document are told apart by their note; without it the picker shows the
+    // name of that document twice.
+    const byName = new Map<string, number>()
+    for (const option of item.dose_options) {
+      byName.set(option.source.name, (byName.get(option.source.name) ?? 0) + 1)
+    }
+    for (const option of item.dose_options) {
+      if ((byName.get(option.source.name) ?? 0) > 1 && option.notes === null) {
+        error(
+          'regimen_items',
+          item.id,
+          `dose_options: "${option.source.name}" gives several doses, each needs a note to tell them apart`,
+        )
+      }
     }
   }
 

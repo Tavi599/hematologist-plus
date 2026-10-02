@@ -280,6 +280,43 @@ describe('checkCatalog', () => {
     expect(warnings).toContain('drug has several infusion params but none is default')
   })
 
+  it('accepts several doses from one document and rejects a repeated or unnamed one', () => {
+    const rows = loadDemo()
+    const item = rows.regimen_items.find((row) => row.id === 'r-chop-21.prednisolone')!
+    const source = { name: 'ДЕМО: один протокол', checkedOn: '2026-09-19' }
+    item.dose_options = [
+      { dose_value: 60, dose_unit: 'mg_m2', cap_amount: null, notes: { uk: 'Старші 70' }, source },
+      { dose_value: 80, dose_unit: 'mg_m2', cap_amount: null, notes: { uk: 'До 70' }, source },
+    ]
+    expect(checkCatalog(rows).filter((issue) => issue.severity === 'error')).toEqual([])
+
+    item.dose_options[1]!.notes = null
+    expect(checkCatalog(rows).map((issue) => issue.message)).toContain(
+      'dose_options: "ДЕМО: один протокол" gives several doses, each needs a note to tell them apart',
+    )
+
+    item.dose_options = [
+      { dose_value: 60, dose_unit: 'mg_m2', cap_amount: null, notes: null, source },
+      { dose_value: 60, dose_unit: 'mg_m2', cap_amount: null, notes: null, source },
+    ]
+    expect(checkCatalog(rows).map((issue) => issue.message)).toContain(
+      'dose_options: the same dose listed twice',
+    )
+
+    item.dose_options = [
+      {
+        dose_value: item.dose_value,
+        dose_unit: item.dose_unit,
+        cap_amount: null,
+        notes: null,
+        source,
+      },
+    ]
+    expect(checkCatalog(rows).map((issue) => issue.message)).toContain(
+      "dose_options: an alternative repeats the item's own dose",
+    )
+  })
+
   it('keeps a regimen whose drug cannot be obtained and names the drug', () => {
     const rows = loadDemo()
     rows.drugs.find((drug) => drug.id === 'rituximab')!.availability = 'unavailable'

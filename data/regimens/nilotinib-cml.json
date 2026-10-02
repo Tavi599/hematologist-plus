@@ -35,7 +35,23 @@
       "notes": {
         "uk": "Двічі на добу з проміжком близько 12 годин, обовʼязково натщесерце: не їсти 2 години до прийому і щонайменше 1 годину після. Капсули ковтати цілими, запиваючи водою. При резистентності чи непереносимості попередньої терапії (хронічна фаза або фаза акселерації) доза становить 400 мг двічі на добу.",
         "en": "Twice daily about 12 hours apart and strictly without food: nothing to eat for 2 hours before and at least 1 hour after the dose. Capsules are swallowed whole with water. With resistance or intolerance to prior therapy (chronic or accelerated phase) the dose is 400 mg twice daily."
-      }
+      },
+      "dose_options": [
+        {
+          "dose_value": 400,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Резистентність або непереносимість попередньої терапії",
+            "en": "Resistance or intolerance to prior therapy"
+          },
+          "source": {
+            "name": "EMA, Tasigna (нілотиніб), коротка характеристика препарату",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/tasigna-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
     }
   ]
 }

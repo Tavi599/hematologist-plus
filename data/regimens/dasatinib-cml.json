@@ -33,7 +33,23 @@
       "notes": {
         "uk": "Один раз на добу, незалежно від їди; таблетки ковтати цілими. Фаза акселерації, бластний криз і Ph+ ГЛЛ - 140 мг один раз на добу.",
         "en": "Once daily, with or without food; tablets are swallowed whole. Accelerated phase, blast crisis and Ph+ ALL: 140 mg once daily."
-      }
+      },
+      "dose_options": [
+        {
+          "dose_value": 140,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Фаза акселерації, бластний криз, Ph+ ГЛЛ",
+            "en": "Accelerated phase, blast crisis, Ph+ ALL"
+          },
+          "source": {
+            "name": "EMA, Sprycel (дазатиніб), коротка характеристика препарату",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/sprycel-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
     }
   ]
 }

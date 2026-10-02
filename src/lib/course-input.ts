@@ -1,6 +1,7 @@
 import { amountUnitOf, convertAmount, type CourseDrug } from '../domain'
 import type { Drug, DrugInfusionParams, DrugPresentation, RegimenItem } from '../schemas/catalog'
 import type { Source } from '../schemas/common'
+import type { LocalizedText } from './localized'
 import type { CatalogIndex } from './catalog-index'
 
 /** A regimen item ready for both the calculation and the table that shows it. */
@@ -20,10 +21,13 @@ export interface CourseItem {
 
 /** One dose the physician can pick for an item: the regimen's own, or another protocol's. */
 export interface DoseChoice {
-  /** `DEFAULT_DOSE_CHOICE` for the dose written in the regimen, otherwise the source name. */
+  /** `DEFAULT_DOSE_CHOICE` for the dose written in the regimen, otherwise the dose itself. */
   id: string
   /** Name of the protocol; null for the regimen's own dose when the regimen names no source. */
   label: string | null
+  /** What tells this alternative from the others when they share a document: the phase, the
+   *  platelet count, the indication. Shown in the picker instead of the protocol's name. */
+  note?: LocalizedText | null
   doseValue: number
   doseUnit: RegimenItem['dose_unit']
   capAmount: number | null
@@ -32,6 +36,14 @@ export interface DoseChoice {
 }
 
 export const DEFAULT_DOSE_CHOICE = 'default'
+
+/**
+ * Id of an alternative: the dose itself, not the name of its document. One label often states
+ * several doses — a phase of the disease, a platelet count — and they must stay apart in the list.
+ */
+export function doseChoiceId(option: { dose_value: number; dose_unit: string }): string {
+  return `${option.dose_value}-${option.dose_unit}`
+}
 
 /** The regimen's own dose first, then every alternative recorded for the item. */
 export function doseChoices(catalog: CatalogIndex, item: RegimenItem): DoseChoice[] {
@@ -46,8 +58,9 @@ export function doseChoices(catalog: CatalogIndex, item: RegimenItem): DoseChoic
       ...(regimenSource === undefined ? {} : { source: regimenSource }),
     },
     ...item.dose_options.map((option) => ({
-      id: option.source.name,
+      id: doseChoiceId(option),
       label: option.source.name,
+      note: option.notes,
       doseValue: option.dose_value,
       doseUnit: option.dose_unit,
       capAmount: option.cap_amount,

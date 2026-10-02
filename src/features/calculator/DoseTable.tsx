@@ -194,8 +194,11 @@ function DoseRow({
               data={[
                 ...item.doseChoices.map((choice) => ({
                   value: choice.id,
+                  // One protocol often writes several doses — a phase of the disease, a platelet
+                  // count. Then its note is what tells them apart, not its name.
                   label:
-                    choice.label ??
+                    (choice.note ? localize(choice.note, language) : null) ||
+                    choice.label ||
                     (choice.id === DEFAULT_DOSE_CHOICE
                       ? t('calculator.doses.doseSourceRegimen')
                       : choice.id),

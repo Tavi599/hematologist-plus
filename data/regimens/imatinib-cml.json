@@ -33,7 +33,37 @@
       "notes": {
         "uk": "Під час їди, запиваючи великою склянкою води - щоб менше дратувало шлунок. 400 і 600 мг приймають один раз на добу, 800 мг - по 400 мг двічі на добу. Фаза акселерації та бластний криз - 600 мг на добу; при прогресуванні або недостатній відповіді дозу підвищують до 800 мг. Лікування триває до прогресування або непереносимості.",
         "en": "With a meal and a large glass of water, to limit gastrointestinal irritation. 400 and 600 mg are taken once daily, 800 mg as 400 mg twice daily. Accelerated phase and blast crisis: 600 mg a day; on progression or inadequate response the dose rises to 800 mg. Treatment continues until progression or intolerance."
-      }
+      },
+      "dose_options": [
+        {
+          "dose_value": 600,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Фаза акселерації або бластний криз",
+            "en": "Accelerated phase or blast crisis"
+          },
+          "source": {
+            "name": "EMA, Glivec (іматиніб), коротка характеристика препарату",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/glivec-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "dose_value": 800,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "При прогресуванні чи недостатній відповіді; дається як 400 мг двічі на добу",
+            "en": "On progression or inadequate response; given as 400 mg twice daily"
+          },
+          "source": {
+            "name": "EMA, Glivec (іматиніб), коротка характеристика препарату",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/glivec-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
     }
   ]
 }

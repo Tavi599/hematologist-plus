@@ -33,7 +33,37 @@
       "notes": {
         "uk": "Мета при есенціальній тромбоцитемії - тромбоцити нижче 400×10⁹/л і лейкоцити понад 4×10⁹/л; при справжній поліцитемії - гематокрит нижче 0,45, тромбоцити нижче 400×10⁹/л і нормальні лейкоцити. Вищу початкову дозу беруть, коли зниження показників потрібне терміново. При ХМЛ початкова доза - 40 мг/кг на добу за кількістю лейкоцитів, після падіння нижче 20×10⁹/л її зменшують удвічі (20 мг/кг). Лікування переривають, якщо лейкоцити нижче 2,5×10⁹/л або тромбоцити нижче 100×10⁹/л. Контроль крові спершу раз на 1-2 тижні, за стабільних показників - не рідше ніж раз на 4 місяці.",
         "en": "The aim in essential thrombocythaemia is platelets below 400 x 10^9/L and white cells above 4 x 10^9/L; in polycythaemia vera a haematocrit below 0.45, platelets below 400 x 10^9/L and a normal white cell count. A higher starting dose is used where the counts must come down urgently. In CML the starting dose is 40 mg/kg a day by white cell count, halved (20 mg/kg) once it falls below 20 x 10^9/L. Treatment is interrupted if white cells fall below 2.5 x 10^9/L or platelets below 100 x 10^9/L. Counts weekly or fortnightly at first, and at least every four months once stable."
-      }
+      },
+      "dose_options": [
+        {
+          "dose_value": 40,
+          "dose_unit": "mg_kg",
+          "notes": {
+            "uk": "ХМЛ: початкова доза; після падіння лейкоцитів нижче 20×10⁹/л — 20 мг/кг",
+            "en": "CML: starting dose; 20 mg/kg once the white cell count falls below 20 x 10^9/L"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.29 Hydroxycarbamide",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-29-hydroxycarbamide.pdf",
+            "version": "2.0 (07.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "dose_value": 1000,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Паліативний контроль лейкоцитозу при ХММЛ або ГМЛ",
+            "en": "Palliative control of a rising white cell count in CMML or AML"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.29 Hydroxycarbamide",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-29-hydroxycarbamide.pdf",
+            "version": "2.0 (07.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
     }
   ]
 }

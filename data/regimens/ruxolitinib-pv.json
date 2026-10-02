@@ -35,7 +35,23 @@
       "notes": {
         "uk": "Підвищувати не раніше ніж через 4 тижні і далі не частіше ніж раз на 2 тижні, крок - не більше 5 мг двічі на добу, максимум 25 мг двічі на добу.",
         "en": "Not increased within the first four weeks and thereafter no more often than every two weeks, by at most 5 mg twice daily, to a maximum of 25 mg twice daily."
-      }
+      },
+      "dose_options": [
+        {
+          "dose_value": 25,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Максимальна доза після титрування",
+            "en": "Maximum dose after titration"
+          },
+          "source": {
+            "name": "EMA, Jakavi (руксолітиніб), коротка характеристика препарату",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/jakavi-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
     }
   ]
 }
