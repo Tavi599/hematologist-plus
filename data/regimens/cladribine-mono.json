@@ -1,0 +1,64 @@
+{
+  "$comment": "Дози - протокол NSSG Oxford L.28 Cladribine +/- Rituximab (вер. 5.0, вересень 2025). Ко-тримоксазол (профілактика пневмоцистозу) і гідрокортизон у довіднику відділення відсутні, тож у схему не внесені. Варіант із ритуксимабом (375 мг/м2 щотижня 8 тижнів при ВКЛ) буде окремою схемою, коли виникне потреба.",
+  "id": "cladribine-mono",
+  "short_name": "Кладрибін",
+  "name": {
+    "uk": "Кладрибін у монорежимі",
+    "en": "Cladribine monotherapy"
+  },
+  "description": {
+    "uk": "Кладрибін 0,14 мг/кг підшкірно, дні 1-5. При волосатоклітинній лейкемії - зазвичай один курс.",
+    "en": "Cladribine 0.14 mg/kg subcutaneously on days 1-5. In hairy cell leukemia usually a single course."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.28 Cladribine +/- Rituximab",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-28-cladribine.pdf",
+      "version": "5.0 (09.2025)",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "cladribine",
+      "drug_id": "cladribine",
+      "route": "subcutaneous",
+      "dose_value": 0.14,
+      "dose_unit": "mg_kg",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Підшкірна інʼєкція. Блювотний потенціал мінімальний - планова протиблювотна профілактика не потрібна.",
+        "en": "Subcutaneous injection. Minimal emetic risk - no routine antiemetic prophylaxis."
+      }
+    },
+    {
+      "key": "fluconazole",
+      "drug_id": "fluconazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Протигрибкова профілактика на час лікування",
+        "en": "Antifungal prophylaxis for the duration of treatment"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і після його завершення (у протоколі - ацикловір 200 мг тричі на добу)",
+        "en": "Antiviral prophylaxis during treatment and after it (the protocol gives aciclovir 200 mg three times a day)"
+      }
+    }
+  ]
+}

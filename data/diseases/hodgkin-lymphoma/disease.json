@@ -29,26 +29,53 @@
     {
       "kind": "eviq",
       "url": "https://www.eviq.org.au/search#/?query=Hodgkin%20lymphoma"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.esmo.org/guidelines/living-guidelines/esmo-living-guideline-lymphomas",
+      "label": {
+        "uk": "ESMO Living Guideline: лімфоми",
+        "en": "ESMO Living Guideline: Lymphomas"
+      },
+      "version": "v1.1",
+      "updated": "2026-02-01"
     }
   ],
   "treatment": [
     {
-      "key": "first-line",
+      "key": "first-line-early",
       "kind": "line",
       "title": {
-        "uk": "Перша лінія",
-        "en": "First line"
+        "uk": "Перша лінія, стадії I–II",
+        "en": "First line, stage I-II"
       },
       "description": {
-        "uk": "A(B)VD; блеоміцин пропускають у пацієнтів понад 60 років і з 3-го циклу при негативному проміжному ПЕТ.",
-        "en": "A(B)VD; bleomycin is omitted over 60 and from cycle 3 when the interim PET is negative."
+        "uk": "Сприятлива група — 2 цикли ABVD і променева терапія 20 Гр на уражену ділянку. Несприятлива група до 60 років — 4 цикли ABVD і 30 Гр, або 2 цикли ескальованого BEACOPP з наступними 2 циклами ABVD під контролем проміжного ПЕТ. Понад 60 років — 2 цикли ABVD, далі 2 цикли AVD і 30 Гр.",
+        "en": "Favourable disease: two cycles of ABVD and 20 Gy involved-site radiotherapy. Unfavourable disease under 60: four cycles of ABVD and 30 Gy, or two cycles of escalated BEACOPP followed by two cycles of ABVD with interim PET. Over 60: two cycles of ABVD, then two cycles of AVD and 30 Gy."
       },
       "regimens": [
         {
           "regimen_id": "abvd"
-        },
+        }
+      ]
+    },
+    {
+      "key": "first-line-advanced",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія, стадії IIB з факторами ризику, III–IV",
+        "en": "First line, stage IIB with risk factors, III-IV"
+      },
+      "description": {
+        "uk": "До 60 років перевагу має BrECADD під контролем проміжного ПЕТ; рівноцінна альтернатива — ніволумаб з AVD (і бажаний варіант у 60–80 років). BV-AVD — коли ніволумаб недоступний, а BrECADD не підходить. Якщо брентуксимаб та інгібітори PD-1 недоступні — ABVD або eBEACOPDac. BrECADD і Nivo-AVD у довіднику ще немає.",
+        "en": "Under 60, BrECADD with interim PET is preferred; nivolumab with AVD is an equal alternative and the favoured option at 60-80. BV-AVD is for when nivolumab is unavailable and BrECADD unsuitable. Without brentuximab and PD-1 inhibitors: ABVD or eBEACOPDac. BrECADD and Nivo-AVD are not in the catalog yet."
+      },
+      "regimens": [
         {
           "regimen_id": "bv-avd"
+        },
+        {
+          "regimen_id": "abvd"
         }
       ]
     },
@@ -56,22 +83,29 @@
       "key": "relapsed",
       "kind": "line",
       "title": {
-        "uk": "Рецидив і рефрактерний перебіг",
-        "en": "Relapsed and refractory"
+        "uk": "Рецидив і рефрактерна хвороба",
+        "en": "Relapsed and refractory disease"
       },
       "description": {
-        "uk": "Перелік неповний: лінії терапії ще треба звірити з настановою NCCN, а схеми сальважу (IGEV, ICE, DHAP, GDP, GVD) у довідник не внесені.",
-        "en": "The list is incomplete: the lines still have to be checked against the NCCN guideline, and the salvage regimens (IGEV, ICE, DHAP, GDP, GVD) are not in the catalog yet."
+        "uk": "Сальвадж-хіміотерапія з наступною аутологічною трансплантацією. Прийнятні схеми: DHAP, ESHAP, GDP, ICE, BEGEV, GVD — у довіднику наразі лише GDP (ритуксимаб не вводиться, бо пухлина CD20-негативна). Після трансплантації при високому ризику — підтримка брентуксимабом. Хто непридатний до трансплантації або має рецидив після неї і не отримував інгібіторів PD-1 — пембролізумаб має перевагу над брентуксимабом.",
+        "en": "Salvage chemotherapy followed by autologous transplantation. Acceptable regimens are DHAP, ESHAP, GDP, ICE, BEGEV and GVD - only GDP is in the catalog (rituximab omitted, the disease being CD20-negative). Brentuximab maintenance after transplantation is for high-risk features. For patients unsuitable for or relapsing after transplantation who are PD-1-naive, pembrolizumab is favoured over brentuximab."
       },
       "regimens": [
         {
-          "regimen_id": "brentuximab-mono"
+          "regimen_id": "r-gdp",
+          "notes": {
+            "uk": "Без ритуксимабу: лімфома Ходжкіна CD20-негативна",
+            "en": "Without rituximab: Hodgkin lymphoma is CD20-negative"
+          }
+        },
+        {
+          "regimen_id": "pembrolizumab"
         },
         {
           "regimen_id": "nivolumab"
         },
         {
-          "regimen_id": "pembrolizumab"
+          "regimen_id": "brentuximab-mono"
         }
       ]
     }

@@ -1,0 +1,183 @@
+{
+  "$comment": "Дози - протокол NSSG Oxford L.62 R-GDP (вер. 2.1, листопад 2025). Пре- і постгідратація (0,9% NaCl 500 мл, далі 1000 мл з калію хлоридом 20 ммоль і магнію сульфатом 10 ммоль) у довідник не внесена: розчини й електроліти не є препаратами довідника, вона описана приміткою до цисплатину. Ко-тримоксазол у відділенні відсутній. При CD20-негативній пухлині ритуксимаб за протоколом не вводиться (схема GDP).",
+  "id": "r-gdp",
+  "short_name": "R-GDP",
+  "name": {
+    "uk": "R-GDP (ритуксимаб + гемцитабін + дексаметазон + цисплатин)",
+    "en": "R-GDP (rituximab, gemcitabine, dexamethasone, cisplatin)"
+  },
+  "description": {
+    "uk": "Дексаметазон дні 1-4, ритуксимаб і цисплатин у день 1, гемцитабін у дні 1 і 8. Цикл 21 день.",
+    "en": "Dexamethasone on days 1-4, rituximab and cisplatin on day 1, gemcitabine on days 1 and 8. 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.62 R-GDP",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-62-r-gdp.pdf",
+      "version": "2.1 (11.2025)",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "Уранці під час їди або відразу після; у день ритуксимабу - за 30-60 хв до інфузії",
+        "en": "In the morning with or just after food; on the rituximab day 30-60 minutes before the infusion"
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 30-60 хв до ритуксимабу",
+        "en": "30-60 minutes before rituximab"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% - 5,0 мл (замість хлорфенаміну протоколу)",
+        "en": "Diphenhydramine 1% 5.0 mL (replaces the protocol's chlorphenamine)"
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. За браком часу ритуксимаб можна ввести днем раніше або днем пізніше за гемцитабін і цисплатин. При CD20-негативній пухлині не вводиться.",
+        "en": "In 500 mL 0.9% NaCl, maximum rate 400 mg/h. If time is short, rituximab may be given the day before or after gemcitabine and cisplatin. Omitted in CD20-negative disease."
+      }
+    },
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1, 8],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Можна вводити під час прегідратації перед цисплатином",
+        "en": "May be given during the pre-hydration for cisplatin"
+      }
+    },
+    {
+      "key": "cisplatin",
+      "drug_id": "cisplatin",
+      "route": "iv_infusion",
+      "dose_value": 75,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "Починати лише після завершення гемцитабіну. Прегідратація: 0,9% NaCl 500 мл за 60 хв. Постгідратація: 1000 мл 0,9% NaCl із калію хлоридом 20 ммоль і магнію сульфатом 10 ммоль за 90 хв; контроль діурезу й ваги.",
+        "en": "Start only after the gemcitabine infusion. Pre-hydration: 500 mL 0.9% NaCl over 60 minutes. Post-hydration: 1000 mL 0.9% NaCl with 20 mmol potassium chloride and 10 mmol magnesium sulphate over 90 minutes; monitor urine output and weight."
+      }
+    },
+    {
+      "key": "ondansetron-d1",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480
+    },
+    {
+      "key": "ondansetron-d2",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [2],
+      "anchor_offset_min": -30
+    },
+    {
+      "key": "furosemide",
+      "drug_id": "furosemide",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Лише за потреби після цисплатину: приріст ваги понад 2 кг або ознаки перевантаження рідиною",
+        "en": "Only if needed after cisplatin: weight gain over 2 kg or signs of fluid overload"
+      }
+    },
+    {
+      "key": "fluconazole",
+      "drug_id": "fluconazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Протигрибкова профілактика на час лікування",
+        "en": "Antifungal prophylaxis for the duration of treatment"
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл; зменшити дозу при нирковій недостатності",
+        "en": "Tumour lysis prophylaxis, cycle 1; reduce the dose in renal impairment"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і після його завершення (у протоколі - ацикловір 200 мг тричі на добу)",
+        "en": "Antiviral prophylaxis during treatment and after it (the protocol gives aciclovir 200 mg three times a day)"
+      }
+    }
+  ]
+}

@@ -29,6 +29,16 @@
     {
       "kind": "eviq",
       "url": "https://www.eviq.org.au/search#/?query=Follicular%20lymphoma"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.esmo.org/guidelines/living-guidelines/esmo-living-guideline-lymphomas",
+      "label": {
+        "uk": "ESMO Living Guideline: лімфоми",
+        "en": "ESMO Living Guideline: Lymphomas"
+      },
+      "version": "v1.1",
+      "updated": "2026-02-01"
     }
   ],
   "treatment": [
@@ -40,17 +50,81 @@
         "en": "First line"
       },
       "description": {
-        "uk": "Лікування починають за наявності показань (критерії GELF/BNLI); безсимптомну хворобу спостерігають.",
-        "en": "Treatment starts when there is an indication (GELF/BNLI criteria); asymptomatic disease is watched."
+        "uk": "Лікування починають за показаннями (критерії GELF); безсимптомну хворобу з малим об'ємом спостерігають.",
+        "en": "Treatment starts when there is an indication (GELF criteria); asymptomatic low-burden disease is observed."
+      },
+      "children": [
+        {
+          "key": "low-burden",
+          "kind": "group",
+          "title": {
+            "uk": "Малий об'єм пухлини",
+            "en": "Low tumour burden"
+          },
+          "description": {
+            "uk": "Активне спостереження або ритуксимаб 375 мг/м² щотижня 4 введення, за потреби з підтримкою раз на 2 місяці до 12 введень. Обмежена I або суміжна II стадія — променева терапія 24 Гр на уражену ділянку.",
+            "en": "Active observation, or rituximab 375 mg/m2 weekly for four doses, optionally with maintenance every two months for twelve doses. Limited stage I or contiguous stage II: 24 Gy involved-site radiotherapy."
+          }
+        },
+        {
+          "key": "high-burden",
+          "kind": "group",
+          "title": {
+            "uk": "Великий об'єм пухлини (критерії GELF)",
+            "en": "High tumour burden (GELF criteria)"
+          },
+          "description": {
+            "uk": "Імунохіміотерапія з анти-CD20: бендамустин, CHOP або CVP у поєднанні з ритуксимабом чи обінутузумабом. Після індукції можлива підтримка анти-CD20 раз на 2 місяці впродовж 2 років. Бендамустин — з осторогою після 70 років і при супутніх хворобах легень.",
+            "en": "Anti-CD20 immunochemotherapy: bendamustine, CHOP or CVP with rituximab or obinutuzumab. Maintenance anti-CD20 every two months for two years may follow induction. Bendamustine needs caution over 70 and with respiratory comorbidity."
+          },
+          "regimens": [
+            {
+              "regimen_id": "br"
+            },
+            {
+              "regimen_id": "r-cvp"
+            },
+            {
+              "regimen_id": "r-chop-21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "second-line",
+      "kind": "line",
+      "title": {
+        "uk": "Друга лінія",
+        "en": "Second line"
+      },
+      "description": {
+        "uk": "Імунохіміотерапія без перехресної резистентності (інша, ніж у першій лінії). При рефрактерності до ритуксимабу перевагу має обінутузумаб. Леналідомід із ритуксимабом — рівноцінний варіант, у довіднику ще без схеми.",
+        "en": "Non-cross-resistant immunochemotherapy (different from the first line). Obinutuzumab is preferred in rituximab-refractory disease. Lenalidomide with rituximab is an equal option, not yet a regimen here."
       },
       "regimens": [
         {
-          "regimen_id": "r-cvp"
+          "regimen_id": "br"
         },
         {
-          "regimen_id": "br"
+          "regimen_id": "r-chop-21"
+        },
+        {
+          "regimen_id": "r-cvp"
         }
       ]
+    },
+    {
+      "key": "third-line",
+      "kind": "line",
+      "title": {
+        "uk": "Третя лінія й далі",
+        "en": "Third line and beyond"
+      },
+      "description": {
+        "uk": "CAR-T-терапія, біспецифічні антитіла (епкоритамаб, мосунетузумаб, одронекстамаб), занубрутиніб з обінутузумабом, леналідомід із ритуксимабом. У відділенні ці варіанти недоступні; у літніх і ослаблених після тривалих ремісій застосовують ритуксимаб у монорежимі.",
+        "en": "CAR-T therapy, bispecific antibodies (epcoritamab, mosunetuzumab, odronextamab), zanubrutinib with obinutuzumab, lenalidomide with rituximab. These are not available in the department; in elderly or frail patients after long remissions rituximab monotherapy is used."
+      }
     }
   ]
 }

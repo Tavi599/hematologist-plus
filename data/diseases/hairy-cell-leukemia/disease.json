@@ -1,5 +1,4 @@
 {
-  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
   "id": "hairy-cell-leukemia",
   "name": {
     "uk": "Волосатоклітинна лейкемія",
@@ -28,7 +27,50 @@
     {
       "kind": "eviq",
       "url": "https://www.eviq.org.au/search#/?query=Hairy%20cell%20leukemia"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.esmo.org/guidelines/esmo-clinical-practice-guideline-hairy-cell-leukaemia",
+      "label": {
+        "uk": "ESMO Clinical Practice Guideline: волосатоклітинна лейкемія",
+        "en": "ESMO Clinical Practice Guideline: Hairy cell leukaemia"
+      }
     }
   ],
-  "treatment": []
+  "treatment": [
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "description": {
+        "uk": "Лікування призначають за показаннями: цитопенії (гемоглобін нижче 100 г/л, тромбоцити нижче 100×10⁹/л, нейтрофіли нижче 1×10⁹/л), симптомна спленомегалія, повторні інфекції. Аналог пурину — кладрибін 0,14 мг/кг підшкірно 5 днів, зазвичай один курс. Додавання ритуксимабу поглиблює відповідь.",
+        "en": "Treatment is given for indications: cytopenias (haemoglobin below 100 g/L, platelets below 100 x 10^9/L, neutrophils below 1 x 10^9/L), symptomatic splenomegaly, recurrent infections. A purine analogue - cladribine 0.14 mg/kg subcutaneously for five days, usually a single course. Adding rituximab deepens the response."
+      },
+      "regimens": [
+        {
+          "regimen_id": "cladribine-mono"
+        }
+      ]
+    },
+    {
+      "key": "relapsed",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив",
+        "en": "Relapse"
+      },
+      "description": {
+        "uk": "За тривалої ремісії аналог пурину повторюють, бажано з ритуксимабом. При ранньому рецидиві або рефрактерності — інгібітор BRAF (вемурафеніб) чи моксетумомаб; у довіднику їх немає.",
+        "en": "After a long remission the purine analogue is repeated, preferably with rituximab. In early relapse or refractory disease, a BRAF inhibitor (vemurafenib) or moxetumomab; neither is in the catalog."
+      },
+      "regimens": [
+        {
+          "regimen_id": "cladribine-mono"
+        }
+      ]
+    }
+  ]
 }

@@ -29,6 +29,16 @@
     {
       "kind": "eviq",
       "url": "https://www.eviq.org.au/search#/?query=Diffuse%20large%20B-cell%20lymphoma"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.esmo.org/guidelines/living-guidelines/esmo-living-guideline-lymphomas",
+      "label": {
+        "uk": "ESMO Living Guideline: лімфоми",
+        "en": "ESMO Living Guideline: Lymphomas"
+      },
+      "version": "v1.1",
+      "updated": "2026-02-01"
     }
   ],
   "treatment": [
@@ -39,31 +49,96 @@
         "uk": "Перша лінія",
         "en": "First line"
       },
-      "regimens": [
+      "description": {
+        "uk": "Основа — імунохіміотерапія з антрацикліном. Кількість циклів залежить від стадії, IPI та віку.",
+        "en": "Anthracycline-based immunochemotherapy. The number of cycles follows stage, IPI and age."
+      },
+      "children": [
         {
-          "regimen_id": "r-chop-21"
+          "key": "stage-i-ii",
+          "kind": "stage",
+          "title": {
+            "uk": "Стадії I–II",
+            "en": "Stage I-II"
+          },
+          "description": {
+            "uk": "До 60 років, IPI 0, без масивного ураження — 4 цикли R-CHOP і ще 2 введення ритуксимабу. При aaIPI ≥ 1 — 6 циклів R-CHOP (або 3–4 цикли з подальшою променевою терапією на уражену ділянку). Понад 80 років — 6 циклів R-mini-CHOP.",
+            "en": "Under 60 with IPI 0 and no bulk: four cycles of R-CHOP plus two further doses of rituximab. With aaIPI 1 or more: six cycles of R-CHOP, or three to four cycles followed by involved-site radiotherapy. Over 80: six cycles of R-mini-CHOP."
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-chop-21"
+            },
+            {
+              "regimen_id": "r-mini-chop",
+              "notes": {
+                "uk": "Для пацієнтів понад 80 років",
+                "en": "For patients over 80"
+              }
+            }
+          ]
         },
         {
-          "regimen_id": "r-mini-chop"
+          "key": "stage-iii-iv",
+          "kind": "stage",
+          "title": {
+            "uk": "Стадії III–IV",
+            "en": "Stage III-IV"
+          },
+          "description": {
+            "uk": "До 80 років при IPI 0–1 — 6 циклів R-CHOP. При IPI ≥ 2 рівноцінний варіант — Pola-R-CHP (полатузумаб ведотин у довіднику є, схеми ще немає). Понад 80 років — 6 циклів R-mini-CHOP. Інтенсифікація (DA-EPOCH-R, R-CODOX-M/R-IVAC) — для молодих із перебудовами MYC і BCL2.",
+            "en": "Under 80 with IPI 0-1: six cycles of R-CHOP. With IPI 2 or more, Pola-R-CHP is an equal option (the drug is in the catalog, the regimen is not yet). Over 80: six cycles of R-mini-CHOP. Intensification (DA-EPOCH-R, R-CODOX-M/R-IVAC) is for younger patients with MYC and BCL2 rearrangements."
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-chop-21"
+            },
+            {
+              "regimen_id": "r-mini-chop",
+              "notes": {
+                "uk": "Для пацієнтів понад 80 років",
+                "en": "For patients over 80"
+              }
+            }
+          ]
         }
-      ],
-      "description": {
-        "uk": "R-CHOP-21 — стандарт; R-mini-CHOP — для пацієнтів понад 80 років або зі зниженим функціональним станом.",
-        "en": "R-CHOP-21 is the standard; R-mini-CHOP is for patients over 80 or with a poor performance status."
-      }
+      ]
     },
     {
-      "key": "salvage",
+      "key": "relapse-late",
       "kind": "line",
       "title": {
-        "uk": "Друга лінія (сальвадж)",
-        "en": "Second line (salvage)"
+        "uk": "Пізній рецидив (понад 12 місяців)",
+        "en": "Late relapse (over 12 months)"
       },
       "description": {
-        "uk": "Мета — досягти відповіді й перейти до високодозової терапії з аутологічною трансплантацією у придатних пацієнтів.",
-        "en": "The aim is a response followed by high-dose therapy with autologous transplantation in fit patients."
+        "uk": "Реіндукція платиновмісною схемою і, за відповіді (Deauville 4 з частковою метаболічною відповіддю або повна відповідь), високодозова терапія з аутологічною трансплантацією.",
+        "en": "Platinum-based reinduction and, if the response is adequate (DS 4 partial metabolic response or complete response), high-dose therapy with autologous transplantation."
       },
       "regimens": [
+        {
+          "regimen_id": "r-eshap"
+        },
+        {
+          "regimen_id": "r-gdp"
+        }
+      ]
+    },
+    {
+      "key": "relapse-early",
+      "kind": "line",
+      "title": {
+        "uk": "Ранній рецидив (до 12 місяців) і подальші лінії",
+        "en": "Early relapse (within 12 months) and later lines"
+      },
+      "description": {
+        "uk": "Стандарт — CAR-T-терапія проти CD19, за її недоступності — біспецифічні антитіла або Pola-BR. Жодного з цих варіантів у довіднику немає: вони не вводяться у відділенні. Якщо CAR-T недосяжна, практично лишаються платиновмісні схеми.",
+        "en": "The standard is CD19-directed CAR-T therapy; where it is unavailable, bispecific antibodies or Pola-BR. None of these are in the catalog - they are not given in the department. Where CAR-T is out of reach, platinum-based regimens remain in practice."
+      },
+      "regimens": [
+        {
+          "regimen_id": "r-gdp"
+        },
         {
           "regimen_id": "r-eshap"
         }

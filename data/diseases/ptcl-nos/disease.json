@@ -1,5 +1,4 @@
 {
-  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
   "id": "ptcl-nos",
   "name": {
     "uk": "Периферична T-клітинна лімфома, неуточнена",
@@ -28,7 +27,63 @@
     {
       "kind": "eviq",
       "url": "https://www.eviq.org.au/search#/?query=Peripheral%20T-cell%20lymphoma"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.esmo.org/guidelines/living-guidelines/esmo-living-guideline-lymphomas",
+      "label": {
+        "uk": "ESMO Living Guideline: лімфоми",
+        "en": "ESMO Living Guideline: Lymphomas"
+      },
+      "version": "v1.1",
+      "updated": "2026-02-01"
     }
   ],
-  "treatment": []
+  "treatment": [
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "description": {
+        "uk": "CHOP або CHOP-подібна хіміотерапія, з етопозидом або без нього. Стадії I–II без масивного ураження й зі сприятливим профілем ризику — скорочений курс (3–4 цикли CHO(E)P) з наступною променевою терапією 30–40 Гр на уражену ділянку. Стадії III–IV — 6 циклів CHO(E)P, за відповіді розглядають консолідацію аутологічною трансплантацією.",
+        "en": "CHOP or CHOP-like chemotherapy with or without etoposide. Stage I-II non-bulky disease with a favourable risk profile: an abbreviated course (three to four cycles of CHO(E)P) followed by 30-40 Gy involved-site radiotherapy. Stage III-IV: six cycles of CHO(E)P, with consolidative autologous transplantation considered in responders."
+      },
+      "regimens": [
+        {
+          "regimen_id": "chop-21"
+        }
+      ]
+    },
+    {
+      "key": "relapsed",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив і рефрактерна хвороба",
+        "en": "Relapsed and refractory disease"
+      },
+      "description": {
+        "uk": "Варіанти: брентуксимаб ведотин (залежно від експресії CD30), DHAP, GDP, ICE, IVAC-MTX; при TFHL — азацитидин. Придатним пацієнтам розглядають алогенну трансплантацію. У довіднику є GDP (без ритуксимабу) і брентуксимаб у монорежимі.",
+        "en": "Options are brentuximab vedotin (by CD30 status), DHAP, GDP, ICE, IVAC-MTX, and azacitidine in TFHL. Allogeneic transplantation is considered in eligible patients. The catalog holds GDP (without rituximab) and brentuximab monotherapy."
+      },
+      "regimens": [
+        {
+          "regimen_id": "r-gdp",
+          "notes": {
+            "uk": "Без ритуксимабу: пухлина CD20-негативна",
+            "en": "Without rituximab: the disease is CD20-negative"
+          }
+        },
+        {
+          "regimen_id": "brentuximab-mono",
+          "notes": {
+            "uk": "За експресії CD30",
+            "en": "By CD30 expression"
+          }
+        }
+      ]
+    }
+  ]
 }

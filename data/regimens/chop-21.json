@@ -1,0 +1,128 @@
+{
+  "$comment": "Той самий протокол NSSG Oxford L.80, що й R-CHOP-21 (вер. 2.1, вересень 2024), без ритуксимабу - для CD20-негативних лімфом. Премедикація проти інфузійної реакції не потрібна, тож дексаметазону й димедролу зі схеми R-CHOP тут немає. Замість преднізолону за рішенням лікаря можна дексаметазон 8-40 мг на добу 4-5 днів.",
+  "id": "chop-21",
+  "short_name": "CHOP-21",
+  "name": {
+    "uk": "CHOP-21",
+    "en": "CHOP-21"
+  },
+  "description": {
+    "uk": "Циклофосфамід, доксорубіцин, вінкристин, преднізолон. Цикл 21 день.",
+    "en": "Cyclophosphamide, doxorubicin, vincristine, prednisolone. 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.80 R-CHOP-21 / CHOP-21",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-80-r-chop-21.pdf",
+      "version": "2.1 (09.2024)",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Уранці під час їди",
+        "en": "In the morning with food"
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_amount": 2,
+      "days": [1],
+      "notes": {
+        "uk": "Пацієнтам понад 70 років розгляньте обмеження дози до 1 мг",
+        "en": "In patients over 70 consider capping the dose at 1 mg"
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "ondansetron-d1",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480
+    },
+    {
+      "key": "ondansetron-d2",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [2],
+      "anchor_offset_min": -30
+    },
+    {
+      "key": "omeprazole",
+      "drug_id": "omeprazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Захист шлунка на час кортикостероїду",
+        "en": "Gastric protection while on the corticosteroid"
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл; зменшити дозу при нирковій недостатності",
+        "en": "Tumour lysis prophylaxis, cycle 1; reduce the dose in renal impairment"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і після його завершення (у протоколі - ацикловір 200 мг тричі на добу)",
+        "en": "Antiviral prophylaxis during treatment and after it (the protocol gives aciclovir 200 mg three times a day)"
+      }
+    }
+  ]
+}

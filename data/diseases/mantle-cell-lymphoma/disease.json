@@ -29,19 +29,41 @@
     {
       "kind": "eviq",
       "url": "https://www.eviq.org.au/search#/?query=Mantle%20cell%20lymphoma"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.esmo.org/guidelines/living-guidelines/esmo-living-guideline-lymphomas",
+      "label": {
+        "uk": "ESMO Living Guideline: лімфоми",
+        "en": "ESMO Living Guideline: Lymphomas"
+      },
+      "version": "v1.1",
+      "updated": "2026-02-01"
     }
   ],
   "treatment": [
     {
-      "key": "first-line",
+      "key": "first-line-fit",
       "kind": "line",
       "title": {
-        "uk": "Перша лінія",
-        "en": "First line"
+        "uk": "Перша лінія, молодші й збережені пацієнти",
+        "en": "First line, younger and fit patients"
       },
       "description": {
-        "uk": "Вибір залежить від віку та придатності до інтенсивної терапії з аутологічною трансплантацією.",
-        "en": "The choice depends on age and fitness for intensive therapy with autologous transplantation."
+        "uk": "До 65 років (за рішенням лікаря — до 70) перевагу має індукція, що містить ковалентний інгібітор BTK: R-CHOP з ібрутинібом у чергуванні з R-DHAP або R-DHAOx, далі 2 роки ібрутинібу і 3 роки підтримки ритуксимабом. Альтернатива — індукція з високими дозами цитарабіну (R-DHAP, R-CHOP/R-DHAP, R-maxi-CHOP/R-HD-цитарабін) з аутологічною трансплантацією і 3 роками підтримки ритуксимабом. Цих схем у довіднику ще немає.",
+        "en": "Under 65 (up to 70 at the physician's discretion) induction containing a covalent BTK inhibitor is preferred: R-CHOP with ibrutinib alternating with R-DHAP or R-DHAOx, then two years of ibrutinib and three years of rituximab maintenance. The alternative is high-dose cytarabine induction (R-DHAP, R-CHOP/R-DHAP, R-maxi-CHOP/R-HD-cytarabine) with autologous transplantation and three years of rituximab maintenance. These regimens are not in the catalog yet."
+      }
+    },
+    {
+      "key": "first-line-elderly",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія, пацієнти похилого віку",
+        "en": "First line, elderly patients"
+      },
+      "description": {
+        "uk": "Коли високі дози цитарабіну й трансплантація не підходять: BR (перевага) з підтримкою ритуксимабом 2 роки; VR-CAP із підтримкою; R-BAC без підтримки; BR з акалабрутинібом. У довіднику поки що BR і R-CHOP.",
+        "en": "Where high-dose cytarabine and transplantation are unsuitable: BR (preferred) with two years of rituximab maintenance; VR-CAP with maintenance; R-BAC without maintenance; BR with acalabrutinib. The catalog currently holds BR and R-CHOP."
       },
       "regimens": [
         {
@@ -51,6 +73,18 @@
           "regimen_id": "r-chop-21"
         }
       ]
+    },
+    {
+      "key": "relapsed",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив і рефрактерна хвороба",
+        "en": "Relapsed and refractory disease"
+      },
+      "description": {
+        "uk": "Після імунохіміотерапії стандарт другої лінії — ковалентний інгібітор BTK у монорежимі (ібрутиніб, акалабрутиніб, занубрутиніб), сам або з венетоклаксом. Препарати в довіднику є, схем як таких немає: дозування постійне, усередину, до прогресування або непереносимості.",
+        "en": "After immunochemotherapy the second-line standard is a covalent BTK inhibitor alone (ibrutinib, acalabrutinib, zanubrutinib) or with venetoclax. The drugs are in the catalog but not as regimens: they are taken orally and continuously until progression or toxicity."
+      }
     }
   ]
 }
