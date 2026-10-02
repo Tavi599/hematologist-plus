@@ -167,6 +167,11 @@ describe('CalculatorPage', () => {
     )
 
     expect(screen.getByRole('button', { name: 'Завантажити .xlsx' })).toBeInTheDocument()
+
+    // And the line is on the schedule for its day, at the hour it was written for, so the sheet
+    // can be read before it is printed.
+    const day = screen.getByRole('table', { name: 'День 1' })
+    expect(within(day).getByText('Sol. NaCl 0,9% — 400,0 в/в крапельно')).toBeInTheDocument()
   })
 
   it('opens a regimen with the cytostatics on and the supportive therapy off', async () => {

@@ -50,3 +50,26 @@ export function manualRowsOn(rows: ManualRow[], block: ManualBlock, day: number)
 export function manualWardRows(rows: ManualRow[]): ManualRow[] {
   return rows.filter((row) => isWritten(row) && row.block === 'ward')
 }
+
+/** A day of the course as both the screen and the printed sheet count them. */
+export interface SheetDay {
+  day: number
+  date: string
+}
+
+/**
+ * The days a sheet covers: the course's own, plus every day a hand-written line falls on. One
+ * list, so the schedule on screen and the printed blank never disagree about what exists.
+ */
+export function daysWithManual(
+  courseDays: SheetDay[],
+  rows: ManualRow[],
+  /** The date of a day the course itself does not have; day 1 is the start of the course. */
+  dateOf: (dayNumber: number) => string,
+): SheetDay[] {
+  const days = new Map<number, SheetDay>(courseDays.map((day) => [day.day, day]))
+  for (const day of manualDayNumbers(rows)) {
+    if (!days.has(day)) days.set(day, { day, date: dateOf(day) })
+  }
+  return [...days.values()].sort((a, b) => a.day - b.day)
+}

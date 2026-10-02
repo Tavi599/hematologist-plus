@@ -1,21 +1,33 @@
 import { Card, NumberInput, Stack, Table, Text, Title } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
 
-import type { CourseResult } from '../../domain'
+import { addDays, type CourseResult } from '../../domain'
 import type { CourseItem } from '../../lib/course-input'
 import { formatDate } from '../../lib/format'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
+import { daysWithManual, manualRowsOn, manualWardRows, type ManualRow } from './manual-rows'
 
-/** Course days with the hourly plan; every administration can be shifted by hand. */
+/**
+ * Course days with the hourly plan; every administration can be shifted by hand.
+ *
+ * Lines written by hand stand in it beside the calculated ones, on the day and at the hour they
+ * were written for — the sheet is read here before it is printed, and a line missing from the
+ * screen but present on the paper is worse than no screen at all.
+ */
 export function ScheduleTable({
   items,
   course,
+  manualRows = [],
+  startDateIso,
   shiftMin,
   onShift,
 }: {
   items: CourseItem[]
-  course: CourseResult
+  /** Null when nothing was calculated: the days then come from the hand-written lines alone. */
+  course: CourseResult | null
+  manualRows?: ManualRow[]
+  startDateIso: string
   shiftMin: Record<string, number>
   onShift: (itemId: string, minutes: number) => void
 }) {
@@ -26,11 +38,28 @@ export function ScheduleTable({
     const item = byId.get(id)
     return item ? localize(item.drug.name, language) : id
   }
+  const days = daysWithManual(
+    (course?.days ?? []).map((day) => ({ day: day.day, date: day.date })),
+    manualRows,
+    (day) => addDays(startDateIso, day - 1),
+  )
+  const administrationsOn = (dayNumber: number) =>
+    course?.days.find((day) => day.day === dayNumber)?.administrations ?? []
+  const untimedOn = (dayNumber: number) =>
+    course?.days.find((day) => day.day === dayNumber)?.untimed ?? []
+
   // A zero-length administration is a bolus — unless the regimen simply has no duration for it.
   const zeroLengthNote = (id: string) =>
     byId.get(id)?.item.route === 'iv_infusion'
       ? t('calculator.schedule.noDuration')
       : t('calculator.schedule.bolus')
+
+  const wardLine = (dayNumber: number) => [
+    ...untimedOn(dayNumber).map(nameOf),
+    ...manualWardRows(manualRows)
+      .filter((row) => row.days.includes(dayNumber))
+      .map((row) => row.what),
+  ]
 
   return (
     <Card withBorder component="section">
@@ -41,7 +70,7 @@ export function ScheduleTable({
         <Text size="xs" c="dimmed">
           {t('calculator.schedule.wardNote')}
         </Text>
-        {course.days.map((day) => (
+        {days.map((day) => (
           <Stack key={day.day} gap={4}>
             <Text fw={500}>
               {t('calculator.schedule.day', { day: day.day })} · {formatDate(day.date, language)}
@@ -60,7 +89,7 @@ export function ScheduleTable({
                   </Table.Tr>
                 </Table.Thead>
                 <Table.Tbody>
-                  {day.administrations.map((administration) => (
+                  {administrationsOn(day.day).map((administration) => (
                     <Table.Tr key={administration.id}>
                       <Table.Td>
                         {administration.start === administration.end
@@ -83,12 +112,34 @@ export function ScheduleTable({
                       </Table.Td>
                     </Table.Tr>
                   ))}
+                  {manualRowsOn(manualRows, 'infusion', day.day).map((row) => (
+                    <Table.Tr key={row.id}>
+                      <Table.Td>
+                        {row.hour === null
+                          ? t('calculator.manual.hourNone')
+                          : `${String(row.hour).padStart(2, '0')}:00`}
+                      </Table.Td>
+                      <Table.Td>
+                        {row.what}
+                        {row.how !== '' && (
+                          <Text size="xs" c="dimmed">
+                            {row.how}
+                          </Text>
+                        )}
+                      </Table.Td>
+                      <Table.Td>
+                        <Text size="xs" c="dimmed">
+                          {t('calculator.manual.byHand')}
+                        </Text>
+                      </Table.Td>
+                    </Table.Tr>
+                  ))}
                 </Table.Tbody>
               </Table>
             </Table.ScrollContainer>
-            {day.untimed.length > 0 && (
+            {wardLine(day.day).length > 0 && (
               <Text size="xs" c="dimmed">
-                {t('calculator.schedule.ward')}: {day.untimed.map(nameOf).join(', ')}
+                {t('calculator.schedule.ward')}: {wardLine(day.day).join(', ')}
               </Text>
             )}
           </Stack>

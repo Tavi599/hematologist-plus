@@ -12,7 +12,7 @@ import type { XlsxBox, XlsxFormat, XlsxInput, XlsxSheet } from '../../lib/xlsx-w
 import { columnName } from '../../lib/xlsx-writer'
 import type { PatientInput } from '../../schemas/patient'
 import type { HeaderValue } from './header'
-import { manualDayNumbers, manualRowsOn, manualWardRows, type ManualRow } from './manual-rows'
+import { daysWithManual, manualRowsOn, manualWardRows, type ManualRow } from './manual-rows'
 
 /**
  * The calculated course on the department's own blanks: one sheet per day with an infusion, laid
@@ -185,22 +185,15 @@ export function buildCourseSheets(input: CourseSheetsInput): XlsxSheet[] {
  * and its own sheet, when the physician wrote an order into it by hand.
  */
 function sheetDays(input: CourseSheetsInput): SheetDay[] {
-  const days = new Map<number, SheetDay>(
+  const course = new Map<number, SheetDay>(
     (input.course?.days ?? []).map((day) => [
       day.day,
       { day: day.day, date: day.date, administrations: day.administrations, untimed: day.untimed },
     ]),
   )
-  for (const day of manualDayNumbers(input.manualRows ?? [])) {
-    if (days.has(day)) continue
-    days.set(day, {
-      day,
-      date: addDays(input.startDateIso, day - 1),
-      administrations: [],
-      untimed: [],
-    })
-  }
-  return [...days.values()].sort((a, b) => a.day - b.day)
+  return daysWithManual([...course.values()], input.manualRows ?? [], (day) =>
+    addDays(input.startDateIso, day - 1),
+  ).map((day) => course.get(day.day) ?? { ...day, administrations: [], untimed: [] })
 }
 
 /* ------------------------------------------------------------------ the day sheet ---------- */

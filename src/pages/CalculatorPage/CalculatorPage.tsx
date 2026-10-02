@@ -161,6 +161,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   ])
 
   const regimen = regimenId === null ? undefined : catalog.regimens.get(regimenId)
+  /** Hand-written lines that actually say something; an empty one is not a sheet. */
+  const written = manualRows.filter((row) => row.what.trim() !== '')
 
   return (
     <Stack>
@@ -248,21 +250,21 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
 
       <ManualRows rows={manualRows} onChange={setManualRows} />
 
-      {course && (
-        <>
-          <ScheduleTable
-            items={items}
-            course={course}
-            shiftMin={shiftMin}
-            onShift={(id, minutes) => setShiftMin((current) => ({ ...current, [id]: minutes }))}
-          />
-          <SupplyTable catalog={catalog} course={course} />
-        </>
+      {(course !== null || written.length > 0) && (
+        <ScheduleTable
+          items={items}
+          course={course}
+          manualRows={manualRows}
+          startDateIso={courseSettings.startDate}
+          shiftMin={shiftMin}
+          onShift={(id, minutes) => setShiftMin((current) => ({ ...current, [id]: minutes }))}
+        />
       )}
+      {course && <SupplyTable catalog={catalog} course={course} />}
 
       {/* A sheet of hand-written lines alone is still a sheet, so the export does not wait for
           a calculation — only for someone to put something on the paper. */}
-      {patient && (course !== null || manualRows.some((row) => row.what.trim() !== '')) && (
+      {patient && (course !== null || written.length > 0) && (
         <CourseExport
           items={items}
           course={course}
