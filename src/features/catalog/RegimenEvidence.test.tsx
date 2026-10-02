@@ -28,6 +28,16 @@ describe('RegimenEvidence', () => {
           evidence: {
             design: { uk: 'Фаза II, 79 пацієнтів.', en: 'Phase II, 79 patients.' },
             results: { uk: 'Загальна відповідь 60,8%.', en: 'Overall response 60.8%.' },
+            appraisal: [
+              {
+                publication: 'Blood. 2014;123(7):985-991',
+                pmid: '24227817',
+                level: { scale: 'oxford-cebm-2011', value: '4' },
+                publication_types: ['Clinical Trial, Phase II'],
+                journal: { name: 'Blood', medline_indexed: true },
+                sources: [],
+              },
+            ],
           },
         })}
       />,

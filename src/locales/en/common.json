@@ -461,6 +461,24 @@
     "design": "Design",
     "population": "Patients",
     "results": "Results",
-    "conduct": "Conduct"
+    "conduct": "Conduct",
+    "appraisalTitle": "Appraisal of the source",
+    "level": "Level of evidence",
+    "levelScale": {
+      "oxford-cebm-2011": "Oxford Centre for Evidence-Based Medicine, 2011 levels of evidence"
+    },
+    "levelValue": {
+      "1": "1 — a systematic review of randomised trials",
+      "2": "2 — a randomised trial",
+      "3": "3 — a non-randomised controlled study",
+      "4": "4 — a case series or a single-arm study",
+      "5": "5 — mechanism-based reasoning"
+    },
+    "publicationTypes": "Publication type in NLM's classification",
+    "journal": "Journal",
+    "medlineIndexed": "indexed for MEDLINE",
+    "medlineNotIndexed": "not indexed for MEDLINE",
+    "quartile": "SCImago quartile {{quartile}} ({{year}})",
+    "pmid": "PubMed"
   }
 }

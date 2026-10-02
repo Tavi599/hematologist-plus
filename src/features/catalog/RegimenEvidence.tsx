@@ -7,6 +7,7 @@ import type { Regimen } from '../../schemas/catalog'
 import { EVIDENCE_FIELDS } from '../../schemas/common'
 
 import { SourceNotes } from '../calculator/SourceNotes'
+import { SourceAppraisal } from './SourceAppraisal'
 
 /**
  * What the chosen regimen is and where it comes from. A regimen taken from a published study
@@ -53,6 +54,9 @@ export function RegimenEvidence({ regimen }: { regimen: Regimen }) {
           </Stack>
         ))}
         <SourceNotes sources={regimen.sources} />
+        {evidence !== null && evidence !== undefined && (
+          <SourceAppraisal appraisal={evidence.appraisal ?? []} />
+        )}
       </Stack>
     </Card>
   )

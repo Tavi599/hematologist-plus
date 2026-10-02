@@ -77,6 +77,50 @@
     "conduct": {
       "uk": "Тромбоцитопенія 3-4 ступеня у 38%, інфекції 3-5 ступеня у 23%. Полінейропатія наростає з циклами: до 8-го циклу частка пацієнтів із нейропатією ≤2 ступеня зросла з 19% до 52%, а 4 ступеня — з 0% до 7%. Тому стан нервів і аналізи перевіряють перед кожним циклом, а при появі нейропатії переглядають дозу бортезомібу.",
       "en": "Grade 3 to 4 thrombocytopenia in 38%, grade 3 to 5 infections in 23%. Polyneuropathy accumulates: by cycle 8 grade 2 or lower neuropathy had risen from 19% to 52% and grade 4 from 0% to 7%. So the nerves and the counts are checked before each cycle, and the bortezomib dose is revisited once neuropathy appears."
-    }
+    },
+    "appraisal": [
+      {
+        "publication": "Ludwig H. та ін. Blood. 2014;123(7):985-991",
+        "pmid": "24227817",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без групи порівняння: усі пацієнти отримували ту саму схему, рандомізації не було. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a comparison group: every patient had the same regimen and there was no randomisation. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/24227817/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-03"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-03"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-03"
+          }
+        ]
+      }
+    ]
   }
 }

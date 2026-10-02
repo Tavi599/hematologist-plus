@@ -235,6 +235,25 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
         }
       }
     }
+    // A regimen that comes from a study has to name the study and say how good it is: it is
+    // given off-label, and the physician decides on exactly these two things.
+    if (regimen.evidence !== null && regimen.evidence !== undefined) {
+      if (regimen.sources.length === 0) {
+        error('regimens', regimen.id, 'a regimen from a study must cite its source')
+      }
+      if (regimen.evidence.appraisal.length === 0) {
+        warning('regimens', regimen.id, 'no appraisal of the publication behind this regimen')
+      }
+      for (const entry of regimen.evidence.appraisal) {
+        if (entry.sources.length === 0) {
+          warning(
+            'regimens',
+            regimen.id,
+            `appraisal of "${entry.publication}" does not say where its indicators were read`,
+          )
+        }
+      }
+    }
   }
 
   const naturalCodeKeys = new Set<string>()

@@ -99,6 +99,96 @@
     "conduct": {
       "uk": "Токсичність 3 ступеня і вище була в 96% пацієнтів: гематологічна у 94%, негематологічна у 50%. Тому потрібні щотижневі аналізи й готовність зменшувати дозу. Леналідомід вимагає профілактики тромбозів і корекції дози за кліренсом креатиніну.",
       "en": "Grade 3 or higher toxicity affected 96% of patients: haematological in 94%, non-haematological in 50%. Weekly counts and a readiness to reduce the dose are therefore needed. Lenalidomide requires thromboprophylaxis and a dose adjusted to the creatinine clearance."
-    }
+    },
+    "appraisal": [
+      {
+        "publication": "Am J Hematol. 2015;90(12):1106-1110",
+        "pmid": "26331432",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без групи порівняння: усі пацієнти отримували ту саму схему, рандомізації не було. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a comparison group: every patient had the same regimen and there was no randomisation. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "American Journal of Hematology",
+          "issn": "0361-8609",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/26331432/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-03"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «American Journal of Hematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7610369",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-03"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-03"
+          }
+        ]
+      },
+      {
+        "publication": "Lentzsch S. та ін. Blood. 2012;119(20):4608-4613",
+        "pmid": "22451423",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без групи порівняння: усі пацієнти отримували ту саму схему, рандомізації не було. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a comparison group: every patient had the same regimen and there was no randomisation. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, N.I.H., Extramural",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22451423/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-03"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-03"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-03"
+          }
+        ]
+      }
+    ]
   }
 }

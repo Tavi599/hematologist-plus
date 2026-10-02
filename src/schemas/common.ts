@@ -132,6 +132,57 @@ export const sourcesSchema = z.array(sourceSchema)
 export type Source = z.infer<typeof sourceSchema>
 
 /**
+ * How good the publication is, and the resource that carries it — by published instruments, not
+ * by our opinion. Three independent things are recorded, and each is left out when it cannot be
+ * read from a document:
+ *
+ *   level              — the level of evidence on the Oxford CEBM 2011 scale for "does this
+ *                        intervention help?": 1 systematic review of randomised trials,
+ *                        2 a randomised trial, 3 a non-randomised controlled study, 4 a case
+ *                        series or a single-arm study, 5 mechanism-based reasoning. It follows
+ *                        from the design of the study and nothing else.
+ *   publication_types  — NLM's own classification of the article, copied from its PubMed record
+ *                        ("Clinical Trial, Phase II", "Multicenter Study"), never paraphrased.
+ *   journal            — the resource: whether NLM indexes it for MEDLINE (its catalogue says so
+ *                        in as many words) and, where someone with access has entered it, the
+ *                        SCImago quartile. A quartile is never guessed; the field stays empty.
+ *
+ * Deliberately absent: GRADE. It grades a body of evidence behind a recommendation, not a single
+ * paper, so a GRADE letter beside one trial would be our judgement wearing an official name.
+ */
+export const EVIDENCE_LEVEL_SCALES = ['oxford-cebm-2011'] as const
+export const JOURNAL_QUARTILES = ['Q1', 'Q2', 'Q3', 'Q4'] as const
+
+export const appraisalSchema = z.strictObject({
+  /** Which cited work this describes, as the source list names it. */
+  publication: nonEmptyTextSchema,
+  /** PubMed identifier, the shortest way back to the record these fields were read from. */
+  pmid: z.string().regex(/^\d+$/, 'digits only').optional(),
+  level: z
+    .strictObject({
+      scale: z.enum(EVIDENCE_LEVEL_SCALES),
+      value: z.enum(['1', '2', '3', '4', '5']),
+      /** Why the design lands on that level. */
+      notes: localizedTextSchema.optional(),
+    })
+    .optional(),
+  publication_types: z.array(nonEmptyTextSchema).default([]),
+  journal: z
+    .strictObject({
+      name: nonEmptyTextSchema,
+      issn: z.string().optional(),
+      medline_indexed: z.boolean().optional(),
+      sjr_quartile: z.enum(JOURNAL_QUARTILES).optional(),
+      sjr_year: z.number().int().optional(),
+    })
+    .optional(),
+  /** Where these indicators were read: the PubMed record, the NLM catalogue, SCImago. */
+  sources: sourcesSchema.default([]),
+})
+
+export type Appraisal = z.infer<typeof appraisalSchema>
+
+/**
  * The study a regimen comes from, for the regimens that come from a study rather than from a
  * protocol or a label. Every field is optional: an abstract states the design and the numbers,
  * rarely everything, and a field is left out instead of being filled from somewhere else.
@@ -145,6 +196,8 @@ export const evidenceSchema = z.strictObject({
   population: localizedTextSchema.optional(),
   results: localizedTextSchema.optional(),
   conduct: localizedTextSchema.optional(),
+  /** One entry per cited publication; see appraisalSchema. */
+  appraisal: z.array(appraisalSchema).default([]),
 })
 
 export type Evidence = z.infer<typeof evidenceSchema>
