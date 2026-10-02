@@ -17,6 +17,7 @@ import type { CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import { catalogName, needLineTotals, newNeedLine, type NeedLine } from './need-lines'
+import { FORM_UNITS } from './need-sheet'
 
 /**
  * The nine graphs of the distribution form, edited line by line. A line is a card rather than a
@@ -45,6 +46,14 @@ export function NeedLines({
 
   const patch = (key: string, next: Partial<NeedLine>) => {
     onChange(lines.map((line) => (line.key === key ? { ...line, ...next } : line)))
+  }
+
+  /** «флак», «таб» — the unit of measure the form is filled in with. */
+  const unitOf = (line: NeedLine): string | null => {
+    const presentation = catalog.rows.drug_presentations.find(
+      (row) => row.id === line.presentationId,
+    )
+    return presentation === undefined ? null : FORM_UNITS[presentation.form]
   }
 
   const nameOf = (presentationId: string | null): string => {
@@ -120,6 +129,13 @@ export function NeedLines({
                   />
                   <Select
                     label={t('need.form.presentation')}
+                    // The form has a graph of its own for this, so it is worth seeing beforehand
+                    // which word will stand in it.
+                    description={
+                      unitOf(line) === null
+                        ? undefined
+                        : t('need.form.unit', { unit: unitOf(line) })
+                    }
                     data={presentations}
                     value={line.presentationId}
                     onChange={(value) => choosePresentation(line, value)}

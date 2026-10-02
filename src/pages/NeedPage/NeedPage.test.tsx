@@ -60,6 +60,8 @@ describe('NeedPage', () => {
 
     await pick('Фасування', 'ДЕМО Ритуксимаб 500 мг')
     expect(screen.getByLabelText('Назва в наказі')).toHaveValue('ДЕМО Ритуксимаб 500 мг')
+    // The form has a graph for the unit of measure; a vial is «флак» in it.
+    expect(screen.getByText('одиниця виміру: флак')).toBeInTheDocument()
 
     // The order names a brand, so a name typed by hand stays whatever the pack becomes.
     await act(async () =>
