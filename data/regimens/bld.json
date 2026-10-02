@@ -1,0 +1,86 @@
+{
+  "$comment": "Дози за рекомендованою дозою фази II (Am J Hematol 2015). Нижча доза леналідоміду 10 мг — максимально переносима доза в ранішому дослідженні Lentzsch 2012, внесена як альтернатива; дні дексаметазону там були щотижневі так само.",
+  "id": "bld",
+  "short_name": "BLD",
+  "name": {
+    "uk": "BLD (бендамустин, леналідомід, дексаметазон)",
+    "en": "BLD (bendamustine, lenalidomide, dexamethasone)"
+  },
+  "description": {
+    "uk": "Рецидивна або рефрактерна мієлома. Цикл 28 днів. Гематологічна токсичність висока — нейтропенія, тромбоцитопенія й анемія 3-4 ступеня трапляються в більшості пацієнтів, тож потрібні щотижневі аналізи й готовність зменшити дозу. Леналідомід вимагає профілактики тромбозів і корекції дози за кліренсом креатиніну. Увага: це схеми з клінічних досліджень, а не з настанови й не з інструкції. Зареєстроване показання бендамустину при мієломі — лише перша лінія в поєднанні з преднізоном; поєднання з бортезомібом чи леналідомідом при рецидиві є застосуванням поза інструкцією.",
+    "en": "Relapsed or refractory myeloma. A 28-day cycle. Haematological toxicity is heavy - grade 3 to 4 neutropenia, thrombocytopenia and anaemia affect most patients, so weekly counts and a readiness to reduce the dose are needed. Lenalidomide requires thromboprophylaxis and a dose adjusted to the creatinine clearance. Note: these come from clinical trials, not from a guideline or a label. The licensed myeloma indication for bendamustine is first line with prednisone only; combining it with bortezomib or lenalidomide at relapse is off-label use."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "Фаза I/II бендамустину з леналідомідом і дексаметазоном при рецидиві мієломи. Am J Hematol. 2015;90(12):1106-1110",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26331432/",
+      "version": "рекомендована доза фази II",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "Lentzsch S. та ін. Combination of bendamustine, lenalidomide, and dexamethasone (BLD) in patients with relapsed or refractory multiple myeloma is feasible and highly effective. Blood. 2012;119(20):4608-4613",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22451423/",
+      "version": "фаза I/II, максимально переносима доза",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 75,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Інфузія за 30-60 хвилин; у довіднику взято повільніший край діапазону.",
+        "en": "Infused over 30 to 60 minutes; the catalogue takes the slower end."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Рекомендована доза фази II. Дозу зменшують при нирковій недостатності й при цитопеніях.",
+        "en": "The recommended phase II dose. It is reduced in renal impairment and for cytopenias."
+      },
+      "dose_options": [
+        {
+          "dose_value": 10,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Максимально переносима доза за Lentzsch 2012",
+            "en": "The maximum tolerated dose in Lentzsch 2012"
+          },
+          "source": {
+            "name": "Lentzsch S. та ін. Combination of bendamustine, lenalidomide, and dexamethasone (BLD) in patients with relapsed or refractory multiple myeloma is feasible and highly effective. Blood. 2012;119(20):4608-4613",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22451423/",
+            "version": "фаза I/II, максимально переносима доза",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Щотижнево.",
+        "en": "Weekly."
+      }
+    }
+  ]
+}
