@@ -1,0 +1,70 @@
+{
+  "$comment": "Підтримка за L.157: цикл 56 днів, ритуксимаб у день 1 кожного другого циклу від циклу 8 до циклу 30 — тобто саме ці 56-денні цикли. Після двох років підтримки залишається сам акалабрутиніб (схема «Акалабрутиніб у монорежимі»).",
+  "id": "r-acala-maintenance",
+  "short_name": "R + акалабрутиніб (підтримка)",
+  "name": {
+    "uk": "Ритуксимаб + акалабрутиніб, підтримувальна терапія",
+    "en": "Rituximab and acalabrutinib maintenance"
+  },
+  "description": {
+    "uk": "Для тих, хто відповів на 6 циклів індукції — часткова або повна відповідь. Цикл 56 днів, максимум 12 циклів (два роки). Далі акалабрутиніб продовжують самостійно.",
+    "en": "For those who responded to the six induction cycles, partially or completely. A 56-day cycle, twelve cycles at most, which is two years. The acalabrutinib then continues on its own."
+  },
+  "cycle_length_days": 56,
+  "default_cycles": 12,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.157 Bendamustine-Rituximab with Acalabrutinib",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-157-r-benda-acala.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає хлорфенамін 10 мг внутрішньовенно і гідрокортизон 100 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "At least 30 minutes before the rituximab. The protocol adds chlorphenamine 10 mg intravenously and hydrocortisone 100 mg intravenously; these are not in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають решту введень.",
+        "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before the other infusions start."
+      }
+    },
+    {
+      "key": "acalabrutinib",
+      "drug_id": "acalabrutinib",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
+        49, 50, 51, 52, 53, 54, 55, 56
+      ],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Двічі на добу з проміжком приблизно 12 годин; таблетки ковтають цілими, запиваючи водою, незалежно від їди.",
+        "en": "Twice daily about 12 hours apart; the tablets are swallowed whole with water, with or without food."
+      }
+    }
+  ]
+}

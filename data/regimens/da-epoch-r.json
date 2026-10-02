@@ -1,0 +1,277 @@
+{
+  "$comment": "Дози рівня 1 (стартового). Решта рівнів — у списку доз кожної позиції: рівень цілого курсу обирають за найнижчим рівнем нейтрофілів попереднього курсу. Преднізолон, ритуксимаб і вінкристин на всіх рівнях однакові, тому альтернатив не мають.",
+  "id": "da-epoch-r",
+  "short_name": "DA-EPOCH-R",
+  "name": {
+    "uk": "DA-EPOCH-R (етопозид, преднізолон, вінкристин, циклофосфамід, доксорубіцин, ритуксимаб)",
+    "en": "DA-EPOCH-R (etoposide, prednisolone, vincristine, cyclophosphamide, doxorubicin, rituximab)"
+  },
+  "description": {
+    "uk": "Високозлоякісні В-клітинні лімфоми з перебудовами MYC і BCL2 та/або BCL6, лімфома Беркітта, первинна медіастинальна В-великоклітинна лімфома. Цикл 21 день, 6-8 циклів. Дози рахують на фактичну масу тіла й зазвичай не обмежують — тобто колонка з обмеженою площею тіла тут довідкова. Рівень доз міняють на цілий курс за найнижчим рівнем нейтрофілів попереднього: при нейтрофілах ≥ 0,5×10⁹/л — на рівень вище; при < 0,5×10⁹/л у 1-2 вимірюваннях — без змін; у 3 і більше — на рівень нижче; при тромбоцитах < 25×10⁹/л — на рівень нижче незалежно від нейтрофілів. Ритуксимаб не дають при CD20-негативній пухлині, а в першому циклі можуть пропустити при великій пухлинній масі.",
+    "en": "High-grade B-cell lymphomas with MYC and BCL2 or BCL6 rearrangements, Burkitt lymphoma and primary mediastinal large B-cell lymphoma. A 21-day cycle, 6 to 8 cycles. Doses follow the actual body weight and are not routinely capped, so the capped-BSA column is for reference here. The dose level changes for a whole cycle according to the previous cycle's neutrophil nadir: at 0.5x10^9/L or above, one level up; below it on one or two measurements, unchanged; on three or more, one level down; a platelet nadir below 25x10^9/L drops a level whatever the neutrophils did. Rituximab is omitted in CD20-negative disease, and may be omitted in the first cycle with bulky disease."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.66 DA-EPOCH-R",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
+      "version": "6.0 (09.2025)",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає хлорфенамін 10 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "At least 30 minutes before the rituximab. The protocol adds chlorphenamine 10 mg intravenously; these are not in the catalogue."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Вранці з їжею; у день 1 — не менш як за 30 хвилин до ритуксимабу. Дозу заокруглюють до розміру таблетки. У дослідженнях преднізолон давали двічі на добу, але в цьому протоколі дозу зменшено до одного разу через переносимість.",
+        "en": "In the morning with food; on day 1 at least 30 minutes before the rituximab. The dose is rounded to a tablet size. The reference studies gave it twice daily; this protocol halves that to once daily for tolerability."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають решту введень.",
+        "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before the other infusions start."
+      }
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 0.4,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Безперервна інфузія 96 годин (дні 1-4). У довіднику записана як щодобові мішки: етопозид у 500 мл 0,9% NaCl на добу, доксорубіцин із вінкристином разом у 500 мл 0,9% NaCl на добу, заміна щодня. Протокол дозволяє й інші варіанти — спільний мішок 1000 мл на 48 годин для помпи або інфузор на 96 годин; їх узгоджують з аптекою.",
+        "en": "A continuous 96-hour infusion over days 1-4. The catalogue writes it as daily bags: etoposide in 500 mL of 0.9% sodium chloride a day, and doxorubicin with vincristine together in 500 mL a day, each replaced daily. The protocol allows other arrangements - a shared 1000 mL bag over 48 hours for a pump, or a 96-hour infusor - agreed with the pharmacy."
+      },
+      "dose_modifiers": [
+        {
+          "key": "motor-neuropathy-grade-2",
+          "label": {
+            "uk": "Моторна нейропатія 2 ступеня",
+            "en": "Grade 2 motor neuropathy"
+          },
+          "dose_value": 0.3,
+          "notes": {
+            "uk": "Протокол пише «75% дози»; від 0,4 мг/м² це 0,3 мг/м². Рішення про зменшення або пропуск вінкристину узгоджують із лікарем-консультантом, а після зменшення токсичності дозу повертають.",
+            "en": "The protocol says 75% of the dose; from 0.4 mg/m2 that is 0.3 mg/m2. Reducing or withholding the vincristine is agreed with the consultant, and the full dose is restored once the toxicity lessens."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.66 DA-EPOCH-R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
+            "version": "6.0 (09.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "key": "neuropathy-grade-3",
+          "label": {
+            "uk": "Моторна або сенсорна нейропатія 3 ступеня",
+            "en": "Grade 3 motor or sensory neuropathy"
+          },
+          "dose_value": 0.2,
+          "notes": {
+            "uk": "Протокол пише «50% дози»; від 0,4 мг/м² це 0,2 мг/м².",
+            "en": "The protocol says 50% of the dose; from 0.4 mg/m2 that is 0.2 mg/m2."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.66 DA-EPOCH-R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
+            "version": "6.0 (09.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Безперервна інфузія 96 годин (дні 1-4). У довіднику записана як щодобові мішки: етопозид у 500 мл 0,9% NaCl на добу, доксорубіцин із вінкристином разом у 500 мл 0,9% NaCl на добу, заміна щодня. Протокол дозволяє й інші варіанти — спільний мішок 1000 мл на 48 годин для помпи або інфузор на 96 годин; їх узгоджують з аптекою.",
+        "en": "A continuous 96-hour infusion over days 1-4. The catalogue writes it as daily bags: etoposide in 500 mL of 0.9% sodium chloride a day, and doxorubicin with vincristine together in 500 mL a day, each replaced daily. The protocol allows other arrangements - a shared 1000 mL bag over 48 hours for a pump, or a 96-hour infusor - agreed with the pharmacy."
+      },
+      "dose_options": [
+        {
+          "dose_value": 12,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Рівень доз 2",
+            "en": "Dose level 2"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.66 DA-EPOCH-R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
+            "version": "6.0 (09.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "dose_value": 14.4,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Рівень доз 3",
+            "en": "Dose level 3"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.66 DA-EPOCH-R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
+            "version": "6.0 (09.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Безперервна інфузія 96 годин (дні 1-4). У довіднику записана як щодобові мішки: етопозид у 500 мл 0,9% NaCl на добу, доксорубіцин із вінкристином разом у 500 мл 0,9% NaCl на добу, заміна щодня. Протокол дозволяє й інші варіанти — спільний мішок 1000 мл на 48 годин для помпи або інфузор на 96 годин; їх узгоджують з аптекою.",
+        "en": "A continuous 96-hour infusion over days 1-4. The catalogue writes it as daily bags: etoposide in 500 mL of 0.9% sodium chloride a day, and doxorubicin with vincristine together in 500 mL a day, each replaced daily. The protocol allows other arrangements - a shared 1000 mL bag over 48 hours for a pump, or a 96-hour infusor - agreed with the pharmacy."
+      },
+      "dose_options": [
+        {
+          "dose_value": 60,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Рівень доз 2",
+            "en": "Dose level 2"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.66 DA-EPOCH-R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
+            "version": "6.0 (09.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "dose_value": 72,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Рівень доз 3",
+            "en": "Dose level 3"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.66 DA-EPOCH-R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
+            "version": "6.0 (09.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_bolus",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [5],
+      "notes": {
+        "uk": "Внутрішньовенно струминно в день 5. Це єдиний препарат схеми, доза якого змінюється на всіх п'яти рівнях.",
+        "en": "Intravenous bolus on day 5. It is the only drug of the regimen whose dose differs at all five levels."
+      },
+      "dose_options": [
+        {
+          "dose_value": 480,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Рівень доз -2",
+            "en": "Dose level -2"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.66 DA-EPOCH-R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
+            "version": "6.0 (09.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "dose_value": 600,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Рівень доз -1",
+            "en": "Dose level -1"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.66 DA-EPOCH-R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
+            "version": "6.0 (09.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "dose_value": 900,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Рівень доз 2",
+            "en": "Dose level 2"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.66 DA-EPOCH-R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
+            "version": "6.0 (09.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "dose_value": 1080,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Рівень доз 3",
+            "en": "Dose level 3"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.66 DA-EPOCH-R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
+            "version": "6.0 (09.2025)",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    }
+  ]
+}

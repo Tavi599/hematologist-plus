@@ -30,5 +30,38 @@
       "url": "https://www.eviq.org.au/search#/?query=AL%20amyloidosis"
     }
   ],
-  "treatment": []
+  "treatment": [
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "description": {
+        "uk": "Мета — швидко прибрати продукцію легких ланцюгів. Лікування підбирають за ураженням серця: при вираженій кардіальній дисфункції дози стероїду зменшують і стежать за водним балансом. Кандидатів на високодозову терапію з автотрансплантацією відбирають окремо.",
+        "en": "The aim is to shut down light chain production quickly. The choice follows the cardiac involvement: with marked cardiac dysfunction the steroid dose is lowered and the fluid balance watched. Candidates for high-dose therapy with autologous transplant are selected separately."
+      },
+      "regimens": [
+        {
+          "regimen_id": "cybord-amyloidosis"
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "relapsed",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив або рефрактерність",
+        "en": "Relapsed or refractory"
+      },
+      "description": {
+        "uk": "Схеми додаються окремо, з дозами й джерелом.",
+        "en": "Regimens are added separately, with doses and a source."
+      },
+      "regimens": [],
+      "children": []
+    }
+  ]
 }

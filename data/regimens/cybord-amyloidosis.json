@@ -1,0 +1,110 @@
+{
+  "$comment": "Циклофосфамід має два способи приймання — щотижневий і щоденний; у довіднику записаний щотижневий, а щоденні 50 мг стоять у списку доз із приміткою. Доксициклін при ураженні серця — окрема позиція, яку вмикають за потреби.",
+  "id": "cybord-amyloidosis",
+  "short_name": "CyBorD (амілоїдоз)",
+  "name": {
+    "uk": "CyBorD (циклофосфамід, бортезоміб, дексаметазон) при амілоїдозі",
+    "en": "CyBorD (cyclophosphamide, bortezomib, dexamethasone) in amyloidosis"
+  },
+  "description": {
+    "uk": "Перша лінія системного амілоїдозу. Цикл 35 днів, зазвичай 4-6 циклів. У літніх пацієнтів розглядають зменшення дози дексаметазону й пильно стежать за водним балансом. У пацієнтів з ураженням серця (підозрюваним або підтвердженим) додають доксициклін.",
+    "en": "First line of systemic amyloidosis. A 35-day cycle, usually 4 to 6 cycles. In elderly patients a lower dexamethasone dose is considered and the fluid balance watched closely. Where cardiac amyloid is suspected or proven, doxycycline is added."
+  },
+  "cycle_length_days": 35,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.11 Cyclophosphamide, bortezomib and dexamethasone in amyloidosis",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-11-cy-bor-dex-amyloidosis.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Підшкірно струминно — це стандартний шлях. У першому циклі при порушеному підшкірному всмоктуванні бортезоміб можна ввести внутрішньовенно.",
+        "en": "A subcutaneous bolus is the standard route. In the first cycle, where subcutaneous absorption is impaired, it may be given intravenously."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Лише в дні бортезомібу. Якщо переноситься добре, дозу підвищують до 20 мг на добу.",
+        "en": "Only on the bortezomib days. Where it is tolerated, the dose rises to 20 mg daily."
+      },
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Підвищена доза, якщо лікування переноситься добре",
+            "en": "The raised dose, where treatment is tolerated"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.11 Cyclophosphamide, bortezomib and dexamethasone in amyloidosis",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-11-cy-bor-dex-amyloidosis.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 500,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22, 29],
+      "notes": {
+        "uk": "Щотижнево, перорально або внутрішньовенно. Альтернатива — 50 мг щодня в дні 1-35; тоді дозу змінюють у списку доз і дні доведеться виставити вручну.",
+        "en": "Weekly, orally or intravenously. The alternative is 50 mg daily on days 1-35; then the dose is changed in the dose list and the days set by hand."
+      },
+      "dose_options": [
+        {
+          "dose_value": 50,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Щоденне приймання, дні 1-35",
+            "en": "The daily schedule, days 1-35"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.11 Cyclophosphamide, bortezomib and dexamethasone in amyloidosis",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-11-cy-bor-dex-amyloidosis.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    },
+    {
+      "key": "doxycycline",
+      "drug_id": "doxycycline",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28, 29, 30, 31, 32, 33, 34, 35
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Лише при підозрюваному або підтвердженому ураженні серця — інакше позицію вимикають.",
+        "en": "Only where cardiac amyloid is suspected or proven; otherwise the row is switched off."
+      }
+    }
+  ]
+}
