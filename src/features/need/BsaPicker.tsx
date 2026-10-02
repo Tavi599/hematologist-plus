@@ -29,7 +29,10 @@ export function BsaPicker({
   const fromBody = (height: number | null, weight: number | null) => {
     setHeightCm(height)
     setWeightKg(weight)
-    if (height === null || weight === null) return
+    // A field clamps what is typed into it only when it is left; «0» and a half-typed «1» pass
+    // through it first, and Mosteller refuses a body with no height, which would take the page
+    // down with it. Nothing is counted until both numbers are numbers.
+    if (height === null || weight === null || height <= 0 || weight <= 0) return
     onChange(Number(mostellerBsa(height, weight).toFixed(2)))
   }
 

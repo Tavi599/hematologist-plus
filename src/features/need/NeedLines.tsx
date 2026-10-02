@@ -10,6 +10,7 @@ import {
   TextInput,
   Title,
 } from '@mantine/core'
+import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { CatalogIndex } from '../../lib/catalog-index'
@@ -34,6 +35,9 @@ export function NeedLines({
   const tu = t as unknown as DynamicTranslate
   const language = currentLanguage()
   const unitLabel = (unit: string) => tu(`units.${unit}`)
+  // Two lines added in the same millisecond would otherwise share a key, and a figure typed into
+  // one would land in both.
+  const added = useRef(0)
 
   const drugs = [...catalog.drugs.values()]
     .map((drug) => ({ value: drug.id, label: localize(drug.name, language) }))
@@ -205,7 +209,7 @@ export function NeedLines({
 
         <Button
           variant="light"
-          onClick={() => onChange([...lines, newNeedLine(`line-${Date.now()}`)])}
+          onClick={() => onChange([...lines, newNeedLine(`line-${Date.now()}-${added.current++}`)])}
           style={{ alignSelf: 'flex-start' }}
         >
           {t('need.form.add')}

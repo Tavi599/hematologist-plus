@@ -82,6 +82,19 @@ describe('NeedPage', () => {
     expect(await screen.findByText('1 × 500 мг + 3 × 100 мг')).toBeInTheDocument()
   })
 
+  it('waits for both measurements instead of falling over on a half-typed height', async () => {
+    renderWithProviders(<NeedPage />)
+    await pick('Препарат', 'ДЕМО Ритуксимаб')
+
+    // A field clamps what is typed into it only when it is left, so a 0 reaches the calculation.
+    await type('Зріст, см', '0')
+    await type('Вага, кг', '80')
+    expect(screen.getByLabelText('BSA для підрахунку, м²')).toHaveValue('')
+
+    await type('Зріст, см', '180')
+    expect(screen.getByLabelText('BSA для підрахунку, м²')).toHaveValue('2')
+  })
+
   it('says what the hint cannot count instead of counting it anyway', async () => {
     renderWithProviders(<NeedPage />)
     await pick('Препарат', 'ДЕМО Ритуксимаб')

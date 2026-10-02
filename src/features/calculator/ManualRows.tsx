@@ -9,7 +9,7 @@ import {
   TextInput,
   Title,
 } from '@mantine/core'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { SHEET_HOURS } from './course-sheets'
@@ -30,6 +30,9 @@ export function ManualRows({
   const { t } = useTranslation()
   // The days are kept as the physician typed them, so «1, 8, 15» can be edited mid-word.
   const [typedDays, setTypedDays] = useState<Record<string, string>>({})
+  // A clock alone does not tell two lines apart: two added in the same millisecond would share
+  // an id, and editing one would edit both.
+  const added = useRef(0)
 
   const patch = (id: string, next: Partial<ManualRow>) => {
     onChange(rows.map((row) => (row.id === id ? { ...row, ...next } : row)))
@@ -120,7 +123,9 @@ export function ManualRows({
         <Button
           variant="light"
           style={{ alignSelf: 'flex-start' }}
-          onClick={() => onChange([...rows, newManualRow(`manual-${Date.now()}`)])}
+          onClick={() =>
+            onChange([...rows, newManualRow(`manual-${Date.now()}-${added.current++}`)])
+          }
         >
           {t('calculator.manual.add')}
         </Button>
