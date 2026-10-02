@@ -39,3 +39,6 @@ coverage
 # NCCN and similar copies are watermarked with the account that downloaded them.
 sources/
 *.pdf
+
+# Supabase CLI scratch directory, created by any "npx supabase" invocation.
+supabase/.temp/
