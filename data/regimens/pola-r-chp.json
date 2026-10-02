@@ -1,0 +1,103 @@
+{
+  "$comment": "Цикли 2-6: усе в день 1, поладузумаб за 30 хвилин.",
+  "id": "pola-r-chp",
+  "short_name": "Pola-R-CHP (2-6)",
+  "name": {
+    "uk": "Pola-R-CHP (поладузумаб ведотин, ритуксимаб, циклофосфамід, доксорубіцин, преднізолон), цикли 2-6",
+    "en": "Pola-R-CHP (polatuzumab vedotin, rituximab, cyclophosphamide, doxorubicin, prednisolone), cycles 2-6"
+  },
+  "description": {
+    "uk": "Усі введення в день 1, преднізолон дні 1-5. Цикл 21 день, усього 6 циклів.",
+    "en": "Everything on day 1, prednisolone on days 1-5. 21-day cycle; six cycles in all."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 5,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.144 Pola-R-CHP",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-144-pola-r-chp.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Вранці з їжею; у дні введень — не менш як за 60 хвилин до них.",
+        "en": "In the morning with food; on treatment days at least 60 minutes beforehand."
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не менш як за 30 хвилин до введень. Протокол додає лоратадин 10 мг перорально — цього препарату в довіднику немає.",
+        "en": "At least 30 minutes before the infusions. The protocol adds loratadine 10 mg orally, which is not in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин, і лише потім починають решту введень. При високому пухлинному навантаженні або високому лімфоцитозі інфузію можна розділити на два дні.",
+        "en": "In 500 mL of 0.9% sodium chloride, at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before the other infusions start. With a high tumour burden or lymphocyte count the infusion may be split over two days."
+      }
+    },
+    {
+      "key": "polatuzumab-vedotin",
+      "drug_id": "polatuzumab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.8,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl за 30 хвилин, через вбудований фільтр 0,2-0,22 мкм. Спостереження за реакціями на введення — під час інфузії і ще щонайменше 30 хвилин після неї.",
+        "en": "In 100 mL of 0.9% sodium chloride over 30 minutes, through a 0.2 to 0.22 micron in-line filter. Watch for administration reactions during the infusion and for at least 30 minutes after it."
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_bolus",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "Внутрішньовенно струминно.",
+        "en": "Intravenous bolus."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_bolus",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "Внутрішньовенно струминно.",
+        "en": "Intravenous bolus."
+      }
+    }
+  ]
+}
