@@ -8,7 +8,7 @@ Dose calculator for chemo-immunotherapy courses and a reference of hematological
 - **Data:** Supabase (read-only from the site)
 - **Hosting:** GitHub Pages
 
-Requirements: [docs/requirements.md](docs/requirements.md) · Plan: [docs/development-plan.md](docs/development-plan.md) · Data format: [docs/data-format.md](docs/data-format.md)
+Requirements: [docs/requirements.md](docs/requirements.md) · Plan: [docs/development-plan.md](docs/development-plan.md) · Data format: [docs/data-format.md](docs/data-format.md) · Updating the content: [docs/content-update.md](docs/content-update.md)
 
 ## Local development
 
