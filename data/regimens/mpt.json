@@ -1,0 +1,114 @@
+{
+  "$comment": "Мелфалан у таблетках по 2 мг, тому розрахована доза округлюється до кратної 2 мг — це робиться вручну при виписуванні.",
+  "id": "mpt",
+  "short_name": "MPT",
+  "name": {
+    "uk": "MPT (мелфалан, преднізолон, талідомід)",
+    "en": "MPT (melphalan, prednisolone, thalidomide)"
+  },
+  "description": {
+    "uk": "Множинна мієлома. Цикл 4 тижні, до виходу на плато (рівень парапротеїну стабільний 3 місяці), після чого лікування припиняють. Талідомід призначають і видають лише в межах програми запобігання вагітності. Перед початком оцінюють ризик тромбозу: якщо він не дуже низький і немає високого ризику кровотечі, призначають профілактику венозного тромбоемболізму — у довіднику цих препаратів немає. Протокол також радить профілактичний ацикловір і флуконазол, а в тяжко пролікованих пацієнтів — розглянути ко-тримоксазол і левофлоксацин.",
+    "en": "Multiple myeloma. A four-week cycle, continued to the plateau phase (the paraprotein stable for three months) and then stopped. Thalidomide is prescribed and dispensed only within the pregnancy prevention programme. The thrombotic risk is assessed first: unless it is particularly low or the bleeding risk high, venous thromboembolism prophylaxis is given, and those drugs are not in the catalogue. The protocol also advises prophylactic aciclovir and fluconazole, and suggests considering co-trimoxazole and levofloxacin in heavily pretreated patients."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.21 MPT",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-21-mpt.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "melphalan",
+      "drug_id": "melphalan",
+      "route": "oral",
+      "dose_value": 7,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "Таблетки по 2 мг, тож дозу округлюють до кратної двом. Лікування не починають, якщо нейтрофіли нижчі за 1,0×10⁹/л або тромбоцити нижчі за 75×10⁹/л.",
+        "en": "The tablets are 2 mg, so the dose is rounded to a multiple of two. Treatment is not started below 1.0x10^9/L neutrophils or 75x10^9/L platelets."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "У дуже літніх пацієнтів або при значній токсичності дозу зменшують.",
+        "en": "In the very old, or where toxicity is significant, the dose is reduced."
+      }
+    },
+    {
+      "key": "thalidomide",
+      "drug_id": "thalidomide",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Приймають увечері. У першому циклі зазвичай починають із 50 мг на добу.",
+        "en": "Taken at night. The first cycle usually starts at 50 mg daily."
+      },
+      "dose_options": [
+        {
+          "dose_value": 50,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Стартова доза першого циклу",
+            "en": "The starting dose of the first cycle"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.21 MPT",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-21-mpt.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Противірусна профілактика. При кліренсі креатиніну нижче 10 мл/хв розглядають 200 мг двічі на добу.",
+        "en": "Antiviral prophylaxis. Below a creatinine clearance of 10 mL/min, 200 mg twice daily is considered."
+      }
+    },
+    {
+      "key": "fluconazole",
+      "drug_id": "fluconazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Протигрибкова профілактика.",
+        "en": "Antifungal prophylaxis."
+      }
+    }
+  ]
+}

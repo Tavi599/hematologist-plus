@@ -73,6 +73,40 @@
             "uk": "Старші за 65 років, без автотрансплантації, з нейропатією на момент діагнозу",
             "en": "Over 65, no autologous transplant, with neuropathy at diagnosis"
           }
+        },
+        {
+          "regimen_id": "crd"
+        },
+        {
+          "regimen_id": "lenalidomide-maintenance",
+          "notes": {
+            "uk": "Підтримка після автотрансплантації",
+            "en": "Maintenance after an autologous transplant"
+          }
+        },
+        {
+          "regimen_id": "ctd"
+        },
+        {
+          "regimen_id": "ctd-attenuated",
+          "notes": {
+            "uk": "Коли повні дози не підходять",
+            "en": "Where the full doses are unsuitable"
+          }
+        },
+        {
+          "regimen_id": "mpt",
+          "notes": {
+            "uk": "Без автотрансплантації",
+            "en": "Without an autologous transplant"
+          }
+        },
+        {
+          "regimen_id": "mp",
+          "notes": {
+            "uk": "Без автотрансплантації",
+            "en": "Without an autologous transplant"
+          }
         }
       ]
     },
@@ -117,6 +151,18 @@
             "uk": "Цикл 7 і далі, раз на місяць, до прогресування",
             "en": "Cycle 7 onwards, monthly, until progression"
           }
+        },
+        {
+          "regimen_id": "rd"
+        },
+        {
+          "regimen_id": "crd"
+        },
+        {
+          "regimen_id": "ctd"
+        },
+        {
+          "regimen_id": "ctd-attenuated"
         }
       ]
     },

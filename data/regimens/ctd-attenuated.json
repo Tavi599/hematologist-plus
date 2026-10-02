@@ -1,0 +1,144 @@
+{
+  "$comment": "Послаблений варіант: менші дози талідоміду й дексаметазону, цикл 4 тижні, дексаметазон у дні 1-4 і 15-18.",
+  "id": "ctd-attenuated",
+  "short_name": "CTD (послаблений)",
+  "name": {
+    "uk": "CTD у послабленому режимі",
+    "en": "CTD, attenuated"
+  },
+  "description": {
+    "uk": "Множинна мієлома в пацієнтів, яким повні дози не підходять. Цикл 4 тижні, щонайменше 4 цикли, зазвичай 6-8. Талідомід призначають і видають лише в межах програми запобігання вагітності. Перед початком оцінюють ризик тромбозу: якщо він не дуже низький і немає високого ризику кровотечі, призначають профілактику венозного тромбоемболізму — у довіднику цих препаратів немає. Протокол також радить профілактичний ацикловір і флуконазол, а в тяжко пролікованих пацієнтів — розглянути ко-тримоксазол і левофлоксацин.",
+    "en": "Multiple myeloma in patients for whom the full doses are unsuitable. A four-week cycle, at least four cycles and usually six to eight. Thalidomide is prescribed and dispensed only within the pregnancy prevention programme. The thrombotic risk is assessed first: unless it is particularly low or the bleeding risk high, venous thromboembolism prophylaxis is given, and those drugs are not in the catalogue. The protocol also advises prophylactic aciclovir and fluconazole, and suggests considering co-trimoxazole and levofloxacin in heavily pretreated patients."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.9 CTD attenuated",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-9-ctd-attenuated.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "thalidomide",
+      "drug_id": "thalidomide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Приймають увечері. Починають із 50 мг на добу й підвищують кожні 2-4 тижні залежно від побічних ефектів; типова цільова доза — 100 мг.",
+        "en": "Taken at night. It starts at 50 mg daily and rises every 2 to 4 weeks as side effects allow; the typical target is 100 mg."
+      },
+      "dose_options": [
+        {
+          "dose_value": 100,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Типова цільова доза",
+            "en": "The typical target dose"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.9 CTD attenuated",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-9-ctd-attenuated.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 500,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Усередину, раз на тиждень. Рівноцінна альтернатива протоколу — 50-100 мг щодня; тоді дозу змінюють у списку доз, а дні виставляють вручну.",
+        "en": "Orally, once a week. The protocol's equivalent alternative is 50 to 100 mg daily; then the dose is changed in the dose list and the days set by hand."
+      },
+      "dose_options": [
+        {
+          "dose_value": 50,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Щоденне приймання, нижня межа",
+            "en": "The daily schedule, lower bound"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.9 CTD attenuated",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-9-ctd-attenuated.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "dose_value": 100,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Щоденне приймання, верхня межа",
+            "en": "The daily schedule, upper bound"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.9 CTD attenuated",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-9-ctd-attenuated.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 15, 16, 17, 18],
+      "notes": {
+        "uk": "Чотири дні поспіль двічі за цикл.",
+        "en": "Four days in a row, twice a cycle."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Противірусна профілактика. При кліренсі креатиніну нижче 10 мл/хв розглядають 200 мг двічі на добу.",
+        "en": "Antiviral prophylaxis. Below a creatinine clearance of 10 mL/min, 200 mg twice daily is considered."
+      }
+    },
+    {
+      "key": "fluconazole",
+      "drug_id": "fluconazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Протигрибкова профілактика.",
+        "en": "Antifungal prophylaxis."
+      }
+    }
+  ]
+}

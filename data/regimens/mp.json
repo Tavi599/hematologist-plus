@@ -1,0 +1,79 @@
+{
+  "$comment": "Преднізолон протокол дає діапазоном 20-60 мг; основною взято середину — 40 мг, межі в списку доз.",
+  "id": "mp",
+  "short_name": "MP",
+  "name": {
+    "uk": "MP (мелфалан + преднізолон)",
+    "en": "MP (melphalan and prednisolone)"
+  },
+  "description": {
+    "uk": "Множинна мієлома. Цикл 4-6 тижнів, до виходу на плато (рівень парапротеїну стабільний 3 місяці), після чого лікування припиняють. Преднізолон протокол називає необов'язковим — мелфалан можна давати й сам. Лікування не починають, якщо нейтрофіли нижчі за 1,0×10⁹/л або тромбоцити нижчі за 75×10⁹/л.",
+    "en": "Multiple myeloma. A four to six week cycle, continued to the plateau phase (the paraprotein stable for three months) and then stopped. The protocol makes the prednisolone optional: the melphalan may be given alone. Treatment is not started below 1.0x10^9/L neutrophils or 75x10^9/L platelets."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.20 Melphalan and Prednisolone",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-20-melphalan-pred.pdf",
+      "version": "4.3 (05.2018)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "melphalan",
+      "drug_id": "melphalan",
+      "route": "oral",
+      "dose_value": 7,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "Таблетки по 2 мг, тож дозу округлюють до кратної двом.",
+        "en": "The tablets are 2 mg, so the dose is rounded to a multiple of two."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Протокол дає діапазон 20-60 мг на добу п'ять днів; тут узято середину, межі — у списку доз. У літніх пацієнтів дозу зменшують.",
+        "en": "The protocol gives a range of 20 to 60 mg daily for five days; the middle is taken here and the bounds sit in the dose list. In older patients the dose is reduced."
+      },
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Нижня межа діапазону",
+            "en": "The lower bound of the range"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.20 Melphalan and Prednisolone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-20-melphalan-pred.pdf",
+            "version": "4.3 (05.2018)",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "dose_value": 60,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Верхня межа діапазону",
+            "en": "The upper bound of the range"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.20 Melphalan and Prednisolone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-20-melphalan-pred.pdf",
+            "version": "4.3 (05.2018)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}
