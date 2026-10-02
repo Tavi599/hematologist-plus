@@ -86,6 +86,9 @@
                 "uk": "Цикли 2-6",
                 "en": "Cycles 2-6"
               }
+            },
+            {
+              "regimen_id": "rituximab-mono"
             }
           ]
         },
@@ -161,6 +164,9 @@
                 "uk": "Кожні 56 днів, до 2 років",
                 "en": "Every 56 days, for up to 2 years"
               }
+            },
+            {
+              "regimen_id": "rituximab-maintenance"
             }
           ]
         }
@@ -199,6 +205,20 @@
           "notes": {
             "uk": "Цикли 2-6",
             "en": "Cycles 2-6"
+          }
+        },
+        {
+          "regimen_id": "r2-cycle-1",
+          "notes": {
+            "uk": "Цикл 1",
+            "en": "Cycle 1"
+          }
+        },
+        {
+          "regimen_id": "r2",
+          "notes": {
+            "uk": "Цикли 2-12",
+            "en": "Cycles 2-12"
           }
         }
       ]

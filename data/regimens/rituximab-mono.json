@@ -1,0 +1,54 @@
+{
+  "$comment": "Цикл тут — це тиждень: ритуксимаб раз на тиждень, 4 рази.",
+  "id": "rituximab-mono",
+  "short_name": "Ритуксимаб",
+  "name": {
+    "uk": "Ритуксимаб у монорежимі",
+    "en": "Rituximab as a single agent"
+  },
+  "description": {
+    "uk": "CD20-позитивні індолентні лімфоми (фолікулярна, мантійноклітинна, маргінальної зони, макроглобулінемія Вальденстрема) і CD20-позитивне посттрансплантаційне лімфопроліферативне захворювання. Зазвичай раз на тиждень, 4 тижні; інші режими можливі за рішенням мультидисциплінарної комісії. При тромботичній тромбоцитопенічній пурпурі з неврологічними чи серцевими проявами ритуксимаб дають частіше — аж до кожних 3 днів, 4 дози.",
+    "en": "CD20-positive indolent lymphomas (follicular, mantle cell, marginal zone, Waldenstrom macroglobulinaemia) and CD20-positive post-transplant lymphoproliferative disorder. Usually once a week for four weeks; other schedules are possible by MDT decision. In thrombotic thrombocytopenic purpura with neurological or cardiac involvement it is given more often, up to every 3 days for four doses."
+  },
+  "cycle_length_days": 7,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.43 Rituximab single agent",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-43-rituximab-single-agent.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 30 хвилин до ритуксимабу. Протокол додає гідрокортизон 100 мг і хлорфенамін 10 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "30 minutes before the rituximab. The protocol adds hydrocortisone 100 mg and chlorphenamine 10 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають інші введення. Якщо перше введення пройшло добре, далі можна перейти на пришвидшену інфузію.",
+        "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before any other infusion starts. If the first dose was tolerated, a rapid infusion may be used from then on."
+      }
+    }
+  ]
+}

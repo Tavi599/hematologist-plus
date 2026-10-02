@@ -1,0 +1,54 @@
+{
+  "$comment": "Підтримка: одна доза на цикл. Цикл 2 місяці в першій ремісії і 3 місяці в другій — другий варіант означає інший інтервал, а не іншу дозу, тому він описаний, а не закладений дозою.",
+  "id": "rituximab-maintenance",
+  "short_name": "Ритуксимаб (підтримка)",
+  "name": {
+    "uk": "Ритуксимаб, підтримувальна терапія",
+    "en": "Rituximab maintenance"
+  },
+  "description": {
+    "uk": "Неходжкінська лімфома в ремісії. У першій ремісії — кожні 2 місяці до прогресування або щонайбільше 2 роки: при фолікулярній лімфомі після часткової чи повної відповіді на першу лінію з ритуксимабом, а також при лімфомі маргінальної зони, мантійноклітинній і лімфоплазмоцитарній лімфомі. У другій ремісії (лише фолікулярна лімфома) — кожні 3 місяці, також щонайбільше 2 роки; у довіднику закладено двомісячний цикл, для тримісячного змініть тривалість циклу. Протокол дозволяє підшкірну форму, але лише після того, як пацієнт уже отримав повну внутрішньовенну дозу — вона може бути частиною індукції.",
+    "en": "Non-Hodgkin lymphoma in remission. In first remission, every 2 months until progression or for two years at most: in follicular lymphoma after a partial or complete response to first-line therapy with rituximab, and in marginal zone, mantle cell and lymphoplasmacytic lymphoma. In second remission, follicular lymphoma only, every 3 months, again for two years at most; the catalogue holds the two-month cycle, so change the cycle length for the three-month one. The protocol allows the subcutaneous form, but only after a full intravenous dose has been given, which may have been part of the induction."
+  },
+  "cycle_length_days": 56,
+  "default_cycles": 12,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.41 Rituximab maintenance",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-41-rituximab-maintenance-1st-rem.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 30 хвилин до ритуксимабу. Протокол додає гідрокортизон 100 мг і хлорфенамін 10 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "30 minutes before the rituximab. The protocol adds hydrocortisone 100 mg and chlorphenamine 10 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають інші введення. Якщо перше введення пройшло добре, далі можна перейти на пришвидшену інфузію.",
+        "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before any other infusion starts. If the first dose was tolerated, a rapid infusion may be used from then on."
+      }
+    }
+  ]
+}

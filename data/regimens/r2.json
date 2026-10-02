@@ -1,0 +1,84 @@
+{
+  "$comment": "Цикли 2-5: ритуксимаб лише в день 1. Леналідомід продовжують до 12 циклів — цикли 6-12 йдуть уже без ритуксимабу, і тоді позицію ритуксимабу вимикають.",
+  "id": "r2",
+  "short_name": "R2 (2-12)",
+  "name": {
+    "uk": "Ритуксимаб + леналідомід, цикли 2-12",
+    "en": "Rituximab and lenalidomide, cycles 2-12"
+  },
+  "description": {
+    "uk": "Цикл 28 днів. Ритуксимаб дають у циклах 1-5 (у цій схемі — у день 1), леналідомід — до 12 циклів. У циклах 6-12 ритуксимабу вже немає, тож тоді його позицію вимикають.",
+    "en": "A 28-day cycle. The rituximab runs in cycles 1 to 5, here on day 1, and the lenalidomide for up to 12 cycles. In cycles 6 to 12 there is no rituximab, so its row is switched off."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 11,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.122 Rituximab with Lenalidomide",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-122-rituximab-lenalidomide.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 30 хвилин до ритуксимабу. Протокол додає гідрокортизон 100 мг і хлорфенамін 10 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "30 minutes before the rituximab. The protocol adds hydrocortisone 100 mg and chlorphenamine 10 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають інші введення. Якщо перше введення пройшло добре, далі можна перейти на пришвидшену інфузію.",
+        "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before any other infusion starts. If the first dose was tolerated, a rapid infusion may be used from then on."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Приймають увечері, дні 1-21. Леналідомід призначають і видають лише в межах програми запобігання вагітності; потрібна оцінка ризику тромбозу й відповідна профілактика.",
+        "en": "Taken at night, days 1 to 21. Lenalidomide is prescribed and dispensed only within the pregnancy prevention programme; the thrombotic risk is assessed and prophylaxis given accordingly."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Противірусна профілактика на весь час лікування і ще 3 місяці після нього.",
+        "en": "Antiviral prophylaxis throughout treatment and for three months after."
+      }
+    }
+  ]
+}
