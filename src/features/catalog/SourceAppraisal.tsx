@@ -92,7 +92,7 @@ export function SourceAppraisal({ appraisal }: { appraisal: Appraisal[] }) {
               )}
             </Group>
           )}
-          <SourceNotes sources={entry.sources} />
+          <SourceNotes sources={entry.sources} titleKey="regimen.appraisalSources" />
         </Stack>
       ))}
     </Stack>

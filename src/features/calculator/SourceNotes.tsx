@@ -3,8 +3,18 @@ import { useTranslation } from 'react-i18next'
 
 import type { Source } from '../../schemas/common'
 
-/** Where the numbers of one course item come from: its dose, its drug and its dilution. */
-export function SourceNotes({ sources }: { sources: Source[] }) {
+/**
+ * Where the numbers of one course item come from: its dose, its drug and its dilution.
+ * `titleKey` overrides the heading where the list is something else — the documents an
+ * appraisal was read from, say, which are not the sources of the prescription.
+ */
+export function SourceNotes({
+  sources,
+  titleKey = 'sources.itemTitle',
+}: {
+  sources: Source[]
+  titleKey?: 'sources.itemTitle' | 'regimen.appraisalSources'
+}) {
   const { t } = useTranslation()
   const unique = sources.filter(
     (source, index) =>
@@ -17,7 +27,7 @@ export function SourceNotes({ sources }: { sources: Source[] }) {
   return (
     <>
       <Text size="sm" fw={500}>
-        {t('sources.itemTitle')}
+        {t(titleKey)}
       </Text>
       <List size="sm" spacing={2}>
         {unique.map((source) => (
