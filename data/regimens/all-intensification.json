@@ -1,0 +1,112 @@
+{
+  "$comment": "Гідратація (1000 мл глюкози 2,5% з NaCl 0,45%, калію хлоридом і натрію гідрокарбонатом, 200 мл/год або 150 мл/год при площі тіла менш як 1,6 м²) і залуження сечі натрію гідрокарбонатом перорально в позиції не внесені: цих засобів немає в довіднику як препаратів з дозою в міліграмах на введення.",
+  "id": "all-intensification",
+  "short_name": "ГЛЛ інтенсифікація",
+  "name": {
+    "uk": "Гостра лімфобластна лейкемія, інтенсифікація і профілактика ураження ЦНС",
+    "en": "Acute lymphoblastic leukaemia, intensification and CNS prophylaxis"
+  },
+  "description": {
+    "uk": "4 тижні, два блоки високодозового метотрексату (дні 1 і 15). Гідратацію починають за 12 годин до інфузії і ведуть до її завершення, із залуженням сечі. Рівень метотрексату в сироватці контролюють від +24 годин і далі щонайменше щодоби, доки він не впаде нижче 0,2 мкмоль/л.",
+    "en": "Four weeks with two blocks of high-dose methotrexate on days 1 and 15. Hydration starts 12 hours before the infusion and runs to its end, with urine alkalinisation. The serum methotrexate is measured from +24 hours and at least daily until it falls below 0.2 micromol/L."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.49 ALL intensification and CNS prophylaxis",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-49-all-intensification-cns-prophylaxis.pdf",
+      "version": "3.0",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "methotrexate-loading",
+      "drug_id": "methotrexate",
+      "route": "iv_infusion",
+      "dose_value": 300,
+      "dose_unit": "mg_m2",
+      "days": [1, 15],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "Навантажувальна частина: у 50 мл 0,9% NaCl за 1 годину, початок о 10:00. Одразу після неї — тривала інфузія.",
+        "en": "The loading part: in 50 mL of 0.9% sodium chloride over an hour, started at 10 am. The long infusion follows immediately."
+      }
+    },
+    {
+      "key": "methotrexate-infusion",
+      "drug_id": "methotrexate",
+      "route": "iv_infusion",
+      "dose_value": 2700,
+      "dose_unit": "mg_m2",
+      "days": [1, 15],
+      "duration_min": 1380,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Тривала частина: у 500 мл 0,9% NaCl (об'єм фіксований) за 23 години, одразу після навантажувальної.",
+        "en": "The long part: in a fixed 500 mL of 0.9% sodium chloride over 23 hours, immediately after the loading dose."
+      }
+    },
+    {
+      "key": "calcium-folinate",
+      "drug_id": "calcium-folinate",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 30,
+      "dose_unit": "mg_flat",
+      "days": [3, 17],
+      "administrations_per_day": 3,
+      "interval_min": 360,
+      "notes": {
+        "uk": "Порятунок після метотрексату: кожні 6 годин, 3 дози — через 42, 48 і 54 години від початку інфузії метотрексату. Залежно від рівня метотрексату й функції нирок доз може знадобитися більше. При площі тіла понад 2,2 м² дозу рахують як 15 мг/м² із заокругленням до 5 мг. Усі дози вводять внутрішньовенно.",
+        "en": "The methotrexate rescue: every 6 hours for 3 doses, at 42, 48 and 54 hours from the start of the methotrexate infusion. More doses may be needed depending on the level and renal function. Above a body surface of 2.2 m2 the dose is 15 mg/m2 rounded to the nearest 5 mg. Every dose is given intravenously."
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [2, 16],
+      "notes": {
+        "uk": "За 30 хвилин до пегаспаргази, одноразово. Протокол додає фамотидин 20 мг перорально — цього препарату в довіднику немає.",
+        "en": "30 minutes before the pegaspargase, once. The protocol adds famotidine 20 mg orally, which is not in the catalogue."
+      }
+    },
+    {
+      "key": "pegaspargase",
+      "drug_id": "pegaspargase",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "iu_m2",
+      "days": [2, 16],
+      "notes": {
+        "uk": "Лише при Ph-негативній хворобі — інакше позицію вимикають.",
+        "en": "Only in Philadelphia-negative disease; otherwise the row is switched off."
+      }
+    },
+    {
+      "key": "imatinib",
+      "drug_id": "imatinib",
+      "route": "oral",
+      "dose_value": 600,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Лише при Ph-позитивній хворобі — інакше позицію вимикають. Приймають безперервно через усе лікування, зокрема в перервах між етапами, по змозі до трансплантації; доза 600 мг або максимальна переносима.",
+        "en": "Only in Philadelphia-positive disease; otherwise the row is switched off. Taken continuously throughout treatment, including the gaps between phases, where possible up to transplant; 600 mg or the maximum tolerated dose."
+      }
+    }
+  ]
+}

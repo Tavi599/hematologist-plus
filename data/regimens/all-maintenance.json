@@ -1,0 +1,111 @@
+{
+  "$comment": "Цикл 3 місяці (92 дні), повторюють 2 роки. Дози метотрексату й меркаптопурину підбирають за показниками крові: ціль — нейтрофіли 0,75-1,5×10⁹/л і тромбоцити 75-150×10⁹/л, тож стартові дози тут не остаточні.",
+  "id": "all-maintenance",
+  "short_name": "ГЛЛ підтримка",
+  "name": {
+    "uk": "Гостра лімфобластна лейкемія, підтримувальна терапія",
+    "en": "Acute lymphoblastic leukaemia, maintenance"
+  },
+  "description": {
+    "uk": "Починають після 4-го циклу консолідації й відновлення показників; цикл повторюють кожні 3 місяці впродовж 2 років, пацієнта оглядають не рідше ніж раз на 4 тижні. Метотрексат і меркаптопурин виписують блоками по 4 тижні, щоб можна було міняти дозу: її і підвищують, і знижують, тримаючи нейтрофіли в межах 0,75-1,5×10⁹/л, а тромбоцити — 75-150×10⁹/л. Пероральний метотрексат не дають у той самий день, що й котримоксазол.",
+    "en": "Begun after the fourth consolidation cycle and count recovery; the cycle repeats every 3 months for 2 years, with review at least every 4 weeks. Methotrexate and mercaptopurine are prescribed in four-week blocks so the dose can change: it is both raised and lowered to hold neutrophils at 0.75 to 1.5x10^9/L and platelets at 75 to 150x10^9/L. The oral methotrexate is not given on the same day as co-trimoxazole."
+  },
+  "cycle_length_days": 92,
+  "default_cycles": 8,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.50 ALL 25-60 Maintenance",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-50-all-maintenance.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_amount": 2,
+      "days": [1],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 10 хвилин; разова доза не більш як 2 мг.",
+        "en": "In 50 mL of 0.9% sodium chloride over 10 minutes; no single dose above 2 mg."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Раз на добу зі сніданком.",
+        "en": "Once daily with breakfast."
+      }
+    },
+    {
+      "key": "methotrexate-oral",
+      "drug_id": "methotrexate",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22, 29, 36, 43, 50, 57, 64, 71, 78, 85, 92],
+      "notes": {
+        "uk": "Раз на тиждень, таблетками по 2,5 мг. Не в один день із котримоксазолом. Стартова доза — її коригують за показниками крові.",
+        "en": "Once a week, as 2.5 mg tablets. Not on the same day as co-trimoxazole. A starting dose, adjusted by the blood counts."
+      }
+    },
+    {
+      "key": "methotrexate-it",
+      "drug_id": "methotrexate",
+      "route": "intrathecal",
+      "dose_value": 12.5,
+      "dose_unit": "mg_flat",
+      "days": [2],
+      "notes": {
+        "uk": "Інтратекально. День введення можна зсунути з організаційних причин.",
+        "en": "Intrathecally. The day may be shifted for logistical reasons."
+      }
+    },
+    {
+      "key": "mercaptopurine",
+      "drug_id": "mercaptopurine",
+      "route": "oral",
+      "dose_value": 75,
+      "dose_unit": "mg_m2",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
+        49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71,
+        72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92
+      ],
+      "notes": {
+        "uk": "Щодня в один і той самий час, не менш як за годину до їжі або через 3 години після неї чи після молока.",
+        "en": "Daily at the same time, at least an hour before food or milk or three hours after."
+      }
+    },
+    {
+      "key": "imatinib",
+      "drug_id": "imatinib",
+      "route": "oral",
+      "dose_value": 600,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
+        49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71,
+        72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92
+      ],
+      "notes": {
+        "uk": "Лише при Ph-позитивній хворобі — інакше позицію вимикають. Приймають через усю підтримувальну терапію.",
+        "en": "Only in Philadelphia-positive disease; otherwise the row is switched off. Taken throughout maintenance."
+      }
+    }
+  ]
+}

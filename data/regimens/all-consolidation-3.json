@@ -1,0 +1,132 @@
+{
+  "$comment": "Цикл 3 консолідації, 6 тижнів: перші 4 тижні повторюють індукцію в меншій дозі даунорубіцину, з дня 29 — циклофосфамід, меркаптопурин і цитарабін.",
+  "id": "all-consolidation-3",
+  "short_name": "ГЛЛ консолідація 3",
+  "name": {
+    "uk": "Гостра лімфобластна лейкемія, відстрочена інтенсифікація (цикл 3 консолідації)",
+    "en": "Acute lymphoblastic leukaemia, delayed intensification (consolidation cycle 3)"
+  },
+  "description": {
+    "uk": "6 тижнів. Перед днем 29 показники перевіряють повторно: лікування цього дня починають за нейтрофілів > 0,75×10⁹/л і тромбоцитів > 75×10⁹/л.",
+    "en": "Six weeks. The counts are checked again before day 29: that day starts at neutrophils above 0.75x10^9/L and platelets above 75x10^9/L."
+  },
+  "cycle_length_days": 42,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.45 ALL 25-60 Consolidation",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-45-all-consolidation.pdf",
+      "version": "3.0",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "daunorubicin",
+      "drug_id": "daunorubicin",
+      "route": "iv_infusion",
+      "dose_value": 25,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "duration_min": 20,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl за 20 хвилин.",
+        "en": "In 100 mL of 0.9% sodium chloride over 20 minutes."
+      }
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_amount": 2,
+      "days": [1, 8, 15, 22],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 10 хвилин; разова доза не більш як 2 мг.",
+        "en": "In 50 mL of 0.9% sodium chloride over 10 minutes; no single dose above 2 mg."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "cap_amount": 20,
+      "days": [1, 2, 3, 4, 8, 9, 10, 11, 15, 16, 17, 18, 22, 23, 24, 25],
+      "notes": {
+        "uk": "Вранці з їжею; разова доза не більш як 20 мг.",
+        "en": "In the morning with food; no single dose above 20 mg."
+      }
+    },
+    {
+      "key": "methotrexate-it",
+      "drug_id": "methotrexate",
+      "route": "intrathecal",
+      "dose_value": 12.5,
+      "dose_unit": "mg_flat",
+      "days": [2, 17],
+      "notes": {
+        "uk": "Інтратекально. День введення можна зсунути з організаційних причин.",
+        "en": "Intrathecally. The day may be shifted for logistical reasons."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_bolus",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [29],
+      "notes": {
+        "uk": "Внутрішньовенно струминно.",
+        "en": "Intravenous bolus."
+      }
+    },
+    {
+      "key": "mercaptopurine",
+      "drug_id": "mercaptopurine",
+      "route": "oral",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42],
+      "notes": {
+        "uk": "Щодня в один і той самий час, не менш як за годину до їжі або через 3 години після неї чи після молока.",
+        "en": "Daily at the same time, at least an hour before food or milk or three hours after."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_bolus",
+      "dose_value": 75,
+      "dose_unit": "mg_m2",
+      "days": [30, 31, 32, 33, 37, 38, 39, 40],
+      "notes": {
+        "uk": "Повільно внутрішньовенно струминно. Дні можна зсувати в межах тижня, якщо повну дозу введено.",
+        "en": "Slow intravenous bolus. The days may be shifted within the week as long as the full dose is given."
+      }
+    },
+    {
+      "key": "imatinib",
+      "drug_id": "imatinib",
+      "route": "oral",
+      "dose_value": 600,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42
+      ],
+      "notes": {
+        "uk": "Лише при Ph-позитивній хворобі — інакше позицію вимикають. Приймають безперервно через усе лікування, зокрема в перервах між етапами, по змозі до трансплантації; доза 600 мг або максимальна переносима.",
+        "en": "Only in Philadelphia-positive disease; otherwise the row is switched off. Taken continuously throughout treatment, including the gaps between phases, where possible up to transplant; 600 mg or the maximum tolerated dose."
+      }
+    }
+  ]
+}

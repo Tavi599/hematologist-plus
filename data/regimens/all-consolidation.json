@@ -1,0 +1,103 @@
+{
+  "$comment": "Цикли 1, 2 і 4 консолідації (цикл 3 — окрема схема «відстрочена інтенсифікація»). Пегаспаргазу дають лише в циклі 1.",
+  "id": "all-consolidation",
+  "short_name": "ГЛЛ консолідація",
+  "name": {
+    "uk": "Гостра лімфобластна лейкемія, консолідація (цикли 1, 2 і 4)",
+    "en": "Acute lymphoblastic leukaemia, consolidation (cycles 1, 2 and 4)"
+  },
+  "description": {
+    "uk": "Цикл 3 тижні. Цикл 1 починають після інтенсифікації, кожен наступний — за нейтрофілів > 0,75×10⁹/л і тромбоцитів > 75×10⁹/л. Пегаспаргазу (лише при Ph-негативній хворобі) дають у день 5 тільки в циклі 1 — в інших циклах позицію вимикають.",
+    "en": "A three-week cycle. Cycle 1 follows the intensification, and each later one waits for neutrophils above 0.75x10^9/L and platelets above 75x10^9/L. The pegaspargase, for Philadelphia-negative disease only, is given on day 5 of cycle 1 alone; in the other cycles the row is switched off."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.45 ALL 25-60 Consolidation",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-45-all-consolidation.pdf",
+      "version": "3.0",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_bolus",
+      "dose_value": 75,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Повільно внутрішньовенно струминно. Дні можна зсувати в межах тижня, якщо повну дозу введено.",
+        "en": "Slow intravenous bolus. The days may be shifted within the week as long as the full dose is given."
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl за 60 хвилин.",
+        "en": "In 500 mL of 0.9% sodium chloride over 60 minutes."
+      }
+    },
+    {
+      "key": "methotrexate-it",
+      "drug_id": "methotrexate",
+      "route": "intrathecal",
+      "dose_value": 12.5,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Інтратекально. День введення можна зсунути з організаційних причин.",
+        "en": "Intrathecally. The day may be shifted for logistical reasons."
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [5],
+      "notes": {
+        "uk": "За 30 хвилин до пегаспаргази, одноразово. Протокол додає фамотидин 20 мг перорально — цього препарату в довіднику немає.",
+        "en": "30 minutes before the pegaspargase, once. The protocol adds famotidine 20 mg orally, which is not in the catalogue."
+      }
+    },
+    {
+      "key": "pegaspargase",
+      "drug_id": "pegaspargase",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "iu_m2",
+      "days": [5],
+      "notes": {
+        "uk": "Лише при Ph-негативній хворобі — інакше позицію вимикають.",
+        "en": "Only in Philadelphia-negative disease; otherwise the row is switched off."
+      }
+    },
+    {
+      "key": "imatinib",
+      "drug_id": "imatinib",
+      "route": "oral",
+      "dose_value": 600,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Лише при Ph-позитивній хворобі — інакше позицію вимикають. Приймають безперервно через усе лікування, зокрема в перервах між етапами, по змозі до трансплантації; доза 600 мг або максимальна переносима.",
+        "en": "Only in Philadelphia-positive disease; otherwise the row is switched off. Taken continuously throughout treatment, including the gaps between phases, where possible up to transplant; 600 mg or the maximum tolerated dose."
+      }
+    }
+  ]
+}

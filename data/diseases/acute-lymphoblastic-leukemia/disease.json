@@ -30,5 +30,80 @@
       "url": "https://www.eviq.org.au/search#/?query=Acute%20lymphoblastic%20leukemia"
     }
   ],
-  "treatment": []
+  "treatment": [
+    {
+      "key": "induction",
+      "kind": "line",
+      "title": {
+        "uk": "Індукція",
+        "en": "Induction"
+      },
+      "description": {
+        "uk": "Дві фази. Перед фазою 1 — стероїдна префаза. Після фази 2 підтверджують ремісію і вимірюють мінімальну залишкову хворобу.",
+        "en": "Two phases. A steroid pre-phase comes before phase 1. After phase 2 remission is confirmed and minimal residual disease measured."
+      },
+      "regimens": [
+        {
+          "regimen_id": "all-phase-1-induction"
+        },
+        {
+          "regimen_id": "all-phase-2-induction"
+        }
+      ]
+    },
+    {
+      "key": "intensification",
+      "kind": "line",
+      "title": {
+        "uk": "Інтенсифікація і профілактика ураження ЦНС",
+        "en": "Intensification and CNS prophylaxis"
+      },
+      "regimens": [
+        {
+          "regimen_id": "all-intensification"
+        }
+      ]
+    },
+    {
+      "key": "consolidation",
+      "kind": "line",
+      "title": {
+        "uk": "Консолідація",
+        "en": "Consolidation"
+      },
+      "description": {
+        "uk": "Чотири цикли. Третій відрізняється — це відстрочена інтенсифікація на 6 тижнів.",
+        "en": "Four cycles. The third differs: a six-week delayed intensification."
+      },
+      "regimens": [
+        {
+          "regimen_id": "all-consolidation",
+          "notes": {
+            "uk": "Цикли 1, 2 і 4",
+            "en": "Cycles 1, 2 and 4"
+          }
+        },
+        {
+          "regimen_id": "all-consolidation-3",
+          "notes": {
+            "uk": "Цикл 3",
+            "en": "Cycle 3"
+          }
+        }
+      ]
+    },
+    {
+      "key": "maintenance",
+      "kind": "line",
+      "title": {
+        "uk": "Підтримувальна терапія",
+        "en": "Maintenance"
+      },
+      "regimens": [
+        {
+          "regimen_id": "all-maintenance"
+        }
+      ]
+    }
+  ]
 }

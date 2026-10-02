@@ -1,0 +1,123 @@
+{
+  "$comment": "Стероїдна префаза (дексаметазон 6 мг/м² перорально вранці з їжею 5-7 днів) передує цьому етапу й у позиції не внесена: вона поза межами 28-денного циклу. Фамотидин премедикації в довіднику відсутній.",
+  "id": "all-phase-1-induction",
+  "short_name": "ГЛЛ індукція 1",
+  "name": {
+    "uk": "Гостра лімфобластна лейкемія, індукція, фаза 1",
+    "en": "Acute lymphoblastic leukaemia, induction, phase 1"
+  },
+  "description": {
+    "uk": "Протокол для дорослих 25-60 років, 4 тижні. Перед ним усі пацієнти отримують стероїдну префазу: дексаметазон 6 мг/м² перорально вранці з їжею 5-7 днів. При CD20-позитивній В-клітинній ГЛЛ розглядають додавання ритуксимабу. Імітиніб — лише при Ph-позитивній хворобі, пегаспаргаза — лише при Ph-негативній; зайву позицію в калькуляторі вимикають. У віці 41 рік і старше пегаспаргазу дня 4 пропускають.",
+    "en": "The adult protocol for ages 25 to 60, four weeks. Every patient first has a steroid pre-phase: dexamethasone 6 mg/m2 orally in the morning with food for 5 to 7 days. In CD20-positive B-ALL, adding rituximab is considered. Imatinib is for Philadelphia-positive disease only and pegaspargase for Philadelphia-negative only; the row that does not apply is switched off in the calculator. From age 41 the day 4 pegaspargase is omitted."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.51 ALL 25-60 Phase 1 induction",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-51-all-phase-1-induction.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "daunorubicin",
+      "drug_id": "daunorubicin",
+      "route": "iv_infusion",
+      "dose_value": 30,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "duration_min": 20,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl за 20 хвилин.",
+        "en": "In 100 mL of 0.9% sodium chloride over 20 minutes."
+      }
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_amount": 2,
+      "days": [1, 8, 15, 22],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 10 хвилин; разова доза не більш як 2 мг.",
+        "en": "In 50 mL of 0.9% sodium chloride over 10 minutes; no single dose above 2 mg."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "cap_amount": 20,
+      "days": [1, 2, 3, 4, 8, 9, 10, 11, 15, 16, 17, 18, 22, 23, 24, 25],
+      "notes": {
+        "uk": "Вранці з їжею; разова доза не більш як 20 мг.",
+        "en": "In the morning with food; no single dose above 20 mg."
+      }
+    },
+    {
+      "key": "methotrexate-it",
+      "drug_id": "methotrexate",
+      "route": "intrathecal",
+      "dose_value": 12.5,
+      "dose_unit": "mg_flat",
+      "days": [14],
+      "notes": {
+        "uk": "Інтратекально. День введення можна зсунути з організаційних причин.",
+        "en": "Intrathecally. The day may be shifted for logistical reasons."
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [4, 18],
+      "notes": {
+        "uk": "За 30 хвилин до пегаспаргази, одноразово. Протокол додає фамотидин 20 мг перорально — цього препарату в довіднику немає.",
+        "en": "30 minutes before the pegaspargase, once. The protocol adds famotidine 20 mg orally, which is not in the catalogue."
+      }
+    },
+    {
+      "key": "pegaspargase",
+      "drug_id": "pegaspargase",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "iu_m2",
+      "days": [4, 18],
+      "notes": {
+        "uk": "Лише при Ph-негативній хворобі — інакше позицію вимикають.",
+        "en": "Only in Philadelphia-negative disease; otherwise the row is switched off."
+      }
+    },
+    {
+      "key": "imatinib",
+      "drug_id": "imatinib",
+      "route": "oral",
+      "dose_value": 600,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Лише при Ph-позитивній хворобі — інакше позицію вимикають. Приймають безперервно через усе лікування, зокрема в перервах між етапами, по змозі до трансплантації; доза 600 мг або максимальна переносима.",
+        "en": "Only in Philadelphia-positive disease; otherwise the row is switched off. Taken continuously throughout treatment, including the gaps between phases, where possible up to transplant; 600 mg or the maximum tolerated dose."
+      }
+    }
+  ]
+}

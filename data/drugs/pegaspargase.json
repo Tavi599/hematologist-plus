@@ -1,0 +1,63 @@
+{
+  "$comment": "Додано для протоколу ГЛЛ (ML.51, ML.45, ML.49). Вимірюється в міжнародних одиницях, тому межі в мг/мл до нього не застосовні.",
+  "id": "pegaspargase",
+  "name": {
+    "uk": "Пегаспаргаза",
+    "en": "Pegaspargase"
+  },
+  "trade_names": ["Oncaspar"],
+  "amount_unit": "iu",
+  "dose_units": ["iu_m2"],
+  "availability": "registered",
+  "notes": {
+    "uk": "При гіперчутливості кожну дозу пегаспаргази можна замінити трьома дозами кризантаспази (L-аспарагінази, Erwinase) по 20 000 ОД/м² внутрішньом'язово в понеділок, середу і п'ятницю. Кризантаспази в довіднику немає.",
+    "en": "On hypersensitivity each pegaspargase dose may be replaced by three doses of crisantaspase (L-asparaginase, Erwinase) at 20 000 units/m2 intramuscularly on Monday, Wednesday and Friday. Crisantaspase is not in the catalogue."
+  },
+  "sources": [
+    {
+      "name": "EMA, Oncaspar (пегаспаргаза), коротка характеристика препарату",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/oncaspar-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "name": "NSSG Oxford Haematology, ML.51 ALL 25-60 Phase 1 induction",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-51-all-phase-1-induction.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s3750",
+      "form": "vial",
+      "strength_amount": 3750,
+      "volume_ml": 5,
+      "label": {
+        "uk": "3750 ОД / 5 мл",
+        "en": "3750 units in 5 mL"
+      }
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [100],
+      "duration_min": 120,
+      "is_default": true,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl за 1-2 години; у довіднику взято довший край.",
+        "en": "In 100 mL of 0.9% sodium chloride over 1 to 2 hours; the catalogue takes the longer end."
+      },
+      "sources": [
+        {
+          "name": "NSSG Oxford Haematology, ML.51 ALL 25-60 Phase 1 induction",
+          "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-51-all-phase-1-induction.pdf",
+          "version": "перевірено 2026-10-02",
+          "checkedOn": "2026-10-02"
+        }
+      ]
+    }
+  ]
+}

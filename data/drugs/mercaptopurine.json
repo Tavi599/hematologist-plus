@@ -1,0 +1,34 @@
+{
+  "$comment": "Додано для протоколу ГЛЛ (ML.52, ML.45, ML.50).",
+  "id": "mercaptopurine",
+  "name": {
+    "uk": "Меркаптопурин",
+    "en": "Mercaptopurine"
+  },
+  "trade_names": ["Puri-Nethol"],
+  "availability": "registered",
+  "notes": {
+    "uk": "Приймають щодня в один час, не менш як за годину до їжі або через 3 години після неї чи після молока. Перед призначенням перевіряють генотип TPMT і NUDT15.",
+    "en": "Taken daily at the same time, at least an hour before food or milk or three hours after. The TPMT and NUDT15 genotype is checked before it is prescribed."
+  },
+  "sources": [
+    {
+      "name": "EMA/MHRA, Puri-Nethol (меркаптопурин), коротка характеристика препарату",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "name": "NSSG Oxford Haematology, ML.52 ALL 25-60 Phase 2 induction",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-52-all-phase-2-induction.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s50",
+      "form": "tablet",
+      "strength_amount": 50
+    }
+  ]
+}
