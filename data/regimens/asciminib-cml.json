@@ -1,0 +1,40 @@
+{
+  "$comment": "Асцимініб у довіднику препаратів уже був, схеми для нього не було.",
+  "id": "asciminib-cml",
+  "short_name": "Асцимініб",
+  "name": {
+    "uk": "Асцимініб у монорежимі",
+    "en": "Asciminib monotherapy"
+  },
+  "description": {
+    "uk": "Хронічна мієлоїдна лейкемія з філадельфійською хромосомою, хронічна фаза, без мутації T315I, після двох і більше інгібіторів тирозинкінази. Цикл 28 днів, лікування безперервне — до прогресування або неприйнятної токсичності. Сильних індукторів CYP3A4 (карбамазепін, рифампіцин, фенобарбітал, фенітоїн, звіробій) уникають: вони знижують концентрацію препарату. З обережністю поєднують із субстратами CYP3A4 з вузьким терапевтичним діапазоном (фентаніл, альфентаніл, мідазолам) — їхня концентрація може зрости до токсичної. Ітраконазол у вигляді перорального розчину не застосовують через його допоміжну речовину.",
+    "en": "Philadelphia-positive chronic myeloid leukaemia in chronic phase, without a T315I mutation, after two or more tyrosine kinase inhibitors. A 28-day cycle, continuous until progression or unacceptable toxicity. Strong CYP3A4 inducers - carbamazepine, rifampicin, phenobarbital, phenytoin, St John's wort - are avoided, as they lower the concentration. CYP3A4 substrates with a narrow therapeutic index (fentanyl, alfentanil, midazolam) need caution: their own levels may rise into toxicity. Itraconazole oral solution is not used, because of its excipient."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.99 Asciminib",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-99-asciminib.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "asciminib",
+      "drug_id": "asciminib",
+      "route": "oral",
+      "dose_value": 80,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Приймають натщесерце: їжі уникають щонайменше за 2 години до і 1 годину після прийому. Таблетки по 20 і 40 мг. Якщо дозу пропущено більш ніж на 12 годин, її пропускають і приймають наступну за розкладом. Для кращої переносимості можна перейти на 40 мг двічі на добу — тоді пропущеною вважають дозу, затриману більш ніж на 6 годин.",
+        "en": "Taken without food: no food for at least 2 hours before and 1 hour after. The tablets are 20 and 40 mg. A dose missed by more than 12 hours is skipped and the next taken on schedule. For better tolerance it may be split to 40 mg twice daily, and then a dose is missed once it is more than 6 hours late."
+      }
+    }
+  ]
+}

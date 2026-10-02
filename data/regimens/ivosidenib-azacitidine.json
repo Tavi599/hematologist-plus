@@ -1,0 +1,72 @@
+{
+  "$comment": "Доза івосиденібу залежить від того, чи пацієнт отримує сильний інгібітор CYP3A4 (а протигрибкова профілактика азолом тут звична), тому 250 мг записані як поправка, а не як окрема схема.",
+  "id": "ivosidenib-azacitidine",
+  "short_name": "Івосиденіб+азацитидин",
+  "name": {
+    "uk": "Івосиденіб + азацитидин",
+    "en": "Ivosidenib and azacitidine"
+  },
+  "description": {
+    "uk": "Раніше нелікована гостра мієлоїдна лейкемія з мутацією IDH1 R132 у дорослих, яким не можна проводити стандартну інтенсивну індукцію. Цикл 28 днів; через пригнічення кровотворення цикли можуть відкладатися, перерви до 10 тижнів допустимі. Максимальної кількості циклів немає — лікують, доки є користь, до прогресування або неприйнятної токсичності. Перед початком знімають ЕКГ: QTc має бути менший за 450 мс; при QTc від 480 до 500 мс початок лікування відкладають. Щоб зменшити ризик синдрому диференціювання, розглядають циторедукцію гідроксикарбамідом. При підозрі на синдром диференціювання вводять системний стероїд.",
+    "en": "Previously untreated acute myeloid leukaemia with an IDH1 R132 mutation in adults who cannot have standard intensive induction. A 28-day cycle; myelosuppression may delay cycles and breaks of up to 10 weeks are allowed. There is no maximum number of cycles: treatment continues while the patient benefits, until progression or unacceptable toxicity. An ECG comes first: the QTc must be under 450 ms, and between 480 and 500 ms the start is deferred. To lower the risk of differentiation syndrome, cytoreduction with hydroxycarbamide is considered. Where differentiation syndrome is suspected, a systemic steroid is given."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.104 Ivosidenib and Azacitidine",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-104-ivosidenib-azaciditine.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "ivosidenib",
+      "drug_id": "ivosidenib",
+      "route": "oral",
+      "dose_value": 500,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Раз на добу. Доза для пацієнта без сильного інгібітора CYP3A4.",
+        "en": "Once daily. This is the dose without a strong CYP3A4 inhibitor."
+      },
+      "dose_modifiers": [
+        {
+          "key": "cyp3a4-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A4 (позаконазол, вориконазол)",
+            "en": "A strong CYP3A4 inhibitor (posaconazole, voriconazole)"
+          },
+          "dose_value": 250,
+          "notes": {
+            "uk": "Якщо починають позаконазол, вориконазол або інший сильний інгібітор CYP3A4.",
+            "en": "Where posaconazole, voriconazole or another strong CYP3A4 inhibitor is started."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.104 Ivosidenib and Azacitidine",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-104-ivosidenib-azaciditine.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "azacitidine",
+      "drug_id": "azacitidine",
+      "route": "subcutaneous",
+      "dose_value": 75,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 8, 9],
+      "notes": {
+        "uk": "Підшкірно раз на добу: дні 1-5 (понеділок-п'ятниця), вихідні — перерва, далі дні 8-9 (понеділок-вівторок).",
+        "en": "Subcutaneously once a day: days 1 to 5 (Monday to Friday), a weekend break, then days 8 and 9 (Monday and Tuesday)."
+      }
+    }
+  ]
+}

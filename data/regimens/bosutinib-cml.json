@@ -1,0 +1,108 @@
+{
+  "$comment": "Стартова доза залежить від того, чи це непереносимість попереднього інгібітора, чи резистентність до нього; обидва варіанти в списку доз. Поправки за кліренсом креатиніну записані повною дозою.",
+  "id": "bosutinib-cml",
+  "short_name": "Бозутиніб",
+  "name": {
+    "uk": "Бозутиніб у монорежимі",
+    "en": "Bosutinib monotherapy"
+  },
+  "description": {
+    "uk": "Хронічна мієлоїдна лейкемія з філадельфійською хромосомою після одного чи більше інгібіторів тирозинкінази, коли іматиніб, нілотиніб і дазатиніб не підходять, а також уперше діагностована хронічна фаза. Цикл 28 днів. У літніх і ослаблених пацієнтів у хронічній фазі, а також за наявності супутніх хвороб, можна почати з нижчої дози — наприклад, 200 мг на добу — і підвищувати її щомісяця на 100 мг залежно від переносимості й відповіді. Сильних і помірних індукторів CYP3A4 уникають; сильних і помірних інгібіторів CYP3A — теж, вони підвищують концентрацію бозутинібу. При печінковій недостатності будь-якого класу за Чайлдом-П'ю дають половину дози.",
+    "en": "Philadelphia-positive chronic myeloid leukaemia after one or more tyrosine kinase inhibitors where imatinib, nilotinib and dasatinib are unsuitable, and newly diagnosed chronic phase. A 28-day cycle. In elderly or frail patients in chronic phase, and in those with comorbidities, a lower start such as 200 mg daily may be used, raised by 100 mg a month as tolerance and response allow. Strong and moderate CYP3A4 inducers are avoided, and so are strong and moderate CYP3A inhibitors, which raise the bosutinib level. In hepatic impairment of any Child-Pugh class the dose is halved."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.44 Bosutinib",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-44-bosutinib.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "bosutinib",
+      "drug_id": "bosutinib",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Раз на добу під час їди, таблетку ковтають цілою — не ділять, не кришать і не ламають. Доза 400 мг — для вперше діагностованої хронічної фази і для пацієнтів із непереносимістю попереднього інгібітора; 500 мг — при резистентності до попереднього інгібітора в хронічній, акселерованій або бластній фазі.",
+        "en": "Once daily with food, the tablet swallowed whole - not cut, crushed or broken. The 400 mg dose is for newly diagnosed chronic phase and for intolerance of a previous inhibitor; 500 mg is for resistance to a previous inhibitor in chronic, accelerated or blast phase."
+      },
+      "dose_options": [
+        {
+          "dose_value": 500,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Резистентність до попереднього інгібітора, будь-яка фаза",
+            "en": "Resistance to a previous inhibitor, any phase"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.44 Bosutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-44-bosutinib.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "dose_value": 200,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Знижений старт у літніх, ослаблених або при супутніх хворобах",
+            "en": "A lower start in elderly or frail patients, or with comorbidity"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.44 Bosutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-44-bosutinib.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ],
+      "dose_modifiers": [
+        {
+          "key": "crcl-30-50",
+          "label": {
+            "uk": "Кліренс креатиніну від 30 до 50 мл/хв",
+            "en": "A creatinine clearance of 30 to 50 mL/min"
+          },
+          "dose_value": 400,
+          "notes": {
+            "uk": "Якщо переноситься, дозу можна підвищити до 500 мг на добу.",
+            "en": "If tolerated, the dose may be escalated to 500 mg daily."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.44 Bosutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-44-bosutinib.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "key": "crcl-below-30",
+          "label": {
+            "uk": "Кліренс креатиніну нижчий за 30 мл/хв",
+            "en": "A creatinine clearance below 30 mL/min"
+          },
+          "dose_value": 300,
+          "notes": {
+            "uk": "Якщо переноситься, дозу можна підвищити до 400 мг на добу.",
+            "en": "If tolerated, the dose may be escalated to 400 mg daily."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.44 Bosutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-44-bosutinib.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}

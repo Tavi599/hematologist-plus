@@ -1,0 +1,56 @@
+{
+  "$comment": "Підвищення до 200 мг — не поправка на обставину, а крок за відсутності відповіді через 4 тижні, тому це альтернативна доза, а не модифікатор.",
+  "id": "gilteritinib-aml",
+  "short_name": "Гілтеритиніб",
+  "name": {
+    "uk": "Гілтеритиніб у монорежимі",
+    "en": "Gilteritinib monotherapy"
+  },
+  "description": {
+    "uk": "Рецидивна або рефрактерна гостра мієлоїдна лейкемія з мутацією FLT3 — внутрішньою тандемною дуплікацією або мутацією тирозинкіназного домену. Цикл 28 днів, лікування безперервне до прогресування або неприйнятної токсичності. Другим, незареєстрованим показанням протокол називає продовження гілтеритинібу як підтримки після трансплантації стовбурових клітин. Потрібен контроль ЕКГ: при подовженні QTc понад 500 мс лікування припиняють і відновлюють, коли QTc повернеться в межі 30 мс від вихідного. Сильних індукторів CYP3A і P-глікопротеїну (фенітоїн, рифампіцин, звіробій) уникають; сильні інгібітори CYP3A та P-глікопротеїну (вориконазол, ітраконазол, позаконазол) підвищують концентрацію — за можливості обирають інший препарат.",
+    "en": "Relapsed or refractory acute myeloid leukaemia with a FLT3 mutation, either an internal tandem duplication or a tyrosine kinase domain mutation. A 28-day cycle, continuous until progression or unacceptable toxicity. As a second, unlicensed indication the protocol names continuing gilteritinib as maintenance after a stem cell transplant. ECG monitoring is required: above a QTc of 500 ms treatment is held and resumed once the QTc returns to within 30 ms of baseline. Strong CYP3A and P-glycoprotein inducers (phenytoin, rifampicin, St John's wort) are avoided; strong CYP3A and P-glycoprotein inhibitors (voriconazole, itraconazole, posaconazole) raise the concentration, so another drug is chosen where possible."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.83 Gilteritinib",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-83-gilteritinib.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "gilteritinib",
+      "drug_id": "gilteritinib",
+      "route": "oral",
+      "dose_value": 120,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Раз на добу, незалежно від їди. Таблетки по 40 мг. Якщо після 4 тижнів лікування відповіді немає, дозу можна підвищити до 200 мг на добу — якщо препарат переноситься або цього вимагає клінічна ситуація. Пропущену дозу приймають того ж дня, якнайшвидше, і далі повертаються до звичайного розкладу; після блювання додаткову дозу не дають.",
+        "en": "Once daily, with or without food. The tablets are 40 mg. If there is no response after four weeks the dose may rise to 200 mg daily, where it is tolerated or clinically warranted. A missed dose is taken as soon as possible the same day and the usual schedule resumes; after vomiting no extra dose is given."
+      },
+      "dose_options": [
+        {
+          "dose_value": 200,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Немає відповіді після 4 тижнів лікування",
+            "en": "No response after four weeks of treatment"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.83 Gilteritinib",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-83-gilteritinib.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}

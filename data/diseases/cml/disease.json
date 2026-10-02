@@ -65,6 +65,13 @@
             "uk": "Лише для короткочасного зниження лейкоцитозу на початку; доза при ХМЛ — 40 мг/кг на добу",
             "en": "Only to bring the white cell count down at the start; the CML dose is 40 mg/kg daily"
           }
+        },
+        {
+          "regimen_id": "bosutinib-cml",
+          "notes": {
+            "uk": "Уперше діагностована хронічна фаза",
+            "en": "Newly diagnosed chronic phase"
+          }
         }
       ]
     },
@@ -97,6 +104,20 @@
         },
         {
           "regimen_id": "dasatinib-cml"
+        },
+        {
+          "regimen_id": "asciminib-cml",
+          "notes": {
+            "uk": "Після двох і більше інгібіторів, без мутації T315I",
+            "en": "After two or more inhibitors, without a T315I mutation"
+          }
+        },
+        {
+          "regimen_id": "bosutinib-cml",
+          "notes": {
+            "uk": "Коли іматиніб, нілотиніб і дазатиніб не підходять",
+            "en": "Where imatinib, nilotinib and dasatinib are unsuitable"
+          }
         }
       ]
     }

@@ -1,0 +1,163 @@
+{
+  "$comment": "У консолідації титрування вже не потрібне: доза венетоклаксу стала. 400 мг — якщо азольного протигрибкового препарату немає, 100 мг — якщо є; тому 100 мг записані як поправка, яка увімкнена за замовчуванням, бо протокол сам призначає азол.",
+  "id": "flag-ida-ven-consolidation",
+  "short_name": "FLAG-IDA+Вен (2)",
+  "name": {
+    "uk": "FLAG-IDA + венетоклакс, цикл 2 (консолідація)",
+    "en": "FLAG-IDA with venetoclax, cycle 2 (consolidation)"
+  },
+  "description": {
+    "uk": "Консолідація після відновлення показників крові. Венетоклакс дають у дні 1-7 без титрування. Протигрибкова профілактика позаконазолом або вориконазолом тут обов'язкова через високий ризик, і доза венетоклаксу в протоколі вже врахована з цією взаємодією. Якщо протигрибковий препарат відмінили, дозу венетоклаксу треба переглянути. Захист шлунка — інгібітор протонної помпи або блокатор H2-рецепторів на весь цикл і на час стійкої тромбоцитопенії.",
+    "en": "Consolidation after the counts recover. The venetoclax runs on days 1 to 7 without a ramp-up. Antifungal prophylaxis with posaconazole or voriconazole is required here because the risk is high, and the venetoclax dose in the protocol already accounts for that interaction. If the antifungal stops for any reason, the venetoclax dose has to be revisited. Gastric protection is a proton pump inhibitor or an H2 blocker, throughout the cycle and for as long as thrombocytopenia persists."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.100 FLAG-IDA with Venetoclax",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-100-flag-ida-venetoclax.pdf",
+      "version": "2.0 (01.2026)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "mcg_kg",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Раз на добу підшкірно, дні 1-7. Дозу округлюють за правилами призначення Г-КСФ.",
+        "en": "Once daily subcutaneously, days 1 to 7. The dose is banded by the G-CSF guidelines."
+      }
+    },
+    {
+      "key": "fludarabine",
+      "drug_id": "fludarabine",
+      "route": "iv_infusion",
+      "dose_value": 30,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4, 5, 6],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl за 30 хвилин.",
+        "en": "In 100 mL of 0.9% sodium chloride over 30 minutes."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4, 5, 6],
+      "duration_min": 240,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Починають через 4 години після початку інфузії флударабіну. У 250 мл 0,9% NaCl за 4 години.",
+        "en": "Started 4 hours after the fludarabine infusion begins. In 250 mL of 0.9% sodium chloride over 4 hours."
+      },
+      "dose_modifiers": [
+        {
+          "key": "age-over-60",
+          "label": {
+            "uk": "Вік понад 60 років",
+            "en": "Over the age of 60"
+          },
+          "dose_value": 1000,
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.100 FLAG-IDA with Venetoclax",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-100-flag-ida-venetoclax.pdf",
+            "version": "2.0 (01.2026)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "idarubicin",
+      "drug_id": "idarubicin",
+      "route": "iv_bolus",
+      "dose_value": 6,
+      "dose_unit": "mg_m2",
+      "days": [4, 5],
+      "notes": {
+        "uk": "Струминно. Перед призначенням зважують сумарну довічну дозу антрациклінів і високий ризик затримки відновлення кровотворення. У консолідації користь і ризик ідарубіцину обговорюють на мультидисциплінарній комісії.",
+        "en": "As a bolus. The cumulative lifetime anthracycline dose and the high risk of delayed regeneration are weighed first. In consolidation the risk and benefit are discussed at the MDT."
+      }
+    },
+    {
+      "key": "venetoclax",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Доза без сильного інгібітора CYP3A. Приймають під час їди або після неї.",
+        "en": "The dose without a strong CYP3A inhibitor. Taken with or after a meal."
+      },
+      "dose_modifiers": [
+        {
+          "key": "azole-prophylaxis",
+          "label": {
+            "uk": "Позаконазол, вориконазол або інший сильний інгібітор CYP3A",
+            "en": "Posaconazole, voriconazole or another strong CYP3A inhibitor"
+          },
+          "dose_value": 100,
+          "default_on": true,
+          "notes": {
+            "uk": "Протокол сам призначає азольну протигрибкову профілактику, тому ця поправка стоїть увімкненою. Якщо протигрибковий препарат відмінили, зніміть позначку.",
+            "en": "The protocol prescribes azole prophylaxis itself, so this modifier starts switched on. If the antifungal is stopped, untick it."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.100 FLAG-IDA with Venetoclax",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-100-flag-ida-venetoclax.pdf",
+            "version": "2.0 (01.2026)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Противірусна профілактика на весь час лікування і ще 3 місяці після нього.",
+        "en": "Antiviral prophylaxis throughout treatment and for three months after."
+      }
+    },
+    {
+      "key": "omeprazole",
+      "drug_id": "omeprazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Захист шлунка на весь цикл і на час стійкої тромбоцитопенії.",
+        "en": "Gastric protection throughout the cycle and for as long as thrombocytopenia persists."
+      }
+    }
+  ]
+}

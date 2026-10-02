@@ -71,6 +71,9 @@
             "uk": "Другий курс",
             "en": "Second course"
           }
+        },
+        {
+          "regimen_id": "flag-ida-ven-induction"
         }
       ]
     },
@@ -88,6 +91,9 @@
       "regimens": [
         {
           "regimen_id": "hd-ara-c"
+        },
+        {
+          "regimen_id": "flag-ida-ven-consolidation"
         }
       ]
     },
@@ -112,6 +118,16 @@
             "uk": "Коли антрациклін небажаний",
             "en": "Where an anthracycline is unwanted"
           }
+        },
+        {
+          "regimen_id": "gilteritinib-aml",
+          "notes": {
+            "uk": "Мутація FLT3",
+            "en": "A FLT3 mutation"
+          }
+        },
+        {
+          "regimen_id": "flag-ida-ven-induction"
         }
       ]
     },
@@ -146,6 +162,13 @@
         },
         {
           "regimen_id": "ldac"
+        },
+        {
+          "regimen_id": "ivosidenib-azacitidine",
+          "notes": {
+            "uk": "Мутація IDH1 R132",
+            "en": "An IDH1 R132 mutation"
+          }
         }
       ]
     }
