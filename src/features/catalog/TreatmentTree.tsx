@@ -48,7 +48,13 @@ function TreatmentNodeView({
     <Stack gap={6} pl={depth === 0 ? 0 : 'md'}>
       <Group gap="xs">
         <Text fw={depth === 0 ? 600 : 500}>{localize(node.title, language)}</Text>
-        <Badge size="xs" variant="light" color="gray" tt="none">
+        {/* A trial section is not another line of treatment; the badge has to say so at a glance. */}
+        <Badge
+          size="xs"
+          variant="light"
+          color={node.kind === 'trial' ? 'yellow' : 'gray'}
+          tt="none"
+        >
           {t(`treatmentKind.${node.kind}`)}
         </Badge>
       </Group>

@@ -76,6 +76,7 @@ data/
 | `cycle_length_days`, `default_cycles` | ціле > 0 | |
 | `items[]` | | див. нижче, **порядок = порядок введення** |
 | `print_forms` | | `{ "version": 1, "forms": [...] }` |
+| `evidence` | `{ design, population, results, conduct }`, усі локал. і всі необов'язкові | дослідження, з якого взята схема. Заповнюється **лише** для схем із публікацій, а не з настанови чи інструкції: наявність поля вмикає в застосунку позначку «схема з клінічного дослідження» й попередження. Поле, якого немає в джерелі, лишають порожнім, а не вигадують |
 
 `items[]`:
 
@@ -106,7 +107,7 @@ data/
 |---|---|
 | `name`, `summary` | локал. |
 | `codes[]` | `system_id`, `code` (`C83.3`), `is_primary` |
-| `treatment[]` | вузли дерева: `key` (унікальний у межах хвороби), `kind` (`treatment`, `line`, `stage`, `group`), `title`, `description`, `regimens[]` (`regimen_id`, `notes`), `children[]` |
+| `treatment[]` | вузли дерева: `key` (унікальний у межах хвороби), `kind` (`treatment`, `line`, `stage`, `group`, `trial` — розділ зі схемами з клінічних досліджень), `title`, `description`, `regimens[]` (`regimen_id`, `notes`), `children[]` |
 
 ## Команди
 

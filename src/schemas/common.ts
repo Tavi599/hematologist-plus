@@ -112,7 +112,7 @@ export type UnitEquivalence = z.infer<typeof unitEquivalenceSchema>
 export const DRUG_AVAILABILITY = ['department', 'registered', 'unavailable'] as const
 export const drugAvailabilitySchema = z.enum(DRUG_AVAILABILITY)
 
-export const TREATMENT_NODE_KINDS = ['treatment', 'line', 'stage', 'group'] as const
+export const TREATMENT_NODE_KINDS = ['treatment', 'line', 'stage', 'group', 'trial'] as const
 export const treatmentNodeKindSchema = z.enum(TREATMENT_NODE_KINDS)
 
 /**
@@ -130,6 +130,27 @@ export const sourceSchema = z.strictObject({
 export const sourcesSchema = z.array(sourceSchema)
 
 export type Source = z.infer<typeof sourceSchema>
+
+/**
+ * The study a regimen comes from, for the regimens that come from a study rather than from a
+ * protocol or a label. Every field is optional: an abstract states the design and the numbers,
+ * rarely everything, and a field is left out instead of being filled from somewhere else.
+ *   design     — phase, number of arms, how the dose was arrived at
+ *   population — who was enrolled, including how heavily pretreated
+ *   results    — what the study reported, in its own numbers
+ *   conduct    — what giving it demands: monitoring, prophylaxis, the toxicity to expect
+ */
+export const evidenceSchema = z.strictObject({
+  design: localizedTextSchema.optional(),
+  population: localizedTextSchema.optional(),
+  results: localizedTextSchema.optional(),
+  conduct: localizedTextSchema.optional(),
+})
+
+export type Evidence = z.infer<typeof evidenceSchema>
+
+/** Which of the four fields exist, in the order they are read. */
+export const EVIDENCE_FIELDS = ['design', 'population', 'results', 'conduct'] as const
 
 /**
  * The same dose as another protocol writes it. A regimen item keeps its own dose as the default

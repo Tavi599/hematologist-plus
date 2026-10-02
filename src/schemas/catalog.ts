@@ -9,6 +9,7 @@ import {
   doseUnitSchema,
   drugAvailabilitySchema,
   diseaseReferencesSchema,
+  evidenceSchema,
   idSchema,
   itemRoleSchema,
   localizedTextSchema,
@@ -117,6 +118,9 @@ export const regimenRowSchema = z.object({
   print_forms: printFormsRowSchema,
   sort_order: sortOrderSchema,
   sources: sourcesSchema,
+  /** The study behind a trial regimen; defaulted so a client reads a database without the
+   *  column, and null for every regimen that comes from a protocol or a label. */
+  evidence: evidenceSchema.nullable().default(null),
 })
 
 export const regimenItemRowSchema = z.object({

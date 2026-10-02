@@ -17,6 +17,7 @@ import { ScheduleTable } from '../../features/calculator/ScheduleTable'
 import { SupplyTable } from '../../features/calculator/SupplyTable'
 import { WarningList } from '../../features/calculator/WarningList'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
+import { RegimenEvidence } from '../../features/catalog/RegimenEvidence'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { buildCourseItems, buildCourseItemsFrom, type CourseItem } from '../../lib/course-input'
 import { formatNumber } from '../../lib/format'
@@ -171,6 +172,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     <Stack>
       <PatientForm onChange={setPatient} />
       <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
+
+      {regimen && <RegimenEvidence regimen={regimen} />}
 
       {!measured && items.length > 0 && (
         <Alert color="blue" variant="light">

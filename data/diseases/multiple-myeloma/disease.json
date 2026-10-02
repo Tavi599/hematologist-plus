@@ -117,20 +117,6 @@
             "uk": "Цикл 7 і далі, раз на місяць, до прогресування",
             "en": "Cycle 7 onwards, monthly, until progression"
           }
-        },
-        {
-          "regimen_id": "bbd",
-          "notes": {
-            "uk": "Поза інструкцією, за фазою II",
-            "en": "Off-label, by a phase II trial"
-          }
-        },
-        {
-          "regimen_id": "bld",
-          "notes": {
-            "uk": "Поза інструкцією, за фазою I/II",
-            "en": "Off-label, by a phase I/II trial"
-          }
         }
       ]
     },
@@ -150,6 +136,27 @@
           "regimen_id": "bone-protection"
         }
       ]
+    },
+    {
+      "key": "clinical-trials",
+      "kind": "trial",
+      "title": {
+        "uk": "Клінічні дослідження",
+        "en": "Clinical trials"
+      },
+      "description": {
+        "uk": "Схеми, які існують лише як опубліковані дослідження: їх немає ні в настанові, ні в інструкції до препарату. Застосування поза інструкцією потребує окремого рішення й згоди пацієнта. Біля кожної схеми в калькуляторі наведено дизайн дослідження, кого в нього включали, що з нього вийшло і чого вимагає проведення.",
+        "en": "Regimens that exist only as published studies: neither a guideline nor a label carries them. Off-label use needs a decision of its own and the patient's consent. In the calculator each regimen states the design of the study, who was enrolled, what came out of it and what the conduct demands."
+      },
+      "regimens": [
+        {
+          "regimen_id": "bbd"
+        },
+        {
+          "regimen_id": "bld"
+        }
+      ],
+      "children": []
     }
   ]
 }

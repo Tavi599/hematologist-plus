@@ -446,11 +446,21 @@
     "treatment": "treatment",
     "line": "line",
     "stage": "stage",
-    "group": "group"
+    "group": "group",
+    "trial": "clinical trial"
   },
   "availability": {
     "department": "in the department",
     "registered": "registered in Ukraine",
     "unavailable": "not obtainable"
+  },
+  "regimen": {
+    "title": "Regimen",
+    "trialTitle": "Regimen from a clinical trial",
+    "trialNote": "The doses come from a published study, not from a guideline or a label. Check the indication and agree the use before prescribing.",
+    "design": "Design",
+    "population": "Patients",
+    "results": "Results",
+    "conduct": "Conduct"
   }
 }

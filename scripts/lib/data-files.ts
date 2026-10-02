@@ -10,6 +10,7 @@ import {
   doseOptionsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
+  evidenceSchema,
   idSchema,
   itemRoleSchema,
   keySchema,
@@ -132,6 +133,8 @@ export const regimenFileSchema = z.strictObject({
   default_cycles: positiveNumberSchema.int().nullable().default(null),
   sort_order: sortOrder,
   sources: sourcesSchema.default([]),
+  /** The study behind a regimen that comes from one; null for a protocol or a label. */
+  evidence: evidenceSchema.nullable().default(null),
   /** Administration order = array order. */
   items: z
     .array(
