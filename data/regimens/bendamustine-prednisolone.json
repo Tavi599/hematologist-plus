@@ -1,0 +1,68 @@
+{
+  "$comment": "У протоколах NSSG схеми з бендамустином на мієлому немає взагалі — дози взяті з КХП самого бендамустину, де мієлома є зареєстрованим показанням. Діапазон 120-150 мг/м² внесено як дві дози на вибір. Зменшення на 30% при помірній печінковій недостатності лишено приміткою, а не поправкою до дози: від двох різних базових доз воно дає різні числа.",
+  "id": "bendamustine-prednisolone",
+  "short_name": "BP",
+  "name": {
+    "uk": "BP (бендамустин + преднізолон)",
+    "en": "BP (bendamustine and prednisolone)"
+  },
+  "description": {
+    "uk": "Перша лінія множинної мієломи стадії II з прогресуванням або стадії III за Дьюрі-Сальмоном у пацієнтів старших за 65 років, яким не планують автологічну трансплантацію і в яких на момент діагнозу вже є клінічна нейропатія, що не дає призначити талідомід або бортезоміб. Цикл 28 днів, щонайменше 3 цикли. Лікування не починають, якщо лейкоцити нижчі за 3000/мкл або тромбоцити нижчі за 75 000/мкл; за таких же показників його переривають і відновлюють після зростання лейкоцитів понад 4000/мкл і тромбоцитів понад 100 000/мкл.",
+    "en": "First line of multiple myeloma, Durie-Salmon stage II with progression or stage III, in patients over 65 who are not candidates for an autologous transplant and who already have clinical neuropathy at diagnosis precluding thalidomide or bortezomib. A 28-day cycle, at least 3 cycles. Treatment is not started with leucocytes below 3000/microlitre or platelets below 75,000/microlitre; at those values it is interrupted and resumed once leucocytes exceed 4000 and platelets 100,000."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "Коротка характеристика препарату: Bendamustine Hydrochloride 2,5 мг/мл, розділи 4.1 і 4.2 (electronic Medicines Compendium)",
+      "url": "https://www.medicines.org.uk/emc/product/10172/smpc",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 120,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Інфузія за 30-60 хвилин; у довіднику взято повільніший край діапазону. КХП дозволяє 120-150 мг/м² — нижня межа стоїть основною дозою, верхня в списку доз. При помірній печінковій недостатності (білірубін 1,2-3,0 мг/дл) дозу зменшують на 30%; при тяжкій (понад 3,0 мг/дл) препарат протипоказаний. При кліренсі креатиніну понад 10 мл/хв корекція не потрібна.",
+        "en": "Infused over 30 to 60 minutes; the catalogue takes the slower end. The SmPC allows 120 to 150 mg/m2 - the lower bound is the main dose, the upper one sits in the dose list. In moderate hepatic impairment (bilirubin 1.2 to 3.0 mg/dL) the dose is cut by 30%; in severe impairment (above 3.0) the drug is contraindicated. Above a creatinine clearance of 10 mL/min no adjustment is needed."
+      },
+      "dose_options": [
+        {
+          "dose_value": 150,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Верхня межа діапазону КХП",
+            "en": "The upper bound of the SmPC range"
+          },
+          "source": {
+            "name": "Коротка характеристика препарату: Bendamustine Hydrochloride 2,5 мг/мл, розділи 4.1 і 4.2 (electronic Medicines Compendium)",
+            "url": "https://www.medicines.org.uk/emc/product/10172/smpc",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "Усередину або внутрішньовенно. КХП називає преднізон; у відділенні є преднізолон, доза та сама.",
+        "en": "Orally or intravenously. The SmPC names prednisone; the department stocks prednisolone at the same dose."
+      }
+    }
+  ]
+}
