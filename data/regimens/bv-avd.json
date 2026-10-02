@@ -28,7 +28,10 @@
       "route": "iv_bolus",
       "dose_value": 8,
       "dose_unit": "mg_flat",
-      "days": [1, 15],
+      "days": [
+        1,
+        15
+      ],
       "administrations_per_day": 2,
       "anchor_offset_min": -30,
       "interval_min": 480,
@@ -43,7 +46,10 @@
       "route": "iv_bolus",
       "dose_value": 25,
       "dose_unit": "mg_m2",
-      "days": [1, 15],
+      "days": [
+        1,
+        15
+      ],
       "notes": {
         "uk": "Струминно",
         "en": "Bolus injection"
@@ -55,7 +61,10 @@
       "route": "iv_infusion",
       "dose_value": 6,
       "dose_unit": "mg_m2",
-      "days": [1, 15],
+      "days": [
+        1,
+        15
+      ],
       "duration_min": 10,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 50,
@@ -70,7 +79,10 @@
       "route": "iv_infusion",
       "dose_value": 375,
       "dose_unit": "mg_m2",
-      "days": [1, 15],
+      "days": [
+        1,
+        15
+      ],
       "duration_min": 120,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 1000,
@@ -86,14 +98,18 @@
       "dose_value": 1.2,
       "dose_unit": "mg_kg",
       "cap_amount": 120,
-      "days": [1, 15],
+      "days": [
+        1,
+        15
+      ],
       "duration_min": 30,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 100,
       "notes": {
         "uk": "Після AVD. Кінцева концентрація 0,4–1,2 мг/мл",
         "en": "After AVD. Final concentration 0.4 to 1.2 mg/mL"
-      }
+      },
+      "infusion_params_key": "nacl-100"
     },
     {
       "key": "allopurinol",
@@ -102,7 +118,15 @@
       "route": "oral",
       "dose_value": 300,
       "dose_unit": "mg_flat",
-      "days": [1, 2, 3, 4, 5, 6, 7],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
       "notes": {
         "uk": "Профілактика синдрому лізису пухлини, 1-й цикл",
         "en": "Tumour lysis prophylaxis, cycle 1"
@@ -116,8 +140,34 @@
       "dose_value": 400,
       "dose_unit": "mg_flat",
       "days": [
-        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
-        26, 27, 28
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
       ],
       "administrations_per_day": 2,
       "notes": {

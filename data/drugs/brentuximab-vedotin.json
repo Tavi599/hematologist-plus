@@ -32,28 +32,47 @@
   ],
   "infusion_params": [
     {
-      "key": "nacl",
+      "key": "nacl-150",
       "solvent": "sodium_chloride_0_9",
-      "bag_volumes_ml": [100, 150],
-      "duration_min": 30,
-      "is_default": true,
       "concentration_min_mg_ml": 0.4,
       "concentration_max_mg_ml": 1.2,
+      "duration_min": 30,
+      "bag_volumes_ml": [
+        150
+      ],
+      "is_default": true,
       "notes": {
-        "uk": "100 мл у складі BV-AVD, 150 мл у монорежимі; кінцева концентрація 0,4–1,2 мг/мл.",
-        "en": "100 mL within BV-AVD, 150 mL as monotherapy; final concentration 0.4–1.2 mg/mL."
+        "uk": "Монотерапія: 150 мл 0,9% NaCl за 30 хвилин, кінцева концентрація 0,4–1,2 мг/мл.",
+        "en": "Monotherapy: 150 mL of 0.9% sodium chloride over 30 minutes, final concentration 0.4–1.2 mg/mL."
+      },
+      "sources": [
+        {
+          "name": "NSSG Oxford Haematology, L.9 Brentuximab vedotin monotherapy",
+          "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-9-brentuximab-vedotin.pdf",
+          "version": "4.0 (09.2025)",
+          "checkedOn": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "key": "nacl-100",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_min_mg_ml": 0.4,
+      "concentration_max_mg_ml": 1.2,
+      "duration_min": 30,
+      "bag_volumes_ml": [
+        100
+      ],
+      "is_default": false,
+      "notes": {
+        "uk": "У складі BV-AVD: 100 мл 0,9% NaCl за 30 хвилин, після завершення AVD.",
+        "en": "Within BV-AVD: 100 mL of 0.9% sodium chloride over 30 minutes, after the AVD is finished."
       },
       "sources": [
         {
           "name": "NSSG Oxford Haematology, L.154 BV-AVD",
           "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-154-bv-avd.pdf",
           "version": "1.0 (05.2025)",
-          "checkedOn": "2026-10-02"
-        },
-        {
-          "name": "NSSG Oxford Haematology, L.9 Brentuximab vedotin monotherapy",
-          "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-9-brentuximab-vedotin.pdf",
-          "version": "4.0 (09.2025)",
           "checkedOn": "2026-10-02"
         }
       ]
