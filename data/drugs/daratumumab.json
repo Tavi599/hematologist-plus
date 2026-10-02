@@ -1,5 +1,5 @@
 {
-  "$comment": "Імпортовано з Список_препаратів_з_доз,_ДЕЦ,_кер_дост.xlsx, Список_препаратів_на_2027_розрахунок1.xlsx 2026-09-18. Взято лише МНН і фасування; параметри розведення та максимальні дози додаються окремо.",
+  "$comment": "Імпортовано з Список_препаратів_з_доз,_ДЕЦ,_кер_дост.xlsx, Список_препаратів_на_2027_розрахунок1.xlsx 2026-09-18. Взято лише МНН і фасування; параметри розведення та максимальні дози додаються окремо. Фасування 400 мг (20 мг/мл, 20 мл) — те, що в переліку відділення; підшкірна форма 1800 мг/15 мл додана з характеристики препарату, бо протоколи NSSG пишуть саме її, але у відділенні вона не закуплена.",
   "id": "daratumumab",
   "name": {
     "uk": "Даратумумаб",
@@ -16,13 +16,71 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "EMA, Darzalex (даратумумаб), коротка характеристика препарату",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/darzalex-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "name": "NSSG Oxford Haematology, MM.47 DaraVelDex, додаток 1 (внутрішньовенний даратумумаб)",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-47-dara-vel-dex.pdf",
+      "version": "4.0",
+      "checkedOn": "2026-10-02"
     }
   ],
   "presentations": [
     {
       "key": "s400",
       "form": "vial",
-      "strength_amount": 400
+      "strength_amount": 400,
+      "volume_ml": 20
+    },
+    {
+      "key": "s1800",
+      "form": "vial",
+      "strength_amount": 1800,
+      "volume_ml": 15,
+      "label": {
+        "uk": "Підшкірна форма",
+        "en": "Subcutaneous form"
+      }
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "stock_concentration_mg_ml": 20,
+      "bag_volumes_ml": [500, 1000],
+      "is_default": true,
+      "rate_ramp": {
+        "first": {
+          "start_ml_h": 50,
+          "step_ml_h": 50,
+          "every_min": 60,
+          "max_ml_h": 200
+        },
+        "next": {
+          "start_ml_h": 100,
+          "step_ml_h": 50,
+          "every_min": 60,
+          "max_ml_h": 200
+        }
+      },
+      "notes": {
+        "uk": "Перша інфузія: 1000 мл, 50 мл/год, +50 мл/год щогодини до 200 мл/год. Друга інфузія: 500 мл і той самий початок 50 мл/год — у довіднику вона порахована за схемою першої. Наступні: 500 мл, 100 мл/год, +50 мл/год щогодини до 200 мл/год. Прискорювати можна лише за відсутності реакцій на попередню інфузію; потрібен вбудований фільтр 0,2 мкм.",
+        "en": "First infusion: 1000 mL at 50 mL/h, +50 mL/h every hour up to 200 mL/h. Second infusion: 500 mL starting at the same 50 mL/h - the catalogue computes it as a first infusion. Later ones: 500 mL at 100 mL/h, +50 mL/h every hour up to 200 mL/h. Escalate only where the previous infusion caused no reaction; a 0.2 micron in-line filter is required."
+      },
+      "sources": [
+        {
+          "name": "NSSG Oxford Haematology, MM.47 DaraVelDex, додаток 1 (внутрішньовенний даратумумаб)",
+          "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-47-dara-vel-dex.pdf",
+          "version": "4.0",
+          "checkedOn": "2026-10-02"
+        }
+      ]
     }
   ]
 }

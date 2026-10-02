@@ -1,0 +1,112 @@
+{
+  "$comment": "Те саме, що FLAG-IDA, без ідарубіцину; філграстим тут дозується на кілограм, як пише ML.53.",
+  "id": "flag",
+  "short_name": "FLAG",
+  "name": {
+    "uk": "FLAG (флударабін, цитарабін, філграстим)",
+    "en": "FLAG (fludarabine, cytarabine, filgrastim)"
+  },
+  "description": {
+    "uk": "Інтенсивна терапія гострої лейкемії без антрацикліну. Філграстим дні 1-7, флударабін і високодозовий цитарабін дні 2-6. Максимум два курси.",
+    "en": "Intensive therapy of acute leukaemia without an anthracycline. Filgrastim on days 1-7, fludarabine and high-dose cytarabine on days 2-6. Two courses at most."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.53 FLAG",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-53-flag.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "fludarabine",
+      "drug_id": "fludarabine",
+      "route": "iv_infusion",
+      "dose_value": 30,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4, 5, 6],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl за 30 хвилин. При ШКФ 30-70 мл/хв — 80% дози, при ШКФ < 30 мл/хв протипоказаний.",
+        "en": "In 100 mL 0.9% sodium chloride over 30 minutes. At a GFR of 30 to 70 mL/min give 80% of the dose; below 30 mL/min it is contraindicated."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4, 5, 6],
+      "duration_min": 240,
+      "gap_before_min": 210,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Починають через 4 години від початку інфузії флударабіну (тобто через 3,5 години після її завершення), у 250 мл 0,9% NaCl за 4 години. Обов'язкові очні краплі: преднізолон 0,5-1% або дексаметазон 0,1%, по 1 краплі в кожне око 4 рази на добу з дня 1 цитарабіну і ще 5 днів після останнього введення — у довідник не внесені, бо доза не в міліграмах.",
+        "en": "Started 4 hours after the fludarabine infusion begins (that is 3.5 hours after it ends), in 250 mL 0.9% sodium chloride over 4 hours. Mandatory eye drops - prednisolone 0.5 to 1% or dexamethasone 0.1%, one drop in each eye four times a day from day 1 of cytarabine and for 5 days after the last dose - are not in the catalogue, because the dose is not in milligrams."
+      },
+      "dose_options": [
+        {
+          "dose_value": 1000,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Пацієнтам понад 60 років — 1000 мг/м² на введення",
+            "en": "Patients over 60 years old receive 1000 mg/m2 per dose"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.53 FLAG",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-53-flag.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "mcg_kg",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Підшкірно раз на добу, з округленням дози за настановою щодо Г-КСФ.",
+        "en": "Subcutaneously once daily, with dose banding per the G-CSF guideline."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини разом із гідратацією. У пацієнтів високого ризику може знадобитися расбуриказа — за протоколом СЛП.",
+        "en": "Tumour lysis prophylaxis together with hydration. High-risk patients may need rasburicase, per the TLS protocol."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Противірусна профілактика: впродовж лікування і 3 місяці після його завершення.",
+        "en": "Antiviral prophylaxis: throughout treatment and for 3 months after it ends."
+      }
+    }
+  ]
+}

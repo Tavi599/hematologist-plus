@@ -33,6 +33,48 @@
   ],
   "treatment": [
     {
+      "key": "induction",
+      "kind": "line",
+      "title": {
+        "uk": "Індукція",
+        "en": "Induction"
+      },
+      "description": {
+        "uk": "Інтенсивна індукція для пацієнтів, придатних до неї. Другий курс дають за відновленням показників, а не за календарем; кістковомозкову пункцію роблять після відновлення, перед другим курсом.",
+        "en": "Intensive induction for patients fit for it. The second course follows count recovery rather than the calendar; the marrow is sampled after recovery, before that course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "da-3-10",
+          "notes": {
+            "uk": "Перший курс",
+            "en": "First course"
+          }
+        },
+        {
+          "regimen_id": "da-3-8",
+          "notes": {
+            "uk": "Другий курс",
+            "en": "Second course"
+          }
+        },
+        {
+          "regimen_id": "ade-10-3-5",
+          "notes": {
+            "uk": "Перший курс",
+            "en": "First course"
+          }
+        },
+        {
+          "regimen_id": "ade-8-3-5",
+          "notes": {
+            "uk": "Другий курс",
+            "en": "Second course"
+          }
+        }
+      ]
+    },
+    {
       "key": "consolidation",
       "kind": "line",
       "title": {
@@ -46,6 +88,30 @@
       "regimens": [
         {
           "regimen_id": "hd-ara-c"
+        }
+      ]
+    },
+    {
+      "key": "salvage",
+      "kind": "line",
+      "title": {
+        "uk": "Рефрактерність і рецидив",
+        "en": "Refractory disease and relapse"
+      },
+      "description": {
+        "uk": "Максимум два курси. Ідарубіцин у другому курсі зважують окремо через кумулятивну дозу антрацикліну.",
+        "en": "Two courses at most. The idarubicin of the second course is weighed separately because of the cumulative anthracycline dose."
+      },
+      "regimens": [
+        {
+          "regimen_id": "flag-ida"
+        },
+        {
+          "regimen_id": "flag",
+          "notes": {
+            "uk": "Коли антрациклін небажаний",
+            "en": "Where an anthracycline is unwanted"
+          }
         }
       ]
     },

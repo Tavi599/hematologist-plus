@@ -52,6 +52,20 @@
         },
         {
           "regimen_id": "vtd"
+        },
+        {
+          "regimen_id": "d-vtd-cycle-1-2",
+          "notes": {
+            "uk": "Індукція перед автологічною трансплантацією, цикли 1-2",
+            "en": "Induction before an autologous transplant, cycles 1-2"
+          }
+        },
+        {
+          "regimen_id": "d-vtd",
+          "notes": {
+            "uk": "Цикли 3-6; цикли 5-6 — після трансплантації",
+            "en": "Cycles 3-6; cycles 5 and 6 follow the transplant"
+          }
         }
       ]
     },
@@ -75,6 +89,27 @@
         },
         {
           "regimen_id": "vad"
+        },
+        {
+          "regimen_id": "d-rd-cycle-1-2",
+          "notes": {
+            "uk": "Цикли 1-2, даратумумаб щотижня",
+            "en": "Cycles 1-2, weekly daratumumab"
+          }
+        },
+        {
+          "regimen_id": "d-rd-cycle-3-6",
+          "notes": {
+            "uk": "Цикли 3-6, раз на два тижні",
+            "en": "Cycles 3-6, every two weeks"
+          }
+        },
+        {
+          "regimen_id": "d-rd",
+          "notes": {
+            "uk": "Цикл 7 і далі, раз на місяць, до прогресування",
+            "en": "Cycle 7 onwards, monthly, until progression"
+          }
         }
       ]
     },

@@ -1,0 +1,96 @@
+{
+  "$comment": "Тривалість циклу 28 днів — технічна: другий курс дають лише за нейтрофілів ≥ 1×10⁹/л і тромбоцитів ≥ 100×10⁹/л, а не за календарем.",
+  "id": "ade-10-3-5",
+  "short_name": "ADE 10+3+5",
+  "name": {
+    "uk": "ADE 10+3+5 (цитарабін, даунорубіцин, етопозид), курс 1",
+    "en": "ADE 10+3+5 (cytarabine, daunorubicin, etoposide), course 1"
+  },
+  "description": {
+    "uk": "Індукція при гострій мієлоїдній лейкемії. Цитарабін 100 мг/м² двічі на добу дні 1-10, даунорубіцин 50 мг/м² дні 1, 3, 5, етопозид 100 мг/м² дні 1-5.",
+    "en": "Induction in acute myeloid leukaemia. Cytarabine 100 mg/m2 twice daily on days 1-10, daunorubicin 50 mg/m2 on days 1, 3 and 5, etoposide 100 mg/m2 on days 1-5."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.1 ADE (cytarabine, daunorubicin, etoposide)",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-1-ade.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_bolus",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Повільно внутрішньовенно струминно кожні 12 годин, 20 введень на курс.",
+        "en": "Slow intravenous bolus every 12 hours, 20 doses per course."
+      }
+    },
+    {
+      "key": "daunorubicin",
+      "drug_id": "daunorubicin",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1, 3, 5],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Раз на добу в 250 мл 0,9% NaCl за 1 годину. Максимальна кумулятивна доза даунорубіцину — 600 мг/м² при нормальній функції серця і 400 мг/м² при її порушенні або після опромінення середостіння: порахуйте попередню експозицію.",
+        "en": "Once daily in 250 mL 0.9% sodium chloride over 1 hour. The maximum cumulative daunorubicin dose is 600 mg/m2 with normal cardiac function and 400 mg/m2 with cardiac dysfunction or previous mediastinal irradiation: count the earlier exposure."
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Раз на добу в 500-1000 мл 0,9% NaCl за 1 годину, 5 введень.",
+        "en": "Once daily in 500 to 1000 mL 0.9% sodium chloride over 1 hour, 5 doses."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини разом із гідратацією. У пацієнтів високого ризику може знадобитися расбуриказа — за протоколом СЛП.",
+        "en": "Tumour lysis prophylaxis together with hydration. High-risk patients may need rasburicase, per the TLS protocol."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Противірусна профілактика: впродовж лікування і 3 місяці після його завершення.",
+        "en": "Antiviral prophylaxis: throughout treatment and for 3 months after it ends."
+      }
+    }
+  ]
+}

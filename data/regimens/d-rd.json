@@ -1,0 +1,113 @@
+{
+  "$comment": "Фаза схеми окремою позицією довідника: дні введення даратумумабу й дози дексаметазону змінюються всередині курсу лікування, тому кожна фаза — своя схема. Антигістамінний препарат премедикації (хлорфенамін) і монтелукаст у довіднику відсутні.",
+  "id": "d-rd",
+  "short_name": "D-Rd (7+)",
+  "name": {
+    "uk": "D-Rd (даратумумаб, леналідомід, дексаметазон), цикл 7 і далі",
+    "en": "D-Rd (daratumumab, lenalidomide, dexamethasone), cycle 7 onwards"
+  },
+  "description": {
+    "uk": "Даратумумаб раз на місяць — день 1. Леналідомід 25 мг дні 1-21, дексаметазон 10 мг. Цикл 28 днів, до прогресування. З циклу 7 дозу дексаметазону наступного дня після даратумумабу можна відмінити, якщо реакцій на введення не було.",
+    "en": "Monthly daratumumab on day 1. Lenalidomide 25 mg on days 1-21, dexamethasone 10 mg. 28-day cycle, until progression. From cycle 7 the dexamethasone of the day after daratumumab may be stopped where no administration reactions occurred."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.38 Daratumumab, lenalidomide and dexamethasone",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-38-dara-len-dex.pdf",
+      "version": "3.5",
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "name": "NSSG Oxford Haematology, MM.47 DaraVelDex, додаток 1 (внутрішньовенний даратумумаб)",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-47-dara-vel-dex.pdf",
+      "version": "4.0",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За годину до даратумумабу. Протокол додає антигістамінний препарат (хлорфенамін 4 мг перорально), а в циклі 1 ще й монтелукаст 10 мг — цих препаратів немає в довіднику.",
+        "en": "One hour before daratumumab. The protocol adds an antihistamine (chlorphenamine 4 mg orally) and, in cycle 1, montelukast 10 mg; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "dexamethasone-premed",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За годину до даратумумабу; ця доза входить у добову дозу дексаметазону, а не додається до неї.",
+        "en": "One hour before daratumumab; this dose is part of the day's dexamethasone, not an addition to it."
+      }
+    },
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "iv_infusion",
+      "dose_value": 16,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "notes": {
+        "uk": "Внутрішньовенно. Першу дозу циклу 1 можна розділити на два дні по 8 мг/кг — тоді премедикацію дня 1 повторюють і в день 2. З циклу 2 частина пацієнтів переходить на пришвидшену інфузію (протокол MM.48).",
+        "en": "Intravenously. The first dose of cycle 1 may be split over two days as 8 mg/kg each, and then the day 1 premedication is repeated on day 2. From cycle 2 some patients move to the rapid-rate infusion (protocol MM.48)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 1800,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Підшкірна форма, фіксована доза — саме її пише протокол; у відділенні не закуплена",
+            "en": "The subcutaneous form at its fixed dose - what the protocol itself writes; not stocked by the department"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.38 Daratumumab, lenalidomide and dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-38-dara-len-dex.pdf",
+            "version": "3.5",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [8, 15, 22],
+      "notes": {
+        "uk": "Щотижневий стероїдний компонент. Дозу наступного дня після даратумумабу з цього циклу можна не давати.",
+        "en": "The weekly steroid component. The dose on the day after daratumumab may be omitted from this cycle on."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Стартова доза, на ніч. Новий цикл зазвичай не починають при нейтрофілах < 1,0×10⁹/л або тромбоцитах < 50×10⁹/л.",
+        "en": "The starting dose, taken at night. A new cycle is normally withheld at neutrophils below 1.0x10^9/L or platelets below 50x10^9/L."
+      }
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "$comment": "Фаза схеми окремою позицією довідника: дні введення даратумумабу й дози дексаметазону змінюються всередині курсу лікування, тому кожна фаза — своя схема. Антигістамінний препарат премедикації (хлорфенамін) і монтелукаст у довіднику відсутні.",
+  "id": "d-vtd-cycle-1-2",
+  "short_name": "D-VTd (1-2)",
+  "name": {
+    "uk": "D-VTd (даратумумаб, бортезоміб, талідомід, дексаметазон), цикли 1-2",
+    "en": "D-VTd (daratumumab, bortezomib, thalidomide, dexamethasone), cycles 1-2"
+  },
+  "description": {
+    "uk": "Індукція перед автологічною трансплантацією: 4 цикли, далі трансплантація, далі 2 цикли консолідації. Даратумумаб і бортезоміб щотижня, талідомід 50 мг щодня. Добова доза дексаметазону 40 мг включає премедикацію.",
+    "en": "Induction before an autologous transplant: 4 cycles, then the transplant, then 2 consolidation cycles. Weekly daratumumab and bortezomib, thalidomide 50 mg daily. The day's 40 mg of dexamethasone includes the premedication."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.56 D-VTD",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-56-d-vtd.pdf",
+      "version": "3.0",
+      "checkedOn": "2026-10-02"
+    },
+    {
+      "name": "NSSG Oxford Haematology, MM.47 DaraVelDex, додаток 1 (внутрішньовенний даратумумаб)",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-47-dara-vel-dex.pdf",
+      "version": "4.0",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "За годину до даратумумабу. Протокол додає антигістамінний препарат (хлорфенамін 4 мг перорально), а в циклі 1 ще й монтелукаст 10 мг — цих препаратів немає в довіднику.",
+        "en": "One hour before daratumumab. The protocol adds an antihistamine (chlorphenamine 4 mg orally) and, in cycle 1, montelukast 10 mg; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "dexamethasone-premed",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "За годину до даратумумабу; ця доза входить у добову дозу дексаметазону, а не додається до неї.",
+        "en": "One hour before daratumumab; this dose is part of the day's dexamethasone, not an addition to it."
+      }
+    },
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "iv_infusion",
+      "dose_value": 16,
+      "dose_unit": "mg_kg",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Внутрішньовенно. Першу дозу циклу 1 можна розділити на два дні по 8 мг/кг — тоді премедикацію дня 1 повторюють і в день 2. З циклу 2 частина пацієнтів переходить на пришвидшену інфузію (протокол MM.48).",
+        "en": "Intravenously. The first dose of cycle 1 may be split over two days as 8 mg/kg each, and then the day 1 premedication is repeated on day 2. From cycle 2 some patients move to the rapid-rate infusion (protocol MM.48)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 1800,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Підшкірна форма, фіксована доза — саме її пише протокол; у відділенні не закуплена",
+            "en": "The subcutaneous form at its fixed dose - what the protocol itself writes; not stocked by the department"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.56 D-VTD",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-56-d-vtd.pdf",
+            "version": "3.0",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Підшкірно.",
+        "en": "Subcutaneously."
+      }
+    },
+    {
+      "key": "thalidomide",
+      "drug_id": "thalidomide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Щодня на ніч.",
+        "en": "Once daily at night."
+      }
+    },
+    {
+      "key": "dexamethasone-rest",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Решта добової дози: разом із 20 мг премедикації це 40 мг на день.",
+        "en": "The rest of the day's dose: with the 20 mg of premedication this makes 40 mg."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [2, 9, 16, 23],
+      "notes": {
+        "uk": "Повна добова доза наступного дня після введень.",
+        "en": "The full day's dose on the day after each administration."
+      }
+    }
+  ]
+}
