@@ -74,8 +74,8 @@
             "en": "High tumour burden (GELF criteria)"
           },
           "description": {
-            "uk": "Імунохіміотерапія з анти-CD20: бендамустин, CHOP або CVP у поєднанні з ритуксимабом чи обінутузумабом. Після індукції можлива підтримка анти-CD20 раз на 2 місяці впродовж 2 років. Бендамустин — з осторогою після 70 років і при супутніх хворобах легень.",
-            "en": "Anti-CD20 immunochemotherapy: bendamustine, CHOP or CVP with rituximab or obinutuzumab. Maintenance anti-CD20 every two months for two years may follow induction. Bendamustine needs caution over 70 and with respiratory comorbidity."
+            "uk": "Імунохіміотерапія з анти-CD20: бендамустин, CHOP або CVP у поєднанні з ритуксимабом чи обінутузумабом. Індукція 6-8 циклів; після неї можлива підтримка анти-CD20 раз на 2 місяці впродовж 2 років. Бендамустин - з осторогою після 70 років і при супутніх хворобах легень. Зверніть увагу: в O-CVP обінутузумаб у першому циклі вводиться тричі (дні 1, 8, 15), тому перший цикл винесено окремою схемою.",
+            "en": "Anti-CD20 immunochemotherapy: bendamustine, CHOP or CVP with rituximab or obinutuzumab. Induction runs 6-8 cycles and may be followed by anti-CD20 maintenance every two months for two years. Bendamustine needs caution over 70 and with respiratory comorbidity. Note that in O-CVP the first cycle gives obinutuzumab three times (days 1, 8, 15), so it is a regimen of its own."
           },
           "regimens": [
             {
@@ -86,6 +86,37 @@
             },
             {
               "regimen_id": "r-chop-21"
+            },
+            {
+              "regimen_id": "o-cvp-cycle-1",
+              "notes": {
+                "uk": "Перший цикл: обінутузумаб у дні 1, 8 і 15",
+                "en": "First cycle: obinutuzumab on days 1, 8 and 15"
+              }
+            },
+            {
+              "regimen_id": "o-cvp",
+              "notes": {
+                "uk": "Цикли 2-8",
+                "en": "Cycles 2-8"
+              }
+            }
+          ]
+        },
+        {
+          "key": "maintenance",
+          "kind": "group",
+          "title": {
+            "uk": "Підтримка після індукції",
+            "en": "Maintenance after induction"
+          },
+          "description": {
+            "uk": "Анти-CD20 раз на 2 місяці впродовж 2 років після імунохіміотерапії. Для обінутузумабу - 12 введень.",
+            "en": "Anti-CD20 every two months for two years after immunochemotherapy. For obinutuzumab, twelve doses."
+          },
+          "regimens": [
+            {
+              "regimen_id": "o-cvp-maintenance"
             }
           ]
         }

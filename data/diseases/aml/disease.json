@@ -57,12 +57,15 @@
         "en": "Unfit for intensive therapy"
       },
       "description": {
-        "uk": "Гіпометилювальні засоби, за можливості з венетоклаксом.",
-        "en": "Hypomethylating agents, with venetoclax where available."
+        "uk": "Гіпометилювальні засоби, за можливості з венетоклаксом. Цитарабін у малих дозах - варіант, коли азацитидин недоступний або не підходить; його вводять підшкірно, зокрема амбулаторно, якщо пацієнта чи доглядальника навчено.",
+        "en": "Hypomethylating agents, with venetoclax where available. Low-dose cytarabine is an option where azacitidine is unavailable or unsuitable; it is given subcutaneously, including at home once the patient or carer has been trained."
       },
       "regimens": [
         {
           "regimen_id": "azacitidine-mono"
+        },
+        {
+          "regimen_id": "ldac"
         }
       ]
     }

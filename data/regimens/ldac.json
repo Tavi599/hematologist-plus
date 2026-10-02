@@ -1,0 +1,52 @@
+{
+  "$comment": "Протокол NSSG Oxford ML.30 Low Dose Ara-C. Цитарабін 20 мг підшкірно двічі на добу, дні 1-10 (20 введень). Цикл повторюють кожні 28-42 дні; щонайменше 4 курси, верхньої межі немає. Перший цикл можна починати незалежно від показників крові, наступні - за нейтрофілів від 1×10⁹/л і тромбоцитів від 100×10⁹/л.",
+  "id": "ldac",
+  "short_name": "LDAC",
+  "name": {
+    "uk": "Цитарабін у малих дозах (LDAC)",
+    "en": "Low-dose cytarabine (LDAC)"
+  },
+  "description": {
+    "uk": "Цитарабін 20 мг підшкірно двічі на добу, дні 1-10. Цикл 28 днів.",
+    "en": "Cytarabine 20 mg subcutaneously twice daily on days 1-10. 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.30 Low Dose Ara-C",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-30-low-dose-ara-c.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "subcutaneous",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Кожна доза через 12 годин, разом 20 введень за цикл. Цикл повторюють кожні 28-42 дні залежно від відновлення показників; за потреби підтримують філграстимом. Відповідь оцінюють після 4-го циклу.",
+        "en": "Each dose 12 hours apart, 20 doses per cycle. The cycle repeats every 28 to 42 days depending on count recovery, supported by filgrastim where needed. The response is assessed after the fourth cycle."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл",
+        "en": "Tumour lysis prophylaxis, cycle 1"
+      }
+    }
+  ]
+}

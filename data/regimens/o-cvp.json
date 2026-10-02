@@ -1,0 +1,156 @@
+{
+  "$comment": "Протокол NSSG Oxford L.98 (вер. 2.0, вересень 2024), цикли 2-8: обінутузумаб лише в день 1. Перший цикл - окрема схема o-cvp-cycle-1 (там обінутузумаб ще й у дні 8 і 15). Індукція - 6-8 циклів кожні 21 день; далі підтримка обінутузумабом раз на 2 місяці впродовж 2 років (схема o-cvp-maintenance).",
+  "id": "o-cvp",
+  "short_name": "O-CVP",
+  "name": {
+    "uk": "O-CVP, цикли 2-8 (обінутузумаб + циклофосфамід + вінкристин + преднізолон)",
+    "en": "O-CVP, cycles 2-8 (obinutuzumab, cyclophosphamide, vincristine, prednisolone)"
+  },
+  "description": {
+    "uk": "Обінутузумаб, циклофосфамід і вінкристин у день 1, преднізолон дні 1-5. Цикл 21 день.",
+    "en": "Obinutuzumab, cyclophosphamide and vincristine on day 1, prednisolone on days 1-5. 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 7,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.98 O-CVP with Maintenance Obinutuzumab",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-98-o-cvp-with-maintenance-obinutuzumab.pdf",
+      "version": "2.0 (09.2024)",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до обінутузумабу",
+        "en": "At least 30 minutes before obinutuzumab"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% - 5,0 мл, не пізніше ніж за 30 хв до обінутузумабу (замість хлорфенаміну протоколу)",
+        "en": "Diphenhydramine 1% 5.0 mL at least 30 minutes before obinutuzumab (replaces the protocol's chlorphenamine)"
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "100 мг на добу всередину; у день 1 - за 60 хв до обінутузумабу",
+        "en": "100 mg a day by mouth; on day 1, 60 minutes before obinutuzumab"
+      }
+    },
+    {
+      "key": "obinutuzumab",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl. Перша інфузія - з 50 мг/год, підвищуючи на 50 мг/год кожні 30 хв до 400 мг/год. Наступні інфузії, якщо реакцій не було, - з 100 мг/год, підвищуючи на 100 мг/год кожні 30 хв до 400 мг/год.",
+        "en": "In 250 mL 0.9% NaCl. The first infusion starts at 50 mg/h and rises by 50 mg/h every 30 minutes to 400 mg/h. Later infusions, where there were no reactions, start at 100 mg/h and rise by 100 mg/h every 30 minutes to 400 mg/h."
+      }
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_amount": 2,
+      "days": [1],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "Понад 70 років - 1 мг",
+        "en": "Over 70 years: 1 mg"
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_bolus",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "ondansetron-d1",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл; зменшити дозу при нирковій недостатності",
+        "en": "Tumour lysis prophylaxis, cycle 1; reduce the dose in renal impairment"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і 3 місяці після (у протоколі - ацикловір 200 мг тричі на добу)",
+        "en": "Antiviral prophylaxis during treatment and for 3 months after (the protocol gives aciclovir 200 mg three times a day)"
+      }
+    },
+    {
+      "key": "omeprazole",
+      "drug_id": "omeprazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Захист шлунка на час кортикостероїду",
+        "en": "Gastric protection while on the corticosteroid"
+      }
+    }
+  ]
+}

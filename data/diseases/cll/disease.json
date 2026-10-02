@@ -40,10 +40,37 @@
         "en": "First line"
       },
       "description": {
-        "uk": "Лікування починають за показаннями iwCLL; безсимптомну хворобу спостерігають. Перед вибором схеми визначають del(17p)/TP53.",
-        "en": "Treatment starts on iwCLL indications; asymptomatic disease is watched. del(17p)/TP53 status is checked before choosing."
+        "uk": "Лікування починають за показаннями iwCLL; безсимптомну хворобу спостерігають. Перед вибором схеми визначають del(17p)/TP53 - при їхній наявності хіміоімунотерапія не застосовується, потрібен інгібітор BTK або венетоклакс. Венетоклакс із обінутузумабом (фіксовані 12 циклів) у довіднику ще без схеми.",
+        "en": "Treatment starts on iwCLL indications; asymptomatic disease is watched. del(17p)/TP53 is checked first - where present, chemoimmunotherapy is not used and a BTK inhibitor or venetoclax is needed. Venetoclax with obinutuzumab (a fixed twelve cycles) is not yet a regimen here."
       },
       "regimens": [
+        {
+          "regimen_id": "br-cll"
+        },
+        {
+          "regimen_id": "acalabrutinib-mono",
+          "notes": {
+            "uk": "Зокрема при del(17p)/мутації TP53, коли хіміоімунотерапія не підходить",
+            "en": "Including del(17p) or a TP53 mutation, where chemoimmunotherapy is unsuitable"
+          }
+        }
+      ]
+    },
+    {
+      "key": "relapsed",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив і рефрактерна хвороба",
+        "en": "Relapsed and refractory disease"
+      },
+      "description": {
+        "uk": "Препарат вибирають за тим, що вже отримано: після хіміоімунотерапії - інгібітор BTK або венетоклакс із ритуксимабом; після інгібітора BTK - венетоклакс; після венетоклаксу - інгібітор BTK. Повторювати ту саму хіміоімунотерапію варто лише при тривалій ремісії.",
+        "en": "The drug follows what was already given: after chemoimmunotherapy, a BTK inhibitor or venetoclax with rituximab; after a BTK inhibitor, venetoclax; after venetoclax, a BTK inhibitor. Repeating the same chemoimmunotherapy is reasonable only after a long remission."
+      },
+      "regimens": [
+        {
+          "regimen_id": "acalabrutinib-mono"
+        },
         {
           "regimen_id": "br-cll"
         }

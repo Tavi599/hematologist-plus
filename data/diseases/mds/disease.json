@@ -46,6 +46,13 @@
       "regimens": [
         {
           "regimen_id": "azacitidine-mono"
+        },
+        {
+          "regimen_id": "ldac",
+          "notes": {
+            "uk": "За протоколом ML.30 показання включають МДС",
+            "en": "The ML.30 protocol lists MDS among its indications"
+          }
         }
       ]
     }
