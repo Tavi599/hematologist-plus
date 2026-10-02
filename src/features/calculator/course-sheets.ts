@@ -130,7 +130,10 @@ const MARK = '+'
 type XlsxLineSet = Required<XlsxBox>
 const THIN: XlsxLineSet = { left: 'thin', right: 'thin', top: 'thin', bottom: 'thin' }
 
-const ARIAL_12 = { size: 12 }
+const ORDER_SIZE = 12
+/** Below this the blank stops being readable at arm's length; a longer order is simply cut. */
+const SMALLEST_SIZE = 8
+const ARIAL_12 = { size: ORDER_SIZE }
 const ARIAL_10 = { size: 10 }
 /**
  * A heading cell holds one line and is centred in it. Wrapping is off on purpose: a wrapped line
@@ -464,16 +467,16 @@ function appendBands(
     const band = bands[index]
     const top = rows.length + 1
     rows.push([
-      { value: band?.what ?? null, format: orderFormat(false) },
-      { value: band?.how ?? null, format: orderFormat(true) },
+      { value: band?.what ?? null, format: orderFormat(false, band?.what ?? '', ORDER_WIDTH) },
+      { value: band?.how ?? null, format: orderFormat(true, band?.how ?? '', HOW_WIDTH) },
       ...Array.from({ length: width }, (_unused, column) => ({
         value: band?.marks[column] ?? null,
         format: markFormat(isGroupEnd(column), false),
       })),
     ])
     rows.push([
-      { value: null, format: orderFormat(false) },
-      { value: null, format: orderFormat(true) },
+      { value: null, format: orderFormat(false, '', ORDER_WIDTH) },
+      { value: null, format: orderFormat(true, '', HOW_WIDTH) },
       ...Array.from({ length: width }, (_unused, column) => ({
         value: null,
         format: markFormat(isGroupEnd(column), true),
@@ -622,13 +625,44 @@ const RULER_FORMAT: XlsxFormat = {
   valign: 'center',
 }
 
-function orderFormat(groupEnd: boolean): XlsxFormat {
+function orderFormat(groupEnd: boolean, text: string, widthUnits: number): XlsxFormat {
   return {
-    font: ARIAL_12,
+    font: { size: fittingSize(text, widthUnits) },
     box: { left: 'thin', right: groupEnd ? 'medium' : 'thin' },
     valign: 'top',
     wrap: true,
   }
+}
+
+/**
+ * Type small enough for the whole order to be read. An order is written across two ruled rows and
+ * Excel does not grow them: whatever does not fit is simply cut off, and an order cut off in the
+ * middle is worse than one set a point or two smaller. A line written out by hand can be much
+ * longer than a calculated one — a bag with three additions in it, a rate and a condition — so
+ * the size follows the text.
+ */
+function fittingSize(text: string, widthUnits: number): number {
+  const lines = text.split('\n')
+  const linesNeeded = (size: number) =>
+    lines.reduce(
+      (sum, line) => sum + Math.max(1, Math.ceil(line.length / charsPerLine(size, widthUnits))),
+      0,
+    )
+  const sizes = [ORDER_SIZE, 11, 10, 9, SMALLEST_SIZE]
+  return sizes.find((size) => linesNeeded(size) <= linesPerBand(size)) ?? SMALLEST_SIZE
+}
+
+/**
+ * How many characters of a given size fit across a column. A column is measured in characters of
+ * the workbook's own font, which is 11 point, so a larger type fits proportionally fewer.
+ */
+function charsPerLine(size: number, widthUnits: number): number {
+  return Math.max(1, Math.floor((widthUnits * 11) / size))
+}
+
+/** How many lines of a given size fit the two ruled rows an order is written across. */
+function linesPerBand(size: number): number {
+  return Math.max(1, Math.floor(BAND_HEIGHT / (size * 1.25)))
 }
 
 function markFormat(groupEnd: boolean, lower: boolean): XlsxFormat {

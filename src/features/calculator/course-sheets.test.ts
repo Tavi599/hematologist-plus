@@ -393,6 +393,31 @@ describe('buildCourseSheets', () => {
     expect(bandStartingWith(built.at(-1)!, 'р.о.')).toBeUndefined()
   })
 
+  it('sets a long hand-written order in smaller type instead of cutting it off', () => {
+    const long =
+      'Sol. NaCl 0,9% — 400,0 + KCl 4% — 40,0 + MgSO4 25% — 4,0 в/в крапельно 150 мл/год під контролем діурезу та рівня калію'
+    const built = sheets({
+      manualRows: [
+        { id: 'manual-1', what: long, how: 'в/в крап.', days: [1], hour: 9, block: 'infusion' },
+        {
+          id: 'manual-2',
+          what: 'Омепразол 40 мг',
+          how: 'р.о.',
+          days: [1],
+          hour: 9,
+          block: 'infusion',
+        },
+      ],
+    })
+    const cell = (first: string) =>
+      built[0]!.rows.find((row) => String(text(row[0] ?? null) ?? '').startsWith(first))?.[0]
+    const longCell = cell('Sol. NaCl') as XlsxCell
+    const shortCell = cell('Омепразол') as XlsxCell
+    expect(longCell.format?.font?.size).toBeLessThan(12)
+    // A short order keeps the size the blank is written in.
+    expect(shortCell.format?.font?.size).toBe(12)
+  })
+
   it('names the patient and the day on every sheet of the course', () => {
     const built = sheets()
     expect(String(text(built[0]!.rows[0]![0] ?? null))).toBe('П.І.Б.: Тестовий Пацієнт')
