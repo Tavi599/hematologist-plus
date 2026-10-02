@@ -1,0 +1,41 @@
+{
+  "$comment": "Дози - коротка характеристика препарату Tasigna (EMA). 300 мг двічі на добу у вперше виявленій хронічній фазі; 400 мг двічі на добу при резистентності чи непереносимості попередньої терапії. Обовʼязковий режим натщесерце - у примітці.",
+  "id": "nilotinib-cml",
+  "short_name": "Нілотиніб",
+  "name": {
+    "uk": "Нілотиніб при ХМЛ",
+    "en": "Nilotinib for CML"
+  },
+  "description": {
+    "uk": "300 мг двічі на добу всередину у вперше виявленій хронічній фазі, безперервно.",
+    "en": "300 mg twice daily by mouth in newly diagnosed chronic phase, continuously."
+  },
+  "cycle_length_days": 28,
+  "sources": [
+    {
+      "name": "EMA, Tasigna (нілотиніб), коротка характеристика препарату",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/tasigna-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "nilotinib",
+      "drug_id": "nilotinib",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Двічі на добу з проміжком близько 12 годин, обовʼязково натщесерце: не їсти 2 години до прийому і щонайменше 1 годину після. Капсули ковтати цілими, запиваючи водою. При резистентності чи непереносимості попередньої терапії (хронічна фаза або фаза акселерації) доза становить 400 мг двічі на добу.",
+        "en": "Twice daily about 12 hours apart and strictly without food: nothing to eat for 2 hours before and at least 1 hour after the dose. Capsules are swallowed whole with water. With resistance or intolerance to prior therapy (chronic or accelerated phase) the dose is 400 mg twice daily."
+      }
+    }
+  ]
+}

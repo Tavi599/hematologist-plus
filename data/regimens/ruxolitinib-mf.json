@@ -1,0 +1,41 @@
+{
+  "$comment": "Дози - коротка характеристика препарату Jakavi (EMA). Початкова доза при мієлофіброзі залежить від кількості тромбоцитів: понад 200 тис./мм3 - 20 мг двічі на добу; 100-200 тис. - 15 мг; 75-100 тис. - 10 мг; 50-75 тис. - 5 мг. У довіднику за основу взято 15 мг (100-200 тис.), решта - як варіанти дози. Максимум 25 мг двічі на добу.",
+  "id": "ruxolitinib-mf",
+  "short_name": "Руксолітиніб",
+  "name": {
+    "uk": "Руксолітиніб при мієлофіброзі",
+    "en": "Ruxolitinib for myelofibrosis"
+  },
+  "description": {
+    "uk": "Усередину двічі на добу, безперервно. Початкова доза - за кількістю тромбоцитів.",
+    "en": "By mouth twice daily, continuously. The starting dose follows the platelet count."
+  },
+  "cycle_length_days": 28,
+  "sources": [
+    {
+      "name": "EMA, Jakavi (руксолітиніб), коротка характеристика препарату",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/jakavi-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "ruxolitinib",
+      "drug_id": "ruxolitinib",
+      "route": "oral",
+      "dose_value": 15,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Базова доза в довіднику - 15 мг двічі на добу (тромбоцити 100-200 тис./мм³). Інші початкові дози: понад 200 тис. - 20 мг; 75-100 тис. - 10 мг; 50-75 тис. - 5 мг двічі на добу. Підвищувати не раніше ніж через 4 тижні лікування і далі не частіше ніж раз на 2 тижні, крок - не більше 5 мг двічі на добу, максимум 25 мг двічі на добу. Загальний аналіз крові - кожні 2-4 тижні до стабілізації дози.",
+        "en": "The catalog default is 15 mg twice daily (platelets 100 000-200 000/mm3). The other starting doses: above 200 000, 20 mg; 75 000-100 000, 10 mg; 50 000-75 000, 5 mg twice daily. The dose is not increased within the first four weeks and thereafter no more often than every two weeks, by at most 5 mg twice daily, to a maximum of 25 mg twice daily. A full blood count every 2-4 weeks until the dose is stable."
+      }
+    }
+  ]
+}

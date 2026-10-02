@@ -1,5 +1,4 @@
 {
-  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
   "id": "cml",
   "name": {
     "uk": "Хронічна мієлоїдна лейкемія",
@@ -28,7 +27,78 @@
     {
       "kind": "eviq",
       "url": "https://www.eviq.org.au/search#/?query=Chronic%20myeloid%20leukemia"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.esmo.org/guidelines/esmo-clinical-practice-guideline-chronic-myeloid-leukaemia",
+      "label": {
+        "uk": "ESMO Clinical Practice Guideline: хронічна мієлоїдна лейкемія",
+        "en": "ESMO Clinical Practice Guideline: Chronic myeloid leukaemia"
+      }
     }
   ],
-  "treatment": []
+  "treatment": [
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія, хронічна фаза",
+        "en": "First line, chronic phase"
+      },
+      "description": {
+        "uk": "Інгібітор тирозинкінази всередину, безперервно. Іматиніб 400 мг на добу — базовий вибір; нілотиніб і дазатиніб швидше дають глибоку молекулярну відповідь, вибір між ними враховує супутні хвороби (судинні — проти нілотинібу, легеневі та плевральні — проти дазатинібу). Гідроксикарбамід застосовують лише короткочасно, щоб збити високий лейкоцитоз, доки не почато інгібітор.",
+        "en": "An oral tyrosine kinase inhibitor, continuously. Imatinib 400 mg daily is the baseline choice; nilotinib and dasatinib reach a deep molecular response sooner, and the choice between them weighs comorbidity (vascular against nilotinib, pulmonary and pleural against dasatinib). Hydroxycarbamide is used only briefly, to bring down a high white cell count before the inhibitor is started."
+      },
+      "regimens": [
+        {
+          "regimen_id": "imatinib-cml"
+        },
+        {
+          "regimen_id": "nilotinib-cml"
+        },
+        {
+          "regimen_id": "dasatinib-cml"
+        },
+        {
+          "regimen_id": "hydroxycarbamide-mpn",
+          "notes": {
+            "uk": "Лише для короткочасного зниження лейкоцитозу на початку; доза при ХМЛ — 40 мг/кг на добу",
+            "en": "Only to bring the white cell count down at the start; the CML dose is 40 mg/kg daily"
+          }
+        }
+      ]
+    },
+    {
+      "key": "monitoring",
+      "kind": "group",
+      "title": {
+        "uk": "Контроль відповіді",
+        "en": "Response monitoring"
+      },
+      "description": {
+        "uk": "Молекулярний контроль BCR::ABL1 у міжнародній шкалі: цільові рубежі — не більше 10% на 3-му місяці, не більше 1% на 6-му, не більше 0,1% на 12-му. Недосягнення рубежу — привід перевірити прихильність до лікування й взаємодії, зробити аналіз мутацій кінази й розглянути зміну препарату.",
+        "en": "Molecular monitoring of BCR::ABL1 on the international scale: the milestones are no more than 10% at 3 months, 1% at 6 months and 0.1% at 12 months. A missed milestone calls for checking adherence and interactions, kinase mutation analysis and consideration of a change of drug."
+      }
+    },
+    {
+      "key": "second-line",
+      "kind": "line",
+      "title": {
+        "uk": "Друга лінія й далі",
+        "en": "Second line and beyond"
+      },
+      "description": {
+        "uk": "При резистентності або непереносимості — інший інгібітор тирозинкінази з урахуванням мутації: нілотиніб 400 мг двічі на добу або дазатиніб. При мутації T315I потрібен понатиніб або асцимініб (асцимініб у довіднику є, схеми ще немає). Босутиніб також є в довіднику без схеми. Алогенна трансплантація — для бластної фази та при вичерпанні інгібіторів.",
+        "en": "On resistance or intolerance, another tyrosine kinase inhibitor chosen by the mutation: nilotinib 400 mg twice daily or dasatinib. The T315I mutation needs ponatinib or asciminib (asciminib is in the catalog, the regimen is not yet). Bosutinib is likewise in the catalog without a regimen. Allogeneic transplantation is for blast phase and for exhausted inhibitor options."
+      },
+      "regimens": [
+        {
+          "regimen_id": "nilotinib-cml"
+        },
+        {
+          "regimen_id": "dasatinib-cml"
+        }
+      ]
+    }
+  ]
 }

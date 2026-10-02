@@ -1,5 +1,4 @@
 {
-  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
   "id": "essential-thrombocythemia",
   "name": {
     "uk": "Есенціальна тромбоцитемія",
@@ -28,7 +27,62 @@
     {
       "kind": "eviq",
       "url": "https://www.eviq.org.au/search#/?query=Essential%20thrombocythemia"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.esmo.org/guidelines/esmo-clinical-practice-guideline-philadelphia-chromosome-negative-chronic-myeloproliferative-neoplasms",
+      "label": {
+        "uk": "ESMO Clinical Practice Guideline: Ph-негативні хронічні мієлопроліферативні новоутворення",
+        "en": "ESMO Clinical Practice Guideline: Philadelphia-negative chronic myeloproliferative neoplasms"
+      }
     }
   ],
-  "treatment": []
+  "treatment": [
+    {
+      "key": "all-patients",
+      "kind": "group",
+      "title": {
+        "uk": "Усім пацієнтам",
+        "en": "All patients"
+      },
+      "description": {
+        "uk": "Ацетилсаліцилова кислота в малій дозі при судинних симптомах, тромбозі в анамнезі або серцево-судинних чинниках ризику. Саме число тромбоцитів показанням до цитозниження не є. При дуже високому тромбоцитозі (понад 1000–1500×10⁹/л) перед аспірином варто виключити набутий синдром Віллебранда.",
+        "en": "Low-dose aspirin for vascular symptoms, previous thrombosis or cardiovascular risk factors. The platelet count by itself is not an indication for cytoreduction. With a very high count (above 1000-1500 x 10^9/L) acquired von Willebrand syndrome should be excluded before aspirin."
+      }
+    },
+    {
+      "key": "cytoreduction",
+      "kind": "line",
+      "title": {
+        "uk": "Цитозниження (високий ризик)",
+        "en": "Cytoreduction (high risk)"
+      },
+      "description": {
+        "uk": "Показане при віці понад 60 років, тромбозі чи тяжкій кровотечі в анамнезі або тромбоцитах понад 1500×10⁹/л. Перша лінія — гідроксикарбамід; у молодших розглядають інтерферон альфа.",
+        "en": "Indicated over the age of 60, after a thrombosis or major bleed, or with platelets above 1500 x 10^9/L. Hydroxycarbamide is the first choice; interferon alfa is considered in younger patients."
+      },
+      "regimens": [
+        {
+          "regimen_id": "hydroxycarbamide-mpn"
+        }
+      ]
+    },
+    {
+      "key": "second-line",
+      "kind": "line",
+      "title": {
+        "uk": "Друга лінія",
+        "en": "Second line"
+      },
+      "description": {
+        "uk": "Анагрелід — при непереносимості гідроксикарбаміду або недостатньому зниженні тромбоцитів. Починають з 1 мг на добу двома прийомами й титрують; більшість відповідає на 1–3 мг на добу.",
+        "en": "Anagrelide, for intolerance of hydroxycarbamide or an inadequate fall in the platelet count. It starts at 1 mg a day in two doses and is titrated; most patients respond on 1-3 mg a day."
+      },
+      "regimens": [
+        {
+          "regimen_id": "anagrelide-et"
+        }
+      ]
+    }
+  ]
 }

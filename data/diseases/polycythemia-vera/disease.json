@@ -1,5 +1,4 @@
 {
-  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
   "id": "polycythemia-vera",
   "name": {
     "uk": "Справжня поліцитемія",
@@ -28,7 +27,62 @@
     {
       "kind": "eviq",
       "url": "https://www.eviq.org.au/search#/?query=Polycythemia%20vera"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.esmo.org/guidelines/esmo-clinical-practice-guideline-philadelphia-chromosome-negative-chronic-myeloproliferative-neoplasms",
+      "label": {
+        "uk": "ESMO Clinical Practice Guideline: Ph-негативні хронічні мієлопроліферативні новоутворення",
+        "en": "ESMO Clinical Practice Guideline: Philadelphia-negative chronic myeloproliferative neoplasms"
+      }
     }
   ],
-  "treatment": []
+  "treatment": [
+    {
+      "key": "all-patients",
+      "kind": "group",
+      "title": {
+        "uk": "Усім пацієнтам",
+        "en": "All patients"
+      },
+      "description": {
+        "uk": "Кровопускання до гематокриту нижче 0,45 і ацетилсаліцилова кислота в малій дозі, якщо немає протипоказань. Окремо — корекція серцево-судинних чинників ризику.",
+        "en": "Venesection to a haematocrit below 0.45 and low-dose aspirin unless contraindicated. Cardiovascular risk factors are managed separately."
+      }
+    },
+    {
+      "key": "cytoreduction",
+      "kind": "line",
+      "title": {
+        "uk": "Цитозниження (високий ризик)",
+        "en": "Cytoreduction (high risk)"
+      },
+      "description": {
+        "uk": "Показане при віці понад 60 років, тромбозі в анамнезі, поганій переносимості кровопускань, прогресуючому лейкоцитозі чи тромбоцитозі або симптомній спленомегалії. Перша лінія — гідроксикарбамід; альтернатива, особливо в молодших, — інтерферон альфа.",
+        "en": "Indicated over the age of 60, after a thrombosis, where venesection is poorly tolerated, with a rising white cell or platelet count, or with symptomatic splenomegaly. Hydroxycarbamide is the first choice; interferon alfa is the alternative, especially in younger patients."
+      },
+      "regimens": [
+        {
+          "regimen_id": "hydroxycarbamide-mpn"
+        }
+      ]
+    },
+    {
+      "key": "second-line",
+      "kind": "line",
+      "title": {
+        "uk": "Друга лінія",
+        "en": "Second line"
+      },
+      "description": {
+        "uk": "При резистентності або непереносимості гідроксикарбаміду — руксолітиніб 10 мг двічі на добу; він також зменшує свербіж і розміри селезінки.",
+        "en": "On resistance or intolerance to hydroxycarbamide, ruxolitinib 10 mg twice daily; it also relieves pruritus and reduces spleen size."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ruxolitinib-pv"
+        }
+      ]
+    }
+  ]
 }

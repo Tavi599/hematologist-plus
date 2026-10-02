@@ -1,5 +1,4 @@
 {
-  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
   "id": "primary-myelofibrosis",
   "name": {
     "uk": "Первинний мієлофіброз",
@@ -28,7 +27,62 @@
     {
       "kind": "eviq",
       "url": "https://www.eviq.org.au/search#/?query=Primary%20myelofibrosis"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.esmo.org/guidelines/esmo-clinical-practice-guideline-philadelphia-chromosome-negative-chronic-myeloproliferative-neoplasms",
+      "label": {
+        "uk": "ESMO Clinical Practice Guideline: Ph-негативні хронічні мієлопроліферативні новоутворення",
+        "en": "ESMO Clinical Practice Guideline: Philadelphia-negative chronic myeloproliferative neoplasms"
+      }
     }
   ],
-  "treatment": []
+  "treatment": [
+    {
+      "key": "risk",
+      "kind": "group",
+      "title": {
+        "uk": "Оцінка ризику й тактика",
+        "en": "Risk assessment and approach"
+      },
+      "description": {
+        "uk": "Тактику визначає прогностична шкала (IPSS, DIPSS або DIPSS-plus). Низький ризик без симптомів — спостереження. Єдиний метод, що виліковує, — алогенна трансплантація; її розглядають при проміжному-2 й високому ризику в придатних пацієнтів.",
+        "en": "The approach follows a prognostic score (IPSS, DIPSS or DIPSS-plus). Low-risk disease without symptoms is observed. Allogeneic transplantation is the only curative option and is considered at intermediate-2 and high risk in eligible patients."
+      }
+    },
+    {
+      "key": "ruxolitinib",
+      "kind": "line",
+      "title": {
+        "uk": "Симптомна спленомегалія і загальні симптоми",
+        "en": "Symptomatic splenomegaly and constitutional symptoms"
+      },
+      "description": {
+        "uk": "Руксолітиніб — початкова доза за кількістю тромбоцитів (20, 15, 10 або 5 мг двічі на добу); зменшує селезінку й знімає загальні симптоми. Перші тижні потрібен частий контроль крові: анемія й тромбоцитопенія очікувані.",
+        "en": "Ruxolitinib, with the starting dose set by the platelet count (20, 15, 10 or 5 mg twice daily); it shrinks the spleen and relieves constitutional symptoms. Frequent blood counts are needed in the first weeks: anaemia and thrombocytopenia are expected."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ruxolitinib-mf"
+        }
+      ]
+    },
+    {
+      "key": "supportive",
+      "kind": "group",
+      "title": {
+        "uk": "Супровідне лікування",
+        "en": "Supportive care"
+      },
+      "description": {
+        "uk": "Анемія — трансфузії, за потреби хелатування заліза. Гідроксикарбамід застосовують при проліферативному перебігу з лейкоцитозом, тромбоцитозом чи спленомегалією, коли руксолітиніб недоступний або не показаний.",
+        "en": "Anaemia is managed with transfusions and, where needed, iron chelation. Hydroxycarbamide is used in proliferative disease with leucocytosis, thrombocytosis or splenomegaly when ruxolitinib is unavailable or not indicated."
+      },
+      "regimens": [
+        {
+          "regimen_id": "hydroxycarbamide-mpn"
+        }
+      ]
+    }
+  ]
 }
