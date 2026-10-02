@@ -1,0 +1,57 @@
+{
+  "$comment": "Протокол NSSG Oxford L.130 (вер. 2.1), цикли 7-12: обінутузумаб уже не вводиться, лишається венетоклакс 400 мг щодня. Разом лікування триває 12 циклів і на цьому завершується.",
+  "id": "ven-obi-venetoclax",
+  "short_name": "Венетоклакс (цикли 7-12)",
+  "name": {
+    "uk": "Венетоклакс після завершення обінутузумабу, цикли 7-12",
+    "en": "Venetoclax after obinutuzumab ends, cycles 7-12"
+  },
+  "description": {
+    "uk": "Венетоклакс 400 мг щодня. Цикл 28 днів, до 12-го циклу включно.",
+    "en": "Venetoclax 400 mg daily. 28-day cycle, through cycle 12."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.130 Venetoclax with Obinutuzumab",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-130-venetoclax-and-obinutuzumab.pdf",
+      "version": "2.1 (07.2023)",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "venetoclax",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Уранці під час їди, запиваючи водою. Уникати грейпфрута, помаранчів сорту «севільський» і карамболі за 3 дні до першої дози й до кінця лікування.",
+        "en": "In the morning with food and water. Grapefruit, Seville oranges and star fruit are avoided from three days before the first dose until treatment ends."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і 3 місяці після (у протоколі - ацикловір 200 мг тричі на добу)",
+        "en": "Antiviral prophylaxis during treatment and for 3 months after (the protocol gives aciclovir 200 mg three times a day)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$comment": "Протокол NSSG Oxford ML.87 AIDA (вер. 1.1), консолідація 3. Курс починають при відновленні показників крові.",
+  "id": "aida-consolidation-3",
+  "short_name": "AIDA (консолідація 3)",
+  "name": {
+    "uk": "AIDA, консолідація 3",
+    "en": "AIDA consolidation 3"
+  },
+  "description": {
+    "uk": "Третиноїн 45 мг/м² на добу дні 1-15, ідарубіцин 12 мг/м² у день 1.",
+    "en": "Tretinoin 45 mg/m2 a day on days 1-15, idarubicin 12 mg/m2 on day 1."
+  },
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.87 AIDA (ATRA plus Idarubicin)",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-87-aida-atra-plus-idarubicin.pdf",
+      "version": "1.1 (11.2022)",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "tretinoin",
+      "drug_id": "tretinoin",
+      "route": "oral",
+      "dose_value": 22.5,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Разом 45 мг/м² на добу двома рівними прийомами; добову дозу округлюють до найближчих 10 мг (капсули по 10 мг).",
+        "en": "45 mg/m2 a day in two equal doses; the daily dose is rounded to the nearest 10 mg (10 mg capsules)."
+      }
+    },
+    {
+      "key": "idarubicin",
+      "drug_id": "idarubicin",
+      "route": "iv_infusion",
+      "dose_value": 12,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 20,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100
+    },
+    {
+      "key": "ondansetron",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і 3 місяці після (у протоколі - ацикловір 200 мг тричі на добу)",
+        "en": "Antiviral prophylaxis during treatment and for 3 months after (the protocol gives aciclovir 200 mg three times a day)"
+      }
+    }
+  ]
+}

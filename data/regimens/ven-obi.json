@@ -1,0 +1,100 @@
+{
+  "$comment": "Протокол NSSG Oxford L.130 (вер. 2.1), цикли 3-6: обінутузумаб 1000 мг у день 1 і венетоклакс 400 мг щодня. Цикли 1 і 2 - окремі схеми (там інші дози), цикли 7-12 - схема ven-obi-venetoclax (сам венетоклакс).",
+  "id": "ven-obi",
+  "short_name": "Ven-Obi",
+  "name": {
+    "uk": "Венетоклакс з обінутузумабом, цикли 3-6",
+    "en": "Venetoclax with obinutuzumab, cycles 3-6"
+  },
+  "description": {
+    "uk": "Обінутузумаб 1000 мг день 1, венетоклакс 400 мг щодня. Цикл 28 днів.",
+    "en": "Obinutuzumab 1000 mg on day 1, venetoclax 400 mg daily. 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.130 Venetoclax with Obinutuzumab",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-130-venetoclax-and-obinutuzumab.pdf",
+      "version": "2.1 (07.2023)",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 1 годину до обінутузумабу",
+        "en": "At least one hour before obinutuzumab"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% - 5,0 мл (у протоколі - лоратадин 10 мг усередину; фамотидин 40 мг у довіднику відділення відсутній)",
+        "en": "Diphenhydramine 1% 5.0 mL (the protocol gives loratadine 10 mg by mouth; famotidine 40 mg is not in the department's catalog)"
+      }
+    },
+    {
+      "key": "obinutuzumab",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl, зі 100 мг/год, підвищуючи на 100 мг/год кожні 30 хв до 400 мг/год",
+        "en": "In 250 mL 0.9% NaCl, from 100 mg/h, raised by 100 mg/h every 30 minutes to 400 mg/h"
+      }
+    },
+    {
+      "key": "venetoclax",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Уранці під час їди, запиваючи водою. Уникати грейпфрута, помаранчів сорту «севільський» і карамболі за 3 дні до першої дози й до кінця лікування.",
+        "en": "In the morning with food and water. Grapefruit, Seville oranges and star fruit are avoided from three days before the first dose until treatment ends."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і 3 місяці після (у протоколі - ацикловір 200 мг тричі на добу)",
+        "en": "Antiviral prophylaxis during treatment and for 3 months after (the protocol gives aciclovir 200 mg three times a day)"
+      }
+    }
+  ]
+}

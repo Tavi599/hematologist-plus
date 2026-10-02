@@ -57,10 +57,24 @@
         "en": "Unfit for intensive therapy"
       },
       "description": {
-        "uk": "Гіпометилювальні засоби, за можливості з венетоклаксом. Цитарабін у малих дозах - варіант, коли азацитидин недоступний або не підходить; його вводять підшкірно, зокрема амбулаторно, якщо пацієнта чи доглядальника навчено.",
-        "en": "Hypomethylating agents, with venetoclax where available. Low-dose cytarabine is an option where azacitidine is unavailable or unsuitable; it is given subcutaneously, including at home once the patient or carer has been trained."
+        "uk": "Гіпометилювальний засіб із венетоклаксом - теперішній стандарт для тих, кому інтенсивна індукція не підходить. У першому циклі дозу венетоклаксу титрують, тому цикл 1 - окрема схема; дози вже враховують протигрибковий супровід азолом, який протокол призначає з дня 1. Азацитидин або цитарабін у малих дозах у монорежимі лишаються варіантом, коли венетоклакс недоступний.",
+        "en": "A hypomethylating agent with venetoclax is the current standard where intensive induction is unsuitable. The venetoclax dose is titrated in the first cycle, so cycle 1 is a regimen of its own; the doses already account for the azole antifungal the protocol starts on day 1. Azacitidine or low-dose cytarabine alone remain options where venetoclax is unavailable."
       },
       "regimens": [
+        {
+          "regimen_id": "aza-ven-cycle-1",
+          "notes": {
+            "uk": "Цикл 1: титрування венетоклаксу 10-20-50-100 мг",
+            "en": "Cycle 1: the venetoclax ramp-up, 10-20-50-100 mg"
+          }
+        },
+        {
+          "regimen_id": "aza-ven",
+          "notes": {
+            "uk": "Цикли 2 і далі",
+            "en": "Cycle 2 onwards"
+          }
+        },
         {
           "regimen_id": "azacitidine-mono"
         },

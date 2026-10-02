@@ -1,0 +1,157 @@
+{
+  "$comment": "Протокол NSSG Oxford L.130 (вер. 2.1, липень 2023), цикл 1. Обінутузумаб тут вводиться чотири рази з різними дозами (100 мг день 1, 900 мг день 2, 1000 мг дні 8 і 15), а венетоклакс починається лише з дня 22 з 20 мг - тому кожна фаза лікування винесена окремою схемою. Премедикація: протокольні лоратадин і фамотидин замінено димедролом, якого у відділенні вживають; фамотидину в довіднику немає. Гідратація й профілактика синдрому лізису пухлини - за окремим протоколом, тут лише алопуринол.",
+  "id": "ven-obi-cycle-1",
+  "short_name": "Ven-Obi (цикл 1)",
+  "name": {
+    "uk": "Венетоклакс з обінутузумабом, цикл 1",
+    "en": "Venetoclax with obinutuzumab, cycle 1"
+  },
+  "description": {
+    "uk": "Обінутузумаб 100 мг день 1, 900 мг день 2, 1000 мг дні 8 і 15; венетоклакс 20 мг дні 22-28. Цикл 28 днів.",
+    "en": "Obinutuzumab 100 mg on day 1, 900 mg on day 2, 1000 mg on days 8 and 15; venetoclax 20 mg on days 22-28. 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.130 Venetoclax with Obinutuzumab",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-130-venetoclax-and-obinutuzumab.pdf",
+      "version": "2.1 (07.2023)",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 15],
+      "notes": {
+        "uk": "Не пізніше ніж за 1 годину до обінутузумабу",
+        "en": "At least one hour before obinutuzumab"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 15],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% - 5,0 мл (у протоколі - лоратадин 10 мг усередину; фамотидин 40 мг у довіднику відділення відсутній)",
+        "en": "Diphenhydramine 1% 5.0 mL (the protocol gives loratadine 10 mg by mouth; famotidine 40 mg is not in the department's catalog)"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 15],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "За 1 годину до обінутузумабу. У наступних циклах потрібен лише тим, хто мав тяжку інфузійну реакцію або має лімфоцити понад 25×10⁹/л перед введенням.",
+        "en": "One hour before obinutuzumab. In later cycles it is needed only after a severe infusion reaction or with lymphocytes above 25 x 10^9/L before the dose."
+      }
+    },
+    {
+      "key": "obinutuzumab-d1",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl, щонайменше 4 години. За звичайного ризику - 25 мг/год без підвищення (разом близько 4 годин); за додаткових чинників ризику тяжкої інфузійної реакції - 6 мг/год першу годину, далі 12 мг/год годину, далі 24 мг/год до кінця.",
+        "en": "In 100 mL 0.9% NaCl over at least 4 hours. At ordinary risk, 25 mg/h without increase (about 4 hours in all); with additional risk factors for a severe infusion reaction, 6 mg/h for an hour, then 12 mg/h for an hour, then 24 mg/h to the end."
+      }
+    },
+    {
+      "key": "obinutuzumab-d2",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 900,
+      "dose_unit": "mg_flat",
+      "days": [2],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl. Починати з 50 мг/год, підвищуючи на 50 мг/год кожні 30 хв до 400 мг/год (разом близько 4 годин).",
+        "en": "In 250 mL 0.9% NaCl. Start at 50 mg/h and raise by 50 mg/h every 30 minutes to 400 mg/h (about 4 hours in all)."
+      }
+    },
+    {
+      "key": "obinutuzumab-d8-15",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [8, 15],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl. Починати зі 100 мг/год, підвищуючи на 100 мг/год кожні 30 хв до 400 мг/год (разом близько 3 годин 15 хв).",
+        "en": "In 250 mL 0.9% NaCl. Start at 100 mg/h and raise by 100 mg/h every 30 minutes to 400 mg/h (about 3 hours 15 minutes in all)."
+      }
+    },
+    {
+      "key": "venetoclax",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [22, 23, 24, 25, 26, 27, 28],
+      "notes": {
+        "uk": "Перший тиждень титрування, таблетки по 10 мг. Уранці під час їди, запиваючи водою. Уникати грейпфрута, помаранчів сорту «севільський» і карамболі за 3 дні до першої дози й до кінця лікування.",
+        "en": "The first week of the ramp-up, 10 mg tablets. In the morning with food and water. Grapefruit, Seville oranges and star fruit are avoided from three days before the first dose until treatment ends."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини; ризик найвищий на початку обінутузумабу й на титруванні венетоклаксу",
+        "en": "Tumour lysis prophylaxis; the risk is highest as obinutuzumab starts and during the venetoclax ramp-up"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і 3 місяці після (у протоколі - ацикловір 200 мг тричі на добу)",
+        "en": "Antiviral prophylaxis during treatment and for 3 months after (the protocol gives aciclovir 200 mg three times a day)"
+      }
+    }
+  ]
+}

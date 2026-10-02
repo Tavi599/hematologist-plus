@@ -1,0 +1,149 @@
+{
+  "$comment": "Протокол NSSG Oxford L.130 (вер. 2.1), цикл 2: обінутузумаб 1000 мг у день 1 і щотижневе підвищення венетоклаксу 50 - 100 - 200 - 400 мг. Кожен щабель - окрема позиція, бо доза змінюється всередині циклу.",
+  "id": "ven-obi-cycle-2",
+  "short_name": "Ven-Obi (цикл 2)",
+  "name": {
+    "uk": "Венетоклакс з обінутузумабом, цикл 2 (титрування)",
+    "en": "Venetoclax with obinutuzumab, cycle 2 (ramp-up)"
+  },
+  "description": {
+    "uk": "Обінутузумаб 1000 мг день 1; венетоклакс 50 - 100 - 200 - 400 мг щотижня. Цикл 28 днів.",
+    "en": "Obinutuzumab 1000 mg on day 1; venetoclax 50, 100, 200 then 400 mg weekly. 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.130 Venetoclax with Obinutuzumab",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-130-venetoclax-and-obinutuzumab.pdf",
+      "version": "2.1 (07.2023)",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 1 годину до обінутузумабу",
+        "en": "At least one hour before obinutuzumab"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% - 5,0 мл (у протоколі - лоратадин 10 мг усередину; фамотидин 40 мг у довіднику відділення відсутній)",
+        "en": "Diphenhydramine 1% 5.0 mL (the protocol gives loratadine 10 mg by mouth; famotidine 40 mg is not in the department's catalog)"
+      }
+    },
+    {
+      "key": "obinutuzumab",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl, зі 100 мг/год, підвищуючи на 100 мг/год кожні 30 хв до 400 мг/год",
+        "en": "In 250 mL 0.9% NaCl, from 100 mg/h, raised by 100 mg/h every 30 minutes to 400 mg/h"
+      }
+    },
+    {
+      "key": "venetoclax-w1",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Тиждень 1 титрування. Уранці під час їди, запиваючи водою. Уникати грейпфрута, помаранчів сорту «севільський» і карамболі за 3 дні до першої дози й до кінця лікування.",
+        "en": "Ramp-up week 1. In the morning with food and water. Grapefruit, Seville oranges and star fruit are avoided from three days before the first dose until treatment ends."
+      }
+    },
+    {
+      "key": "venetoclax-w2",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "Тиждень 2 титрування. Уранці під час їди, запиваючи водою. Уникати грейпфрута, помаранчів сорту «севільський» і карамболі за 3 дні до першої дози й до кінця лікування.",
+        "en": "Ramp-up week 2. In the morning with food and water. Grapefruit, Seville oranges and star fruit are avoided from three days before the first dose until treatment ends."
+      }
+    },
+    {
+      "key": "venetoclax-w3",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Тиждень 3 титрування. Уранці під час їди, запиваючи водою. Уникати грейпфрута, помаранчів сорту «севільський» і карамболі за 3 дні до першої дози й до кінця лікування.",
+        "en": "Ramp-up week 3. In the morning with food and water. Grapefruit, Seville oranges and star fruit are avoided from three days before the first dose until treatment ends."
+      }
+    },
+    {
+      "key": "venetoclax-w4",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [22, 23, 24, 25, 26, 27, 28],
+      "notes": {
+        "uk": "Цільова доза. Уранці під час їди, запиваючи водою. Уникати грейпфрута, помаранчів сорту «севільський» і карамболі за 3 дні до першої дози й до кінця лікування.",
+        "en": "The target dose. In the morning with food and water. Grapefruit, Seville oranges and star fruit are avoided from three days before the first dose until treatment ends."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини на час титрування",
+        "en": "Tumour lysis prophylaxis during the ramp-up"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і 3 місяці після (у протоколі - ацикловір 200 мг тричі на добу)",
+        "en": "Antiviral prophylaxis during treatment and for 3 months after (the protocol gives aciclovir 200 mg three times a day)"
+      }
+    }
+  ]
+}

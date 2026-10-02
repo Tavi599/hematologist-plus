@@ -40,18 +40,46 @@
         "en": "First line"
       },
       "description": {
-        "uk": "Лікування починають за показаннями iwCLL; безсимптомну хворобу спостерігають. Перед вибором схеми визначають del(17p)/TP53 - при їхній наявності хіміоімунотерапія не застосовується, потрібен інгібітор BTK або венетоклакс. Венетоклакс із обінутузумабом (фіксовані 12 циклів) у довіднику ще без схеми.",
-        "en": "Treatment starts on iwCLL indications; asymptomatic disease is watched. del(17p)/TP53 is checked first - where present, chemoimmunotherapy is not used and a BTK inhibitor or venetoclax is needed. Venetoclax with obinutuzumab (a fixed twelve cycles) is not yet a regimen here."
+        "uk": "Лікування починають за показаннями iwCLL; безсимптомну хворобу спостерігають. Перед вибором схеми визначають del(17p)/TP53 - при їхній наявності хіміоімунотерапія не застосовується. Венетоклакс з обінутузумабом - фіксований курс на 12 циклів: доза венетоклаксу росте щотижня, а обінутузумаб уводять лише до 6-го циклу, тому кожна фаза внесена окремою схемою.",
+        "en": "Treatment starts on iwCLL indications; asymptomatic disease is watched. del(17p)/TP53 is checked first - where present, chemoimmunotherapy is not used. Venetoclax with obinutuzumab is a fixed course of twelve cycles: the venetoclax dose rises weekly and obinutuzumab runs only to cycle 6, so each phase is a regimen of its own."
       },
       "regimens": [
+        {
+          "regimen_id": "ven-obi-cycle-1",
+          "notes": {
+            "uk": "Цикл 1: обінутузумаб 100/900/1000 мг, венетоклакс з дня 22",
+            "en": "Cycle 1: obinutuzumab 100/900/1000 mg, venetoclax from day 22"
+          }
+        },
+        {
+          "regimen_id": "ven-obi-cycle-2",
+          "notes": {
+            "uk": "Цикл 2: щотижневе підвищення венетоклаксу до 400 мг",
+            "en": "Cycle 2: the venetoclax ramp-up to 400 mg"
+          }
+        },
+        {
+          "regimen_id": "ven-obi",
+          "notes": {
+            "uk": "Цикли 3-6",
+            "en": "Cycles 3-6"
+          }
+        },
+        {
+          "regimen_id": "ven-obi-venetoclax",
+          "notes": {
+            "uk": "Цикли 7-12: лише венетоклакс",
+            "en": "Cycles 7-12: venetoclax alone"
+          }
+        },
         {
           "regimen_id": "br-cll"
         },
         {
           "regimen_id": "acalabrutinib-mono",
           "notes": {
-            "uk": "Зокрема при del(17p)/мутації TP53, коли хіміоімунотерапія не підходить",
-            "en": "Including del(17p) or a TP53 mutation, where chemoimmunotherapy is unsuitable"
+            "uk": "Зокрема при del(17p)/мутації TP53",
+            "en": "Including del(17p) or a TP53 mutation"
           }
         }
       ]
@@ -70,6 +98,13 @@
       "regimens": [
         {
           "regimen_id": "acalabrutinib-mono"
+        },
+        {
+          "regimen_id": "ven-obi-cycle-1",
+          "notes": {
+            "uk": "Якщо венетоклакс раніше не застосовували",
+            "en": "Where venetoclax has not been used before"
+          }
         },
         {
           "regimen_id": "br-cll"

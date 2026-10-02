@@ -30,5 +30,46 @@
       "url": "https://www.eviq.org.au/search#/?query=Acute%20promyelocytic%20leukemia"
     }
   ],
-  "treatment": []
+  "treatment": [
+    {
+      "key": "induction",
+      "kind": "line",
+      "title": {
+        "uk": "Індукція",
+        "en": "Induction"
+      },
+      "description": {
+        "uk": "Третиноїн починають за першої ж підозри, не чекаючи цитогенетичного підтвердження: смертність ранніх днів визначає коагулопатія. Третиноїн із ідарубіцином - стандарт для груп високого ризику й там, де немає триоксиду миш'яку; у довіднику відділення миш'яку немає, тому схеми ATRA+ATO тут не буде. Під час третиноїну не можна транексамову кислоту. Слідкувати за синдромом диференціювання.",
+        "en": "Tretinoin starts at the first suspicion, without waiting for cytogenetic confirmation: the coagulopathy drives early mortality. Tretinoin with idarubicin is the standard for high-risk disease and where arsenic trioxide is unavailable; the department has no arsenic, so ATRA with ATO is not here. Tranexamic acid must not be given during tretinoin. Watch for differentiation syndrome."
+      },
+      "regimens": [
+        {
+          "regimen_id": "aida-induction"
+        }
+      ]
+    },
+    {
+      "key": "consolidation",
+      "kind": "line",
+      "title": {
+        "uk": "Консолідація",
+        "en": "Consolidation"
+      },
+      "description": {
+        "uk": "Три послідовні курси після досягнення гематологічної ремісії. Кожен починають при відновленні показників: нейтрофіли понад 1,5×10⁹/л, тромбоцити понад 100×10⁹/л. Після кожного курсу - кістковий мозок із ПЛР на PML-RARA.",
+        "en": "Three successive courses after haematological remission. Each starts on count recovery: neutrophils above 1.5 x 10^9/L and platelets above 100 x 10^9/L. A marrow with PML-RARA PCR follows each course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "aida-consolidation-1"
+        },
+        {
+          "regimen_id": "aida-consolidation-2"
+        },
+        {
+          "regimen_id": "aida-consolidation-3"
+        }
+      ]
+    }
+  ]
 }

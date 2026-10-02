@@ -1,0 +1,130 @@
+{
+  "$comment": "Протокол NSSG Oxford ML.84 Azacitidine and Venetoclax (вер. 4.0), цикл 1. УВАГА: дози венетоклаксу тут уже враховують одночасний прийом позаконазолу чи вориконазолу (сильні інгібітори CYP3A), які протокол призначає з дня 1. Без цього супроводу дози інші. Титрування 10 - 20 - 50 - 100 мг розбито на окремі позиції, бо доза змінюється всередині циклу. Біопсія кісткового мозку між 21-м і 28-м днем визначає лікування другого циклу.",
+  "id": "aza-ven-cycle-1",
+  "short_name": "Aza-Ven (цикл 1)",
+  "name": {
+    "uk": "Азацитидин з венетоклаксом, цикл 1",
+    "en": "Azacitidine with venetoclax, cycle 1"
+  },
+  "description": {
+    "uk": "Азацитидин 75 мг/м² підшкірно дні 1-5 і 8-9; венетоклакс 10 - 20 - 50 - 100 мг з дня 1. Цикл 28 днів.",
+    "en": "Azacitidine 75 mg/m2 subcutaneously on days 1-5 and 8-9; venetoclax 10, 20, 50 then 100 mg from day 1. 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.84 Azacitidine and Venetoclax",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-84-azacitidine-and-venetoclax-covid-19.pdf",
+      "version": "4.0",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "ondansetron",
+      "drug_id": "ondansetron",
+      "role": "premedication",
+      "route": "intramuscular",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 8, 9],
+      "notes": {
+        "uk": "За 30 хв до азацитидину; за практикою відділення - внутрішньом'язово",
+        "en": "30 minutes before azacitidine; given intramuscularly in the department"
+      }
+    },
+    {
+      "key": "azacitidine",
+      "drug_id": "azacitidine",
+      "route": "subcutaneous",
+      "dose_value": 75,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 8, 9],
+      "notes": {
+        "uk": "Дні 1-5 і 8-9: п'ять днів поспіль, тоді перерва на вихідні й ще два дні. Дозу понад 4 мл ділять на два шприци й вводять у різні ділянки.",
+        "en": "Days 1-5 and 8-9: five consecutive days, then a weekend break and two more. Doses over 4 mL are split between two syringes and two sites."
+      }
+    },
+    {
+      "key": "venetoclax-d1",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Перший день титрування. Доза вже зменшена через взаємодію з протигрибковим засобом (позаконазол або вориконазол - сильні інгібітори CYP3A), які за протоколом дають з дня 1. Без такого супроводу доза інша - звіряйтесь із протоколом.",
+        "en": "The first day of the ramp-up. The dose is already reduced for the interaction with the antifungal (posaconazole or voriconazole, strong CYP3A inhibitors) that the protocol starts on day 1. Without that cover the dose differs - check the protocol."
+      }
+    },
+    {
+      "key": "venetoclax-d2",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [2],
+      "notes": {
+        "uk": "Другий день титрування. Доза вже зменшена через взаємодію з протигрибковим засобом (позаконазол або вориконазол - сильні інгібітори CYP3A), які за протоколом дають з дня 1. Без такого супроводу доза інша - звіряйтесь із протоколом.",
+        "en": "The second day of the ramp-up. The dose is already reduced for the interaction with the antifungal (posaconazole or voriconazole, strong CYP3A inhibitors) that the protocol starts on day 1. Without that cover the dose differs - check the protocol."
+      }
+    },
+    {
+      "key": "venetoclax-d3",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [3],
+      "notes": {
+        "uk": "Третій день титрування. Доза вже зменшена через взаємодію з протигрибковим засобом (позаконазол або вориконазол - сильні інгібітори CYP3A), які за протоколом дають з дня 1. Без такого супроводу доза інша - звіряйтесь із протоколом.",
+        "en": "The third day of the ramp-up. The dose is already reduced for the interaction with the antifungal (posaconazole or voriconazole, strong CYP3A inhibitors) that the protocol starts on day 1. Without that cover the dose differs - check the protocol."
+      }
+    },
+    {
+      "key": "venetoclax-d4",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [
+        4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28
+      ],
+      "notes": {
+        "uk": "Підтримувальна доза з дня 4 під час титрування. Приймати під час або після їди. Доза вже зменшена через взаємодію з протигрибковим засобом (позаконазол або вориконазол - сильні інгібітори CYP3A), які за протоколом дають з дня 1. Без такого супроводу доза інша - звіряйтесь із протоколом.",
+        "en": "The maintained dose from day 4 of the ramp-up. Taken with or after a meal. The dose is already reduced for the interaction with the antifungal (posaconazole or voriconazole, strong CYP3A inhibitors) that the protocol starts on day 1. Without that cover the dose differs - check the protocol."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини; у день 1 перед венетоклаксом потрібна гідратація 1-1,5 л і щонайменше 2 л рідини на добу під час титрування",
+        "en": "Tumour lysis prophylaxis; on day 1, 1-1.5 L of fluid before venetoclax and at least 2 L a day during the ramp-up"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і 3 місяці після (у протоколі - ацикловір 200 мг тричі на добу)",
+        "en": "Antiviral prophylaxis during treatment and for 3 months after (the protocol gives aciclovir 200 mg three times a day)"
+      }
+    }
+  ]
+}
