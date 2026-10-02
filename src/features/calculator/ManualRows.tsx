@@ -13,7 +13,7 @@ import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { SHEET_HOURS } from './course-sheets'
-import { newManualRow, type ManualBlock, type ManualRow } from './manual-rows'
+import { moveRow, newManualRow, type ManualBlock, type ManualRow } from './manual-rows'
 import { parseDays } from './parse-days'
 
 /**
@@ -53,7 +53,7 @@ export function ManualRows({
           {t('calculator.manual.lead')}
         </Text>
 
-        {rows.map((row) => {
+        {rows.map((row, index) => {
           const typed = typedDays[row.id] ?? row.days.join(', ')
           const parsed = parseDays(typed)
           return (
@@ -108,6 +108,22 @@ export function ManualRows({
                 disabled={row.block === 'ward'}
                 w={130}
               />
+              <ActionIcon
+                variant="subtle"
+                aria-label={t('calculator.manual.up')}
+                disabled={index === 0}
+                onClick={() => onChange(moveRow(rows, row.id, -1))}
+              >
+                ↑
+              </ActionIcon>
+              <ActionIcon
+                variant="subtle"
+                aria-label={t('calculator.manual.down')}
+                disabled={index === rows.length - 1}
+                onClick={() => onChange(moveRow(rows, row.id, 1))}
+              >
+                ↓
+              </ActionIcon>
               <ActionIcon
                 variant="subtle"
                 color="red"

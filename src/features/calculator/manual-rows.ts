@@ -73,3 +73,17 @@ export function daysWithManual(
   }
   return [...days.values()].sort((a, b) => a.day - b.day)
 }
+
+/**
+ * Moves a line one place up or down. The order of the lines is the order they are printed in,
+ * and on an infusion sheet that order is the order the ward gives them in.
+ */
+export function moveRow(rows: ManualRow[], id: string, by: -1 | 1): ManualRow[] {
+  const from = rows.findIndex((row) => row.id === id)
+  const to = from + by
+  if (from === -1 || to < 0 || to >= rows.length) return rows
+  const moved = [...rows]
+  const [row] = moved.splice(from, 1)
+  moved.splice(to, 0, row!)
+  return moved
+}
