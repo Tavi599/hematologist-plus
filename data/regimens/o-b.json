@@ -1,0 +1,79 @@
+{
+  "$comment": "Цикли 2-6: обінутузумаб лише в день 1.",
+  "id": "o-b",
+  "short_name": "O-B (2-6)",
+  "name": {
+    "uk": "Обінутузумаб + бендамустин, цикли 2-6",
+    "en": "Obinutuzumab and bendamustine, cycles 2-6"
+  },
+  "description": {
+    "uk": "Обінутузумаб 1000 мг день 1, бендамустин 90 мг/м² дні 1-2. Цикл 28 днів, усього 6 циклів індукції.",
+    "en": "Obinutuzumab 1000 mg on day 1, bendamustine 90 mg/m2 on days 1 and 2. 28-day cycle; induction runs to 6 cycles in all."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 5,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.91 Obinutuzumab and Bendamustine",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-91-obinutuzumab-and-bendamustine.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не менш як за 60 хвилин до обінутузумабу. 20 мг у вигляді дексаметазону натрію фосфату відповідають 16,5 мг основи. Гідрокортизон не застосовують — він не зменшує реакцій на введення.",
+        "en": "At least 60 minutes before obinutuzumab. 20 mg as dexamethasone sodium phosphate equals 16.5 mg of the base. Hydrocortisone is not used: it does not reduce administration reactions."
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не менш як за 30 хвилин до обінутузумабу. Протокол додає хлорфенамін 10 мг внутрішньовенно — цього препарату в довіднику немає. Крім парацетамолу, премедикацію в наступних циклах можна не давати, якщо попередні введення перенесені добре.",
+        "en": "At least 30 minutes before obinutuzumab. The protocol adds chlorphenamine 10 mg intravenously, which is not in the catalogue. Apart from paracetamol, the premedication may be dropped in later cycles where the earlier doses were tolerated."
+      }
+    },
+    {
+      "key": "obinutuzumab",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl зі сходинкою швидкості; тривалість рахується з об'єму, а не задається схемою.",
+        "en": "In 250 mL of 0.9% sodium chloride at a rising rate; the duration follows from the volume rather than from the regimen."
+      }
+    },
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 90,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl за 30-60 хвилин.",
+        "en": "In 500 mL of 0.9% sodium chloride over 30 to 60 minutes."
+      }
+    }
+  ]
+}

@@ -21,6 +21,12 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "NSSG Oxford Haematology, L.91 Obinutuzumab and Bendamustine",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-91-obinutuzumab-and-bendamustine.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
     }
   ],
   "presentations": [
@@ -28,6 +34,40 @@
       "key": "s1000",
       "form": "vial",
       "strength_amount": 1000
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [250],
+      "is_default": true,
+      "rate_ramp": {
+        "first": {
+          "start_ml_h": 12.5,
+          "step_ml_h": 12.5,
+          "every_min": 30,
+          "max_ml_h": 100
+        },
+        "next": {
+          "start_ml_h": 25,
+          "step_ml_h": 25,
+          "every_min": 30,
+          "max_ml_h": 100
+        }
+      },
+      "notes": {
+        "uk": "Протокол задає швидкість у мг/год; тут вона переведена в мл/год для фіксованої дози 1000 мг у 250 мл 0,9% NaCl (4 мг/мл), і лише для неї перерахунок точний. Перша інфузія: 50 мг/год, +50 мг/год кожні 30 хв до 400 мг/год (12,5 → 100 мл/год). Наступні, якщо попередню перенесли зі швидкістю ≥ 100 мг/год: 100 мг/год, +100 мг/год кожні 30 хв до 400 мг/год (25 → 100 мл/год). Якщо в циклі 1 не було реакцій ≥ 3 ступеня, подальші введення можна давати за скороченою схемою — 100 мг/год 30 хвилин, далі 900 мг/год близько 60 хвилин; вона в розрахунок не закладена.",
+        "en": "The protocol states the rate in mg/hour; here it is converted to mL/h for the fixed dose of 1000 mg in 250 mL of 0.9% sodium chloride (4 mg/mL), and the conversion is exact for that alone. First infusion: 50 mg/h, +50 mg/h every 30 minutes up to 400 mg/h (12.5 to 100 mL/h). Later ones, where the previous was tolerated at 100 mg/h or faster: 100 mg/h, +100 mg/h every 30 minutes up to 400 mg/h (25 to 100 mL/h). Where cycle 1 brought no reaction of grade 3 or worse, later doses may follow the short schedule - 100 mg/h for 30 minutes, then about 900 mg/h for 60 minutes - which is not modelled here."
+      },
+      "sources": [
+        {
+          "name": "NSSG Oxford Haematology, L.91 Obinutuzumab and Bendamustine",
+          "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-91-obinutuzumab-and-bendamustine.pdf",
+          "version": "перевірено 2026-10-02",
+          "checkedOn": "2026-10-02"
+        }
+      ]
     }
   ]
 }

@@ -100,6 +100,20 @@
                 "uk": "Цикли 2-8",
                 "en": "Cycles 2-8"
               }
+            },
+            {
+              "regimen_id": "o-b-cycle-1",
+              "notes": {
+                "uk": "Цикл 1; показання — FLIPI 2 і вище",
+                "en": "Cycle 1; indicated at FLIPI 2 or higher"
+              }
+            },
+            {
+              "regimen_id": "o-b",
+              "notes": {
+                "uk": "Цикли 2-6",
+                "en": "Cycles 2-6"
+              }
             }
           ]
         },
@@ -117,6 +131,13 @@
           "regimens": [
             {
               "regimen_id": "o-cvp-maintenance"
+            },
+            {
+              "regimen_id": "o-b-maintenance",
+              "notes": {
+                "uk": "Кожні 56 днів, до 2 років",
+                "en": "Every 56 days, for up to 2 years"
+              }
             }
           ]
         }
@@ -142,6 +163,20 @@
         },
         {
           "regimen_id": "r-cvp"
+        },
+        {
+          "regimen_id": "o-b-cycle-1",
+          "notes": {
+            "uk": "Відсутність відповіді або прогресування протягом 6 місяців після ритуксимабу",
+            "en": "No response, or progression within 6 months of rituximab"
+          }
+        },
+        {
+          "regimen_id": "o-b",
+          "notes": {
+            "uk": "Цикли 2-6",
+            "en": "Cycles 2-6"
+          }
         }
       ]
     },
