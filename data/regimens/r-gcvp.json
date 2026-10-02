@@ -1,0 +1,139 @@
+{
+  "$comment": "Гемцитабін протокол нарощує по циклах, якщо немає токсичності, тому 875 і 1000 мг/м² стоять у списку доз.",
+  "id": "r-gcvp",
+  "short_name": "R-GCVP",
+  "name": {
+    "uk": "R-GCVP (ритуксимаб, гемцитабін, циклофосфамід, вінкристин, преднізолон)",
+    "en": "R-GCVP (rituximab, gemcitabine, cyclophosphamide, vincristine, prednisolone)"
+  },
+  "description": {
+    "uk": "Високозлоякісна неходжкінська лімфома в пацієнтів, яким не підходить антрациклінова хіміотерапія через порушену функцію серця або інші супутні хвороби. Цикл 21 день, 6 циклів. Якщо пухлина CD20-негативна, ритуксимаб не дають.",
+    "en": "High-grade non-Hodgkin lymphoma in patients unsuitable for anthracycline chemotherapy because of impaired cardiac function or other comorbidity. A 21-day cycle, six cycles. Where the disease is CD20-negative the rituximab is omitted."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.31 R-GCVP",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-31-r-gcvp.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає хлорфенамін 10 мг внутрішньовенно, якого в довіднику немає.",
+        "en": "At least 30 minutes before the rituximab. The protocol adds chlorphenamine 10 mg intravenously, which is not in the catalogue."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Уранці під час їди; у день 1 — щонайменше за 30 хвилин до ритуксимабу.",
+        "en": "In the morning with food; on day 1, at least 30 minutes before the rituximab."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають інші введення. Якщо CD20 негативний, ритуксимаб не дають — позицію вимикають.",
+        "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before any other infusion starts. If the disease is CD20-negative the rituximab is omitted: the row is switched off."
+      }
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_amount": 2,
+      "days": [1],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 10 хвилин, разова доза не більш як 2 мг. У пацієнтів старших за 70 років протокол радить розглянути стелю 1 мг.",
+        "en": "In 50 mL of 0.9% sodium chloride over 10 minutes, no single dose above 2 mg. Over the age of 70 the protocol suggests considering a 1 mg cap."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_bolus",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "Струминно.",
+        "en": "As a bolus."
+      }
+    },
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1, 8],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl за 30 хвилин. Якщо токсичності немає, дозу нарощують: у циклі 2 до 875 мг/м², у циклах 3-6 — до 1000 мг/м².",
+        "en": "In 250 mL of 0.9% sodium chloride over 30 minutes. Without toxicity the dose rises: 875 mg/m2 in cycle 2 and 1000 mg/m2 in cycles 3 to 6."
+      },
+      "dose_options": [
+        {
+          "dose_value": 875,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Цикл 2, якщо немає токсичності",
+            "en": "Cycle 2, if there was no toxicity"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.31 R-GCVP",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-31-r-gcvp.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "dose_value": 1000,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Цикли 3-6, якщо переноситься",
+            "en": "Cycles 3 to 6, if tolerated"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.31 R-GCVP",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-31-r-gcvp.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}

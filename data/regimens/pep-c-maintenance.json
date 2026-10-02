@@ -1,0 +1,73 @@
+{
+  "$comment": "У підтримці змінюють не дозу, а частоту: рівень 0 — п'ять днів на тиждень (понеділок-п'ятниця), +1 — щодня, -1 — через день, -2 — двічі на тиждень, -3 — раз на тиждень. Тут закладено рівень 0; інші рівні виставляють днями вручну.",
+  "id": "pep-c-maintenance",
+  "short_name": "PEP-C (підтримка)",
+  "name": {
+    "uk": "PEP-C, фаза підтримки",
+    "en": "PEP-C, maintenance phase"
+  },
+  "description": {
+    "uk": "Добові дози лишаються ті самі, що й в індукції, — змінюється лише частота приймання. Стартовий рівень 0 — п'ять днів на тиждень (понеділок-п'ятниця), і саме він закладений у цій схемі. Рівень +1 — щодня, -1 — через день, -2 — двічі на тиждень (понеділок і четвер або вівторок і п'ятниця), -3 — раз на тиждень; ці рівні виставляють днями вручну. Якщо лейкоцити падають до 3×10⁹/л і нижче або тромбоцити до 75×10⁹/л і нижче, лікування припиняють, щотижня повторюють аналіз і відновлюють на рівень нижче. Підвищувати рівень може лише консультант. Лікування триває до прогресування або неприйнятної токсичності.",
+    "en": "The daily doses stay as in the induction; only the frequency changes. The starting level 0 is five days a week, Monday to Friday, and that is what this regimen holds. Level +1 is daily, -1 alternate days, -2 twice weekly (Monday and Thursday, or Tuesday and Friday), -3 once weekly; those levels are set by hand through the days. If the white cells fall to 3x10^9/L or below, or the platelets to 75x10^9/L or below, treatment is held, the count repeated weekly, and treatment restarted one level lower. Only the consultant may escalate a level. Treatment continues until progression or unacceptable toxicity."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.107 PEP-C",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-107-pep-c.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "notes": {
+        "uk": "Після сніданку. Таблетки по 5 мг, ковтають цілими, запиваючи водою.",
+        "en": "After breakfast. The tablets are 5 mg, swallowed whole with water."
+      },
+      "days": [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26]
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "notes": {
+        "uk": "Після обіду. Таблетки по 50 мг.",
+        "en": "After lunch. The tablets are 50 mg."
+      },
+      "days": [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26]
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "notes": {
+        "uk": "Після вечері. Капсули по 50 мг.",
+        "en": "After dinner. The capsules are 50 mg."
+      },
+      "days": [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26]
+    },
+    {
+      "key": "procarbazine",
+      "drug_id": "procarbazine",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "notes": {
+        "uk": "На ніч, разом із протиблювотним. Капсули по 50 мг.",
+        "en": "At bedtime, with an antiemetic. The capsules are 50 mg."
+      },
+      "days": [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26]
+    }
+  ]
+}

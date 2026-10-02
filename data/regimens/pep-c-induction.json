@@ -1,0 +1,73 @@
+{
+  "$comment": "Разові дози в цій схемі ніколи не змінюються — змінюється частота приймання. Тому фаза індукції (щодня, дні 1-14) і підтримка (5 днів на тиждень) — дві окремі схеми, а не рівні доз.",
+  "id": "pep-c-induction",
+  "short_name": "PEP-C (індукція)",
+  "name": {
+    "uk": "PEP-C, фаза індукції (преднізолон, етопозид, прокарбазин, циклофосфамід)",
+    "en": "PEP-C, induction phase (prednisolone, etoposide, procarbazine, cyclophosphamide)"
+  },
+  "description": {
+    "uk": "Повністю пероральна паліативна схема при рецидивній або рефрактерній лімфомі. Усі чотири препарати приймають щодня в дні 1-14, кожен у свій час доби. Цикл 14 днів, 1-4 цикли. До фази підтримки переходять, коли лейкоцити відновляться до 3×10⁹/л і вище.",
+    "en": "A fully oral palliative regimen in relapsed or refractory lymphoma. All four drugs are taken daily on days 1 to 14, each at its own time of day. A 14-day cycle, 1 to 4 cycles. The maintenance phase begins once the white cells recover to 3x10^9/L or more."
+  },
+  "cycle_length_days": 14,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.107 PEP-C",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-107-pep-c.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "notes": {
+        "uk": "Після сніданку. Таблетки по 5 мг, ковтають цілими, запиваючи водою.",
+        "en": "After breakfast. The tablets are 5 mg, swallowed whole with water."
+      },
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "notes": {
+        "uk": "Після обіду. Таблетки по 50 мг.",
+        "en": "After lunch. The tablets are 50 mg."
+      },
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "notes": {
+        "uk": "Після вечері. Капсули по 50 мг.",
+        "en": "After dinner. The capsules are 50 mg."
+      },
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    },
+    {
+      "key": "procarbazine",
+      "drug_id": "procarbazine",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "notes": {
+        "uk": "На ніч, разом із протиблювотним. Капсули по 50 мг.",
+        "en": "At bedtime, with an antiemetic. The capsules are 50 mg."
+      },
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    }
+  ]
+}

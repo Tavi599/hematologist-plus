@@ -56,6 +56,20 @@
       "regimens": [
         {
           "regimen_id": "abvd"
+        },
+        {
+          "regimen_id": "chlvpp",
+          "notes": {
+            "uk": "Літні та ослаблені пацієнти, або коли антрацикліни протипоказані",
+            "en": "Elderly and frail patients, or where anthracyclines are contraindicated"
+          }
+        },
+        {
+          "regimen_id": "beacopdac-escalated",
+          "notes": {
+            "uk": "Функціональний стан 0-2, вік до 60 років, після комісії",
+            "en": "Performance status 0-2, aged 60 or under, after the MDT"
+          }
         }
       ]
     },
@@ -76,6 +90,20 @@
         },
         {
           "regimen_id": "abvd"
+        },
+        {
+          "regimen_id": "chlvpp",
+          "notes": {
+            "uk": "Літні та ослаблені пацієнти, або коли антрацикліни протипоказані",
+            "en": "Elderly and frail patients, or where anthracyclines are contraindicated"
+          }
+        },
+        {
+          "regimen_id": "beacopdac-escalated",
+          "notes": {
+            "uk": "Функціональний стан 0-2, вік до 60 років, після комісії",
+            "en": "Performance status 0-2, aged 60 or under, after the MDT"
+          }
         }
       ]
     },
@@ -119,6 +147,13 @@
         },
         {
           "regimen_id": "r-dhaox"
+        },
+        {
+          "regimen_id": "chlvpp",
+          "notes": {
+            "uk": "Літні та ослаблені пацієнти, або коли антрацикліни протипоказані",
+            "en": "Elderly and frail patients, or where anthracyclines are contraindicated"
+          }
         }
       ]
     }

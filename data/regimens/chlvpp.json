@@ -1,0 +1,191 @@
+{
+  "$comment": "Усі чотири цитостатики мають стелю разової дози, тож вони задані через cap_amount. Ко-тримоксазол у довіднику відсутній, тому лишився в описі.",
+  "id": "chlvpp",
+  "short_name": "ChlVPP",
+  "name": {
+    "uk": "ChlVPP (хлорамбуцил, вінбластин, прокарбазин, преднізолон)",
+    "en": "ChlVPP (chlorambucil, vinblastine, procarbazine, prednisolone)"
+  },
+  "description": {
+    "uk": "Лімфома Ходжкіна: перша лінія або терапія порятунку в літніх і ослаблених пацієнтів, а також у тих, кому не можна давати антрациклінову хіміотерапію. Цикл 28 днів, до 8 циклів. Головний ризик — пригнічення кровотворення, тому в літніх і ослаблених дози зменшують. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень на весь час лікування й щонайменше 3 місяці після; у довіднику його немає.",
+    "en": "Hodgkin lymphoma: first line or salvage in elderly and frail patients, and in those who cannot have anthracycline chemotherapy. A 28-day cycle, up to eight cycles. Myelosuppression is the main risk, so the doses are reduced in the elderly and the frail. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week throughout treatment and for at least three months after; it is not in the catalogue."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.79 ChlVPP",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-79-chlvpp.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "chlorambucil",
+      "drug_id": "chlorambucil",
+      "route": "oral",
+      "dose_value": 6,
+      "dose_unit": "mg_m2",
+      "cap_amount": 10,
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "Разова доза не більш як 10 мг. Таблетки по 2 мг, приймають натщесерце — щонайменше за годину до їди або через 3 години після неї; можна на ніч, щоб уникнути денної нудоти.",
+        "en": "No single dose above 10 mg. The tablets are 2 mg and are taken on an empty stomach, at least an hour before or three hours after food; they may be taken at bedtime to avoid daytime nausea."
+      }
+    },
+    {
+      "key": "vinblastine",
+      "drug_id": "vinblastine",
+      "route": "iv_bolus",
+      "dose_value": 6,
+      "dose_unit": "mg_m2",
+      "cap_amount": 10,
+      "days": [1, 8],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "Разова доза не більш як 10 мг. У 50 мл 0,9% NaCl за 10 хвилин.",
+        "en": "No single dose above 10 mg. In 50 mL of 0.9% sodium chloride over 10 minutes."
+      }
+    },
+    {
+      "key": "procarbazine",
+      "drug_id": "procarbazine",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "cap_amount": 200,
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Добова доза не більш як 200 мг, розділена на три приймання, незалежно від їди. Капсули по 50 мг.",
+        "en": "No daily dose above 200 mg, split into three, with or without food. The capsules are 50 mg."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_m2",
+      "cap_amount": 60,
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "Добова доза не більш як 60 мг, уранці під час їди.",
+        "en": "No daily dose above 60 mg, in the morning with food."
+      }
+    },
+    {
+      "key": "ondansetron",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Дні 1-14 — високий еметогенний ризик.",
+        "en": "Days 1 to 14, the highly emetogenic ones."
+      }
+    },
+    {
+      "key": "metoclopramide",
+      "drug_id": "metoclopramide",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Протокол дозволяє 10-20 мг тричі на добу; взято нижню межу.",
+        "en": "The protocol allows 10 to 20 mg three times a day; the lower bound is used."
+      },
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Верхня межа діапазону",
+            "en": "The upper bound of the range"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.79 ChlVPP",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-79-chlvpp.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини разом із гідратацією, 7 днів у першому циклі. При нирковій недостатності дозу зменшують.",
+        "en": "Tumour lysis prophylaxis with hydration, for 7 days in the first cycle. The dose is reduced in renal impairment."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Противірусна профілактика на весь час лікування і ще 3 місяці після нього.",
+        "en": "Antiviral prophylaxis throughout treatment and for three months after."
+      }
+    },
+    {
+      "key": "fluconazole",
+      "drug_id": "fluconazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Протигрибкова профілактика на весь час лікування.",
+        "en": "Antifungal prophylaxis throughout treatment."
+      }
+    },
+    {
+      "key": "omeprazole",
+      "drug_id": "omeprazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Захист шлунка на весь час лікування. Альтернатива протоколу — фамотидин 20 мг двічі на добу, якого в довіднику немає.",
+        "en": "Gastric protection throughout treatment. The protocol's alternative is famotidine 20 mg twice daily, which is not in the catalogue."
+      }
+    }
+  ]
+}
