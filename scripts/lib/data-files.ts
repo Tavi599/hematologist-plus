@@ -6,6 +6,7 @@ import {
   rateRampSchema,
   scheduleBlockSchema,
   diseaseReferencesSchema,
+  doseModifiersSchema,
   doseOptionsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
@@ -159,6 +160,8 @@ export const regimenFileSchema = z.strictObject({
         notes: optionalLocalized,
         /** Same dose as written by other protocols; the physician picks one in the calculator. */
         dose_options: doseOptionsSchema.default([]),
+        /** Circumstances that change the dose, ticked by the physician in the calculator. */
+        dose_modifiers: doseModifiersSchema.default([]),
       }),
     )
     .min(1),

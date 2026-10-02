@@ -4,6 +4,8 @@ import { calculateCourse } from '../domain'
 import { indexCatalog } from './catalog-index'
 import { demoCatalog } from './catalog.fixture'
 import {
+  activeModifiers,
+  applyModifiers,
   buildCourseItems,
   buildCourseItemsFrom,
   DEFAULT_DOSE_CHOICE,
@@ -274,5 +276,77 @@ describe('fitsRoute', () => {
     const built = buildCourseItemsFrom(indexCatalog(catalog), [oral])[0]!
     expect(built.courseDrug.presentations?.map((p) => p.id)).not.toContain('p.amp')
     expect(built.courseDrug.presentations?.map((p) => p.id)).toContain('p.tab')
+  })
+})
+
+describe('dose modifiers', () => {
+  const source = { name: 'ДЕМО: інструкція', checkedOn: '2026-09-19' }
+  const withModifiers = () => {
+    const catalog = demoCatalog()
+    const item = catalog.regimen_items.find((row) => row.id === 'r-chop-21.prednisolone')!
+    item.dose_modifiers = [
+      {
+        key: 'strong-inhibitor',
+        label: { uk: 'Сильний інгібітор' },
+        dose_value: 25,
+        cap_amount: null,
+        notes: null,
+        default_on: false,
+        source,
+      },
+      {
+        key: 'moderate-inhibitor',
+        label: { uk: 'Помірний інгібітор' },
+        dose_value: 50,
+        cap_amount: null,
+        notes: null,
+        default_on: true,
+        source,
+      },
+    ]
+    return catalog
+  }
+
+  it('applies the modifiers the protocol itself assumes until the physician says otherwise', () => {
+    const item = buildCourseItems(indexCatalog(withModifiers()), 'r-chop-21').at(-1)!
+    expect(item.activeModifierKeys).toEqual(['moderate-inhibitor'])
+    expect(item.courseDrug.dose).toEqual({ value: 50, unit: 'mg_flat' })
+  })
+
+  it('lets the physician switch a modifier off and keeps the regimen dose', () => {
+    const items = buildCourseItems(indexCatalog(withModifiers()), 'r-chop-21', undefined, {
+      'r-chop-21.prednisolone': [],
+    })
+    expect(items.at(-1)!.courseDrug.dose).toEqual({ value: 100, unit: 'mg_flat' })
+  })
+
+  it('takes the lowest dose when several circumstances hold at once', () => {
+    const items = buildCourseItems(indexCatalog(withModifiers()), 'r-chop-21', undefined, {
+      'r-chop-21.prednisolone': ['moderate-inhibitor', 'strong-inhibitor'],
+    })
+    expect(items.at(-1)!.courseDrug.dose).toEqual({ value: 25, unit: 'mg_flat' })
+  })
+
+  it('keeps the lowest cap among the modifiers that name one', () => {
+    expect(
+      applyModifiers({ value: 100, capAmount: 60 }, [
+        {
+          ...{ key: 'a', label: {}, notes: null, default_on: false, source },
+          dose_value: 80,
+          cap_amount: 40,
+        },
+        {
+          ...{ key: 'b', label: {}, notes: null, default_on: false, source },
+          dose_value: 90,
+          cap_amount: null,
+        },
+      ]),
+    ).toEqual({ value: 80, capAmount: 40 })
+  })
+
+  it('ignores a modifier key that is not in the catalog', () => {
+    const catalog = withModifiers()
+    const item = catalog.regimen_items.find((row) => row.id === 'r-chop-21.prednisolone')!
+    expect(activeModifiers(item, ['nope'])).toEqual([])
   })
 })

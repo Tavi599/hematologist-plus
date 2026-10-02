@@ -147,6 +147,32 @@ export const doseOptionSchema = z.strictObject({
 export const doseOptionsSchema = z.array(doseOptionSchema)
 
 /**
+ * A circumstance that changes the dose and is switched on or off for this patient: an
+ * interaction, an organ, an age. Unlike a dose option — which asks "by which protocol?" and
+ * admits one answer — several modifiers can hold at once, and two of them may well arrive at the
+ * same milligrams.
+ *
+ * A modifier states the whole dose, never a percentage, and always in the unit the item is
+ * already written in: the catalog records what a document says, and the arithmetic of "minus
+ * 50%" is the document's, not ours. When several are on, the lowest dose applies — the safest of
+ * the circumstances the physician ticked.
+ */
+export const doseModifierSchema = z.strictObject({
+  key: idSchema,
+  /** What the checkbox says, e.g. «Сильний інгібітор CYP3A». */
+  label: localizedTextSchema,
+  dose_value: positiveNumberSchema,
+  cap_amount: positiveNumberSchema.nullable().default(null),
+  notes: localizedTextSchema.nullable().default(null),
+  /** On from the start, for a circumstance the protocol itself assumes (its own antifungal). */
+  default_on: z.boolean().default(false),
+  source: sourceSchema,
+})
+
+export const doseModifiersSchema = z.array(doseModifierSchema)
+export type DoseModifier = z.infer<typeof doseModifierSchema>
+
+/**
  * Where a physician reads more about a disease. The app only links out: guideline text is
  * copyrighted and is never copied into the catalog.
  */

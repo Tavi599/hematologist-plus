@@ -50,13 +50,53 @@
       "key": "venetoclax",
       "drug_id": "venetoclax",
       "route": "oral",
-      "dose_value": 100,
+      "dose_value": 400,
       "dose_unit": "mg_flat",
       "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
       "notes": {
-        "uk": "Дні 1-21; тривалість може бути іншою (28 днів за сценарієм 1 або 14 днів, якщо показники крові не відновились) - уточнює лікар. Доза вже зменшена через взаємодію з протигрибковим засобом (позаконазол або вориконазол - сильні інгібітори CYP3A), які за протоколом дають з дня 1. Без такого супроводу доза інша - звіряйтесь із протоколом.",
-        "en": "Days 1-21; the duration may differ (28 days in scenario 1, or 14 days where the counts have not recovered) at the physician's discretion. The dose is already reduced for the interaction with the antifungal (posaconazole or voriconazole, strong CYP3A inhibitors) that the protocol starts on day 1. Without that cover the dose differs - check the protocol."
-      }
+        "uk": "Дні 1-21; тривалість може бути іншою (28 днів за сценарієм 1 або 14 днів, якщо показники крові не відновились) - уточнює лікар. Повна добова доза - 400 мг; поправка «протигрибкова профілактика азолом» стоїть увімкненою, бо протокол призначає азол з дня 1.",
+        "en": "Days 1-21; the duration may differ (28 days in scenario 1, or 14 days where the counts have not recovered) at the physician's discretion. The full daily dose is 400 mg; the azole prophylaxis modifier starts switched on, because the protocol gives the azole from day 1."
+      },
+      "dose_modifiers": [
+        {
+          "key": "azole-prophylaxis",
+          "label": {
+            "uk": "Протигрибкова профілактика азолом за протоколом (позаконазол або вориконазол)",
+            "en": "The protocol's azole antifungal prophylaxis (posaconazole or voriconazole)"
+          },
+          "dose_value": 100,
+          "notes": {
+            "uk": "Протокол ML.84 призначає позаконазол або вориконазол з дня 1, і саме тому пише вже зменшену дозу венетоклаксу. Знімати цю позначку можна лише тоді, коли азол не застосовується.",
+            "en": "The ML.84 protocol starts posaconazole or voriconazole on day 1, which is why it writes the already reduced venetoclax dose. Untick this only where no azole is given."
+          },
+          "default_on": true,
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.84 Azacitidine and Venetoclax",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-84-azacitidine-and-venetoclax-covid-19.pdf",
+            "version": "4.0",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "key": "cyp3a-moderate",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A (флуконазол, еритроміцин, дилтіазем, верапаміл)",
+            "en": "Moderate CYP3A inhibitor (fluconazole, erythromycin, diltiazem, verapamil)"
+          },
+          "dose_value": 200,
+          "notes": {
+            "uk": "Дозу зменшують щонайменше вдвічі. При ХЛЛ на початку лікування й під час титрування помірних інгібіторів краще уникати.",
+            "en": "The dose is halved at least. In CLL moderate inhibitors are better avoided at initiation and during the ramp-up."
+          },
+          "default_on": false,
+          "source": {
+            "name": "EMA, Venclyxto (венетоклакс), коротка характеристика препарату, таблиця 7",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/venclyxto-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
     },
     {
       "key": "aciclovir",

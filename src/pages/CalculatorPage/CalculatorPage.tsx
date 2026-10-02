@@ -62,6 +62,9 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [drugPercent, setDrugPercent] = useState<Record<string, number>>({})
   const [doseOverrideAmount, setDoseOverrideAmount] = useState<Record<string, number>>({})
   const [chosenDoses, setChosenDoses] = useState<Record<string, string>>({})
+  // Empty until the physician touches a tick: an item with no entry here uses the modifiers its
+  // own protocol assumes.
+  const [chosenModifiers, setChosenModifiers] = useState<Record<string, string[]>>({})
   const [shiftMin, setShiftMin] = useState<Record<string, number>>({})
   const [header, setHeader] = useState(emptyHeader)
   const [manualRows, setManualRows] = useState<ManualRow[]>([])
@@ -86,10 +89,10 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
 
   const items = useMemo(
     () => [
-      ...(regimenId ? buildCourseItems(catalog, regimenId, chosenDoses) : []),
-      ...buildCourseItemsFrom(catalog, customItems, chosenDoses),
+      ...(regimenId ? buildCourseItems(catalog, regimenId, chosenDoses, chosenModifiers) : []),
+      ...buildCourseItemsFrom(catalog, customItems, chosenDoses, chosenModifiers),
     ],
-    [catalog, regimenId, customItems, chosenDoses],
+    [catalog, regimenId, customItems, chosenDoses, chosenModifiers],
   )
 
   // A regimen opens with its cytostatics on and its premedication and supportive therapy off:
@@ -231,6 +234,9 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           }
           onDoseChoice={(id, choiceId) =>
             setChosenDoses((current) => ({ ...current, [id]: choiceId }))
+          }
+          onDoseModifiers={(id, keys) =>
+            setChosenModifiers((current) => ({ ...current, [id]: keys }))
           }
           onDoseOverride={(id, doseMg) =>
             setDoseOverrideAmount((current) => {

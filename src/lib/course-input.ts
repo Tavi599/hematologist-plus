@@ -1,6 +1,6 @@
 import { amountUnitOf, convertAmount, type CourseDrug } from '../domain'
 import type { Drug, DrugInfusionParams, DrugPresentation, RegimenItem } from '../schemas/catalog'
-import type { Source } from '../schemas/common'
+import type { DoseModifier, Source } from '../schemas/common'
 import type { LocalizedText } from './localized'
 import type { CatalogIndex } from './catalog-index'
 
@@ -13,6 +13,10 @@ export interface CourseItem {
   doseChoices: DoseChoice[]
   /** Id of the choice the calculation used. */
   doseChoiceId: string
+  /** Circumstances that change this dose, as the catalog records them. */
+  doseModifiers: DoseModifier[]
+  /** Keys of the modifiers the calculation applied. */
+  activeModifierKeys: string[]
   /** What the calculation engine needs; `infusion` is set only when a volume can be derived. */
   courseDrug: CourseDrug
   /** Infusion that cannot be calculated: no catalog parameters and no fallback in the regimen. */
@@ -69,6 +73,36 @@ export function doseChoices(catalog: CatalogIndex, item: RegimenItem): DoseChoic
   ]
 }
 
+/**
+ * The modifiers in force for an item: what the physician ticked, or — before they have touched
+ * anything — the ones the protocol itself assumes.
+ */
+export function activeModifiers(item: RegimenItem, chosen?: string[]): DoseModifier[] {
+  // An offline copy saved by an older version of the app has no such column at all.
+  const modifiers = item.dose_modifiers ?? []
+  if (chosen === undefined) return modifiers.filter((modifier) => modifier.default_on)
+  return modifiers.filter((modifier) => chosen.includes(modifier.key))
+}
+
+/**
+ * The dose after the modifiers in force. Each states a whole dose in the item's own unit, so the
+ * safest of them simply wins: the lowest dose, and the lowest cap among those that name one.
+ */
+export function applyModifiers(
+  dose: { value: number; capAmount: number | null },
+  modifiers: DoseModifier[],
+): { value: number; capAmount: number | null } {
+  let value = dose.value
+  let capAmount = dose.capAmount
+  for (const modifier of modifiers) {
+    if (modifier.dose_value < value) value = modifier.dose_value
+    if (modifier.cap_amount !== null && (capAmount === null || modifier.cap_amount < capAmount)) {
+      capAmount = modifier.cap_amount
+    }
+  }
+  return { value, capAmount }
+}
+
 /** Infusion parameters of a drug: the one the item points at, else the default, else the only one. */
 export function resolveInfusionParams(
   catalog: CatalogIndex,
@@ -86,8 +120,14 @@ export function buildCourseItems(
   catalog: CatalogIndex,
   regimenId: string,
   chosenDoses?: Record<string, string>,
+  chosenModifiers?: Record<string, string[]>,
 ): CourseItem[] {
-  return buildCourseItemsFrom(catalog, catalog.itemsByRegimen.get(regimenId) ?? [], chosenDoses)
+  return buildCourseItemsFrom(
+    catalog,
+    catalog.itemsByRegimen.get(regimenId) ?? [],
+    chosenDoses,
+    chosenModifiers,
+  )
 }
 
 /** Same for an arbitrary list of items, including drugs the physician added by hand. */
@@ -95,6 +135,7 @@ export function buildCourseItemsFrom(
   catalog: CatalogIndex,
   items: RegimenItem[],
   chosenDoses?: Record<string, string>,
+  chosenModifiers?: Record<string, string[]>,
 ): CourseItem[] {
   return items.flatMap((item) => {
     const drug = catalog.drugs.get(item.drug_id)
@@ -123,13 +164,15 @@ export function buildCourseItemsFrom(
             drug.unit_equivalence,
           ))
     const durationMin = item.duration_min ?? params?.duration_min ?? null
+    const modifiers = activeModifiers(item, chosenModifiers?.[item.id])
+    const dosed = applyModifiers({ value: chosen.doseValue, capAmount }, modifiers)
 
     const courseDrug: CourseDrug = {
       id: item.id,
       dose: {
-        value: chosen.doseValue,
+        value: dosed.value,
         unit: chosen.doseUnit,
-        ...(capAmount === null ? {} : { capAmount }),
+        ...(dosed.capAmount === null ? {} : { capAmount: dosed.capAmount }),
       },
       days: item.days,
       administrationsPerDay: item.administrations_per_day,
@@ -152,6 +195,8 @@ export function buildCourseItemsFrom(
         infusionParams: params,
         doseChoices: choices,
         doseChoiceId: chosen.id,
+        doseModifiers: item.dose_modifiers ?? [],
+        activeModifierKeys: modifiers.map((modifier) => modifier.key),
         courseDrug,
         missingInfusionData: item.route === 'iv_infusion' && !infusion,
       },
@@ -226,6 +271,7 @@ export function customCourseItem(params: {
     notes: null,
     sort_order: params.sortOrder,
     dose_options: [],
+    dose_modifiers: [],
     // A drug added by hand is placed like the rest of its kind: tablets on the ward sheet.
     block: params.route === 'oral' ? 'ward' : 'infusion',
     interval_min: null,

@@ -184,6 +184,12 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
     if (doses.includes(`${item.dose_value} ${item.dose_unit}`)) {
       error('regimen_items', item.id, "dose_options: an alternative repeats the item's own dose")
     }
+    // Modifiers are ticked, not picked, so each needs an identity of its own. Their doses may
+    // coincide — two circumstances can lead to the same milligrams — but the keys may not.
+    const modifierKeys = item.dose_modifiers.map((modifier) => modifier.key)
+    if (new Set(modifierKeys).size !== modifierKeys.length) {
+      error('regimen_items', item.id, 'dose_modifiers: two modifiers share a key')
+    }
     // Two doses from one document are told apart by their note; without it the picker shows the
     // name of that document twice.
     const byName = new Map<string, number>()

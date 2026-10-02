@@ -6,8 +6,8 @@ import i18n from '../../lib/i18n'
 import { renderWithProviders } from '../../test/render'
 import { CalculatorPage } from './CalculatorPage'
 
-const source = vi.hoisted(() => ({ fetchTable: vi.fn() }))
-vi.mock('../../lib/catalog-source', () => ({ catalogFetcher: source.fetchTable }))
+const fetch = vi.hoisted(() => ({ fetchTable: vi.fn() }))
+vi.mock('../../lib/catalog-source', () => ({ catalogFetcher: fetch.fetchTable }))
 
 /** 180 cm × 80 kg → BSA exactly 2.0 m², so the demo regimen gives round doses. */
 async function fillPatient() {
@@ -28,8 +28,8 @@ describe('CalculatorPage', () => {
   beforeEach(async () => {
     await act(() => i18n.changeLanguage('uk'))
     const catalog = demoCatalog()
-    source.fetchTable.mockReset()
-    source.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
+    fetch.fetchTable.mockReset()
+    fetch.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
   })
 
   it('calculates the regimen once the patient and the regimen are set', async () => {
@@ -87,6 +87,52 @@ describe('CalculatorPage', () => {
     expect(screen.queryByText(/NaCl 0,9% 250 мл/)).not.toBeInTheDocument()
   })
 
+  it('switches a dose modifier on and off and takes the lowest dose of those ticked', async () => {
+    const catalog = demoCatalog()
+    const source = { name: 'ДЕМО: інструкція', checkedOn: '2026-09-19' }
+    catalog.regimen_items.find((row) => row.id === 'r-chop-21.cyclophosphamide')!.dose_modifiers = [
+      {
+        key: 'azole',
+        label: { uk: 'Азол за протоколом' },
+        dose_value: 500,
+        cap_amount: null,
+        notes: null,
+        default_on: true,
+        source,
+      },
+      {
+        key: 'renal',
+        label: { uk: 'Ниркова недостатність' },
+        dose_value: 250,
+        cap_amount: null,
+        notes: null,
+        default_on: false,
+        source,
+      },
+    ]
+    fetch.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
+
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    await screen.findByRole('combobox', { name: 'Схема' })
+    await fillPatient()
+
+    const table = screen.getByRole('table', { name: 'Дози' })
+    const row = within(table).getByText('ДЕМО Циклофосфамід').closest('tr')!
+    // A modifier keeps the item's unit, so this is 500 mg/m² × 2.0 m² against the regimen's 750.
+    expect(within(row).getAllByText('1 000 мг')).toHaveLength(2)
+
+    const azole = within(row).getByRole('checkbox', { name: /Азол за протоколом/ })
+    await act(async () => fireEvent.click(azole))
+    expect(within(row).getAllByText('1 500 мг')).toHaveLength(2)
+
+    // Two circumstances at once: the lower of the two doses is the one that is given.
+    await act(async () => fireEvent.click(azole))
+    await act(async () =>
+      fireEvent.click(within(row).getByRole('checkbox', { name: /Ниркова недостатність/ })),
+    )
+    expect(within(row).getAllByText('500 мг')).toHaveLength(2)
+  })
+
   it('shows the composition of the regimen before the patient data is entered', async () => {
     renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
     expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
@@ -136,7 +182,7 @@ describe('CalculatorPage', () => {
   it('narrows the regimen list by disease and by what can be obtained', async () => {
     const catalog = demoCatalog()
     catalog.drugs.find((drug) => drug.id === 'rituximab')!.availability = 'unavailable'
-    source.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
+    fetch.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
     renderWithProviders(<CalculatorPage />)
 
     const regimen = await screen.findByRole('combobox', { name: 'Схема' })
@@ -177,7 +223,7 @@ describe('CalculatorPage', () => {
   it('opens a regimen with the cytostatics on and the supportive therapy off', async () => {
     const catalog = demoCatalog()
     catalog.regimen_items.find((row) => row.id === 'r-chop-21.prednisolone')!.role = 'supportive'
-    source.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
+    fetch.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
     renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
     await screen.findByRole('combobox', { name: 'Схема' })
     await fillPatient()

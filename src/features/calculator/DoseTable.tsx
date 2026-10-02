@@ -40,6 +40,8 @@ export interface DoseTableProps {
   onReduction: (itemId: string, percent: number | null) => void
   onDoseOverride: (itemId: string, doseAmount: number | null) => void
   onDoseChoice: (itemId: string, choiceId: string) => void
+  /** The full set of modifier keys in force for this item after the physician's click. */
+  onDoseModifiers: (itemId: string, keys: string[]) => void
   onRemove: (itemId: string) => void
   customIds: string[]
 }
@@ -135,6 +137,7 @@ function DoseRow({
   onReduction,
   onDoseOverride,
   onDoseChoice,
+  onDoseModifiers,
   onRemove,
   customIds,
 }: DoseTableProps & {
@@ -216,6 +219,38 @@ function DoseRow({
               }}
               aria-label={`${t('calculator.doses.doseSource')}: ${localize(item.drug.name, language)}`}
             />
+          )}
+          {item.doseModifiers.length > 0 && (
+            // Several circumstances can hold at once — an interaction and an organ — and two of
+            // them may well land on the same milligrams, so these are ticks, not a list to pick from.
+            <Checkbox.Group
+              mt={6}
+              label={t('calculator.doses.modifiers')}
+              description={t('calculator.doses.modifiersHint')}
+              value={item.activeModifierKeys}
+              onChange={(keys) => onDoseModifiers(id, keys)}
+            >
+              <Stack gap={2} mt={2}>
+                {item.doseModifiers.map((modifier) => (
+                  <Checkbox
+                    key={modifier.key}
+                    value={modifier.key}
+                    disabled={!enabled || manualAmount !== undefined}
+                    size="xs"
+                    label={
+                      <Text size="xs">
+                        {localize(modifier.label, language)}
+                        <Text span c="dimmed">
+                          {' '}
+                          — {formatNumber(modifier.dose_value, language, 2)}{' '}
+                          {tu(`units.${item.item.dose_unit}`)}
+                        </Text>
+                      </Text>
+                    }
+                  />
+                ))}
+              </Stack>
+            </Checkbox.Group>
           )}
         </Table.Td>
         <Table.Td>

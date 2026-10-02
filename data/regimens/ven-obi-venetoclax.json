@@ -34,7 +34,47 @@
       "notes": {
         "uk": "Уранці під час їди, запиваючи водою. Уникати грейпфрута, помаранчів сорту «севільський» і карамболі за 3 дні до першої дози й до кінця лікування.",
         "en": "In the morning with food and water. Grapefruit, Seville oranges and star fruit are avoided from three days before the first dose until treatment ends."
-      }
+      },
+      "dose_modifiers": [
+        {
+          "key": "cyp3a-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A (позаконазол, вориконазол, кетоконазол, ритонавір, кларитроміцин)",
+            "en": "Strong CYP3A inhibitor (posaconazole, voriconazole, ketoconazole, ritonavir, clarithromycin)"
+          },
+          "dose_value": 100,
+          "notes": {
+            "uk": "Дозу зменшують до 100 мг або менше. При ХЛЛ одночасний прийом із сильним інгібітором протипоказаний на початку лікування й під час титрування. Попередню дозу повертають через 2-3 дні після відміни інгібітора.",
+            "en": "The dose drops to 100 mg or less. In CLL a strong inhibitor is contraindicated at initiation and during the ramp-up. The previous dose is resumed 2 to 3 days after the inhibitor stops."
+          },
+          "default_on": false,
+          "source": {
+            "name": "EMA, Venclyxto (венетоклакс), коротка характеристика препарату, таблиця 7",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/venclyxto-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "key": "cyp3a-moderate",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A (флуконазол, еритроміцин, дилтіазем, верапаміл)",
+            "en": "Moderate CYP3A inhibitor (fluconazole, erythromycin, diltiazem, verapamil)"
+          },
+          "dose_value": 200,
+          "notes": {
+            "uk": "Дозу зменшують щонайменше вдвічі. При ХЛЛ на початку лікування й під час титрування помірних інгібіторів краще уникати.",
+            "en": "The dose is halved at least. In CLL moderate inhibitors are better avoided at initiation and during the ramp-up."
+          },
+          "default_on": false,
+          "source": {
+            "name": "EMA, Venclyxto (венетоклакс), коротка характеристика препарату, таблиця 7",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/venclyxto-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
     },
     {
       "key": "aciclovir",

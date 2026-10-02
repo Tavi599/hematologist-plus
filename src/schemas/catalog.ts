@@ -4,6 +4,7 @@ import {
   amountUnitSchema,
   rateRampSchema,
   scheduleBlockSchema,
+  doseModifiersSchema,
   doseOptionsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
@@ -145,6 +146,9 @@ export const regimenItemRowSchema = z.object({
   interval_min: positiveNumberSchema.int().nullable(),
   /** day_support: minutes from the start of the day's first chained drug; negative is before it. */
   anchor_offset_min: z.number().int().nullable(),
+  /** Circumstances that change this dose, switched on per patient; defaulted for a database
+   *  where the migration has not run yet. */
+  dose_modifiers: doseModifiersSchema.default([]),
 })
 
 export const classificationSystemRowSchema = z.object({
