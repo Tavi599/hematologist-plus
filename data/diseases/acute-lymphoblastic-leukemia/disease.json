@@ -104,6 +104,35 @@
           "regimen_id": "all-maintenance"
         }
       ]
+    },
+    {
+      "key": "relapsed",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив або рефрактерність",
+        "en": "Relapsed or refractory"
+      },
+      "description": {
+        "uk": "Лікування підбирають за імунофенотипом і за тим, що пацієнт уже отримував; мета — ремісія перед трансплантацією.",
+        "en": "The choice follows the immunophenotype and what the patient has already had; the aim is a remission before transplant."
+      },
+      "regimens": [
+        {
+          "regimen_id": "inotuzumab-cycle-1",
+          "notes": {
+            "uk": "Цикл 1",
+            "en": "Cycle 1"
+          }
+        },
+        {
+          "regimen_id": "inotuzumab-remission",
+          "notes": {
+            "uk": "Цикли 2 і далі при ремісії",
+            "en": "Cycle 2 onwards in remission"
+          }
+        }
+      ],
+      "children": []
     }
   ]
 }

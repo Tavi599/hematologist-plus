@@ -1,0 +1,37 @@
+{
+  "$comment": "Доза для МДС нижча за мієломну: 10 мг у дні 1-21 циклу на 28 днів.",
+  "id": "lenalidomide-mds",
+  "short_name": "Леналідомід (МДС)",
+  "name": {
+    "uk": "Леналідомід при мієлодиспластичному синдромі з делецією 5q",
+    "en": "Lenalidomide in myelodysplastic syndrome with a 5q deletion"
+  },
+  "description": {
+    "uk": "Залежна від трансфузій анемія (менш як 8 тижнів поспіль без трансфузій еритроцитів за 16 тижнів до початку лікування) при мієлодиспластичному синдромі дуже низького, низького або проміжного ризику за IPSS-R, пов'язаному з ізольованою делецією 5q — або з нею й ще однією аномалією, — коли інших достатніх варіантів лікування немає. Цикл 28 днів: три тижні прийому, тиждень перерви. Леналідомід призначають і видають лише в межах програми запобігання вагітності; потрібна оцінка ризику тромбозу й відповідна профілактика.",
+    "en": "Transfusion-dependent anaemia (fewer than 8 consecutive weeks without red cell transfusions in the 16 weeks before treatment) in myelodysplastic syndrome of very low, low or intermediate IPSS-R risk associated with an isolated 5q deletion, or that with one further abnormality, where other options are insufficient. A 28-day cycle: three weeks on, one week off. Lenalidomide is prescribed and dispensed only within the pregnancy prevention programme; the thrombotic risk is assessed and prophylaxis given accordingly."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.39 Lenalidomide MDS",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-39-lenalidomide-mds.pdf",
+      "version": "3.0 (07.2025)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Раз на добу, дні 1-21, далі тиждень перерви.",
+        "en": "Once daily on days 1 to 21, then a week off."
+      }
+    }
+  ]
+}

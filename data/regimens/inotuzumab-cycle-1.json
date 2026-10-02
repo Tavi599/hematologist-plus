@@ -1,0 +1,70 @@
+{
+  "$comment": "Цикл 1 має дві різні дози в одному циклі — 0,8 мг/м² у день 1 і 0,5 мг/м² у дні 8 і 15, тому це дві позиції.",
+  "id": "inotuzumab-cycle-1",
+  "short_name": "Інотузумаб (1)",
+  "name": {
+    "uk": "Інотузумаб озогаміцин, цикл 1",
+    "en": "Inotuzumab ozogamicin, cycle 1"
+  },
+  "description": {
+    "uk": "Гостра лімфобластна лейкемія. Перший цикл триває 3 тижні; його можна подовжити до 4 тижнів, якщо досягнуто повної ремісії (зокрема з неповним відновленням показників) та/або щоб дати токсичності минути. Перші дві дози циклу 1 зазвичай вводять у стаціонарі. Пацієнта спостерігають під час інфузії і щонайменше годину після неї — через ризик реакцій на введення. Час введення можна зсувати на ±2 дні, зберігаючи щонайменше 6 днів між дозами. Після відновлення показників (нейтрофіли понад 1×10⁹/л, тромбоцити понад 50×10⁹/л) оцінюють ремісію за аспіратом кісткового мозку.",
+    "en": "Acute lymphoblastic leukaemia. The first cycle runs three weeks and may be extended to four if a complete remission, including one with incomplete count recovery, is achieved, or to let toxicity settle. The first two doses of cycle 1 are usually given as an inpatient. The patient is watched during the infusion and for at least an hour after it, for infusion-related reactions. The timing may shift by up to 2 days either way, keeping at least 6 days between doses. Once the counts recover (neutrophils above 1x10^9/L, platelets above 50x10^9/L) remission is assessed on a marrow aspirate."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.82 Inotuzumab Ozogamicin",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-82-inotuzumab-ozogamicin.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "За 30 хвилин до інотузумабу. Протокол додає гідрокортизону натрію сукцинат 100 мг і хлорфенамін 10 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "30 minutes before the inotuzumab. The protocol adds hydrocortisone sodium succinate 100 mg and chlorphenamine 10 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "inotuzumab-d1",
+      "drug_id": "inotuzumab-ozogamicin",
+      "route": "iv_infusion",
+      "dose_value": 0.8,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 1 годину.",
+        "en": "In 50 mL of 0.9% sodium chloride over an hour."
+      }
+    },
+    {
+      "key": "inotuzumab-d8-15",
+      "drug_id": "inotuzumab-ozogamicin",
+      "route": "iv_infusion",
+      "dose_value": 0.5,
+      "dose_unit": "mg_m2",
+      "days": [8, 15],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 1 годину.",
+        "en": "In 50 mL of 0.9% sodium chloride over an hour."
+      }
+    }
+  ]
+}

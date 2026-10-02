@@ -1,0 +1,55 @@
+{
+  "$comment": "З циклу 2 доза залежить від того, чи досягнуто ремісії: 0,5 мг/м² тричі на цикл при ремісії — це ця схема; без ремісії лишається розклад циклу 1.",
+  "id": "inotuzumab-remission",
+  "short_name": "Інотузумаб (2+, ремісія)",
+  "name": {
+    "uk": "Інотузумаб озогаміцин, цикли 2 і далі, при досягнутій ремісії",
+    "en": "Inotuzumab ozogamicin, cycle 2 onwards, in remission"
+  },
+  "description": {
+    "uk": "Цикл 4 тижні. Наступний цикл починають, коли нейтрофіли сягнуть 1×10⁹/л, а тромбоцити 50×10⁹/л, — якщо тільки цитопенія не спричинена залишковою лейкемією, і це рішення приймає лише консультант. Якщо ремісії не досягнуто, доза лишається такою, як у циклі 1: 0,8 мг/м² у день 1 і 0,5 мг/м² у дні 8 і 15. Пацієнта спостерігають під час інфузії і щонайменше годину після неї — через ризик реакцій на введення. Час введення можна зсувати на ±2 дні, зберігаючи щонайменше 6 днів між дозами.",
+    "en": "A four-week cycle. The next cycle starts once neutrophils reach 1x10^9/L and platelets 50x10^9/L, unless the cytopenia is thought to be residual leukaemia, which only the consultant decides. Without a remission the dosing stays as in cycle 1: 0.8 mg/m2 on day 1 and 0.5 mg/m2 on days 8 and 15. The patient is watched during the infusion and for at least an hour after it, for infusion-related reactions. The timing may shift by up to 2 days either way, keeping at least 6 days between doses."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.82 Inotuzumab Ozogamicin",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-82-inotuzumab-ozogamicin.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "За 30 хвилин до інотузумабу. Протокол додає гідрокортизону натрію сукцинат 100 мг і хлорфенамін 10 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "30 minutes before the inotuzumab. The protocol adds hydrocortisone sodium succinate 100 mg and chlorphenamine 10 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "inotuzumab",
+      "drug_id": "inotuzumab-ozogamicin",
+      "route": "iv_infusion",
+      "dose_value": 0.5,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 1 годину. Доза для пацієнта, який досяг ремісії.",
+        "en": "In 50 mL of 0.9% sodium chloride over an hour. This is the dose once remission is achieved."
+      }
+    }
+  ]
+}

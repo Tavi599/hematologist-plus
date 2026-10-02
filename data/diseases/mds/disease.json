@@ -33,6 +33,28 @@
   ],
   "treatment": [
     {
+      "key": "lower-risk",
+      "kind": "line",
+      "title": {
+        "uk": "Нижчий ризик",
+        "en": "Lower risk"
+      },
+      "description": {
+        "uk": "Дуже низький, низький і проміжний ризик за IPSS-R. Лікування спрямоване на цитопенії, передусім на залежність від трансфузій, а не на саму хворобу.",
+        "en": "Very low, low and intermediate IPSS-R risk. Treatment is aimed at the cytopenias, above all at transfusion dependence, rather than at the disease itself."
+      },
+      "regimens": [
+        {
+          "regimen_id": "lenalidomide-mds",
+          "notes": {
+            "uk": "Делеція 5q",
+            "en": "A 5q deletion"
+          }
+        }
+      ],
+      "children": []
+    },
+    {
       "key": "higher-risk",
       "kind": "group",
       "title": {
