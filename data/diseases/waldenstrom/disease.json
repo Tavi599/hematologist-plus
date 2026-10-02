@@ -55,6 +55,9 @@
         },
         {
           "regimen_id": "br"
+        },
+        {
+          "regimen_id": "ibrutinib-mono"
         }
       ]
     },
@@ -68,7 +71,12 @@
       "description": {
         "uk": "Повторення схеми першої лінії за тривалої ремісії або перехід на інгібітор BTK (ібрутиніб, занубрутиніб) усередину тривало. Препарати в довіднику є, схем як таких немає.",
         "en": "Repeating the first-line regimen after a long remission, or switching to a BTK inhibitor (ibrutinib, zanubrutinib) taken orally and continuously. The drugs are in the catalog but not as regimens."
-      }
+      },
+      "regimens": [
+        {
+          "regimen_id": "ibrutinib-mono"
+        }
+      ]
     }
   ]
 }

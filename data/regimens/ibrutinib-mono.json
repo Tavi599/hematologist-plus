@@ -1,0 +1,94 @@
+{
+  "$comment": "Доза 420 мг — для ХЛЛ, лімфоми з малих лімфоцитів і макроглобулінемії Вальденстрема; 560 мг — для мантійноклітинної лімфоми, тому вона в списку доз, а не окремою схемою. Поправки на інгібітори CYP3A4 — з розділу взаємодій того самого протоколу.",
+  "id": "ibrutinib-mono",
+  "short_name": "Ібрутиніб",
+  "name": {
+    "uk": "Ібрутиніб у монорежимі",
+    "en": "Ibrutinib monotherapy"
+  },
+  "description": {
+    "uk": "Приймають щодня приблизно в один час, таблетки ковтають цілими, запиваючи водою. Цикл 28 днів, до прогресування або неприйнятної токсичності. Варфарин та інші антагоністи вітаміну К разом із ібрутинібом не призначають; препарати звіробою протипоказані.",
+    "en": "Taken daily at about the same time, the tablets swallowed whole with water. 28-day cycle, until progression or unacceptable toxicity. Warfarin and other vitamin K antagonists are not given alongside; St John's wort is contraindicated."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+      "version": "перевірено 2026-10-02",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "ibrutinib",
+      "drug_id": "ibrutinib",
+      "route": "oral",
+      "dose_value": 420,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Доза для ХЛЛ, лімфоми з малих лімфоцитів і макроглобулінемії Вальденстрема. Показання при ХЛЛ — делеція 17p або мутація TP53, у першій лінії й при рецидиві. Сильних і помірних індукторів CYP3A4 (карбамазепін, рифампіцин, фенітоїн) уникають — вони знижують концентрацію ібрутинібу.",
+        "en": "The dose for CLL, small lymphocytic lymphoma and Waldenstrom macroglobulinaemia. In CLL the indication is a 17p deletion or a TP53 mutation, first line and at relapse. Strong and moderate CYP3A4 inducers - carbamazepine, rifampicin, phenytoin - are avoided, as they lower the ibrutinib concentration."
+      },
+      "dose_options": [
+        {
+          "dose_value": 560,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Мантійноклітинна лімфома",
+            "en": "Mantle cell lymphoma"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ],
+      "dose_modifiers": [
+        {
+          "key": "cyp3a4-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A4 (кетоконазол, ітраконазол, вориконазол, позаконазол, кларитроміцин, телітроміцин)",
+            "en": "Strong CYP3A4 inhibitor (ketoconazole, itraconazole, voriconazole, posaconazole, clarithromycin, telithromycin)"
+          },
+          "dose_value": 140,
+          "notes": {
+            "uk": "Одночасного призначення краще уникати. Якщо інгібітор потрібен ненадовго (протигрибковий препарат чи антибіотик на 7 днів або менше), ібрутиніб на цей час або переривають, або зменшують до 140 мг на добу. Пацієнта пильно спостерігають щодо ознак токсичності.",
+            "en": "Concomitant use is better avoided. Where the inhibitor is short-term - an antifungal or antibiotic for 7 days or less - ibrutinib is either interrupted or reduced to 140 mg daily. Watch closely for signs of toxicity."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "key": "cyp3a4-moderate",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A4",
+            "en": "Moderate CYP3A4 inhibitor"
+          },
+          "dose_value": 280,
+          "notes": {
+            "uk": "Якщо без інгібітора не обійтися. Сюди ж належать грейпфрут і севільські апельсини — їх виключають.",
+            "en": "Where the inhibitor cannot be avoided. Grapefruit and Seville oranges count as moderate inhibitors and are excluded."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    }
+  ]
+}

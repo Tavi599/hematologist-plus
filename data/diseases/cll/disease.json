@@ -81,6 +81,13 @@
             "uk": "Зокрема при del(17p)/мутації TP53",
             "en": "Including del(17p) or a TP53 mutation"
           }
+        },
+        {
+          "regimen_id": "ibrutinib-mono",
+          "notes": {
+            "uk": "Делеція 17p або мутація TP53",
+            "en": "A 17p deletion or TP53 mutation"
+          }
         }
       ]
     },
@@ -108,6 +115,13 @@
         },
         {
           "regimen_id": "br-cll"
+        },
+        {
+          "regimen_id": "ibrutinib-mono",
+          "notes": {
+            "uk": "Делеція 17p або мутація TP53",
+            "en": "A 17p deletion or TP53 mutation"
+          }
         }
       ]
     }

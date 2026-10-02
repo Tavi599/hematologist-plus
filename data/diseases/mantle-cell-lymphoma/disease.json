@@ -84,7 +84,16 @@
       "description": {
         "uk": "Після імунохіміотерапії стандарт другої лінії — ковалентний інгібітор BTK у монорежимі (ібрутиніб, акалабрутиніб, занубрутиніб), сам або з венетоклаксом. Препарати в довіднику є, схем як таких немає: дозування постійне, усередину, до прогресування або непереносимості.",
         "en": "After immunochemotherapy the second-line standard is a covalent BTK inhibitor alone (ibrutinib, acalabrutinib, zanubrutinib) or with venetoclax. The drugs are in the catalog but not as regimens: they are taken orally and continuously until progression or toxicity."
-      }
+      },
+      "regimens": [
+        {
+          "regimen_id": "ibrutinib-mono",
+          "notes": {
+            "uk": "Доза 560 мг",
+            "en": "At the 560 mg dose"
+          }
+        }
+      ]
     }
   ]
 }
