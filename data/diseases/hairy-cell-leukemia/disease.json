@@ -1,0 +1,34 @@
+{
+  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
+  "id": "hairy-cell-leukemia",
+  "name": {
+    "uk": "Волосатоклітинна лейкемія",
+    "en": "Hairy cell leukemia"
+  },
+  "summary": {
+    "uk": "Рідкісна В-клітинна лейкемія з цитопеніями й спленомегалією; характерна мутація BRAF V600E. Лікування призначають за наявності показань, а не за самим діагнозом.",
+    "en": "A rare B-cell leukemia with cytopenias and splenomegaly; BRAF V600E is characteristic. Treatment is given for indications, not for the diagnosis alone."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C91.4",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Hairy%20cell%20leukemia"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Hairy%20cell%20leukemia"
+    }
+  ],
+  "treatment": []
+}

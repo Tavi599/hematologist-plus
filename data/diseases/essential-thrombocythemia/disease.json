@@ -1,0 +1,34 @@
+{
+  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
+  "id": "essential-thrombocythemia",
+  "name": {
+    "uk": "Есенціальна тромбоцитемія",
+    "en": "Essential thrombocythemia"
+  },
+  "summary": {
+    "uk": "Мієлопролиферативне новоутворення з тромбоцитозом (JAK2, CALR або MPL); лікування визначає ризик тромбозу, а не саме число тромбоцитів.",
+    "en": "A myeloproliferative neoplasm with thrombocytosis (JAK2, CALR or MPL); treatment follows thrombotic risk rather than the platelet count itself."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "D47.3",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Essential%20thrombocythemia"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Essential%20thrombocythemia"
+    }
+  ],
+  "treatment": []
+}

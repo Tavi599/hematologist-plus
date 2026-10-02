@@ -1,0 +1,34 @@
+{
+  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
+  "id": "apl",
+  "name": {
+    "uk": "Гостра промієлоцитарна лейкемія",
+    "en": "Acute promyelocytic leukemia"
+  },
+  "summary": {
+    "uk": "Варіант гострої мієлоїдної лейкемії з t(15;17)/PML-RARA. Невідкладний стан через коагулопатію; лікування починають з ATRA ще до цитогенетичного підтвердження.",
+    "en": "An AML variant with t(15;17)/PML-RARA. An emergency because of the coagulopathy; ATRA is started before cytogenetic confirmation."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C92.4",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Acute%20promyelocytic%20leukemia"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Acute%20promyelocytic%20leukemia"
+    }
+  ],
+  "treatment": []
+}

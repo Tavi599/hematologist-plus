@@ -1,0 +1,34 @@
+{
+  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
+  "id": "acute-lymphoblastic-leukemia",
+  "name": {
+    "uk": "Гостра лімфобластна лейкемія",
+    "en": "Acute lymphoblastic leukemia"
+  },
+  "summary": {
+    "uk": "Пухлина з лімфоїдних попередників (B- або T-лінії); лікування багатокомпонентне й тривале, з профілактикою нейролейкемії.",
+    "en": "A neoplasm of lymphoid precursors (B- or T-lineage); treatment is multi-agent and prolonged, with CNS prophylaxis."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C91.0",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Acute%20lymphoblastic%20leukemia"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Acute%20lymphoblastic%20leukemia"
+    }
+  ],
+  "treatment": []
+}

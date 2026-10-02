@@ -1,0 +1,34 @@
+{
+  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
+  "id": "waldenstrom",
+  "name": {
+    "uk": "Макроглобулінемія Вальденстрема",
+    "en": "Waldenström macroglobulinemia"
+  },
+  "summary": {
+    "uk": "Лімфоплазмоцитарна лімфома з моноклональним IgM; мутація MYD88 L265P у більшості хворих. Окремої уваги потребує синдром гіперв'язкості.",
+    "en": "Lymphoplasmacytic lymphoma with a monoclonal IgM; MYD88 L265P in most patients. Hyperviscosity needs separate attention."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C88.0",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Waldenstrom%20macroglobulinemia"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Waldenstrom%20macroglobulinemia"
+    }
+  ],
+  "treatment": []
+}

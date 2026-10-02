@@ -1,0 +1,34 @@
+{
+  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
+  "id": "primary-myelofibrosis",
+  "name": {
+    "uk": "Первинний мієлофіброз",
+    "en": "Primary myelofibrosis"
+  },
+  "summary": {
+    "uk": "Мієлопролиферативне новоутворення з фіброзом кісткового мозку, цитопеніями та спленомегалією; єдиний радикальний метод — алогенна трансплантація.",
+    "en": "A myeloproliferative neoplasm with marrow fibrosis, cytopenias and splenomegaly; allogeneic transplantation is the only curative option."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "D47.4",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Primary%20myelofibrosis"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Primary%20myelofibrosis"
+    }
+  ],
+  "treatment": []
+}

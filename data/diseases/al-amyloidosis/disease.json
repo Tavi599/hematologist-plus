@@ -1,0 +1,34 @@
+{
+  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
+  "id": "al-amyloidosis",
+  "name": {
+    "uk": "AL-амілоїдоз (системний амілоїдоз легких ланцюгів)",
+    "en": "AL amyloidosis"
+  },
+  "summary": {
+    "uk": "Відкладення амілоїду з легких ланцюгів плазмоклітинного клону; прогноз визначає ураження серця. Потрібне гістологічне підтвердження й типування амілоїду.",
+    "en": "Amyloid deposition from the light chains of a plasma cell clone; cardiac involvement drives the prognosis. Histological confirmation and amyloid typing are required."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "E85.8",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=AL%20amyloidosis"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=AL%20amyloidosis"
+    }
+  ],
+  "treatment": []
+}

@@ -1,0 +1,34 @@
+{
+  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
+  "id": "polycythemia-vera",
+  "name": {
+    "uk": "Справжня поліцитемія",
+    "en": "Polycythemia vera"
+  },
+  "summary": {
+    "uk": "Мієлопролиферативне новоутворення з мутацією JAK2; головна мета — знизити ризик тромбозу (гематокрит, ацетилсаліцилова кислота, за показаннями — цитозниження).",
+    "en": "A JAK2-mutated myeloproliferative neoplasm; the aim is to lower thrombotic risk (haematocrit, aspirin and, where indicated, cytoreduction)."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "D45",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Polycythemia%20vera"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Polycythemia%20vera"
+    }
+  ],
+  "treatment": []
+}

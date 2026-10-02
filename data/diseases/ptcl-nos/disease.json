@@ -1,0 +1,34 @@
+{
+  "$comment": "Нозологія внесена без дерева лікування: схеми додаються окремо, з дозами й джерелом. Тексти настанов у довідник не копіюються — лише посилання.",
+  "id": "ptcl-nos",
+  "name": {
+    "uk": "Периферична T-клітинна лімфома, неуточнена",
+    "en": "Peripheral T-cell lymphoma, NOS"
+  },
+  "summary": {
+    "uk": "Збірна група агресивних T-клітинних лімфом без ознак окремої нозології; результати гірші, ніж при В-клітинних лімфомах того ж стадіювання.",
+    "en": "A heterogeneous group of aggressive T-cell lymphomas that fit no distinct entity; outcomes are worse than for B-cell lymphomas of the same stage."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C84.4",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Peripheral%20T-cell%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Peripheral%20T-cell%20lymphoma"
+    }
+  ],
+  "treatment": []
+}
