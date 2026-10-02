@@ -122,6 +122,27 @@
             "uk": "Делеція 17p або мутація TP53",
             "en": "A 17p deletion or TP53 mutation"
           }
+        },
+        {
+          "regimen_id": "r-ven-cycle-1",
+          "notes": {
+            "uk": "Цикл 1, титрування",
+            "en": "Cycle 1, the ramp-up"
+          }
+        },
+        {
+          "regimen_id": "r-ven-cycle-2",
+          "notes": {
+            "uk": "Цикл 2",
+            "en": "Cycle 2"
+          }
+        },
+        {
+          "regimen_id": "r-ven",
+          "notes": {
+            "uk": "Цикли 3-7",
+            "en": "Cycles 3-7"
+          }
         }
       ]
     }

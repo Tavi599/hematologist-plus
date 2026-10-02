@@ -1,0 +1,159 @@
+{
+  "$comment": "Розчинник карбоплатину: протокол друкує «500 мл glucose 0,5%», чого як інфузійного розчину не існує — майже напевно це 5%, тому поле розчинника лишено порожнім, а розбіжність винесена в примітку. Гідрокортизон і хлорфенамін премедикації, а також маніт для корекції діурезу в довіднику відсутні.",
+  "id": "r-ice",
+  "short_name": "R-ICE",
+  "name": {
+    "uk": "R-ICE (ритуксимаб, іфосфамід, карбоплатин, етопозид)",
+    "en": "R-ICE (rituximab, ifosfamide, carboplatin, etoposide)"
+  },
+  "description": {
+    "uk": "Терапія порятунку. Цикл 21 день (або щойно відновляться показники крові), 3-6 циклів. Іфосфамід із месною йде 24-годинною інфузією в трьох мішках по 1000 мл, які міняють кожні 8 годин — так вимагає стабільність розчину. Усю сечу перевіряють тест-смужкою на кров.",
+    "en": "Salvage therapy. A 21-day cycle, or as soon after count recovery as possible, for 3 to 6 cycles. The ifosfamide with mesna runs as a 24-hour infusion in three 1000 mL bags changed every 8 hours, as the stability of the solution requires. All urine is dipstick-tested for blood."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.24 R-ICE",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-24-r-ice.pdf",
+      "version": "3.0 (09.2025)",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає гідрокортизон 100 мг і хлорфенамін 10 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "At least 30 minutes before the rituximab. The protocol adds hydrocortisone 100 mg and chlorphenamine 10 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають решту введень.",
+        "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before the other infusions start."
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 250-1000 мл 0,9% NaCl, концентрація нижча за 0,4 мг/мл, за 1 годину. У день 2 йде одночасно з іфосфамідом в іншому просвіті катетера.",
+        "en": "In 250 to 1000 mL of 0.9% sodium chloride at under 0.4 mg/mL, over an hour. On day 2 it runs at the same time as the ifosfamide, through the other lumen."
+      }
+    },
+    {
+      "key": "carboplatin",
+      "drug_id": "carboplatin",
+      "route": "iv_infusion",
+      "dose_value": 5,
+      "dose_unit": "auc",
+      "cap_amount": 800,
+      "days": [2],
+      "duration_min": 30,
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Формула Калверта, AUC 5, разова доза не більш як 800 мг; швидкість клубочкової фільтрації протокол радить рахувати за формулою Райта, тоді як калькулятор рахує за Кокрофтом-Голтом — звірте. У 500 мл за 30 хвилин. Розчинник: протокол друкує «глюкоза 0,5%», такого інфузійного розчину не існує, тож майже напевно йдеться про 5% — перевірте перед застосуванням. Далі дивляться на діурез: якщо понад 100 мл/год, переходять до іфосфаміду; якщо 60-100 мл/год, спершу вводять 200 мл 20% манітолу за 30 хвилин.",
+        "en": "The Calvert formula at AUC 5, no single dose above 800 mg; the protocol computes the GFR by the Wright formula while the calculator uses Cockcroft-Gault, so check. In 500 mL over 30 minutes. The solvent: the protocol prints glucose 0.5%, which is not an infusion fluid, so it almost certainly means 5% - verify before use. The urine output then decides: above 100 mL/hour the ifosfamide follows; at 60 to 100 mL/hour, 200 mL of 20% mannitol goes in first over 30 minutes."
+      }
+    },
+    {
+      "key": "mesna-pre",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "duration_min": 15,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 15 хвилин, перед іфосфамідом.",
+        "en": "In 50 mL of 0.9% sodium chloride over 15 minutes, before the ifosfamide."
+      }
+    },
+    {
+      "key": "ifosfamide",
+      "drug_id": "ifosfamide",
+      "route": "iv_infusion",
+      "dose_value": 5000,
+      "dose_unit": "mg_m2",
+      "cap_amount": 9600,
+      "days": [2],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 3000,
+      "notes": {
+        "uk": "Разом із месною в 3000 мл 0,9% NaCl за 24 години, трьома мішками по 1000 мл із заміною кожні 8 годин. Максимальна доза при 24-годинній інфузії — 9600 мг.",
+        "en": "With the mesna in 3000 mL of 0.9% sodium chloride over 24 hours, as three 1000 mL bags changed every 8 hours. The maximum dose on the 24-hour infusion is 9600 mg."
+      }
+    },
+    {
+      "key": "mesna-with-ifosfamide",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 5000,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 3000,
+      "notes": {
+        "uk": "У тих самих мішках, що й іфосфамід, доза рівна його дозі.",
+        "en": "In the same bags as the ifosfamide, at the same dose as it."
+      }
+    },
+    {
+      "key": "mesna-post",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 3000,
+      "dose_unit": "mg_m2",
+      "days": [3],
+      "duration_min": 720,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "У 1000 мл 0,9% NaCl за 12 годин, починають одразу після завершення інфузії іфосфаміду з месною.",
+        "en": "In 1000 mL of 0.9% sodium chloride over 12 hours, started immediately after the ifosfamide and mesna infusion ends."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини з гідратацією, 7 днів у циклі 1; дозу зменшують при нирковій недостатності. При високому ризику розглядають расбуриказу.",
+        "en": "Tumour lysis prophylaxis with hydration, for 7 days in cycle 1; the dose is reduced in renal impairment. At high risk, rasburicase is considered."
+      }
+    }
+  ]
+}
