@@ -75,6 +75,13 @@
       "regimens": [
         {
           "regimen_id": "ibrutinib-mono"
+        },
+        {
+          "regimen_id": "chlorambucil-mono",
+          "notes": {
+            "uk": "Паліативний контроль хвороби",
+            "en": "Palliative disease control"
+          }
         }
       ]
     }

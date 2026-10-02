@@ -88,6 +88,48 @@
             "uk": "Делеція 17p або мутація TP53",
             "en": "A 17p deletion or TP53 mutation"
           }
+        },
+        {
+          "regimen_id": "acala-ven-cycle-1-2",
+          "notes": {
+            "uk": "Цикли 1-2, лише акалабрутиніб",
+            "en": "Cycles 1-2, acalabrutinib alone"
+          }
+        },
+        {
+          "regimen_id": "acala-ven-cycle-3",
+          "notes": {
+            "uk": "Цикл 3, титрування венетоклаксу",
+            "en": "Cycle 3, the venetoclax ramp-up"
+          }
+        },
+        {
+          "regimen_id": "acala-ven",
+          "notes": {
+            "uk": "Цикли 4-14",
+            "en": "Cycles 4-14"
+          }
+        },
+        {
+          "regimen_id": "ibru-ven-cycle-1-3",
+          "notes": {
+            "uk": "Цикли 1-3, лише ібрутиніб",
+            "en": "Cycles 1-3, ibrutinib alone"
+          }
+        },
+        {
+          "regimen_id": "ibru-ven-cycle-4",
+          "notes": {
+            "uk": "Цикл 4, титрування венетоклаксу",
+            "en": "Cycle 4, the venetoclax ramp-up"
+          }
+        },
+        {
+          "regimen_id": "ibru-ven",
+          "notes": {
+            "uk": "Цикли 5-15",
+            "en": "Cycles 5-15"
+          }
         }
       ]
     },
@@ -142,6 +184,27 @@
           "notes": {
             "uk": "Цикли 3-7",
             "en": "Cycles 3-7"
+          }
+        },
+        {
+          "regimen_id": "chlorambucil-mono",
+          "notes": {
+            "uk": "Паліативний контроль хвороби",
+            "en": "Palliative disease control"
+          }
+        },
+        {
+          "regimen_id": "r-chlorambucil-cycle-1",
+          "notes": {
+            "uk": "Цикл 1",
+            "en": "Cycle 1"
+          }
+        },
+        {
+          "regimen_id": "r-chlorambucil",
+          "notes": {
+            "uk": "Цикли 2-6",
+            "en": "Cycles 2-6"
           }
         }
       ]

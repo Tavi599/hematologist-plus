@@ -1,0 +1,126 @@
+{
+  "$comment": "Цикл 4 — титрування венетоклаксу щотижня, тому чотири позиції замість однієї.",
+  "id": "ibru-ven-cycle-4",
+  "short_name": "Ібру+Вен (4)",
+  "name": {
+    "uk": "Ібрутиніб + венетоклакс, цикл 4 (титрування)",
+    "en": "Ibrutinib and venetoclax, cycle 4 (ramp-up)"
+  },
+  "description": {
+    "uk": "Титрування венетоклаксу: 20 мг на добу в дні 1-7, 50 мг у дні 8-14, 100 мг у дні 15-21, 200 мг у дні 22-28. Ібрутиніб продовжують без змін. Усім пацієнтам перед початком титрування призначають гідратацію й алопуринол, ризик лізису пухлини оцінюють повторно перед додаванням венетоклаксу. Доз гідратації та алопуринолу протокол не фіксує, тому окремих позицій для них у схемі немає.",
+    "en": "The venetoclax ramp-up: 20 mg daily on days 1 to 7, 50 mg on days 8 to 14, 100 mg on days 15 to 21, 200 mg on days 22 to 28. The ibrutinib continues unchanged. Everyone gets hydration and allopurinol before the ramp-up starts, and the tumour lysis risk is assessed again before the venetoclax is added. The protocol fixes no dose for the hydration or the allopurinol, so neither has a row of its own here."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.148 Ibrutinib with Venetoclax",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-148-ibrutinib-ventoclax.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "ibrutinib",
+      "drug_id": "ibrutinib",
+      "route": "oral",
+      "dose_value": 420,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Приблизно в один час щодня, таблетку ковтають цілою. Препарати звіробою протипоказані. Варфарин та інші антагоністи вітаміну К разом із ібрутинібом не призначають. Субстрати P-глікопротеїну приймають щонайменше за 6 годин до або після ібрутинібу.",
+        "en": "At about the same time each day, the tablet swallowed whole. St John's wort is contraindicated. Warfarin and other vitamin K antagonists are not given alongside. P-glycoprotein substrates are taken at least 6 hours before or after the ibrutinib."
+      },
+      "dose_modifiers": [
+        {
+          "key": "cyp3a4-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A4",
+            "en": "A strong CYP3A4 inhibitor"
+          },
+          "dose_value": 140,
+          "notes": {
+            "uk": "Поєднання краще уникнути; якщо інгібітор необхідний, дозу ібрутинібу зменшують до 140 мг на добу. На початку лікування й під час титрування венетоклаксу сильні інгібітори протипоказані.",
+            "en": "The combination is better avoided; where the inhibitor is necessary the ibrutinib drops to 140 mg daily. At initiation and during the venetoclax ramp-up a strong inhibitor is contraindicated."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.148 Ibrutinib with Venetoclax",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-148-ibrutinib-ventoclax.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "key": "cyp3a4-moderate",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A4",
+            "en": "A moderate CYP3A4 inhibitor"
+          },
+          "dose_value": 280,
+          "notes": {
+            "uk": "Поєднання краще уникнути; якщо інгібітор необхідний, дозу ібрутинібу зменшують до 280 мг на добу.",
+            "en": "The combination is better avoided; where the inhibitor is necessary the ibrutinib drops to 280 mg daily."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.148 Ibrutinib with Venetoclax",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-148-ibrutinib-ventoclax.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "venetoclax-w1",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Тиждень 1 титрування. Приймають уранці, під час їди.",
+        "en": "Week 1 of the ramp-up, taken in the morning with food."
+      }
+    },
+    {
+      "key": "venetoclax-w2",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "Тиждень 2 титрування. Приймають уранці, під час їди.",
+        "en": "Week 2 of the ramp-up, taken in the morning with food."
+      }
+    },
+    {
+      "key": "venetoclax-w3",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Тиждень 3 титрування. Приймають уранці, під час їди.",
+        "en": "Week 3 of the ramp-up, taken in the morning with food."
+      }
+    },
+    {
+      "key": "venetoclax-w4",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [22, 23, 24, 25, 26, 27, 28],
+      "notes": {
+        "uk": "Тиждень 4 титрування. Приймають уранці, під час їди.",
+        "en": "Week 4 of the ramp-up, taken in the morning with food."
+      }
+    }
+  ]
+}

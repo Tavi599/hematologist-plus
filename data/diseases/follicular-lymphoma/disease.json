@@ -64,7 +64,30 @@
           "description": {
             "uk": "Активне спостереження або ритуксимаб 375 мг/м² щотижня 4 введення, за потреби з підтримкою раз на 2 місяці до 12 введень. Обмежена I або суміжна II стадія — променева терапія 24 Гр на уражену ділянку.",
             "en": "Active observation, or rituximab 375 mg/m2 weekly for four doses, optionally with maintenance every two months for twelve doses. Limited stage I or contiguous stage II: 24 Gy involved-site radiotherapy."
-          }
+          },
+          "regimens": [
+            {
+              "regimen_id": "chlorambucil-mono",
+              "notes": {
+                "uk": "Паліативний контроль хвороби",
+                "en": "Palliative disease control"
+              }
+            },
+            {
+              "regimen_id": "r-chlorambucil-cycle-1",
+              "notes": {
+                "uk": "Цикл 1",
+                "en": "Cycle 1"
+              }
+            },
+            {
+              "regimen_id": "r-chlorambucil",
+              "notes": {
+                "uk": "Цикли 2-6",
+                "en": "Cycles 2-6"
+              }
+            }
+          ]
         },
         {
           "key": "high-burden",
@@ -190,7 +213,30 @@
       "description": {
         "uk": "CAR-T-терапія, біспецифічні антитіла (епкоритамаб, мосунетузумаб, одронекстамаб), занубрутиніб з обінутузумабом, леналідомід із ритуксимабом. У відділенні ці варіанти недоступні; у літніх і ослаблених після тривалих ремісій застосовують ритуксимаб у монорежимі.",
         "en": "CAR-T therapy, bispecific antibodies (epcoritamab, mosunetuzumab, odronextamab), zanubrutinib with obinutuzumab, lenalidomide with rituximab. These are not available in the department; in elderly or frail patients after long remissions rituximab monotherapy is used."
-      }
+      },
+      "regimens": [
+        {
+          "regimen_id": "chlorambucil-mono",
+          "notes": {
+            "uk": "Паліативний контроль хвороби",
+            "en": "Palliative disease control"
+          }
+        },
+        {
+          "regimen_id": "r-chlorambucil-cycle-1",
+          "notes": {
+            "uk": "Цикл 1",
+            "en": "Cycle 1"
+          }
+        },
+        {
+          "regimen_id": "r-chlorambucil",
+          "notes": {
+            "uk": "Цикли 2-6",
+            "en": "Cycles 2-6"
+          }
+        }
+      ]
     }
   ]
 }

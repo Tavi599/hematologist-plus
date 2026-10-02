@@ -1,0 +1,94 @@
+{
+  "$comment": "Цикли 4-14 — повна доза обох препаратів. Поправки на інгібітори CYP3A4 діють лише після завершення титрування, тому стоять саме тут.",
+  "id": "acala-ven",
+  "short_name": "Акала+Вен (4-14)",
+  "name": {
+    "uk": "Акалабрутиніб + венетоклакс, цикли 4-14",
+    "en": "Acalabrutinib and venetoclax, cycles 4-14"
+  },
+  "description": {
+    "uk": "Повна доза обох препаратів. Цикл 28 днів, лікування триває до прогресування або неприйнятної токсичності, але не довше ніж 14 циклів разом із попередніми.",
+    "en": "The full dose of both drugs. A 28-day cycle, continued until progression or unacceptable toxicity and for no more than 14 cycles counting the earlier ones."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 11,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.162 Acalabrutinib with Venetoclax",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-162-acalabrutinib-with-venetoclax.pdf",
+      "version": "1.0 (09.2026)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "acalabrutinib",
+      "drug_id": "acalabrutinib",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Приблизно кожні 12 годин, таблетки ковтають цілими, запиваючи водою. Якщо дозу пропущено більш ніж на 3 години, наступну приймають у звичайний час; подвійну дозу не приймають. Варфарин та інші антагоністи вітаміну К не призначають. Із сильним інгібітором CYP3A4 поєднання уникають: якщо інгібітор потрібен ненадовго (протиінфекційний препарат до 7 днів), акалабрутиніб на цей час переривають. Для помірних інгібіторів корекція дози не потрібна — лише пильне спостереження.",
+        "en": "About every 12 hours, the tablets swallowed whole with water. A dose missed by more than 3 hours is skipped and the next taken at its usual time; the dose is never doubled. Warfarin and other vitamin K antagonists are not given. A strong CYP3A4 inhibitor is avoided: where it is needed short-term, an anti-infective for up to 7 days, the acalabrutinib is interrupted instead. Moderate inhibitors need no dose change, only close watching."
+      }
+    },
+    {
+      "key": "venetoclax",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Повна добова доза після титрування. Приймають уранці, під час їди. Якщо дозу пропущено менш ніж на 8 годин — приймають того ж дня; якщо більше — пропускають. Після перерви понад тиждень під час титрування або понад два тижні після нього ризик лізису оцінюють заново й можуть почати титрування спочатку.",
+        "en": "The full daily dose after the ramp-up, taken in the morning with food. A dose missed by less than 8 hours is taken the same day; later than that it is skipped. After a break of over a week during the ramp-up, or over two weeks after it, the tumour lysis risk is reassessed and the ramp-up may have to start again."
+      },
+      "dose_modifiers": [
+        {
+          "key": "cyp3a4-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A4 після завершення титрування",
+            "en": "A strong CYP3A4 inhibitor after the ramp-up is complete"
+          },
+          "dose_value": 100,
+          "notes": {
+            "uk": "Протокол вимагає зменшити дозу щонайменше на 75% — від 400 мг це 100 мг. Під час титрування таких інгібіторів уникають узагалі. Попередню дозу повертають через 2-3 дні після відміни інгібітора.",
+            "en": "The protocol requires the dose to be cut by at least 75%, which from 400 mg is 100 mg. During the ramp-up such inhibitors are avoided altogether. The previous dose is resumed 2 to 3 days after the inhibitor stops."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.162 Acalabrutinib with Venetoclax",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-162-acalabrutinib-with-venetoclax.pdf",
+            "version": "1.0 (09.2026)",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "key": "cyp3a4-moderate",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A4 після завершення титрування",
+            "en": "A moderate CYP3A4 inhibitor after the ramp-up is complete"
+          },
+          "dose_value": 200,
+          "notes": {
+            "uk": "Протокол вимагає зменшити дозу щонайменше на 50% — від 400 мг це 200 мг. Під час титрування таких інгібіторів уникають.",
+            "en": "The protocol requires the dose to be cut by at least 50%, which from 400 mg is 200 mg. During the ramp-up such inhibitors are avoided."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.162 Acalabrutinib with Venetoclax",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-162-acalabrutinib-with-venetoclax.pdf",
+            "version": "1.0 (09.2026)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}

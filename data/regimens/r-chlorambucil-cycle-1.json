@@ -1,0 +1,96 @@
+{
+  "$comment": "Цикл 1 із ритуксимабом: доза 375 мг/м² і для ХЛЛ, і для НХЛ. Для ХЛЛ при лімфоцитах понад 25×10⁹/л протокол ділить першу дозу на два дні — це описано в примітці, бо поділ залежить від аналізу.",
+  "id": "r-chlorambucil-cycle-1",
+  "short_name": "R-хлорамбуцил (1)",
+  "name": {
+    "uk": "Ритуксимаб + хлорамбуцил, цикл 1",
+    "en": "Rituximab and chlorambucil, cycle 1"
+  },
+  "description": {
+    "uk": "CD20-позитивне захворювання. Цикл 28 днів, 4-6 циклів. У першому циклі ритуксимаб дають у дозі 375 мг/м².",
+    "en": "CD20-positive disease. A 28-day cycle, 4 to 6 cycles. In the first cycle the rituximab is 375 mg/m2."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.26 Chlorambucil +/- R",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-26-chlorambucil.pdf",
+      "version": "перегляд 05.2018",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 30 хвилин до ритуксимабу. Протокол додає хлорфенамін 10 мг і гідрокортизон 100 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "30 minutes before the rituximab. The protocol adds chlorphenamine 10 mg and hydrocortisone 100 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl. При ХЛЛ із лімфоцитами понад 25×10⁹/л протокол ділить дозу першого циклу: 50 мг/м² (або 100 мг фіксовано) у день 1, решту 325 мг/м² — у день 2. Поділ залежить від аналізу, тому в схемі він не закладений: у такому разі дозу й дні виставляють вручну.",
+        "en": "In 500 mL of 0.9% sodium chloride. In CLL with lymphocytes above 25x10^9/L the protocol splits the first cycle: 50 mg/m2 (or a flat 100 mg) on day 1 and the remaining 325 mg/m2 on day 2. The split depends on a blood count, so it is not built into the regimen: the dose and days are set by hand in that case."
+      }
+    },
+    {
+      "key": "chlorambucil",
+      "drug_id": "chlorambucil",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "Таблетки приймають натщесерце — щонайменше за годину до їди або через 3 години після неї. Протокол дає три рівноцінні режими: 10 мг на добу в дні 1-14, 10 мг/м² на добу в дні 1-7 або 4 мг на добу постійно. Тут основним узято перший; інші два стоять у списку доз, і дні для них доведеться виставити вручну. Лікування відкладають при нейтрофілах нижче 1,0×10⁹/л або тромбоцитах нижче 100×10⁹/л, якщо це не наслідок інфільтрації кісткового мозку. При нирковій недостатності дозу не зменшують, при вираженій печінковій — зменшують.",
+        "en": "The tablets are taken on an empty stomach, at least an hour before or three hours after food. The protocol gives three equivalent schedules: 10 mg daily on days 1 to 14, 10 mg/m2 daily on days 1 to 7, or 4 mg daily continuously. The first is the main one here; the other two sit in the dose list and their days have to be set by hand. Treatment is deferred below 1.0x10^9/L neutrophils or 100x10^9/L platelets unless marrow infiltration explains it. Renal impairment needs no reduction; gross hepatic dysfunction does."
+      },
+      "dose_options": [
+        {
+          "dose_value": 10,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "10 мг/м² на добу, дні 1-7",
+            "en": "10 mg/m2 daily, days 1 to 7"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.26 Chlorambucil +/- R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-26-chlorambucil.pdf",
+            "version": "перегляд 05.2018",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "dose_value": 4,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "4 мг на добу постійно",
+            "en": "4 mg daily, continuously"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.26 Chlorambucil +/- R",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-26-chlorambucil.pdf",
+            "version": "перегляд 05.2018",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}

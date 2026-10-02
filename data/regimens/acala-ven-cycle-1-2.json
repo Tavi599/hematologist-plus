@@ -1,0 +1,41 @@
+{
+  "$comment": "Цикли 1-2 — лише акалабрутиніб: це введення, яке знижує ризик лізису пухлини перед додаванням венетоклаксу.",
+  "id": "acala-ven-cycle-1-2",
+  "short_name": "Акала+Вен (1-2)",
+  "name": {
+    "uk": "Акалабрутиніб + венетоклакс, цикли 1-2 (вступна фаза)",
+    "en": "Acalabrutinib and venetoclax, cycles 1-2 (lead-in)"
+  },
+  "description": {
+    "uk": "Перша лінія раніше нелікованого ХЛЛ або лімфоми з малих лімфоцитів. У циклах 1-2 дають лише акалабрутиніб: за цей час ризик синдрому лізису пухлини знижується, і аж тоді додають венетоклакс. Цикл 28 днів. Ризик синдрому лізису пухлини оцінюють перед початком і повторно перед циклом 3. Низький ризик — усі лімфовузли менші за 5 см і лімфоцити нижчі за 25×10⁹/л; помірний — вузол від 5 до 10 см або лімфоцити 25×10⁹/л і вище; високий — вузол 10 см і більше, або вузол від 5 см разом із лімфоцитами 25×10⁹/л і вище. Усім призначають гідратацію (1,5-2 л води на добу, починаючи за 2 дні до першої дози й перед кожним підвищенням) і алопуринол за 2-3 дні до початку титрування; при високому ризику додають расбуриказу 3 мг внутрішньовенно за 30-60 хвилин до кожного підвищення дози. Доз гідратації та алопуринолу протокол не фіксує, тому окремих позицій для них у схемі немає.",
+    "en": "First line of previously untreated CLL or small lymphocytic lymphoma. Cycles 1 and 2 are acalabrutinib alone: the tumour lysis risk falls over that time, and only then is the venetoclax added. A 28-day cycle. The tumour lysis risk is assessed before treatment and again before cycle 3. Low risk: every node under 5 cm and lymphocytes under 25x10^9/L; moderate: a node of 5 to 10 cm or lymphocytes of 25x10^9/L or more; high: a node of 10 cm or more, or a node over 5 cm together with lymphocytes of 25x10^9/L or more. Everyone gets hydration (1.5 to 2 L of water daily, starting 2 days before the first dose and before each increase) and allopurinol 2 to 3 days before the ramp-up starts; at high risk, rasburicase 3 mg intravenously goes in 30 to 60 minutes before each increase. The protocol fixes no dose for the hydration or the allopurinol, so neither has a row of its own here."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.162 Acalabrutinib with Venetoclax",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-162-acalabrutinib-with-venetoclax.pdf",
+      "version": "1.0 (09.2026)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "acalabrutinib",
+      "drug_id": "acalabrutinib",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Приблизно кожні 12 годин, таблетки ковтають цілими, запиваючи водою. Якщо дозу пропущено більш ніж на 3 години, наступну приймають у звичайний час; подвійну дозу не приймають. Варфарин та інші антагоністи вітаміну К не призначають. Із сильним інгібітором CYP3A4 поєднання уникають: якщо інгібітор потрібен ненадовго (протиінфекційний препарат до 7 днів), акалабрутиніб на цей час переривають. Для помірних інгібіторів корекція дози не потрібна — лише пильне спостереження.",
+        "en": "About every 12 hours, the tablets swallowed whole with water. A dose missed by more than 3 hours is skipped and the next taken at its usual time; the dose is never doubled. Warfarin and other vitamin K antagonists are not given. A strong CYP3A4 inhibitor is avoided: where it is needed short-term, an anti-infective for up to 7 days, the acalabrutinib is interrupted instead. Moderate inhibitors need no dose change, only close watching."
+      }
+    }
+  ]
+}
