@@ -1,0 +1,66 @@
+{
+  "$comment": "KCd за eviQ 4186 (вер. 2): цикл 28 днів до прогресування; циклофосфамід 300 мг/м² (макс. 500 мг) усередину дні 1, 8, 15; дексаметазон 20 мг дні 1–2, 8–9, 15–16, 22–23 (понад 75 років — 20 мг на тиждень). Відрізняється від NSSG KCd (36 мг/м² без нарощування, циклофосфамід 500 мг, дексаметазон 40 мг щотижня).",
+  "id": "kcd-eviq",
+  "short_name": "KCd (eviQ)",
+  "name": {
+    "uk": "KCd за eviQ, цикл 2 і далі",
+    "en": "KCd per eviQ, cycle 2 onwards"
+  },
+  "description": {
+    "uk": "Карфілзоміб 36 мг/м² дні 1–2, 8–9, 15–16; циклофосфамід 300 мг/м² дні 1, 8, 15; дексаметазон 20 мг.",
+    "en": "Carfilzomib 36 mg/m2 on days 1 to 2, 8 to 9, 15 to 16; cyclophosphamide 300 mg/m2 on days 1, 8, 15; dexamethasone 20 mg."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "eviQ: KCd (протокол 4186, вер. 2)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/4186-multiple-myeloma-kcd-carfilzomib-cyclophosph",
+      "version": "вер. 2",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "carfilzomib-36",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 36,
+      "dose_unit": "mg_m2",
+      "cap_amount": 79.2,
+      "days": [1, 2, 8, 9, 15, 16],
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "36 мг/м² за 30 хвилин, не більше 79.2 мг (eviQ 4186).",
+        "en": "36 mg/m2 over 30 minutes, no more than 79.2 mg (eviQ 4186)."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "300 мг/м² усередину раз на тиждень, не більше 500 мг (eviQ 4186).",
+        "en": "300 mg/m2 by mouth weekly, no more than 500 mg (eviQ 4186)."
+      },
+      "cap_amount": 500
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9, 15, 16, 22, 23],
+      "notes": {
+        "uk": "20 мг усередину (eviQ 4186).",
+        "en": "20 mg by mouth (eviQ 4186)."
+      }
+    }
+  ]
+}

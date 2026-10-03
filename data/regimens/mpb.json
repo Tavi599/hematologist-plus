@@ -1,0 +1,61 @@
+{
+  "$comment": "MPB за eviQ 1413 (вер. 8): щотижневий бортезоміб за схемою GIMEMA-MM-03-05 для менш частої нейропатії.",
+  "id": "mpb",
+  "short_name": "MPB",
+  "name": {
+    "uk": "MPB (мелфалан, преднізолон, бортезоміб; eviQ)",
+    "en": "MPB (melphalan, prednisolone, bortezomib; eviQ)"
+  },
+  "description": {
+    "uk": "Мелфалан 9 мг/м² і преднізолон 60 мг/м² дні 1–4; бортезоміб щотижня дні 1, 8, 15, 22; цикл 35 днів, 9 циклів.",
+    "en": "Melphalan 9 mg/m2 and prednisolone 60 mg/m2 on days 1 to 4; bortezomib weekly on days 1, 8, 15, 22; a 35-day cycle, nine cycles."
+  },
+  "cycle_length_days": 35,
+  "default_cycles": 9,
+  "sources": [
+    {
+      "name": "eviQ: MPB (протокол 1413, вер. 8)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/1413-multiple-myeloma-mpb-melphalan-prednisolone",
+      "version": "вер. 8 від 02.10.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "melphalan",
+      "drug_id": "melphalan",
+      "route": "oral",
+      "dose_value": 9,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "9 мг/м² натще (eviQ 1413).",
+        "en": "9 mg/m2 on an empty stomach (eviQ 1413)."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "60 мг/м² з їжею (eviQ 1413).",
+        "en": "60 mg/m2 with food (eviQ 1413)."
+      }
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "1,3 мг/м² підшкірно (eviQ 1413).",
+        "en": "1.3 mg/m2 subcutaneously (eviQ 1413)."
+      }
+    }
+  ]
+}

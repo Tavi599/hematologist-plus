@@ -1,0 +1,69 @@
+{
+  "$comment": "Kd щотижня за eviQ 3830 (вер. 2): цикл 1 — карфілзоміб 20 мг/м² день 1, 70 мг/м² дні 8 і 15; цикли 2–9 — 70 мг/м² дні 1, 8, 15 (28 днів); з циклу 10 дексаметазон без дня 22. Понад 75 років дексаметазон 20 мг на тиждень. Об'єм/розчинник карфілзомібу — практика відділення.",
+  "id": "kd-weekly-cycle-1",
+  "short_name": "Kd щотижня ц.1",
+  "name": {
+    "uk": "Kd щотижня, цикл 1 (eviQ)",
+    "en": "Weekly Kd, cycle 1 (eviQ)"
+  },
+  "description": {
+    "uk": "Карфілзоміб 20 мг/м² день 1, 70 мг/м² дні 8 і 15; дексаметазон 40 мг дні 1, 8, 15, 22.",
+    "en": "Carfilzomib 20 mg/m2 on day 1, 70 mg/m2 on days 8 and 15; dexamethasone 40 mg on days 1, 8, 15, 22."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "eviQ: Kd щотижня (протокол 3830, вер. 2)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/3830-kd-carfilzomib-and-dexamethasone-weekly",
+      "version": "вер. 2 від 13.10.2023",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "carfilzomib-20",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "cap_amount": 44,
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "20 мг/м² за 30 хвилин, не більше 44 мг (eviQ 3830). При BSA >2,2 м² — за 2,2.",
+        "en": "20 mg/m2 over 30 minutes, no more than 44 mg (eviQ 3830). For a BSA over 2.2 m2 use 2.2."
+      }
+    },
+    {
+      "key": "carfilzomib-70",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 70,
+      "dose_unit": "mg_m2",
+      "cap_amount": 154,
+      "days": [8, 15],
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "70 мг/м² за 30 хвилин, не більше 154 мг (eviQ 3830). При BSA >2,2 м² — за 2,2.",
+        "en": "70 mg/m2 over 30 minutes, no more than 154 mg (eviQ 3830). For a BSA over 2.2 m2 use 2.2."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "40 мг усередину (eviQ 3830).",
+        "en": "40 mg by mouth (eviQ 3830)."
+      }
+    }
+  ]
+}

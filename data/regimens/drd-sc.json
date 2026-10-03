@@ -1,0 +1,61 @@
+{
+  "$comment": "DRd з даратумумабом п/ш за eviQ 4371 (вер. 2): цикл 28 днів; цикли 1–2 — дні 1, 8, 15, 22; цикли 3–6 — дні 1 і 15; з циклу 7 — день 1. Леналідомід 25 мг дні 1–21; дексаметазон 20 мг дні 1–2, 8–9, 15–16, 22–23 (понад 75 років, ІМТ <18,5 чи погана переносимість стероїдів — 20 мг на тиждень). Для рецидиву й нелікованої мієломи без трансплантації. У каталозі DRd з внутрішньовенним даратумумабом 16 мг/кг (NSSG).",
+  "id": "drd-sc",
+  "short_name": "DRd п/ш, цикл 7 і далі",
+  "name": {
+    "uk": "DRd п/ш, цикл 7 і далі",
+    "en": "DRd SC, cycle 7 onwards"
+  },
+  "description": {
+    "uk": "Даратумумаб 1800 мг п/ш у дні 1; леналідомід дні 1–21; дексаметазон 20 мг.",
+    "en": "Daratumumab 1800 mg SC; lenalidomide on days 1 to 21; dexamethasone 20 mg."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "eviQ: DRd п/ш (протокол 4371, вер. 2)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/4371-multiple-myeloma-drd-daratumumab-subcutaneou",
+      "version": "вер. 2",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "subcutaneous",
+      "dose_value": 1800,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "1800 мг підшкірно (eviQ 4371).",
+        "en": "1800 mg subcutaneously (eviQ 4371)."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "25 мг раз на добу (eviQ 4371).",
+        "en": "25 mg once a day (eviQ 4371)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9, 15, 16, 22, 23],
+      "notes": {
+        "uk": "20 мг усередину (eviQ 4371).",
+        "en": "20 mg by mouth (eviQ 4371)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "$comment": "ERd за eviQ 4138 (вер. 4): цикл 28 днів до прогресування. Цикли 1–2: дексаметазон 28 мг усередину + 8 мг в/в щотижня; цикли 3+: 20 мг усередину щотижня + 8 мг в/в у дні 1 і 15. Відрізняється від схеми за інструкцією EMA в каталозі (розподіл дексаметазону).",
+  "id": "erd-eviq-cycle-1-2",
+  "short_name": "ERd (eviQ) ц.1-2",
+  "name": {
+    "uk": "ERd за eviQ, цикли 1–2",
+    "en": "ERd per eviQ, cycles 1-2"
+  },
+  "description": {
+    "uk": "Елотузумаб 10 мг/кг дні 1, 8, 15, 22; леналідомід дні 1–21; дексаметазон 28 мг усередину + 8 мг в/в щотижня.",
+    "en": "Elotuzumab 10 mg/kg on days 1, 8, 15, 22; lenalidomide on days 1 to 21; dexamethasone 28 mg by mouth + 8 mg IV weekly."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "eviQ: ERd (протокол 4138, вер. 4)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/4138-multiple-myeloma-erd-elotuzumab-lenalidomide",
+      "version": "вер. 4",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "loratadine",
+      "drug_id": "loratadine",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "За 45–90 хв до елотузумабу (eviQ 4138).",
+        "en": "45 to 90 minutes before elotuzumab (eviQ 4138)."
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "За 45–90 хв до елотузумабу (eviQ 4138).",
+        "en": "45 to 90 minutes before elotuzumab (eviQ 4138)."
+      }
+    },
+    {
+      "key": "famotidine",
+      "drug_id": "famotidine",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "За 45–90 хв до елотузумабу (eviQ 4138).",
+        "en": "45 to 90 minutes before elotuzumab (eviQ 4138)."
+      }
+    },
+    {
+      "key": "dexamethasone-iv",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "8 мг в/в перед елотузумабом (eviQ 4138).",
+        "en": "8 mg IV before elotuzumab (eviQ 4138)."
+      }
+    },
+    {
+      "key": "elotuzumab",
+      "drug_id": "elotuzumab",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_kg",
+      "days": [1, 8, 15, 22],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 230,
+      "notes": {
+        "uk": "10 мг/кг в/в (eviQ 4138). Об'єм — практика відділення; після цикл 1 день 8 без реакцій — швидкість до 300 мл/год.",
+        "en": "10 mg/kg IV (eviQ 4138). The volume follows the department's practice; with no reactions after cycle 1 day 8 the rate can be 300 mL/h."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "25 мг раз на добу (eviQ 4138).",
+        "en": "25 mg once a day (eviQ 4138)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 28,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "28 мг усередину (eviQ 4138).",
+        "en": "28 mg by mouth (eviQ 4138)."
+      }
+    }
+  ]
+}

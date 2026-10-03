@@ -1,0 +1,55 @@
+{
+  "$comment": "KRd цикли 13–18 за eviQ 4142 (вер. 3): зменшена частота карфілзомібу; після 18 циклів — Rd (eviQ 547) до прогресування.",
+  "id": "krd-cycle-13-18",
+  "short_name": "KRd ц.13-18",
+  "name": {
+    "uk": "KRd, цикли 13–18",
+    "en": "KRd, cycles 13-18"
+  },
+  "description": {
+    "uk": "Карфілзоміб 27 мг/м² у дні 1, 2, 15, 16; леналідомід дні 1–21; дексаметазон 20 мг дні 1, 2, 8, 9, 15, 16, 22, 23.",
+    "en": "Carfilzomib 27 mg/m2 on days 1, 2, 15, 16; lenalidomide on days 1 to 21; dexamethasone 20 mg on days 1, 2, 8, 9, 15, 16, 22, 23."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "eviQ: KRd (протокол 4142, вер. 3)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/4142-multiple-myeloma-krd-carfilzomib-lenalidomid",
+      "version": "вер. 3",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "carfilzomib",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 27,
+      "dose_unit": "mg_m2",
+      "cap_amount": 60,
+      "days": [1, 2, 15, 16],
+      "duration_min": 10,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9, 15, 16, 22, 23],
+      "block": "day_support",
+      "anchor_offset_min": -30
+    }
+  ]
+}

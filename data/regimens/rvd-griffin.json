@@ -1,0 +1,61 @@
+{
+  "$comment": "RVd GRIFFIN за eviQ 3973/3919 (вер. 3). Примітка: даратумумаб у GRIFFIN-квадруплеті додається окремо.",
+  "id": "rvd-griffin",
+  "short_name": "RVd GRIFFIN",
+  "name": {
+    "uk": "RVd за GRIFFIN (eviQ 3919)",
+    "en": "RVd per GRIFFIN (eviQ 3919)"
+  },
+  "description": {
+    "uk": "Індукція 4 цикли по 21 день: леналідомід дні 1–14, бортезоміб дні 1, 4, 8, 11, дексаметазон 20 мг дні 1, 2, 8, 9, 15, 16; консолідація 2 цикли після ASCT — ті самі дози.",
+    "en": "Induction four 21-day cycles: lenalidomide on days 1 to 14, bortezomib on days 1, 4, 8, 11, dexamethasone 20 mg on days 1, 2, 8, 9, 15, 16; consolidation two cycles after ASCT with the same doses."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "eviQ: RVd (протокол 3973, вер. 3; варіанти GRIFFIN 3919, PETHEMA 3936, щотижневий 4367)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/3973-multiple-myeloma-rvd-lenalidomide-bortezomib",
+      "version": "вер. 3 від 23.05.2025",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 4, 8, 11],
+      "notes": {
+        "uk": "1,3 мг/м² підшкірно (eviQ 3973).",
+        "en": "1.3 mg/m2 subcutaneously (eviQ 3973)."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "25 мг раз на добу (eviQ 3973).",
+        "en": "25 mg once a day (eviQ 3973)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9, 15, 16],
+      "notes": {
+        "uk": "20 мг усередину (eviQ 3973).",
+        "en": "20 mg by mouth (eviQ 3973)."
+      }
+    }
+  ]
+}

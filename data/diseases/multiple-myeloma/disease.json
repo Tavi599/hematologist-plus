@@ -184,6 +184,68 @@
             "uk": "За ниркової недостатності або нейропатії, коли леналідомід небажаний.",
             "en": "In renal impairment or neuropathy, where lenalidomide is unwanted."
           }
+        },
+        {
+          "regimen_id": "cybord-eviq",
+          "notes": {
+            "uk": "eviQ 556",
+            "en": "eviQ 556"
+          }
+        },
+        {
+          "regimen_id": "cybord-weekly-eviq",
+          "notes": {
+            "uk": "eviQ 1562",
+            "en": "eviQ 1562"
+          }
+        },
+        {
+          "regimen_id": "rvd-griffin",
+          "notes": {
+            "uk": "eviQ 3919",
+            "en": "eviQ 3919"
+          }
+        },
+        {
+          "regimen_id": "rvd-pethema",
+          "notes": {
+            "uk": "eviQ 3936",
+            "en": "eviQ 3936"
+          }
+        },
+        {
+          "regimen_id": "rvd-weekly",
+          "notes": {
+            "uk": "eviQ 4367",
+            "en": "eviQ 4367"
+          }
+        },
+        {
+          "regimen_id": "mpb",
+          "notes": {
+            "uk": "Без трансплантації; eviQ 1413",
+            "en": "Without transplantation; eviQ 1413"
+          }
+        },
+        {
+          "regimen_id": "drd-sc-cycle-1-2",
+          "notes": {
+            "uk": "Без трансплантації; п/ш даратумумаб; eviQ 4371",
+            "en": "Without transplantation; SC daratumumab; eviQ 4371"
+          }
+        },
+        {
+          "regimen_id": "drd-sc-cycle-3-6"
+        },
+        {
+          "regimen_id": "drd-sc"
+        },
+        {
+          "regimen_id": "lenalidomide-maintenance-continuous",
+          "notes": {
+            "uk": "Після автотрансплантації; eviQ 3797",
+            "en": "After autologous transplantation; eviQ 3797"
+          }
         }
       ]
     },
@@ -465,6 +527,66 @@
             "uk": "Цикл 10 і далі",
             "en": "Cycle 10 onwards"
           }
+        },
+        {
+          "regimen_id": "krd-cycle-13-18",
+          "notes": {
+            "uk": "eviQ 4142",
+            "en": "eviQ 4142"
+          }
+        },
+        {
+          "regimen_id": "kd-weekly-cycle-1",
+          "notes": {
+            "uk": "Щотижневий Kd; eviQ 3830",
+            "en": "Weekly Kd; eviQ 3830"
+          }
+        },
+        {
+          "regimen_id": "kd-weekly-cycle-2-9"
+        },
+        {
+          "regimen_id": "kd-weekly"
+        },
+        {
+          "regimen_id": "kcd-eviq-cycle-1",
+          "notes": {
+            "uk": "eviQ 4186",
+            "en": "eviQ 4186"
+          }
+        },
+        {
+          "regimen_id": "kcd-eviq"
+        },
+        {
+          "regimen_id": "erd-eviq-cycle-1-2",
+          "notes": {
+            "uk": "eviQ 4138",
+            "en": "eviQ 4138"
+          }
+        },
+        {
+          "regimen_id": "erd-eviq"
+        },
+        {
+          "regimen_id": "pvd-eviq-cycle-1-8",
+          "notes": {
+            "uk": "eviQ 3791",
+            "en": "eviQ 3791"
+          }
+        },
+        {
+          "regimen_id": "drd-sc-cycle-1-2",
+          "notes": {
+            "uk": "п/ш даратумумаб; eviQ 4371",
+            "en": "SC daratumumab; eviQ 4371"
+          }
+        },
+        {
+          "regimen_id": "drd-sc-cycle-3-6"
+        },
+        {
+          "regimen_id": "drd-sc"
         }
       ]
     },

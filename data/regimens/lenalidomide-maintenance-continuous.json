@@ -1,0 +1,56 @@
+{
+  "$comment": "Підтримка леналідомідом за eviQ 3797 (вер. 3): безперервно, на відміну від NSSG (дні 1–21). Зниження до 5 мг на добу чи через день — за нейтрофілами й тромбоцитами.",
+  "id": "lenalidomide-maintenance-continuous",
+  "short_name": "Леналідомід підтримка (eviQ)",
+  "name": {
+    "uk": "Леналідомід, підтримка після автотрансплантації безперервно (eviQ)",
+    "en": "Lenalidomide maintenance after autologous transplant, continuous (eviQ)"
+  },
+  "description": {
+    "uk": "10 мг раз на добу без перерви, з дня 90–100 після трансплантації; через 3 місяці можна 15 мг.",
+    "en": "10 mg once a day without a break, from day 90 to 100 after transplantation; 15 mg after 3 months if tolerated."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "eviQ: підтримка леналідомідом після аутотрансплантації (протокол 3797, вер. 3)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/3797-lenalidomide-maintenance-post-autologous-tran",
+      "version": "вер. 3 від 10.08.2023",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "10 мг раз на добу (eviQ 3797).",
+        "en": "10 mg once a day (eviQ 3797)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 15,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Через 3 місяці, якщо переноситься (eviQ 3797)",
+            "en": "After 3 months if tolerated (eviQ 3797)"
+          },
+          "source": {
+            "name": "eviQ: підтримка леналідомідом після аутотрансплантації (протокол 3797, вер. 3)",
+            "url": "https://www.eviq.org.au/haematology/multiple-myeloma/3797-lenalidomide-maintenance-post-autologous-tran",
+            "version": "вер. 3 від 10.08.2023",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    }
+  ]
+}
