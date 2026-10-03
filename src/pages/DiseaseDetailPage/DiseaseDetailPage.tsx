@@ -82,7 +82,12 @@ function ArticleSection({ disease }: { disease: Disease }) {
 
   if (!isAuthConfigured) return null
 
-  const forSection = (articles.data ?? []).filter((row) => row.section === section)
+  // Which sources someone has actually written up. A source the disease names but nobody has
+  // written about yet gets no button, and a source selected before the list shrank falls back to
+  // the department's own article rather than leaving the reader on an empty page.
+  const written = new Set((articles.data ?? []).map((row) => row.section))
+  const shown = written.has(section) ? section : 'own'
+  const forSection = (articles.data ?? []).filter((row) => row.section === shown)
 
   return (
     <Card withBorder component="section">
@@ -90,7 +95,7 @@ function ArticleSection({ disease }: { disease: Disease }) {
         <Title order={2} size="h4">
           {t('diseaseDetail.article')}
         </Title>
-        <ArticleSources disease={disease} value={section} onChange={setSection} />
+        <ArticleSources disease={disease} written={written} value={shown} onChange={setSection} />
         {loading ? (
           <Loader size="sm" />
         ) : user === null ? (

@@ -9,39 +9,41 @@ import type { Disease } from '../../schemas/catalog'
 import type { ArticleSection } from '../../schemas/common'
 
 /**
- * Buttons that switch the article between the sources it is written from. Each opens what the
- * department wrote from that guideline, inside the app and behind the same sign-in as the rest
- * of the article — it never sends the reader out, and no guideline text is stored.
+ * Buttons that switch the article between the sources it has been written from. Each opens what
+ * the department wrote from that guideline, inside the app and behind the same sign-in as the
+ * rest of the article — it never sends the reader out, and no guideline text is stored.
+ *
+ * Nothing is drawn while the department's own article is all there is, which is the usual case:
+ * a row of buttons that all lead to the same text only takes up the screen.
  */
 
 export function ArticleSources({
   disease,
+  written,
   value,
   onChange,
 }: {
   disease: Disease
+  /** Sections that have text for this disease; a source without text gets no button. */
+  written: ReadonlySet<ArticleSection>
   value: ArticleSection
   onChange: (section: ArticleSection) => void
 }) {
   const { t } = useTranslation()
   const tu = t as unknown as DynamicTranslate
   const language = currentLanguage()
-  const choices = articleSources(disease)
-  const selected = choices.find((choice) => choice.section === value)
-  const reference = selected?.reference
+  const choices = articleSources(disease, written)
+  const reference = choices.find((choice) => choice.section === value)?.reference
 
   if (choices.length <= 1) return null
 
   return (
     <Stack gap={6}>
-      <Text size="sm" fw={500}>
-        {t('diseaseDetail.references')}
-      </Text>
       <Group gap="xs">
         {choices.map((choice) => (
           <Button
             key={choice.section}
-            size="xs"
+            size="compact-xs"
             variant={choice.section === value ? 'filled' : 'default'}
             onClick={() => onChange(choice.section)}
           >
@@ -49,20 +51,25 @@ export function ArticleSources({
           </Button>
         ))}
       </Group>
-      {reference?.updated != null && (
+      {reference !== undefined && (
         <Text size="xs" c="dimmed">
-          {t('diseaseDetail.referencesUpdated', {
-            list:
-              [tu(`referenceName.${reference.kind}`), reference.version].filter(Boolean).join(' ') +
-              ` — ${formatDate(reference.updated, language)}`,
-          })}
+          {t('diseaseDetail.referencesWritten', { source: edition(reference, language, tu) })}
         </Text>
       )}
-      <Text size="xs" c="dimmed">
-        {t('diseaseDetail.referencesNote')}
-      </Text>
     </Stack>
   )
+}
+
+/** The guideline as the reader needs to see it cited: name, edition, and the day it was issued. */
+function edition(
+  reference: NonNullable<ArticleSourceChoice['reference']>,
+  language: ReturnType<typeof currentLanguage>,
+  tu: DynamicTranslate,
+): string {
+  const named = [tu(`referenceName.${reference.kind}`), reference.version].filter(Boolean).join(' ')
+  return reference.updated === null
+    ? named
+    : `${named} — ${formatDate(reference.updated, language)}`
 }
 
 function label(

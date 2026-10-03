@@ -3,6 +3,7 @@ import { describe, expect, it, vi } from 'vitest'
 
 import { renderWithProviders } from '../../test/render'
 import type { Disease } from '../../schemas/catalog'
+import type { ArticleSection } from '../../schemas/common'
 import { articleSources } from '../../lib/article-sources'
 import { ArticleSources } from './ArticleSources'
 
@@ -31,11 +32,16 @@ const withNccn = disease([
   },
 ])
 
-describe('ArticleSources', () => {
-  it('offers the department article first, then one button per source', () => {
-    renderWithProviders(<ArticleSources disease={withNccn} value="own" onChange={() => {}} />)
+const written = (...sections: ArticleSection[]) => new Set<ArticleSection>(['own', ...sections])
+const both = written('nccn', 'uptodate')
 
-    expect(articleSources(withNccn).map((choice) => choice.section)).toEqual([
+describe('ArticleSources', () => {
+  it('offers the department article first, then one button per source written up', () => {
+    renderWithProviders(
+      <ArticleSources disease={withNccn} written={both} value="own" onChange={() => {}} />,
+    )
+
+    expect(articleSources(withNccn, both).map((choice) => choice.section)).toEqual([
       'own',
       'nccn',
       'uptodate',
@@ -45,7 +51,9 @@ describe('ArticleSources', () => {
   })
 
   it('never sends the reader to the guideline site', () => {
-    renderWithProviders(<ArticleSources disease={withNccn} value="nccn" onChange={() => {}} />)
+    renderWithProviders(
+      <ArticleSources disease={withNccn} written={both} value="nccn" onChange={() => {}} />,
+    )
 
     // The text is the department's own and stays behind the sign-in: no link leaves the app.
     expect(screen.queryAllByRole('link')).toHaveLength(0)
@@ -53,25 +61,55 @@ describe('ArticleSources', () => {
   })
 
   it('names the edition of the selected source and when it was issued', () => {
-    renderWithProviders(<ArticleSources disease={withNccn} value="nccn" onChange={() => {}} />)
+    renderWithProviders(
+      <ArticleSources disease={withNccn} written={both} value="nccn" onChange={() => {}} />,
+    )
     expect(screen.getByText(/NCCN 2.2026 — 01.07.2026/)).toBeInTheDocument()
   })
 
   it('says nothing about an edition the source does not state', () => {
-    renderWithProviders(<ArticleSources disease={withNccn} value="uptodate" onChange={() => {}} />)
-    expect(screen.queryByText(/Версія настанови/)).not.toBeInTheDocument()
+    renderWithProviders(
+      <ArticleSources disease={withNccn} written={both} value="uptodate" onChange={() => {}} />,
+    )
+    expect(screen.getByText(/за: UpToDate\./)).toBeInTheDocument()
   })
 
   it('reports the source the reader picked', () => {
     const onChange = vi.fn()
-    renderWithProviders(<ArticleSources disease={withNccn} value="own" onChange={onChange} />)
+    renderWithProviders(
+      <ArticleSources disease={withNccn} written={both} value="own" onChange={onChange} />,
+    )
 
     fireEvent.click(screen.getByRole('button', { name: 'UpToDate' }))
     expect(onChange).toHaveBeenCalledWith('uptodate')
   })
 
+  it('hides a source nobody has written about yet', () => {
+    renderWithProviders(
+      <ArticleSources
+        disease={withNccn}
+        written={written('nccn')}
+        value="own"
+        onChange={() => {}}
+      />,
+    )
+
+    expect(screen.getByRole('button', { name: 'Що каже NCCN · 2.2026' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'UpToDate' })).not.toBeInTheDocument()
+  })
+
+  it('renders nothing when only the department article exists', () => {
+    // The usual case: the disease names its guidelines, but the write-ups are still to come.
+    renderWithProviders(
+      <ArticleSources disease={withNccn} written={written()} value="own" onChange={() => {}} />,
+    )
+    expect(screen.queryAllByRole('button')).toHaveLength(0)
+  })
+
   it('renders nothing when a disease names no source', () => {
-    renderWithProviders(<ArticleSources disease={disease([])} value="own" onChange={() => {}} />)
+    renderWithProviders(
+      <ArticleSources disease={disease([])} written={both} value="own" onChange={() => {}} />,
+    )
     expect(screen.queryAllByRole('button')).toHaveLength(0)
   })
 })
