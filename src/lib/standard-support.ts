@@ -3,8 +3,8 @@ import type { CatalogIndex } from './catalog-index'
 import type { CourseItem } from './course-input'
 
 /**
- * The supportive care every course is surrounded by — antiemetics and prophylaxis against viral,
- * pneumocystis and fungal infection — as four switches the physician turns on or off by the
+ * The supportive care every course is surrounded by — antiemetics, prophylaxis against viral,
+ * pneumocystis and fungal infection, and cardio aspirin — as five switches the physician turns on or off by the
  * standard, instead of hunting for the rows in the regimen.
  *
  * A regimen that already writes such rows keeps them: the switch enables or disables them as a
@@ -17,7 +17,13 @@ import type { CourseItem } from './course-input'
  * antiviral: the department's own 400 mg twice a day, as in the regimens already in the catalog
  * (NSSG writes 200 mg three times a day). Change them here, not inline.
  */
-export const SUPPORT_CATEGORIES = ['antiemetic', 'antiviral', 'pneumocystis', 'antifungal'] as const
+export const SUPPORT_CATEGORIES = [
+  'antiemetic',
+  'antiviral',
+  'pneumocystis',
+  'antifungal',
+  'antiplatelet',
+] as const
 export type SupportCategory = (typeof SUPPORT_CATEGORIES)[number]
 
 const CATEGORY_DRUGS: Record<SupportCategory, readonly string[]> = {
@@ -25,6 +31,7 @@ const CATEGORY_DRUGS: Record<SupportCategory, readonly string[]> = {
   antiviral: ['aciclovir', 'valaciclovir'],
   pneumocystis: ['co-trimoxazole'],
   antifungal: ['fluconazole', 'posaconazole', 'voriconazole'],
+  antiplatelet: ['acetylsalicylic-acid'],
 }
 
 export const NO_SUPPORT: Record<SupportCategory, boolean> = {
@@ -32,6 +39,7 @@ export const NO_SUPPORT: Record<SupportCategory, boolean> = {
   antiviral: false,
   pneumocystis: false,
   antifungal: false,
+  antiplatelet: false,
 }
 
 const MONDAY_WEDNESDAY_FRIDAY = new Set([1, 3, 5])
@@ -143,6 +151,20 @@ export function standardSupportRows(
           notes: {
             uk: 'Стандартна протигрибкова профілактика низького ризику: 50 мг на добу впродовж лікування. При високому ризику (довга нейтропенія) протоколи радять позаконазол чи вориконазол — обирає лікар. Додано перемикачем «Супровід за стандартом».',
             en: 'Standard low-risk antifungal prophylaxis: 50 mg a day during treatment. At high risk (prolonged neutropenia) the protocols advise posaconazole or voriconazole — the physician chooses. Added by the «Standard support» switch.',
+          },
+        }),
+      )
+    }
+    if (category === 'antiplatelet' && has('acetylsalicylic-acid')) {
+      result.push(
+        row(base, category, {
+          drug_id: 'acetylsalicylic-acid',
+          route: 'oral',
+          dose_value: 100,
+          days: cycle,
+          notes: {
+            uk: 'Кардіоаспірин 100 мг раз на добу на весь цикл — за потреби (наприклад, профілактика тромбозів при леналідоміді чи тромбоцитозі). Тромбоцити нижче 50 ×10⁹/л і ризик кровотечі — протипоказання, вирішує лікар. Додано перемикачем «Супровід за стандартом».',
+            en: 'Cardio aspirin 100 mg once a day for the whole cycle — as needed (for example thrombosis prophylaxis with lenalidomide or thrombocytosis). Platelets below 50 ×10⁹/L and a bleeding risk are contraindications; the physician decides. Added by the «Standard support» switch.',
           },
         }),
       )

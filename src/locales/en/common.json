@@ -137,12 +137,14 @@
       "antiviral": "Antiviral prophylaxis",
       "pneumocystis": "Pneumocystis pneumonia prophylaxis",
       "antifungal": "Antifungal prophylaxis",
+      "antiplatelet": "Cardio aspirin (antiplatelet)",
       "ownRows": "Rows of the regimen: {{count}}",
       "standard": {
         "antiemetic": "Adds ondansetron 8 mg twice a day on the days cytostatics are given",
         "antiviral": "Adds aciclovir 400 mg twice a day for the whole cycle",
         "pneumocystis": "Adds co-trimoxazole 480 mg on Mon, Wed and Fri",
-        "antifungal": "Adds fluconazole 50 mg a day for the whole cycle"
+        "antifungal": "Adds fluconazole 50 mg a day for the whole cycle",
+        "antiplatelet": "Adds aspirin 100 mg once a day for the whole cycle"
       }
     },
     "manual": {

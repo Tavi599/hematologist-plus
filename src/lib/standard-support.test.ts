@@ -14,7 +14,7 @@ import {
 const catalog = (drugIds: string[]) =>
   ({ drugs: new Map(drugIds.map((id) => [id, {}])) }) as unknown as CatalogIndex
 
-const ALL = ['ondansetron', 'aciclovir', 'co-trimoxazole', 'fluconazole']
+const ALL = ['ondansetron', 'aciclovir', 'co-trimoxazole', 'fluconazole', 'acetylsalicylic-acid']
 
 function entry(
   id: string,
@@ -33,7 +33,13 @@ const chemo = [
   entry('r.vincristine', 'vincristine', 'main', 'iv_infusion', [1, 8]),
   entry('r.prednisolone', 'prednisolone', 'main', 'oral', [1, 2, 3, 4, 5]),
 ]
-const ON = { antiemetic: true, antiviral: true, pneumocystis: true, antifungal: true }
+const ON = {
+  antiemetic: true,
+  antiviral: true,
+  pneumocystis: true,
+  antifungal: true,
+  antiplatelet: true,
+}
 
 describe('supportCategoryOf', () => {
   it('names the kind of a supportive row and nothing for a drug that treats', () => {
@@ -50,6 +56,9 @@ describe('supportCategoryOf', () => {
       'antifungal',
     )
     // The same drug as part of the treatment is not support.
+    expect(
+      supportCategoryOf(entry('a', 'acetylsalicylic-acid', 'supportive', 'oral', [1]).item),
+    ).toBe('antiplatelet')
     expect(supportCategoryOf(entry('a', 'fluconazole', 'main', 'oral', [1]).item)).toBeNull()
     expect(supportCategoryOf(entry('a', 'rituximab', 'supportive', 'oral', [1]).item)).toBeNull()
   })
@@ -83,6 +92,13 @@ describe('standardSupportRows', () => {
       role: 'supportive',
     })
     expect(by['standard-support.antiviral']!.days).toHaveLength(21)
+    expect(by['standard-support.antiplatelet']).toMatchObject({
+      drug_id: 'acetylsalicylic-acid',
+      dose_value: 100,
+      route: 'oral',
+      role: 'supportive',
+    })
+    expect(by['standard-support.antiplatelet']!.days).toHaveLength(21)
     expect(by['standard-support.antifungal']).toMatchObject({
       drug_id: 'fluconazole',
       dose_value: 50,
