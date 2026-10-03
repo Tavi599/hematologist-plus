@@ -107,6 +107,27 @@
             "uk": "Без автотрансплантації",
             "en": "Without an autologous transplant"
           }
+        },
+        {
+          "regimen_id": "dvrd-cycle-1-2",
+          "notes": {
+            "uk": "Цикли 1-2",
+            "en": "Cycles 1-2"
+          }
+        },
+        {
+          "regimen_id": "dvrd-cycle-3-8",
+          "notes": {
+            "uk": "Цикли 3-8",
+            "en": "Cycles 3-8"
+          }
+        },
+        {
+          "regimen_id": "dvrd",
+          "notes": {
+            "uk": "Цикли 9 і далі, без бортезомібу",
+            "en": "Cycle 9 onwards, without bortezomib"
+          }
         }
       ]
     },
@@ -252,6 +273,20 @@
           "notes": {
             "uk": "Цикли 7 і далі",
             "en": "Cycle 7 onwards"
+          }
+        },
+        {
+          "regimen_id": "vtd-pace",
+          "notes": {
+            "uk": "Інтенсивна терапія порятунку",
+            "en": "Intensive salvage"
+          }
+        },
+        {
+          "regimen_id": "vtd-pace-carboplatin",
+          "notes": {
+            "uk": "Те саме при нирковій недостатності",
+            "en": "The same in renal impairment"
           }
         }
       ]

@@ -1,0 +1,169 @@
+{
+  "$comment": "Варіант із карбоплатином замість цисплатину — для пацієнтів із нирковою недостатністю.",
+  "id": "vtd-pace-carboplatin",
+  "short_name": "VTD-PACE (карбо)",
+  "name": {
+    "uk": "VTD-PACE із карбоплатином замість цисплатину",
+    "en": "VTD-PACE with carboplatin in place of cisplatin"
+  },
+  "description": {
+    "uk": "Відсутність відповіді на індукційну терапію або прогресування на ній; рецидивна чи рефрактерна мієлома в пацієнтів, яким підходить інтенсивна терапія порятунку; первинна плазмоклітинна лейкемія або дебют з екстрамедулярним ураженням. Цикл 4-6 тижнів, усього 2-4 цикли. Якщо бортезоміб не показаний, схема називається DT-PACE — тоді позицію бортезомібу вимикають. Цей варіант застосовують при нирковій недостатності: карбоплатин 50 мг/м² на добу замість цисплатину.",
+    "en": "Failure to respond to induction or progression on it; relapsed or refractory myeloma in patients fit for intensive salvage; primary plasma cell leukaemia or presentation with extramedullary disease. A four to six week cycle, 2 to 4 cycles in all. Where bortezomib is not indicated the regimen is DT-PACE: its row is then switched off. This variant is for renal impairment: carboplatin 50 mg/m2 a day in place of the cisplatin."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.50 VTDPACE / DTPACE",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-50-vtdpace-dtpace.pdf",
+      "version": "2.1 (06.2023)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "Щодня, дні 1-4.",
+        "en": "Daily, days 1 to 4."
+      }
+    },
+    {
+      "key": "thalidomide",
+      "drug_id": "thalidomide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Увечері, раз на добу. Починають із 50 мг і підвищують до 100 мг, якщо переноситься. Якщо планують збір стовбурових клітин, талідомід дають лише в дні 1-4. За рішенням лікаря талідомід можна не давати взагалі, якщо хвороба оцінена як стійка до нього.",
+        "en": "Once daily at night. It starts at 50 mg and rises to 100 mg as tolerated. Where a stem cell harvest is planned it is given on days 1 to 4 only. At the clinician's discretion it may be omitted altogether if the disease is judged thalidomide-refractory."
+      },
+      "dose_options": [
+        {
+          "dose_value": 100,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Цільова доза, якщо переноситься",
+            "en": "The target dose, as tolerated"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.50 VTDPACE / DTPACE",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-50-vtdpace-dtpace.pdf",
+            "version": "2.1 (06.2023)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "carboplatin",
+      "drug_id": "carboplatin",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "Замінює цисплатин при нирковій недостатності; безперервна інфузія через центральний катетер.",
+        "en": "Replaces the cisplatin in renal impairment; a continuous infusion through a central line."
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 40,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "Безперервна інфузія через центральний катетер; сумарно 160 мг/м² за цикл. Цисплатин, етопозид і доксорубіцин вводять безперервною інфузією через центральний катетер. Протокол дає два варіанти залежно від даних про стабільність розчину в конкретній лікарні: або цисплатин, етопозид і циклофосфамід змішують в одному мішку на 24 години, або в мішку лишають цисплатин з етопозидом, а циклофосфамід вводять окремо струминно. Доксорубіцин у будь-якому разі йде окремо — у 100 мл 0,9% NaCl за 24 години. У вибраних пацієнтів розумно обмежити розрахунок площею поверхні тіла 2 м².",
+        "en": "A continuous infusion through a central line; 160 mg/m2 in all per cycle. The cisplatin, etoposide and doxorubicin run as continuous infusions through a central line. The protocol gives two options depending on the stability data each hospital uses: either cisplatin, etoposide and cyclophosphamide share one 24-hour bag, or the bag holds cisplatin and etoposide while the cyclophosphamide is given separately as a bolus. The doxorubicin runs on its own either way, in 100 mL of 0.9% sodium chloride over 24 hours. In selected patients it is reasonable to cap the body surface area at 2 m2."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 400,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "Сумарно 1600 мг/м² за цикл. Залежно від обраного варіанта — або в тому самому мішку, або окремо струминно.",
+        "en": "1600 mg/m2 in all per cycle. Depending on the option chosen, either in the same bag or separately as a bolus."
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl за 24 години через центральний катетер; сумарно 40 мг/м² за цикл.",
+        "en": "In 100 mL of 0.9% sodium chloride over 24 hours through a central line; 40 mg/m2 in all per cycle."
+      }
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1,
+      "dose_unit": "mg_m2",
+      "days": [1, 4, 8, 11],
+      "notes": {
+        "uk": "Підшкірно струминно — лише тоді, коли бортезоміб показаний. Без нього схема називається DT-PACE: тоді цю позицію вимикають.",
+        "en": "A subcutaneous bolus, only where bortezomib is indicated. Without it the regimen is DT-PACE: this row is then switched off."
+      }
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "miu_kg",
+      "days": [6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "notes": {
+        "uk": "З дня 6, доки нейтрофіли не перевищать 1,0×10⁹/л. Відлік такий: інфузія дня 4 триває добу й завершується в день 5, а філграстим починають через 24 години після цього. Якщо планують збір стовбурових клітин, дозу підвищують до 1 млн МО/кг з дня 6, розраховуючи зібрати клітини в дні 15-16.",
+        "en": "From day 6 until the neutrophils exceed 1.0x10^9/L. The count works out thus: the day 4 infusion runs for 24 hours and ends on day 5, and the filgrastim starts 24 hours after that. Where a stem cell harvest is planned the dose rises to 1 million IU/kg from day 6, aiming to collect on days 15 and 16."
+      },
+      "dose_options": [
+        {
+          "dose_value": 1,
+          "dose_unit": "miu_kg",
+          "notes": {
+            "uk": "Якщо планують збір стовбурових клітин",
+            "en": "Where a stem cell harvest is planned"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.50 VTDPACE / DTPACE",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-50-vtdpace-dtpace.pdf",
+            "version": "2.1 (06.2023)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}
