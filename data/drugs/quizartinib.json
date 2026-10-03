@@ -1,0 +1,29 @@
+{
+  "$comment": "Додано 2026-10-03 для схеми 7+3 з квізартинібом (UpToDate). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "quizartinib",
+  "name": {
+    "uk": "Квізартиніб",
+    "en": "Quizartinib"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: VANFLYTA (quizartinib), Dosage Forms and Strengths — таблетки 17,7 і 26,5 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=29cdbcfe-497d-4e78-bb7b-2d4acafe8e86",
+      "version": "SPL від 22.04.2026",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t17-7",
+      "form": "tablet",
+      "strength_amount": 17.7
+    },
+    {
+      "key": "t26-5",
+      "form": "tablet",
+      "strength_amount": 26.5
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "$comment": "Схема «7+3» за UpToDate: цитарабін безперервною інфузією 7 діб + даунорубіцин у дні 1–3. Тривалість циклу 28 днів — технічна (наступний курс — за відновленням показників). Відрізняється від DA 3+10 (NSSG ML.6), де цитарабін струминно кожні 12 годин. Мідостаурин — дні 8–21.",
+  "id": "da-7-3-midostaurin",
+  "short_name": "7+3 + Mido",
+  "name": {
+    "uk": "7+3 + мідостаурин",
+    "en": "7+3 + midostaurin"
+  },
+  "description": {
+    "uk": "FLT3-мутована ГМЛ: 7+3 і мідостаурин 50 мг двічі на добу у дні 8–21.",
+    "en": "FLT3-mutated AML: 7+3 and midostaurin 50 mg twice daily on days 8 to 21."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Acute myeloid leukemia: Induction therapy in fit, younger adults",
+      "url": "https://www.uptodate.com/contents/acute-myeloid-leukemia-induction-therapy-in-fit-younger-adults",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Безперервна інфузія 7 діб: 100 мг/м² на добу (UpToDate допускає 100–200). Розчинник і об'єм доби — практика відділення.",
+        "en": "A 7-day continuous infusion: 100 mg/m2 a day (UpToDate allows 100 to 200). The diluent and the daily volume follow the department's practice."
+      },
+      "dose_options": [
+        {
+          "dose_value": 200,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Верхня межа діапазону UpToDate (100–200 мг/м² на добу)",
+            "en": "Upper end of the UpToDate range (100 to 200 mg/m2 a day)"
+          },
+          "source": {
+            "name": "UpToDate: Acute myeloid leukemia: Induction therapy in fit, younger adults",
+            "url": "https://www.uptodate.com/contents/acute-myeloid-leukemia-induction-therapy-in-fit-younger-adults",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "daunorubicin",
+      "drug_id": "daunorubicin",
+      "route": "iv_infusion",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "60 мг/м² у дні 1–3 (UpToDate: 60–90). UpToDate: даунорубіцин та ідарубіцин дають подібні результати.",
+        "en": "60 mg/m2 on days 1 to 3 (UpToDate: 60 to 90). UpToDate: daunorubicin and idarubicin give similar outcomes."
+      },
+      "dose_options": [
+        {
+          "dose_value": 90,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Верхня межа діапазону UpToDate (60–90 мг/м²)",
+            "en": "Upper end of the UpToDate range (60 to 90 mg/m2)"
+          },
+          "source": {
+            "name": "UpToDate: Acute myeloid leukemia: Induction therapy in fit, younger adults",
+            "url": "https://www.uptodate.com/contents/acute-myeloid-leukemia-induction-therapy-in-fit-younger-adults",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "midostaurin",
+      "drug_id": "midostaurin",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "50 мг двічі на добу, дні 8–21 (одразу після 7+3). Для будь-якої мутації FLT3. Під час їди.",
+        "en": "50 mg twice daily on days 8 to 21 (straight after 7+3). For any FLT3 mutation. With food."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини разом із гідратацією. У пацієнтів високого ризику може знадобитися расбуриказа — за протоколом СЛП.",
+        "en": "Tumour lysis prophylaxis together with hydration. High-risk patients may need rasburicase, per the TLS protocol."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Противірусна профілактика: впродовж лікування і 3 місяці після його завершення.",
+        "en": "Antiviral prophylaxis: throughout treatment and for 3 months after it ends."
+      }
+    }
+  ]
+}

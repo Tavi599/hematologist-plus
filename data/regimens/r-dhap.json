@@ -1,0 +1,110 @@
+{
+  "$comment": "R-DHAP за UpToDate (рецидив ДВКЛ у придатних пацієнтів): ритуксимаб 375 мг/м² (день -1), дексаметазон 40 мг/добу дні 1–4, цисплатин 100 мг/м² день 1 безперервною інфузією, цитарабін 2 г/м² за 3 години день 2 і ще раз через 12 годин, цикл 3 тижні. У довіднику дні зсунуто на +1 (ритуксимаб — день 1). Об'єм і тривалість цисплатину (безперервна інфузія 24 год у 1000 мл) — практика відділення за R-GDP/R-ICE; джерело не називає розчинника. Деякі експерти замінюють цисплатин карбоплатином або оксаліплатином — для цього є R-DHAOx.",
+  "id": "r-dhap",
+  "short_name": "R-DHAP",
+  "name": {
+    "uk": "R-DHAP (ритуксимаб, дексаметазон, цитарабін, цисплатин)",
+    "en": "R-DHAP (rituximab, dexamethasone, cytarabine, cisplatin)"
+  },
+  "description": {
+    "uk": "Рятувальна схема першого рецидиву ДВКЛ у придатних до трансплантації пацієнтів. Цикл 21 день.",
+    "en": "Salvage for the first relapse of DLBCL in transplant-eligible patients. A 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "UpToDate: Diffuse large B cell lymphoma (DLBCL): Suspected first relapse or refractory disease in patients who are medically fit",
+      "url": "https://www.uptodate.com/contents/diffuse-large-b-cell-lymphoma-dlbcl-suspected-first-relapse-or-refractory-disease-in-patients-who-are-medically-fit",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 30-60 хв до ритуксимабу",
+        "en": "30-60 minutes before rituximab"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% - 5,0 мл (замість хлорфенаміну протоколу)",
+        "en": "Diphenhydramine 1% 5.0 mL (replaces the protocol's chlorphenamine)"
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "UpToDate дає ритуксимаб за день до початку (день -1); тут це день 1, а решта препаратів зсунута на день уперед.",
+        "en": "UpToDate gives the rituximab the day before the rest (day -1); here that is day 1 and the other drugs are shifted a day on."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [2, 3, 4, 5],
+      "notes": {
+        "uk": "40 мг на добу всередину, дні 2–5 (за UpToDate — дні 1–4).",
+        "en": "40 mg a day by mouth, days 2 to 5 (days 1 to 4 in UpToDate)."
+      }
+    },
+    {
+      "key": "cisplatin",
+      "drug_id": "cisplatin",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "Безперервна інфузія 24 години. Потрібна гідратація й контроль діурезу, електролітів.",
+        "en": "A continuous 24-hour infusion. Needs hydration and monitoring of urine output and electrolytes."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [3],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "2 г/м² за 3 години і ще раз через 12 годин (за UpToDate — день 2). Очні краплі зі стероїдом — за практикою відділення (не внесені: доза не в мг).",
+        "en": "2 g/m2 over 3 hours and again 12 hours later (day 2 in UpToDate). Steroid eye drops follow the department's practice (not entered: the dose is not in mg)."
+      }
+    }
+  ]
+}

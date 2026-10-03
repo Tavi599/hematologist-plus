@@ -21,6 +21,12 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "FDA label: ONUREG (azacitidine tablets), Dosage Forms and Strengths — таблетки 200 і 300 мг; 300 мг на день, дні 1–14 кожного 28-денного циклу",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e95e33f-8aba-4f19-b332-2416580d358b",
+      "version": "SPL від 15.06.2026",
+      "checkedOn": "2026-10-03"
     }
   ],
   "presentations": [
@@ -28,6 +34,16 @@
       "key": "s100",
       "form": "vial",
       "strength_amount": 100
+    },
+    {
+      "key": "t200",
+      "form": "tablet",
+      "strength_amount": 200
+    },
+    {
+      "key": "t300",
+      "form": "tablet",
+      "strength_amount": 300
     }
   ]
 }

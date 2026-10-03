@@ -1,0 +1,188 @@
+{
+  "$comment": "VR-CAP за UpToDate (первинне лікування мантійноклітинної лімфоми): R-CHOP, де вінкристин замінено бортезомібом 1,3 мг/м² у дні 1, 4, 8, 11; решта — як у R-CHOP-21 (ритуксимаб 375, циклофосфамід 750, доксорубіцин 50 мг/м², преднізолон 100 мг дні 1–5). Цикл 21 день, кількість циклів — 6 (як у R-CHOP). Премедикація відділення — як у R-CHOP-21.",
+  "id": "vr-cap",
+  "short_name": "VR-CAP",
+  "name": {
+    "uk": "VR-CAP (бортезоміб, ритуксимаб, циклофосфамід, доксорубіцин, преднізолон)",
+    "en": "VR-CAP (bortezomib, rituximab, cyclophosphamide, doxorubicin, prednisolone)"
+  },
+  "description": {
+    "uk": "Мантійноклітинна лімфома, пацієнти похилого віку чи менш придатні до інтенсивної терапії (одна з альтернатив R-B). Цикл 21 день.",
+    "en": "Mantle cell lymphoma in older or less-fit patients (one alternative to R-B). A 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Mantle cell lymphoma: Initial management",
+      "url": "https://www.uptodate.com/contents/mantle-cell-lymphoma-initial-management",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "Дизайн відділення «Ритуксимаб» (Google Таблиці)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до ритуксимабу",
+        "en": "At least 30 minutes before rituximab"
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "100 мг на добу, дні 1–5 (так у таблиці R-CHOP21 UpToDate); у день 1 — не пізніше ніж за 30 хв до ритуксимабу.",
+        "en": "100 mg a day on days 1 to 5 (as in the UpToDate R-CHOP21 table); on day 1 at least 30 minutes before the rituximab."
+      }
+    },
+    {
+      "key": "omeprazole",
+      "drug_id": "omeprazole",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "У 20–40 мл 0,9% NaCl, в/в струминно повільно",
+        "en": "In 20-40 mL 0.9% NaCl, slow IV push"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Разом із димедролом у 100 мл 0,9% NaCl, в/в крапельно 200 мл/год, до ритуксимабу",
+        "en": "With diphenhydramine in 100 mL 0.9% NaCl, IV 200 mL/h, before rituximab"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% — 5,0 мл; у тому самому флаконі, що й дексаметазон (замість хлорфенаміну протоколу)",
+        "en": "Diphenhydramine 1% 5.0 mL, in the same bag as dexamethasone (replaces the protocol's chlorphenamine)"
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "Максимальна швидкість 400 мг/год; спостереження 30 хв перед наступними інфузіями",
+        "en": "Maximum rate 400 mg/h; observe for 30 minutes before the next infusions"
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 4, 8, 11],
+      "notes": {
+        "uk": "Замінює вінкристин у R-CHOP: 1,3 мг/м² у дні 1, 4, 8 і 11 кожного циклу (UpToDate). Шлях введення — підшкірно, як у відділенні; в оригінальному дослідженні — внутрішньовенно.",
+        "en": "Replaces the vincristine of R-CHOP: 1.3 mg/m2 on days 1, 4, 8 and 11 of each cycle (UpToDate). Given subcutaneously as in the department; the original trial gave it intravenously."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "ondansetron-d1",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480
+    },
+    {
+      "key": "ondansetron-d2",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [2],
+      "anchor_offset_min": -30
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл; зменшити дозу при нирковій недостатності",
+        "en": "Tumour lysis prophylaxis, cycle 1; reduce the dose in renal impairment"
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика впродовж лікування і 3 місяці після",
+        "en": "Antiviral prophylaxis during treatment and for 3 months after"
+      }
+    }
+  ]
+}

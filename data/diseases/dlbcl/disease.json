@@ -278,6 +278,13 @@
           "regimen_id": "r-gdp"
         },
         {
+          "regimen_id": "r-dhap",
+          "notes": {
+            "uk": "Рятувальна схема першого рецидиву (UpToDate); цисплатин можна замінити карбоплатином чи оксаліплатином (R-DHAOx).",
+            "en": "Salvage for the first relapse (UpToDate); cisplatin can be replaced by carboplatin or oxaliplatin (R-DHAOx)."
+          }
+        },
+        {
           "regimen_id": "r-ice"
         },
         {
@@ -341,6 +348,13 @@
       "regimens": [
         {
           "regimen_id": "r-gdp"
+        },
+        {
+          "regimen_id": "r-dhap",
+          "notes": {
+            "uk": "Рятувальна схема першого рецидиву (UpToDate); цисплатин можна замінити карбоплатином чи оксаліплатином (R-DHAOx).",
+            "en": "Salvage for the first relapse (UpToDate); cisplatin can be replaced by carboplatin or oxaliplatin (R-DHAOx)."
+          }
         },
         {
           "regimen_id": "r-eshap"

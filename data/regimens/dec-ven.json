@@ -1,0 +1,115 @@
+{
+  "$comment": "Цикли 2 і далі за UpToDate: децитабін 20 мг/м² дні 1–5, венетоклакс 400 мг щодня. При значній гематологічній токсичності венетоклакс скорочують до перших 21 або 14 днів циклу (ефективність таких схем не доведена).",
+  "id": "dec-ven",
+  "short_name": "Dec+Ven, цикли 2+",
+  "name": {
+    "uk": "Децитабін + венетоклакс, цикли 2 і далі",
+    "en": "Decitabine + venetoclax, cycles 2 onwards"
+  },
+  "description": {
+    "uk": "Децитабін 20 мг/м² дні 1–5 і венетоклакс 400 мг щодня. Цикл 28 днів.",
+    "en": "Decitabine 20 mg/m2 on days 1 to 5 and venetoclax 400 mg daily. A 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Acute myeloid leukemia: Management of medically unfit adults",
+      "url": "https://www.uptodate.com/contents/acute-myeloid-leukemia-management-of-medically-unfit-adults",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "FDA label: Decitabine for Injection (Bluepoint), Dosage and Administration — розведення до 0,1–1 мг/мл у 0,9% NaCl або 5% глюкозі; флакон 50 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5975fa81-1e29-4d56-e063-6394a90a9cd5",
+      "version": "SPL від 01.09.2026",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "decitabine",
+      "drug_id": "decitabine",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "20 мг/м² внутрішньовенно за 1 годину, дні 1–5 кожного 28-денного циклу (UpToDate). Об'єм 100 мл — вибір для дотримання межі 0,1–1 мг/мл за інструкцією.",
+        "en": "20 mg/m2 IV over 1 hour on days 1 to 5 of each 28-day cycle (UpToDate). The 100 mL volume keeps within the label's 0.1 to 1 mg/mL."
+      }
+    },
+    {
+      "key": "venetoclax",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Щодня, під час їди.",
+        "en": "Daily, with food."
+      },
+      "dose_modifiers": [
+        {
+          "key": "cyp3a-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A (позаконазол, вориконазол, кларитроміцин, кетоконазол, ітраконазол, ритонавір)",
+            "en": "Strong CYP3A inhibitor (posaconazole, voriconazole, clarithromycin, ketoconazole, itraconazole, ritonavir)"
+          },
+          "default_on": false,
+          "notes": {
+            "uk": "Дозу зменшують щонайменше на 75% (до 10/20/50/100 мг), як у протоколі ML.84.",
+            "en": "The dose is cut by at least 75% (to 10/20/50/100 mg), as in protocol ML.84."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.84 Azacitidine and Venetoclax",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-84-azacitidine-and-venetoclax-covid-19.pdf",
+            "version": "4.0",
+            "checkedOn": "2026-10-03"
+          },
+          "dose_value": 100
+        },
+        {
+          "key": "cyp3a-moderate",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A (ципрофлоксацин, дилтіазем, еритроміцин, флуконазол, верапаміл)",
+            "en": "Moderate CYP3A inhibitor (ciprofloxacin, diltiazem, erythromycin, fluconazole, verapamil)"
+          },
+          "default_on": false,
+          "notes": {
+            "uk": "Дозу зменшують щонайменше вдвічі.",
+            "en": "The dose is halved at least."
+          },
+          "source": {
+            "name": "EMA, Venclyxto (венетоклакс), коротка характеристика препарату, таблиця 7",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/venclyxto-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-03"
+          },
+          "dose_value": 200
+        }
+      ]
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Противірусна профілактика: впродовж лікування і 3 місяці після його завершення.",
+        "en": "Antiviral prophylaxis: throughout treatment and for 3 months after it ends."
+      }
+    }
+  ]
+}

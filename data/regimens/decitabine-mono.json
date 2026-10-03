@@ -1,0 +1,60 @@
+{
+  "$comment": "Децитабін у монорежимі за UpToDate: 20 мг/м² внутрішньовенно за 1 годину, 5 (або 10) днів поспіль у 28-денних циклах. Внесено 5-денний варіант; 10-денний — додайте дні 6–10 вручну.",
+  "id": "decitabine-mono",
+  "short_name": "Децитабін",
+  "name": {
+    "uk": "Децитабін, монотерапія",
+    "en": "Decitabine monotherapy"
+  },
+  "description": {
+    "uk": "20 мг/м² на добу, дні 1–5 кожного 28-денного циклу.",
+    "en": "20 mg/m2 a day on days 1 to 5 of each 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Acute myeloid leukemia: Management of medically unfit adults",
+      "url": "https://www.uptodate.com/contents/acute-myeloid-leukemia-management-of-medically-unfit-adults",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "FDA label: Decitabine for Injection (Bluepoint), Dosage and Administration — розведення до 0,1–1 мг/мл у 0,9% NaCl або 5% глюкозі; флакон 50 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5975fa81-1e29-4d56-e063-6394a90a9cd5",
+      "version": "SPL від 01.09.2026",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "decitabine",
+      "drug_id": "decitabine",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "20 мг/м² внутрішньовенно за 1 годину, дні 1–5 кожного 28-денного циклу (UpToDate). Об'єм 100 мл — вибір для дотримання межі 0,1–1 мг/мл за інструкцією.",
+        "en": "20 mg/m2 IV over 1 hour on days 1 to 5 of each 28-day cycle (UpToDate). The 100 mL volume keeps within the label's 0.1 to 1 mg/mL."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Противірусна профілактика: впродовж лікування і 3 місяці після його завершення.",
+        "en": "Antiviral prophylaxis: throughout treatment and for 3 months after it ends."
+      }
+    }
+  ]
+}
