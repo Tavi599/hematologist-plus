@@ -401,4 +401,15 @@ describe('catalogToSql', () => {
     rows.hospitals[0]!.address = 'x $catalog$ y'
     expect(() => catalogToSql(rows, { prune: false })).toThrow(/contains \$catalog\$/)
   })
+
+  it('refuses rows of one table that do not carry the same columns', () => {
+    // The column list comes from the first row; a row that disagrees would silently lose a
+    // column on the way into the live database, so it has to fail here instead.
+    const rows = loadDemo()
+    const first = rows.drugs[0]
+    expect(first).toBeDefined()
+    const { availability: _dropped, ...withoutColumn } = first!
+    rows.drugs = [first!, withoutColumn as SyncRows['drugs'][number]]
+    expect(() => catalogToSql(rows, { prune: false })).toThrow(/expected/)
+  })
 })
