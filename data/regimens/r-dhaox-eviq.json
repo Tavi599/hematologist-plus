@@ -1,10 +1,10 @@
 {
-  "$comment": "Варіант за NSSG L.133: цитарабін 2000 мг/м² ДВІЧІ на добу в день 2. Джерела розходяться: eviQ (1674, 4351) дає цитарабін 2000 мг/м² раз на добу в дні 2 і 3 — див. окрему схему «R-DHAOx — за eviQ». Поправка на ШКФ 31–59 мл/хв — це рівно половина дози, тому записана як окрема доза.",
-  "id": "r-dhaox",
-  "short_name": "R-DHAOx (NSSG)",
+  "$comment": "Варіант за eviQ (4351, на основі 1674): цитарабін 2000 мг/м² ОДИН раз на добу в дні 2 і 3 (3 години в 500 мл 0,9% NaCl), пегфілграстим 6 мг у день 5; дексаметазон 40 мг у дні 1–4. NSSG L.133 дає цитарабін двічі на добу в день 2 — див. схему «R-DHAOx — за NSSG». Корекції цитарабіну за ШКФ тут не вносилися (їх немає в підтверджених даних eviQ).",
+  "id": "r-dhaox-eviq",
+  "short_name": "R-DHAOx (eviQ)",
   "name": {
-    "uk": "R-DHAOx — за NSSG (ритуксимаб, дексаметазон, цитарабін, оксаліплатин)",
-    "en": "R-DHAOx - per NSSG (rituximab, dexamethasone, cytarabine, oxaliplatin)"
+    "uk": "R-DHAOx — за eviQ (ритуксимаб, дексаметазон, цитарабін, оксаліплатин)",
+    "en": "R-DHAOx - per eviQ (rituximab, dexamethasone, cytarabine, oxaliplatin)"
   },
   "description": {
     "uk": "Рецидивна або рефрактерна лімфома Ходжкіна й неходжкінські лімфоми, а також перша лінія мантійноклітинної лімфоми. Цикл 21 день: 3 цикли як терапія порятунку, максимум 4 цикли в першій лінії. Профілактика цитарабінового кон'юнктивіту — очні краплі зі стероїдом (преднізолон 0,5% або дексаметазон 0,1%) по краплі в кожне око 4 рази на добу з дня 2 і ще 5 днів після останньої дози цитарабіну; у довіднику їх немає. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень (понеділок, середа, п'ятниця) на весь час лікування й щонайменше 3 місяці після. У циклі мобілізації стовбурових клітин дозу філграстиму підвищують до 1,0 млн МО/кг і продовжують до завершення збору; пегфілграстим у такому циклі застосовувати не можна.",
@@ -14,10 +14,10 @@
   "default_cycles": 3,
   "sources": [
     {
-      "name": "NSSG Oxford Haematology, L.133 R-DHAOx",
-      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-133-r-dhaox.pdf",
-      "version": "09.2024",
-      "checkedOn": "2026-10-03"
+      "name": "eviQ: MCL — R-DHAOx induction (протокол 4351, вер. 1; архівний; на основі 1674)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/mantle-cell-lymphoma/4351-mantle-cell-lymphoma-induction-r-dhaox",
+      "version": "вер. 1",
+      "checkedOn": "2026-10-04"
     },
     {
       "name": "eviQ: R-DHAOx (протокол 1674, вер. 7)",
@@ -89,36 +89,15 @@
       "route": "iv_infusion",
       "dose_value": 2000,
       "dose_unit": "mg_m2",
-      "days": [2],
-      "administrations_per_day": 2,
-      "interval_min": 720,
-      "duration_min": 120,
+      "days": [2, 3],
+      "administrations_per_day": 1,
+      "duration_min": 180,
       "fallback_solvent": "sodium_chloride_0_9",
-      "fallback_volume_ml": 250,
+      "fallback_volume_ml": 500,
       "notes": {
-        "uk": "Двічі на добу в день 2, кожна доза в 250 мл 0,9% NaCl за 2 години. Можна вводити амбулаторною інфузійною помпою; якщо її максимальна швидкість перевищує 125 мл/год, об'єм зменшують до 100 мл.",
-        "en": "Twice on day 2, each dose in 250 mL of 0.9% sodium chloride over 2 hours. An ambulatory pump may be used; where its maximum flow exceeds 125 mL/hour the volume drops to 100 mL."
-      },
-      "dose_modifiers": [
-        {
-          "key": "gfr-31-59",
-          "label": {
-            "uk": "Швидкість клубочкової фільтрації 31-59 мл/хв",
-            "en": "A glomerular filtration rate of 31 to 59 mL/min"
-          },
-          "dose_value": 1000,
-          "notes": {
-            "uk": "Протокол пише «50% дози» — від 2000 мг/м² це 1000 мг/м². При ШКФ нижче 30 мл/хв цитарабін не дають узагалі.",
-            "en": "The protocol writes \"50% of the dose\", which from 2000 mg/m2 is 1000 mg/m2. Below a GFR of 30 mL/min the cytarabine is omitted entirely."
-          },
-          "source": {
-            "name": "NSSG Oxford Haematology, L.133 R-DHAOx",
-            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-133-r-dhaox.pdf",
-            "version": "09.2024",
-            "checkedOn": "2026-10-03"
-          }
-        }
-      ]
+        "uk": "2000 мг/м² раз на добу в дні 2 і 3, у 500 мл 0,9% NaCl за 3 години (eviQ 4351).",
+        "en": "2000 mg/m2 once a day on days 2 and 3, in 500 mL of 0.9% sodium chloride over 3 hours (eviQ 4351)."
+      }
     },
     {
       "key": "ondansetron",
@@ -127,7 +106,7 @@
       "route": "iv_bolus",
       "dose_value": 8,
       "dose_unit": "mg_flat",
-      "days": [1, 2],
+      "days": [1, 2, 3],
       "administrations_per_day": 2,
       "interval_min": 720,
       "notes": {
@@ -221,33 +200,17 @@
       }
     },
     {
-      "key": "filgrastim",
-      "drug_id": "filgrastim",
+      "key": "pegfilgrastim",
+      "drug_id": "pegfilgrastim",
       "role": "supportive",
       "route": "subcutaneous",
-      "dose_value": 0.5,
-      "dose_unit": "miu_kg",
-      "days": [9, 10, 11, 12, 13, 14, 15],
+      "dose_value": 6,
+      "dose_unit": "mg_flat",
+      "days": [5],
       "notes": {
-        "uk": "Дні 9-15 у циклах без мобілізації стовбурових клітин.",
-        "en": "Days 9 to 15 in cycles that are not priming for a stem cell harvest."
-      },
-      "dose_options": [
-        {
-          "dose_value": 1,
-          "dose_unit": "miu_kg",
-          "notes": {
-            "uk": "Цикл мобілізації стовбурових клітин",
-            "en": "A stem cell priming cycle"
-          },
-          "source": {
-            "name": "NSSG Oxford Haematology, L.133 R-DHAOx",
-            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-133-r-dhaox.pdf",
-            "version": "09.2024",
-            "checkedOn": "2026-10-03"
-          }
-        }
-      ]
+        "uk": "6 мг підшкірно в день 5 (eviQ 4351). У циклі мобілізації стовбурових клітин замість нього — філграстим 10 мкг/кг/добу з дня 9 до збору.",
+        "en": "6 mg subcutaneously on day 5 (eviQ 4351). In a stem cell mobilisation cycle, filgrastim 10 mcg/kg/day from day 9 until collection replaces it."
+      }
     }
   ]
 }
