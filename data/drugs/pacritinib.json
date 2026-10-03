@@ -1,0 +1,24 @@
+{
+  "$comment": "Додано 2026-10-04 (UpToDate: мієлофіброз). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "pacritinib",
+  "name": {
+    "uk": "Пакритиніб",
+    "en": "Pacritinib"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: VONJO (pacritinib) — капсули 100 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b5ab444-0e1a-4984-99db-76ad11a298ee",
+      "version": "SPL від 30.07.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "c100",
+      "form": "capsule",
+      "strength_amount": 100
+    }
+  ]
+}

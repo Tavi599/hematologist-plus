@@ -1,0 +1,49 @@
+{
+  "id": "ref-hl-bv-nivo",
+  "short_name": "BV + ніволумаб",
+  "name": {
+    "uk": "Брентуксимаб ведотин + ніволумаб (рецидив)",
+    "en": "Brentuximab vedotin + nivolumab (relapse)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory classic Hodgkin lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-classic-hodgkin-lymphoma",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Друга лінія для хворих, непридатних до трансплантації, або амбулаторно; переноситься краще за CPI + хіміотерапію, але повних ремісій менше (67%, 3-річна ВБП 91% у трансплантованих).",
+      "en": "Second line for patients ineligible for transplantation, or as an outpatient; better tolerated than a CPI plus chemotherapy, but with fewer complete responses (67%, 3-year PFS 91% in transplanted patients)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Брентуксимаб ведотин",
+          "en": "Brentuximab vedotin"
+        },
+        "drug_id": "brentuximab-vedotin"
+      },
+      {
+        "name": {
+          "uk": "Ніволумаб",
+          "en": "Nivolumab"
+        },
+        "drug_id": "nivolumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Коли нейропатія стає обмежувальною, лікування продовжують одним ніволумабом; ніволумаб приблизно до року при повній відповіді.",
+        "en": "When neuropathy becomes limiting, treatment continues with nivolumab alone; nivolumab for about a year after a complete response."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз і днів комбінації.",
+      "en": "UpToDate gives no doses or days for the combination."
+    },
+    "availability": "unknown"
+  }
+}

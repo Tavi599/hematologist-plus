@@ -1,0 +1,66 @@
+{
+  "id": "ref-mf-anemia",
+  "short_name": "Анемія при МФ",
+  "name": {
+    "uk": "Допоміжне лікування анемії при мієлофіброзі",
+    "en": "Adjunctive treatment of anaemia in myelofibrosis"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Management of primary and secondary myelofibrosis",
+      "url": "https://www.uptodate.com/contents/management-of-primary-and-secondary-myelofibrosis",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Анемія без спленомегалії й симптомів при нижчому ризику: спершу допоміжні засоби, а не JAK-інгібітор; жоден не кращий, вибір за токсичністю й супутніми хворобами. ESA в МФ зазвичай неефективні й можуть збільшити селезінку, луспатерцепт майже не діє.",
+      "en": "Anaemia without splenomegaly or symptoms at lower risk: adjunctive measures first, not a JAK inhibitor; none is superior, choice by toxicity and comorbidity. ESAs are generally ineffective in MF and can enlarge the spleen, luspatercept barely works."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Данази",
+          "en": "Danazol"
+        }
+      },
+      {
+        "name": {
+          "uk": "Преднізолон",
+          "en": "Prednisone"
+        },
+        "drug_id": "prednisolone"
+      },
+      {
+        "name": {
+          "uk": "Талідомід",
+          "en": "Thalidomide"
+        },
+        "drug_id": "thalidomide"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Данази 600 мг на добу; тестостерону енантат 400–600 мг в/м щотижня; флуоксиместерон 10 мг тричі на добу; преднізолон 0,5 мг/кг на добу; талідомід 50 мг на добу або леналідомід 10 мг на добу ± преднізолон.",
+        "en": "Danazol 600 mg a day; testosterone enanthate 400 to 600 mg intramuscularly weekly; fluoxymesterone 10 mg three times a day; prednisone 0.5 mg/kg a day; thalidomide 50 mg a day or lenalidomide 10 mg a day ± prednisone."
+      },
+      {
+        "uk": "Лікувати щонайменше 3 місяці для оцінки; через 6 місяців знизити до мінімальної ефективної дози; леналідомід кращий при del(5q31).",
+        "en": "Treat for at least 3 months to assess; after 6 months taper to the minimum effective dose; lenalidomide works best with del(5q31)."
+      }
+    ],
+    "gap": {
+      "uk": "Це перелік допоміжних засобів на вибір, а не єдина схема.",
+      "en": "This is a list of adjunctive options to choose from, not a single regimen."
+    },
+    "availability": "unknown"
+  }
+}

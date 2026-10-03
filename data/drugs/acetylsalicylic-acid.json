@@ -1,0 +1,24 @@
+{
+  "$comment": "Додано 2026-10-04 (UpToDate: ПВ, ЕТ — низькі дози). Статус «зареєстрований» поставлено за загальновідомою наявністю низькодозового препарату; перевірте і змініть, якщо відділення має інший.",
+  "id": "acetylsalicylic-acid",
+  "name": {
+    "uk": "Ацетилсаліцилова кислота (низькі дози)",
+    "en": "Acetylsalicylic acid (low dose)"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "UpToDate: Polycythemia vera and secondary polycythemia: Treatment and prognosis",
+      "url": "https://www.uptodate.com/contents/polycythemia-vera-and-secondary-polycythemia-treatment-and-prognosis",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t100",
+      "form": "tablet",
+      "strength_amount": 100
+    }
+  ]
+}

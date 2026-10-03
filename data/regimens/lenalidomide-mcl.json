@@ -1,0 +1,53 @@
+{
+  "$comment": "Леналідомід при первинній рефрактерності або рецидиві ≤1 року після останнього інгібітора BTK (UpToDate): до 25 мг на добу, дні 1–21 циклу 28 днів. Зареєстрований в ЄС, не в США.",
+  "id": "lenalidomide-mcl",
+  "short_name": "Леналідомід (МКЛ)",
+  "name": {
+    "uk": "Леналідомід (мантійноклітинна лімфома, рецидив)",
+    "en": "Lenalidomide (mantle cell lymphoma, relapse)"
+  },
+  "description": {
+    "uk": "10 мг (до 25 мг) на добу, дні 1–21 кожні 28 днів.",
+    "en": "10 mg (up to 25 mg) a day on days 1 to 21 every 28 days."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory mantle cell lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-mantle-cell-lymphoma",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Старт 10 мг на добу, дні 1–21: більшість хворих не переносить 25 мг. Максимум 25 мг (UpToDate). Профілактика тромбозів, доза за кліренсом креатиніну; лише в межах програми запобігання вагітності.",
+        "en": "Start with 10 mg a day on days 1 to 21: most patients do not tolerate 25 mg. Up to 25 mg (UpToDate). Thrombosis prophylaxis, dose by creatinine clearance; only within a pregnancy prevention programme."
+      },
+      "dose_options": [
+        {
+          "dose_value": 25,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Найбільша доза за UpToDate (до 25 мг)",
+            "en": "The highest dose per UpToDate (up to 25 mg)"
+          },
+          "source": {
+            "name": "UpToDate: Treatment of relapsed or refractory mantle cell lymphoma",
+            "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-mantle-cell-lymphoma",
+            "version": "перевірено 2026-10-04",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    }
+  ]
+}

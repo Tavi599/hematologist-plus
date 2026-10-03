@@ -1,0 +1,68 @@
+{
+  "$comment": "Гемцитабін + вінорелбін за eviQ 627 (вер. 5): рецидивна/рефрактерна лімфома Ходжкіна й НХЛ, 21-денні цикли, 4–6 циклів.",
+  "id": "gem-vin",
+  "short_name": "Gem-Vin",
+  "name": {
+    "uk": "Гемцитабін + вінорелбін",
+    "en": "Gemcitabine + vinorelbine"
+  },
+  "description": {
+    "uk": "Вінорелбін 25 мг/м² і гемцитабін 1000 мг/м² у дні 1 і 8; пегфілграстим у день 9. Цикл 21 день.",
+    "en": "Vinorelbine 25 mg/m2 and gemcitabine 1000 mg/m2 on days 1 and 8; pegfilgrastim on day 9. A 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "eviQ: Gemcitabine and vinorelbine (протокол 627)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/hodgkin-lymphoma/3310-redirect-id-627",
+      "version": "вер. 5 від 12.09.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "vinorelbine",
+      "drug_id": "vinorelbine",
+      "route": "iv_infusion",
+      "dose_value": 25,
+      "dose_unit": "mg_m2",
+      "days": [1, 8],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "25 мг/м² у 50 мл 0,9% NaCl за 6–10 хвилин (eviQ 627).",
+        "en": "25 mg/m2 in 50 mL of 0.9% NaCl over 6 to 10 minutes (eviQ 627)."
+      }
+    },
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1, 8],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "1000 мг/м² у 100–500 мл 0,9% NaCl за 30 хвилин (eviQ 627).",
+        "en": "1000 mg/m2 in 100 to 500 mL of 0.9% NaCl over 30 minutes (eviQ 627)."
+      }
+    },
+    {
+      "key": "pegfilgrastim",
+      "drug_id": "pegfilgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 6,
+      "dose_unit": "mg_flat",
+      "days": [9],
+      "notes": {
+        "uk": "6 мг підшкірно не раніше ніж через 24 години після хіміотерапії (eviQ 627).",
+        "en": "6 mg subcutaneously at least 24 hours after chemotherapy (eviQ 627)."
+      }
+    }
+  ]
+}

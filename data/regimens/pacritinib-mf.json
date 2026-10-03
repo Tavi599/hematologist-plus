@@ -1,0 +1,48 @@
+{
+  "$comment": "200 мг двічі на добу при тромбоцитах <50 ×10⁹/л (прискорене схвалення FDA). Протипоказані сильні інгібітори й індуктори CYP3A4; уникати при помірній/тяжкій печінковій чи нирковій недостатності; ризик кровотеч, подовження QT.",
+  "id": "pacritinib-mf",
+  "short_name": "Пакритиніб",
+  "name": {
+    "uk": "Пакритиніб (мієлофіброз)",
+    "en": "Pacritinib (myelofibrosis)"
+  },
+  "description": {
+    "uk": "200 мг двічі на добу при тромбоцитах <50 ×10⁹/л (прискорене схвалення FDA).",
+    "en": "200 mg twice a day at platelets under 50 ×10⁹/L (FDA accelerated approval)."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "UpToDate: Management of primary and secondary myelofibrosis",
+      "url": "https://www.uptodate.com/contents/management-of-primary-and-secondary-myelofibrosis",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: VONJO (pacritinib) — капсули 100 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b5ab444-0e1a-4984-99db-76ad11a298ee",
+      "version": "SPL від 30.07.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "pacritinib",
+      "drug_id": "pacritinib",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Безперервно (UpToDate, листок FDA).",
+        "en": "Continuously (UpToDate, FDA label)."
+      },
+      "administrations_per_day": 2,
+      "interval_min": 720
+    }
+  ]
+}

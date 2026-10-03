@@ -48,7 +48,16 @@
       "description": {
         "uk": "Ацетилсаліцилова кислота в малій дозі при судинних симптомах, тромбозі в анамнезі або серцево-судинних чинниках ризику. Саме число тромбоцитів показанням до цитозниження не є. При дуже високому тромбоцитозі (понад 1000–1500×10⁹/л) перед аспірином варто виключити набутий синдром Віллебранда.",
         "en": "Low-dose aspirin for vascular symptoms, previous thrombosis or cardiovascular risk factors. The platelet count by itself is not an indication for cytoreduction. With a very high count (above 1000-1500 x 10^9/L) acquired von Willebrand syndrome should be excluded before aspirin."
-      }
+      },
+      "regimens": [
+        {
+          "regimen_id": "aspirin-mpn",
+          "notes": {
+            "uk": "Низький ризик — аспірин без циторедукції; UpToDate",
+            "en": "Low risk — aspirin without cytoreduction; UpToDate"
+          }
+        }
+      ]
     },
     {
       "key": "cytoreduction",
@@ -64,6 +73,13 @@
       "regimens": [
         {
           "regimen_id": "hydroxycarbamide-mpn"
+        },
+        {
+          "regimen_id": "hydroxycarbamide-et",
+          "notes": {
+            "uk": "15 мг/кг на добу; UpToDate",
+            "en": "15 mg/kg a day; UpToDate"
+          }
         }
       ]
     },
@@ -81,6 +97,23 @@
       "regimens": [
         {
           "regimen_id": "anagrelide-et"
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-mpn-ropeginterferon"
         }
       ]
     }

@@ -1,0 +1,67 @@
+{
+  "$comment": "Леналідомід + ритуксимаб при рецидиві МКЛ (UpToDate): ритуксимаб 375 мг/м² у день 1 кожного циклу 6 місяців.",
+  "id": "r-lenalidomide-mcl",
+  "short_name": "R-Len (МКЛ)",
+  "name": {
+    "uk": "Леналідомід + ритуксимаб (мантійноклітинна лімфома, рецидив)",
+    "en": "Lenalidomide + rituximab (mantle cell lymphoma, relapse)"
+  },
+  "description": {
+    "uk": "Леналідомід дні 1–21 і ритуксимаб день 1; цикл 28 днів, 6 місяців.",
+    "en": "Lenalidomide on days 1 to 21 and rituximab on day 1; a 28-day cycle, six months."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory mantle cell lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-mantle-cell-lymphoma",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "375 мг/м² у день 1 кожного циклу, 6 місяців (UpToDate).",
+        "en": "375 mg/m2 on day 1 of each cycle for six months (UpToDate)."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Старт 10 мг на добу, дні 1–21: більшість хворих не переносить 25 мг. Максимум 25 мг (UpToDate). Профілактика тромбозів, доза за кліренсом креатиніну; лише в межах програми запобігання вагітності.",
+        "en": "Start with 10 mg a day on days 1 to 21: most patients do not tolerate 25 mg. Up to 25 mg (UpToDate). Thrombosis prophylaxis, dose by creatinine clearance; only within a pregnancy prevention programme."
+      },
+      "dose_options": [
+        {
+          "dose_value": 25,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Найбільша доза за UpToDate (до 25 мг)",
+            "en": "The highest dose per UpToDate (up to 25 mg)"
+          },
+          "source": {
+            "name": "UpToDate: Treatment of relapsed or refractory mantle cell lymphoma",
+            "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-mantle-cell-lymphoma",
+            "version": "перевірено 2026-10-04",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    }
+  ]
+}

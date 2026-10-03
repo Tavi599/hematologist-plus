@@ -64,6 +64,34 @@
       "regimens": [
         {
           "regimen_id": "ruxolitinib-mf"
+        },
+        {
+          "regimen_id": "fedratinib-mf",
+          "notes": {
+            "uk": "Вищий ризик ПМФ, тромбоцити >50; UpToDate",
+            "en": "Higher-risk PMF, platelets over 50; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "pacritinib-mf",
+          "notes": {
+            "uk": "Тромбоцити <50 ×10⁹/л; UpToDate",
+            "en": "Platelets under 50 ×10⁹/L; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "momelotinib-mf",
+          "notes": {
+            "uk": "З анемією, тромбоцити ≥50; UpToDate",
+            "en": "With anaemia, platelets 50 or more; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "hydroxycarbamide-mf",
+          "notes": {
+            "uk": "Спленомегалія без анемії чи симптомів; 500–1000 мг через день; UpToDate",
+            "en": "Splenomegaly without anaemia or symptoms; 500 to 1000 mg every other day; UpToDate"
+          }
         }
       ]
     },
@@ -81,6 +109,23 @@
       "regimens": [
         {
           "regimen_id": "hydroxycarbamide-mpn"
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-mf-anemia"
         }
       ]
     }

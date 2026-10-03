@@ -1,0 +1,37 @@
+{
+  "$comment": "Підтримка леналідомідом при МКЛ за UpToDate: 20 мг, дні 1–21, 12 циклів по 28 днів. UpToDate радить після аутотрансплантації та у літніх ритуксимаб, а не леналідомід; схема внесена як альтернатива.",
+  "id": "lenalidomide-maintenance-mcl",
+  "short_name": "Леналідомід підтримка (МКЛ)",
+  "name": {
+    "uk": "Леналідомід, підтримка (мантійноклітинна лімфома)",
+    "en": "Lenalidomide maintenance (mantle cell lymphoma)"
+  },
+  "description": {
+    "uk": "20 мг, дні 1–21, 12 циклів по 28 днів.",
+    "en": "20 mg on days 1 to 21, twelve 28-day cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 12,
+  "sources": [
+    {
+      "name": "UpToDate: Mantle cell lymphoma: Initial management",
+      "url": "https://www.uptodate.com/contents/mantle-cell-lymphoma-initial-management",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "20 мг на добу, дні 1–21 циклу 28 днів, 12 циклів (UpToDate). Дані підтримки леналідомідом слабші, ніж ритуксимабом.",
+        "en": "20 mg a day on days 1 to 21 of a 28-day cycle, 12 cycles (UpToDate). The evidence for lenalidomide maintenance is weaker than for rituximab."
+      }
+    }
+  ]
+}

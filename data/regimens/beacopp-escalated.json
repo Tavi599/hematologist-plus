@@ -1,0 +1,112 @@
+{
+  "$comment": "BEACOPP escalated за eviQ 1461 (вер. 9): цикл 21 день, 2–6 циклів. Сумарна доза блеоміцину не більше 400 000 МО. У BEACOPDac (HD21) дакарбазин замінює прокарбазин.",
+  "id": "beacopp-escalated",
+  "short_name": "BEACOPP-esc",
+  "name": {
+    "uk": "BEACOPP escalated (блеоміцин, етопозид, доксорубіцин, циклофосфамід, вінкристин, прокарбазин, преднізолон)",
+    "en": "BEACOPP escalated"
+  },
+  "description": {
+    "uk": "Цикл 21 день: доксорубіцин, циклофосфамід день 1, етопозид дні 1–3, прокарбазин дні 1–7, преднізолон дні 1–14, вінкристин і блеоміцин день 8, пегфілграстим день 4.",
+    "en": "A 21-day cycle: doxorubicin and cyclophosphamide on day 1, etoposide on days 1 to 3, procarbazine on days 1 to 7, prednisolone on days 1 to 14, vincristine and bleomycin on day 8, pegfilgrastim on day 4."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "eviQ: Hodgkin lymphoma — BEACOPP escalated dose (протокол 1461)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/hodgkin-lymphoma/1461-beacopp-escalated-bleomycin-etoposide-doxoru",
+      "version": "вер. 9",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_bolus",
+      "dose_value": 35,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 1250,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 200,
+      "dose_unit": "mg_m2",
+      "cap_amount": 400,
+      "days": [1, 2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    },
+    {
+      "key": "bleomycin",
+      "drug_id": "bleomycin",
+      "route": "iv_infusion",
+      "dose_value": 10000,
+      "dose_unit": "iu_m2",
+      "days": [8],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_amount": 2,
+      "days": [8],
+      "duration_min": 15,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50
+    },
+    {
+      "key": "procarbazine",
+      "drug_id": "procarbazine",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "100 мг/м² раз на добу, дні 1–7 (eviQ 1461).",
+        "en": "100 mg/m2 once a day on days 1 to 7 (eviQ 1461)."
+      }
+    },
+    {
+      "key": "pegfilgrastim",
+      "drug_id": "pegfilgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 6,
+      "dose_unit": "mg_flat",
+      "days": [4],
+      "notes": {
+        "uk": "6 мг підшкірно не раніше ніж через 24 години після хіміотерапії (eviQ 1461).",
+        "en": "6 mg subcutaneously at least 24 hours after chemotherapy (eviQ 1461)."
+      }
+    }
+  ]
+}

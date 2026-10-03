@@ -1,0 +1,47 @@
+{
+  "$comment": "Низькі дози аспірину при ПВ і ЕТ за UpToDate: 40–100 мг на добу, не більше 100 мг на добу загалом. Для ЕТ з артеріальним тромбозом чи JAK2 V617F UpToDate радить 81–100 мг двічі на добу, але в іншому місці обмежує загальну дозу 100 мг; вибір лікаря — зміна запису. При вагітності з ЕТ — для всіх; за 3 дні до пологів відміняють.",
+  "id": "aspirin-mpn",
+  "short_name": "Аспірин (ПВ/ЕТ)",
+  "name": {
+    "uk": "Аспірин у низьких дозах (ПВ, ЕТ)",
+    "en": "Low-dose aspirin (PV, ET)"
+  },
+  "description": {
+    "uk": "100 мг раз на добу безперервно.",
+    "en": "100 mg once a day continuously."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "UpToDate: Polycythemia vera and secondary polycythemia: Treatment and prognosis",
+      "url": "https://www.uptodate.com/contents/polycythemia-vera-and-secondary-polycythemia-treatment-and-prognosis",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Essential thrombocythemia: Treatment and prognosis",
+      "url": "https://www.uptodate.com/contents/essential-thrombocythemia-treatment-and-prognosis",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "aspirin",
+      "drug_id": "acetylsalicylic-acid",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Низька доза — 40–100 мг на добу (UpToDate); загалом не понад 100 мг.",
+        "en": "A low dose is 40 to 100 mg a day (UpToDate); no more than 100 mg in all."
+      }
+    }
+  ]
+}

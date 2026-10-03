@@ -1,0 +1,51 @@
+{
+  "id": "ref-mpn-ropeginterferon",
+  "short_name": "Ропегінтерферон (ПВ/ЕТ)",
+  "name": {
+    "uk": "Ропегінтерферон альфа-2b при ПВ і ЕТ",
+    "en": "Ropeginterferon alfa-2b in PV and ET"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Polycythemia vera and secondary polycythemia: Treatment and prognosis",
+      "url": "https://www.uptodate.com/contents/polycythemia-vera-and-secondary-polycythemia-treatment-and-prognosis",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Essential thrombocythemia: Treatment and prognosis",
+      "url": "https://www.uptodate.com/contents/essential-thrombocythemia-treatment-and-prognosis",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Циторедукція при ПВ і ЕТ: вибір при потенціалі вагітності, віці <40 років ЕТ, а також при резистентності чи непереносимості гідроксикарбаміду.",
+      "en": "Cytoreduction in PV and ET: the choice with pregnancy potential, ET under 40 years, and after resistance or intolerance to hydroxycarbamide."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ропегінтерферон альфа-2b",
+          "en": "Ropeginterferon alfa-2b"
+        }
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Старт 100 мкг підшкірно раз на 2 тижні, підвищення на 50 мкг кожні 2 тижні до 500 мкг, доки Ht <45%, тромбоцити <400 і лейкоцити <10 ×10⁹/л.",
+        "en": "Start with 100 mcg subcutaneously every two weeks, raised by 50 mcg every two weeks up to 500 mcg until Hct is under 45%, platelets under 400 and leukocytes under 10 ×10⁹/L."
+      },
+      {
+        "uk": "При переході з гідроксикарбаміду інтерферон починають із 50 мкг раз на 2 тижні, а дозу гідроксикарбаміду знижують на 20–40% кожні 2 тижні й відміняють до 13-го тижня.",
+        "en": "When switching from hydroxycarbamide, interferon starts at 50 mcg every two weeks while the hydroxycarbamide dose is cut by 20 to 40% every two weeks and stopped by week 13."
+      }
+    ],
+    "gap": {
+      "uk": "Препарату немає в довіднику (немає джерела на форму випуску), а доза змінюється щодвотижня.",
+      "en": "The drug is not in the catalog (no source for its presentation), and the dose changes every two weeks."
+    },
+    "availability": "unavailable"
+  }
+}

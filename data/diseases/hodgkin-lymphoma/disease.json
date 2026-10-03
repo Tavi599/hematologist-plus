@@ -70,6 +70,20 @@
             "uk": "Функціональний стан 0-2, вік до 60 років, після комісії",
             "en": "Performance status 0-2, aged 60 or under, after the MDT"
           }
+        },
+        {
+          "regimen_id": "avd",
+          "notes": {
+            "uk": "Після двох циклів ABVD і PET2 Deauville 1–3 без променевої терапії — ще 4 цикли AVD; UpToDate",
+            "en": "After two cycles of ABVD and PET2 Deauville 1 to 3 without radiotherapy — four more cycles of AVD; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "n-avd",
+          "notes": {
+            "uk": "За думкою частини експертів, якщо хворий придатний до комбінованої терапії; UpToDate",
+            "en": "Some experts use it when the patient is suitable for combined-modality therapy; UpToDate"
+          }
         }
       ]
     },
@@ -117,6 +131,27 @@
           "notes": {
             "uk": "Функціональний стан 0-2, вік до 60 років, після комісії",
             "en": "Performance status 0-2, aged 60 or under, after the MDT"
+          }
+        },
+        {
+          "regimen_id": "beacopp-escalated",
+          "notes": {
+            "uk": "eviQ 1461",
+            "en": "eviQ 1461"
+          }
+        },
+        {
+          "regimen_id": "pvag",
+          "notes": {
+            "uk": "Понад 60 років або непридатні до ABVD/BEACOPP; eviQ 1399",
+            "en": "Over 60 or unfit for ABVD/BEACOPP; eviQ 1399"
+          }
+        },
+        {
+          "regimen_id": "avd",
+          "notes": {
+            "uk": "ABVD без блеоміцину при де-ескалації за PET",
+            "en": "ABVD without bleomycin when de-escalating by PET"
           }
         }
       ]
@@ -185,6 +220,50 @@
             "uk": "Літні та ослаблені пацієнти, або коли антрацикліни протипоказані",
             "en": "Elderly and frail patients, or where anthracyclines are contraindicated"
           }
+        },
+        {
+          "regimen_id": "bv-bendamustine",
+          "notes": {
+            "uk": "eviQ 5013",
+            "en": "eviQ 5013"
+          }
+        },
+        {
+          "regimen_id": "bv-ice",
+          "notes": {
+            "uk": "eviQ 4303",
+            "en": "eviQ 4303"
+          }
+        },
+        {
+          "regimen_id": "gem-vin",
+          "notes": {
+            "uk": "eviQ 627",
+            "en": "eviQ 627"
+          }
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-hl-pembro-gvd"
+        },
+        {
+          "regimen_id": "ref-hl-bv-nivo"
+        },
+        {
+          "regimen_id": "ref-hl-begev"
         }
       ]
     }

@@ -70,6 +70,13 @@
         },
         {
           "regimen_id": "r-dhaox"
+        },
+        {
+          "regimen_id": "br",
+          "notes": {
+            "uk": "R-B (3 цикли) + R-HiDAC (3 цикли) або R-B окремо; UpToDate",
+            "en": "R-B (three cycles) + R-HiDAC (three cycles) or R-B alone; UpToDate"
+          }
         }
       ]
     },
@@ -121,6 +128,13 @@
         },
         {
           "regimen_id": "rituximab-maintenance"
+        },
+        {
+          "regimen_id": "lenalidomide-maintenance-mcl",
+          "notes": {
+            "uk": "Альтернатива підтримці ритуксимабом; UpToDate",
+            "en": "An alternative to rituximab maintenance; UpToDate"
+          }
         }
       ]
     },
@@ -176,6 +190,62 @@
             "uk": "Пероральна паліативна схема, підтримка",
             "en": "An oral palliative regimen, maintenance"
           }
+        },
+        {
+          "regimen_id": "acalabrutinib-mono",
+          "notes": {
+            "uk": "Перший рецидив без інгібітора BTK; 100 мг двічі на добу; UpToDate",
+            "en": "First relapse with no prior BTK inhibitor; 100 mg twice a day; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "zanubrutinib-mono",
+          "notes": {
+            "uk": "Перший рецидив без інгібітора BTK; UpToDate",
+            "en": "First relapse with no prior BTK inhibitor; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "lenalidomide-mcl",
+          "notes": {
+            "uk": "Первинна рефрактерність чи рецидив ≤1 року після BTK-інгібітора; UpToDate",
+            "en": "Primary refractory or relapse within a year of a BTK inhibitor; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "r-lenalidomide-mcl"
+        },
+        {
+          "regimen_id": "bortezomib-mcl"
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-mcl-pirtobrutinib"
+        },
+        {
+          "regimen_id": "ref-mcl-car-t"
+        },
+        {
+          "regimen_id": "ref-mcl-venetoclax"
+        },
+        {
+          "regimen_id": "ref-mcl-sonrotoclax"
+        },
+        {
+          "regimen_id": "ref-mcl-temsirolimus"
         }
       ]
     }

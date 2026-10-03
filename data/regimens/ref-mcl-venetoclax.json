@@ -1,0 +1,42 @@
+{
+  "id": "ref-mcl-venetoclax",
+  "short_name": "Венетоклакс (МКЛ)",
+  "name": {
+    "uk": "Венетоклакс при мантійноклітинній лімфомі",
+    "en": "Venetoclax in mantle cell lymphoma"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory mantle cell lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-mantle-cell-lymphoma",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Помірна активність при рецидиві; не схвалений FDA чи EMA. Дози до 400 мг на добу з поступовим підвищенням.",
+      "en": "Modest activity in relapse; not approved by the FDA or EMA. Doses up to 400 mg a day, escalated gradually."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Венетоклакс",
+          "en": "Venetoclax"
+        },
+        "drug_id": "venetoclax"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Старт 20 мг на добу тиждень, далі поступово до 400 мг за 5 тижнів через ризик СЛП; при високій проліферації можливе швидше підвищення в стаціонарі.",
+        "en": "Start with 20 mg a day for a week, then escalate gradually to 400 mg over five weeks because of tumor lysis risk; faster escalation in hospital may be considered for highly proliferative disease."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не вказує проміжних сходинок дози в МКЛ; сходинки CLL (20–50–100–200–400) у каталозі є в схемі R-Ven.",
+      "en": "UpToDate does not state the intermediate dose steps in MCL; the CLL steps (20-50-100-200-400) are in the R-Ven regimen of the catalog."
+    },
+    "availability": "unknown"
+  }
+}

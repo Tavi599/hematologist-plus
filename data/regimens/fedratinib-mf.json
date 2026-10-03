@@ -1,0 +1,46 @@
+{
+  "$comment": "400 мг раз на добу при тромбоцитах >50 ×10⁹/л. Не застосовувати при тромбоцитах ≤50, тяжкій печінковій недостатності. Боксове попередження про енцефалопатію: тіамін 100 мг на добу, рівень тіаміну до початку. Зменшувати дозу поступово.",
+  "id": "fedratinib-mf",
+  "short_name": "Федратиніб",
+  "name": {
+    "uk": "Федратиніб (мієлофіброз)",
+    "en": "Fedratinib (myelofibrosis)"
+  },
+  "description": {
+    "uk": "400 мг раз на добу при тромбоцитах >50 ×10⁹/л.",
+    "en": "400 mg once a day at platelets over 50 ×10⁹/L."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "UpToDate: Management of primary and secondary myelofibrosis",
+      "url": "https://www.uptodate.com/contents/management-of-primary-and-secondary-myelofibrosis",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: INREBIC (fedratinib) — капсули 100 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f0f55a2a-4e0c-4cba-8571-03e1424486d7",
+      "version": "SPL від 20.07.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "fedratinib",
+      "drug_id": "fedratinib",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Безперервно (UpToDate, листок FDA).",
+        "en": "Continuously (UpToDate, FDA label)."
+      }
+    }
+  ]
+}

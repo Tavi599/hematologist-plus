@@ -1,0 +1,61 @@
+{
+  "$comment": "AVD — ABVD без блеоміцину: за UpToDate при ранній несприятливій лімфомі Ходжкіна з PET2 Deauville 1–3 без променевої терапії — 4 цикли AVD після двох циклів ABVD; так само скорочують блеоміцин у RATHL. Дози ті самі, що в ABVD (NSSG L.8, eviQ 56).",
+  "id": "avd",
+  "short_name": "AVD",
+  "name": {
+    "uk": "AVD (доксорубіцин, вінбластин, дакарбазин)",
+    "en": "AVD (doxorubicin, vinblastine, dacarbazine)"
+  },
+  "description": {
+    "uk": "ABVD без блеоміцину: дні 1 і 15, цикл 28 днів.",
+    "en": "ABVD without bleomycin: days 1 and 15, a 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "UpToDate: Classic Hodgkin lymphoma (cHL): Treatment of unfavorable prognosis early (stage I-II) cHL in adults",
+      "url": "https://www.uptodate.com/contents/classic-hodgkin-lymphoma-chl-treatment-of-unfavorable-prognosis-early-stage-i-ii-chl-in-adults",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "NSSG Oxford Haematology, L.8 A(B)VD",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-8-abvd.pdf",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 25,
+      "dose_unit": "mg_m2",
+      "days": [1, 15]
+    },
+    {
+      "key": "vinblastine",
+      "drug_id": "vinblastine",
+      "route": "iv_infusion",
+      "dose_value": 6,
+      "dose_unit": "mg_m2",
+      "days": [1, 15],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50
+    },
+    {
+      "key": "dacarbazine",
+      "drug_id": "dacarbazine",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1, 15],
+      "duration_min": 90,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000
+    }
+  ]
+}

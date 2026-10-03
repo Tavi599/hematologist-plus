@@ -1,0 +1,59 @@
+{
+  "id": "ref-hl-pembro-gvd",
+  "short_name": "Pembro-GVD / Pembro-ICE / Nivo-ICE",
+  "name": {
+    "uk": "Інгібітор PD-1 + хіміотерапія: pembro-GVD, pembro-ICE, nivo-ICE",
+    "en": "PD-1 inhibitor + chemotherapy: pembro-GVD, pembro-ICE, nivo-ICE"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory classic Hodgkin lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-classic-hodgkin-lymphoma",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Друга лінія при рецидиві лімфоми Ходжкіна, якщо раніше не було інгібітора PD-1: за UpToDate краще, ніж BV-схеми чи хіміотерапія окремо. Повна відповідь 87–95%, 2-річна ВБП 88–100% у тих, кого далі трансплантували.",
+      "en": "Second line for relapsed Hodgkin lymphoma with no prior PD-1 inhibitor: per UpToDate better than BV-based or chemotherapy alone. Complete response 87 to 95%, 2-year PFS 88 to 100% in those transplanted afterwards."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Пембролізумаб / ніволумаб",
+          "en": "Pembrolizumab / nivolumab"
+        },
+        "drug_id": "pembrolizumab"
+      },
+      {
+        "name": {
+          "uk": "Гемцитабін, вінорелбін, ліпосомальний доксорубіцин (GVD)",
+          "en": "Gemcitabine, vinorelbine, pegylated liposomal doxorubicin (GVD)"
+        }
+      },
+      {
+        "name": {
+          "uk": "Іфосфамід, карбоплатин, етопозид (ICE)",
+          "en": "Ifosfamide, carboplatin, etoposide (ICE)"
+        },
+        "drug_id": "ifosfamide"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Pembro-GVD можна давати амбулаторно; схеми з ICE не додають антрациклін.",
+        "en": "Pembro-GVD can be given as an outpatient; ICE regimens add no anthracycline."
+      },
+      {
+        "uk": "Не давати хворим, яким потрібна системна імуносупресія через аутоімунну хворобу; інгібітори PD-1 підвищують ускладнення алотрансплантації.",
+        "en": "Not for patients who need systemic immunosuppression for an autoimmune disease; PD-1 inhibitors raise the complications of allogeneic transplantation."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate наводить лише склад схем, без доз і днів.",
+      "en": "UpToDate gives only the composition of the regimens, without doses and days."
+    },
+    "availability": "unknown"
+  }
+}

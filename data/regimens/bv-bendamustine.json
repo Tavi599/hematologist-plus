@@ -1,0 +1,103 @@
+{
+  "$comment": "Бендамустин + брентуксимаб ведотин за eviQ 5013 (вер. 1, на перегляді): 6 циклів по 21 день. Палоносетрон 0,25 мг в/в перед хіміотерапією у протоколі не внесено (немає в довіднику): протиблювотні — у «Супроводі за стандартом» або вручну. Інфузійні реакції частіші при цьому поєднанні — премедикація.",
+  "id": "bv-bendamustine",
+  "short_name": "BV+бендамустин",
+  "name": {
+    "uk": "Брентуксимаб ведотин + бендамустин",
+    "en": "Brentuximab vedotin + bendamustine"
+  },
+  "description": {
+    "uk": "BV 1,8 мг/кг у день 1 і бендамустин 90 мг/м² у дні 1–2; 6 циклів по 21 день.",
+    "en": "BV 1.8 mg/kg on day 1 and bendamustine 90 mg/m2 on days 1 and 2; six 21-day cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "eviQ: Hodgkin lymphoma — bendamustine and brentuximab vedotin (протокол 5013)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/hodgkin-lymphoma/5013-hodgkin-lymphoma-bendamustine-and-brentuximab",
+      "version": "вер. 1 (на перегляді, 31.07.2026)",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory classic Hodgkin lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-classic-hodgkin-lymphoma",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "8 мг усередину з їжею чи після (eviQ 5013).",
+        "en": "8 mg by mouth with or after food (eviQ 5013)."
+      }
+    },
+    {
+      "key": "loratadine",
+      "drug_id": "loratadine",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "За 60 хв до лікування (eviQ 5013).",
+        "en": "60 minutes before treatment (eviQ 5013)."
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "За 60 хв до лікування (eviQ 5013).",
+        "en": "60 minutes before treatment (eviQ 5013)."
+      }
+    },
+    {
+      "key": "brentuximab-vedotin",
+      "drug_id": "brentuximab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.8,
+      "dose_unit": "mg_kg",
+      "cap_amount": 180,
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 150,
+      "notes": {
+        "uk": "У 150 мл 0,9% NaCl за 30 хвилин; кінцева концентрація 0,4–1,2 мг/мл",
+        "en": "In 150 mL of 0.9% sodium chloride over 30 minutes; final concentration 0.4 to 1.2 mg/mL"
+      }
+    },
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 90,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "90 мг/м² у 500 мл 0,9% NaCl за 30–60 хвилин (eviQ 5013).",
+        "en": "90 mg/m2 in 500 mL of 0.9% NaCl over 30 to 60 minutes (eviQ 5013)."
+      }
+    }
+  ]
+}

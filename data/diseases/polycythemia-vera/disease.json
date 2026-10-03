@@ -48,7 +48,16 @@
       "description": {
         "uk": "Кровопускання до гематокриту нижче 0,45 і ацетилсаліцилова кислота в малій дозі, якщо немає протипоказань. Окремо — корекція серцево-судинних чинників ризику.",
         "en": "Venesection to a haematocrit below 0.45 and low-dose aspirin unless contraindicated. Cardiovascular risk factors are managed separately."
-      }
+      },
+      "regimens": [
+        {
+          "regimen_id": "aspirin-mpn",
+          "notes": {
+            "uk": "Усім хворим на ПВ; флеботомія до Ht <45%; UpToDate",
+            "en": "All PV patients; phlebotomy to Hct under 45%; UpToDate"
+          }
+        }
+      ]
     },
     {
       "key": "cytoreduction",
@@ -64,6 +73,13 @@
       "regimens": [
         {
           "regimen_id": "hydroxycarbamide-mpn"
+        },
+        {
+          "regimen_id": "hydroxycarbamide-pv",
+          "notes": {
+            "uk": "Типовий старт 500 мг двічі на добу; UpToDate",
+            "en": "Typical start 500 mg twice a day; UpToDate"
+          }
         }
       ]
     },
@@ -81,6 +97,26 @@
       "regimens": [
         {
           "regimen_id": "ruxolitinib-pv"
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-mpn-ropeginterferon"
+        },
+        {
+          "regimen_id": "ref-mpn-pv-other"
         }
       ]
     }

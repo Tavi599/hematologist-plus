@@ -1,0 +1,40 @@
+{
+  "$comment": "Гідроксикарбамід при ЕТ за UpToDate: початкова доза 15 мг/кг на добу (зазвичай одна-дві таблетки по 500 мг), уникати пропусків доз. Високий ризик ЕТ ≥40 років без потенціалу вагітності — разом з аспірином. Протипоказаний при вагітності.",
+  "id": "hydroxycarbamide-et",
+  "short_name": "Гідроксикарбамід (ЕТ)",
+  "name": {
+    "uk": "Гідроксикарбамід при есенціальній тромбоцитемії",
+    "en": "Hydroxycarbamide in essential thrombocythemia"
+  },
+  "description": {
+    "uk": "15 мг/кг на добу безперервно, далі за кількістю тромбоцитів.",
+    "en": "15 mg/kg a day continuously, then by the platelet count."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "UpToDate: Essential thrombocythemia: Treatment and prognosis",
+      "url": "https://www.uptodate.com/contents/essential-thrombocythemia-treatment-and-prognosis",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "hydroxycarbamide",
+      "drug_id": "hydroxycarbamide",
+      "route": "oral",
+      "dose_value": 15,
+      "dose_unit": "mg_kg",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "15 мг/кг на добу, зазвичай 500–1000 мг (UpToDate); титрують за тромбоцитами.",
+        "en": "15 mg/kg a day, usually 500 to 1000 mg (UpToDate); titrated to the platelets."
+      }
+    }
+  ]
+}

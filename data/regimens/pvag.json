@@ -1,0 +1,67 @@
+{
+  "$comment": "PVAG за eviQ 1399 (вер. 4): для ранньої несприятливої чи поширеної лімфоми Ходжкіна у хворих понад 60 років або непридатних до ABVD/BEACOPP. Цикл 21 день (до 60 років можна кожні 14), 4 цикли, далі рестадіювання: ремісія — ще 2, часткова відповідь — ще 4.",
+  "id": "pvag",
+  "short_name": "PVAG",
+  "name": {
+    "uk": "PVAG (преднізолон, вінбластин, доксорубіцин, гемцитабін)",
+    "en": "PVAG (prednisolone, vinblastine, doxorubicin, gemcitabine)"
+  },
+  "description": {
+    "uk": "Преднізолон 40 мг/м² дні 1–5; доксорубіцин 50, вінбластин 6, гемцитабін 1000 мг/м² у день 1. Цикл 21 день.",
+    "en": "Prednisolone 40 mg/m2 on days 1 to 5; doxorubicin 50, vinblastine 6, gemcitabine 1000 mg/m2 on day 1. A 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "eviQ: Hodgkin lymphoma — PVAG (протокол 1399)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/hodgkin-lymphoma/1399-pvag-prednisolone-vinblastine-doxorubicin-ge",
+      "version": "вер. 4 від 12.09.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "40 мг/м² раз на добу (eviQ 1399).",
+        "en": "40 mg/m2 once a day (eviQ 1399)."
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_bolus",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "vinblastine",
+      "drug_id": "vinblastine",
+      "route": "iv_infusion",
+      "dose_value": 6,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50
+    },
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250
+    }
+  ]
+}
