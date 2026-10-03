@@ -170,6 +170,85 @@
             }
           ]
         }
+      ],
+      "regimens": [
+        {
+          "regimen_id": "br",
+          "notes": {
+            "uk": "Бендамустин із ритуксимабом — одна з основних схем індукції.",
+            "en": "Bendamustine with rituximab, one of the main induction regimens."
+          }
+        },
+        {
+          "regimen_id": "r-cvp",
+          "notes": {
+            "uk": "Коли бендамустин небажаний.",
+            "en": "Where bendamustine is unwanted."
+          }
+        },
+        {
+          "regimen_id": "r-chop-21",
+          "notes": {
+            "uk": "За ознак трансформації або високого пухлинного навантаження.",
+            "en": "Where transformation is suspected or the tumour burden is high."
+          }
+        },
+        {
+          "regimen_id": "o-b-cycle-1",
+          "notes": {
+            "uk": "Цикл 1 обінутузумабу з бендамустином.",
+            "en": "Cycle 1 of obinutuzumab with bendamustine."
+          }
+        },
+        {
+          "regimen_id": "o-b",
+          "notes": {
+            "uk": "Цикли 2-6.",
+            "en": "Cycles 2-6."
+          }
+        },
+        {
+          "regimen_id": "o-cvp-cycle-1",
+          "notes": {
+            "uk": "Цикл 1 обінутузумабу з CVP.",
+            "en": "Cycle 1 of obinutuzumab with CVP."
+          }
+        },
+        {
+          "regimen_id": "o-cvp",
+          "notes": {
+            "uk": "Цикли 2-8.",
+            "en": "Cycles 2-8."
+          }
+        },
+        {
+          "regimen_id": "rituximab-maintenance",
+          "notes": {
+            "uk": "Підтримка після індукції з ритуксимабом.",
+            "en": "Maintenance after a rituximab-based induction."
+          }
+        },
+        {
+          "regimen_id": "o-b-maintenance",
+          "notes": {
+            "uk": "Підтримка після індукції з обінутузумабом і бендамустином.",
+            "en": "Maintenance after obinutuzumab with bendamustine."
+          }
+        },
+        {
+          "regimen_id": "o-cvp-maintenance",
+          "notes": {
+            "uk": "Підтримка після індукції з обінутузумабом і CVP.",
+            "en": "Maintenance after obinutuzumab with CVP."
+          }
+        },
+        {
+          "regimen_id": "chlorambucil-mono",
+          "notes": {
+            "uk": "Паліативний варіант для ослаблених пацієнтів.",
+            "en": "A palliative option for frail patients."
+          }
+        }
       ]
     },
     {

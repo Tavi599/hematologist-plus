@@ -221,6 +221,29 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
     warning('regimens', regimenId, `drugs not obtainable: ${[...new Set(drugIds)].join(', ')}`)
   }
 
+  // The disease pages are the only way into a regimen, so one that hangs off no node is
+  // invisible: it exists, it validates, and no physician can reach it. The same the other way
+  // round — an empty line in the tree reads as "nothing is used here", which is never true.
+  const linkedRegimens = new Set(rows.treatment_node_regimens.map((link) => link.regimen_id))
+  for (const regimen of rows.regimens) {
+    if (!linkedRegimens.has(regimen.id)) {
+      warning('regimens', regimen.id, 'reachable from no treatment node')
+    }
+  }
+  const nodesWithRegimens = new Set(rows.treatment_node_regimens.map((link) => link.node_id))
+  const parentNodes = new Set(
+    rows.treatment_nodes.map((node) => node.parent_id).filter((id) => id !== null),
+  )
+  for (const node of rows.treatment_nodes) {
+    // A `group` is a heading or a block of advice — monitoring targets, what every patient gets —
+    // and carries its content in its description, so it owes no regimen. Every other kind names a
+    // line or a stage of treatment, and an empty one reads as "nothing is used here".
+    if (node.kind === 'group') continue
+    if (!nodesWithRegimens.has(node.id) && !parentNodes.has(node.id)) {
+      warning('treatment_nodes', node.id, 'has neither regimens nor child nodes')
+    }
+  }
+
   for (const regimen of rows.regimens) {
     const forms = regimen.print_forms?.forms ?? []
     for (const form of forms) {

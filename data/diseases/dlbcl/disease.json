@@ -164,6 +164,64 @@
             }
           ]
         }
+      ],
+      "regimens": [
+        {
+          "regimen_id": "pola-r-chp-cycle-1",
+          "notes": {
+            "uk": "Цикл 1. Перевага при IPI 2-5 та при подвійному ураженні.",
+            "en": "Cycle 1. Preferred at IPI 2-5 and in double-hit disease."
+          }
+        },
+        {
+          "regimen_id": "pola-r-chp",
+          "notes": {
+            "uk": "Цикли 2-6.",
+            "en": "Cycles 2-6."
+          }
+        },
+        {
+          "regimen_id": "r-chop-21",
+          "notes": {
+            "uk": "Класичний стандарт першої лінії.",
+            "en": "The classic first-line standard."
+          }
+        },
+        {
+          "regimen_id": "r-mini-chop",
+          "notes": {
+            "uk": "Пацієнти похилого віку, яким повні дози CHOP не підходять.",
+            "en": "Elderly patients for whom full-dose CHOP is unsuitable."
+          }
+        },
+        {
+          "regimen_id": "r-gcvp",
+          "notes": {
+            "uk": "Коли антрациклін протипоказаний через серце або супутні хвороби.",
+            "en": "Where an anthracycline is contraindicated by cardiac or other comorbidity."
+          }
+        },
+        {
+          "regimen_id": "da-epoch-r",
+          "notes": {
+            "uk": "Високозлоякісна лімфома з перебудовами MYC і BCL2 та/або BCL6, первинна медіастинальна.",
+            "en": "High-grade lymphoma with MYC and BCL2 and/or BCL6 rearrangements, and primary mediastinal."
+          }
+        },
+        {
+          "regimen_id": "hd-methotrexate-cns",
+          "notes": {
+            "uk": "Профілактика ураження центральної нервової системи за високого ризику.",
+            "en": "Prophylaxis of central nervous system involvement where the risk is high."
+          }
+        },
+        {
+          "regimen_id": "methotrexate-intrathecal",
+          "notes": {
+            "uk": "Інтратекальна профілактика, якщо обрано саме її.",
+            "en": "Intrathecal prophylaxis, where that is the route chosen."
+          }
+        }
       ]
     },
     {

@@ -324,6 +324,30 @@ describe('checkCatalog', () => {
     expect(issues.filter((issue) => issue.severity === 'error')).toEqual([])
     expect(issues.map((issue) => issue.message)).toContain('drugs not obtainable: rituximab')
   })
+
+  it('notices a regimen no disease page leads to, and a line with nothing in it', () => {
+    const rows = loadDemo()
+    // The disease pages are the only way in: unlink the regimen and it becomes unreachable,
+    // which is how R-CHOP came to be missing from the first line of DLBCL for weeks.
+    rows.treatment_node_regimens = []
+    const messages = checkCatalog(rows).map((issue) => issue.message)
+    expect(messages).toContain('reachable from no treatment node')
+    expect(messages).toContain('has neither regimens nor child nodes')
+  })
+
+  it('asks nothing of a group node, which carries advice rather than regimens', () => {
+    const rows = loadDemo()
+    const node = rows.treatment_nodes[0]!
+    node.kind = 'group'
+    rows.treatment_node_regimens = rows.treatment_node_regimens.filter(
+      (link) => link.node_id !== node.id,
+    )
+    expect(
+      checkCatalog(rows).filter(
+        (issue) => issue.id === node.id && issue.message.startsWith('has neither'),
+      ),
+    ).toEqual([])
+  })
 })
 
 describe('diff', () => {
