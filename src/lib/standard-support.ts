@@ -4,7 +4,7 @@ import type { CourseItem } from './course-input'
 
 /**
  * The supportive care every course is surrounded by — antiemetics, prophylaxis against viral,
- * pneumocystis and fungal infection, and cardio aspirin — as five switches the physician turns on or off by the
+ * pneumocystis and fungal infection, and «Aspirin cardio» — as five switches the physician turns on or off by the
  * standard, instead of hunting for the rows in the regimen.
  *
  * A regimen that already writes such rows keeps them: the switch enables or disables them as a
@@ -163,8 +163,8 @@ export function standardSupportRows(
           dose_value: 100,
           days: cycle,
           notes: {
-            uk: 'Кардіоаспірин 100 мг раз на добу на весь цикл — за потреби (наприклад, профілактика тромбозів при леналідоміді чи тромбоцитозі). Тромбоцити нижче 50 ×10⁹/л і ризик кровотечі — протипоказання, вирішує лікар. Додано перемикачем «Супровід за стандартом».',
-            en: 'Cardio aspirin 100 mg once a day for the whole cycle — as needed (for example thrombosis prophylaxis with lenalidomide or thrombocytosis). Platelets below 50 ×10⁹/L and a bleeding risk are contraindications; the physician decides. Added by the «Standard support» switch.',
+            uk: 'Аспірин кардіо 100 мг раз на добу на весь цикл — за потреби (наприклад, профілактика тромбозів при леналідоміді чи тромбоцитозі). Тромбоцити нижче 50 ×10⁹/л і ризик кровотечі — протипоказання, вирішує лікар. Додано перемикачем «Супровід за стандартом».',
+            en: 'Aspirin cardio 100 mg once a day for the whole cycle — as needed (for example thrombosis prophylaxis with lenalidomide or thrombocytosis). Platelets below 50 ×10⁹/L and a bleeding risk are contraindications; the physician decides. Added by the «Standard support» switch.',
           },
         }),
       )
