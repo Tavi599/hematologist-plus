@@ -1,3 +1,4 @@
+import { regimenAvailability } from '../../lib/availability'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import type { Drug, TreatmentNode, TreatmentNodeRegimen } from '../../schemas/catalog'
 
@@ -67,9 +68,10 @@ export function filterTree(
   catalog: CatalogIndex,
   diseaseId: string,
   drugIds: readonly string[],
+  onlyObtainable = false,
 ): FilteredNode[] {
   const roots = catalog.rootNodesByDisease.get(diseaseId) ?? []
-  return roots.flatMap((node) => keep(catalog, node, drugIds))
+  return roots.flatMap((node) => keep(catalog, node, drugIds, onlyObtainable))
 }
 
 /** How many regimens the tree is showing — what the filter's own caption counts. */
@@ -81,13 +83,26 @@ function keep(
   catalog: CatalogIndex,
   node: TreatmentNode,
   drugIds: readonly string[],
+  onlyObtainable: boolean,
 ): FilteredNode[] {
-  const links = (catalog.regimenLinksByNode.get(node.id) ?? []).filter((link) =>
-    regimenHasDrugs(catalog, link.regimen_id, drugIds),
+  const own = catalog.regimenLinksByNode.get(node.id) ?? []
+  const links = own.filter(
+    (link) =>
+      regimenHasDrugs(catalog, link.regimen_id, drugIds) &&
+      (!onlyObtainable || regimenAvailability(catalog, link.regimen_id) !== 'unavailable'),
   )
-  const children = (catalog.childNodes.get(node.id) ?? []).flatMap((child) =>
-    keep(catalog, child, drugIds),
-  )
+  const kids = catalog.childNodes.get(node.id) ?? []
+  const children = kids.flatMap((child) => keep(catalog, child, drugIds, onlyObtainable))
+  // A line whose every regimen was hidden for being unobtainable is not worth its heading; a
+  // heading that never had regimens (advice only) stays.
+  if (
+    onlyObtainable &&
+    (own.length > 0 || kids.length > 0) &&
+    links.length === 0 &&
+    children.length === 0
+  ) {
+    return []
+  }
   // Unfiltered, a node with neither regimens nor children is still a heading with advice under it
   // and belongs on the page; filtered, it answers nothing that was asked.
   if (drugIds.length > 0 && links.length === 0 && children.length === 0) return []

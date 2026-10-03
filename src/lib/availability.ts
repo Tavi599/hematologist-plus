@@ -13,6 +13,15 @@ export function regimenAvailability(
   regimenId: string,
 ): Drug['availability'] {
   const items = catalog.itemsByRegimen.get(regimenId) ?? []
+  const reference = catalog.regimens.get(regimenId)?.reference
+  if (reference !== null && reference !== undefined) {
+    // A described course has no items: it is as obtainable as its card says, or as its drugs.
+    if (reference.availability === 'unavailable') return 'unavailable'
+    const named = reference.drugs.flatMap((drug) =>
+      drug.drug_id === undefined ? [] : [catalog.drugs.get(drug.drug_id)],
+    )
+    if (named.some((drug) => drug?.availability === 'unavailable')) return 'unavailable'
+  }
   return worstAvailability(items, (item) => catalog.drugs.get(item.drug_id))
 }
 

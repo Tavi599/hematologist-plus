@@ -1,4 +1,4 @@
-import { Anchor, Badge, Button, Group, MultiSelect, Stack, Text } from '@mantine/core'
+import { Anchor, Badge, Button, Group, MultiSelect, Stack, Switch, Text } from '@mantine/core'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
@@ -7,6 +7,7 @@ import { routes } from '../../app/routes'
 import { regimenAvailability } from '../../lib/availability'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage } from '../../lib/i18n'
+import { useOnlyObtainable } from '../../lib/only-obtainable'
 import { localize } from '../../lib/localized'
 import { RegimenReference } from './RegimenReference'
 import { countRegimens, drugsInTree, filterTree, type FilteredNode } from './treatment-filter'
@@ -22,14 +23,23 @@ export function TreatmentTree({
   const { t } = useTranslation()
   const language = currentLanguage()
   const [drugIds, setDrugIds] = useState<string[]>([])
+  const [onlyObtainable, setOnlyObtainable] = useOnlyObtainable()
 
   const drugs = useMemo(
     () => drugsInTree(catalog, diseaseId, (drug) => localize(drug.name, language)),
     [catalog, diseaseId, language],
   )
   const nodes = useMemo(
-    () => filterTree(catalog, diseaseId, drugIds),
-    [catalog, diseaseId, drugIds],
+    () => filterTree(catalog, diseaseId, drugIds, onlyObtainable),
+    [catalog, diseaseId, drugIds, onlyObtainable],
+  )
+  const hidden = useMemo(
+    () =>
+      onlyObtainable
+        ? countRegimens(filterTree(catalog, diseaseId, drugIds)) -
+          countRegimens(filterTree(catalog, diseaseId, drugIds, true))
+        : 0,
+    [catalog, diseaseId, drugIds, onlyObtainable],
   )
 
   const roots = catalog.rootNodesByDisease.get(diseaseId) ?? []
@@ -39,6 +49,16 @@ export function TreatmentTree({
 
   return (
     <Stack gap="sm">
+      <Switch
+        label={t('diseaseDetail.hideUnavailable')}
+        description={
+          onlyObtainable && hidden > 0
+            ? t('diseaseDetail.hiddenCount', { count: hidden })
+            : undefined
+        }
+        checked={onlyObtainable}
+        onChange={(event) => setOnlyObtainable(event.currentTarget.checked)}
+      />
       {/* Worth the room only where there is a list to cut down; two regimens are read faster than
           a filter is filled in. */}
       {drugs.length > 1 && (

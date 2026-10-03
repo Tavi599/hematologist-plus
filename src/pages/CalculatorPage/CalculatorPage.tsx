@@ -19,7 +19,15 @@ import { WarningList } from '../../features/calculator/WarningList'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
 import { RegimenEvidence } from '../../features/catalog/RegimenEvidence'
 import type { CatalogIndex } from '../../lib/catalog-index'
+import { StandardSupport } from '../../features/calculator/StandardSupport'
 import { cyclophosphamideMesna } from '../../lib/cyclophosphamide-mesna'
+import {
+  categoryItemIds,
+  isStandardSupportId,
+  NO_SUPPORT,
+  standardSupportRows,
+  type SupportCategory,
+} from '../../lib/standard-support'
 import {
   buildCourseItems,
   buildCourseItemsFrom,
@@ -47,7 +55,13 @@ export function CalculatorPage() {
 function optionalIds(items: CourseItem[], custom: RegimenItem[]): string[] {
   const added = new Set(custom.map((item) => item.id))
   return items
-    .filter((item) => !added.has(item.item.id) && item.item.role !== 'main')
+    .filter(
+      (item) =>
+        !added.has(item.item.id) &&
+        item.item.role !== 'main' &&
+        // A standard row exists only while its switch is on, and is on from the start.
+        !isStandardSupportId(item.item.id),
+    )
     .map((item) => item.item.id)
 }
 
@@ -78,6 +92,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [shiftMin, setShiftMin] = useState<Record<string, number>>({})
   const [header, setHeader] = useState(emptyHeader)
   const [manualRows, setManualRows] = useState<ManualRow[]>([])
+  const [support, setSupport] = useState<Record<SupportCategory, boolean>>(NO_SUPPORT)
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
   const regimenId = searchParams.get('regimen')
@@ -97,7 +112,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     )
   }
 
-  const baseItems = useMemo(
+  const ownItems = useMemo(
     () => [
       ...(regimenId
         ? buildCourseItems(catalog, regimenId, chosenDoses, chosenModifiers, administrationModes)
@@ -113,6 +128,47 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     [catalog, regimenId, customItems, chosenDoses, chosenModifiers, administrationModes],
   )
 
+  // The standard supportive care the physician has switched on and the regimen does not write
+  // itself: antiemetics and prophylaxis, added as ordinary rows so they are calculated, scheduled
+  // and printed like the rest.
+  const baseItems = useMemo(
+    () => [
+      ...ownItems,
+      ...buildCourseItemsFrom(
+        catalog,
+        standardSupportRows(
+          catalog,
+          ownItems,
+          regimenId === null ? null : (catalog.regimens.get(regimenId)?.cycle_length_days ?? null),
+          courseSettings.startDate,
+          support,
+        ),
+        chosenDoses,
+        chosenModifiers,
+        administrationModes,
+      ),
+    ],
+    [
+      catalog,
+      ownItems,
+      regimenId,
+      courseSettings.startDate,
+      support,
+      chosenDoses,
+      chosenModifiers,
+      administrationModes,
+    ],
+  )
+
+  const onSupport = (category: SupportCategory, on: boolean) => {
+    setSupport((current) => ({ ...current, [category]: on }))
+    // The regimen's own rows of the kind follow the switch as a group.
+    const ids = categoryItemIds(ownItems, category)
+    setDisabledIds((current) =>
+      on ? current.filter((id) => !ids.includes(id)) : [...new Set([...current, ...ids])],
+    )
+  }
+
   // A regimen opens with its cytostatics on and its premedication and supportive therapy off:
   // what a patient actually gets of those is decided at the bedside, and the physician switches
   // on what this course needs. A drug added by hand is never switched off — it was added on
@@ -120,6 +176,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [toggledRegimen, setToggledRegimen] = useState<string | null | undefined>(undefined)
   if (regimenId !== toggledRegimen) {
     setToggledRegimen(regimenId)
+    setSupport(NO_SUPPORT)
     setDisabledIds(optionalIds(baseItems, customItems))
   }
 
@@ -203,6 +260,10 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
 
       {regimen && <RegimenEvidence regimen={regimen} />}
+
+      {ownItems.length > 0 && (
+        <StandardSupport items={ownItems} value={support} onChange={onSupport} />
+      )}
 
       {!measured && items.length > 0 && (
         <Alert color="blue" variant="light">

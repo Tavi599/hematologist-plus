@@ -130,6 +130,21 @@
       "modifiers": "Dose modifiers",
       "modifiersHint": "Several may be ticked; the lowest dose applies"
     },
+    "standardSupport": {
+      "title": "Standard support",
+      "lead": "Antiemetics and infection prophylaxis are switched on and off here with one switch. If the regimen has its own rows of the kind, the switch enables or disables them; if it has none, it adds the standard ones.",
+      "antiemetic": "Antiemetics",
+      "antiviral": "Antiviral prophylaxis",
+      "pneumocystis": "Pneumocystis pneumonia prophylaxis",
+      "antifungal": "Antifungal prophylaxis",
+      "ownRows": "Rows of the regimen: {{count}}",
+      "standard": {
+        "antiemetic": "Adds ondansetron 8 mg twice a day on the days cytostatics are given",
+        "antiviral": "Adds aciclovir 400 mg twice a day for the whole cycle",
+        "pneumocystis": "Adds co-trimoxazole 480 mg on Mon, Wed and Fri",
+        "antifungal": "Adds fluconazole 50 mg a day for the whole cycle"
+      }
+    },
     "manual": {
       "title": "Lines written by hand",
       "lead": "An order the catalog does not hold: printed as it is typed, never calculated. A whole sheet can be made this way, with no regimen at all.",
@@ -258,6 +273,8 @@
     "chapter": "ICD-10 chapter: {{letter}}"
   },
   "diseaseDetail": {
+    "hideUnavailable": "Hide unavailable regimens",
+    "hiddenCount": "Regimens hidden: {{count}}",
     "title": "Disease",
     "placeholder": "Article and treatment tree for “{{slug}}” will appear here.",
     "back": "Back to list",

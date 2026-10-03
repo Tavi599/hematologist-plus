@@ -16,7 +16,8 @@ import { useTranslation } from 'react-i18next'
 import type { BsaVariant } from '../../domain'
 import { regimenAvailability } from '../../lib/availability'
 import type { CatalogIndex } from '../../lib/catalog-index'
-import { filterRegimens, NO_REGIMEN_FILTER, type RegimenFilter } from '../../lib/regimen-filter'
+import { useOnlyObtainable } from '../../lib/only-obtainable'
+import { filterRegimens, type RegimenFilter } from '../../lib/regimen-filter'
 import { currentLanguage } from '../../lib/i18n'
 import { decimalInput } from '../../lib/decimal-input'
 import { localize } from '../../lib/localized'
@@ -52,7 +53,10 @@ export function CourseSettings({
   const { t } = useTranslation()
   const language = currentLanguage()
   const patch = (next: Partial<CourseSettingsValue>) => onChange({ ...value, ...next })
-  const [filter, setFilter] = useState<RegimenFilter>(NO_REGIMEN_FILTER)
+  const [diseaseId, setDiseaseId] = useState<string | null>(null)
+  // Shared with the disease pages: hiding what cannot be obtained is one decision, not two.
+  const [onlyObtainable, setOnlyObtainable] = useOnlyObtainable()
+  const filter: RegimenFilter = { diseaseId, onlyObtainable }
 
   const regimens = filterRegimens(catalog, filter).map((regimen) => ({
     value: regimen.id,
@@ -80,7 +84,7 @@ export function CourseSettings({
             placeholder={t('calculator.course.diseaseAll')}
             data={diseases}
             value={filter.diseaseId}
-            onChange={(diseaseId) => setFilter({ ...filter, diseaseId })}
+            onChange={setDiseaseId}
             searchable
             clearable
             style={{ minWidth: 240 }}
@@ -89,9 +93,7 @@ export function CourseSettings({
             mb={8}
             label={t('calculator.course.onlyObtainable')}
             checked={filter.onlyObtainable}
-            onChange={(event) =>
-              setFilter({ ...filter, onlyObtainable: event.currentTarget.checked })
-            }
+            onChange={(event) => setOnlyObtainable(event.currentTarget.checked)}
           />
         </Group>
 

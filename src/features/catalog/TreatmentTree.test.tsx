@@ -1,8 +1,9 @@
-import { screen } from '@testing-library/react'
-import { describe, expect, it } from 'vitest'
+import { act, fireEvent, screen } from '@testing-library/react'
+import { afterEach, describe, expect, it } from 'vitest'
 
 import { demoCatalog } from '../../lib/catalog.fixture'
 import { indexCatalog } from '../../lib/catalog-index'
+import { resetOnlyObtainable, setOnlyObtainable } from '../../lib/only-obtainable'
 import { emptyCatalog, type TreatmentNode } from '../../schemas/catalog'
 import { renderWithProviders } from '../../test/render'
 
@@ -21,6 +22,11 @@ function node(id: string, parent: string | null, title: string): TreatmentNode {
 }
 
 describe('TreatmentTree', () => {
+  afterEach(() => {
+    window.localStorage.clear()
+    resetOnlyObtainable()
+  })
+
   it('renders a hierarchy', () => {
     const rows = emptyCatalog()
     rows.diseases = [
@@ -98,5 +104,30 @@ describe('TreatmentTree', () => {
     // one has none.
     expect(screen.getAllByRole('link', { name: /Розрахувати/ })).toHaveLength(1)
     expect(screen.queryByRole('link', { name: 'Глофіт-GemOx' })).not.toBeInTheDocument()
+  })
+
+  it('hides the regimens that cannot be obtained when asked, and says how many', async () => {
+    const rows = demoCatalog()
+    rows.drugs.find((drug) => drug.id === 'rituximab')!.availability = 'unavailable'
+    renderWithProviders(<TreatmentTree catalog={indexCatalog(rows)} diseaseId="dlbcl" />)
+    expect(screen.getByText('R-CHOP-21')).toBeInTheDocument()
+
+    await act(async () =>
+      fireEvent.click(screen.getByRole('switch', { name: 'Приховати недоступні схеми' })),
+    )
+
+    expect(screen.queryByText('R-CHOP-21')).not.toBeInTheDocument()
+    expect(screen.getByText('Приховано схем: 1')).toBeInTheDocument()
+    // The choice is kept for the next page.
+    expect(window.localStorage.getItem('hp.onlyObtainable')).toBe('1')
+  })
+
+  it('opens with the unobtainable regimens already hidden once the choice was made', () => {
+    setOnlyObtainable(true)
+    const rows = demoCatalog()
+    rows.drugs.find((drug) => drug.id === 'rituximab')!.availability = 'unavailable'
+    renderWithProviders(<TreatmentTree catalog={indexCatalog(rows)} diseaseId="dlbcl" />)
+
+    expect(screen.queryByText('R-CHOP-21')).not.toBeInTheDocument()
   })
 })

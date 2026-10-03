@@ -281,4 +281,30 @@ describe('CalculatorPage', () => {
     expect(screen.getByLabelText('Зріст, см')).toHaveValue('')
     expect(screen.getByLabelText('Вага, кг')).toHaveValue('')
   })
+
+  it('adds the standard antiviral row when its switch is turned on, and takes it away again', async () => {
+    const rows = demoCatalog()
+    rows.drugs.push({
+      ...rows.drugs.find((drug) => drug.id === 'prednisolone')!,
+      id: 'aciclovir',
+      name: { uk: 'ДЕМО Ацикловір' },
+    })
+    fetch.fetchTable.mockImplementation(async (table: keyof typeof rows) => rows[table])
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
+    await fillPatient()
+
+    const table = () => screen.getByRole('table', { name: 'Дози' })
+    expect(within(table()).queryByText('ДЕМО Ацикловір')).not.toBeInTheDocument()
+
+    const antiviral = screen
+      .getByText('Противірусна профілактика')
+      .closest('.mantine-Switch-root')!
+      .querySelector('input')!
+    await act(async () => fireEvent.click(antiviral))
+    expect(within(table()).getByText('ДЕМО Ацикловір')).toBeInTheDocument()
+
+    await act(async () => fireEvent.click(antiviral))
+    expect(within(table()).queryByText('ДЕМО Ацикловір')).not.toBeInTheDocument()
+  })
 })
