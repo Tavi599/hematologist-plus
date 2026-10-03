@@ -24,7 +24,13 @@ export interface NeedLine {
   /** Packs one patient needs for one course — from the hint, or typed by hand. */
   packsPerCourse: number | null
   stock: number | null
+  /**
+   * Packs an average month takes. Left null it is counted from the course; a figure typed here
+   * is the department's own and overrides the count.
+   */
   monthlyUse: number | null
+  /** Months the quantity lasts; counted from the two above unless typed over. */
+  months: number | null
   /** What the department of health is asked to distribute; the whole need unless typed over. */
   proposed: number | null
   /** Regimen the hint counts the packs of this drug by. */
@@ -34,8 +40,25 @@ export interface NeedLine {
 export interface NeedLineTotals {
   /** 100 % need: every patient's whole planned treatment, in packs. */
   total: number
+  /** What goes in the «середньомісячне використання» graph, counted or typed. */
+  monthlyUse: number | null
+  /** What goes in the «кількість місяців» graph, counted or typed. */
   monthsCovered: number | null
   proposed: number
+}
+
+/**
+ * The average month's use the form is filled in with, before anyone corrects it: what one patient
+ * takes in one course. A cycle runs about a month, so the two come to the same thing — and that
+ * is how the department's own forms are filled in, where the figure stays the same whether the
+ * line is for two patients or for five (Візгем 4 flac, Вориконазол 60 tab).
+ *
+ * Nothing to count it from leaves the graph empty rather than zero: an empty graph is a question,
+ * a zero is an answer, and the form goes to the department of health.
+ */
+export function defaultMonthlyUse(line: NeedLine): number | null {
+  const packs = line.packsPerCourse
+  return packs === null || packs === 0 ? null : packs
 }
 
 export function newNeedLine(key: string): NeedLine {
@@ -50,6 +73,7 @@ export function newNeedLine(key: string): NeedLine {
     packsPerCourse: null,
     stock: null,
     monthlyUse: null,
+    months: null,
     proposed: null,
     regimenId: null,
   }
@@ -57,9 +81,11 @@ export function newNeedLine(key: string): NeedLine {
 
 export function needLineTotals(line: NeedLine): NeedLineTotals {
   const total = (line.patients ?? 0) * (line.packsPerCourse ?? 0) * (line.courses ?? 0)
+  const monthlyUse = line.monthlyUse ?? defaultMonthlyUse(line)
   return {
     total,
-    monthsCovered: monthsCovered(total, line.monthlyUse ?? 0),
+    monthlyUse,
+    monthsCovered: line.months ?? monthsCovered(total, monthlyUse ?? 0),
     proposed: line.proposed ?? total,
   }
 }
@@ -92,7 +118,7 @@ export function needSheetRows(
       patients: line.patients,
       total: totals.total === 0 ? null : totals.total,
       stock: line.stock,
-      monthlyUse: line.monthlyUse,
+      monthlyUse: totals.monthlyUse,
       months: totals.monthsCovered,
       proposed: totals.proposed === 0 ? null : totals.proposed,
     }

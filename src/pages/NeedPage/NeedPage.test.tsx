@@ -9,6 +9,9 @@ import { NeedPage } from './NeedPage'
 const source = vi.hoisted(() => ({ fetchTable: vi.fn() }))
 vi.mock('../../lib/catalog-source', () => ({ catalogFetcher: source.fetchTable }))
 
+const saved = vi.hoisted(() => ({ saveFile: vi.fn() }))
+vi.mock('../../lib/save-file', () => ({ saveFile: saved.saveFile }))
+
 const pick = async (label: string, option: string) => {
   const combobox = await screen.findByRole('combobox', { name: label })
   await act(async () => fireEvent.click(combobox))
@@ -23,6 +26,7 @@ describe('NeedPage', () => {
   beforeEach(async () => {
     await act(() => i18n.changeLanguage('uk'))
     const catalog = demoCatalog()
+    saved.saveFile.mockReset()
     source.fetchTable.mockReset()
     source.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
   })
@@ -49,8 +53,18 @@ describe('NeedPage', () => {
 
     await type('Пацієнтів', '2')
     expect(screen.getByText('36')).toBeInTheDocument()
+
+    // Both counted graphs stand filled in before anyone touches them: a month takes what a course
+    // takes, and 36 packs at 3 a month last twelve.
+    expect(screen.getByLabelText('Середньомісячне використання')).toHaveAttribute(
+      'placeholder',
+      '3',
+    )
+    expect(screen.getByLabelText('Місяців вистачає')).toHaveAttribute('placeholder', '12')
+
+    // And a figure of the department's own replaces the count.
     await type('Середньомісячне використання', '4')
-    expect(screen.getByText('9')).toBeInTheDocument()
+    expect(screen.getByLabelText('Місяців вистачає')).toHaveAttribute('placeholder', '9')
   })
 
   it('renames the line when the pack changes, unless the name was written by hand', async () => {
@@ -101,5 +115,17 @@ describe('NeedPage', () => {
     renderWithProviders(<NeedPage />)
     await pick('Препарат', 'ДЕМО Ритуксимаб')
     expect(await screen.findByText('Введіть BSA, щоб порахувати')).toBeInTheDocument()
+  })
+
+  it('names the file after the drug of the form, not after the word "need"', async () => {
+    // A folder of «Потреба 2026-10-03» tells nobody which form is which; the drug does.
+    renderWithProviders(<NeedPage />)
+    await pick('Препарат', 'ДЕМО Ритуксимаб')
+    await act(async () =>
+      fireEvent.click(screen.getByRole('button', { name: 'Завантажити .xlsx' })),
+    )
+
+    const name = saved.saveFile.mock.calls[0]?.[0] as string
+    expect(name).toMatch(/^ДЕМО Ритуксимаб \d{4}-\d{2}-\d{2}\.xlsx$/)
   })
 })

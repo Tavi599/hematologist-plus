@@ -5,6 +5,7 @@ import type { CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { saveFile } from '../../lib/save-file'
 import { buildXlsx, XLSX_MEDIA_TYPE } from '../../lib/xlsx-writer'
+import { needFileName } from './need-file-name'
 import { catalogName, needSheetRows, type NeedLine } from './need-lines'
 import { buildNeedSheet, FORM_UNITS } from './need-sheet'
 
@@ -37,8 +38,14 @@ export function NeedExport({ catalog, lines }: { catalog: CatalogIndex; lines: N
       },
     )
     const date = new Date().toISOString().slice(0, 10)
+    // The drugs of the form name the file, so a folder of them can be read at a glance.
+    const fileName = needFileName(
+      rows.map((row) => row.name),
+      date,
+      { fallback: t('need.export.fileNameFallback'), more: t('need.export.fileNameMore') },
+    )
     saveFile(
-      `${t('need.export.fileName', { date })}.xlsx`,
+      `${fileName}.xlsx`,
       buildXlsx([buildNeedSheet(rows, t('need.export.sheet'))]),
       XLSX_MEDIA_TYPE,
     )

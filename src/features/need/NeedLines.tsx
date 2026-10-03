@@ -16,7 +16,13 @@ import { useTranslation } from 'react-i18next'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
-import { catalogName, needLineTotals, newNeedLine, type NeedLine } from './need-lines'
+import {
+  catalogName,
+  defaultMonthlyUse,
+  needLineTotals,
+  newNeedLine,
+  type NeedLine,
+} from './need-lines'
 import { FORM_UNITS } from './need-sheet'
 
 /**
@@ -192,11 +198,13 @@ export function NeedLines({
                   />
                   <NumberInput
                     label={t('need.form.monthlyUse')}
+                    description={t('need.form.monthlyUseHint')}
                     value={line.monthlyUse ?? ''}
+                    placeholder={String(defaultMonthlyUse(line) ?? '')}
                     onChange={(value) => patch(line.key, { monthlyUse: asNumber(value) })}
                     min={0}
                     allowDecimal={false}
-                    w={160}
+                    w={190}
                   />
                 </Group>
 
@@ -204,9 +212,16 @@ export function NeedLines({
                   <Text size="sm">
                     {t('need.form.total')}: <strong>{totals.total}</strong>
                   </Text>
-                  <Text size="sm">
-                    {t('need.form.months')}: <strong>{totals.monthsCovered ?? '—'}</strong>
-                  </Text>
+                  <NumberInput
+                    label={t('need.form.months')}
+                    description={t('need.form.monthsHint')}
+                    value={line.months ?? ''}
+                    placeholder={String(totals.monthsCovered ?? '')}
+                    onChange={(value) => patch(line.key, { months: asNumber(value) })}
+                    min={0}
+                    allowDecimal={false}
+                    w={180}
+                  />
                   <NumberInput
                     label={t('need.form.proposed')}
                     description={t('need.form.proposedHint')}

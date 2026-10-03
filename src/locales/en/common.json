@@ -191,8 +191,10 @@
       "perCourse": "Packs per course",
       "stock": "Stock",
       "monthlyUse": "Average monthly use",
+      "monthlyUseHint": "counted as packs per course",
       "total": "100 % need",
       "months": "Months covered",
+      "monthsHint": "counted as 100 % need ÷ average monthly use",
       "proposed": "Proposed for distribution",
       "proposedHint": "the whole need unless typed over",
       "add": "Add a line"
@@ -219,7 +221,8 @@
       "title": "File to hand in",
       "hint": "The distribution form as .xlsx, printed A4 landscape. The hint for the count is not written to the file.",
       "button": "Download .xlsx",
-      "fileName": "Need {{date}}",
+      "fileNameFallback": "Need",
+      "fileNameMore": "and others",
       "sheet": "Need"
     }
   },

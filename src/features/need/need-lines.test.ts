@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest'
 
-import { needLineTotals, needSheetRows, newNeedLine, type NeedLine } from './need-lines'
+import {
+  defaultMonthlyUse,
+  needLineTotals,
+  needSheetRows,
+  newNeedLine,
+  type NeedLine,
+} from './need-lines'
 
 const filled = (patch: Partial<NeedLine> = {}): NeedLine => ({
   ...newNeedLine('line-1'),
@@ -18,7 +24,39 @@ const filled = (patch: Partial<NeedLine> = {}): NeedLine => ({
 
 describe('needLineTotals', () => {
   it('counts the whole planned treatment of every patient', () => {
-    expect(needLineTotals(filled())).toEqual({ total: 12, monthsCovered: 3, proposed: 12 })
+    expect(needLineTotals(filled())).toEqual({
+      total: 12,
+      monthlyUse: 4,
+      monthsCovered: 3,
+      proposed: 12,
+    })
+  })
+
+  it('takes the average month from the course when nobody has said otherwise', () => {
+    // The department's own forms count it this way: a cycle runs about a month, so what one
+    // patient takes in a course is what they take in a month.
+    const line = filled({ packsPerCourse: 3, monthlyUse: null })
+    expect(defaultMonthlyUse(line)).toBe(3)
+    expect(needLineTotals(line)).toMatchObject({ total: 36, monthlyUse: 3, monthsCovered: 12 })
+  })
+
+  it('keeps the figure the department typed over the counted one', () => {
+    expect(needLineTotals(filled({ packsPerCourse: 3, monthlyUse: 9 }))).toMatchObject({
+      monthlyUse: 9,
+      monthsCovered: 4,
+    })
+  })
+
+  it('keeps the months the department typed over the division', () => {
+    expect(needLineTotals(filled({ months: 7 })).monthsCovered).toBe(7)
+  })
+
+  it('leaves the average month empty when there is no course to count it from', () => {
+    expect(defaultMonthlyUse(filled({ packsPerCourse: null, monthlyUse: null }))).toBeNull()
+    expect(needLineTotals(filled({ packsPerCourse: null, monthlyUse: null }))).toMatchObject({
+      monthlyUse: null,
+      monthsCovered: null,
+    })
   })
 
   it('proposes the whole need unless a figure is typed over it', () => {
@@ -28,6 +66,7 @@ describe('needLineTotals', () => {
   it('counts nothing out of a line that is only started', () => {
     expect(needLineTotals(newNeedLine('line-2'))).toEqual({
       total: 0,
+      monthlyUse: null,
       monthsCovered: null,
       proposed: 0,
     })
