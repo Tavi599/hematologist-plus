@@ -258,7 +258,10 @@ describe('buildCourseSheets', () => {
     expect(stamp).toContain('Код за ЄДРПОУ 42751893')
     // The stamp box is wide enough for the institution's current, much longer name.
     expect(ward.merges).toContain('A1:F1')
-    expect(String(text(ward.rows[0]![16] ?? null))).toContain('№003-4/о')
+    // Four lines, as on the printed form — the order sits on one line with its date.
+    expect(String(text(ward.rows[0]![16] ?? null))).toBe(
+      'МЕДИЧНА ДОКУМЕНТАЦІЯ\nФорма первинної облікової документації №003-4/о\nЗАТВЕРДЖЕНО\nНаказ МОЗ України від 29.05.2013р. №435',
+    )
     expect(String(text(ward.rows[1]![0] ?? null))).toBe('ЛИСТОК ЛІКАРСЬКИХ ПРИЗНАЧЕНЬ')
   })
 

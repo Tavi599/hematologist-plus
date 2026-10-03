@@ -127,7 +127,7 @@ const BLANK = {
   orders: 'Призначення                                                         / Час',
   wardOrders: 'Призначення                                                           / Дата',
   wardForm:
-    'МЕДИЧНА ДОКУМЕНТАЦІЯ\nФорма первинної облікової документації\n№003-4/о\nЗАТВЕРДЖЕНО\nНаказ МОЗ України\n29.05.2013р. №435',
+    'МЕДИЧНА ДОКУМЕНТАЦІЯ\nФорма первинної облікової документації №003-4/о\nЗАТВЕРДЖЕНО\nНаказ МОЗ України від 29.05.2013р. №435',
   wardHeading: 'ЛИСТОК ЛІКАРСЬКИХ ПРИЗНАЧЕНЬ',
   wardRecord: 'Номер медичної карти стаціонарного пацієнта:',
   wardPatient: 'П.І.Б. пацієнта: ',
@@ -454,9 +454,9 @@ function wardSheet(
     ...spread('', 9, STAMP_FORMAT),
   ])
   merges.push('A1:F1', 'Q1:Z1')
-  // Six printed lines of the form's designation at ten points, and the stamp beside it: the box
+  // Four printed lines of the form's designation at ten points, and the stamp beside it: the box
   // is ruled to hold them whole, down to the order the form was approved by.
-  heights.push(84)
+  heights.push(62)
 
   rows.push([{ value: BLANK.wardHeading, format: TITLE_FORMAT }, ...spread('', 25, TITLE_FORMAT)])
   merges.push(`A2:${lastColumn}2`)
