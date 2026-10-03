@@ -1,0 +1,37 @@
+{
+  "$comment": "Високі дози дексаметазону при ХЛЛ як порятунок для кінцевої чи резистентної хвороби за UpToDate (відповіді трапляються, але часті інфекції й потреба знижувати дозу).",
+  "id": "dexamethasone-hd-cll",
+  "short_name": "Дексаметазон 40 (ХЛЛ)",
+  "name": {
+    "uk": "Дексаметазон у високих дозах (ХЛЛ)",
+    "en": "High-dose dexamethasone (CLL)"
+  },
+  "description": {
+    "uk": "40 мг на добу усередину в дні 1–4, 9–12, 17–20 кожні 28 днів.",
+    "en": "40 mg a day by mouth on days 1 to 4, 9 to 12 and 17 to 20 every 28 days."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory chronic lymphocytic leukemia",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-chronic-lymphocytic-leukemia",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 9, 10, 11, 12, 17, 18, 19, 20],
+      "notes": {
+        "uk": "40 мг на добу (UpToDate). Високий ризик інфекцій; профілактику вмикайте в «Супроводі за стандартом».",
+        "en": "40 mg a day (UpToDate). High risk of infection; switch prophylaxis on in «Standard support»."
+      }
+    }
+  ]
+}

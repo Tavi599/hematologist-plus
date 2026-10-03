@@ -1,0 +1,39 @@
+{
+  "$comment": "Додано 2026-10-04 (UpToDate: ХМЛ після невдачі першого ІТК). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "ponatinib",
+  "name": {
+    "uk": "Понатиніб",
+    "en": "Ponatinib"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: ICLUSIG (ponatinib) — таблетки 10, 15, 30, 45 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=16d804b6-4957-43ee-b18c-3b36ec37c5ac",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t10",
+      "form": "tablet",
+      "strength_amount": 10
+    },
+    {
+      "key": "t15",
+      "form": "tablet",
+      "strength_amount": 15
+    },
+    {
+      "key": "t30",
+      "form": "tablet",
+      "strength_amount": 30
+    },
+    {
+      "key": "t45",
+      "form": "tablet",
+      "strength_amount": 45
+    }
+  ]
+}

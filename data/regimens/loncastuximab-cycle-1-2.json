@@ -1,0 +1,61 @@
+{
+  "$comment": "Лонкастуксимаб при рецидивному ДВКЛ після ≥2 ліній за UpToDate і листком FDA: 0,15 мг/кг у перших двох циклах, далі 0,075 мг/кг, день 1 кожні 3 тижні. Не давати перед CD19-спрямованим CAR-T (UpToDate). Дексаметазон 4 мг двічі на добу 3 дні, починаючи з дня перед введенням (день 0 — день перед). Профілактику й симптоматичне лікування набряків — за потреби вручну.",
+  "id": "loncastuximab-cycle-1-2",
+  "short_name": "Лонкаст. ц.1-2",
+  "name": {
+    "uk": "Лонкастуксимаб, цикли 1–2",
+    "en": "Loncastuximab, cycles 1-2"
+  },
+  "description": {
+    "uk": "0,15 мг/кг у день 1 кожні 3 тижні, 2 цикли, з дексаметазоном.",
+    "en": "0.15 mg/kg on day 1 every 3 weeks for two cycles, with dexamethasone."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "UpToDate: Diffuse large B cell lymphoma (DLBCL): Second or later relapse or patients who are medically unfit",
+      "url": "https://www.uptodate.com/contents/diffuse-large-b-cell-lymphoma-dlbcl-second-or-later-relapse-or-patients-who-are-medically-unfit",
+      "version": "тема оновлена 03.09.2026",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: ZYNLONTA (loncastuximab tesirine-lpyl) — флакон 10 мг (відновлення 2,2 мл води, 5 мг/мл), розведення в 50 мл 5% глюкози",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=af54af12-3edf-4301-8bc5-0446bc813c1d",
+      "version": "ред. 02.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [0, 1, 2],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "4 мг двічі на добу 3 дні, починаючи з дня перед введенням (день 0), усередину або в/в (листок FDA).",
+        "en": "4 mg twice a day for 3 days, starting the day before (day 0), by mouth or IV (FDA label)."
+      }
+    },
+    {
+      "key": "loncastuximab",
+      "drug_id": "loncastuximab-tesirine",
+      "route": "iv_infusion",
+      "dose_value": 0.15,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "0,15 мг/кг за 30 хвилин у 50 мл 5% глюкози.",
+        "en": "0.15 mg/kg over 30 minutes in 50 mL of 5% glucose."
+      }
+    }
+  ]
+}

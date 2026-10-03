@@ -540,7 +540,14 @@
           "regimen_id": "ref-epcor-gemox"
         },
         {
-          "regimen_id": "ref-loncastuximab"
+          "regimen_id": "loncastuximab-cycle-1-2",
+          "notes": {
+            "uk": "Після ≥2 ліній; не перед CD19-CAR-T; UpToDate, листок FDA",
+            "en": "After at least two lines; not before CD19 CAR-T; UpToDate, FDA label"
+          }
+        },
+        {
+          "regimen_id": "loncastuximab"
         },
         {
           "regimen_id": "ref-bv-r-len"

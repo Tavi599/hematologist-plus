@@ -3,12 +3,12 @@
   "id": "zanubrutinib-mono",
   "short_name": "Занубрутиніб",
   "name": {
-    "uk": "Занубрутиніб (макроглобулінемія Вальденстрема)",
-    "en": "Zanubrutinib (Waldenström macroglobulinemia)"
+    "uk": "Занубрутиніб (ХЛЛ, макроглобулінемія Вальденстрема)",
+    "en": "Zanubrutinib (CLL, Waldenström macroglobulinemia)"
   },
   "description": {
-    "uk": "160 мг двічі на добу безперервно до прогресування чи неприйнятної токсичності.",
-    "en": "160 mg twice a day continuously until progression or unacceptable toxicity."
+    "uk": "160 мг двічі на добу безперервно до прогресування чи неприйнятної токсичності (ХЛЛ — перша лінія й рецидив, WM).",
+    "en": "160 mg twice a day continuously until progression or unacceptable toxicity (CLL first line and relapse, WM)."
   },
   "cycle_length_days": 28,
   "default_cycles": 6,
@@ -23,6 +23,18 @@
       "name": "FDA label: BRUKINSA (zanubrutinib) — капсули 80 мг, таблетки 160 мг; ХМ/WM і ФЛ з обінутузумабом",
       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3e08fe23-d70e-424c-bc51-1222e320f902",
       "version": "SPL, ред. 07.2026",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Selection of initial therapy for symptomatic or advanced CLL/SLL",
+      "url": "https://www.uptodate.com/contents/selection-of-initial-therapy-for-symptomatic-or-advanced-chronic-lymphocytic-leukemia-small-lymphocytic-lymphoma",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory chronic lymphocytic leukemia",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-chronic-lymphocytic-leukemia",
+      "version": "перевірено 2026-10-04",
       "checkedOn": "2026-10-04"
     }
   ],

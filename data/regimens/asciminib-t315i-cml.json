@@ -1,0 +1,42 @@
+{
+  "$comment": "Асциміниб 200 мг двічі на добу при ХМЛ з мутацією T315I за UpToDate: доза вища, ніж при інших мутаціях BCR::ABL1 (80 мг на добу). Натще: без їжі за 2 години до й 1 годину після прийому.",
+  "id": "asciminib-t315i-cml",
+  "short_name": "Асциміниб T315I",
+  "name": {
+    "uk": "Асциміниб 200 мг двічі на добу (ХМЛ, T315I)",
+    "en": "Asciminib 200 mg twice a day (CML, T315I)"
+  },
+  "description": {
+    "uk": "200 мг двічі на добу безперервно.",
+    "en": "200 mg twice a day continuously."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of chronic phase CML after failure of the initial tyrosine kinase inhibitor",
+      "url": "https://www.uptodate.com/contents/treatment-of-chronic-phase-chronic-myeloid-leukemia-after-failure-of-the-initial-tyrosine-kinase-inhibitor",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "asciminib",
+      "drug_id": "asciminib",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "200 мг двічі на добу через ~12 годин (UpToDate); натще.",
+        "en": "200 mg twice a day about 12 hours apart (UpToDate); on an empty stomach."
+      }
+    }
+  ]
+}

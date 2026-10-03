@@ -1,0 +1,76 @@
+{
+  "$comment": "Понатиніб при ХМЛ у хронічній фазі після невдачі першого ІТК за UpToDate й листком FDA: старт 45 мг раз на добу, зниження до 15 мг, коли BCR::ABL1 ≤1%. Бокс-попередження: артеріальні оклюзії, ВТЕ, серцева недостатність, гепатотоксичність; частина клініцистів додає аспірин (даних немає). Показаний при мутації T315I.",
+  "id": "ponatinib-cml",
+  "short_name": "Понатиніб",
+  "name": {
+    "uk": "Понатиніб (ХМЛ, друга лінія і далі)",
+    "en": "Ponatinib (CML, second line onward)"
+  },
+  "description": {
+    "uk": "45 мг раз на добу, при BCR::ABL1 ≤1% — 15 мг.",
+    "en": "45 mg once a day; 15 mg once BCR::ABL1 is 1% or below."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of chronic phase CML after failure of the initial tyrosine kinase inhibitor",
+      "url": "https://www.uptodate.com/contents/treatment-of-chronic-phase-chronic-myeloid-leukemia-after-failure-of-the-initial-tyrosine-kinase-inhibitor",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: ICLUSIG (ponatinib) — таблетки 10, 15, 30, 45 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=16d804b6-4957-43ee-b18c-3b36ec37c5ac",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "ponatinib",
+      "drug_id": "ponatinib",
+      "route": "oral",
+      "dose_value": 45,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "45 мг раз на добу з їжею або без.",
+        "en": "45 mg once a day with or without food."
+      },
+      "dose_options": [
+        {
+          "dose_value": 15,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Підтримувальна доза, коли BCR::ABL1 ≤1% (UpToDate, листок FDA)",
+            "en": "Maintenance dose once BCR::ABL1 is 1% or below (UpToDate, FDA label)"
+          },
+          "source": {
+            "name": "FDA label: ICLUSIG (ponatinib) — таблетки 10, 15, 30, 45 мг",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=16d804b6-4957-43ee-b18c-3b36ec37c5ac",
+            "version": "перевірено 2026-10-04",
+            "checkedOn": "2026-10-04"
+          }
+        },
+        {
+          "dose_value": 30,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Проміжне зниження при побічних явищах (дослідження PACE)",
+            "en": "Intermediate reduction for adverse events (the PACE study)"
+          },
+          "source": {
+            "name": "UpToDate: Treatment of chronic phase CML after failure of the initial tyrosine kinase inhibitor",
+            "url": "https://www.uptodate.com/contents/treatment-of-chronic-phase-chronic-myeloid-leukemia-after-failure-of-the-initial-tyrosine-kinase-inhibitor",
+            "version": "перевірено 2026-10-04",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    }
+  ]
+}

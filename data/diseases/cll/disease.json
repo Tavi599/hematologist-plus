@@ -130,6 +130,13 @@
             "uk": "Цикли 5-15",
             "en": "Cycles 5-15"
           }
+        },
+        {
+          "regimen_id": "zanubrutinib-mono",
+          "notes": {
+            "uk": "Один із кращих варіантів; UpToDate",
+            "en": "One of the preferred options; UpToDate"
+          }
         }
       ]
     },
@@ -206,6 +213,46 @@
             "uk": "Цикли 2-6",
             "en": "Cycles 2-6"
           }
+        },
+        {
+          "regimen_id": "zanubrutinib-mono",
+          "notes": {
+            "uk": "Для тих, хто не отримував інгібітор BTK; UpToDate",
+            "en": "For BTK-inhibitor-naive patients; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "dexamethasone-hd-cll",
+          "notes": {
+            "uk": "Порятунок при кінцевій чи резистентній хворобі",
+            "en": "Salvage for end-stage or resistant disease"
+          }
+        },
+        {
+          "regimen_id": "methylprednisolone-hd-cll"
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-cll-pirtobrutinib"
+        },
+        {
+          "regimen_id": "ref-cll-idelalisib"
+        },
+        {
+          "regimen_id": "ref-cll-liso-cel"
         }
       ]
     }

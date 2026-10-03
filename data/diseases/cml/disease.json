@@ -118,6 +118,20 @@
             "uk": "Коли іматиніб, нілотиніб і дазатиніб не підходять",
             "en": "Where imatinib, nilotinib and dasatinib are unsuitable"
           }
+        },
+        {
+          "regimen_id": "ponatinib-cml",
+          "notes": {
+            "uk": "Мутація T315I або невдача двох ІТК; UpToDate",
+            "en": "T315I mutation or failure of two TKIs; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "asciminib-t315i-cml",
+          "notes": {
+            "uk": "T315I; UpToDate",
+            "en": "T315I; UpToDate"
+          }
         }
       ]
     }

@@ -1,0 +1,52 @@
+{
+  "id": "ref-cll-idelalisib",
+  "short_name": "Іделалісиб + R",
+  "name": {
+    "uk": "Іделалісиб + ритуксимаб (ХЛЛ)",
+    "en": "Idelalisib + rituximab (CLL)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory chronic lymphocytic leukemia",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-chronic-lymphocytic-leukemia",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Зареєстровано при рецидиві ХЛЛ, коли ритуксимаб окремо був би доречний через супутні хвороби; UpToDate обмежує застосування токсичністю.",
+      "en": "Approved in relapsed CLL when rituximab alone would be appropriate because of comorbidity; UpToDate limits its use because of toxicity."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Іделалісиб",
+          "en": "Idelalisib"
+        }
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Тяжка діарея або коліт зазвичай після 8 місяців; після одужання можна відновити з 100 мг двічі на добу.",
+        "en": "Severe diarrhoea or colitis usually after 8 months; after recovery it can be restarted at 100 mg twice a day."
+      },
+      {
+        "uk": "Дувелісиб — лише після ≥2 ліній, не як ранній варіант (ризик смерті від лікування).",
+        "en": "Duvelisib — only after at least two lines, not as an early option (treatment-related mortality)."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить стандартних доз іделалісибу й ритуксимабу в цій комбінації.",
+      "en": "UpToDate gives no standard doses of idelalisib and rituximab in this combination."
+    },
+    "availability": "unavailable"
+  }
+}
