@@ -32,6 +32,15 @@ export const DOMAIN_DEFAULTS = {
   doseRoundingStep: { mg: 1, mcg: 1, iu: 1, miu: 0.1 } as Record<AmountUnit, number>,
 
   /**
+   * A finer step for small doses: below `below` the dose is rounded to `step` instead. Agreed
+   * with the department (2026-10-03): small doses go to tenths of a milligram — 1 mg steps took
+   * bortezomib 2.34 mg down to 2 mg (−15%) and vincristine 0.4 mg down to nothing.
+   */
+  smallDoseRounding: { mg: { below: 10, step: 0.1 } } as Partial<
+    Record<AmountUnit, { below: number; step: number }>
+  >,
+
+  /**
    * Snap the dose to an amount made of whole vials when the difference is within
    * this percentage. `null` disables vial snapping until the rule is confirmed.
    */

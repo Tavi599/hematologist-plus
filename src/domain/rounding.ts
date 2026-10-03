@@ -39,7 +39,7 @@ export interface RoundingResult {
 export function roundDose(doseAmount: number, options: RoundingOptions = {}): RoundingResult {
   assertNonNegative('doseAmount', doseAmount)
   const unit = options.unit ?? 'mg'
-  const step = options.step ?? DOMAIN_DEFAULTS.doseRoundingStep[unit]
+  const step = options.step ?? defaultStep(doseAmount, unit)
   const tolerance = options.vialTolerancePercent ?? DOMAIN_DEFAULTS.vialRoundingTolerancePercent
 
   let roundedAmount = roundToStep(doseAmount, step)
@@ -92,4 +92,10 @@ export function roundDose(doseAmount: number, options: RoundingOptions = {}): Ro
 function nearestVialAmount(doseAmount: number, presentations: Presentation[]): number {
   const { below, above } = nearestWholeUnitAmounts(doseAmount, presentations)
   return below !== null && doseAmount - below < above - doseAmount ? below : above
+}
+
+/** The unit's step, or the finer one for a dose small enough that whole units would distort it. */
+function defaultStep(doseAmount: number, unit: AmountUnit): number {
+  const small = DOMAIN_DEFAULTS.smallDoseRounding[unit]
+  return small && doseAmount < small.below ? small.step : DOMAIN_DEFAULTS.doseRoundingStep[unit]
 }

@@ -19,6 +19,7 @@ import { WarningList } from '../../features/calculator/WarningList'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
 import { RegimenEvidence } from '../../features/catalog/RegimenEvidence'
 import type { CatalogIndex } from '../../lib/catalog-index'
+import { cyclophosphamideMesna } from '../../lib/cyclophosphamide-mesna'
 import {
   buildCourseItems,
   buildCourseItemsFrom,
@@ -96,7 +97,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     )
   }
 
-  const items = useMemo(
+  const baseItems = useMemo(
     () => [
       ...(regimenId
         ? buildCourseItems(catalog, regimenId, chosenDoses, chosenModifiers, administrationModes)
@@ -119,7 +120,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [toggledRegimen, setToggledRegimen] = useState<string | null | undefined>(undefined)
   if (regimenId !== toggledRegimen) {
     setToggledRegimen(regimenId)
-    setDisabledIds(optionalIds(items, customItems))
+    setDisabledIds(optionalIds(baseItems, customItems))
   }
 
   /**
@@ -132,47 +133,59 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     patient !== null &&
     (enteredBsaM2 !== null || (patient.heightCm !== null && patient.weightKg !== null))
 
-  const { course, error } = useMemo<{ course: CourseResult | null; error: unknown }>(() => {
-    if (!patient || !measured || items.length === 0) return { course: null, error: null }
+  // Mesna for a high cyclophosphamide dose follows the dose as calculated, so the course is
+  // calculated once, the mesna rows are added, and the course is calculated again with them.
+  const { items, course, error } = useMemo<{
+    items: CourseItem[]
+    course: CourseResult | null
+    error: unknown
+  }>(() => {
+    if (!patient || !measured || baseItems.length === 0) {
+      return { items: baseItems, course: null, error: null }
+    }
+    const calculate = (courseItems: CourseItem[]) =>
+      calculateCourse(
+        {
+          ageYears: patient.ageYears ?? undefined,
+          sex: patient.sex,
+          heightCm: patient.heightCm ?? undefined,
+          weightKg: patient.weightKg ?? undefined,
+          serumCreatinine: patient.serumCreatinine ?? undefined,
+          creatinineUnit: patient.creatinineUnit,
+          bilirubinUmolL: patient.bilirubinUmolL ?? undefined,
+        },
+        courseItems.map((item) => item.courseDrug),
+        {
+          startDateIso: courseSettings.startDate,
+          dayStart: courseSettings.dayStart,
+          // 'entered' is a source, not a third dose column: the typed BSA replaces Mosteller
+          // and the two columns stay actual / capped as before.
+          bsaVariant:
+            courseSettings.bsaVariant === 'entered' ? 'actual' : courseSettings.bsaVariant,
+          ...(courseSettings.bsaVariant === 'entered' && courseSettings.bsaM2 !== null
+            ? { bsaM2: courseSettings.bsaM2 }
+            : {}),
+          cycleNumber: courseSettings.cycleNumber,
+          drugPercent,
+          doseOverrideAmount,
+          disabledIds,
+          shiftMin,
+        },
+      )
     try {
-      return {
-        course: calculateCourse(
-          {
-            ageYears: patient.ageYears ?? undefined,
-            sex: patient.sex,
-            heightCm: patient.heightCm ?? undefined,
-            weightKg: patient.weightKg ?? undefined,
-            serumCreatinine: patient.serumCreatinine ?? undefined,
-            creatinineUnit: patient.creatinineUnit,
-            bilirubinUmolL: patient.bilirubinUmolL ?? undefined,
-          },
-          items.map((item) => item.courseDrug),
-          {
-            startDateIso: courseSettings.startDate,
-            dayStart: courseSettings.dayStart,
-            // 'entered' is a source, not a third dose column: the typed BSA replaces Mosteller
-            // and the two columns stay actual / capped as before.
-            bsaVariant:
-              courseSettings.bsaVariant === 'entered' ? 'actual' : courseSettings.bsaVariant,
-            ...(courseSettings.bsaVariant === 'entered' && courseSettings.bsaM2 !== null
-              ? { bsaM2: courseSettings.bsaM2 }
-              : {}),
-            cycleNumber: courseSettings.cycleNumber,
-            drugPercent,
-            doseOverrideAmount,
-            disabledIds,
-            shiftMin,
-          },
-        ),
-        error: null,
-      }
+      const first = calculate(baseItems)
+      const mesna = cyclophosphamideMesna(catalog, baseItems, first)
+      if (mesna.length === 0) return { items: baseItems, course: first, error: null }
+      const withMesna = [...baseItems, ...mesna]
+      return { items: withMesna, course: calculate(withMesna), error: null }
     } catch (thrown) {
-      return { course: null, error: thrown }
+      return { items: baseItems, course: null, error: thrown }
     }
   }, [
+    catalog,
     patient,
     measured,
-    items,
+    baseItems,
     courseSettings,
     drugPercent,
     doseOverrideAmount,

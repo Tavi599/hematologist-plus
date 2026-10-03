@@ -16,7 +16,7 @@ describe('roundDose', () => {
   })
 
   it('rounds halves up', () => {
-    expect(roundDose(2.5).roundedAmount).toBe(3)
+    expect(roundDose(12.5).roundedAmount).toBe(13)
     expect(roundDose(90.5).roundedAmount).toBe(91)
   })
 
@@ -82,6 +82,19 @@ describe('roundDose', () => {
     const result = roundDose(858.4, { roundUpToWholePack: true })
     expect(result.roundedAmount).toBe(858)
     expect(result.method).toBe('step')
+  })
+
+  it('rounds a dose below 10 mg to tenths: bortezomib 2.34 mg is 2.3, not 2', () => {
+    expect(roundDose(2.34).roundedAmount).toBe(2.3)
+    expect(roundDose(2.34).steps[0]?.params).toMatchObject({ step: 0.1 })
+    // Vincristine 0.4 mg a day (VAD) no longer rounds to nothing.
+    expect(roundDose(0.4).roundedAmount).toBe(0.4)
+    expect(roundDose(9.96).roundedAmount).toBe(10)
+  })
+
+  it('keeps whole milligrams from 10 mg up and for other units', () => {
+    expect(roundDose(10.4).roundedAmount).toBe(10)
+    expect(roundDose(2.34, { unit: 'mcg' }).roundedAmount).toBe(2)
   })
 
   it('handles zero and invalid input', () => {

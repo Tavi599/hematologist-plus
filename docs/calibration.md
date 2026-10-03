@@ -18,7 +18,7 @@
 | 6 | Верхня межа GFR у формулі Calvert | 125 mL/min | `config.ts → carboplatinGfrCapMlMin` |
 | 7 | Порядок: максимальна доза (cap) → редукція | спершу cap, потім % | `dosing.ts → calculateDose` |
 | 8 | Редукція препарату vs редукція курсу | % препарату замінює % курсу | `dosing.ts → effectiveReductionPercent` |
-| 9 | Крок округлення | 1 mg | `config.ts → doseRoundingStepMg` |
+| 9 | Крок округлення | 1 mg; до 10 мг — 0,1 мг (узгоджено 2026-10-03) | `config.ts → doseRoundingStep`, `smallDoseRounding` |
 | 10 | Округлення до вмісту флакона: допуск, напрям | вимкнено (`null`) | `config.ts → vialRoundingTolerancePercent`, `rounding.ts` |
 | 11 | Підбір флаконів | мінімальні залишки, потім мінімум флаконів; флакони не діляться між введеннями | `presentations.ts` |
 | 12 | Об'єм розчинника | найменший стандартний флакон у межах концентрації; об'єм препарату додається, якщо відома концентрація розчину | `infusion.ts` |
