@@ -1,0 +1,66 @@
+{
+  "$comment": "Блінатумомаб при B-ОЛЛ за eviQ і листком FDA: безперервна інфузія 28 діб, потім 14 діб перерви (цикл 42 дні). Госпіталізація щонайменше на перші 3 доби циклу 1 і 2 доби циклу 2; окрема лінія центрального катетера; інтратекальна профілактика під час лікування (eviQ). Профілактику й СВЦ-лікування не внесено.",
+  "id": "blinatumomab-rr-cycle-2-5",
+  "short_name": "Блін. ц.2-5",
+  "name": {
+    "uk": "Блінатумомаб, цикли 2–5 (рецидивний/рефрактерний B-ОЛЛ)",
+    "en": "Blinatumomab, cycles 2-5 (relapsed/refractory B-ALL)"
+  },
+  "description": {
+    "uk": "28 мкг на добу, дні 1–28; до 5 циклів загалом (після двох індукційних до 3 консолідаційних за користю й ризиком).",
+    "en": "28 mcg a day on days 1 to 28; up to five cycles in all (up to three consolidation cycles after two induction cycles, by benefit and risk)."
+  },
+  "cycle_length_days": 42,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "eviQ: Acute lymphoblastic leukaemia — blinatumomab (протокол 3404)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-lymphoblastic-leukaemia/3404-acute-lymphoblastic-leukaemia-blinatumomab",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: BLINCYTO (blinatumomab) — флакон 35 мкг, стабілізатор розчину, мішок 250 мл 0,9% NaCl",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=38b482a8-960b-4591-9857-5031ecb830aa",
+      "version": "ред. 14.04.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "20 мг в/в за 60 хв до початку (eviQ 3404). Те саме після перерви в інфузії від 4 годин.",
+        "en": "20 mg IV 60 minutes before the start (eviQ 3404). The same after an interruption of 4 hours or more."
+      }
+    },
+    {
+      "key": "blinatumomab-28",
+      "drug_id": "blinatumomab",
+      "route": "iv_infusion",
+      "dose_value": 28,
+      "dose_unit": "mcg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "28 мкг на добу. Безперервна інфузія 24 год на добу (eviQ 3404). Для хворих <45 кг доза в мкг/м² (див. протокол).",
+        "en": "28 мкг на добу. A continuous 24-hour infusion (eviQ 3404). For patients under 45 kg the dose is per m2 (see the protocol)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "ref-ptcl-newer",
+  "short_name": "Ромідепсин / праалатрексат",
+  "name": {
+    "uk": "Нові препарати при рецидивній ПТКЛ: ромідепсин, праалатрексат",
+    "en": "Newer agents in relapsed PTCL: romidepsin, pralatrexate"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory peripheral T cell lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-peripheral-t-cell-lymphoma",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Для первинної рефрактерності, раннього рецидиву (<6 місяців) чи багаторазових рецидивів UpToDate радить новий препарат замість комбінованої хіміотерапії (виняток — АЛКЛ, де їх дають навіть перед трансплантацією).",
+      "en": "For primary refractory disease, early relapse (under 6 months) or multiple relapses UpToDate advises a newer agent instead of combination chemotherapy (an exception is ALCL, where they are given even before transplantation)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ромідепсин",
+          "en": "Romidepsin"
+        }
+      },
+      {
+        "name": {
+          "uk": "Праалатрексат",
+          "en": "Pralatrexate"
+        }
+      },
+      {
+        "name": {
+          "uk": "Брентуксимаб ведотин (CD30+)",
+          "en": "Brentuximab vedotin (CD30+)"
+        },
+        "drug_id": "brentuximab-vedotin"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Брентуксимаб 1,8 мг/кг раз на 3 тижні при CD30-позитивній ПТКЛ: відповідь 41% (повна 24%), поза реєстрацією (схема «Брентуксимаб» у довіднику).",
+        "en": "Brentuximab 1.8 mg/kg every 3 weeks in CD30-positive PTCL: response 41% (complete 24%), off-label (the «Brentuximab» regimen in the catalog)."
+      },
+      {
+        "uk": "Для AITL — беліностат або ромідепсин, а не праалатрексат чи брентуксимаб. Ромідепсин вилучено FDA для ПТКЛ, але лишається в NCCN і зареєстрований при шкірній Т-клітинній лімфомі.",
+        "en": "For AITL belinostat or romidepsin rather than pralatrexate or brentuximab. The FDA approval of romidepsin for PTCL was withdrawn, but it stays in the NCCN guidelines and is approved for cutaneous T-cell lymphoma."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз ромідепсину й праалатрексату в тексті, а препаратів немає в довіднику.",
+      "en": "UpToDate gives no romidepsin and pralatrexate doses in the text, and the drugs are not in the catalog."
+    },
+    "availability": "unavailable"
+  }
+}

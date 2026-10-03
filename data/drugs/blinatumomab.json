@@ -1,0 +1,53 @@
+{
+  "$comment": "Додано 2026-10-04 (eviQ 3404, 3483; листок FDA). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "blinatumomab",
+  "name": {
+    "uk": "Блінатумомаб",
+    "en": "Blinatumomab"
+  },
+  "availability": "unavailable",
+  "amount_unit": "mcg",
+  "dose_units": ["mcg_flat", "mcg_m2"],
+  "sources": [
+    {
+      "name": "FDA label: BLINCYTO (blinatumomab) — флакон 35 мкг, стабілізатор розчину, мішок 250 мл 0,9% NaCl",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=38b482a8-960b-4591-9857-5031ecb830aa",
+      "version": "ред. 14.04.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v35",
+      "form": "vial",
+      "strength_amount": 35
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [250],
+      "is_default": true,
+      "duration_min": 1440,
+      "sources": [
+        {
+          "name": "FDA label: BLINCYTO (blinatumomab) — флакон 35 мкг, стабілізатор розчину, мішок 250 мл 0,9% NaCl",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=38b482a8-960b-4591-9857-5031ecb830aa",
+          "version": "ред. 14.04.2026",
+          "checkedOn": "2026-10-04"
+        },
+        {
+          "name": "eviQ: Acute lymphoblastic leukaemia — blinatumomab (протокол 3404)",
+          "url": "https://www.eviq.org.au/haematology/leukaemias/acute-lymphoblastic-leukaemia/3404-acute-lymphoblastic-leukaemia-blinatumomab",
+          "version": "перевірено 2026-10-04",
+          "checkedOn": "2026-10-04"
+        }
+      ],
+      "notes": {
+        "uk": "Мішок 250 мл 0,9% NaCl зі стабілізатором розчину з упаковки; безперервна інфузія через окрему лінію з фільтром 0,2 мкм (поліолефін, без DEHP). Мішок готують на 24, 48, 72 чи 96 годин або 7 діб — об'єм і швидкість вказані в листку.",
+        "en": "A 250 mL bag of 0.9% NaCl with the solution stabilizer from the pack; a continuous infusion through a dedicated line with a 0.2 micron filter (polyolefin, DEHP-free). The bag is prepared for 24, 48, 72 or 96 hours or 7 days — the volume and rate are in the label."
+      }
+    }
+  ]
+}

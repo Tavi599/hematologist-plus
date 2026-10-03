@@ -1,0 +1,40 @@
+{
+  "$comment": "Кладрибін безперервною в/в інфузією 0,1 мг/кг на добу 7 днів при волосатоклітинному лейкозі за UpToDate (серія 349 хворих: повна ремісія 91%). Об'єм розчину на добу — практика відділення.",
+  "id": "cladribine-ci-hcl",
+  "short_name": "Кладрибін 7 діб (ВКЛ)",
+  "name": {
+    "uk": "Кладрибін безперервно 7 діб (волосатоклітинний лейкоз)",
+    "en": "Cladribine as a 7-day continuous infusion (hairy cell leukaemia)"
+  },
+  "description": {
+    "uk": "0,1 мг/кг на добу безперервною інфузією, дні 1–7.",
+    "en": "0.1 mg/kg a day as a continuous infusion on days 1 to 7."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of hairy cell leukemia (HCL) and HCL variant",
+      "url": "https://www.uptodate.com/contents/treatment-of-hairy-cell-leukemia-hcl-and-hcl-variant",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "cladribine",
+      "drug_id": "cladribine",
+      "route": "iv_infusion",
+      "dose_value": 0.1,
+      "dose_unit": "mg_kg",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "0,1 мг/кг на добу безперервно (UpToDate). Об'єм доби — практика відділення.",
+        "en": "0.1 mg/kg a day continuously (UpToDate). The daily volume follows the department's practice."
+      }
+    }
+  ]
+}

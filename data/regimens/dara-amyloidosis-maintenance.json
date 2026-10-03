@@ -1,0 +1,37 @@
+{
+  "$comment": "Даратумумаб-CyBorD при AL-амілоїдозі за eviQ 4205 (вер. 3): цикл 28 днів, до 24 циклів чи до прогресування. Дексаметазон — 40 мг на тиждень двома днями по 20 мг поспіль (до 70 років; старші чи ІМТ <18,5 — менше); у стислому записі eviQ дні дексаметазону позначені як «різні», тому взято дні 1–2, 8–9, 15–16, 22–23 — перевірте за протоколом. Премедикація перед даратумумабом: парацетамол 1000 мг + лоратадин 10 мг. Доксициклін, профілактики — вручну чи в «Супроводі за стандартом».",
+  "id": "dara-amyloidosis-maintenance",
+  "short_name": "Dara AL підтримка",
+  "name": {
+    "uk": "Даратумумаб, підтримка (AL-амілоїдоз), цикли 7–24",
+    "en": "Daratumumab maintenance (AL amyloidosis), cycles 7-24"
+  },
+  "description": {
+    "uk": "1800 мг підшкірно у день 1 кожні 4 тижні, до циклу 24.",
+    "en": "1800 mg subcutaneously on day 1 every 4 weeks, up to cycle 24."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 18,
+  "sources": [
+    {
+      "name": "eviQ: AL amyloidosis — daratumumab-CyBorD (протокол 4205)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/4205-al-amyloidosis-daratumumab-cybord-cyclophosp",
+      "version": "вер. 3",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "subcutaneous",
+      "dose_value": 1800,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "1800 мг підшкірно (eviQ 4205).",
+        "en": "1800 mg subcutaneously (eviQ 4205)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "$comment": "Додано 2026-10-04 (eviQ 1941, 1943; листок FDA). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "arsenic-trioxide",
+  "name": {
+    "uk": "Тріоксид миш'яку",
+    "en": "Arsenic trioxide"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: TRISENOX (arsenic trioxide) — флакони 10 мг/10 мл і 12 мг/6 мл",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=101fc347-d0ad-4aee-8b06-9feb187fd741",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v10",
+      "form": "vial",
+      "strength_amount": 10,
+      "volume_ml": 10
+    },
+    {
+      "key": "v12",
+      "form": "vial",
+      "strength_amount": 12,
+      "volume_ml": 6
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [100, 250],
+      "is_default": true,
+      "duration_min": 120,
+      "sources": [
+        {
+          "name": "eviQ: APL — standard risk chemotherapy-free induction (протокол 1941)",
+          "url": "https://www.eviq.org.au/haematology-and-bmt/leukaemias/apml/1941-acute-promyelocytic-leukaemia-standard-risk",
+          "version": "перевірено 2026-10-04",
+          "checkedOn": "2026-10-04"
+        },
+        {
+          "name": "FDA label: TRISENOX (arsenic trioxide) — флакони 10 мг/10 мл і 12 мг/6 мл",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=101fc347-d0ad-4aee-8b06-9feb187fd741",
+          "version": "перевірено 2026-10-04",
+          "checkedOn": "2026-10-04"
+        }
+      ],
+      "notes": {
+        "uk": "100–250 мл 0,9% NaCl за 2 години (eviQ; листок FDA — 1–2 години). ЕКГ перед початком і щонайменше двічі на тиждень; калій >4 ммоль/л, магній >0,8 ммоль/л.",
+        "en": "100 to 250 mL of 0.9% NaCl over 2 hours (eviQ; the FDA label says 1 to 2 hours). ECG before starting and at least twice a week; potassium above 4 mmol/L, magnesium above 0.8 mmol/L."
+      }
+    }
+  ]
+}

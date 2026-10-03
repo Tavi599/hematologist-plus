@@ -1,0 +1,81 @@
+{
+  "$comment": "Індукція АПЛ без хіміотерапії (стандартний ризик) за eviQ 1941: ATRA 45 мг/м² на добу + тріоксид миш'яку 0,15 мг/кг щодня, до 60 днів (припиняють при гематологічній повній ремісії; кістковий мозок щотижня з дня 28). Профілактика синдрому диференціювання преднізолоном (рекомендація eviQ); при синдромі — дексаметазон 10 мг в/в двічі на добу. Лейкоцитоз >10 ×10⁹/л — гідроксикарбамід за протоколом відділення.",
+  "id": "atra-ato-induction",
+  "short_name": "ATRA+ATO інд.",
+  "name": {
+    "uk": "ATRA + тріоксид миш'яку, індукція (АПЛ, стандартний ризик)",
+    "en": "ATRA + arsenic trioxide, induction (APL, standard risk)"
+  },
+  "description": {
+    "uk": "ATRA 45 мг/м² на добу і тріоксид миш'яку 0,15 мг/кг щодня, дні 1–60; преднізолон 0,5 мг/кг, мінімум 21 день.",
+    "en": "ATRA 45 mg/m2 a day and arsenic trioxide 0.15 mg/kg daily on days 1 to 60; prednisolone 0.5 mg/kg for at least 21 days."
+  },
+  "cycle_length_days": 60,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "eviQ: APL — standard risk chemotherapy-free induction (протокол 1941)",
+      "url": "https://www.eviq.org.au/haematology-and-bmt/leukaemias/apml/1941-acute-promyelocytic-leukaemia-standard-risk",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: TRISENOX (arsenic trioxide) — флакони 10 мг/10 мл і 12 мг/6 мл",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=101fc347-d0ad-4aee-8b06-9feb187fd741",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "tretinoin",
+      "drug_id": "tretinoin",
+      "route": "oral",
+      "dose_value": 22.5,
+      "dose_unit": "mg_m2",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
+        49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60
+      ],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "45 мг/м² на добу двома рівними дозами, тобто 22,5 мг/м² двічі (eviQ 1941). До 20 років розглянути 25 мг/м² на добу через ризик псевдопухлини мозку.",
+        "en": "45 mg/m2 a day in two equal doses, that is 22.5 mg/m2 twice (eviQ 1941). Under 20 years consider 25 mg/m2 a day because of pseudotumour cerebri."
+      }
+    },
+    {
+      "key": "arsenic-trioxide",
+      "drug_id": "arsenic-trioxide",
+      "route": "iv_infusion",
+      "dose_value": 0.15,
+      "dose_unit": "mg_kg",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
+        49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60
+      ],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "0,15 мг/кг у 100–250 мл 0,9% NaCl за 2 години (eviQ 1941).",
+        "en": "0.15 mg/kg in 100 to 250 mL of 0.9% NaCl over 2 hours (eviQ 1941)."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 0.5,
+      "dose_unit": "mg_kg",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "0,5 мг/кг раз на добу мінімум 21 день і далі, поки лейкоцити не досягнуть піку й не знизяться (eviQ 1941); дні 1–21 — мінімум.",
+        "en": "0.5 mg/kg once a day for at least 21 days and until the white count peaks and falls (eviQ 1941); days 1 to 21 are the minimum."
+      }
+    }
+  ]
+}

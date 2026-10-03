@@ -1,0 +1,102 @@
+{
+  "$comment": "Даратумумаб-CyBorD при AL-амілоїдозі за eviQ 4205 (вер. 3): цикл 28 днів, до 24 циклів чи до прогресування. Дексаметазон — 40 мг на тиждень двома днями по 20 мг поспіль (до 70 років; старші чи ІМТ <18,5 — менше); у стислому записі eviQ дні дексаметазону позначені як «різні», тому взято дні 1–2, 8–9, 15–16, 22–23 — перевірте за протоколом. Премедикація перед даратумумабом: парацетамол 1000 мг + лоратадин 10 мг. Доксициклін, профілактики — вручну чи в «Супроводі за стандартом».",
+  "id": "dara-cybord-cycle-1-2",
+  "short_name": "Dara-CyBorD ц.1-2",
+  "name": {
+    "uk": "Даратумумаб-CyBorD, цикли 1–2 (AL-амілоїдоз)",
+    "en": "Daratumumab-CyBorD, cycles 1-2 (AL amyloidosis)"
+  },
+  "description": {
+    "uk": "Даратумумаб, бортезоміб, циклофосфамід щотижня (дні 1, 8, 15, 22) + дексаметазон.",
+    "en": "Daratumumab, bortezomib and cyclophosphamide weekly (days 1, 8, 15, 22) + dexamethasone."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "eviQ: AL amyloidosis — daratumumab-CyBorD (протокол 4205)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/4205-al-amyloidosis-daratumumab-cybord-cyclophosp",
+      "version": "вер. 3",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "Перед даратумумабом (eviQ 4205).",
+        "en": "Before daratumumab (eviQ 4205)."
+      }
+    },
+    {
+      "key": "loratadine",
+      "drug_id": "loratadine",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "Перед даратумумабом (eviQ 4205).",
+        "en": "Before daratumumab (eviQ 4205)."
+      }
+    },
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "subcutaneous",
+      "dose_value": 1800,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "1800 мг підшкірно (eviQ 4205).",
+        "en": "1800 mg subcutaneously (eviQ 4205)."
+      }
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "1,3 мг/м² щотижня підшкірно (eviQ 4205).",
+        "en": "1.3 mg/m2 weekly subcutaneously (eviQ 4205)."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_m2",
+      "cap_amount": 500,
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "300 мг/м² усередину щотижня, не більше 500 мг (eviQ 4205).",
+        "en": "300 mg/m2 by mouth weekly, no more than 500 mg (eviQ 4205)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9, 15, 16, 22, 23],
+      "notes": {
+        "uk": "40 мг на тиждень двома днями по 20 мг поспіль (eviQ 4205); дні уточніть за протоколом. Скорочена доза — понад 70 років чи ІМТ <18,5.",
+        "en": "40 mg a week as 20 mg on two consecutive days (eviQ 4205); check the days against the protocol. A reduced dose over 70 years or with BMI below 18.5."
+      }
+    }
+  ]
+}

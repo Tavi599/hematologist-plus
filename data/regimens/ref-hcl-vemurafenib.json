@@ -1,0 +1,52 @@
+{
+  "id": "ref-hcl-vemurafenib",
+  "short_name": "Вемурафеніб ± R",
+  "name": {
+    "uk": "Вемурафеніб ± ритуксимаб при рецидивному ВКЛ",
+    "en": "Vemurafenib ± rituximab in relapsed HCL"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of hairy cell leukemia (HCL) and HCL variant",
+      "url": "https://www.uptodate.com/contents/treatment-of-hairy-cell-leukemia-hcl-and-hcl-variant",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Для хворих, рефрактерних до пуринових аналогів, чи для тих, у кого аналоги неможливі через активну інфекцію; позареєстраційно. Доза в дослідженнях — 960 мг двічі на добу.",
+      "en": "For patients refractory to purine analogs or those who cannot take analogs because of active infection; off-label. The dose in the studies was 960 mg twice a day."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Вемурафеніб",
+          "en": "Vemurafenib"
+        }
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "При рефрактерності пуринового аналога після повторної біопсії мозку — інший аналог або вемурафеніб + ритуксимаб.",
+        "en": "For resistance to a purine analog, after repeating the marrow evaluation — another analog or vemurafenib plus rituximab."
+      },
+      {
+        "uk": "При ремісії >24 місяців — повторне лікування тим самим або іншим пуриновим аналогом з ритуксимабом.",
+        "en": "With a remission over 24 months — retreatment with the same or the other purine analog followed by rituximab."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить тривалості курсу вемурафенібу, а препарату немає в довіднику.",
+      "en": "UpToDate gives no duration of the vemurafenib course, and the drug is not in the catalog."
+    },
+    "availability": "unavailable"
+  }
+}

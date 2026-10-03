@@ -1,0 +1,47 @@
+{
+  "$comment": "Додано 2026-10-04 (eviQ 4510). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "nelarabine",
+  "name": {
+    "uk": "Неларабін",
+    "en": "Nelarabine"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: ARRANON (nelarabine) — флакон 250 мг/50 мл (5 мг/мл), без розведення",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0f9051de-5c4d-4c0f-8c19-e15214498cca",
+      "version": "ред. 03.2025",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v250",
+      "form": "vial",
+      "strength_amount": 250,
+      "volume_ml": 50
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "duration_min": 120,
+      "stock_concentration_mg_ml": 5,
+      "sources": [
+        {
+          "name": "FDA label: ARRANON (nelarabine) — флакон 250 мг/50 мл (5 мг/мл), без розведення",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0f9051de-5c4d-4c0f-8c19-e15214498cca",
+          "version": "ред. 03.2025",
+          "checkedOn": "2026-10-04"
+        }
+      ],
+      "notes": {
+        "uk": "Вводять без розведення: потрібний об'єм переносять у ПВХ-мішок чи скляний контейнер; інфузія 2 години дорослим.",
+        "en": "Given undiluted: the needed volume goes into a PVC bag or a glass container; a 2-hour infusion in adults."
+      }
+    }
+  ]
+}

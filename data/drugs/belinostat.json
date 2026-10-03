@@ -1,0 +1,47 @@
+{
+  "$comment": "Додано 2026-10-04 (UpToDate: рецидивна ПТКЛ). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "belinostat",
+  "name": {
+    "uk": "Беліностат",
+    "en": "Belinostat"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: BELEODAQ (belinostat) — флакон 500 мг, відновлення 9 мл води (50 мг/мл), розведення в 250 мл 0,9% NaCl",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e8ef36b-71fa-4492-a16f-577d5f7d111d",
+      "version": "ред. 07.04.2025",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v500",
+      "form": "vial",
+      "strength_amount": 500,
+      "volume_ml": 10
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [250],
+      "is_default": true,
+      "duration_min": 30,
+      "stock_concentration_mg_ml": 50,
+      "sources": [
+        {
+          "name": "FDA label: BELEODAQ (belinostat) — флакон 500 мг, відновлення 9 мл води (50 мг/мл), розведення в 250 мл 0,9% NaCl",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e8ef36b-71fa-4492-a16f-577d5f7d111d",
+          "version": "ред. 07.04.2025",
+          "checkedOn": "2026-10-04"
+        }
+      ],
+      "notes": {
+        "uk": "Флакон відновлюють 9 мл води (50 мг/мл), потрібний об'єм переносять у 250 мл 0,9% NaCl; 30 хвилин через фільтр 0,22 мкм (при болі в місці введення — до 45 хвилин).",
+        "en": "Each vial is reconstituted with 9 mL of water (50 mg/mL) and the needed volume goes into 250 mL of 0.9% NaCl; 30 minutes through a 0.22 micron filter (up to 45 minutes if the site hurts)."
+      }
+    }
+  ]
+}

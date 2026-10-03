@@ -55,6 +55,36 @@
             "uk": "CD20-позитивна В-клітинна ГЛЛ; додається до основної хіміотерапії",
             "en": "CD20-positive B-cell ALL; added to the main chemotherapy"
           }
+        },
+        {
+          "regimen_id": "hyper-cvad-a-it",
+          "notes": {
+            "uk": "Ph- ОЛЛ і лімфобластна лімфома від 25 років; 8 циклів A/B; eviQ 571, 572",
+            "en": "Ph- ALL and lymphoblastic lymphoma from 25 years; 8 alternating A/B cycles; eviQ 571, 572"
+          }
+        },
+        {
+          "regimen_id": "hyper-cvad-b-it"
+        },
+        {
+          "regimen_id": "hyper-cvad-a"
+        },
+        {
+          "regimen_id": "hyper-cvad-b"
+        },
+        {
+          "regimen_id": "dasatinib-all",
+          "notes": {
+            "uk": "Ph+ ОЛЛ, разом з хіміотерапією; eviQ 4416",
+            "en": "Ph+ ALL, together with chemotherapy; eviQ 4416"
+          }
+        },
+        {
+          "regimen_id": "ponatinib-all",
+          "notes": {
+            "uk": "Ph+ ОЛЛ: стійкість до дазатинібу чи T315I; eviQ 3513",
+            "en": "Ph+ ALL: dasatinib resistance or T315I; eviQ 3513"
+          }
         }
       ]
     },
@@ -115,6 +145,13 @@
       "regimens": [
         {
           "regimen_id": "all-maintenance"
+        },
+        {
+          "regimen_id": "pomp-maintenance",
+          "notes": {
+            "uk": "Після hyper-CVAD, 24 місяці; eviQ 165",
+            "en": "After hyper-CVAD, 24 months; eviQ 165"
+          }
         }
       ]
     },
@@ -142,6 +179,30 @@
           "notes": {
             "uk": "Цикли 2 і далі при ремісії",
             "en": "Cycle 2 onwards in remission"
+          }
+        },
+        {
+          "regimen_id": "blinatumomab-rr-cycle-1",
+          "notes": {
+            "uk": "B-ОЛЛ; eviQ 3404, листок FDA",
+            "en": "B-ALL; eviQ 3404, FDA label"
+          }
+        },
+        {
+          "regimen_id": "blinatumomab-rr-cycle-2-5"
+        },
+        {
+          "regimen_id": "blinatumomab-mrd",
+          "notes": {
+            "uk": "MRD-позитивна B-ОЛЛ у ремісії; eviQ 3483",
+            "en": "MRD-positive B-ALL in remission; eviQ 3483"
+          }
+        },
+        {
+          "regimen_id": "nelarabine-tall",
+          "notes": {
+            "uk": "T-ОЛЛ і T-лімфобластна лімфома; eviQ 4510",
+            "en": "T-ALL and T-lymphoblastic lymphoma; eviQ 4510"
           }
         }
       ],

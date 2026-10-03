@@ -1,0 +1,46 @@
+{
+  "$comment": "Беліностат при рецидивній/рефрактерній ПТКЛ за UpToDate і листком FDA: 1000 мг/м² за 30 хвилин щодня в дні 1–5 циклу 21 день до прогресування чи неприйнятної токсичності. Для AITL UpToDate радить беліностат або ромідепсин, а не праалатрексат чи брентуксимаб. Загальний аналіз крові щотижня, печінкові проби перед кожним циклом; ризик СЛП.",
+  "id": "belinostat-ptcl",
+  "short_name": "Беліностат",
+  "name": {
+    "uk": "Беліностат (рецидивна ПТКЛ)",
+    "en": "Belinostat (relapsed PTCL)"
+  },
+  "description": {
+    "uk": "1000 мг/м² за 30 хвилин в дні 1–5 кожні 21 день.",
+    "en": "1000 mg/m2 over 30 minutes on days 1 to 5 every 21 days."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory peripheral T cell lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-peripheral-t-cell-lymphoma",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: BELEODAQ (belinostat) — флакон 500 мг, відновлення 9 мл води (50 мг/мл), розведення в 250 мл 0,9% NaCl",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e8ef36b-71fa-4492-a16f-577d5f7d111d",
+      "version": "ред. 07.04.2025",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "belinostat",
+      "drug_id": "belinostat",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "1000 мг/м² у 250 мл 0,9% NaCl за 30 хвилин (UpToDate, листок FDA).",
+        "en": "1000 mg/m2 in 250 mL of 0.9% NaCl over 30 minutes (UpToDate, FDA label)."
+      }
+    }
+  ]
+}

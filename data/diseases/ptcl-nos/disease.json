@@ -61,6 +61,20 @@
             "uk": "CD30-позитивна анапластична великоклітинна лімфома",
             "en": "CD30-positive anaplastic large cell lymphoma"
           }
+        },
+        {
+          "regimen_id": "choep-21",
+          "notes": {
+            "uk": "eviQ 630",
+            "en": "eviQ 630"
+          }
+        },
+        {
+          "regimen_id": "choep-14",
+          "notes": {
+            "uk": "З пегфілграстимом; eviQ 686",
+            "en": "With pegfilgrastim; eviQ 686"
+          }
         }
       ]
     },
@@ -102,6 +116,30 @@
             "uk": "Паліативна схема",
             "en": "A palliative regimen"
           }
+        },
+        {
+          "regimen_id": "belinostat-ptcl",
+          "notes": {
+            "uk": "Особливо AITL; UpToDate",
+            "en": "AITL in particular; UpToDate"
+          }
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-ptcl-newer"
         }
       ]
     }

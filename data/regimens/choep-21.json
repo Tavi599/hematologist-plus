@@ -1,0 +1,94 @@
+{
+  "$comment": "CHOEP-21 за eviQ 630: 6–8 циклів кожні 21 день. Протиблювотні (палоносетрон 0,25 мг в/в у протоколі) — у «Супроводі за стандартом» або вручну. Для ПТКЛ — перша лінія (сильніша за CHOP у молодших пацієнтів — за джерелами UpToDate).",
+  "id": "choep-21",
+  "short_name": "CHOEP-21",
+  "name": {
+    "uk": "CHOEP-21 (циклофосфамід, доксорубіцин, вінкристин, етопозид, преднізолон)",
+    "en": "CHOEP-21 (cyclophosphamide, doxorubicin, vincristine, etoposide, prednisolone)"
+  },
+  "description": {
+    "uk": "Доксорубіцин, вінкристин, циклофосфамід у день 1, етопозид дні 1–3, преднізолон дні 1–5; цикл 21 день, 6–8 циклів.",
+    "en": "Doxorubicin, vincristine, cyclophosphamide on day 1, etoposide on days 1 to 3, prednisolone on days 1 to 5; a 21-day cycle, six to eight cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "eviQ: NHL — CHOEP21 (протокол 630)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/nk-cell-and-t-cell-lymphoma/630-choep21-cyclophosphamide-doxorubicin-vincrist",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "100 мг раз на добу (eviQ 630).",
+        "en": "100 mg once a day (eviQ 630)."
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_bolus",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "50 мг/м² за 5–15 хвилин (eviQ 630).",
+        "en": "50 mg/m2 over 5 to 15 minutes (eviQ 630)."
+      }
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 2,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "2 мг у 50 мл 0,9% NaCl за 5–10 хвилин (eviQ 630).",
+        "en": "2 mg in 50 mL of 0.9% NaCl over 5 to 10 minutes (eviQ 630)."
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "100 мг/м² у 500 мл за 30–60 хвилин; лише контейнери без ПВХ/DEHP (eviQ 630).",
+        "en": "100 mg/m2 in 500 mL over 30 to 60 minutes; only non-PVC/DEHP-free containers (eviQ 630)."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "750 мг/м² у 500 мл за 30–60 хвилин (eviQ 630).",
+        "en": "750 mg/m2 in 500 mL over 30 to 60 minutes (eviQ 630)."
+      }
+    }
+  ]
+}

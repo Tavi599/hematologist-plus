@@ -1,0 +1,40 @@
+{
+  "$comment": "Кладрибін в/в при волосатоклітинному лейкозі за UpToDate: 0,14 мг/кг за 2 години щодня 5 днів — один курс. Об'єм розчину й розчинник — практика відділення. Після курсу через 4–6 тижнів 4 щотижневі дози ритуксимабу (схема «Ритуксимаб»). Профілактика інфекцій — у «Супроводі за стандартом».",
+  "id": "cladribine-iv-hcl",
+  "short_name": "Кладрибін в/в (ВКЛ)",
+  "name": {
+    "uk": "Кладрибін внутрішньовенно, 5 днів (волосатоклітинний лейкоз)",
+    "en": "Cladribine intravenously, 5 days (hairy cell leukaemia)"
+  },
+  "description": {
+    "uk": "0,14 мг/кг за 2 години щодня, дні 1–5; один курс.",
+    "en": "0.14 mg/kg over 2 hours daily on days 1 to 5; one course."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of hairy cell leukemia (HCL) and HCL variant",
+      "url": "https://www.uptodate.com/contents/treatment-of-hairy-cell-leukemia-hcl-and-hcl-variant",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "cladribine",
+      "drug_id": "cladribine",
+      "route": "iv_infusion",
+      "dose_value": 0.14,
+      "dose_unit": "mg_kg",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "0,14 мг/кг за 2 години (UpToDate). Об'єм — практика відділення.",
+        "en": "0.14 mg/kg over 2 hours (UpToDate). The volume follows the department's practice."
+      }
+    }
+  ]
+}

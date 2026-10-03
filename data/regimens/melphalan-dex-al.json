@@ -1,0 +1,50 @@
+{
+  "$comment": "Мелфалан + дексаметазон усередину при AL-амілоїдозі за eviQ 1466: протокол ЗАМІНЕНИЙ на даратумумаб-CyBorD (4205); внесено для хворих, у яких даратумумаб недоступний. Зменшення мелфалану: вік >75 років — на 50%; eGFR 45–59 і 30–44 — на 25%; eGFR 15–29 — на 50%. Таблетки зберігати в холодильнику, ковтати цілими.",
+  "id": "melphalan-dex-al",
+  "short_name": "Мелфалан-Dex (AL)",
+  "name": {
+    "uk": "Мелфалан + дексаметазон усередину (AL-амілоїдоз; замінений протокол)",
+    "en": "Oral melphalan + dexamethasone (AL amyloidosis; superseded protocol)"
+  },
+  "description": {
+    "uk": "Мелфалан 10 мг/м² і дексаметазон 40 мг щодня в дні 1–4; цикл 28 днів, 6–12 циклів.",
+    "en": "Melphalan 10 mg/m2 and dexamethasone 40 mg daily on days 1 to 4; a 28-day cycle, six to twelve cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "eviQ: AL amyloidosis — melphalan and dexamethasone oral (протокол 1466, замінений)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/1466-al-amyloidosis-melphalan-and-dexamethasone-or",
+      "version": "вер. 4, переглянуто 13.10.2023",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "melphalan",
+      "drug_id": "melphalan",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "10 мг/м² на добу натще (eviQ 1466).",
+        "en": "10 mg/m2 a day on an empty stomach (eviQ 1466)."
+      },
+      "dose_modifiers": []
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "40 мг на добу з їжею (eviQ 1466).",
+        "en": "40 mg a day with food (eviQ 1466)."
+      }
+    }
+  ]
+}

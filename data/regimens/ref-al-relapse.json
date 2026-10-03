@@ -1,0 +1,75 @@
+{
+  "id": "ref-al-relapse",
+  "short_name": "Рецидив AL",
+  "name": {
+    "uk": "Рецидивний або рефрактерний AL-амілоїдоз",
+    "en": "Relapsed or refractory AL amyloidosis"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of immunoglobulin light chain (AL) amyloidosis",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-immunoglobulin-light-chain-al-amyloidosis",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Вибір індивідуальний, стандарту немає. Спершу розглядають аутотрансплантацію при першому рецидиві (якщо відкладали) та інший клас препаратів, ніж у першій лінії.",
+      "en": "The choice is individual, there is no standard. First consider autologous transplantation at first relapse (if it was delayed) and a drug class other than the first line."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Даратумумаб (або ізатуксимаб)",
+          "en": "Daratumumab (or isatuximab)"
+        },
+        "drug_id": "daratumumab"
+      },
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід / помалідомід",
+          "en": "Lenalidomide / pomalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Венетоклакс (t(11;14))",
+          "en": "Venetoclax (t(11;14))"
+        },
+        "drug_id": "venetoclax"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Схеми з даратумумабом краще при тяжкому ураженні серця, для тих, хто його не отримував, чи при рецидиві після відміни; відповідь 76–78%.",
+        "en": "Daratumumab-based regimens are preferred with severe cardiac involvement, in daratumumab-naive patients, or when relapsing off therapy; response 76 to 78%."
+      },
+      {
+        "uk": "Леналідомід і помалідомід — після бортезомібу чи при нейропатії без суттєвої кардіоміопатії; леналідомід погано при тяжкому ураженні серця.",
+        "en": "Lenalidomide and pomalidomide — after bortezomib or with neuropathy and no significant cardiomyopathy; lenalidomide is unsuitable with severe cardiac involvement."
+      },
+      {
+        "uk": "Венетоклакс позареєстраційно лише при t(11;14): VGPR/CR у 78% проти 30% без неї. Іксазоміб — позареєстраційно. Теклістамаб і елранатамаб — невеликі серії (теклістамаб: VGPR у 95% за місяць).",
+        "en": "Venetoclax off-label only with t(11;14): VGPR or CR in 78% versus 30% without it. Ixazomib off-label. Teclistamab and elranatamab — small series (teclistamab: VGPR in 95% by one month)."
+      },
+      {
+        "uk": "Якщо даратумумабу немає, UpToDate радить CyBorD, а не мелфалан + дексаметазон; BMD (бортезоміб, мелфалан, дексаметазон) прийнятний для непридатних до трансплантації.",
+        "en": "If daratumumab is not available UpToDate advises CyBorD rather than melphalan plus dexamethasone; BMD (bortezomib, melphalan, dexamethasone) is acceptable for patients ineligible for transplantation."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз і днів для рецидивних схем.",
+      "en": "UpToDate gives no doses or days for the relapse regimens."
+    },
+    "availability": "unknown"
+  }
+}

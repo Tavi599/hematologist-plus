@@ -52,6 +52,27 @@
       "regimens": [
         {
           "regimen_id": "cladribine-mono"
+        },
+        {
+          "regimen_id": "cladribine-iv-hcl",
+          "notes": {
+            "uk": "Переважний пуриновий аналог; UpToDate",
+            "en": "The preferred purine analog; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "cladribine-ci-hcl",
+          "notes": {
+            "uk": "Альтернативний графік на 7 діб",
+            "en": "The alternative 7-day schedule"
+          }
+        },
+        {
+          "regimen_id": "rituximab-mono",
+          "notes": {
+            "uk": "Через 4–6 тижнів після кладрибіну — 4 щотижневі дози (консолідація); при варіанті ВКЛ-v — 8",
+            "en": "Four weekly doses 4 to 6 weeks after cladribine (consolidation); eight for the HCL variant"
+          }
         }
       ]
     },
@@ -69,6 +90,36 @@
       "regimens": [
         {
           "regimen_id": "cladribine-mono"
+        },
+        {
+          "regimen_id": "cladribine-iv-hcl",
+          "notes": {
+            "uk": "Ремісія >24 місяців — той самий чи інший аналог, потім ритуксимаб",
+            "en": "Remission over 24 months — the same or the other analog, then rituximab"
+          }
+        },
+        {
+          "regimen_id": "rituximab-mono"
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-hcl-pentostatin"
+        },
+        {
+          "regimen_id": "ref-hcl-vemurafenib"
         }
       ]
     }

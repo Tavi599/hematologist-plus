@@ -1,0 +1,116 @@
+{
+  "$comment": "Hyper-CVAD за eviQ 571/572/788: 8 циклів по 21 день, чергування частини A (цикли 1, 3, 5, 7) і B (цикли 2, 4, 6, 8), потім POMP 24 місяці. Для Ph- ОЛЛ і лімфобластної лімфоми від 25 років; цикл починають при нейтрофілах ≥1 і тромбоцитах ≥50 ×10⁹/л. У частині B день введення інтратекального метотрексату в стислому записі eviQ не вказаний, тому його не внесено (інтратекальний цитарабін день 8 — внесено). Профілактики, гідратація, протиблювотні — у «Супроводі за стандартом» або вручну.",
+  "id": "hyper-cvad-a",
+  "short_name": "Hyper-CVAD частина A, цикли 5 і 7",
+  "name": {
+    "uk": "Hyper-CVAD частина A, цикли 5 і 7",
+    "en": "Hyper-CVAD part A, cycles 5 and 7"
+  },
+  "description": {
+    "uk": "Те саме, що цикли 1 і 3, без інтратекальних препаратів.",
+    "en": "The same as cycles 1 and 3, without the intrathecal drugs."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "eviQ: ALL — Ph- hyper CVAD part A (протокол 571)",
+      "url": "https://www.eviq.org.au/haematology-and-bmt/leukaemias/all/571-acute-lymphoblastic-leukaemia-ph-hyper-cvad-p",
+      "version": "вер. 11",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "eviQ: ALL — Hyper CVAD Part A and B/POMP overview (протокол 788)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-lymphoblastic-leukaemia/788-hyper-cvad-part-a-and-b-pomp-overview",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 11, 12, 13, 14],
+      "notes": {
+        "uk": "40 мг раз на добу усередину чи в/в (eviQ 571).",
+        "en": "40 mg once a day by mouth or IV (eviQ 571)."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 300,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "300 мг/м² кожні 12 годин у 500 мл 0,9% NaCl за 3 години (eviQ 571).",
+        "en": "300 mg/m2 every 12 hours in 500 mL of 0.9% NaCl over 3 hours (eviQ 571)."
+      }
+    },
+    {
+      "key": "mesna",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 600,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "600 мг/м² на добу безперервно у 1000 мл 0,9% NaCl: за годину до першої дози циклофосфаміду й ще 12 годин після останньої (eviQ 571).",
+        "en": "600 mg/m2 a day continuously in 1000 mL of 0.9% NaCl: an hour before the first cyclophosphamide dose and for 12 hours after the last (eviQ 571)."
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_bolus",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [4],
+      "notes": {
+        "uk": "50 мг/м² за 5–15 хвилин, промити ~150 мл 0,9% NaCl (eviQ 571).",
+        "en": "50 mg/m2 over 5 to 15 minutes, flush with about 150 mL of 0.9% NaCl (eviQ 571)."
+      }
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 2,
+      "dose_unit": "mg_flat",
+      "days": [4, 11],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "2 мг за 5–10 хвилин через міні-мішок (eviQ 571).",
+        "en": "2 mg over 5 to 10 minutes by minibag (eviQ 571)."
+      }
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 10,
+      "dose_unit": "mcg_kg",
+      "days": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "10 мкг/кг підшкірно з дня 5 до відновлення нейтрофілів (eviQ 571); дні 5–14 — орієнтир.",
+        "en": "10 mcg/kg subcutaneously from day 5 until neutrophil recovery (eviQ 571); days 5 to 14 are a guide."
+      }
+    }
+  ]
+}

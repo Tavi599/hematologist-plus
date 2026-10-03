@@ -44,7 +44,35 @@
       },
       "regimens": [
         {
-          "regimen_id": "cybord-amyloidosis"
+          "regimen_id": "cybord-amyloidosis",
+          "notes": {
+            "uk": "Якщо даратумумабу немає; UpToDate радить CyBorD, а не мелфалан + дексаметазон",
+            "en": "If daratumumab is not available; UpToDate advises CyBorD rather than melphalan plus dexamethasone"
+          }
+        },
+        {
+          "regimen_id": "dara-cybord-cycle-1-2",
+          "notes": {
+            "uk": "Переважна схема (eviQ 4205)",
+            "en": "The preferred regimen (eviQ 4205)"
+          }
+        },
+        {
+          "regimen_id": "dara-cybord-cycle-3-6"
+        },
+        {
+          "regimen_id": "dara-amyloidosis-maintenance",
+          "notes": {
+            "uk": "Цикли 7–24",
+            "en": "Cycles 7 to 24"
+          }
+        },
+        {
+          "regimen_id": "melphalan-dex-al",
+          "notes": {
+            "uk": "Замінений протокол; якщо даратумумаба немає; eviQ 1466",
+            "en": "A superseded protocol; if daratumumab is not available; eviQ 1466"
+          }
         }
       ],
       "children": []
@@ -60,7 +88,11 @@
         "uk": "Схеми додаються окремо, з дозами й джерелом.",
         "en": "Regimens are added separately, with doses and a source."
       },
-      "regimens": [],
+      "regimens": [
+        {
+          "regimen_id": "ref-al-relapse"
+        }
+      ],
       "children": []
     }
   ]

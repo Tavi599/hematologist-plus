@@ -1,0 +1,134 @@
+{
+  "$comment": "Hyper-CVAD за eviQ 571/572/788: 8 циклів по 21 день, чергування частини A (цикли 1, 3, 5, 7) і B (цикли 2, 4, 6, 8), потім POMP 24 місяці. Для Ph- ОЛЛ і лімфобластної лімфоми від 25 років; цикл починають при нейтрофілах ≥1 і тромбоцитах ≥50 ×10⁹/л. У частині B день введення інтратекального метотрексату в стислому записі eviQ не вказаний, тому його не внесено (інтратекальний цитарабін день 8 — внесено). Профілактики, гідратація, протиблювотні — у «Супроводі за стандартом» або вручну.",
+  "id": "hyper-cvad-b-it",
+  "short_name": "Hyper-CVAD частина B, цикли 2 і 4",
+  "name": {
+    "uk": "Hyper-CVAD частина B, цикли 2 і 4",
+    "en": "Hyper-CVAD part B, cycles 2 and 4"
+  },
+  "description": {
+    "uk": "Метотрексат 200 + 800 мг/м², цитарабін 3000 мг/м² двічі, метилпреднізолон; інтратекальний цитарабін день 8.",
+    "en": "Methotrexate 200 + 800 mg/m2, cytarabine 3000 mg/m2 twice, methylprednisolone; intrathecal cytarabine on day 8."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "eviQ: ALL — Ph- hyper CVAD part B (протокол 572)",
+      "url": "https://www.eviq.org.au/haematology-and-bmt/leukaemias/acute-lymphoblastic-leukaemia/572-ph-hyper-cvad-part-b",
+      "version": "вер. 11",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "eviQ: ALL — Hyper CVAD Part A and B/POMP overview (протокол 788)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-lymphoblastic-leukaemia/788-hyper-cvad-part-a-and-b-pomp-overview",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "methylprednisolone",
+      "drug_id": "methylprednisolone",
+      "route": "iv_bolus",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "50 мг двічі на добу в/в (eviQ 572).",
+        "en": "50 mg twice a day IV (eviQ 572)."
+      }
+    },
+    {
+      "key": "methotrexate-first",
+      "drug_id": "methotrexate",
+      "route": "iv_infusion",
+      "dose_value": 200,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "200 мг/м² за 2 години (eviQ 572).",
+        "en": "200 mg/m2 over 2 hours (eviQ 572)."
+      }
+    },
+    {
+      "key": "methotrexate-second",
+      "drug_id": "methotrexate",
+      "route": "iv_infusion",
+      "dose_value": 800,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 1320,
+      "anchor_offset_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "800 мг/м² за 22 години одразу після першої дози (eviQ 572).",
+        "en": "800 mg/m2 over 22 hours straight after the first dose (eviQ 572)."
+      }
+    },
+    {
+      "key": "calcium-folinate",
+      "drug_id": "calcium-folinate",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 15,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4],
+      "administrations_per_day": 4,
+      "interval_min": 360,
+      "anchor_offset_min": 720,
+      "notes": {
+        "uk": "15 мг/м² кожні 6 годин, починаючи за 36 годин після початку метотрексату, до рівня метотрексату <0,1 мкмоль/л (eviQ 572); дні 2–4 — орієнтир.",
+        "en": "15 mg/m2 every 6 hours starting 36 hours after the methotrexate began, until the methotrexate level is below 0.1 micromol/L (eviQ 572); days 2 to 4 are a guide."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 3000,
+      "dose_unit": "mg_m2",
+      "days": [2, 3],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "3000 мг/м² двічі на добу в 500–1000 мл 0,9% NaCl за 3 години (eviQ 572). Окулярні краплі зі стероїдом — за практикою відділення.",
+        "en": "3000 mg/m2 twice a day in 500 to 1000 mL of 0.9% NaCl over 3 hours (eviQ 572). Steroid eye drops follow the department's practice."
+      }
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 10,
+      "dose_unit": "mcg_kg",
+      "days": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "notes": {
+        "uk": "10 мкг/кг підшкірно з дня 4 до відновлення нейтрофілів (eviQ 572); дні 4–13 — орієнтир.",
+        "en": "10 mcg/kg subcutaneously from day 4 until neutrophil recovery (eviQ 572); days 4 to 13 are a guide."
+      }
+    },
+    {
+      "key": "cytarabine-it",
+      "drug_id": "cytarabine",
+      "route": "intrathecal",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [8],
+      "notes": {
+        "uk": "100 мг інтратекально, день 8, лише цикли 2 і 4 (eviQ 572).",
+        "en": "100 mg intrathecally, day 8, cycles 2 and 4 only (eviQ 572)."
+      }
+    }
+  ]
+}

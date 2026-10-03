@@ -1,0 +1,70 @@
+{
+  "$comment": "Понатиніб при Ph+ ОЛЛ за eviQ 3513 (вер. 2): стійкість чи непереносимість дазатинібу або T315I; 45 мг раз на добу безперервно; при гематологічній токсичності: 1-й раз відновити 45 мг, 2-й — 30 мг, 3-й — 15 мг. З преднізолоном (зняти до дня 29) у літніх ≥60 років чи непридатних до інтенсивної терапії (Martinelli).",
+  "id": "ponatinib-all",
+  "short_name": "Понатиніб (Ph+ ОЛЛ)",
+  "name": {
+    "uk": "Понатиніб (Ph+ ОЛЛ)",
+    "en": "Ponatinib (Ph+ ALL)"
+  },
+  "description": {
+    "uk": "45 мг раз на добу безперервно.",
+    "en": "45 mg once a day continuously."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "eviQ: Acute lymphoblastic leukaemia — ponatinib (протокол 3513)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-lymphoblastic-leukaemia/3513-acute-lymphoblastic-leukaemia-ponatinib",
+      "version": "вер. 2 від 20.05.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "ponatinib",
+      "drug_id": "ponatinib",
+      "route": "oral",
+      "dose_value": 45,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "45 мг раз на добу (eviQ 3513).",
+        "en": "45 mg once a day (eviQ 3513)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 30,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "2-е повторення нейтропенії/тромбоцитопенії (eviQ 3513)",
+            "en": "Second recurrence of neutropenia or thrombocytopenia (eviQ 3513)"
+          },
+          "source": {
+            "name": "eviQ: Acute lymphoblastic leukaemia — ponatinib (протокол 3513)",
+            "url": "https://www.eviq.org.au/haematology/leukaemias/acute-lymphoblastic-leukaemia/3513-acute-lymphoblastic-leukaemia-ponatinib",
+            "version": "вер. 2 від 20.05.2024",
+            "checkedOn": "2026-10-04"
+          }
+        },
+        {
+          "dose_value": 15,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "3-є повторення (eviQ 3513)",
+            "en": "Third recurrence (eviQ 3513)"
+          },
+          "source": {
+            "name": "eviQ: Acute lymphoblastic leukaemia — ponatinib (протокол 3513)",
+            "url": "https://www.eviq.org.au/haematology/leukaemias/acute-lymphoblastic-leukaemia/3513-acute-lymphoblastic-leukaemia-ponatinib",
+            "version": "вер. 2 від 20.05.2024",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    }
+  ]
+}
