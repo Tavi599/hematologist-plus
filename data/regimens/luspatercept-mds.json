@@ -1,0 +1,73 @@
+{
+  "$comment": "Луспатерцепт при нижчому ризику МДС за UpToDate і листком FDA: старт 1 мг/кг раз на 3 тижні підшкірно; підвищення до 1,33, потім 1,75 мг/кг, якщо потреба в трансфузіях не зменшилась (UpToDate: після 3 введень; листок: після ≥2 введень на рівні). Припинити, якщо після двох підвищень (24 тижні) потреба не зменшилась. Дози понад 1,2 мл ділять на кілька місць введення.",
+  "id": "luspatercept-mds",
+  "short_name": "Луспатерцепт",
+  "name": {
+    "uk": "Луспатерцепт (МДС нижчого ризику)",
+    "en": "Luspatercept (lower-risk MDS)"
+  },
+  "description": {
+    "uk": "1 мг/кг підшкірно раз на 3 тижні.",
+    "en": "1 mg/kg subcutaneously every 3 weeks."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 8,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of lower-risk myelodysplastic syndromes/neoplasms (MDS)",
+      "url": "https://www.uptodate.com/contents/treatment-of-lower-risk-myelodysplastic-syndromes-neoplasms-mds",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: REBLOZYL (luspatercept-aamt) — флакони 25 і 75 мг (50 мг/мл після відновлення: 0,68 і 1,6 мл води)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82f4d266-3f52-41eb-86ba-0abf3cf468e8",
+      "version": "SPL від 27.02.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "luspatercept",
+      "drug_id": "luspatercept",
+      "route": "subcutaneous",
+      "dose_value": 1,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "notes": {
+        "uk": "Старт 1 мг/кг. Підвищення за потреби — варіанти дози.",
+        "en": "Start with 1 mg/kg. Escalate if needed — see the dose options."
+      },
+      "dose_options": [
+        {
+          "dose_value": 1.33,
+          "dose_unit": "mg_kg",
+          "notes": {
+            "uk": "Перше підвищення (листок FDA)",
+            "en": "First escalation (FDA label)"
+          },
+          "source": {
+            "name": "FDA label: REBLOZYL (luspatercept-aamt) — флакони 25 і 75 мг (50 мг/мл після відновлення: 0,68 і 1,6 мл води)",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82f4d266-3f52-41eb-86ba-0abf3cf468e8",
+            "version": "SPL від 27.02.2026",
+            "checkedOn": "2026-10-04"
+          }
+        },
+        {
+          "dose_value": 1.75,
+          "dose_unit": "mg_kg",
+          "notes": {
+            "uk": "Друге підвищення, найбільша доза (листок FDA)",
+            "en": "Second escalation, the maximum (FDA label)"
+          },
+          "source": {
+            "name": "FDA label: REBLOZYL (luspatercept-aamt) — флакони 25 і 75 мг (50 мг/мл після відновлення: 0,68 і 1,6 мл води)",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82f4d266-3f52-41eb-86ba-0abf3cf468e8",
+            "version": "SPL від 27.02.2026",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    }
+  ]
+}

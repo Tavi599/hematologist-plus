@@ -64,6 +64,27 @@
         },
         {
           "regimen_id": "rituximab-maintenance"
+        },
+        {
+          "regimen_id": "zanubrutinib-mono",
+          "notes": {
+            "uk": "Переважний інгібітор BTK для літніх і тих, кому хіміотерапія не підходить; UpToDate",
+            "en": "The preferred BTK inhibitor for older patients and those unsuitable for chemotherapy; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "ibrutinib-rituximab-cycle-1",
+          "notes": {
+            "uk": "Тижні 1–4 ритуксимабу; цикли 2–4 — «Ібрутиніб»",
+            "en": "Rituximab weeks 1 to 4; cycles 2 to 4 — «Ibrutinib»"
+          }
+        },
+        {
+          "regimen_id": "ibrutinib-rituximab-cycle-5",
+          "notes": {
+            "uk": "Тижні 17–20 ритуксимабу",
+            "en": "Rituximab weeks 17 to 20"
+          }
         }
       ]
     },
@@ -88,6 +109,63 @@
             "uk": "Паліативний контроль хвороби",
             "en": "Palliative disease control"
           }
+        },
+        {
+          "regimen_id": "zanubrutinib-mono",
+          "notes": {
+            "uk": "Після хіміотерапії — перший вибір UpToDate",
+            "en": "After chemotherapy — the first choice of UpToDate"
+          }
+        },
+        {
+          "regimen_id": "br",
+          "notes": {
+            "uk": "Після BTK-інгібітора або при ремісії >5 років; UpToDate",
+            "en": "After a BTK inhibitor or a remission over 5 years; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "drc"
+        },
+        {
+          "regimen_id": "cladribine-r-wm",
+          "notes": {
+            "uk": "Багаторазовий рецидив",
+            "en": "Multiply relapsed disease"
+          }
+        },
+        {
+          "regimen_id": "fcr-wm",
+          "notes": {
+            "uk": "Багаторазовий рецидив",
+            "en": "Multiply relapsed disease"
+          }
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-wm-bdr"
+        },
+        {
+          "regimen_id": "ref-wm-venetoclax"
+        },
+        {
+          "regimen_id": "ref-wm-pirtobrutinib"
+        },
+        {
+          "regimen_id": "ref-wm-ird"
         }
       ]
     }

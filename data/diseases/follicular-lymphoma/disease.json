@@ -365,6 +365,23 @@
         },
         {
           "regimen_id": "obinutuzumab-mono"
+        },
+        {
+          "regimen_id": "zanubrutinib-obinutuzumab-cycle-1",
+          "notes": {
+            "uk": "Після ≥2 ліній, якщо бісспецифічні антитіла й клітинна терапія не підходять; листок FDA",
+            "en": "After at least two lines when bispecific antibodies and cell therapy are unsuitable; FDA label"
+          }
+        },
+        {
+          "regimen_id": "zanubrutinib-obinutuzumab-cycle-2-6"
+        },
+        {
+          "regimen_id": "zanubrutinib-obinutuzumab",
+          "notes": {
+            "uk": "Раз на 8 тижнів, разом до 20 доз",
+            "en": "Every 8 weeks, up to 20 doses in all"
+          }
         }
       ]
     },
@@ -391,9 +408,6 @@
         },
         {
           "regimen_id": "ref-fl-len-obinutuzumab"
-        },
-        {
-          "regimen_id": "ref-fl-zanubrutinib-obinutuzumab"
         },
         {
           "regimen_id": "ref-fl-mosunetuzumab"

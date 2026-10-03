@@ -1,0 +1,106 @@
+{
+  "$comment": "Іметелстат при нижчому ризику МДС із трансфузійною залежністю, рефрактерному до ESA, за UpToDate (IMerge) і листком FDA: 7,1 мг/кг в/в за 2 години раз на 4 тижні, до прогресування чи неприйнятної токсичності. Нейтропенія 3+ ступеня у 68%, тромбоцитопенія у 62%.",
+  "id": "imetelstat-mds",
+  "short_name": "Іметелстат",
+  "name": {
+    "uk": "Іметелстат (МДС нижчого ризику)",
+    "en": "Imetelstat (lower-risk MDS)"
+  },
+  "description": {
+    "uk": "7,1 мг/кг в/в за 2 години раз на 4 тижні.",
+    "en": "7.1 mg/kg IV over 2 hours every 4 weeks."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of lower-risk myelodysplastic syndromes/neoplasms (MDS)",
+      "url": "https://www.uptodate.com/contents/treatment-of-lower-risk-myelodysplastic-syndromes-neoplasms-mds",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: RYTELO (imetelstat) — флакони 47 і 188 мг, відновлення 0,9% NaCl (31,4 мг/мл), розведення до ~500 мл 0,9% NaCl",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0fab7ca-e578-43c5-9df6-bdaff4182257",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "anchor_offset_min": -30,
+      "notes": {
+        "uk": "25–50 мг в/в чи усередину щонайменше за 30 хв до інфузії (листок FDA).",
+        "en": "25 to 50 mg IV or by mouth at least 30 minutes before the infusion (FDA label)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 50,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Верхня межа діапазону листка",
+            "en": "Upper end of the label range"
+          },
+          "source": {
+            "name": "FDA label: RYTELO (imetelstat) — флакони 47 і 188 мг, відновлення 0,9% NaCl (31,4 мг/мл), розведення до ~500 мл 0,9% NaCl",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0fab7ca-e578-43c5-9df6-bdaff4182257",
+            "version": "перевірено 2026-10-04",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    },
+    {
+      "key": "hydrocortisone",
+      "drug_id": "hydrocortisone",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "anchor_offset_min": -30,
+      "notes": {
+        "uk": "100–200 мг в/в чи усередину щонайменше за 30 хв до інфузії (листок FDA).",
+        "en": "100 to 200 mg IV or by mouth at least 30 minutes before the infusion (FDA label)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 200,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Верхня межа діапазону листка",
+            "en": "Upper end of the label range"
+          },
+          "source": {
+            "name": "FDA label: RYTELO (imetelstat) — флакони 47 і 188 мг, відновлення 0,9% NaCl (31,4 мг/мл), розведення до ~500 мл 0,9% NaCl",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0fab7ca-e578-43c5-9df6-bdaff4182257",
+            "version": "перевірено 2026-10-04",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    },
+    {
+      "key": "imetelstat",
+      "drug_id": "imetelstat",
+      "route": "iv_infusion",
+      "dose_value": 7.1,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "7,1 мг/кг у ~500 мл 0,9% NaCl за 2 години (листок FDA).",
+        "en": "7.1 mg/kg in about 500 mL of 0.9% NaCl over 2 hours (FDA label)."
+      }
+    }
+  ]
+}

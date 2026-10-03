@@ -1,0 +1,41 @@
+{
+  "id": "ref-mds-romiplostim",
+  "short_name": "Ромиплостим (МДС)",
+  "name": {
+    "uk": "Ромиплостим при тромбоцитопенії в МДС нижчого ризику",
+    "en": "Romiplostim for thrombocytopenia in lower-risk MDS"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of lower-risk myelodysplastic syndromes/neoplasms (MDS)",
+      "url": "https://www.uptodate.com/contents/treatment-of-lower-risk-myelodysplastic-syndromes-neoplasms-mds",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Підвищує тромбоцити приблизно у половини хворих; краща відповідь при ТПО <500 пг/мл і малій кількості трансфузій тромбоцитів.",
+      "en": "Raises platelets in about half of patients; better response with TPO under 500 pg/mL and few platelet transfusions."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ромиплостим",
+          "en": "Romiplostim"
+        }
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "1–10 мкг/кг підшкірно щотижня.",
+        "en": "1 to 10 mcg/kg subcutaneously weekly."
+      }
+    ],
+    "gap": {
+      "uk": "Підбір дози за кількістю тромбоцитів, а препарату немає в довіднику.",
+      "en": "The dose is titrated to the platelet count, and the drug is not in the catalog."
+    },
+    "availability": "unavailable"
+  }
+}

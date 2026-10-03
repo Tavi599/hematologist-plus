@@ -1,0 +1,31 @@
+{
+  "$comment": "Додано 2026-10-04 (UpToDate: нижчий ризик МДС). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "luspatercept",
+  "name": {
+    "uk": "Луспатерцепт",
+    "en": "Luspatercept"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: REBLOZYL (luspatercept-aamt) — флакони 25 і 75 мг (50 мг/мл після відновлення: 0,68 і 1,6 мл води)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82f4d266-3f52-41eb-86ba-0abf3cf468e8",
+      "version": "SPL від 27.02.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v25",
+      "form": "vial",
+      "strength_amount": 25,
+      "volume_ml": 0.5
+    },
+    {
+      "key": "v75",
+      "form": "vial",
+      "strength_amount": 75,
+      "volume_ml": 1.5
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "$comment": "Флударабін + циклофосфамід + ритуксимаб при макроглобулінемії Вальденстрема за UpToDate (італійське дослідження, 43 хворих): для багаторазового рецидиву, до 6 циклів по 28 днів. У дослідженні профілактика ко-тримоксазолом і ацикловіром була обов'язкова; нейтропенія 3–4 ступеня у 88%.",
+  "id": "fcr-wm",
+  "short_name": "FCR (WM)",
+  "name": {
+    "uk": "FCR: флударабін + циклофосфамід + ритуксимаб (макроглобулінемія Вальденстрема)",
+    "en": "FCR: fludarabine + cyclophosphamide + rituximab (Waldenström macroglobulinemia)"
+  },
+  "description": {
+    "uk": "Ритуксимаб 375 мг/м² у день 1, флударабін 25 мг/м² і циклофосфамід 250 мг/м² у дні 2–4; до 6 циклів по 28 днів.",
+    "en": "Rituximab 375 mg/m2 on day 1, fludarabine 25 mg/m2 and cyclophosphamide 250 mg/m2 on days 2 to 4; up to six 28-day cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of Waldenström macroglobulinemia",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-waldenstrom-macroglobulinemia",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "375 мг/м² у день 1 (UpToDate).",
+        "en": "375 mg/m2 on day 1 (UpToDate)."
+      }
+    },
+    {
+      "key": "fludarabine",
+      "drug_id": "fludarabine",
+      "route": "iv_infusion",
+      "dose_value": 25,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "duration_min": 30,
+      "notes": {
+        "uk": "25 мг/м² у дні 2–4 (UpToDate). Об'єм і тривалість — практика відділення.",
+        "en": "25 mg/m2 on days 2 to 4 (UpToDate). Volume and duration follow the department's practice."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 250,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "duration_min": 60,
+      "notes": {
+        "uk": "250 мг/м² у дні 2–4 (UpToDate). Об'єм і тривалість — практика відділення.",
+        "en": "250 mg/m2 on days 2 to 4 (UpToDate). Volume and duration follow the department's practice."
+      }
+    }
+  ]
+}

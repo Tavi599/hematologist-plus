@@ -1,0 +1,29 @@
+{
+  "$comment": "Додано 2026-10-04 (WM за UpToDate, ФЛ з обінутузумабом за листком FDA). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "zanubrutinib",
+  "name": {
+    "uk": "Занубрутиніб",
+    "en": "Zanubrutinib"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: BRUKINSA (zanubrutinib) — капсули 80 мг, таблетки 160 мг; ХМ/WM і ФЛ з обінутузумабом",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3e08fe23-d70e-424c-bc51-1222e320f902",
+      "version": "SPL, ред. 07.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "c80",
+      "form": "capsule",
+      "strength_amount": 80
+    },
+    {
+      "key": "t160",
+      "form": "tablet",
+      "strength_amount": 160
+    }
+  ]
+}

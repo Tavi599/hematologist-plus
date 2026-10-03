@@ -1,0 +1,55 @@
+{
+  "id": "ref-wm-ird",
+  "short_name": "IRD (WM)",
+  "name": {
+    "uk": "Іксазоміб + дексаметазон + ритуксимаб (IRD)",
+    "en": "Ixazomib + dexamethasone + rituximab (IRD)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of Waldenström macroglobulinemia",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-waldenstrom-macroglobulinemia",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Повністю пероральний протеасомний компонент; у нелікованих (26 хворих) відповідь 96%, велика відповідь 77%, медіана ВБП 40 місяців, без 4 ступеня побічних явищ.",
+      "en": "An all-oral proteasome-inhibitor component; in untreated patients (26) response 96%, major response 77%, median PFS 40 months, no grade 4 adverse events."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Іксазоміб",
+          "en": "Ixazomib"
+        }
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "У іншому дослідженні (59 хворих) відповідь 71%, дворічна ВБП 56%.",
+        "en": "In another study (59 patients) response 71%, two-year PFS 56%."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз і днів, а іксазомібу немає в довіднику.",
+      "en": "UpToDate gives neither doses nor days, and ixazomib is not in the catalog."
+    },
+    "availability": "unavailable"
+  }
+}

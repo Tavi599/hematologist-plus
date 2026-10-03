@@ -1,0 +1,53 @@
+{
+  "$comment": "Додано 2026-10-04 (UpToDate: нижчий ризик МДС). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "imetelstat",
+  "name": {
+    "uk": "Іметелстат",
+    "en": "Imetelstat"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: RYTELO (imetelstat) — флакони 47 і 188 мг, відновлення 0,9% NaCl (31,4 мг/мл), розведення до ~500 мл 0,9% NaCl",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0fab7ca-e578-43c5-9df6-bdaff4182257",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v47",
+      "form": "vial",
+      "strength_amount": 47,
+      "volume_ml": 1.5
+    },
+    {
+      "key": "v188",
+      "form": "vial",
+      "strength_amount": 188,
+      "volume_ml": 6
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [500],
+      "is_default": true,
+      "duration_min": 120,
+      "stock_concentration_mg_ml": 31.4,
+      "sources": [
+        {
+          "name": "FDA label: RYTELO (imetelstat) — флакони 47 і 188 мг, відновлення 0,9% NaCl (31,4 мг/мл), розведення до ~500 мл 0,9% NaCl",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0fab7ca-e578-43c5-9df6-bdaff4182257",
+          "version": "перевірено 2026-10-04",
+          "checkedOn": "2026-10-04"
+        }
+      ],
+      "notes": {
+        "uk": "Флакон відновлюють 0,9% NaCl (47 мг — 1,8 мл, 188 мг — 6,3 мл) до 31,4 мг/мл; розведений доводять до ~500 мл 0,9% NaCl. Розчин використовують за 18 год при кімнатній температурі чи за 48 год у холодильнику.",
+        "en": "Each vial is reconstituted with 0.9% NaCl (47 mg — 1.8 mL, 188 mg — 6.3 mL) to 31.4 mg/mL; the diluted solution is brought to about 500 mL of 0.9% NaCl. Use within 18 hours at room temperature or 48 hours refrigerated."
+      }
+    }
+  ]
+}

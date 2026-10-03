@@ -1,0 +1,43 @@
+{
+  "$comment": "Децитабін + цедазуридин перорально за UpToDate і листком FDA (INQOVI, ред. 25.05.2026): 1 таблетка (35 мг + 100 мг) щодня в дні 1–5 циклу 28 днів, щонайменше 4 цикли; натще (за 2 години до їжі й 2 години після). Листок також допускає застосування з венетоклаксом при ГМЛ (між прийомами 2 години).",
+  "id": "inqovi-mds",
+  "short_name": "Децитабін+цедазуридин",
+  "name": {
+    "uk": "Децитабін + цедазуридин перорально (МДС вищого ризику)",
+    "en": "Oral decitabine and cedazuridine (higher-risk MDS)"
+  },
+  "description": {
+    "uk": "1 таблетка щодня в дні 1–5 кожні 28 днів, щонайменше 4 цикли.",
+    "en": "One tablet daily on days 1 to 5 every 28 days, at least four cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Myelodysplastic syndromes/neoplasms (MDS): Treatment of higher-risk MDS",
+      "url": "https://www.uptodate.com/contents/myelodysplastic-syndromes-neoplasms-mds-treatment-of-higher-risk-mds",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: INQOVI (decitabine and cedazuridine) — таблетки 35 мг децитабіну + 100 мг цедазуридину",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=91a0f80b-f865-4d06-a40d-4d148d99ee71",
+      "version": "ред. 25.05.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "decitabine-cedazuridine",
+      "drug_id": "decitabine-cedazuridine",
+      "route": "oral",
+      "dose_value": 35,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Одна таблетка (35 мг децитабіну + 100 мг цедазуридину) на добу, натще: не їсти за 2 години до й після прийому.",
+        "en": "One tablet (35 mg decitabine + 100 mg cedazuridine) a day on an empty stomach: no food for 2 hours before and after."
+      }
+    }
+  ]
+}

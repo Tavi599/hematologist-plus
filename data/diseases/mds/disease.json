@@ -50,6 +50,34 @@
             "uk": "Делеція 5q",
             "en": "A 5q deletion"
           }
+        },
+        {
+          "regimen_id": "luspatercept-mds",
+          "notes": {
+            "uk": "Трансфузійна залежність; UpToDate",
+            "en": "Transfusion dependence; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "imetelstat-mds",
+          "notes": {
+            "uk": "Трансфузійна залежність, рефрактерна до ESA; UpToDate",
+            "en": "Transfusion dependence refractory to ESA; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "azacitidine-mono",
+          "notes": {
+            "uk": "Альтернатива при нижчому ризику: 75 мг/м² 7 днів, щонайменше 6 курсів; UpToDate",
+            "en": "An alternative at lower risk: 75 mg/m2 for 7 days, at least six courses; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "decitabine-mono",
+          "notes": {
+            "uk": "20 мг/м² 3 або 5 днів кожні 4–6 тижнів, щонайменше 4 цикли; UpToDate. Тут розклад на 5 днів",
+            "en": "20 mg/m2 for 3 or 5 days every 4 to 6 weeks, at least four cycles; UpToDate. The 5-day schedule here"
+          }
         }
       ],
       "children": []
@@ -75,6 +103,40 @@
             "uk": "За протоколом ML.30 показання включають МДС",
             "en": "The ML.30 protocol lists MDS among its indications"
           }
+        },
+        {
+          "regimen_id": "decitabine-mono",
+          "notes": {
+            "uk": "20 мг/м² в/в 5 днів кожні 4 тижні, щонайменше 4–6 циклів; UpToDate",
+            "en": "20 mg/m2 IV for 5 days every 4 weeks, at least four to six cycles; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "inqovi-mds",
+          "notes": {
+            "uk": "Пероральна альтернатива децитабіну в/в; UpToDate, листок FDA",
+            "en": "An oral alternative to IV decitabine; UpToDate, FDA label"
+          }
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-mds-esa"
+        },
+        {
+          "regimen_id": "ref-mds-romiplostim"
         }
       ]
     }

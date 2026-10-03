@@ -1,0 +1,48 @@
+{
+  "$comment": "Занубрутиніб у монорежимі при макроглобулінемії Вальденстрема за UpToDate: до прогресування чи неприйнятної токсичності. UpToDate віддає йому перевагу серед інгібіторів BTK (ASPEN: вдвічі менше відмін через токсичність, ніж ібрутиніб).",
+  "id": "zanubrutinib-mono",
+  "short_name": "Занубрутиніб",
+  "name": {
+    "uk": "Занубрутиніб (макроглобулінемія Вальденстрема)",
+    "en": "Zanubrutinib (Waldenström macroglobulinemia)"
+  },
+  "description": {
+    "uk": "160 мг двічі на добу безперервно до прогресування чи неприйнятної токсичності.",
+    "en": "160 mg twice a day continuously until progression or unacceptable toxicity."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of Waldenström macroglobulinemia",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-waldenstrom-macroglobulinemia",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: BRUKINSA (zanubrutinib) — капсули 80 мг, таблетки 160 мг; ХМ/WM і ФЛ з обінутузумабом",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3e08fe23-d70e-424c-bc51-1222e320f902",
+      "version": "SPL, ред. 07.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "zanubrutinib",
+      "drug_id": "zanubrutinib",
+      "route": "oral",
+      "dose_value": 160,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "160 мг двічі на добу або 320 мг раз на добу (UpToDate, листок FDA): рахується варіант 160 мг двічі; при варіанті 320 мг раз на добу запис зміните вручну. Затримати на 3–7 днів до й після операції.",
+        "en": "160 mg twice a day or 320 mg once a day (UpToDate, FDA label): the 160 mg twice a day option is calculated; for 320 mg once a day change the line by hand. Hold for 3 to 7 days before and after surgery."
+      }
+    }
+  ]
+}

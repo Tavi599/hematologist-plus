@@ -1,0 +1,54 @@
+{
+  "$comment": "Ібрутиніб + ритуксимаб за UpToDate (дослідження iNNOVATE, 68 нелікованих): ритуксимаб 375 мг/м² тижні 1–4 і 17–20, ібрутиніб 420 мг щодня. Цикли 2–4 і 6+ — лише ібрутиніб: схема «Ібрутиніб». Додавання ритуксимабу знижує ризик спалаху IgM (8% проти 47%), але підвищує фібриляцію передсердь (12% проти 1%). UpToDate віддає перевагу ібрутинібу без ритуксимабу.",
+  "id": "ibrutinib-rituximab-cycle-1",
+  "short_name": "Ібрутиніб + ритуксимаб, цикл 1",
+  "name": {
+    "uk": "Ібрутиніб + ритуксимаб, цикл 1",
+    "en": "Ibrutinib + rituximab, cycle 1"
+  },
+  "description": {
+    "uk": "Ібрутиніб 420 мг щодня; ритуксимаб щотижня (дні 1, 8, 15, 22).",
+    "en": "Ibrutinib 420 mg daily; rituximab weekly (days 1, 8, 15, 22)."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of Waldenström macroglobulinemia",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-waldenstrom-macroglobulinemia",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "ibrutinib",
+      "drug_id": "ibrutinib",
+      "route": "oral",
+      "dose_value": 420,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "420 мг раз на добу безперервно (UpToDate).",
+        "en": "420 mg once a day continuously (UpToDate)."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "375 мг/м² щотижня (тижні 1–4 і 17–20 від початку; тижні 17–20 — це дні 1, 8, 15, 22 п'ятого 28-денного циклу). Огляд IgM-спалаху — перед кожною дозою (UpToDate).",
+        "en": "375 mg/m2 weekly (weeks 1 to 4 and 17 to 20 from the start; weeks 17 to 20 are days 1, 8, 15, 22 of the fifth 28-day cycle). Watch for an IgM flare (UpToDate)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$comment": "Кладрибін + ритуксимаб при макроглобулінемії Вальденстрема за UpToDate (фаза II, 29 хворих, 4 щомісячні цикли): для багаторазового рецидиву; ризик вторинного МДС/ГМЛ і трансформації вищий. Додаткову профілактику (ацикловір, ко-тримоксазол) вмикайте у «Супроводі за стандартом».",
+  "id": "cladribine-r-wm",
+  "short_name": "Кладрибін+R (WM)",
+  "name": {
+    "uk": "Кладрибін + ритуксимаб (макроглобулінемія Вальденстрема)",
+    "en": "Cladribine + rituximab (Waldenström macroglobulinemia)"
+  },
+  "description": {
+    "uk": "Ритуксимаб 375 мг/м² у день 1, кладрибін 0,1 мг/кг підшкірно в дні 1–5; 4 щомісячні цикли.",
+    "en": "Rituximab 375 mg/m2 on day 1, cladribine 0.1 mg/kg subcutaneously on days 1 to 5; four monthly cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of Waldenström macroglobulinemia",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-waldenstrom-macroglobulinemia",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "375 мг/м² у день 1 (UpToDate).",
+        "en": "375 mg/m2 on day 1 (UpToDate)."
+      }
+    },
+    {
+      "key": "cladribine",
+      "drug_id": "cladribine",
+      "route": "subcutaneous",
+      "dose_value": 0.1,
+      "dose_unit": "mg_kg",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "0,1 мг/кг підшкірно в дні 1–5 (UpToDate).",
+        "en": "0.1 mg/kg subcutaneously on days 1 to 5 (UpToDate)."
+      }
+    }
+  ]
+}
