@@ -147,7 +147,11 @@ describe('buildCourseSheets', () => {
   it('leaves a ruled, empty box at the foot of every sheet for a handwritten note', () => {
     for (const sheet of sheets()) {
       const last = sheet.rows.length
-      expect(sheet.rows[last - 1]!.every((cell) => (text(cell) ?? '') === '')).toBe(true)
+      // A day sheet carries the department's control line in it; the ward sheet is bare.
+      const written = sheet.rows[last - 1]!.map((cell) => text(cell) ?? '').filter(
+        (cell) => cell !== '',
+      )
+      expect(written.length).toBeLessThanOrEqual(1)
       expect(sheet.merges).toContain(`A${last}:Z${last}`)
       // Tall enough to write a line in; the department writes its notes by hand.
       expect(sheet.heights!.at(-1)).toBeGreaterThanOrEqual(30)
@@ -297,6 +301,44 @@ describe('buildCourseSheets', () => {
     const ward = sheets().at(-1)!
     const dates = ward.rows[4]!.slice(2, 2 + 8).map((cell) => String(text(cell)))
     expect(dates).toEqual(['21.09', '22.09', '23.09', '24.09', '25.09', '26.09', '27.09', '28.09'])
+  })
+
+  it('prints the control line of the department at the foot of a day sheet only', () => {
+    const built = sheets()
+    const day = built[0]!
+    expect(String(text(day.rows.at(-1)![0] ?? null))).toBe(
+      'Контроль ваги, діурезу, АТ, ЧСС, температури тіла!',
+    )
+    expect(text(built.at(-1)!.rows.at(-1)![0] ?? null)).toBeNull()
+  })
+
+  it('writes the dose under every mark of a drug given several times a day', () => {
+    const items = buildCourseItems(indexCatalog(demoCatalog()), 'r-chop-21').map((item) =>
+      item.item.block === 'infusion' && item.item.drug_id === 'cyclophosphamide'
+        ? {
+            ...item,
+            item: { ...item.item, administrations_per_day: 3 },
+            courseDrug: { ...item.courseDrug, administrationsPerDay: 3, durationMin: 120 },
+          }
+        : item,
+    )
+    const course = calculateCourse(
+      { ageYears: 60, sex: 'male', heightCm: 180, weightKg: 80 },
+      items.map((item) => item.courseDrug),
+      { startDateIso: '2026-09-21', dayStart: '09:00' },
+    )
+    const day = sheets({ items, course })[0]!
+    const upper = day.rows.findIndex((row) =>
+      String(text(row[0] ?? null) ?? '').startsWith('ДЕМО Циклофосфамід'),
+    )
+    const marks = day.rows[upper]!.slice(2).map(text)
+    const under = day.rows[upper + 1]!.slice(2).map(text)
+    expect(marks.filter((mark) => mark === '+')).toHaveLength(3)
+    // The same three columns carry the dose beneath; the others stay empty.
+    expect(under.map((cell, index) => (marks[index] === '+') === (cell !== null))).not.toContain(
+      false,
+    )
+    expect(String(under.find((cell) => cell !== null))).toMatch(/units.mg$/)
   })
 
   describe('the ward layout', () => {

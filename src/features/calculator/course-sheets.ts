@@ -137,6 +137,7 @@ const BLANK = {
   rate: 'V= ',
   perDay: ' р/добу',
   times: ' та ',
+  control: 'Контроль ваги, діурезу, АТ, ЧСС, температури тіла!',
 } as const
 
 const MARK = '+'
@@ -274,10 +275,16 @@ function daySheet(input: CourseSheetsInput, day: SheetDay): XlsxSheet {
       what: order.what,
       how: order.how,
       marks: SHEET_HOURS.map((hour) => (order.hours.has(hour) ? MARK : null)),
+      // One mark says «given»; several say «given again», and the nurse needs to see how much.
+      ...(order.hours.size > 1 && order.dose
+        ? {
+            under: SHEET_HOURS.map((hour) => (order.hours.has(hour) ? (order.dose ?? null) : null)),
+          }
+        : {}),
     })),
   )
 
-  rows.push([{ value: null, format: NOTE_FORMAT }, ...spread('', 25, NOTE_FORMAT)])
+  rows.push([{ value: BLANK.control, format: NOTE_FORMAT }, ...spread('', 25, NOTE_FORMAT)])
   merges.push(`A${rows.length}:${lastColumn}${rows.length}`)
   heights.push(NOTE_HEIGHT)
 
@@ -296,6 +303,8 @@ interface Order {
   how: string
   /** Hours of this day the drug is given in; several for a drug repeated through the day. */
   hours: Set<number>
+  /** The dose of one administration, written under each mark of a drug repeated through the day. */
+  dose?: string
 }
 
 /**
@@ -320,6 +329,11 @@ function dayOrders(input: CourseSheetsInput, day: SheetDay): Order[] {
       what: whatLine(administration.drugId, item, result, input),
       how: howLine(item, result, input),
       hours: new Set([hour]),
+      ...(result
+        ? {
+            dose: `${formatAmount(result.doseAmount, input.language, 1)} ${input.t(`units.${result.amountUnit}`)}`,
+          }
+        : {}),
     })
   }
   return [...orders.values()]
@@ -518,6 +532,8 @@ interface Band {
   what: string
   how: string
   marks: (string | null)[]
+  /** Text for the lower row under each mark, e.g. the dose of a repeated administration. */
+  under?: (string | null)[]
 }
 
 /**
@@ -551,8 +567,10 @@ function appendBands(
       { value: null, format: orderFormat(false, '', ORDER_WIDTH) },
       { value: null, format: orderFormat(true, '', HOW_WIDTH) },
       ...Array.from({ length: width }, (_unused, column) => ({
-        value: null,
-        format: markFormat(isGroupEnd(column), true),
+        value: band?.under?.[column] ?? null,
+        format: band?.under?.[column]
+          ? underFormat(isGroupEnd(column))
+          : markFormat(isGroupEnd(column), true),
       })),
     ])
     merges.push(`A${top}:A${top + 1}`, `B${top}:B${top + 1}`)
@@ -763,6 +781,15 @@ function charsPerLine(size: number, widthUnits: number): number {
 /** How many lines of a given size fit the two ruled rows an order is written across. */
 function linesPerBand(size: number): number {
   return Math.max(1, Math.floor(BAND_HEIGHT / (size * 1.25)))
+}
+
+/** The dose written under a mark: small, so it fits the five-character column. */
+function underFormat(groupEnd: boolean): XlsxFormat {
+  return {
+    ...markFormat(groupEnd, true),
+    font: { size: 7 },
+    valign: 'center',
+  }
 }
 
 function markFormat(groupEnd: boolean, lower: boolean): XlsxFormat {
