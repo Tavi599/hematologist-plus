@@ -1,0 +1,31 @@
+{
+  "$comment": "Додано 2026-10-04 для схем eviQ 4554. Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "epcoritamab",
+  "name": {
+    "uk": "Епкоритамаб",
+    "en": "Epcoritamab"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: EPKINLY (epcoritamab-bysp) — флакони 4 мг/0,8 мл і 48 мг/0,8 мл для підшкірного введення",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7836711-b677-412d-bf2d-0f7c8444103a",
+      "version": "SPL від 30.06.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s4",
+      "form": "vial",
+      "strength_amount": 4,
+      "volume_ml": 0.8
+    },
+    {
+      "key": "s48",
+      "form": "vial",
+      "strength_amount": 48,
+      "volume_ml": 0.8
+    }
+  ]
+}

@@ -331,6 +331,50 @@
             "uk": "Цикли 2-6",
             "en": "Cycles 2-6"
           }
+        },
+        {
+          "regimen_id": "tafasitamab-len-cycle-1",
+          "notes": {
+            "uk": "Не придатні до аутотрансплантації; eviQ 4461",
+            "en": "Not eligible for autologous transplant; eviQ 4461"
+          }
+        },
+        {
+          "regimen_id": "tafasitamab-len-cycle-2-3"
+        },
+        {
+          "regimen_id": "tafasitamab-len",
+          "notes": {
+            "uk": "Цикли 4–12",
+            "en": "Cycles 4 to 12"
+          }
+        },
+        {
+          "regimen_id": "tafasitamab-maintenance",
+          "notes": {
+            "uk": "Цикл 13 і далі, без леналідоміду",
+            "en": "Cycle 13 onwards, without lenalidomide"
+          }
+        },
+        {
+          "regimen_id": "epcoritamab-cycle-1",
+          "notes": {
+            "uk": "Після двох і більше ліній; особливо після CAR-T (eviQ 4554)",
+            "en": "After two or more lines; particularly after CAR-T (eviQ 4554)"
+          }
+        },
+        {
+          "regimen_id": "epcoritamab-cycle-2-3"
+        },
+        {
+          "regimen_id": "epcoritamab-cycle-4-9"
+        },
+        {
+          "regimen_id": "epcoritamab",
+          "notes": {
+            "uk": "Цикл 10 і далі",
+            "en": "Cycle 10 onwards"
+          }
         }
       ]
     },
@@ -420,6 +464,50 @@
             "uk": "Цикли 2–12.",
             "en": "Cycles 2 to 12."
           }
+        },
+        {
+          "regimen_id": "tafasitamab-len-cycle-1",
+          "notes": {
+            "uk": "Не придатні до аутотрансплантації; eviQ 4461",
+            "en": "Not eligible for autologous transplant; eviQ 4461"
+          }
+        },
+        {
+          "regimen_id": "tafasitamab-len-cycle-2-3"
+        },
+        {
+          "regimen_id": "tafasitamab-len",
+          "notes": {
+            "uk": "Цикли 4–12",
+            "en": "Cycles 4 to 12"
+          }
+        },
+        {
+          "regimen_id": "tafasitamab-maintenance",
+          "notes": {
+            "uk": "Цикл 13 і далі, без леналідоміду",
+            "en": "Cycle 13 onwards, without lenalidomide"
+          }
+        },
+        {
+          "regimen_id": "epcoritamab-cycle-1",
+          "notes": {
+            "uk": "Після двох і більше ліній; особливо після CAR-T (eviQ 4554)",
+            "en": "After two or more lines; particularly after CAR-T (eviQ 4554)"
+          }
+        },
+        {
+          "regimen_id": "epcoritamab-cycle-2-3"
+        },
+        {
+          "regimen_id": "epcoritamab-cycle-4-9"
+        },
+        {
+          "regimen_id": "epcoritamab",
+          "notes": {
+            "uk": "Цикл 10 і далі",
+            "en": "Cycle 10 onwards"
+          }
         }
       ]
     },
@@ -443,12 +531,6 @@
         },
         {
           "regimen_id": "ref-epcor-gemox"
-        },
-        {
-          "regimen_id": "ref-epcoritamab"
-        },
-        {
-          "regimen_id": "ref-tafasitamab-len"
         },
         {
           "regimen_id": "ref-loncastuximab"

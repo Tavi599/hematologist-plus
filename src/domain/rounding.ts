@@ -97,5 +97,13 @@ function nearestVialAmount(doseAmount: number, presentations: Presentation[]): n
 /** The unit's step, or the finer one for a dose small enough that whole units would distort it. */
 function defaultStep(doseAmount: number, unit: AmountUnit): number {
   const small = DOMAIN_DEFAULTS.smallDoseRounding[unit]
-  return small && doseAmount < small.below ? small.step : DOMAIN_DEFAULTS.doseRoundingStep[unit]
+  if (!small || doseAmount >= small.below) return DOMAIN_DEFAULTS.doseRoundingStep[unit]
+  // A dose so small that even tenths move it noticeably is kept to the finer step.
+  const fine = DOMAIN_DEFAULTS.fineDoseRounding[unit]
+  if (fine && doseAmount > 0) {
+    const deviation =
+      (Math.abs(roundToStep(doseAmount, small.step) - doseAmount) / doseAmount) * 100
+    if (deviation > fine.maxDeviationPercent) return fine.step
+  }
+  return small.step
 }

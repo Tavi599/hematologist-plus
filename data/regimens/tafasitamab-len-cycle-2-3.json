@@ -1,0 +1,58 @@
+{
+  "$comment": "Тафаситамаб + леналідомід за eviQ 4461 (вер. 2): цикл 28 днів, до прогресії чи неприйнятної токсичності; лише цикли 1–12 — із леналідомідом. Профілактика ВТЕ (аспірин у малій дозі або еноксапарин 40 мг на добу при факторах ризику), ко-тримоксазол і противірусна профілактика не внесені: ввімкніть їх у «Супроводі за стандартом» або вручну. Протиблювотні не потрібні (низький ризик).",
+  "id": "tafasitamab-len-cycle-2-3",
+  "short_name": "Tafa+Len ц.2-3",
+  "name": {
+    "uk": "Тафаситамаб + леналідомід, цикли 2–3",
+    "en": "Tafasitamab + lenalidomide, cycles 2-3"
+  },
+  "description": {
+    "uk": "Дні 1, 8, 15, 22 тафаситамабу + леналідомід 25 мг, дні 1–21.",
+    "en": "Tafasitamab on days 1, 8, 15, 22 plus lenalidomide 25 mg on days 1 to 21."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "eviQ: Non-Hodgkin lymphoma — tafasitamab and lenalidomide (протокол 4461)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/4461-non-hodgkin-lymphoma-tafasitamab-and-lenalido",
+      "version": "вер. 2",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Diffuse large B cell lymphoma (DLBCL): Second or later relapse or patients who are medically unfit",
+      "url": "https://www.uptodate.com/contents/diffuse-large-b-cell-lymphoma-dlbcl-second-or-later-relapse-or-patients-who-are-medically-unfit",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "tafasitamab",
+      "drug_id": "tafasitamab",
+      "route": "iv_infusion",
+      "dose_value": 12,
+      "dose_unit": "mg_kg",
+      "days": [1, 8, 15, 22],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "12 мг/кг у 250 мл 0,9% NaCl (eviQ).",
+        "en": "12 mg/kg in 250 mL of 0.9% NaCl (eviQ)."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "25 мг раз на добу, дні 1–21 кожного 28-денного циклу (eviQ). Дозу леналідоміду часто доводиться зменшувати (UpToDate).",
+        "en": "25 mg once a day on days 1 to 21 of each 28-day cycle (eviQ). The lenalidomide dose often needs reducing (UpToDate)."
+      }
+    }
+  ]
+}

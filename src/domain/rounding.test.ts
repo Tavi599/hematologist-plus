@@ -92,6 +92,16 @@ describe('roundDose', () => {
     expect(roundDose(9.96).roundedAmount).toBe(10)
   })
 
+  it('goes to hundredths where tenths would move a very small dose by more than 5%', () => {
+    // Epcoritamab priming dose: 0.16 mg must not become 0.2 mg (+25%).
+    expect(roundDose(0.16).roundedAmount).toBe(0.16)
+    expect(roundDose(0.16).steps[0]?.params).toMatchObject({ step: 0.01 })
+    expect(roundDose(0.43).roundedAmount).toBe(0.43)
+    // Within 5% of a tenth the tenth stays: vincristine 0.4 and 0.41 are 0.4.
+    expect(roundDose(0.41).roundedAmount).toBe(0.4)
+    expect(roundDose(0.8).roundedAmount).toBe(0.8)
+  })
+
   it('keeps whole milligrams from 10 mg up and for other units', () => {
     expect(roundDose(10.4).roundedAmount).toBe(10)
     expect(roundDose(2.34, { unit: 'mcg' }).roundedAmount).toBe(2)

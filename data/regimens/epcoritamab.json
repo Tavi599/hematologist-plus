@@ -1,0 +1,43 @@
+{
+  "$comment": "Епкоритамаб за eviQ 4554 (вер. 1 від 22.10.2025): цикл 28 днів, безперервно до прогресії чи неприйнятної токсичності; підшкірно в нижню частину живота чи стегно. eviQ радить розглянути 24-годинну госпіталізацію після першої повної дози (цикл 1, день 15) і мати напохваті тоцилізумаб. Профілактика ко-тримоксазолом (160/800 мг двічі чи тричі на тиждень), противірусна й протигрибкова — у «Супроводі за стандартом» або вручну. Протиблювотні не потрібні (низький ризик). Якщо після 4-ї дози 1-го циклу був СВЦ 2–3 ступеня, дексаметазон 16 мг до і 3 дні після кожної дози продовжують.",
+  "id": "epcoritamab",
+  "short_name": "Епкоритамаб, цикл 10 і далі",
+  "name": {
+    "uk": "Епкоритамаб, цикл 10 і далі",
+    "en": "Epcoritamab, cycle 10 onwards"
+  },
+  "description": {
+    "uk": "48 мг у день 1 кожного 28-денного циклу до прогресії чи неприйнятної токсичності.",
+    "en": "48 mg on day 1 of each 28-day cycle until progression or unacceptable toxicity."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "eviQ: Non-Hodgkin lymphoma — epcoritamab (протокол 4554)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/4554-nhl-epcoritamab",
+      "version": "вер. 1 від 22.10.2025",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Diffuse large B cell lymphoma (DLBCL): Second or later relapse or patients who are medically unfit",
+      "url": "https://www.uptodate.com/contents/diffuse-large-b-cell-lymphoma-dlbcl-second-or-later-relapse-or-patients-who-are-medically-unfit",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "epcoritamab",
+      "drug_id": "epcoritamab",
+      "route": "subcutaneous",
+      "dose_value": 48,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "48 мг підшкірно (eviQ).",
+        "en": "48 mg subcutaneously (eviQ)."
+      }
+    }
+  ]
+}

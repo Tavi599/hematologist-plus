@@ -1,0 +1,46 @@
+{
+  "$comment": "Тафаситамаб + леналідомід за eviQ 4461 (вер. 2): цикл 28 днів, до прогресії чи неприйнятної токсичності; лише цикли 1–12 — із леналідомідом. Профілактика ВТЕ (аспірин у малій дозі або еноксапарин 40 мг на добу при факторах ризику), ко-тримоксазол і противірусна профілактика не внесені: ввімкніть їх у «Супроводі за стандартом» або вручну. Протиблювотні не потрібні (низький ризик).",
+  "id": "tafasitamab-maintenance",
+  "short_name": "Tafa (13+)",
+  "name": {
+    "uk": "Тафаситамаб, продовження (цикл 13+)",
+    "en": "Tafasitamab alone (cycle 13 onwards)"
+  },
+  "description": {
+    "uk": "Тафаситамаб у дні 1 і 15 до прогресії чи неприйнятної токсичності, без леналідоміду.",
+    "en": "Tafasitamab on days 1 and 15 until progression or unacceptable toxicity, without lenalidomide."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "eviQ: Non-Hodgkin lymphoma — tafasitamab and lenalidomide (протокол 4461)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/4461-non-hodgkin-lymphoma-tafasitamab-and-lenalido",
+      "version": "вер. 2",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Diffuse large B cell lymphoma (DLBCL): Second or later relapse or patients who are medically unfit",
+      "url": "https://www.uptodate.com/contents/diffuse-large-b-cell-lymphoma-dlbcl-second-or-later-relapse-or-patients-who-are-medically-unfit",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "tafasitamab",
+      "drug_id": "tafasitamab",
+      "route": "iv_infusion",
+      "dose_value": 12,
+      "dose_unit": "mg_kg",
+      "days": [1, 15],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "12 мг/кг у 250 мл 0,9% NaCl (eviQ).",
+        "en": "12 mg/kg in 250 mL of 0.9% NaCl (eviQ)."
+      }
+    }
+  ]
+}

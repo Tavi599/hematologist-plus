@@ -41,6 +41,15 @@ export const DOMAIN_DEFAULTS = {
   >,
 
   /**
+   * Tenths still distort a very small dose: epcoritamab's 0.16 mg priming dose would become
+   * 0.2 mg (+25%). Where rounding to tenths moves the dose by more than `maxDeviationPercent`,
+   * the finer `step` is used instead (2026-10-04).
+   */
+  fineDoseRounding: { mg: { step: 0.01, maxDeviationPercent: 5 } } as Partial<
+    Record<AmountUnit, { step: number; maxDeviationPercent: number }>
+  >,
+
+  /**
    * Snap the dose to an amount made of whole vials when the difference is within
    * this percentage. `null` disables vial snapping until the rule is confirmed.
    */
