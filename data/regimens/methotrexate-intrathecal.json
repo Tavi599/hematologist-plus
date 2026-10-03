@@ -1,0 +1,37 @@
+{
+  "$comment": "Інтратекальна доза фіксована і не залежить від площі поверхні тіла. Частота задається тією схемою, до якої це введення додають, тому цикл тут умовний — 7 днів.",
+  "id": "methotrexate-intrathecal",
+  "short_name": "Метотрексат інтратекально",
+  "name": {
+    "uk": "Метотрексат інтратекально",
+    "en": "Methotrexate, intrathecal"
+  },
+  "description": {
+    "uk": "Профілактика або лікування ураження центральної нервової системи. Частота введень залежить від основної схеми хіміотерапії, до якої це додають; для лікування ураження ЦНС вводять щонайменше щотижня, доки показники ліквору не нормалізуються, і потім ще 1-2 рази. У довіднику закладено тижневий цикл як найчастіший; якщо протокол призначає інший інтервал, змініть тривалість циклу.",
+    "en": "Prophylaxis or treatment of central nervous system involvement. The frequency follows the chemotherapy regimen this is added to; for CNS treatment it is at least weekly until the cerebrospinal fluid count is normal, and then one or two further doses. The catalogue holds a weekly cycle as the commonest; where the protocol sets another interval, change the cycle length."
+  },
+  "cycle_length_days": 7,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.85 Methotrexate (intrathecal)",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-85-methotrexate-intrathecal.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "methotrexate",
+      "drug_id": "methotrexate",
+      "route": "intrathecal",
+      "dose_value": 12.5,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Перед введенням ін'єкції дають нагрітися до кімнатної температури. Доза фіксована; якщо інша схема вже містить інтратекальний метотрексат, діє її доза.",
+        "en": "The injection is allowed to reach room temperature first. The dose is fixed; where another regimen already includes intrathecal methotrexate, its own dose applies."
+      }
+    }
+  ]
+}

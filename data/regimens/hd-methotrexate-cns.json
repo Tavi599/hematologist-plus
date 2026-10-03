@@ -1,0 +1,70 @@
+{
+  "$comment": "Метотрексат вводять двома послідовними дозами в один день: навантажувальна 300 мг/м² за 15 хвилин і одразу за нею 2700 мг/м² за 3 години. Гідратація, залуження сечі й порятунок кальцію фолінатом розписані в протоколі окремою таблицею; у схемі є лише фолінат, бо гідратація не має фіксованої дози.",
+  "id": "hd-methotrexate-cns",
+  "short_name": "HD-MTX (ЦНС)",
+  "name": {
+    "uk": "Високодозовий метотрексат для профілактики ураження ЦНС",
+    "en": "High-dose methotrexate for CNS prophylaxis"
+  },
+  "description": {
+    "uk": "Високозлоякісна неходжкінська лімфома з високим ризиком ураження центральної нервової системи. Цикл 21 день, 2-4 цикли; зазвичай дають 2 цикли внутрішньовенного метотрексату після повного курсу R-CHOP (як правило, 6 циклів), і R-CHOP заради цього не переривають. Інтратекальна хіміотерапія в цю схему не входить. Лікування узгоджують на мультидисциплінарній комісії. За 12 годин до метотрексату починають гідратацію й залуження сечі; під час інфузії сечу перевіряють тест-смужкою кожні 2 години, pH має лишатися не нижчим за 7, інакше додають натрію гідрокарбонат. Залуження продовжують, доки рівень метотрексату не впаде нижче 0,1 мкмоль/л. Піперацилін з тазобактамом під час високодозового метотрексату й порятунку не застосовують — потрібен інший антибіотик.",
+    "en": "High-grade non-Hodgkin lymphoma at high risk of central nervous system involvement. A 21-day cycle, 2 to 4 cycles; usually two cycles of intravenous methotrexate follow a full course of R-CHOP, typically six cycles, and the R-CHOP is not interrupted for them. Intrathecal chemotherapy is not part of this regimen. Treatment is agreed at the MDT. Hydration and urine alkalinisation start 12 hours before the methotrexate; during the infusion the urine is dipsticked every 2 hours and the pH kept at 7 or above, with more sodium bicarbonate if it falls. Alkalinisation continues until the methotrexate level falls below 0.1 micromol/L. Piperacillin with tazobactam is not used during high-dose methotrexate or the rescue; another antibiotic is chosen."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.13 High dose methotrexate for CNS prophylaxis",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-13-high-dose-methotrexate-high-grade-nhl-cns-prophylaxis.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "methotrexate-loading",
+      "drug_id": "methotrexate",
+      "route": "iv_infusion",
+      "dose_value": 300,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 15,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Перша доза: рівно в 100 мл 0,9% NaCl за 15 хвилин.",
+        "en": "The first dose: in exactly 100 mL of 0.9% sodium chloride over 15 minutes."
+      }
+    },
+    {
+      "key": "methotrexate",
+      "drug_id": "methotrexate",
+      "route": "iv_infusion",
+      "dose_value": 2700,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 195,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Друга доза, починають одразу після першої: рівно в 500 мл 0,9% NaCl за 3 години. Протокол зазначає, що разом із навантажувальною дозою інфузія триває 3 години 15 хвилин і може бути довшою, якщо швидкість обмежена технічно.",
+        "en": "The second dose, started immediately after the first: in exactly 500 mL of 0.9% sodium chloride over 3 hours. The protocol notes the infusion takes 3 hours 15 minutes with the loading dose, and may run longer if the flow rate is technically limited."
+      }
+    },
+    {
+      "key": "calcium-folinate",
+      "drug_id": "calcium-folinate",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 15,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4],
+      "administrations_per_day": 4,
+      "interval_min": 360,
+      "notes": {
+        "uk": "Порятунок починають через 24 години після початку інфузії метотрексату: 15 мг/м² внутрішньовенно кожні 3 години, 5 доз, далі 15 мг/м² внутрішньовенно або всередину кожні 6 годин, доки рівень метотрексату не впаде нижче 0,1 мкмоль/л. У схемі закладено шестигодинний інтервал; перші п'ять триголинних доз виставляють вручну, а тривалість порятунку визначає рівень метотрексату, а не календар.",
+        "en": "The rescue starts 24 hours after the methotrexate infusion began: 15 mg/m2 intravenously every 3 hours for five doses, then 15 mg/m2 intravenously or by mouth every 6 hours until the methotrexate level falls below 0.1 micromol/L. The regimen holds the six-hourly interval; the first five three-hourly doses are set by hand, and the length of the rescue is decided by the methotrexate level, not the calendar."
+      }
+    }
+  ]
+}

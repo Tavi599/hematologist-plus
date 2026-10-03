@@ -1,0 +1,37 @@
+{
+  "$comment": "Те саме, що й з інтратекальним метотрексатом: доза фіксована, частоту задає основна схема.",
+  "id": "cytarabine-intrathecal",
+  "short_name": "Цитарабін інтратекально",
+  "name": {
+    "uk": "Цитарабін інтратекально",
+    "en": "Cytarabine, intrathecal"
+  },
+  "description": {
+    "uk": "Профілактика або лікування ураження центральної нервової системи. Частота введень залежить від основної схеми хіміотерапії. У довіднику закладено тижневий цикл як найчастіший; якщо протокол призначає інший інтервал, змініть тривалість циклу.",
+    "en": "Prophylaxis or treatment of central nervous system involvement. The frequency follows the chemotherapy regimen this is added to. The catalogue holds a weekly cycle as the commonest; where the protocol sets another interval, change the cycle length."
+  },
+  "cycle_length_days": 7,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.55 Cytarabine (intrathecal)",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-55-cytarabine-intrathecal.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "intrathecal",
+      "dose_value": 70,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Перед введенням ін'єкції дають нагрітися до кімнатної температури. Доза фіксована; якщо інша схема вже містить інтратекальний цитарабін, діє її доза.",
+        "en": "The injection is allowed to reach room temperature first. The dose is fixed; where another regimen already includes intrathecal cytarabine, its own dose applies."
+      }
+    }
+  ]
+}

@@ -148,6 +148,19 @@
                 "uk": "Коли антрацикліни протипоказані",
                 "en": "Where anthracyclines are contraindicated"
               }
+            },
+            {
+              "regimen_id": "hd-methotrexate-cns",
+              "notes": {
+                "uk": "Профілактика ураження ЦНС",
+                "en": "CNS prophylaxis"
+              }
+            },
+            {
+              "regimen_id": "methotrexate-intrathecal"
+            },
+            {
+              "regimen_id": "cytarabine-intrathecal"
             }
           ]
         }

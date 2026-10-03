@@ -1,0 +1,177 @@
+{
+  "$comment": "Вінкристину в цій схемі немає навмисно: його прибрали, щоб не складати нейротоксичність із брентуксимабом. Ко-тримоксазолу в довіднику немає, тому він лишився в описі.",
+  "id": "bv-chp",
+  "short_name": "BV-CHP",
+  "name": {
+    "uk": "BV-CHP (брентуксимаб ведотин, циклофосфамід, доксорубіцин, преднізолон)",
+    "en": "BV-CHP (brentuximab vedotin, cyclophosphamide, doxorubicin, prednisolone)"
+  },
+  "description": {
+    "uk": "Раніше нелікована CD30-позитивна системна анапластична великоклітинна лімфома. Цикл 21 день, зазвичай 6 циклів. Пацієнтам із високим міжнародним прогностичним індексом розглядають автологічну трансплантацію в першій ремісії. Під час інфузії брентуксимабу й після неї пацієнта пильно спостерігають — можливі реакції на введення. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень на весь час лікування й щонайменше 3 місяці після; у довіднику його немає.",
+    "en": "Previously untreated CD30-positive systemic anaplastic large cell lymphoma. A 21-day cycle, usually six cycles. In patients with a high International Prognostic Index, an autologous transplant in first remission is considered. The patient is watched closely during and after the brentuximab infusion for infusion-related reactions. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week throughout treatment and for at least three months after; it is not in the catalogue."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.127 Brentuximab vedotin in combination with CHP",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-127-brentuximab-with-chp.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Уранці, під час їди.",
+        "en": "In the morning, with food."
+      }
+    },
+    {
+      "key": "brentuximab-vedotin",
+      "drug_id": "brentuximab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.8,
+      "dose_unit": "mg_kg",
+      "cap_amount": 180,
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 150,
+      "notes": {
+        "uk": "У 150 мл 0,9% NaCl за 30 хвилин, кінцева концентрація 0,4-1,2 мг/мл; разова доза не більш як 180 мг. Як розчинник протокол дозволяє також 5% глюкозу або розчин Рінгера лактат.",
+        "en": "In 150 mL of 0.9% sodium chloride over 30 minutes at a final concentration of 0.4 to 1.2 mg/mL; no single dose above 180 mg. The protocol also allows 5% glucose or lactated Ringer's as the diluent."
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_bolus",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "Струминно.",
+        "en": "As a bolus."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_bolus",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "Струминно.",
+        "en": "As a bolus."
+      }
+    },
+    {
+      "key": "ondansetron",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "День 1 — високий еметогенний ризик; у день 2 протокол дає 8 мг один раз (виставляють вручну).",
+        "en": "Day 1 is highly emetogenic; on day 2 the protocol gives 8 mg once, which is set by hand."
+      }
+    },
+    {
+      "key": "metoclopramide",
+      "drug_id": "metoclopramide",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Протокол дозволяє 10-20 мг тричі на добу; взято нижню межу.",
+        "en": "The protocol allows 10 to 20 mg three times a day; the lower bound is used."
+      },
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Верхня межа діапазону",
+            "en": "The upper bound of the range"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.127 Brentuximab vedotin in combination with CHP",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-127-brentuximab-with-chp.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини разом із гідратацією, 7 днів у першому циклі. При нирковій недостатності дозу зменшують.",
+        "en": "Tumour lysis prophylaxis with hydration, for 7 days in the first cycle. The dose is reduced in renal impairment."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Противірусна профілактика на весь час лікування і ще 3 місяці після нього.",
+        "en": "Antiviral prophylaxis throughout treatment and for three months after."
+      }
+    },
+    {
+      "key": "omeprazole",
+      "drug_id": "omeprazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Захист шлунка в дні преднізолону.",
+        "en": "Gastric protection on the prednisolone days."
+      }
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "miu_kg",
+      "days": [6, 7, 8, 9, 10, 11, 12],
+      "notes": {
+        "uk": "З дня 6, 7 днів.",
+        "en": "From day 6, for 7 days."
+      }
+    }
+  ]
+}
