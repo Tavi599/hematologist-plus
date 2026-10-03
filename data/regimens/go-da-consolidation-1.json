@@ -1,0 +1,88 @@
+{
+  "$comment": "Консолідація 1 і 2 різняться лише кількістю днів даунорубіцину — один проти двох.",
+  "id": "go-da-consolidation-1",
+  "short_name": "GO+DA (консолідація 1)",
+  "name": {
+    "uk": "Гемтузумаб озогаміцин + даунорубіцин і цитарабін, консолідація, цикл 1",
+    "en": "Gemtuzumab ozogamicin with daunorubicin and cytarabine, consolidation, cycle 1"
+  },
+  "description": {
+    "uk": "Перший цикл консолідації після повної ремісії. Починають, коли нейтрофіли перевищать 1×10⁹/л, а тромбоцити 100×10⁹/л. Цикл придатний для амбулаторного введення.",
+    "en": "The first consolidation cycle after a complete remission. It starts once neutrophils exceed 1x10^9/L and platelets 100x10^9/L. The cycle is suitable for ambulatory administration."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.80 Gemtuzumab Ozogamicin + DA + IDAC",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-80-gemtuzumab-ozogamicin-da-cytarabine.pdf",
+      "version": "06.2025",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За годину до гемтузумабу. Протокол додає хлорфенамін 10 мг і гідрокортизону натрію сукцинат 100 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "An hour before the gemtuzumab. The protocol adds chlorphenamine 10 mg and hydrocortisone sodium succinate 100 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "gemtuzumab-ozogamicin",
+      "drug_id": "gemtuzumab-ozogamicin",
+      "route": "iv_infusion",
+      "dose_value": 3,
+      "dose_unit": "mg_m2",
+      "cap_amount": 5,
+      "days": [1],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 2 години, концентрація 0,075-0,234 мг/мл, через вбудований фільтр 0,2 мкм із низьким зв'язуванням білка. Більше, ніж можна витягти з флакона на 5 мг, не вводять — звідси стеля разової дози.",
+        "en": "In 50 mL of 0.9% sodium chloride over 2 hours at 0.075 to 0.234 mg/mL, through a 0.2 micron low protein-binding in-line filter. No more than the extractable content of a 5 mg vial is given, which is where the cap comes from."
+      }
+    },
+    {
+      "key": "daunorubicin",
+      "drug_id": "daunorubicin",
+      "route": "iv_infusion",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl за 30 хвилин.",
+        "en": "In 250 mL of 0.9% sodium chloride over 30 minutes."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Двічі на добу, кожна доза в 250 мл 0,9% NaCl за 3 години.",
+        "en": "Twice a day, each dose in 250 mL of 0.9% sodium chloride over 3 hours."
+      }
+    }
+  ]
+}

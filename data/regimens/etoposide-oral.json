@@ -1,0 +1,53 @@
+{
+  "$comment": "Протокол нарощує тижневу дозу щодва тижні, якщо лейкоцити не падають. Тижневі дози задані як альтернативні, бо змінюється не разова доза, а кількість днів приймання: разова лишається 50 або 100 мг.",
+  "id": "etoposide-oral",
+  "short_name": "Етопозид (усередину)",
+  "name": {
+    "uk": "Етопозид усередину, паліативна схема",
+    "en": "Oral etoposide, palliative"
+  },
+  "description": {
+    "uk": "Друга лінія паліативного лікування мієлоїдних захворювань: гострої мієлоїдної лейкемії, мієлопроліферативних хвороб і їх перекриття з мієлодиспластичним синдромом. Зареєстроване показання — рецидивна або рефрактерна ГМЛ. Пероральний етопозид не взаємозамінний з ін'єкційним: у них різні доза, розклад і показання. Перед початком нейтрофіли мають перевищувати 1×10⁹/л, а тромбоцити 50×10⁹/л — якщо тільки цитопенія не зумовлена самою хворобою. Схема нарощується щодва тижні, якщо лейкоцити не знижуються або знижуються менш як на 20%: тижні 1-2 — 150 мг на тиждень (наприклад, 50 мг у понеділок, середу, п'ятницю); тижні 3-4 — 300 мг на тиждень (50 мг щодня, крім неділі); тижні 5-6 — 450 мг на тиждень; тижні 7-8 — 600 мг на тиждень. Дозу далі підбирають так, щоб лейкоцити трималися 5-10×10⁹/л, нейтрофіли понад 1×10⁹/л, тромбоцити не нижче 50×10⁹/л, а гемоглобін понад 100 г/л. Лікують, доки є клінічна користь. У схемі закладено стартовий тиждень; наступні рівні виставляють днями й дозою вручну.",
+    "en": "Second-line palliative treatment of myeloid disease: acute myeloid leukaemia, myeloproliferative disease and the overlap with myelodysplastic syndrome. The licensed indication is relapsed or refractory AML. Oral etoposide is not interchangeable with the injection: the dose, the schedule and the indication all differ. Before starting, neutrophils must exceed 1x10^9/L and platelets 50x10^9/L, unless the disease itself explains the cytopenia. The schedule escalates every two weeks while the white count does not fall, or falls by less than 20%: weeks 1 and 2, 150 mg a week (say 50 mg on Monday, Wednesday and Friday); weeks 3 and 4, 300 mg a week (50 mg daily except Sunday); weeks 5 and 6, 450 mg a week; weeks 7 and 8, 600 mg a week. The dose is then adjusted to hold the white count at 5 to 10x10^9/L, the neutrophils above 1x10^9/L, the platelets at 50x10^9/L or more and the haemoglobin above 100 g/L. Treatment continues while it benefits the patient. The regimen holds the starting week; the later levels are set by hand through the days and the dose."
+  },
+  "cycle_length_days": 7,
+  "default_cycles": 8,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.37 Etoposide (oral)",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-37-etoposide-oral.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 3, 5],
+      "notes": {
+        "uk": "Капсули приймають натщесерце. Стартовий рівень: 150 мг на тиждень — 50 мг тричі на тиждень. На вищих рівнях разова доза лишається 50 мг або зростає до 100 мг, а змінюється передусім кількість днів приймання.",
+        "en": "The capsules are taken on an empty stomach. The starting level is 150 mg a week, 50 mg three times a week. At the higher levels the single dose stays at 50 mg or rises to 100 mg; what mainly changes is how many days it is taken."
+      },
+      "dose_options": [
+        {
+          "dose_value": 100,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Вищі рівні, де частину днів дають по 100 мг",
+            "en": "The higher levels, where some days take 100 mg"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.37 Etoposide (oral)",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-37-etoposide-oral.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}

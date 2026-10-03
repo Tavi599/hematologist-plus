@@ -1,0 +1,57 @@
+{
+  "$comment": "Другий цикл індукції дають лише за результатом біопсії і вже без гемтузумабу; дози даунорубіцину й цитарабіну інші.",
+  "id": "da-idac-induction-2",
+  "short_name": "DA+IDAC (індукція 2)",
+  "name": {
+    "uk": "Даунорубіцин і цитарабін у проміжній дозі, індукція, цикл 2",
+    "en": "Daunorubicin with intermediate-dose cytarabine, induction, cycle 2"
+  },
+  "description": {
+    "uk": "Другий цикл індукції, потрібний лише тоді, коли біопсія показала клінічно значущу залишкову лейкемію. Гемтузумаб у цьому циклі не дають. Починають, коли нейтрофіли перевищать 1×10⁹/л, а тромбоцити 100×10⁹/л.",
+    "en": "A second induction cycle, needed only where the biopsy showed clinically significant residual leukaemia. No gemtuzumab is given in it. It starts once neutrophils exceed 1x10^9/L and platelets 100x10^9/L."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.80 Gemtuzumab Ozogamicin + DA + IDAC",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-80-gemtuzumab-ozogamicin-da-cytarabine.pdf",
+      "version": "06.2025",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "daunorubicin",
+      "drug_id": "daunorubicin",
+      "route": "iv_infusion",
+      "dose_value": 35,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl за 30 хвилин.",
+        "en": "In 250 mL of 0.9% sodium chloride over 30 minutes."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Двічі на добу, кожна доза в 250 мл 0,9% NaCl за 3 години.",
+        "en": "Twice a day, each dose in 250 mL of 0.9% sodium chloride over 3 hours."
+      }
+    }
+  ]
+}

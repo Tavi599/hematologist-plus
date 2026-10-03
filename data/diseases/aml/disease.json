@@ -74,6 +74,20 @@
         },
         {
           "regimen_id": "flag-ida-ven-induction"
+        },
+        {
+          "regimen_id": "go-da-induction",
+          "notes": {
+            "uk": "CD33-позитивна ГМЛ",
+            "en": "CD33-positive AML"
+          }
+        },
+        {
+          "regimen_id": "da-idac-induction-2",
+          "notes": {
+            "uk": "Другий цикл за біопсією",
+            "en": "A second cycle by biopsy"
+          }
         }
       ]
     },
@@ -94,6 +108,20 @@
         },
         {
           "regimen_id": "flag-ida-ven-consolidation"
+        },
+        {
+          "regimen_id": "go-da-consolidation-1",
+          "notes": {
+            "uk": "Цикл 1",
+            "en": "Cycle 1"
+          }
+        },
+        {
+          "regimen_id": "go-da-consolidation-2",
+          "notes": {
+            "uk": "Цикл 2",
+            "en": "Cycle 2"
+          }
         }
       ]
     },
@@ -171,6 +199,13 @@
           "notes": {
             "uk": "Мутація IDH1 R132",
             "en": "An IDH1 R132 mutation"
+          }
+        },
+        {
+          "regimen_id": "etoposide-oral",
+          "notes": {
+            "uk": "Паліативна схема",
+            "en": "A palliative regimen"
           }
         }
       ]
