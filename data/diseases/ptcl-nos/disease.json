@@ -72,15 +72,21 @@
         "en": "Relapsed and refractory disease"
       },
       "description": {
-        "uk": "Варіанти: брентуксимаб ведотин (залежно від експресії CD30), DHAP, GDP, ICE, IVAC-MTX; при TFHL — азацитидин. Придатним пацієнтам розглядають алогенну трансплантацію. У довіднику є GDP (без ритуксимабу) і брентуксимаб у монорежимі.",
-        "en": "Options are brentuximab vedotin (by CD30 status), DHAP, GDP, ICE, IVAC-MTX, and azacitidine in TFHL. Allogeneic transplantation is considered in eligible patients. The catalog holds GDP (without rituximab) and brentuximab monotherapy."
+        "uk": "Варіанти: брентуксимаб ведотин (залежно від експресії CD30), DHAP, GDP, ICE, IVAC-MTX; при TFHL — азацитидин. Придатним пацієнтам розглядають алогенну трансплантацію. Пухлина CD20-негативна, тому схеми тут — без ритуксимабу.",
+        "en": "Options are brentuximab vedotin (by CD30 status), DHAP, GDP, ICE, IVAC-MTX, and azacitidine in TFHL. Allogeneic transplantation is considered in eligible patients. The disease is CD20-negative, so none of these regimens carries rituximab."
       },
       "regimens": [
         {
-          "regimen_id": "r-gdp",
+          "regimen_id": "gdp"
+        },
+        {
+          "regimen_id": "ice"
+        },
+        {
+          "regimen_id": "dhaox",
           "notes": {
-            "uk": "Без ритуксимабу: пухлина CD20-негативна",
-            "en": "Without rituximab: the disease is CD20-negative"
+            "uk": "Оксаліплатиновий варіант DHAP: коли цисплатин небажаний через нирки або слух",
+            "en": "The oxaliplatin version of DHAP: when cisplatin is unwanted because of the kidneys or hearing"
           }
         },
         {
@@ -91,10 +97,10 @@
           }
         },
         {
-          "regimen_id": "r-vp",
+          "regimen_id": "vp",
           "notes": {
-            "uk": "Паліативна схема; при Т-клітинній лімфомі ритуксимаб не дають",
-            "en": "A palliative regimen; in T-cell lymphoma the rituximab is omitted"
+            "uk": "Паліативна схема",
+            "en": "A palliative regimen"
           }
         }
       ]

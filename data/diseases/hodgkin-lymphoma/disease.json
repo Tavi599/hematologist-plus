@@ -115,15 +115,45 @@
         "en": "Relapsed and refractory disease"
       },
       "description": {
-        "uk": "Сальвадж-хіміотерапія з наступною аутологічною трансплантацією. Прийнятні схеми: DHAP, ESHAP, GDP, ICE, BEGEV, GVD — у довіднику наразі лише GDP (ритуксимаб не вводиться, бо пухлина CD20-негативна). Після трансплантації при високому ризику — підтримка брентуксимабом. Хто непридатний до трансплантації або має рецидив після неї і не отримував інгібіторів PD-1 — пембролізумаб має перевагу над брентуксимабом.",
-        "en": "Salvage chemotherapy followed by autologous transplantation. Acceptable regimens are DHAP, ESHAP, GDP, ICE, BEGEV and GVD - only GDP is in the catalog (rituximab omitted, the disease being CD20-negative). Brentuximab maintenance after transplantation is for high-risk features. For patients unsuitable for or relapsing after transplantation who are PD-1-naive, pembrolizumab is favoured over brentuximab."
+        "uk": "Сальвадж-хіміотерапія з наступною аутологічною трансплантацією: стовбурові клітини збирають після першого-другого циклу, тому схему обирають і за її мобілізаційною здатністю. Класична лімфома Ходжкіна CD20-негативна, тому всі схеми тут — без ритуксимабу. Після трансплантації при високому ризику — підтримка брентуксимабом. Хто непридатний до трансплантації або має рецидив після неї і не отримував інгібіторів PD-1, — пембролізумаб має перевагу над брентуксимабом.",
+        "en": "Salvage chemotherapy followed by autologous transplantation: stem cells are collected after the first or second cycle, so the regimen is chosen partly for how well it mobilises. Classical Hodgkin lymphoma is CD20-negative, so none of these regimens carries rituximab. Brentuximab maintenance after transplantation is for high-risk features. For patients unsuitable for or relapsing after transplantation who are PD-1-naive, pembrolizumab is favoured over brentuximab."
       },
       "regimens": [
         {
-          "regimen_id": "r-gdp",
+          "regimen_id": "igev",
           "notes": {
-            "uk": "Без ритуксимабу: лімфома Ходжкіна CD20-негативна",
-            "en": "Without rituximab: Hodgkin lymphoma is CD20-negative"
+            "uk": "Створена саме для лімфоми Ходжкіна; найкраще мобілізує стовбурові клітини",
+            "en": "Designed for Hodgkin lymphoma; the best stem cell mobiliser here"
+          }
+        },
+        {
+          "regimen_id": "ice"
+        },
+        {
+          "regimen_id": "gdp"
+        },
+        {
+          "regimen_id": "eshap"
+        },
+        {
+          "regimen_id": "dhaox",
+          "notes": {
+            "uk": "Оксаліплатиновий варіант DHAP: коли цисплатин небажаний через нирки або слух",
+            "en": "The oxaliplatin version of DHAP: when cisplatin is unwanted because of the kidneys or hearing"
+          }
+        },
+        {
+          "regimen_id": "mini-beam",
+          "notes": {
+            "uk": "Міст до трансплантації після невдалої попередньої сальвадж-схеми; стовбурові клітини збирають до неї",
+            "en": "A bridge to transplantation after a failed previous salvage; stem cells are harvested first"
+          }
+        },
+        {
+          "regimen_id": "gem-ox",
+          "notes": {
+            "uk": "Коли високодозова терапія з трансплантацією не підходить",
+            "en": "When high-dose therapy with transplantation is not an option"
           }
         },
         {
@@ -134,19 +164,6 @@
         },
         {
           "regimen_id": "brentuximab-mono"
-        },
-        {
-          "regimen_id": "r-ice"
-        },
-        {
-          "regimen_id": "r-gem-ox",
-          "notes": {
-            "uk": "Gem-Ox без ритуксимабу, поза інструкцією",
-            "en": "Gem-Ox without rituximab, off-label"
-          }
-        },
-        {
-          "regimen_id": "r-dhaox"
         },
         {
           "regimen_id": "chlvpp",

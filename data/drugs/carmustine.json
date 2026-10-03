@@ -1,0 +1,48 @@
+{
+  "$comment": "Внесено 2026-10-03 разом зі схемою mini-BEAM: препарат називався в сальвадж-схемі лімфоми Ходжкіна, але в довіднику його не було. Реєстрація звірена за відкритими даними Державного реєстру (БіКНУ-100 мг, ліофілізат для розчину для інфузій по 100 мг).",
+  "id": "carmustine",
+  "name": {
+    "uk": "Кармустин",
+    "en": "Carmustine"
+  },
+  "trade_names": ["БіКНУ"],
+  "atc_code": "L01AD01",
+  "dose_units": ["mg_m2"],
+  "notes": {
+    "uk": "Нітрозосечовина. Ліофілізат розчиняють доданим стерильним розчинником (безводний етанол), далі розводять у 5% глюкозі; падіння тиску й почервоніння під час інфузії пов'язані саме зі спиртом у розчиннику, тому вводять не швидше ніж за годину. Легенева токсичність залежить від сумарної дози й може проявитися через роки.",
+    "en": "A nitrosourea. The lyophilisate is reconstituted with the supplied sterile diluent (absolute ethanol) and then diluted in 5% glucose; the hypotension and flushing seen during the infusion come from that ethanol, so it is given over no less than an hour. Pulmonary toxicity is cumulative and may appear years later."
+  },
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України, відкриті дані (reestr-lz.csv)",
+      "version": "вивантаження з data.gov.ua",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "NSSG Oxford Haematology, L.30 Mini-BEAM Modified (розчинник, об'єм і тривалість інфузії)",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-30-mini-beam-modified.pdf",
+      "version": "3.0 (09.2025)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v100",
+      "form": "vial",
+      "strength_amount": 100,
+      "label": {
+        "uk": "ліофілізат 100 мг з розчинником",
+        "en": "100 mg lyophilisate with diluent"
+      }
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "glucose-500",
+      "solvent": "glucose_5",
+      "bag_volumes_ml": [500],
+      "duration_min": 60,
+      "is_default": true
+    }
+  ]
+}

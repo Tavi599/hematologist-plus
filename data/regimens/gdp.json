@@ -1,14 +1,14 @@
 {
-  "$comment": "Дози - протокол NSSG Oxford L.62 R-GDP (вер. 2.1, листопад 2025). Пре- і постгідратація (0,9% NaCl 500 мл, далі 1000 мл з калію хлоридом 20 ммоль і магнію сульфатом 10 ммоль) у довідник не внесена: розчини й електроліти не є препаратами довідника, вона описана приміткою до цисплатину. При CD20-негативній пухлині ритуксимаб за протоколом не вводиться (схема GDP).",
-  "id": "r-gdp",
-  "short_name": "R-GDP",
+  "$comment": "Безритуксимабний варіант схеми за тим самим протоколом NSSG Oxford L.62: сам протокол передбачає, що при CD20-негативній пухлині ритуксимаб не вводиться. Для лімфоми Ходжкіна та Т-клітинних лімфом беруть цю схему, а не R-GDP, щоб ритуксимаб не потрапив у розрахунок і в бланк. Пре- і постгідратація (0,9% NaCl 500 мл, далі 1000 мл з калію хлоридом 20 ммоль і магнію сульфатом 10 ммоль) у довідник не внесена: розчини й електроліти не є препаратами довідника, вона описана приміткою до цисплатину.",
+  "id": "gdp",
+  "short_name": "GDP",
   "name": {
-    "uk": "R-GDP (ритуксимаб + гемцитабін + дексаметазон + цисплатин)",
-    "en": "R-GDP (rituximab, gemcitabine, dexamethasone, cisplatin)"
+    "uk": "GDP (гемцитабін + дексаметазон + цисплатин)",
+    "en": "GDP (gemcitabine, dexamethasone, cisplatin)"
   },
   "description": {
-    "uk": "Дексаметазон дні 1-4, ритуксимаб і цисплатин у день 1, гемцитабін у дні 1 і 8. Цикл 21 день.",
-    "en": "Dexamethasone on days 1-4, rituximab and cisplatin on day 1, gemcitabine on days 1 and 8. 21-day cycle."
+    "uk": "Дексаметазон дні 1-4, цисплатин у день 1, гемцитабін у дні 1 і 8. Цикл 21 день.",
+    "en": "Dexamethasone on days 1-4, cisplatin on day 1, gemcitabine on days 1 and 8. 21-day cycle."
   },
   "cycle_length_days": 21,
   "default_cycles": 3,
@@ -29,49 +29,8 @@
       "dose_unit": "mg_flat",
       "days": [1, 2, 3, 4],
       "notes": {
-        "uk": "Уранці під час їди або відразу після; у день ритуксимабу - за 30-60 хв до інфузії",
-        "en": "In the morning with or just after food; on the rituximab day 30-60 minutes before the infusion"
-      }
-    },
-    {
-      "key": "paracetamol",
-      "drug_id": "paracetamol",
-      "role": "premedication",
-      "route": "oral",
-      "dose_value": 1000,
-      "dose_unit": "mg_flat",
-      "days": [1],
-      "notes": {
-        "uk": "За 30-60 хв до ритуксимабу",
-        "en": "30-60 minutes before rituximab"
-      }
-    },
-    {
-      "key": "diphenhydramine",
-      "drug_id": "diphenhydramine",
-      "role": "premedication",
-      "route": "iv_infusion",
-      "dose_value": 50,
-      "dose_unit": "mg_flat",
-      "days": [1],
-      "duration_min": 30,
-      "fallback_solvent": "sodium_chloride_0_9",
-      "fallback_volume_ml": 100,
-      "notes": {
-        "uk": "Димедрол 1% - 5,0 мл (замість хлорфенаміну протоколу)",
-        "en": "Diphenhydramine 1% 5.0 mL (replaces the protocol's chlorphenamine)"
-      }
-    },
-    {
-      "key": "rituximab",
-      "drug_id": "rituximab",
-      "route": "iv_infusion",
-      "dose_value": 375,
-      "dose_unit": "mg_m2",
-      "days": [1],
-      "notes": {
-        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. За браком часу ритуксимаб можна ввести днем раніше або днем пізніше за гемцитабін і цисплатин. При CD20-негативній пухлині не вводиться.",
-        "en": "In 500 mL 0.9% NaCl, maximum rate 400 mg/h. If time is short, rituximab may be given the day before or after gemcitabine and cisplatin. Omitted in CD20-negative disease."
+        "uk": "Уранці під час їди або відразу після",
+        "en": "In the morning with or just after food"
       }
     },
     {

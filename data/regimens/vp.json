@@ -1,0 +1,56 @@
+{
+  "$comment": "Безритуксимабний варіант схеми за протоколом NSSG Oxford L.40. Паліативна схема з малою токсичністю для пацієнтів, яким інтенсивне лікування не підходить.",
+  "id": "vp",
+  "short_name": "VP",
+  "name": {
+    "uk": "VP (вінбластин + преднізолон)",
+    "en": "VP (vinblastine, prednisolone)"
+  },
+  "description": {
+    "uk": "Преднізолон щодня, вінбластин у дні 1 і 15. Цикл 28 днів.",
+    "en": "Prednisolone daily, vinblastine on days 1 and 15. 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.40 R-VP",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-40-r-vp.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 30,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Уранці під час їди; у день 1 — щонайменше за 30 хвилин до ритуксимабу. Безперервний курс стероїду — за рішенням лікаря. Після 4-6 циклів дозу радять зменшити.",
+        "en": "In the morning with food; on day 1, at least 30 minutes before the rituximab. A continuous steroid course is at the clinician's discretion. Beyond cycles 4 to 6 a reduction is advised."
+      }
+    },
+    {
+      "key": "vinblastine",
+      "drug_id": "vinblastine",
+      "route": "iv_infusion",
+      "dose_value": 6,
+      "dose_unit": "mg_m2",
+      "cap_amount": 10,
+      "days": [1, 15],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 10 хвилин, разова доза не більш як 10 мг.",
+        "en": "In 50 mL of 0.9% sodium chloride over 10 minutes, no single dose above 10 mg."
+      }
+    }
+  ]
+}

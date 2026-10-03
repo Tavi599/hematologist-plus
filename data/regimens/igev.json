@@ -1,0 +1,138 @@
+{
+  "$comment": "Дози — первинна публікація Santoro A. та ін., Haematologica 2007;92(1):35-41. Схема створена саме для лімфоми Ходжкіна, а не запозичена з неходжкінських. Протиблювотну терапію публікація не описує, тому в схему вона не внесена: її призначають за протоколом відділення. Г-КСФ у дослідженні давали (ленограстим) — доза й дні в цій публікації не наведені, тож окремою позицією не внесені, щоб не вигадувати значення.",
+  "id": "igev",
+  "short_name": "IGEV",
+  "name": {
+    "uk": "IGEV (іфосфамід + гемцитабін + вінорелбін + преднізолон)",
+    "en": "IGEV (ifosfamide, gemcitabine, vinorelbine, prednisolone)"
+  },
+  "description": {
+    "uk": "Іфосфамід із месною дні 1-4, гемцитабін у дні 1 і 4, вінорелбін у день 1, преднізолон дні 1-4. Цикл 21 день, зазвичай 4 цикли. Сальвадж-схема при рефрактерній або рецидивній лімфомі Ходжкіна; добре мобілізує стовбурові клітини, тому її часто беруть перед аутологічною трансплантацією. Г-КСФ після циклу — за протоколом відділення.",
+    "en": "Ifosfamide with mesna on days 1-4, gemcitabine on days 1 and 4, vinorelbine on day 1, prednisolone on days 1-4. A 21-day cycle, usually four cycles. Salvage for refractory or relapsed Hodgkin lymphoma; it mobilises stem cells well, so it is often chosen before autologous transplantation. G-CSF after the cycle follows local policy."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "Santoro A. та ін. Ifosfamide, gemcitabine, and vinorelbine: a new induction regimen for refractory and relapsed Hodgkin's lymphoma. Haematologica. 2007;92(1):35-41",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17229633/",
+      "version": "дослідження фази II, 91 пацієнт",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Проспективне дослідження однієї групи без рандомізації. Дози фіксовані, цикл 21 день, відповідь оцінювали після 4 циклів, далі — збір стовбурових клітин і високодозова терапія.",
+      "en": "A prospective single-arm study without randomisation. Fixed doses, a 21-day cycle, response assessed after four cycles, then stem cell collection and high-dose therapy."
+    },
+    "population": {
+      "uk": "91 пацієнт із рефрактерною або рецидивною лімфомою Ходжкіна.",
+      "en": "91 patients with refractory or relapsed Hodgkin lymphoma."
+    },
+    "results": {
+      "uk": "Повна ремісія у 53,8%, часткова — у 27,5%; загальна відповідь 81,3%. Прогноз залежав від відповіді на попередню хіміотерапію та від ураження трьох і більше ділянок. Достатню мобілізацію стовбурових клітин отримали 98,7% пацієнтів.",
+      "en": "Complete remission in 53.8% and partial response in 27.5%, an overall response of 81.3%. Response to prior chemotherapy and involvement of three or more sites predicted the outcome. Adequate stem cell mobilisation was achieved in 98.7%."
+    },
+    "conduct": {
+      "uk": "Токсичність була керованою: затримок циклів і зниження доз майже не знадобилося. Іфосфамід вводять на тлі гіпергідратації 2000 мл фізіологічного розчину й під прикриттям месни — без них ризикують геморагічним циститом та енцефалопатією.",
+      "en": "Toxicity was manageable, with few delays or dose reductions. Ifosfamide is given with 2000 mL saline hyperhydration and mesna cover; without them the risks are haemorrhagic cystitis and encephalopathy."
+    },
+    "appraisal": [
+      {
+        "publication": "Santoro A. та ін. Haematologica. 2007;92(1):35-41",
+        "pmid": "17229633",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Усі пацієнти отримували ту саму схему, групи порівняння не було. За оксфордською шкалою це 4-й рівень.",
+            "en": "Every patient had the same regimen and there was no comparison group. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial", "Journal Article"],
+        "journal": {
+          "name": "Haematologica",
+          "issn": "1592-8721",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/17229633/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-03"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Haematologica» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0417435",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-03"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-03"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4]
+    },
+    {
+      "key": "vinorelbine",
+      "drug_id": "vinorelbine",
+      "route": "iv_bolus",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 800,
+      "dose_unit": "mg_m2",
+      "days": [1, 4],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250
+    },
+    {
+      "key": "ifosfamide",
+      "drug_id": "ifosfamide",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "За 2 години, на тлі гіпергідратації 2000 мл фізіологічного розчину на добу",
+        "en": "Over two hours, with 2000 mL saline hyperhydration a day"
+      }
+    },
+    {
+      "key": "mesna",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 2600,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "Разом з іфосфамідом, захист сечового міхура. Публікація не наводить розчинника, об'єму й тривалості введення месни — їх беруть за практикою відділення, тому калькулятор об'єм розчинника тут не рахує.",
+        "en": "With the ifosfamide, to protect the bladder. The publication gives no diluent, volume or infusion time for the mesna — these follow local practice, so the calculator does not work out a solvent volume here."
+      }
+    }
+  ]
+}
