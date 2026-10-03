@@ -15,9 +15,15 @@ import {
 import {
   AMOUNT_UNITS,
   DOSE_UNITS,
+  DRUG_AVAILABILITY,
+  ITEM_ROLES,
   localizedTextSchema,
+  PRESENTATION_FORMS,
   reviewRulesSchema,
+  ROUTES,
   SCHEDULE_BLOCKS,
+  SOLVENTS,
+  TREATMENT_NODE_KINDS,
 } from './common'
 import { printFormsRowSchema } from './print-forms'
 import { proposalRowSchema } from './proposals'
@@ -201,5 +207,98 @@ describe('shared schemas', () => {
     expect(
       printFormsRowSchema.safeParse({ version: 1, forms: [{ ...form, itemIds: [] }] }).success,
     ).toBe(false)
+  })
+  it('survives a label this copy of the app does not know yet', () => {
+    // A node kind added by a later migration must not fail the whole catalog load: that is what
+    // left an installed copy with nothing to show when the trial kind arrived.
+    const node = {
+      id: 'mm.trials',
+      disease_id: 'mm',
+      parent_id: null,
+      kind: 'something-added-later',
+      title: { uk: 'Розділ' },
+      description: null,
+      sort_order: 0,
+    }
+    expect(catalogRowSchemas.treatment_nodes.parse(node).kind).toBe('group')
+
+    const drug = {
+      id: 'drug',
+      name: { uk: 'Препарат' },
+      trade_names: [],
+      atc_code: null,
+      review_rules: null,
+      notes: null,
+      sort_order: 0,
+      sources: [],
+      availability: 'added-later',
+      amount_unit: 'mg',
+      dose_units: [],
+      max_single_dose_amount: null,
+      unit_equivalence: null,
+    }
+    expect(catalogRowSchemas.drugs.parse(drug).availability).toBe('registered')
+  })
+
+  it('still fails on a value that would change a dose or a sheet', () => {
+    const drug = {
+      id: 'drug',
+      name: { uk: 'Препарат' },
+      trade_names: [],
+      atc_code: null,
+      review_rules: null,
+      notes: null,
+      sort_order: 0,
+      sources: [],
+      availability: 'department',
+      amount_unit: 'mg',
+      dose_units: ['mg_per_fortnight'],
+      max_single_dose_amount: null,
+      unit_equivalence: null,
+    }
+    expect(catalogRowSchemas.drugs.safeParse(drug).success).toBe(false)
+    expect(catalogRowSchemas.drugs.safeParse({ ...drug, amount_unit: 'spoonful' }).success).toBe(
+      false,
+    )
+  })
+  it('keeps every enum the same as the check constraint that guards its column', () => {
+    // These lists are written twice: once in TypeScript and once as a check constraint. A value
+    // added to one and not the other passes validation and the build, and then the sync fails
+    // against the live database — or, worse, a row is rejected in the middle of a transaction.
+    const constraints = new Map<string, string[]>()
+    const values = (list: string) =>
+      [...list.matchAll(/'([^']+)'/g)].map((match) => match[1]!).sort()
+
+    for (const table of sql.matchAll(/create table public\.(\w+) \(\n([\s\S]*?)\n\);/g)) {
+      for (const column of table[2]!.matchAll(/^ {2}(\w+)[\s\S]*?check \(\1 in \(([^)]*)\)\)/gm)) {
+        constraints.set(`${table[1]}.${column[1]}`, values(column[2]!))
+      }
+    }
+    // Columns added later, and constraints a later migration replaced, both win over the above.
+    for (const added of sql.matchAll(
+      /alter table public\.(\w+)\s+add column (\w+)[\s\S]*?check \(\2 in \(([^)]*)\)\)/g,
+    )) {
+      constraints.set(`${added[1]}.${added[2]}`, values(added[3]!))
+    }
+    for (const replaced of sql.matchAll(
+      /alter table public\.(\w+)\s+add constraint \w+\s+check \((\w+) in \(([\s\S]*?)\)\)/g,
+    )) {
+      constraints.set(`${replaced[1]}.${replaced[2]}`, values(replaced[3]!))
+    }
+
+    const expected: Record<string, readonly string[]> = {
+      'drugs.availability': DRUG_AVAILABILITY,
+      'drugs.amount_unit': AMOUNT_UNITS,
+      'drug_presentations.form': PRESENTATION_FORMS,
+      'drug_infusion_params.solvent': SOLVENTS,
+      'regimen_items.role': ITEM_ROLES,
+      'regimen_items.route': ROUTES,
+      'regimen_items.dose_unit': DOSE_UNITS,
+      'regimen_items.block': SCHEDULE_BLOCKS,
+      'treatment_nodes.kind': TREATMENT_NODE_KINDS,
+    }
+    for (const [column, list] of Object.entries(expected)) {
+      expect(constraints.get(column), column).toEqual([...list].sort())
+    }
   })
 })

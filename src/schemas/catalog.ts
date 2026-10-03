@@ -62,7 +62,8 @@ export const drugRowSchema = z.object({
   notes: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
   sources: sourcesSchema,
-  availability: drugAvailabilitySchema,
+  /** Label and filter only: an unknown value shows the drug rather than hiding it. */
+  availability: drugAvailabilitySchema.catch('registered'),
   /** Unit the pack strengths and caps of this drug are in. */
   amount_unit: amountUnitSchema,
   /** Dose units this drug is officially prescribed in; empty means unrestricted. */
@@ -108,6 +109,18 @@ export const drugInfusionParamsRowSchema = z
     { message: 'concentration_min_mg_ml must not exceed concentration_max_mg_ml' },
   )
 
+/**
+ * Rows are read with `z.object`, so a column this copy of the app does not know about is simply
+ * ignored and a new column cannot break an installed copy. A new *value* of an existing enum used
+ * to break one all the same: one unknown `treatment_nodes.kind` failed the whole catalog load and
+ * left the app with nothing to show. So the enums below that only decide how something is labelled
+ * fall back to a known value instead of failing.
+ *
+ * This is deliberately limited to labels. An unknown dose unit, amount unit, route, solvent or
+ * schedule block must still fail the load: those drive arithmetic and the printed sheets, and
+ * guessing at them could put a wrong number in front of a physician. Failing loudly leaves the
+ * previous cached catalog in use and offers the reinstall button; guessing would not.
+ */
 export const regimenRowSchema = z.object({
   id: idSchema,
   short_name: nonEmptyTextSchema,
@@ -182,8 +195,9 @@ export const diseaseArticleRowSchema = z.object({
   language: z.enum(['uk', 'en']),
   body: nonEmptyTextSchema,
   sort_order: sortOrderSchema,
-  /** Which source this text was written from; defaulted for a database without the column. */
-  section: articleSectionSchema.default('own'),
+  /** Which source this text was written from; defaulted for a database without the column,
+   *  and for a source this copy does not know the article is still shown. */
+  section: articleSectionSchema.default('own').catch('own'),
 })
 
 /**
@@ -211,7 +225,8 @@ export const treatmentNodeRowSchema = z.object({
   id: idSchema,
   disease_id: idSchema,
   parent_id: idSchema.nullable(),
-  kind: treatmentNodeKindSchema,
+  /** Badge only: a kind added after this copy was installed reads as a plain group. */
+  kind: treatmentNodeKindSchema.catch('group'),
   title: localizedTextSchema,
   description: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
