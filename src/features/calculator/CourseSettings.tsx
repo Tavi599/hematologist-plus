@@ -106,13 +106,9 @@ export function CourseSettings({
           renderOption={({ option }) => (
             <Group gap="xs" wrap="nowrap" justify="space-between" w="100%">
               <span>{option.label}</span>
-              {availability.get(option.value) !== 'department' && (
-                <Badge
-                  size="xs"
-                  variant="light"
-                  color={availability.get(option.value) === 'unavailable' ? 'red' : 'yellow'}
-                >
-                  {t(`availability.${availability.get(option.value)!}`)}
+              {availability.get(option.value) === 'unavailable' && (
+                <Badge size="xs" variant="light" color="red">
+                  {t('availability.unavailable')}
                 </Badge>
               )}
             </Group>

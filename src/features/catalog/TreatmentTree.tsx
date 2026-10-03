@@ -109,14 +109,9 @@ function TreatmentNodeView({
             <Anchor component={Link} to={`${routes.calculator}?regimen=${regimen.id}`}>
               {regimen.short_name}
             </Anchor>
-            {availability !== 'department' && (
-              <Badge
-                size="xs"
-                variant="light"
-                color={availability === 'unavailable' ? 'red' : 'yellow'}
-                tt="none"
-              >
-                {t(`availability.${availability}`)}
+            {availability === 'unavailable' && (
+              <Badge size="xs" variant="light" color="red" tt="none">
+                {t('availability.unavailable')}
               </Badge>
             )}
             <Button

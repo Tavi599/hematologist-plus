@@ -1,6 +1,7 @@
 import { screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 
+import { demoCatalog } from '../../lib/catalog.fixture'
 import { indexCatalog } from '../../lib/catalog-index'
 import { emptyCatalog, type TreatmentNode } from '../../schemas/catalog'
 import { renderWithProviders } from '../../test/render'
@@ -30,6 +31,24 @@ describe('TreatmentTree', () => {
 
     expect(screen.getByText('Перша лінія')).toBeInTheDocument()
     expect(screen.getByText('Підгрупа')).toBeInTheDocument()
+  })
+
+  it('leaves a regimen unlabelled when every drug of it is registered', () => {
+    const rows = demoCatalog()
+    renderWithProviders(<TreatmentTree catalog={indexCatalog(rows)} diseaseId="dlbcl" />)
+
+    expect(screen.getByText('R-CHOP-21')).toBeInTheDocument()
+    // Registration is the ordinary case: a badge on it would sit on almost every regimen and
+    // say nothing. Only a drug the department cannot get at all is worth the physician's eye.
+    expect(screen.queryByText(/зареєстрований/)).not.toBeInTheDocument()
+  })
+
+  it('marks a regimen whose drug cannot be obtained', () => {
+    const rows = demoCatalog()
+    rows.drugs.find((drug) => drug.id === 'rituximab')!.availability = 'unavailable'
+    renderWithProviders(<TreatmentTree catalog={indexCatalog(rows)} diseaseId="dlbcl" />)
+
+    expect(screen.getByText('недоступний')).toBeInTheDocument()
   })
 
   it('says so when a disease has no treatment tree yet', () => {
