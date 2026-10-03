@@ -46,8 +46,21 @@
         {
           "name": "Дизайн відділення «CHOEP» (Google Таблиці)",
           "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "SmPC Doxorubicin 2 mg/ml concentrate (Seacross), розділ 6.6 (emc)",
+          "url": "https://www.medicines.org.uk/emc/product/8443/smpc",
+          "version": "редакція від 12.11.2024",
+          "checkedOn": "2026-10-03"
+        },
+        {
+          "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv): концентрація розчину чинних реєстрацій",
+          "url": "https://data.gov.ua/dataset/reestr_likarskyh_zasobiv_moz",
+          "version": "набір даних від 2023-11-10",
+          "checkedOn": "2026-10-03"
         }
-      ]
+      ],
+      "stock_concentration_mg_ml": 2
     }
   ]
 }

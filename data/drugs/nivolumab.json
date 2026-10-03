@@ -40,8 +40,16 @@
           "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-90-nivolumab.pdf",
           "version": "3.0 (07.2022)",
           "checkedOn": "2026-10-02"
+        },
+        {
+          "name": "SmPC OPDIVO 10 mg/mL concentrate, розділ 6.6 (emc)",
+          "url": "https://www.medicines.org.uk/emc/product/6888/smpc",
+          "version": "редакція від 18.08.2026",
+          "checkedOn": "2026-10-03"
         }
-      ]
+      ],
+      "concentration_max_mg_ml": 10,
+      "stock_concentration_mg_ml": 10
     }
   ]
 }

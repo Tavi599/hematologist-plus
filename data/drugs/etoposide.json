@@ -40,15 +40,39 @@
     {
       "key": "nacl",
       "solvent": "sodium_chloride_0_9",
-      "bag_volumes_ml": [500],
+      "bag_volumes_ml": [500, 1000],
       "is_default": true,
       "duration_min": 60,
       "sources": [
         {
           "name": "Дизайн відділення «CHOEP» (Google Таблиці)",
           "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "FDA label: Etoposide Injection, USP (Fresenius Kabi), Dosage and Administration — Preparation for Intravenous Administration",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fe870629-104d-4d67-a7c6-f53bc588121e",
+          "version": "SPL v7 від 03.08.2026",
+          "checkedOn": "2026-10-03"
+        },
+        {
+          "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv): концентрація розчину чинних реєстрацій",
+          "url": "https://data.gov.ua/dataset/reestr_likarskyh_zasobiv_moz",
+          "version": "набір даних від 2023-11-10",
+          "checkedOn": "2026-10-03"
+        },
+        {
+          "name": "NSSG Oxford Haematology, L.95 BEACOPDac-14 or BEACOPDac-escalated — етопозид у 1000 мл 0,9% NaCl",
+          "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-95-beacopdac-14-or-beacopdac-escalated.pdf",
+          "version": "перевірено 2026-10-03",
+          "checkedOn": "2026-10-03"
         }
-      ]
+      ],
+      "concentration_max_mg_ml": 0.4,
+      "stock_concentration_mg_ml": 20,
+      "notes": {
+        "uk": "Верхня межа 0,4 мг/мл — за інструкцією: вище можливий осад. Нижню межу інструкції (0,2 мг/мл) не внесено: вона стосується стабільності розчину, а не безпеки, і давала б попередження на тривалих інфузіях (DA-EPOCH-R, ESHAP, PACE), де етопозид свідомо розведено сильніше.",
+        "en": "Upper limit 0.4 mg/mL from the label: above it the drug may precipitate. The label's lower limit (0.2 mg/mL) is left out: it concerns the stability of the solution, not safety, and would flag the long infusions (DA-EPOCH-R, ESHAP, PACE) where etoposide is deliberately more dilute."
+      }
     }
   ]
 }

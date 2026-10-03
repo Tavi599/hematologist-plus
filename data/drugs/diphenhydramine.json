@@ -37,8 +37,15 @@
         {
           "name": "Дизайн відділення «Ритуксимаб» (Google Таблиці)",
           "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv): концентрація розчину чинних реєстрацій",
+          "url": "https://data.gov.ua/dataset/reestr_likarskyh_zasobiv_moz",
+          "version": "набір даних від 2023-11-10",
+          "checkedOn": "2026-10-03"
         }
-      ]
+      ],
+      "stock_concentration_mg_ml": 10
     }
   ]
 }
