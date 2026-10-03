@@ -452,6 +452,16 @@
           }
         },
         {
+          "regimen_id": "glofit-gemox-cycle-1",
+          "notes": {
+            "uk": "Другий і наступні рецидиви; eviQ 4601",
+            "en": "Second and later relapses; eviQ 4601"
+          }
+        },
+        {
+          "regimen_id": "glofit-gemox"
+        },
+        {
           "regimen_id": "glofitamab-cycle-1",
           "notes": {
             "uk": "Після двох і більше ліній; NICE TA927.",
@@ -523,9 +533,6 @@
         "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
       },
       "regimens": [
-        {
-          "regimen_id": "ref-glofit-gemox"
-        },
         {
           "regimen_id": "ref-pola-r-gemox"
         },

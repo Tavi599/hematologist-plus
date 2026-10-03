@@ -1,0 +1,53 @@
+{
+  "id": "ref-fl-r2-first-line",
+  "short_name": "R2 (1-ша лінія)",
+  "name": {
+    "uk": "R2: леналідомід + ритуксимаб (перша лінія ФЛ)",
+    "en": "R2: lenalidomide + rituximab (first-line FL)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Initial treatment of stage II to IV follicular lymphoma",
+      "url": "https://www.uptodate.com/contents/initial-treatment-of-stage-ii-to-iv-follicular-lymphoma",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Ще нелікована ФЛ стадій II–IV, що потребує лікування. R2 порівняли з хіміоімунотерапією в дослідженні RELEVANCE (1030 хворих).",
+      "en": "Untreated stage II to IV FL that needs treatment. R2 was compared with chemoimmunotherapy in RELEVANCE (1030 patients)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "RELEVANCE: R2 18 місяців, потім ритуксимаб для підтримки ще рік (разом 30 місяців); у групі порівняння R-CHOP (72%), BR (23%) або R-CVP (5%) близько 6 місяців і 2 роки підтримки.",
+        "en": "RELEVANCE: R2 for 18 months, then rituximab maintenance for another year (30 months in all); the control arm had R-CHOP (72%), BR (23%) or R-CVP (5%) for about 6 months and two years of maintenance."
+      },
+      {
+        "uk": "Ритуксимаб лишається кращим антитілом при нелікованій ФЛ; для підтримки — 2 роки (раз на 2 місяці).",
+        "en": "Rituximab remains the preferred antibody in untreated FL; maintenance lasts two years (every two months)."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз леналідоміду й ритуксимабу для першої лінії; у каталозі є R2 для рецидиву (NSSG L.122), але переносити його схему на першу лінію без джерела не можна.",
+      "en": "UpToDate gives no doses of lenalidomide and rituximab for the first line; the catalog has R2 for relapse (NSSG L.122), but its schedule cannot be carried over to the first line without a source."
+    },
+    "availability": "unknown"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "$comment": "Обінутузумаб у монорежимі при рецидиві фолікулярної лімфоми за UpToDate: 1000 мг раз на два місяці до двох років (12 введень). Премедикацію (стероїд, антигістамінний, парацетамол) UpToDate не наводить — вмикається вручну. Рекомендовано при супутніх хворобах, що виключають комбінацію, або малому об'ємі пухлини.",
+  "id": "obinutuzumab-mono",
+  "short_name": "Обінутузумаб моно",
+  "name": {
+    "uk": "Обінутузумаб у монорежимі (рецидив ФЛ)",
+    "en": "Obinutuzumab alone (relapsed FL)"
+  },
+  "description": {
+    "uk": "1000 мг в/в раз на 2 місяці, до 2 років.",
+    "en": "1000 mg IV once every 2 months, for up to 2 years."
+  },
+  "cycle_length_days": 56,
+  "default_cycles": 12,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory follicular lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-follicular-lymphoma",
+      "version": "тема оновлена 03.08.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "obinutuzumab",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "1000 мг у 250 мл 0,9% NaCl раз на 2 місяці; найдовше 2 роки (UpToDate, схема з рандомізованого дослідження). Перша інфузія — зі сходинкою швидкості.",
+        "en": "1000 mg in 250 mL of 0.9% NaCl once every 2 months for up to 2 years (UpToDate, the randomized-trial schedule). The first infusion with a stepped rate."
+      }
+    }
+  ]
+}

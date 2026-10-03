@@ -1,0 +1,64 @@
+{
+  "id": "ref-fl-r2-epcoritamab",
+  "short_name": "R2 + епкоритамаб",
+  "name": {
+    "uk": "R2 + епкоритамаб (рецидив ФЛ)",
+    "en": "R2 + epcoritamab (relapsed FL)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory follicular lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-follicular-lymphoma",
+      "version": "тема оновлена 03.08.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидив ФЛ: R2 з епкоритамабом дав повну відповідь у 83% проти 50% при R2 (EPCORE FL-1, 488 хворих); 16-місячна виживаність без прогресування 86% проти 40%.",
+      "en": "Relapsed FL: R2 with epcoritamab gave a complete response in 83% versus 50% with R2 (EPCORE FL-1, 488 patients); 16-month progression-free survival 86% versus 40%."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Епкоритамаб п/ш",
+          "en": "Epcoritamab SC"
+        },
+        "drug_id": "epcoritamab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Епкоритамаб підшкірно щотижня перші 3 місяці, потім щомісяця до завершення року лікування.",
+        "en": "Epcoritamab subcutaneously weekly for the first 3 months, then monthly until one year of treatment is complete."
+      },
+      {
+        "uk": "СВЦ у 35% (1–2 ступеня), переважно після першої повної дози; нейтропенія 3–4 ступеня у 69%, інфекції 3+ ступеня у 33%.",
+        "en": "Cytokine release in 35% (grade 1 or 2), mostly after the first full dose; grade 3 or 4 neutropenia in 69%, grade 3 or worse infection in 33%."
+      },
+      {
+        "uk": "Потрібна профілактика пневмоцистної, герпетичної та VZV-інфекції; не вводити живі вакцини.",
+        "en": "Prophylaxis against Pneumocystis, herpes simplex and VZV is needed; no live vaccines."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить сходинок дози епкоритамабу й днів R2 у цій комбінації; окремий епкоритамаб для ДВКЛ (eviQ 4554) є в каталозі, але в ФЛ режим інший.",
+      "en": "UpToDate gives neither the epcoritamab step-up nor the R2 days in this combination; epcoritamab alone for DLBCL (eviQ 4554) is in the catalog, but the FL schedule differs."
+    },
+    "availability": "unavailable"
+  }
+}

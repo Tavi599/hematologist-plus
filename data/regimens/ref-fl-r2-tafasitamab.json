@@ -1,0 +1,64 @@
+{
+  "id": "ref-fl-r2-tafasitamab",
+  "short_name": "R2 + тафаситамаб",
+  "name": {
+    "uk": "R2 + тафаситамаб (рецидив ФЛ)",
+    "en": "R2 + tafasitamab (relapsed FL)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory follicular lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-follicular-lymphoma",
+      "version": "тема оновлена 03.08.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидив ФЛ: додавання тафаситамабу до R2 подовжило виживаність без прогресування (inMIND, 548 хворих): медіана 22,4 проти 13,9 міс.",
+      "en": "Relapsed FL: adding tafasitamab to R2 prolonged progression-free survival (inMIND, 548 patients): median 22.4 versus 13.9 months."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Тафаситамаб",
+          "en": "Tafasitamab"
+        },
+        "drug_id": "tafasitamab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Тафаситамаб в/в щотижня перші 3 місяці, потім раз на 2 тижні до завершення року.",
+        "en": "Tafasitamab IV weekly for the first 3 months, then every 2 weeks to complete one year."
+      },
+      {
+        "uk": "Нейтропенія 3–4 ступеня у 40%, інфекції 3+ ступеня у 24%; потрібна профілактика пневмоцистної, герпетичної та VZV-інфекції.",
+        "en": "Grade 3 or 4 neutropenia in 40%, grade 3 or worse infection in 24%; prophylaxis against Pneumocystis, herpes simplex and VZV is needed."
+      },
+      {
+        "uk": "Аспірин 81 мг на добу для профілактики тромбозів при леналідоміді; леналідомід дозують за кліренсом креатиніну.",
+        "en": "Aspirin 81 mg a day against thrombosis during lenalidomide; lenalidomide is dosed by creatinine clearance."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз і днів введення цього режиму в тексті статті, тому розрахунку немає.",
+      "en": "UpToDate does not give the doses and days of this regimen in the article text, so there is no calculation."
+    },
+    "availability": "unavailable"
+  }
+}

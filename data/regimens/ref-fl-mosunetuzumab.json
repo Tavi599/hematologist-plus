@@ -1,0 +1,58 @@
+{
+  "id": "ref-fl-mosunetuzumab",
+  "short_name": "Мозунетузумаб / одронекстамаб",
+  "name": {
+    "uk": "Бісспецифічні антитіла CD20×CD3: мозунетузумаб, одронекстамаб (ФЛ)",
+    "en": "CD20×CD3 bispecific antibodies: mosunetuzumab, odronextamab (FL)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory follicular lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-follicular-lymphoma",
+      "version": "тема оновлена 03.08.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Множинний рецидив ФЛ, особливо з короткою попередньою ремісією (<24 міс.): відповідь приблизно у 80%, близько половини живі без прогресування через 2 роки.",
+      "en": "Multiply relapsed FL, especially with a short prior remission (<24 months): response in about 80%, about half alive and progression-free at two years."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Мозунетузумаб",
+          "en": "Mosunetuzumab"
+        }
+      },
+      {
+        "name": {
+          "uk": "Одронекстамаб",
+          "en": "Odronextamab"
+        }
+      },
+      {
+        "name": {
+          "uk": "Епкоритамаб",
+          "en": "Epcoritamab"
+        },
+        "drug_id": "epcoritamab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Мозунетузумаб — 8–17 циклів залежно від відповіді; епкоритамаб і одронекстамаб — до прогресування. Починають із сходинок дози, далі інтервал 2–4 тижні.",
+        "en": "Mosunetuzumab for 8 to 17 cycles depending on response; epcoritamab and odronextamab until progression. Treatment begins with step-up doses, then an interval of 2 to 4 weeks."
+      },
+      {
+        "uk": "СВЦ у 44–66% (переважно 1–2 ступеня, у першому циклі); профілактика пневмоцистної, герпетичної та VZV-інфекції; ризик реактивації гепатиту B.",
+        "en": "Cytokine release in 44 to 66% (mostly grade 1 or 2, in the first cycle); prophylaxis against Pneumocystis, herpes simplex and VZV; risk of hepatitis B reactivation."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить сходинок доз мозунетузумабу й одронекстамабу, а цих препаратів немає в довіднику.",
+      "en": "UpToDate gives no step-up doses for mosunetuzumab and odronextamab, and these drugs are not in the catalog."
+    },
+    "availability": "unavailable"
+  }
+}

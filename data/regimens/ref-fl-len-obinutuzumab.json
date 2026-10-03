@@ -1,0 +1,53 @@
+{
+  "id": "ref-fl-len-obinutuzumab",
+  "short_name": "Len + обінутузумаб",
+  "name": {
+    "uk": "Леналідомід + обінутузумаб (рецидив ФЛ)",
+    "en": "Lenalidomide + obinutuzumab (relapsed FL)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory follicular lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-follicular-lymphoma",
+      "version": "тема оновлена 03.08.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидив ФЛ, особливо після ранньої невдачі лікування на ритуксимабі: відповідь у 79% із 86 хворих (GALEN, одна група).",
+      "en": "Relapsed FL, especially after early treatment failure on rituximab: response in 79% of 86 patients (GALEN, single arm)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Обінутузумаб",
+          "en": "Obinutuzumab"
+        },
+        "drug_id": "obinutuzumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Замінює R2, коли ритуксимаб щойно був неефективний; з R2 прямо не порівнювали.",
+        "en": "Replaces R2 when rituximab has just failed; not compared head to head with R2."
+      },
+      {
+        "uk": "Аспірин 81 мг на добу для профілактики тромбозів; леналідомід дозують за кліренсом креатиніну.",
+        "en": "Aspirin 81 mg a day against thrombosis; lenalidomide is dosed by creatinine clearance."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз і днів введення цього режиму в тексті статті, тому розрахунку немає.",
+      "en": "UpToDate does not give the doses and days of this regimen in the article text, so there is no calculation."
+    },
+    "availability": "unknown"
+  }
+}

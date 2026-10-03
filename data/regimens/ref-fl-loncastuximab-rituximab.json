@@ -1,0 +1,52 @@
+{
+  "id": "ref-fl-loncastuximab-rituximab",
+  "short_name": "Лонкастуксимаб + ритуксимаб",
+  "name": {
+    "uk": "Лонкастуксимаб тесирин + ритуксимаб (ФЛ)",
+    "en": "Loncastuximab tesirine + rituximab (FL)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory follicular lymphoma",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-follicular-lymphoma",
+      "version": "тема оновлена 03.08.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Множинний рецидив ФЛ, у т.ч. з ранньою невдачею лікування; позареєстраційне застосування. Відповідь 97% (повна 67%) у 39 хворих, 12-місячна ВБП 95%.",
+      "en": "Multiply relapsed FL, including early treatment failure; off-label. Response 97% (complete 67%) in 39 patients, 12-month PFS 95%."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Лонкастуксимаб тесирин",
+          "en": "Loncastuximab tesirine"
+        }
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Лонкастуксимаб раз на 3 тижні; ритуксимаб щотижня 4 дози, далі раз на 8 тижнів; до 39 тижнів, схема залежить від відповіді.",
+        "en": "Loncastuximab every 3 weeks; rituximab weekly for four doses, then every 8 weeks; up to 39 weeks, adjusted by response."
+      },
+      {
+        "uk": "Лімфопенія 3+ ступеня 21%, нейтропенія 13%; набряки (периферичні й генералізовані по 16%). Анти-CD19: можливий вплив на подальшу CD19-CAR-T.",
+        "en": "Grade 3 or worse lymphopenia 21%, neutropenia 13%; oedema (peripheral and generalised, 16% each). Anti-CD19: a possible effect on later CD19 CAR-T."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз лонкастуксимабу в ФЛ, а препарата немає в довіднику.",
+      "en": "UpToDate does not give the loncastuximab doses in FL, and the drug is not in the catalog."
+    },
+    "availability": "unknown"
+  }
+}

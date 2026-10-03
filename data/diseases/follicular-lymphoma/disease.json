@@ -299,6 +299,13 @@
             "uk": "Цикли 2-12",
             "en": "Cycles 2-12"
           }
+        },
+        {
+          "regimen_id": "obinutuzumab-mono",
+          "notes": {
+            "uk": "Антитіло окремо: супутні хвороби чи повільна хвороба; UpToDate",
+            "en": "Antibody alone: comorbidity or slowly progressing disease; UpToDate"
+          }
         }
       ]
     },
@@ -355,6 +362,44 @@
             "uk": "Пероральна паліативна схема, підтримка",
             "en": "An oral palliative regimen, maintenance"
           }
+        },
+        {
+          "regimen_id": "obinutuzumab-mono"
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-fl-r2-first-line"
+        },
+        {
+          "regimen_id": "ref-fl-r2-tafasitamab"
+        },
+        {
+          "regimen_id": "ref-fl-r2-epcoritamab"
+        },
+        {
+          "regimen_id": "ref-fl-len-obinutuzumab"
+        },
+        {
+          "regimen_id": "ref-fl-zanubrutinib-obinutuzumab"
+        },
+        {
+          "regimen_id": "ref-fl-mosunetuzumab"
+        },
+        {
+          "regimen_id": "ref-fl-loncastuximab-rituximab"
         }
       ]
     }

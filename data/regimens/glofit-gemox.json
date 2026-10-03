@@ -1,0 +1,131 @@
+{
+  "$comment": "Glofit-GemOX за eviQ 4601 (вер. 1, протокол на перегляді): цикл 21 день, до 12 циклів — 8 циклів глофітамабу з GemOx, далі глофітамаб 30 мг у монорежимі (цикли 9–12: схема «Глофітамаб, цикли 2–12»). Цикл 1: обінутузумаб 1000 мг (день 1), GemOx у день 2, глофітамаб 2,5 мг (день 8) і 10 мг (день 15); з циклу 2 — глофітамаб 30 мг і GemOx в один день 1. Премедикація глофітамабу та пегфілграстим — за eviQ; першу дозу глофітамабу (день 8) вводять з госпіталізацією на 24 години. Лікування СВЦ/ІКАНС не внесено.",
+  "id": "glofit-gemox",
+  "short_name": "Glofit-GemOx ц.2-8",
+  "name": {
+    "uk": "Глофітамаб + GemOx, цикли 2–8",
+    "en": "Glofitamab + GemOx, cycles 2-8"
+  },
+  "description": {
+    "uk": "Глофітамаб 30 мг і GemOx (гемцитабін 1000 мг/м², оксаліплатин 100 мг/м²) у день 1; 7 циклів.",
+    "en": "Glofitamab 30 mg and GemOx (gemcitabine 1000 mg/m2, oxaliplatin 100 mg/m2) on day 1; seven cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 7,
+  "sources": [
+    {
+      "name": "eviQ: Non-Hodgkin lymphoma — Glofit-GemOX (glofitamab, gemcitabine, oxaliplatin) and obinutuzumab (протокол 4601)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/4601-nhl-glofit-gemox-glofitamab-gemcitabine-oxal",
+      "version": "вер. 1 (на перегляді)",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "eviQ: Non-Hodgkin lymphoma — glofitamab and obinutuzumab (протокол 4454)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/4454-non-hodgkin-lymphoma-glofitamab-and-obinutuzu",
+      "version": "вер. 1 від 30.05.2025, оновлено 20.03.2026",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Не пізніше ніж за 60 хв до інфузії. У циклах 4–12 — лише тим, хто мав СВЦ після попередніх доз; якщо дексаметазону немає — преднізолон 100 мг або метилпреднізолон 80 мг.",
+        "en": "At least 60 minutes before the infusion. In cycles 4 to 12 only after cytokine release with earlier doses; if dexamethasone is unavailable, prednisolone 100 mg or methylprednisolone 80 mg."
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до інфузії.",
+        "en": "At least 30 minutes before the infusion."
+      }
+    },
+    {
+      "key": "loratadine",
+      "drug_id": "loratadine",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до інфузії.",
+        "en": "At least 30 minutes before the infusion."
+      }
+    },
+    {
+      "key": "glofitamab",
+      "drug_id": "glofitamab",
+      "route": "iv_infusion",
+      "dose_value": 30,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 240,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl: цикл 2 — за 4 години, з циклу 3 — за 2 години, якщо попередні дози переносилися добре; після СВЦ тривалість лишають 4 години (до 8 годин).",
+        "en": "In 100 mL 0.9% NaCl: cycle 2 over 4 hours, from cycle 3 over 2 hours if earlier doses were well tolerated; after cytokine release it stays at 4 hours (up to 8)."
+      }
+    },
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl за 30 хвилин.",
+        "en": "In 250 mL of 0.9% sodium chloride over 30 minutes."
+      }
+    },
+    {
+      "key": "oxaliplatin",
+      "drug_id": "oxaliplatin",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 120,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 250-500 мл 5% глюкози за 2 години, концентрація 0,2-0,7 мг/мл.",
+        "en": "In 250 to 500 mL of 5% glucose over 2 hours, at 0.2 to 0.7 mg/mL."
+      }
+    },
+    {
+      "key": "pegfilgrastim",
+      "drug_id": "pegfilgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 6,
+      "dose_unit": "mg_flat",
+      "days": [2],
+      "notes": {
+        "uk": "6 мг підшкірно не раніше ніж через 24 години після хіміотерапії (eviQ 4601).",
+        "en": "6 mg subcutaneously at least 24 hours after chemotherapy (eviQ 4601)."
+      }
+    }
+  ]
+}
