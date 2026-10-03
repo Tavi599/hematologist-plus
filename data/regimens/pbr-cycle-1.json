@@ -1,0 +1,98 @@
+{
+  "$comment": "У циклі 1 введення рознесені на два дні й полатузумаб іде повільніше — 90 хвилин замість 30, бо це перша доза.",
+  "id": "pbr-cycle-1",
+  "short_name": "PBR (1)",
+  "name": {
+    "uk": "PBR (полатузумаб ведотин, бендамустин, ритуксимаб), цикл 1",
+    "en": "PBR (polatuzumab vedotin, bendamustine, rituximab), cycle 1"
+  },
+  "description": {
+    "uk": "Рецидивна або рефрактерна дифузна В-великоклітинна лімфома в дорослих, яким не підходить трансплантація гемопоетичних стовбурових клітин. Цикл 21 день, максимум 6 циклів. У першому циклі ритуксимаб дають у день 1, а полатузумаб і бендамустин — з дня 2.",
+    "en": "Relapsed or refractory diffuse large B-cell lymphoma in adults who are not candidates for a haematopoietic stem cell transplant. A 21-day cycle, six cycles at most. In the first cycle the rituximab is on day 1, and the polatuzumab and bendamustine start on day 2."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.113 PBR (polatuzumab vedotin, bendamustine, rituximab)",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-113-pbr.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 2],
+      "notes": {
+        "uk": "Не менш як за 30 хвилин до ритуксимабу й полатузумабу. Протокол додає хлорфенамін 10 мг і гідрокортизон 100 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "At least 30 minutes before the rituximab and the polatuzumab. The protocol adds chlorphenamine 10 mg and hydrocortisone 100 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають інші введення.",
+        "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before any other infusion starts."
+      }
+    },
+    {
+      "key": "polatuzumab-vedotin",
+      "drug_id": "polatuzumab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.8,
+      "dose_unit": "mg_kg",
+      "cap_amount": 240,
+      "days": [2],
+      "duration_min": 90,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 5% глюкози за 90 хвилин, через вбудований фільтр 0,2 або 0,22 мкм; разова доза не більш як 240 мг. Перша доза йде повільніше: пацієнта спостерігають під час інфузії і щонайменше 90 хвилин після неї через ризик реакцій на введення.",
+        "en": "In 100 mL of 5% glucose over 90 minutes, through a 0.2 or 0.22 micron in-line filter; no single dose above 240 mg. The first dose runs slower: the patient is watched during the infusion and for at least 90 minutes after it, for infusion-related reactions."
+      }
+    },
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 90,
+      "dose_unit": "mg_m2",
+      "days": [2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl за 30-60 хвилин; у довіднику взято повільніший край діапазону.",
+        "en": "In 500 mL of 0.9% sodium chloride over 30 to 60 minutes; the catalogue takes the slower end."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [4, 5, 6, 7, 8, 9, 10],
+      "notes": {
+        "uk": "Низький ризик лізису пухлини: з дня 4, 7 днів, разом із гідратацією. При проміжному ризику починають за 3 дні до бендамустину, у дні бендамустину пропускають і відновлюють з дня 4 — разом 10 днів; такий розклад виставляють вручну. При високому ризику замість алопуринолу дають расбуриказу 3 мг у дні хіміотерапії. У дні бендамустину алопуринол не дають — вони взаємодіють.",
+        "en": "Low tumour lysis risk: from day 4 for 7 days, with hydration. At intermediate risk it starts 3 days before the bendamustine, is omitted on the bendamustine days and resumes from day 4, for 10 days in all; that schedule is set by hand. At high risk rasburicase 3 mg on the chemotherapy days replaces it. Allopurinol is never given on a bendamustine day: the two interact."
+      }
+    }
+  ]
+}

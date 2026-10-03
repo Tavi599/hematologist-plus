@@ -1,0 +1,85 @@
+{
+  "$comment": "З циклу 2 усе зміщується на день раніше, а полатузумаб вводять за 30 хвилин — якщо попередню дозу перенесено добре.",
+  "id": "pbr",
+  "short_name": "PBR (2-6)",
+  "name": {
+    "uk": "PBR (полатузумаб ведотин, бендамустин, ритуксимаб), цикли 2-6",
+    "en": "PBR (polatuzumab vedotin, bendamustine, rituximab), cycles 2-6"
+  },
+  "description": {
+    "uk": "Рецидивна або рефрактерна дифузна В-великоклітинна лімфома в дорослих, яким не підходить трансплантація гемопоетичних стовбурових клітин. Цикл 21 день, максимум 6 циклів. З другого циклу ритуксимаб і полатузумаб дають в один день — день 1.",
+    "en": "Relapsed or refractory diffuse large B-cell lymphoma in adults who are not candidates for a haematopoietic stem cell transplant. A 21-day cycle, six cycles at most. From the second cycle the rituximab and the polatuzumab share day 1."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 5,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.113 PBR (polatuzumab vedotin, bendamustine, rituximab)",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-113-pbr.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає хлорфенамін 10 мг і гідрокортизон 100 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "At least 30 minutes before the rituximab. The protocol adds chlorphenamine 10 mg and hydrocortisone 100 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають інші введення.",
+        "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before any other infusion starts."
+      }
+    },
+    {
+      "key": "polatuzumab-vedotin",
+      "drug_id": "polatuzumab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.8,
+      "dose_unit": "mg_kg",
+      "cap_amount": 240,
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 5% глюкози за 30 хвилин, через вбудований фільтр 0,2 або 0,22 мкм; разова доза не більш як 240 мг. Пришвидшене введення застосовують лише тоді, коли попередню дозу перенесено добре — інакше інфузію знову розтягують на 90 хвилин. Пацієнта спостерігають під час інфузії і щонайменше 30 хвилин після неї.",
+        "en": "In 100 mL of 5% glucose over 30 minutes, through a 0.2 or 0.22 micron in-line filter; no single dose above 240 mg. The shorter infusion is used only where the previous dose was well tolerated; otherwise it runs over 90 minutes again. The patient is watched during the infusion and for at least 30 minutes after it."
+      }
+    },
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 90,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl за 30-60 хвилин; у довіднику взято повільніший край діапазону.",
+        "en": "In 500 mL of 0.9% sodium chloride over 30 to 60 minutes; the catalogue takes the slower end."
+      }
+    }
+  ]
+}
