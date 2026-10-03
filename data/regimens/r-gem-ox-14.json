@@ -1,0 +1,57 @@
+{
+  "$comment": "R-GemOX за eviQ 1672 (вер. 8): цикл 14 днів, 8 циклів (NSSG L.100 — цикл 21 день, 6 циклів). Оксаліплатин у 5% глюкозі 2 години, гемцитабін у NaCl 30 хвилин; порядок для мінімізації екстравазації. Г-КСФ — за потребою.",
+  "id": "r-gem-ox-14",
+  "short_name": "R-GemOx-14",
+  "name": {
+    "uk": "R-GemOx, цикл 14 днів (eviQ)",
+    "en": "R-GemOx, 14-day cycle (eviQ)"
+  },
+  "description": {
+    "uk": "Ритуксимаб, оксаліплатин 100 і гемцитабін 1000 мг/м² у день 1; цикл 14 днів, 8 циклів.",
+    "en": "Rituximab, oxaliplatin 100 and gemcitabine 1000 mg/m2 on day 1; a 14-day cycle, eight cycles."
+  },
+  "cycle_length_days": 14,
+  "default_cycles": 8,
+  "sources": [
+    {
+      "name": "eviQ: R-GemOX (протокол 1672, вер. 8)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/1672-r-gemox-rituximab-gemcitabine-oxaliplatin",
+      "version": "вер. 8 від 04.12.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500
+    },
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250
+    },
+    {
+      "key": "oxaliplatin",
+      "drug_id": "oxaliplatin",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 120,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 500
+    }
+  ]
+}

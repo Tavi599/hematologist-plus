@@ -18,6 +18,12 @@
       "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-66-da-epoch-r-etoposide.pdf",
       "version": "6.0 (09.2025)",
       "checkedOn": "2026-10-02"
+    },
+    {
+      "name": "eviQ: DA-R-EPOCH (протокол 783)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/783-da-r-epoch-dose-adjusted-rituximab-etoposide",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
     }
   ],
   "items": [
@@ -46,7 +52,23 @@
       "notes": {
         "uk": "Вранці з їжею; у день 1 — не менш як за 30 хвилин до ритуксимабу. Дозу заокруглюють до розміру таблетки. У дослідженнях преднізолон давали двічі на добу, але в цьому протоколі дозу зменшено до одного разу через переносимість.",
         "en": "In the morning with food; on day 1 at least 30 minutes before the rituximab. The dose is rounded to a tablet size. The reference studies gave it twice daily; this protocol halves that to once daily for tolerability."
-      }
+      },
+      "dose_options": [
+        {
+          "dose_value": 120,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "eviQ 783: преднізолон 60 мг/м² ДВІЧІ на добу, дні 1–5 = 120 мг/м² на добу (NSSG — 60 мг/м² на добу)",
+            "en": "eviQ 783: prednisolone 60 mg/m2 TWICE a day on days 1 to 5 = 120 mg/m2 a day (NSSG — 60 mg/m2 a day)"
+          },
+          "source": {
+            "name": "eviQ: DA-R-EPOCH (протокол 783)",
+            "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/783-da-r-epoch-dose-adjusted-rituximab-etoposide",
+            "version": "перевірено 2026-10-04",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
     },
     {
       "key": "rituximab",

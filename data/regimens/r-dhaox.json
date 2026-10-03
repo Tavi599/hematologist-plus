@@ -1,5 +1,5 @@
 {
-  "$comment": "Цитарабін двічі на добу в день 2. Поправка на ШКФ 31-59 мл/хв — це рівно половина дози, тому записана як окрема доза, а не як відсоток.",
+  "$comment": "Цитарабін двічі на добу в день 2. Поправка на ШКФ 31-59 мл/хв — це рівно половина дози, тому записана як окрема доза, а не як відсоток. eviQ 1674 пише цитарабін 2000 мг/м² у дні 2 і 3 (два вливання); у каталозі — двічі в день 2 за NSSG. Перевірте за протоколом відділення.",
   "id": "r-dhaox",
   "short_name": "R-DHAOx",
   "name": {
@@ -18,6 +18,12 @@
       "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-133-r-dhaox.pdf",
       "version": "09.2024",
       "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "eviQ: R-DHAOx (протокол 1674, вер. 7)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/1674-r-dhaox-rituximab-dexamethasone-cytarabine-o",
+      "version": "вер. 7",
+      "checkedOn": "2026-10-04"
     }
   ],
   "items": [

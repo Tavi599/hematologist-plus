@@ -1,0 +1,121 @@
+{
+  "$comment": "R-ICE із фракціонованим іфосфамідом за eviQ 171: ифосфамід 1666 мг/м² у дні 1–3 з месною (1666 мг/м² в/в + 2000 мг усередину через 2 і 6 годин), що дозволяє амбулаторне введення; 2–3 цикли по 21 день, філграстим з дня 4. Варіант з безперервним іфосфамідом (eviQ 1559) — схема «R-ICE» NSSG.",
+  "id": "r-ice-fractionated",
+  "short_name": "R-ICE (фракц.)",
+  "name": {
+    "uk": "R-ICE з фракціонованим іфосфамідом",
+    "en": "R-ICE with fractionated ifosfamide"
+  },
+  "description": {
+    "uk": "Ритуксимаб день 1; етопозид і іфосфамід дні 1–3; карбоплатин AUC 5 день 1; філграстим з дня 4.",
+    "en": "Rituximab on day 1; etoposide and ifosfamide on days 1 to 3; carboplatin AUC 5 on day 1; filgrastim from day 4."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "eviQ: RICE фракціонований (протокол 171)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/171-rice-rituximab-fractionated-ifosfamide-carbop",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "375 мг/м² (eviQ 171).",
+        "en": "375 mg/m2 (eviQ 171)."
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500
+    },
+    {
+      "key": "carboplatin",
+      "drug_id": "carboplatin",
+      "route": "iv_infusion",
+      "dose_value": 5,
+      "dose_unit": "auc",
+      "cap_amount": 800,
+      "days": [1],
+      "duration_min": 30,
+      "fallback_volume_ml": 500,
+      "fallback_solvent": "glucose_5"
+    },
+    {
+      "key": "ifosfamide",
+      "drug_id": "ifosfamide",
+      "route": "iv_infusion",
+      "dose_value": 1666,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "1666 мг/м² у 1000 мл 0,9% NaCl за 2 години, дні 1–3 (eviQ 171).",
+        "en": "1666 mg/m2 in 1000 mL of 0.9% NaCl over 2 hours, days 1 to 3 (eviQ 171)."
+      }
+    },
+    {
+      "key": "mesna-iv",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 1666,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "1666 мг/м² в/в разом з іфосфамідом (eviQ 171).",
+        "en": "1666 mg/m2 IV together with ifosfamide (eviQ 171)."
+      }
+    },
+    {
+      "key": "mesna-oral",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 2000,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3],
+      "administrations_per_day": 2,
+      "interval_min": 240,
+      "notes": {
+        "uk": "2000 мг усередину через 2 і 6 годин після завершення інфузії іфосфаміду (eviQ 171).",
+        "en": "2000 mg by mouth 2 and 6 hours after the ifosfamide infusion (eviQ 171)."
+      }
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 5,
+      "dose_unit": "mcg_kg",
+      "days": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "notes": {
+        "uk": "5 мкг/кг підшкірно щодня з дня 4 до відновлення нейтрофілів (eviQ 171); дні 4–13 — орієнтир.",
+        "en": "5 mcg/kg subcutaneously daily from day 4 until neutrophil recovery (eviQ 171); days 4 to 13 are a guide."
+      }
+    }
+  ]
+}

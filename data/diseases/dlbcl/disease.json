@@ -77,6 +77,13 @@
               }
             },
             {
+              "regimen_id": "r-choep-14",
+              "notes": {
+                "uk": "До 60 років з aaIPI 2–3; eviQ 826",
+                "en": "Up to 60 years with aaIPI 2 to 3; eviQ 826"
+              }
+            },
+            {
               "regimen_id": "r-mini-chop",
               "notes": {
                 "uk": "Для пацієнтів понад 80 років",
@@ -95,6 +102,13 @@
               "notes": {
                 "uk": "Цикли 2-6",
                 "en": "Cycles 2-6"
+              }
+            },
+            {
+              "regimen_id": "pola-r-chp-cycle-7-8",
+              "notes": {
+                "uk": "Лише ритуксимаб; eviQ 4434",
+                "en": "Rituximab alone; eviQ 4434"
               }
             },
             {
@@ -129,6 +143,13 @@
               }
             },
             {
+              "regimen_id": "r-choep-14",
+              "notes": {
+                "uk": "До 60 років з aaIPI 2–3; eviQ 826",
+                "en": "Up to 60 years with aaIPI 2 to 3; eviQ 826"
+              }
+            },
+            {
               "regimen_id": "r-mini-chop",
               "notes": {
                 "uk": "Для пацієнтів понад 80 років",
@@ -147,6 +168,13 @@
               "notes": {
                 "uk": "Цикли 2-6",
                 "en": "Cycles 2-6"
+              }
+            },
+            {
+              "regimen_id": "pola-r-chp-cycle-7-8",
+              "notes": {
+                "uk": "Лише ритуксимаб; eviQ 4434",
+                "en": "Rituximab alone; eviQ 4434"
               }
             },
             {
@@ -209,6 +237,13 @@
           }
         },
         {
+          "regimen_id": "pola-r-chp-cycle-7-8",
+          "notes": {
+            "uk": "Лише ритуксимаб; eviQ 4434",
+            "en": "Rituximab alone; eviQ 4434"
+          }
+        },
+        {
           "regimen_id": "r-chop-21",
           "notes": {
             "uk": "Класичний стандарт першої лінії.",
@@ -220,6 +255,13 @@
           "notes": {
             "uk": "Цикл 14 днів із Г-КСФ (NSSG L.48); у відділенні використовується поряд із R-CHOP-21.",
             "en": "A 14-day cycle with G-CSF (NSSG L.48); used in the department alongside R-CHOP-21."
+          }
+        },
+        {
+          "regimen_id": "r-choep-14",
+          "notes": {
+            "uk": "До 60 років з aaIPI 2–3; eviQ 826",
+            "en": "Up to 60 years with aaIPI 2 to 3; eviQ 826"
           }
         },
         {
@@ -285,13 +327,34 @@
           }
         },
         {
+          "regimen_id": "r-dhap-eviq",
+          "notes": {
+            "uk": "Розклад днів за eviQ 1584",
+            "en": "Day layout per eviQ 1584"
+          }
+        },
+        {
           "regimen_id": "r-ice"
+        },
+        {
+          "regimen_id": "r-ice-fractionated",
+          "notes": {
+            "uk": "Фракціонований іфосфамід; eviQ 171",
+            "en": "Fractionated ifosfamide; eviQ 171"
+          }
         },
         {
           "regimen_id": "r-gem-ox",
           "notes": {
             "uk": "Коли високодозова терапія не підходить",
             "en": "Where high-dose therapy is unsuitable"
+          }
+        },
+        {
+          "regimen_id": "r-gem-ox-14",
+          "notes": {
+            "uk": "Цикл 14 днів, 8 циклів; eviQ 1672",
+            "en": "A 14-day cycle, eight cycles; eviQ 1672"
           }
         },
         {
@@ -401,16 +464,37 @@
           }
         },
         {
+          "regimen_id": "r-dhap-eviq",
+          "notes": {
+            "uk": "Розклад днів за eviQ 1584",
+            "en": "Day layout per eviQ 1584"
+          }
+        },
+        {
           "regimen_id": "r-eshap"
         },
         {
           "regimen_id": "r-ice"
         },
         {
+          "regimen_id": "r-ice-fractionated",
+          "notes": {
+            "uk": "Фракціонований іфосфамід; eviQ 171",
+            "en": "Fractionated ifosfamide; eviQ 171"
+          }
+        },
+        {
           "regimen_id": "r-gem-ox",
           "notes": {
             "uk": "Коли високодозова терапія не підходить",
             "en": "Where high-dose therapy is unsuitable"
+          }
+        },
+        {
+          "regimen_id": "r-gem-ox-14",
+          "notes": {
+            "uk": "Цикл 14 днів, 8 циклів; eviQ 1672",
+            "en": "A 14-day cycle, eight cycles; eviQ 1672"
           }
         },
         {

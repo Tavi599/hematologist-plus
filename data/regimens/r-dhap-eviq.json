@@ -1,0 +1,81 @@
+{
+  "$comment": "R-DHAP за eviQ 1584 (вер. 7): ритуксимаб день 1, дексаметазон дні 1–4, цисплатин 100 мг/м² за 24 години день 1, цитарабін 2000 мг/м² двічі (через 12 год) у день 2 за 3 години. Відрізняється розкладом днів від схеми UpToDate, яка вже є в довіднику («R-DHAP»). 3 цикли, далі збір стовбурових клітин.",
+  "id": "r-dhap-eviq",
+  "short_name": "R-DHAP (eviQ)",
+  "name": {
+    "uk": "R-DHAP за eviQ",
+    "en": "R-DHAP per eviQ"
+  },
+  "description": {
+    "uk": "Цикл 21 день: ритуксимаб і цисплатин день 1, дексаметазон дні 1–4, цитарабін двічі день 2; 3 цикли.",
+    "en": "A 21-day cycle: rituximab and cisplatin on day 1, dexamethasone on days 1 to 4, cytarabine twice on day 2; three cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "eviQ: R-DHAP (протокол 1584, вер. 7)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/1584-r-dhap-rituximab-dexamethasone-cytarabine-ci",
+      "version": "вер. 7 від 11.03.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4]
+    },
+    {
+      "key": "cisplatin",
+      "drug_id": "cisplatin",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "dose_options": [
+        {
+          "dose_value": 1000,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Понад 70 років (eviQ 1584)",
+            "en": "Over 70 years (eviQ 1584)"
+          },
+          "source": {
+            "name": "eviQ: R-DHAP (протокол 1584, вер. 7)",
+            "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/1584-r-dhap-rituximab-dexamethasone-cytarabine-ci",
+            "version": "вер. 7 від 11.03.2024",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    }
+  ]
+}

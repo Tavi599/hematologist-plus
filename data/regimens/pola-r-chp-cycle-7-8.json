@@ -1,0 +1,33 @@
+{
+  "$comment": "Pola-R-CHP за eviQ 4434: 8 циклів по 21 день — цикли 1–6 повна комбінація, цикли 7–8 лише ритуксимаб 375 мг/м² у день 1.",
+  "id": "pola-r-chp-cycle-7-8",
+  "short_name": "Pola-R-CHP ц.7-8",
+  "name": {
+    "uk": "Pola-R-CHP, цикли 7–8 (лише ритуксимаб)",
+    "en": "Pola-R-CHP, cycles 7-8 (rituximab alone)"
+  },
+  "description": {
+    "uk": "Ритуксимаб 375 мг/м² у день 1; цикл 21 день, 2 цикли.",
+    "en": "Rituximab 375 mg/m2 on day 1; a 21-day cycle, two cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "eviQ: NHL — Pola-R-CHP (протокол 4434, вер. 1)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/4434-nhl-pola-r-chp",
+      "version": "вер. 1, переглянуто 05.09.2025",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "$comment": "R-CHOEP-14 за eviQ 826 (вер. 8): CD20+ В-клітинна лімфома до 60 років з високим aaIPI 2–3; 6–8 циклів кожні 14 днів, пегфілграстим день 4.",
+  "id": "r-choep-14",
+  "short_name": "R-CHOEP-14",
+  "name": {
+    "uk": "R-CHOEP-14",
+    "en": "R-CHOEP-14"
+  },
+  "description": {
+    "uk": "CHOEP-14 + ритуксимаб 375 мг/м² у день 1; цикл 14 днів, 6–8 циклів.",
+    "en": "CHOEP-14 + rituximab 375 mg/m2 on day 1; a 14-day cycle, six to eight cycles."
+  },
+  "cycle_length_days": 14,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "eviQ: R-CHOEP14 (протокол 826, вер. 8)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/826-r-choep14-rituximab-cyclophosphamide-doxorubi",
+      "version": "вер. 8 від 31.08.2026",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "eviQ: NHL — CHOEP14 (протокол 686)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/nk-cell-and-t-cell-lymphoma/686-choep14-cyclophosphamide-doxorubicin-vincrist",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "375 мг/м² (eviQ 826).",
+        "en": "375 mg/m2 (eviQ 826)."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "100 мг раз на добу (eviQ 686).",
+        "en": "100 mg once a day (eviQ 686)."
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_bolus",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "50 мг/м² за 5–15 хвилин (eviQ 686).",
+        "en": "50 mg/m2 over 5 to 15 minutes (eviQ 686)."
+      }
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 2,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "2 мг у 50 мл 0,9% NaCl за 5–10 хвилин (eviQ 686).",
+        "en": "2 mg in 50 mL of 0.9% NaCl over 5 to 10 minutes (eviQ 686)."
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "100 мг/м² у 500 мл за 30–60 хвилин; лише контейнери без ПВХ/DEHP (eviQ 686).",
+        "en": "100 mg/m2 in 500 mL over 30 to 60 minutes; only non-PVC/DEHP-free containers (eviQ 686)."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "750 мг/м² у 500 мл за 30–60 хвилин (eviQ 686).",
+        "en": "750 mg/m2 in 500 mL over 30 to 60 minutes (eviQ 686)."
+      }
+    },
+    {
+      "key": "pegfilgrastim",
+      "drug_id": "pegfilgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 6,
+      "dose_unit": "mg_flat",
+      "days": [4],
+      "notes": {
+        "uk": "6 мг підшкірно на день 4 (eviQ 686).",
+        "en": "6 mg subcutaneously on day 4 (eviQ 686)."
+      }
+    }
+  ]
+}
