@@ -78,10 +78,29 @@
           }
         },
         {
+          "key": "cyp3a-strong-other",
+          "label": {
+            "uk": "Інший сильний інгібітор CYP3A (кларитроміцин, кетоконазол, ітраконазол, ритонавір)",
+            "en": "Another strong CYP3A inhibitor (clarithromycin, ketoconazole, itraconazole, ritonavir)"
+          },
+          "dose_value": 100,
+          "notes": {
+            "uk": "Вимога та сама, що й до азольної профілактики: дозу зменшують до 100 мг або менше - щонайменше на 75%. Позаконазол і вориконазол теж сильні інгібітори, вони мають власну позначку вище. Попередню дозу повертають через 2-3 дні після відміни інгібітора.",
+            "en": "The requirement is the same as for the azole prophylaxis: the dose is cut to 100 mg or less, by at least 75%. Posaconazole and voriconazole are strong inhibitors too and have their own tick above. The previous dose is resumed 2 to 3 days after the inhibitor stops."
+          },
+          "default_on": false,
+          "source": {
+            "name": "EMA, Venclyxto (венетоклакс), коротка характеристика препарату, таблиця 7",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/venclyxto-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
           "key": "cyp3a-moderate",
           "label": {
-            "uk": "Помірний інгібітор CYP3A (флуконазол, еритроміцин, дилтіазем, верапаміл)",
-            "en": "Moderate CYP3A inhibitor (fluconazole, erythromycin, diltiazem, verapamil)"
+            "uk": "Помірний інгібітор CYP3A (ципрофлоксацин, дилтіазем, еритроміцин, флуконазол, верапаміл)",
+            "en": "Moderate CYP3A inhibitor (ciprofloxacin, diltiazem, erythromycin, fluconazole, verapamil)"
           },
           "dose_value": 200,
           "notes": {
