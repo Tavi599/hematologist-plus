@@ -1,0 +1,34 @@
+{
+  "$comment": "Внесено 2026-10-03: 2,5 мг двічі на добу як профілактика венозного тромбоемболізму в схемах із леналідомідом і талідомідом.",
+  "id": "apixaban",
+  "name": {
+    "uk": "Апіксабан",
+    "en": "Apixaban"
+  },
+  "trade_names": ["Еліквіс", "Елюкса"],
+  "atc_code": "B01AF02",
+  "dose_units": ["mg_flat"],
+  "notes": {
+    "uk": "Профілактика венозного тромбоемболізму при леналідоміді, помалідоміді й талідоміді — 2,5 мг двічі на добу. Призначають після оцінки ризику кровотечі.",
+    "en": "Thromboprophylaxis with lenalidomide, pomalidomide and thalidomide: 2.5 mg twice daily, after the bleeding risk has been weighed."
+  },
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України, відкриті дані (reestr-lz.csv)",
+      "version": "вивантаження з data.gov.ua",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t2-5",
+      "form": "tablet",
+      "strength_amount": 2.5
+    },
+    {
+      "key": "t5",
+      "form": "tablet",
+      "strength_amount": 5
+    }
+  ]
+}

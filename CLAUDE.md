@@ -129,6 +129,13 @@ src/
 - An infusion may be given at a rising rate (`drug_infusion_params.rate_ramp`, mL/h). Then the duration follows from the volume instead of the regimen, and which of the two ramps applies (first infusion or a later one) comes from the course's cycle number.
 - The UI shows the calculation chain for each dose (`CalculationStep[]`: BSA → per-unit dose → cap → reduction → rounding).
 - Never invent clinical values (doses, caps, concentrations). If data is missing, surface it to the user and ask.
+- **A drug named in a note is a drug the catalog must have.** When a note recommends something —
+  pneumocystis prophylaxis, a premedication, thromboprophylaxis — add that drug to `data/drugs/`
+  rather than writing that it is missing: otherwise the physician reads the advice and cannot act
+  on it in the app. Registration in Ukraine is checked against the State Register open data
+  (`reestr-lz.csv` on data.gov.ua), and a drug Ukraine has not registered goes in with
+  `availability: "unavailable"`. `check-catalog` warns when a note still says a drug is absent
+  that the catalog now has.
 
 ## Print forms
 

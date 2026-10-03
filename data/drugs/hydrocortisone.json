@@ -1,0 +1,38 @@
+{
+  "$comment": "Внесено 2026-10-03: 100 мг внутрішньовенно стоїть у премедикації ритуксимабу, інотузумабу й гемтузумабу.",
+  "id": "hydrocortisone",
+  "name": {
+    "uk": "Гідрокортизон",
+    "en": "Hydrocortisone"
+  },
+  "trade_names": ["Солу-Кортеф", "Гідрокортизон Ромфарм"],
+  "atc_code": "H02AB09",
+  "dose_units": ["mg_flat"],
+  "notes": {
+    "uk": "Для премедикації беруть натрію сукцинат — порошок для розчину для ін'єкцій по 100 мг. Суспензія гідрокортизону ацетату для внутрішньовенного введення не призначена.",
+    "en": "Premedication uses the sodium succinate: a 100 mg powder for solution for injection. The acetate suspension is not for intravenous use."
+  },
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України, відкриті дані (reestr-lz.csv)",
+      "version": "вивантаження з data.gov.ua",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v100",
+      "form": "vial",
+      "strength_amount": 100,
+      "label": {
+        "uk": "натрію сукцинат, порошок 100 мг",
+        "en": "sodium succinate, 100 mg powder"
+      }
+    },
+    {
+      "key": "t10",
+      "form": "tablet",
+      "strength_amount": 10
+    }
+  ]
+}

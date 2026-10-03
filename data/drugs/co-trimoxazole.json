@@ -1,0 +1,52 @@
+{
+  "$comment": "Внесено 2026-10-03: препарат називався в примітках схем («ко-тримоксазол 480 мг тричі на тиждень»), але в довіднику його не було, тож додати його рядком до курсу було неможливо.",
+  "id": "co-trimoxazole",
+  "name": {
+    "uk": "Ко-тримоксазол",
+    "en": "Co-trimoxazole"
+  },
+  "trade_names": ["Бісептол", "Бі-септ", "Суметролім"],
+  "atc_code": "J01EE01",
+  "dose_units": ["mg_flat"],
+  "notes": {
+    "uk": "Профілактика пневмоцистної пневмонії. Дозу записують сумою двох діючих речовин: «480 мг» — це 400 мг сульфаметоксазолу та 80 мг триметоприму. Таблеток по 960 мг в Україні не зареєстровано, тому ця доза береться двома таблетками по 480 мг.",
+    "en": "Pneumocystis prophylaxis. The dose is written as the sum of both actives: 480 mg is 400 mg sulfamethoxazole and 80 mg trimethoprim. No 960 mg tablet is registered in Ukraine, so that dose is taken as two 480 mg tablets."
+  },
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України, відкриті дані (reestr-lz.csv)",
+      "version": "вивантаження з data.gov.ua",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t480",
+      "form": "tablet",
+      "strength_amount": 480,
+      "label": {
+        "uk": "400 мг / 80 мг",
+        "en": "400 mg / 80 mg"
+      }
+    },
+    {
+      "key": "t120",
+      "form": "tablet",
+      "strength_amount": 120,
+      "label": {
+        "uk": "100 мг / 20 мг",
+        "en": "100 mg / 20 mg"
+      }
+    },
+    {
+      "key": "a480",
+      "form": "ampoule",
+      "strength_amount": 480,
+      "volume_ml": 5,
+      "label": {
+        "uk": "концентрат (80 мг + 16 мг)/мл, 5 мл",
+        "en": "concentrate (80 mg + 16 mg)/mL, 5 mL"
+      }
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "$comment": "Вінкристину в цій схемі немає навмисно: його прибрали, щоб не складати нейротоксичність із брентуксимабом. Ко-тримоксазолу в довіднику немає, тому він лишився в описі.",
+  "$comment": "Вінкристину в цій схемі немає навмисно: його прибрали, щоб не складати нейротоксичність із брентуксимабом.",
   "id": "bv-chp",
   "short_name": "BV-CHP",
   "name": {
@@ -7,8 +7,8 @@
     "en": "BV-CHP (brentuximab vedotin, cyclophosphamide, doxorubicin, prednisolone)"
   },
   "description": {
-    "uk": "Раніше нелікована CD30-позитивна системна анапластична великоклітинна лімфома. Цикл 21 день, зазвичай 6 циклів. Пацієнтам із високим міжнародним прогностичним індексом розглядають автологічну трансплантацію в першій ремісії. Під час інфузії брентуксимабу й після неї пацієнта пильно спостерігають — можливі реакції на введення. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень на весь час лікування й щонайменше 3 місяці після; у довіднику його немає.",
-    "en": "Previously untreated CD30-positive systemic anaplastic large cell lymphoma. A 21-day cycle, usually six cycles. In patients with a high International Prognostic Index, an autologous transplant in first remission is considered. The patient is watched closely during and after the brentuximab infusion for infusion-related reactions. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week throughout treatment and for at least three months after; it is not in the catalogue."
+    "uk": "Раніше нелікована CD30-позитивна системна анапластична великоклітинна лімфома. Цикл 21 день, зазвичай 6 циклів. Пацієнтам із високим міжнародним прогностичним індексом розглядають автологічну трансплантацію в першій ремісії. Під час інфузії брентуксимабу й після неї пацієнта пильно спостерігають — можливі реакції на введення. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень на весь час лікування й щонайменше 3 місяці після.",
+    "en": "Previously untreated CD30-positive systemic anaplastic large cell lymphoma. A 21-day cycle, usually six cycles. In patients with a high International Prognostic Index, an autologous transplant in first remission is considered. The patient is watched closely during and after the brentuximab infusion for infusion-related reactions. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week throughout treatment and for at least three months after."
   },
   "cycle_length_days": 21,
   "default_cycles": 6,

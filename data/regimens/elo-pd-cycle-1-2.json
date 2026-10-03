@@ -47,8 +47,8 @@
       "dose_unit": "mg_flat",
       "days": [1, 8, 15, 22],
       "notes": {
-        "uk": "Коротка характеристика допускає 25-50 мг; у довіднику взято верхній край. Внутрішньовенне введення бажане щонайменше для перших чотирьох інфузій. ",
-        "en": "The SmPC allows 25 to 50 mg; the catalogue takes the upper end. The intravenous route is preferred for at least the first four infusions. "
+        "uk": "Коротка характеристика допускає 25-50 мг; у довіднику взято верхній край. Внутрішньовенне введення бажане щонайменше для перших чотирьох інфузій.",
+        "en": "The SmPC allows 25 to 50 mg; the catalogue takes the upper end. The intravenous route is preferred for at least the first four infusions."
       }
     },
     {
@@ -107,7 +107,7 @@
       "days": [1, 8, 15, 22],
       "fallback_solvent": "sodium_chloride_0_9",
       "notes": {
-        "uk": "Порошок розчиняють до 25 мг/мл. Швидкість задана в мл/хв і залежить від номера інфузії, тому довідник її не рахує — звіряйтесь із короткою характеристикою. Премедикацію дають за 45-90 хвилин до введення. Крім цього, коротка характеристика вимагає блокатор H2-рецепторів (ранітидин 50 мг внутрішньовенно або рівноцінний) чи пероральний інгібітор протонної помпи — цих препаратів у довіднику немає, призначайте окремо.",
+        "uk": "Порошок розчиняють до 25 мг/мл. Швидкість задана в мл/хв і залежить від номера інфузії, тому довідник її не рахує — звіряйтесь із короткою характеристикою. Премедикацію дають за 45-90 хвилин до введення. Крім цього, коротка характеристика вимагає блокатор H2-рецепторів (ранітидин 50 мг внутрішньовенно або рівноцінний) чи пероральний інгібітор протонної помпи: ранітидин вилучено з обігу, тож беруть фамотидин або омепразол — призначайте окремо.",
         "en": "The powder is reconstituted to 25 mg/mL. The rate is in mL/min and depends on which infusion it is, so the catalogue does not compute it; check the SmPC. Premedication is given 45 to 90 minutes beforehand. The SmPC also requires an H2 blocker (ranitidine 50 mg intravenously or equivalent) or an oral proton pump inhibitor; neither is in the catalogue, so prescribe it separately."
       }
     },

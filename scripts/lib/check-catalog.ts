@@ -245,6 +245,33 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
     }
   }
 
+  // A note that says a drug is not in the catalog is advice to go and prescribe it elsewhere.
+  // Once the drug is added, that sentence quietly becomes a lie, and nothing else would catch it:
+  // the note is prose, and prose validates. So: a sentence claiming something is missing must not
+  // name a drug the catalog has.
+  const ABSENT_CLAIM =
+    /(у|в) довіднику[^.;]{0,40}(нема|відсутн)|(нема|відсутн)[^.;]{0,30}(у|в) довіднику|not in the catalog|is not in the catalog/i
+  const drugNames = rows.drugs.flatMap((drug) =>
+    Object.values(drug.name as Record<string, string>)
+      .filter((name) => name.length >= 5)
+      .map((name) => ({ id: drug.id, name: name.toLowerCase() })),
+  )
+  // Two things are said in the same breath and must not be mistaken for the claim: that the drug
+  // is there but has no regimen yet, and that a form of it is missing — eye drops of a steroid the
+  // catalog carries as an injection.
+  const NOT_THE_CLAIM = /довіднику є|довідник\w* відділення є|in the catalog\w*,? but|крапл|drops/i
+  for (const { table, id, text } of localizedTexts(rows)) {
+    for (const sentence of text.split(/(?<=[.;])\s+/)) {
+      if (!ABSENT_CLAIM.test(sentence) || NOT_THE_CLAIM.test(sentence)) continue
+      const lower = sentence.toLowerCase()
+      for (const drug of drugNames) {
+        if (lower.includes(drug.name)) {
+          warning(table, id, `says ${drug.id} is not in the catalog, but it is`)
+        }
+      }
+    }
+  }
+
   // Article text lives outside this repository, so nothing else looks at it. These checks run
   // wherever it is loaded — a local run with --content, and the demo set in CI.
   const LONG_ENOUGH_TO_NEED_CONTENTS = 2000
@@ -373,4 +400,30 @@ function hasCycle(startId: string, nodes: Map<string, { parent_id: string | null
     current = nodes.get(current)?.parent_id ?? null
   }
   return false
+}
+
+/**
+ * Every piece of prose the catalog carries, with the row it belongs to: notes, descriptions and
+ * summaries, in every language they are written in. Used to check prose against the data it
+ * describes, which nothing else does.
+ */
+function* localizedTexts(rows: SyncRows): Generator<{ table: string; id: string; text: string }> {
+  const fields: [string, { id: string; [key: string]: unknown }[], string[]][] = [
+    ['drugs', rows.drugs, ['notes']],
+    ['regimens', rows.regimens, ['description']],
+    ['regimen_items', rows.regimen_items, ['notes']],
+    ['treatment_nodes', rows.treatment_nodes, ['description']],
+    ['diseases', rows.diseases, ['summary']],
+  ]
+  for (const [table, list, keys] of fields) {
+    for (const row of list) {
+      for (const key of keys) {
+        const value = row[key]
+        if (value === null || typeof value !== 'object') continue
+        for (const text of Object.values(value as Record<string, string>)) {
+          if (typeof text === 'string' && text !== '') yield { table, id: row.id, text }
+        }
+      }
+    }
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "$comment": "Для лімфоми Ходжкіна той самий протокол дає схему без ритуксимабу (Gem-Ox) — у калькуляторі позицію ритуксимабу просто вимикають. Ко-тримоксазол у довіднику відсутній, тому лишився в описі.",
+  "$comment": "Для лімфоми Ходжкіна той самий протокол дає схему без ритуксимабу (Gem-Ox) — у калькуляторі позицію ритуксимабу просто вимикають.",
   "id": "r-gem-ox",
   "short_name": "R-GemOx",
   "name": {
@@ -7,8 +7,8 @@
     "en": "R-GemOx (rituximab, gemcitabine, oxaliplatin)"
   },
   "description": {
-    "uk": "Рецидивна або рефрактерна дифузна В-великоклітинна лімфома в пацієнтів, яким не підходить високодозова терапія. Для лімфоми Ходжкіна той самий протокол дає Gem-Ox без ритуксимабу — тоді позицію ритуксимабу вимикають; саме поєднання гемцитабіну з оксаліплатином протокол позначає як застосування поза інструкцією. Цикл 21 день, максимум 6 циклів. Оксаліплатин протипоказаний при сенсорній нейропатії з порушенням функції до початку лікування, при ШКФ нижче 30 мл/хв і якщо пацієнт отримував оксаліплатин протягом останніх 12 місяців. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень (понеділок, середа, п'ятниця) на весь час лікування й щонайменше 3 місяці після; у довіднику цього препарату немає.",
-    "en": "Relapsed or refractory diffuse large B-cell lymphoma in patients unfit for high-dose therapy. For Hodgkin lymphoma the same protocol gives Gem-Ox without the rituximab, in which case the rituximab row is switched off; the gemcitabine-oxaliplatin pairing itself is marked off-label. A 21-day cycle, six cycles at most. Oxaliplatin is contraindicated with sensory neuropathy impairing function before the first course, below a GFR of 30 mL/min, and within 12 months of previous oxaliplatin. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week (Monday, Wednesday, Friday) throughout treatment and for at least three months after; it is not in the catalogue."
+    "uk": "Рецидивна або рефрактерна дифузна В-великоклітинна лімфома в пацієнтів, яким не підходить високодозова терапія. Для лімфоми Ходжкіна той самий протокол дає Gem-Ox без ритуксимабу — тоді позицію ритуксимабу вимикають; саме поєднання гемцитабіну з оксаліплатином протокол позначає як застосування поза інструкцією. Цикл 21 день, максимум 6 циклів. Оксаліплатин протипоказаний при сенсорній нейропатії з порушенням функції до початку лікування, при ШКФ нижче 30 мл/хв і якщо пацієнт отримував оксаліплатин протягом останніх 12 місяців. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень (понеділок, середа, п'ятниця) на весь час лікування й щонайменше 3 місяці після.",
+    "en": "Relapsed or refractory diffuse large B-cell lymphoma in patients unfit for high-dose therapy. For Hodgkin lymphoma the same protocol gives Gem-Ox without the rituximab, in which case the rituximab row is switched off; the gemcitabine-oxaliplatin pairing itself is marked off-label. A 21-day cycle, six cycles at most. Oxaliplatin is contraindicated with sensory neuropathy impairing function before the first course, below a GFR of 30 mL/min, and within 12 months of previous oxaliplatin. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week (Monday, Wednesday, Friday) throughout treatment and for at least three months after."
   },
   "cycle_length_days": 21,
   "default_cycles": 6,
@@ -32,8 +32,8 @@
       "dose_unit": "mg_flat",
       "days": [1],
       "notes": {
-        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає хлорфенамін 10 мг внутрішньовенно, якого в довіднику немає.",
-        "en": "At least 30 minutes before the rituximab. The protocol adds chlorphenamine 10 mg intravenously, which is not in the catalogue."
+        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає хлорфенамін 10 мг внутрішньовенно.",
+        "en": "At least 30 minutes before the rituximab. The protocol adds chlorphenamine 10 mg intravenously."
       }
     },
     {
@@ -176,8 +176,8 @@
       "dose_unit": "mg_flat",
       "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
       "notes": {
-        "uk": "За потреби, на весь час лікування. Альтернатива протоколу — фамотидин 20 мг двічі на добу, якого в довіднику немає.",
-        "en": "If required, throughout treatment. The protocol's alternative is famotidine 20 mg twice daily, which is not in the catalogue."
+        "uk": "За потреби, на весь час лікування. Альтернатива протоколу — фамотидин 20 мг двічі на добу.",
+        "en": "If required, throughout treatment. The protocol's alternative is famotidine 20 mg twice daily."
       }
     }
   ]

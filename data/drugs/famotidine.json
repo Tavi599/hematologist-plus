@@ -1,0 +1,43 @@
+{
+  "$comment": "Внесено 2026-10-03: блокатор H2-рецепторів, якого вимагають короткі характеристики ізатуксимабу й елотузумабу, і альтернатива захисту шлунка в кількох схемах.",
+  "id": "famotidine",
+  "name": {
+    "uk": "Фамотидин",
+    "en": "Famotidine"
+  },
+  "trade_names": ["Квамател"],
+  "atc_code": "A02BA03",
+  "dose_units": ["mg_flat"],
+  "notes": {
+    "uk": "Блокатор H2-рецепторів. Протоколи, написані під ранітидин, виконуються фамотидином: ранітидин вилучено з обігу через нітрозаміни.",
+    "en": "An H2 blocker. Protocols written for ranitidine are carried out with famotidine: ranitidine was withdrawn over nitrosamine contamination."
+  },
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України, відкриті дані (reestr-lz.csv)",
+      "version": "вивантаження з data.gov.ua",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t20",
+      "form": "tablet",
+      "strength_amount": 20
+    },
+    {
+      "key": "t40",
+      "form": "tablet",
+      "strength_amount": 40
+    },
+    {
+      "key": "v20",
+      "form": "vial",
+      "strength_amount": 20,
+      "label": {
+        "uk": "ліофілізат 20 мг",
+        "en": "20 mg lyophilisate"
+      }
+    }
+  ]
+}

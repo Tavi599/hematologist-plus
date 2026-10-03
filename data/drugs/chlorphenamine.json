@@ -1,0 +1,36 @@
+{
+  "$comment": "Внесено 2026-10-03: препарат стоїть у премедикації багатьох протоколів (ритуксимаб, обінутузумаб, даратумумаб, інотузумаб, гемтузумаб), але в Україні не зареєстрований.",
+  "id": "chlorphenamine",
+  "name": {
+    "uk": "Хлорфенамін",
+    "en": "Chlorphenamine"
+  },
+  "trade_names": ["Piriton"],
+  "atc_code": "R06AB04",
+  "availability": "unavailable",
+  "dose_units": ["mg_flat"],
+  "notes": {
+    "uk": "Антигістамінний препарат премедикації в британських протоколах (4 мг усередину або 10 мг внутрішньовенно). У Державному реєстрі лікарських засобів України станом на 03.10.2026 відсутній; відділення замість нього вводить дифенгідрамін або хлоропірамін.",
+    "en": "The antihistamine the British protocols premedicate with (4 mg orally or 10 mg intravenously). Not in the State Register of Ukraine as of 03.10.2026; the department gives diphenhydramine or chloropyramine instead."
+  },
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України, відкриті дані (reestr-lz.csv)",
+      "version": "вивантаження з data.gov.ua",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t4",
+      "form": "tablet",
+      "strength_amount": 4
+    },
+    {
+      "key": "a10",
+      "form": "ampoule",
+      "strength_amount": 10,
+      "volume_ml": 1
+    }
+  ]
+}

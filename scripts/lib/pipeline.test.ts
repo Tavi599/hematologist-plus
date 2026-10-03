@@ -368,6 +368,34 @@ ${'текст '.repeat(400)}
     )
   })
 
+  it('catches a note still saying a drug is missing after it was added', () => {
+    // The note is prose, so nothing else would notice; and a physician who reads it goes and
+    // prescribes the drug by hand when the course could have carried it.
+    const rows = loadDemo()
+    const drug = rows.drugs[0]!
+    const name = (drug.name as Record<string, string>).uk ?? ''
+    const regimen = rows.regimens[0]!
+    regimen.description = {
+      uk: `Профілактика — ${name} 480 мг тричі на тиждень, якого в довіднику немає.`,
+    }
+
+    expect(checkCatalog(rows).map((issue) => issue.message)).toContain(
+      `says ${drug.id} is not in the catalog, but it is`,
+    )
+  })
+
+  it('leaves alone a note saying the drug is there but the regimen is not', () => {
+    const rows = loadDemo()
+    const drug = rows.drugs[0]!
+    const name = (drug.name as Record<string, string>).uk ?? ''
+    const node = rows.treatment_nodes[0]!
+    node.description = { uk: `При резистентності — ${name} (у довіднику є, схеми ще немає).` }
+
+    expect(checkCatalog(rows).map((issue) => issue.message)).not.toContain(
+      `says ${drug.id} is not in the catalog, but it is`,
+    )
+  })
+
   it('asks nothing of a group node, which carries advice rather than regimens', () => {
     const rows = loadDemo()
     const node = rows.treatment_nodes[0]!

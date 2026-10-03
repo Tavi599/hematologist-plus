@@ -1,5 +1,5 @@
 {
-  "$comment": "Усі чотири цитостатики мають стелю разової дози, тож вони задані через cap_amount. Ко-тримоксазол у довіднику відсутній, тому лишився в описі.",
+  "$comment": "Усі чотири цитостатики мають стелю разової дози, тож вони задані через cap_amount.",
   "id": "chlvpp",
   "short_name": "ChlVPP",
   "name": {
@@ -7,8 +7,8 @@
     "en": "ChlVPP (chlorambucil, vinblastine, procarbazine, prednisolone)"
   },
   "description": {
-    "uk": "Лімфома Ходжкіна: перша лінія або терапія порятунку в літніх і ослаблених пацієнтів, а також у тих, кому не можна давати антрациклінову хіміотерапію. Цикл 28 днів, до 8 циклів. Головний ризик — пригнічення кровотворення, тому в літніх і ослаблених дози зменшують. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень на весь час лікування й щонайменше 3 місяці після; у довіднику його немає.",
-    "en": "Hodgkin lymphoma: first line or salvage in elderly and frail patients, and in those who cannot have anthracycline chemotherapy. A 28-day cycle, up to eight cycles. Myelosuppression is the main risk, so the doses are reduced in the elderly and the frail. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week throughout treatment and for at least three months after; it is not in the catalogue."
+    "uk": "Лімфома Ходжкіна: перша лінія або терапія порятунку в літніх і ослаблених пацієнтів, а також у тих, кому не можна давати антрациклінову хіміотерапію. Цикл 28 днів, до 8 циклів. Головний ризик — пригнічення кровотворення, тому в літніх і ослаблених дози зменшують. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень на весь час лікування й щонайменше 3 місяці після.",
+    "en": "Hodgkin lymphoma: first line or salvage in elderly and frail patients, and in those who cannot have anthracycline chemotherapy. A 28-day cycle, up to eight cycles. Myelosuppression is the main risk, so the doses are reduced in the elderly and the frail. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week throughout treatment and for at least three months after."
   },
   "cycle_length_days": 28,
   "default_cycles": 6,
@@ -183,8 +183,8 @@
         26, 27, 28
       ],
       "notes": {
-        "uk": "Захист шлунка на весь час лікування. Альтернатива протоколу — фамотидин 20 мг двічі на добу, якого в довіднику немає.",
-        "en": "Gastric protection throughout treatment. The protocol's alternative is famotidine 20 mg twice daily, which is not in the catalogue."
+        "uk": "Захист шлунка на весь час лікування. Альтернатива протоколу — фамотидин 20 мг двічі на добу.",
+        "en": "Gastric protection throughout treatment. The protocol's alternative is famotidine 20 mg twice daily."
       }
     }
   ]

@@ -1,0 +1,48 @@
+{
+  "$comment": "Внесено 2026-10-03: низькомолекулярний гепарин, названий у схемах із леналідомідом і талідомідом як альтернатива апіксабану.",
+  "id": "enoxaparin",
+  "name": {
+    "uk": "Еноксапарин",
+    "en": "Enoxaparin"
+  },
+  "trade_names": ["Клексан", "Новопарин", "Нардін"],
+  "atc_code": "B01AB05",
+  "dose_units": ["mg_flat", "mg_kg"],
+  "notes": {
+    "uk": "Низькомолекулярний гепарин для профілактики венозного тромбоемболізму. Шприци маркують і в міліграмах, і в анти-Ха МО (100 мг/мл = 10 000 анти-Ха МО/мл); довідник рахує в міліграмах і між цими одиницями не перераховує.",
+    "en": "A low-molecular-weight heparin for thromboprophylaxis. The syringes are labelled both in milligrams and in anti-Xa IU (100 mg/mL = 10,000 anti-Xa IU/mL); the catalog counts in milligrams and does not convert between the two."
+  },
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України, відкриті дані (reestr-lz.csv)",
+      "version": "вивантаження з data.gov.ua",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s20",
+      "form": "syringe",
+      "strength_amount": 20,
+      "volume_ml": 0.2
+    },
+    {
+      "key": "s40",
+      "form": "syringe",
+      "strength_amount": 40,
+      "volume_ml": 0.4
+    },
+    {
+      "key": "s60",
+      "form": "syringe",
+      "strength_amount": 60,
+      "volume_ml": 0.6
+    },
+    {
+      "key": "s80",
+      "form": "syringe",
+      "strength_amount": 80,
+      "volume_ml": 0.8
+    }
+  ]
+}

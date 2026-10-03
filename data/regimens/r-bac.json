@@ -1,5 +1,5 @@
 {
-  "$comment": "Протокол сам позначає обидва показання як застосування поза інструкцією. Схема взята з протоколу мережі, а не з публікації, тому поля evidence тут немає — але про позаінструкційність сказано в описі. Ко-тримоксазол і очні краплі зі стероїдом у довіднику відсутні, тому вони лишилися в описі.",
+  "$comment": "Протокол сам позначає обидва показання як застосування поза інструкцією. Схема взята з протоколу мережі, а не з публікації, тому поля evidence тут немає — але про позаінструкційність сказано в описі. Очні краплі зі стероїдом у довіднику відсутні, бо доза в них не в міліграмах.",
   "id": "r-bac",
   "short_name": "R-BAC",
   "name": {
@@ -7,8 +7,8 @@
     "en": "R-BAC (rituximab, bendamustine, cytarabine)"
   },
   "description": {
-    "uk": "Мантійноклітинна лімфома: перша лінія в літніх пацієнтів, яким не підходить антрациклінова хіміотерапія, або рецидив після інгібітора BTK, коли CAR-T чи клінічне дослідження недоступні. Протокол позначає обидва показання як застосування поза інструкцією. Цикл 28 днів, максимум 6 циклів. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень (понеділок, середа, п'ятниця) на весь час лікування й щонайменше 3 місяці після; у періоди нейтропенії дозу можна зменшити до двох разів на тиждень. Для профілактики цитарабінового кон'юнктивіту — очні краплі зі стероїдом (преднізолон 0,5% або дексаметазон 0,1%) по краплі в кожне око 4 рази на добу з дня 2 і ще 5 днів після останньої дози цитарабіну. Жодного з цих двох засобів у довіднику немає, тому окремих позицій для них у схемі теж немає.",
-    "en": "Mantle cell lymphoma: first line in older patients unsuitable for anthracycline chemotherapy, or relapse after a BTK inhibitor where CAR-T or a trial is not available. The protocol marks both indications as off-label. A 28-day cycle, six cycles at most. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week (Monday, Wednesday, Friday) throughout treatment and for at least three months after; during neutropenia the dose may drop to twice weekly. Against cytarabine conjunctivitis, steroid eye drops (prednisolone 0.5% or dexamethasone 0.1%), one drop in each eye four times a day from day 2 and for five days after the last cytarabine. Neither is in the catalogue, so neither has a row of its own here."
+    "uk": "Мантійноклітинна лімфома: перша лінія в літніх пацієнтів, яким не підходить антрациклінова хіміотерапія, або рецидив після інгібітора BTK, коли CAR-T чи клінічне дослідження недоступні. Протокол позначає обидва показання як застосування поза інструкцією. Цикл 28 днів, максимум 6 циклів. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень (понеділок, середа, п'ятниця) на весь час лікування й щонайменше 3 місяці після; у періоди нейтропенії дозу можна зменшити до двох разів на тиждень. Для профілактики цитарабінового кон'юнктивіту — очні краплі зі стероїдом (преднізолон 0,5% або дексаметазон 0,1%) по краплі в кожне око 4 рази на добу з дня 2 і ще 5 днів після останньої дози цитарабіну. Очних крапель у довіднику немає, бо доза в них не в міліграмах, тому окремої позиції для них у схемі теж немає.",
+    "en": "Mantle cell lymphoma: first line in older patients unsuitable for anthracycline chemotherapy, or relapse after a BTK inhibitor where CAR-T or a trial is not available. The protocol marks both indications as off-label. A 28-day cycle, six cycles at most. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week (Monday, Wednesday, Friday) throughout treatment and for at least three months after; during neutropenia the dose may drop to twice weekly. Against cytarabine conjunctivitis, steroid eye drops (prednisolone 0.5% or dexamethasone 0.1%), one drop in each eye four times a day from day 2 and for five days after the last cytarabine. The eye drops are not in the catalogue, because their dose is not in milligrams, so they have no row of their own here."
   },
   "cycle_length_days": 28,
   "default_cycles": 6,
@@ -32,8 +32,8 @@
       "dose_unit": "mg_flat",
       "days": [1],
       "notes": {
-        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає гідрокортизон 100 мг і хлорфенамін 10 мг внутрішньовенно — цих препаратів у довіднику немає.",
-        "en": "At least 30 minutes before the rituximab. The protocol adds hydrocortisone 100 mg and chlorphenamine 10 mg intravenously; neither is in the catalogue."
+        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає гідрокортизон 100 мг і хлорфенамін 10 мг внутрішньовенно.",
+        "en": "At least 30 minutes before the rituximab. The protocol adds hydrocortisone 100 mg and chlorphenamine 10 mg intravenously."
       }
     },
     {

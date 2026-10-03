@@ -7,8 +7,8 @@
     "en": "R-DHAOx (rituximab, dexamethasone, cytarabine, oxaliplatin)"
   },
   "description": {
-    "uk": "Рецидивна або рефрактерна лімфома Ходжкіна й неходжкінські лімфоми, а також перша лінія мантійноклітинної лімфоми. Цикл 21 день: 3 цикли як терапія порятунку, максимум 4 цикли в першій лінії. Профілактика цитарабінового кон'юнктивіту — очні краплі зі стероїдом (преднізолон 0,5% або дексаметазон 0,1%) по краплі в кожне око 4 рази на добу з дня 2 і ще 5 днів після останньої дози цитарабіну; у довіднику їх немає. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень (понеділок, середа, п'ятниця) на весь час лікування й щонайменше 3 місяці після; у довіднику цього препарату немає. У циклі мобілізації стовбурових клітин дозу філграстиму підвищують до 1,0 млн МО/кг і продовжують до завершення збору; пегфілграстим у такому циклі застосовувати не можна.",
-    "en": "Relapsed or refractory Hodgkin and non-Hodgkin lymphoma, and first line of mantle cell lymphoma. A 21-day cycle: three cycles as salvage, four at most as front-line therapy. Against cytarabine conjunctivitis, steroid eye drops (prednisolone 0.5% or dexamethasone 0.1%), one drop in each eye four times a day from day 2 and for five days after the last cytarabine; they are not in the catalogue. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week (Monday, Wednesday, Friday) throughout treatment and for at least three months after; it is not in the catalogue. In a stem cell priming cycle the filgrastim rises to 1.0 million IU/kg and continues until the harvest is complete; pegfilgrastim must not be used in such a cycle."
+    "uk": "Рецидивна або рефрактерна лімфома Ходжкіна й неходжкінські лімфоми, а також перша лінія мантійноклітинної лімфоми. Цикл 21 день: 3 цикли як терапія порятунку, максимум 4 цикли в першій лінії. Профілактика цитарабінового кон'юнктивіту — очні краплі зі стероїдом (преднізолон 0,5% або дексаметазон 0,1%) по краплі в кожне око 4 рази на добу з дня 2 і ще 5 днів після останньої дози цитарабіну; у довіднику їх немає. Профілактика пневмоцистозу — ко-тримоксазол 480 мг тричі на тиждень (понеділок, середа, п'ятниця) на весь час лікування й щонайменше 3 місяці після. У циклі мобілізації стовбурових клітин дозу філграстиму підвищують до 1,0 млн МО/кг і продовжують до завершення збору; пегфілграстим у такому циклі застосовувати не можна.",
+    "en": "Relapsed or refractory Hodgkin and non-Hodgkin lymphoma, and first line of mantle cell lymphoma. A 21-day cycle: three cycles as salvage, four at most as front-line therapy. Against cytarabine conjunctivitis, steroid eye drops (prednisolone 0.5% or dexamethasone 0.1%), one drop in each eye four times a day from day 2 and for five days after the last cytarabine; they are not in the catalogue. Pneumocystis prophylaxis is co-trimoxazole 480 mg three times a week (Monday, Wednesday, Friday) throughout treatment and for at least three months after. In a stem cell priming cycle the filgrastim rises to 1.0 million IU/kg and continues until the harvest is complete; pegfilgrastim must not be used in such a cycle."
   },
   "cycle_length_days": 21,
   "default_cycles": 3,
@@ -44,8 +44,8 @@
       "dose_unit": "mg_flat",
       "days": [1],
       "notes": {
-        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає хлорфенамін 10 мг внутрішньовенно, якого в довіднику немає.",
-        "en": "At least 30 minutes before the rituximab. The protocol adds chlorphenamine 10 mg intravenously, which is not in the catalogue."
+        "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає хлорфенамін 10 мг внутрішньовенно.",
+        "en": "At least 30 minutes before the rituximab. The protocol adds chlorphenamine 10 mg intravenously."
       }
     },
     {

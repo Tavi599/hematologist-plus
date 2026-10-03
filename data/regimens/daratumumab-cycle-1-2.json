@@ -7,8 +7,8 @@
     "en": "Daratumumab monotherapy, cycles 1-2"
   },
   "description": {
-    "uk": "Множинна мієлома. Цикл 28 днів. У перших двох циклах даратумумаб дають щотижня. У циклі 1 до премедикації додають монтелукаст 10 мг усередину — цього препарату в довіднику немає, тому окремої позиції для нього в схемі теж немає.",
-    "en": "Multiple myeloma. A 28-day cycle. In the first two cycles the daratumumab is weekly. In cycle 1 the premedication also includes montelukast 10 mg by mouth; it is not in the catalogue, so it has no row of its own here."
+    "uk": "Множинна мієлома. Цикл 28 днів. У перших двох циклах даратумумаб дають щотижня. У циклі 1 до премедикації додають монтелукаст 10 мг усередину.",
+    "en": "Multiple myeloma. A 28-day cycle. In the first two cycles the daratumumab is weekly. In cycle 1 the premedication also includes montelukast 10 mg by mouth."
   },
   "cycle_length_days": 28,
   "default_cycles": 2,
@@ -32,8 +32,8 @@
       "dose_unit": "mg_flat",
       "days": [1, 8, 15, 22],
       "notes": {
-        "uk": "За годину до ін'єкції даратумумабу. Протокол додає хлорфенамін 4 мг усередину, якого в довіднику немає.",
-        "en": "An hour before the daratumumab injection. The protocol adds chlorphenamine 4 mg by mouth, which is not in the catalogue."
+        "uk": "За годину до ін'єкції даратумумабу. Протокол додає хлорфенамін 4 мг усередину.",
+        "en": "An hour before the daratumumab injection. The protocol adds chlorphenamine 4 mg by mouth."
       }
     },
     {
