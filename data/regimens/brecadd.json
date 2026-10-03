@@ -1,0 +1,145 @@
+{
+  "$comment": "BrECADD за eviQ (протокол 4598, вер. 2 від 31.08.2026): цикл 21 день, 4–6 циклів. UpToDate вважає її прийнятною для придатних пацієнтів до 60 років з несприятливими прогностичними ознаками при поширеній стадії (дослідження HD21; прямого порівняння з N+AVD немає). Протиблювотні eviQ радить за емето-ризиком без доз — не внесені.",
+  "id": "brecadd",
+  "short_name": "BrECADD",
+  "name": {
+    "uk": "BrECADD (брентуксимаб, етопозид, циклофосфамід, доксорубіцин, дакарбазин, дексаметазон)",
+    "en": "BrECADD (brentuximab, etoposide, cyclophosphamide, doxorubicin, dacarbazine, dexamethasone)"
+  },
+  "description": {
+    "uk": "Поширена стадія класичної лімфоми Ходжкіна у придатних пацієнтів до 60 років з несприятливими ознаками. Цикл 21 день, 4–6 циклів.",
+    "en": "Advanced-stage classical Hodgkin lymphoma in fit patients up to 60 with adverse features. A 21-day cycle, 4 to 6 cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "eviQ: Hodgkin lymphoma BrECADD (протокол 4598)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/hodgkin-lymphoma/4598-hodgkin-lymphoma-brecadd",
+      "version": "вер. 2 від 31.08.2026",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "UpToDate: Initial treatment of advanced (stage III-IV) classic Hodgkin lymphoma",
+      "url": "https://www.uptodate.com/contents/initial-treatment-of-advanced-stage-iii-iv-classic-hodgkin-lymphoma",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "brentuximab-vedotin",
+      "drug_id": "brentuximab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.8,
+      "dose_unit": "mg_kg",
+      "cap_amount": 180,
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 150,
+      "notes": {
+        "uk": "1,8 мг/кг, не більше 180 мг, за 30 хв у день 1 (eviQ). Розведення — 150 мл: 100 мл дало б концентрацію понад межу 1,2 мг/мл інструкції.",
+        "en": "1.8 mg/kg, no more than 180 mg, over 30 minutes on day 1 (eviQ). Diluted in 150 mL: 100 mL would exceed the label limit of 1.2 mg/mL."
+      },
+      "infusion_params_key": "nacl-150"
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [2, 3, 4, 5],
+      "notes": {
+        "uk": "40 мг усередину, дні 2–5 (eviQ). Це й протиблювотний засіб.",
+        "en": "40 mg by mouth on days 2 to 5 (eviQ). It is also an antiemetic."
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_bolus",
+      "dose_value": 40,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "notes": {
+        "uk": "40 мг/м² внутрішньовенно за 5–15 хв, день 2 (eviQ). Накопичену дозу антрациклінів і серце контролювати.",
+        "en": "40 mg/m2 intravenously over 5 to 15 minutes on day 2 (eviQ). Watch the cumulative anthracycline dose and the heart."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 1250,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "1250 мг/м² у 500 мл 0,9% NaCl за 30–60 хв, день 2 (eviQ). Доза ≥ 1000 мг: калькулятор додасть месну за вашим правилом.",
+        "en": "1250 mg/m2 in 500 mL of 0.9% NaCl over 30 to 60 minutes on day 2 (eviQ). A dose of 1000 mg or more: the calculator adds mesna by your rule."
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 150,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "150 мг/м² у 1000 мл 0,9% NaCl (контейнер без ПВХ) за 30–60 хв, дні 2–4 (eviQ). Етопофос 113,6 мг відповідає етопозиду 100 мг.",
+        "en": "150 mg/m2 in 1000 mL of 0.9% NaCl (a non-PVC container) over 30 to 60 minutes on days 2 to 4 (eviQ). Etopophos 113.6 mg equals etoposide 100 mg."
+      }
+    },
+    {
+      "key": "dacarbazine",
+      "drug_id": "dacarbazine",
+      "route": "iv_infusion",
+      "dose_value": 250,
+      "dose_unit": "mg_m2",
+      "days": [3, 4],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "250 мг/м² у 500 мл 0,9% NaCl за 60 хв, дні 3–4 (eviQ). Захищати від світла.",
+        "en": "250 mg/m2 in 500 mL of 0.9% NaCl over 60 minutes on days 3 to 4 (eviQ). Protect from light."
+      },
+      "infusion_params_key": "nacl-500"
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 5,
+      "dose_unit": "mcg_kg",
+      "days": [5, 6, 7, 8, 9, 10, 11],
+      "notes": {
+        "uk": "5 мкг/кг підшкірно з дня 5 до відновлення нейтрофілів (eviQ); у розрахунку 7 днів — кількість уточнюйте за аналізами. Можна пегфілграстим одноразово за цикл.",
+        "en": "5 mcg/kg subcutaneously from day 5 until neutrophil recovery (eviQ); seven days are entered, adjust to the counts. A single dose of pegfilgrastim per cycle is an alternative."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Противірусна профілактика (eviQ радить її, дозу не називає); доза за практикою відділення. Профілактика пневмоцистної пневмонії теж рекомендована — не внесена.",
+        "en": "Antiviral prophylaxis (eviQ recommends it without naming a dose); the dose follows the department's practice. Pneumocystis prophylaxis is recommended too and is not entered."
+      }
+    }
+  ]
+}

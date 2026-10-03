@@ -60,6 +60,25 @@
           "checkedOn": "2026-10-02"
         }
       ]
+    },
+    {
+      "key": "nacl-500",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [500],
+      "is_default": false,
+      "duration_min": 60,
+      "sources": [
+        {
+          "name": "eviQ: Hodgkin lymphoma BrECADD (протокол 4598) — дакарбазин 250 мг/м² у 500 мл 0,9% NaCl за 60 хв",
+          "url": "https://www.eviq.org.au/haematology/lymphoma/hodgkin-lymphoma/4598-hodgkin-lymphoma-brecadd",
+          "version": "вер. 2 від 31.08.2026",
+          "checkedOn": "2026-10-03"
+        }
+      ],
+      "notes": {
+        "uk": "Другий набір: 500 мл за 60 хвилин — для BrECADD. Основний (1000 мл за 2 години) — для BV-AVD.",
+        "en": "The second set: 500 mL over 60 minutes, for BrECADD. The main one (1000 mL over 2 hours) is for BV-AVD."
+      }
     }
   ]
 }
