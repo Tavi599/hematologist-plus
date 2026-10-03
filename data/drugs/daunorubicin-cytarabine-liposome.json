@@ -1,0 +1,53 @@
+{
+  "$comment": "Додано 2026-10-04 для схеми eviQ 4288. Не взаємозамінний із даунорубіцином і цитарабіном окремо. Доза записана за даунорубіцином (44 і 29 мг/м²); цитарабін у флаконі йде в сталому співвідношенні (100 і 65 мг/м²). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "daunorubicin-cytarabine-liposome",
+  "name": {
+    "uk": "Даунорубіцин + цитарабін ліпосомальний (CPX-351, Vyxeos)",
+    "en": "Daunorubicin and cytarabine liposome (CPX-351, Vyxeos)"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: VYXEOS (daunorubicin and cytarabine liposome) — флакон 44 мг/100 мг, відновлення 19 мл води, розведення в 500 мл 0,9% NaCl або 5% глюкози",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7ea701ce-e7d3-4349-a9c2-642a501d45c8",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v44",
+      "form": "vial",
+      "strength_amount": 44,
+      "volume_ml": 20
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [500],
+      "is_default": true,
+      "duration_min": 90,
+      "stock_concentration_mg_ml": 2.2,
+      "sources": [
+        {
+          "name": "FDA label: VYXEOS (daunorubicin and cytarabine liposome) — флакон 44 мг/100 мг, відновлення 19 мл води, розведення в 500 мл 0,9% NaCl або 5% глюкози",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7ea701ce-e7d3-4349-a9c2-642a501d45c8",
+          "version": "перевірено 2026-10-04",
+          "checkedOn": "2026-10-04"
+        },
+        {
+          "name": "eviQ: Acute myeloid leukaemia — liposomal daunorubicin and cytarabine (протокол 4288)",
+          "url": "https://www.eviq.org.au/haematology/leukaemias/acute-myeloid-leukaemia/4288-acute-myeloid-leukaemia-liposomal-daunorubici",
+          "version": "вер. 2 від 08.03.2024",
+          "checkedOn": "2026-10-04"
+        }
+      ],
+      "notes": {
+        "uk": "Флакон відновлюють 19 мл води для ін'єкцій (2,2 мг даунорубіцину і 5 мг цитарабіну в 1 мл), потрібний об'єм переносять у 500 мл 0,9% NaCl (допустима і 5% глюкоза). Інфузія 90 хвилин; відновлений розчин і розведений разом зберігають не довше 4 годин у холодильнику.",
+        "en": "Each vial is reconstituted with 19 mL of water for injection (2.2 mg of daunorubicin and 5 mg of cytarabine per mL) and the needed volume goes into 500 mL of 0.9% NaCl (5% glucose is allowed too). A 90-minute infusion; reconstituted plus diluted solution is kept no longer than 4 hours in a refrigerator."
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "$comment": "Івосиденіб у монорежимі при рецидивній/рефрактерній ГМЛ з IDH1 за UpToDate (500 мг на добу). Доза, яка знижується до 250 мг при сильному інгібіторі CYP3A4, — як у схемі з азацитидином. Профілактика синдрому диференціювання — за протоколом відділення.",
+  "id": "ivosidenib-aml",
+  "short_name": "Івосиденіб",
+  "name": {
+    "uk": "Івосиденіб (рецидив, IDH1)",
+    "en": "Ivosidenib (relapse, IDH1)"
+  },
+  "description": {
+    "uk": "Рецидивна або рефрактерна ГМЛ з мутацією IDH1: 500 мг раз на добу до прогресування чи неприйнятної токсичності.",
+    "en": "Relapsed or refractory AML with an IDH1 mutation: 500 mg once a day until progression or unacceptable toxicity."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory acute myeloid leukemia",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-acute-myeloid-leukemia",
+      "version": "тема оновлена 20.11.2025",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "ivosidenib",
+      "drug_id": "ivosidenib",
+      "route": "oral",
+      "dose_value": 500,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Раз на добу, в один і той самий час. Синдром диференціювання (бокс-попередження): розглядають стероїд і перерву в лікуванні.",
+        "en": "Once a day at the same time. Differentiation syndrome (boxed warning): consider a steroid and a pause."
+      },
+      "dose_modifiers": [
+        {
+          "key": "cyp3a4-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A4 (позаконазол, вориконазол)",
+            "en": "A strong CYP3A4 inhibitor (posaconazole, voriconazole)"
+          },
+          "dose_value": 250,
+          "notes": {
+            "uk": "Якщо починають позаконазол, вориконазол або інший сильний інгібітор CYP3A4.",
+            "en": "Where posaconazole, voriconazole or another strong CYP3A4 inhibitor is started."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.104 Ivosidenib and Azacitidine",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-104-ivosidenib-azaciditine.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -18,6 +18,18 @@
       "url": "https://www.uptodate.com/contents/acute-myeloid-leukemia-in-medically-fit-adults-post-remission-therapy",
       "version": "перевірено 2026-10-03",
       "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "eviQ: Acute myeloid leukaemia — consolidation cytarabine, вік до 60 (протокол 4285)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-myeloid-leukaemia/4285-acute-myeloid-leukaemia-consolidation-cytarab",
+      "version": "вер. 3, переглянуто 08.05.2024",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "eviQ: Acute myeloid leukaemia — consolidation cytarabine, вік 60+ (протокол 4354)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-myeloid-leukaemia/4354-acute-myeloid-leukaemia-consolidation-cytarab",
+      "version": "вер. 3",
+      "checkedOn": "2026-10-04"
     }
   ],
   "items": [
@@ -34,22 +46,36 @@
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 250,
       "notes": {
-        "uk": "Кожні 12 годин, за 2–3 години (6 доз). UpToDate: 1–1,5 г/м².",
-        "en": "Every 12 hours over 2 to 3 hours (6 doses). UpToDate: 1 to 1.5 g/m2."
+        "uk": "Кожні 12 годин, за 3 години в 500 мл 0,9% NaCl за eviQ (6 доз). Вік до 60: 1,5 г/м², 60+: 1 г/м² (eviQ); UpToDate: 1–1,5 г/м². Стероїдні очні краплі — під час і 72 години після.",
+        "en": "Every 12 hours over 3 hours in 500 mL of 0.9% NaCl per eviQ (6 doses). Under 60: 1.5 g/m2, 60+: 1 g/m2 (eviQ); UpToDate: 1 to 1.5 g/m2. Steroid eye drops during and for 72 hours after."
       },
       "dose_options": [
         {
           "dose_value": 1000,
           "dose_unit": "mg_m2",
           "notes": {
-            "uk": "Від 61 року або при нирковій недостатності (нижча межа UpToDate)",
-            "en": "From 61 years or with kidney insufficiency (the UpToDate lower dose)"
+            "uk": "Від 60 років (eviQ 4354: 1 г/м² двічі на добу; UpToDate: 61+) або при нирковій недостатності",
+            "en": "From 60 years (eviQ 4354: 1 g/m2 twice a day; UpToDate: 61+) or with kidney insufficiency"
           },
           "source": {
             "name": "UpToDate: Acute myeloid leukemia in medically fit adults: Post-remission therapy",
             "url": "https://www.uptodate.com/contents/acute-myeloid-leukemia-in-medically-fit-adults-post-remission-therapy",
             "version": "перевірено 2026-10-03",
             "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "dose_value": 3000,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "CBF-ГМЛ до 60 років (eviQ 4285 радить 3 г/м² двічі на добу)",
+            "en": "CBF AML under 60 years (eviQ 4285 advises 3 g/m2 twice a day)"
+          },
+          "source": {
+            "name": "eviQ: Acute myeloid leukaemia — consolidation cytarabine, вік до 60 (протокол 4285)",
+            "url": "https://www.eviq.org.au/haematology/leukaemias/acute-myeloid-leukaemia/4285-acute-myeloid-leukaemia-consolidation-cytarab",
+            "version": "вер. 3, переглянуто 08.05.2024",
+            "checkedOn": "2026-10-04"
           }
         }
       ]

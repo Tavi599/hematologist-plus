@@ -18,6 +18,12 @@
       "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-83-gilteritinib.pdf",
       "version": "перевірено 2026-10-03",
       "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "eviQ: Acute myeloid leukaemia — gilteritinib (протокол 3907)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-myeloid-leukaemia/3907-acute-myeloid-leukaemia-gilteritinib",
+      "version": "вер. 2 від 04.02.2025",
+      "checkedOn": "2026-10-04"
     }
   ],
   "items": [
@@ -40,14 +46,14 @@
           "dose_value": 200,
           "dose_unit": "mg_flat",
           "notes": {
-            "uk": "Немає відповіді після 4 тижнів лікування",
-            "en": "No response after four weeks of treatment"
+            "uk": "Можна підвищити до 200 мг після 4 тижнів, якщо відповіді немає (eviQ 3907).",
+            "en": "May be raised to 200 mg after 4 weeks if there is no response (eviQ 3907)."
           },
           "source": {
-            "name": "NSSG Oxford Haematology, ML.83 Gilteritinib",
-            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-83-gilteritinib.pdf",
-            "version": "перевірено 2026-10-03",
-            "checkedOn": "2026-10-03"
+            "name": "eviQ: Acute myeloid leukaemia — gilteritinib (протокол 3907)",
+            "url": "https://www.eviq.org.au/haematology/leukaemias/acute-myeloid-leukaemia/3907-acute-myeloid-leukaemia-gilteritinib",
+            "version": "вер. 2 від 04.02.2025",
+            "checkedOn": "2026-10-04"
           }
         }
       ]

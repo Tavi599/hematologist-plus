@@ -1,0 +1,29 @@
+{
+  "$comment": "Додано 2026-10-04 (UpToDate: рецидивна ГМЛ з мутацією IDH2). Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "enasidenib",
+  "name": {
+    "uk": "Енасиденіб",
+    "en": "Enasidenib"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: IDHIFA (enasidenib) — таблетки 50 і 100 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a5b4cdf0-3fa8-4c6c-80f6-8d8a00e3a5b6",
+      "version": "SPL від 16.01.2025",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t50",
+      "form": "tablet",
+      "strength_amount": 50
+    },
+    {
+      "key": "t100",
+      "form": "tablet",
+      "strength_amount": 100
+    }
+  ]
+}

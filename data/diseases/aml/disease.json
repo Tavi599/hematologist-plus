@@ -123,6 +123,23 @@
             "uk": "FLT3-позитивна ГМЛ, другий курс",
             "en": "FLT3-positive AML, second course"
           }
+        },
+        {
+          "regimen_id": "ida-7-3",
+          "notes": {
+            "uk": "Ідарубіцин замість даунорубіцину; eviQ 350",
+            "en": "Idarubicin instead of daunorubicin; eviQ 350"
+          }
+        },
+        {
+          "regimen_id": "cpx-351-induction-1",
+          "notes": {
+            "uk": "Вторинна ГМЛ і ГМЛ, пов'язана з лікуванням; eviQ 4288",
+            "en": "Secondary and therapy-related AML; eviQ 4288"
+          }
+        },
+        {
+          "regimen_id": "cpx-351-induction-2"
         }
       ]
     },
@@ -185,6 +202,20 @@
             "uk": "Підтримка від 55 років при проміжному/несприятливому ризику після консолідації",
             "en": "Maintenance from 55 years with intermediate or adverse risk after consolidation"
           }
+        },
+        {
+          "regimen_id": "ida-5-2-consolidation",
+          "notes": {
+            "uk": "1–2 курси; eviQ 342",
+            "en": "One or two cycles; eviQ 342"
+          }
+        },
+        {
+          "regimen_id": "cpx-351-consolidation",
+          "notes": {
+            "uk": "Після індукції CPX-351; eviQ 4288",
+            "en": "After CPX-351 induction; eviQ 4288"
+          }
         }
       ]
     },
@@ -222,6 +253,37 @@
         },
         {
           "regimen_id": "cytarabine-intrathecal"
+        },
+        {
+          "regimen_id": "ivosidenib-aml",
+          "notes": {
+            "uk": "Мутація IDH1; UpToDate",
+            "en": "IDH1 mutation; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "olutasidenib",
+          "notes": {
+            "uk": "Мутація IDH1; листок FDA",
+            "en": "IDH1 mutation; FDA label"
+          }
+        },
+        {
+          "regimen_id": "enasidenib",
+          "notes": {
+            "uk": "Мутація IDH2; UpToDate",
+            "en": "IDH2 mutation; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "go-mono-induction",
+          "notes": {
+            "uk": "CD33-позитивна ГМЛ; UpToDate",
+            "en": "CD33-positive AML; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "go-mono-continuation"
         }
       ]
     },
@@ -305,6 +367,29 @@
             "uk": "Якщо венетоклакс недоступний",
             "en": "Where venetoclax is not available"
           }
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-mec"
+        },
+        {
+          "regimen_id": "ref-ham"
+        },
+        {
+          "regimen_id": "ref-stimulus"
         }
       ]
     }

@@ -1,0 +1,40 @@
+{
+  "$comment": "Гемтузумаб озогаміцин у монорежимі при CD33-позитивній рецидивній/рефрактерній ГМЛ за UpToDate: 3 мг/м² у дні 1, 4, 7; без прогресування — 2 мг/м² у день 1 кожні 4 тижні, до 8 циклів. Обмеження 4,5 мг (один флакон) в UpToDate наведено для вперше виявленої ГМЛ, для рецидиву не вказано, тому обмеження не ставилося. Премедикація (глюкокортикоїд, парацетамол, дифенгідрамін) без доз у UpToDate — вмикається вручну. Бокс-попередження: гепатотоксичність і VOD.",
+  "id": "go-mono-induction",
+  "short_name": "ГО моно",
+  "name": {
+    "uk": "Гемтузумаб озогаміцин, індукція (рецидив)",
+    "en": "Gemtuzumab ozogamicin, induction (relapse)"
+  },
+  "description": {
+    "uk": "CD33-позитивна рецидивна/рефрактерна ГМЛ: 3 мг/м² у дні 1, 4, 7.",
+    "en": "CD33-positive relapsed or refractory AML: 3 mg/m2 on days 1, 4 and 7."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory acute myeloid leukemia",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-acute-myeloid-leukemia",
+      "version": "тема оновлена 20.11.2025",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "gemtuzumab-ozogamicin",
+      "drug_id": "gemtuzumab-ozogamicin",
+      "route": "iv_infusion",
+      "dose_value": 3,
+      "dose_unit": "mg_m2",
+      "days": [1, 4, 7],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "3 мг/м² у дні 1, 4, 7 (UpToDate).",
+        "en": "3 mg/m2 on days 1, 4 and 7 (UpToDate)."
+      }
+    }
+  ]
+}

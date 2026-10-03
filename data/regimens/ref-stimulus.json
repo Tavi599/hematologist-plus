@@ -1,0 +1,58 @@
+{
+  "id": "ref-stimulus",
+  "short_name": "STIMULus",
+  "name": {
+    "uk": "STIMULus (цитарабін + тіогуанін у малих дозах)",
+    "en": "STIMULus (low-dose cytarabine + tioguanine)"
+  },
+  "sources": [
+    {
+      "name": "eviQ: Acute myeloid leukaemia — STIMULus (протокол 4088)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-myeloid-leukaemia/4088-acute-myeloid-leukaemia-stimulus-low-dose-cy",
+      "version": "вер. 1 від 06.02.2023",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Вперше виявлена ГМЛ у пацієнтів, яким не підходить інтенсивна хіміотерапія і азацитидин + венетоклакс; зокрема при протипоказаннях до антрациклінів. Вік у дослідженні в середньому 75 років.",
+      "en": "Newly diagnosed AML in patients ineligible for intensive chemotherapy and for azacitidine plus venetoclax; also with contraindications to anthracyclines. Mean age in the study 75 years."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Тіогуанін",
+          "en": "Tioguanine"
+        }
+      },
+      {
+        "name": {
+          "uk": "Пегфілграстим",
+          "en": "Pegfilgrastim"
+        }
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Цитарабін 20 мг/м² і тіогуанін 40 мг/м² щодня: індукція — дні 1–21 (цикл 28 днів), консолідація — дні 1–14 (цикл 35 днів, 3 цикли), підтримка — дні 1–14 (цикл 42 дні), до 2 років від початку індукції.",
+        "en": "Cytarabine 20 mg/m2 and tioguanine 40 mg/m2 daily: induction on days 1 to 21 (28-day cycle), consolidation on days 1 to 14 (35-day cycle, 3 cycles), maintenance on days 1 to 14 (42-day cycle), up to 2 years from the start of induction."
+      },
+      {
+        "uk": "Пегфілграстим — коли нейтрофіли падають нижче 1,0 ×10⁹/л. Новий цикл — при нейтрофілах >1,0 і тромбоцитах >25 ×10⁹/л.",
+        "en": "Pegfilgrastim when neutrophils fall below 1.0 ×10⁹/L. A new cycle when neutrophils are above 1.0 and platelets above 25 ×10⁹/L."
+      }
+    ],
+    "gap": {
+      "uk": "Протокол eviQ 4088 не вказує шлях введення цитарабіну (відсилає до протоколу індукції), а тіогуаніну ще немає в довіднику.",
+      "en": "The eviQ 4088 protocol does not state the route of cytarabine (it refers to the induction protocol), and tioguanine is not in the catalog yet."
+    },
+    "availability": "unknown"
+  }
+}

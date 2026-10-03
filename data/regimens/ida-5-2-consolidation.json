@@ -1,0 +1,53 @@
+{
+  "$comment": "Консолідація 5-2 з ідарубіцином за eviQ 342 (вер. 6). Довжина циклу в протоколі не вказана — наступний курс за відновленням кровотворення; 28 днів технічні. Протиблювотні, G-CSF і профілактики — у «Супроводі за стандартом» або вручну.",
+  "id": "ida-5-2-consolidation",
+  "short_name": "5-2 Ida",
+  "name": {
+    "uk": "Консолідація 5-2 (цитарабін + ідарубіцин)",
+    "en": "Consolidation 5-2 (cytarabine + idarubicin)"
+  },
+  "description": {
+    "uk": "Цитарабін безперервно 5 діб, ідарубіцин 12 мг/м² у дні 1–2; 1 або 2 курси після підтвердженої ремісії.",
+    "en": "Cytarabine as a 5-day continuous infusion, idarubicin 12 mg/m2 on days 1 and 2; one or two cycles after confirmed remission."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "eviQ: Acute myeloid leukaemia — consolidation 5-2 Ida (протокол 342)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-myeloid-leukaemia/342-consolidation-5-2-ida-cytarabine-and-idarubic",
+      "version": "вер. 6, переглянуто 11.03.2022",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Безперервна інфузія 5 діб: 100 мг/м² на добу, новий мішок щодня, без перерв (eviQ 342).",
+        "en": "A 5-day continuous infusion: 100 mg/m2 a day, a new bag every day, no interruptions (eviQ 342)."
+      },
+      "dose_options": []
+    },
+    {
+      "key": "idarubicin",
+      "drug_id": "idarubicin",
+      "route": "iv_bolus",
+      "dose_value": 12,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "notes": {
+        "uk": "12 мг/м² струминно за 10–15 хвилин (eviQ 342).",
+        "en": "12 mg/m2 as a bolus over 10 to 15 minutes (eviQ 342)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$comment": "Олутасиденіб при рецидивній/рефрактерній ГМЛ з IDH1: UpToDate називає препарат і результати, але не дозу; доза й режим — з листка FDA (REZLIDHIA).",
+  "id": "olutasidenib",
+  "short_name": "Олутасиденіб",
+  "name": {
+    "uk": "Олутасиденіб (рецидив, IDH1)",
+    "en": "Olutasidenib (relapse, IDH1)"
+  },
+  "description": {
+    "uk": "Рецидивна або рефрактерна ГМЛ з мутацією IDH1: 150 мг двічі на добу натще до прогресування чи неприйнятної токсичності.",
+    "en": "Relapsed or refractory AML with an IDH1 mutation: 150 mg twice a day on an empty stomach until progression or unacceptable toxicity."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory acute myeloid leukemia",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-acute-myeloid-leukemia",
+      "version": "тема оновлена 20.11.2025",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: REZLIDHIA (olutasidenib) — капсули 150 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4a0c7c8b-b95f-455d-9600-b7351e4397fe",
+      "version": "SPL від 05.11.2025",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "olutasidenib",
+      "drug_id": "olutasidenib",
+      "route": "oral",
+      "dose_value": 150,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Двічі на добу через ~12 годин, за годину до їжі або за 2 години після (їжа різко збільшує всмоктування). Синдром диференціювання (бокс-попередження). Мінімум 6 місяців без прогресування.",
+        "en": "Twice a day about 12 hours apart, 1 hour before or 2 hours after a meal (food greatly raises absorption). Differentiation syndrome (boxed warning). At least 6 months without progression."
+      }
+    }
+  ]
+}

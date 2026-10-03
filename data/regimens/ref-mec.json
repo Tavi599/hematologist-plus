@@ -1,0 +1,60 @@
+{
+  "id": "ref-mec",
+  "short_name": "MEC",
+  "name": {
+    "uk": "MEC (мітоксантрон + етопозид + цитарабін)",
+    "en": "MEC (mitoxantrone + etoposide + cytarabine)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory acute myeloid leukemia",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-acute-myeloid-leukemia",
+      "version": "тема оновлена 20.11.2025",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рефрактерна або рецидивна ГМЛ; один із найуживаніших режимів порятунку. Приблизно 40% повних ремісій.",
+      "en": "Refractory or relapsed AML; one of the most used salvage regimens. About 40% complete remissions."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Мітоксантрон",
+          "en": "Mitoxantrone"
+        },
+        "drug_id": "mitoxantrone"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Мітоксантрон 10–12 мг/м² і етопозид 100 мг/м² на добу, 5 діб.",
+        "en": "Mitoxantrone 10 to 12 mg/m2 and etoposide 100 mg/m2 a day for 5 days."
+      },
+      {
+        "uk": "Токсичність: стоматит, нудота, інфекції, нейтропенічна гарячка; зрідка минуща серцева недостатність і тахіаритмії.",
+        "en": "Toxicity: stomatitis, nausea, infections, neutropenic fever; rarely transient heart failure and tachyarrhythmias."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не вказує дозу й спосіб введення цитарабіну в цьому режимі, тому розрахунку немає.",
+      "en": "UpToDate does not give the cytarabine dose or schedule for this regimen, so there is no calculation."
+    },
+    "availability": "unknown"
+  }
+}

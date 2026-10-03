@@ -1,0 +1,53 @@
+{
+  "id": "ref-ham",
+  "short_name": "HAM",
+  "name": {
+    "uk": "HAM (мітоксантрон + цитарабін проміжними дозами)",
+    "en": "HAM (mitoxantrone + intermediate-dose cytarabine)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment of relapsed or refractory acute myeloid leukemia",
+      "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-acute-myeloid-leukemia",
+      "version": "тема оновлена 20.11.2025",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидивна або рефрактерна ГМЛ; у серії з 47 пацієнтів повна ремісія у 62%, але медіана ремісії лише 3,7 місяця.",
+      "en": "Relapsed or refractory AML; in a series of 47 patients 62% complete remission, but the median remission was only 3.7 months."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Мітоксантрон",
+          "en": "Mitoxantrone"
+        },
+        "drug_id": "mitoxantrone"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Мітоксантрон 5 мг/м² на добу 5 діб; цитарабін 0,5 г/м² в/в кожні 12 годин 6 діб.",
+        "en": "Mitoxantrone 5 mg/m2 a day for 5 days; cytarabine 0.5 g/m2 IV every 12 hours for 6 days."
+      },
+      {
+        "uk": "У трьох пацієнтів від 60 років виникла гостра мозочкова токсичність.",
+        "en": "Three patients aged 60 or older developed acute cerebellar toxicity."
+      }
+    ],
+    "gap": {
+      "uk": "Це доза з однієї публікації, UpToDate не дає її як стандарт і не вказує дні введення мітоксантрону відносно цитарабіну.",
+      "en": "This is the dose from one publication; UpToDate does not give it as a standard and does not say how the mitoxantrone days relate to the cytarabine days."
+    },
+    "availability": "unknown"
+  }
+}
