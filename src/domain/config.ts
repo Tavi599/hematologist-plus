@@ -37,6 +37,13 @@ export const DOMAIN_DEFAULTS = {
    */
   vialRoundingTolerancePercent: null as number | null,
 
+  /**
+   * CALIBRATION: how mesna is split when the physician switches it from the protocol's schedule
+   * to separate boluses. Taken from one department infusion sheet (IGEV: five boluses, every
+   * three hours, from the start of the ifosfamide); the physician can change both numbers.
+   */
+  mesnaBolus: { count: 5, intervalMin: 180 },
+
   /** Standard giving-set drop factor, drops per mL. */
   dropFactorGttPerMl: 20,
 

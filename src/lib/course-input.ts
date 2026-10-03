@@ -1,4 +1,4 @@
-import { amountUnitOf, convertAmount, type CourseDrug } from '../domain'
+import { amountUnitOf, convertAmount, DOMAIN_DEFAULTS, type CourseDrug } from '../domain'
 import type { Drug, DrugInfusionParams, DrugPresentation, RegimenItem } from '../schemas/catalog'
 import type { DoseModifier, Source } from '../schemas/common'
 import type { LocalizedText } from './localized'
@@ -21,6 +21,8 @@ export interface CourseItem {
   courseDrug: CourseDrug
   /** Infusion that cannot be calculated: no catalog parameters and no fallback in the regimen. */
   missingInfusionData: boolean
+  /** The protocol gives this drug as an infusion the physician may switch to boluses. */
+  switchable: boolean
 }
 
 /** One dose the physician can pick for an item: the regimen's own, or another protocol's. */
@@ -115,28 +117,98 @@ export function resolveInfusionParams(
   return all.find((params) => params.is_default) ?? (all.length === 1 ? all[0]! : null)
 }
 
+/**
+ * How the physician gives a drug whose schedule varies between hospitals. `protocol` keeps the
+ * regimen's own row; `bolus` gives the same daily dose as `count` equal boluses `intervalMin`
+ * apart, the first one together with the day's first chained drug.
+ */
+export type AdministrationMode =
+  { kind: 'protocol' } | { kind: 'bolus'; count: number; intervalMin: number }
+
+export const PROTOCOL_MODE: AdministrationMode = { kind: 'protocol' }
+
+/** Drugs whose way of giving the physician may switch in any protocol. */
+const SWITCHABLE_DRUGS = new Set(['mesna'])
+
+/** Drugs whose dose goes up to whole ampoules in every mode: 6.5 ampoules are given as 7. */
+const WHOLE_PACK_DRUGS = new Set(['mesna'])
+
+/** Only a protocol infusion can be switched: a row the protocol already gives as a bolus stays. */
+export function canSwitchAdministration(item: Pick<RegimenItem, 'drug_id' | 'route'>): boolean {
+  return SWITCHABLE_DRUGS.has(item.drug_id) && item.route === 'iv_infusion'
+}
+
+/** The mode a physician gets on first switching to boluses. */
+export function defaultBolusMode(): AdministrationMode {
+  return { kind: 'bolus', ...DOMAIN_DEFAULTS.mesnaBolus }
+}
+
+/**
+ * The row as the physician chose to give it. The daily dose stays what the protocol states
+ * (dose × administrations a day); only its split changes, so doses, alternatives and modifiers
+ * are all rescaled to one bolus. An infusion's duration and bags no longer apply.
+ */
+export function applyAdministrationMode(item: RegimenItem, mode: AdministrationMode): RegimenItem {
+  if (mode.kind === 'protocol' || !canSwitchAdministration(item)) return item
+  const factor = item.administrations_per_day / mode.count
+  return {
+    ...item,
+    route: 'iv_bolus',
+    administrations_per_day: mode.count,
+    interval_min: mode.intervalMin,
+    anchor_offset_min: item.anchor_offset_min ?? 0,
+    block: 'day_support',
+    duration_min: null,
+    fallback_solvent: null,
+    fallback_volume_ml: null,
+    infusion_params_id: null,
+    gap_before_min: null,
+    dose_value: item.dose_value * factor,
+    cap_amount: item.cap_amount === null ? null : item.cap_amount * factor,
+    dose_options: item.dose_options.map((option) => ({
+      ...option,
+      dose_value: option.dose_value * factor,
+      cap_amount: option.cap_amount === null ? null : option.cap_amount * factor,
+    })),
+    dose_modifiers: (item.dose_modifiers ?? []).map((modifier) => ({
+      ...modifier,
+      dose_value: modifier.dose_value * factor,
+      cap_amount: modifier.cap_amount === null ? null : modifier.cap_amount * factor,
+    })),
+  }
+}
+
 /** Builds the calculation input for every item of a regimen, in administration order. */
 export function buildCourseItems(
   catalog: CatalogIndex,
   regimenId: string,
   chosenDoses?: Record<string, string>,
   chosenModifiers?: Record<string, string[]>,
+  administrationModes?: Record<string, AdministrationMode>,
 ): CourseItem[] {
   return buildCourseItemsFrom(
     catalog,
     catalog.itemsByRegimen.get(regimenId) ?? [],
     chosenDoses,
     chosenModifiers,
+    administrationModes,
   )
 }
 
 /** Same for an arbitrary list of items, including drugs the physician added by hand. */
 export function buildCourseItemsFrom(
   catalog: CatalogIndex,
-  items: RegimenItem[],
+  protocolItems: RegimenItem[],
   chosenDoses?: Record<string, string>,
   chosenModifiers?: Record<string, string[]>,
+  administrationModes?: Record<string, AdministrationMode>,
 ): CourseItem[] {
+  const switchable = new Set(
+    protocolItems.filter((item) => canSwitchAdministration(item)).map((item) => item.id),
+  )
+  const items = protocolItems.map((item) =>
+    applyAdministrationMode(item, administrationModes?.[item.id] ?? PROTOCOL_MODE),
+  )
   return items.flatMap((item) => {
     const drug = catalog.drugs.get(item.drug_id)
     if (!drug) return []
@@ -180,6 +252,9 @@ export function buildCourseItemsFrom(
       ...(item.gap_before_min === null ? {} : { gapBeforeMin: item.gap_before_min }),
       ...(infusion ? { infusion } : {}),
       ...(presentations.length > 0 ? { presentations } : {}),
+      ...(WHOLE_PACK_DRUGS.has(item.drug_id) && presentations.length > 0
+        ? { roundUpToWholePack: true }
+        : {}),
       ...(drug.review_rules ? { reviewRules: drug.review_rules } : {}),
       ...(drug.unit_equivalence ? { unitEquivalence: drug.unit_equivalence } : {}),
       block: item.block,
@@ -199,6 +274,7 @@ export function buildCourseItemsFrom(
         activeModifierKeys: modifiers.map((modifier) => modifier.key),
         courseDrug,
         missingInfusionData: item.route === 'iv_infusion' && !infusion,
+        switchable: switchable.has(item.id),
       },
     ]
   })

@@ -7,6 +7,7 @@ import {
   Collapse,
   Group,
   NumberInput,
+  SegmentedControl,
   Select,
   Stack,
   Switch,
@@ -22,7 +23,13 @@ import { amountUnitOf, isMassUnit } from '../../domain'
 import { formatNumber } from '../../lib/format'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
-import { DEFAULT_DOSE_CHOICE, type CourseItem } from '../../lib/course-input'
+import {
+  DEFAULT_DOSE_CHOICE,
+  defaultBolusMode,
+  PROTOCOL_MODE,
+  type AdministrationMode,
+  type CourseItem,
+} from '../../lib/course-input'
 import { groupCourseItems } from '../../lib/dose-groups'
 import { CalculationChain } from './CalculationChain'
 import { SourceNotes } from './SourceNotes'
@@ -40,6 +47,9 @@ export interface DoseTableProps {
   onReduction: (itemId: string, percent: number | null) => void
   onDoseOverride: (itemId: string, doseAmount: number | null) => void
   onDoseChoice: (itemId: string, choiceId: string) => void
+  /** How a switchable drug (mesna) is given; absent means the protocol's own schedule. */
+  administrationModes: Record<string, AdministrationMode>
+  onAdministrationMode: (itemId: string, mode: AdministrationMode) => void
   /** The full set of modifier keys in force for this item after the physician's click. */
   onDoseModifiers: (itemId: string, keys: string[]) => void
   onRemove: (itemId: string) => void
@@ -137,6 +147,8 @@ function DoseRow({
   onReduction,
   onDoseOverride,
   onDoseChoice,
+  administrationModes,
+  onAdministrationMode,
   onDoseModifiers,
   onRemove,
   customIds,
@@ -227,6 +239,14 @@ function DoseRow({
                 }
               }}
               aria-label={`${t('calculator.doses.doseSource')}: ${localize(item.drug.name, language)}`}
+            />
+          )}
+          {item.switchable && (
+            <AdministrationModeControl
+              drugName={localize(item.drug.name, language)}
+              mode={administrationModes[id] ?? PROTOCOL_MODE}
+              disabled={!enabled}
+              onChange={(mode) => onAdministrationMode(id, mode)}
             />
           )}
           {item.doseModifiers.length > 0 && (
@@ -476,5 +496,78 @@ function DoseRow({
         </Table.Td>
       </Table.Tr>
     </>
+  )
+}
+
+/** Switch between the protocol's schedule and separate boluses, with the numbers of the latter. */
+function AdministrationModeControl({
+  drugName,
+  mode,
+  disabled,
+  onChange,
+}: {
+  drugName: string
+  mode: AdministrationMode
+  disabled: boolean
+  onChange: (mode: AdministrationMode) => void
+}) {
+  const { t } = useTranslation()
+  return (
+    <Stack gap={4} mt={6}>
+      <Text size="xs" c="dimmed">
+        {t('calculator.doses.administrationMode')}
+      </Text>
+      <SegmentedControl
+        size="xs"
+        disabled={disabled}
+        data={[
+          { value: 'protocol', label: t('calculator.doses.modeProtocol') },
+          { value: 'bolus', label: t('calculator.doses.modeBolus') },
+        ]}
+        value={mode.kind}
+        onChange={(kind) => onChange(kind === 'bolus' ? defaultBolusMode() : PROTOCOL_MODE)}
+        aria-label={`${t('calculator.doses.administrationMode')}: ${drugName}`}
+      />
+      {mode.kind === 'bolus' && (
+        <>
+          <Group gap="xs" wrap="nowrap">
+            <NumberInput
+              size="xs"
+              w={90}
+              min={2}
+              max={12}
+              allowDecimal={false}
+              disabled={disabled}
+              label={t('calculator.doses.bolusCount')}
+              value={mode.count}
+              onChange={(next) => {
+                const count = Math.round(Number(next))
+                if (Number.isFinite(count) && count >= 2) onChange({ ...mode, count })
+              }}
+            />
+            <NumberInput
+              size="xs"
+              w={110}
+              min={0.5}
+              max={24}
+              step={0.5}
+              decimalScale={1}
+              disabled={disabled}
+              label={t('calculator.doses.bolusIntervalHours')}
+              value={mode.intervalMin / 60}
+              onChange={(next) => {
+                const hours = Number(next)
+                if (Number.isFinite(hours) && hours >= 0.5) {
+                  onChange({ ...mode, intervalMin: Math.round(hours * 60) })
+                }
+              }}
+            />
+          </Group>
+          <Text size="xs" c="dimmed">
+            {t('calculator.doses.bolusHint')}
+          </Text>
+        </>
+      )}
+    </Stack>
   )
 }

@@ -3,13 +3,18 @@ import { describe, expect, it } from 'vitest'
 import { calculateCourse } from '../domain'
 import { indexCatalog } from './catalog-index'
 import { demoCatalog } from './catalog.fixture'
+import type { RegimenItem } from '../schemas/catalog'
 import {
   activeModifiers,
+  applyAdministrationMode,
   applyModifiers,
   buildCourseItems,
   buildCourseItemsFrom,
+  canSwitchAdministration,
+  customCourseItem,
   DEFAULT_DOSE_CHOICE,
   fitsRoute,
+  PROTOCOL_MODE,
   resolveInfusionParams,
 } from './course-input'
 
@@ -348,5 +353,147 @@ describe('dose modifiers', () => {
     const catalog = withModifiers()
     const item = catalog.regimen_items.find((row) => row.id === 'r-chop-21.prednisolone')!
     expect(activeModifiers(item, ['nope'])).toEqual([])
+  })
+})
+
+describe('administration mode', () => {
+  /** The demo catalog plus mesna: a copy of another demo drug under the id the switch knows. */
+  const withMesna = () => {
+    const catalog = demoCatalog()
+    const template = catalog.drugs.find((drug) => drug.id === 'vincristine')!
+    catalog.drugs.push({ ...template, id: 'mesna', max_single_dose_amount: null })
+    return indexCatalog(catalog)
+  }
+  const mesnaItem = () =>
+    customCourseItem({
+      id: 'mesna-row',
+      drugId: 'mesna',
+      doseValue: 2600,
+      doseUnit: 'mg_m2',
+      days: [1, 2, 3, 4],
+      route: 'iv_infusion',
+      durationMin: 120,
+      sortOrder: 0,
+    })
+  const five = { kind: 'bolus', count: 5, intervalMin: 180 } as const
+
+  it('leaves the row alone in the protocol mode', () => {
+    const item = mesnaItem()
+    expect(applyAdministrationMode(item, PROTOCOL_MODE)).toBe(item)
+  })
+
+  it('splits the daily dose into equal boluses timed from the first drug of the day', () => {
+    // 2600 mg/m² a day in five boluses is 520 mg/m² each, every three hours.
+    const split = applyAdministrationMode(mesnaItem(), five)
+    expect(split).toMatchObject({
+      route: 'iv_bolus',
+      dose_value: 520,
+      administrations_per_day: 5,
+      interval_min: 180,
+      anchor_offset_min: 0,
+      block: 'day_support',
+      duration_min: null,
+      fallback_volume_ml: null,
+    })
+  })
+
+  it('keeps the daily dose when the protocol already gives the drug several times a day', () => {
+    // Twice a day at 1000 is 2000 a day; in four boluses that is 500 each.
+    const twice = { ...mesnaItem(), dose_value: 1000, administrations_per_day: 2 }
+    expect(
+      applyAdministrationMode(twice, { kind: 'bolus', count: 4, intervalMin: 240 }).dose_value,
+    ).toBe(500)
+  })
+
+  it('rescales the alternative doses and the cap with the split', () => {
+    const item: RegimenItem = {
+      ...mesnaItem(),
+      cap_amount: 5000,
+      dose_options: [
+        {
+          dose_value: 1000,
+          dose_unit: 'mg_m2',
+          cap_amount: 3000,
+          notes: null,
+          source: { name: 'x', checkedOn: '2026-10-03' },
+        },
+      ],
+    }
+    const split = applyAdministrationMode(item, five)
+    expect(split.cap_amount).toBe(1000)
+    expect(split.dose_options[0]).toMatchObject({ dose_value: 200, cap_amount: 600 })
+  })
+
+  it('does not touch any other drug', () => {
+    const vincristine = { ...mesnaItem(), drug_id: 'vincristine' }
+    expect(applyAdministrationMode(vincristine, five)).toBe(vincristine)
+    expect(canSwitchAdministration(vincristine)).toBe(false)
+    expect(canSwitchAdministration(mesnaItem())).toBe(true)
+  })
+
+  it('leaves mesna the protocol already gives as a bolus', () => {
+    const bolus = { ...mesnaItem(), route: 'iv_bolus' as const }
+    expect(canSwitchAdministration(bolus)).toBe(false)
+    expect(applyAdministrationMode(bolus, five)).toBe(bolus)
+    const [built] = buildCourseItemsFrom(withMesna(), [bolus])
+    expect(built!.switchable).toBe(false)
+  })
+
+  it('counts the ampoules for every bolus of the course', () => {
+    // BSA 1.65 m²: 520 × 1.65 = 858 mg a bolus; 5 boluses × 4 days = 20 administrations.
+    const [built] = buildCourseItemsFrom(withMesna(), [mesnaItem()], undefined, undefined, {
+      'mesna-row': five,
+    })
+    expect(built!.courseDrug).toMatchObject({
+      dose: { value: 520, unit: 'mg_m2' },
+      administrationsPerDay: 5,
+      block: 'day_support',
+      intervalMin: 180,
+    })
+    expect(built!.missingInfusionData).toBe(false)
+    expect(built!.switchable).toBe(true)
+
+    const course = calculateCourse(
+      { ageYears: 50, sex: 'female', heightCm: 165, weightKg: 62 },
+      [built!.courseDrug],
+      { startDateIso: '2026-10-05', dayStart: '09:00' },
+    )
+    const drug = course.drugs[0]!
+    expect(drug.administrationsInCourse).toBe(20)
+    expect(drug.rounded.actual.roundedAmount).toBe(Math.round(520 * course.bsa.actualM2))
+  })
+})
+
+describe('whole ampoules of mesna', () => {
+  it('rounds every dose of mesna up to whole ampoules of the smallest strength', () => {
+    const catalog = demoCatalog()
+    const template = catalog.drugs.find((drug) => drug.id === 'vincristine')!
+    catalog.drugs.push({ ...template, id: 'mesna', max_single_dose_amount: null })
+    const vial = catalog.drug_presentations.find((row) => row.drug_id === 'vincristine')!
+    catalog.drug_presentations.push(
+      { ...vial, id: 'mesna.s400', drug_id: 'mesna', form: 'vial', strength_amount: 400 },
+      { ...vial, id: 'mesna.s1000', drug_id: 'mesna', form: 'vial', strength_amount: 1000 },
+    )
+    const item = customCourseItem({
+      id: 'mesna-row',
+      drugId: 'mesna',
+      doseValue: 520,
+      doseUnit: 'mg_m2',
+      days: [1],
+      route: 'iv_bolus',
+      sortOrder: 0,
+    })
+    const [built] = buildCourseItemsFrom(indexCatalog(catalog), [item])
+    expect(built!.courseDrug.roundUpToWholePack).toBe(true)
+
+    // BSA 1.65 m² (forced): 520 × 1.65 = 858 mg, 2.1 ampoules of 400 mg → 3 ampoules, 1200 mg.
+    const course = calculateCourse(
+      { ageYears: 50, sex: 'female', heightCm: 165, weightKg: 62 },
+      [built!.courseDrug],
+      { startDateIso: '2026-10-05', dayStart: '09:00', bsaM2: 1.65 },
+    )
+    const rounded = course.drugs[0]!.rounded.actual
+    expect(rounded.unroundedAmount).toBeCloseTo(858, 6)
+    expect(rounded).toMatchObject({ roundedAmount: 1200, method: 'pack' })
   })
 })

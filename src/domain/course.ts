@@ -70,6 +70,8 @@ export interface CourseDrug {
   /** Set only for infusions; without it no solvent volume is calculated. */
   infusion?: InfusionParams
   presentations?: Presentation[]
+  /** Never split a pack: the rounded dose goes up to whole packs of the smallest strength. */
+  roundUpToWholePack?: boolean
   reviewRules?: ReviewRules
   /** What this drug's label says its mass is worth in activity; the only bridge between them. */
   unitEquivalence?: UnitEquivalence | null
@@ -330,7 +332,11 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
     ),
     unit: amountUnit,
   }))
-  const roundingOptions = { unit: amountUnit, ...(presentations ? { presentations } : {}) }
+  const roundingOptions = {
+    unit: amountUnit,
+    ...(presentations ? { presentations } : {}),
+    ...(drug.roundUpToWholePack ? { roundUpToWholePack: true } : {}),
+  }
   const rounded: Record<BsaVariant, RoundingResult> = {
     actual: roundDose(variants.actual.doseAmount, roundingOptions),
     capped: roundDose(variants.capped.doseAmount, roundingOptions),

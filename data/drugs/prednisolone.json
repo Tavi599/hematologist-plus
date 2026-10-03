@@ -16,6 +16,12 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv): розчин для ін'єкцій — концентрація й об'єм ампули/флакона чинних реєстрацій",
+      "url": "https://data.gov.ua/dataset/reestr_likarskyh_zasobiv_moz",
+      "version": "набір даних від 2023-11-10",
+      "checkedOn": "2026-10-03"
     }
   ],
   "presentations": [
@@ -27,7 +33,8 @@
     {
       "key": "s30",
       "form": "ampoule",
-      "strength_amount": 30
+      "strength_amount": 30,
+      "volume_ml": 1
     }
   ]
 }

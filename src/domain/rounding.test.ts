@@ -53,6 +53,37 @@ describe('roundDose', () => {
     )
   })
 
+  it('rounds up to whole packs of the smallest strength: 6.5 ampoules become 7', () => {
+    const packs = [
+      { id: 'a400', strengthAmount: 400 },
+      { id: 'v1000', strengthAmount: 1000 },
+    ]
+    const result = roundDose(2600, { presentations: packs, roundUpToWholePack: true })
+    expect(result.roundedAmount).toBe(2800)
+    expect(result.method).toBe('pack')
+    expect(result.steps[0]).toMatchObject({
+      key: 'rounding.packUp',
+      params: { packAmount: 400, packs: 7, unrounded: 2600 },
+    })
+  })
+
+  it('keeps an exact number of packs and wins over vial snapping', () => {
+    const packs = [{ id: 'a400', strengthAmount: 400 }]
+    const exact = roundDose(1200.0000001, {
+      presentations: packs,
+      roundUpToWholePack: true,
+      vialTolerancePercent: 50,
+    })
+    expect(exact.roundedAmount).toBe(1200)
+    expect(exact.method).toBe('pack')
+  })
+
+  it('falls back to the step when there is no pack to round up to', () => {
+    const result = roundDose(858.4, { roundUpToWholePack: true })
+    expect(result.roundedAmount).toBe(858)
+    expect(result.method).toBe('step')
+  })
+
   it('handles zero and invalid input', () => {
     expect(roundDose(0)).toMatchObject({ roundedAmount: 0, deviationPercent: 0 })
     expect(() => roundDose(-1)).toThrow(DomainInputError)

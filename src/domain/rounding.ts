@@ -12,9 +12,14 @@ export interface RoundingOptions {
   presentations?: Presentation[]
   /** Snap to whole-vial amount if within this %; `null` disables snapping. */
   vialTolerancePercent?: number | null
+  /**
+   * Round up to whole packs of the smallest strength: 6.5 ampoules become 7. For a drug the
+   * department never splits (mesna); it overrides both the step and vial snapping.
+   */
+  roundUpToWholePack?: boolean
 }
 
-export type RoundingMethod = 'step' | 'vial'
+export type RoundingMethod = 'step' | 'vial' | 'pack'
 
 export interface RoundingResult {
   unit: AmountUnit
@@ -39,8 +44,15 @@ export function roundDose(doseAmount: number, options: RoundingOptions = {}): Ro
 
   let roundedAmount = roundToStep(doseAmount, step)
   let method: RoundingMethod = 'step'
+  const smallestPack = options.roundUpToWholePack
+    ? Math.min(...(options.presentations ?? []).map((pack) => pack.strengthAmount))
+    : Infinity
 
-  if (tolerance !== null && options.presentations?.length && doseAmount > 0) {
+  if (Number.isFinite(smallestPack) && smallestPack > 0) {
+    // The tolerance keeps an exact multiple from tipping into one more pack on a float error.
+    roundedAmount = Math.ceil(doseAmount / smallestPack - 1e-9) * smallestPack
+    method = 'pack'
+  } else if (tolerance !== null && options.presentations?.length && doseAmount > 0) {
     assertPercent('vialTolerancePercent', tolerance)
     const candidate = nearestVialAmount(doseAmount, options.presentations)
     if (Math.abs(candidate - doseAmount) / doseAmount <= tolerance / 100) {
@@ -59,10 +71,18 @@ export function roundDose(doseAmount: number, options: RoundingOptions = {}): Ro
     deviationPercent,
     steps: [
       {
-        key: method === 'vial' ? 'rounding.vial' : 'rounding.step',
+        key: `rounding.${method === 'pack' ? 'packUp' : method}`,
         value: roundedAmount,
         unit,
-        params: { unrounded: doseAmount, step, unit, deviationPercent },
+        params: {
+          unrounded: doseAmount,
+          step,
+          unit,
+          deviationPercent,
+          ...(method === 'pack'
+            ? { packAmount: smallestPack, packs: Math.round(roundedAmount / smallestPack) }
+            : {}),
+        },
       },
     ],
   }
