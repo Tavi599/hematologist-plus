@@ -1,0 +1,36 @@
+{
+  "$comment": "Пембролізумаб 400 мг раз на 6 тижнів за eviQ 3671 (вер. 5) як альтернатива 200 мг раз на 3 тижні: рецидивна ЛХ після автотрансплантації чи ≥2 ліній і рецидивна ПМВЛКЛ; до 35 введень чи 24 місяців.",
+  "id": "pembrolizumab-q6w",
+  "short_name": "Пембролізумаб 400/6 тижнів",
+  "name": {
+    "uk": "Пембролізумаб 400 мг раз на 6 тижнів",
+    "en": "Pembrolizumab 400 mg every 6 weeks"
+  },
+  "description": {
+    "uk": "400 мг у день 1 кожні 42 дні; до 24 місяців.",
+    "en": "400 mg on day 1 every 42 days; up to 24 months."
+  },
+  "cycle_length_days": 42,
+  "default_cycles": 17,
+  "sources": [
+    {
+      "name": "eviQ: пембролізумаб, фіксована доза (протокол 3671, вер. 5)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/hodgkin-lymphoma/3419-redirect-id-3671",
+      "version": "вер. 5 від 20.03.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "pembrolizumab",
+      "drug_id": "pembrolizumab",
+      "route": "iv_infusion",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100
+    }
+  ]
+}

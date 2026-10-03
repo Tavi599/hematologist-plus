@@ -18,6 +18,12 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/17229633/",
       "version": "дослідження фази II, 91 пацієнт",
       "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "eviQ: IGEV (протокол 4253)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/hodgkin-lymphoma/4253-hodgkin-lymphoma-igev-ifosfamide-gemcitabine",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
     }
   ],
   "evidence": {
@@ -132,6 +138,35 @@
       "notes": {
         "uk": "Разом з іфосфамідом, захист сечового міхура. Публікація не наводить розчинника, об'єму й тривалості введення месни — їх беруть за практикою відділення, тому калькулятор об'єм розчинника тут не рахує.",
         "en": "With the ifosfamide, to protect the bladder. The publication gives no diluent, volume or infusion time for the mesna — these follow local practice, so the calculator does not work out a solvent volume here."
+      },
+      "dose_options": [
+        {
+          "dose_value": 2000,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "eviQ 4253: месна 2000 мг/м² в/в разом з іфосфамідом + 800 мг усередину через 2 і 6 годин після інфузії (усередину не внесено)",
+            "en": "eviQ 4253: mesna 2000 mg/m2 IV with ifosfamide + 800 mg by mouth 2 and 6 hours after the infusion (the oral part is not entered)"
+          },
+          "source": {
+            "name": "eviQ: IGEV (протокол 4253)",
+            "url": "https://www.eviq.org.au/haematology/lymphoma/hodgkin-lymphoma/4253-hodgkin-lymphoma-igev-ifosfamide-gemcitabine",
+            "version": "перевірено 2026-10-04",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    },
+    {
+      "key": "pegfilgrastim",
+      "drug_id": "pegfilgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 6,
+      "dose_unit": "mg_flat",
+      "days": [5],
+      "notes": {
+        "uk": "6 мг підшкірно на день 5 (eviQ 4253); при мобілізації стовбурових клітин — філграстим 10 мкг/кг щодня.",
+        "en": "6 mg subcutaneously on day 5 (eviQ 4253); for stem-cell mobilisation filgrastim 10 mcg/kg daily."
       }
     }
   ]
