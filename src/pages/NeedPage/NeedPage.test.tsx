@@ -54,13 +54,13 @@ describe('NeedPage', () => {
     await type('Пацієнтів', '2')
     expect(screen.getByText('36')).toBeInTheDocument()
 
-    // Both counted graphs stand filled in before anyone touches them: a month takes what a course
-    // takes, and 36 packs at 3 a month last twelve.
+    // Both counted graphs stand filled in before anyone touches them: two patients at three packs
+    // a course spend six packs a month, and the six courses planned come out as six months.
     expect(screen.getByLabelText('Середньомісячне використання')).toHaveAttribute(
       'placeholder',
-      '3',
+      '6',
     )
-    expect(screen.getByLabelText('Місяців вистачає')).toHaveAttribute('placeholder', '12')
+    expect(screen.getByLabelText('Місяців вистачає')).toHaveAttribute('placeholder', '6')
 
     // And a figure of the department's own replaces the count.
     await type('Середньомісячне використання', '4')

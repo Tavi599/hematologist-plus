@@ -48,17 +48,19 @@ export interface NeedLineTotals {
 }
 
 /**
- * The average month's use the form is filled in with, before anyone corrects it: what one patient
- * takes in one course. A cycle runs about a month, so the two come to the same thing — and that
- * is how the department's own forms are filled in, where the figure stays the same whether the
- * line is for two patients or for five (Візгем 4 flac, Вориконазол 60 tab).
+ * The average month's use the form is filled in with, before anyone corrects it: what the whole
+ * department takes in a month, every patient on treatment at once. A cycle runs about a month, so
+ * a month is one course for each of them.
+ *
+ * The months graph then comes out as the number of courses, which is the figure the department
+ * wants to see there — the division itself is unchanged, and so is the wording of either graph.
  *
  * Nothing to count it from leaves the graph empty rather than zero: an empty graph is a question,
  * a zero is an answer, and the form goes to the department of health.
  */
 export function defaultMonthlyUse(line: NeedLine): number | null {
-  const packs = line.packsPerCourse
-  return packs === null || packs === 0 ? null : packs
+  const monthly = (line.patients ?? 0) * (line.packsPerCourse ?? 0)
+  return monthly === 0 ? null : monthly
 }
 
 export function newNeedLine(key: string): NeedLine {

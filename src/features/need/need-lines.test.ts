@@ -32,12 +32,12 @@ describe('needLineTotals', () => {
     })
   })
 
-  it('takes the average month from the course when nobody has said otherwise', () => {
-    // The department's own forms count it this way: a cycle runs about a month, so what one
-    // patient takes in a course is what they take in a month.
+  it('takes the average month from a month of the whole department', () => {
+    // Two patients, three packs each in a course and a course to a month: six packs a month, and
+    // the six courses planned come out of the division as six months.
     const line = filled({ packsPerCourse: 3, monthlyUse: null })
-    expect(defaultMonthlyUse(line)).toBe(3)
-    expect(needLineTotals(line)).toMatchObject({ total: 36, monthlyUse: 3, monthsCovered: 12 })
+    expect(defaultMonthlyUse(line)).toBe(6)
+    expect(needLineTotals(line)).toMatchObject({ total: 36, monthlyUse: 6, monthsCovered: 6 })
   })
 
   it('keeps the figure the department typed over the counted one', () => {
@@ -45,6 +45,10 @@ describe('needLineTotals', () => {
       monthlyUse: 9,
       monthsCovered: 4,
     })
+  })
+
+  it('has no month to count without patients to spend it', () => {
+    expect(defaultMonthlyUse(filled({ patients: null, monthlyUse: null }))).toBeNull()
   })
 
   it('keeps the months the department typed over the division', () => {
