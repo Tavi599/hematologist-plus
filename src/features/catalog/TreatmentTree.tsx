@@ -1,4 +1,5 @@
-import { Anchor, Badge, Button, Group, Stack, Text } from '@mantine/core'
+import { Anchor, Badge, Button, Group, MultiSelect, Stack, Text } from '@mantine/core'
+import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 
@@ -7,7 +8,7 @@ import { regimenAvailability } from '../../lib/availability'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
-import type { TreatmentNode } from '../../schemas/catalog'
+import { countRegimens, drugsInTree, filterTree, type FilteredNode } from './treatment-filter'
 
 /** Disease → treatment → line/stage → regimen, each regimen leading into the calculator. */
 export function TreatmentTree({
@@ -18,13 +19,50 @@ export function TreatmentTree({
   diseaseId: string
 }) {
   const { t } = useTranslation()
+  const language = currentLanguage()
+  const [drugIds, setDrugIds] = useState<string[]>([])
+
+  const drugs = useMemo(
+    () => drugsInTree(catalog, diseaseId, (drug) => localize(drug.name, language)),
+    [catalog, diseaseId, language],
+  )
+  const nodes = useMemo(
+    () => filterTree(catalog, diseaseId, drugIds),
+    [catalog, diseaseId, drugIds],
+  )
+
   const roots = catalog.rootNodesByDisease.get(diseaseId) ?? []
   if (roots.length === 0) return <Text c="dimmed">{t('diseaseDetail.noTreatment')}</Text>
 
+  const shown = countRegimens(nodes)
+
   return (
     <Stack gap="sm">
-      {roots.map((node) => (
-        <TreatmentNodeView key={node.id} catalog={catalog} node={node} depth={0} />
+      {/* Worth the room only where there is a list to cut down; two regimens are read faster than
+          a filter is filled in. */}
+      {drugs.length > 1 && (
+        <Stack gap={4}>
+          <MultiSelect
+            label={t('diseaseDetail.filter')}
+            description={t('diseaseDetail.filterHint')}
+            data={drugs.map(({ drug, label }) => ({ value: drug.id, label }))}
+            value={drugIds}
+            onChange={setDrugIds}
+            searchable
+            clearable
+            maxDropdownHeight={280}
+          />
+          {drugIds.length > 0 && (
+            <Text size="xs" c={shown === 0 ? 'red' : 'dimmed'}>
+              {shown === 0
+                ? t('diseaseDetail.filterNone')
+                : t('diseaseDetail.filterCount', { shown })}
+            </Text>
+          )}
+        </Stack>
+      )}
+      {nodes.map((filtered) => (
+        <TreatmentNodeView key={filtered.node.id} catalog={catalog} filtered={filtered} depth={0} />
       ))}
     </Stack>
   )
@@ -32,17 +70,16 @@ export function TreatmentTree({
 
 function TreatmentNodeView({
   catalog,
-  node,
+  filtered,
   depth,
 }: {
   catalog: CatalogIndex
-  node: TreatmentNode
+  filtered: FilteredNode
   depth: number
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
-  const children = catalog.childNodes.get(node.id) ?? []
-  const links = catalog.regimenLinksByNode.get(node.id) ?? []
+  const { node, links, children } = filtered
 
   return (
     <Stack gap={6} pl={depth === 0 ? 0 : 'md'}>
@@ -94,7 +131,12 @@ function TreatmentNodeView({
         )
       })}
       {children.map((child) => (
-        <TreatmentNodeView key={child.id} catalog={catalog} node={child} depth={depth + 1} />
+        <TreatmentNodeView
+          key={child.node.id}
+          catalog={catalog}
+          filtered={child}
+          depth={depth + 1}
+        />
       ))}
     </Stack>
   )
