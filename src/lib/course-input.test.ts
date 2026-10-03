@@ -497,3 +497,41 @@ describe('whole ampoules of mesna', () => {
     expect(rounded).toMatchObject({ roundedAmount: 1200, method: 'pack' })
   })
 })
+
+describe('mesna boluses after the ifosfamide', () => {
+  it('times the boluses from the ifosfamide of the same course', () => {
+    const catalog = demoCatalog()
+    const template = catalog.drugs.find((drug) => drug.id === 'vincristine')!
+    catalog.drugs.push(
+      { ...template, id: 'mesna', max_single_dose_amount: null },
+      { ...template, id: 'ifosfamide', max_single_dose_amount: null },
+    )
+    const ifosfamide = customCourseItem({
+      id: 'ifo',
+      drugId: 'ifosfamide',
+      doseValue: 2000,
+      doseUnit: 'mg_m2',
+      days: [1],
+      route: 'iv_infusion',
+      durationMin: 120,
+      sortOrder: 1,
+    })
+    const mesna = customCourseItem({
+      id: 'mes',
+      drugId: 'mesna',
+      doseValue: 2600,
+      doseUnit: 'mg_m2',
+      days: [1],
+      route: 'iv_infusion',
+      durationMin: 120,
+      sortOrder: 2,
+    })
+    const modes = { mes: { kind: 'bolus', count: 5, intervalMin: 180 } as const }
+    const built = buildCourseItemsFrom(indexCatalog(catalog), [ifosfamide, mesna], {}, {}, modes)
+    expect(built[1]!.courseDrug.anchorDrugId).toBe('ifo')
+
+    // In the protocol mode mesna stays an infusion of the chain and has no anchor of its own.
+    const plain = buildCourseItemsFrom(indexCatalog(catalog), [ifosfamide, mesna])
+    expect(plain[1]!.courseDrug.anchorDrugId).toBeUndefined()
+  })
+})

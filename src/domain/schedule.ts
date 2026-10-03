@@ -74,6 +74,11 @@ export interface AdministrationInput {
   /** `day_support`: minutes between the repeats of this drug within the day (q8h = 480). */
   intervalMin?: number
   /**
+   * `day_support`: time this row from the start of that chained row instead of the day's first
+   * cytostatic — mesna from the ifosfamide it protects against. Ignored on a day without it.
+   */
+  anchorId?: string
+  /**
    * `infusion`: this is a drug of the regimen itself, not its premedication. The support of
    * the day is timed from the first of these — 30 min before the cytostatic, not before the
    * premedication that precedes it.
@@ -113,6 +118,7 @@ export function scheduleAdministrations(
   let firstStart: number | null = null
   let firstMainStart: number | null = null
   const scheduled: ScheduledAdministration[] = []
+  const chainStarts = new Map<string, number>()
 
   for (const item of items) {
     if (item.block !== 'infusion') continue
@@ -120,12 +126,18 @@ export function scheduleAdministrations(
     cursor = startMin + durationOf(item)
     firstStart ??= startMin
     if (item.isMain) firstMainStart ??= startMin
+    chainStarts.set(item.id, startMin)
     scheduled.push(placed(item.id, startMin, durationOf(item)))
   }
 
-  const anchor = firstMainStart ?? firstStart ?? dayStartMin
+  const dayAnchor = firstMainStart ?? firstStart ?? dayStartMin
   for (const item of items) {
     if (item.block !== 'day_support') continue
+    // A drug given several times a day is chained as `<id>#1`, `<id>#2`…: take its first one.
+    const anchor =
+      (item.anchorId === undefined
+        ? undefined
+        : (chainStarts.get(item.anchorId) ?? chainStarts.get(`${item.anchorId}#1`))) ?? dayAnchor
     const offset = item.anchorOffsetMin ?? 0
     if (!Number.isInteger(offset)) {
       throw new DomainInputError(`${item.id}.anchorOffsetMin`, 'must be a whole number of minutes')

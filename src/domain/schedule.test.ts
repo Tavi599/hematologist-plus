@@ -115,6 +115,46 @@ describe('scheduleAdministrations', () => {
     expect(untimedIds(items)).toEqual([])
   })
 
+  it('times a row from the chained drug it names: mesna from the ifosfamide', () => {
+    // IGEV day 1 from 09:00: vinorelbine 10 min, gemcitabine 30 min, ifosfamide from 09:40.
+    const chain = [
+      { id: 'vinorelbine', block: 'infusion' as const, durationMin: 10, isMain: true },
+      { id: 'gemcitabine', block: 'infusion' as const, durationMin: 30, isMain: true },
+      { id: 'ifosfamide', block: 'infusion' as const, durationMin: 120, isMain: true },
+    ]
+    const mesna = [0, 1].map((occurrence) => ({
+      id: `mesna#${occurrence + 1}`,
+      block: 'day_support' as const,
+      durationMin: 0,
+      intervalMin: 180,
+      anchorId: 'ifosfamide',
+      occurrence,
+    }))
+    const placed = scheduleAdministrations('09:00', [...chain, ...mesna])
+    expect(placed.filter((row) => row.id.startsWith('mesna')).map((row) => row.start)).toEqual([
+      '09:40',
+      '12:40',
+    ])
+  })
+
+  it('takes the first of several daily administrations as the anchor', () => {
+    const placed = scheduleAdministrations('09:00', [
+      { id: 'pre', block: 'infusion' as const, durationMin: 60, isMain: true },
+      { id: 'ifosfamide#1', block: 'infusion' as const, durationMin: 60, isMain: true },
+      { id: 'ifosfamide#2', block: 'infusion' as const, durationMin: 60, isMain: true },
+      { id: 'mesna', block: 'day_support' as const, durationMin: 0, anchorId: 'ifosfamide' },
+    ])
+    expect(placed.find((row) => row.id === 'mesna')!.start).toBe('10:00')
+  })
+
+  it('falls back to the first cytostatic on a day without the anchor drug', () => {
+    const placed = scheduleAdministrations('09:00', [
+      { id: 'gemcitabine', block: 'infusion' as const, durationMin: 30, isMain: true },
+      { id: 'mesna', block: 'day_support' as const, durationMin: 0, anchorId: 'ifosfamide' },
+    ])
+    expect(placed.find((row) => row.id === 'mesna')!.start).toBe('09:00')
+  })
+
   it('leaves the inpatient sheet out of the hourly grid', () => {
     const items = [
       { id: 'aciclovir', block: 'ward' as const, durationMin: 0 },

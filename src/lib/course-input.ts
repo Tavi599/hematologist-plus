@@ -130,6 +130,12 @@ export const PROTOCOL_MODE: AdministrationMode = { kind: 'protocol' }
 /** Drugs whose way of giving the physician may switch in any protocol. */
 const SWITCHABLE_DRUGS = new Set(['mesna'])
 
+/**
+ * What mesna protects against: its boluses are timed from the start of these, as on the
+ * department's IGEV sheet (first bolus with the ifosfamide), not from the day's first drug.
+ */
+const MESNA_ANCHORS = new Set(['ifosfamide', 'cyclophosphamide'])
+
 /** Drugs whose dose goes up to whole ampoules in every mode: 6.5 ampoules are given as 7. */
 const WHOLE_PACK_DRUGS = new Set(['mesna'])
 
@@ -209,6 +215,9 @@ export function buildCourseItemsFrom(
   const items = protocolItems.map((item) =>
     applyAdministrationMode(item, administrationModes?.[item.id] ?? PROTOCOL_MODE),
   )
+  const anchorItem = protocolItems.find(
+    (item) => MESNA_ANCHORS.has(item.drug_id) && item.block === 'infusion',
+  )
   return items.flatMap((item) => {
     const drug = catalog.drugs.get(item.drug_id)
     if (!drug) return []
@@ -261,6 +270,9 @@ export function buildCourseItemsFrom(
       isMain: item.role === 'main',
       ...(item.anchor_offset_min === null ? {} : { anchorOffsetMin: item.anchor_offset_min }),
       ...(item.interval_min === null ? {} : { intervalMin: item.interval_min }),
+      ...(anchorItem && item.drug_id === 'mesna' && item.block === 'day_support'
+        ? { anchorDrugId: anchorItem.id }
+        : {}),
     }
 
     return [

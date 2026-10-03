@@ -65,6 +65,8 @@ export interface CourseDrug {
   anchorOffsetMin?: number
   /** `day_support`: minutes between the repeats within one day (q8h = 480). */
   intervalMin?: number
+  /** `day_support`: id of the course drug whose start this row is timed from on its days. */
+  anchorDrugId?: string
   /** A drug of the regimen itself: the support of the day is timed from the first of these. */
   isMain?: boolean
   /** Set only for infusions; without it no solvent volume is calculated. */
@@ -447,6 +449,7 @@ function buildDays(
           ...(drug.gapBeforeMin === undefined ? {} : { gapBeforeMin: drug.gapBeforeMin }),
           ...(drug.anchorOffsetMin === undefined ? {} : { anchorOffsetMin: drug.anchorOffsetMin }),
           ...(drug.intervalMin === undefined ? {} : { intervalMin: drug.intervalMin }),
+          ...(drug.anchorDrugId === undefined ? {} : { anchorId: drug.anchorDrugId }),
           ...(adjustments.shiftMin?.[drug.id] === undefined
             ? {}
             : { shiftMin: adjustments.shiftMin[drug.id] }),
