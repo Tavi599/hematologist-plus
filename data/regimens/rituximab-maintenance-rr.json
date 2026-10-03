@@ -1,0 +1,35 @@
+{
+  "$comment": "Підтримка ритуксимабом при рецидивній/рефрактерній ФЛ за eviQ 1385 (вер. 9): 375 мг/м² раз на 3 місяці (84 дні), до 8 введень, найдовше 2 роки. При вперше виявленій ФЛ — раз на 2 місяці (схема «Ритуксимаб, підтримка»). UpToDate обидва графіки вважає прийнятними (PRIMA: раз на 2 місяці 2 роки).",
+  "id": "rituximab-maintenance-rr",
+  "short_name": "R підтримка (рецидив)",
+  "name": {
+    "uk": "Ритуксимаб, підтримка при рецидиві (раз на 3 місяці)",
+    "en": "Rituximab maintenance in relapse (every 3 months)"
+  },
+  "description": {
+    "uk": "375 мг/м² раз на 84 дні, до 8 введень.",
+    "en": "375 mg/m2 every 84 days, up to eight doses."
+  },
+  "cycle_length_days": 84,
+  "default_cycles": 8,
+  "sources": [
+    {
+      "name": "eviQ: NHL — rituximab maintenance (протокол 1385, вер. 9)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/1385-nhl-rituximab-maintenance",
+      "version": "вер. 9 від 20.03.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500
+    }
+  ]
+}

@@ -89,6 +89,16 @@
             },
             {
               "regimen_id": "rituximab-mono"
+            },
+            {
+              "regimen_id": "r-chlorambucil-eviq-cycle-1",
+              "notes": {
+                "uk": "Варіант за eviQ 1368 (хлорамбуцил 6 мг/м²)",
+                "en": "The eviQ 1368 variant (chlorambucil 6 mg/m2)"
+              }
+            },
+            {
+              "regimen_id": "r-chlorambucil-eviq"
             }
           ]
         },
@@ -139,6 +149,23 @@
               "notes": {
                 "uk": "Цикли 2-6",
                 "en": "Cycles 2-6"
+              }
+            },
+            {
+              "regimen_id": "o-chop-cycle-1",
+              "notes": {
+                "uk": "O-CHOP21: eviQ 3573",
+                "en": "O-CHOP21: eviQ 3573"
+              }
+            },
+            {
+              "regimen_id": "o-chop"
+            },
+            {
+              "regimen_id": "o-chop-cycle-7-8",
+              "notes": {
+                "uk": "Обінутузумаб окремо",
+                "en": "Obinutuzumab alone"
               }
             }
           ]
@@ -305,6 +332,26 @@
           "notes": {
             "uk": "Антитіло окремо: супутні хвороби чи повільна хвороба; UpToDate",
             "en": "Antibody alone: comorbidity or slowly progressing disease; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "o-chop-cycle-1",
+          "notes": {
+            "uk": "Клінічно агресивний пізній рецидив без трансформації; UpToDate, eviQ 3573",
+            "en": "Clinically aggressive late relapse without transformation; UpToDate, eviQ 3573"
+          }
+        },
+        {
+          "regimen_id": "o-chop"
+        },
+        {
+          "regimen_id": "o-chop-cycle-7-8"
+        },
+        {
+          "regimen_id": "rituximab-maintenance-rr",
+          "notes": {
+            "uk": "Раз на 3 місяці, до 8 введень; eviQ 1385",
+            "en": "Every 3 months, up to eight doses; eviQ 1385"
           }
         }
       ]

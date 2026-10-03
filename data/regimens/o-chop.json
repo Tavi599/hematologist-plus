@@ -1,0 +1,72 @@
+{
+  "$comment": "O-CHOP21 за eviQ 3573 (вер. 4): цикл 21 день; цикл 1 — обінутузумаб у дні 1, 8, 15; цикли 2–6 — у день 1; цикли 7–8 — обінутузумаб окремо. Премедикація: парацетамол 1000 мг, лоратадин 10 мг, дексаметазон 20 мг у дні 8 і 15 (у день 1 стероїд — преднізолон); наступні інфузії можуть не потребувати премедикації. Палоносетрон 0,25 мг в/в — протиблювотні вручну.",
+  "id": "o-chop",
+  "short_name": "O-CHOP ц.2-6",
+  "name": {
+    "uk": "O-CHOP21, цикли 2–6",
+    "en": "O-CHOP21, cycles 2-6"
+  },
+  "description": {
+    "uk": "Обінутузумаб 1000 мг у день 1 + CHOP; цикл 21 день, 5 циклів.",
+    "en": "Obinutuzumab 1000 mg on day 1 + CHOP; a 21-day cycle, five cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 5,
+  "sources": [
+    {
+      "name": "eviQ: O-CHOP21 (протокол 3573, вер. 4)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/3573-o-chop21-obinutuzumab-cyclophosphamide-doxor",
+      "version": "вер. 4, переглянуто 04.09.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "100 мг раз на добу (eviQ 3573).",
+        "en": "100 mg once a day (eviQ 3573)."
+      }
+    },
+    {
+      "key": "obinutuzumab",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_amount": 2,
+      "days": [1]
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    }
+  ]
+}

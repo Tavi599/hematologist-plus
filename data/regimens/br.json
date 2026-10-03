@@ -34,6 +34,12 @@
       "url": "https://www.uptodate.com/contents/mantle-cell-lymphoma-initial-management",
       "version": "перевірено 2026-10-04",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "eviQ: Lymphoma — bendamustine and rituximab (протокол 3794, вер. 9)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/1718-redirect-id-3794",
+      "version": "вер. 9",
+      "checkedOn": "2026-10-04"
     }
   ],
   "items": [
@@ -74,7 +80,23 @@
       "notes": {
         "uk": "Премедикація за практикою відділення: дексаметазон 20 мг + димедрол 1% 5,0 мл у 100 мл 0,9% NaCl; у протоколі — гідрокортизон 100 мг і хлорфенамін 10 мг в/в",
         "en": "Department premedication: dexamethasone 20 mg with diphenhydramine 50 mg in 100 mL 0.9% NaCl; the protocol uses hydrocortisone 100 mg and chlorphenamine 10 mg IV"
-      }
+      },
+      "dose_options": [
+        {
+          "dose_value": 8,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "eviQ 3794: дексаметазон 8 мг усередину в дні 1 і 2 (NSSG — 20 мг в/в)",
+            "en": "eviQ 3794: dexamethasone 8 mg by mouth on days 1 and 2 (NSSG — 20 mg IV)"
+          },
+          "source": {
+            "name": "eviQ: Lymphoma — bendamustine and rituximab (протокол 3794, вер. 9)",
+            "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/1718-redirect-id-3794",
+            "version": "вер. 9",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
     },
     {
       "key": "diphenhydramine",

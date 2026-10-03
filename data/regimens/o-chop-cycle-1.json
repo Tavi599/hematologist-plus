@@ -1,0 +1,117 @@
+{
+  "$comment": "O-CHOP21 за eviQ 3573 (вер. 4): цикл 21 день; цикл 1 — обінутузумаб у дні 1, 8, 15; цикли 2–6 — у день 1; цикли 7–8 — обінутузумаб окремо. Премедикація: парацетамол 1000 мг, лоратадин 10 мг, дексаметазон 20 мг у дні 8 і 15 (у день 1 стероїд — преднізолон); наступні інфузії можуть не потребувати премедикації. Палоносетрон 0,25 мг в/в — протиблювотні вручну.",
+  "id": "o-chop-cycle-1",
+  "short_name": "O-CHOP ц.1",
+  "name": {
+    "uk": "O-CHOP21, цикл 1",
+    "en": "O-CHOP21, cycle 1"
+  },
+  "description": {
+    "uk": "Обінутузумаб 1000 мг у дні 1, 8, 15; доксорубіцин, вінкристин, циклофосфамід у день 1; преднізолон 100 мг дні 1–5.",
+    "en": "Obinutuzumab 1000 mg on days 1, 8, 15; doxorubicin, vincristine, cyclophosphamide on day 1; prednisolone 100 mg on days 1 to 5."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "eviQ: O-CHOP21 (протокол 3573, вер. 4)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/3573-o-chop21-obinutuzumab-cyclophosphamide-doxor",
+      "version": "вер. 4, переглянуто 04.09.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "За 60 хв до обінутузумабу (eviQ 3573).",
+        "en": "60 minutes before obinutuzumab (eviQ 3573)."
+      }
+    },
+    {
+      "key": "loratadine",
+      "drug_id": "loratadine",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "За 60 хв до обінутузумабу (eviQ 3573).",
+        "en": "60 minutes before obinutuzumab (eviQ 3573)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [8, 15],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "Дні 8 і 15 (eviQ 3573).",
+        "en": "Days 8 and 15 (eviQ 3573)."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "100 мг раз на добу (eviQ 3573).",
+        "en": "100 mg once a day (eviQ 3573)."
+      }
+    },
+    {
+      "key": "obinutuzumab",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_amount": 2,
+      "days": [1]
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    }
+  ]
+}

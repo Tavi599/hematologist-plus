@@ -1,0 +1,35 @@
+{
+  "$comment": "O-CHOP21 за eviQ 3573 (вер. 4): цикл 21 день; цикл 1 — обінутузумаб у дні 1, 8, 15; цикли 2–6 — у день 1; цикли 7–8 — обінутузумаб окремо. Премедикація: парацетамол 1000 мг, лоратадин 10 мг, дексаметазон 20 мг у дні 8 і 15 (у день 1 стероїд — преднізолон); наступні інфузії можуть не потребувати премедикації. Палоносетрон 0,25 мг в/в — протиблювотні вручну.",
+  "id": "o-chop-cycle-7-8",
+  "short_name": "O-CHOP ц.7-8",
+  "name": {
+    "uk": "O-CHOP21, цикли 7–8 (обінутузумаб окремо)",
+    "en": "O-CHOP21, cycles 7-8 (obinutuzumab alone)"
+  },
+  "description": {
+    "uk": "Обінутузумаб 1000 мг у день 1 кожні 21 день, 2 цикли.",
+    "en": "Obinutuzumab 1000 mg on day 1 every 21 days, two cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "eviQ: O-CHOP21 (протокол 3573, вер. 4)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/3573-o-chop21-obinutuzumab-cyclophosphamide-doxor",
+      "version": "вер. 4, переглянуто 04.09.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "obinutuzumab",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250
+    }
+  ]
+}

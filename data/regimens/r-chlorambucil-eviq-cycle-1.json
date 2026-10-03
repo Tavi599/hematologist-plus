@@ -1,0 +1,54 @@
+{
+  "$comment": "Хлорамбуцил + ритуксимаб за eviQ 1368 (вер. 8): хлорамбуцил 6 мг/м² раз на добу (таблетки по 2 мг — округлення до таблетки). Цикл 1 — 42 дні (хлорамбуцил дні 1–42, ритуксимаб щотижня 4 рази), після 14 днів перерви цикли 2–5 по 28 днів (хлорамбуцил дні 1–14, ритуксимаб день 1). Інакше, ніж у NSSG L.2 (хлорамбуцил 10 мг, ритуксимаб 500 мг/м² у ХЛЛ).",
+  "id": "r-chlorambucil-eviq-cycle-1",
+  "short_name": "R-Хлорамб. (eviQ) ц.1",
+  "name": {
+    "uk": "Хлорамбуцил + ритуксимаб за eviQ, цикл 1",
+    "en": "Chlorambucil + rituximab per eviQ, cycle 1"
+  },
+  "description": {
+    "uk": "Хлорамбуцил 6 мг/м² дні 1–42; ритуксимаб дні 1, 8, 15, 22; цикл 42 дні.",
+    "en": "Chlorambucil 6 mg/m2 on days 1 to 42; rituximab on days 1, 8, 15, 22; a 42-day cycle."
+  },
+  "cycle_length_days": 42,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "eviQ: chlorambucil and rituximab (протокол 1368, вер. 8)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/1368-chlorambucil-and-rituximab",
+      "version": "вер. 8 від 11.04.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "375 мг/м² (eviQ 1368).",
+        "en": "375 mg/m2 (eviQ 1368)."
+      }
+    },
+    {
+      "key": "chlorambucil",
+      "drug_id": "chlorambucil",
+      "route": "oral",
+      "dose_value": 6,
+      "dose_unit": "mg_m2",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42
+      ],
+      "notes": {
+        "uk": "6 мг/м² раз на добу (eviQ 1368); таблетки по 2 мг — округлення до таблетки.",
+        "en": "6 mg/m2 once a day (eviQ 1368); 2 mg tablets — rounded to a tablet."
+      }
+    }
+  ]
+}

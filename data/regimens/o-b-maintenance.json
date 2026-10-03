@@ -11,13 +11,19 @@
     "en": "Obinutuzumab 1000 mg on day 1 every 56 days, for up to 2 years or until progression. In the front line, maintenance may be omitted where induction achieved a deep remission."
   },
   "cycle_length_days": 56,
-  "default_cycles": 13,
+  "default_cycles": 12,
   "sources": [
     {
       "name": "NSSG Oxford Haematology, L.91 Obinutuzumab and Bendamustine",
       "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-91-obinutuzumab-and-bendamustine.pdf",
       "version": "перевірено 2026-10-02",
       "checkedOn": "2026-10-02"
+    },
+    {
+      "name": "eviQ: obinutuzumab maintenance (протокол 3588, вер. 4)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/3588-obinutuzumab-maintenance",
+      "version": "вер. 4, переглянуто 10.09.2024",
+      "checkedOn": "2026-10-04"
     }
   ],
   "items": [

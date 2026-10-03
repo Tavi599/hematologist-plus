@@ -26,6 +26,12 @@
     {
       "name": "Дизайн відділення «CHOEP» (Google Таблиці)",
       "checkedOn": "2026-09-19"
+    },
+    {
+      "name": "eviQ: R-CHOP21 (протокол 70, вер. 9)",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/70-r-chop21-rituximab-cyclophosphamide-doxorubici",
+      "version": "вер. 9 від 11.04.2024",
+      "checkedOn": "2026-10-04"
     }
   ],
   "items": [
@@ -52,7 +58,23 @@
       "notes": {
         "uk": "Уранці під час їди; у день 1 — не пізніше ніж за 30 хв до ритуксимабу",
         "en": "In the morning with food; on day 1 at least 30 minutes before rituximab"
-      }
+      },
+      "dose_options": [
+        {
+          "dose_value": 100,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "eviQ 70: преднізолон 100 мг раз на добу, дні 1–5 (NSSG — 40 мг/м²)",
+            "en": "eviQ 70: prednisolone 100 mg once a day on days 1 to 5 (NSSG — 40 mg/m2)"
+          },
+          "source": {
+            "name": "eviQ: R-CHOP21 (протокол 70, вер. 9)",
+            "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/70-r-chop21-rituximab-cyclophosphamide-doxorubici",
+            "version": "вер. 9 від 11.04.2024",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
     },
     {
       "key": "omeprazole",
