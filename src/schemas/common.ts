@@ -112,7 +112,14 @@ export type UnitEquivalence = z.infer<typeof unitEquivalenceSchema>
 export const DRUG_AVAILABILITY = ['department', 'registered', 'unavailable'] as const
 export const drugAvailabilitySchema = z.enum(DRUG_AVAILABILITY)
 
-export const TREATMENT_NODE_KINDS = ['treatment', 'line', 'stage', 'group', 'trial'] as const
+export const TREATMENT_NODE_KINDS = [
+  'treatment',
+  'line',
+  'stage',
+  'group',
+  'trial',
+  'reference',
+] as const
 export const treatmentNodeKindSchema = z.enum(TREATMENT_NODE_KINDS)
 
 /**
@@ -201,6 +208,32 @@ export const evidenceSchema = z.strictObject({
 })
 
 export type Evidence = z.infer<typeof evidenceSchema>
+
+/**
+ * A course described but not calculated: the sources name it and its drugs, yet leave out a
+ * piece of the schedule the calculator cannot do without (the day of a drug within the cycle, a
+ * ramp-up step), and a dose list written down from memory would be a dose for a patient. The
+ * regimen keeps a card in the treatment tree instead of items, and is never offered in the
+ * calculator.
+ *   summary      — what the course is and who it is for
+ *   drugs        — the drugs of the course as the source names them
+ *   key_info     — the short facts worth knowing: how long, how often, what it demands
+ *   gap          — what the source does not say, which is why there is no calculation
+ *   availability — whether the course can be given in Ukraine; unknown until someone checks
+ */
+export const REFERENCE_AVAILABILITY = ['unknown', 'registered', 'unavailable'] as const
+
+export const referenceSchema = z.strictObject({
+  summary: localizedTextSchema,
+  drugs: z
+    .array(z.strictObject({ name: localizedTextSchema, drug_id: idSchema.optional() }))
+    .min(1),
+  key_info: z.array(localizedTextSchema).default([]),
+  gap: localizedTextSchema.optional(),
+  availability: z.enum(REFERENCE_AVAILABILITY).default('unknown'),
+})
+
+export type Reference = z.infer<typeof referenceSchema>
 
 /** Which of the four fields exist, in the order they are read. */
 export const EVIDENCE_FIELDS = ['design', 'population', 'results', 'conduct'] as const

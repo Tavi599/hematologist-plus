@@ -8,6 +8,7 @@ import { regimenAvailability } from '../../lib/availability'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
+import { RegimenReference } from './RegimenReference'
 import { countRegimens, drugsInTree, filterTree, type FilteredNode } from './treatment-filter'
 
 /** Disease → treatment → line/stage → regimen, each regimen leading into the calculator. */
@@ -89,7 +90,7 @@ function TreatmentNodeView({
         <Badge
           size="xs"
           variant="light"
-          color={node.kind === 'trial' ? 'yellow' : 'gray'}
+          color={node.kind === 'trial' ? 'yellow' : node.kind === 'reference' ? 'cyan' : 'gray'}
           tt="none"
         >
           {t(`treatmentKind.${node.kind}`)}
@@ -103,6 +104,10 @@ function TreatmentNodeView({
       {links.map((link) => {
         const regimen = catalog.regimens.get(link.regimen_id)
         if (!regimen) return null
+        // A described course has no calculator to lead into: it stands as a card.
+        if (regimen.reference !== null && regimen.reference !== undefined) {
+          return <RegimenReference key={link.id} regimen={regimen} />
+        }
         const availability = regimenAvailability(catalog, regimen.id)
         return (
           <Group key={link.id} gap="sm" wrap="wrap" pl="md">

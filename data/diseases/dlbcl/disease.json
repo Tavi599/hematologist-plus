@@ -422,6 +422,41 @@
           }
         }
       ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-glofit-gemox"
+        },
+        {
+          "regimen_id": "ref-pola-r-gemox"
+        },
+        {
+          "regimen_id": "ref-epcor-gemox"
+        },
+        {
+          "regimen_id": "ref-epcoritamab"
+        },
+        {
+          "regimen_id": "ref-tafasitamab-len"
+        },
+        {
+          "regimen_id": "ref-loncastuximab"
+        },
+        {
+          "regimen_id": "ref-bv-r-len"
+        }
+      ]
     }
   ]
 }

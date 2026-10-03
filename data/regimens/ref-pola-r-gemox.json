@@ -1,0 +1,71 @@
+{
+  "id": "ref-pola-r-gemox",
+  "short_name": "Pola-R-GemOx",
+  "name": {
+    "uk": "Полатузумаб + R-GemOx",
+    "en": "Polatuzumab + R-GemOx"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Diffuse large B cell lymphoma (DLBCL): Second or later relapse or patients who are medically unfit",
+      "url": "https://www.uptodate.com/contents/diffuse-large-b-cell-lymphoma-dlbcl-second-or-later-relapse-or-patients-who-are-medically-unfit",
+      "version": "огляд літератури до вересня 2026, тема оновлена 03.09.2026",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Другий і наступні рецидиви ДВКЛ у пацієнтів, яким не підходить аутотрансплантація чи CAR-T. Не підходить, якщо полатузумаб уже входив у першу лінію (наприклад, Pola-R-CHP), особливо менш як рік тому.",
+      "en": "Second or later relapse of DLBCL in patients not eligible for autologous transplant or CAR-T. Not suitable if polatuzumab was part of the first line (for example Pola-R-CHP), especially less than a year ago."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Полатузумаб ведотин",
+          "en": "Polatuzumab vedotin"
+        },
+        "drug_id": "polatuzumab-vedotin"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Гемцитабін",
+          "en": "Gemcitabine"
+        },
+        "drug_id": "gemcitabine"
+      },
+      {
+        "name": {
+          "uk": "Оксаліплатин",
+          "en": "Oxaliplatin"
+        },
+        "drug_id": "oxaliplatin"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "До 8 циклів по 21 дню.",
+        "en": "Up to eight 21-day cycles."
+      },
+      {
+        "uk": "Дослідження POLARGO: медіана виживаності 19,5 проти 12,5 міс. у R-GemOx, 2-річна виживаність без прогресування 25% проти 12%.",
+        "en": "POLARGO: median survival 19.5 versus 12.5 months with R-GemOx, two-year progression-free survival 25% versus 12%."
+      },
+      {
+        "uk": "Частіші інфекції (смертельні випадки 12% проти 4%) і периферична нейропатія ≥2 ступеня (16% проти 6%).",
+        "en": "More infections (fatal events 12% versus 4%) and grade 2 or worse peripheral neuropathy (16% versus 6%)."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить дозу полатузумабу в цій комбінації та дні препаратів у циклі, тому розрахунку немає. R-GemOx окремо (ритуксимаб 375 мг/м², гемцитабін 1000 і оксаліплатин 100 мг/м²) є в довіднику.",
+      "en": "UpToDate gives neither the polatuzumab dose in this combination nor the days of the drugs within the cycle, so there is no calculation. R-GemOx alone (rituximab 375 mg/m2, gemcitabine 1000 and oxaliplatin 100 mg/m2) is in the catalog."
+    },
+    "availability": "unknown"
+  }
+}

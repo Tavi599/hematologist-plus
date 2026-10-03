@@ -10,6 +10,7 @@ import {
   drugAvailabilitySchema,
   diseaseReferencesSchema,
   evidenceSchema,
+  referenceSchema,
   idSchema,
   itemRoleSchema,
   localizedTextSchema,
@@ -134,6 +135,8 @@ export const regimenRowSchema = z.object({
   /** The study behind a trial regimen; defaulted so a client reads a database without the
    *  column, and null for every regimen that comes from a protocol or a label. */
   evidence: evidenceSchema.nullable().default(null),
+  /** A course described but not calculated; defaulted for the same reason as `evidence`. */
+  reference: referenceSchema.nullable().default(null),
 })
 
 export const regimenItemRowSchema = z.object({

@@ -28,4 +28,23 @@ describe('filterRegimens', () => {
     expect(filterRegimens(index, NO_REGIMEN_FILTER)).toHaveLength(1)
     expect(filterRegimens(index, { diseaseId: null, onlyObtainable: true })).toEqual([])
   })
+
+  it('never offers a course that is only described', () => {
+    const rows = demoCatalog()
+    rows.regimens.push({
+      ...rows.regimens[0]!,
+      id: 'only-described',
+      short_name: 'Лише опис',
+      reference: {
+        summary: { uk: 'Опис' },
+        drugs: [{ name: { uk: 'Препарат' } }],
+        key_info: [],
+        availability: 'unknown',
+      },
+    })
+
+    expect(filterRegimens(indexCatalog(rows), NO_REGIMEN_FILTER).map((r) => r.id)).toEqual([
+      'r-chop-21',
+    ])
+  })
 })

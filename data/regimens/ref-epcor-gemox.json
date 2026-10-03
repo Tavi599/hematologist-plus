@@ -1,0 +1,70 @@
+{
+  "id": "ref-epcor-gemox",
+  "short_name": "Epcor-GemOx",
+  "name": {
+    "uk": "Епкоритамаб + GemOx",
+    "en": "Epcoritamab + GemOx"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Diffuse large B cell lymphoma (DLBCL): Second or later relapse or patients who are medically unfit",
+      "url": "https://www.uptodate.com/contents/diffuse-large-b-cell-lymphoma-dlbcl-second-or-later-relapse-or-patients-who-are-medically-unfit",
+      "version": "огляд літератури до вересня 2026, тема оновлена 03.09.2026",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Другий і наступні рецидиви ДВКЛ у пацієнтів, яким не підходить аутотрансплантація чи CAR-T. Прямого порівняння з GemOx у рандомізованому дослідженні ще немає.",
+      "en": "Second or later relapse of DLBCL in patients not eligible for autologous transplant or CAR-T. There is no randomised comparison with GemOx yet."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Епкоритамаб 48 мг підшкірно (зі східчастим початком)",
+          "en": "Epcoritamab 48 mg subcutaneously (stepped up)"
+        }
+      },
+      {
+        "name": {
+          "uk": "Гемцитабін 1000 мг/м²",
+          "en": "Gemcitabine 1000 mg/m2"
+        },
+        "drug_id": "gemcitabine"
+      },
+      {
+        "name": {
+          "uk": "Оксаліплатин 100 мг/м²",
+          "en": "Oxaliplatin 100 mg/m2"
+        },
+        "drug_id": "oxaliplatin"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон 100 мг (профілактика СВЦ)",
+          "en": "Prednisolone 100 mg (cytokine release prophylaxis)"
+        },
+        "drug_id": "prednisolone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Дослідження EPCORE NHL-2: відповідь 85% (61% повна), медіана виживаності 22 міс.; СВЦ приблизно в половини, 3 ступеня в одного пацієнта.",
+        "en": "EPCORE NHL-2: response 85% (61% complete), median survival 22 months; cytokine release in about half, grade 3 in one patient."
+      },
+      {
+        "uk": "У циклі 1 перед кожною дозою епкоритамабу: преднізолон 100 мг за 30–120 хв, антигістамінний засіб і парацетамол 650–1000 мг.",
+        "en": "In cycle 1 before every epcoritamab dose: prednisolone 100 mg 30 to 120 minutes ahead, an antihistamine and paracetamol 650 to 1000 mg."
+      },
+      {
+        "uk": "Більше глюкокортикоїдів у періоді нарощування дози, більше інфекцій і гіпогамаглобулінемії, ніж з іншими комбінаціями.",
+        "en": "More glucocorticoid during the ramp-up, and more infections and hypogammaglobulinaemia than with the other combinations."
+      }
+    ],
+    "gap": {
+      "uk": "У тексті UpToDate розклад суперечить собі (GemOx кожні 2 тижні 8 доз проти 21-денних циклів) і не вказує днів, тому розрахунку немає.",
+      "en": "The UpToDate text is inconsistent about the schedule (GemOx every 2 weeks for 8 doses versus 21-day cycles) and gives no days, so there is no calculation."
+    },
+    "availability": "unknown"
+  }
+}

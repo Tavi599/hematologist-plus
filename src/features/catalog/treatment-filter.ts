@@ -18,14 +18,23 @@ export interface FilteredNode {
   children: FilteredNode[]
 }
 
+/** The drugs of a regimen: its items, or for a described course the drugs its card names. */
+function regimenDrugIds(catalog: CatalogIndex, regimenId: string): Set<string> {
+  const ids = new Set((catalog.itemsByRegimen.get(regimenId) ?? []).map((item) => item.drug_id))
+  for (const drug of catalog.regimens.get(regimenId)?.reference?.drugs ?? []) {
+    if (drug.drug_id !== undefined) ids.add(drug.drug_id)
+  }
+  return ids
+}
+
 export function regimenHasDrugs(
   catalog: CatalogIndex,
   regimenId: string,
   drugIds: readonly string[],
 ): boolean {
   if (drugIds.length === 0) return true
-  const items = catalog.itemsByRegimen.get(regimenId) ?? []
-  return drugIds.every((drugId) => items.some((item) => item.drug_id === drugId))
+  const named = regimenDrugIds(catalog, regimenId)
+  return drugIds.every((drugId) => named.has(drugId))
 }
 
 /**
@@ -39,8 +48,8 @@ export function drugsInTree(
 ): { drug: Drug; label: string }[] {
   const found = new Map<string, Drug>()
   for (const regimenId of regimensInTree(catalog, diseaseId)) {
-    for (const item of catalog.itemsByRegimen.get(regimenId) ?? []) {
-      const drug = catalog.drugs.get(item.drug_id)
+    for (const drugId of regimenDrugIds(catalog, regimenId)) {
+      const drug = catalog.drugs.get(drugId)
       if (drug) found.set(drug.id, drug)
     }
   }

@@ -1,0 +1,64 @@
+{
+  "id": "ref-bv-r-len",
+  "short_name": "BV + R + Len",
+  "name": {
+    "uk": "Брентуксимаб + ритуксимаб + леналідомід",
+    "en": "Brentuximab + rituximab + lenalidomide"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Diffuse large B cell lymphoma (DLBCL): Second or later relapse or patients who are medically unfit",
+      "url": "https://www.uptodate.com/contents/diffuse-large-b-cell-lymphoma-dlbcl-second-or-later-relapse-or-patients-who-are-medically-unfit",
+      "version": "огляд літератури до вересня 2026, тема оновлена 03.09.2026",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидив ДВКЛ після двох і більше ліній у пацієнтів, яким не підходить аутотрансплантація чи CAR-T. Ефективний навіть без експресії CD30, але виживаність без прогресування коротка.",
+      "en": "Relapsed DLBCL after two or more lines in patients not eligible for autologous transplant or CAR-T. Effective even without CD30 expression, but progression-free survival is short."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Брентуксимаб ведотин 1,2 мг/кг",
+          "en": "Brentuximab vedotin 1.2 mg/kg"
+        },
+        "drug_id": "brentuximab-vedotin"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб 375 мг/м²",
+          "en": "Rituximab 375 mg/m2"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід 20 мг щодня",
+          "en": "Lenalidomide 20 mg daily"
+        },
+        "drug_id": "lenalidomide"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Брентуксимаб і ритуксимаб — день 1 кожного 21-денного циклу, леналідомід — щодня.",
+        "en": "Brentuximab and rituximab on day 1 of each 21-day cycle, lenalidomide daily."
+      },
+      {
+        "uk": "ECHELON-3: медіана виживаності 13,8 проти 8,5 міс. у R-леналідоміду; виживаність без прогресування близько 4 міс.",
+        "en": "ECHELON-3: median survival 13.8 versus 8.5 months with rituximab-lenalidomide; progression-free survival about 4 months."
+      },
+      {
+        "uk": "Нейропатія та цитопенії.",
+        "en": "Neuropathy and cytopenias."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate пише «щодня» без вказівки кількості днів леналідоміду в циклі, тому розрахунку немає.",
+      "en": "UpToDate says «daily» without saying how many days of lenalidomide there are in a cycle, so there is no calculation."
+    },
+    "availability": "unknown"
+  }
+}

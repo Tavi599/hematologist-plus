@@ -1,0 +1,56 @@
+{
+  "id": "ref-loncastuximab",
+  "short_name": "Лонкастуксимаб",
+  "name": {
+    "uk": "Лонкастуксимаб тесирин",
+    "en": "Loncastuximab tesirine"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Diffuse large B cell lymphoma (DLBCL): Second or later relapse or patients who are medically unfit",
+      "url": "https://www.uptodate.com/contents/diffuse-large-b-cell-lymphoma-dlbcl-second-or-later-relapse-or-patients-who-are-medically-unfit",
+      "version": "огляд літератури до вересня 2026, тема оновлена 03.09.2026",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидив ДВКЛ після двох і більше ліній; антитіло-ліки проти CD19. Не давати перед CD19-спрямованим CAR-T.",
+      "en": "Relapsed DLBCL after two or more lines; an anti-CD19 antibody-drug conjugate. Not to be used as bridging before CD19-directed CAR-T."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Лонкастуксимаб тесирин в/в за 30 хв",
+          "en": "Loncastuximab tesirine IV over 30 minutes"
+        }
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон (профілактика)",
+          "en": "Dexamethasone (prophylaxis)"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "День 1 кожного 21-денного циклу: 0,15 мг/кг у перших двох циклах, далі 0,075 мг/кг.",
+        "en": "Day 1 of each 21-day cycle: 0.15 mg/kg for two cycles, then 0.075 mg/kg."
+      },
+      {
+        "uk": "Дексаметазон 3 дні, починаючи з дня -1.",
+        "en": "Dexamethasone for three days starting on day -1."
+      },
+      {
+        "uk": "LOTIS-2: відповідь 48% (24% повна); нейтропенія 3+ ступеня у 32%, набряки та випоти.",
+        "en": "LOTIS-2: response 48% (24% complete); grade 3 or worse neutropenia in 32%, oedema and effusions."
+      }
+    ],
+    "gap": {
+      "uk": "Препарата ще немає в довіднику, а дозу дексаметазону UpToDate не називає.",
+      "en": "The drug is not in the catalog yet, and UpToDate does not name the dexamethasone dose."
+    },
+    "availability": "unknown"
+  }
+}

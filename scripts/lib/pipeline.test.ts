@@ -10,6 +10,7 @@ import { checkCatalog } from './check-catalog'
 import { diffTable, hasChanges, stableStringify } from './diff'
 import { parseArgs } from './env'
 import { diseaseCodeId, flattenDataSet } from './flatten'
+import { regimenFileSchema } from './data-files'
 import { contentOptions, loadDataDir, prunesArticlesBlind } from './load-data'
 import { DEMO_CATALOG_FIXTURE, demoCatalogJson } from './snapshot'
 import { catalogToSql } from './sql'
@@ -77,6 +78,64 @@ describe('demo data set', () => {
       expect.objectContaining({ table: 'regimen_items', id: 'r-chop-21.cyclophosphamide' }),
       // The demo set carries an NCCN section in Ukrainian only, on purpose.
       expect.objectContaining({ table: 'disease_articles', id: 'dlbcl.nccn' }),
+    ])
+  })
+})
+
+describe('a regimen that is described, not calculated', () => {
+  const reference = {
+    summary: { uk: 'Опис' },
+    drugs: [{ name: { uk: 'Препарат' } }],
+  }
+  const item = {
+    key: 'a',
+    drug_id: 'b',
+    route: 'oral',
+    dose_value: 1,
+    dose_unit: 'mg_flat',
+    days: [1],
+  }
+  const base = { id: 'r', short_name: 'R', name: { uk: 'R' } }
+
+  it('needs no items, and a calculated regimen still needs them', () => {
+    expect(regimenFileSchema.safeParse({ ...base, reference }).success).toBe(true)
+    expect(regimenFileSchema.safeParse({ ...base }).success).toBe(false)
+    expect(regimenFileSchema.safeParse({ ...base, items: [item] }).success).toBe(true)
+  })
+
+  it('refuses a description that also carries items', () => {
+    expect(regimenFileSchema.safeParse({ ...base, reference, items: [item] }).success).toBe(false)
+  })
+
+  it('fills in that the availability is unknown', () => {
+    const parsed = regimenFileSchema.parse({ ...base, reference })
+    expect(parsed.reference?.availability).toBe('unknown')
+    expect(parsed.reference?.key_info).toEqual([])
+  })
+
+  it('wants a source, and a drug that exists, and no items in the database either', () => {
+    const rows = loadDemo()
+    rows.regimens.push({
+      ...rows.regimens[0]!,
+      id: 'ref',
+      sources: [],
+      print_forms: { version: 1, forms: [] },
+      reference: {
+        summary: { uk: 'Опис' },
+        drugs: [{ name: { uk: 'X' }, drug_id: 'ghost' }],
+        key_info: [],
+        availability: 'unknown',
+      },
+    })
+    rows.regimen_items.push({ ...rows.regimen_items[0]!, id: 'ref.a', regimen_id: 'ref' })
+    const found = checkCatalog(rows)
+      .filter((issue) => issue.severity === 'error' && issue.id === 'ref')
+      .map((issue) => issue.message)
+
+    expect(found).toEqual([
+      'a described course must cite its source',
+      'a described course carries no items',
+      'reference drug "ghost" is not in the catalog',
     ])
   })
 })

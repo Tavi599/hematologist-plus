@@ -33,6 +33,8 @@ export function filterRegimens(catalog: CatalogIndex, filter: RegimenFilter): Re
   const diseases = filter.diseaseId === null ? null : diseasesByRegimen(catalog)
   return [...catalog.regimens.values()]
     .filter((regimen) => {
+      // A described course has nothing to calculate.
+      if (regimen.reference !== null && regimen.reference !== undefined) return false
       if (diseases !== null && !diseases.get(regimen.id)?.has(filter.diseaseId!)) return false
       return !filter.onlyObtainable || regimenAvailability(catalog, regimen.id) !== 'unavailable'
     })

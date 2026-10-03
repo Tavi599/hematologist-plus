@@ -19,6 +19,7 @@ import {
   nonNegativeIntSchema,
   positiveNumberSchema,
   presentationFormSchema,
+  referenceSchema,
   reviewRulesSchema,
   routeSchema,
   solventSchema,
@@ -123,53 +124,73 @@ export const drugFileSchema = z.strictObject({
     .default([]),
 })
 
-export const regimenFileSchema = z.strictObject({
-  $comment: z.string().optional(),
-  id: idSchema,
-  short_name: nonEmptyTextSchema,
-  name: localizedTextSchema,
-  description: optionalLocalized,
-  cycle_length_days: positiveNumberSchema.int().nullable().default(null),
-  default_cycles: positiveNumberSchema.int().nullable().default(null),
-  sort_order: sortOrder,
-  sources: sourcesSchema.default([]),
-  /** The study behind a regimen that comes from one; null for a protocol or a label. */
-  evidence: evidenceSchema.nullable().default(null),
-  /** Administration order = array order. */
-  items: z
-    .array(
-      z.strictObject({
-        key: keySchema,
-        drug_id: idSchema,
-        role: itemRoleSchema.default('main'),
-        route: routeSchema,
-        dose_value: positiveNumberSchema,
-        dose_unit: doseUnitSchema,
-        cap_amount: optionalPositive,
-        /** Sheet and timing; derived from role and route when omitted (see flatten.ts). */
-        block: scheduleBlockSchema.optional(),
-        /** Minutes between the repeats within a day (q8h = 480). */
-        interval_min: optionalPositiveInt,
-        /** day_support: minutes from the day's first chained drug; negative is before it. */
-        anchor_offset_min: z.number().int().nullable().default(null),
-        days: z.array(nonNegativeIntSchema).min(1),
-        administrations_per_day: positiveNumberSchema.int().default(1),
-        /** Key of one of the drug's infusion_params; the drug default is used when omitted. */
-        infusion_params_key: keySchema.nullable().default(null),
-        duration_min: optionalNonNegativeInt,
-        fallback_solvent: solventSchema.nullable().default(null),
-        fallback_volume_ml: optionalPositive,
-        gap_before_min: optionalNonNegativeInt,
-        notes: optionalLocalized,
-        /** Same dose as written by other protocols; the physician picks one in the calculator. */
-        dose_options: doseOptionsSchema.default([]),
-        /** Circumstances that change the dose, ticked by the physician in the calculator. */
-        dose_modifiers: doseModifiersSchema.default([]),
-      }),
-    )
-    .min(1),
-  print_forms: printFormsFileSchema.default(EMPTY_PRINT_FORMS),
-})
+export const regimenFileSchema = z
+  .strictObject({
+    $comment: z.string().optional(),
+    id: idSchema,
+    short_name: nonEmptyTextSchema,
+    name: localizedTextSchema,
+    description: optionalLocalized,
+    cycle_length_days: positiveNumberSchema.int().nullable().default(null),
+    default_cycles: positiveNumberSchema.int().nullable().default(null),
+    sort_order: sortOrder,
+    sources: sourcesSchema.default([]),
+    /** The study behind a regimen that comes from one; null for a protocol or a label. */
+    evidence: evidenceSchema.nullable().default(null),
+    /** A course that is described but not calculated; it then has no items. */
+    reference: referenceSchema.nullable().default(null),
+    /** Administration order = array order. */
+    items: z
+      .array(
+        z.strictObject({
+          key: keySchema,
+          drug_id: idSchema,
+          role: itemRoleSchema.default('main'),
+          route: routeSchema,
+          dose_value: positiveNumberSchema,
+          dose_unit: doseUnitSchema,
+          cap_amount: optionalPositive,
+          /** Sheet and timing; derived from role and route when omitted (see flatten.ts). */
+          block: scheduleBlockSchema.optional(),
+          /** Minutes between the repeats within a day (q8h = 480). */
+          interval_min: optionalPositiveInt,
+          /** day_support: minutes from the day's first chained drug; negative is before it. */
+          anchor_offset_min: z.number().int().nullable().default(null),
+          days: z.array(nonNegativeIntSchema).min(1),
+          administrations_per_day: positiveNumberSchema.int().default(1),
+          /** Key of one of the drug's infusion_params; the drug default is used when omitted. */
+          infusion_params_key: keySchema.nullable().default(null),
+          duration_min: optionalNonNegativeInt,
+          fallback_solvent: solventSchema.nullable().default(null),
+          fallback_volume_ml: optionalPositive,
+          gap_before_min: optionalNonNegativeInt,
+          notes: optionalLocalized,
+          /** Same dose as written by other protocols; the physician picks one in the calculator. */
+          dose_options: doseOptionsSchema.default([]),
+          /** Circumstances that change the dose, ticked by the physician in the calculator. */
+          dose_modifiers: doseModifiersSchema.default([]),
+        }),
+      )
+      .default([]),
+    print_forms: printFormsFileSchema.default(EMPTY_PRINT_FORMS),
+  })
+  .superRefine((regimen, context) => {
+    // A calculated course has items; a described one has none, and says why on its card.
+    if (regimen.reference === null && regimen.items.length === 0) {
+      context.addIssue({
+        code: 'custom',
+        path: ['items'],
+        message: 'a regimen needs at least one item',
+      })
+    }
+    if (regimen.reference !== null && regimen.items.length > 0) {
+      context.addIssue({
+        code: 'custom',
+        path: ['items'],
+        message: 'a reference-only regimen carries no items',
+      })
+    }
+  })
 
 interface TreatmentNodeFile {
   key: string

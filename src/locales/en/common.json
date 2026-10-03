@@ -476,12 +476,21 @@
     "line": "line",
     "stage": "stage",
     "group": "group",
-    "trial": "clinical trial"
+    "trial": "clinical trial",
+    "reference": "for reference"
   },
   "availability": {
     "department": "in the department",
     "registered": "registered in Ukraine",
     "unavailable": "not obtainable"
+  },
+  "describedCourse": {
+    "noCalculation": "description only, not calculated",
+    "unavailable": "not available in Ukraine",
+    "registered": "registered in Ukraine",
+    "drugs": "Drugs",
+    "keyInfo": "The course in brief",
+    "gap": "Why there is no calculation"
   },
   "regimen": {
     "title": "Regimen",

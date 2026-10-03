@@ -307,6 +307,19 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
   }
 
   for (const regimen of rows.regimens) {
+    if (regimen.reference !== null && regimen.reference !== undefined) {
+      if (regimen.sources.length === 0) {
+        error('regimens', regimen.id, 'a described course must cite its source')
+      }
+      if (rows.regimen_items.some((item) => item.regimen_id === regimen.id)) {
+        error('regimens', regimen.id, 'a described course carries no items')
+      }
+      for (const drug of regimen.reference.drugs) {
+        if (drug.drug_id !== undefined && !drugById.has(drug.drug_id)) {
+          error('regimens', regimen.id, `reference drug "${drug.drug_id}" is not in the catalog`)
+        }
+      }
+    }
     const forms = regimen.print_forms?.forms ?? []
     for (const form of forms) {
       for (const itemId of form.itemIds) {

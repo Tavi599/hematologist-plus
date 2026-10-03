@@ -57,4 +57,46 @@ describe('TreatmentTree', () => {
 
     expect(screen.getByText(/ще не заповнене/)).toBeInTheDocument()
   })
+
+  it('shows a described course as a card with no way into the calculator', () => {
+    const rows = demoCatalog()
+    rows.regimens.push({
+      ...rows.regimens[0]!,
+      id: 'only-described',
+      short_name: 'Глофіт-GemOx',
+      name: { uk: 'Глофітамаб + GemOx' },
+      sources: [{ name: 'UpToDate: тема', checkedOn: '2026-10-03' }],
+      reference: {
+        summary: { uk: 'Рецидив ДВКЛ.' },
+        drugs: [{ name: { uk: 'Глофітамаб' } }, { name: { uk: 'Гемцитабін' } }],
+        key_info: [{ uk: 'Цикли по 21 дню.' }],
+        gap: { uk: 'UpToDate не вказує день GemOx.' },
+        availability: 'unavailable',
+      },
+    })
+    rows.treatment_nodes.push({
+      ...node('ref', null, 'Для ознайомлення'),
+      disease_id: 'dlbcl',
+      kind: 'reference',
+    })
+    rows.treatment_node_regimens.push({
+      id: 'ref.only-described',
+      node_id: 'ref',
+      regimen_id: 'only-described',
+      notes: null,
+      sort_order: 0,
+    })
+    renderWithProviders(<TreatmentTree catalog={indexCatalog(rows)} diseaseId="dlbcl" />)
+
+    expect(screen.getByText('Глофіт-GemOx')).toBeInTheDocument()
+    expect(screen.getByText('лише опис, без розрахунку')).toBeInTheDocument()
+    expect(screen.getByText('недоступний в Україні')).toBeInTheDocument()
+    expect(screen.getByText('Глофітамаб, Гемцитабін')).toBeInTheDocument()
+    expect(screen.getByText('Цикли по 21 дню.')).toBeInTheDocument()
+    expect(screen.getByText(/UpToDate не вказує день GemOx/)).toBeInTheDocument()
+    // The ordinary regimen of the same tree keeps its way into the calculator; the described
+    // one has none.
+    expect(screen.getAllByRole('link', { name: /Розрахувати/ })).toHaveLength(1)
+    expect(screen.queryByRole('link', { name: 'Глофіт-GemOx' })).not.toBeInTheDocument()
+  })
 })

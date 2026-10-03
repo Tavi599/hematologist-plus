@@ -1,0 +1,75 @@
+{
+  "id": "ref-glofit-gemox",
+  "short_name": "Glofit-GemOx",
+  "name": {
+    "uk": "Глофітамаб + GemOx",
+    "en": "Glofitamab + GemOx"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Diffuse large B cell lymphoma (DLBCL): Second or later relapse or patients who are medically unfit",
+      "url": "https://www.uptodate.com/contents/diffuse-large-b-cell-lymphoma-dlbcl-second-or-later-relapse-or-patients-who-are-medically-unfit",
+      "version": "огляд літератури до вересня 2026, тема оновлена 03.09.2026",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Другий і наступні рецидиви ДВКЛ у пацієнтів, яким не підходить аутотрансплантація чи CAR-T. UpToDate радить GemOx з глофітамабом, епкоритамабом або полатузумабом.",
+      "en": "Second or later relapse of DLBCL in patients not eligible for autologous transplant or CAR-T. UpToDate suggests GemOx with glofitamab, epcoritamab or polatuzumab."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Глофітамаб",
+          "en": "Glofitamab"
+        },
+        "drug_id": "glofitamab"
+      },
+      {
+        "name": {
+          "uk": "Обінутузумаб (разова доза 1000 мг у день 1 циклу 1)",
+          "en": "Obinutuzumab (a single 1000 mg dose on day 1 of cycle 1)"
+        },
+        "drug_id": "obinutuzumab"
+      },
+      {
+        "name": {
+          "uk": "Гемцитабін 1000 мг/м²",
+          "en": "Gemcitabine 1000 mg/m2"
+        },
+        "drug_id": "gemcitabine"
+      },
+      {
+        "name": {
+          "uk": "Оксаліплатин 100 мг/м²",
+          "en": "Oxaliplatin 100 mg/m2"
+        },
+        "drug_id": "oxaliplatin"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Цикли по 21 дню: 8 циклів глофітамаб + GemOx, потім 4 цикли глофітамабу в монорежимі (разом 12).",
+        "en": "21-day cycles: eight cycles of glofitamab with GemOx, then four of glofitamab alone (twelve in all)."
+      },
+      {
+        "uk": "Глофітамаб вводять східчасто: 2,5 мг на день 8 і 10 мг на день 15 циклу 1, далі 30 мг на день 1 наступних циклів.",
+        "en": "Glofitamab is stepped up: 2.5 mg on day 8 and 10 mg on day 15 of cycle 1, then 30 mg on day 1 of the later cycles."
+      },
+      {
+        "uk": "Обінутузумаб 1000 мг за 7 днів до першої дози глофітамабу знижує ризик синдрому вивільнення цитокінів.",
+        "en": "Obinutuzumab 1000 mg seven days before the first glofitamab dose lowers the risk of cytokine release syndrome."
+      },
+      {
+        "uk": "Дослідження STARGLO: медіана виживаності 25,5 проти 12,9 міс. у R-GemOx; СВЦ у 44% (3-4 ступеня у 2%), нейротоксичність ≥2 ступеня у 31%.",
+        "en": "STARGLO: median survival 25.5 versus 12.9 months with R-GemOx; cytokine release in 44% (grade 3 or 4 in 2%), grade 2 or worse neurotoxicity in 31%."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не вказує, в який день кожного циклу давати GemOx відносно глофітамабу. Доз для пацієнта без цього розкладу не заведено; окремо є глофітамаб у монорежимі (цикл 1 і цикли 2–12).",
+      "en": "UpToDate does not say on which day of each cycle GemOx is given relative to glofitamab. Without that schedule no doses are entered; glofitamab alone (cycle 1 and cycles 2 to 12) is in the catalog separately."
+    },
+    "availability": "unknown"
+  }
+}
