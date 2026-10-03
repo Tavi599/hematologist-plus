@@ -1,0 +1,108 @@
+{
+  "$comment": "Розклад даратумумабу згущений на початку: цикли 1-2 щотижня, 3-6 раз на два тижні, з 7-го раз на місяць.",
+  "id": "dpd",
+  "short_name": "DPd (7+)",
+  "name": {
+    "uk": "DPd (даратумумаб, помалідомід, дексаметазон), цикли 7 і далі",
+    "en": "DPd (daratumumab, pomalidomide, dexamethasone), cycle 7 onwards"
+  },
+  "description": {
+    "uk": "Цикл 28 днів, даратумумаб лише в день 1.",
+    "en": "A 28-day cycle, the daratumumab on day 1 only."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.51 Daratumumab with Pomalidomide and Dexamethasone",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-51-daratumumab-with-pomalidomide-and-dexamethasone.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За годину до ін'єкції даратумумабу. Протокол додає хлорфенамін 4 мг усередину, а в циклі 1 ще й монтелукаст 10 мг — цих препаратів у довіднику немає.",
+        "en": "An hour before the daratumumab injection. The protocol adds chlorphenamine 4 mg by mouth, and in cycle 1 montelukast 10 mg as well; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "dexamethasone-weekly",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Щотижнева доза дексаметазону, що включає й премедикацію в дні даратумумабу: 40 мг у пацієнтів до 75 років і 20 мг у старших. У день першої ін'єкції премедикація — 20 мг, з другої її можна зменшити до 12 мг.",
+        "en": "The weekly dexamethasone, which includes the premedication on daratumumab days: 40 mg at 75 or under and 20 mg above. On the day of the first injection the premedication is 20 mg, and from the second it may drop to 12 mg."
+      },
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Вік понад 75 років",
+            "en": "Over the age of 75"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.51 Daratumumab with Pomalidomide and Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-51-daratumumab-with-pomalidomide-and-dexamethasone.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "subcutaneous",
+      "dose_value": 1800,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 5,
+      "notes": {
+        "uk": "Підшкірно, фіксована доза, за 3-5 хвилин.",
+        "en": "Subcutaneously, a fixed dose, over 3 to 5 minutes."
+      }
+    },
+    {
+      "key": "dexamethasone-post",
+      "drug_id": "dexamethasone",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [2, 3],
+      "notes": {
+        "uk": "Два дні поспіль, починаючи з наступного дня після ін'єкції, щоб зменшити ризик відстрочених реакцій.",
+        "en": "For two days starting the day after the injection, to lower the risk of delayed reactions."
+      }
+    },
+    {
+      "key": "pomalidomide",
+      "drug_id": "pomalidomide",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Приймають увечері. Помалідомід призначають і видають лише в межах програми запобігання вагітності; потрібна оцінка ризику тромбозу й відповідна профілактика.",
+        "en": "Taken at night. Pomalidomide is prescribed and dispensed only within the pregnancy prevention programme; the thrombotic risk is assessed and prophylaxis given accordingly."
+      }
+    }
+  ]
+}

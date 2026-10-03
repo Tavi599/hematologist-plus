@@ -1,0 +1,77 @@
+{
+  "$comment": "Розклад адаптовано з дослідження OPTIMISM; з 9-го циклу бортезоміб дають лише в дні 1 і 8, тому це дві схеми.",
+  "id": "pvd",
+  "short_name": "PVd (9+)",
+  "name": {
+    "uk": "PVd (помалідомід, бортезоміб, дексаметазон), цикли 9 і далі",
+    "en": "PVd (pomalidomide, bortezomib, dexamethasone), cycle 9 onwards"
+  },
+  "description": {
+    "uk": "Цикл 21 день. З дев'ятого циклу бортезоміб дають лише в дні 1 і 8.",
+    "en": "A 21-day cycle. From cycle 9 the bortezomib runs on days 1 and 8 only."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.49 PVd, 21-day cycle",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-49-pvd-21-day-cycle.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "pomalidomide",
+      "drug_id": "pomalidomide",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "Приймають увечері. Помалідомід призначають і видають лише в межах програми запобігання вагітності; потрібна оцінка ризику тромбозу й відповідна профілактика.",
+        "en": "Taken at night. Pomalidomide is prescribed and dispensed only within the pregnancy prevention programme; the thrombotic risk is assessed and prophylaxis given accordingly."
+      }
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 8],
+      "notes": {
+        "uk": "Підшкірно струминно. Між послідовними дозами має минути щонайменше 72 години.",
+        "en": "A subcutaneous bolus. At least 72 hours must pass between consecutive doses."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9],
+      "notes": {
+        "uk": "У день бортезомібу й наступного дня. У пацієнтів старших за 75 років розглядають зменшення до 10 мг. На відміну від схем із леналідомідом, дексаметазон тут не відміняють.",
+        "en": "On the day of each bortezomib dose and the day after. Over the age of 75 a reduction to 10 mg is considered. Unlike the lenalidomide-based regimens, the dexamethasone here is not stopped."
+      },
+      "dose_options": [
+        {
+          "dose_value": 10,
+          "dose_unit": "mg_flat",
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.49 PVd, 21-day cycle",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-49-pvd-21-day-cycle.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          },
+          "notes": {
+            "uk": "Вік понад 75 років",
+            "en": "Over the age of 75"
+          }
+        }
+      ]
+    }
+  ]
+}
