@@ -1,0 +1,71 @@
+{
+  "$comment": "У циклі 1 карфілзоміб дають у двох різних дозах — 20 мг/м² у дні 1-2 і 56 мг/м² далі, тому це дві позиції. Дози обмежені площею поверхні тіла 2,2 м², тож стеля в міліграмах узята з протоколу.",
+  "id": "kd-cycle-1",
+  "short_name": "Kd (1)",
+  "name": {
+    "uk": "Карфілзоміб + дексаметазон, цикл 1",
+    "en": "Carfilzomib and dexamethasone, cycle 1"
+  },
+  "description": {
+    "uk": "Множинна мієлома. Цикл 28 днів. У першому циклі перші дві дози карфілзомібу знижені — 20 мг/м², далі 56 мг/м². Усі дози карфілзомібу обмежені площею поверхні тіла 2,2 м². Карфілзоміб вимагає гідратації: 500 мл 0,9% NaCl внутрішньовенно до і після введення, а пацієнта просять випивати 3 л рідини за добу до лікування й у дні введень, уникаючи солодких і кофеїнових напоїв. Доз цієї інфузії як позиції в схемі немає — це гідратація, а не препарат. Після інфузії карфілзомібу пацієнта спостерігають годину.",
+    "en": "Multiple myeloma. A 28-day cycle. In the first cycle the first two carfilzomib doses are lower, 20 mg/m2, and then 56 mg/m2. Every carfilzomib dose is capped at a body surface area of 2.2 m2. Carfilzomib needs hydration: 500 mL of 0.9% sodium chloride intravenously before and after the dose, and the patient is asked to drink 3 litres in the 24 hours before treatment and on treatment days, avoiding sugary and caffeinated drinks. That infusion is not a row of its own: it is hydration, not a drug. The patient is watched for an hour after the carfilzomib."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.39 Carfilzomib and Dexamethasone",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-39-carfilzomib-and-dexamethasone.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9, 15, 16, 22, 23],
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "notes": {
+        "uk": "За 30 хвилин до карфілзомібу в дні, коли його дають; у дні 22-23 — самостійно.",
+        "en": "30 minutes before the carfilzomib on the days it is given; on days 22 and 23 on its own."
+      }
+    },
+    {
+      "key": "carfilzomib-d1-2",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "cap_amount": 44,
+      "days": [1, 2],
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Знижена перша доза: у 100 мл 5% глюкози за 30 хвилин, не більш як 44 мг.",
+        "en": "The reduced first dose: in 100 mL of 5% glucose over 30 minutes, no more than 44 mg."
+      }
+    },
+    {
+      "key": "carfilzomib",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 56,
+      "dose_unit": "mg_m2",
+      "cap_amount": 123,
+      "days": [8, 9, 15, 16],
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 5% глюкози за 30 хвилин, не більш як 123 мг.",
+        "en": "In 100 mL of 5% glucose over 30 minutes, no more than 123 mg."
+      }
+    }
+  ]
+}

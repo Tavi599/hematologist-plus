@@ -1,0 +1,96 @@
+{
+  "$comment": "У циклі 1 перші дві дози карфілзомібу знижені до 20 мг/м² і вводяться в меншому об'ємі за 10 хвилин; далі 36 мг/м². Обидві дози в одній схемі, бо різниця лише в перших двох днях першого циклу.",
+  "id": "kcd",
+  "short_name": "KCd",
+  "name": {
+    "uk": "KCd (карфілзоміб, циклофосфамід, дексаметазон)",
+    "en": "KCd (carfilzomib, cyclophosphamide, dexamethasone)"
+  },
+  "description": {
+    "uk": "Множинна мієлома. Цикл 28 днів, до прогресування або неприйнятної токсичності; після підтвердження повної відповіді радять дати ще 2 цикли, але не більш як 6 циклів разом. У перші два дні першого циклу карфілзоміб вводять у дозі 20 мг/м² у 50 мл 5% глюкози за 10 хвилин, далі — 36 мг/м² у 100 мл за 30 хвилин; дози обмежені площею поверхні тіла 2,2 м². Гідратація 500 мл 0,9% NaCl до і після введення — у циклі 1 і в день 1 циклу 2, далі лише якщо підвищені ЛДГ чи сечова кислота або є ризик лізису пухлини; решті достатньо випивати щонайменше літр рідини до і після кожного введення. У першому циклі перед кожним введенням дають 4 мг дексаметазону внутрішньовенно, а далі — лише якщо виникали озноб, тремтіння чи задишка. Пацієнта спостерігають годину після введення в циклі 1 і в день 1 циклу 2.",
+    "en": "Multiple myeloma. A 28-day cycle, until progression or unacceptable toxicity; after a confirmed complete response two further cycles are advised, to a maximum of six in all. On the first two days of cycle 1 the carfilzomib is 20 mg/m2 in 50 mL of 5% glucose over 10 minutes, and 36 mg/m2 in 100 mL over 30 minutes thereafter; the doses are capped at a body surface area of 2.2 m2. Hydration with 500 mL of 0.9% sodium chloride before and after is given in cycle 1 and on day 1 of cycle 2, and after that only with a raised LDH or urate or a tumour lysis risk; for everyone else at least a litre of fluid before and after each dose is enough. In the first cycle 4 mg of intravenous dexamethasone precedes every dose, and later only if rigors, chills or breathlessness occurred. The patient is watched for an hour after each dose in cycle 1 and on day 1 of cycle 2."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.28 Cyclophosphamide, Carfilzomib and Dexamethasone",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-28-cyclophosphamide-carfilzomib-dexamethasone.pdf",
+      "version": "1.4 (06.2019)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "carfilzomib",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 36,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 8, 9, 15, 16],
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 5% глюкози за 30 хвилин. У дні 1 і 2 першого циклу доза нижча — 20 мг/м² у 50 мл за 10 хвилин (у списку доз).",
+        "en": "In 100 mL of 5% glucose over 30 minutes. On days 1 and 2 of cycle 1 the dose is lower, 20 mg/m2 in 50 mL over 10 minutes, which sits in the dose list."
+      },
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Дні 1 і 2 першого циклу, у 50 мл за 10 хвилин",
+            "en": "Days 1 and 2 of cycle 1, in 50 mL over 10 minutes"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.28 Cyclophosphamide, Carfilzomib and Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-28-cyclophosphamide-carfilzomib-dexamethasone.pdf",
+            "version": "1.4 (06.2019)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 500,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "Усередину, щотижня.",
+        "en": "Orally, weekly."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Щотижня. У літніх і ослаблених пацієнтів розглядають 20 мг.",
+        "en": "Weekly. In elderly or frail patients 20 mg is considered."
+      },
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Літні або ослаблені пацієнти",
+            "en": "Elderly or frail patients"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.28 Cyclophosphamide, Carfilzomib and Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-28-cyclophosphamide-carfilzomib-dexamethasone.pdf",
+            "version": "1.4 (06.2019)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}

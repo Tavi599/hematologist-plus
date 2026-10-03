@@ -1,0 +1,81 @@
+{
+  "$comment": "Розклад даратумумабу згущений на початку: цикли 1-2 щотижня, 3-6 раз на два тижні, з 7-го раз на місяць. Тому це три схеми.",
+  "id": "daratumumab-cycle-1-2",
+  "short_name": "Даратумумаб (1-2)",
+  "name": {
+    "uk": "Даратумумаб у монорежимі, цикли 1-2",
+    "en": "Daratumumab monotherapy, cycles 1-2"
+  },
+  "description": {
+    "uk": "Множинна мієлома. Цикл 28 днів. У перших двох циклах даратумумаб дають щотижня. У циклі 1 до премедикації додають монтелукаст 10 мг усередину — цього препарату в довіднику немає, тому окремої позиції для нього в схемі теж немає.",
+    "en": "Multiple myeloma. A 28-day cycle. In the first two cycles the daratumumab is weekly. In cycle 1 the premedication also includes montelukast 10 mg by mouth; it is not in the catalogue, so it has no row of its own here."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.32 Daratumumab monotherapy",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-32-daratumumab-monotherapy.pdf",
+      "version": "3.3 (06.2023)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "За годину до ін'єкції даратумумабу. Протокол додає хлорфенамін 4 мг усередину, якого в довіднику немає.",
+        "en": "An hour before the daratumumab injection. The protocol adds chlorphenamine 4 mg by mouth, which is not in the catalogue."
+      }
+    },
+    {
+      "key": "dexamethasone-pre",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "За годину до ін'єкції. Після другої ін'єкції дозу можна зменшити до 12 мг.",
+        "en": "An hour before the injection. After the second injection it may drop to 12 mg."
+      }
+    },
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "subcutaneous",
+      "dose_value": 1800,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "duration_min": 5,
+      "notes": {
+        "uk": "Підшкірно, фіксована доза, за 3-5 хвилин.",
+        "en": "Subcutaneously, a fixed dose, over 3 to 5 minutes."
+      }
+    },
+    {
+      "key": "dexamethasone-post",
+      "drug_id": "dexamethasone",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [2, 3, 9, 10, 16, 17, 23, 24],
+      "notes": {
+        "uk": "Два дні поспіль, починаючи з наступного дня після ін'єкції, щоб зменшити ризик відстрочених реакцій.",
+        "en": "For two days starting the day after the injection, to lower the risk of delayed reactions."
+      }
+    }
+  ]
+}

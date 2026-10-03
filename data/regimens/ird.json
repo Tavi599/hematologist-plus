@@ -1,0 +1,77 @@
+{
+  "$comment": "Усі три препарати починають одночасно — протокол прямо забороняє додавати їх по черзі.",
+  "id": "ird",
+  "short_name": "IRd",
+  "name": {
+    "uk": "IRd (іксазоміб, леналідомід, дексаметазон)",
+    "en": "IRd (ixazomib, lenalidomide, dexamethasone)"
+  },
+  "description": {
+    "uk": "Множинна мієлома. Цикл 28 днів, до прогресування або неприйнятної токсичності. Усі три препарати починають одночасно: додавати їх по черзі протокол не дозволяє.",
+    "en": "Multiple myeloma. A 28-day cycle, until progression or unacceptable toxicity. All three drugs start together: the protocol does not allow one to be added on later."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.33 Ixazomib with Lenalidomide and Dexamethasone",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-33-ixazomib-with-lenalidomide-and-dexamethasone.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "ixazomib",
+      "drug_id": "ixazomib",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "За годину до їди або через 2 години після неї. Якщо дозу пропущено або відкладено, її не приймають протягом 72 годин до наступної запланованої.",
+        "en": "An hour before food or two hours after it. A missed or delayed dose is not taken within 72 hours of the next scheduled one."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Раз на добу ввечері, незалежно від їди. Леналідомід призначають і видають лише в межах програми запобігання вагітності; потрібна оцінка ризику тромбозу й відповідна профілактика.",
+        "en": "Once daily at night, with or without food. Lenalidomide is prescribed and dispensed only within the pregnancy prevention programme; the thrombotic risk is assessed and prophylaxis given accordingly."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Уранці, під час їди. У пацієнтів від 75 років, при поганій переносимості стероїдів або появі їхніх побічних ефектів розглядають 20 мг.",
+        "en": "In the morning with food. In patients of 75 or over, with poor steroid tolerance or developing steroid side effects, 20 mg is considered."
+      },
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Вік від 75 років або погана переносимість стероїдів",
+            "en": "Aged 75 or over, or poor steroid tolerance"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.33 Ixazomib with Lenalidomide and Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-33-ixazomib-with-lenalidomide-and-dexamethasone.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}

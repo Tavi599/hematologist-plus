@@ -1,0 +1,55 @@
+{
+  "$comment": "З циклу 2 доза карфілзомібу однакова весь цикл.",
+  "id": "kd",
+  "short_name": "Kd (2+)",
+  "name": {
+    "uk": "Карфілзоміб + дексаметазон, цикли 2 і далі",
+    "en": "Carfilzomib and dexamethasone, cycle 2 onwards"
+  },
+  "description": {
+    "uk": "Цикл 28 днів, до прогресування або неприйнятної токсичності. Внутрішньовенну гідратацію до і після введення продовжують у день 1 циклу 2, а далі — якщо зберігається ризик синдрому лізису пухлини; решті пацієнтів достатньо випивати щонайменше літр рідини до і після кожного введення. Усі дози карфілзомібу обмежені площею поверхні тіла 2,2 м².",
+    "en": "A 28-day cycle, until progression or unacceptable toxicity. Intravenous hydration before and after continues on day 1 of cycle 2, and after that only while the tumour lysis risk persists; for everyone else at least a litre of fluid before and after each dose is enough. Every carfilzomib dose is capped at a body surface area of 2.2 m2."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.39 Carfilzomib and Dexamethasone",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-39-carfilzomib-and-dexamethasone.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9, 15, 16, 22, 23],
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "notes": {
+        "uk": "За 30 хвилин до карфілзомібу в дні, коли його дають.",
+        "en": "30 minutes before the carfilzomib on the days it is given."
+      }
+    },
+    {
+      "key": "carfilzomib",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 56,
+      "dose_unit": "mg_m2",
+      "cap_amount": 123,
+      "days": [1, 2, 8, 9, 15, 16],
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 5% глюкози за 30 хвилин, не більш як 123 мг.",
+        "en": "In 100 mL of 5% glucose over 30 minutes, no more than 123 mg."
+      }
+    }
+  ]
+}

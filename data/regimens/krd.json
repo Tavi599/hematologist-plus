@@ -1,0 +1,67 @@
+{
+  "$comment": "Карфілзоміб дають щонайбільше 18 циклів; леналідомід і дексаметазон продовжують далі самі.",
+  "id": "krd",
+  "short_name": "KRd (2+)",
+  "name": {
+    "uk": "Карфілзоміб + леналідомід + дексаметазон, цикли 2 і далі",
+    "en": "Carfilzomib, lenalidomide and dexamethasone, cycle 2 onwards"
+  },
+  "description": {
+    "uk": "Цикл 28 днів. Карфілзоміб дають щонайбільше 18 циклів; леналідомід і дексаметазон продовжують до прогресування або неприйнятної токсичності — тоді позицію карфілзомібу вимикають. Внутрішньовенну гідратацію до і після введення продовжують у день 1 циклу 2, а далі — лише якщо зберігається ризик синдрому лізису пухлини; решті пацієнтів достатньо випивати щонайменше літр рідини до і після кожного введення.",
+    "en": "A 28-day cycle. The carfilzomib runs for 18 cycles at most; the lenalidomide and dexamethasone continue until progression or unacceptable toxicity, and then the carfilzomib row is switched off. Intravenous hydration before and after continues on day 1 of cycle 2, and after that only while the tumour lysis risk persists; for everyone else at least a litre of fluid before and after each dose is enough."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 11,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.34 Carfilzomib, Lenalidomide and Dexamethasone",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-34-car-len-dex.pdf",
+      "version": "3.5 (09.2025)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9, 15, 16, 22, 23],
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "notes": {
+        "uk": "За 30 хвилин до карфілзомібу в дні, коли його дають. У літніх пацієнтів або при поганій переносимості стероїдів дозу зменшують.",
+        "en": "30 minutes before the carfilzomib on the days it is given. In older patients, or where steroids are poorly tolerated, the dose is reduced."
+      }
+    },
+    {
+      "key": "carfilzomib",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 27,
+      "dose_unit": "mg_m2",
+      "cap_amount": 60,
+      "days": [1, 2, 8, 9, 15, 16],
+      "duration_min": 10,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 50-100 мл 5% глюкози за 10 хвилин, не більш як 60 мг.",
+        "en": "In 50 to 100 mL of 5% glucose over 10 minutes, no more than 60 mg."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Раз на добу ввечері, незалежно від їди. Леналідомід призначають і видають лише в межах програми запобігання вагітності; потрібна оцінка ризику тромбозу й відповідна профілактика.",
+        "en": "Once daily at night, with or without food. Lenalidomide is prescribed and dispensed only within the pregnancy prevention programme; the thrombotic risk is assessed and prophylaxis given accordingly."
+      }
+    }
+  ]
+}
