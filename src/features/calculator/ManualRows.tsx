@@ -15,6 +15,7 @@ import { useTranslation } from 'react-i18next'
 import { SHEET_HOURS } from './course-sheets'
 import { moveRow, newManualRow, type ManualBlock, type ManualRow } from './manual-rows'
 import { parseDays } from './parse-days'
+import { SupportiveBuilder } from './SupportiveBuilder'
 
 /**
  * Orders written out by hand. They are printed as typed, so the physician can put a line on the
@@ -52,6 +53,8 @@ export function ManualRows({
         <Text size="sm" c="dimmed">
           {t('calculator.manual.lead')}
         </Text>
+
+        <SupportiveBuilder onAdd={(row) => onChange([...rows, row])} />
 
         {rows.map((row, index) => {
           const typed = typedDays[row.id] ?? row.days.join(', ')

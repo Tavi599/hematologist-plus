@@ -145,6 +145,19 @@
       "add": "Add a line",
       "remove": "Remove the line",
       "byHand": "by hand",
+      "support": {
+        "title": "Optional support",
+        "solvent": "Solution",
+        "glucose": "Glucose 5%",
+        "volume": "Volume",
+        "ml": "mL",
+        "rate": "Rate",
+        "rateUnit": "mL/h",
+        "addInfusion": "Add the solution",
+        "ondansetron": "Add ondansetron",
+        "omeprazole": "Add omeprazole",
+        "hint": "Bags of 500, 1000 and 3000 mL come with potassium and magnesium in proportion (per 1000 mL: KCl 4% 40 mL, MgSO4 25% 4 mL); either can be switched off or changed. Nothing is filled in for smaller bags (100–400 mL): switch it on and type the amount. The line can be edited below."
+      },
       "up": "Move the line up",
       "down": "Move the line down"
     },
