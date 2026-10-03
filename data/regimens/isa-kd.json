@@ -88,7 +88,15 @@
       "route": "iv_infusion",
       "dose_value": 56,
       "dose_unit": "mg_m2",
-      "days": [1, 2, 8, 9, 15, 16]
+      "days": [1, 2, 8, 9, 15, 16],
+      "cap_amount": 123,
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 5% глюкози за 30 хвилин, не більш як 123 мг.",
+        "en": "In 100 mL of 5% glucose over 30 minutes, no more than 123 mg."
+      }
     }
   ]
 }

@@ -91,9 +91,13 @@
       "dose_unit": "mg_m2",
       "days": [1, 2],
       "notes": {
-        "uk": "Стартова доза перших двох днів; при задовільній переносимості з дня 8 підвищують до 56 мг/м2.",
-        "en": "The starting dose for the first two days; if tolerated it rises to 56 mg/m2 from day 8."
-      }
+        "uk": "Знижена стартова доза перших двох днів: у 100 мл 5% глюкози за 30 хвилин, не більш як 44 мг. При задовільній переносимості з дня 8 підвищують до 56 мг/м2.",
+        "en": "The reduced starting dose for the first two days: in 100 mL of 5% glucose over 30 minutes, no more than 44 mg. If tolerated it rises to 56 mg/m2 from day 8."
+      },
+      "cap_amount": 44,
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100
     },
     {
       "key": "carfilzomib",
@@ -103,9 +107,13 @@
       "dose_unit": "mg_m2",
       "days": [8, 9, 15, 16],
       "notes": {
-        "uk": "Повна доза з дня 8.",
-        "en": "The full dose from day 8."
-      }
+        "uk": "Повна доза з дня 8: у 100 мл 5% глюкози за 30 хвилин, не більш як 123 мг.",
+        "en": "The full dose from day 8: in 100 mL of 5% glucose over 30 minutes, no more than 123 mg."
+      },
+      "cap_amount": 123,
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100
     }
   ]
 }
