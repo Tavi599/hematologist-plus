@@ -45,6 +45,13 @@
       "regimens": [
         {
           "regimen_id": "aida-induction"
+        },
+        {
+          "regimen_id": "atra-emergency",
+          "notes": {
+            "uk": "Негайний старт при підозрі, до підтвердження діагнозу",
+            "en": "Started at once on suspicion, before the diagnosis is confirmed"
+          }
         }
       ]
     },

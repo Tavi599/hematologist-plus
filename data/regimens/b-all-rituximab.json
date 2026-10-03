@@ -1,0 +1,54 @@
+{
+  "$comment": "Це не самостійна схема, а ритуксимаб, який додають до хіміотерапії B-ALL. Дні введень належать фазам основного протоколу, а не власному циклу, тому вони описані, а не закладені в розклад: у схемі лишено одну дозу, яку додають до потрібного дня.",
+  "id": "b-all-rituximab",
+  "short_name": "Ритуксимаб (B-ALL)",
+  "name": {
+    "uk": "Ритуксимаб до хіміотерапії B-клітинної ГЛЛ",
+    "en": "Rituximab added to B-cell ALL chemotherapy"
+  },
+  "description": {
+    "uk": "Додається до першої лінії хіміотерапії при CD20-позитивній В-клітинній гострій лімфобластній лейкемії дорослих. Загалом не більш як 16 доз від індукції до підтримки. Дні введень належать фазам основного протоколу: якщо пацієнт отримує блінатумомаб, разом дають 8 доз за розкладом дослідження E1910 — індукція, фаза I: дні 8 і 15; індукція, фаза II: дні 8 і 15; інтенсифікація: день 3; консолідація 1: день 5; консолідація 2: день 5; консолідація 3 (відстрочена інтенсифікація): день 8. Якщо блінатумомаб не застосовують, дозволено всі 16 доз за розкладом дослідження GRAALL-2005 — індукція, фаза I: дні 3, 10, 17 і 24; індукція, фаза II: дні 2 і 16; інтенсифікація: день 3; консолідація 1: день 1; консолідація 2: день 1; консолідація 3: день 2. Дози можна пересувати під розклад конкретного пацієнта, але їх кількість у кожній фазі має лишатися такою, як написано.",
+    "en": "Added to first-line chemotherapy in adult CD20-positive B-cell precursor acute lymphoblastic leukaemia. No more than 16 doses in all, from induction through maintenance. The days belong to the phases of the main protocol: with blinatumomab, 8 doses in all on the E1910 schedule - induction phase I, days 8 and 15; induction phase II, days 8 and 15; intensification, day 3; consolidation 1, day 5; consolidation 2, day 5; consolidation 3 (delayed intensification), day 8. Without blinatumomab, the full 16 doses are allowed on the GRAALL-2005 schedule - induction phase I, days 3, 10, 17 and 24; induction phase II, days 2 and 16; intensification, day 3; consolidation 1, day 1; consolidation 2, day 1; consolidation 3, day 2. Doses may be moved to suit a patient's own schedule, but the number in each phase must be kept."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.114 B-ALL rituximab",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-114-b-all-rituximab.pdf",
+      "version": "1.0 (05.2026)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 30 хвилин до ритуксимабу, один раз. Протокол додає гідрокортизону натрію сукцинат 100 мг і хлорфенамін 10 мг внутрішньовенно — цих препаратів у довіднику немає.",
+        "en": "30 minutes before the rituximab, once. The protocol adds hydrocortisone sodium succinate 100 mg and chlorphenamine 10 mg intravenously; neither is in the catalogue."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl зі східчастим нарощуванням швидкості, максимум 400 мг/год. Перед початком інфузії пацієнта спостерігають 30 хвилин. Якщо перше введення пройшло добре, з другої дози можна перейти на пришвидшену інфузію. День тут умовний: конкретні дні визначає фаза основного протоколу — див. опис схеми.",
+        "en": "In 500 mL of 0.9% sodium chloride with an incremental rate, up to 400 mg/hour. The patient is observed for 30 minutes before the infusion starts. If the first dose was tolerated, a rapid infusion may be used from the second. The day here is nominal: the actual days come from the phase of the main protocol, as the description sets out."
+      }
+    }
+  ]
+}
