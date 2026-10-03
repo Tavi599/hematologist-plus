@@ -1,0 +1,158 @@
+{
+  "$comment": "Цикли 3 і далі: одне введення 20 мг/кг у день 1; дексаметазон у дні 8, 15 і 22 — окремо.",
+  "id": "elo-pd",
+  "short_name": "Elo-Pd (3+)",
+  "name": {
+    "uk": "Elo-Pd (елотузумаб, помалідомід, дексаметазон), цикли 3 і далі",
+    "en": "Elo-Pd (elotuzumab, pomalidomide, dexamethasone), cycle 3 onwards"
+  },
+  "description": {
+    "uk": "Рецидивна й рефрактерна множинна мієлома в дорослих після щонайменше двох ліній терапії, які включали леналідомід та інгібітор протеасоми, з прогресуванням на останній лінії. Цикл 28 днів. З третього циклу елотузумаб вводять раз на цикл подвоєною дозою — 20 мг/кг у день 1. Елотузумаб в Україні не зареєстрований — схема наведена для повноти.",
+    "en": "Relapsed and refractory multiple myeloma in adults after at least two prior lines including lenalidomide and a proteasome inhibitor, with progression on the last line. A 28-day cycle. From the third cycle the elotuzumab is given once per cycle at double the dose, 20 mg/kg on day 1. Elotuzumab is not registered in Ukraine; the regimen is listed for completeness."
+  },
+  "cycle_length_days": 28,
+  "sources": [
+    {
+      "name": "EMA, Empliciti (елотузумаб), коротка характеристика препарату",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/empliciti-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Коротка характеристика допускає 650-1000 мг; у довіднику взято верхній край.",
+        "en": "The SmPC allows 650 to 1000 mg; the catalogue takes the upper end."
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Коротка характеристика допускає 25-50 мг; у довіднику взято верхній край. Внутрішньовенне введення бажане щонайменше для перших чотирьох інфузій. ",
+        "en": "The SmPC allows 25 to 50 mg; the catalogue takes the upper end. The intravenous route is preferred for at least the first four infusions. "
+      }
+    },
+    {
+      "key": "dexamethasone-iv",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 45-90 хвилин до елотузумабу, на додачу до пероральної дози.",
+        "en": "45 to 90 minutes before the elotuzumab, on top of the oral dose."
+      }
+    },
+    {
+      "key": "dexamethasone-oral",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 28,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 3-24 години до елотузумабу.",
+        "en": "Between 3 and 24 hours before the elotuzumab."
+      },
+      "dose_modifiers": [
+        {
+          "key": "age-75",
+          "label": {
+            "uk": "Вік понад 75 років",
+            "en": "Aged over 75"
+          },
+          "dose_value": 8,
+          "notes": {
+            "uk": "Для пацієнтів понад 75 років коротка характеристика пише 8 мг замість 28 мг.",
+            "en": "For patients over 75 the SmPC gives 8 mg instead of 28 mg."
+          },
+          "source": {
+            "name": "EMA, Empliciti (елотузумаб), коротка характеристика препарату",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/empliciti-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "dexamethasone-oral-alone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [8, 15, 22],
+      "notes": {
+        "uk": "Дні без елотузумабу, у які дексаметазон усе одно призначений.",
+        "en": "Days without elotuzumab on which dexamethasone is still scheduled."
+      },
+      "dose_modifiers": [
+        {
+          "key": "age-75",
+          "label": {
+            "uk": "Вік понад 75 років",
+            "en": "Aged over 75"
+          },
+          "dose_value": 20,
+          "notes": {
+            "uk": "Для пацієнтів понад 75 років — 20 мг замість 40 мг.",
+            "en": "For patients over 75, 20 mg instead of 40 mg."
+          },
+          "source": {
+            "name": "EMA, Empliciti (елотузумаб), коротка характеристика препарату",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/empliciti-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "elotuzumab",
+      "drug_id": "elotuzumab",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "notes": {
+        "uk": "Порошок розчиняють до 25 мг/мл. Швидкість задана в мл/хв і залежить від номера інфузії, тому довідник її не рахує — звіряйтесь із короткою характеристикою. Премедикацію дають за 45-90 хвилин до введення. Крім цього, коротка характеристика вимагає блокатор H2-рецепторів (ранітидин 50 мг внутрішньовенно або рівноцінний) чи пероральний інгібітор протонної помпи — цих препаратів у довіднику немає, призначайте окремо.",
+        "en": "The powder is reconstituted to 25 mg/mL. The rate is in mL/min and depends on which infusion it is, so the catalogue does not compute it; check the SmPC. Premedication is given 45 to 90 minutes beforehand. The SmPC also requires an H2 blocker (ranitidine 50 mg intravenously or equivalent) or an oral proton pump inhibitor; neither is in the catalogue, so prescribe it separately."
+      }
+    },
+    {
+      "key": "pomalidomide",
+      "drug_id": "pomalidomide",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Дні 1-21, далі тиждень перерви. У день інфузії приймають не раніш як через 2 години після неї. Потрібна тромбопрофілактика.",
+        "en": "Days 1-21, then a week off. On an infusion day it is taken no sooner than 2 hours afterwards. Thromboprophylaxis is required."
+      }
+    }
+  ]
+}

@@ -198,6 +198,23 @@ describe('CalculatorPage', () => {
     expect(screen.queryByText('R-CHOP-21 — ДЕМО R-CHOP-21')).not.toBeInTheDocument()
   })
 
+  it('says in the dose table which drug cannot be obtained, and why', async () => {
+    const catalog = demoCatalog()
+    const rituximab = catalog.drugs.find((drug) => drug.id === 'rituximab')!
+    rituximab.availability = 'unavailable'
+    rituximab.notes = { uk: 'Не зареєстрований в Україні.', en: 'Not registered in Ukraine.' }
+    fetch.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
+
+    // The badge in the regimen list names no drug; the row has to, or the physician cannot tell
+    // which of the four drugs in the course is the one that has to be found elsewhere.
+    const row = within(await screen.findByRole('table', { name: 'Дози' }))
+      .getByText('ДЕМО Ритуксимаб')
+      .closest('tr')!
+    expect(within(row).getByText(/недоступний\. Не зареєстрований в Україні\./)).toBeInTheDocument()
+  })
+
   it('makes a printable sheet out of lines written by hand, with no regimen at all', async () => {
     renderWithProviders(<CalculatorPage />)
     await screen.findByRole('combobox', { name: 'Схема' })

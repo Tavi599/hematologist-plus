@@ -1,0 +1,48 @@
+{
+  "$comment": "Sd: селінексор і дексаметазон у дні 1 і 3 кожного тижня. Коротка характеристика не задає довжини циклу — взято 28 днів.",
+  "id": "selinexor-dex",
+  "short_name": "Sd",
+  "name": {
+    "uk": "Sd (селінексор, дексаметазон)",
+    "en": "Sd (selinexor, dexamethasone)"
+  },
+  "description": {
+    "uk": "Множинна мієлома в дорослих після щонайменше чотирьох ліній терапії, рефрактерна до кількох класів препаратів. Лікування безперервне, до прогресування або неприйнятної токсичності; довжини циклу коротка характеристика не задає — у довіднику взято 28 днів для зручності розкладу. Селінексор в Україні не зареєстрований — схема наведена для повноти.",
+    "en": "Multiple myeloma in adults after at least four prior therapies, refractory to several drug classes. Treatment is continuous until progression or unacceptable toxicity; the SmPC sets no cycle length, so the catalogue uses 28 days to lay out the schedule. Selinexor is not registered in Ukraine; the regimen is listed for completeness."
+  },
+  "cycle_length_days": 28,
+  "sources": [
+    {
+      "name": "EMA, Nexpovio (селінексор), коротка характеристика препарату",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/nexpovio-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "selinexor",
+      "drug_id": "selinexor",
+      "route": "oral",
+      "dose_value": 80,
+      "dose_unit": "mg_flat",
+      "days": [1, 3, 8, 10, 15, 17, 22, 24],
+      "notes": {
+        "uk": "Дні 1 і 3 кожного тижня — разом 160 мг на тиждень. Ступені зниження за токсичності: 100 мг раз на тиждень, далі 80, далі 60.",
+        "en": "Days 1 and 3 of each week, 160 mg a week in all. The reduction steps for toxicity are 100 mg once weekly, then 80, then 60."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 3, 8, 10, 15, 17, 22, 24],
+      "notes": {
+        "uk": "Разом із селінексором, у ті самі дні.",
+        "en": "With the selinexor, on the same days."
+      }
+    }
+  ]
+}

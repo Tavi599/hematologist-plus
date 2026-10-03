@@ -128,6 +128,62 @@
             "uk": "Цикли 9 і далі, без бортезомібу",
             "en": "Cycle 9 onwards, without bortezomib"
           }
+        },
+        {
+          "regimen_id": "d-rd-cycle-1-2",
+          "notes": {
+            "uk": "Цикли 1-2. Якщо трансплантація не планується; перевага за наявної нейропатії, бо без бортезомібу.",
+            "en": "Cycles 1-2. Where no transplant is planned; preferred with pre-existing neuropathy, as it has no bortezomib."
+          }
+        },
+        {
+          "regimen_id": "d-rd-cycle-3-6",
+          "notes": {
+            "uk": "Цикли 3-6.",
+            "en": "Cycles 3-6."
+          }
+        },
+        {
+          "regimen_id": "d-rd",
+          "notes": {
+            "uk": "Цикли 7 і далі, до прогресування.",
+            "en": "Cycle 7 onwards, until progression."
+          }
+        },
+        {
+          "regimen_id": "rd",
+          "notes": {
+            "uk": "Для ослаблених пацієнтів зі стандартним ризиком, які не переносять потрійну схему.",
+            "en": "For frail patients with standard-risk disease who cannot tolerate a triplet."
+          }
+        },
+        {
+          "regimen_id": "krd-cycle-1",
+          "notes": {
+            "uk": "Цикл 1. Альтернатива VRd, якщо трансплантація не планується.",
+            "en": "Cycle 1. An alternative to VRd where no transplant is planned."
+          }
+        },
+        {
+          "regimen_id": "krd",
+          "notes": {
+            "uk": "Цикли 2 і далі.",
+            "en": "Cycles 2 onwards."
+          }
+        },
+        {
+          "regimen_id": "ird",
+          "notes": {
+            "uk": "Повністю пероральна схема - коли щотижневі візити утруднені.",
+            "en": "A fully oral regimen, for when weekly visits are hard to arrange."
+          }
+        },
+        {
+          "regimen_id": "kcd",
+          "notes": {
+            "uk": "За ниркової недостатності або нейропатії, коли леналідомід небажаний.",
+            "en": "In renal impairment or neuropathy, where lenalidomide is unwanted."
+          }
         }
       ]
     },
@@ -287,6 +343,76 @@
           "notes": {
             "uk": "Те саме при нирковій недостатності",
             "en": "The same in renal impairment"
+          }
+        },
+        {
+          "regimen_id": "isa-pd-cycle-1",
+          "notes": {
+            "uk": "Цикл 1.",
+            "en": "Cycle 1."
+          }
+        },
+        {
+          "regimen_id": "isa-pd",
+          "notes": {
+            "uk": "Цикли 2 і далі.",
+            "en": "Cycle 2 onwards."
+          }
+        },
+        {
+          "regimen_id": "isa-kd-cycle-1",
+          "notes": {
+            "uk": "Цикл 1.",
+            "en": "Cycle 1."
+          }
+        },
+        {
+          "regimen_id": "isa-kd",
+          "notes": {
+            "uk": "Цикли 2 і далі.",
+            "en": "Cycle 2 onwards."
+          }
+        },
+        {
+          "regimen_id": "elo-rd-cycle-1-2",
+          "notes": {
+            "uk": "Цикли 1-2.",
+            "en": "Cycles 1-2."
+          }
+        },
+        {
+          "regimen_id": "elo-rd",
+          "notes": {
+            "uk": "Цикли 3 і далі.",
+            "en": "Cycle 3 onwards."
+          }
+        },
+        {
+          "regimen_id": "elo-pd-cycle-1-2",
+          "notes": {
+            "uk": "Цикли 1-2.",
+            "en": "Cycles 1-2."
+          }
+        },
+        {
+          "regimen_id": "elo-pd",
+          "notes": {
+            "uk": "Цикли 3 і далі.",
+            "en": "Cycle 3 onwards."
+          }
+        },
+        {
+          "regimen_id": "svd",
+          "notes": {
+            "uk": "Після однієї і більше ліній терапії.",
+            "en": "After one or more prior therapies."
+          }
+        },
+        {
+          "regimen_id": "selinexor-dex",
+          "notes": {
+            "uk": "Після чотирьох і більше ліній терапії.",
+            "en": "After four or more prior therapies."
           }
         }
       ]

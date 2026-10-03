@@ -1,0 +1,111 @@
+{
+  "$comment": "Цикл 1 Isa-Kd: ізатуксимаб щотижня, карфілзоміб починають з 20 мг/м2. Кістяк Kd — зі схеми kd-cycle-1.",
+  "id": "isa-kd-cycle-1",
+  "short_name": "Isa-Kd (1)",
+  "name": {
+    "uk": "Isa-Kd (ізатуксимаб, карфілзоміб, дексаметазон), цикл 1",
+    "en": "Isa-Kd (isatuximab, carfilzomib, dexamethasone), cycle 1"
+  },
+  "description": {
+    "uk": "Множинна мієлома в дорослих після щонайменше однієї лінії терапії. Цикл 28 днів, до прогресування або неприйнятної токсичності. У першому циклі ізатуксимаб вводять щотижня, а карфілзоміб починають зі зниженої дози. Ізатуксимаб в Україні не зареєстрований — схема наведена для повноти.",
+    "en": "Multiple myeloma in adults after at least one prior therapy. A 28-day cycle, until progression or unacceptable toxicity. In the first cycle the isatuximab is weekly and the carfilzomib starts at a reduced dose. Isatuximab is not registered in Ukraine; the regimen is listed for completeness."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "EMA, Sarclisa (ізатуксимаб), коротка характеристика препарату",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/sarclisa-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "NSSG Oxford Haematology, MM.39 Carfilzomib and Dexamethasone",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-39-carfilzomib-dexamethasone.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Коротка характеристика допускає 650-1000 мг; у довіднику взято верхній край.",
+        "en": "The SmPC allows 650 to 1000 mg; the catalogue takes the upper end."
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Коротка характеристика допускає 25-50 мг; у довіднику взято верхній край. Внутрішньовенне введення бажане щонайменше для перших чотирьох інфузій. ",
+        "en": "The SmPC allows 25 to 50 mg; the catalogue takes the upper end. The intravenous route is preferred for at least the first four infusions. "
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9, 15, 16, 22, 23],
+      "notes": {
+        "uk": "У дні введення ізатуксимабу або карфілзомібу дають внутрішньовенно, в інші дні — перорально. Доза одна й та сама: вона водночас премедикація і частина схеми.",
+        "en": "Intravenously on the days of an isatuximab or carfilzomib infusion, orally otherwise. It is one and the same dose: both premedication and part of the regimen."
+      }
+    },
+    {
+      "key": "isatuximab",
+      "drug_id": "isatuximab",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_kg",
+      "days": [1, 8, 15, 22],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl через вбудований фільтр 0,22 мкм. Зниження дози не передбачене: при токсичності введення відкладають або пропускають. Премедикацію дають за 15-60 хвилин до інфузії. Крім цього, коротка характеристика вимагає блокатор H2-рецепторів (ранітидин 50 мг внутрішньовенно або рівноцінний) чи пероральний інгібітор протонної помпи — цих препаратів у довіднику немає, призначайте окремо.",
+        "en": "In 250 mL of 0.9% sodium chloride through a 0.22 micron in-line filter. No dose reduction is foreseen: for toxicity the dose is delayed or omitted. Premedication is given 15 to 60 minutes before the infusion. The SmPC also requires an H2 blocker (ranitidine 50 mg intravenously or equivalent) or an oral proton pump inhibitor; neither is in the catalogue, so prescribe it separately."
+      }
+    },
+    {
+      "key": "carfilzomib-d1-2",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "notes": {
+        "uk": "Стартова доза перших двох днів; при задовільній переносимості з дня 8 підвищують до 56 мг/м2.",
+        "en": "The starting dose for the first two days; if tolerated it rises to 56 mg/m2 from day 8."
+      }
+    },
+    {
+      "key": "carfilzomib",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 56,
+      "dose_unit": "mg_m2",
+      "days": [8, 9, 15, 16],
+      "notes": {
+        "uk": "Повна доза з дня 8.",
+        "en": "The full dose from day 8."
+      }
+    }
+  ]
+}

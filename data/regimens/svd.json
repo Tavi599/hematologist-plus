@@ -1,0 +1,60 @@
+{
+  "$comment": "Цикл 35 днів: селінексор щотижня всі 5 тижнів, бортезоміб лише перші 4.",
+  "id": "svd",
+  "short_name": "SVd",
+  "name": {
+    "uk": "SVd (селінексор, бортезоміб, дексаметазон)",
+    "en": "SVd (selinexor, bortezomib, dexamethasone)"
+  },
+  "description": {
+    "uk": "Множинна мієлома в дорослих після щонайменше однієї лінії терапії. Цикл 35 днів, до прогресування або неприйнятної токсичності. Селінексор в Україні не зареєстрований — схема наведена для повноти.",
+    "en": "Multiple myeloma in adults after at least one prior therapy. A 35-day cycle, until progression or unacceptable toxicity. Selinexor is not registered in Ukraine; the regimen is listed for completeness."
+  },
+  "cycle_length_days": 35,
+  "sources": [
+    {
+      "name": "EMA, Nexpovio (селінексор), коротка характеристика препарату",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/nexpovio-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "selinexor",
+      "drug_id": "selinexor",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22, 29],
+      "notes": {
+        "uk": "Раз на тиждень. УВАГА: разова доза не має перевищувати 70 мг/м2 — при площі поверхні тіла менш як 1,43 м2 фіксовані 100 мг завеликі, дозу рахують окремо; довідник цього обмеження не застосовує. Ступені зниження за токсичності: 80, 60, 40 мг.",
+        "en": "Once a week. NOTE: a single dose must not exceed 70 mg/m2, so below a body surface area of 1.43 m2 the flat 100 mg is too much and the dose is worked out separately; the catalogue does not apply this limit. The reduction steps for toxicity are 80, 60 and 40 mg."
+      }
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Раз на тиждень чотири тижні, п'ятий тиждень — без бортезомібу.",
+        "en": "Once a week for four weeks; the fifth week is bortezomib-free."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9, 15, 16, 22, 23, 29, 30],
+      "notes": {
+        "uk": "Двічі на тиждень — у перший і другий день кожного тижня циклу.",
+        "en": "Twice a week, on the first and second day of each week of the cycle."
+      }
+    }
+  ]
+}

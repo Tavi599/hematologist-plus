@@ -1,0 +1,118 @@
+{
+  "$comment": "Цикли 2 і далі: ізатуксимаб раз на два тижні.",
+  "id": "isa-pd",
+  "short_name": "Isa-Pd (2+)",
+  "name": {
+    "uk": "Isa-Pd (ізатуксимаб, помалідомід, дексаметазон), цикли 2 і далі",
+    "en": "Isa-Pd (isatuximab, pomalidomide, dexamethasone), cycle 2 onwards"
+  },
+  "description": {
+    "uk": "Рецидивна й рефрактерна множинна мієлома в дорослих після щонайменше двох ліній терапії, які включали леналідомід та інгібітор протеасоми, з прогресуванням на останній лінії. Цикл 28 днів, до прогресування або неприйнятної токсичності. З другого циклу ізатуксимаб вводять раз на два тижні. Ізатуксимаб в Україні не зареєстрований — схема наведена для повноти.",
+    "en": "Relapsed and refractory multiple myeloma in adults after at least two prior lines including lenalidomide and a proteasome inhibitor, with progression on the last line. A 28-day cycle, until progression or unacceptable toxicity. From the second cycle the isatuximab is every two weeks. Isatuximab is not registered in Ukraine; the regimen is listed for completeness."
+  },
+  "cycle_length_days": 28,
+  "sources": [
+    {
+      "name": "EMA, Sarclisa (ізатуксимаб), коротка характеристика препарату",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/sarclisa-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "NSSG Oxford Haematology, MM.22 Pomalidomide (Imnovid)",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-22-pomalidomide.pdf",
+      "version": "перевірено 2026-10-03",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 15],
+      "notes": {
+        "uk": "Коротка характеристика допускає 650-1000 мг; у довіднику взято верхній край.",
+        "en": "The SmPC allows 650 to 1000 mg; the catalogue takes the upper end."
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 15],
+      "notes": {
+        "uk": "Коротка характеристика допускає 25-50 мг; у довіднику взято верхній край. Внутрішньовенне введення бажане щонайменше для перших чотирьох інфузій. ",
+        "en": "The SmPC allows 25 to 50 mg; the catalogue takes the upper end. The intravenous route is preferred for at least the first four infusions. "
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "Одна доза перед ізатуксимабом і помалідомідом — вона водночас є премедикацією і частиною схеми, двічі її не дають. У дні інфузії можна ввести внутрішньовенно.",
+        "en": "One dose before the isatuximab and the pomalidomide: it is both the premedication and part of the regimen, and is not given twice. On infusion days it may be given intravenously."
+      },
+      "dose_modifiers": [
+        {
+          "key": "age-75",
+          "label": {
+            "uk": "Вік 75 років і більше",
+            "en": "Aged 75 years or over"
+          },
+          "dose_value": 20,
+          "notes": {
+            "uk": "Коротка характеристика ізатуксимабу прямо пише 20 мг для пацієнтів від 75 років.",
+            "en": "The isatuximab SmPC states 20 mg for patients aged 75 and over."
+          },
+          "source": {
+            "name": "EMA, Sarclisa (ізатуксимаб), коротка характеристика препарату",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/sarclisa-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "isatuximab",
+      "drug_id": "isatuximab",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_kg",
+      "days": [1, 15],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl через вбудований фільтр 0,22 мкм. Якщо за перші чотири введення реакцій не було, потребу в премедикації переглядають. Крім цього, коротка характеристика вимагає блокатор H2-рецепторів (ранітидин 50 мг внутрішньовенно або рівноцінний) чи пероральний інгібітор протонної помпи — цих препаратів у довіднику немає, призначайте окремо.",
+        "en": "In 250 mL of 0.9% sodium chloride through a 0.22 micron in-line filter. Where the first four administrations caused no reaction, the need for premedication is reconsidered. The SmPC also requires an H2 blocker (ranitidine 50 mg intravenously or equivalent) or an oral proton pump inhibitor; neither is in the catalogue, so prescribe it separately."
+      }
+    },
+    {
+      "key": "pomalidomide",
+      "drug_id": "pomalidomide",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Дні 1-21, далі тиждень перерви. У день інфузії приймають не раніш як через 2 години після неї. Потрібна тромбопрофілактика.",
+        "en": "Days 1-21, then a week off. On an infusion day it is taken no sooner than 2 hours afterwards. Thromboprophylaxis is required."
+      }
+    }
+  ]
+}

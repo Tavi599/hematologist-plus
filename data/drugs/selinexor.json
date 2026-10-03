@@ -1,0 +1,38 @@
+{
+  "$comment": "Доданий разом зі схемами SVd та Sd. В Україні не зареєстрований.",
+  "id": "selinexor",
+  "name": {
+    "uk": "Селінексор",
+    "en": "Selinexor"
+  },
+  "trade_names": ["Nexpovio"],
+  "atc_code": "L01XX66",
+  "amount_unit": "mg",
+  "dose_units": ["mg_flat"],
+  "availability": "unavailable",
+  "notes": {
+    "uk": "Селінексор не зареєстрований в Україні: станом на 03.10.2026 його немає в Державному реєстрі лікарських засобів за жодною торговою назвою. Схеми з ним наведені для повноти; призначення потребує окремого шляху закупівлі.",
+    "en": "Selinexor is not registered in Ukraine: as of 3 October 2026 it appears in the State Register of Medicinal Products under no trade name. The regimens that use it are listed for completeness; prescribing one needs a separate route of supply."
+  },
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України, відкриті дані (reestr.csv)",
+      "url": "http://www.drlz.com.ua/ibp/ddsite.nsf/all/shlist?opendocument",
+      "version": "вивантаження від 2026-10-03",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "EMA, Nexpovio (селінексор), коротка характеристика препарату",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/nexpovio-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t20",
+      "form": "tablet",
+      "strength_amount": 20
+    }
+  ]
+}

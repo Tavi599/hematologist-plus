@@ -178,6 +178,15 @@ function DoseRow({
             {item.item.role !== 'main' && ` · ${t(`role.${item.item.role}`)}`}
             {customIds.includes(id) && ` · ${t('calculator.doses.custom')}`}
           </Text>
+          {/* A drug the department cannot simply take off the shelf. The badge in the regimen
+              list says only that something in the course is missing; here it is clear which
+              drug, and the drug's own note says why — most often that it is not registered. */}
+          {item.drug.availability !== 'department' && (
+            <Text size="xs" c={item.drug.availability === 'unavailable' ? 'red' : 'yellow.8'}>
+              {t(`availability.${item.drug.availability}`)}
+              {item.drug.notes !== null && `. ${localize(item.drug.notes, language)}`}
+            </Text>
+          )}
         </Table.Td>
         <Table.Td>
           <Text>
