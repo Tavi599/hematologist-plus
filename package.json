@@ -17,6 +17,7 @@
     "pwa:assets": "pwa-assets-generator",
     "data:validate": "tsx scripts/validate-data.ts",
     "data:validate:demo": "tsx scripts/validate-data.ts --dir data-demo",
+    "data:validate:content": "tsx scripts/validate-data.ts --content ../Hematologist_plus_content",
     "data:sync": "tsx scripts/sync-supabase.ts",
     "db:check-rls": "tsx scripts/check-rls.ts"
   },

@@ -1,5 +1,6 @@
 import { amountUnitOf, isMassUnit, sameFamily } from '../../src/domain'
 import { SYNC_TABLES, syncRowSchemas, type SyncRows } from '../../src/schemas/catalog'
+import { articleHeadings } from '../../src/pages/DiseaseDetailPage/headings'
 import type { DoseUnit } from '../../src/domain'
 
 export interface CatalogIssue {
@@ -241,6 +242,40 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
     if (node.kind === 'group') continue
     if (!nodesWithRegimens.has(node.id) && !parentNodes.has(node.id)) {
       warning('treatment_nodes', node.id, 'has neither regimens nor child nodes')
+    }
+  }
+
+  // Article text lives outside this repository, so nothing else looks at it. These checks run
+  // wherever it is loaded — a local run with --content, and the demo set in CI.
+  const LONG_ENOUGH_TO_NEED_CONTENTS = 2000
+  const articleLanguages = new Map<string, string[]>()
+  for (const article of rows.disease_articles) {
+    const key = `${article.disease_id}.${article.section}`
+    articleLanguages.set(key, [...(articleLanguages.get(key) ?? []), article.language])
+
+    const headings = articleHeadings(article.body)
+    if (article.body.length >= LONG_ENOUGH_TO_NEED_CONTENTS && headings.length < 2) {
+      warning(
+        'disease_articles',
+        article.id,
+        'long article with fewer than two headings: no contents is built for it',
+      )
+    }
+    const seenIds = new Set<string>()
+    for (const heading of headings) {
+      if (seenIds.has(heading.id)) {
+        warning(
+          'disease_articles',
+          article.id,
+          `two headings called "${heading.text}": the contents leads to the first one`,
+        )
+      }
+      seenIds.add(heading.id)
+    }
+  }
+  for (const [key, languages] of articleLanguages) {
+    if (languages.length === 1) {
+      warning('disease_articles', key, `written in ${languages[0]} only`)
     }
   }
 

@@ -10,7 +10,7 @@ import { checkCatalog } from './check-catalog'
 import { diffTable, hasChanges, stableStringify } from './diff'
 import { parseArgs } from './env'
 import { diseaseCodeId, flattenDataSet } from './flatten'
-import { loadDataDir } from './load-data'
+import { contentOptions, loadDataDir, prunesArticlesBlind } from './load-data'
 import { DEMO_CATALOG_FIXTURE, demoCatalogJson } from './snapshot'
 import { catalogToSql } from './sql'
 
@@ -75,6 +75,8 @@ describe('demo data set', () => {
     const warnings = checkCatalog(loadDemo()).filter((issue) => issue.severity === 'warning')
     expect(warnings).toEqual([
       expect.objectContaining({ table: 'regimen_items', id: 'r-chop-21.cyclophosphamide' }),
+      // The demo set carries an NCCN section in Ukrainian only, on purpose.
+      expect.objectContaining({ table: 'disease_articles', id: 'dlbcl.nccn' }),
     ])
   })
 })
@@ -333,6 +335,37 @@ describe('checkCatalog', () => {
     const messages = checkCatalog(rows).map((issue) => issue.message)
     expect(messages).toContain('reachable from no treatment node')
     expect(messages).toContain('has neither regimens nor child nodes')
+  })
+
+  it('refuses to prune when the articles were never loaded', () => {
+    // Articles live outside this repository; a prune run without them reads as "every article
+    // was deleted" and empties the table, with nothing here to restore it from.
+    const blind = contentOptions(new Map(), 'data')
+    expect(prunesArticlesBlind(true, blind)).toBe(true)
+    expect(prunesArticlesBlind(false, blind)).toBe(false)
+    expect(prunesArticlesBlind(true, contentOptions(new Map([['content', '../x']]), 'data'))).toBe(
+      false,
+    )
+    // A demo set carries its own articles, so there is nothing to lose.
+    expect(prunesArticlesBlind(true, contentOptions(new Map(), 'data-demo'))).toBe(false)
+  })
+
+  it('reports an article the contents cannot be built from', () => {
+    const rows = loadDemo()
+    const article = rows.disease_articles[0]!
+    article.body = `# Діагностика
+${'текст '.repeat(400)}
+# Діагностика
+ще`
+    const messages = checkCatalog(rows).map((issue) => issue.message)
+    expect(messages).toContain(
+      'two headings called "Діагностика": the contents leads to the first one',
+    )
+
+    article.body = 'текст '.repeat(400)
+    expect(checkCatalog(rows).map((issue) => issue.message)).toContain(
+      'long article with fewer than two headings: no contents is built for it',
+    )
   })
 
   it('asks nothing of a group node, which carries advice rather than regimens', () => {

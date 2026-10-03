@@ -185,5 +185,14 @@ export function contentOptions(options: Map<string, string>, dir: string): LoadO
   return contentDir === undefined ? { contentDir: MISSING_CONTENT_DIR } : { contentDir }
 }
 
+/**
+ * True when a prune would run against a data set whose articles were never loaded. To the diff
+ * that is indistinguishable from articles deleted on purpose, so one run wipes every one of them
+ * — and the text is not in this repository to put back.
+ */
+export function prunesArticlesBlind(prune: boolean, options: LoadOptions): boolean {
+  return prune && options.contentDir === MISSING_CONTENT_DIR
+}
+
 /** A directory that cannot exist, so no article is read from the public repository by mistake. */
 export const MISSING_CONTENT_DIR = '<no-content-dir>'

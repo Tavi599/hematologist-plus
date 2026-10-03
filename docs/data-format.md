@@ -22,6 +22,14 @@ data/
   <content>/diseases/<id>/article.uptodate.uk.md  те саме для UpToDate, eviq, nssg, other
 ```
 
+**`--prune` без `--content` конвеєр відхиляє.** Без цієї опції статті просто не завантажуються,
+а для порівняння це виглядає так само, як статті, видалені навмисне: один запуск стер би їх усі,
+і відновити текст із цього репозиторію нема звідки.
+
+Статті перевіряються разом із рештою даних: конвеєр попереджає про два однакові заголовки
+(зміст веде лише до першого), про довгу статтю без заголовків (зміст не збереться) і про розділ,
+написаний лише однією мовою.
+
 Кожен файл стає окремим рядком `disease_articles` з полем `section` (`own` для `article.<lang>.md`,
 інакше — назва джерела). У програмі це кнопки під хворобою: вони перемикають розділ статті
 всередині застосунку і **нікуди не ведуть**. Джерело, версія й дата — у `references` хвороби.
@@ -127,12 +135,13 @@ GRADE свідомо не використовується: він оцінює 
 ## Команди
 
 ```bash
-npm run data:validate                        # перевірити data/
+npm run data:validate                        # перевірити data/ (без статей)
 npm run data:validate:demo                   # перевірити data-demo/
+npm run data:validate:content                # те саме разом зі статтями з приватної теки
 npm run data:sync                            # суха перевірка: що зміниться в БД
 npm run data:sync -- --apply                 # записати (потрібен SUPABASE_SECRET_KEY у .env.local)
-npm run data:sync -- --apply --prune         # записати і видалити рядки, яких немає у файлах
-npm run data:sync -- --sql seed.sql --prune  # SQL-транзакція для SQL Editor у Supabase (без ключа)
+npm run data:sync -- --apply --prune --content ../Hematologist_plus_content
+npm run data:sync -- --sql seed.sql --prune --content ../Hematologist_plus_content
 npm run db:check-rls                         # публічний ключ може лише читати
 ```
 

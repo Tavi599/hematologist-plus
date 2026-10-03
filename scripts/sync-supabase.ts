@@ -20,7 +20,7 @@ import { checkCatalog } from './lib/check-catalog'
 import { diffCatalog, hasChanges, type TableDiff } from './lib/diff'
 import { loadEnv, parseArgs, requireEnv } from './lib/env'
 import { flattenDataSet } from './lib/flatten'
-import { contentOptions, loadDataDir } from './lib/load-data'
+import { contentOptions, loadDataDir, prunesArticlesBlind } from './lib/load-data'
 import { printCatalogIssues, printFileIssues } from './lib/report'
 import { catalogToSql } from './lib/sql'
 
@@ -37,7 +37,18 @@ async function main() {
   const apply = flags.has('apply')
   const prune = flags.has('prune')
 
-  const { data, issues: fileIssues } = loadDataDir(dir, contentOptions(options, dir))
+  const content = contentOptions(options, dir)
+  // Without --content the articles are simply not loaded, and to --prune that looks exactly like
+  // articles that were deleted on purpose: one run wipes every one of them from the database,
+  // and the text is not in this repository to put back. The combination is always a mistake.
+  if (prunesArticlesBlind(prune, content)) {
+    throw new Error(
+      '--prune without --content would delete every disease article, because none were loaded. ' +
+        'Pass --content <dir> pointing at the private content checkout.',
+    )
+  }
+
+  const { data, issues: fileIssues } = loadDataDir(dir, content)
   const rows = flattenDataSet(data)
   const catalogIssues = checkCatalog(rows)
   printFileIssues(fileIssues)

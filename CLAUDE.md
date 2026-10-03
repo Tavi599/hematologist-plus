@@ -46,9 +46,11 @@ npm run typecheck    # tsc -b --noEmit
 npm run format       # Prettier (format:check in CI)
 npm run pwa:assets   # regenerate PWA icons from public/icon.svg
 npm run data:validate        # validate data/ (add `-- --dir data-demo`, or use data:validate:demo)
+npm run data:validate:content  # the same, with the article text from the private checkout
 npm run data:sync            # dry run: diff data/ against Supabase (public key is enough)
 npm run data:sync -- --apply [--prune]      # write; needs SUPABASE_SECRET_KEY in .env.local, never in the site
 npm run data:sync -- --sql <file> [--prune] # one SQL transaction for the Supabase SQL editor (no key)
+# --prune requires --content: without it no article is loaded, and the prune would delete them all
 npm run db:check-rls         # publishable key can read but not write every catalog table
 ```
 
