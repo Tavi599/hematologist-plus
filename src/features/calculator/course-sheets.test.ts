@@ -262,10 +262,92 @@ describe('buildCourseSheets', () => {
     const ward = sheets().at(-1)!
     const prednisolone = bandStartingWith(ward, 'ДЕМО Преднізолон')!.map(text)
 
+    // Five days of «+», one «-» on the day after the last — the department's own convention —
+    // and then nothing.
     expect(prednisolone.slice(2, 2 + WARD_DAY_COLUMNS)).toEqual([
       ...Array.from({ length: 5 }, () => '+'),
-      ...Array.from({ length: WARD_DAY_COLUMNS - 5 }, () => null),
+      '-',
+      ...Array.from({ length: WARD_DAY_COLUMNS - 6 }, () => null),
     ])
+  })
+
+  it('writes «-» on the days a drug is skipped inside its course, as VRD does', () => {
+    // Dexamethasone on days 1-2, 4-5, 8-9 and 11-12: «+ + - + + - - + + - + + -».
+    const items = buildCourseItems(indexCatalog(demoCatalog()), 'r-chop-21').map((item) =>
+      item.courseDrug.block === 'ward'
+        ? {
+            ...item,
+            courseDrug: { ...item.courseDrug, days: [1, 2, 4, 5, 8, 9, 11, 12] },
+          }
+        : item,
+    )
+    const course = calculateCourse(
+      { ageYears: 60, sex: 'male', heightCm: 180, weightKg: 80 },
+      items.map((item) => item.courseDrug),
+      { startDateIso: '2026-09-21', dayStart: '09:00' },
+    )
+    const ward = sheets({ items, course }).at(-1)!
+    const marks = bandStartingWith(ward, 'ДЕМО Преднізолон')!
+      .map(text)
+      .slice(2, 2 + 14)
+    expect(marks).toEqual(['+', '+', '-', '+', '+', '-', '-', '+', '+', '-', '+', '+', '-', null])
+  })
+
+  it('gives every date its own column, also one on which nothing is given', () => {
+    const ward = sheets().at(-1)!
+    const dates = ward.rows[4]!.slice(2, 2 + 8).map((cell) => String(text(cell)))
+    expect(dates).toEqual(['21.09', '22.09', '23.09', '24.09', '25.09', '26.09', '27.09', '28.09'])
+  })
+
+  describe('the ward layout', () => {
+    it('puts the whole course on the inpatient sheet and makes no day sheets', () => {
+      const built = sheets({ layout: 'ward' })
+      expect(built.map((sheet) => sheet.name)).toEqual(['calculator.export.wardSheet'])
+      const lines = orders(built[0]!, 5).join('|')
+      // The infusion drugs are on it as well, not only the tablets.
+      expect(lines).toContain('ДЕМО Ритуксимаб')
+      expect(lines).toContain('ДЕМО Преднізолон')
+    })
+
+    it('marks an infusion drug on its day and dashes the days after it up to the last', () => {
+      const ward = sheets({ layout: 'ward' })[0]!
+      const rituximab = bandStartingWith(ward, 'ДЕМО Ритуксимаб')!
+        .map(text)
+        .slice(2, 2 + 7)
+      // Given on day 1 only: «+» and then the single «-» of the day after.
+      expect(rituximab).toEqual(['+', '-', null, null, null, null, null])
+    })
+
+    it('writes a tablet as «р.о. х 2р/добу (09:00 та 21:00)» when the protocol sets the interval', () => {
+      const items = buildCourseItems(indexCatalog(demoCatalog()), 'r-chop-21').map((item) =>
+        item.courseDrug.block === 'ward'
+          ? {
+              ...item,
+              item: { ...item.item, administrations_per_day: 2, interval_min: 720 },
+              courseDrug: { ...item.courseDrug, administrationsPerDay: 2 },
+            }
+          : item,
+      )
+      const course = calculateCourse(
+        { ageYears: 60, sex: 'male', heightCm: 180, weightKg: 80 },
+        items.map((item) => item.courseDrug),
+        { startDateIso: '2026-09-21', dayStart: '09:00' },
+      )
+      const ward = sheets({ items, course, layout: 'ward', dayStart: '09:00' })[0]!
+      const how = String(text(bandStartingWith(ward, 'ДЕМО Преднізолон')![1] ?? null))
+      expect(how).toBe('routeShort.oral х 2р/добу (09:00 та 21:00)')
+    })
+
+    it('leaves a switched-off drug off the sheet', () => {
+      const items = buildCourseItems(indexCatalog(demoCatalog()), 'r-chop-21')
+      const course = calculateCourse(
+        { ageYears: 60, sex: 'male', heightCm: 180, weightKg: 80 },
+        items.map((item) => item.courseDrug),
+        { startDateIso: '2026-09-21', dayStart: '09:00', disabledIds: ['r-chop-21.rituximab'] },
+      )
+      const ward = sheets({ items, course, layout: 'ward' })[0]!
+      expect(orders(ward, 5).join('|')).not.toContain('ДЕМО Ритуксимаб')
+    })
   })
 
   it('continues on a second inpatient sheet instead of dropping a day off the blank', () => {

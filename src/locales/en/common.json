@@ -172,6 +172,10 @@
       "button": "Download .xlsx",
       "hint": "The department blanks: a sheet for every day with an administration plus the inpatient prescription list (form 003-4/o). The file is built in the browser: patient data is never sent anywhere.",
       "wardSheet": "Inpatient sheet",
+      "layout": "Sheet layout",
+      "layoutInfusion": "Infusion sheets + ward sheet",
+      "layoutWard": "Ward sheet only (like VRD)",
+      "hintWard": "One prescription list (form No. 003-4/o) for the whole course: every drug a line, «+» on the days it is given and «-» on the days it is not. The file is built in the browser: no patient data is sent anywhere.",
       "fileName": "Prescription sheet {{date}}"
     },
     "error": {

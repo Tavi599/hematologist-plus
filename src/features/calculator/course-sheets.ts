@@ -1,5 +1,7 @@
 import {
   addDays,
+  formatTime,
+  parseTime,
   type CourseAdministrationResult,
   type CourseDrugResult,
   type CourseResult,
@@ -45,9 +47,20 @@ export interface CourseSheetsInput {
   header: HeaderValue
   /** Orders written out by hand; printed as typed, never calculated. */
   manualRows?: ManualRow[]
+  /**
+   * `infusion` (default): a sheet per day with an infusion plus the inpatient sheet for what has
+   * no clock time. `ward`: the whole course on the inpatient sheet alone, as the department
+   * writes a course of tablets and injections (VRD): every drug of the course is a line, `+` on
+   * the days it is given.
+   */
+  layout?: SheetLayout
+  /** Start of the working day, HH:MM: where the times of a drug given several times a day begin. */
+  dayStart?: string
   language: Language
   t: Translate
 }
+
+export type SheetLayout = 'infusion' | 'ward'
 
 /** A day the sheets cover: one of the course's own, or one only a hand-written order falls on. */
 interface SheetDay {
@@ -123,9 +136,12 @@ const BLANK = {
   registryCode: 'Код за ЄДРПОУ ',
   rate: 'V= ',
   perDay: ' р/добу',
+  times: ' та ',
 } as const
 
 const MARK = '+'
+/** A day inside the course on which the drug is not given, as the department writes it. */
+const OFF_MARK = '-'
 
 type XlsxLineSet = Required<XlsxBox>
 const THIN: XlsxLineSet = { left: 'thin', right: 'thin', top: 'thin', bottom: 'thin' }
@@ -174,6 +190,7 @@ const GROUP_EVERY = 6
 
 export function buildCourseSheets(input: CourseSheetsInput): XlsxSheet[] {
   const manual = input.manualRows ?? []
+  if (input.layout === 'ward') return wardSheets(input)
   const days = sheetDays(input)
     .filter(
       (day) =>
@@ -325,16 +342,73 @@ function manualOrders(input: CourseSheetsInput, day: SheetDay): Order[] {
  * for 24 days, so a longer course continues on a second sheet rather than losing a column.
  */
 function wardSheets(input: CourseSheetsInput): XlsxSheet[] {
-  const wardItems = input.items.filter((item) => item.item.block === 'ward')
+  const wardItems = wardItemsOf(input)
   const manual = manualWardRows(input.manualRows ?? [])
   if (wardItems.length === 0 && manual.length === 0) return []
 
-  const all = sheetDays(input)
-  const pages: SheetDay[][] = []
-  for (let start = 0; start < all.length; start += WARD_DAY_COLUMNS) {
-    pages.push(all.slice(start, start + WARD_DAY_COLUMNS))
-  }
+  const pages = wardPages(input, wardItems)
   return pages.map((days, index) => wardSheet(input, wardItems, days, index, pages.length))
+}
+
+/**
+ * What goes on the inpatient sheet: the drugs with no clock time — or, in the ward layout, every
+ * drug the course gives, a switched-off one included only if the calculation still has it.
+ */
+function wardItemsOf(input: CourseSheetsInput): CourseItem[] {
+  if (input.layout !== 'ward') return input.items.filter((item) => item.item.block === 'ward')
+  const calculated = new Set((input.course?.drugs ?? []).map((drug) => drug.id))
+  return input.items.filter((item) => calculated.has(item.item.id))
+}
+
+/**
+ * The date columns, 24 to a sheet and consecutive: the ward reads a missing date as a missed
+ * day, so a day on which nothing is given still has its column. The columns run from the first
+ * day to the day after the last one anything is given on, which is where the last `-` is written.
+ */
+function wardPages(input: CourseSheetsInput, wardItems: CourseItem[]): SheetDay[][] {
+  const known = new Map(sheetDays(input).map((day) => [day.day, day]))
+  const given = wardItems.flatMap((item) => daysGiven(item, known))
+  const numbers = [...known.keys(), ...given]
+  if (numbers.length === 0) return [[]]
+  const first = Math.min(...numbers)
+  const last = Math.max(...numbers) + 1
+  const pageCount = Math.ceil((last - first + 1) / WARD_DAY_COLUMNS)
+  return Array.from({ length: pageCount }, (_unused, page) =>
+    Array.from({ length: WARD_DAY_COLUMNS }, (_column, index) => {
+      const day = first + page * WARD_DAY_COLUMNS + index
+      return (
+        known.get(day) ?? {
+          day,
+          date: addDays(input.startDateIso, day - 1),
+          administrations: [],
+          untimed: [],
+        }
+      )
+    }),
+  )
+}
+
+/** Course days on which one drug is given: timed on the day sheet, or untimed on the ward. */
+function daysGiven(item: CourseItem, days: Map<number, SheetDay>): number[] {
+  return [...days.values()].filter((day) => isGivenOn(item.item.id, day)).map((day) => day.day)
+}
+
+function isGivenOn(id: string, day: SheetDay): boolean {
+  return day.untimed.includes(id) || day.administrations.some((entry) => entry.drugId === id)
+}
+
+/**
+ * The marks of one line across the date columns: `+` where it is given, `-` on the days before
+ * its last one on which it is not, and nothing after the course has moved on.
+ */
+function wardMarks(days: SheetDay[], allGiven: Set<number>): (string | null)[] {
+  const last = Math.max(0, ...[...allGiven])
+  return Array.from({ length: WARD_DAY_COLUMNS }, (_unused, index) => {
+    const day = days[index]
+    if (!day) return null
+    if (allGiven.has(day.day)) return MARK
+    return day.day <= last + 1 && last > 0 ? OFF_MARK : null
+  })
 }
 
 function wardSheet(
@@ -401,15 +475,14 @@ function wardSheet(
   heights.push(19.5)
 
   const resultById = new Map((input.course?.drugs ?? []).map((drug) => [drug.id, drug]))
+  const allDays = new Map(sheetDays(input).map((day) => [day.day, day]))
   const bands = [
     ...wardItems.map((item) => {
       const result = resultById.get(item.item.id)
       return {
         what: whatLine(item.item.id, item, result, input),
-        how: howLine(item, result, input),
-        marks: Array.from({ length: WARD_DAY_COLUMNS }, (_unused, index) =>
-          days[index]?.untimed.includes(item.item.id) ? MARK : null,
-        ),
+        how: wardHowLine(item, result, input),
+        marks: wardMarks(days, new Set(daysGiven(item, allDays))),
       }
     }),
     // A hand-written line is marked on the days it was written for, whatever the course does.
@@ -557,6 +630,33 @@ function howLine(
   }
   const perDay = result?.administrationsPerDay ?? item?.item.administrations_per_day ?? 1
   return perDay > 1 ? `${route}\n${perDay}${BLANK.perDay}` : route
+}
+
+/**
+ * How a line of the inpatient sheet is written: «р.о. х 2р/добу (09:00 та 21:00)». The times
+ * follow from the interval the protocol gives, counted from the start of the working day.
+ */
+function wardHowLine(
+  item: CourseItem,
+  result: CourseDrugResult | undefined,
+  input: CourseSheetsInput,
+): string {
+  const plain = howLine(item, result, input)
+  if (item.item.route !== 'oral') return plain
+  const perDay = result?.administrationsPerDay ?? item.item.administrations_per_day
+  const route = input.t(`routeShort.${item.item.route}`)
+  const times = administrationTimes(item, perDay, input.dayStart ?? '09:00')
+  return `${route} х ${perDay}${BLANK.perDay.trim()}${times ? ` (${times})` : ''}`
+}
+
+function administrationTimes(item: CourseItem, perDay: number, dayStart: string): string {
+  const interval = item.item.interval_min
+  if (perDay < 2 || interval === null) return ''
+  const start = parseTime(dayStart)
+  return Array.from(
+    { length: perDay },
+    (_unused, index) => formatTime(start + index * interval).time,
+  ).join(BLANK.times)
 }
 
 /** The stamp at the top of the blank: institution, address, registry code. */

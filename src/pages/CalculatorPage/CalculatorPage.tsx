@@ -323,6 +323,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           regimenName={regimen ? localize(regimen.name, language) : null}
           cycleNumber={courseSettings.cycleNumber}
           startDate={courseSettings.startDate}
+          dayStart={courseSettings.dayStart}
           header={header}
           manualRows={manualRows}
         />
