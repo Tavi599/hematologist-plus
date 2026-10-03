@@ -74,11 +74,11 @@
       "role": "supportive",
       "route": "subcutaneous",
       "dose_value": 0.5,
-      "dose_unit": "mcg_kg",
+      "dose_unit": "miu_kg",
       "days": [1, 2, 3, 4, 5, 6, 7],
       "notes": {
-        "uk": "Підшкірно раз на добу, з округленням дози за настановою щодо Г-КСФ.",
-        "en": "Subcutaneously once daily, with dose banding per the G-CSF guideline."
+        "uk": "Підшкірно раз на добу, з округленням дози за настановою щодо Г-КСФ. У тексті протоколу NSSG стоїть «0,5 мкг/кг» — це друкарська помилка: усі інші протоколи NSSG дають 0,5 млн МО/кг (5 мкг/кг).",
+        "en": "Subcutaneously once daily, with dose banding per the G-CSF guideline. The NSSG text reads «0.5 microgram/kg», a misprint: the other NSSG protocols give 0.5 million IU/kg (5 mcg/kg)."
       }
     },
     {

@@ -1,0 +1,370 @@
+{
+  "$comment": "Дози — NSSG Oxford L.49 (вер. 5.0, вересень 2025), R-IVAC — цикли 2 і 4 високоризикового чергування. Пацієнтам понад 65 років дози месни, іфосфаміду й цитарабіну знижені — у списках доз. Премедикація відділення — як у R-CODOX-M.",
+  "id": "r-ivac",
+  "short_name": "R-IVAC",
+  "name": {
+    "uk": "R-IVAC (ритуксимаб, іфосфамід, етопозид, цитарабін)",
+    "en": "R-IVAC (rituximab, ifosfamide, etoposide, cytarabine)"
+  },
+  "description": {
+    "uk": "Цикли 2 і 4 високоризикового чергування з R-CODOX-M при лімфомі Беркітта, «double/triple hit» та ДВКЛ з високим IPI. Цикл 21–28 днів за відновленням показників крові.",
+    "en": "Cycles 2 and 4 of the high-risk alternation with R-CODOX-M in Burkitt lymphoma, double- or triple-hit lymphoma and high-IPI DLBCL. A 21 to 28-day cycle, by count recovery."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.49 R-CODOX-M / R-IVAC",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-49-r-codox-m-r-ivac.pdf",
+      "version": "5.0 (09.2025)",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "Дизайн відділення «Ритуксимаб» (Google Таблиці)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до ритуксимабу",
+        "en": "At least 30 minutes before rituximab"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 12,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Одночасно премедикація до ритуксимабу й протиблювотний засіб. З димедролом у 100 мл 0,9% NaCl, до ритуксимабу (замість хлорфенаміну протоколу).",
+        "en": "Both the rituximab premedication and an antiemetic. With diphenhydramine in 100 mL 0.9% NaCl, before the rituximab (instead of the protocol's chlorphenamine)."
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% — 5,0 мл; у тому самому флаконі, що й дексаметазон (замість хлорфенаміну протоколу)",
+        "en": "Diphenhydramine 1% 5.0 mL, in the same bag as dexamethasone (replaces the protocol's chlorphenamine)"
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "Максимальна швидкість 400 мг/год; спостереження 30 хв перед наступними інфузіями",
+        "en": "Maximum rate 400 mg/h; observe for 30 minutes before the next infusions"
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 500 мл 0,9% NaCl за 1 годину.",
+        "en": "In 500 mL 0.9% NaCl over 1 hour."
+      }
+    },
+    {
+      "key": "mesna-pre",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 300,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "За 15–30 хв до іфосфаміду, у 50–100 мл 0,9% NaCl за 15–30 хв.",
+        "en": "15 to 30 minutes before the ifosfamide, in 50 to 100 mL 0.9% NaCl over 15 to 30 minutes."
+      },
+      "dose_options": [
+        {
+          "dose_value": 200,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Понад 65 років (знижена доза за протоколом)",
+            "en": "Over 65 (reduced dose per the protocol)"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.49 R-CODOX-M / R-IVAC",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-49-r-codox-m-r-ivac.pdf",
+            "version": "5.0 (09.2025)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "ifosfamide",
+      "drug_id": "ifosfamide",
+      "route": "iv_infusion",
+      "dose_value": 1500,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "У 1000 мл 0,9% NaCl за 1 годину разом із месною в тій самій дозі (1500 мг/м²) в одному мішку.",
+        "en": "In 1000 mL 0.9% NaCl over 1 hour together with mesna in the same dose (1500 mg/m2) in the same bag."
+      },
+      "dose_options": [
+        {
+          "dose_value": 1000,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Понад 65 років (знижена доза за протоколом)",
+            "en": "Over 65 (reduced dose per the protocol)"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.49 R-CODOX-M / R-IVAC",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-49-r-codox-m-r-ivac.pdf",
+            "version": "5.0 (09.2025)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "mesna-with-ifosfamide",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 1500,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "В одному мішку з іфосфамідом (його 1000 мл — це і її розчинник, окремого об'єму калькулятор не рахує).",
+        "en": "In the same bag as the ifosfamide (its 1000 mL is her solvent too; the calculator works out no volume of its own)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 1000,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Понад 65 років (знижена доза за протоколом)",
+            "en": "Over 65 (reduced dose per the protocol)"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.49 R-CODOX-M / R-IVAC",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-49-r-codox-m-r-ivac.pdf",
+            "version": "5.0 (09.2025)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "mesna-post",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "block": "day_support",
+      "anchor_offset_min": 240,
+      "interval_min": 240,
+      "administrations_per_day": 2,
+      "dose_value": 450,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Через 4 і 8 годин від початку інфузії іфосфаміду, у 50–100 мл 0,9% NaCl за 15–30 хв. При доброму пероральному прийомі можна замінити месною всередину 900 мг/м² через 2 і 6 годин після кінця іфосфаміду. Час відлічується від початку першої інфузії дня — за потреби зсуньте вручну.",
+        "en": "4 and 8 hours after the start of the ifosfamide infusion, in 50 to 100 mL 0.9% NaCl over 15 to 30 minutes. With good oral intake it can be replaced by oral mesna 900 mg/m2 at 2 and 6 hours after the end of the ifosfamide. The time is counted from the start of the day's first infusion — shift it by hand if needed."
+      },
+      "dose_options": [
+        {
+          "dose_value": 300,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Понад 65 років (знижена доза за протоколом)",
+            "en": "Over 65 (reduced dose per the protocol)"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.49 R-CODOX-M / R-IVAC",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-49-r-codox-m-r-ivac.pdf",
+            "version": "5.0 (09.2025)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Двічі на добу, в 500 мл 0,9% NaCl за 3 години. Амбулаторно — через помпу; якщо макс. швидкість помпи понад 125 мл/год, розчинник 100 мл. Очні краплі зі стероїдом — з дня 1 і 5 днів після останньої дози (не внесені).",
+        "en": "Twice daily, in 500 mL 0.9% NaCl over 3 hours. As an outpatient via a pump; if the pump's maximum rate is above 125 mL/h the diluent is 100 mL. Steroid eye drops from day 1 until 5 days after the last dose (not entered)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 1000,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Понад 65 років (знижена доза за протоколом)",
+            "en": "Over 65 (reduced dose per the protocol)"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.49 R-CODOX-M / R-IVAC",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-49-r-codox-m-r-ivac.pdf",
+            "version": "5.0 (09.2025)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ],
+      "infusion_params_key": "nacl-500"
+    },
+    {
+      "key": "methotrexate-it",
+      "drug_id": "methotrexate",
+      "route": "intrathecal",
+      "dose_value": 12.5,
+      "dose_unit": "mg_flat",
+      "days": [5],
+      "notes": {
+        "uk": "Інтратекально.",
+        "en": "Intrathecally."
+      }
+    },
+    {
+      "key": "cytarabine-it",
+      "drug_id": "cytarabine",
+      "route": "intrathecal",
+      "dose_value": 70,
+      "dose_unit": "mg_flat",
+      "days": [7, 9],
+      "notes": {
+        "uk": "Інтратекально, лише при ураженні ЦНС і лише в 1-му циклі R-IVAC (цикл 2) — інакше позицію вимкніть.",
+        "en": "Intrathecally, only with CNS disease and only in the first R-IVAC (cycle 2) — otherwise switch the row off."
+      }
+    },
+    {
+      "key": "calcium-folinate-it",
+      "drug_id": "calcium-folinate",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 15,
+      "dose_unit": "mg_flat",
+      "days": [6],
+      "notes": {
+        "uk": "Одна доза всередину через 24 години після інтратекального метотрексату.",
+        "en": "A single oral dose 24 hours after the intrathecal methotrexate."
+      }
+    },
+    {
+      "key": "ondansetron",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480,
+      "notes": {
+        "uk": "8 мг двічі на добу в дні 1–5.",
+        "en": "8 mg twice daily on days 1 to 5."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Впродовж лікування і ще 3 місяці після.",
+        "en": "During treatment and for 3 months after."
+      }
+    },
+    {
+      "key": "fluconazole",
+      "drug_id": "fluconazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Впродовж лікування.",
+        "en": "During treatment."
+      }
+    },
+    {
+      "key": "famotidine",
+      "drug_id": "famotidine",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Під час лікування і доки тромбоцити не перевищать 50×10⁹/л. Інгібітори протонної помпи — уникати (взаємодія з метотрексатом).",
+        "en": "During treatment and until platelets exceed 50 x 10^9/L. Avoid proton-pump inhibitors (interaction with methotrexate)."
+      }
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "miu_kg",
+      "days": [7, 8, 9, 10, 11, 12, 13],
+      "notes": {
+        "uk": "Протокол: 0,5 млн МО/кг/добу з 7-го дня, 7 днів або довше, доки нейтрофіли не перевищать 1,0×10⁹/л.",
+        "en": "Protocol: 0.5 million IU/kg/day from day 7 for 7 days or longer, until neutrophils exceed 1.0 x 10^9/L."
+      }
+    }
+  ]
+}

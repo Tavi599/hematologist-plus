@@ -1,0 +1,139 @@
+{
+  "$comment": "Дози — NSSG Oxford L.84 (вер. 2.1, вересень 2024), цикли 2, 4, 6 чергування. Пацієнтам понад 60 років цитарабін 2000 мг/м² (на розсуд консультанта) — у списку доз. Цикл 6: додаткове введення ритуксимабу на день 9 і прайминг Г-КСФ перед збором стовбурових клітин. Обов'язкові очні краплі зі стероїдом (преднізолон 0,5% або дексаметазон 0,1% по краплі в кожне око 4 рази на добу з дня 1 до 5 днів після цитарабіну) не внесені: доза не в мг.",
+  "id": "r-ara-c",
+  "short_name": "R-Ara-C",
+  "name": {
+    "uk": "R-Ara-C (цикли 2, 4, 6 чергування з R-maxi-CHOP)",
+    "en": "R-Ara-C (cycles 2, 4 and 6 of the alternation with R-maxi-CHOP)"
+  },
+  "description": {
+    "uk": "Ритуксимаб і цитарабін 3000 мг/м² двічі на добу в дні 1–2. Цикл 21 день; у циклах 2, 4, 6 з шести. Мантійноклітинна лімфома.",
+    "en": "Rituximab and cytarabine 3000 mg/m2 twice daily on days 1 and 2. A 21-day cycle; cycles 2, 4 and 6 of six. Mantle cell lymphoma."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.84 R-maxi-CHOP / R-Ara-C",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-84-maxi-chop-arac-r.pdf",
+      "version": "2.1 (09.2024)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до ритуксимабу",
+        "en": "At least 30 minutes before rituximab"
+      }
+    },
+    {
+      "key": "hydrocortisone",
+      "drug_id": "hydrocortisone",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до ритуксимабу, разом із парацетамолом (хлорфенамін протоколу у відділенні не застосовується).",
+        "en": "At least 30 minutes before the rituximab, with the paracetamol (the protocol's chlorphenamine is not used in the department)."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "Максимальна швидкість 400 мг/год; спостереження 30 хв перед наступними інфузіями. У циклі 6 додаткове введення на день 9 — додайте день 9 вручну.",
+        "en": "Maximum rate 400 mg/h; observe for 30 minutes before the next infusions. Cycle 6 has an extra dose on day 9 — add day 9 by hand."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 3000,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Двічі на добу з інтервалом 12 годин у 250 мл 0,9% NaCl за 2 години (стаціонар). Амбулаторно — через помпу; якщо макс. швидкість помпи нижча за 125 мл/год, розчинник 100 мл. Очні краплі зі стероїдом — див. примітку до схеми.",
+        "en": "Twice daily 12 hours apart in 250 mL 0.9% NaCl over 2 hours (inpatient). As an outpatient via a pump; if the pump's maximum rate is below 125 mL/h the diluent is 100 mL. Steroid eye drops — see the regimen note."
+      },
+      "dose_options": [
+        {
+          "dose_value": 2000,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Пацієнтам понад 60 років (обговорити з консультантом)",
+            "en": "Patients over 60 (discuss with the consultant)"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.84 R-maxi-CHOP / R-Ara-C",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-84-maxi-chop-arac-r.pdf",
+            "version": "2.1 (09.2024)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "ondansetron",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1, 2],
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Помірний еметоризик: 8 мг двічі на добу в дні 1–2.",
+        "en": "Moderate emetic risk: 8 mg twice daily on days 1 and 2."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Протокол: 200 мг тричі на добу впродовж лікування і ще 3 місяці після.",
+        "en": "Protocol: 200 mg three times a day during treatment and for 3 months after."
+      }
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "miu_kg",
+      "days": [6, 7, 8, 9, 10],
+      "notes": {
+        "uk": "Протокол: 0,5 млн МО/кг/добу з 6-го дня, 5 днів (цикли 2 і 4). У циклі 6 — прайминг: 1 млн МО/кг з 5-го дня до збору.",
+        "en": "Protocol: 0.5 million IU/kg/day from day 6 for 5 days (cycles 2 and 4). Cycle 6 is priming: 1 million IU/kg from day 5 until the harvest."
+      }
+    }
+  ]
+}

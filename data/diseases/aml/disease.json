@@ -88,6 +88,20 @@
             "uk": "Другий цикл за біопсією",
             "en": "A second cycle by biopsy"
           }
+        },
+        {
+          "regimen_id": "midostaurin-da-3-10",
+          "notes": {
+            "uk": "FLT3-позитивна ГМЛ, перший курс (NICE TA523)",
+            "en": "FLT3-positive AML, first course (NICE TA523)"
+          }
+        },
+        {
+          "regimen_id": "midostaurin-da-3-8",
+          "notes": {
+            "uk": "FLT3-позитивна ГМЛ, другий курс",
+            "en": "FLT3-positive AML, second course"
+          }
         }
       ]
     },
@@ -121,6 +135,20 @@
           "notes": {
             "uk": "Цикл 2",
             "en": "Cycle 2"
+          }
+        },
+        {
+          "regimen_id": "midostaurin-hd-ara-c",
+          "notes": {
+            "uk": "FLT3-позитивна ГМЛ",
+            "en": "FLT3-positive AML"
+          }
+        },
+        {
+          "regimen_id": "midostaurin-maintenance",
+          "notes": {
+            "uk": "Підтримка 12 циклів після консолідації",
+            "en": "Maintenance for 12 cycles after consolidation"
           }
         }
       ]
@@ -186,6 +214,20 @@
           "notes": {
             "uk": "Цикли 2 і далі",
             "en": "Cycle 2 onwards"
+          }
+        },
+        {
+          "regimen_id": "ldac-ven-cycle-1",
+          "notes": {
+            "uk": "Цикл 1 з титруванням венетоклаксу",
+            "en": "Cycle 1 with the venetoclax ramp-up"
+          }
+        },
+        {
+          "regimen_id": "ldac-ven",
+          "notes": {
+            "uk": "Цикли 2 і далі",
+            "en": "Cycles 2 onwards"
           }
         },
         {

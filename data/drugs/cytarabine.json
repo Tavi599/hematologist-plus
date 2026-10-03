@@ -45,6 +45,25 @@
           "checkedOn": "2026-10-02"
         }
       ]
+    },
+    {
+      "key": "nacl-500",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [500],
+      "is_default": false,
+      "duration_min": 180,
+      "sources": [
+        {
+          "name": "NSSG Oxford Haematology, L.49 R-CODOX-M / R-IVAC — цитарабін 2000 мг/м² у 500 мл 0,9% NaCl за 3 години",
+          "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-49-r-codox-m-r-ivac.pdf",
+          "version": "5.0 (09.2025)",
+          "checkedOn": "2026-10-03"
+        }
+      ],
+      "notes": {
+        "uk": "Другий набір: 500 мл — для R-IVAC. Основний (250 мл) — для HD ARA-C та R-Ara-C.",
+        "en": "The second set: 500 mL, for R-IVAC. The main one (250 mL) is for HD ARA-C and R-Ara-C."
+      }
     }
   ]
 }

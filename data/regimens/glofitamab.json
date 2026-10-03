@@ -1,0 +1,109 @@
+{
+  "$comment": "Дози — NSSG Oxford L.149 (вер. 3.0, вересень 2025), цикли 2–12. Дексаметазон у циклах 4–12 — лише тим, хто мав СВЦ (позицію вимикають за відсутності).",
+  "id": "glofitamab",
+  "short_name": "Глофітамаб, цикли 2–12",
+  "name": {
+    "uk": "Глофітамаб, цикли 2–12",
+    "en": "Glofitamab, cycles 2 to 12"
+  },
+  "description": {
+    "uk": "Глофітамаб 30 мг у день 1 кожні 21 день, до 12 циклів.",
+    "en": "Glofitamab 30 mg on day 1 every 21 days, up to 12 cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 11,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.149 Glofitamab",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-149-glofitamab-eams.pdf",
+      "version": "3.0 (09.2025)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Не пізніше ніж за 60 хв до інфузії. У циклах 4–12 — лише тим, хто мав СВЦ після попередніх доз; якщо дексаметазону немає — преднізолон 100 мг або метилпреднізолон 80 мг.",
+        "en": "At least 60 minutes before the infusion. In cycles 4 to 12 only after cytokine release with earlier doses; if dexamethasone is unavailable, prednisolone 100 mg or methylprednisolone 80 mg."
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до інфузії.",
+        "en": "At least 30 minutes before the infusion."
+      }
+    },
+    {
+      "key": "loratadine",
+      "drug_id": "loratadine",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до інфузії.",
+        "en": "At least 30 minutes before the infusion."
+      }
+    },
+    {
+      "key": "glofitamab",
+      "drug_id": "glofitamab",
+      "route": "iv_infusion",
+      "dose_value": 30,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 240,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl: цикл 2 — за 4 години, з циклу 3 — за 2 години, якщо попередні дози переносилися добре; після СВЦ тривалість лишають 4 години (до 8 годин).",
+        "en": "In 100 mL 0.9% NaCl: cycle 2 over 4 hours, from cycle 3 over 2 hours if earlier doses were well tolerated; after cytokine release it stays at 4 hours (up to 8)."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Впродовж лікування і щонайменше 3 місяці після.",
+        "en": "During treatment and for at least 3 months after."
+      }
+    },
+    {
+      "key": "fluconazole",
+      "drug_id": "fluconazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Впродовж лікування.",
+        "en": "During treatment."
+      }
+    }
+  ]
+}

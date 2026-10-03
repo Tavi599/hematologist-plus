@@ -1,0 +1,151 @@
+{
+  "$comment": "Дози — NSSG Oxford L.149 (вер. 3.0, вересень 2025). Обінутузумаб перед глофітамабом — поза реєстрацією, лише для зниження ризику СВЦ. ПЕРШЕ введення глофітамабу (день 8) — з госпіталізацією на 24 години. Лікування СВЦ/ІКАНС (тоцилізумаб, стероїди) і гідратацію протокол веде за станом пацієнта — не внесено.",
+  "id": "glofitamab-cycle-1",
+  "short_name": "Глофітамаб, цикл 1",
+  "name": {
+    "uk": "Глофітамаб, цикл 1 (з обінутузумабом)",
+    "en": "Glofitamab, cycle 1 (with obinutuzumab)"
+  },
+  "description": {
+    "uk": "Рецидивна/рефрактерна ДВКЛ після двох і більше ліній. День 1 — обінутузумаб 1000 мг, день 8 — глофітамаб 2,5 мг, день 15 — 10 мг. Цикл 21 день.",
+    "en": "Relapsed or refractory DLBCL after two or more lines. Day 1 obinutuzumab 1000 mg, day 8 glofitamab 2.5 mg, day 15 10 mg. A 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.149 Glofitamab",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-149-glofitamab-eams.pdf",
+      "version": "3.0 (09.2025)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Не пізніше ніж за 60 хв до інфузії. У циклах 4–12 — лише тим, хто мав СВЦ після попередніх доз; якщо дексаметазону немає — преднізолон 100 мг або метилпреднізолон 80 мг.",
+        "en": "At least 60 minutes before the infusion. In cycles 4 to 12 only after cytokine release with earlier doses; if dexamethasone is unavailable, prednisolone 100 mg or methylprednisolone 80 mg."
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до інфузії.",
+        "en": "At least 30 minutes before the infusion."
+      }
+    },
+    {
+      "key": "loratadine",
+      "drug_id": "loratadine",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до інфузії.",
+        "en": "At least 30 minutes before the infusion."
+      }
+    },
+    {
+      "key": "obinutuzumab",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl. Починати з 50 мг/год, підвищуючи на 50 мг/год кожні 30 хв до 400 мг/год.",
+        "en": "In 250 mL 0.9% NaCl. Start at 50 mg/h and raise by 50 mg/h every 30 minutes to 400 mg/h."
+      }
+    },
+    {
+      "key": "glofitamab-d8",
+      "drug_id": "glofitamab",
+      "route": "iv_infusion",
+      "dose_value": 2.5,
+      "dose_unit": "mg_flat",
+      "days": [8],
+      "duration_min": 240,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 22.5,
+      "notes": {
+        "uk": "22,5 мл 0,9% NaCl + 2,5 мл препарату = 25 мл у шприці, 4 години (протокол: «у 25 мл»; 0,1 мг/мл — нижня межа інструкції). Після введення — спостереження в стаціонарі 24 години (СВЦ).",
+        "en": "22.5 mL of 0.9% NaCl + 2.5 mL of the drug = 25 mL in a syringe over 4 hours (the protocol says «in 25 mL»; 0.1 mg/mL is the label lower limit). Observation in hospital for 24 hours afterwards (cytokine release)."
+      }
+    },
+    {
+      "key": "glofitamab-d15",
+      "drug_id": "glofitamab",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [15],
+      "duration_min": 240,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 4 години.",
+        "en": "In 50 mL 0.9% NaCl over 4 hours."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Протокол: 28 днів від 1-го циклу (за оцінкою ризику СЛП); зменшити дозу при нирковій недостатності. Захист шлунка (омепразол 20 мг або фамотидин 20 мг двічі на добу), котримоксазол 480 мг у пн/ср/пт і Г-КСФ за показаннями — за протоколом, не внесені.",
+        "en": "Protocol: 28 days from cycle 1 (by tumour lysis risk); reduce the dose in renal impairment. Gastric protection (omeprazole 20 mg or famotidine 20 mg twice a day), co-trimoxazole 480 mg on Mon/Wed/Fri and G-CSF where indicated follow the protocol and are not entered."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Впродовж лікування і щонайменше 3 місяці після.",
+        "en": "During treatment and for at least 3 months after."
+      }
+    },
+    {
+      "key": "fluconazole",
+      "drug_id": "fluconazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Впродовж лікування.",
+        "en": "During treatment."
+      }
+    }
+  ]
+}

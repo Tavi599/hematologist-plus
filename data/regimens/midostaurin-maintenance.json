@@ -1,0 +1,42 @@
+{
+  "$comment": "Підтримка за ML.79: мідостаурин 50 мг двічі на добу безперервно, 12 циклів по 28 днів. Перед кондиціонуванням для ТГСК — припинити за 48 годин. Припинити, якщо нейтрофіли < 1,0×10⁹/л 2 тижні й довше та це пов'язують з мідостаурином.",
+  "id": "midostaurin-maintenance",
+  "short_name": "Midostaurin maintenance",
+  "name": {
+    "uk": "Мідостаурин, підтримка",
+    "en": "Midostaurin maintenance"
+  },
+  "description": {
+    "uk": "Безперервно 50 мг двічі на добу, 12 циклів по 28 днів, після консолідації у ремісії.",
+    "en": "50 mg twice daily continuously, 12 cycles of 28 days, in remission after consolidation."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 12,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.79 Midostaurin + DA + HD-Cytarabine",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-79-midostaurin-da-cytarabine.pdf",
+      "version": "3.0 (11.2025)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "midostaurin",
+      "drug_id": "midostaurin",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Під час їди, капсули цілими. При нейтрофілах < 0,5×10⁹/л призупинити до > 1,0×10⁹/л. QTc: >470 і ≤500 мс — 50 мг раз на добу, >500 мс — призупинити.",
+        "en": "With food, capsules whole. Withhold at neutrophils below 0.5 x 10^9/L until above 1.0 x 10^9/L. QTc: above 470 and up to 500 ms — 50 mg once daily, above 500 ms — withhold."
+      }
+    }
+  ]
+}

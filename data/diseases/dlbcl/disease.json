@@ -70,6 +70,13 @@
               "regimen_id": "r-chop-21"
             },
             {
+              "regimen_id": "r-chop-14",
+              "notes": {
+                "uk": "Цикл 14 днів із Г-КСФ; той самий склад, що R-CHOP-21.",
+                "en": "A 14-day cycle with G-CSF; the same drugs as R-CHOP-21."
+              }
+            },
+            {
               "regimen_id": "r-mini-chop",
               "notes": {
                 "uk": "Для пацієнтів понад 80 років",
@@ -107,12 +114,19 @@
             "en": "Stage III-IV"
           },
           "description": {
-            "uk": "До 80 років при IPI 0–1 — 6 циклів R-CHOP. При IPI ≥ 2 рівноцінний варіант — Pola-R-CHP (полатузумаб ведотин у довіднику є, схеми ще немає). Понад 80 років — 6 циклів R-mini-CHOP. Інтенсифікація (DA-EPOCH-R, R-CODOX-M/R-IVAC) — для молодих із перебудовами MYC і BCL2.",
-            "en": "Under 80 with IPI 0-1: six cycles of R-CHOP. With IPI 2 or more, Pola-R-CHP is an equal option (the drug is in the catalog, the regimen is not yet). Over 80: six cycles of R-mini-CHOP. Intensification (DA-EPOCH-R, R-CODOX-M/R-IVAC) is for younger patients with MYC and BCL2 rearrangements."
+            "uk": "До 80 років при IPI 0–1 — 6 циклів R-CHOP. При IPI ≥ 2 рівноцінний варіант — Pola-R-CHP. Понад 80 років — 6 циклів R-mini-CHOP. Інтенсифікація (DA-EPOCH-R, R-CODOX-M/R-IVAC) — для молодих із перебудовами MYC і BCL2.",
+            "en": "Under 80 with IPI 0-1: six cycles of R-CHOP. With IPI 2 or more, Pola-R-CHP is an equal option. Over 80: six cycles of R-mini-CHOP. Intensification (DA-EPOCH-R, R-CODOX-M/R-IVAC) is for younger patients with MYC and BCL2 rearrangements."
           },
           "regimens": [
             {
               "regimen_id": "r-chop-21"
+            },
+            {
+              "regimen_id": "r-chop-14",
+              "notes": {
+                "uk": "Цикл 14 днів із Г-КСФ; той самий склад, що R-CHOP-21.",
+                "en": "A 14-day cycle with G-CSF; the same drugs as R-CHOP-21."
+              }
             },
             {
               "regimen_id": "r-mini-chop",
@@ -140,6 +154,20 @@
               "notes": {
                 "uk": "Високозлоякісна В-клітинна лімфома з перебудовами MYC і BCL2 та/або BCL6",
                 "en": "High-grade B-cell lymphoma with MYC and BCL2 or BCL6 rearrangements"
+              }
+            },
+            {
+              "regimen_id": "r-codox-m",
+              "notes": {
+                "uk": "Високий IPI, «double/triple hit», ризик ураження ЦНС; цикли 1 і 3 (при низькому ризику — 3 цикли).",
+                "en": "High IPI, double- or triple-hit, risk of CNS relapse; cycles 1 and 3 (three cycles at low risk)."
+              }
+            },
+            {
+              "regimen_id": "r-ivac",
+              "notes": {
+                "uk": "Цикли 2 і 4 високоризикового чергування.",
+                "en": "Cycles 2 and 4 of the high-risk alternation."
               }
             },
             {
@@ -185,6 +213,13 @@
           "notes": {
             "uk": "Класичний стандарт першої лінії.",
             "en": "The classic first-line standard."
+          }
+        },
+        {
+          "regimen_id": "r-chop-14",
+          "notes": {
+            "uk": "Цикл 14 днів із Г-КСФ (NSSG L.48); у відділенні використовується поряд із R-CHOP-21.",
+            "en": "A 14-day cycle with G-CSF (NSSG L.48); used in the department alongside R-CHOP-21."
           }
         },
         {
@@ -356,6 +391,20 @@
           "notes": {
             "uk": "Цикли 2-6",
             "en": "Cycles 2-6"
+          }
+        },
+        {
+          "regimen_id": "glofitamab-cycle-1",
+          "notes": {
+            "uk": "Після двох і більше ліній; NICE TA927.",
+            "en": "After two or more lines; NICE TA927."
+          }
+        },
+        {
+          "regimen_id": "glofitamab",
+          "notes": {
+            "uk": "Цикли 2–12.",
+            "en": "Cycles 2 to 12."
           }
         }
       ]

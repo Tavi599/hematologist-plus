@@ -1,0 +1,101 @@
+{
+  "$comment": "Хіміотерапія — як у DA 3+10 (ML.6) за ML.79: даунорубіцин 60 мг/м² дні 1, 3, 5; цитарабін 100 мг/м² кожні 12 год, дні 1–10. Мідостаурин з 8-го дня; якщо статус FLT3 затримується — можна з 11-го дня на 14 днів. Після цього — пункція кісткового мозку; за залишкової лейкемії — другий цикл. Протигрибкова профілактика, ІПП/Н2-блокатор і пригнічення менструації в позиції не внесені.",
+  "id": "midostaurin-da-3-10",
+  "short_name": "Midostaurin + DA 3+10 (induction, cycle 1)",
+  "name": {
+    "uk": "Мідостаурин + DA 3+10 (індукція, цикл 1)",
+    "en": "Midostaurin + DA 3+10 (induction, cycle 1)"
+  },
+  "description": {
+    "uk": "FLT3-позитивна ГМЛ: DA 3+10 і мідостаурин 50 мг двічі на добу з 8-го дня 14 днів (NICE TA523).",
+    "en": "FLT3-positive AML: DA 3+10 plus midostaurin 50 mg twice daily from day 8 for 14 days (NICE TA523)."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.79 Midostaurin + DA + HD-Cytarabine",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-79-midostaurin-da-cytarabine.pdf",
+      "version": "3.0 (11.2025)",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "NSSG Oxford Haematology, ML.6 DA (daunorubicin + cytarabine)",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-6-da.pdf",
+      "version": "4.4",
+      "checkedOn": "2026-10-02"
+    }
+  ],
+  "items": [
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_bolus",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Повільно внутрішньовенно струминно кожні 12 годин, 20 введень на курс.",
+        "en": "Slow intravenous bolus every 12 hours, 20 doses per course."
+      }
+    },
+    {
+      "key": "daunorubicin",
+      "drug_id": "daunorubicin",
+      "route": "iv_infusion",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 3, 5],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Раз на добу в 250 мл 0,9% NaCl за 1 годину. Максимальна кумулятивна доза даунорубіцину — 600 мг/м² при нормальній функції серця і 400 мг/м² при її порушенні або після опромінення середостіння: порахуйте попередню експозицію.",
+        "en": "Once daily in 250 mL 0.9% sodium chloride over 1 hour. The maximum cumulative daunorubicin dose is 600 mg/m2 with normal cardiac function and 400 mg/m2 with cardiac dysfunction or previous mediastinal irradiation: count the earlier exposure."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини разом із гідратацією. У пацієнтів високого ризику може знадобитися расбуриказа — за протоколом СЛП.",
+        "en": "Tumour lysis prophylaxis together with hydration. High-risk patients may need rasburicase, per the TLS protocol."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Противірусна профілактика: впродовж лікування і 3 місяці після його завершення.",
+        "en": "Antiviral prophylaxis: throughout treatment and for 3 months after it ends."
+      }
+    },
+    {
+      "key": "midostaurin",
+      "drug_id": "midostaurin",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Під час їди, капсули цілими. Стежити за QTc: >470 і ≤500 мс — 50 мг раз на добу, >500 мс — призупинити.",
+        "en": "With food, capsules whole. Watch the QTc: above 470 and up to 500 ms — 50 mg once daily, above 500 ms — withhold."
+      }
+    }
+  ]
+}

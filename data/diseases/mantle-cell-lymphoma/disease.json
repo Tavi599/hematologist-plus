@@ -55,6 +55,20 @@
       },
       "regimens": [
         {
+          "regimen_id": "r-maxi-chop",
+          "notes": {
+            "uk": "Цикли 1, 3, 5 чергування Nordic MCL2; далі BEAM з аутотрансплантацією.",
+            "en": "Cycles 1, 3 and 5 of the Nordic MCL2 alternation; BEAM with autologous transplant follows."
+          }
+        },
+        {
+          "regimen_id": "r-ara-c",
+          "notes": {
+            "uk": "Цикли 2, 4, 6; у циклі 6 — збір стовбурових клітин.",
+            "en": "Cycles 2, 4 and 6; stem-cell harvest after cycle 6."
+          }
+        },
+        {
           "regimen_id": "r-dhaox"
         }
       ]

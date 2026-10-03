@@ -1,0 +1,234 @@
+{
+  "$comment": "Дози цитостатиків — NSSG Oxford L.84 (вер. 2.1, вересень 2024): половина індукції MCL за схемою Nordic MCL2 — R-maxi-CHOP у циклах 1, 3, 5, чергується з R-Ara-C (окремий запис) у циклах 2, 4, 6, після чого BEAM з аутотрансплантацією. Премедикація відділення — як у R-CHOP-21 (хлорфенамін протоколу замінено димедролом). Омепразол 20 мг на днях 1–5 і метоклопрамід за протоколом не внесено.",
+  "id": "r-maxi-chop",
+  "short_name": "R-maxi-CHOP",
+  "name": {
+    "uk": "R-maxi-CHOP (цикли 1, 3, 5 чергування з R-Ara-C)",
+    "en": "R-maxi-CHOP (cycles 1, 3 and 5 of the alternation with R-Ara-C)"
+  },
+  "description": {
+    "uk": "Ритуксимаб, циклофосфамід 1200 мг/м², доксорубіцин 75 мг/м², вінкристин, преднізолон. Цикл 21 день; у циклах 1, 3, 5 з шести, між ними — R-Ara-C. Мантійноклітинна лімфома, інтенсивна терапія для підготовлених пацієнтів.",
+    "en": "Rituximab, cyclophosphamide 1200 mg/m2, doxorubicin 75 mg/m2, vincristine, prednisolone. A 21-day cycle; cycles 1, 3 and 5 of six, with R-Ara-C between them. Mantle cell lymphoma, intensive treatment for fit patients."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, L.84 R-maxi-CHOP / R-Ara-C",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-84-maxi-chop-arac-r.pdf",
+      "version": "2.1 (09.2024)",
+      "checkedOn": "2026-10-03"
+    },
+    {
+      "name": "Дизайн відділення «Ритуксимаб» (Google Таблиці)",
+      "checkedOn": "2026-09-19"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до ритуксимабу",
+        "en": "At least 30 minutes before rituximab"
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "Уранці під час їди; у день 1 — не пізніше ніж за 30 хв до ритуксимабу",
+        "en": "In the morning with food; on day 1 at least 30 minutes before rituximab"
+      }
+    },
+    {
+      "key": "omeprazole",
+      "drug_id": "omeprazole",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "У 20–40 мл 0,9% NaCl, в/в струминно повільно",
+        "en": "In 20-40 mL 0.9% NaCl, slow IV push"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Разом із димедролом у 100 мл 0,9% NaCl, в/в крапельно 200 мл/год, до ритуксимабу",
+        "en": "With diphenhydramine in 100 mL 0.9% NaCl, IV 200 mL/h, before rituximab"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% — 5,0 мл; у тому самому флаконі, що й дексаметазон (замість хлорфенаміну протоколу)",
+        "en": "Diphenhydramine 1% 5.0 mL, in the same bag as dexamethasone (replaces the protocol's chlorphenamine)"
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "Максимальна швидкість 400 мг/год; спостереження 30 хв перед наступними інфузіями",
+        "en": "Maximum rate 400 mg/h; observe for 30 minutes before the next infusions"
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 75,
+      "dose_unit": "mg_m2",
+      "days": [1]
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "cap_amount": 2,
+      "days": [1],
+      "notes": {
+        "uk": "Пацієнтам понад 70 років розгляньте обмеження дози до 1 мг",
+        "en": "In patients over 70 consider capping the dose at 1 mg"
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 1200,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "Струминно. Доза 1200 мг/м² — вища за R-CHOP, тому потрібен захист сечового міхура месною (нижче).",
+        "en": "As a bolus. At 1200 mg/m2, above R-CHOP, so the bladder needs mesna (below)."
+      }
+    },
+    {
+      "key": "mesna-iv",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 240,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "20% дози циклофосфаміду, струминно безпосередньо перед циклофосфамідом.",
+        "en": "20% of the cyclophosphamide dose, as a bolus immediately before it."
+      }
+    },
+    {
+      "key": "mesna-oral",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 480,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "administrations_per_day": 2,
+      "interval_min": 240,
+      "notes": {
+        "uk": "40% дози циклофосфаміду всередину через 2 і 6 годин після внутрішньовенної месни. Пацієнтам із високим ризиком уротоксичності інтервал скорочують або збільшують кількість доз.",
+        "en": "40% of the cyclophosphamide dose by mouth 2 and 6 hours after the intravenous mesna. At high risk of urothelial toxicity the interval is shortened or more doses are given."
+      }
+    },
+    {
+      "key": "ondansetron-d1",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "administrations_per_day": 2,
+      "anchor_offset_min": -30,
+      "interval_min": 480
+    },
+    {
+      "key": "ondansetron-d2",
+      "drug_id": "ondansetron",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [2],
+      "anchor_offset_min": -30
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини, 1-й цикл, 7 днів; зменшити дозу при нирковій недостатності.",
+        "en": "Tumour lysis prophylaxis, cycle 1, 7 days; reduce the dose in renal impairment."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Протокол: 200 мг тричі на добу впродовж лікування і ще 3 місяці після.",
+        "en": "Protocol: 200 mg three times a day during treatment and for 3 months after."
+      }
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "miu_kg",
+      "days": [6, 7, 8, 9, 10],
+      "notes": {
+        "uk": "Протокол: 0,5 млн МО/кг/добу з 6-го дня, 5 днів (у циклах 1–5; у циклі 6 — прайминг, 1 млн МО/кг з 5-го дня до збору).",
+        "en": "Protocol: 0.5 million IU/kg/day from day 6 for 5 days (cycles 1 to 5; cycle 6 is priming at 1 million IU/kg from day 5 until the harvest)."
+      }
+    }
+  ]
+}

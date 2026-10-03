@@ -1,0 +1,99 @@
+{
+  "$comment": "Консолідація за ML.79: цитарабін 3 г/м² двічі на добу в дні 1, 3, 5 (6 доз) у 250 мл 0,9% NaCl за 3 години; мідостаурин дні 8–21. Для пацієнтів від 60 років і молодших із супутніми хворобами за рішенням консиліуму — 1,5 г/м² (у списку доз). Загальна кількість циклів індукції й консолідації — 4. Очні краплі зі стероїдом (преднізолон 0,5–1% або дексаметазон 0,1% по краплі в кожне око 4 рази на добу з 1-го дня і ще 5 днів після цитарабіну) — не внесені: доза не в мг.",
+  "id": "midostaurin-hd-ara-c",
+  "short_name": "Midostaurin + HD ARA-C",
+  "name": {
+    "uk": "Мідостаурин + високі дози цитарабіну (консолідація)",
+    "en": "Midostaurin + high-dose cytarabine (consolidation)"
+  },
+  "description": {
+    "uk": "Консолідація при FLT3-позитивній ГМЛ: цитарабін 3 г/м² двічі на добу в дні 1, 3, 5 і мідостаурин 50 мг двічі на добу з 8-го по 21-й день. Дві або три консолідації. Лише коли нейтрофіли ≥ 1,0×10⁹/л і тромбоцити ≥ 100×10⁹/л.",
+    "en": "Consolidation for FLT3-positive AML: cytarabine 3 g/m2 twice daily on days 1, 3 and 5 and midostaurin 50 mg twice daily on days 8 to 21. Two or three consolidations. Only with neutrophils at least 1.0 x 10^9/L and platelets at least 100 x 10^9/L."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, ML.79 Midostaurin + DA + HD-Cytarabine",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-79-midostaurin-da-cytarabine.pdf",
+      "version": "3.0 (11.2025)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 3000,
+      "dose_unit": "mg_m2",
+      "days": [1, 3, 5],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Двічі на добу, у 250 мл 0,9% NaCl за 3 години (6 доз).",
+        "en": "Twice daily, in 250 mL 0.9% NaCl over 3 hours (6 doses)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 1500,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Від 60 років і молодші з супутніми хворобами — за рішенням консиліуму",
+            "en": "From 60 years, and younger patients with comorbidity — by the MDT"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.79 Midostaurin + DA + HD-Cytarabine",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-79-midostaurin-da-cytarabine.pdf",
+            "version": "3.0 (11.2025)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "midostaurin",
+      "drug_id": "midostaurin",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Під час їди, капсули цілими. Стежити за QTc: >470 і ≤500 мс — 50 мг раз на добу, >500 мс — призупинити.",
+        "en": "With food, capsules whole. Watch the QTc: above 470 and up to 500 ms — 50 mg once daily, above 500 ms — withhold."
+      }
+    },
+    {
+      "key": "aciclovir",
+      "drug_id": "aciclovir",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "administrations_per_day": 3,
+      "notes": {
+        "uk": "Впродовж лікування і ще 3 місяці після.",
+        "en": "During treatment and for 3 months after."
+      }
+    },
+    {
+      "key": "fluconazole",
+      "drug_id": "fluconazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "Консолідація — низький ризик: флуконазол до відновлення нейтрофілів; за рішенням клініциста позаконазол або вориконазол.",
+        "en": "Consolidation is low risk: fluconazole until neutrophil recovery; posaconazole or voriconazole at the clinician's discretion."
+      }
+    }
+  ]
+}
