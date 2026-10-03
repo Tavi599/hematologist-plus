@@ -1,0 +1,62 @@
+{
+  "id": "ref-mm-teclistamab",
+  "short_name": "Теклістамаб ± даратумумаб",
+  "name": {
+    "uk": "Теклістамаб ± даратумумаб (рецидив мієломи)",
+    "en": "Teclistamab ± daratumumab (relapsed myeloma)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Multiple myeloma: Treatment of relapsed disease",
+      "url": "https://www.uptodate.com/contents/multiple-myeloma-treatment-of-relapsed-disease",
+      "version": "перевірено 2026-10-04 (огляд літератури до вересня 2026)",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Multiple myeloma: Administration considerations for common therapies",
+      "url": "https://www.uptodate.com/contents/multiple-myeloma-administration-considerations-for-common-therapies",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "За UpToDate таргетна на BCMA терапія — кращий вибір при першому рецидиві; теклістамаб покращив виживаність без прогресування й загальну виживаність проти потрійних схем (PVd, Kd) і проти DPd/DVd у комбінації з даратумумабом.",
+      "en": "Per UpToDate BCMA-directed therapy is preferred at first relapse; teclistamab improved progression-free and overall survival versus triplet regimens (PVd, Kd), and with daratumumab versus DPd/DVd."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Теклістамаб п/ш",
+          "en": "Teclistamab SC"
+        }
+      },
+      {
+        "name": {
+          "uk": "Даратумумаб п/ш",
+          "en": "Daratumumab SC"
+        },
+        "drug_id": "daratumumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Починають зі східчастого підвищення дози протягом першого тижня, далі — до прогресування чи неприйнятної токсичності; премедикація (кортикостероїд, антигістамінний, жарознижувальний) — за інструкцією.",
+        "en": "Treatment begins with step-up dosing over the first week, then continues until progression or unacceptable toxicity; premedication (a corticosteroid, an antihistamine, an antipyretic) per the label."
+      },
+      {
+        "uk": "З даратумумабом після сходинок слідують схемі даратумумабу; після першого циклу без стероїдів. Обов'язково профілактичний імуноглобулін, противірусна й пневмоцистна профілактика.",
+        "en": "With daratumumab the daratumumab schedule is followed after step-up; steroid-free after the first cycle. Prophylactic immunoglobulin, antiviral and Pneumocystis prophylaxis are required."
+      },
+      {
+        "uk": "Лише в США схвалено при ≥4 попередніх лініях (монотерапія) або ≥1 лінії (з даратумумабом).",
+        "en": "Approved in the USA after at least 4 prior lines (alone) or at least 1 line (with daratumumab)."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз теклістамабу, тому їх треба брати з інструкції, яка ще не опрацьована; препарату немає в довіднику.",
+      "en": "UpToDate does not state the teclistamab doses (they come from the FDA label, which has not been worked through yet), and the drug is not in the catalog."
+    },
+    "availability": "unavailable"
+  }
+}

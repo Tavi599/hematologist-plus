@@ -1,0 +1,56 @@
+{
+  "id": "ref-mm-dkd",
+  "short_name": "Dara-Kd",
+  "name": {
+    "uk": "Даратумумаб + карфілзоміб + дексаметазон (DKd)",
+    "en": "Daratumumab + carfilzomib + dexamethasone (DKd)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Multiple myeloma: Treatment of relapsed disease",
+      "url": "https://www.uptodate.com/contents/multiple-myeloma-treatment-of-relapsed-disease",
+      "version": "перевірено 2026-10-04 (огляд літератури до вересня 2026)",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидив мієломи після 1–3 ліній; покращив виживаність без прогресування проти Kd (CANDOR). Ізатуксимаб + Kd уже є в довіднику (isa-kd).",
+      "en": "Relapsed myeloma after one to three lines; improved progression-free survival against Kd (CANDOR). Isatuximab + Kd is already in the catalog (isa-kd)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Даратумумаб",
+          "en": "Daratumumab"
+        },
+        "drug_id": "daratumumab"
+      },
+      {
+        "name": {
+          "uk": "Карфілзоміб",
+          "en": "Carfilzomib"
+        },
+        "drug_id": "carfilzomib"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "У CANDOR терапію припинили через побічні події у 26%, фатальні події у 9%; літні й середньої придатності мали більше фатальних подій.",
+        "en": "In CANDOR therapy was stopped because of adverse events in 26%, fatal events occurred in 9%; older and intermediate-fitness patients had more fatal events."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз і днів, а в довіднику немає схеми карфілзомібу з даратумумабом.",
+      "en": "UpToDate gives no doses or days, and the catalog has no carfilzomib–daratumumab regimen."
+    },
+    "availability": "unknown"
+  }
+}

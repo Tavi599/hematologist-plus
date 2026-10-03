@@ -1,0 +1,115 @@
+{
+  "$comment": "Елранатамаб за eviQ 4555 (вер. 3, переглянуто 05.08.2026) і листком FDA: підшкірно в живіт (краще) або стегно; після кожної дози зі сходинками — спостереження щонайменше 48 годин. Цикл 28 днів, до прогресування чи неприйнятної токсичності. Профілактика пневмоцистної, герпетичної інфекцій і імуноглобулін (UpToDate) не внесені: вмикайте в «Супроводі за стандартом» або вручну. Лікування СВЦ/ІКАНС не внесено.",
+  "id": "elranatamab-cycle-1",
+  "short_name": "Елранатамаб, цикл 1",
+  "name": {
+    "uk": "Елранатамаб, цикл 1",
+    "en": "Elranatamab, cycle 1"
+  },
+  "description": {
+    "uk": "12 мг (день 1), 32 мг (день 4), 76 мг (дні 8, 15, 22) з премедикацією.",
+    "en": "12 mg (day 1), 32 mg (day 4), 76 mg (days 8, 15, 22) with premedication."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "eviQ: Multiple myeloma — elranatamab (протокол 4555)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/4555-multiple-myeloma-elranatamab",
+      "version": "вер. 3, переглянуто 05.08.2026",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: ELREXFIO (elranatamab-bcmm) — флакони 44 мг/1,1 мл і 76 мг/1,9 мл (40 мг/мл), готовий розчин для підшкірного введення",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa044060-5b4b-4692-bf0f-9a50e140b10e",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Multiple myeloma: Administration considerations for common therapies",
+      "url": "https://www.uptodate.com/contents/multiple-myeloma-administration-considerations-for-common-therapies",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 4, 8],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "За 60 хв до елранатамабу (дні 1, 4, 8 — eviQ 4555).",
+        "en": "60 minutes before elranatamab (days 1, 4, 8 — eviQ 4555)."
+      }
+    },
+    {
+      "key": "loratadine",
+      "drug_id": "loratadine",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 4, 8],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "За 60 хв до елранатамабу.",
+        "en": "60 minutes before elranatamab."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 4, 8],
+      "anchor_offset_min": -60,
+      "notes": {
+        "uk": "20 мг усередину чи в/в за 60 хв до елранатамабу.",
+        "en": "20 mg by mouth or IV 60 minutes before elranatamab."
+      }
+    },
+    {
+      "key": "elranatamab-d1",
+      "drug_id": "elranatamab",
+      "route": "subcutaneous",
+      "dose_value": 12,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Сходинка 1: 12 мг (eviQ 4555).",
+        "en": "12 mg subcutaneously (eviQ 4555)."
+      }
+    },
+    {
+      "key": "elranatamab-d4",
+      "drug_id": "elranatamab",
+      "route": "subcutaneous",
+      "dose_value": 32,
+      "dose_unit": "mg_flat",
+      "days": [4],
+      "notes": {
+        "uk": "Сходинка 2: 32 мг (eviQ 4555).",
+        "en": "32 mg subcutaneously (eviQ 4555)."
+      }
+    },
+    {
+      "key": "elranatamab-full",
+      "drug_id": "elranatamab",
+      "route": "subcutaneous",
+      "dose_value": 76,
+      "dose_unit": "mg_flat",
+      "days": [8, 15, 22],
+      "notes": {
+        "uk": "76 мг підшкірно (eviQ 4555).",
+        "en": "76 mg subcutaneously (eviQ 4555)."
+      }
+    }
+  ]
+}

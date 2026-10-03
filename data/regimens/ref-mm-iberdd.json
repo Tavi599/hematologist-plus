@@ -1,0 +1,55 @@
+{
+  "id": "ref-mm-iberdd",
+  "short_name": "Іберомід + даратумумаб + дексаметазон",
+  "name": {
+    "uk": "IberDd (іберомід + даратумумаб п/ш + дексаметазон)",
+    "en": "IberDd (iberdomide + daratumumab SC + dexamethasone)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Multiple myeloma: Treatment of relapsed disease",
+      "url": "https://www.uptodate.com/contents/multiple-myeloma-treatment-of-relapsed-disease",
+      "version": "перевірено 2026-10-04 (огляд літератури до вересня 2026)",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидив мієломи після ≥1 лінії, включно з інгібітором протеасом і IMiD; в США схвалено за прискореною процедурою. Глибші відповіді, ніж DVd, але значно більше нейтропенії й інфекцій.",
+      "en": "Relapsed myeloma after at least one line, including a proteasome inhibitor and an IMiD; approved in the USA by accelerated approval. Deeper responses than DVd, but substantially more neutropenia and infections."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Іберомід",
+          "en": "Iberdomide"
+        }
+      },
+      {
+        "name": {
+          "uk": "Даратумумаб п/ш",
+          "en": "Daratumumab SC"
+        },
+        "drug_id": "daratumumab"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "UpToDate зазначає, що потрібне довше спостереження, щоб побачити, чи глибші відповіді дадуть пізніше прогресування й кращу виживаність.",
+        "en": "UpToDate notes that longer follow-up is needed to see whether the deeper responses translate into delayed progression and better survival."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз; іберомід ще не в довіднику.",
+      "en": "UpToDate gives no doses; iberdomide is not in the catalog yet."
+    },
+    "availability": "unavailable"
+  }
+}

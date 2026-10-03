@@ -414,6 +414,57 @@
             "uk": "Після чотирьох і більше ліній терапії.",
             "en": "After four or more prior therapies."
           }
+        },
+        {
+          "regimen_id": "dvd-cycle-1-3",
+          "notes": {
+            "uk": "Після ≥1 лінії; eviQ 4175",
+            "en": "After at least one line; eviQ 4175"
+          }
+        },
+        {
+          "regimen_id": "dvd-cycle-4-8"
+        },
+        {
+          "regimen_id": "daratumumab-sc-maintenance",
+          "notes": {
+            "uk": "Після DVd; eviQ 4176",
+            "en": "After DVd; eviQ 4176"
+          }
+        },
+        {
+          "regimen_id": "elranatamab-cycle-1",
+          "notes": {
+            "uk": "Після ≥4 ліній; eviQ 4555",
+            "en": "After at least four lines; eviQ 4555"
+          }
+        },
+        {
+          "regimen_id": "elranatamab-cycle-2-6"
+        },
+        {
+          "regimen_id": "elranatamab-cycle-7-12"
+        },
+        {
+          "regimen_id": "elranatamab",
+          "notes": {
+            "uk": "Цикл 13 і далі",
+            "en": "Cycle 13 onwards"
+          }
+        },
+        {
+          "regimen_id": "pcd-cycle-1-9",
+          "notes": {
+            "uk": "eviQ 3645",
+            "en": "eviQ 3645"
+          }
+        },
+        {
+          "regimen_id": "pcd",
+          "notes": {
+            "uk": "Цикл 10 і далі",
+            "en": "Cycle 10 onwards"
+          }
         }
       ]
     },
@@ -454,6 +505,41 @@
         }
       ],
       "children": []
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
+        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-mm-teclistamab"
+        },
+        {
+          "regimen_id": "ref-mm-talquetamab"
+        },
+        {
+          "regimen_id": "ref-mm-belantamab"
+        },
+        {
+          "regimen_id": "ref-mm-iberdd"
+        },
+        {
+          "regimen_id": "ref-mm-dkd"
+        },
+        {
+          "regimen_id": "ref-mm-car-t"
+        },
+        {
+          "regimen_id": "ref-mm-venetoclax"
+        }
+      ]
     }
   ]
 }

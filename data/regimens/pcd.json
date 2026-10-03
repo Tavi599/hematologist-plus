@@ -1,0 +1,65 @@
+{
+  "$comment": "PCd за eviQ 3645 (вер. 3): цикл 28 днів, до прогресування чи неприйнятної токсичності; циклофосфамід лише в циклах 1–9. Профілактика ВТЕ (аспірин у малій дозі або еноксапарин 40 мг на добу при факторах ризику) не внесена: вмикайте вручну.",
+  "id": "pcd",
+  "short_name": "Pd (після PCd)",
+  "name": {
+    "uk": "Помалідомід + дексаметазон, цикл 10 і далі (після PCd)",
+    "en": "Pomalidomide + dexamethasone, cycle 10 onwards (after PCd)"
+  },
+  "description": {
+    "uk": "Без циклофосфаміду: помалідомід 4 мг дні 1–21, дексаметазон 40 мг щотижня; до прогресування.",
+    "en": "Without cyclophosphamide: pomalidomide 4 mg on days 1 to 21, dexamethasone 40 mg weekly; until progression."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "eviQ: Multiple myeloma — pomalidomide, cyclophosphamide and dexamethasone (протокол 3645)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/3645-pomalidomide-cyclophosphamide-and-dexamethaso",
+      "version": "вер. 3",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "pomalidomide",
+      "drug_id": "pomalidomide",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "4 мг раз на добу, дні 1–21 (eviQ 3645). Приймають лише в межах програми запобігання вагітності.",
+        "en": "4 mg once a day on days 1 to 21 (eviQ 3645). Given only within the pregnancy prevention programme."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "40 мг раз на тиждень; понад 75 років — 20 мг (eviQ 3645).",
+        "en": "40 mg once a week; over 75 years 20 mg (eviQ 3645)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Понад 75 років (eviQ 3645)",
+            "en": "Over 75 years (eviQ 3645)"
+          },
+          "source": {
+            "name": "eviQ: Multiple myeloma — pomalidomide, cyclophosphamide and dexamethasone (протокол 3645)",
+            "url": "https://www.eviq.org.au/haematology/multiple-myeloma/3645-pomalidomide-cyclophosphamide-and-dexamethaso",
+            "version": "вер. 3",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    }
+  ]
+}

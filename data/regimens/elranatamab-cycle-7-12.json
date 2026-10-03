@@ -1,0 +1,49 @@
+{
+  "$comment": "Елранатамаб за eviQ 4555 (вер. 3, переглянуто 05.08.2026) і листком FDA: підшкірно в живіт (краще) або стегно; після кожної дози зі сходинками — спостереження щонайменше 48 годин. Цикл 28 днів, до прогресування чи неприйнятної токсичності. Профілактика пневмоцистної, герпетичної інфекцій і імуноглобулін (UpToDate) не внесені: вмикайте в «Супроводі за стандартом» або вручну. Лікування СВЦ/ІКАНС не внесено.",
+  "id": "elranatamab-cycle-7-12",
+  "short_name": "Елранатамаб, цикли 7–12",
+  "name": {
+    "uk": "Елранатамаб, цикли 7–12",
+    "en": "Elranatamab, cycles 7-12"
+  },
+  "description": {
+    "uk": "76 мг раз на 2 тижні: дні 1 і 15. При тривалій токсичності день 15 можна пропустити.",
+    "en": "76 mg every 2 weeks: days 1 and 15. With persisting toxicity day 15 can be omitted."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "eviQ: Multiple myeloma — elranatamab (протокол 4555)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/4555-multiple-myeloma-elranatamab",
+      "version": "вер. 3, переглянуто 05.08.2026",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: ELREXFIO (elranatamab-bcmm) — флакони 44 мг/1,1 мл і 76 мг/1,9 мл (40 мг/мл), готовий розчин для підшкірного введення",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa044060-5b4b-4692-bf0f-9a50e140b10e",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Multiple myeloma: Administration considerations for common therapies",
+      "url": "https://www.uptodate.com/contents/multiple-myeloma-administration-considerations-for-common-therapies",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "elranatamab",
+      "drug_id": "elranatamab",
+      "route": "subcutaneous",
+      "dose_value": 76,
+      "dose_unit": "mg_flat",
+      "days": [1, 15],
+      "notes": {
+        "uk": "76 мг підшкірно (eviQ 4555).",
+        "en": "76 mg subcutaneously (eviQ 4555)."
+      }
+    }
+  ]
+}

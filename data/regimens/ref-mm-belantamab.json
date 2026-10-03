@@ -1,0 +1,59 @@
+{
+  "id": "ref-mm-belantamab",
+  "short_name": "Белантамаб (BVd / BPd)",
+  "name": {
+    "uk": "Белантамаб мафодотин: BVd, BPd (рецидив мієломи)",
+    "en": "Belantamab mafodotin: BVd, BPd (relapsed myeloma)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Multiple myeloma: Treatment of relapsed disease",
+      "url": "https://www.uptodate.com/contents/multiple-myeloma-treatment-of-relapsed-disease",
+      "version": "перевірено 2026-10-04 (огляд літератури до вересня 2026)",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Анти-BCMA кон'югат антитіла. BVd покращив загальну виживаність проти DVd; у Європі зареєстровано BVd (≥1 попередня лінія) і BPd (≥1 лінія, включно з леналідомідом). У США — BVd після ≥2 ліній.",
+      "en": "An anti-BCMA antibody-drug conjugate. BVd improved overall survival against DVd; in Europe BVd (at least one prior line) and BPd (at least one line including lenalidomide) are approved. In the USA, BVd after at least two lines."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Белантамаб мафодотин",
+          "en": "Belantamab mafodotin"
+        }
+      },
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Помалідомід",
+          "en": "Pomalidomide"
+        },
+        "drug_id": "pomalidomide"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "На відміну від інших BCMA-препаратів СВЦ і нейротоксичність не описані; обов'язковий офтальмологічний моніторинг перед кожною дозою (ураження рогівки).",
+        "en": "Unlike the other BCMA drugs, cytokine release and neurotoxicity are not reported; ophthalmic monitoring before every dose is required (corneal toxicity)."
+      },
+      {
+        "uk": "У практиці рідше введення зменшує токсичність.",
+        "en": "In practice less frequent dosing lowers toxicity."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз і днів, а белантамабу немає в довіднику.",
+      "en": "UpToDate gives no doses or days, and belantamab is not in the catalog."
+    },
+    "availability": "unavailable"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ref-mm-car-t",
+  "short_name": "CAR-T (іде-кел, цилта-кел)",
+  "name": {
+    "uk": "CAR-T проти BCMA: ідекабтаген віклеуцел, цильтакабтаген аутолейцел",
+    "en": "Anti-BCMA CAR-T: idecabtagene vicleucel, ciltacabtagene autoleucel"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Multiple myeloma: Treatment of relapsed disease",
+      "url": "https://www.uptodate.com/contents/multiple-myeloma-treatment-of-relapsed-disease",
+      "version": "перевірено 2026-10-04 (огляд літератури до вересня 2026)",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Один із кращих варіантів при рецидиві мієломи; потребує виробництва клітин для хворого й лімфодеплеції циклофосфамідом + флударабіном. Відповідь близько 78%, медіана ВБП 8–20 місяців.",
+      "en": "One of the preferred options for relapsed myeloma; the cells are made for the patient after lymphodepletion with cyclophosphamide plus fludarabine. Response about 78%, median PFS 8 to 20 months."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід (лімфодеплеція)",
+          "en": "Cyclophosphamide (lymphodepletion)"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Флударабін (лімфодеплеція)",
+          "en": "Fludarabine (lymphodepletion)"
+        },
+        "drug_id": "fludarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Цилта-кел схвалений після ≥1 лінії при рефрактерності до леналідоміду; іде-кел — після ≥2 ліній. У дослідженні KarMMa-3 іде-кел подовжив ВБП: 13,8 проти 4,4 міс.",
+        "en": "Cilta-cel is approved after at least one line when refractory to lenalidomide; ide-cel after at least two lines. In KarMMa-3 ide-cel prolonged PFS: 13.8 versus 4.4 months."
+      },
+      {
+        "uk": "Ризики: СВЦ, ІКАНС, ентероколіт (цилта-кел), вторинні Т-клітинні пухлини.",
+        "en": "Risks: cytokine release, ICANS, enterocolitis (cilta-cel), secondary T-cell malignancies."
+      }
+    ],
+    "gap": {
+      "uk": "Це клітинна терапія, а не схема з дозами: лімфодеплеція йде за протоколом центру, UpToDate доз не наводить.",
+      "en": "This is cell therapy, not a dosed regimen: lymphodepletion follows the centre's protocol and UpToDate gives no doses."
+    },
+    "availability": "unavailable"
+  }
+}

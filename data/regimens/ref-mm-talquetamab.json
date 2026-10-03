@@ -1,0 +1,51 @@
+{
+  "id": "ref-mm-talquetamab",
+  "short_name": "Талкветамаб",
+  "name": {
+    "uk": "Талкветамаб (GPRC5D×CD3, мієлома)",
+    "en": "Talquetamab (GPRC5D×CD3, myeloma)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Multiple myeloma: Treatment of relapsed disease",
+      "url": "https://www.uptodate.com/contents/multiple-myeloma-treatment-of-relapsed-disease",
+      "version": "перевірено 2026-10-04 (огляд літератури до вересня 2026)",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "UpToDate: Multiple myeloma: Administration considerations for common therapies",
+      "url": "https://www.uptodate.com/contents/multiple-myeloma-administration-considerations-for-common-therapies",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Мієлома, яка прогресує після ≥4 ліній, включно з анти-CD38 антитілом, інгібітором протеасом і IMiD; бісспецифічне антитіло проти GPRC5D.",
+      "en": "Myeloma progressing after at least 4 lines, including an anti-CD38 antibody, a proteasome inhibitor and an IMiD; a bispecific antibody against GPRC5D."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Талкветамаб п/ш",
+          "en": "Talquetamab SC"
+        }
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Комбінація з даратумумабом ± помалідомідом відсунула прогресування проти DPd, але реєстрації комбінацій немає; UpToDate чекає більше даних.",
+        "en": "The combination with daratumumab ± pomalidomide delayed progression against DPd, but the combinations are not approved; UpToDate awaits more data."
+      },
+      {
+        "uk": "Особливі токсичності: зміна смаку, втрата ваги, ураження слизової рота, шкіри й нігтів; СВЦ та ІКАНС.",
+        "en": "Specific toxicities: taste change, weight loss, oral, skin and nail toxicity; cytokine release and ICANS."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить доз і сходинок талкветамабу, а препарату немає в довіднику.",
+      "en": "UpToDate gives no talquetamab doses or step-up, and the drug is not in the catalog."
+    },
+    "availability": "unavailable"
+  }
+}

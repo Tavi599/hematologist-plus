@@ -1,0 +1,37 @@
+{
+  "$comment": "Підтримка даратумумабом п/ш за eviQ 4176 (вер. 5): 1800 мг у день 1 кожного 28-денного циклу до прогресування чи неприйнятної токсичності; після DVd (рецидив) або D-VMP (вперше виявлена, непридатні до трансплантації). З циклу 2 рутинна премедикація не потрібна (eviQ 2026).",
+  "id": "daratumumab-sc-maintenance",
+  "short_name": "Даратумумаб п/ш підтримка",
+  "name": {
+    "uk": "Даратумумаб п/ш, підтримка",
+    "en": "Daratumumab SC, maintenance"
+  },
+  "description": {
+    "uk": "1800 мг підшкірно у день 1 кожні 4 тижні до прогресування чи неприйнятної токсичності.",
+    "en": "1800 mg subcutaneously on day 1 every 4 weeks until progression or unacceptable toxicity."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "eviQ: Multiple myeloma — daratumumab subcutaneous maintenance (протокол 4176)",
+      "url": "https://www.eviq.org.au/haematology-and-bmt/multiple-myeloma/4176-multiple-myeloma-daratumumab-subcutaneous-mai",
+      "version": "вер. 5 (квітень 2026)",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "subcutaneous",
+      "dose_value": 1800,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "1800 мг підшкірно за 3–5 хвилин у черевну стінку; перше введення — 4 години спостереження (eviQ 4176).",
+        "en": "1800 mg subcutaneously over 3 to 5 minutes into the abdominal wall; 4 hours of observation after the first dose (eviQ 4176)."
+      }
+    }
+  ]
+}

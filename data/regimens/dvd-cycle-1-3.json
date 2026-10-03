@@ -1,0 +1,87 @@
+{
+  "$comment": "DVd за eviQ 4175 (вер. 4): цикл 21 день, 8 циклів, далі даратумумаб п/ш раз на 4 тижні (схема «Даратумумаб п/ш, підтримка»). Премедикація за eviQ 4175 — на цикл 1; з циклу 2 рутинна премедикація не потрібна (eviQ 2026). Тромбопрофілактика, ко-тримоксазол і противірусна профілактика не внесені: ввімкніть їх у «Супроводі за стандартом» або вручну.",
+  "id": "dvd-cycle-1-3",
+  "short_name": "DVd ц.1-3",
+  "name": {
+    "uk": "DVd (даратумумаб п/ш + бортезоміб + дексаметазон), цикли 1–3",
+    "en": "DVd (daratumumab SC + bortezomib + dexamethasone), cycles 1-3"
+  },
+  "description": {
+    "uk": "Рецидив мієломи після ≥1 лінії: даратумумаб щотижня (дні 1, 8, 15), бортезоміб дні 1, 4, 8, 11, дексаметазон. Цикл 21 день.",
+    "en": "Relapsed myeloma after at least one line: daratumumab weekly (days 1, 8, 15), bortezomib days 1, 4, 8, 11, dexamethasone. A 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "eviQ: Multiple myeloma — DVd (daratumumab subcutaneous, bortezomib, dexamethasone) (протокол 4175)",
+      "url": "https://www.eviq.org.au/haematology-and-bmt/multiple-myeloma/4175-multiple-myeloma-dvd-daratumumab-sc-bortezom",
+      "version": "вер. 4",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "У дні даратумумабу (eviQ 4175, цикл 1).",
+        "en": "On daratumumab days (eviQ 4175, cycle 1)."
+      }
+    },
+    {
+      "key": "loratadine",
+      "drug_id": "loratadine",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "За 1–3 години до даратумумабу (eviQ 4175, цикл 1).",
+        "en": "1 to 3 hours before daratumumab (eviQ 4175, cycle 1)."
+      }
+    },
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "subcutaneous",
+      "dose_value": 1800,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "1800 мг підшкірно (eviQ 4175).",
+        "en": "1800 mg subcutaneously (eviQ 4175)."
+      }
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 4, 8, 11],
+      "notes": {
+        "uk": "1,3 мг/м² підшкірно (eviQ 4175).",
+        "en": "1.3 mg/m2 subcutaneously (eviQ 4175)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 4, 5, 8, 9, 11, 12],
+      "notes": {
+        "uk": "20 мг у день бортезомібу і наступний день (усередину або в/в). Для хворих >75 років, ІМТ <18,5, погано контрольованого діабету чи непереносимості стероїдів — 20 мг на тиждень (eviQ 4175). У дні даратумумабу дексаметазон водночас є премедикацією.",
+        "en": "20 mg on the day of bortezomib and the day after (by mouth or IV). For patients over 75, BMI under 18.5, poorly controlled diabetes or steroid intolerance, 20 mg a week (eviQ 4175). On daratumumab days dexamethasone is also the premedication."
+      }
+    }
+  ]
+}

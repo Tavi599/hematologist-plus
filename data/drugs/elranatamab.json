@@ -1,0 +1,31 @@
+{
+  "$comment": "Додано 2026-10-04 для схеми eviQ 4555. Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "elranatamab",
+  "name": {
+    "uk": "Елранатамаб",
+    "en": "Elranatamab"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: ELREXFIO (elranatamab-bcmm) — флакони 44 мг/1,1 мл і 76 мг/1,9 мл (40 мг/мл), готовий розчин для підшкірного введення",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa044060-5b4b-4692-bf0f-9a50e140b10e",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v44",
+      "form": "vial",
+      "strength_amount": 44,
+      "volume_ml": 1.1
+    },
+    {
+      "key": "v76",
+      "form": "vial",
+      "strength_amount": 76,
+      "volume_ml": 1.9
+    }
+  ]
+}

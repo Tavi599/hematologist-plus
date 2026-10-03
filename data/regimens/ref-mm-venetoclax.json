@@ -1,0 +1,56 @@
+{
+  "id": "ref-mm-venetoclax",
+  "short_name": "Венетоклакс при t(11;14)",
+  "name": {
+    "uk": "Венетоклакс при мієломі з t(11;14)",
+    "en": "Venetoclax in myeloma with t(11;14)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Multiple myeloma: Treatment of relapsed disease",
+      "url": "https://www.uptodate.com/contents/multiple-myeloma-treatment-of-relapsed-disease",
+      "version": "перевірено 2026-10-04 (огляд літератури до вересня 2026)",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Позареєстраційне застосування лише як пізня лінія при t(11;14) чи при агресивній хворобі, рефрактерній до початкової терапії. У BELLINI венетоклакс + бортезоміб + дексаметазон дав більше смертей від інфекцій в усій популяції.",
+      "en": "Off-label, only as a late line in t(11;14) or in aggressive disease refractory to initial therapy. In BELLINI venetoclax plus bortezomib and dexamethasone caused more deaths from infection in the whole population."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Венетоклакс",
+          "en": "Venetoclax"
+        },
+        "drug_id": "venetoclax"
+      },
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Користь у підгрупі з t(11;14) (35 хворих): подовжена ВБП без явного зниження виживаності. Експресію BCL-2 для вибору терапії не використовують.",
+        "en": "Benefit in the t(11;14) subgroup (35 patients): prolonged PFS without a clear decrease in survival. BCL-2 expression is not used to choose therapy."
+      }
+    ],
+    "gap": {
+      "uk": "UpToDate не наводить дози й дні для мієломи.",
+      "en": "UpToDate gives neither the dose nor the days for myeloma."
+    },
+    "availability": "unknown"
+  }
+}
