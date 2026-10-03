@@ -1,0 +1,49 @@
+{
+  "$comment": "RVd-lite для літніх і ослаблених за eviQ 3917 (вер. 1; O'Donnell 2018): індукція 9 циклів по 35 днів, консолідація 6 циклів по 28 днів, далі леналідомід до прогресування (за бажанням; доза підтримки в eviQ не вказана). Дексаметазон у консолідації eviQ не наводить, тому не внесено.",
+  "id": "rvd-lite-consolidation",
+  "short_name": "RVd-lite консолідація",
+  "name": {
+    "uk": "RVd-lite, консолідація",
+    "en": "RVd-lite, consolidation"
+  },
+  "description": {
+    "uk": "Леналідомід 15 мг дні 1–21; бортезоміб дні 1 і 15; цикл 28 днів, 6 циклів.",
+    "en": "Lenalidomide 15 mg on days 1 to 21; bortezomib on days 1 and 15; a 28-day cycle, six cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "eviQ: RVd-lite (протокол 3917, вер. 1)",
+      "url": "https://www.eviq.org.au/haematology/multiple-myeloma/3917-multiple-myeloma-rvd-lite-lenalidomide-borte",
+      "version": "вер. 1, переглянуто 28.10.2024",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 15,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "15 мг раз на добу (eviQ 3917). Лише в межах програми запобігання вагітності; профілактика ВТЕ — вручну.",
+        "en": "15 mg once a day (eviQ 3917). Only within a pregnancy prevention programme; VTE prophylaxis by hand."
+      }
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 15],
+      "notes": {
+        "uk": "1,3 мг/м² підшкірно (eviQ 3917).",
+        "en": "1.3 mg/m2 subcutaneously (eviQ 3917)."
+      }
+    }
+  ]
+}
