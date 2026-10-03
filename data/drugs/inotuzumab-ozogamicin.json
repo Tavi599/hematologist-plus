@@ -34,5 +34,32 @@
       "form": "vial",
       "strength_amount": 1
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "duration_min": null,
+      "sources": [
+        {
+          "name": "Схеми відділення: розчинник і об'єм мішка",
+          "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "FDA label: BESPONSA (inotuzumab ozogamicin), Dosage and Administration — 0,01–0,1 мг/мл у 50 мл",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cc7014b1-c775-411d-b374-8113248b4077",
+          "version": "SPL від 09.02.2026",
+          "checkedOn": "2026-10-03"
+        }
+      ],
+      "concentration_min_mg_ml": 0.01,
+      "concentration_max_mg_ml": 0.1,
+      "notes": {
+        "uk": "Для дози від 0,5 мг — 0,01–0,1 мг/мл у загальному об'ємі 50 мл — за інструкцією. Для меншої дози інструкція дозволяє 0,025–0,1 мг/мл в об'ємі 2–50 мл.",
+        "en": "For a dose of 0.5 mg or more: 0.01–0.1 mg/mL in a total of 50 mL per the label. For a smaller dose the label allows 0.025–0.1 mg/mL in 2–50 mL."
+      }
+    }
   ]
 }

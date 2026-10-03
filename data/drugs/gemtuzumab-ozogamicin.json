@@ -24,5 +24,32 @@
       "form": "vial",
       "strength_amount": 4.5
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "duration_min": null,
+      "sources": [
+        {
+          "name": "Схеми відділення: розчинник і об'єм мішка",
+          "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "FDA label: MYLOTARG (gemtuzumab ozogamicin), Dosage and Administration — 0,075–0,234 мг/мл",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32fd2bb2-1cfa-4250-feb8-d7956c794e05",
+          "version": "SPL від 22.12.2025",
+          "checkedOn": "2026-10-03"
+        }
+      ],
+      "concentration_min_mg_ml": 0.075,
+      "concentration_max_mg_ml": 0.234,
+      "notes": {
+        "uk": "Розведення до 0,075–0,234 мг/мл — за інструкцією. Дози менші за 3,9 мг інструкція велить готувати в шприці, тож для них попередження про малу концентрацію очікуване.",
+        "en": "Dilution to 0.075–0.234 mg/mL per the label. The label has doses below 3.9 mg prepared in a syringe, so a low-concentration warning is expected for them."
+      }
+    }
   ]
 }

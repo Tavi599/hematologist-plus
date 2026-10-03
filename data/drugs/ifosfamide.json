@@ -29,5 +29,32 @@
       "form": "vial",
       "strength_amount": 1000
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "duration_min": null,
+      "sources": [
+        {
+          "name": "Схеми відділення: розчинник і об'єм мішка",
+          "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "FDA label: IFEX (ifosfamide), Dosage and Administration — розведення до 0,6–20 мг/мл",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b7241707-7538-4d1a-91e7-3a25a91e0b9a",
+          "version": "SPL від 06.07.2026",
+          "checkedOn": "2026-10-03"
+        }
+      ],
+      "concentration_min_mg_ml": 0.6,
+      "concentration_max_mg_ml": 20,
+      "notes": {
+        "uk": "Розведення до 0,6–20 мг/мл — за інструкцією. Об'єм мішка береться зі схеми.",
+        "en": "Dilution to 0.6–20 mg/mL per the label. The bag volume comes from the regimen."
+      }
+    }
   ]
 }

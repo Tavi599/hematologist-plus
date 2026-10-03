@@ -29,5 +29,31 @@
       "form": "vial",
       "strength_amount": 50
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "duration_min": null,
+      "sources": [
+        {
+          "name": "Схеми відділення: розчинник і об'єм мішка",
+          "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "FDA label: Melphalan Hydrochloride for Injection (kit), Dosage and Administration — розведення в 0,9% NaCl до концентрації не вище 0,45 мг/мл",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2c18beeb-7bd4-4591-94cb-9d7156c1b8e0",
+          "version": "SPL від 08.07.2026",
+          "checkedOn": "2026-10-03"
+        }
+      ],
+      "concentration_max_mg_ml": 0.45,
+      "notes": {
+        "uk": "Верхня межа 0,45 мг/мл у 0,9% NaCl — за інструкцією. Об'єм мішка береться зі схеми.",
+        "en": "Upper limit 0.45 mg/mL in 0.9% NaCl per the label. The bag volume comes from the regimen."
+      }
+    }
   ]
 }

@@ -29,5 +29,30 @@
       "form": "vial",
       "strength_amount": 60
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "glucose",
+      "solvent": "glucose_5",
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "duration_min": null,
+      "sources": [
+        {
+          "name": "Схеми відділення: розчинник і об'єм мішка",
+          "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "FDA label: KYPROLIS (carfilzomib), упаковка: розведення 5% глюкозою",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ea66eb30-e665-4693-99a1-a9d3b4bbe2d6",
+          "version": "SPL від 26.06.2025",
+          "checkedOn": "2026-10-03"
+        }
+      ],
+      "notes": {
+        "uk": "Розчинник — 5% глюкоза, як у схемах. Межі концентрації інструкція не наводить.",
+        "en": "The solvent is 5% glucose, as in the regimens. The label gives no concentration limit."
+      }
+    }
   ]
 }

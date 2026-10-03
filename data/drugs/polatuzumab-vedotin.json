@@ -29,5 +29,32 @@
       "form": "vial",
       "strength_amount": 140
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "duration_min": null,
+      "sources": [
+        {
+          "name": "Схеми відділення: розчинник і об'єм мішка",
+          "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "FDA label: POLIVY (polatuzumab vedotin-piiq), Dosage and Administration — 0,72–2,7 мг/мл у мішку не менше 50 мл",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20a16ab2-f338-4abb-9dcd-254bd949a2bc",
+          "version": "SPL від 28.08.2026",
+          "checkedOn": "2026-10-03"
+        }
+      ],
+      "concentration_min_mg_ml": 0.72,
+      "concentration_max_mg_ml": 2.7,
+      "notes": {
+        "uk": "Розведення до 0,72–2,7 мг/мл у мішку щонайменше 50 мл — за інструкцією; допустимі 0,9% NaCl, 0,45% NaCl і 5% глюкоза. Розчинник і об'єм береться зі схеми.",
+        "en": "Dilution to 0.72–2.7 mg/mL in a bag of at least 50 mL per the label; 0.9% NaCl, 0.45% NaCl and 5% glucose are allowed. The solvent and volume come from the regimen."
+      }
+    }
   ]
 }

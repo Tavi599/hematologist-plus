@@ -34,5 +34,30 @@
       "form": "vial",
       "strength_amount": 100
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "glucose",
+      "solvent": "glucose_5",
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "duration_min": null,
+      "sources": [
+        {
+          "name": "Схеми відділення: розчинник і об'єм мішка",
+          "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "FDA label: Oxaliplatin Injection (Gland Pharma), Dosage and Administration — 250–500 мл 5% глюкози, не розводити хлоридвмісними розчинами",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a6f89dc3-a594-4b5b-8728-272e20c1ecb5",
+          "version": "SPL від 01.09.2026",
+          "checkedOn": "2026-10-03"
+        }
+      ],
+      "notes": {
+        "uk": "Розчинник — лише 5% глюкоза: хлоридвмісні розчини протипоказані. Межі концентрації інструкція не наводить.",
+        "en": "The solvent is 5% glucose only: chloride-containing solutions must not be used. The label gives no concentration limit."
+      }
+    }
   ]
 }

@@ -29,5 +29,31 @@
       "form": "vial",
       "strength_amount": 1000
     }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "duration_min": null,
+      "sources": [
+        {
+          "name": "Схеми відділення: розчинник і об'єм мішка",
+          "checkedOn": "2026-09-19"
+        },
+        {
+          "name": "FDA label: Gemcitabine for Injection, USP, Dosage and Administration — розведення до концентрації не нижче 0,1 мг/мл",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44bcc16c-341d-49e8-a1c6-95d084667aca",
+          "version": "SPL від 21.09.2026",
+          "checkedOn": "2026-10-03"
+        }
+      ],
+      "concentration_min_mg_ml": 0.1,
+      "notes": {
+        "uk": "Нижня межа 0,1 мг/мл — за інструкцією. Об'єм мішка береться зі схеми.",
+        "en": "Lower limit 0.1 mg/mL per the label. The bag volume comes from the regimen."
+      }
+    }
   ]
 }
