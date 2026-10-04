@@ -135,6 +135,11 @@ const BLANK = {
   wardMode: 'Режим: палатний            Дієта: стіл №5',
   registryCode: 'Код за ЄДРПОУ ',
   rate: 'V= ',
+  rampStart: 'Початкова швидкість (V1)= ',
+  rampStep: ' мл/год. Пришвидшувати кожні ',
+  rampBy: ' хв на ',
+  rampMax: ' мл/год до досягнення максимальної швидкості (Vmax) = ',
+  rampEnd: ' мл/год.',
   perDay: ' р/добу',
   times: ' та ',
   control: 'Контроль ваги, діурезу, АТ, ЧСС, температури тіла!',
@@ -274,6 +279,7 @@ function daySheet(input: CourseSheetsInput, day: SheetDay): XlsxSheet {
     orders.map((order) => ({
       what: order.what,
       how: order.how,
+      ...(order.note ? { note: order.note } : {}),
       marks: SHEET_HOURS.map((hour) => (order.hours.has(hour) ? MARK : null)),
       // One mark says «given»; several say «given again», and the nurse needs to see how much.
       ...(order.hours.size > 1 && order.dose
@@ -305,6 +311,8 @@ interface Order {
   hours: Set<number>
   /** The dose of one administration, written under each mark of a drug repeated through the day. */
   dose?: string
+  /** A rising rate, written out across the hours under the order as the department writes it. */
+  note?: string
 }
 
 /**
@@ -325,10 +333,16 @@ function dayOrders(input: CourseSheetsInput, day: SheetDay): Order[] {
     }
     const item = byId.get(administration.drugId)
     const result = resultById.get(administration.drugId)
+    const note = rampNote(item, result, input, day.day)
     orders.set(administration.drugId, {
       what: whatLine(administration.drugId, item, result, input),
-      how: howLine(item, result, input),
+      how: note
+        ? item
+          ? input.t(`routeShort.${item.item.route}`)
+          : ''
+        : howLine(item, result, input),
       hours: new Set([hour]),
+      ...(note ? { note } : {}),
       ...(result
         ? {
             dose: `${formatAmount(result.doseAmount, input.language, 1)} ${input.t(`units.${result.amountUnit}`)}`,
@@ -534,6 +548,8 @@ interface Band {
   marks: (string | null)[]
   /** Text for the lower row under each mark, e.g. the dose of a repeated administration. */
   under?: (string | null)[]
+  /** A line across the lower row from the route to the last hour: the rising rate. */
+  note?: string
 }
 
 /**
@@ -563,6 +579,21 @@ function appendBands(
         format: markFormat(isGroupEnd(column), false),
       })),
     ])
+    if (band?.note) {
+      // The department's sheet: «Початкова швидкість (V1)= … (Vmax) = …» written right across the
+      // lower row, from the route column to the last hour, under the order it belongs to.
+      rows.push([
+        { value: null, format: orderFormat(false, '', ORDER_WIDTH) },
+        { value: band.note, format: NOTE_LINE_FORMAT },
+        ...spread('', width, NOTE_LINE_FORMAT),
+      ])
+      merges.push(
+        `A${top}:A${top + 1}`,
+        `B${top + 1}:${columnName(ORDER_COLUMNS + width - 1)}${top + 1}`,
+      )
+      heights.push(BAND_ROW_HEIGHT, BAND_ROW_HEIGHT)
+      continue
+    }
     rows.push([
       { value: null, format: orderFormat(false, '', ORDER_WIDTH) },
       { value: null, format: orderFormat(true, '', HOW_WIDTH) },
@@ -626,6 +657,10 @@ function whatLine(
     : ''
   const infusion = result?.infusion
   if (!infusion) return name + dose
+  // Undiluted (immunoglobulin): the department writes the volume of the dose itself in brackets.
+  if (infusion.bagVolumeMl === 0) {
+    return `${name}${dose}\n(${formatAmount(infusion.totalVolumeMl, language)} ${t('units.ml')})`
+  }
   const solvent = t(`solvent.${item?.infusionParams?.solvent ?? 'sodium_chloride_0_9'}`)
   return `${name}${dose}\n${solvent} ${formatAmount(infusion.bagVolumeMl, language)} ${t('units.ml')}`
 }
@@ -648,6 +683,34 @@ function howLine(
   }
   const perDay = result?.administrationsPerDay ?? item?.item.administrations_per_day ?? 1
   return perDay > 1 ? `${route}\n${perDay}${BLANK.perDay}` : route
+}
+
+/**
+ * The rising rate of a drug that is not given at one speed: the first infusion of the course
+ * starts slower, every later one by the second set of steps.
+ */
+function rampNote(
+  item: CourseItem | undefined,
+  result: CourseDrugResult | undefined,
+  input: CourseSheetsInput,
+  day: number,
+): string | null {
+  const ramp = item?.infusionParams?.rate_ramp
+  if (!item || !ramp || !result?.infusion?.ramp) return null
+  const isFirst = input.cycleNumber === 1 && day === Math.min(...item.item.days)
+  const steps = isFirst || ramp.next === null ? ramp.first : ramp.next
+  const n = (value: number) => formatAmount(value, input.language)
+  return (
+    BLANK.rampStart +
+    n(steps.start_ml_h) +
+    BLANK.rampStep +
+    n(steps.every_min) +
+    BLANK.rampBy +
+    n(steps.step_ml_h) +
+    BLANK.rampMax +
+    n(steps.max_ml_h) +
+    BLANK.rampEnd
+  )
 }
 
 /**
@@ -781,6 +844,13 @@ function charsPerLine(size: number, widthUnits: number): number {
 /** How many lines of a given size fit the two ruled rows an order is written across. */
 function linesPerBand(size: number): number {
   return Math.max(1, Math.floor(BAND_HEIGHT / (size * 1.25)))
+}
+
+/** The rising rate across the lower row of an order: one line, set small enough to fit. */
+const NOTE_LINE_FORMAT: XlsxFormat = {
+  font: { size: 10 },
+  box: { left: 'thin', right: 'medium', top: 'thin', bottom: 'medium' },
+  valign: 'center',
 }
 
 /** The dose written under a mark: small, so it fits the five-character column. */

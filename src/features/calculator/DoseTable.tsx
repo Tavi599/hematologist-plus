@@ -423,15 +423,19 @@ function DoseRow({
           {result?.infusion ? (
             <Stack gap={2}>
               <Text size="sm">
-                {t('calculator.doses.infusionValue', {
-                  solvent: item.infusionParams
-                    ? t(`solvent.${item.infusionParams.solvent}`)
-                    : t('solvent.sodium_chloride_0_9'),
-                  bag: formatNumber(result.infusion.bagVolumeMl, language, 0),
-                  total: formatNumber(result.infusion.totalVolumeMl, language, 1),
-                  concentration: formatNumber(result.infusion.concentrationPerMl, language, 2),
-                  unit: tu(`units.${result.infusion.concentrationUnit}_ml`),
-                })}
+                {result.infusion.bagVolumeMl === 0
+                  ? t('calculator.doses.infusionUndiluted', {
+                      total: formatNumber(result.infusion.totalVolumeMl, language, 1),
+                    })
+                  : t('calculator.doses.infusionValue', {
+                      solvent: item.infusionParams
+                        ? t(`solvent.${item.infusionParams.solvent}`)
+                        : t('solvent.sodium_chloride_0_9'),
+                      bag: formatNumber(result.infusion.bagVolumeMl, language, 0),
+                      total: formatNumber(result.infusion.totalVolumeMl, language, 1),
+                      concentration: formatNumber(result.infusion.concentrationPerMl, language, 2),
+                      unit: tu(`units.${result.infusion.concentrationUnit}_ml`),
+                    })}
               </Text>
               {result.infusion.ramp && item.infusionParams?.rate_ramp && (
                 <>

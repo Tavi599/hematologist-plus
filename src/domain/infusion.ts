@@ -125,8 +125,14 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
   const dropFactor = input.dropFactorGttPerMl ?? DOMAIN_DEFAULTS.dropFactorGttPerMl
   assertPositive('doseAmount', doseAmount)
   assertPositive('dropFactorGttPerMl', dropFactor)
-  if (params.bagVolumesMl.length === 0) {
-    throw new DomainInputError('bagVolumesMl', 'at least one bag volume is required')
+  // No bag at all is an undiluted infusion — immunoglobulin goes in from its own bottle — and that
+  // is only possible when the drug's own concentration says how many millilitres the dose is.
+  const undiluted = params.bagVolumesMl.length === 0
+  if (undiluted && params.stockConcentrationMgMl === undefined) {
+    throw new DomainInputError(
+      'bagVolumesMl',
+      'at least one bag volume is required, or a stock concentration for an undiluted infusion',
+    )
   }
   params.bagVolumesMl.forEach((v) => assertPositive('bagVolumesMl', v))
   if (params.stockConcentrationMgMl !== undefined) {
@@ -155,7 +161,7 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
     params.concentrationMinMgMl === undefined ||
     concentrationFor(bag) >= params.concentrationMinMgMl
 
-  let bagVolumeMl = bags.find((bag) => fitsMax(bag) && fitsMin(bag))
+  let bagVolumeMl = undiluted ? 0 : bags.find((bag) => fitsMax(bag) && fitsMin(bag))
   let issue: InfusionIssue | null = null
   if (bagVolumeMl === undefined) {
     issue = 'concentration_out_of_range'

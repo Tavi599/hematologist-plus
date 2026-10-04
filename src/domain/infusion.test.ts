@@ -115,6 +115,22 @@ describe('rate raised in steps', () => {
     expect(Math.max(...rates)).toBe(200)
   })
 
+  it("runs an undiluted infusion from the drug's own volume when no bag is given", () => {
+    // 28 g of a 10% immunoglobulin is 280 mL, given straight from the bottles.
+    const result = calculateInfusion({
+      doseAmount: 28000,
+      params: {
+        bagVolumesMl: [],
+        stockConcentrationMgMl: 100,
+        rateRamp: { first: { startMlH: 30, stepMlH: 30, everyMin: 30, maxMlH: 90 } },
+      },
+    })
+    expect(result.bagVolumeMl).toBe(0)
+    expect(result.totalVolumeMl).toBe(280)
+    expect(result.issue).toBeNull()
+    expect(result.ramp?.first.durationMin).toBeGreaterThan(0)
+  })
+
   it('takes the duration from the ramp instead of the regimen', () => {
     const result = calculateInfusion({
       doseAmount: 500,

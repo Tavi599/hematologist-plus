@@ -25,7 +25,38 @@
       "form": "vial",
       "strength_amount": 10000,
       "volume_ml": 100,
-      "label": { "uk": "10% по 100 мл (10 г)", "en": "10% 100 mL (10 g)" }
+      "label": {
+        "uk": "10% по 100 мл (10 г)",
+        "en": "10% 100 mL (10 g)"
+      }
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "undiluted",
+      "solvent": "sodium_chloride_0_9",
+      "stock_concentration_mg_ml": 100,
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "rate_ramp": {
+        "first": {
+          "start_ml_h": 30,
+          "step_ml_h": 30,
+          "every_min": 30,
+          "max_ml_h": 90
+        },
+        "next": null
+      },
+      "notes": {
+        "uk": "Вводиться нерозведеним, з флаконів (10%, 100 мг/мл). Початкова швидкість 30 мл/год, пришвидшувати кожні 30 хв на 30 мл/год до 90 мл/год.",
+        "en": "Given undiluted from the bottles (10%, 100 mg/mL). Starts at 30 mL/h, raised by 30 mL/h every 30 min up to 90 mL/h."
+      },
+      "sources": [
+        {
+          "name": "Дизайн відділення «Біовен інфуз лист» (Google Таблиці)",
+          "checkedOn": "2026-10-04"
+        }
+      ]
     }
   ]
 }

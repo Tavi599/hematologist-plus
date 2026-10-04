@@ -21,12 +21,12 @@ const t = (key: string, params?: Record<string, unknown>) =>
     key,
   )
 
-function sheets(overrides: Partial<CourseSheetsInput> = {}): XlsxSheet[] {
-  const items = buildCourseItems(indexCatalog(demoCatalog()), 'r-chop-21')
+function sheets(overrides: Partial<CourseSheetsInput> = {}, catalog = demoCatalog()): XlsxSheet[] {
+  const items = buildCourseItems(indexCatalog(catalog), 'r-chop-21')
   const course = calculateCourse(
     { ageYears: 60, sex: 'male', heightCm: 180, weightKg: 80, serumCreatinine: 88.4 },
     items.map((item) => item.courseDrug),
-    { startDateIso: '2026-09-21', dayStart: '09:00' },
+    { startDateIso: '2026-09-21', dayStart: '09:00', cycleNumber: overrides.cycleNumber ?? 1 },
   )
   return buildCourseSheets({
     items,
@@ -88,6 +88,32 @@ describe('buildCourseSheets', () => {
     expect(ruler[0]).toBe('9')
     expect(ruler.at(-1)).toBe('8')
     expect(ruler).toContain('24')
+  })
+
+  it('writes a rising rate across the hours under the order, as the department does', () => {
+    const catalog = demoCatalog()
+    const params = catalog.drug_infusion_params.find((row) => row.drug_id === 'rituximab')!
+    params.rate_ramp = {
+      first: { start_ml_h: 25, step_ml_h: 25, every_min: 30, max_ml_h: 200 },
+      next: { start_ml_h: 50, step_ml_h: 50, every_min: 30, max_ml_h: 200 },
+    }
+    const first = sheets({}, catalog)[0]!
+    const index = first.rows.findIndex((row) =>
+      String(text(row[0] ?? null) ?? '').startsWith('ДЕМО Ритуксимаб'),
+    )
+    // The route stays in its column; the rate is a line of its own across the lower row.
+    expect(text(first.rows[index]![1] ?? null)).toBe('routeShort.iv_infusion')
+    const note = String(text(first.rows[index + 1]![1] ?? null))
+    expect(first.merges).toContain(`B${index + 2}:Z${index + 2}`)
+
+    // A later cycle starts at the faster steps of the later infusions.
+    expect(note).toBe(
+      'Початкова швидкість (V1)= 25 мл/год. Пришвидшувати кожні 30 хв на 25 мл/год до досягнення максимальної швидкості (Vmax) = 200 мл/год.',
+    )
+    const later = sheets({ cycleNumber: 2 }, catalog)[0]!
+    expect(String(text(later.rows[index + 1]![1] ?? null))).toBe(
+      'Початкова швидкість (V1)= 50 мл/год. Пришвидшувати кожні 30 хв на 50 мл/год до досягнення максимальної швидкості (Vmax) = 200 мл/год.',
+    )
   })
 
   it('marks an administration in the hour it starts in', () => {
