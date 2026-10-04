@@ -304,7 +304,13 @@ function buildInfusionParams(
       : item.fallback_volume_ml === null
         ? []
         : [item.fallback_volume_ml]
-  if (bagVolumesMl.length === 0) return undefined
+  // No bag, but the drug's own concentration is known: it is given undiluted (immunoglobulin).
+  const undiluted =
+    bagVolumesMl.length === 0 &&
+    params !== null &&
+    params.stock_concentration_mg_ml !== null &&
+    params.bag_volumes_ml.length === 0
+  if (bagVolumesMl.length === 0 && !undiluted) return undefined
 
   return {
     bagVolumesMl,

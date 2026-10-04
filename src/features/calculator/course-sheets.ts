@@ -135,6 +135,7 @@ const BLANK = {
   wardMode: 'Режим: палатний            Дієта: стіл №5',
   registryCode: 'Код за ЄДРПОУ ',
   rate: 'V= ',
+  grams: ' гр',
   rampStart: 'Початкова швидкість (V1)= ',
   rampStep: ' мл/год. Пришвидшувати кожні ',
   rampBy: ' хв на ',
@@ -657,9 +658,12 @@ function whatLine(
     : ''
   const infusion = result?.infusion
   if (!infusion) return name + dose
-  // Undiluted (immunoglobulin): the department writes the volume of the dose itself in brackets.
+  // Undiluted (immunoglobulin): the department writes the dose in grams and the volume of the
+  // dose itself in brackets — «Біовен 28 гр (280 мл)».
   if (infusion.bagVolumeMl === 0) {
-    return `${name}${dose}\n(${formatAmount(infusion.totalVolumeMl, language)} ${t('units.ml')})`
+    const volume = `(${formatAmount(infusion.totalVolumeMl, language)} ${t('units.ml')})`
+    if (result.amountUnit !== 'mg') return `${name}${dose} ${volume}`
+    return `${name} ${formatAmount(result.doseAmount / 1000, language, 1)}${BLANK.grams} ${volume}`
   }
   const solvent = t(`solvent.${item?.infusionParams?.solvent ?? 'sodium_chloride_0_9'}`)
   return `${name}${dose}\n${solvent} ${formatAmount(infusion.bagVolumeMl, language)} ${t('units.ml')}`

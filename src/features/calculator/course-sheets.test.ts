@@ -116,6 +116,19 @@ describe('buildCourseSheets', () => {
     )
   })
 
+  it('writes an undiluted infusion in grams with its own volume in brackets', () => {
+    const catalog = demoCatalog()
+    const params = catalog.drug_infusion_params.find((row) => row.drug_id === 'rituximab')!
+    params.bag_volumes_ml = []
+    params.concentration_min_mg_ml = null
+    params.concentration_max_mg_ml = null
+    const day = sheets({}, catalog)[0]!
+    // 375 mg/m² × 2.0 m² = 750 mg from a 10 mg/mL concentrate: 0,8 г in 75 mL, as «Біовен ___ гр (___ мл)».
+    expect(text(bandStartingWith(day, 'ДЕМО Ритуксимаб')![0] ?? null)).toBe(
+      'ДЕМО Ритуксимаб 0,8 гр (75 units.ml)',
+    )
+  })
+
   it('marks an administration in the hour it starts in', () => {
     const [day] = sheets()
     const rituximab = bandStartingWith(day!, 'ДЕМО Ритуксимаб')!
