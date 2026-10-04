@@ -128,7 +128,10 @@
       "custom": "added manually",
       "remove": "Remove",
       "modifiers": "Dose modifiers",
-      "modifiersHint": "Several may be ticked; the lowest dose applies"
+      "modifiersHint": "Several may be ticked; the lowest dose applies",
+      "otherVariant": "on {{variant}}: {{value}}",
+      "variantActual": "actual BSA",
+      "variantCapped": "BSA 2.0"
     },
     "standardSupport": {
       "title": "Standard support",
@@ -211,6 +214,13 @@
     "error": {
       "title": "Calculation failed",
       "field": "Field: {{field}}"
+    },
+    "tabs": {
+      "doses": "Doses",
+      "schedule": "Schedule",
+      "supply": "Vials / need",
+      "print": "Print and header",
+      "empty": "The result appears here once there is a patient and a regimen (or hand-written lines)."
     }
   },
   "need": {

@@ -1,4 +1,4 @@
-import { Alert, Card, Group, SimpleGrid, Stack, Text, Title } from '@mantine/core'
+import { Alert, Card, Group, Stack, Tabs, Text, Title } from '@mantine/core'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router'
@@ -39,6 +39,7 @@ import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import type { RegimenItem } from '../../schemas/catalog'
 import { todayIso, type PatientInput } from '../../schemas/patient'
+import classes from './CalculatorPage.module.css'
 
 export function CalculatorPage() {
   const { t } = useTranslation()
@@ -254,145 +255,194 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   /** Hand-written lines that actually say something; an empty one is not a sheet. */
   const written = manualRows.filter((row) => row.what.trim() !== '')
 
+  const sheetReady = course !== null || written.length > 0
+
   return (
-    <Stack gap="sm">
-      <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="sm" style={{ alignItems: 'stretch' }}>
-        <PatientForm onChange={setPatient} />
-        <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
-      </SimpleGrid>
-
-      {regimen && <RegimenEvidence regimen={regimen} />}
-
-      {ownItems.length > 0 && (
-        <StandardSupport items={ownItems} value={support} onChange={onSupport} />
-      )}
-
-      {!measured && items.length > 0 && (
-        <Alert color="blue" variant="light">
-          {t('calculator.patient.incomplete')}
-        </Alert>
-      )}
-      {!measured && items.length === 0 && (
-        <Text c="dimmed">{t('calculator.patient.incomplete')}</Text>
-      )}
-
-      {error !== null && (
-        <Alert color="red" title={t('calculator.error.title')}>
-          <Text size="sm">{(error as Error).message}</Text>
-          {error instanceof DomainInputError && (
-            <Text size="sm">{t('calculator.error.field', { field: error.field })}</Text>
+    <div className={classes.layout}>
+      {/* The inputs stay in view while the results are read: change a weight or a regimen and
+          the doses beside it change with it. On a narrow screen the two simply stack. */}
+      <aside className={classes.inputs}>
+        <Stack gap="sm">
+          <PatientForm onChange={setPatient} />
+          <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
+          {ownItems.length > 0 && (
+            <StandardSupport items={ownItems} value={support} onChange={onSupport} />
           )}
-        </Alert>
-      )}
+        </Stack>
+      </aside>
 
-      {course && (
-        <>
-          <Card withBorder>
-            <Group justify="space-between" wrap="wrap">
-              <Text fw={500}>
-                {course.creatinineClearanceMlMin === null
-                  ? t('calculator.patient.summaryNoCrcl', {
-                      bsa: formatNumber(course.bsa.actualM2, language, 2),
+      <Stack gap="sm" className={classes.results}>
+        {regimen && <RegimenEvidence regimen={regimen} />}
+
+        {!measured && items.length > 0 && (
+          <Alert color="blue" variant="light">
+            {t('calculator.patient.incomplete')}
+          </Alert>
+        )}
+        {!measured && items.length === 0 && (
+          <Text c="dimmed">{t('calculator.patient.incomplete')}</Text>
+        )}
+
+        {error !== null && (
+          <Alert color="red" title={t('calculator.error.title')}>
+            <Text size="sm">{(error as Error).message}</Text>
+            {error instanceof DomainInputError && (
+              <Text size="sm">{t('calculator.error.field', { field: error.field })}</Text>
+            )}
+          </Alert>
+        )}
+
+        {course && (
+          <>
+            <Card withBorder>
+              <Group justify="space-between" wrap="wrap">
+                <Text fw={500}>
+                  {course.creatinineClearanceMlMin === null
+                    ? t('calculator.patient.summaryNoCrcl', {
+                        bsa: formatNumber(course.bsa.actualM2, language, 2),
+                      })
+                    : t('calculator.patient.summary', {
+                        bsa: formatNumber(course.bsa.actualM2, language, 2),
+                        crcl: `${formatNumber(course.creatinineClearanceMlMin, language, 1)} ${t('units.ml_min')}`,
+                      })}
+                </Text>
+                <Text size="xs" c="dimmed">
+                  {t('warning.noDoseChange')}
+                </Text>
+              </Group>
+            </Card>
+            <WarningList warnings={course.warnings} />
+          </>
+        )}
+
+        {/* Every block stays mounted while its tab is hidden, so nothing typed is lost by
+            switching tabs; only one of them is on screen at a time. */}
+        <Tabs defaultValue="doses" keepMountedMode="display-none">
+          <Tabs.List>
+            <Tabs.Tab value="doses">{t('calculator.tabs.doses')}</Tabs.Tab>
+            <Tabs.Tab value="schedule">{t('calculator.tabs.schedule')}</Tabs.Tab>
+            <Tabs.Tab value="supply">{t('calculator.tabs.supply')}</Tabs.Tab>
+            <Tabs.Tab value="print">{t('calculator.tabs.print')}</Tabs.Tab>
+          </Tabs.List>
+
+          <Tabs.Panel value="doses" pt="sm">
+            <Stack gap="sm">
+              {items.length > 0 && (
+                <DoseTable
+                  items={items}
+                  course={course}
+                  bsaVariant={courseSettings.bsaVariant === 'capped' ? 'capped' : 'actual'}
+                  disabledIds={disabledIds}
+                  drugPercent={drugPercent}
+                  doseOverrideAmount={doseOverrideAmount}
+                  customIds={customItems.map((item) => item.id)}
+                  onToggle={(id, enabled) =>
+                    setDisabledIds((current) =>
+                      enabled ? current.filter((entry) => entry !== id) : [...current, id],
+                    )
+                  }
+                  onReduction={(id, percent) =>
+                    setDrugPercent((current) => {
+                      const { [id]: _removed, ...rest } = current
+                      return percent === null ? rest : { ...rest, [id]: percent }
                     })
-                  : t('calculator.patient.summary', {
-                      bsa: formatNumber(course.bsa.actualM2, language, 2),
-                      crcl: `${formatNumber(course.creatinineClearanceMlMin, language, 1)} ${t('units.ml_min')}`,
-                    })}
+                  }
+                  onDoseChoice={(id, choiceId) =>
+                    setChosenDoses((current) => ({ ...current, [id]: choiceId }))
+                  }
+                  administrationModes={administrationModes}
+                  onAdministrationMode={(id, mode) => {
+                    // The doses on offer change with the split, so a dose picked before no longer exists.
+                    setChosenDoses((current) => {
+                      const { [id]: _removed, ...rest } = current
+                      return rest
+                    })
+                    setDoseOverrideAmount((current) => {
+                      const { [id]: _removed, ...rest } = current
+                      return rest
+                    })
+                    setAdministrationModes((current) => ({ ...current, [id]: mode }))
+                  }}
+                  onDoseModifiers={(id, keys) =>
+                    setChosenModifiers((current) => ({ ...current, [id]: keys }))
+                  }
+                  onDoseOverride={(id, doseMg) =>
+                    setDoseOverrideAmount((current) => {
+                      const { [id]: _removed, ...rest } = current
+                      return doseMg === null ? rest : { ...rest, [id]: doseMg }
+                    })
+                  }
+                  onRemove={(id) =>
+                    setCustomItems((current) => current.filter((item) => item.id !== id))
+                  }
+                />
+              )}
+              <AddDrugForm
+                catalog={catalog}
+                sortOrder={items.length}
+                onAdd={(item) => setCustomItems((current) => [...current, item])}
+              />
+            </Stack>
+          </Tabs.Panel>
+
+          <Tabs.Panel value="schedule" pt="sm">
+            <Stack gap="sm">
+              {sheetReady ? (
+                <ScheduleTable
+                  items={items}
+                  course={course}
+                  manualRows={manualRows}
+                  startDateIso={courseSettings.startDate}
+                  shiftMin={shiftMin}
+                  onShift={(id, minutes) =>
+                    setShiftMin((current) => ({ ...current, [id]: minutes }))
+                  }
+                />
+              ) : (
+                <Text size="sm" c="dimmed">
+                  {t('calculator.tabs.empty')}
+                </Text>
+              )}
+              <ManualRows rows={manualRows} onChange={setManualRows} />
+            </Stack>
+          </Tabs.Panel>
+
+          <Tabs.Panel value="supply" pt="sm">
+            {course ? (
+              <SupplyTable catalog={catalog} course={course} />
+            ) : (
+              <Text size="sm" c="dimmed">
+                {t('calculator.tabs.empty')}
               </Text>
-              <Text size="xs" c="dimmed">
-                {t('warning.noDoseChange')}
-              </Text>
-            </Group>
-          </Card>
-          <WarningList warnings={course.warnings} />
-        </>
-      )}
+            )}
+          </Tabs.Panel>
 
-      {items.length > 0 && (
-        <DoseTable
-          items={items}
-          course={course}
-          disabledIds={disabledIds}
-          drugPercent={drugPercent}
-          doseOverrideAmount={doseOverrideAmount}
-          customIds={customItems.map((item) => item.id)}
-          onToggle={(id, enabled) =>
-            setDisabledIds((current) =>
-              enabled ? current.filter((entry) => entry !== id) : [...current, id],
-            )
-          }
-          onReduction={(id, percent) =>
-            setDrugPercent((current) => {
-              const { [id]: _removed, ...rest } = current
-              return percent === null ? rest : { ...rest, [id]: percent }
-            })
-          }
-          onDoseChoice={(id, choiceId) =>
-            setChosenDoses((current) => ({ ...current, [id]: choiceId }))
-          }
-          administrationModes={administrationModes}
-          onAdministrationMode={(id, mode) => {
-            // The doses on offer change with the split, so a dose picked before no longer exists.
-            setChosenDoses((current) => {
-              const { [id]: _removed, ...rest } = current
-              return rest
-            })
-            setDoseOverrideAmount((current) => {
-              const { [id]: _removed, ...rest } = current
-              return rest
-            })
-            setAdministrationModes((current) => ({ ...current, [id]: mode }))
-          }}
-          onDoseModifiers={(id, keys) =>
-            setChosenModifiers((current) => ({ ...current, [id]: keys }))
-          }
-          onDoseOverride={(id, doseMg) =>
-            setDoseOverrideAmount((current) => {
-              const { [id]: _removed, ...rest } = current
-              return doseMg === null ? rest : { ...rest, [id]: doseMg }
-            })
-          }
-          onRemove={(id) => setCustomItems((current) => current.filter((item) => item.id !== id))}
-        />
-      )}
-
-      <AddDrugForm
-        catalog={catalog}
-        sortOrder={items.length}
-        onAdd={(item) => setCustomItems((current) => [...current, item])}
-      />
-
-      <ManualRows rows={manualRows} onChange={setManualRows} />
-
-      {(course !== null || written.length > 0) && (
-        <ScheduleTable
-          items={items}
-          course={course}
-          manualRows={manualRows}
-          startDateIso={courseSettings.startDate}
-          shiftMin={shiftMin}
-          onShift={(id, minutes) => setShiftMin((current) => ({ ...current, [id]: minutes }))}
-        />
-      )}
-      {course && <SupplyTable catalog={catalog} course={course} />}
-
-      {/* A sheet of hand-written lines alone is still a sheet, so the export does not wait for
-          a calculation — only for someone to put something on the paper. */}
-      {patient && (course !== null || written.length > 0) && (
-        <CourseExport
-          items={items}
-          course={course}
-          patient={patient}
-          regimenName={regimen ? localize(regimen.name, language) : null}
-          cycleNumber={courseSettings.cycleNumber}
-          startDate={courseSettings.startDate}
-          dayStart={courseSettings.dayStart}
-          header={header}
-          manualRows={manualRows}
-        />
-      )}
-
-      <HospitalHeader catalog={catalog} value={header} onChange={setHeader} />
-    </Stack>
+          <Tabs.Panel value="print" pt="sm">
+            <Stack gap="sm">
+              {/* A sheet of hand-written lines alone is still a sheet, so the export does not
+                  wait for a calculation — only for someone to put something on the paper. */}
+              {patient && sheetReady ? (
+                <CourseExport
+                  items={items}
+                  course={course}
+                  patient={patient}
+                  regimenName={regimen ? localize(regimen.name, language) : null}
+                  cycleNumber={courseSettings.cycleNumber}
+                  startDate={courseSettings.startDate}
+                  dayStart={courseSettings.dayStart}
+                  header={header}
+                  manualRows={manualRows}
+                />
+              ) : (
+                <Text size="sm" c="dimmed">
+                  {t('calculator.tabs.empty')}
+                </Text>
+              )}
+              <HospitalHeader catalog={catalog} value={header} onChange={setHeader} />
+            </Stack>
+          </Tabs.Panel>
+        </Tabs>
+      </Stack>
+    </div>
   )
 }

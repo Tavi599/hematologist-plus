@@ -43,15 +43,16 @@ describe('CalculatorPage', () => {
     const table = screen.getByRole('table', { name: 'Дози' })
     const rituximab = within(table).getByText('ДЕМО Ритуксимаб').closest('tr')!
     // 375 mg/m² × 2.0 m² = 750 mg; 500 + 3 × 100 mg vials; 250 mL bag keeps 1–4 mg/mL.
-    // Both BSA variants are equal here, so the actual and the capped column show the same dose.
-    expect(within(rituximab).getAllByText('750 мг')).toHaveLength(2)
+    // Both BSA variants are equal here, so only the one dose is shown, with no second variant.
+    expect(within(rituximab).getByText('750 мг')).toBeInTheDocument()
+    expect(within(rituximab).queryByText(/^за BSA 2,0/)).not.toBeInTheDocument()
     expect(within(rituximab).getByText('1 × 500 мг')).toBeInTheDocument()
     expect(within(rituximab).getByText('3 × 100 мг')).toBeInTheDocument()
     expect(within(rituximab).getByText(/NaCl 0,9% 250 мл/)).toBeInTheDocument()
 
     // Vincristine 1.4 mg/m² × 2.0 = 2.8 mg, limited by the drug's 2 mg maximum.
     const vincristine = within(table).getByText('ДЕМО Вінкристин').closest('tr')!
-    expect(within(vincristine).getAllByText('2 мг')).toHaveLength(2)
+    expect(within(vincristine).getByText('2 мг')).toBeInTheDocument()
 
     // Cyclophosphamide has no dilution parameters in the demo catalog.
     const cyclophosphamide = within(table).getByText('ДЕМО Циклофосфамід').closest('tr')!
@@ -59,6 +60,21 @@ describe('CalculatorPage', () => {
 
     expect(screen.getByText(/BSA 2 м²/)).toBeInTheDocument()
     expect(screen.getByText(/88,9 мл\/хв/)).toBeInTheDocument()
+  })
+
+  it('shows the dose on the chosen BSA and the other variant under it when they differ', async () => {
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
+    await act(async () => {
+      fireEvent.change(screen.getByLabelText('Вік, років'), { target: { value: '60' } })
+      fireEvent.change(screen.getByLabelText('Зріст, см'), { target: { value: '190' } })
+      fireEvent.change(screen.getByLabelText('Вага, кг'), { target: { value: '110' } })
+    })
+    // √(190 × 110 / 3600) = 2.41 m²: 375 × 2.41 = 904 mg on the actual BSA, 750 mg on 2.0.
+    const rituximab = within(screen.getByRole('table', { name: 'Дози' }))
+      .getByText('ДЕМО Ритуксимаб')
+      .closest('tr')!
+    expect(within(rituximab).getByText('за BSA 2,0: 750 мг')).toBeInTheDocument()
   })
 
   it('reduces one drug only when it is marked and lets a drug be switched off', async () => {
@@ -79,7 +95,7 @@ describe('CalculatorPage', () => {
         target: { value: '25' },
       })
     })
-    expect(within(rituximab).getAllByText('563 мг')).toHaveLength(2) // 750 − 25% = 562.5
+    expect(within(rituximab).getByText('563 мг')).toBeInTheDocument() // 750 − 25% = 562.5
 
     await act(async () => {
       fireEvent.click(within(rituximab).getByRole('switch'))
@@ -119,18 +135,18 @@ describe('CalculatorPage', () => {
     const table = screen.getByRole('table', { name: 'Дози' })
     const row = within(table).getByText('ДЕМО Циклофосфамід').closest('tr')!
     // A modifier keeps the item's unit, so this is 500 mg/m² × 2.0 m² against the regimen's 750.
-    expect(within(row).getAllByText('1 000 мг')).toHaveLength(2)
+    expect(within(row).getByText('1 000 мг')).toBeInTheDocument()
 
     const azole = within(row).getByRole('checkbox', { name: /Азол за протоколом/ })
     await act(async () => fireEvent.click(azole))
-    expect(within(row).getAllByText('1 500 мг')).toHaveLength(2)
+    expect(within(row).getByText('1 500 мг')).toBeInTheDocument()
 
     // Two circumstances at once: the lower of the two doses is the one that is given.
     await act(async () => fireEvent.click(azole))
     await act(async () =>
       fireEvent.click(within(row).getByRole('checkbox', { name: /Ниркова недостатність/ })),
     )
-    expect(within(row).getAllByText('500 мг')).toHaveLength(2)
+    expect(within(row).getByText('500 мг')).toBeInTheDocument()
   })
 
   it('shows the composition of the regimen before the patient data is entered', async () => {
@@ -157,7 +173,7 @@ describe('CalculatorPage', () => {
         target: { value: '700' },
       })
     })
-    expect(within(rituximab).getAllByText('700 мг')).toHaveLength(2)
+    expect(within(rituximab).getByText('700 мг')).toBeInTheDocument()
     expect(within(rituximab).getByText('вручну')).toBeInTheDocument()
   })
 
@@ -222,7 +238,8 @@ describe('CalculatorPage', () => {
     // Nothing is calculated and nothing is on paper yet, so there is nothing to download.
     expect(screen.queryByRole('button', { name: 'Завантажити .xlsx' })).not.toBeInTheDocument()
 
-    // Hand-written lines sit in a folded section; the physician opens it first.
+    // Hand-written lines sit in a folded section of the schedule tab; the physician opens it.
+    await act(async () => fireEvent.click(screen.getByRole('tab', { name: 'Графік введень' })))
     await act(async () => fireEvent.click(screen.getByRole('button', { name: /Рядки від руки/ })))
     await act(async () => fireEvent.click(screen.getByRole('button', { name: 'Додати рядок' })))
     await act(async () =>
@@ -231,10 +248,12 @@ describe('CalculatorPage', () => {
       }),
     )
 
+    await act(async () => fireEvent.click(screen.getByRole('tab', { name: 'Друк і шапка' })))
     expect(screen.getByRole('button', { name: 'Завантажити .xlsx' })).toBeInTheDocument()
 
     // And the line is on the schedule for its day, at the hour it was written for, so the sheet
     // can be read before it is printed.
+    await act(async () => fireEvent.click(screen.getByRole('tab', { name: 'Графік введень' })))
     const day = screen.getByRole('table', { name: 'День 1' })
     expect(within(day).getByText('Sol. NaCl 0,9% — 400,0 в/в крапельно')).toBeInTheDocument()
   })
@@ -252,6 +271,7 @@ describe('CalculatorPage', () => {
     expect(screen.getByLabelText('Препарат у курсі: ДЕМО Ритуксимаб')).toBeChecked()
     // Switched off means out of the course, not merely unticked: nothing to order for it, and
     // no line for it on the sheet.
+    await act(async () => fireEvent.click(screen.getByRole('tab', { name: 'Флакони / потреба' })))
     const supply = screen.getByRole('table', { name: 'Потреба на курс' })
     expect(within(supply).queryByText(/Преднізолон/)).not.toBeInTheDocument()
     expect(within(supply).getAllByText(/Ритуксимаб/).length).toBeGreaterThan(0)
@@ -279,7 +299,7 @@ describe('CalculatorPage', () => {
     // 375 mg/m² × 1.75 m² = 656.25 → 656 mg, from the typed BSA alone.
     const table = screen.getByRole('table', { name: 'Дози' })
     const rituximab = within(table).getByText('ДЕМО Ритуксимаб').closest('tr')!
-    expect(within(rituximab).getAllByText('656 мг')).toHaveLength(2)
+    expect(within(rituximab).getByText('656 мг')).toBeInTheDocument()
     expect(screen.getByLabelText('Зріст, см')).toHaveValue('')
     expect(screen.getByLabelText('Вага, кг')).toHaveValue('')
   })

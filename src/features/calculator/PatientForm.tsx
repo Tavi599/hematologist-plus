@@ -74,7 +74,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
         </Text>
 
         <SimpleGrid
-          cols={{ base: 2, xs: 3 }}
+          cols={{ base: 2, xs: 3, lg: 2 }}
           spacing="xs"
           verticalSpacing="xs"
           style={{ alignItems: 'end' }}

@@ -18,7 +18,7 @@ import {
 import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import type { CourseDrugResult, CourseResult } from '../../domain'
+import type { BsaVariant, CourseDrugResult, CourseResult } from '../../domain'
 import { amountUnitOf, isMassUnit } from '../../domain'
 import { formatNumber } from '../../lib/format'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
@@ -54,6 +54,8 @@ export interface DoseTableProps {
   onDoseModifiers: (itemId: string, keys: string[]) => void
   onRemove: (itemId: string) => void
   customIds: string[]
+  /** The BSA the doses are given on; the other variant is shown under it when it differs. */
+  bsaVariant: BsaVariant
 }
 
 /** Value of the "typed by hand" entry in the dose-source list; not a real choice id. */
@@ -84,7 +86,7 @@ export function DoseTable(props: DoseTableProps) {
           {t('calculator.doses.title')}
         </Title>
       </Box>
-      <Table.ScrollContainer minWidth={840}>
+      <Table.ScrollContainer minWidth={760}>
         <Table verticalSpacing="xs" highlightOnHover aria-label={t('calculator.doses.title')}>
           <Table.Thead>
             <Table.Tr>
@@ -95,10 +97,22 @@ export function DoseTable(props: DoseTableProps) {
                 {t(
                   course?.bsa.entered
                     ? 'calculator.doses.doseEntered'
-                    : 'calculator.doses.doseActual',
+                    : props.bsaVariant === 'capped'
+                      ? 'calculator.doses.doseCapped'
+                      : 'calculator.doses.doseActual',
+                )}
+                {course && (
+                  <Text span size="xs" c="dimmed" fw={400}>
+                    {' '}
+                    {formatNumber(
+                      props.bsaVariant === 'capped' ? course.bsa.cappedM2 : course.bsa.actualM2,
+                      currentLanguage(),
+                      2,
+                    )}{' '}
+                    {t('units.m2')}
+                  </Text>
                 )}
               </Table.Th>
-              <Table.Th>{t('calculator.doses.doseCapped')}</Table.Th>
               <Table.Th w={110}>{t('calculator.doses.reduction')}</Table.Th>
               <Table.Th w={120}>{t('calculator.doses.manualDose')}</Table.Th>
               <Table.Th>{t('calculator.doses.units')}</Table.Th>
@@ -110,7 +124,7 @@ export function DoseTable(props: DoseTableProps) {
             {groupCourseItems(items).map((group) => (
               <Fragment key={group.key}>
                 <Table.Tr bg="var(--mantine-color-default-hover)">
-                  <Table.Td colSpan={10} py={6}>
+                  <Table.Td colSpan={9} py={6}>
                     <Text size="xs" fw={600} tt="uppercase" c="dimmed">
                       {t(`calculator.doses.block.${group.kind}`)}
                     </Text>
@@ -152,6 +166,7 @@ function DoseRow({
   onDoseModifiers,
   onRemove,
   customIds,
+  bsaVariant,
 }: DoseTableProps & {
   item: CourseItem
   result: CourseDrugResult | undefined
@@ -288,7 +303,9 @@ function DoseRow({
               <Group gap={6} wrap="nowrap">
                 <Text fw={600}>
                   {amount(
-                    manualAmount === undefined ? result.rounded.actual.roundedAmount : manualAmount,
+                    manualAmount === undefined
+                      ? result.rounded[bsaVariant].roundedAmount
+                      : manualAmount,
                   )}
                 </Text>
                 {manualAmount !== undefined && (
@@ -299,25 +316,27 @@ function DoseRow({
               </Group>
               <Text size="xs" c="dimmed">
                 {t('calculator.doses.unrounded', {
-                  value: formatNumber(result.rounded.actual.unroundedAmount, language, 2),
+                  value: formatNumber(result.rounded[bsaVariant].unroundedAmount, language, 2),
                   unit: unitName,
                 })}
               </Text>
-            </>
-          ) : (
-            <Text c="dimmed">—</Text>
-          )}
-        </Table.Td>
-        <Table.Td>
-          {result ? (
-            <Text
-              fw={result.variants.differs && manualAmount === undefined ? 600 : 400}
-              c={result.variants.differs && manualAmount === undefined ? undefined : 'dimmed'}
-            >
-              {amount(
-                manualAmount === undefined ? result.rounded.capped.roundedAmount : manualAmount,
+              {/* The two BSA variants used to be two columns; the one not chosen is still here,
+                  under the dose, whenever it would give a different number. */}
+              {result.variants.differs && manualAmount === undefined && (
+                <Text size="xs" c="orange.8">
+                  {t('calculator.doses.otherVariant', {
+                    variant: t(
+                      bsaVariant === 'capped'
+                        ? 'calculator.doses.variantActual'
+                        : 'calculator.doses.variantCapped',
+                    ),
+                    value: amount(
+                      result.rounded[bsaVariant === 'capped' ? 'actual' : 'capped'].roundedAmount,
+                    ),
+                  })}
+                </Text>
               )}
-            </Text>
+            </>
           ) : (
             <Text c="dimmed">—</Text>
           )}
@@ -363,7 +382,9 @@ function DoseRow({
             disabled={!enabled}
             value={manualAmount ?? ''}
             placeholder={
-              result ? formatNumber(result.rounded['actual'].roundedAmount, language, 1) : undefined
+              result
+                ? formatNumber(result.rounded[bsaVariant].roundedAmount, language, 1)
+                : undefined
             }
             onChange={(value) => onDoseOverride(id, Number(value) > 0 ? Number(value) : null)}
             aria-label={`${t('calculator.doses.manualDose')}: ${localize(item.drug.name, language)}`}
@@ -472,7 +493,7 @@ function DoseRow({
         </Table.Td>
       </Table.Tr>
       <Table.Tr>
-        <Table.Td colSpan={10} p={0} style={{ border: expanded ? undefined : 'none' }}>
+        <Table.Td colSpan={9} p={0} style={{ border: expanded ? undefined : 'none' }}>
           <Collapse expanded={expanded}>
             <Stack gap="xs" p="md">
               {result && (
