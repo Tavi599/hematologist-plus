@@ -33,7 +33,7 @@ export function StandardSupport({
         <Text size="xs" c="dimmed">
           {t('calculator.standardSupport.lead')}
         </Text>
-        <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="xs" verticalSpacing="xs">
+        <SimpleGrid cols={{ base: 1, sm: 2, lg: 1 }} spacing="xs" verticalSpacing={8}>
           {SUPPORT_CATEGORIES.map((category) => {
             const own = categoryItemIds(items, category).length
             return (
