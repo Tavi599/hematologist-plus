@@ -1,0 +1,35 @@
+/**
+ * The form on the left, the course hint and the download on the right; the right panel stays put
+ * while the form scrolls, and scrolls on its own if it is taller than the screen. Below the breakpoint it is one column.
+ */
+.layout {
+  display: grid;
+  gap: var(--mantine-spacing-sm);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+
+.aside {
+  min-width: 0;
+}
+
+.results {
+  min-width: 0;
+}
+
+@media (min-width: 75em) {
+  .layout {
+    grid-template-columns: minmax(0, 7fr) minmax(320px, 5fr);
+  }
+
+  .aside {
+    position: sticky;
+    top: calc(var(--app-shell-header-height, 48px) + var(--mantine-spacing-sm));
+    max-height: calc(
+      100dvh - var(--app-shell-header-height, 48px) - var(--app-shell-footer-height, 32px) - 2 *
+        var(--mantine-spacing-sm)
+    );
+    overflow-y: auto;
+    padding-right: 2px;
+  }
+}

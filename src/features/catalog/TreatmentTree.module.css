@@ -1,0 +1,19 @@
+/* A line of treatment: a thin rule above it separates it from the one before. */
+.line {
+  border-top: 1px solid var(--mantine-color-default-border);
+  padding-top: var(--mantine-spacing-xs);
+}
+
+.toggle {
+  width: 100%;
+}
+
+/* One regimen in the grid: a hover shade shows which row the arrow belongs to. */
+.regimen {
+  padding: 2px 6px;
+  border-radius: var(--mantine-radius-sm);
+
+  &:hover {
+    background-color: var(--mantine-color-default-hover);
+  }
+}

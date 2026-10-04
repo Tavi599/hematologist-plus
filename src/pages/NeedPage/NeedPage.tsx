@@ -8,6 +8,7 @@ import { NeedHint } from '../../features/need/NeedHint'
 import { newNeedLine, type NeedLine } from '../../features/need/need-lines'
 import { NeedLines } from '../../features/need/NeedLines'
 import type { CatalogIndex } from '../../lib/catalog-index'
+import classes from './NeedPage.module.css'
 
 /**
  * The need for a drug on the Ministry's distribution form. The form is filled in drug by drug;
@@ -30,16 +31,20 @@ function NeedForm({ catalog }: { catalog: CatalogIndex }) {
   const [bsaM2, setBsaM2] = useState<number | null>(null)
 
   return (
-    <Stack>
-      <NeedLines catalog={catalog} lines={lines} onChange={setLines} />
-      <NeedHint
-        catalog={catalog}
-        lines={lines}
-        bsaM2={bsaM2}
-        onBsaChange={setBsaM2}
-        onChange={setLines}
-      />
-      <NeedExport catalog={catalog} lines={lines} />
-    </Stack>
+    <div className={classes.layout}>
+      <div className={classes.results}>
+        <NeedLines catalog={catalog} lines={lines} onChange={setLines} />
+      </div>
+      <Stack gap="sm" className={classes.aside}>
+        <NeedHint
+          catalog={catalog}
+          lines={lines}
+          bsaM2={bsaM2}
+          onBsaChange={setBsaM2}
+          onChange={setLines}
+        />
+        <NeedExport catalog={catalog} lines={lines} />
+      </Stack>
+    </div>
   )
 }

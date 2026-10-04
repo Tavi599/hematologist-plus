@@ -5,6 +5,7 @@ import {
   Group,
   NumberInput,
   Select,
+  SimpleGrid,
   Stack,
   Text,
   TextInput,
@@ -123,7 +124,12 @@ export function NeedLines({
                   </ActionIcon>
                 </Group>
 
-                <Group align="flex-end" wrap="wrap" gap="sm">
+                <SimpleGrid
+                  cols={{ base: 2, sm: 3 }}
+                  spacing="xs"
+                  verticalSpacing="xs"
+                  style={{ alignItems: 'end' }}
+                >
                   <Select
                     label={t('need.form.drug')}
                     data={drugs}
@@ -131,7 +137,6 @@ export function NeedLines({
                     onChange={(value) => chooseDrug(line, value)}
                     searchable
                     clearable
-                    w={240}
                   />
                   <Select
                     label={t('need.form.presentation')}
@@ -146,23 +151,25 @@ export function NeedLines({
                     value={line.presentationId}
                     onChange={(value) => choosePresentation(line, value)}
                     disabled={presentations.length === 0}
-                    w={200}
                   />
                   <TextInput
                     label={t('need.form.name')}
                     description={t('need.form.nameHint')}
                     value={line.name}
                     onChange={(event) => patch(line.key, { name: event.currentTarget.value })}
-                    w={260}
                   />
-                </Group>
+                </SimpleGrid>
 
-                <Group align="flex-end" wrap="wrap" gap="sm">
+                <SimpleGrid
+                  cols={{ base: 2, sm: 3 }}
+                  spacing="xs"
+                  verticalSpacing="xs"
+                  style={{ alignItems: 'end' }}
+                >
                   <TextInput
                     label={t('need.form.order')}
                     value={line.orderRef}
                     onChange={(event) => patch(line.key, { orderRef: event.currentTarget.value })}
-                    w={200}
                   />
                   <NumberInput
                     label={t('need.form.patients')}
@@ -170,7 +177,6 @@ export function NeedLines({
                     onChange={(value) => patch(line.key, { patients: asNumber(value) })}
                     min={0}
                     allowDecimal={false}
-                    w={120}
                   />
                   <NumberInput
                     label={t('need.form.courses')}
@@ -178,7 +184,6 @@ export function NeedLines({
                     onChange={(value) => patch(line.key, { courses: asNumber(value) })}
                     min={0}
                     allowDecimal={false}
-                    w={120}
                   />
                   <NumberInput
                     label={t('need.form.perCourse')}
@@ -186,7 +191,6 @@ export function NeedLines({
                     onChange={(value) => patch(line.key, { packsPerCourse: asNumber(value) })}
                     min={0}
                     allowDecimal={false}
-                    w={140}
                   />
                   <NumberInput
                     label={t('need.form.stock')}
@@ -194,7 +198,6 @@ export function NeedLines({
                     onChange={(value) => patch(line.key, { stock: asNumber(value) })}
                     min={0}
                     allowDecimal={false}
-                    w={120}
                   />
                   <NumberInput
                     label={t('need.form.monthlyUse')}
@@ -204,12 +207,16 @@ export function NeedLines({
                     onChange={(value) => patch(line.key, { monthlyUse: asNumber(value) })}
                     min={0}
                     allowDecimal={false}
-                    w={190}
                   />
-                </Group>
+                </SimpleGrid>
 
-                <Group align="flex-end" wrap="wrap" gap="sm">
-                  <Text size="sm">
+                <SimpleGrid
+                  cols={{ base: 2, sm: 3 }}
+                  spacing="xs"
+                  verticalSpacing="xs"
+                  style={{ alignItems: 'end' }}
+                >
+                  <Text size="sm" pb={6}>
                     {t('need.form.total')}: <strong>{totals.total}</strong>
                   </Text>
                   <NumberInput
@@ -220,7 +227,6 @@ export function NeedLines({
                     onChange={(value) => patch(line.key, { months: asNumber(value) })}
                     min={0}
                     allowDecimal={false}
-                    w={180}
                   />
                   <NumberInput
                     label={t('need.form.proposed')}
@@ -230,9 +236,8 @@ export function NeedLines({
                     onChange={(value) => patch(line.key, { proposed: asNumber(value) })}
                     min={0}
                     allowDecimal={false}
-                    w={180}
                   />
-                </Group>
+                </SimpleGrid>
               </Stack>
             </Card>
           )
