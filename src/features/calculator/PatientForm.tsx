@@ -1,6 +1,5 @@
 import {
   Card,
-  Group,
   NumberInput,
   SegmentedControl,
   Select,
@@ -8,6 +7,7 @@ import {
   Text,
   TextInput,
   Title,
+  SimpleGrid,
 } from '@mantine/core'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useEffect, useRef } from 'react'
@@ -65,7 +65,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
 
   return (
     <Card withBorder component="section">
-      <Stack gap="sm">
+      <Stack gap="xs">
         <Title order={2} size="h4">
           {t('calculator.patient.title')}
         </Title>
@@ -73,7 +73,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
           {t('calculator.patient.note')}
         </Text>
 
-        <Group grow align="flex-start" wrap="wrap">
+        <SimpleGrid cols={{ base: 2, xs: 3 }} spacing="xs" verticalSpacing="xs">
           <TextInput
             label={t('calculator.patient.fullName')}
             description={t('calculator.patient.optional')}
@@ -86,9 +86,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
             autoComplete="off"
             {...register('recordNumber')}
           />
-        </Group>
 
-        <Group grow align="flex-start" wrap="wrap">
           <TextInput
             type="date"
             label={t('calculator.patient.birthDate')}
@@ -127,9 +125,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
               </div>
             )}
           />
-        </Group>
 
-        <Group grow align="flex-start" wrap="wrap">
           <Controller
             control={control}
             name="heightCm"
@@ -160,9 +156,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
               />
             )}
           />
-        </Group>
 
-        <Group grow align="flex-start" wrap="wrap">
           <Controller
             control={control}
             name="serumCreatinine"
@@ -205,7 +199,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
               />
             )}
           />
-        </Group>
+        </SimpleGrid>
       </Stack>
     </Card>
   )

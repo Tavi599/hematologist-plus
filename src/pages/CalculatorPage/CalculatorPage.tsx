@@ -1,4 +1,4 @@
-import { Alert, Card, Group, Stack, Text, Title } from '@mantine/core'
+import { Alert, Card, Group, SimpleGrid, Stack, Text, Title } from '@mantine/core'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router'
@@ -44,7 +44,7 @@ export function CalculatorPage() {
   const { t } = useTranslation()
 
   return (
-    <Stack>
+    <Stack gap="sm">
       <Title order={1}>{t('calculator.title')}</Title>
       <CatalogGate>{(catalog) => <Calculator catalog={catalog} />}</CatalogGate>
     </Stack>
@@ -255,9 +255,11 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const written = manualRows.filter((row) => row.what.trim() !== '')
 
   return (
-    <Stack>
-      <PatientForm onChange={setPatient} />
-      <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
+    <Stack gap="sm">
+      <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="sm" style={{ alignItems: 'start' }}>
+        <PatientForm onChange={setPatient} />
+        <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
+      </SimpleGrid>
 
       {regimen && <RegimenEvidence regimen={regimen} />}
 

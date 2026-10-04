@@ -1,10 +1,11 @@
-import { Card, Group, Select, Stack, Text, TextInput, Title } from '@mantine/core'
+import { Group, Select, Stack, Text, TextInput } from '@mantine/core'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { CatalogIndex } from '../../lib/catalog-index'
 
 import type { HeaderValue } from './header'
+import { CollapsibleCard } from './CollapsibleCard'
 
 /** Header of the printed sheets: defaults from the hospitals table, editable here. */
 export function HospitalHeader({
@@ -50,11 +51,8 @@ export function HospitalHeader({
   }
 
   return (
-    <Card withBorder component="section">
+    <CollapsibleCard title={t('calculator.hospital.title')}>
       <Stack gap="sm">
-        <Title order={2} size="h4">
-          {t('calculator.hospital.title')}
-        </Title>
         {catalog.hospitals.length === 0 ? (
           <Text size="xs" c="dimmed">
             {t('calculator.hospital.none')}
@@ -107,6 +105,6 @@ export function HospitalHeader({
           />
         </Group>
       </Stack>
-    </Card>
+    </CollapsibleCard>
   )
 }

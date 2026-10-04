@@ -1,14 +1,4 @@
-import {
-  ActionIcon,
-  Button,
-  Card,
-  Group,
-  Select,
-  Stack,
-  Text,
-  TextInput,
-  Title,
-} from '@mantine/core'
+import { ActionIcon, Button, Group, Select, Stack, Text, TextInput } from '@mantine/core'
 import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -16,6 +6,7 @@ import { SHEET_HOURS } from './course-sheets'
 import { moveRow, newManualRow, type ManualBlock, type ManualRow } from './manual-rows'
 import { parseDays } from './parse-days'
 import { SupportiveBuilder } from './SupportiveBuilder'
+import { CollapsibleCard } from './CollapsibleCard'
 
 /**
  * Orders written out by hand. They are printed as typed, so the physician can put a line on the
@@ -45,11 +36,8 @@ export function ManualRows({
   ]
 
   return (
-    <Card withBorder component="section">
+    <CollapsibleCard title={t('calculator.manual.title')}>
       <Stack gap="sm">
-        <Title order={2} size="h4">
-          {t('calculator.manual.title')}
-        </Title>
         <Text size="sm" c="dimmed">
           {t('calculator.manual.lead')}
         </Text>
@@ -149,6 +137,6 @@ export function ManualRows({
           {t('calculator.manual.add')}
         </Button>
       </Stack>
-    </Card>
+    </CollapsibleCard>
   )
 }

@@ -85,7 +85,7 @@ export function DoseTable(props: DoseTableProps) {
         </Title>
       </Box>
       <Table.ScrollContainer minWidth={840}>
-        <Table verticalSpacing="sm" highlightOnHover aria-label={t('calculator.doses.title')}>
+        <Table verticalSpacing="xs" highlightOnHover aria-label={t('calculator.doses.title')}>
           <Table.Thead>
             <Table.Tr>
               <Table.Th w={52}>{t('calculator.doses.enabled')}</Table.Th>

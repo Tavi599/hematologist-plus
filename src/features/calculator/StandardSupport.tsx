@@ -1,4 +1,4 @@
-import { Card, Stack, Switch, Text, Title } from '@mantine/core'
+import { Card, SimpleGrid, Stack, Switch, Text, Title } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
 
 import type { CourseItem } from '../../lib/course-input'
@@ -30,25 +30,27 @@ export function StandardSupport({
         <Title order={2} size="h4">
           {t('calculator.standardSupport.title')}
         </Title>
-        <Text size="sm" c="dimmed">
+        <Text size="xs" c="dimmed">
           {t('calculator.standardSupport.lead')}
         </Text>
-        {SUPPORT_CATEGORIES.map((category) => {
-          const own = categoryItemIds(items, category).length
-          return (
-            <Switch
-              key={category}
-              label={t(`calculator.standardSupport.${category}`)}
-              description={
-                own > 0
-                  ? t('calculator.standardSupport.ownRows', { count: own })
-                  : t(`calculator.standardSupport.standard.${category}`)
-              }
-              checked={value[category]}
-              onChange={(event) => onChange(category, event.currentTarget.checked)}
-            />
-          )
-        })}
+        <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="xs" verticalSpacing="xs">
+          {SUPPORT_CATEGORIES.map((category) => {
+            const own = categoryItemIds(items, category).length
+            return (
+              <Switch
+                key={category}
+                label={t(`calculator.standardSupport.${category}`)}
+                description={
+                  own > 0
+                    ? t('calculator.standardSupport.ownRows', { count: own })
+                    : t(`calculator.standardSupport.standard.${category}`)
+                }
+                checked={value[category]}
+                onChange={(event) => onChange(category, event.currentTarget.checked)}
+              />
+            )
+          })}
+        </SimpleGrid>
       </Stack>
     </Card>
   )

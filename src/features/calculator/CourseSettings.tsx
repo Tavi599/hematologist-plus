@@ -5,6 +5,7 @@ import {
   Group,
   NumberInput,
   Select,
+  SimpleGrid,
   Stack,
   Text,
   TextInput,
@@ -73,7 +74,7 @@ export function CourseSettings({
 
   return (
     <Card withBorder component="section">
-      <Stack gap="sm">
+      <Stack gap="xs">
         <Title order={2} size="h4">
           {t('calculator.course.title')}
         </Title>
@@ -125,7 +126,7 @@ export function CourseSettings({
           </Text>
         )}
 
-        <Group grow align="flex-start" wrap="wrap">
+        <SimpleGrid cols={{ base: 2, xs: 3 }} spacing="xs" verticalSpacing="xs">
           <TextInput
             type="date"
             label={t('calculator.course.startDate')}
@@ -173,7 +174,7 @@ export function CourseSettings({
               }}
             />
           )}
-        </Group>
+        </SimpleGrid>
       </Stack>
     </Card>
   )

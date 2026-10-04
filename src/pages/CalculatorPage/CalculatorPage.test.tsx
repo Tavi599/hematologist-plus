@@ -222,6 +222,8 @@ describe('CalculatorPage', () => {
     // Nothing is calculated and nothing is on paper yet, so there is nothing to download.
     expect(screen.queryByRole('button', { name: 'Завантажити .xlsx' })).not.toBeInTheDocument()
 
+    // Hand-written lines sit in a folded section; the physician opens it first.
+    await act(async () => fireEvent.click(screen.getByRole('button', { name: /Рядки від руки/ })))
     await act(async () => fireEvent.click(screen.getByRole('button', { name: 'Додати рядок' })))
     await act(async () =>
       fireEvent.change(screen.getByLabelText('Призначення'), {

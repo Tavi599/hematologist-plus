@@ -20,7 +20,7 @@ export function AppLayout() {
   ]
 
   return (
-    <AppShell header={{ height: 60 }} footer={{ height: { base: 52, sm: 36 } }} padding="md">
+    <AppShell header={{ height: 48 }} footer={{ height: { base: 52, sm: 32 } }} padding="sm">
       <AppShell.Header>
         <Container size="xl" h="100%">
           <Group h="100%" justify="space-between" wrap="nowrap">

@@ -1,4 +1,4 @@
-import { Button, Card, Group, NumberInput, Select, TextInput, Title } from '@mantine/core'
+import { Button, Group, NumberInput, Select, TextInput } from '@mantine/core'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -9,6 +9,7 @@ import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import type { RegimenItem } from '../../schemas/catalog'
 import { parseDays } from './parse-days'
+import { CollapsibleCard } from './CollapsibleCard'
 
 /** Adds a drug that is not part of the regimen (supportive therapy, a substitution). */
 export function AddDrugForm({
@@ -60,10 +61,7 @@ export function AddDrugForm({
   }
 
   return (
-    <Card withBorder component="section">
-      <Title order={2} size="h4" mb="sm">
-        {t('calculator.doses.addTitle')}
-      </Title>
+    <CollapsibleCard title={t('calculator.doses.addTitle')}>
       <Group align="flex-end" wrap="wrap" gap="sm">
         <Select
           label={t('calculator.doses.addDrug')}
@@ -109,6 +107,6 @@ export function AddDrugForm({
           {t('calculator.doses.addSubmit')}
         </Button>
       </Group>
-    </Card>
+    </CollapsibleCard>
   )
 }
