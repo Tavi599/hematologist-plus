@@ -73,8 +73,14 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
           {t('calculator.patient.note')}
         </Text>
 
-        <SimpleGrid cols={{ base: 2, xs: 3 }} spacing="xs" verticalSpacing="xs">
+        <SimpleGrid
+          cols={{ base: 2, xs: 3 }}
+          spacing="xs"
+          verticalSpacing="xs"
+          style={{ alignItems: 'end' }}
+        >
           <TextInput
+            style={{ gridColumn: 'span 2' }}
             label={t('calculator.patient.fullName')}
             description={t('calculator.patient.optional')}
             autoComplete="off"
@@ -111,7 +117,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
             name="sex"
             render={({ field }) => (
               <div>
-                <Text size="sm" fw={500} mb={4}>
+                <Text size="xs" fw={500} mb={4}>
                   {t('calculator.patient.sex')}
                 </Text>
                 <SegmentedControl
@@ -159,6 +165,21 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
 
           <Controller
             control={control}
+            name="bilirubinUmolL"
+            render={({ field }) => (
+              <NumberInput
+                {...field}
+                value={field.value ?? ''}
+                label={t('calculator.patient.bilirubinUmolL')}
+                description={t('calculator.patient.optional')}
+                {...decimalInput()}
+                decimalScale={1}
+                error={invalid('bilirubinUmolL')}
+              />
+            )}
+          />
+          <Controller
+            control={control}
             name="serumCreatinine"
             render={({ field }) => (
               <NumberInput
@@ -181,21 +202,6 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
                 allowDeselect={false}
                 label={t('calculator.patient.creatinineUnit')}
                 data={CREATININE_UNITS.map((unit) => ({ value: unit, label: t(`units.${unit}`) }))}
-              />
-            )}
-          />
-          <Controller
-            control={control}
-            name="bilirubinUmolL"
-            render={({ field }) => (
-              <NumberInput
-                {...field}
-                value={field.value ?? ''}
-                label={t('calculator.patient.bilirubinUmolL')}
-                description={t('calculator.patient.optional')}
-                {...decimalInput()}
-                decimalScale={1}
-                error={invalid('bilirubinUmolL')}
               />
             )}
           />

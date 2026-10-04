@@ -126,7 +126,12 @@ export function CourseSettings({
           </Text>
         )}
 
-        <SimpleGrid cols={{ base: 2, xs: 3 }} spacing="xs" verticalSpacing="xs">
+        <SimpleGrid
+          cols={{ base: 2, xs: 3 }}
+          spacing="xs"
+          verticalSpacing="xs"
+          style={{ alignItems: 'end' }}
+        >
           <TextInput
             type="date"
             label={t('calculator.course.startDate')}

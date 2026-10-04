@@ -256,7 +256,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
 
   return (
     <Stack gap="sm">
-      <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="sm" style={{ alignItems: 'start' }}>
+      <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="sm" style={{ alignItems: 'stretch' }}>
         <PatientForm onChange={setPatient} />
         <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
       </SimpleGrid>
