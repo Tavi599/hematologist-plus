@@ -1,0 +1,102 @@
+{
+  "$comment": "Застереження: дослідження зупинено через смертельні аритмії; калькулятор схему не пропонує.",
+  "id": "avoid-wm-ibrutinib-venetoclax",
+  "short_name": "Ібрутиніб + венетоклакс (Вальденстрем)",
+  "name": {
+    "uk": "Ібрутиніб + венетоклакс у першій лінії макроглобулінемії Вальденстрема",
+    "en": "Ibrutinib plus venetoclax first line in Waldenström macroglobulinaemia"
+  },
+  "sources": [
+    {
+      "name": "Castillo J.J. та ін. Final Report of a Phase II Study of Ibrutinib and Venetoclax in Previously Untreated Waldenström Macroglobulinemia. Am J Hematol. 2026;101:1255-1263",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41832630/",
+      "version": "резюме; фаза II, 45 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "phase": "II",
+      "randomized": false,
+      "n": 45
+    },
+    "settings": ["first-line"],
+    "verdict": "avoid",
+    "appraisal": [
+      {
+        "publication": "Castillo J.J. та ін. Am J Hematol. 2026;101:1255-1263",
+        "pmid": "41832630",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Journal Article", "Clinical Trial, Phase II"],
+        "journal": {
+          "name": "American Journal of Hematology",
+          "issn": "0361-8609",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/41832630/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «American Journal of Hematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7610369",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Дослідження двох пероральних препаратів фіксованої тривалості в нелікованих пацієнтів зупинили після 45 пацієнтів через шлуночкові аритмії.",
+      "en": "The study of the two oral drugs for a fixed duration in untreated patients was stopped after 45 patients because of ventricular arrhythmias."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ібрутиніб",
+          "en": "Ibrutinib"
+        },
+        "drug_id": "ibrutinib"
+      },
+      {
+        "name": {
+          "uk": "Венетоклакс",
+          "en": "Venetoclax"
+        },
+        "drug_id": "venetoclax"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Шлуночкові аритмії в 4 пацієнтів (9%), з них 2 смертельні.",
+        "en": "Ventricular arrhythmias in 4 patients (9%), 2 of them fatal."
+      },
+      {
+        "uk": "Ефективність висока (дуже добра часткова або повна відповідь 42%, медіана виживаності без прогресування 36 місяців), але не виправдовує ризику поза дослідженням.",
+        "en": "Efficacy was high (very good partial or complete response 42%, median progression-free survival 36 months) but does not justify the risk outside a trial."
+      }
+    ],
+    "gap": {
+      "uk": "Не застосовувати поза дослідженням.",
+      "en": "Not to be used outside a trial."
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-cll-richter-vr-epoch",
+  "short_name": "VR-EPOCH (Ріхтер)",
+  "name": {
+    "uk": "Венетоклакс + DA-R-EPOCH при синдромі Ріхтера",
+    "en": "Venetoclax plus DA-R-EPOCH in Richter syndrome"
+  },
+  "sources": [
+    {
+      "name": "Davids M.S. та ін. Venetoclax plus dose-adjusted R-EPOCH for Richter syndrome. Blood. 2022;139:686-689",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8814674/",
+      "version": "повний текст у PMC; фаза II, 26 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "nct": "NCT03054896",
+      "phase": "II",
+      "randomized": false,
+      "n": 26
+    },
+    "settings": ["first-line", "high-risk"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Davids M.S. та ін. Blood. 2022;139:686-689",
+        "pmid": "34788401",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34788401/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Синдром Ріхтера: 1 цикл DA-R-EPOCH, після відновлення показників — пришвидшене щоденне нарощування венетоклаксу до 400 мг, далі до 5 циклів VR-EPOCH по 21 дню; при відповіді — підтримка венетоклаксом або клітинна терапія.",
+      "en": "Richter syndrome: one cycle of DA-R-EPOCH, then after count recovery an accelerated daily venetoclax ramp-up to 400 mg, then up to five 21-day cycles of VR-EPOCH; responders go on to venetoclax maintenance or cellular therapy."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Венетоклакс",
+          "en": "Venetoclax"
+        },
+        "drug_id": "venetoclax"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин",
+          "en": "Doxorubicin"
+        },
+        "drug_id": "doxorubicin"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Повна відповідь 50%, загальна — 62%; медіана виживаності без прогресування 10,1 місяця, загальної — 19,6 місяця.",
+        "en": "Complete response 50%, overall 62%; median progression-free survival 10.1 months, overall survival 19.6 months."
+      },
+      {
+        "uk": "Нейтропенія 3 ступеня і вище 65%, тромбоцитопенія 50%, фебрильна нейтропенія 38%; синдрому лізису пухлини при щоденному нарощуванні не було.",
+        "en": "Grade 3 or worse neutropenia 65%, thrombocytopenia 50%, febrile neutropenia 38%; no tumour lysis with the daily ramp-up."
+      }
+    ],
+    "gap": {
+      "uk": "DA-R-EPOCH є в довіднику (DA-EPOCH-R), але схема пришвидшеного нарощування венетоклаксу — лише в протоколі.",
+      "en": "DA-R-EPOCH is in the catalogue (DA-EPOCH-R), but the accelerated venetoclax ramp-up schedule is only in the protocol."
+    }
+  }
+}

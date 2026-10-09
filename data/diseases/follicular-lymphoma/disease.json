@@ -433,6 +433,84 @@
       ]
     },
     {
+      "key": "clinical-trials",
+      "kind": "trial",
+      "title": {
+        "uk": "Клінічні дослідження",
+        "en": "Clinical trials"
+      },
+      "description": {
+        "uk": "Схеми, які існують лише як опубліковані дослідження: їх немає ні в настанові, ні в інструкції до препарату. Застосування поза інструкцією потребує окремого рішення й згоди пацієнта. Біля кожної схеми в калькуляторі наведено дизайн дослідження, кого в нього включали, що з нього вийшло і чого вимагає проведення.",
+        "en": "Regimens that exist only as published studies: neither a guideline nor a label carries them. Off-label use needs a decision of its own and the patient's consent. In the calculator each regimen states the design of the study, who was enrolled, what came out of it and what the conduct demands."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "trials-first-line",
+          "kind": "trial",
+          "title": {
+            "uk": "Перша лінія",
+            "en": "First line"
+          },
+          "description": {
+            "uk": "Без хіміотерапії.",
+            "en": "Chemotherapy-free."
+          },
+          "regimens": [
+            {
+              "regimen_id": "r2-first-line-cycle-1",
+              "notes": {
+                "uk": "RELEVANCE, фаза III; як R-хіміотерапія",
+                "en": "RELEVANCE, phase III; on a par with R-chemotherapy"
+              }
+            },
+            {
+              "regimen_id": "r2-first-line",
+              "notes": {
+                "uk": "Цикли 2–6",
+                "en": "Cycles 2 to 6"
+              }
+            }
+          ]
+        },
+        {
+          "key": "trials-relapse",
+          "kind": "trial",
+          "title": {
+            "uk": "Рецидив",
+            "en": "Relapse"
+          },
+          "description": {
+            "uk": "Зокрема рання невдача ритуксимабу.",
+            "en": "Including early failure of rituximab."
+          },
+          "regimens": [
+            {
+              "regimen_id": "galen-cycle-1",
+              "notes": {
+                "uk": "GALEN, фаза II",
+                "en": "GALEN, phase II"
+              }
+            },
+            {
+              "regimen_id": "galen",
+              "notes": {
+                "uk": "Цикли 2–6",
+                "en": "Cycles 2 to 6"
+              }
+            },
+            {
+              "regimen_id": "galen-obinutuzumab-maintenance",
+              "notes": {
+                "uk": "Другий рік підтримки",
+                "en": "Second maintenance year"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "reference",
       "kind": "reference",
       "title": {
@@ -445,16 +523,10 @@
       },
       "regimens": [
         {
-          "regimen_id": "ref-fl-r2-first-line"
-        },
-        {
           "regimen_id": "ref-fl-r2-tafasitamab"
         },
         {
           "regimen_id": "ref-fl-r2-epcoritamab"
-        },
-        {
-          "regimen_id": "ref-fl-len-obinutuzumab"
         },
         {
           "regimen_id": "ref-fl-mosunetuzumab"

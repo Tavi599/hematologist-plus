@@ -1,0 +1,166 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-cll-giv",
+  "short_name": "GIV (CLL13)",
+  "name": {
+    "uk": "Венетоклакс + обінутузумаб + ібрутиніб у придатних (CLL13/GAIA)",
+    "en": "Venetoclax, obinutuzumab and ibrutinib in fit patients (CLL13/GAIA)"
+  },
+  "sources": [
+    {
+      "name": "Eichhorst B. та ін. First-Line Venetoclax Combinations in Chronic Lymphocytic Leukemia. N Engl J Med. 2023;388:1739-1754",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37163621/",
+      "version": "резюме; фаза III, 926 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Fürstenau M. та ін. Venetoclax combinations in untreated CLL: 5-year results and patient-reported outcomes analysis of the CLL13/GAIA trial. Blood. 2026;147:3025-3038",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41911073/",
+      "version": "резюме; 5 років",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "CLL13/GAIA",
+      "nct": "NCT02950051",
+      "phase": "III",
+      "randomized": true,
+      "n": 926,
+      "comparator": "FCR або BR",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Eichhorst B. та ін. N Engl J Med. 2023;388:1739-1754",
+        "pmid": "37163621",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "The New England Journal of Medicine",
+          "issn": "0028-4793",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/37163621/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The New England Journal of Medicine» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0255562",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Fürstenau M. та ін. Blood. 2026;147:3025-3038",
+        "pmid": "41911073",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Clinical Trial, Phase III",
+          "Multicenter Study"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/41911073/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Придатні пацієнти з ХЛЛ без аберацій TP53: 12 циклів венетоклаксу з обінутузумабом та ібрутинібом; ібрутиніб продовжують до циклу 36, якщо на 12-му або 15-му місяці визначається залишкова хвороба.",
+      "en": "Fit CLL patients without TP53 aberrations: 12 cycles of venetoclax with obinutuzumab and ibrutinib; ibrutinib continues to cycle 36 if residual disease is measurable at month 12 or 15."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Венетоклакс",
+          "en": "Venetoclax"
+        },
+        "drug_id": "venetoclax"
+      },
+      {
+        "name": {
+          "uk": "Обінутузумаб",
+          "en": "Obinutuzumab"
+        },
+        "drug_id": "obinutuzumab"
+      },
+      {
+        "name": {
+          "uk": "Ібрутиніб",
+          "en": "Ibrutinib"
+        },
+        "drug_id": "ibrutinib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "П'ятирічна виживаність без прогресування: GIV 81,3%, венетоклакс + обінутузумаб 69,8%, венетоклакс + ритуксимаб 57,4%, FCR або BR 50,7%. GIV довше, ніж венетоклакс + обінутузумаб (p=0,0046).",
+        "en": "Five-year progression-free survival: GIV 81.3%, venetoclax plus obinutuzumab 69.8%, venetoclax plus rituximab 57.4%, FCR or BR 50.7%. GIV longer than venetoclax plus obinutuzumab (p=0.0046)."
+      },
+      {
+        "uk": "Загальна виживаність не відрізнялася (близько 94% у всіх групах з венетоклаксом). З GIV найбільше серцевих подій і пізніше покращення якості життя.",
+        "en": "Overall survival did not differ (about 94% in all venetoclax arms). GIV had the most cardiac events and a later improvement in quality of life."
+      }
+    ],
+    "gap": {
+      "uk": "Розклад трьох препаратів (дні обінутузумабу, нарощування венетоклаксу, початок ібрутинібу) у резюме не наведено.",
+      "en": "The three-drug schedule (obinutuzumab days, venetoclax ramp-up, ibrutinib start) is not in the abstracts."
+    }
+  }
+}

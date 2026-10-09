@@ -234,6 +234,54 @@
       ]
     },
     {
+      "key": "clinical-trials",
+      "kind": "trial",
+      "title": {
+        "uk": "Клінічні дослідження",
+        "en": "Clinical trials"
+      },
+      "description": {
+        "uk": "Схеми, які існують лише як опубліковані дослідження: їх немає ні в настанові, ні в інструкції до препарату. Застосування поза інструкцією потребує окремого рішення й згоди пацієнта. Біля кожної схеми в калькуляторі наведено дизайн дослідження, кого в нього включали, що з нього вийшло і чого вимагає проведення.",
+        "en": "Regimens that exist only as published studies: neither a guideline nor a label carries them. Off-label use needs a decision of its own and the patient's consent. In the calculator each regimen states the design of the study, who was enrolled, what came out of it and what the conduct demands."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "trials-first-line",
+          "kind": "trial",
+          "title": {
+            "uk": "Перша лінія, придатні",
+            "en": "First line, fit patients"
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-cll-giv"
+            }
+          ]
+        },
+        {
+          "key": "trials-richter",
+          "kind": "trial",
+          "title": {
+            "uk": "Трансформація Ріхтера",
+            "en": "Richter transformation"
+          },
+          "description": {
+            "uk": "Прогноз поганий; бажано включення в дослідження й алотрансплантація в ремісії.",
+            "en": "The prognosis is poor; trial enrolment and an allogeneic transplant in remission are preferred."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-cll-richter-vr-epoch"
+            },
+            {
+              "regimen_id": "ref-cll-richter-pembrolizumab"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "reference",
       "kind": "reference",
       "title": {

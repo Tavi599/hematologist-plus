@@ -1,0 +1,96 @@
+{
+  "$comment": "Лише опис: розрахунок — через схему «Пембролізумаб» довідника.",
+  "id": "ref-cll-richter-pembrolizumab",
+  "short_name": "Пембролізумаб (Ріхтер)",
+  "name": {
+    "uk": "Пембролізумаб при трансформації Ріхтера",
+    "en": "Pembrolizumab in Richter transformation"
+  },
+  "sources": [
+    {
+      "name": "Ding W. та ін. Pembrolizumab in patients with CLL and Richter transformation or with relapsed CLL. Blood. 2017;129:3419-3427",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492091/",
+      "version": "повний текст у PMC; фаза II, 25 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "nct": "NCT02332980",
+      "phase": "II",
+      "randomized": false,
+      "n": 25
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Ding W. та ін. Blood. 2017;129:3419-3427",
+        "pmid": "28424162",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article"],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/28424162/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Трансформація Ріхтера (ДВКЛ), особливо з прогресуванням на ібрутинібі: пембролізумаб 200 мг кожні 3 тижні.",
+      "en": "Richter transformation (DLBCL), particularly progressing on ibrutinib: pembrolizumab 200 mg every 3 weeks."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Пембролізумаб",
+          "en": "Pembrolizumab"
+        },
+        "drug_id": "pembrolizumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Відповідь у 4 з 9 пацієнтів з трансформацією (44%), усі — після прогресування на ібрутинібі; при самій ХЛЛ відповідей не було (0 з 16).",
+        "en": "Responses in 4 of 9 patients with transformation (44%), all after progression on ibrutinib; none in CLL alone (0 of 16)."
+      },
+      {
+        "uk": "Медіана загальної виживаності при трансформації 10,7 місяця. Небажані явища 3 ступеня і вище — 60%.",
+        "en": "Median overall survival in transformation 10.7 months. Grade 3 or worse adverse events, 60%."
+      }
+    ],
+    "gap": {
+      "uk": "Доза та сама, що в схемі «Пембролізумаб» довідника (200 мг кожні 3 тижні); окремого розрахунку не потрібно. Дані — лише 9 пацієнтів.",
+      "en": "The dose matches the catalogue pembrolizumab regimen (200 mg every 3 weeks); no separate calculation needed. The data cover only 9 patients."
+    }
+  }
+}

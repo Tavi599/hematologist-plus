@@ -1,0 +1,138 @@
+{
+  "$comment": "GALEN за реєстром NCT01582776 і резюме: індукція 6 циклів по 28 днів — обінутузумаб 1000 мг у дні 8, 15, 22 циклу 1 і в день 1 циклів 2–6; леналідомід 20 мг у дні 1–21 циклу 1 і в дні 2–22 циклів 2–6. Рік 1 підтримки: леналідомід 10 мг у дні 2–22, 12 циклів по 28 днів, обінутузумаб 1000 мг через цикл (котрі саме — не сказано, тож не розраховується). Рік 2: обінутузумаб 1000 мг у день 1 кожні 56 днів, 6 разів. Швидкості введення обінутузумабу — як у Glofit-GemOx довідника.",
+  "id": "galen-cycle-1",
+  "short_name": "GALEN (цикл 1)",
+  "name": {
+    "uk": "Обінутузумаб + леналідомід (GALEN): цикл 1",
+    "en": "Obinutuzumab plus lenalidomide (GALEN): cycle 1"
+  },
+  "description": {
+    "uk": "Рецидив фолікулярної лімфоми. Цикл 1 з 28 днів.",
+    "en": "Relapsed follicular lymphoma. Cycle 1 of 28 days."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Morschhauser F. та ін. Obinutuzumab combined with lenalidomide for relapsed or refractory follicular B-cell lymphoma (GALEN): a multicentre, single-arm, phase 2 study. Lancet Haematol. 2019;6:e429-e437",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31296423/",
+      "version": "резюме; фаза II, 89 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT01582776 (GALEN), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT01582776",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Багатоцентрове дослідження фази II без групи порівняння (LYSARC, Франція).",
+      "en": "A multicentre phase II study without a comparison group (LYSARC, France)."
+    },
+    "population": {
+      "uk": "89 пацієнтів з рецидивом або рефрактерною фолікулярною лімфомою 1–3a ступеня після схеми з ритуксимабом, зокрема з ранньою невдачею.",
+      "en": "89 patients with relapsed or refractory grade 1 to 3a follicular lymphoma after a rituximab regimen, including early failure."
+    },
+    "results": {
+      "uk": "Загальна відповідь наприкінці індукції 79%, повна — 38%. Дворічна виживаність без прогресування 65%, загальна — 87%.",
+      "en": "Overall response at the end of induction 79%, complete 38%. Two-year progression-free survival 65%, overall 87%."
+    },
+    "conduct": {
+      "uk": "Найчастіше — астенія (61%), нейтропенія (43%), бронхіт (41%), діарея (40%); фебрильна нейтропенія 5%, одна смерть від неї.",
+      "en": "Commonest were asthenia (61%), neutropenia (43%), bronchitis (41%), diarrhoea (40%); febrile neutropenia 5%, with one death from it."
+    },
+    "trial": {
+      "acronym": "GALEN",
+      "nct": "NCT01582776",
+      "phase": "II",
+      "randomized": false,
+      "n": 89
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Morschhauser F. та ін. Lancet Haematol. 2019;6:e429-e437",
+        "pmid": "31296423",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article", "Multicenter Study"],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31296423/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "20 мг раз на добу в дні 1–21 (NCT01582776).",
+        "en": "20 mg once a day on days 1 to 21 (NCT01582776)."
+      }
+    },
+    {
+      "key": "obinutuzumab",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [8],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl. Починати з 50 мг/год, підвищуючи на 50 мг/год кожні 30 хв до 400 мг/год.",
+        "en": "In 250 mL 0.9% NaCl. Start at 50 mg/h and raise by 50 mg/h every 30 minutes to 400 mg/h."
+      }
+    },
+    {
+      "key": "obinutuzumab-repeat",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [15, 22],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "1000 мг у 250 мл 0,9% NaCl. Повторні введення: з 100 мг/год, підвищуючи на 100 мг/год кожні 30 хвилин до 400 мг/год, якщо попереднє перенесено без реакцій.",
+        "en": "1000 mg in 250 mL of 0.9% sodium chloride. Repeat infusions: from 100 mg/h, raised by 100 mg/h every 30 minutes to 400 mg/h, if the previous one caused no reaction."
+      }
+    }
+  ]
+}

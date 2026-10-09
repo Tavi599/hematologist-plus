@@ -1,0 +1,190 @@
+{
+  "$comment": "R2 у першій лінії за рукописом RELEVANCE (PMC11003525): леналідомід 20 мг у дні 2–22 кожного 28-денного циклу, 6 циклів (10 мг при кліренсі креатиніну 30–59 мл/хв); ритуксимаб 375 мг/м² у дні 1, 8, 15, 22 циклу 1 і в день 1 циклів 2–6. Далі за повної відповіді — леналідомід 10 мг на добу 12 циклів, за часткової — 20 мг ще 3 або 6 циклів до повної відповіді, загалом 18 циклів; ритуксимаб кожні 8 тижнів 12 разів. Днів леналідоміду в циклах 7–18 рукопис не наводить, тож ці цикли не розраховуються.",
+  "id": "r2-first-line-cycle-1",
+  "short_name": "R2, перша лінія (цикл 1)",
+  "name": {
+    "uk": "Ритуксимаб + леналідомід у першій лінії (RELEVANCE): цикл 1",
+    "en": "Rituximab plus lenalidomide first line (RELEVANCE): cycle 1"
+  },
+  "description": {
+    "uk": "Нелікована фолікулярна лімфома, що потребує лікування. Цикл 1 з 28 днів: ритуксимаб щотижня.",
+    "en": "Untreated follicular lymphoma needing treatment. Cycle 1 of 28 days: weekly rituximab."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Morschhauser F. та ін. Rituximab plus Lenalidomide in Advanced Untreated Follicular Lymphoma. N Engl J Med. 2018;379:934-947",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11003525/",
+      "version": "рукопис у PMC; фаза III, 1030 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Gower N. та ін. Lenalidomide plus rituximab for previously untreated advanced follicular lymphoma: the 10-year RELEVANCE trial analysis. Blood. 2026;147:3061-3068",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41915772/",
+      "version": "резюме; 10 років спостереження",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Міжнародне рандомізоване дослідження фази III на перевагу: R2 проти R-хіміотерапії (R-CHOP, R-CVP або BR на вибір), в обох групах — підтримка ритуксимабом.",
+      "en": "An international randomised phase III superiority trial: R2 against R-chemotherapy (R-CHOP, R-CVP or BR by choice), with rituximab maintenance in both arms."
+    },
+    "population": {
+      "uk": "1030 пацієнтів з нелікованою фолікулярною лімфомою II–IV стадії, що потребує лікування.",
+      "en": "1030 patients with untreated stage II to IV follicular lymphoma needing treatment."
+    },
+    "results": {
+      "uk": "Перевагу не доведено, ефективність однакова. Медіана виживаності без прогресування 110,6 проти 102,8 місяця, десятирічна — 46,4% проти 46,6%; десятирічна загальна виживаність 82,4% проти 81,1%.",
+      "en": "Superiority was not shown; efficacy was the same. Median progression-free survival 110.6 against 102.8 months, ten-year 46.4% against 46.6%; ten-year overall survival 82.4% against 81.1%."
+    },
+    "conduct": {
+      "uk": "Інший профіль токсичності: нейтропенія 3–4 ступеня 32% проти 50%, фебрильна нейтропенія 2% проти 7%, але шкірні реакції 3–4 ступеня 7% проти 1%. Альтернатива без хіміотерапії.",
+      "en": "A different toxicity profile: grade 3 to 4 neutropenia 32% against 50%, febrile neutropenia 2% against 7%, but grade 3 to 4 skin reactions 7% against 1%. A chemotherapy-free alternative."
+    },
+    "trial": {
+      "acronym": "RELEVANCE",
+      "nct": "NCT01476787",
+      "phase": "III",
+      "randomized": true,
+      "n": 1030,
+      "comparator": "R-CHOP, R-CVP або BR",
+      "primary_met": false
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Morschhauser F. та ін. N Engl J Med. 2018;379:934-947",
+        "pmid": "30184451",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't",
+          "Equivalence Trial"
+        ],
+        "journal": {
+          "name": "The New England Journal of Medicine",
+          "issn": "0028-4793",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30184451/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The New England Journal of Medicine» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0255562",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Gower N. та ін. Blood. 2026;147:3061-3068",
+        "pmid": "41915772",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Clinical Trial, Phase III",
+          "Multicenter Study"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/41915772/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "375 мг/м² в/в. Швидкість і розведення — за правилами відділення для ритуксимабу.",
+        "en": "375 mg/m² IV. Rate and dilution per the department rules for rituximab."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+      "notes": {
+        "uk": "20 мг раз на добу в дні 2–22 (RELEVANCE); при кліренсі креатиніну 30–59 мл/хв — 10 мг.",
+        "en": "20 mg once a day on days 2 to 22 (RELEVANCE); 10 mg with a creatinine clearance of 30 to 59 mL/min."
+      },
+      "dose_modifiers": [
+        {
+          "key": "crcl-30-59",
+          "label": {
+            "uk": "Кліренс креатиніну 30–59 мл/хв",
+            "en": "Creatinine clearance 30 to 59 mL/min"
+          },
+          "dose_value": 10,
+          "source": {
+            "name": "Morschhauser F. та ін. Rituximab plus Lenalidomide in Advanced Untreated Follicular Lymphoma. N Engl J Med. 2018;379:934-947",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11003525/",
+            "version": "рукопис у PMC; фаза III, 1030 пацієнтів",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    }
+  ]
+}

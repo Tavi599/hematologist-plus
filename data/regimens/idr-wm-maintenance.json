@@ -1,0 +1,173 @@
+{
+  "$comment": "IDR за Castillo 2020 (PMC7448596) і 2018: іксазоміб 4 мг і дексаметазон 20 мг перорально в дні 1, 8, 15; ритуксимаб 375 мг/м² в/в у день 1; 6 індукційних циклів по 4 тижні (у циклах 1–2 без ритуксимабу, щоб уникнути спалаху IgM), потім 6 підтримувальних циклів по 8 тижнів з тими самими днями.",
+  "id": "idr-wm-maintenance",
+  "short_name": "IDR, підтримка",
+  "name": {
+    "uk": "IDR, підтримка: 6 циклів по 8 тижнів",
+    "en": "IDR maintenance: six 8-week cycles"
+  },
+  "description": {
+    "uk": "Після індукції, якщо є хоча б мінімальна відповідь або клінічна користь. 6 циклів по 56 днів.",
+    "en": "After induction, with at least a minor response or clinical benefit. Six 56-day cycles."
+  },
+  "cycle_length_days": 56,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "Castillo J.J. та ін. Ixazomib, dexamethasone, and rituximab in treatment-naive patients with Waldenström macroglobulinemia: long-term follow-up. Blood Adv. 2020;4:3952-3959",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7448596/",
+      "version": "повний текст у PMC",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Дослідження фази II без групи порівняння (Дана-Фарбер).",
+      "en": "A phase II study without a comparison group (Dana-Farber)."
+    },
+    "population": {
+      "uk": "26 нелікованих пацієнтів із симптомною макроглобулінемією Вальденстрема; усі з мутацією MYD88, 58% — з мутацією CXCR4.",
+      "en": "26 untreated patients with symptomatic Waldenström macroglobulinaemia; all with MYD88 mutation, 58% with CXCR4 mutation."
+    },
+    "results": {
+      "uk": "Відповідь 96%, велика — 77%. Медіана виживаності без прогресування 40 місяців. З мутацією CXCR4 відповідь настає пізніше.",
+      "en": "Response 96%, major 77%. Median progression-free survival 40 months. With a CXCR4 mutation response comes later."
+    },
+    "conduct": {
+      "uk": "Повністю пероральний протеасомний компонент, без нейропатії; небажаних явищ 4 ступеня не було. Профілактика оперізувального герпесу та інгібітор протонної помпи чи H2-блокатор на весь час лікування. При IgM понад 4000 мг/дл — плазмаферез перед ритуксимабом.",
+      "en": "An all-oral proteasome component, without neuropathy; no grade 4 adverse events. Herpes zoster prophylaxis and a proton pump inhibitor or H2 blocker throughout. With IgM over 4000 mg/dL, plasmapheresis before rituximab."
+    },
+    "trial": {
+      "nct": "NCT02400437",
+      "phase": "II",
+      "randomized": false,
+      "n": 26
+    },
+    "settings": ["maintenance"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Castillo J.J. та ін. Blood Adv. 2020;4:3952-3959",
+        "pmid": "32822482",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood Advances",
+          "issn": "2473-9529",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/32822482/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood Advances» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101698425",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Castillo J.J. та ін. Clin Cancer Res. 2018;24:3247-3252",
+        "pmid": "29661775",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Clinical Cancer Research",
+          "issn": "1078-0432",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29661775/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Clinical Cancer Research» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/9502500",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "ixazomib",
+      "drug_id": "ixazomib",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "4 мг перорально в дні 1, 8, 15 (Castillo 2020).",
+        "en": "4 mg by mouth on days 1, 8 and 15 (Castillo 2020)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "20 мг перорально в дні 1, 8, 15 (Castillo 2020).",
+        "en": "20 mg by mouth on days 1, 8 and 15 (Castillo 2020)."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "375 мг/м² в/в. Швидкість і розведення — за правилами відділення для ритуксимабу.",
+        "en": "375 mg/m² IV. Rate and dilution per the department rules for rituximab."
+      }
+    }
+  ]
+}

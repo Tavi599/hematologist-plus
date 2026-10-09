@@ -1,0 +1,189 @@
+{
+  "$comment": "BDR за Treon 2009 (PMC2727288) і реєстром NCT00250926: бортезоміб 1,3 мг/м² в/в і дексаметазон 40 мг в/в у дні 1, 4, 8, 11, ритуксимаб 375 мг/м² в/в у день 11 після них; цикл 21 день; 4 цикли індукції, потім ще 4 цикли по одному раз на 3 місяці. Щотижневий варіант EMN (бортезоміб 1,6 мг/м² у дні 1, 8, 15, 22 кожні 35 днів) — у результатах, окремо не розраховується: днів дексаметазону й ритуксимабу резюме не дає.",
+  "id": "bdr-wm",
+  "short_name": "BDR (Вальденстрем)",
+  "name": {
+    "uk": "Бортезоміб + дексаметазон + ритуксимаб (BDR)",
+    "en": "Bortezomib, dexamethasone and rituximab (BDR)"
+  },
+  "description": {
+    "uk": "Макроглобулінемія Вальденстрема, перша лінія або рецидив. 4 цикли по 21 дню, потім 4 таких самих цикли по одному раз на 3 місяці. При IgM від 5000 мг/дл — плазмаферез перед ритуксимабом.",
+    "en": "Waldenström macroglobulinaemia, first line or relapse. Four 21-day cycles, then four more of the same, one every 3 months. With IgM of 5000 mg/dL or more, plasmapheresis before rituximab."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "Treon S.P. та ін. Primary therapy of Waldenström macroglobulinemia with bortezomib, dexamethasone, and rituximab: WMCTG clinical trial 05-180. J Clin Oncol. 2009;27:3830-3835",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2727288/",
+      "version": "повний текст у PMC; фаза II, 23 пацієнти",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT00250926 (WMCTG 05-180), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT00250926",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Gavriatopoulou M. та ін. BDR in newly diagnosed patients with WM: final analysis of a phase 2 study after a minimum follow-up of 6 years. Blood. 2017;129:456-459",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27872060/",
+      "version": "резюме; фаза II, 59 пацієнтів (щотижневий бортезоміб)",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Два дослідження фази II без групи порівняння: WMCTG 05-180 (бортезоміб двічі на тиждень) і EMN (щотижня, 1,6 мг/м², з монотерапією бортезомібом у першому циклі).",
+      "en": "Two phase II studies without a comparison group: WMCTG 05-180 (bortezomib twice weekly) and EMN (weekly, 1.6 mg/m², with bortezomib alone in the first cycle)."
+    },
+    "population": {
+      "uk": "WMCTG: 23 нелікованих пацієнти з симптомною хворобою. EMN: 59 нелікованих, переважно літніх і з несприятливим прогнозом.",
+      "en": "WMCTG: 23 untreated symptomatic patients. EMN: 59 untreated, mostly elderly with adverse prognostic features."
+    },
+    "results": {
+      "uk": "WMCTG: відповідь 96%, велика — 83%, медіана часу до відповіді 1,4 місяця. EMN: відповідь 85%, медіана виживаності без прогресування 43 місяці, семирічна загальна виживаність 66%.",
+      "en": "WMCTG: response 96%, major 83%, median time to response 1.4 months. EMN: response 85%, median progression-free survival 43 months, seven-year overall survival 66%."
+    },
+    "conduct": {
+      "uk": "Двічі на тиждень бортезоміб дав нейропатію, через яку 61% достроково припинили бортезоміб; щотижневе введення (EMN) — нейропатія 46%, 3 ступеня 7%. Обов'язкова профілактика оперізувального герпесу (валацикловір 1 г раз на добу або ацикловір 400 мг двічі). Підшкірне введення бортезомібу зменшує нейропатію.",
+      "en": "Twice-weekly bortezomib caused neuropathy that ended it early in 61%; weekly dosing (EMN) gave neuropathy in 46%, grade 3 in 7%. Herpes zoster prophylaxis is mandatory (valaciclovir 1 g once a day or aciclovir 400 mg twice a day). Subcutaneous bortezomib reduces neuropathy."
+    },
+    "trial": {
+      "acronym": "WMCTG 05-180",
+      "nct": "NCT00250926",
+      "phase": "II",
+      "randomized": false,
+      "n": 23
+    },
+    "settings": ["first-line", "relapse"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Treon S.P. та ін. J Clin Oncol. 2009;27:3830-3835",
+        "pmid": "19506160",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, N.I.H., Extramural",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/19506160/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Gavriatopoulou M. та ін. Blood. 2017;129:456-459",
+        "pmid": "27872060",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27872060/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "iv_bolus",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 4, 8, 11],
+      "notes": {
+        "uk": "40 мг в/в у дні 1, 4, 8, 11 (NCT00250926).",
+        "en": "40 mg IV on days 1, 4, 8 and 11 (NCT00250926)."
+      }
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "iv_bolus",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 4, 8, 11],
+      "notes": {
+        "uk": "1,3 мг/м² в/в у дні 1, 4, 8, 11 (Treon 2009).",
+        "en": "1.3 mg/m² IV on days 1, 4, 8 and 11 (Treon 2009)."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [11],
+      "notes": {
+        "uk": "375 мг/м² в/в. Швидкість і розведення — за правилами відділення для ритуксимабу. Після бортезомібу й дексаметазону (NCT00250926).",
+        "en": "375 mg/m² IV. Rate and dilution per the department rules for rituximab. After bortezomib and dexamethasone (NCT00250926)."
+      }
+    }
+  ]
+}

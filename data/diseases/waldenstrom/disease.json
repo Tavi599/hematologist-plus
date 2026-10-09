@@ -144,6 +144,111 @@
       ]
     },
     {
+      "key": "clinical-trials",
+      "kind": "trial",
+      "title": {
+        "uk": "Клінічні дослідження",
+        "en": "Clinical trials"
+      },
+      "description": {
+        "uk": "Схеми, які існують лише як опубліковані дослідження: їх немає ні в настанові, ні в інструкції до препарату. Застосування поза інструкцією потребує окремого рішення й згоди пацієнта. Біля кожної схеми в калькуляторі наведено дизайн дослідження, кого в нього включали, що з нього вийшло і чого вимагає проведення.",
+        "en": "Regimens that exist only as published studies: neither a guideline nor a label carries them. Off-label use needs a decision of its own and the patient's consent. In the calculator each regimen states the design of the study, who was enrolled, what came out of it and what the conduct demands."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "trials-proteasome",
+          "kind": "trial",
+          "title": {
+            "uk": "Схеми з інгібітором протеасом",
+            "en": "Proteasome inhibitor regimens"
+          },
+          "description": {
+            "uk": "Без хіміотерапії, фіксованої тривалості. При високому IgM — плазмаферез перед ритуксимабом. IDR і CaRD не дають нейропатії.",
+            "en": "Chemotherapy-free, fixed duration. With high IgM, plasmapheresis before rituximab. IDR and CaRD spare neuropathy."
+          },
+          "regimens": [
+            {
+              "regimen_id": "bdr-wm",
+              "notes": {
+                "uk": "Перша лінія або рецидив",
+                "en": "First line or relapse"
+              }
+            },
+            {
+              "regimen_id": "idr-wm-cycle-1-2",
+              "notes": {
+                "uk": "Пероральний; цикли 1–2",
+                "en": "Oral; cycles 1 to 2"
+              }
+            },
+            {
+              "regimen_id": "idr-wm",
+              "notes": {
+                "uk": "Цикли 3–6",
+                "en": "Cycles 3 to 6"
+              }
+            },
+            {
+              "regimen_id": "idr-wm-maintenance",
+              "notes": {
+                "uk": "Підтримка",
+                "en": "Maintenance"
+              }
+            },
+            {
+              "regimen_id": "card-wm-cycle-1",
+              "notes": {
+                "uk": "Без нейропатії; цикл 1",
+                "en": "Neuropathy-sparing; cycle 1"
+              }
+            },
+            {
+              "regimen_id": "card-wm",
+              "notes": {
+                "uk": "Цикли 2–6",
+                "en": "Cycles 2 to 6"
+              }
+            },
+            {
+              "regimen_id": "card-wm-maintenance",
+              "notes": {
+                "uk": "Підтримка",
+                "en": "Maintenance"
+              }
+            }
+          ]
+        },
+        {
+          "key": "trials-relapse",
+          "kind": "trial",
+          "title": {
+            "uk": "Рецидив, зокрема після інгібітора BTK",
+            "en": "Relapse, including after a BTK inhibitor"
+          },
+          "regimens": [
+            {
+              "regimen_id": "venetoclax-wm-week-1",
+              "notes": {
+                "uk": "Тиждень 1",
+                "en": "Week 1"
+              }
+            },
+            {
+              "regimen_id": "venetoclax-wm",
+              "notes": {
+                "uk": "800 мг до 2 років",
+                "en": "800 mg for up to 2 years"
+              }
+            },
+            {
+              "regimen_id": "avoid-wm-ibrutinib-venetoclax"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "reference",
       "kind": "reference",
       "title": {
@@ -156,16 +261,7 @@
       },
       "regimens": [
         {
-          "regimen_id": "ref-wm-bdr"
-        },
-        {
-          "regimen_id": "ref-wm-venetoclax"
-        },
-        {
           "regimen_id": "ref-wm-pirtobrutinib"
-        },
-        {
-          "regimen_id": "ref-wm-ird"
         }
       ]
     }

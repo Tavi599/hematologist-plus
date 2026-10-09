@@ -1,0 +1,141 @@
+{
+  "$comment": "CaRD за резюме і реєстром NCT01470196: карфілзоміб 20 мг/м² (цикл 1) і 36 мг/м² (цикли 2–6) в/в та дексаметазон 20 мг в/в у дні 1, 2, 8, 9; ритуксимаб 375 мг/м² у дні 2 і 9; цикл 21 день, 6 циклів. Через 8 тижнів — підтримка: карфілзоміб 36 мг/м² і дексаметазон 20 мг у дні 1, 2, ритуксимаб у день 2, кожні 8 тижнів, 8 разів. Введення карфілзомібу (100 мл 5% глюкози за 30 хвилин, площа поверхні тіла не більше 2,2 м²) — як в Isa-Kd довідника.",
+  "id": "card-wm-maintenance",
+  "short_name": "CaRD, підтримка",
+  "name": {
+    "uk": "CaRD, підтримка кожні 8 тижнів",
+    "en": "CaRD maintenance every 8 weeks"
+  },
+  "description": {
+    "uk": "Через 8 тижнів після індукції. 8 циклів по 56 днів.",
+    "en": "Eight weeks after induction. Eight 56-day cycles."
+  },
+  "cycle_length_days": 56,
+  "default_cycles": 8,
+  "sources": [
+    {
+      "name": "Treon S.P. та ін. Carfilzomib, rituximab, and dexamethasone (CaRD) treatment offers a neuropathy-sparing approach for treating Waldenström's macroglobulinemia. Blood. 2014;124:503-510",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24859363/",
+      "version": "резюме; фаза II, 31 пацієнт",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT01470196 (CaRD), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT01470196",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Дослідження фази II без групи порівняння (WMCTG).",
+      "en": "A phase II study without a comparison group (WMCTG)."
+    },
+    "population": {
+      "uk": "31 пацієнт із симптомною макроглобулінемією Вальденстрема, які раніше не отримували ні бортезомібу, ні ритуксимабу.",
+      "en": "31 patients with symptomatic Waldenström macroglobulinaemia naive to both bortezomib and rituximab."
+    },
+    "results": {
+      "uk": "Відповідь 87,1%, незалежно від мутацій MYD88 і CXCR4. За медіани спостереження 15,4 місяця 20 пацієнтів без прогресування.",
+      "en": "Response 87.1%, regardless of MYD88 and CXCR4 mutations. At a median follow-up of 15.4 months, 20 patients were progression-free."
+    },
+    "conduct": {
+      "uk": "Без нейропатії (2 ступеня — один пацієнт). Безсимптомне підвищення ліпази 41,9%, нейтропенія 12,9%, кардіоміопатія в одного пацієнта з чинниками ризику. Часто знижуються IgA та IgG.",
+      "en": "Neuropathy-sparing (grade 2 in one patient). Asymptomatic raised lipase 41.9%, neutropenia 12.9%, cardiomyopathy in one patient with risk factors. IgA and IgG often fall."
+    },
+    "trial": {
+      "nct": "NCT01470196",
+      "phase": "II",
+      "randomized": false,
+      "n": 31
+    },
+    "settings": ["maintenance"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Treon S.P. та ін. Blood. 2014;124:503-510",
+        "pmid": "24859363",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/24859363/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "iv_bolus",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2],
+      "notes": {
+        "uk": "20 мг в/в перед карфілзомібом (NCT01470196).",
+        "en": "20 mg IV before carfilzomib (NCT01470196)."
+      }
+    },
+    {
+      "key": "carfilzomib",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 36,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "cap_amount": 79.2,
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "36 мг/м² в/в (NCT01470196); у 100 мл 5% глюкози за 30 хвилин, площу поверхні тіла беруть не більше 2,2 м² (не більш як 79,2 мг).",
+        "en": "36 mg/m² IV (NCT01470196); in 100 mL of 5% glucose over 30 minutes, with body surface area capped at 2.2 m² (no more than 79.2 mg)."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "notes": {
+        "uk": "375 мг/м² в/в. Швидкість і розведення — за правилами відділення для ритуксимабу.",
+        "en": "375 mg/m² IV. Rate and dilution per the department rules for rituximab."
+      }
+    }
+  ]
+}

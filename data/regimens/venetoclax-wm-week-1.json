@@ -1,0 +1,121 @@
+{
+  "$comment": "Венетоклакс при макроглобулінемії Вальденстрема за Castillo 2022 (PMC8683218): з 7-го пацієнта — 400 мг раз на добу 1 тиждень, далі 800 мг раз на добу до 2 років (перші 6 пацієнтів: 200 мг тиждень, 400 мг тиждень, далі 800 мг). Алопуринол 300 мг раз на добу з-за 3 днів до венетоклаксу, 4 тижні, і пиття 2 л на добу. Тут — тиждень 1 і далі цикли по 28 днів (2 роки = 26 циклів).",
+  "id": "venetoclax-wm-week-1",
+  "short_name": "Венетоклакс (Вальденстрем), тиждень 1",
+  "name": {
+    "uk": "Венетоклакс при рецидиві макроглобулінемії Вальденстрема: тиждень 1",
+    "en": "Venetoclax in relapsed Waldenström macroglobulinaemia: week 1"
+  },
+  "description": {
+    "uk": "400 мг на добу 7 днів, далі 800 мг. Алопуринол і пиття 2 л на добу починають за 3 дні до венетоклаксу.",
+    "en": "400 mg a day for 7 days, then 800 mg. Allopurinol and 2 L a day of fluids start 3 days before venetoclax."
+  },
+  "cycle_length_days": 7,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Castillo J.J. та ін. Venetoclax in Previously Treated Waldenström Macroglobulinemia. J Clin Oncol. 2022;40:63-71",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8683218/",
+      "version": "повний текст у PMC; фаза II, 32 пацієнти",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Багатоцентрове дослідження фази II без групи порівняння (WMCTG).",
+      "en": "A multicentre phase II study without a comparison group (WMCTG)."
+    },
+    "population": {
+      "uk": "32 пацієнти з рецидивом макроглобулінемії Вальденстрема, половина — після інгібітора BTK; усі з мутацією MYD88.",
+      "en": "32 patients with relapsed Waldenström macroglobulinaemia, half after a BTK inhibitor; all with MYD88 mutation."
+    },
+    "results": {
+      "uk": "Відповідь 84%, велика — 81%; при рефрактерності велика відповідь 50% проти 95% при рецидиві. Медіана виживаності без прогресування 30 місяців. Після інгібітора BTK відповідь настає пізніше (4,5 проти 1,4 місяця).",
+      "en": "Response 84%, major 81%; major response 50% in refractory against 95% in relapsed disease. Median progression-free survival 30 months. After a BTK inhibitor response comes later (4.5 against 1.4 months)."
+    },
+    "conduct": {
+      "uk": "Амбулаторно. Нейтропенія 3 ступеня і вище в 45%, один лабораторний синдром лізису пухлини; спалахів IgM, нейропатії й аритмій не було. Г-КСФ дозволявся.",
+      "en": "Outpatient. Grade 3 or worse neutropenia in 45%, one laboratory tumour lysis; no IgM flare, neuropathy or arrhythmia. G-CSF was allowed."
+    },
+    "trial": {
+      "nct": "NCT02677324",
+      "phase": "II",
+      "randomized": false,
+      "n": 32
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Castillo J.J. та ін. J Clin Oncol. 2022;40:63-71",
+        "pmid": "34793256",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34793256/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "venetoclax",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "400 мг раз на добу (Castillo 2022).",
+        "en": "400 mg once a day (Castillo 2022)."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "300 мг раз на добу, почати за 3 дні до венетоклаксу і продовжувати 4 тижні (Castillo 2022).",
+        "en": "300 mg once a day, starting 3 days before venetoclax and continuing for 4 weeks (Castillo 2022)."
+      }
+    }
+  ]
+}
