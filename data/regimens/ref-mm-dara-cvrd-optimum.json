@@ -1,0 +1,122 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-mm-dara-cvrd-optimum",
+  "short_name": "Dara-CVRd (OPTIMUM)",
+  "name": {
+    "uk": "Dara-CVRd для високого ризику з подовженою консолідацією (OPTIMUM/MUKnine)",
+    "en": "Dara-CVRd for high risk with extended consolidation (OPTIMUM/MUKnine)"
+  },
+  "sources": [
+    {
+      "name": "Kaiser M.F. та ін. Induction and extended consolidation with daratumumab, cyclophosphamide, bortezomib, lenalidomide, and dexamethasone in patients with high-risk multiple myeloma (OPTIMUM/MUKnine): 5-year follow-up. Lancet Oncol. 2026;27(10):1271-1282",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42705255/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "OPTIMUM/MUKnine",
+      "nct": "NCT03188172",
+      "phase": "II",
+      "randomized": false,
+      "n": 107,
+      "comparator": "зовнішній контроль (Myeloma XI)"
+    },
+    "settings": ["ndmm-te", "high-risk", "pcl"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Kaiser M.F. та ін. Lancet Oncol. 2026;27(10):1271-1282",
+        "pmid": "42705255",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Journal Article", "Multicenter Study", "Clinical Trial, Phase II"],
+        "journal": {
+          "name": "The Lancet Oncology",
+          "issn": "1470-2045",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/42705255/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/100957246",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Високий ризик або плазмоклітинний лейкоз: індукція даратумумаб + циклофосфамід + бортезоміб + леналідомід + дексаметазон → мелфалан із бортезомібом і автотрансплантація → дві фази консолідації → підтримка леналідомідом і даратумумабом до прогресування.",
+      "en": "High risk or plasma cell leukaemia: daratumumab, cyclophosphamide, bortezomib, lenalidomide and dexamethasone induction → melphalan with bortezomib and an autologous transplant → two consolidation phases → lenalidomide-daratumumab maintenance until progression."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Даратумумаб",
+          "en": "Daratumumab"
+        },
+        "drug_id": "daratumumab"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "За 5 років: виживаність без прогресування не досягнута проти 24,4 місяця в генетично подібному зовнішньому контролі (HR 0,32), загальна — не досягнута проти 57,4 місяця (HR 0,43). Без переваги при трьох і більше аномаліях високого ризику.",
+        "en": "At 5 years: progression-free survival not reached against 24.4 months in a genetically matched external control (HR 0.32), overall survival not reached against 57.4 months (HR 0.43). No benefit with three or more high-risk abnormalities."
+      }
+    ],
+    "gap": {
+      "uk": "Дози в резюме не наведені («за протоколом»); контроль зовнішній, не рандомізований.",
+      "en": "The abstract gives no doses (\"as per protocol\"); the control is external, not randomised."
+    }
+  }
+}

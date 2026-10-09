@@ -1,0 +1,109 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-mm-pom-pld-dex",
+  "short_name": "Pom + PLD + dex",
+  "name": {
+    "uk": "Помалідомід + пегільований ліпосомальний доксорубіцин + дексаметазон",
+    "en": "Pomalidomide, pegylated liposomal doxorubicin and dexamethasone"
+  },
+  "sources": [
+    {
+      "name": "Cohen A. та ін. Safety and efficacy of pomalidomide, dexamethasone and pegylated liposomal doxorubicin for patients with relapsed or refractory multiple myeloma. Br J Haematol. 2018;180(1):60-70",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29164606/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "phase": "I-II",
+      "randomized": false
+    },
+    "settings": ["rrmm-late", "len-refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Cohen A. та ін. Br J Haematol. 2018;180(1):60-70",
+        "pmid": "29164606",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "British Journal of Haematology",
+          "issn": "0007-1048",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29164606/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «British Journal of Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0372544",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Рецидив, рефрактерний до леналідоміду. Цикл 28 днів: дексаметазон 40 мг і ліпосомальний доксорубіцин 5 мг/м² у дні 1, 4, 8, 11, помалідомід 3 мг (4 мг дали забагато нейтропенії).",
+      "en": "Lenalidomide-refractory relapse. A 28-day cycle: dexamethasone 40 mg and liposomal doxorubicin 5 mg/m² on days 1, 4, 8 and 11, pomalidomide 3 mg (4 mg gave too much neutropenia)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Помалідомід",
+          "en": "Pomalidomide"
+        },
+        "drug_id": "pomalidomide"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин ліпосомальний",
+          "en": "Liposomal doxorubicin"
+        },
+        "drug_id": "doxorubicin-liposomal"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Відповідь 39% на 3 мг і 31% на 4 мг; виживаність без прогресування 5,4 місяця. На 4 мг нейтропенія 3+ ступеня в 59% — дозу знизили до 3 мг.",
+        "en": "Response 39% at 3 mg and 31% at 4 mg; progression-free survival 5.4 months. At 4 mg grade 3+ neutropenia in 59%, so the dose was lowered to 3 mg."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме не наводить днів помалідоміду й кількості пацієнтів; повний текст закритий.",
+      "en": "The abstract gives neither the pomalidomide days nor the number of patients; the full text is closed."
+    }
+  }
+}

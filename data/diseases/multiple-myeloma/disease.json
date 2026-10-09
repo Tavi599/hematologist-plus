@@ -638,6 +638,43 @@
       "regimens": [],
       "children": [
         {
+          "key": "trials-te",
+          "kind": "trial",
+          "title": {
+            "uk": "Вперше діагностована: придатні до трансплантації",
+            "en": "Newly diagnosed: transplant-eligible"
+          },
+          "description": {
+            "uk": "Індукція перед автотрансплантацією, зокрема для високого ризику.",
+            "en": "Induction before an autologous transplant, including high risk."
+          },
+          "regimens": [
+            {
+              "regimen_id": "bvp-cycle-1",
+              "notes": {
+                "uk": "Перший цикл 6 тижнів",
+                "en": "A 6-week first cycle"
+              }
+            },
+            {
+              "regimen_id": "bvp",
+              "notes": {
+                "uk": "Цикли 2–9; збір клітин ускладнений",
+                "en": "Cycles 2-9; stem cell collection impaired"
+              }
+            },
+            {
+              "regimen_id": "ref-mm-pad"
+            },
+            {
+              "regimen_id": "ref-mm-dara-krd-master"
+            },
+            {
+              "regimen_id": "ref-mm-dara-cvrd-optimum"
+            }
+          ]
+        },
+        {
           "key": "trials-frail",
           "kind": "trial",
           "title": {
@@ -728,6 +765,13 @@
                 "uk": "З циклу 5, 4 мг, до 2 років",
                 "en": "From cycle 5, 4 mg, up to 2 years"
               }
+            },
+            {
+              "regimen_id": "kr-maintenance",
+              "notes": {
+                "uk": "Після карфілзомібу в індукції, 2 роки",
+                "en": "After carfilzomib induction, 2 years"
+              }
             }
           ]
         },
@@ -812,6 +856,22 @@
             },
             {
               "regimen_id": "ref-mm-idd"
+            },
+            {
+              "regimen_id": "clatd",
+              "notes": {
+                "uk": "Ослаблені, низькі дози",
+                "en": "The infirm, low doses"
+              }
+            },
+            {
+              "regimen_id": "ref-mm-bpd"
+            },
+            {
+              "regimen_id": "ref-mm-pom-pld-dex"
+            },
+            {
+              "regimen_id": "ref-mm-dcep"
             }
           ]
         },

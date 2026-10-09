@@ -1,0 +1,133 @@
+{
+  "$comment": "ClaTD за Morris, BJH 2008 (резюме): кларитроміцин 250 мг двічі на добу і талідомід 50 мг на ніч постійно; дексаметазон 10 мг 4 дні щомісяця. «Щомісяця» записано 28-денним циклом з дексаметазоном у дні 1–4.",
+  "id": "clatd",
+  "short_name": "ClaTD",
+  "name": {
+    "uk": "ClaTD (кларитроміцин + талідомід + дексаметазон у низьких дозах)",
+    "en": "ClaTD (low-dose clarithromycin, thalidomide and dexamethasone)"
+  },
+  "description": {
+    "uk": "Рецидивна або рефрактерна мієлома у літніх, ослаблених чи з тяжкими цитопеніями. Повністю пероральна, низькі дози; цикл 28 днів, постійно.",
+    "en": "Relapsed or refractory myeloma in the elderly, the infirm or the severely cytopenic. Fully oral, low doses; a 28-day cycle, continuously."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Morris T.C. та ін. Clarithromycin with low dose dexamethasone and thalidomide is effective therapy in relapsed/refractory myeloma. Br J Haematol. 2008;143(3):349-354",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18759764/",
+      "version": "резюме; повний текст на сайті журналу закритий перевіркою на бота",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Дослідження фази II без групи порівняння.",
+      "en": "A phase II study without a comparison group."
+    },
+    "population": {
+      "uk": "30 пацієнтів з рецидивною або рефрактерною мієломою, зокрема літні, ослаблені й з тяжкими цитопеніями.",
+      "en": "30 patients with relapsed or refractory myeloma, including the elderly, the infirm and the severely cytopenic."
+    },
+    "results": {
+      "uk": "Зниження парапротеїну щонайменше на 50% у 89%, загальна відповідь 96%. Результат на 30 пацієнтах і з того часу не підтверджений більшим дослідженням.",
+      "en": "A paraprotein fall of at least 50% in 89%, overall response 96%. A result on 30 patients, not confirmed by a larger study since."
+    },
+    "conduct": {
+      "uk": "У 8 пацієнтів дозволяли підвищувати талідомід до 200 мг на добу. Кларитроміцин сповільнює виведення дексаметазону: у літніх із Rd це збільшило токсичні смерті (GEM-CLARIDEX). Талідомід 50 мг: у довіднику лише капсули по 100 мг.",
+      "en": "In 8 patients thalidomide could be raised to 200 mg a day. Clarithromycin slows dexamethasone clearance: in the elderly on Rd this raised toxic deaths (GEM-CLARIDEX). Thalidomide 50 mg: the catalogue has only 100 mg capsules."
+    },
+    "trial": {
+      "phase": "II",
+      "randomized": false,
+      "n": 30
+    },
+    "settings": ["relapse", "refractory", "frail"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Morris T.C. та ін. Br J Haematol. 2008;143(3):349-354",
+        "pmid": "18759764",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article"],
+        "journal": {
+          "name": "British Journal of Haematology",
+          "issn": "0007-1048",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/18759764/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «British Journal of Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0372544",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "clarithromycin",
+      "drug_id": "clarithromycin",
+      "route": "oral",
+      "dose_value": 250,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "250 мг двічі на добу постійно (Morris 2008).",
+        "en": "250 mg twice a day continuously (Morris 2008)."
+      },
+      "administrations_per_day": 2
+    },
+    {
+      "key": "thalidomide",
+      "drug_id": "thalidomide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "50 мг на ніч постійно (Morris 2008).",
+        "en": "50 mg at night continuously (Morris 2008)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "10 мг на добу 4 дні щомісяця (Morris 2008).",
+        "en": "10 mg a day for 4 days every month (Morris 2008)."
+      }
+    }
+  ]
+}

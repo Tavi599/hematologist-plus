@@ -1,0 +1,136 @@
+{
+  "$comment": "BVP за Mateos, Haematologica 2015 (повний текст): цикл 1 — 6 тижнів, бендамустин 90 мг/м² в/в дні 1 і 4, бортезоміб 1,3 мг/м² в/в дні 1, 4, 8, 11, 22, 25, 29, 32, преднізон 60 мг/м² дні 1–4; далі 28-денні цикли — бендамустин дні 1 і 8, бортезоміб дні 1, 8, 15, 22, преднізон дні 1–4; до 9 циклів. Преднізон замінено преднізолоном у тій самій дозі. Розчин і об'єм бендамустину — як у BBD довідника (NaCl 0,9% 500 мл, 60 хв).",
+  "id": "bvp-cycle-1",
+  "short_name": "BVP, цикл 1",
+  "name": {
+    "uk": "BVP (бендамустин + бортезоміб + преднізолон), цикл 1 (6 тижнів)",
+    "en": "BVP (bendamustine, bortezomib and prednisolone), cycle 1 (6 weeks)"
+  },
+  "description": {
+    "uk": "Уперше діагностована мієлома. Перший цикл 6 тижнів: бортезоміб двічі на тиждень, бендамустин у дні 1 і 4.",
+    "en": "Newly diagnosed myeloma. A 6-week first cycle: bortezomib twice weekly, bendamustine on days 1 and 4."
+  },
+  "cycle_length_days": 42,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Mateos M.V. та ін. Bendamustine, bortezomib and prednisone for the treatment of patients with newly diagnosed multiple myeloma: results of a prospective phase 2 Spanish/PETHEMA trial. Haematologica. 2015;100(8):1096-1102",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5004426/",
+      "version": "повний текст у PMC; фаза II, 60 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Відкрите дослідження фази II в 16 центрах Іспанії (PETHEMA), без групи порівняння. Перший цикл 6 тижнів з бортезомібом двічі на тиждень, далі 28-денні цикли з бортезомібом раз на тиждень. Кандидатам на трансплантацію — збір стовбурових клітин після 4 циклів і трансплантація після 6; іншим — до 9 циклів без підтримки.",
+      "en": "An open-label phase II study at 16 Spanish centres (PETHEMA), without a comparison group. A 6-week first cycle with twice-weekly bortezomib, then 28-day cycles with weekly bortezomib. Transplant candidates had stem cells collected after 4 cycles and the transplant after 6; the others up to 9 cycles without maintenance."
+    },
+    "population": {
+      "uk": "60 пацієнтів з уперше діагностованою мієломою: 42 кандидати на трансплантацію, 17 — ні.",
+      "en": "60 patients with newly diagnosed myeloma: 42 transplant candidates, 17 not."
+    },
+    "results": {
+      "uk": "Після медіани 6 циклів відповідь 84%, VGPR і краще 57%, повна 24%. У непридатних до трансплантації після 9 циклів VGPR і краще 57%. Дворічна виживаність без прогресування 62%, загальна 86%.",
+      "en": "After a median of 6 cycles the response was 84%, VGPR or better 57%, complete 24%. In transplant-ineligible patients VGPR or better after 9 cycles was 57%. Two-year progression-free survival 62%, overall 86%."
+    },
+    "conduct": {
+      "uk": "Найчастіше: периферична нейропатія 38%, нейтропенія 32%, астенія 27%, інфекції 27%, переважно 1–2 ступеня. Двоє померли від тяжких інфекцій. У 35% не вдалося зібрати стовбурові клітини самим Г-КСФ, тому збір перенесли на після 3-го циклу з плериксафором для слабких мобілізаторів. Самі автори радять цю схему радше для рецидиву, де збір клітин не потрібен.",
+      "en": "Most frequent: peripheral neuropathy 38%, neutropenia 32%, asthenia 27%, infection 27%, mostly grade 1 to 2. Two patients died of severe infection. In 35% G-CSF alone failed to collect stem cells, so collection was moved to after cycle 3 with plerixafor for poor mobilisers. The authors themselves suggest the regimen rather for relapse, where no collection is needed."
+    },
+    "trial": {
+      "acronym": "PETHEMA BVP",
+      "nct": "NCT01376401",
+      "phase": "II",
+      "randomized": false,
+      "n": 60
+    },
+    "settings": ["ndmm-te", "ndmm-ti", "relapse"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Mateos M.V. та ін. Haematologica. 2015;100(8):1096-1102",
+        "pmid": "25911554",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Haematologica",
+          "issn": "0390-6078",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/25911554/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Haematologica» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0417435",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 90,
+      "dose_unit": "mg_m2",
+      "days": [1, 4],
+      "notes": {
+        "uk": "90 мг/м² в/в (Mateos 2015).",
+        "en": "90 mg/m² IV (Mateos 2015)."
+      },
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "iv_bolus",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 4, 8, 11, 22, 25, 29, 32],
+      "notes": {
+        "uk": "1,3 мг/м² в/в двічі на тиждень (Mateos 2015).",
+        "en": "1.3 mg/m² IV twice weekly (Mateos 2015)."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "60 мг/м² у дні 1–4. У дослідженні — преднізон; преднізолон у тій самій дозі рівноцінний.",
+        "en": "60 mg/m² on days 1 to 4. The study used prednisone; prednisolone at the same dose is equivalent."
+      }
+    }
+  ]
+}

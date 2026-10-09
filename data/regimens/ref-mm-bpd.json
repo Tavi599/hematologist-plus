@@ -1,0 +1,105 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-mm-bpd",
+  "short_name": "BPd",
+  "name": {
+    "uk": "Бендамустин + помалідомід + дексаметазон",
+    "en": "Bendamustine, pomalidomide and dexamethasone"
+  },
+  "sources": [
+    {
+      "name": "Kumar S. та ін. Bendamustine in combination with pomalidomide and dexamethasone in relapsed/refractory multiple myeloma: A phase II trial. Br J Haematol. 2022;198(2):288-297",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35499209/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "phase": "II",
+      "randomized": false,
+      "n": 28
+    },
+    "settings": ["rrmm-late", "len-refractory", "pi-refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Kumar S. та ін. Br J Haematol. 2022;198(2):288-297",
+        "pmid": "35499209",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article"],
+        "journal": {
+          "name": "British Journal of Haematology",
+          "issn": "0007-1048",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35499209/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «British Journal of Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0372544",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Пізній рецидив, рефрактерний до леналідоміду й бортезомібу. Бендамустин 120 мг/м² у день 1, помалідомід 3 мг у дні 1–21, дексаметазон 40 мг; до 6 циклів.",
+      "en": "Late relapse refractory to lenalidomide and bortezomib. Bendamustine 120 mg/m² on day 1, pomalidomide 3 mg on days 1 to 21, dexamethasone 40 mg; up to 6 cycles."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бендамустин",
+          "en": "Bendamustine"
+        },
+        "drug_id": "bendamustine"
+      },
+      {
+        "name": {
+          "uk": "Помалідомід",
+          "en": "Pomalidomide"
+        },
+        "drug_id": "pomalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "28 пацієнтів, медіана 3 попередні лінії, 86% рефрактерні до леналідоміду й бортезомібу. Відповідь 57,6%, краща при екстрамедулярній мієломі; виживаність без прогресування 6,2 місяця, загальна 9,7 місяця.",
+        "en": "28 patients, a median of 3 prior lines, 86% refractory to lenalidomide and bortezomib. Response 57.6%, better in extramedullary myeloma; progression-free survival 6.2 months, overall 9.7 months."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме називає дні дексаметазону «1, 8, 11, 22», що схоже на помилку, і не дає довжини циклу; повний текст закритий.",
+      "en": "The abstract gives the dexamethasone days as \"1, 8, 11, 22\", which looks like an error, and no cycle length; the full text is closed."
+    }
+  }
+}

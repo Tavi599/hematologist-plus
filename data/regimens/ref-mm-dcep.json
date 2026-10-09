@@ -1,0 +1,111 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-mm-dcep",
+  "short_name": "DCEP",
+  "name": {
+    "uk": "DCEP (дексаметазон + циклофосфамід + етопозид + цисплатин)",
+    "en": "DCEP (dexamethasone, cyclophosphamide, etoposide, cisplatin)"
+  },
+  "sources": [
+    {
+      "name": "Dadacaridou M. та ін. Dexamethasone, cyclophosphamide, etoposide and cisplatin (DCEP) for relapsed or refractory multiple myeloma patients. J BUON. 2007;12(1):41-44",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17436400/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "settings": ["relapse", "refractory", "pre-transplant"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Dadacaridou M. та ін. J BUON. 2007;12(1):41-44",
+        "pmid": "17436400",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial", "Journal Article"],
+        "journal": {
+          "name": "Journal of B.U.ON.",
+          "issn": "1107-0625",
+          "medline_indexed": false
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/17436400/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of B.U.ON.» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/100883428",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Рецидив або рефрактерність, як «міст» до трансплантації. Дні 1–4: циклофосфамід 400 мг/м², цисплатин 15 мг/м² і етопозид 40 мг/м² на добу 24-годинною інфузією; дексаметазон 40 мг в/в; Г-КСФ з дня 5; цикл 28 днів.",
+      "en": "Relapse or refractory disease, as a bridge to a transplant. Days 1 to 4: cyclophosphamide 400 mg/m², cisplatin 15 mg/m² and etoposide 40 mg/m² a day as a 24-hour infusion; dexamethasone 40 mg IV; G-CSF from day 5; a 28-day cycle."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Цисплатин",
+          "en": "Cisplatin"
+        },
+        "drug_id": "cisplatin"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "12 пацієнтів після VAD. Відповідь 58,3% (2 повні, 5 часткових), медіана тривалості 9 місяців; 4 дійшли до трансплантації. Мієлотоксичність 3–4 ступеня короткочасна.",
+        "en": "12 patients after VAD. Response 58.3% (2 complete, 5 partial), median duration 9 months; 4 went on to a transplant. Grade 3 to 4 myelotoxicity was short-lived."
+      },
+      {
+        "uk": "Найслабше джерело у вибірці: журнал знято з індексації MEDLINE, 12 пацієнтів.",
+        "en": "The weakest source in the selection: the journal was deselected from MEDLINE, 12 patients."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме не дає об'ємів і розчинника для 24-годинних інфузій; дозу цисплатину коригували за функцією нирок, але як — не сказано.",
+      "en": "The abstract gives no volumes or solvent for the 24-hour infusions; the cisplatin dose was adjusted for renal function, but how is not said."
+    }
+  }
+}

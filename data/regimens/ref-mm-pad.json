@@ -1,0 +1,162 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-mm-pad",
+  "short_name": "PAD (HOVON-65)",
+  "name": {
+    "uk": "PAD (бортезоміб + доксорубіцин + дексаметазон) → трансплантація → підтримка бортезомібом",
+    "en": "PAD (bortezomib, doxorubicin, dexamethasone) → transplant → bortezomib maintenance"
+  },
+  "sources": [
+    {
+      "name": "Sonneveld P. та ін. Bortezomib induction and maintenance treatment in patients with newly diagnosed multiple myeloma: results of the randomized phase III HOVON-65/GMMG-HD4 trial. J Clin Oncol. 2012;30(24):2946-2955",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22802322/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "HOVON-65/GMMG-HD4",
+      "phase": "III",
+      "randomized": true,
+      "n": 827,
+      "comparator": "VAD",
+      "primary_met": true
+    },
+    "settings": ["ndmm-te", "renal", "high-risk", "maintenance"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Sonneveld P. та ін. J Clin Oncol. 2012;30(24):2946-2955",
+        "pmid": "22802322",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22802322/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Mai E.K. та ін. Leukemia. 2015;29(8):1721-1729",
+        "pmid": "25787915",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Comparative Study",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Leukemia",
+          "issn": "0887-6924",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/25787915/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Leukemia» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8704895",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Придатні до трансплантації: індукція PAD, високодозовий мелфалан з автотрансплантацією, далі бортезоміб 1,3 мг/м² раз на 2 тижні протягом 2 років.",
+      "en": "Transplant-eligible: PAD induction, high-dose melphalan with an autologous transplant, then bortezomib 1.3 mg/m² every 2 weeks for 2 years."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин",
+          "en": "Doxorubicin"
+        },
+        "drug_id": "doxorubicin"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Проти VAD з підтримкою талідомідом: виживаність без прогресування 35 проти 28 місяців (HR 0,75), загальна виживаність краща (HR 0,77). Найбільша користь — при креатиніні понад 2 мг/дл і del(17p).",
+        "en": "Against VAD with thalidomide maintenance: progression-free survival 35 against 28 months (HR 0.75), better overall survival (HR 0.77). The greatest benefit with creatinine over 2 mg/dL and del(17p)."
+      },
+      {
+        "uk": "У прямому порівнянні (GMMG-MM5, Mai 2015, 504 пацієнти) VCD не гірша за PAd за VGPR (37% проти 34%), з меншою кількістю прогресувань (0,4% проти 4,8%), нейропатії й тромбозів; автори вважають VCD кращою. VCD є в довіднику.",
+        "en": "In a head-to-head trial (GMMG-MM5, Mai 2015, 504 patients) VCD was not inferior to PAd for VGPR (37% against 34%), with fewer progressions (0.4% against 4.8%), less neuropathy and thrombosis; the authors prefer VCD. VCD is in the catalogue."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме не наводять доз доксорубіцину й дексаметазону, а повні тексти закриті.",
+      "en": "The abstracts give no doxorubicin or dexamethasone doses, and the full texts are closed."
+    }
+  }
+}

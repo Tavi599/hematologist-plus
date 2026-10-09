@@ -1,0 +1,118 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-mm-dara-krd-master",
+  "short_name": "Dara-KRd (MASTER)",
+  "name": {
+    "uk": "Dara-KRd з трансплантацією і відміною лікування за мінімальною залишковою хворобою (MASTER)",
+    "en": "Dara-KRd with a transplant and MRD-guided cessation (MASTER)"
+  },
+  "sources": [
+    {
+      "name": "Costa L.J. та ін. Minimal residual disease response-adapted therapy in newly diagnosed multiple myeloma (MASTER): final report of the multicentre, single-arm, phase 2 trial. Lancet Haematol. 2023;10(11):e890-e901",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10836587/",
+      "version": "рукопис автора в PMC",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "MASTER",
+      "nct": "NCT03224507",
+      "phase": "II",
+      "randomized": false,
+      "n": 123
+    },
+    "settings": ["ndmm-te", "high-risk"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Costa L.J. та ін. Lancet Haematol. 2023;10(11):e890-e901",
+        "pmid": "37776872",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Multicenter Study", "Journal Article"],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/37776872/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "4 цикли Dara-KRd → автотрансплантація → до двох блоків по 4 цикли Dara-KRd; після двох поспіль негативних результатів МЗХ (<10⁻⁵) лікування припиняють, інакше — підтримка леналідомідом.",
+      "en": "4 cycles of Dara-KRd → autologous transplant → up to two blocks of 4 cycles of Dara-KRd; after two consecutive MRD-negative results (<10⁻⁵) treatment stops, otherwise lenalidomide maintenance."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Даратумумаб",
+          "en": "Daratumumab"
+        },
+        "drug_id": "daratumumab"
+      },
+      {
+        "name": {
+          "uk": "Карфілзоміб",
+          "en": "Carfilzomib"
+        },
+        "drug_id": "carfilzomib"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Цикл 28 днів: даратумумаб 16 мг/кг в/в у дні 1, 8, 15, 22; карфілзоміб 56 мг/м² у дні 1, 8, 15; леналідомід 25 мг дні 1–21; дексаметазон 40 мг у дні 1, 8, 15, 22.",
+        "en": "A 28-day cycle: daratumumab 16 mg/kg IV on days 1, 8, 15 and 22; carfilzomib 56 mg/m² on days 1, 8 and 15; lenalidomide 25 mg days 1 to 21; dexamethasone 40 mg on days 1, 8, 15 and 22."
+      },
+      {
+        "uk": "123 пацієнти, збагачено високим ризиком. МЗХ <10⁻⁵ у 81%, лікування припинили 71%. Трирічна виживаність без прогресування 88% без аномалій високого ризику, 79% з однією, 50% з двома і більше.",
+        "en": "123 patients, enriched for high risk. MRD <10⁻⁵ in 81%, 71% stopped treatment. Three-year progression-free survival 88% without high-risk abnormalities, 79% with one, 50% with two or more."
+      }
+    ],
+    "gap": {
+      "uk": "Рукопис каже, що розклад даратумумабу з циклу 4 зменшували, але не каже як; трансплантаційні етапи калькулятор не рахує.",
+      "en": "The manuscript says the daratumumab schedule was reduced from cycle 4 but not how; the calculator does not compute the transplant steps."
+    }
+  }
+}

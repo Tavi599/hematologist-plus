@@ -1,0 +1,180 @@
+{
+  "$comment": "Підтримка KR за FORTE (Lancet Oncol 2021, резюме): карфілзоміб 36 мг/м² в/в у дні 1, 2, 15, 16 кожні 28 днів до 2 років; леналідомід 10 мг дні 1–21 до прогресування. Обмеження дози карфілзомібу BSA 2,2 м² і розчин — як у KRd довідника.",
+  "id": "kr-maintenance",
+  "short_name": "KR, підтримка (FORTE)",
+  "name": {
+    "uk": "KR: підтримка карфілзомібом + леналідомідом після трансплантації (FORTE)",
+    "en": "KR: carfilzomib-lenalidomide maintenance after a transplant (FORTE)"
+  },
+  "description": {
+    "uk": "Підтримка після індукції й консолідації з карфілзомібом. Цикл 28 днів: карфілзоміб до 2 років (26 циклів), леналідомід 10 мг до прогресування. Леналідомід — лише в межах програми запобігання вагітності.",
+    "en": "Maintenance after carfilzomib-based induction and consolidation. A 28-day cycle: carfilzomib for up to 2 years (26 cycles), lenalidomide 10 mg until progression. Lenalidomide only within the pregnancy prevention programme."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 26,
+  "sources": [
+    {
+      "name": "Gay F. та ін. Carfilzomib with cyclophosphamide and dexamethasone or lenalidomide and dexamethasone plus autologous transplantation or carfilzomib plus lenalidomide and dexamethasone, followed by maintenance with carfilzomib plus lenalidomide or lenalidomide alone (FORTE). Lancet Oncol. 2021;22(12):1705-1720",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34774221/",
+      "version": "резюме (повний розклад доз наведено в ньому)",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване відкрите дослідження фази II (42 центри Італії) з двома рандомізаціями: спершу три варіанти індукції (KRd + ТГСК, 12 циклів KRd, KCd + ТГСК), далі підтримка карфілзомібом із леналідомідом проти одного леналідоміду.",
+      "en": "A randomised open-label phase II trial (42 Italian centres) with two randomisations: first three induction strategies (KRd + ASCT, 12 cycles of KRd, KCd + ASCT), then carfilzomib-lenalidomide against lenalidomide alone as maintenance."
+    },
+    "population": {
+      "uk": "474 пацієнти до 65 років з уперше діагностованою мієломою, придатні до трансплантації; 356 рандомізовано на підтримку.",
+      "en": "474 transplant-eligible patients up to 65 with newly diagnosed myeloma; 356 randomised to maintenance."
+    },
+    "results": {
+      "uk": "Трирічна виживаність без прогресування від другої рандомізації 75% з KR проти 65% з одним леналідомідом (HR 0,64; p=0,023).",
+      "en": "Three-year progression-free survival from the second randomisation 75% with KR against 65% with lenalidomide alone (HR 0.64; p=0.023)."
+    },
+    "conduct": {
+      "uk": "На підтримці нейтропенія 3–4 ступеня 20% проти 23%, інфекції 5% проти 7%, судинні події 7% проти 1%. Серйозні побічні події, пов'язані з лікуванням, 14% проти 8%. Карфілзоміб означає внутрішньовенні введення двічі на 2 тижні протягом 2 років.",
+      "en": "On maintenance, grade 3 to 4 neutropenia 20% against 23%, infection 5% against 7%, vascular events 7% against 1%. Treatment-related serious adverse events 14% against 8%. Carfilzomib means two IV visits every 2 weeks for 2 years."
+    },
+    "trial": {
+      "acronym": "FORTE",
+      "nct": "NCT02203643",
+      "phase": "II",
+      "randomized": true,
+      "n": 356,
+      "comparator": "леналідомід",
+      "primary_met": true
+    },
+    "settings": ["ndmm-te", "maintenance"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Gay F. та ін. Lancet Oncol. 2021;22(12):1705-1720",
+        "pmid": "34774221",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "The Lancet Oncology",
+          "issn": "1470-2045",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34774221/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/100957246",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "carfilzomib",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 36,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 15, 16],
+      "notes": {
+        "uk": "36 мг/м² у дні 1, 2, 15, 16, до 2 років (FORTE). Дозу рахують не більше ніж на BSA 2,2 м², як в інших схемах карфілзомібу довідника.",
+        "en": "36 mg/m² on days 1, 2, 15 and 16, for up to 2 years (FORTE). The dose is calculated on no more than a BSA of 2.2 m², as in the catalogue's other carfilzomib regimens."
+      },
+      "cap_amount": 79.2,
+      "duration_min": 10,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "10 мг у дні 1–21, до прогресування (FORTE).",
+        "en": "10 mg on days 1 to 21, until progression (FORTE)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "crcl-30-50",
+          "label": {
+            "uk": "Кліренс креатиніну від 30 до 50 мл/хв",
+            "en": "A creatinine clearance of 30 to 50 mL/min"
+          },
+          "dose_value": 10,
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.59 Lenalidomide Maintenance",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-59-lenalidomide-maintenance.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "key": "crcl-below-30",
+          "label": {
+            "uk": "Кліренс креатиніну нижчий за 30 мл/хв, без діалізу",
+            "en": "A creatinine clearance below 30 mL/min, without dialysis"
+          },
+          "dose_value": 7.5,
+          "notes": {
+            "uk": "Альтернатива протоколу — 15 мг через день. Якщо відповіді немає, а препарат переноситься добре, дозу можна підвищити до 10 мг на добу.",
+            "en": "The protocol's alternative is 15 mg every other day. Where there is no response and the drug is tolerated, the dose may rise to 10 mg daily."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.59 Lenalidomide Maintenance",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-59-lenalidomide-maintenance.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "key": "dialysis",
+          "label": {
+            "uk": "Гемодіаліз",
+            "en": "On dialysis"
+          },
+          "dose_value": 5,
+          "notes": {
+            "uk": "У день діалізу дозу дають після процедури.",
+            "en": "On a dialysis day the dose is given after the session."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.59 Lenalidomide Maintenance",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-59-lenalidomide-maintenance.pdf",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    }
+  ]
+}
