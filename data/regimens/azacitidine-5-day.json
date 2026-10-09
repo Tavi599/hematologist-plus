@@ -1,0 +1,121 @@
+{
+  "$comment": "Розклади азацитидину без вихідних за Lyons 2009 (резюме): AZA 5 — 75 мг/м² п/ш у дні 1–5; AZA 5-2-2 — 75 мг/м² п/ш у дні 1–5 і 8–9; цикл 28 днів, 6 циклів у дослідженні. Введення й премедикація — як у схемі азацитидину довідника.",
+  "id": "azacitidine-5-day",
+  "short_name": "Азацитидин 5 днів",
+  "name": {
+    "uk": "Азацитидин 5 днів (AZA 5)",
+    "en": "Azacitidine for 5 days (AZA 5)"
+  },
+  "description": {
+    "uk": "МДС, коли 7-денний розклад неможливий (без введень у вихідні). Дні 1–5 кожні 28 днів.",
+    "en": "MDS when the 7-day schedule is not possible (no weekend dosing). Days 1 to 5 every 28 days."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "Lyons R.M. та ін. Hematologic response to three alternative dosing schedules of azacitidine in patients with myelodysplastic syndromes. J Clin Oncol. 2009;27:1850-1856",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19255328/",
+      "version": "резюме; рандомізована фаза II, 151 пацієнт",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване дослідження фази II трьох розкладів азацитидину без введень у вихідні (AZA 5-2-2, AZA 5-2-5, AZA 5); групи порівняння зі стандартним 7-денним розкладом немає.",
+      "en": "A randomised phase II trial of three azacitidine schedules without weekend dosing (AZA 5-2-2, AZA 5-2-5, AZA 5); there is no comparison arm on the standard 7-day schedule."
+    },
+    "population": {
+      "uk": "151 пацієнт з МДС, переважно нижчого ризику за FAB (63%); 30% — рефрактерна анемія з надлишком бластів.",
+      "en": "151 patients with MDS, mostly FAB lower risk (63%); 30% refractory anaemia with excess blasts."
+    },
+    "results": {
+      "uk": "Гематологічне покращення: AZA 5-2-2 — 44%, AZA 5-2-5 — 45%, AZA 5 — 56%. Незалежність від трансфузій еритроцитів — 50%, 55% і 64% відповідно.",
+      "en": "Haematological improvement: AZA 5-2-2, 44%; AZA 5-2-5, 45%; AZA 5, 56%. Red cell transfusion independence 50%, 55% and 64% respectively."
+    },
+    "conduct": {
+      "uk": "Небажані явища 3–4 ступеня: 84%, 77% і 58%. Перевага у виживаності доведена лише для 7-денного розкладу при МДС вищого ризику (AZA-001), тож для вищого ризику ці розклади — вимушений компроміс.",
+      "en": "Grade 3 to 4 adverse events: 84%, 77% and 58%. A survival benefit is proven only for the 7-day schedule in higher-risk MDS (AZA-001), so for higher risk these schedules are a forced compromise."
+    },
+    "trial": {
+      "phase": "II",
+      "randomized": true,
+      "n": 151,
+      "comparator": "інші розклади без вихідних"
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Lyons R.M. та ін. J Clin Oncol. 2009;27:1850-1856",
+        "pmid": "19255328",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/19255328/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "ondansetron",
+      "drug_id": "ondansetron",
+      "role": "premedication",
+      "route": "intramuscular",
+      "dose_value": 8,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "За 30 хв до азацитидину; за практикою відділення — внутрішньом'язово. З 3-го циклу можна не давати, якщо нудоти не було.",
+        "en": "30 minutes before azacitidine; given intramuscularly in the department. May be omitted from cycle 3 if there was no nausea."
+      }
+    },
+    {
+      "key": "azacitidine",
+      "drug_id": "azacitidine",
+      "route": "subcutaneous",
+      "dose_value": 75,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "75 мг/м² п/ш у дні 1–5 (Lyons 2009).",
+        "en": "75 mg/m² SC on days 1 to 5 (Lyons 2009)."
+      }
+    }
+  ]
+}

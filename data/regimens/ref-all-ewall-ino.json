@@ -1,0 +1,123 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-all-ewall-ino",
+  "short_name": "EWALL-INO",
+  "name": {
+    "uk": "Інотузумаб з низькоінтенсивною хіміотерапією для літніх (EWALL-INO)",
+    "en": "Inotuzumab with low-intensity chemotherapy for older patients (EWALL-INO)"
+  },
+  "sources": [
+    {
+      "name": "Chevallier P. та ін. Inotuzumab Ozogamicin and Low-Intensity Chemotherapy in Older Patients With Newly Diagnosed CD22+ Philadelphia Chromosome-Negative B-Cell Precursor Acute Lymphoblastic Leukemia. J Clin Oncol. 2024;42:4327-4341",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39418626/",
+      "version": "резюме; фаза II, 131 пацієнт",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "EWALL-INO",
+      "nct": "NCT03249870",
+      "phase": "II",
+      "randomized": false,
+      "n": 131
+    },
+    "settings": ["first-line", "elderly"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Chevallier P. та ін. J Clin Oncol. 2024;42:4327-4341",
+        "pmid": "39418626",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Clinical Trial, Phase II",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39418626/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Від 55 років, CD22+ Ph-негативний В-ГЛЛ. Після префази: індукція 1 — вінкристин, дексаметазон і інотузумаб 0,8 мг/м² у день 1 та 0,5 мг/м² у дні 8 і 15; індукція 2 — циклофосфамід, дексаметазон і інотузумаб 0,5 мг/м² у дні 1 і 8; далі до 6 консолідацій і 18 місяців підтримки.",
+      "en": "Aged 55 or over, CD22+ Ph-negative B-ALL. After a prephase: induction 1, vincristine, dexamethasone and inotuzumab 0.8 mg/m² on day 1 and 0.5 mg/m² on days 8 and 15; induction 2, cyclophosphamide, dexamethasone and inotuzumab 0.5 mg/m² on days 1 and 8; then up to six consolidations and 18 months of maintenance."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Інотузумаб озогаміцин",
+          "en": "Inotuzumab ozogamicin"
+        },
+        "drug_id": "inotuzumab-ozogamicin"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Після двох індукцій повна ремісія 90%, МЗХ нижче 10⁻⁴ у 80%. Однорічна загальна виживаність 73,2%, безрецидивна — 66%.",
+        "en": "After two inductions complete remission 90%, MRD below 10⁻⁴ in 80%. One-year overall survival 73.2%, relapse-free 66%."
+      },
+      {
+        "uk": "Лише один несмертельний синусоїдальний обструктивний синдром. Гірше при цитогенетиці високого ризику і експресії CD22 нижче 70%.",
+        "en": "Only one non-fatal sinusoidal obstruction syndrome. Worse with high-risk cytogenetics and CD22 expression below 70%."
+      }
+    ],
+    "gap": {
+      "uk": "Доз вінкристину, дексаметазону й циклофосфаміду та схем консолідації резюме не наводить; повний текст закритий.",
+      "en": "The abstract gives no doses for vincristine, dexamethasone and cyclophosphamide nor the consolidation schedules; the full text is closed."
+    }
+  }
+}

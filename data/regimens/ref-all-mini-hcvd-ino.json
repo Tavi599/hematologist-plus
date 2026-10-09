@@ -1,0 +1,176 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-all-mini-hcvd-ino",
+  "short_name": "Mini-hyper-CVD + інотузумаб",
+  "name": {
+    "uk": "Mini-hyper-CVD + інотузумаб для літніх з Ph-негативним В-ГЛЛ",
+    "en": "Mini-hyper-CVD plus inotuzumab for older patients with Ph-negative B-ALL"
+  },
+  "sources": [
+    {
+      "name": "Kantarjian H. та ін. Inotuzumab ozogamicin in combination with low-intensity chemotherapy for older patients with Philadelphia chromosome-negative acute lymphoblastic leukaemia: a single-arm, phase 2 study. Lancet Oncol. 2018;19:240-248",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11537312/",
+      "version": "рукопис у PMC; фаза II, 52 пацієнти",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Jabbour E. та ін. Mini-hyper-CVD plus inotuzumab ozogamicin, with or without blinatumomab, in the subgroup of older patients with newly diagnosed Philadelphia chromosome-negative B-cell acute lymphocytic leukaemia: long-term results of an open-label phase 2 trial. Lancet Haematol. 2023;10:e433-e444",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11840755/",
+      "version": "рукопис у PMC; 80 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "nct": "NCT01371630",
+      "phase": "II",
+      "randomized": false,
+      "n": 80
+    },
+    "settings": ["first-line", "elderly"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Kantarjian H. та ін. Lancet Oncol. 2018;19:240-248",
+        "pmid": "29352703",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, N.I.H., Extramural"
+        ],
+        "journal": {
+          "name": "The Lancet Oncology",
+          "issn": "1470-2045",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29352703/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/100957246",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Jabbour E. та ін. Lancet Haematol. 2023;10:e433-e444",
+        "pmid": "37187201",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article"],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/37187201/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Від 60 років, Ph-негативний В-ГЛЛ. Непарні цикли: циклофосфамід 150 мг/м² кожні 12 годин у дні 1–3, дексаметазон 20 мг у дні 1–4 і 11–14, вінкристин 2 мг у дні 1 і 8, без антрацикліну. Парні: метотрексат 250 мг/м² у день 1, цитарабін 0,5 г/м² кожні 12 годин у дні 2–3. Інотузумаб у циклах 1–4; далі POMP зі зниженими дозами.",
+      "en": "Aged 60 or over, Ph-negative B-ALL. Odd cycles: cyclophosphamide 150 mg/m² every 12 hours on days 1 to 3, dexamethasone 20 mg on days 1 to 4 and 11 to 14, vincristine 2 mg on days 1 and 8, no anthracycline. Even cycles: methotrexate 250 mg/m² on day 1, cytarabine 0.5 g/m² every 12 hours on days 2 to 3. Inotuzumab in cycles 1 to 4; then dose-reduced POMP."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Інотузумаб озогаміцин",
+          "en": "Inotuzumab ozogamicin"
+        },
+        "drug_id": "inotuzumab-ozogamicin"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Дворічна виживаність без прогресування 58%, п'ятирічна — 44%.",
+        "en": "Two-year progression-free survival 58%, five-year 44%."
+      },
+      {
+        "uk": "Ризики: тромбоцитопенія 3–4 ступеня 78%, смерті від інфекцій 10%, від вторинних мієлоїдних пухлин 11%, від синусоїдального обструктивного синдрому 5%.",
+        "en": "Risks: grade 3 to 4 thrombocytopenia 78%, deaths from infection 10%, from secondary myeloid neoplasms 11%, from sinusoidal obstruction syndrome 5%."
+      },
+      {
+        "uk": "Після поправки до протоколу інотузумаб дробили: цикл 1 — 0,6 мг/м² у день 2 і 0,3 мг/м² у день 8; цикли 2–4 — по 0,3 мг/м² у дні 2 і 8; далі блінатумомаб, якого в Україні немає.",
+        "en": "After the protocol amendment inotuzumab was fractionated: cycle 1, 0.6 mg/m² on day 2 and 0.3 mg/m² on day 8; cycles 2 to 4, 0.3 mg/m² on days 2 and 8; then blinatumomab, which is not available in Ukraine."
+      }
+    ],
+    "gap": {
+      "uk": "Початкова доза інотузумабу задана діапазоном (1,3–1,8 мг/м²), а дробна версія йде з блінатумомабом, тож розрахунку немає.",
+      "en": "The original inotuzumab dose is a range (1.3 to 1.8 mg/m²), and the fractionated version comes with blinatumomab, so there is no calculation."
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-mds-atg-csa",
+  "short_name": "АТГ + циклоспорин (МДС)",
+  "name": {
+    "uk": "Антитимоцитарний глобулін + циклоспорин при МДС нижчого ризику",
+    "en": "Antithymocyte globulin plus ciclosporin in lower-risk MDS"
+  },
+  "sources": [
+    {
+      "name": "Passweg J.R. та ін. Immunosuppressive therapy for patients with myelodysplastic syndrome: a prospective randomized multicenter phase III trial comparing antithymocyte globulin plus cyclosporine with best supportive care--SAKK 33/99. J Clin Oncol. 2011;29:303-309",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21149672/",
+      "version": "резюме; фаза III, 88 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "SAKK 33/99",
+      "phase": "III",
+      "randomized": true,
+      "n": 88,
+      "comparator": "найкраща підтримувальна терапія",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Passweg J.R. та ін. J Clin Oncol. 2011;29:303-309",
+        "pmid": "21149672",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/21149672/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "МДС нижчого ризику (зокрема гіпопластичний) з трансфузійною залежністю менше 2 років: кінський АТГ 15 мг/кг 5 днів і циклоспорин перорально 180 днів.",
+      "en": "Lower-risk MDS (including hypoplastic) transfusion-dependent for under 2 years: horse ATG 15 mg/kg for 5 days and oral ciclosporin for 180 days."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Антитимоцитарний глобулін",
+          "en": "Antithymocyte globulin"
+        },
+        "drug_id": "anti-thymocyte-globulin-rabbit"
+      },
+      {
+        "name": {
+          "uk": "Циклоспорин",
+          "en": "Ciclosporin"
+        },
+        "drug_id": "ciclosporin"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Гематологічна відповідь через 6 місяців 29% (13 з 45) проти 9% — але дворічна виживаність без трансформації (46% проти 55%) і загальна (49% проти 63%) не покращилися.",
+        "en": "Haematological response at 6 months 29% (13 of 45) against 9%, but two-year transformation-free (46% against 55%) and overall survival (49% against 63%) did not improve."
+      }
+    ],
+    "gap": {
+      "uk": "У дослідженні — кінський АТГ; у довіднику лише кролячий, дози яких не взаємозамінні. Доз циклоспорину резюме не наводить.",
+      "en": "The trial used horse ATG; the catalogue has only rabbit ATG, and their doses are not interchangeable. The abstract gives no ciclosporin dose."
+    }
+  }
+}
