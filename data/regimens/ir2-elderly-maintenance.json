@@ -1,0 +1,107 @@
+{
+  "$comment": "iR2 за резюме (PMID 36102758) і реєстром NCT03949062: індукція 6 циклів по 21 дню — ібрутиніб 560 мг щодня в дні 1–21, ритуксимаб 375 мг/м² в/в у день 1, леналідомід 25 мг у дні 1–10; за повної відповіді — ще 6 циклів леналідоміду 25 мг у дні 1–10 кожні 21 день (цикли 7–12).",
+  "id": "ir2-elderly-maintenance",
+  "short_name": "iR2, підтримка леналідомідом",
+  "name": {
+    "uk": "iR2 для кволих від 75 років: підтримка леналідомідом після повної відповіді",
+    "en": "iR2 for the frail aged 75 or over: lenalidomide maintenance after a complete response"
+  },
+  "description": {
+    "uk": "Лише за повної відповіді після 6 циклів індукції iR2. Цикли 7–12 по 21 дню.",
+    "en": "Only for a complete response after six iR2 induction cycles. Cycles 7 to 12, 21 days each."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "Xu P.P. та ін. Ibrutinib, rituximab, and lenalidomide in unfit or frail patients aged 75 years or older with de novo diffuse large B-cell lymphoma: a phase 2, single-arm study. Lancet Healthy Longev. 2022;3:e481-e490",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36102758/",
+      "version": "резюме; фаза II, 30 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Одноцентрове дослідження фази II без групи порівняння (Жуйцзінь, Шанхай). Схема без хіміотерапії. Первинна кінцева точка — повна відповідь після індукції.",
+      "en": "A single-centre phase II study without a comparison group (Ruijin, Shanghai). A chemotherapy-free regimen. The primary end point was complete response after induction."
+    },
+    "population": {
+      "uk": "30 непридатних або кволих пацієнтів від 75 років з вперше діагностованим ДВКЛ, яким не підходить стандартна хіміотерапія.",
+      "en": "30 unfit or frail patients aged 75 or over with newly diagnosed DLBCL, unsuited to standard chemotherapy."
+    },
+    "results": {
+      "uk": "Повна відповідь після індукції 56,7%, загальна — 66,7%. Дворічна виживаність без прогресування 53,3%, загальна — 66,7%.",
+      "en": "Complete response after induction 56.7%, overall 66.7%. Two-year progression-free survival 53.3%, overall 66.7%."
+    },
+    "conduct": {
+      "uk": "Нейтропенія 3–4 ступеня 23%, пневмонія 3–4 ступеня 23%, фібриляція передсердь 10%.",
+      "en": "Grade 3 to 4 neutropenia 23%, grade 3 to 4 pneumonia 23%, atrial fibrillation 10%."
+    },
+    "trial": {
+      "nct": "NCT03949062",
+      "phase": "II",
+      "randomized": false,
+      "n": 30
+    },
+    "settings": ["maintenance", "elderly", "frail"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Xu P.P. та ін. Lancet Healthy Longev. 2022;3:e481-e490",
+        "pmid": "36102758",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "The Lancet Healthy Longevity",
+          "issn": "2666-7568",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/36102758/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Healthy Longevity» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101773309",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "notes": {
+        "uk": "25 мг раз на добу в дні 1–10 кожні 21 день, цикли 7–12 (Xu 2022).",
+        "en": "25 mg once a day on days 1 to 10 every 21 days, cycles 7 to 12 (Xu 2022)."
+      }
+    }
+  ]
+}

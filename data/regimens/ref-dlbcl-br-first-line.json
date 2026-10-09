@@ -1,0 +1,98 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-dlbcl-br-first-line",
+  "short_name": "BR у першій лінії (кволі)",
+  "name": {
+    "uk": "Бендамустин + ритуксимаб у першій лінії для кволих літніх",
+    "en": "Bendamustine plus rituximab in the first line for frail older patients"
+  },
+  "sources": [
+    {
+      "name": "Park S.I. та ін. A phase II trial of bendamustine in combination with rituximab in older patients with previously untreated diffuse large B-cell lymphoma. Br J Haematol. 2016;175:281-289",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27448091/",
+      "version": "резюме; фаза II, 23 пацієнти",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "phase": "II",
+      "randomized": false,
+      "n": 23
+    },
+    "settings": ["first-line", "elderly", "frail"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Park S.I. та ін. Br J Haematol. 2016;175:281-289",
+        "pmid": "27448091",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article"],
+        "journal": {
+          "name": "British Journal of Haematology",
+          "issn": "0007-1048",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27448091/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «British Journal of Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0372544",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Пацієнти від 65 років, яким не підходить R-CHOP (медіана віку 80, у половини ECOG 2 і вище).",
+      "en": "Patients aged 65 or over unsuited to R-CHOP (median age 80, ECOG 2 or worse in half)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бендамустин",
+          "en": "Bendamustine"
+        },
+        "drug_id": "bendamustine"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Відповідь 78%, повна — 52%, але медіана виживаності без прогресування лише 5,4 місяця, загальної — 10,2 місяця. Автори радять обережність у кволих з поганим загальним станом.",
+        "en": "Response 78%, complete 52%, but median progression-free survival only 5.4 months and overall survival 10.2 months. The authors advise caution in frail patients with poor performance status."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме не наводить доз і днів.",
+      "en": "The abstract gives no doses or days."
+    }
+  }
+}

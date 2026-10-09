@@ -1,0 +1,163 @@
+{
+  "$comment": "BR при рецидиві ДВКЛ за резюме Ohmachi, JCO 2013: ритуксимаб 375 мг/м² в/в у день 1, бендамустин 120 мг/м² в/в у дні 2 і 3; цикл 21 день, до 6 циклів. Інший розклад Vacirca 2014 (бендамустин 120 мг/м² у дні 1–2, ритуксимаб у день 1, цикл 28 днів) — у результатах, окремої схеми не робив: дані слабші. Розведення бендамустину — за правилами відділення.",
+  "id": "br-dlbcl-relapse",
+  "short_name": "BR-120, рецидив ДВКЛ",
+  "name": {
+    "uk": "Бендамустин 120 мг/м² + ритуксимаб при рецидиві ДВКЛ",
+    "en": "Bendamustine 120 mg/m² plus rituximab in relapsed DLBCL"
+  },
+  "description": {
+    "uk": "Рецидив або рефрактерність ДВКЛ після 1–3 ліній, коли аутотрансплантація неможлива або вже була. До 6 циклів по 21 дню.",
+    "en": "Relapsed or refractory DLBCL after one to three lines when an autologous transplant is not possible or has already been done. Up to six 21-day cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "Ohmachi K. та ін. Multicenter phase II study of bendamustine plus rituximab in patients with relapsed or refractory diffuse large B-cell lymphoma. J Clin Oncol. 2013;31:2103-2109",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23650408/",
+      "version": "резюме; фаза II, 63 пацієнти",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Vacirca J.L. та ін. Bendamustine combined with rituximab for patients with relapsed or refractory diffuse large B cell lymphoma. Ann Hematol. 2014;93:403-409",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23955074/",
+      "version": "резюме; фаза II, 59 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Багатоцентрове дослідження фази II без групи порівняння (Японія). Первинна кінцева точка — загальна відповідь.",
+      "en": "A multicentre phase II study without a comparison group (Japan). The primary end point was overall response."
+    },
+    "population": {
+      "uk": "63 пацієнти з рецидивом або рефрактерним ДВКЛ після 1–3 ліній; медіана віку 67 років (до 75), 97% уже отримували ритуксимаб.",
+      "en": "63 patients with relapsed or refractory DLBCL after one to three lines; median age 67 (up to 75), 97% had already had rituximab."
+    },
+    "results": {
+      "uk": "Загальна відповідь 62,7%, повна — 37,3%; однаково до і після 65 років. Медіана виживаності без прогресування 6,7 місяця. В американському дослідженні з іншим розкладом (120 мг/м² у дні 1–2, цикл 28 днів; медіана віку 74) відповідь 45,8%, медіана виживаності без прогресування 3,6 місяця.",
+      "en": "Overall response 62.7%, complete 37.3%; the same under and over 65. Median progression-free survival 6.7 months. In a US study with a different schedule (120 mg/m² on days 1 and 2, 28-day cycle; median age 74) response was 45.8% and median progression-free survival 3.6 months."
+    },
+    "conduct": {
+      "uk": "Токсичність 3–4 ступеня переважно гематологічна: лімфопенія 78%, нейтропенія 76%, CD4-лімфопенія 66%, тромбоцитопенія 22%. Тривала CD4-лімфопенія — підстава для профілактики пневмоцистної пневмонії й герпесу.",
+      "en": "Grade 3 to 4 toxicity was mainly haematological: lymphopenia 78%, neutropenia 76%, CD4 lymphopenia 66%, thrombocytopenia 22%. Prolonged CD4 lymphopenia is a reason for Pneumocystis and herpes prophylaxis."
+    },
+    "trial": {
+      "phase": "II",
+      "randomized": false,
+      "n": 63
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Ohmachi K. та ін. J Clin Oncol. 2013;31:2103-2109",
+        "pmid": "23650408",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article", "Multicenter Study"],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/23650408/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Vacirca J.L. та ін. Ann Hematol. 2014;93:403-409",
+        "pmid": "23955074",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Annals of Hematology",
+          "issn": "0939-5555",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/23955074/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Annals of Hematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/9107334",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "375 мг/м² в/в. Швидкість і розведення — за правилами відділення для ритуксимабу.",
+        "en": "375 mg/m² IV. Rate and dilution per the department rules for rituximab."
+      }
+    },
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 120,
+      "dose_unit": "mg_m2",
+      "days": [2, 3],
+      "notes": {
+        "uk": "120 мг/м² в/в у дні 2 і 3 (Ohmachi 2013).",
+        "en": "120 mg/m² IV on days 2 and 3 (Ohmachi 2013)."
+      }
+    }
+  ]
+}

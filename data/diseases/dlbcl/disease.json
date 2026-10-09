@@ -612,6 +612,125 @@
       ]
     },
     {
+      "key": "clinical-trials",
+      "kind": "trial",
+      "title": {
+        "uk": "Клінічні дослідження",
+        "en": "Clinical trials"
+      },
+      "description": {
+        "uk": "Схеми, які існують лише як опубліковані дослідження: їх немає ні в настанові, ні в інструкції до препарату. Застосування поза інструкцією потребує окремого рішення й згоди пацієнта. Біля кожної схеми в калькуляторі наведено дизайн дослідження, кого в нього включали, що з нього вийшло і чого вимагає проведення.",
+        "en": "Regimens that exist only as published studies: neither a guideline nor a label carries them. Off-label use needs a decision of its own and the patient's consent. In the calculator each regimen states the design of the study, who was enrolled, what came out of it and what the conduct demands."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "trials-first-line",
+          "kind": "trial",
+          "title": {
+            "uk": "Перша лінія",
+            "en": "First line"
+          },
+          "description": {
+            "uk": "Доповнення до R-CHOP у молодших і схеми без антрацикліну для літніх і кволих.",
+            "en": "Additions to R-CHOP in younger patients and anthracycline-free regimens for older and frail patients."
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-chop-ibrutinib",
+              "notes": {
+                "uk": "PHOENIX, фаза III; лише до 60 років, не-GCB",
+                "en": "PHOENIX, phase III; under 60 only, non-GCB"
+              }
+            },
+            {
+              "regimen_id": "r-gemox-14-elderly",
+              "notes": {
+                "uk": "Від 70 років або ECOG ≥2; фаза II",
+                "en": "Aged 70 or over, or ECOG 2 or worse; phase II"
+              }
+            },
+            {
+              "regimen_id": "ir2-elderly-induction",
+              "notes": {
+                "uk": "Кволі від 75 років; без хіміотерапії",
+                "en": "Frail, aged 75 or over; chemotherapy-free"
+              }
+            },
+            {
+              "regimen_id": "ir2-elderly-maintenance",
+              "notes": {
+                "uk": "Після повної відповіді на iR2",
+                "en": "After a complete response to iR2"
+              }
+            },
+            {
+              "regimen_id": "ref-dlbcl-br-first-line"
+            },
+            {
+              "regimen_id": "avoid-dlbcl-r2-chop"
+            }
+          ]
+        },
+        {
+          "key": "trials-maintenance",
+          "kind": "trial",
+          "title": {
+            "uk": "Підтримка",
+            "en": "Maintenance"
+          },
+          "description": {
+            "uk": "Після відповіді на R-CHOP. Подовжує виживаність без прогресування, але не загальну.",
+            "en": "After a response to R-CHOP. It lengthens progression-free survival but not overall survival."
+          },
+          "regimens": [
+            {
+              "regimen_id": "lenalidomide-maintenance-dlbcl",
+              "notes": {
+                "uk": "REMARC, фаза III; 60–80 років",
+                "en": "REMARC, phase III; aged 60 to 80"
+              }
+            }
+          ]
+        },
+        {
+          "key": "trials-relapse",
+          "kind": "trial",
+          "title": {
+            "uk": "Рецидив, трансплантація неможлива",
+            "en": "Relapse, no transplant possible"
+          },
+          "description": {
+            "uk": "Для пацієнтів, яким не підходять аутотрансплантація чи CAR-T.",
+            "en": "For patients unsuited to an autologous transplant or CAR-T."
+          },
+          "regimens": [
+            {
+              "regimen_id": "pola-r-gemox",
+              "notes": {
+                "uk": "POLARGO, фаза III; після 1 і більше ліній",
+                "en": "POLARGO, phase III; after one or more lines"
+              }
+            },
+            {
+              "regimen_id": "bv-r-len",
+              "notes": {
+                "uk": "ECHELON-3, фаза III; після 2 і більше ліній",
+                "en": "ECHELON-3, phase III; after two or more lines"
+              }
+            },
+            {
+              "regimen_id": "br-dlbcl-relapse",
+              "notes": {
+                "uk": "Фаза II; 1–3 попередні лінії",
+                "en": "Phase II; one to three prior lines"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "reference",
       "kind": "reference",
       "title": {
@@ -624,9 +743,6 @@
       },
       "regimens": [
         {
-          "regimen_id": "ref-pola-r-gemox"
-        },
-        {
           "regimen_id": "ref-epcor-gemox"
         },
         {
@@ -638,9 +754,6 @@
         },
         {
           "regimen_id": "loncastuximab"
-        },
-        {
-          "regimen_id": "ref-bv-r-len"
         }
       ]
     }

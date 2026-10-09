@@ -1,0 +1,175 @@
+{
+  "$comment": "Спростована комбінація: зберігається лише як застереження, калькулятор її не пропонує.",
+  "id": "avoid-dlbcl-r2-chop",
+  "short_name": "R2-CHOP (ROBUST)",
+  "name": {
+    "uk": "R-CHOP + леналідомід у першій лінії",
+    "en": "R-CHOP plus lenalidomide in the first line"
+  },
+  "sources": [
+    {
+      "name": "Nowakowski G.S. та ін. ROBUST: A Phase III Study of Lenalidomide Plus R-CHOP Versus Placebo Plus R-CHOP in Previously Untreated Patients With ABC-Type Diffuse Large B-Cell Lymphoma. J Clin Oncol. 2021;39:1317-1328",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8078325/",
+      "version": "повний текст у PMC; фаза III, 570 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "ROBUST",
+      "phase": "III",
+      "randomized": true,
+      "n": 570,
+      "comparator": "плацебо + R-CHOP",
+      "primary_met": false
+    },
+    "settings": ["first-line"],
+    "verdict": "avoid",
+    "appraisal": [
+      {
+        "publication": "Nowakowski G.S. та ін. J Clin Oncol. 2021;39:1317-1328",
+        "pmid": "33621109",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Comparative Study",
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33621109/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Nowakowski G.S. та ін. J Clin Oncol. 2021;39:1329-1338",
+        "pmid": "33555941",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Research Support, N.I.H., Extramural"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33555941/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Леналідомід, доданий до R-CHOP-21 у першій лінії, у дослідженні фази III не покращив виживаність без прогресування при ABC-підтипі ДВКЛ.",
+      "en": "Lenalidomide added to first-line R-CHOP-21 did not improve progression-free survival in ABC-type DLBCL in a phase III trial."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин",
+          "en": "Doxorubicin"
+        },
+        "drug_id": "doxorubicin"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "ROBUST (570 пацієнтів з ABC-підтипом, леналідомід 15 мг у дні 1–14): HR 0,85 (p=0,29); нейтропенія 3–4 ступеня 60% проти 48%, повні 6 циклів — 74% проти 84%.",
+        "en": "ROBUST (570 ABC-type patients, lenalidomide 15 mg on days 1 to 14): HR 0.85 (p=0.29); grade 3 to 4 neutropenia 60% against 48%, all six cycles in 74% against 84%."
+      },
+      {
+        "uk": "Рандомізоване дослідження фази II E1412 (280 пацієнтів, леналідомід 25 мг у дні 1–10) показало трирічну виживаність без прогресування 73% проти 61%, але це дослідження пошуку сигналу; підтвердження у фазі III не отримано.",
+        "en": "The randomised phase II E1412 (280 patients, lenalidomide 25 mg on days 1 to 10) showed three-year progression-free survival of 73% against 61%, but it was signal-seeking; phase III did not confirm it."
+      }
+    ],
+    "gap": {
+      "uk": "Не застосовувати поза дослідженням.",
+      "en": "Not to be used outside a trial."
+    }
+  }
+}

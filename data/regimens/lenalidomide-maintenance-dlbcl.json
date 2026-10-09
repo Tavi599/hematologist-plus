@@ -1,0 +1,167 @@
+{
+  "$comment": "REMARC за резюме (PMID 28426350) і реєстром NCT01122472: леналідомід 25 мг на добу в дні 1–21 циклу 28 днів упродовж 24 місяців. 24 місяці — це 26 циклів по 28 днів (730 днів / 28). Корекції дози при нирковій недостатності джерела не наводять.",
+  "id": "lenalidomide-maintenance-dlbcl",
+  "short_name": "Леналідомід, підтримка (REMARC)",
+  "name": {
+    "uk": "Підтримка леналідомідом після R-CHOP у літніх (REMARC)",
+    "en": "Lenalidomide maintenance after R-CHOP in older patients (REMARC)"
+  },
+  "description": {
+    "uk": "Пацієнти 60–80 років з повною або частковою відповіддю після 6–8 циклів R-CHOP. Цикли 28 днів упродовж 24 місяців.",
+    "en": "Patients aged 60 to 80 with a complete or partial response after six to eight cycles of R-CHOP. 28-day cycles for 24 months."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 26,
+  "sources": [
+    {
+      "name": "Thieblemont C. та ін. Lenalidomide Maintenance Compared With Placebo in Responding Elderly Patients With Diffuse Large B-Cell Lymphoma Treated With First-Line Rituximab Plus Cyclophosphamide, Doxorubicin, Vincristine, and Prednisone. J Clin Oncol. 2017;35:2473-2481",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28426350/",
+      "version": "резюме; фаза III, 650 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT01122472 (REMARC), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT01122472",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Thieblemont C. та ін. Lenalidomide maintenance for diffuse large B-cell lymphoma patients responding to R-CHOP: quality of life, dosing, and safety results from the randomised controlled REMARC study. Br J Haematol. 2020;189:84-96",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31702836/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Подвійне сліпе рандомізоване плацебо-контрольоване дослідження фази III групи LYSA. Первинна кінцева точка — виживаність без прогресування.",
+      "en": "A double-blind, randomised, placebo-controlled phase III trial of the LYSA group. The primary end point was progression-free survival."
+    },
+    "population": {
+      "uk": "650 пацієнтів 60–80 років з ДВКЛ або іншою агресивною В-клітинною лімфомою з повною чи частковою відповіддю після 6 або 8 циклів R-CHOP.",
+      "en": "650 patients aged 60 to 80 with DLBCL or another aggressive B-cell lymphoma in complete or partial response after six or eight cycles of R-CHOP."
+    },
+    "results": {
+      "uk": "Медіана виживаності без прогресування не досягнута проти 58,9 місяця з плацебо (HR 0,708; p=0,01), однаково в усіх підгрупах. Загальна виживаність не відрізнялася (HR 1,218; p=0,26).",
+      "en": "Median progression-free survival not reached against 58.9 months with placebo (HR 0.708; p=0.01), consistently across subgroups. Overall survival did not differ (HR 1.218; p=0.26)."
+    },
+    "conduct": {
+      "uk": "Нейтропенія 3–4 ступеня 56% проти 22%, шкірні реакції 5% проти 1%. Дозу часто знижували, але перевага в виживаності без прогресування зберігалася й після зниження; якість життя не погіршувалася.",
+      "en": "Grade 3 to 4 neutropenia 56% against 22%, skin reactions 5% against 1%. The dose was often reduced, but the progression-free survival benefit held after reduction; quality of life did not worsen."
+    },
+    "trial": {
+      "acronym": "REMARC",
+      "nct": "NCT01122472",
+      "phase": "III",
+      "randomized": true,
+      "n": 650,
+      "comparator": "плацебо",
+      "primary_met": true
+    },
+    "settings": ["maintenance", "elderly"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Thieblemont C. та ін. J Clin Oncol. 2017;35:2473-2481",
+        "pmid": "28426350",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Comparative Study",
+          "Journal Article",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/28426350/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Thieblemont C. та ін. Br J Haematol. 2020;189:84-96",
+        "pmid": "31702836",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "British Journal of Haematology",
+          "issn": "0007-1048",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31702836/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «British Journal of Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0372544",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "25 мг раз на добу в дні 1–21 циклу 28 днів, 24 місяці (REMARC).",
+        "en": "25 mg once a day on days 1 to 21 of a 28-day cycle, for 24 months (REMARC)."
+      }
+    }
+  ]
+}

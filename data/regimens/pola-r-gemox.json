@@ -1,0 +1,164 @@
+{
+  "$comment": "POLARGO за реєстром NCT04182204 і повним текстом (PMC13528845): день 1 — полатузумаб 1,8 мг/кг (не більше 240 мг) і ритуксимаб 375 мг/м² в/в; день 2 — гемцитабін 1000 мг/м² і оксаліплатин 100 мг/м² в/в; цикл 21 день, до 8 циклів. Тривалість інфузій і розчинники джерела не наводять: полатузумаб — 90 хвилин першого введення і 30 наступних за інструкцією; гемцитабін 250 мл NaCl за 30 хвилин і оксаліплатин 500 мл 5% глюкози за 2 години — як у R-GemOx довідника. Первинна профілактика Г-КСФ і профілактика пневмоцистної пневмонії та герпесу обов'язкові.",
+  "id": "pola-r-gemox",
+  "short_name": "Pola-R-GemOx",
+  "name": {
+    "uk": "Полатузумаб + R-GemOx (POLARGO)",
+    "en": "Polatuzumab plus R-GemOx (POLARGO)"
+  },
+  "description": {
+    "uk": "Рецидив або рефрактерність ДВКЛ після однієї і більше ліній, коли аутотрансплантація неможлива. До 8 циклів по 21 дню. Не підходить, якщо полатузумаб або гемцитабін з платиною вже були.",
+    "en": "Relapsed or refractory DLBCL after one or more lines when an autologous transplant is not possible. Up to eight 21-day cycles. Not for patients who have already had polatuzumab or gemcitabine with platinum."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 8,
+  "sources": [
+    {
+      "name": "Matasar M. та ін. Polatuzumab Vedotin Plus Rituximab, Gemcitabine, and Oxaliplatin in Relapsed or Refractory Diffuse Large B-Cell Lymphoma: Results From the Phase III, Randomized POLARGO Trial. J Clin Oncol. 2026;44:2435-2446",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13528845/",
+      "version": "повний текст у PMC; фаза III, 255 рандомізованих",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT04182204 (POLARGO), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT04182204",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Відкрите рандомізоване дослідження фази III: Pola-R-GemOx проти R-GemOx після вступної фази безпеки (15 пацієнтів). Первинна кінцева точка — загальна виживаність.",
+      "en": "An open-label randomised phase III trial: Pola-R-GemOx against R-GemOx after a safety run-in (15 patients). The primary end point was overall survival."
+    },
+    "population": {
+      "uk": "255 пацієнтів з рецидивом або рефрактерним ДВКЛ (зокрема трансформованим), яким не підходила аутотрансплантація; медіана віку 65 років, у 65% одна попередня лінія, у 66% рефрактерність до останньої. Не включали тих, хто вже отримував полатузумаб або гемцитабін з платиною, і з нейропатією вище 1 ступеня.",
+      "en": "255 patients with relapsed or refractory DLBCL (including transformed) unsuitable for an autologous transplant; median age 65, one prior line in 65%, refractory to the last line in 66%. Patients who had had polatuzumab or gemcitabine with platinum, or neuropathy above grade 1, were excluded."
+    },
+    "results": {
+      "uk": "Медіана загальної виживаності 19,5 проти 12,5 місяця (HR 0,6; p=0,0017) за медіани спостереження 24,6 місяця.",
+      "en": "Median overall survival 19.5 against 12.5 months (HR 0.6; p=0.0017) at a median follow-up of 24.6 months."
+    },
+    "conduct": {
+      "uk": "Обов'язкові первинна профілактика Г-КСФ і профілактика пневмоцистної пневмонії та герпесу. Периферична нейропатія 57% проти 29%, переважно 1 ступеня. Смертельні небажані явища 12% проти 4%, переважно інфекції (зокрема COVID-19).",
+      "en": "Primary G-CSF prophylaxis and prophylaxis against Pneumocystis pneumonia and herpes are mandatory. Peripheral neuropathy 57% against 29%, mostly grade 1. Fatal adverse events 12% against 4%, mostly infections (including COVID-19)."
+    },
+    "trial": {
+      "acronym": "POLARGO",
+      "nct": "NCT04182204",
+      "phase": "III",
+      "randomized": true,
+      "n": 255,
+      "comparator": "R-GemOx",
+      "primary_met": true
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Matasar M. та ін. J Clin Oncol. 2026;44:2435-2446",
+        "pmid": "42407012",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Clinical Trial, Phase III",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/42407012/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "375 мг/м² в/в. Швидкість і розведення — за правилами відділення для ритуксимабу.",
+        "en": "375 mg/m² IV. Rate and dilution per the department rules for rituximab."
+      }
+    },
+    {
+      "key": "polatuzumab-vedotin",
+      "drug_id": "polatuzumab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.8,
+      "dose_unit": "mg_kg",
+      "cap_amount": 240,
+      "days": [1],
+      "duration_min": 90,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "1,8 мг/кг, не більше 240 мг на цикл (NCT04182204). За інструкцією перше введення — 90 хвилин, наступні — 30, якщо попереднє перенесено добре; мішок щонайменше 50 мл, 0,72–2,7 мг/мл, фільтр 0,2–0,22 мкм.",
+        "en": "1.8 mg/kg, no more than 240 mg a cycle (NCT04182204). Per the label the first infusion runs 90 minutes and later ones 30 if the previous was tolerated; a bag of at least 50 mL, 0.72 to 2.7 mg/mL, a 0.2 to 0.22 micron filter."
+      }
+    },
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "notes": {
+        "uk": "1000 мг/м² у день 2 (NCT04182204). Розведення як у R-GemOx довідника: 250 мл 0,9% NaCl за 30 хвилин.",
+        "en": "1000 mg/m² on day 2 (NCT04182204). Dilution as in the catalogue R-GemOx: 250 mL of 0.9% sodium chloride over 30 minutes."
+      },
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250
+    },
+    {
+      "key": "oxaliplatin",
+      "drug_id": "oxaliplatin",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "notes": {
+        "uk": "100 мг/м² у день 2 (NCT04182204). Розведення як у R-GemOx довідника: 500 мл 5% глюкози за 2 години.",
+        "en": "100 mg/m² on day 2 (NCT04182204). Dilution as in the catalogue R-GemOx: 500 mL of 5% glucose over 2 hours."
+      },
+      "duration_min": 120,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 500
+    }
+  ]
+}

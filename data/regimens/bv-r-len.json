@@ -1,0 +1,145 @@
+{
+  "$comment": "ECHELON-3 за повним текстом (PMC11936473) і реєстром NCT04404283: брентуксимаб 1,2 мг/кг в/в раз на 3 тижні, леналідомід 20 мг перорально раз на добу (щодня, без перерви), ритуксимаб 375 мг/м² в/в раз на 3 тижні; цикли 21 день до прогресування або неприйнятної токсичності. Ритуксимаб підшкірно 1400 мг дозволений з циклу 2. Первинна профілактика Г-КСФ обов'язкова в усіх циклах (за правилами центру — препарату й доз стаття не наводить). Обмеження брентуксимабу 120 мг (розрахунок для понад 100 кг — як для 100 кг) і розведення в 100 мл NaCl — як у BV-AVD довідника.",
+  "id": "bv-r-len",
+  "short_name": "BV-R-Len",
+  "name": {
+    "uk": "Брентуксимаб + ритуксимаб + леналідомід (ECHELON-3)",
+    "en": "Brentuximab, rituximab and lenalidomide (ECHELON-3)"
+  },
+  "description": {
+    "uk": "Рецидив або рефрактерність ДВКЛ після двох і більше ліній, коли трансплантація чи CAR-T неможливі. Цикли 21 день до прогресування або неприйнятної токсичності.",
+    "en": "Relapsed or refractory DLBCL after two or more lines when a transplant or CAR-T is not possible. 21-day cycles until progression or unacceptable toxicity."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Bartlett N.L. та ін. Brentuximab Vedotin Combination for Relapsed Diffuse Large B-Cell Lymphoma. J Clin Oncol. 2025;43:1061-1072",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11936473/",
+      "version": "повний текст у PMC; фаза III, 230 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT04404283 (ECHELON-3), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT04404283",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Подвійне сліпе рандомізоване плацебо-контрольоване дослідження фази III: брентуксимаб або плацебо до леналідоміду з ритуксимабом. Первинна кінцева точка — загальна виживаність.",
+      "en": "A double-blind, randomised, placebo-controlled phase III trial: brentuximab or placebo added to lenalidomide and rituximab. The primary end point was overall survival."
+    },
+    "population": {
+      "uk": "230 пацієнтів з рецидивом або рефрактерним ДВКЛ (зокрема трансформованим) після двох і більше ліній, яким не підходили трансплантація чи CAR-T; частина вже мала CAR-T. Включали незалежно від експресії CD30.",
+      "en": "230 patients with relapsed or refractory DLBCL (including transformed) after two or more lines, unsuitable for a transplant or CAR-T; some had already had CAR-T. Enrolment did not depend on CD30 expression."
+    },
+    "results": {
+      "uk": "Медіана загальної виживаності 13,8 проти 8,5 місяця (HR 0,63; p=0,009), виживаності без прогресування — 4,2 проти 2,6 місяця. Відповідь 64% проти 42%, повна — 40% проти 19%.",
+      "en": "Median overall survival 13.8 against 8.5 months (HR 0.63; p=0.009), progression-free survival 4.2 against 2.6 months. Response 64% against 42%, complete 40% against 19%."
+    },
+    "conduct": {
+      "uk": "Первинна профілактика Г-КСФ обов'язкова в кожному циклі. Найчастіші небажані явища — нейтропенія, тромбоцитопенія, діарея й анемія; небажані явища були в 97% в обох групах. Ритуксимаб з циклу 2 можна вводити підшкірно (1400 мг).",
+      "en": "Primary G-CSF prophylaxis is mandatory in every cycle. The commonest adverse events were neutropenia, thrombocytopenia, diarrhoea and anaemia; adverse events occurred in 97% in both arms. From cycle 2 rituximab may be given subcutaneously (1400 mg)."
+    },
+    "trial": {
+      "acronym": "ECHELON-3",
+      "nct": "NCT04404283",
+      "phase": "III",
+      "randomized": true,
+      "n": 230,
+      "comparator": "плацебо + R + леналідомід",
+      "primary_met": true
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Bartlett N.L. та ін. J Clin Oncol. 2025;43:1061-1072",
+        "pmid": "39772655",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Multicenter Study",
+          "Clinical Trial, Phase III",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39772655/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "375 мг/м² в/в. Швидкість і розведення — за правилами відділення для ритуксимабу. З циклу 2 дослідження дозволяло 1400 мг підшкірно.",
+        "en": "375 mg/m² IV. Rate and dilution per the department rules for rituximab. From cycle 2 the trial allowed 1400 mg subcutaneously."
+      }
+    },
+    {
+      "key": "brentuximab-vedotin",
+      "drug_id": "brentuximab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.2,
+      "dose_unit": "mg_kg",
+      "cap_amount": 120,
+      "days": [1],
+      "duration_min": 30,
+      "infusion_params_key": "nacl-100",
+      "notes": {
+        "uk": "1,2 мг/кг в/в раз на 3 тижні (ECHELON-3). Для маси понад 100 кг дозу рахують як для 100 кг; кінцева концентрація 0,4–1,2 мг/мл.",
+        "en": "1.2 mg/kg IV every 3 weeks (ECHELON-3). Above 100 kg the dose is worked out for 100 kg; final concentration 0.4 to 1.2 mg/mL."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "20 мг раз на добу щодня, без перерви між циклами (ECHELON-3).",
+        "en": "20 mg once a day every day, with no break between cycles (ECHELON-3)."
+      }
+    }
+  ]
+}

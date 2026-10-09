@@ -1,0 +1,217 @@
+{
+  "$comment": "PHOENIX за повним текстом (PMC6553835) і реєстром NCT01855750: ритуксимаб 375 мг/м², циклофосфамід 750 мг/м², доксорубіцин 50 мг/м², вінкристин 1,4 мг/м² (не більше 2 мг) — в/в у день 1; преднізон 100 мг у дні 1–5 (замінено на преднізолон 1:1); ібрутиніб 560 мг щодня з дня 1 циклу 1 до дня 21 останнього; цикл 21 день, 6 або 8 циклів. Тривалості й розведення джерела не наводять.",
+  "id": "r-chop-ibrutinib",
+  "short_name": "R-CHOP + ібрутиніб",
+  "name": {
+    "uk": "R-CHOP + ібрутиніб (PHOENIX): лише до 60 років, не-GCB",
+    "en": "R-CHOP plus ibrutinib (PHOENIX): under 60 only, non-GCB"
+  },
+  "description": {
+    "uk": "Вперше діагностований ДВКЛ не-GCB підтипу у пацієнтів до 60 років. 6 циклів по 21 дню. Від 60 років схема шкодить.",
+    "en": "Newly diagnosed non-GCB DLBCL in patients under 60. Six 21-day cycles. From 60 the regimen does harm."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "Younes A. та ін. Randomized Phase III Trial of Ibrutinib and Rituximab Plus Cyclophosphamide, Doxorubicin, Vincristine, and Prednisone in Non-Germinal Center B-Cell Diffuse Large B-Cell Lymphoma. J Clin Oncol. 2019;37(15):1285-1295",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6553835/",
+      "version": "повний текст у PMC; фаза III, 838 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT01855750 (PHOENIX), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT01855750",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Подвійне сліпе рандомізоване дослідження фази III: ібрутиніб або плацебо до R-CHOP. Первинна кінцева точка — безподійна виживаність у всіх і в ABC-підгрупі; взаємодію з віком аналізували за планом.",
+      "en": "A double-blind randomised phase III trial: ibrutinib or placebo added to R-CHOP. The primary end point was event-free survival in all patients and the ABC subgroup; the interaction with age was a preplanned analysis."
+    },
+    "population": {
+      "uk": "838 пацієнтів з вперше діагностованим ДВКЛ не-GCB підтипу (імуногістохімія), стадії II–IV, R-IPI від 1; медіана віку 62 роки.",
+      "en": "838 patients with newly diagnosed non-GCB DLBCL (immunohistochemistry), stage II to IV, R-IPI 1 or more; median age 62."
+    },
+    "results": {
+      "uk": "Первинна кінцева точка не досягнута (HR 0,934 у всіх). До 60 років ібрутиніб покращив безподійну (HR 0,579), безпрогресивну (HR 0,556) і загальну виживаність (HR 0,330). Від 60 років — гірші всі три показники, серйозні небажані явища 63,4% проти 38,2%, повний R-CHOP отримали лише 73,7% проти 88,8%.",
+      "en": "The primary end point was not met (HR 0.934 overall). Under 60, ibrutinib improved event-free (HR 0.579), progression-free (HR 0.556) and overall survival (HR 0.330). From 60, all three were worse, serious adverse events 63.4% against 38.2%, and only 73.7% against 88.8% received full R-CHOP."
+    },
+    "conduct": {
+      "uk": "Перевага лише в підгрупі за віком, тож це варіант для молодих пацієнтів з не-GCB підтипом, а не стандарт. Профілактика інфекцій і Г-КСФ — за рішенням лікаря; вторинна антибіотикопрофілактика частіше була потрібна з ібрутинібом.",
+      "en": "The benefit is confined to an age subgroup, so this is an option for younger non-GCB patients, not a standard. Infection prophylaxis and G-CSF were at the investigator's discretion; secondary antibiotic prophylaxis was needed more often with ibrutinib."
+    },
+    "trial": {
+      "acronym": "PHOENIX",
+      "nct": "NCT01855750",
+      "phase": "III",
+      "randomized": true,
+      "n": 838,
+      "comparator": "плацебо + R-CHOP",
+      "primary_met": false
+    },
+    "settings": ["first-line"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Younes A. та ін. J Clin Oncol. 2019;37(15):1285-1295",
+        "pmid": "30901302",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Research Support, N.I.H., Extramural",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30901302/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "100 мг у дні 1–5. У дослідженні — преднізон 100 мг або еквівалент; замінено на преднізолон 1:1.",
+        "en": "100 mg on days 1 to 5. The trial used prednisone 100 mg or equivalent; replaced 1:1 by prednisolone."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "375 мг/м² в/в. Швидкість і розведення — за правилами відділення для ритуксимабу.",
+        "en": "375 mg/m² IV. Rate and dilution per the department rules for rituximab."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "750 мг/м² в/в у день 1.",
+        "en": "750 mg/m² IV on day 1."
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "50 мг/м² в/в у день 1.",
+        "en": "50 mg/m² IV on day 1."
+      }
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "1,4 мг/м² в/в у день 1, не більше 2 мг.",
+        "en": "1.4 mg/m² IV on day 1, no more than 2 mg."
+      },
+      "cap_amount": 2
+    },
+    {
+      "key": "ibrutinib",
+      "drug_id": "ibrutinib",
+      "route": "oral",
+      "dose_value": 560,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "560 мг раз на добу щодня, з дня 1 першого циклу до дня 21 останнього (PHOENIX).",
+        "en": "560 mg once a day every day, from day 1 of the first cycle to day 21 of the last (PHOENIX)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "cyp3a4-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A4 (кетоконазол, ітраконазол, вориконазол, позаконазол, кларитроміцин, телітроміцин)",
+            "en": "Strong CYP3A4 inhibitor (ketoconazole, itraconazole, voriconazole, posaconazole, clarithromycin, telithromycin)"
+          },
+          "dose_value": 140,
+          "notes": {
+            "uk": "Одночасного призначення краще уникати. Якщо інгібітор потрібен ненадовго (протигрибковий препарат чи антибіотик на 7 днів або менше), ібрутиніб на цей час або переривають, або зменшують до 140 мг на добу. Пацієнта пильно спостерігають щодо ознак токсичності.",
+            "en": "Concomitant use is better avoided. Where the inhibitor is short-term - an antifungal or antibiotic for 7 days or less - ibrutinib is either interrupted or reduced to 140 mg daily. Watch closely for signs of toxicity."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "key": "cyp3a4-moderate",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A4",
+            "en": "Moderate CYP3A4 inhibitor"
+          },
+          "dose_value": 280,
+          "notes": {
+            "uk": "Якщо без інгібітора не обійтися. Сюди ж належать грейпфрут і севільські апельсини — їх виключають.",
+            "en": "Where the inhibitor cannot be avoided. Grapefruit and Seville oranges count as moderate inhibitors and are excluded."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    }
+  ]
+}
