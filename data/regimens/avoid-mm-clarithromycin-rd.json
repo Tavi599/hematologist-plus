@@ -1,0 +1,118 @@
+{
+  "$comment": "Спростована комбінація: зберігається лише як застереження, калькулятор її не пропонує.",
+  "id": "avoid-mm-clarithromycin-rd",
+  "short_name": "Кларитроміцин + Rd (літні)",
+  "name": {
+    "uk": "Кларитроміцин + леналідомід + дексаметазон у літніх, непридатних до трансплантації",
+    "en": "Clarithromycin, lenalidomide and dexamethasone in elderly transplant-ineligible patients"
+  },
+  "sources": [
+    {
+      "name": "Puig N. та ін. Lenalidomide and dexamethasone with or without clarithromycin in patients with multiple myeloma ineligible for autologous transplant: a randomized trial. Blood Cancer J. 2021;11(5):101",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8139975/",
+      "version": "повний текст у PMC; GEM-CLARIDEX, фаза III, 286 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "GEM-CLARIDEX",
+      "nct": "NCT02575144",
+      "phase": "III",
+      "randomized": true,
+      "n": 286,
+      "comparator": "Rd",
+      "primary_met": false
+    },
+    "settings": ["ndmm-ti"],
+    "verdict": "avoid",
+    "appraisal": [
+      {
+        "publication": "Puig N. та ін. Blood Cancer J. 2021;11(5):101",
+        "pmid": "34021118",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "Blood Cancer Journal",
+          "issn": "2044-5385",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34021118/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood Cancer Journal» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101568469",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Додавання кларитроміцину до Rd у вперше діагностованих літніх пацієнтів не подовжило виживаності без прогресування (23 проти 29 місяців, HR 0,783, p=0,14), хоча повних відповідей було більше (22,6% проти 14,4%).",
+      "en": "Adding clarithromycin to Rd in elderly newly diagnosed patients did not prolong progression-free survival (23 against 29 months, HR 0.783, p=0.14), though complete responses were more frequent (22.6% against 14.4%)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Кларитроміцин",
+          "en": "Clarithromycin"
+        },
+        "drug_id": "clarithromycin"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Токсичних смертей більше в групі кларитроміцину, переважно від інфекцій і у віці від 75 років; медіана віку в дослідженні 76 років.",
+        "en": "More toxic deaths with clarithromycin, mostly infectious and at 75 or older; the median age was 76."
+      },
+      {
+        "uk": "Автори пояснюють це надмірною дією дексаметазону: кларитроміцин сповільнює його виведення. Побічних дій стероїдів 15% проти 6%.",
+        "en": "The authors attribute it to excess dexamethasone exposure, as clarithromycin slows its clearance. Steroid-related adverse events 15% against 6%."
+      },
+      {
+        "uk": "Це стосується саме літніх із Rd; схеми з кларитроміцином при рецидиві (ClaPd) досліджено окремо, без порівняння.",
+        "en": "This concerns the elderly on Rd; clarithromycin regimens for relapse (ClaPd) were studied separately, without a comparison."
+      }
+    ]
+  }
+}

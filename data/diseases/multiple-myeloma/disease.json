@@ -638,8 +638,8 @@
             "en": "Newly diagnosed: transplant-ineligible, frail"
           },
           "description": {
-            "uk": "Схеми, що зменшують дексаметазон або інтенсивність лікування в літніх і кволих.",
-            "en": "Regimens that cut dexamethasone or intensity in the elderly and frail."
+            "uk": "Схеми для пацієнтів, непридатних до трансплантації, зокрема ті, що зменшують дексаметазон або інтенсивність лікування в літніх і кволих.",
+            "en": "Regimens for transplant-ineligible patients, including those that cut dexamethasone or intensity in the elderly and frail."
           },
           "regimens": [
             {
@@ -676,6 +676,51 @@
                 "uk": "Після 9 циклів Rd",
                 "en": "After 9 cycles of Rd"
               }
+            },
+            {
+              "regimen_id": "vmpt-induction",
+              "notes": {
+                "uk": "9 циклів по 35 днів",
+                "en": "9 cycles of 35 days"
+              }
+            },
+            {
+              "regimen_id": "vt-maintenance",
+              "notes": {
+                "uk": "Після VMPT, 2 роки",
+                "en": "After VMPT, 2 years"
+              }
+            },
+            {
+              "regimen_id": "avoid-mm-clarithromycin-rd"
+            }
+          ]
+        },
+        {
+          "key": "trials-maintenance",
+          "kind": "trial",
+          "title": {
+            "uk": "Підтримка після трансплантації",
+            "en": "Maintenance after a transplant"
+          },
+          "description": {
+            "uk": "Підтримувальне лікування після автотрансплантації, зокрема коли леналідомід не переноситься.",
+            "en": "Maintenance after an autologous transplant, including when lenalidomide is not tolerated."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ixazomib-maintenance-cycle-1-4",
+              "notes": {
+                "uk": "TOURMALINE-MM3, цикли 1–4, 3 мг",
+                "en": "TOURMALINE-MM3, cycles 1-4, 3 mg"
+              }
+            },
+            {
+              "regimen_id": "ixazomib-maintenance",
+              "notes": {
+                "uk": "З циклу 5, 4 мг, до 2 років",
+                "en": "From cycle 5, 4 mg, up to 2 years"
+              }
             }
           ]
         },
@@ -710,6 +755,22 @@
             },
             {
               "regimen_id": "bld"
+            },
+            {
+              "regimen_id": "cpr-relapse",
+              "notes": {
+                "uk": "Повністю пероральна",
+                "en": "Fully oral"
+              }
+            },
+            {
+              "regimen_id": "ref-mm-vcp-weekly"
+            },
+            {
+              "regimen_id": "avoid-mm-icd-frail"
+            },
+            {
+              "regimen_id": "avoid-mm-venetoclax-vd"
             }
           ]
         }

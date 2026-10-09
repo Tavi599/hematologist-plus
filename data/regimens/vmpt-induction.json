@@ -1,0 +1,205 @@
+{
+  "$comment": "VMPT → VT за реєстром NCT01063179 і резюме Palumbo (JCO 2010, 2014): індукція 9 циклів по 35 днів — бортезоміб 1,3 мг/м² в/в болюсно дні 1, 8, 15, 22; мелфалан 9 мг/м² і преднізон 60 мг/м² усередину дні 1–4; талідомід 50 мг щодня безперервно. Підтримка — талідомід 50 мг щодня + бортезоміб 1,3 мг/м² раз на 2 тижні, 2 роки (у реєстрі — до прогресування); записано 14-денним циклом, 52 цикли = 2 роки. Преднізон замінено преднізолоном у тій самій дозі.",
+  "id": "vmpt-induction",
+  "short_name": "VMPT",
+  "name": {
+    "uk": "VMPT (бортезоміб щотижня, мелфалан, преднізолон, талідомід), індукція",
+    "en": "VMPT (weekly bortezomib, melphalan, prednisolone, thalidomide), induction"
+  },
+  "description": {
+    "uk": "Уперше діагностована мієлома, непридатні до трансплантації. Цикл 35 днів, 9 циклів, далі підтримка VT.",
+    "en": "Newly diagnosed myeloma, transplant-ineligible. A 35-day cycle, 9 cycles, then VT maintenance."
+  },
+  "cycle_length_days": 35,
+  "default_cycles": 9,
+  "sources": [
+    {
+      "name": "Palumbo A. та ін. Bortezomib-melphalan-prednisone-thalidomide followed by maintenance with bortezomib-thalidomide compared with bortezomib-melphalan-prednisone for initial treatment of multiple myeloma. J Clin Oncol. 2010;28(34):5101-5109; оновлення: J Clin Oncol. 2014;32(7):634-640",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24449241/",
+      "version": "резюме обох публікацій; повний текст на сайті журналу закритий перевіркою на бота",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT01063179 (GIMEMA VMPT-VT проти VMP), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT01063179",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Bringhen S. та ін. Efficacy and safety of once-weekly bortezomib in multiple myeloma patients. Blood. 2010;116(23):4745-4753",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20807892/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване дослідження фази III (GIMEMA, Італія): 9 п'ятитижневих циклів VMPT, далі підтримка бортезомібом із талідомідом, — проти 9 циклів VMP без підтримки. Спершу бортезоміб вводили двічі на тиждень; після зміни протоколу — раз на тиждень, і саме цей розклад записаний у реєстрі.",
+      "en": "A randomised phase III trial (GIMEMA, Italy): 9 five-week cycles of VMPT followed by bortezomib-thalidomide maintenance, against 9 cycles of VMP without maintenance. Bortezomib was first given twice weekly; after a protocol amendment once weekly, the schedule the registry records."
+    },
+    "population": {
+      "uk": "511 пацієнтів з уперше діагностованою мієломою, непридатних до автотрансплантації.",
+      "en": "511 transplant-ineligible patients with newly diagnosed myeloma."
+    },
+    "results": {
+      "uk": "Медіана спостереження 54 місяці. Виживаність без прогресування 35,3 проти 24,8 місяця (HR 0,58; p<0,001), час до наступного лікування 46,6 проти 27,8 місяця. П'ятирічна загальна виживаність 61% проти 51% (HR 0,70; p=0,01). Повна відповідь 38% проти 24%. Бортезоміб раз на тиждень (372 пацієнти) не знизив ефективності порівняно з двічі на тиждень: трирічна виживаність без прогресування 50% проти 47%.",
+      "en": "Median follow-up 54 months. Progression-free survival 35.3 against 24.8 months (HR 0.58; p<0.001), time to next therapy 46.6 against 27.8 months. Five-year overall survival 61% against 51% (HR 0.70; p=0.01). Complete response 38% against 24%. Weekly bortezomib (372 patients) did not lower efficacy against twice weekly: three-year progression-free survival 50% against 47%."
+    },
+    "conduct": {
+      "uk": "З VMPT-VT частіше нейтропенія 3–4 ступеня (38%), периферична нейропатія (11%) і кардіологічні події (10–11%); тромбоемболії 5% проти 2%. Смерті, пов'язані з лікуванням, 4% проти 3%. Бортезоміб раз на тиждень знизив нейропатію 3–4 ступеня з 28% до 8%. Талідомід 50 мг: у довіднику лише капсули по 100 мг.",
+      "en": "VMPT-VT brought more grade 3 to 4 neutropenia (38%), peripheral neuropathy (11%) and cardiac events (10 to 11%); thromboembolism 5% against 2%. Treatment-related deaths 4% against 3%. Weekly bortezomib cut grade 3 to 4 neuropathy from 28% to 8%. Thalidomide 50 mg: the catalogue has only 100 mg capsules."
+    },
+    "trial": {
+      "acronym": "GIMEMA VMPT-VT",
+      "nct": "NCT01063179",
+      "phase": "III",
+      "randomized": true,
+      "n": 511,
+      "comparator": "VMP",
+      "primary_met": true
+    },
+    "settings": ["ndmm-ti"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Palumbo A. та ін. J Clin Oncol. 2014;32(7):634-640",
+        "pmid": "24449241",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/24449241/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Palumbo A. та ін. J Clin Oncol. 2010;28(34):5101-5109",
+        "pmid": "20940200",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/20940200/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "iv_bolus",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "1,3 мг/м² в/в болюсно раз на тиждень (NCT01063179).",
+        "en": "1.3 mg/m² IV bolus once a week (NCT01063179)."
+      }
+    },
+    {
+      "key": "melphalan",
+      "drug_id": "melphalan",
+      "route": "oral",
+      "dose_value": 9,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "9 мг/м² усередину в дні 1–4 (NCT01063179).",
+        "en": "9 mg/m² by mouth on days 1 to 4 (NCT01063179)."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "60 мг/м² у дні 1–4. У дослідженні — преднізон; преднізолон у тій самій дозі рівноцінний.",
+        "en": "60 mg/m² on days 1 to 4. The study used prednisone; prednisolone at the same dose is equivalent."
+      }
+    },
+    {
+      "key": "thalidomide",
+      "drug_id": "thalidomide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28, 29, 30, 31, 32, 33, 34, 35
+      ],
+      "notes": {
+        "uk": "50 мг щодня безперервно (NCT01063179).",
+        "en": "50 mg every day without a break (NCT01063179)."
+      }
+    }
+  ]
+}

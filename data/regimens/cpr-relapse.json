@@ -1,0 +1,183 @@
+{
+  "$comment": "CPR при рецидиві за Reece, BJH 2015 (резюме): максимальна введена доза — циклофосфамід 300 мг/м² усередину в дні 1, 8, 15; леналідомід 25 мг дні 1–21; преднізон 100 мг через день; цикл 28 днів, до прогресування. «Через день» записано днями 1, 3, 5 … 27. Преднізон замінено преднізолоном у тій самій дозі. Ниркові поправки леналідоміду — з NSSG MM.18.",
+  "id": "cpr-relapse",
+  "short_name": "CPR (рецидив)",
+  "name": {
+    "uk": "CPR (циклофосфамід + преднізолон + леналідомід), рецидив",
+    "en": "CPR (cyclophosphamide, prednisolone and lenalidomide), relapse"
+  },
+  "description": {
+    "uk": "Рецидивна або рефрактерна мієлома. Повністю пероральна: цикл 28 днів, до прогресування. Леналідомід — лише в межах програми запобігання вагітності.",
+    "en": "Relapsed or refractory myeloma. Fully oral: a 28-day cycle, until progression. Lenalidomide only within the pregnancy prevention programme."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Reece D.E. та ін. Phase I-II trial of oral cyclophosphamide, prednisone and lenalidomide for the treatment of patients with relapsed and refractory multiple myeloma. Br J Haematol. 2015;168(1):46-54",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25146584/",
+      "version": "резюме (максимальна введена доза); повний текст на сайті журналу закритий перевіркою на бота",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Одноцентрове дослідження фази I–II з підбором дози, без групи порівняння. Пацієнти, які відповіли, лікувалися до прогресування.",
+      "en": "A single-centre phase I-II dose-escalation study without a comparison group. Responding patients were treated until progression."
+    },
+    "population": {
+      "uk": "32 пацієнти з рецидивною або рефрактерною мієломою; медіана віку 64 роки, медіана попередніх ліній — 2.",
+      "en": "32 patients with relapsed or refractory myeloma; the median age was 64 and the median number of prior lines 2."
+    },
+    "results": {
+      "uk": "Відповідь (частково і краще) 94% при медіані спостереження 28 місяців. Виживаність без прогресування 16,1 місяця, загальна виживаність 27,6 місяця. Дозолімітуючої токсичності на повній дозі не було; медіана тривалості лікування 16 місяців.",
+      "en": "Response (partial or better) 94% at a median follow-up of 28 months. Progression-free survival 16.1 months, overall survival 27.6 months. No dose-limiting toxicity at the full dose; the median duration of treatment was 16 months."
+    },
+    "conduct": {
+      "uk": "Мала вибірка з одного центру. Корекцію дози леналідоміду за функцією нирок у калькуляторі взято з протоколу NSSG для Rd: резюме її не наводить. Таблеток циклофосфаміду в довіднику немає — кількість для видачі рахуйте окремо.",
+      "en": "A small single-centre sample. The renal adjustment of lenalidomide in the calculator comes from the NSSG Rd protocol: the abstract states none. The catalogue has no cyclophosphamide tablets, so count the supply separately."
+    },
+    "trial": {
+      "phase": "I-II",
+      "randomized": false,
+      "n": 32
+    },
+    "settings": ["rrmm-early"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Reece D.E. та ін. Br J Haematol. 2015;168(1):46-54",
+        "pmid": "25146584",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "British Journal of Haematology",
+          "issn": "0007-1048",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/25146584/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «British Journal of Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0372544",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "300 мг/м² усередину в дні 1, 8, 15 (Reece 2015).",
+        "en": "300 mg/m² by mouth on days 1, 8 and 15 (Reece 2015)."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "25 мг на добу в дні 1–21 (Reece 2015).",
+        "en": "25 mg a day on days 1 to 21 (Reece 2015)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "crcl-30-50",
+          "label": {
+            "uk": "Кліренс креатиніну від 30 до 50 мл/хв",
+            "en": "A creatinine clearance of 30 to 50 mL/min"
+          },
+          "dose_value": 10,
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.18 Lenalidomide with Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-18-lenalidomide-dex.pdf",
+            "version": "5.0 (06.2023)",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "key": "crcl-below-30",
+          "label": {
+            "uk": "Кліренс креатиніну нижчий за 30 мл/хв, без діалізу",
+            "en": "A creatinine clearance below 30 mL/min, without dialysis"
+          },
+          "dose_value": 15,
+          "notes": {
+            "uk": "Протокол пише «15 мг через день» — через день це розклад, а не доза, тому дні виставляють вручну.",
+            "en": "The protocol writes \"15 mg every other day\"; alternate days are a schedule and not a dose, so the days are set by hand."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.18 Lenalidomide with Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-18-lenalidomide-dex.pdf",
+            "version": "5.0 (06.2023)",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "key": "dialysis",
+          "label": {
+            "uk": "Гемодіаліз",
+            "en": "On dialysis"
+          },
+          "dose_value": 5,
+          "notes": {
+            "uk": "У день діалізу дозу дають після процедури.",
+            "en": "On a dialysis day the dose is given after the session."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.18 Lenalidomide with Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-18-lenalidomide-dex.pdf",
+            "version": "5.0 (06.2023)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27],
+      "notes": {
+        "uk": "100 мг через день. У дослідженні — преднізон; преднізолон у тій самій дозі рівноцінний.",
+        "en": "100 mg every other day. The study used prednisone; prednisolone at the same dose is equivalent."
+      }
+    }
+  ]
+}

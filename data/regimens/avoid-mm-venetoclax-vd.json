@@ -1,0 +1,158 @@
+{
+  "$comment": "Спростована комбінація: зберігається лише як застереження, калькулятор її не пропонує.",
+  "id": "avoid-mm-venetoclax-vd",
+  "short_name": "Венетоклакс + Vd без t(11;14)",
+  "name": {
+    "uk": "Венетоклакс + бортезоміб + дексаметазон у загальній популяції рецидиву",
+    "en": "Venetoclax, bortezomib and dexamethasone in the general relapsed population"
+  },
+  "sources": [
+    {
+      "name": "Kumar S.K. та ін. Venetoclax or placebo in combination with bortezomib and dexamethasone in patients with relapsed or refractory multiple myeloma (BELLINI). Lancet Oncol. 2020;21(12):1630-1642; остаточний аналіз загальної виживаності: Lancet Haematol. 2025;12(8):e574-e587",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40587991/",
+      "version": "резюме обох публікацій",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "BELLINI",
+      "nct": "NCT02755597",
+      "phase": "III",
+      "randomized": true,
+      "n": 291,
+      "comparator": "плацебо + Vd",
+      "primary_met": true
+    },
+    "settings": ["rrmm-early"],
+    "verdict": "avoid",
+    "appraisal": [
+      {
+        "publication": "Kumar S.K. та ін. Lancet Oncol. 2020;21(12):1630-1642",
+        "pmid": "33129376",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "The Lancet Oncology",
+          "issn": "1470-2045",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33129376/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/100957246",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Kumar S.K. та ін. Lancet Haematol. 2025;12(8):e574-e587",
+        "pmid": "40587991",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Clinical Trial, Phase III",
+          "Multicenter Study"
+        ],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/40587991/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Венетоклакс подовжив виживаність без прогресування (23,4 проти 11,4 місяця), але загальна виживаність за остаточним аналізом була на користь плацебо (HR 1,19). Автори прямо радять не застосовувати венетоклакс у загальній популяції рецидиву.",
+      "en": "Venetoclax prolonged progression-free survival (23.4 against 11.4 months), but the final analysis of overall survival favoured placebo (HR 1.19). The authors advise outright against venetoclax in the general relapsed population."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Венетоклакс",
+          "en": "Venetoclax"
+        },
+        "drug_id": "venetoclax"
+      },
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Смертельні інфекції під час лікування — 8 (4%) з венетоклаксом, жодної з плацебо.",
+        "en": "Fatal treatment-emergent infections: 8 (4%) with venetoclax, none with placebo."
+      },
+      {
+        "uk": "Застереження стосується пацієнтів без t(11;14); схеми з венетоклаксом при t(11;14) досліджено окремо.",
+        "en": "The warning concerns patients without t(11;14); venetoclax regimens in t(11;14) were studied separately."
+      }
+    ]
+  }
+}

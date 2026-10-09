@@ -1,0 +1,112 @@
+{
+  "$comment": "Підтримка іксазомібом після автотрансплантації за TOURMALINE-MM3 (Lancet 2019, резюме): іксазоміб у дні 1, 8, 15 28-денного циклу 2 роки; 3 мг у циклах 1–4, з циклу 5 — 4 мг, якщо переносився (тоді 22 цикли до 2 років).",
+  "id": "ixazomib-maintenance",
+  "short_name": "Іксазоміб, підтримка, з циклу 5",
+  "name": {
+    "uk": "Іксазоміб, підтримка після автотрансплантації, з циклу 5",
+    "en": "Ixazomib maintenance after an autologous transplant, from cycle 5"
+  },
+  "description": {
+    "uk": "4 мг усередину в дні 1, 8, 15 кожні 28 днів, якщо 3 мг переносилися; разом 2 роки підтримки.",
+    "en": "4 mg by mouth on days 1, 8 and 15 every 28 days if 3 mg was tolerated; 2 years of maintenance in all."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 22,
+  "sources": [
+    {
+      "name": "Dimopoulos M.A. та ін. Oral ixazomib maintenance following autologous stem cell transplantation (TOURMALINE-MM3): a double-blind, randomised, placebo-controlled phase 3 trial. Lancet. 2019;393(10168):253-264",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30545780/",
+      "version": "резюме; фаза III, 656 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Подвійне сліпе рандомізоване дослідження фази III проти плацебо, 167 центрів у 30 країнах, розподіл 3:2. Іксазоміб у дні 1, 8, 15 28-денного циклу протягом 2 років: 3 мг у циклах 1–4, з циклу 5 — 4 мг, якщо переносився.",
+      "en": "A double-blind randomised placebo-controlled phase III trial, 167 sites in 30 countries, 3:2 allocation. Ixazomib on days 1, 8 and 15 of a 28-day cycle for 2 years: 3 mg in cycles 1 to 4, 4 mg from cycle 5 if tolerated."
+    },
+    "population": {
+      "uk": "656 пацієнтів з уперше діагностованою мієломою, які після індукції, мелфалану 200 мг/м² і однієї автотрансплантації протягом 12 місяців від діагнозу досягли щонайменше часткової відповіді.",
+      "en": "656 patients with newly diagnosed myeloma who reached at least a partial response after induction, melphalan 200 mg/m² and a single autologous transplant within 12 months of diagnosis."
+    },
+    "results": {
+      "uk": "Виживаність без прогресування 26,5 проти 21,3 місяця з плацебо (HR 0,72; p=0,0023) при медіані спостереження 31 місяць.",
+      "en": "Progression-free survival 26.5 against 21.3 months with placebo (HR 0.72; p=0.0023) at a median follow-up of 31 months."
+    },
+    "conduct": {
+      "uk": "Серйозні побічні події у 27% проти 20% з плацебо. Друга пухлина в 3% в обох групах. Підтримка без імуномодулятора — варіант, коли леналідомід не переноситься.",
+      "en": "Serious adverse events in 27% against 20% with placebo. A second cancer in 3% in both groups. A maintenance without an immunomodulator: an option when lenalidomide is not tolerated."
+    },
+    "trial": {
+      "acronym": "TOURMALINE-MM3",
+      "nct": "NCT02181413",
+      "phase": "III",
+      "randomized": true,
+      "n": 656,
+      "comparator": "плацебо",
+      "primary_met": true
+    },
+    "settings": ["ndmm-te", "maintenance"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Dimopoulos M.A. та ін. Lancet. 2019;393(10168):253-264",
+        "pmid": "30545780",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "The Lancet",
+          "issn": "0140-6736",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30545780/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/2985213R",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "ixazomib",
+      "drug_id": "ixazomib",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "4 мг у дні 1, 8, 15 (TOURMALINE-MM3).",
+        "en": "4 mg on days 1, 8 and 15 (TOURMALINE-MM3)."
+      }
+    }
+  ]
+}

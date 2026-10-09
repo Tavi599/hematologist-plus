@@ -1,0 +1,114 @@
+{
+  "$comment": "VCP з бортезомібом раз на тиждень за Reece, JCO 2008. Резюме не дає дози преднізону, тому лише картка без розрахунку.",
+  "id": "ref-mm-vcp-weekly",
+  "short_name": "VCP щотижня",
+  "name": {
+    "uk": "VCP: бортезоміб раз на тиждень + циклофосфамід і преднізон усередину",
+    "en": "VCP: weekly bortezomib with oral cyclophosphamide and prednisone"
+  },
+  "sources": [
+    {
+      "name": "Reece D.E. та ін. Phase I-II trial of bortezomib plus oral cyclophosphamide and prednisone in relapsed and refractory multiple myeloma. J Clin Oncol. 2008;26(29):4777-4783",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18645194/",
+      "version": "резюме; повний текст на сайті журналу закритий перевіркою на бота",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "phase": "I-II",
+      "randomized": false,
+      "n": 37
+    },
+    "settings": ["rrmm-early", "rrmm-late"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Reece D.E. та ін. J Clin Oncol. 2008;26(29):4777-4783",
+        "pmid": "18645194",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/18645194/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Рецидивна або рефрактерна мієлома. Бортезоміб 1,5 мг/м² у дні 1, 8, 15 28-денного циклу з циклофосфамідом 300 мг/м² усередину щотижня і преднізоном через день.",
+      "en": "Relapsed or refractory myeloma. Bortezomib 1.5 mg/m² on days 1, 8 and 15 of a 28-day cycle with oral cyclophosphamide 300 mg/m² weekly and alternate-day prednisone."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Преднізон (в Україні — преднізолон)",
+          "en": "Prednisone (prednisolone in Ukraine)"
+        },
+        "drug_id": "prednisolone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "37 пацієнтів. На двох найвищих дозах відповідь (з мінімальною) 95%, повна відповідь у понад 50%.",
+        "en": "37 patients. At the two highest doses the response (counting minimal) was 95%, complete response over 50%."
+      },
+      {
+        "uk": "Варіант із бортезомібом раз на тиждень дав менше тромбоцитопенії 3 ступеня й нейропатії 1–2 ступеня, ніж двічі на тиждень; однорічна виживаність без прогресування 83%.",
+        "en": "The weekly bortezomib schedule gave less grade 3 thrombocytopenia and grade 1 to 2 neuropathy than twice weekly; one-year progression-free survival 83%."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме не наводить дози преднізону, а повний текст недоступний, тож калькулятор схему не рахує.",
+      "en": "The abstract gives no prednisone dose and the full text is not accessible, so the calculator does not compute the regimen."
+    }
+  }
+}
