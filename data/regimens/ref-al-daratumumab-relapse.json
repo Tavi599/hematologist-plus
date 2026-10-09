@@ -1,0 +1,100 @@
+{
+  "$comment": "Лише опис: ритм як у схемах «Даратумумаб» довідника, але дослідження вводило в/в 16 мг/кг.",
+  "id": "ref-al-daratumumab-relapse",
+  "short_name": "Даратумумаб при рецидиві AL",
+  "name": {
+    "uk": "Даратумумаб окремо при рецидиві AL-амілоїдозу",
+    "en": "Daratumumab alone in relapsed AL amyloidosis"
+  },
+  "sources": [
+    {
+      "name": "Sanchorawala V. та ін. Safety, tolerability, and response rates of daratumumab in relapsed AL amyloidosis: results of a phase 2 study. Blood. 2020;135:1541-1547",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7193185/",
+      "version": "повний текст у PMC; фаза II, 22 пацієнти",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "nct": "NCT02841033",
+      "phase": "II",
+      "randomized": false,
+      "n": 22
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Sanchorawala V. та ін. Blood. 2020;135:1541-1547",
+        "pmid": "31978210",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31978210/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Рецидив після аутотрансплантації або інгібітора протеасом: даратумумаб 16 мг/кг в/в щотижня 8 тижнів, кожні 2 тижні до 24-го тижня, далі раз на 4 тижні — до 24 місяців.",
+      "en": "Relapse after an autologous transplant or a proteasome inhibitor: daratumumab 16 mg/kg IV weekly for 8 weeks, every 2 weeks to week 24, then every 4 weeks, for up to 24 months."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Даратумумаб",
+          "en": "Daratumumab"
+        },
+        "drug_id": "daratumumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Повна або дуже добра часткова гематологічна відповідь 86%, медіана часу до першої відповіді 4 тижні. Ниркова відповідь 67%, серцева — 50%.",
+        "en": "Complete or very good partial haematological response 86%, median time to first response 4 weeks. Renal response 67%, cardiac 50%."
+      },
+      {
+        "uk": "Інфузійних реакцій 3–4 ступеня не було; респіраторні інфекції і фібриляція передсердь — по 18%.",
+        "en": "No grade 3 to 4 infusion reactions; respiratory infections and atrial fibrillation 18% each."
+      }
+    ],
+    "gap": {
+      "uk": "Ритм той самий, що в схемах «Даратумумаб» довідника (цикли 1–2, 3–6 і далі), але там підшкірна форма 1800 мг, а в дослідженні — в/в 16 мг/кг.",
+      "en": "The rhythm matches the catalogue daratumumab regimens (cycles 1 to 2, 3 to 6 and after), but they use the 1800 mg subcutaneous form, and the study used 16 mg/kg IV."
+    }
+  }
+}

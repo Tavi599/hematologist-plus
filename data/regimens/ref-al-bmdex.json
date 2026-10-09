@@ -1,0 +1,118 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-al-bmdex",
+  "short_name": "BMDex (AL)",
+  "name": {
+    "uk": "Бортезоміб + мелфалан + дексаметазон у першій лінії AL-амілоїдозу",
+    "en": "Bortezomib, melphalan and dexamethasone first line in AL amyloidosis"
+  },
+  "sources": [
+    {
+      "name": "Kastritis E. та ін. Bortezomib, Melphalan, and Dexamethasone for Light-Chain Amyloidosis. J Clin Oncol. 2020;38:3252-3260",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32730181/",
+      "version": "резюме; фаза III, 109 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "nct": "NCT01277016",
+      "phase": "III",
+      "randomized": true,
+      "n": 109,
+      "comparator": "MDex",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Kastritis E. та ін. J Clin Oncol. 2020;38:3252-3260",
+        "pmid": "32730181",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/32730181/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Перша лінія AL-амілоїдозу без стадії серцевого ураження IIIb, коли даратумумаб недоступний: додавання бортезомібу до мелфалану з дексаметазоном.",
+      "en": "First line in AL amyloidosis without cardiac stage IIIb, when daratumumab is not available: bortezomib added to melphalan and dexamethasone."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Мелфалан",
+          "en": "Melphalan"
+        },
+        "drug_id": "melphalan"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Гематологічна відповідь через 3 місяці 79% проти 52%, дуже добра часткова або повна 64% проти 39%; смертність удвічі нижча (HR 0,50) — перше контрольоване дослідження з перевагою у виживаності.",
+        "en": "Haematological response at 3 months 79% against 52%, very good partial or complete 64% against 39%; mortality halved (HR 0.50), the first controlled trial with a survival benefit."
+      },
+      {
+        "uk": "Небажані явища 3–4 ступеня у 20% циклів проти 10%: цитопенії, нейропатія, серцева недостатність.",
+        "en": "Grade 3 to 4 adverse events in 20% of cycles against 10%: cytopenias, neuropathy, heart failure."
+      }
+    ],
+    "gap": {
+      "uk": "Дози й дні резюме і реєстр не наводять; повний текст закритий. MDex окремо є в довіднику.",
+      "en": "Neither the abstract nor the registry gives doses or days; the full text is closed. MDex alone is in the catalogue."
+    }
+  }
+}

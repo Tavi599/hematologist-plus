@@ -1,0 +1,114 @@
+{
+  "$comment": "Спростована заміна: зберігається лише як застереження, калькулятор її не пропонує.",
+  "id": "avoid-ptcl-gem-p",
+  "short_name": "GEM-P у першій лінії",
+  "name": {
+    "uk": "GEM-P замість CHOP у першій лінії ПТКЛ",
+    "en": "GEM-P instead of CHOP first line in PTCL"
+  },
+  "sources": [
+    {
+      "name": "Gleeson M. та ін. CHOP versus GEM-P in previously untreated patients with peripheral T-cell lymphoma (CHEMO-T): a phase 2, multicentre, randomised, open-label trial. Lancet Haematol. 2018;5:e190-e200",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5946805/",
+      "version": "повний текст у PMC; рандомізована фаза II, 87 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "CHEMO-T",
+      "nct": "NCT01719835",
+      "phase": "II",
+      "randomized": true,
+      "n": 87,
+      "comparator": "CHOP",
+      "primary_met": false
+    },
+    "settings": ["first-line"],
+    "verdict": "avoid",
+    "appraisal": [
+      {
+        "publication": "Gleeson M. та ін. Lancet Haematol. 2018;5:e190-e200",
+        "pmid": "29703335",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29703335/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Гемцитабін + цисплатин + метилпреднізолон у першій лінії не кращий за CHOP; CHOP лишається стандартом.",
+      "en": "Gemcitabine, cisplatin and methylprednisolone in the first line is no better than CHOP; CHOP remains the standard."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Гемцитабін",
+          "en": "Gemcitabine"
+        },
+        "drug_id": "gemcitabine"
+      },
+      {
+        "name": {
+          "uk": "Цисплатин",
+          "en": "Cisplatin"
+        },
+        "drug_id": "cisplatin"
+      },
+      {
+        "name": {
+          "uk": "Метилпреднізолон",
+          "en": "Methylprednisolone"
+        },
+        "drug_id": "methylprednisolone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Дослідження закрили достроково: повна відповідь 46% з GEM-P проти 62% з CHOP. Дві смерті від легеневих інфекцій — обидві з GEM-P.",
+        "en": "The trial closed early: complete response 46% with GEM-P against 62% with CHOP. Two deaths from lung infections, both with GEM-P."
+      }
+    ],
+    "gap": {
+      "uk": "Не застосовувати в першій лінії поза дослідженням.",
+      "en": "Not to be used first line outside a trial."
+    }
+  }
+}

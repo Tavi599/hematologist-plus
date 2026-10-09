@@ -1,0 +1,127 @@
+{
+  "$comment": "Ben-dex при AL-амілоїдозі за Lentzsch 2020: бендамустин 100 мг/м² в/в у дні 1 і 2, дексаметазон 40 мг щотижня; цикл 28 днів до прогресування або ще 6 циклів після повної гематологічної відповіді. Розведення бендамустину — за правилами відділення.",
+  "id": "benda-dex-al",
+  "short_name": "Бендамустин + дексаметазон (AL)",
+  "name": {
+    "uk": "Бендамустин + дексаметазон при рецидиві AL-амілоїдозу",
+    "en": "Bendamustine plus dexamethasone in relapsed AL amyloidosis"
+  },
+  "description": {
+    "uk": "Рецидив або рефрактерність AL-амілоїдозу після однієї і більше ліній, коли інших варіантів мало. Цикли 28 днів.",
+    "en": "Relapsed or refractory AL amyloidosis after one or more lines, when there are few other options. 28-day cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Lentzsch S. та ін. Bendamustine With Dexamethasone in Relapsed/Refractory Systemic Light-Chain Amyloidosis: Results of a Phase II Study. J Clin Oncol. 2020;38:1455-1462",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7193746/",
+      "version": "повний текст у PMC; фаза II, 31 пацієнт",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT01222260 (ben-dex), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT01222260",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Багатоцентрове дослідження фази II без групи порівняння.",
+      "en": "A multicentre phase II study without a comparison group."
+    },
+    "population": {
+      "uk": "31 пацієнт зі стійким або прогресуючим AL-амілоїдозом після однієї і більше ліній.",
+      "en": "31 patients with persistent or progressive AL amyloidosis after one or more lines."
+    },
+    "results": {
+      "uk": "Часткова гематологічна відповідь або краща 57% (повна 11%, дуже добра часткова 18%), органна відповідь 29%. Медіана виживаності без прогресування 11,3 місяця, загальної — 18,2 місяця.",
+      "en": "Partial haematological response or better 57% (complete 11%, very good partial 18%), organ response 29%. Median progression-free survival 11.3 months, overall survival 18.2 months."
+    },
+    "conduct": {
+      "uk": "Небажані явища 3–4 ступеня 65%: мієлосупресія, втома, нудота й блювання. Смертей від лікування не було.",
+      "en": "Grade 3 to 4 adverse events 65%: myelosuppression, fatigue, nausea and vomiting. No treatment-related deaths."
+    },
+    "trial": {
+      "nct": "NCT01222260",
+      "phase": "II",
+      "randomized": false,
+      "n": 31
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Lentzsch S. та ін. J Clin Oncol. 2020;38:1455-1462",
+        "pmid": "32083996",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, N.I.H., Extramural",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/32083996/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "notes": {
+        "uk": "100 мг/м² в/в у дні 1 і 2 (Lentzsch 2020).",
+        "en": "100 mg/m² IV on days 1 and 2 (Lentzsch 2020)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "40 мг раз на тиждень, у дні 1, 8, 15, 22 (Lentzsch 2020).",
+        "en": "40 mg once a week, on days 1, 8, 15 and 22 (Lentzsch 2020)."
+      }
+    }
+  ]
+}

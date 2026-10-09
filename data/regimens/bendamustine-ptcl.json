@@ -1,0 +1,108 @@
+{
+  "$comment": "Бендамустин окремо при Т-клітинних лімфомах за BENTLY: 120 мг/м² на добу в/в у дні 1–2 кожні 3 тижні, 6 циклів. Розведення — за правилами відділення.",
+  "id": "bendamustine-ptcl",
+  "short_name": "Бендамустин (ПТКЛ)",
+  "name": {
+    "uk": "Бендамустин 120 мг/м² при рецидиві Т-клітинних лімфом",
+    "en": "Bendamustine 120 mg/m² in relapsed T-cell lymphomas"
+  },
+  "description": {
+    "uk": "Рецидив або рефрактерність периферичної Т-клітинної лімфоми, зокрема ангіоімунобластної, після 1–3 ліній. 6 циклів по 21 дню.",
+    "en": "Relapsed or refractory peripheral T-cell lymphoma, including angioimmunoblastic, after one to three lines. Six 21-day cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "Damaj G. та ін. Results from a prospective, open-label, phase II trial of bendamustine in refractory or relapsed T-cell lymphomas: the BENTLY trial. J Clin Oncol. 2013;31:104-110",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23109692/",
+      "version": "резюме; фаза II, 60 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Відкрите дослідження фази II без групи порівняння (BENTLY, Франція).",
+      "en": "An open-label phase II study without a comparison group (BENTLY, France)."
+    },
+    "population": {
+      "uk": "60 пацієнтів з периферичною (переважно ангіоімунобластною і неуточненою) або шкірною Т-клітинною лімфомою після 1–3 ліній; 45% рефрактерні до останньої.",
+      "en": "60 patients with peripheral (mostly angioimmunoblastic and NOS) or cutaneous T-cell lymphoma after one to three lines; 45% refractory to the last."
+    },
+    "results": {
+      "uk": "Загальна відповідь 50%, повна — 28%, незалежно від підтипу, віку й попереднього лікування. Але відповіді короткі: медіани тривалості відповіді 3,5, виживаності без прогресування 3,6, загальної — 6,2 місяця.",
+      "en": "Overall response 50%, complete 28%, regardless of subtype, age and prior treatment. But responses were short: median duration of response 3.5, progression-free survival 3.6, overall survival 6.2 months."
+    },
+    "conduct": {
+      "uk": "Нейтропенія 3–4 ступеня 30%, тромбоцитопенія 24%, інфекції 20%. Третина пацієнтів отримали менше 3 циклів через прогресування. Найкраще — як міст до трансплантації.",
+      "en": "Grade 3 to 4 neutropenia 30%, thrombocytopenia 24%, infections 20%. A third had fewer than three cycles because of progression. Best used as a bridge to a transplant."
+    },
+    "trial": {
+      "acronym": "BENTLY",
+      "phase": "II",
+      "randomized": false,
+      "n": 60
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Damaj G. та ін. J Clin Oncol. 2013;31:104-110",
+        "pmid": "23109692",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/23109692/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 120,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "notes": {
+        "uk": "120 мг/м² в/в у дні 1 і 2 (BENTLY).",
+        "en": "120 mg/m² IV on days 1 and 2 (BENTLY)."
+      }
+    }
+  ]
+}

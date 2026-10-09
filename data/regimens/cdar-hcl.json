@@ -1,0 +1,181 @@
+{
+  "$comment": "CDAR за Chihara 2020 (PMC7213585) і реєстром NCT00923013: кладрибін 0,15 мг/кг на добу 2-годинною в/в інфузією в дні 1–5 (на розсуд — за 1 годину); ритуксимаб 375 мг/м² в/в щотижня 8 разів, з дня 1 (дні 1, 8, 15, 22, 29, 36, 43, 50). Один курс. Об'єм розведення кладрибіну — як у схемі кладрибіну довідника (практика відділення).",
+  "id": "cdar-hcl",
+  "short_name": "CDAR (кладрибін + ритуксимаб)",
+  "name": {
+    "uk": "Кладрибін з одночасним ритуксимабом (CDAR)",
+    "en": "Cladribine with concurrent rituximab (CDAR)"
+  },
+  "description": {
+    "uk": "Перша лінія класичного волосистоклітинного лейкозу і його варіанту. Один курс: кладрибін 5 днів і ритуксимаб щотижня 8 тижнів.",
+    "en": "First line in classic hairy cell leukaemia and its variant. One course: 5 days of cladribine and weekly rituximab for 8 weeks."
+  },
+  "cycle_length_days": 56,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Chihara D. та ін. Randomized Phase II Study of First-Line Cladribine With Concurrent or Delayed Rituximab in Patients With Hairy Cell Leukemia. J Clin Oncol. 2020;38:1527-1538",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7213585/",
+      "version": "повний текст у PMC; рандомізована фаза II, 68 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Chihara D. та ін. Long term follow-up of a phase II study of cladribine with concurrent rituximab with hairy cell leukemia variant. Blood Adv. 2021;5:4807-4816",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9153043/",
+      "version": "повний текст у PMC; 20 пацієнтів з варіантом",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT00923013 (CDAR), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT00923013",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване дослідження фази II (NCI): ритуксимаб одночасно з кладрибіном проти ритуксимабу через 6 і більше місяців при появі залишкової хвороби. Первинна кінцева точка — повна ремісія без залишкової хвороби.",
+      "en": "A randomised phase II trial (NCI): rituximab concurrent with cladribine against rituximab 6 or more months later on detection of residual disease. The primary end point was complete remission free of residual disease."
+    },
+    "population": {
+      "uk": "68 пацієнтів з класичним волосистоклітинним лейкозом без попередніх пуринових аналогів; окремо — 20 пацієнтів з варіантом.",
+      "en": "68 patients with classic hairy cell leukaemia naive to purine analogues; separately, 20 patients with the variant."
+    },
+    "results": {
+      "uk": "Через 6 місяців повна ремісія без залишкової хвороби 97% проти 24% з одним кладрибіном; за медіани спостереження 96 місяців без залишкової хвороби 94% проти 12%. При варіанті: повна ремісія 95%, п'ятирічна виживаність без прогресування 63,3%.",
+      "en": "At 6 months complete remission free of residual disease 97% against 24% with cladribine alone; at a median follow-up of 96 months 94% against 12% remained free of residual disease. In the variant: complete remission 95%, five-year progression-free survival 63.3%."
+    },
+    "conduct": {
+      "uk": "Короткочасна тромбоцитопенія 3–4 ступеня 59% проти 9% і переливання тромбоцитів 35% (без кровотеч), але на 4-му тижні нейтрофілів і тромбоцитів більше, ніж з одним кладрибіном.",
+      "en": "Brief grade 3 to 4 thrombocytopenia 59% against 9% and platelet transfusions in 35% (without bleeding), but higher neutrophil and platelet counts at week 4 than with cladribine alone."
+    },
+    "trial": {
+      "nct": "NCT00923013",
+      "phase": "II",
+      "randomized": true,
+      "n": 68,
+      "comparator": "кладрибін з відстроченим ритуксимабом",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Chihara D. та ін. J Clin Oncol. 2020;38:1527-1538",
+        "pmid": "32109194",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Research Support, N.I.H., Intramural",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/32109194/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Chihara D. та ін. Blood Adv. 2021;5:4807-4816",
+        "pmid": "34607348",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, N.I.H., Intramural",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood Advances",
+          "issn": "2473-9529",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34607348/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood Advances» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101698425",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "cladribine",
+      "drug_id": "cladribine",
+      "route": "iv_infusion",
+      "dose_value": 0.15,
+      "dose_unit": "mg_kg",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "0,15 мг/кг на добу за 2 години в дні 1–5 (NCT00923013). Об'єм — практика відділення.",
+        "en": "0.15 mg/kg a day over 2 hours on days 1 to 5 (NCT00923013). The volume follows the department's practice."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22, 29, 36, 43, 50],
+      "notes": {
+        "uk": "375 мг/м² в/в щотижня, 8 разів з дня 1 (Chihara 2020).",
+        "en": "375 mg/m² IV weekly, 8 doses from day 1 (Chihara 2020)."
+      }
+    }
+  ]
+}

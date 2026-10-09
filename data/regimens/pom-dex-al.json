@@ -1,0 +1,167 @@
+{
+  "$comment": "Pom-dex при AL-амілоїдозі за Sanchorawala 2016: помалідомід 4 мг у дні 1–21 і дексаметазон 20 мг щотижня, цикл 28 днів. Palladini 2017 давав помалідомід 4 мг безперервно (дні 1–28) і дексаметазон 20 або 40 мг щотижня — розбіжність показано в тексті.",
+  "id": "pom-dex-al",
+  "short_name": "Помалідомід + дексаметазон (AL)",
+  "name": {
+    "uk": "Помалідомід + дексаметазон при рецидиві AL-амілоїдозу",
+    "en": "Pomalidomide plus dexamethasone in relapsed AL amyloidosis"
+  },
+  "description": {
+    "uk": "Рецидив AL-амілоїдозу після бортезомібу, алкілувальних препаратів і леналідоміду або талідоміду. Цикли 28 днів.",
+    "en": "Relapsed AL amyloidosis after bortezomib, alkylators and lenalidomide or thalidomide. 28-day cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Sanchorawala V. та ін. Pomalidomide and dexamethasone in the treatment of AL amyloidosis: results of a phase 1 and 2 trial. Blood. 2016;128:1059-1062",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27381904/",
+      "version": "резюме; фаза I–II, 27 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Palladini G. та ін. A phase 2 trial of pomalidomide and dexamethasone rescue treatment in patients with AL amyloidosis. Blood. 2017;129:2120-2123",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28130212/",
+      "version": "резюме; фаза II, 28 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Два дослідження без групи порівняння: фази I–II (Бостон, підбір дози) і фази II (Павія).",
+      "en": "Two studies without a comparison group: phase I to II (Boston, dose-finding) and phase II (Pavia)."
+    },
+    "population": {
+      "uk": "27 і 28 пацієнтів після попереднього лікування, у Павії — після бортезомібу, алкілувальних і імуномодулювальних препаратів.",
+      "en": "27 and 28 previously treated patients; in Pavia after bortezomib, alkylators and immunomodulatory drugs."
+    },
+    "results": {
+      "uk": "Бостон (4 мг у дні 1–21): гематологічна відповідь 50%, медіана тривалості 15 місяців. Павія (4 мг безперервно): відповідь 68%, дуже добра часткова або повна — 29%, медіана часу до відповіді 1 місяць; відповідь подовжувала виживаність.",
+      "en": "Boston (4 mg on days 1 to 21): haematological response 50%, median duration 15 months. Pavia (4 mg continuously): response 68%, very good partial or complete 29%, median time to response 1 month; response lengthened survival."
+    },
+    "conduct": {
+      "uk": "Мієлосупресія, втома, затримка рідини й інфекції. Розклад відрізняється: 21 день із 28 (Бостон) або безперервно (Павія) — тут за Бостоном.",
+      "en": "Myelosuppression, fatigue, fluid retention and infections. The schedules differ: 21 days of 28 (Boston) or continuous (Pavia); here Boston's is used."
+    },
+    "trial": {
+      "phase": "I-II",
+      "randomized": false,
+      "n": 27
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Sanchorawala V. та ін. Blood. 2016;128:1059-1062",
+        "pmid": "27381904",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27381904/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Palladini G. та ін. Blood. 2017;129:2120-2123",
+        "pmid": "28130212",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/28130212/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "pomalidomide",
+      "drug_id": "pomalidomide",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "4 мг раз на добу в дні 1–21 (Sanchorawala 2016). У Palladini 2017 — безперервно.",
+        "en": "4 mg once a day on days 1 to 21 (Sanchorawala 2016). Palladini 2017 gave it continuously."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "20 мг раз на тиждень, у дні 1, 8, 15, 22 (Sanchorawala 2016).",
+        "en": "20 mg once a week, on days 1, 8, 15 and 22 (Sanchorawala 2016)."
+      }
+    }
+  ]
+}

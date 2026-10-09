@@ -1,0 +1,118 @@
+{
+  "$comment": "Пероральний азацитидин за ORACLE: 300 мг раз на добу в дні 1–14 циклу 28 днів (у Японії — 200 мг). Тривалості лікування резюме не наводить.",
+  "id": "oral-azacitidine-tfh",
+  "short_name": "Азацитидин перорально (ТФХ-лімфома)",
+  "name": {
+    "uk": "Пероральний азацитидин при рецидиві лімфоми з фенотипом фолікулярних Т-хелперів",
+    "en": "Oral azacitidine in relapsed follicular helper T-cell lymphoma"
+  },
+  "description": {
+    "uk": "Рецидив або рефрактерність ангіоімунобластної та інших лімфом з фенотипом фолікулярних Т-хелперів. Цикли 28 днів.",
+    "en": "Relapsed or refractory angioimmunoblastic and other follicular helper T-cell lymphomas. 28-day cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Dupuis J. та ін. Oral azacitidine compared with standard therapy in patients with relapsed or refractory follicular helper T-cell lymphoma (ORACLE): an open-label randomised, phase 3 study. Lancet Haematol. 2024;11:e406-e414",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38796193/",
+      "version": "резюме; фаза III, 86 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT03593018 (ORACLE), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT03593018",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Відкрите рандомізоване дослідження фази III: пероральний азацитидин проти гемцитабіну, бендамустину або ромідепсину на вибір лікаря.",
+      "en": "An open-label randomised phase III trial: oral azacitidine against gemcitabine, bendamustine or romidepsin by the investigator's choice."
+    },
+    "population": {
+      "uk": "86 пацієнтів з рецидивом лімфоми з фенотипом фолікулярних Т-хелперів (переважно ангіоімунобластної), ECOG 0–3, медіана віку 69 років.",
+      "en": "86 patients with relapsed follicular helper T-cell lymphoma (mostly angioimmunoblastic), ECOG 0 to 3, median age 69."
+    },
+    "results": {
+      "uk": "Первинна кінцева точка формально не досягнута: медіана виживаності без прогресування 5,6 проти 2,8 місяця (HR 0,63; 95% ДІ 0,38–1,07).",
+      "en": "The primary end point was formally not met: median progression-free survival 5.6 against 2.8 months (HR 0.63; 95% CI 0.38 to 1.07)."
+    },
+    "conduct": {
+      "uk": "Токсичність менша: небажані явища 3–4 ступеня 76% проти 98%, гематологічні 67% проти 93%, інфекції 19% проти 33%. Пероральний прийом, амбулаторно.",
+      "en": "Less toxic: grade 3 to 4 adverse events 76% against 98%, haematological 67% against 93%, infections 19% against 33%. Oral, outpatient."
+    },
+    "trial": {
+      "acronym": "ORACLE",
+      "nct": "NCT03593018",
+      "phase": "III",
+      "randomized": true,
+      "n": 86,
+      "comparator": "гемцитабін, бендамустин або ромідепсин",
+      "primary_met": false
+    },
+    "settings": ["relapse", "refractory", "elderly"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Dupuis J. та ін. Lancet Haematol. 2024;11:e406-e414",
+        "pmid": "38796193",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Clinical Trial, Phase III",
+          "Multicenter Study",
+          "Comparative Study"
+        ],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/38796193/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "azacitidine",
+      "drug_id": "azacitidine",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "300 мг перорально раз на добу в дні 1–14 (ORACLE). Пероральна форма не взаємозамінна з ін'єкційною.",
+        "en": "300 mg by mouth once a day on days 1 to 14 (ORACLE). The oral form is not interchangeable with the injection."
+      }
+    }
+  ]
+}

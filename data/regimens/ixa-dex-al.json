@@ -1,0 +1,131 @@
+{
+  "$comment": "Ixa-dex при AL-амілоїдозі за TOURMALINE-AL1 (PMC8727292): іксазоміб 4 мг у дні 1, 8, 15; дексаметазон 20 мг у дні 1, 8, 15, 22; цикл 28 днів до прогресування або токсичності.",
+  "id": "ixa-dex-al",
+  "short_name": "Іксазоміб + дексаметазон (AL)",
+  "name": {
+    "uk": "Іксазоміб + дексаметазон при рецидиві AL-амілоїдозу",
+    "en": "Ixazomib plus dexamethasone in relapsed AL amyloidosis"
+  },
+  "description": {
+    "uk": "Рецидив або рефрактерність AL-амілоїдозу після 1–2 ліній. Цикли 28 днів до прогресування або неприйнятної токсичності.",
+    "en": "Relapsed or refractory AL amyloidosis after one or two lines. 28-day cycles until progression or unacceptable toxicity."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Dispenzieri A. та ін. A randomized phase 3 study of ixazomib-dexamethasone versus physician's choice in relapsed or refractory AL amyloidosis. Leukemia. 2022;36:225-235",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8727292/",
+      "version": "повний текст у PMC; фаза III, 168 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT01659658 (TOURMALINE-AL1), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT01659658",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване дослідження фази III: іксазоміб з дексаметазоном проти схеми на вибір лікаря (дексаметазон із мелфаланом, циклофосфамідом, талідомідом або леналідомідом).",
+      "en": "A randomised phase III trial: ixazomib with dexamethasone against the physician's choice (dexamethasone with melphalan, cyclophosphamide, thalidomide or lenalidomide)."
+    },
+    "population": {
+      "uk": "168 пацієнтів з рецидивом або рефрактерністю після 1–2 ліній.",
+      "en": "168 patients relapsed or refractory after one or two lines."
+    },
+    "results": {
+      "uk": "Перша первинна точка не досягнута: гематологічна відповідь 53% проти 51%. Але медіана часу до погіршення функції життєво важливих органів або смерті 34,8 проти 26,1 місяця (HR 0,53), лікування тривало довше (11,7 проти 5,0 місяця).",
+      "en": "The first primary end point was not met: haematological response 53% against 51%. But the median time to vital organ deterioration or death was 34.8 against 26.1 months (HR 0.53), and treatment lasted longer (11.7 against 5.0 months)."
+    },
+    "conduct": {
+      "uk": "Діарея 34%, висип 33%, аритмії 26% проти 15%, нудота 24%.",
+      "en": "Diarrhoea 34%, rash 33%, arrhythmias 26% against 15%, nausea 24%."
+    },
+    "trial": {
+      "acronym": "TOURMALINE-AL1",
+      "nct": "NCT01659658",
+      "phase": "III",
+      "randomized": true,
+      "n": 168,
+      "comparator": "на вибір лікаря",
+      "primary_met": false
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Dispenzieri A. та ін. Leukemia. 2022;36:225-235",
+        "pmid": "34168284",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Comparative Study",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Leukemia",
+          "issn": "0887-6924",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34168284/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Leukemia» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8704895",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "ixazomib",
+      "drug_id": "ixazomib",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "4 мг перорально в дні 1, 8, 15 (TOURMALINE-AL1).",
+        "en": "4 mg by mouth on days 1, 8 and 15 (TOURMALINE-AL1)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "20 мг раз на тиждень, у дні 1, 8, 15, 22 (TOURMALINE-AL1).",
+        "en": "20 mg once a week, on days 1, 8, 15 and 22 (TOURMALINE-AL1)."
+      }
+    }
+  ]
+}
