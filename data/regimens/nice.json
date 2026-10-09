@@ -1,0 +1,210 @@
+{
+  "$comment": "NICE за Mei 2022 (PMC9227101) і NCT03016871: спершу ніволумаб 240 мг кожні 2 тижні, до 6 циклів (схема «Ніволумаб» довідника); без повної відповіді — 2 цикли NICE по 21 дню: ніволумаб 240 мг у день 1, етопозид 100 мг/м² у дні 1–3, карбоплатин AUC 5 (не більше 750 мг) у день 2, іфосфамід 5000 мг/м² у день 2. Введення ICE (розведення, месна, порядок) — як у ICE довідника (NSSG L.24); дози ті самі, що в дослідженні, крім обмеження карбоплатину 750 мг.",
+  "id": "nice",
+  "short_name": "NICE (ніволумаб + ICE)",
+  "name": {
+    "uk": "NICE (ніволумаб + ICE) після ніволумабу без повної відповіді",
+    "en": "NICE (nivolumab plus ICE) after nivolumab without a complete response"
+  },
+  "description": {
+    "uk": "Перший порятунок, адаптований за ПЕТ: спершу ніволумаб 240 мг кожні 2 тижні (до 6 введень, окрема схема), і лише без повної відповіді — 2 цикли NICE по 21 дню. Потім аутотрансплантація.",
+    "en": "PET-adapted first salvage: nivolumab 240 mg every 2 weeks first (up to six doses, a separate regimen), and only without a complete response two 21-day NICE cycles. Then an autologous transplant."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "Mei M.G. та ін. Response-adapted anti-PD-1-based salvage therapy for Hodgkin lymphoma with nivolumab alone or in combination with ICE. Blood. 2022;139:3605-3616",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9227101/",
+      "version": "повний текст у PMC; фаза II, 43 пацієнти",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT03016871 (NICE), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT03016871",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Дослідження фази II без групи порівняння з адаптацією за ПЕТ.",
+      "en": "A PET-adapted phase II study without a comparison group."
+    },
+    "population": {
+      "uk": "43 пацієнти з рецидивом або рефрактерністю класичної лімфоми Ходжкіна як перший порятунок перед аутотрансплантацією.",
+      "en": "43 patients with relapsed or refractory classical Hodgkin lymphoma at first salvage before an autologous transplant."
+    },
+    "results": {
+      "uk": "Після одного ніволумабу повна відповідь 71%; 9 пацієнтів отримали NICE, повна відповідь у 8 (89%). Наприкінці лікування повна відповідь 91%. Дворічна виживаність без прогресування 72% у всіх і 94% у тих, хто одразу пішов на трансплантацію.",
+      "en": "After nivolumab alone complete response was 71%; 9 patients had NICE, with a complete response in 8 (89%). At the end of treatment complete response was 91%. Two-year progression-free survival 72% in all and 94% in those bridged straight to a transplant."
+    },
+    "conduct": {
+      "uk": "Антиеметики: дексаметазон 12 мг у день 1 і 8 мг у дні 2–3. Г-КСФ і протимікробна профілактика — за стандартом центру.",
+      "en": "Antiemetics: dexamethasone 12 mg on day 1 and 8 mg on days 2 to 3. G-CSF and antimicrobial prophylaxis per centre standard."
+    },
+    "trial": {
+      "nct": "NCT03016871",
+      "phase": "II",
+      "randomized": false,
+      "n": 43
+    },
+    "settings": ["relapse", "refractory", "pre-transplant"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Mei M.G. та ін. Blood. 2022;139:3605-3616",
+        "pmid": "35316328",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, N.I.H., Extramural"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35316328/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "nivolumab",
+      "drug_id": "nivolumab",
+      "route": "iv_infusion",
+      "dose_value": 240,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "240 мг в/в у день 1, у 100 мл 0,9% NaCl за 30 хвилин (Mei 2022).",
+        "en": "240 mg IV on day 1, in 100 mL of 0.9% sodium chloride over 30 minutes (Mei 2022)."
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "У 250-1000 мл 0,9% NaCl, концентрація нижча за 0,4 мг/мл, за 1 годину. У день 2 йде одночасно з іфосфамідом в іншому просвіті катетера.",
+        "en": "In 250 to 1000 mL of 0.9% sodium chloride at under 0.4 mg/mL, over an hour. On day 2 it runs at the same time as the ifosfamide, through the other lumen."
+      }
+    },
+    {
+      "key": "carboplatin",
+      "drug_id": "carboplatin",
+      "route": "iv_infusion",
+      "dose_value": 5,
+      "dose_unit": "auc",
+      "cap_amount": 750,
+      "days": [2],
+      "duration_min": 30,
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "Формула Калверта, AUC 5, разова доза не більш як 800 мг; швидкість клубочкової фільтрації протокол радить рахувати за формулою Райта, тоді як калькулятор рахує за Кокрофтом-Голтом — звірте. У 500 мл за 30 хвилин. Розчинник: протокол друкує «глюкоза 0,5%», такого інфузійного розчину не існує, тож майже напевно йдеться про 5% — перевірте перед застосуванням. Далі дивляться на діурез: якщо понад 100 мл/год, переходять до іфосфаміду; якщо 60-100 мл/год, спершу вводять 200 мл 20% манітолу за 30 хвилин.",
+        "en": "The Calvert formula at AUC 5, no single dose above 800 mg; the protocol computes the GFR by the Wright formula while the calculator uses Cockcroft-Gault, so check. In 500 mL over 30 minutes. The solvent: the protocol prints glucose 0.5%, which is not an infusion fluid, so it almost certainly means 5% - verify before use. The urine output then decides: above 100 mL/hour the ifosfamide follows; at 60 to 100 mL/hour, 200 mL of 20% mannitol goes in first over 30 minutes."
+      }
+    },
+    {
+      "key": "mesna-pre",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "duration_min": 15,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "У 50 мл 0,9% NaCl за 15 хвилин, перед іфосфамідом.",
+        "en": "In 50 mL of 0.9% sodium chloride over 15 minutes, before the ifosfamide."
+      }
+    },
+    {
+      "key": "ifosfamide",
+      "drug_id": "ifosfamide",
+      "route": "iv_infusion",
+      "dose_value": 5000,
+      "dose_unit": "mg_m2",
+      "cap_amount": 9600,
+      "days": [2],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 3000,
+      "notes": {
+        "uk": "Разом із месною в 3000 мл 0,9% NaCl за 24 години, трьома мішками по 1000 мл із заміною кожні 8 годин. Максимальна доза при 24-годинній інфузії — 9600 мг.",
+        "en": "With the mesna in 3000 mL of 0.9% sodium chloride over 24 hours, as three 1000 mL bags changed every 8 hours. The maximum dose on the 24-hour infusion is 9600 mg."
+      }
+    },
+    {
+      "key": "mesna-with-ifosfamide",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 5000,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 3000,
+      "notes": {
+        "uk": "У тих самих мішках, що й іфосфамід, доза рівна його дозі.",
+        "en": "In the same bags as the ifosfamide, at the same dose as it."
+      }
+    },
+    {
+      "key": "mesna-post",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 3000,
+      "dose_unit": "mg_m2",
+      "days": [3],
+      "duration_min": 720,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "У 1000 мл 0,9% NaCl за 12 годин, починають одразу після завершення інфузії іфосфаміду з месною.",
+        "en": "In 1000 mL of 0.9% sodium chloride over 12 hours, started immediately after the ifosfamide and mesna infusion ends."
+      }
+    }
+  ]
+}

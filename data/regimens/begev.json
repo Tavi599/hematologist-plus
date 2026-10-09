@@ -1,0 +1,199 @@
+{
+  "$comment": "BeGEV за Santoro 2020 (PMC6960479) і реєстром NCT01884441: гемцитабін 800 мг/м² у дні 1 і 4, вінорельбін 20 мг/м² у день 1, бендамустин 90 мг/м² у дні 2 і 3, преднізолон 100 мг у дні 1–4; 4 цикли кожні 21 день. Розведення: гемцитабін і вінорельбін — як у Gem-Vin довідника, бендамустин — за правилами відділення.",
+  "id": "begev",
+  "short_name": "BeGEV",
+  "name": {
+    "uk": "BeGEV (бендамустин, гемцитабін, вінорельбін, преднізолон)",
+    "en": "BeGEV (bendamustine, gemcitabine, vinorelbine, prednisolone)"
+  },
+  "description": {
+    "uk": "Рецидив або рефрактерність класичної лімфоми Ходжкіна після однієї лінії, перед аутотрансплантацією. 4 цикли по 21 дню.",
+    "en": "Classical Hodgkin lymphoma relapsed or refractory after one line, before an autologous transplant. Four 21-day cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "Santoro A. та ін. Five-year results of the BEGEV salvage regimen in relapsed/refractory classical Hodgkin lymphoma. Blood Adv. 2020;4:136-140",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6960479/",
+      "version": "повний текст у PMC (розклад схеми)",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Santoro A. та ін. Bendamustine in Combination With Gemcitabine and Vinorelbine Is an Effective Regimen As Induction Chemotherapy Before Autologous Stem-Cell Transplantation for Relapsed or Refractory Hodgkin Lymphoma: Final Results of a Multicenter Phase II Study. J Clin Oncol. 2016;34:3293-3299",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27382096/",
+      "version": "резюме; фаза II, 59 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT01884441 (BeGEV), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT01884441",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Багатоцентрове відкрите дослідження фази II без групи порівняння (Італія). Первинна кінцева точка — повна відповідь після 4 циклів.",
+      "en": "A multicentre open-label phase II study without a comparison group (Italy). The primary end point was complete response after four cycles."
+    },
+    "population": {
+      "uk": "59 пацієнтів з рецидивом або рефрактерністю після однієї лінії хіміотерапії.",
+      "en": "59 patients relapsed or refractory after one chemotherapy line."
+    },
+    "results": {
+      "uk": "Повна відповідь 73–75%, загальна — 83%. Стовбурові клітини зібрано в 55 з 57. П'ятирічна виживаність без прогресування 59%, загальна — 78%; після трансплантації — 77% і 91%, однаково при рецидиві й рефрактерності.",
+      "en": "Complete response 73 to 75%, overall 83%. Stem cells were collected in 55 of 57. Five-year progression-free survival 59%, overall 78%; after a transplant 77% and 91%, the same in relapsed and refractory disease."
+    },
+    "conduct": {
+      "uk": "Токсичність 3–4 ступеня: тромбоцитопенія й нейтропенія по 13,5%, фебрильна нейтропенія — 7 пацієнтів. Вторинних лейкозів не було.",
+      "en": "Grade 3 to 4 toxicity: thrombocytopenia and neutropenia 13.5% each, febrile neutropenia in 7 patients. No secondary leukaemia."
+    },
+    "trial": {
+      "nct": "NCT01884441",
+      "phase": "II",
+      "randomized": false,
+      "n": 59
+    },
+    "settings": ["relapse", "refractory", "pre-transplant"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Santoro A. та ін. J Clin Oncol. 2016;34:3293-3299",
+        "pmid": "27382096",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article", "Multicenter Study"],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27382096/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Santoro A. та ін. Blood Adv. 2020;4:136-140",
+        "pmid": "31935284",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood Advances",
+          "issn": "2473-9529",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31935284/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood Advances» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101698425",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "100 мг у дні 1–4 (Santoro 2020).",
+        "en": "100 mg on days 1 to 4 (Santoro 2020)."
+      }
+    },
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 800,
+      "dose_unit": "mg_m2",
+      "days": [1, 4],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "800 мг/м² у дні 1 і 4; у 250 мл 0,9% NaCl за 30 хвилин.",
+        "en": "800 mg/m² on days 1 and 4; in 250 mL of 0.9% sodium chloride over 30 minutes."
+      }
+    },
+    {
+      "key": "vinorelbine",
+      "drug_id": "vinorelbine",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "20 мг/м² у день 1; у 50 мл 0,9% NaCl за 6–10 хвилин.",
+        "en": "20 mg/m² on day 1; in 50 mL of 0.9% sodium chloride over 6 to 10 minutes."
+      }
+    },
+    {
+      "key": "bendamustine",
+      "drug_id": "bendamustine",
+      "route": "iv_infusion",
+      "dose_value": 90,
+      "dose_unit": "mg_m2",
+      "days": [2, 3],
+      "notes": {
+        "uk": "90 мг/м² у дні 2 і 3 (Santoro 2020).",
+        "en": "90 mg/m² on days 2 and 3 (Santoro 2020)."
+      }
+    }
+  ]
+}

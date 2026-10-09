@@ -1,0 +1,186 @@
+{
+  "$comment": "BV + ніволумаб за Herrera 2018 (PMC5855021) і реєстром NCT02572167: брентуксимаб 1,8 мг/кг і ніволумаб 3 мг/кг в/в кожні 21 день, до 4 циклів. У циклі 1 брентуксимаб у день 1, ніволумаб у день 8; у циклах 2–4 обидва в день 1, ніволумаб щонайменше через 30 хвилин після брентуксимабу. У частині 3 (Advani 2021) обидва препарати в день 1 від першого циклу. Розведення — як у монотерапіях довідника.",
+  "id": "bv-nivo-salvage",
+  "short_name": "BV + ніволумаб (цикли 2–4)",
+  "name": {
+    "uk": "Брентуксимаб + ніволумаб, перший порятунок: цикли 2–4",
+    "en": "Brentuximab plus nivolumab, first salvage: cycles 2 to 4"
+  },
+  "description": {
+    "uk": "Обидва препарати в день 1, ніволумаб щонайменше через 30 хвилин після брентуксимабу. Цикли 2–4 по 21 дню.",
+    "en": "Both drugs on day 1, nivolumab at least 30 minutes after brentuximab. Cycles 2 to 4, 21 days each."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "Herrera A.F. та ін. Interim results of brentuximab vedotin in combination with nivolumab in patients with relapsed or refractory Hodgkin lymphoma. Blood. 2018;131:1183-1194",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5855021/",
+      "version": "повний текст у PMC; фаза I–II, 62 пацієнти",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Advani R.H. та ін. Brentuximab vedotin in combination with nivolumab in relapsed or refractory Hodgkin lymphoma: 3-year study results. Blood. 2021;138:427-438",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12684812/",
+      "version": "повний текст у PMC; 91 пацієнт",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT02572167 (BV + ніволумаб), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT02572167",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Дослідження фази I–II без групи порівняння як перший порятунок; після лікування — аутотрансплантація на розсуд лікаря.",
+      "en": "A phase I to II study without a comparison group as first salvage; afterwards an autologous transplant at the physician's discretion."
+    },
+    "population": {
+      "uk": "91 пацієнт з рецидивом або рефрактерністю класичної лімфоми Ходжкіна після першої лінії.",
+      "en": "91 patients with classical Hodgkin lymphoma relapsed or refractory after the first line."
+    },
+    "results": {
+      "uk": "Загальна відповідь 85%, повна — 67%. Трирічна виживаність без прогресування 77%, а в тих, хто одразу пішов на аутотрансплантацію, — 91%; трирічна загальна виживаність 93%.",
+      "en": "Overall response 85%, complete 67%. Three-year progression-free survival 77%, and 91% in those who went straight to an autologous transplant; three-year overall survival 93%."
+    },
+    "conduct": {
+      "uk": "Найчастіші — нудота (52%) та інфузійні реакції (43%), усі 1–2 ступеня. Імуноопосередковані небажані явища, що потребували кортикостероїдів, — 18%. Без хіміотерапії; переноситься краще, ніж інгібітор PD-1 з хіміотерапією, але повних ремісій менше.",
+      "en": "Commonest were nausea (52%) and infusion reactions (43%), all grade 1 to 2. Immune-related adverse events needing corticosteroids, 18%. Chemotherapy-free; better tolerated than a PD-1 inhibitor with chemotherapy, but with fewer complete remissions."
+    },
+    "trial": {
+      "nct": "NCT02572167",
+      "phase": "I-II",
+      "randomized": false,
+      "n": 91
+    },
+    "settings": ["relapse", "refractory", "pre-transplant"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Advani R.H. та ін. Blood. 2021;138:427-438",
+        "pmid": "33827139",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33827139/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Herrera A.F. та ін. Blood. 2018;131:1183-1194",
+        "pmid": "29229594",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, N.I.H., Extramural",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29229594/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "brentuximab-vedotin",
+      "drug_id": "brentuximab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.8,
+      "dose_unit": "mg_kg",
+      "cap_amount": 180,
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 150,
+      "notes": {
+        "uk": "1,8 мг/кг в/в у день 1, не більше 180 мг; у 150 мл 0,9% NaCl за 30 хвилин.",
+        "en": "1.8 mg/kg IV on day 1, no more than 180 mg; in 150 mL of 0.9% sodium chloride over 30 minutes."
+      }
+    },
+    {
+      "key": "nivolumab",
+      "drug_id": "nivolumab",
+      "route": "iv_infusion",
+      "dose_value": 3,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "3 мг/кг в/в у день 1, щонайменше через 30 хвилин після брентуксимабу (Herrera 2018).",
+        "en": "3 mg/kg IV on day 1, at least 30 minutes after brentuximab (Herrera 2018)."
+      },
+      "gap_before_min": 30
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "$comment": "GVD за резюме Bartlett 2007: дні 1 і 8 кожні 21 день; без трансплантації в анамнезі — гемцитабін 1000, вінорельбін 20, пегільований ліпосомальний доксорубіцин 15 мг/м²; після трансплантації — 800, 15 і 10 мг/м² (галочка). Кількості циклів резюме не наводить. Розведення — як у Pembro-GVD.",
+  "id": "gvd",
+  "short_name": "GVD",
+  "name": {
+    "uk": "GVD (гемцитабін, вінорельбін, ліпосомальний доксорубіцин)",
+    "en": "GVD (gemcitabine, vinorelbine, liposomal doxorubicin)"
+  },
+  "description": {
+    "uk": "Рецидив класичної лімфоми Ходжкіна, зокрема після аутотрансплантації (тоді дози нижчі — галочка). Цикли 21 день; кількість циклів джерело не наводить.",
+    "en": "Relapsed classical Hodgkin lymphoma, including after an autologous transplant (then lower doses, a checkbox). 21-day cycles; the source gives no number of cycles."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Bartlett N.L. та ін. Gemcitabine, vinorelbine, and pegylated liposomal doxorubicin (GVD), a salvage regimen in relapsed Hodgkin's lymphoma: CALGB 59804. Ann Oncol. 2007;18:1071-1079",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17426059/",
+      "version": "резюме; фаза I–II, 91 пацієнт",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Дослідження фази I–II групи CALGB з підбором дози, окремо для пацієнтів без трансплантації і після неї.",
+      "en": "A CALGB phase I to II dose-finding study, separately for patients without and after a transplant."
+    },
+    "population": {
+      "uk": "91 пацієнт з рецидивом лімфоми Ходжкіна.",
+      "en": "91 patients with relapsed Hodgkin lymphoma."
+    },
+    "results": {
+      "uk": "Загальна відповідь 70%, повна — 19%. Без трансплантації в анамнезі, з подальшою аутотрансплантацією: чотирирічна безподійна виживаність 52%, загальна — 70%. Після невдалої трансплантації — 10% і 34%.",
+      "en": "Overall response 70%, complete 19%. Transplant-naive patients going on to an autologous transplant: four-year event-free survival 52%, overall 70%. After a failed transplant, 10% and 34%."
+    },
+    "conduct": {
+      "uk": "Дозолімітувальна токсичність — мукозит у пацієнтів без трансплантації і фебрильна нейтропенія після неї.",
+      "en": "Dose-limiting toxicity was mucositis in transplant-naive patients and febrile neutropenia after a transplant."
+    },
+    "trial": {
+      "acronym": "CALGB 59804",
+      "phase": "I-II",
+      "randomized": false,
+      "n": 91
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Bartlett N.L. та ін. Ann Oncol. 2007;18:1071-1079",
+        "pmid": "17426059",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, N.I.H., Extramural"
+        ],
+        "journal": {
+          "name": "Annals of Oncology",
+          "issn": "0923-7534",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/17426059/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Annals of Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/9007735",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1, 8],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "1000 мг/м² у дні 1 і 8; після трансплантації 800 мг/м² (Bartlett 2007).",
+        "en": "1000 mg/m² on days 1 and 8; after a transplant 800 mg/m² (Bartlett 2007)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "after-transplant",
+          "label": {
+            "uk": "Рецидив після аутотрансплантації",
+            "en": "Relapse after an autologous transplant"
+          },
+          "dose_value": 800,
+          "source": {
+            "name": "Bartlett N.L. та ін. Gemcitabine, vinorelbine, and pegylated liposomal doxorubicin (GVD), a salvage regimen in relapsed Hodgkin's lymphoma: CALGB 59804. Ann Oncol. 2007;18:1071-1079",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/17426059/",
+            "version": "резюме: дози після трансплантації",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    },
+    {
+      "key": "vinorelbine",
+      "drug_id": "vinorelbine",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1, 8],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "20 мг/м² у дні 1 і 8; після трансплантації 15 мг/м² (Bartlett 2007).",
+        "en": "20 mg/m² on days 1 and 8; after a transplant 15 mg/m² (Bartlett 2007)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "after-transplant",
+          "label": {
+            "uk": "Рецидив після аутотрансплантації",
+            "en": "Relapse after an autologous transplant"
+          },
+          "dose_value": 15,
+          "source": {
+            "name": "Bartlett N.L. та ін. Gemcitabine, vinorelbine, and pegylated liposomal doxorubicin (GVD), a salvage regimen in relapsed Hodgkin's lymphoma: CALGB 59804. Ann Oncol. 2007;18:1071-1079",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/17426059/",
+            "version": "резюме: дози після трансплантації",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    },
+    {
+      "key": "doxorubicin-liposomal",
+      "drug_id": "doxorubicin-liposomal",
+      "route": "iv_infusion",
+      "dose_value": 15,
+      "dose_unit": "mg_m2",
+      "days": [1, 8],
+      "notes": {
+        "uk": "15 мг/м² у дні 1 і 8; після трансплантації 10 мг/м² (Bartlett 2007). За інструкцією Caelyx — у 250 мл 5% глюкози за 1 годину.",
+        "en": "15 mg/m² on days 1 and 8; after a transplant 10 mg/m² (Bartlett 2007). Per the Caelyx label, in 250 mL of 5% glucose over an hour."
+      },
+      "duration_min": 60,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 250,
+      "dose_modifiers": [
+        {
+          "key": "after-transplant",
+          "label": {
+            "uk": "Рецидив після аутотрансплантації",
+            "en": "Relapse after an autologous transplant"
+          },
+          "dose_value": 10,
+          "source": {
+            "name": "Bartlett N.L. та ін. Gemcitabine, vinorelbine, and pegylated liposomal doxorubicin (GVD), a salvage regimen in relapsed Hodgkin's lymphoma: CALGB 59804. Ann Oncol. 2007;18:1071-1079",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/17426059/",
+            "version": "резюме: дози після трансплантації",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    }
+  ]
+}

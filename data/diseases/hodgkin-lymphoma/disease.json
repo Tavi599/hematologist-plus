@@ -252,25 +252,129 @@
       ]
     },
     {
-      "key": "reference",
-      "kind": "reference",
+      "key": "clinical-trials",
+      "kind": "trial",
       "title": {
-        "uk": "Для ознайомлення (без розрахунку)",
-        "en": "For reference (not calculated)"
+        "uk": "Клінічні дослідження",
+        "en": "Clinical trials"
       },
       "description": {
-        "uk": "Курси, про які пишуть джерела, але розклад яких неповний або препарат ще не заведений у довідник: доз для пацієнта тут немає, лише коротка інформація про курс.",
-        "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
+        "uk": "Схеми, які існують лише як опубліковані дослідження: їх немає ні в настанові, ні в інструкції до препарату. Застосування поза інструкцією потребує окремого рішення й згоди пацієнта. Біля кожної схеми в калькуляторі наведено дизайн дослідження, кого в нього включали, що з нього вийшло і чого вимагає проведення.",
+        "en": "Regimens that exist only as published studies: neither a guideline nor a label carries them. Off-label use needs a decision of its own and the patient's consent. In the calculator each regimen states the design of the study, who was enrolled, what came out of it and what the conduct demands."
       },
-      "regimens": [
+      "regimens": [],
+      "children": [
         {
-          "regimen_id": "ref-hl-pembro-gvd"
+          "key": "trials-elderly",
+          "kind": "trial",
+          "title": {
+            "uk": "Перша лінія: літні та непридатні до хіміотерапії",
+            "en": "First line: older patients and those unfit for chemotherapy"
+          },
+          "description": {
+            "uk": "Від 60 років. Результат сильно залежить від геріатричної оцінки (CIRS-G, IADL).",
+            "en": "Aged 60 or over. Outcome depends heavily on the geriatric assessment (CIRS-G, IADL)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-hl-bv-avd-sequential",
+              "notes": {
+                "uk": "Придатні до хіміотерапії",
+                "en": "Fit for chemotherapy"
+              }
+            },
+            {
+              "regimen_id": "bv-dtic",
+              "notes": {
+                "uk": "Непридатні до хіміотерапії",
+                "en": "Unfit for chemotherapy"
+              }
+            },
+            {
+              "regimen_id": "bv-nivo-elderly",
+              "notes": {
+                "uk": "Непридатні; дослідження розходяться",
+                "en": "Unfit; the studies disagree"
+              }
+            }
+          ]
         },
         {
-          "regimen_id": "ref-hl-bv-nivo"
+          "key": "trials-salvage",
+          "kind": "trial",
+          "title": {
+            "uk": "Перший рецидив перед аутотрансплантацією",
+            "en": "First relapse before an autologous transplant"
+          },
+          "description": {
+            "uk": "Мета — повна метаболічна відповідь перед трансплантацією. Інгібітор PD-1 не дають, якщо потрібна імуносупресія через аутоімунну хворобу; він підвищує ускладнення подальшої алотрансплантації.",
+            "en": "The aim is a complete metabolic response before the transplant. A PD-1 inhibitor is not given where an autoimmune disease needs immunosuppression; it raises the complications of a later allogeneic transplant."
+          },
+          "regimens": [
+            {
+              "regimen_id": "pembro-gvd",
+              "notes": {
+                "uk": "Повна відповідь 95%; амбулаторно",
+                "en": "Complete response 95%; outpatient"
+              }
+            },
+            {
+              "regimen_id": "pembro-ice",
+              "notes": {
+                "uk": "Повна відповідь 86,5%",
+                "en": "Complete response 86.5%"
+              }
+            },
+            {
+              "regimen_id": "nice",
+              "notes": {
+                "uk": "Після ніволумабу без повної відповіді",
+                "en": "After nivolumab without a complete response"
+              }
+            },
+            {
+              "regimen_id": "bv-nivo-salvage-cycle-1",
+              "notes": {
+                "uk": "Без хіміотерапії",
+                "en": "Chemotherapy-free"
+              }
+            },
+            {
+              "regimen_id": "bv-nivo-salvage",
+              "notes": {
+                "uk": "Цикли 2–4",
+                "en": "Cycles 2 to 4"
+              }
+            },
+            {
+              "regimen_id": "begev",
+              "notes": {
+                "uk": "Без інгібітора PD-1",
+                "en": "Without a PD-1 inhibitor"
+              }
+            }
+          ]
         },
         {
-          "regimen_id": "ref-hl-begev"
+          "key": "trials-later",
+          "kind": "trial",
+          "title": {
+            "uk": "Рецидив після трансплантації",
+            "en": "Relapse after a transplant"
+          },
+          "description": {
+            "uk": "Схема зі зниженими дозами для пацієнтів після аутотрансплантації.",
+            "en": "Reduced doses for patients after an autologous transplant."
+          },
+          "regimens": [
+            {
+              "regimen_id": "gvd",
+              "notes": {
+                "uk": "Після трансплантації — галочка зниження доз",
+                "en": "After a transplant, the reduced-dose checkbox"
+              }
+            }
+          ]
         }
       ]
     }

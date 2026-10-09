@@ -1,0 +1,125 @@
+{
+  "$comment": "Лише опис: розрахунок — через окремі схеми довідника.",
+  "id": "ref-hl-bv-avd-sequential",
+  "short_name": "BV → AVD → BV (літні)",
+  "name": {
+    "uk": "Послідовно брентуксимаб, AVD і знову брентуксимаб у літніх",
+    "en": "Sequential brentuximab, AVD and brentuximab again in older patients"
+  },
+  "sources": [
+    {
+      "name": "Evens A.M. та ін. Multicenter Phase II Study of Sequential Brentuximab Vedotin and Doxorubicin, Vinblastine, and Dacarbazine Chemotherapy for Older Patients With Untreated Classical Hodgkin Lymphoma. J Clin Oncol. 2018;36:3015-3022",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30179569/",
+      "version": "резюме; фаза II, 48 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "phase": "II",
+      "randomized": false,
+      "n": 48
+    },
+    "settings": ["first-line", "elderly"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Evens A.M. та ін. J Clin Oncol. 2018;36:3015-3022",
+        "pmid": "30179569",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30179569/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Вперше діагностована класична лімфома Ходжкіна від 60 років, придатні до хіміотерапії: 2 введення брентуксимабу 1,8 мг/кг кожні 3 тижні, потім 6 циклів AVD, потім 4 введення брентуксимабу тим, хто відповів.",
+      "en": "Newly diagnosed classical Hodgkin lymphoma at 60 or over, fit for chemotherapy: two doses of brentuximab 1.8 mg/kg every 3 weeks, then six cycles of AVD, then four doses of brentuximab in responders."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Брентуксимаб ведотин",
+          "en": "Brentuximab vedotin"
+        },
+        "drug_id": "brentuximab-vedotin"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин",
+          "en": "Doxorubicin"
+        },
+        "drug_id": "doxorubicin"
+      },
+      {
+        "name": {
+          "uk": "Вінбластин",
+          "en": "Vinblastine"
+        },
+        "drug_id": "vinblastine"
+      },
+      {
+        "name": {
+          "uk": "Дакарбазин",
+          "en": "Dacarbazine"
+        },
+        "drug_id": "dacarbazine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Медіана віку 69 років (до 88). Після AVD повна ремісія 90%; дворічна виживаність без прогресування 84%, загальна — 93%.",
+        "en": "Median age 69 (up to 88). After AVD complete remission 90%; two-year progression-free survival 84%, overall 93%."
+      },
+      {
+        "uk": "Геріатрична оцінка вирішальна: при CIRS-G від 10 дворічна виживаність без прогресування 45% проти 100%, при втраті повсякденної самостійності (IADL) — 25% проти 94%.",
+        "en": "Geriatric assessment is decisive: with CIRS-G 10 or more, two-year progression-free survival was 45% against 100%; with loss of instrumental activities of daily living, 25% against 94%."
+      },
+      {
+        "uk": "Нейропатія 2 ступеня в 33%, переважно оборотна; 6 циклів AVD завершили 77%.",
+        "en": "Grade 2 neuropathy in 33%, mostly reversible; 77% completed six cycles of AVD."
+      }
+    ],
+    "gap": {
+      "uk": "Розраховують окремими схемами довідника: «Брентуксимаб ведотин, монотерапія» (1,8 мг/кг кожні 21 день) і AVD.",
+      "en": "Calculated with the separate catalogue regimens: brentuximab vedotin monotherapy (1.8 mg/kg every 21 days) and AVD."
+    }
+  }
+}

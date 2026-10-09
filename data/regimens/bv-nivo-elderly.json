@@ -1,0 +1,178 @@
+{
+  "$comment": "BV + ніволумаб у першій лінії за Cheson 2020 (ACCRU) і реєстром NCT02758717: брентуксимаб 1,8 мг/кг (не більше 180 мг) в/в за 30 хвилин і ніволумаб 3 мг/кг в/в за 60 хвилин у день 1; цикл 21 день, 8 циклів. Те саме дозування в частині D Friedberg 2024.",
+  "id": "bv-nivo-elderly",
+  "short_name": "BV + ніволумаб (літні)",
+  "name": {
+    "uk": "Брентуксимаб + ніволумаб у першій лінії для літніх",
+    "en": "Brentuximab plus nivolumab first line for older patients"
+  },
+  "description": {
+    "uk": "Перша лінія класичної лімфоми Ходжкіна від 60 років або в молодших, яким хіміотерапія протипоказана. 8 циклів по 21 дню. Два дослідження дали різні результати.",
+    "en": "First line in classical Hodgkin lymphoma at 60 or over, or in younger patients for whom chemotherapy is contraindicated. Eight 21-day cycles. The two studies disagree."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 8,
+  "sources": [
+    {
+      "name": "Cheson B.D. та ін. Brentuximab vedotin plus nivolumab as first-line therapy in older or chemotherapy-ineligible patients with Hodgkin lymphoma (ACCRU): a multicentre, single-arm, phase 2 trial. Lancet Haematol. 2020;7:e808-e815",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33010817/",
+      "version": "резюме; фаза II, 46 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Friedberg J.W. та ін. Brentuximab vedotin with dacarbazine or nivolumab as frontline cHL therapy for older patients ineligible for chemotherapy. Blood. 2024;143:786-795",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37946283/",
+      "version": "резюме; фаза II, частини B і D",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT02758717 (ACCRU), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT02758717",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Два непорівняльні дослідження фази II: ACCRU (8 центрів США) і частина D дослідження Friedberg.",
+      "en": "Two non-comparative phase II studies: ACCRU (8 US centres) and part D of the Friedberg study."
+    },
+    "population": {
+      "uk": "ACCRU: 46 пацієнтів, медіана віку 71,5 року, ECOG 0–2; молодші — лише з фракцією викиду менше 50%, зниженою дифузійною здатністю легень або кліренсом креатиніну 30–60 мл/хв. Friedberg: 21 пацієнт від 60 років, непридатний до хіміотерапії.",
+      "en": "ACCRU: 46 patients, median age 71.5, ECOG 0 to 2; younger ones only with an ejection fraction under 50%, reduced lung diffusion capacity or a creatinine clearance of 30 to 60 mL/min. Friedberg: 21 patients aged 60 or over unfit for chemotherapy."
+    },
+    "results": {
+      "uk": "ACCRU: відповідь 61%, повна — 48%; набір зупинено після проміжного аналізу, бо заздалегідь заданий поріг активності не досягнуто. Friedberg: відповідь 86%, повна — 67%, медіана виживаності без прогресування не досягнута (спостереження 51,6 місяця).",
+      "en": "ACCRU: response 61%, complete 48%; enrolment stopped after the interim analysis because the preset activity threshold was not met. Friedberg: response 86%, complete 67%, median progression-free survival not reached (follow-up 51.6 months)."
+    },
+    "conduct": {
+      "uk": "ACCRU: нейропатія 48% (3 ступеня — 11%), корекції дози в 30%, переважно через нейротоксичність; підвищення ліпази або амілази, панкреатит. Friedberg: небажані явища 3 ступеня і вище в 76%, найчастіше підвищення ліпази 24% і моторна нейропатія 19%.",
+      "en": "ACCRU: neuropathy 48% (grade 3, 11%), dose adjustments in 30%, mostly for neurotoxicity; raised lipase or amylase, pancreatitis. Friedberg: grade 3 or worse adverse events in 76%, most often raised lipase 24% and motor neuropathy 19%."
+    },
+    "trial": {
+      "acronym": "ACCRU",
+      "nct": "NCT02758717",
+      "phase": "II",
+      "randomized": false,
+      "n": 46,
+      "primary_met": false
+    },
+    "settings": ["first-line", "elderly", "frail"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Cheson B.D. та ін. Lancet Haematol. 2020;7:e808-e815",
+        "pmid": "33010817",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article", "Multicenter Study"],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33010817/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Friedberg J.W. та ін. Blood. 2024;143:786-795",
+        "pmid": "37946283",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/37946283/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "brentuximab-vedotin",
+      "drug_id": "brentuximab-vedotin",
+      "route": "iv_infusion",
+      "dose_value": 1.8,
+      "dose_unit": "mg_kg",
+      "cap_amount": 180,
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 150,
+      "notes": {
+        "uk": "1,8 мг/кг в/в за 30 хвилин у день 1, не більше 180 мг (Cheson 2020).",
+        "en": "1.8 mg/kg IV over 30 minutes on day 1, no more than 180 mg (Cheson 2020)."
+      }
+    },
+    {
+      "key": "nivolumab",
+      "drug_id": "nivolumab",
+      "route": "iv_infusion",
+      "dose_value": 3,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "3 мг/кг в/в за 60 хвилин у день 1, після брентуксимабу (NCT02758717); у 100 мл 0,9% NaCl.",
+        "en": "3 mg/kg IV over 60 minutes on day 1, after brentuximab (NCT02758717); in 100 mL of 0.9% sodium chloride."
+      }
+    }
+  ]
+}

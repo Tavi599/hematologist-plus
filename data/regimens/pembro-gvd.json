@@ -1,0 +1,162 @@
+{
+  "$comment": "Pembro-GVD за резюме і реєстром NCT03618550: пембролізумаб 200 мг в/в у день 1; гемцитабін 1000 мг/м², вінорельбін 20 мг/м², пегільований ліпосомальний доксорубіцин 15 мг/м² в/в у дні 1 і 8; цикл 21 день, 2–4 цикли перед аутотрансплантацією. Розведення й тривалість: гемцитабін і вінорельбін — як у Gem-Vin довідника (eviQ 627), доксорубіцин ліпосомальний — за інструкцією Caelyx, пембролізумаб — як у схемі пембролізумабу довідника.",
+  "id": "pembro-gvd",
+  "short_name": "Pembro-GVD",
+  "name": {
+    "uk": "Пембролізумаб + GVD (гемцитабін, вінорельбін, ліпосомальний доксорубіцин)",
+    "en": "Pembrolizumab plus GVD (gemcitabine, vinorelbine, liposomal doxorubicin)"
+  },
+  "description": {
+    "uk": "Перший рецидив або рефрактерність класичної лімфоми Ходжкіна у кандидатів на аутотрансплантацію. 2 цикли по 21 дню; за неповної відповіді — ще 2. Амбулаторно.",
+    "en": "First relapse or refractory classical Hodgkin lymphoma in candidates for an autologous transplant. Two 21-day cycles; two more without a complete response. Outpatient."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "Moskowitz A.J. та ін. Phase II Trial of Pembrolizumab Plus Gemcitabine, Vinorelbine, and Liposomal Doxorubicin as Second-Line Therapy for Relapsed or Refractory Classical Hodgkin Lymphoma. J Clin Oncol. 2021;39:3109-3117",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9851707/",
+      "version": "повний текст у PMC; фаза II, 39 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT03618550 (Pembro-GVD), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT03618550",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Багатоцентрове дослідження фази II без групи порівняння (MSKCC). Після повної метаболічної відповіді через 2 або 4 цикли — висока доза й аутотрансплантація.",
+      "en": "A multicentre phase II study without a comparison group (MSKCC). After a complete metabolic response at two or four cycles, high-dose therapy and an autologous transplant."
+    },
+    "population": {
+      "uk": "39 кандидатів на трансплантацію з рецидивом або рефрактерністю після першої лінії: 41% первинно рефрактерні, 38% з рецидивом протягом року.",
+      "en": "39 transplant candidates relapsed or refractory after the first line: 41% primary refractory, 38% relapsed within a year."
+    },
+    "results": {
+      "uk": "Загальна відповідь 100%, повна — 95% (38 оцінених); 31 пацієнтові вистачило 2 циклів. 95% дійшли до трансплантації, і всі вони в ремісії за медіани спостереження 13,5 місяця.",
+      "en": "Overall response 100%, complete 95% (38 evaluable); two cycles were enough for 31. 95% reached a transplant, and all of them remained in remission at a median follow-up of 13.5 months."
+    },
+    "conduct": {
+      "uk": "Небажані явища переважно 1–2 ступеня; 3 ступеня — підвищення трансаміназ (4), нейтропенія (4), мукозит (2), тиреоїдит і висип. Інгібітор PD-1 протипоказаний, якщо потрібна системна імуносупресія через аутоімунну хворобу.",
+      "en": "Adverse events mostly grade 1 to 2; grade 3 were raised transaminases (4), neutropenia (4), mucositis (2), thyroiditis and rash. A PD-1 inhibitor is contraindicated where an autoimmune disease needs systemic immunosuppression."
+    },
+    "trial": {
+      "nct": "NCT03618550",
+      "phase": "II",
+      "randomized": false,
+      "n": 39
+    },
+    "settings": ["relapse", "refractory", "pre-transplant"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Moskowitz A.J. та ін. J Clin Oncol. 2021;39:3109-3117",
+        "pmid": "34170745",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34170745/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "pembrolizumab",
+      "drug_id": "pembrolizumab",
+      "route": "iv_infusion",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "200 мг в/в у день 1, у 100 мл 0,9% NaCl за 30 хвилин.",
+        "en": "200 mg IV on day 1, in 100 mL of 0.9% sodium chloride over 30 minutes."
+      }
+    },
+    {
+      "key": "gemcitabine",
+      "drug_id": "gemcitabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1, 8],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "1000 мг/м² у дні 1 і 8 (NCT03618550); у 250 мл 0,9% NaCl за 30 хвилин.",
+        "en": "1000 mg/m² on days 1 and 8 (NCT03618550); in 250 mL of 0.9% sodium chloride over 30 minutes."
+      }
+    },
+    {
+      "key": "vinorelbine",
+      "drug_id": "vinorelbine",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1, 8],
+      "duration_min": 10,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "20 мг/м² у дні 1 і 8 (NCT03618550); у 50 мл 0,9% NaCl за 6–10 хвилин.",
+        "en": "20 mg/m² on days 1 and 8 (NCT03618550); in 50 mL of 0.9% sodium chloride over 6 to 10 minutes."
+      }
+    },
+    {
+      "key": "doxorubicin-liposomal",
+      "drug_id": "doxorubicin-liposomal",
+      "route": "iv_infusion",
+      "dose_value": 15,
+      "dose_unit": "mg_m2",
+      "days": [1, 8],
+      "notes": {
+        "uk": "15 мг/м² у дні 1 і 8 (NCT03618550). За інструкцією Caelyx — у 250 мл 5% глюкози за 1 годину, першу інфузію не швидше 1 мг/хв.",
+        "en": "15 mg/m² on days 1 and 8 (NCT03618550). Per the Caelyx label, in 250 mL of 5% glucose over an hour, the first infusion no faster than 1 mg/min."
+      },
+      "duration_min": 60,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 250
+    }
+  ]
+}
