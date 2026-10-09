@@ -1,6 +1,6 @@
 import { amountUnitOf, convertAmount, DOMAIN_DEFAULTS, type CourseDrug } from '../domain'
 import type { Drug, DrugInfusionParams, DrugPresentation, RegimenItem } from '../schemas/catalog'
-import type { DoseModifier, Source } from '../schemas/common'
+import type { DoseModifier, Solvent, Source } from '../schemas/common'
 import type { LocalizedText } from './localized'
 import type { CatalogIndex } from './catalog-index'
 
@@ -23,6 +23,16 @@ export interface CourseItem {
   missingInfusionData: boolean
   /** The protocol gives this drug as an infusion the physician may switch to boluses. */
   switchable: boolean
+}
+
+/**
+ * What the dose is diluted in: the drug's infusion parameters when the catalog has them, otherwise
+ * the solvent the regimen itself names. Saline only when neither says anything — never in place of
+ * a solvent the source wrote down (oxaliplatin, liposomal doxorubicin and carboplatin by some
+ * protocols go into glucose).
+ */
+export function solventOf(item: Pick<CourseItem, 'item' | 'infusionParams'>): Solvent {
+  return item.infusionParams?.solvent ?? item.item.fallback_solvent ?? 'sodium_chloride_0_9'
 }
 
 /** One dose the physician can pick for an item: the regimen's own, or another protocol's. */

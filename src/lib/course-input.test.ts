@@ -16,6 +16,7 @@ import {
   fitsRoute,
   PROTOCOL_MODE,
   resolveInfusionParams,
+  solventOf,
 } from './course-input'
 
 const index = () => indexCatalog(demoCatalog())
@@ -226,6 +227,23 @@ describe('resolveInfusionParams', () => {
     item.infusion_params_id = null
     params.is_default = false
     expect(resolveInfusionParams(indexCatalog(catalog), item)).toBeNull()
+  })
+})
+
+describe('solventOf', () => {
+  it('takes the drug parameters first, then the solvent the regimen names, saline last', () => {
+    const items = buildCourseItems(index(), 'r-chop-21')
+    const withParams = items.find((entry) => entry.infusionParams !== null)!
+    expect(solventOf(withParams)).toBe(withParams.infusionParams!.solvent)
+
+    // Liposomal doxorubicin: no catalog parameters, the regimen says 5% glucose.
+    const own = { ...withParams, infusionParams: null }
+    expect(solventOf({ ...own, item: { ...own.item, fallback_solvent: 'glucose_5' } })).toBe(
+      'glucose_5',
+    )
+    expect(solventOf({ ...own, item: { ...own.item, fallback_solvent: null } })).toBe(
+      'sodium_chloride_0_9',
+    )
   })
 })
 

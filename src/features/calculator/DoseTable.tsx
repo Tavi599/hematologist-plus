@@ -27,6 +27,7 @@ import {
   DEFAULT_DOSE_CHOICE,
   defaultBolusMode,
   PROTOCOL_MODE,
+  solventOf,
   type AdministrationMode,
   type CourseItem,
 } from '../../lib/course-input'
@@ -428,9 +429,7 @@ function DoseRow({
                       total: formatNumber(result.infusion.totalVolumeMl, language, 1),
                     })
                   : t('calculator.doses.infusionValue', {
-                      solvent: item.infusionParams
-                        ? t(`solvent.${item.infusionParams.solvent}`)
-                        : t('solvent.sodium_chloride_0_9'),
+                      solvent: t(`solvent.${solventOf(item)}`),
                       bag: formatNumber(result.infusion.bagVolumeMl, language, 0),
                       total: formatNumber(result.infusion.totalVolumeMl, language, 1),
                       concentration: formatNumber(result.infusion.concentrationPerMl, language, 2),

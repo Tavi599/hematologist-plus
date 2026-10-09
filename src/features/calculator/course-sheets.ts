@@ -6,7 +6,7 @@ import {
   type CourseDrugResult,
   type CourseResult,
 } from '../../domain'
-import type { CourseItem } from '../../lib/course-input'
+import { solventOf, type CourseItem } from '../../lib/course-input'
 import { formatAmount, formatDate } from '../../lib/format'
 import type { Language } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
@@ -665,7 +665,7 @@ function whatLine(
     if (result.amountUnit !== 'mg') return `${name}${dose} ${volume}`
     return `${name} ${formatAmount(result.doseAmount / 1000, language, 1)}${BLANK.grams} ${volume}`
   }
-  const solvent = t(`solvent.${item?.infusionParams?.solvent ?? 'sodium_chloride_0_9'}`)
+  const solvent = t(`solvent.${item ? solventOf(item) : 'sodium_chloride_0_9'}`)
   return `${name}${dose}\n${solvent} ${formatAmount(infusion.bagVolumeMl, language)} ${t('units.ml')}`
 }
 

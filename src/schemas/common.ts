@@ -30,6 +30,7 @@ export const localizedTextSchema = z
 
 export const SOLVENTS = ['sodium_chloride_0_9', 'glucose_5', 'water_for_injection'] as const
 export const solventSchema = z.enum(SOLVENTS)
+export type Solvent = (typeof SOLVENTS)[number]
 
 export const PRESENTATION_FORMS = [
   'vial',
