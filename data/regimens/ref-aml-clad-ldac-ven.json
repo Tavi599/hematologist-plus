@@ -1,0 +1,159 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-aml-clad-ldac-ven",
+  "short_name": "Clad/LDAC/Ven ⇄ Aza/Ven",
+  "name": {
+    "uk": "Кладрибін + малі дози цитарабіну + венетоклакс, що чергуються з азацитидином і венетоклаксом",
+    "en": "Cladribine, low-dose cytarabine and venetoclax alternating with azacitidine and venetoclax"
+  },
+  "sources": [
+    {
+      "name": "Kadia T.M. та ін. Phase II Study of Venetoclax Added to Cladribine Plus Low-Dose Cytarabine Alternating With 5-Azacitidine in Older Patients With Newly Diagnosed Acute Myeloid Leukemia. J Clin Oncol. 2022;40(33):3848-3857; оновлення: Am J Hematol. 2026;101(7):1737-1747",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9671758/",
+      "version": "рукопис автора в PMC; 190 пацієнтів в оновленні",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "nct": "NCT03586609",
+      "phase": "II",
+      "randomized": false,
+      "n": 190
+    },
+    "settings": ["first-line", "elderly", "frail"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Kadia T.M. та ін. J Clin Oncol. 2022;40(33):3848-3857",
+        "pmid": "35704787",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, N.I.H., Extramural"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35704787/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Kadia T.M. та ін. Am J Hematol. 2026;101(7):1737-1747",
+        "pmid": "42035228",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article"],
+        "journal": {
+          "name": "American Journal of Hematology",
+          "issn": "0361-8609",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/42035228/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «American Journal of Hematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7610369",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Літні (від 60) або непридатні до інтенсивної терапії. Індукція: кладрибін 5 мг/м² в/в у дні 1–5, цитарабін 20 мг п/ш двічі на добу в дні 1–10, венетоклакс 400 мг у дні 1–21 після нарощування. Далі курси кладрибін (дні 1–3) + цитарабін + венетоклакс чергуються з азацитидином 75 мг/м² у дні 1–7 + венетоклаксом.",
+      "en": "Elderly (60 or over) or unfit for intensive therapy. Induction: cladribine 5 mg/m² IV on days 1 to 5, cytarabine 20 mg SC twice a day on days 1 to 10, venetoclax 400 mg on days 1 to 21 after a ramp-up. Then courses of cladribine (days 1 to 3), cytarabine and venetoclax alternate with azacitidine 75 mg/m² on days 1 to 7 and venetoclax."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Кладрибін",
+          "en": "Cladribine"
+        },
+        "drug_id": "cladribine"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Венетоклакс",
+          "en": "Venetoclax"
+        },
+        "drug_id": "venetoclax"
+      },
+      {
+        "name": {
+          "uk": "Азацитидин",
+          "en": "Azacitidine"
+        },
+        "drug_id": "azacitidine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "190 пацієнтів, медіана віку 68 років, 64% несприятливий ризик. Повна ремісія (з неповним відновленням) 84%, МЗХ-негативна — 75%. Медіана загальної виживаності 52 місяці, п'ятирічна — 45%; 44% відповідачів дійшли до алотрансплантації.",
+        "en": "190 patients, median age 68, 64% adverse risk. Complete remission (with incomplete recovery) 84%, MRD-negative 75%. Median overall survival 52 months, five-year 45%; 44% of responders went on to an allograft."
+      },
+      {
+        "uk": "Смертність за 4 і 8 тижнів 1% і 3%. З позаконазолом чи вориконазолом венетоклакс 100 мг.",
+        "en": "Four- and eight-week mortality 1% and 3%. With posaconazole or voriconazole venetoclax 100 mg."
+      }
+    ],
+    "gap": {
+      "uk": "Нарощування дози венетоклаксу й тривалість венетоклаксу в консолідації (залежить від МЗХ) описані в протоколі, а не в статті.",
+      "en": "The venetoclax ramp-up and its duration in consolidation (MRD-adapted) are in the protocol, not the article."
+    }
+  }
+}

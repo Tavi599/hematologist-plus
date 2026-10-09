@@ -200,13 +200,15 @@ export type Appraisal = z.infer<typeof appraisalSchema>
  *   t11-14, pcl, renal, neuropathy, high-risk — a feature of the disease or of the patient
  *   maintenance       — after induction or a transplant
  * The first four are the same words for any disease, for studies that a myeloma term does not fit:
- *   first-line, relapse, refractory, pre-transplant (salvage meant to lead to a transplant)
+ *   first-line, relapse, refractory, pre-transplant (salvage meant to lead to a transplant),
+ *   elderly (by the study's own age limit)
  */
 export const TRIAL_SETTINGS = [
   'first-line',
   'relapse',
   'refractory',
   'pre-transplant',
+  'elderly',
   'ndmm-te',
   'ndmm-ti',
   'frail',

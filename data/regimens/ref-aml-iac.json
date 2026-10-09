@@ -1,0 +1,113 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-aml-iac",
+  "short_name": "IAC",
+  "name": {
+    "uk": "IAC (ідарубіцин + цитарабін + кладрибін), індукція",
+    "en": "IAC (idarubicin, cytarabine and cladribine), induction"
+  },
+  "sources": [
+    {
+      "name": "Zhang X. та ін. Cladribine Added to Idarubicin and Cytarabine as an Induction Regimen for Patients with De Novo Acute Myeloid Leukemia: A Multicenter, Randomized Phase III Trial. Clin Cancer Res. 2025;31(8):1407-1414",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40008901/",
+      "version": "резюме; реєстр NCT02323022",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "nct": "NCT02323022",
+      "phase": "III",
+      "randomized": true,
+      "n": 618,
+      "comparator": "IA (ідарубіцин 12 мг/м²)",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Zhang X. та ін. Clin Cancer Res. 2025;31(8):1407-1414",
+        "pmid": "40008901",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Clinical Trial, Phase III",
+          "Multicenter Study"
+        ],
+        "journal": {
+          "name": "Clinical Cancer Research",
+          "issn": "1078-0432",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/40008901/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Clinical Cancer Research» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/9502500",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Вперше діагностований ГМЛ у дорослих. Кладрибін 5 мг/м² у дні 1–5, ідарубіцин 8 мг/м² у дні 1–3, цитарабін 100 мг/м² у дні 1–7 — проти ідарубіцину 12 мг/м² з тим самим цитарабіном.",
+      "en": "Newly diagnosed AML in adults. Cladribine 5 mg/m² on days 1 to 5, idarubicin 8 mg/m² on days 1 to 3, cytarabine 100 mg/m² on days 1 to 7, against idarubicin 12 mg/m² with the same cytarabine."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ідарубіцин",
+          "en": "Idarubicin"
+        },
+        "drug_id": "idarubicin"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Кладрибін",
+          "en": "Cladribine"
+        },
+        "drug_id": "cladribine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Повна ремісія 80,5% проти 72,4% (p=0,029); дворічна загальна виживаність 81,3% проти 70,0% (p=0,011). Найбільша перевага при несприятливому ризику і у віці понад 45 років. Токсичність не відрізнялася.",
+        "en": "Complete remission 80.5% against 72.4% (p=0.029); two-year overall survival 81.3% against 70.0% (p=0.011). The greatest benefit with adverse risk and over 45. Toxicity did not differ."
+      }
+    ],
+    "gap": {
+      "uk": "Ні резюме, ні реєстр не кажуть, як вводили цитарабін (болюсом чи тривалою інфузією) і ідарубіцин; повний текст закритий.",
+      "en": "Neither the abstract nor the registry says how cytarabine (bolus or continuous infusion) and idarubicin were given; the full text is closed."
+    }
+  }
+}

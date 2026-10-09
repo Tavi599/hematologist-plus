@@ -1,0 +1,115 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-aml-clag",
+  "short_name": "CLAG",
+  "name": {
+    "uk": "CLAG (кладрибін + цитарабін + Г-КСФ) при рефрактерному ГМЛ",
+    "en": "CLAG (cladribine, cytarabine and G-CSF) in refractory AML"
+  },
+  "sources": [
+    {
+      "name": "Wrzesień-Kuś A. та ін. A multicenter, open, non-comparative, phase II study of the combination of cladribine, cytarabine, and G-CSF as induction therapy in refractory acute myeloid leukemia (PALG). Eur J Haematol. 2003;71(3):155-162",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12930315/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "PALG CLAG",
+      "phase": "II",
+      "randomized": false,
+      "n": 58
+    },
+    "settings": ["refractory", "relapse"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Wrzesień-Kuś A. та ін. Eur J Haematol. 2003;71(3):155-162",
+        "pmid": "12930315",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study"
+        ],
+        "journal": {
+          "name": "European Journal of Haematology",
+          "issn": "0902-4441",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/12930315/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «European Journal of Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8703985",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Рефрактерний ГМЛ або ранній рецидив: кладрибін 5 мг/м², цитарабін 2 г/м², Г-КСФ — те саме, що CLAG-M, без мітоксантрону.",
+      "en": "Refractory AML or early relapse: cladribine 5 mg/m², cytarabine 2 g/m², G-CSF, the same as CLAG-M without mitoxantrone."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Кладрибін",
+          "en": "Cladribine"
+        },
+        "drug_id": "cladribine"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Філграстим",
+          "en": "Filgrastim"
+        },
+        "drug_id": "filgrastim"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "58 пацієнтів: повна ремісія 50%, резистентність 33%, рання смерть 17%; однорічна загальна виживаність 42%.",
+        "en": "58 patients: complete remission 50%, refractory 33%, early death 17%; one-year overall survival 42%."
+      },
+      {
+        "uk": "Після індукції DA повна ремісія 58%, а після DAC (з кладрибіном) — лише 10%: після DAC CLAG майже не діє.",
+        "en": "After DA induction complete remission was 58%, but after DAC (with cladribine) only 10%: after DAC, CLAG hardly works."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме не наводить днів; розклад CLAG-M з реєстру PALG для CLAG окремо не підтверджений.",
+      "en": "The abstract gives no days; the PALG registry CLAG-M schedule is not confirmed for CLAG separately."
+    }
+  }
+}

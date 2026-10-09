@@ -1,0 +1,110 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-aml-dac-clam",
+  "short_name": "DAC → CLAM",
+  "name": {
+    "uk": "Рання інтенсифікація CLAM після DAC при поганій відповіді на 14-й день (PALG)",
+    "en": "Early CLAM intensification after DAC with a poor day-14 response (PALG)"
+  },
+  "sources": [
+    {
+      "name": "Pluta A. та ін. Early induction intensification with cladribine, cytarabine, and mitoxantrone (CLAM) in AML patients treated with the DAC induction regimen. Leuk Lymphoma. 2020;61(3):588-603",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31661339/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "PALG",
+      "phase": "II",
+      "randomized": false,
+      "n": 253
+    },
+    "settings": ["first-line"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Pluta A. та ін. Leuk Lymphoma. 2020;61(3):588-603",
+        "pmid": "31661339",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Leukemia & Lymphoma",
+          "issn": "1026-8022",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31661339/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Leukemia & Lymphoma» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/9007422",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "До 60 років: DAC як перша індукція; якщо на 14-й день бластів у кістковому мозку понад 10% — CLAM (кладрибін + цитарабін + мітоксантрон) з 16-го дня.",
+      "en": "Up to 60: DAC as first induction; with over 10% marrow blasts on day 14, CLAM (cladribine, cytarabine, mitoxantrone) from day 16."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Кладрибін",
+          "en": "Cladribine"
+        },
+        "drug_id": "cladribine"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Мітоксантрон",
+          "en": "Mitoxantrone"
+        },
+        "drug_id": "mitoxantrone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Після одного DAC повна ремісія 83% при бластах на 14-й день менше 10%. З 35 пацієнтів, що отримали CLAM, ремісія 60%, але рання смертність 23%.",
+        "en": "After one DAC course, complete remission 83% with day-14 blasts under 10%. Of 35 patients given CLAM, remission 60% but early death 23%."
+      }
+    ],
+    "gap": {
+      "uk": "Доз CLAM резюме не наводить.",
+      "en": "The abstract gives no CLAM doses."
+    }
+  }
+}

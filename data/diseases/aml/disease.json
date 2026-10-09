@@ -378,6 +378,134 @@
       ]
     },
     {
+      "key": "clinical-trials",
+      "kind": "trial",
+      "title": {
+        "uk": "Клінічні дослідження",
+        "en": "Clinical trials"
+      },
+      "description": {
+        "uk": "Схеми, які існують лише як опубліковані дослідження: їх немає ні в настанові, ні в інструкції до препарату. Застосування поза інструкцією потребує окремого рішення й згоди пацієнта. Біля кожної схеми в калькуляторі наведено дизайн дослідження, кого в нього включали, що з нього вийшло і чого вимагає проведення.",
+        "en": "Regimens that exist only as published studies: neither a guideline nor a label carries them. Off-label use needs a decision of its own and the patient's consent. In the calculator each regimen states the design of the study, who was enrolled, what came out of it and what the conduct demands."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "trials-induction",
+          "kind": "trial",
+          "title": {
+            "uk": "Індукція: придатні до інтенсивної терапії",
+            "en": "Induction: fit for intensive therapy"
+          },
+          "description": {
+            "uk": "Кладрибін, доданий до стандартної індукції.",
+            "en": "Cladribine added to standard induction."
+          },
+          "regimens": [
+            {
+              "regimen_id": "dac-induction",
+              "notes": {
+                "uk": "PALG, фаза III; до 60 років",
+                "en": "PALG, phase III; up to 60"
+              }
+            },
+            {
+              "regimen_id": "clia-ven-induction",
+              "notes": {
+                "uk": "18–65 років",
+                "en": "Age 18 to 65"
+              }
+            },
+            {
+              "regimen_id": "clia-ven-consolidation",
+              "notes": {
+                "uk": "Після ремісії",
+                "en": "After remission"
+              }
+            },
+            {
+              "regimen_id": "ref-aml-iac"
+            },
+            {
+              "regimen_id": "ref-aml-dac-aml18"
+            },
+            {
+              "regimen_id": "ref-aml-dac-clam"
+            }
+          ]
+        },
+        {
+          "key": "trials-salvage",
+          "kind": "trial",
+          "title": {
+            "uk": "Рефрактерність і рецидив",
+            "en": "Refractory and relapsed disease"
+          },
+          "description": {
+            "uk": "Порятунок із кладрибіном. У дослідженні CLIA виживаність після трансплантації — 78 місяців проти 8,8 без неї. Після DAC в індукції CLAG майже не діє.",
+            "en": "Cladribine salvage. In the CLIA study survival after a transplant was 78 months against 8.8 without. After DAC induction, CLAG hardly works."
+          },
+          "regimens": [
+            {
+              "regimen_id": "clag-m",
+              "notes": {
+                "uk": "PALG, фаза II",
+                "en": "PALG, phase II"
+              }
+            },
+            {
+              "regimen_id": "clia-relapse",
+              "notes": {
+                "uk": "Міст до трансплантації",
+                "en": "Bridge to a transplant"
+              }
+            },
+            {
+              "regimen_id": "ref-aml-clag"
+            }
+          ]
+        },
+        {
+          "key": "trials-elderly",
+          "kind": "trial",
+          "title": {
+            "uk": "Літні та непридатні до інтенсивної терапії",
+            "en": "Elderly and unfit for intensive therapy"
+          },
+          "description": {
+            "uk": "Кладрибін із малими дозами цитарабіну — низькоінтенсивна альтернатива гіпометилюючим препаратам.",
+            "en": "Cladribine with low-dose cytarabine: a low-intensity alternative to hypomethylating agents."
+          },
+          "regimens": [
+            {
+              "regimen_id": "clad-ldac-induction",
+              "notes": {
+                "uk": "Від 60 років",
+                "en": "60 or over"
+              }
+            },
+            {
+              "regimen_id": "clad-ldac-consolidation",
+              "notes": {
+                "uk": "Цикли A",
+                "en": "A cycles"
+              }
+            },
+            {
+              "regimen_id": "clad-ldac-decitabine",
+              "notes": {
+                "uk": "Цикли B",
+                "en": "B cycles"
+              }
+            },
+            {
+              "regimen_id": "ref-aml-clad-ldac-ven"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "reference",
       "kind": "reference",
       "title": {

@@ -1,0 +1,192 @@
+{
+  "$comment": "CLAG-M (PALG) за реєстром NCT03257241: кладрибін 5 мг/м² в/в 2 год у дні 1–5; цитарабін 2 г/м² в/в 4 год, через 2 години після кладрибіну, у дні 1–5; мітоксантрон 10 мг/м² в/в у дні 1–3; Г-КСФ 30 млн ОД (300 мкг) п/ш раз на добу з дня 0 до дня 5 (6 доз). Дози підтверджено резюме Wierzbowska 2008. Об'єми розведення кладрибіну й мітоксантрону джерела не дають.",
+  "id": "clag-m",
+  "short_name": "CLAG-M",
+  "name": {
+    "uk": "CLAG-M (кладрибін + цитарабін + мітоксантрон + Г-КСФ)",
+    "en": "CLAG-M (cladribine, cytarabine, mitoxantrone and G-CSF)"
+  },
+  "description": {
+    "uk": "Рефрактерний або рецидивний ГМЛ. Один курс; при частковій ремісії — другий. Г-КСФ починають напередодні (день 0).",
+    "en": "Refractory or relapsed AML. One course; a second one for a partial remission. G-CSF starts the day before (day 0)."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Wierzbowska A. та ін. Cladribine combined with high doses of arabinoside cytosine, mitoxantrone, and G-CSF (CLAG-M) is a highly effective salvage regimen in patients with refractory and relapsed acute myeloid leukemia of the poor risk: a final report of the Polish Adult Leukemia Group. Eur J Haematol. 2008;80(2):115-126",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18076637/",
+      "version": "резюме; фаза II, 118 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT03257241 (PALG: DA-90 проти DAC; порятунок CLAG-M проти FLAG-IDA), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT03257241",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Багатоцентрові дослідження фази II Польської групи з лейкозів дорослих без групи порівняння. Після повної ремісії — консолідація високими дозами цитарабіну з мітоксантроном ± кладрибін.",
+      "en": "Multicentre phase II studies of the Polish Adult Leukemia Group without a comparison group. After complete remission, consolidation with high-dose cytarabine and mitoxantrone ± cladribine."
+    },
+    "population": {
+      "uk": "118 пацієнтів з 11 центрів: 78 первинно резистентних і 40 з рецидивом, поганий прогноз.",
+      "en": "118 patients from 11 centres: 78 primary refractory and 40 relapsed, poor risk."
+    },
+    "results": {
+      "uk": "Повна ремісія 58% після одного-двох курсів, резистентність 35%, рання смерть 7%. Чотирирічна загальна виживаність 14%, безрецидивна — 30%. Гірше при лейкоцитах понад 10×10⁹/л, віці понад 34 роки і несприятливому каріотипі. У меншому дослідженні тієї ж групи (43 пацієнти) — ремісія 49%, рання смерть 5%.",
+      "en": "Complete remission 58% after one or two courses, refractory 35%, early death 7%. Four-year overall survival 14%, disease-free 30%. Worse with leukocytes over 10×10⁹/L, age over 34 and an adverse karyotype. In a smaller study of the same group (43 patients) remission 49%, early death 5%."
+    },
+    "conduct": {
+      "uk": "Найвиразніша токсичність — гематологічна. Г-КСФ з дня 0 до дня 5.",
+      "en": "The most prominent toxicity is haematological. G-CSF from day 0 to day 5."
+    },
+    "trial": {
+      "acronym": "PALG CLAG-M",
+      "phase": "II",
+      "randomized": false,
+      "n": 118
+    },
+    "settings": ["relapse", "refractory", "pre-transplant"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Wierzbowska A. та ін. Eur J Haematol. 2008;80(2):115-126",
+        "pmid": "18076637",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Journal Article", "Research Support, Non-U.S. Gov't"],
+        "journal": {
+          "name": "European Journal of Haematology",
+          "issn": "0902-4441",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/18076637/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «European Journal of Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8703985",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Wrzesień-Kuś A. та ін. Ann Hematol. 2005;84(9):557-564",
+        "pmid": "15856358",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study"
+        ],
+        "journal": {
+          "name": "Annals of Hematology",
+          "issn": "0939-5555",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/15856358/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Annals of Hematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/9107334",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 30,
+      "dose_unit": "miu_flat",
+      "days": [0, 1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "30 млн ОД (300 мкг) п/ш раз на добу з дня 0 до дня 5, 6 доз (NCT03257241).",
+        "en": "30 MU (300 mcg) SC once a day from day 0 to day 5, 6 doses (NCT03257241)."
+      }
+    },
+    {
+      "key": "cladribine",
+      "drug_id": "cladribine",
+      "route": "iv_infusion",
+      "dose_value": 5,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "5 мг/м² в/в за 2 години (NCT03257241). Об'єму розведення джерело не вказує.",
+        "en": "5 mg/m² IV over 2 hours (NCT03257241). The source gives no diluent volume."
+      },
+      "duration_min": 120
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "2 г/м² в/в за 4 години, через 2 години після кладрибіну (NCT03257241).",
+        "en": "2 g/m² IV over 4 hours, 2 hours after cladribine (NCT03257241)."
+      },
+      "duration_min": 240,
+      "gap_before_min": 120
+    },
+    {
+      "key": "mitoxantrone",
+      "drug_id": "mitoxantrone",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "notes": {
+        "uk": "10 мг/м² в/в раз на добу (NCT03257241). Об'єму розведення джерело не вказує.",
+        "en": "10 mg/m² IV once a day (NCT03257241). The source gives no diluent volume."
+      }
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "$comment": "CLIA + венетоклакс за Kadia, Lancet Haematol 2021 (рукопис у PMC): індукція — кладрибін 5 мг/м² в/в 1–2 год і цитарабін 1,5 г/м² (від 60 років — 1 г/м²) в/в 2 год, через 3–6 год після початку кладрибіну, у дні 1–5; ідарубіцин 10 мг/м² у дні 1–3. Консолідація — кладрибін 5 мг/м² і цитарабін 1 г/м² (від 60 — 0,75 г/м²) у дні 1–3, ідарубіцин 8 мг/м² у дні 1–2. Венетоклакс 400 мг у дні 2–8 кожного курсу без нарощування. Курси по 28 днів, до 6. Об'єми розведення кладрибіну й ідарубіцину стаття не дає.",
+  "id": "clia-ven-induction",
+  "short_name": "CLIA-Ven, індукція",
+  "name": {
+    "uk": "CLIA + венетоклакс (кладрибін, ідарубіцин, цитарабін), індукція",
+    "en": "CLIA plus venetoclax (cladribine, idarubicin, cytarabine), induction"
+  },
+  "description": {
+    "uk": "Вперше діагностований ГМЛ або МДС високого ризику, вік 18–65, придатні до інтенсивної терапії. Курс 28 днів, у стаціонарі.",
+    "en": "Newly diagnosed AML or high-risk MDS, age 18 to 65, fit for intensive therapy. A 28-day course, inpatient."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Kadia T.M. та ін. Venetoclax plus intensive chemotherapy with cladribine, idarubicin, and cytarabine in patients with newly diagnosed acute myeloid leukaemia or high-risk myelodysplastic syndrome: a cohort from a single-centre, single-arm, phase 2 trial. Lancet Haematol. 2021;8(8):e552-e561",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8884174/",
+      "version": "рукопис автора в PMC, розділ Procedures",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Одноцентрове дослідження фази II (MD Anderson) без групи порівняння, окрема когорта з венетоклаксом. Курси по 28 днів, до 6 курсів; у першій ремісії — алогенна трансплантація, якщо можлива.",
+      "en": "A single-centre phase II study (MD Anderson) without a comparison group, a separate venetoclax cohort. 28-day courses, up to 6; an allogeneic transplant in first remission where possible."
+    },
+    "population": {
+      "uk": "50 пацієнтів 18–65 років (медіана 48) з уперше діагностованим ГМЛ, змішаним фенотипом або МДС високого ризику.",
+      "en": "50 patients aged 18 to 65 (median 48) with newly diagnosed AML, mixed phenotype or high-risk MDS."
+    },
+    "results": {
+      "uk": "Композитна повна ремісія 94%, МЗХ не виявлена у 82%. Річна виживаність без подій 68%, загальна — 85%. Одна смерть під час індукції.",
+      "en": "Composite complete remission 94%, undetectable MRD in 82%. One-year event-free survival 68%, overall 85%. One induction death."
+    },
+    "conduct": {
+      "uk": "Перший курс — у стаціонарі. Венетоклакс 400 мг у дні 2–8 без нарощування; при лейкоцитах понад 20×10⁹/л — циторедукція до початку. З азолами: сильні інгібітори CYP3A — венетоклакс 100 мг, помірні — 200 мг. Антибактеріальна, противірусна і протигрибкова профілактика на час нейтропенії. Фебрильна нейтропенія 3+ ступеня у 84%, підвищення АЛТ. При мутації FLT3 у дослідженні додавали мідостаурин або гілтеритиніб (в Україні недоступні).",
+      "en": "The first course is inpatient. Venetoclax 400 mg on days 2 to 8 without a ramp-up; with leukocytes over 20×10⁹/L, cytoreduction first. With azoles: strong CYP3A inhibitors, venetoclax 100 mg; moderate, 200 mg. Antibacterial, antiviral and antifungal prophylaxis during neutropenia. Grade 3+ febrile neutropenia in 84%, raised ALT. With an FLT3 mutation the study added midostaurin or gilteritinib (not available in Ukraine)."
+    },
+    "trial": {
+      "nct": "NCT02115295",
+      "phase": "II",
+      "randomized": false,
+      "n": 50
+    },
+    "settings": ["first-line", "high-risk"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Kadia T.M. та ін. Lancet Haematol. 2021;8(8):e552-e561",
+        "pmid": "34329576",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article"],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34329576/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "cladribine",
+      "drug_id": "cladribine",
+      "route": "iv_infusion",
+      "dose_value": 5,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "5 мг/м² в/в за 1–2 години (Kadia 2021). Об'єму розведення джерело не вказує.",
+        "en": "5 mg/m² IV over 1 to 2 hours (Kadia 2021). The source gives no diluent volume."
+      },
+      "duration_min": 120
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 1500,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "1500 мг/м² в/в за 2 години, через 3–6 годин після початку кладрибіну (Kadia 2021).",
+        "en": "1500 mg/m² IV over 2 hours, 3 to 6 hours after the start of cladribine (Kadia 2021)."
+      },
+      "duration_min": 120,
+      "gap_before_min": 60,
+      "dose_modifiers": [
+        {
+          "key": "age-60-or-over",
+          "label": {
+            "uk": "Вік 60 років і більше",
+            "en": "Age 60 or over"
+          },
+          "dose_value": 1000,
+          "source": {
+            "name": "Kadia T.M. та ін. Venetoclax plus intensive chemotherapy with cladribine, idarubicin, and cytarabine in patients with newly diagnosed acute myeloid leukaemia or high-risk myelodysplastic syndrome: a cohort from a single-centre, single-arm, phase 2 trial. Lancet Haematol. 2021;8(8):e552-e561",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8884174/",
+            "version": "рукопис автора в PMC, розділ Procedures",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    },
+    {
+      "key": "idarubicin",
+      "drug_id": "idarubicin",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "notes": {
+        "uk": "10 мг/м² в/в (Kadia 2021). Об'єму розведення джерело не вказує.",
+        "en": "10 mg/m² IV (Kadia 2021). The source gives no diluent volume."
+      }
+    },
+    {
+      "key": "venetoclax",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [2, 3, 4, 5, 6, 7, 8],
+      "notes": {
+        "uk": "400 мг у дні 2–8 без нарощування дози (Kadia 2021).",
+        "en": "400 mg on days 2 to 8 without a ramp-up (Kadia 2021)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "strong-cyp3a",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A (позаконазол, вориконазол)",
+            "en": "A strong CYP3A inhibitor (posaconazole, voriconazole)"
+          },
+          "dose_value": 100,
+          "source": {
+            "name": "Kadia T.M. та ін. Venetoclax plus intensive chemotherapy with cladribine, idarubicin, and cytarabine in patients with newly diagnosed acute myeloid leukaemia or high-risk myelodysplastic syndrome: a cohort from a single-centre, single-arm, phase 2 trial. Lancet Haematol. 2021;8(8):e552-e561",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8884174/",
+            "version": "рукопис автора в PMC, розділ Procedures",
+            "checkedOn": "2026-10-09"
+          }
+        },
+        {
+          "key": "moderate-cyp3a",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A",
+            "en": "A moderate CYP3A inhibitor"
+          },
+          "dose_value": 200,
+          "source": {
+            "name": "Kadia T.M. та ін. Venetoclax plus intensive chemotherapy with cladribine, idarubicin, and cytarabine in patients with newly diagnosed acute myeloid leukaemia or high-risk myelodysplastic syndrome: a cohort from a single-centre, single-arm, phase 2 trial. Lancet Haematol. 2021;8(8):e552-e561",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8884174/",
+            "version": "рукопис автора в PMC, розділ Procedures",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    }
+  ]
+}

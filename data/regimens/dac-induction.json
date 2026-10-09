@@ -1,0 +1,243 @@
+{
+  "$comment": "DAC-7 (PALG): даунорубіцин 60 мг/м² в/в 30–60 хв у дні 1–3; кладрибін 5 мг/м² в/в 2 год у дні 1–5 перед цитарабіном; цитарабін 200 мг/м² на добу в/в 22-годинною інфузією в дні 1–7. Дози — Holowiecki, Leukemia 2004 (резюме); тривалість інфузій і порядок — реєстр PALG NCT03257241. Об'єми розведення даунорубіцину й кладрибіну джерела не дають.",
+  "id": "dac-induction",
+  "short_name": "DAC",
+  "name": {
+    "uk": "DAC (даунорубіцин + цитарабін + кладрибін), індукція",
+    "en": "DAC (daunorubicin, cytarabine and cladribine), induction"
+  },
+  "description": {
+    "uk": "Індукція вперше діагностованого ГМЛ у придатних до інтенсивної терапії. Один курс; оцінка кісткового мозку на 14-й день.",
+    "en": "Induction of newly diagnosed AML in patients fit for intensive therapy. One course; marrow assessment on day 14."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Holowiecki J. та ін. Cladribine, but not fludarabine, added to daunorubicin and cytarabine during induction prolongs survival of patients with acute myeloid leukemia: a multicenter, randomized phase III study. J Clin Oncol. 2012;30(20):2441-2448",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22508825/",
+      "version": "резюме; фаза III, 652 пацієнти",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Holowiecki J. та ін. Addition of cladribine to daunorubicin and cytarabine increases complete remission rate after a single course of induction treatment in acute myeloid leukemia. Leukemia. 2004;18(5):989-997",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14999298/",
+      "version": "резюме; фаза III, 400 пацієнтів (дози DAC-7)",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Pluta A. та ін. Addition of cladribine to the standard induction treatment improves outcomes in a subset of elderly acute myeloid leukemia patients. Am J Hematol. 2017;92(4):359-366",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28103640/",
+      "version": "резюме; рандомізована фаза II, 171 пацієнт старше 60 років",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT03257241 (PALG: DA-90 проти DAC; порятунок CLAG-M проти FLAG-IDA), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT03257241",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Два рандомізовані дослідження фази III Польської групи з лейкозів дорослих (PALG): DAC проти DA (2004, 400 пацієнтів) і DA проти DAC проти DAF (2012, 652 пацієнти). Подальше лікування в групах однакове.",
+      "en": "Two randomised phase III trials of the Polish Adult Leukemia Group (PALG): DAC against DA (2004, 400 patients) and DA against DAC against DAF (2012, 652 patients). Post-remission treatment was the same across arms."
+    },
+    "population": {
+      "uk": "Нелікований ГМЛ у дорослих до 60 років (медіана віку 45–47). Окреме рандомізоване дослідження фази II — 171 пацієнт старше 60 років.",
+      "en": "Untreated AML in adults up to 60 (median age 45 to 47). A separate randomised phase II trial enrolled 171 patients over 60."
+    },
+    "results": {
+      "uk": "2012: повна ремісія 67,5% проти 56% з DA (p=0,01) за рахунок меншої резистентності (21% проти 34%); трирічна загальна виживаність 45% проти 33% (p=0,02). Найбільша перевага — від 50 років, при лейкоцитах понад 50×10⁹/л і несприятливому каріотипі. 2004: повна ремісія після одного курсу 64% проти 47%, госпіталізація на 7 днів коротша. Старше 60 років загальна виживаність не покращилася (8,6 проти 9,1 місяця), але у віці 60–65 повна ремісія 51% проти 29%.",
+      "en": "2012: complete remission 67.5% against 56% with DA (p=0.01) through less resistant disease (21% against 34%); three-year overall survival 45% against 33% (p=0.02). The greatest benefit at 50 or over, with leukocytes over 50×10⁹/L and an adverse karyotype. 2004: complete remission after one course 64% against 47%, a hospital stay 7 days shorter. Over 60 overall survival did not improve (8.6 against 9.1 months), but at 60 to 65 complete remission was 51% against 29%."
+    },
+    "conduct": {
+      "uk": "Токсичність не відрізнялася від DA ні в молодших, ні в старших. Кладрибін вводять за 2 години перед цитарабіном. У пацієнтів, які отримали DAC в індукції, порятунок CLAG дав лише 10% повних ремісій (проти 58% після DA).",
+      "en": "Toxicity did not differ from DA in younger or older patients. Cladribine is infused over 2 hours before cytarabine. In patients induced with DAC, CLAG salvage gave only 10% complete remissions (against 58% after DA)."
+    },
+    "trial": {
+      "acronym": "PALG DAC",
+      "phase": "III",
+      "randomized": true,
+      "n": 652,
+      "comparator": "DA",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Holowiecki J. та ін. J Clin Oncol. 2012;30(20):2441-2448",
+        "pmid": "22508825",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22508825/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Holowiecki J. та ін. Leukemia. 2004;18(5):989-997",
+        "pmid": "14999298",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial",
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Leukemia",
+          "issn": "0887-6924",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/14999298/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Leukemia» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8704895",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Pluta A. та ін. Am J Hematol. 2017;92(4):359-366",
+        "pmid": "28103640",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "American Journal of Hematology",
+          "issn": "0361-8609",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/28103640/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «American Journal of Hematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7610369",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "daunorubicin",
+      "drug_id": "daunorubicin",
+      "route": "iv_infusion",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "notes": {
+        "uk": "60 мг/м² в/в за 30–60 хвилин (NCT03257241). Об'єму розведення джерело не вказує.",
+        "en": "60 mg/m² IV over 30 to 60 minutes (NCT03257241). The source gives no diluent volume."
+      },
+      "duration_min": 60
+    },
+    {
+      "key": "cladribine",
+      "drug_id": "cladribine",
+      "route": "iv_infusion",
+      "dose_value": 5,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "5 мг/м² в/в за 2 години, перед цитарабіном (NCT03257241). Об'єму розведення джерело не вказує.",
+        "en": "5 mg/m² IV over 2 hours, before cytarabine (NCT03257241). The source gives no diluent volume."
+      },
+      "duration_min": 120
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 200,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "200 мг/м² на добу 22-годинною в/в інфузією (NCT03257241).",
+        "en": "200 mg/m² a day as a 22-hour IV infusion (NCT03257241)."
+      },
+      "duration_min": 1320
+    }
+  ]
+}

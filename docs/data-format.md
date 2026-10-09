@@ -107,7 +107,7 @@ GRADE свідомо не використовується: він оцінює 
 | Поле | | |
 |---|---|---|
 | `trial` | `{ acronym?, nct?, phase, randomized, n?, comparator?, primary_met? }` | факти дослідження: фаза (`I`, `I-II`, `II`, `III`), чи було рандомізоване, скільки пацієнтів (для рандомізованого — рандомізовано), з чим порівнювали, чи досягнуто головної мети. `nct` — номер у ClinicalTrials.gov |
-| `settings[]` | закритий список | для кого схема: загальні `first-line`, `relapse`, `refractory`, `pre-transplant`, `maintenance`, `frail`, `renal`, `neuropathy`, `high-risk`; для мієломи `ndmm-te`, `ndmm-ti`, `rrmm-early` (1–3 лінії), `rrmm-late`, `len-refractory`, `pi-refractory`, `t11-14`, `pcl`. Без жодного значення валідатор попереджає |
+| `settings[]` | закритий список | для кого схема: загальні `first-line`, `relapse`, `refractory`, `pre-transplant`, `elderly` (за віковою межею самого дослідження), `maintenance`, `frail`, `renal`, `neuropathy`, `high-risk`; для мієломи `ndmm-te`, `ndmm-ti`, `rrmm-early` (1–3 лінії), `rrmm-late`, `len-refractory`, `pi-refractory`, `t11-14`, `pcl`. Без жодного значення валідатор попереджає |
 | `verdict` | `option` (типово), `caution`, `avoid` | що дослідження означає для практики. `caution` — діє, але виявлено шкоду, що вимагає відбору чи профілактики (у дереві — плашка «обережно»). `avoid` — рандомізоване дослідження не показало користі або показало шкоду; така схема **зобов'язана** бути карткою `reference` без `items`, щоб калькулятор її ніколи не запропонував |
 
 Вузол `kind: "trial"` (і всі його підвузли) не може містити схему з препаратом `availability: "unavailable"` — це помилка валідації: розділ досліджень — короткий список того, що реально можна дати в Україні.

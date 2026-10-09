@@ -1,0 +1,117 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-aml-dac-aml18",
+  "short_name": "DAC в AML18 (старші, МЗХ+)",
+  "name": {
+    "uk": "DAC як інтенсифікація другого курсу в старших із залишковою хворобою (AML18)",
+    "en": "DAC as second-course intensification in older patients with residual disease (AML18)"
+  },
+  "sources": [
+    {
+      "name": "Russell N.H. та ін. Treatment Intensification With Either Fludarabine, AraC, G-CSF and Idarubicin, or Cladribine Plus Daunorubicin and AraC on the Basis of Residual Disease Status in Older Patients With AML: Results From the NCRI AML18 Trial. J Clin Oncol. 2025;43(6):694-704",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11825491/",
+      "version": "повний текст у PMC (розклади — у додатку)",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "NCRI AML18",
+      "phase": "III",
+      "randomized": true,
+      "n": 523,
+      "comparator": "DA",
+      "primary_met": false
+    },
+    "settings": ["first-line", "elderly"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Russell N.H. та ін. J Clin Oncol. 2025;43(6):694-704",
+        "pmid": "39556780",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39556780/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Придатні старші пацієнти (медіана 67 років) без МЗХ-негативної ремісії після першого курсу DA: другий курс DA з кладрибіном замість DA; кладрибін — підшкірно, не більше 10 мг на дозу (за текстом статті).",
+      "en": "Fit older patients (median age 67) without an MRD-negative remission after a first DA course: a second course of DA with cladribine (subcutaneous, no more than 10 mg a dose) instead of DA."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Даунорубіцин",
+          "en": "Daunorubicin"
+        },
+        "drug_id": "daunorubicin"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Кладрибін",
+          "en": "Cladribine"
+        },
+        "drug_id": "cladribine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "У всіх рандомізованих загальна виживаність не покращилася значимо (HR 0,74; p=0,054); трирічна — 46% з DAC проти 34% з DA. Без пацієнтів з невідомим статусом МЗХ — HR 0,66 (p=0,018), менше рецидивів.",
+        "en": "Across all randomised patients overall survival did not improve significantly (HR 0.74; p=0.054); three-year survival 46% with DAC against 34% with DA. Excluding patients of unknown MRD status, HR 0.66 (p=0.018) and fewer relapses."
+      },
+      {
+        "uk": "DAC переносився краще за FLAG-Ida: смертність до 60-го дня 4% проти 9%; кардіальні побічні дії 3+ ступеня частіші з DAC.",
+        "en": "DAC was better tolerated than FLAG-Ida: day-60 mortality 4% against 9%; grade 3+ cardiac adverse events were more frequent with DAC."
+      }
+    ],
+    "gap": {
+      "uk": "Розклад DA3+8 з кладрибіном наведено лише в додатку до статті, тут не звіреному.",
+      "en": "The DA3+8 with cladribine schedule is only in the article supplement, not checked here."
+    }
+  }
+}

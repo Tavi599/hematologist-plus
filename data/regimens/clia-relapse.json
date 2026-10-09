@@ -1,0 +1,135 @@
+{
+  "$comment": "CLIA при рецидиві за Goulart, Cancer 2025 (резюме): кладрибін 5 мг/м² в/в у дні 1–5, цитарабін 1000 мг/м² в/в у дні 1–5, ідарубіцин 10 мг/м² в/в у дні 1–3. Тривалість інфузій і інтервал — за тим самим дослідженням NCT02115295 (Kadia 2021). Консолідацію резюме не наводить.",
+  "id": "clia-relapse",
+  "short_name": "CLIA (рецидив)",
+  "name": {
+    "uk": "CLIA (кладрибін + ідарубіцин + цитарабін), рецидив або рефрактерність",
+    "en": "CLIA (cladribine, idarubicin, cytarabine), relapse or refractory disease"
+  },
+  "description": {
+    "uk": "Рецидивний або рефрактерний ГМЛ, переважно як міст до алогенної трансплантації. Один курс індукції.",
+    "en": "Relapsed or refractory AML, mostly as a bridge to an allogeneic transplant. One induction course."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Goulart H. та ін. Cladribine, idarubicin, and cytarabine (CLIA) for patients with relapsed and/or refractory acute myeloid leukemia: A single-center, single-arm, phase 2 trial. Cancer. 2025;131(8):e35840",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40193193/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Kadia T.M. та ін. Venetoclax plus intensive chemotherapy with cladribine, idarubicin, and cytarabine in patients with newly diagnosed acute myeloid leukaemia or high-risk myelodysplastic syndrome: a cohort from a single-centre, single-arm, phase 2 trial. Lancet Haematol. 2021;8(8):e552-e561",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8884174/",
+      "version": "рукопис автора в PMC, розділ Procedures",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Одноцентрове дослідження фази II (MD Anderson) без групи порівняння; при мутації FLT3 додавали сорафеніб.",
+      "en": "A single-centre phase II study (MD Anderson) without a comparison group; sorafenib was added for FLT3 mutations."
+    },
+    "population": {
+      "uk": "Рецидивний або рефрактерний ГМЛ; 35 пацієнтів у першому порятунку.",
+      "en": "Relapsed or refractory AML; 35 patients in first salvage."
+    },
+    "results": {
+      "uk": "Композитна повна ремісія 33%, у першому порятунку 49%. Медіана загальної виживаності 7,9 місяця (у першому порятунку 12). Після трансплантації — 78 місяців проти 8,8 без неї.",
+      "en": "Composite complete remission 33%, 49% in first salvage. Median overall survival 7.9 months (12 in first salvage). After a transplant 78 months against 8.8 without."
+    },
+    "conduct": {
+      "uk": "Смертність за 4 і 8 тижнів — 6% і 17%. Побічні дії 3+ ступеня — переважно інфекції й підвищення печінкових ферментів.",
+      "en": "Four- and eight-week mortality 6% and 17%. Grade 3+ adverse events were mostly infections and raised liver enzymes."
+    },
+    "trial": {
+      "nct": "NCT02115295",
+      "phase": "II",
+      "randomized": false
+    },
+    "settings": ["relapse", "refractory", "pre-transplant"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Goulart H. та ін. Cancer. 2025;131(8):e35840",
+        "pmid": "40193193",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Journal Article", "Clinical Trial, Phase II"],
+        "journal": {
+          "name": "Cancer",
+          "issn": "0008-543X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/40193193/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Cancer» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0374236",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "cladribine",
+      "drug_id": "cladribine",
+      "route": "iv_infusion",
+      "dose_value": 5,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "5 мг/м² в/в за 1–2 години. Об'єму розведення джерело не вказує.",
+        "en": "5 mg/m² IV over 1 to 2 hours. The source gives no diluent volume."
+      },
+      "duration_min": 120
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "1000 мг/м² в/в за 2 години, через 3–6 годин після початку кладрибіну.",
+        "en": "1000 mg/m² IV over 2 hours, 3 to 6 hours after the start of cladribine."
+      },
+      "duration_min": 120,
+      "gap_before_min": 60
+    },
+    {
+      "key": "idarubicin",
+      "drug_id": "idarubicin",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "notes": {
+        "uk": "10 мг/м² в/в. Об'єму розведення джерело не вказує.",
+        "en": "10 mg/m² IV. The source gives no diluent volume."
+      }
+    }
+  ]
+}

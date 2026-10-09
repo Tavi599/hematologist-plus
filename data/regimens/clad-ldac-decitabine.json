@@ -1,0 +1,104 @@
+{
+  "$comment": "Кладрибін + малі дози цитарабіну, що чергуються з децитабіном, за Kadia, Lancet Haematol 2018 (рукопис у PMC) і реєстром NCT01515527: індукція — кладрибін 5 мг/м² в/в 1–2 год у дні 1–5 + цитарабін 20 мг п/ш двічі на добу в дні 1–10; консолідація A — кладрибін у дні 1–3 + той самий цитарабін; консолідація B — децитабін 20 мг/м² в/в у дні 1–5. Цикли 28 днів: двоє A чергуються з двома B, до 18 циклів (за реєстром A — цикли 2, 5, 6, 9, 10 …, B — 3, 4, 7, 8 …).",
+  "id": "clad-ldac-decitabine",
+  "short_name": "Clad/LDAC, консолідація B (децитабін)",
+  "name": {
+    "uk": "Консолідація B: децитабін, що чергується з кладрибіном і малими дозами цитарабіну",
+    "en": "Consolidation B: decitabine alternating with cladribine and low-dose cytarabine"
+  },
+  "description": {
+    "uk": "Два цикли децитабіну після кожних двох циклів A.",
+    "en": "Two decitabine cycles after every two A cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "Kadia T.M. та ін. Cladribine and low-dose cytarabine alternating with decitabine as front-line therapy for elderly patients with acute myeloid leukaemia: a phase 2 single-arm trial. Lancet Haematol. 2018;5(9):e411-e421",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6775639/",
+      "version": "рукопис автора в PMC, розділ Procedures",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Одноцентрове дослідження фази II (MD Anderson) без групи порівняння. Два 28-денні цикли кладрибіну з малими дозами цитарабіну чергуються з двома циклами децитабіну, до 18 циклів. Цикли кожні 4–7 тижнів залежно від відновлення крові (нейтрофіли ≥1×10⁹/л, тромбоцити ≥50×10⁹/л).",
+      "en": "A single-centre phase II study (MD Anderson) without a comparison group. Two 28-day cycles of cladribine with low-dose cytarabine alternate with two cycles of decitabine, up to 18 cycles. Cycles every 4 to 7 weeks depending on count recovery (neutrophils ≥1×10⁹/L, platelets ≥50×10⁹/L)."
+    },
+    "population": {
+      "uk": "118 пацієнтів від 60 років (медіана 69, 44% від 70) з нелікованим ГМЛ або МДС високого ризику, ECOG ≤2. 41% — несприятливий каріотип, 17% — мутація TP53.",
+      "en": "118 patients aged 60 or over (median 69, 44% 70 or over) with untreated AML or high-risk MDS, ECOG 2 or less. 41% adverse karyotype, 17% TP53 mutation."
+    },
+    "results": {
+      "uk": "Повна ремісія 58%, з неповним відновленням ще 9% (разом 68%). Медіана безрецидивної виживаності 10,8 місяця, загальної — 13,8 місяця.",
+      "en": "Complete remission 58%, with incomplete recovery a further 9% (68% in all). Median disease-free survival 10.8 months, overall 13.8 months."
+    },
+    "conduct": {
+      "uk": "Смертність за 4 тижні 1%, за 8 тижнів 7%. Негематологічні побічні дії 3+ ступеня: інфекції 75%, підвищення білірубіну 22%, висип 11%, нудота 11%. Цитарабін вводять через 3–6 годин після початку інфузії кладрибіну. Якщо після циклу 1 немає ремісії — можна повторити індукцію.",
+      "en": "Four-week mortality 1%, eight-week 7%. Grade 3+ non-haematological adverse events: infection 75%, raised bilirubin 22%, rash 11%, nausea 11%. Cytarabine is given 3 to 6 hours after the start of the cladribine infusion. Without remission after cycle 1, induction may be repeated."
+    },
+    "trial": {
+      "nct": "NCT01515527",
+      "phase": "II",
+      "randomized": false,
+      "n": 118
+    },
+    "settings": ["first-line", "elderly"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Kadia T.M. та ін. Lancet Haematol. 2018;5(9):e411-e421",
+        "pmid": "30115541",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article"],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30115541/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "decitabine",
+      "drug_id": "decitabine",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "20 мг/м² в/в за 1–2 години в дні 1–5 (NCT01515527).",
+        "en": "20 mg/m² IV over 1 to 2 hours on days 1 to 5 (NCT01515527)."
+      },
+      "duration_min": 60
+    }
+  ]
+}
