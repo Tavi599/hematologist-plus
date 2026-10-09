@@ -1,0 +1,107 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-all-dasatinib-steroids",
+  "short_name": "Дазатиніб + кортикостероїди (Ph+ ГЛЛ)",
+  "name": {
+    "uk": "Індукція дазатинібом зі стероїдами без хіміотерапії при Ph+ ГЛЛ (GIMEMA LAL1205)",
+    "en": "Chemotherapy-free dasatinib and steroid induction in Ph+ ALL (GIMEMA LAL1205)"
+  },
+  "sources": [
+    {
+      "name": "Foà R. та ін. Dasatinib as first-line treatment for adult patients with Philadelphia chromosome-positive acute lymphoblastic leukemia. Blood. 2011;118:6521-6528",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21931113/",
+      "version": "резюме; фаза II, 53 пацієнти",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "GIMEMA LAL1205",
+      "phase": "II",
+      "randomized": false,
+      "n": 53
+    },
+    "settings": ["first-line", "elderly", "frail"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Foà R. та ін. Blood. 2011;118:6521-6528",
+        "pmid": "21931113",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/21931113/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Вперше діагностований Ph+ ГЛЛ у дорослих без верхньої межі віку: дазатиніб 84 дні, кортикостероїди перші 32 дні та інтратекальна хіміотерапія; постремісійне лікування — на розсуд центру.",
+      "en": "Newly diagnosed Ph+ ALL in adults with no upper age limit: dasatinib for 84 days, corticosteroids for the first 32 days and intrathecal chemotherapy; post-remission treatment at the centre's discretion."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Дазатиніб",
+          "en": "Dasatinib"
+        },
+        "drug_id": "dasatinib"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон",
+          "en": "Prednisolone"
+        },
+        "drug_id": "prednisolone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Повна гематологічна ремісія в усіх (92,5% до дня 22), без смертей в індукції. Загальна виживаність за 20 місяців 69,2%, безрецидивна — 51,1%; з 17 рецидивів у 12 — мутація T315I.",
+        "en": "Complete haematological remission in all (92.5% by day 22), no induction deaths. Overall survival at 20 months 69.2%, disease-free 51.1%; T315I in 12 of 17 relapses."
+      },
+      {
+        "uk": "Без хіміотерапії — варіант для літніх і кволих; після індукції потрібна консолідація (хіміотерапія або алотрансплантація), інакше рецидиви часті.",
+        "en": "Chemotherapy-free, an option for the elderly and frail; consolidation (chemotherapy or an allogeneic transplant) is needed after induction, or relapses are frequent."
+      }
+    ],
+    "gap": {
+      "uk": "Доз дазатинібу й стероїдів резюме не наводить; дазатиніб окремо є в довіднику (eviQ 4416).",
+      "en": "The abstract gives no dasatinib or steroid doses; dasatinib alone is in the catalogue (eviQ 4416)."
+    }
+  }
+}

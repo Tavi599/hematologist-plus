@@ -1,0 +1,98 @@
+{
+  "$comment": "Застереження: дослідження не показало переваги; калькулятор схему не пропонує.",
+  "id": "avoid-et-ruxolitinib",
+  "short_name": "Руксолітиніб при ЕТ (MAJIC-ET)",
+  "name": {
+    "uk": "Руксолітиніб при есенціальній тромбоцитемії з резистентністю до гідроксикарбаміду",
+    "en": "Ruxolitinib in essential thrombocythaemia resistant to hydroxycarbamide"
+  },
+  "sources": [
+    {
+      "name": "Harrison C.N. та ін. Ruxolitinib vs best available therapy for ET intolerant or resistant to hydroxycarbamide. Blood. 2017;130:1889-1897",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29074595/",
+      "version": "резюме; рандомізована фаза II, 110 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "MAJIC-ET",
+      "phase": "II",
+      "randomized": true,
+      "n": 110,
+      "comparator": "найкраща доступна терапія",
+      "primary_met": false
+    },
+    "settings": ["relapse"],
+    "verdict": "avoid",
+    "appraisal": [
+      {
+        "publication": "Harrison C.N. та ін. Blood. 2017;130:1889-1897",
+        "pmid": "29074595",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Comparative Study",
+          "Journal Article",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29074595/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Руксолітиніб при ЕТ з резистентністю або непереносимістю гідроксикарбаміду не кращий за другу лінію (анагрелід тощо).",
+      "en": "Ruxolitinib in ET resistant or intolerant to hydroxycarbamide is no better than second-line treatment (anagrelide and others)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Руксолітиніб",
+          "en": "Ruxolitinib"
+        },
+        "drug_id": "ruxolitinib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Повна відповідь за рік 46,6% проти 44,2%; тромбози, кровотечі й трансформація за 2 роки — без різниці. Покращилися лише деякі симптоми. Анемія 3 ступеня 19% проти 0%.",
+        "en": "Complete response at a year 46.6% against 44.2%; thrombosis, bleeding and transformation at 2 years did not differ. Only some symptoms improved. Grade 3 anaemia 19% against 0%."
+      }
+    ],
+    "gap": {
+      "uk": "Не застосовувати при ЕТ поза дослідженням; при ЕТ другою лінією в довіднику є анагрелід.",
+      "en": "Not for ET outside a trial; the catalogue has anagrelide as the second line in ET."
+    }
+  }
+}

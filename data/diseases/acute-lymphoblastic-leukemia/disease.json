@@ -236,6 +236,19 @@
               "regimen_id": "ref-all-ewall-ino"
             }
           ]
+        },
+        {
+          "key": "trials-ph-positive",
+          "kind": "trial",
+          "title": {
+            "uk": "Ph-позитивний ГЛЛ",
+            "en": "Ph-positive ALL"
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-all-dasatinib-steroids"
+            }
+          ]
         }
       ]
     }
