@@ -255,6 +255,41 @@
           },
           "regimens": [
             {
+              "regimen_id": "ibrutinib-mono",
+              "notes": {
+                "uk": "E1912: цикл 1 — ібрутиніб 420 мг окремо",
+                "en": "E1912: cycle 1 is ibrutinib 420 mg alone"
+              }
+            },
+            {
+              "regimen_id": "ir-cll-cycle-2",
+              "notes": {
+                "uk": "E1912, фаза III; до 70 років",
+                "en": "E1912, phase III; up to 70"
+              }
+            },
+            {
+              "regimen_id": "ir-cll",
+              "notes": {
+                "uk": "Цикли 3–7",
+                "en": "Cycles 3 to 7"
+              }
+            },
+            {
+              "regimen_id": "fcr-cll-cycle-1",
+              "notes": {
+                "uk": "CLL8, фаза III; лише мутований IGHV без TP53",
+                "en": "CLL8, phase III; mutated IGHV without TP53 only"
+              }
+            },
+            {
+              "regimen_id": "fcr-cll",
+              "notes": {
+                "uk": "Курси 2–6",
+                "en": "Courses 2 to 6"
+              }
+            },
+            {
               "regimen_id": "ref-cll-giv"
             }
           ]

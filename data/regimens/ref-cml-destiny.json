@@ -1,0 +1,111 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-cml-destiny",
+  "short_name": "DESTINY: половина дози перед відміною",
+  "name": {
+    "uk": "Зниження дози ІТК удвічі перед відміною (DESTINY)",
+    "en": "Halving the TKI dose before stopping (DESTINY)"
+  },
+  "sources": [
+    {
+      "name": "Clark R.E. та ін. De-escalation of tyrosine kinase inhibitor therapy before complete treatment discontinuation in patients with chronic myeloid leukaemia (DESTINY): a non-randomised, phase 2 trial. Lancet Haematol. 2019;6:e375-e383",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31201085/",
+      "version": "резюме; фаза II, 174 пацієнти",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "DESTINY",
+      "nct": "NCT01804985",
+      "phase": "II",
+      "randomized": false,
+      "n": 174
+    },
+    "settings": ["maintenance"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Clark R.E. та ін. Lancet Haematol. 2019;6:e375-e383",
+        "pmid": "31201085",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article"],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31201085/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Хронічна фаза ХМЛ, ІТК від 3 років, усі ПЛР за останні 12 місяців нижче 0,1%: половина стандартної дози 12 місяців (наприклад, іматиніб 200 мг, дазатиніб 50 мг), потім повна відміна з частим моніторингом ПЛР.",
+      "en": "Chronic-phase CML on a TKI for 3 years or more, all PCR results below 0.1% for the past 12 months: half the standard dose for 12 months (for example imatinib 200 mg, dasatinib 50 mg), then complete withdrawal with frequent PCR monitoring."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Іматиніб",
+          "en": "Imatinib"
+        },
+        "drug_id": "imatinib"
+      },
+      {
+        "name": {
+          "uk": "Дазатиніб",
+          "en": "Dasatinib"
+        },
+        "drug_id": "dasatinib"
+      },
+      {
+        "name": {
+          "uk": "Нілотиніб",
+          "en": "Nilotinib"
+        },
+        "drug_id": "nilotinib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "При стабільній MR4 безрецидивна виживаність за 3 роки 72%, при лише MMR — 36%. Прогресування не було; усі рецидиви повернули MMR протягом 5 місяців після відновлення повної дози.",
+        "en": "With stable MR4, three-year recurrence-free survival 72%; with MMR only, 36%. No progression; all recurrences regained MMR within 5 months of resuming the full dose."
+      },
+      {
+        "uk": "Рецидив — два поспіль результати ПЛР понад 0,1%: повна доза відновлюється.",
+        "en": "Recurrence is two consecutive PCR results over 0.1%: the full dose is resumed."
+      }
+    ],
+    "gap": {
+      "uk": "Половину дози для кожного ІТК стаття формулює загально; конкретні дози — арифметика від стандартних.",
+      "en": "The article states half the dose generally for each TKI; the specific doses are arithmetic from the standard ones."
+    }
+  }
+}

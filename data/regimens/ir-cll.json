@@ -1,0 +1,181 @@
+{
+  "$comment": "Ібрутиніб + ритуксимаб за E1912 (PMC6908306) і NCT02048813: ібрутиніб 420 мг щодня до прогресування; ритуксимаб 50 мг/м² у день 1 і 325 мг/м² у день 2 циклу 2, 500 мг/м² у день 1 циклів 3–7; цикл 28 днів. Після циклу 7 — ібрутиніб окремо (схема довідника). Профілактика пневмоцистної пневмонії й оперізувального герпесу 1 рік; алопуринол 300 мг у дні 1–14 циклу 1.",
+  "id": "ir-cll",
+  "short_name": "Ібрутиніб + ритуксимаб (цикли 3–7)",
+  "name": {
+    "uk": "Ібрутиніб + ритуксимаб при ХЛЛ (E1912): цикли 3–7",
+    "en": "Ibrutinib plus rituximab in CLL (E1912): cycles 3 to 7"
+  },
+  "description": {
+    "uk": "Цикли 3–7 по 28 днів; далі ібрутиніб окремо до прогресування.",
+    "en": "Cycles 3 to 7, 28 days each; then ibrutinib alone until progression."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 5,
+  "sources": [
+    {
+      "name": "Shanafelt T.D. та ін. Ibrutinib-Rituximab or Chemoimmunotherapy for Chronic Lymphocytic Leukemia. N Engl J Med. 2019;381:432-443",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6908306/",
+      "version": "рукопис у PMC; фаза III, 529 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване дослідження фази III (ECOG-ACRIN): ібрутиніб + ритуксимаб проти FCR (2:1).",
+      "en": "A randomised phase III trial (ECOG-ACRIN): ibrutinib plus rituximab against FCR (2:1)."
+    },
+    "population": {
+      "uk": "529 нелікованих пацієнтів до 70 років з ХЛЛ без del(17p).",
+      "en": "529 untreated patients up to 70 with CLL without del(17p)."
+    },
+    "results": {
+      "uk": "Трирічна виживаність без прогресування 89,4% проти 72,9% (HR 0,35), загальна 98,8% проти 91,5% (HR 0,17). При немутованому IGHV перевага велика (90,7% проти 62,5%), при мутованому — різниці немає (87,7% проти 88,0%).",
+      "en": "Three-year progression-free survival 89.4% against 72.9% (HR 0.35), overall 98.8% against 91.5% (HR 0.17). Large benefit with unmutated IGHV (90.7% against 62.5%), none with mutated IGHV (87.7% against 88.0%)."
+    },
+    "conduct": {
+      "uk": "Небажані явища 3 ступеня і вище — однаково (80%), але інфекцій 3 ступеня і вище менше (10,5% проти 20,3%). Ібрутиніб безперервно — фібриляція передсердь, кровотечі, гіпертензія.",
+      "en": "Grade 3 or worse adverse events similar (80%), but fewer grade 3 or worse infections (10.5% against 20.3%). Ibrutinib is continuous: atrial fibrillation, bleeding, hypertension."
+    },
+    "trial": {
+      "acronym": "E1912",
+      "nct": "NCT02048813",
+      "phase": "III",
+      "randomized": true,
+      "n": 529,
+      "comparator": "FCR",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Shanafelt T.D. та ін. N Engl J Med. 2019;381:432-443",
+        "pmid": "31365801",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, N.I.H., Extramural"
+        ],
+        "journal": {
+          "name": "The New England Journal of Medicine",
+          "issn": "0028-4793",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31365801/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The New England Journal of Medicine» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0255562",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "ibrutinib",
+      "drug_id": "ibrutinib",
+      "route": "oral",
+      "dose_value": 420,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "420 мг раз на добу щодня (E1912).",
+        "en": "420 mg once a day every day (E1912)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 560,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Мантійноклітинна лімфома",
+            "en": "Mantle cell lymphoma"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ],
+      "dose_modifiers": [
+        {
+          "key": "cyp3a4-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A4 (кетоконазол, ітраконазол, вориконазол, позаконазол, кларитроміцин, телітроміцин)",
+            "en": "Strong CYP3A4 inhibitor (ketoconazole, itraconazole, voriconazole, posaconazole, clarithromycin, telithromycin)"
+          },
+          "dose_value": 140,
+          "notes": {
+            "uk": "Одночасного призначення краще уникати. Якщо інгібітор потрібен ненадовго (протигрибковий препарат чи антибіотик на 7 днів або менше), ібрутиніб на цей час або переривають, або зменшують до 140 мг на добу. Пацієнта пильно спостерігають щодо ознак токсичності.",
+            "en": "Concomitant use is better avoided. Where the inhibitor is short-term - an antifungal or antibiotic for 7 days or less - ibrutinib is either interrupted or reduced to 140 mg daily. Watch closely for signs of toxicity."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "key": "cyp3a4-moderate",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A4",
+            "en": "Moderate CYP3A4 inhibitor"
+          },
+          "dose_value": 280,
+          "notes": {
+            "uk": "Якщо без інгібітора не обійтися. Сюди ж належать грейпфрут і севільські апельсини — їх виключають.",
+            "en": "Where the inhibitor cannot be avoided. Grapefruit and Seville oranges count as moderate inhibitors and are excluded."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 500,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "500 мг/м² у день 1 (E1912).",
+        "en": "500 mg/m² on day 1 (E1912)."
+      }
+    }
+  ]
+}

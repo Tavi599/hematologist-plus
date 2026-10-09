@@ -1,0 +1,125 @@
+{
+  "$comment": "Децитабін у низьких дозах при МДС нижчого ризику за Jabbour 2017: 20 мг/м² в/в раз на добу в дні 1–3 кожні 28 днів. Введення — як у схемі «Децитабін» довідника.",
+  "id": "decitabine-3-day-mds",
+  "short_name": "Децитабін 3 дні (МДС нижчого ризику)",
+  "name": {
+    "uk": "Децитабін 3 дні при МДС нижчого ризику",
+    "en": "Decitabine for 3 days in lower-risk MDS"
+  },
+  "description": {
+    "uk": "МДС нижчого ризику (IPSS низький або проміжний-1) і МДС/МПН, зокрема ХММЛ. Дні 1–3 кожні 28 днів.",
+    "en": "Lower-risk MDS (IPSS low or intermediate-1) and MDS/MPN, including CMML. Days 1 to 3 every 28 days."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Jabbour E. та ін. Randomized phase 2 study of low-dose decitabine vs low-dose azacitidine in lower-risk MDS and MDS/MPN. Blood. 2017;130:1514-1522",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5620419/",
+      "version": "рукопис у PMC; рандомізована фаза II, 113 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Sasaki K. та ін. Low-Dose Decitabine versus Low-Dose Azacitidine in Lower-Risk MDS. NEJM Evid. 2022;1:EVIDoa2200034",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38319837/",
+      "version": "резюме; спостереження 68 місяців",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT01720225 (низькі дози ГМА), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT01720225",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване дослідження фази II з адаптивним розподілом: децитабін 3 дні проти азацитидину 3 дні.",
+      "en": "A randomised phase II trial with adaptive allocation: decitabine for 3 days against azacitidine for 3 days."
+    },
+    "population": {
+      "uk": "113 пацієнтів з МДС нижчого ризику або МДС/МПН, медіана віку 70 років.",
+      "en": "113 patients with lower-risk MDS or MDS/MPN, median age 70."
+    },
+    "results": {
+      "uk": "Загальна відповідь 70% проти 49% з азацитидином (p=0,03); незалежність від трансфузій 41% проти 15% серед залежних; цитогенетична відповідь 61% проти 25%. Медіана загальної виживаності всіх — 33 місяці.",
+      "en": "Overall response 70% against 49% with azacitidine (p=0.03); transfusion independence 41% against 15% among dependent patients; cytogenetic response 61% against 25%. Median overall survival of all patients, 33 months."
+    },
+    "conduct": {
+      "uk": "Добре переноситься, ранньої смертності не було; медіана — 9 циклів.",
+      "en": "Well tolerated, no early deaths; median 9 cycles."
+    },
+    "trial": {
+      "nct": "NCT01720225",
+      "phase": "II",
+      "randomized": true,
+      "n": 113,
+      "comparator": "азацитидин 3 дні",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Jabbour E. та ін. Blood. 2017;130:1514-1522",
+        "pmid": "28774880",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Comparative Study",
+          "Journal Article",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/28774880/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "decitabine",
+      "drug_id": "decitabine",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "20 мг/м² в/в у дні 1–3 (Jabbour 2017).",
+        "en": "20 mg/m² IV on days 1 to 3 (Jabbour 2017)."
+      }
+    }
+  ]
+}

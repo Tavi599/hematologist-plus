@@ -1,0 +1,198 @@
+{
+  "$comment": "FCR за CLL8 (Hallek 2010): флударабін 25 мг/м² і циклофосфамід 250 мг/м² в/в у дні 1–3; ритуксимаб 375 мг/м² у день 0 першого курсу і 500 мг/м² у день 1 курсів 2–6; курс 28 днів, 6 курсів. У E1912 перший ритуксимаб ділили: 50 мг/м² у день 1 і 325 мг/м² у день 2. Введення флударабіну й циклофосфаміду — як у FCR довідника для Вальденстрема.",
+  "id": "fcr-cll-cycle-1",
+  "short_name": "FCR (курс 1)",
+  "name": {
+    "uk": "FCR при ХЛЛ: курс 1",
+    "en": "FCR in CLL: course 1"
+  },
+  "description": {
+    "uk": "Перша лінія ХЛЛ у придатних з мутованим IGHV без del(17p)/TP53. Курс 1 з 28 днів: ритуксимаб 375 мг/м² у день 0.",
+    "en": "First line in fit CLL patients with mutated IGHV and no del(17p)/TP53. Course 1 of 28 days: rituximab 375 mg/m² on day 0."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Hallek M. та ін. Addition of rituximab to fludarabine and cyclophosphamide in patients with chronic lymphocytic leukaemia: a randomised, open-label, phase 3 trial. Lancet. 2010;376:1164-1174",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20888994/",
+      "version": "резюме; фаза III, 817 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Fischer K. та ін. Long-term remissions after FCR chemoimmunotherapy in previously untreated patients with CLL: updated results of the CLL8 trial. Blood. 2016;127:208-215",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26486789/",
+      "version": "резюме; спостереження 5,9 року",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT00281918 (CLL8), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT00281918",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Відкрите рандомізоване дослідження фази III: FCR проти FC.",
+      "en": "An open-label randomised phase III trial: FCR against FC."
+    },
+    "population": {
+      "uk": "817 нелікованих фізично придатних пацієнтів 30–81 року з ХЛЛ.",
+      "en": "817 untreated physically fit patients aged 30 to 81 with CLL."
+    },
+    "results": {
+      "uk": "Медіана виживаності без прогресування 56,8 проти 32,9 місяця, загальна виживаність краща (HR 0,68). При мутованому IGHV — тривалі ремісії; при del(17p) користі немає.",
+      "en": "Median progression-free survival 56.8 against 32.9 months, better overall survival (HR 0.68). Long remissions with mutated IGHV; no benefit with del(17p)."
+    },
+    "conduct": {
+      "uk": "Нейтропенія 3–4 ступеня 34%, тривала нейтропенія в перший рік 16,6%; вторинні пухлини, зокрема Ріхтер, 13%. У E1912 ібрутиніб + ритуксимаб переміг FCR у молодших до 70 років, особливо при немутованому IGHV. Тепер FCR — лише для придатних з мутованим IGHV без del(17p)/TP53, коли таргетні схеми недоступні.",
+      "en": "Grade 3 to 4 neutropenia 34%, prolonged first-year neutropenia 16.6%; secondary cancers, including Richter, 13%. In E1912 ibrutinib plus rituximab beat FCR in patients up to 70, especially with unmutated IGHV. FCR is now only for fit patients with mutated IGHV and no del(17p)/TP53 when targeted regimens are unavailable."
+    },
+    "trial": {
+      "acronym": "CLL8",
+      "nct": "NCT00281918",
+      "phase": "III",
+      "randomized": true,
+      "n": 817,
+      "comparator": "FC",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Hallek M. та ін. Lancet. 2010;376:1164-1174",
+        "pmid": "20888994",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Comparative Study",
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "The Lancet",
+          "issn": "0140-6736",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/20888994/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/2985213R",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Fischer K. та ін. Blood. 2016;127:208-215",
+        "pmid": "26486789",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/26486789/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [0],
+      "notes": {
+        "uk": "375 мг/м² у день 0 першого курсу (CLL8).",
+        "en": "375 mg/m² on day 0 of the first course (CLL8)."
+      }
+    },
+    {
+      "key": "fludarabine",
+      "drug_id": "fludarabine",
+      "route": "iv_infusion",
+      "dose_value": 25,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "duration_min": 30,
+      "notes": {
+        "uk": "25 мг/м² в/в у дні 1–3 (CLL8). При порушенні функції нирок дозу знижують.",
+        "en": "25 mg/m² IV on days 1 to 3 (CLL8). Reduce in renal impairment."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 250,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "duration_min": 60,
+      "notes": {
+        "uk": "250 мг/м² в/в у дні 1–3 (CLL8).",
+        "en": "250 mg/m² IV on days 1 to 3 (CLL8)."
+      }
+    }
+  ]
+}

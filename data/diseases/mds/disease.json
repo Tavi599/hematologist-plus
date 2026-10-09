@@ -142,6 +142,13 @@
           },
           "regimens": [
             {
+              "regimen_id": "decitabine-3-day-mds",
+              "notes": {
+                "uk": "Нижчий ризик; відповідь 70%",
+                "en": "Lower risk; response 70%"
+              }
+            },
+            {
               "regimen_id": "azacitidine-5-day",
               "notes": {
                 "uk": "Без вихідних; переважно нижчий ризик",
@@ -157,6 +164,9 @@
             },
             {
               "regimen_id": "ref-mds-atg-csa"
+            },
+            {
+              "regimen_id": "ref-mds-eltrombopag"
             }
           ]
         }

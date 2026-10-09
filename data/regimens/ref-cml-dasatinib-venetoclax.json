@@ -1,0 +1,98 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-cml-dasatinib-venetoclax",
+  "short_name": "Дазатиніб + венетоклакс",
+  "name": {
+    "uk": "Дазатиніб + венетоклакс у першій лінії ХМЛ",
+    "en": "Dasatinib plus venetoclax first line in CML"
+  },
+  "sources": [
+    {
+      "name": "Jabbour E. та ін. Combination of dasatinib and venetoclax in newly diagnosed chronic phase chronic myeloid leukemia. Cancer. 2024;130:2652-2659",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38591430/",
+      "version": "резюме; фаза II, 65 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "phase": "II",
+      "randomized": false,
+      "n": 65
+    },
+    "settings": ["first-line"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Jabbour E. та ін. Cancer. 2024;130:2652-2659",
+        "pmid": "38591430",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Journal Article", "Clinical Trial, Phase II"],
+        "journal": {
+          "name": "Cancer",
+          "issn": "0008-543X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/38591430/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Cancer» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0374236",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Дазатиніб 50 мг на добу 3 курси, з 4-го курсу — венетоклакс 200 мг на добу 3 роки (після MR4.5 — 200 мг 14 днів, згодом 100 мг 7 днів на курс), потім дазатиніб окремо.",
+      "en": "Dasatinib 50 mg a day for 3 courses, from course 4 venetoclax 200 mg a day for 3 years (after MR4.5, 200 mg for 14 days, later 100 mg for 7 days a course), then dasatinib alone."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Дазатиніб",
+          "en": "Dasatinib"
+        },
+        "drug_id": "dasatinib"
+      },
+      {
+        "name": {
+          "uk": "Венетоклакс",
+          "en": "Venetoclax"
+        },
+        "drug_id": "venetoclax"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "MMR за 12 місяців 86%, але так само, як з дазатинібом окремо (79% в обох за історичним порівнянням). Нейтропенія 3–4 ступеня 22% проти 11%.",
+        "en": "MMR at 12 months 86%, but the same as with dasatinib alone (79% in both by historical comparison). Grade 3 to 4 neutropenia 22% against 11%."
+      }
+    ],
+    "gap": {
+      "uk": "Переваги над дазатинібом 50 мг окремо (є в довіднику) не показано; не застосовувати поза дослідженням, поки немає даних про ремісію без лікування.",
+      "en": "No advantage over dasatinib 50 mg alone (in the catalogue) was shown; not for use outside a trial until treatment-free remission data appear."
+    }
+  }
+}

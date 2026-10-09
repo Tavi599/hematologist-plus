@@ -1,0 +1,103 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-mds-eltrombopag",
+  "short_name": "Елтромбопаг (МДС нижчого ризику)",
+  "name": {
+    "uk": "Елтромбопаг при МДС нижчого ризику з тяжкою тромбоцитопенією",
+    "en": "Eltrombopag in lower-risk MDS with severe thrombocytopenia"
+  },
+  "sources": [
+    {
+      "name": "Oliva E.N. та ін. Eltrombopag versus placebo for low-risk myelodysplastic syndromes with thrombocytopenia (EQoL-MDS): phase 1 results of a single-blind, randomised, controlled, phase 2 superiority trial. Lancet Haematol. 2017;4:e127-e136",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28162984/",
+      "version": "резюме; рандомізована фаза II, 90 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "EQoL-MDS",
+      "phase": "II",
+      "randomized": true,
+      "n": 90,
+      "comparator": "плацебо",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Oliva E.N. та ін. Lancet Haematol. 2017;4:e127-e136",
+        "pmid": "28162984",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/28162984/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "МДС нижчого ризику з тромбоцитами стабільно нижче 30×10⁹/л, коли інше лікування не допомогло або неможливе: елтромбопаг від 50 мг з підбором дози до 300 мг на добу щонайменше 24 тижні.",
+      "en": "Lower-risk MDS with platelets stably below 30×10⁹/L when other treatment failed or is not possible: eltrombopag from 50 mg titrated up to 300 mg a day for at least 24 weeks."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Елтромбопаг",
+          "en": "Eltrombopag"
+        },
+        "drug_id": "eltrombopag"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Тромбоцитарна відповідь 47% проти 3%; пацієнтів з кровотечами 14% проти 42%. Прогресування в ГМЛ 12% проти 16% — без різниці.",
+        "en": "Platelet response 47% against 3%; patients with bleeding 14% against 42%. Progression to AML 12% against 16%, no difference."
+      },
+      {
+        "uk": "Небажані явища 3–4 ступеня 46% проти 16%. Не застосовувати при надлишку бластів.",
+        "en": "Grade 3 to 4 adverse events 46% against 16%. Not for excess blasts."
+      }
+    ],
+    "gap": {
+      "uk": "Схеми підбору дози (кроки й інтервали) резюме не наводить.",
+      "en": "The abstract gives no titration steps or intervals."
+    }
+  }
+}

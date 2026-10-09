@@ -162,6 +162,22 @@
                 "uk": "Половина дози: менше плевральних випотів",
                 "en": "Half the dose: fewer pleural effusions"
               }
+            },
+            {
+              "regimen_id": "ref-cml-dasatinib-venetoclax"
+            }
+          ]
+        },
+        {
+          "key": "trials-tfr",
+          "kind": "trial",
+          "title": {
+            "uk": "Підготовка до відміни ІТК",
+            "en": "Preparing to stop the TKI"
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-cml-destiny"
             }
           ]
         }
