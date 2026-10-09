@@ -1,0 +1,114 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-aml-ivo-ven-aza",
+  "short_name": "Івосиденіб + венетоклакс ± азацитидин",
+  "name": {
+    "uk": "Івосиденіб + венетоклакс ± азацитидин при ГМЛ з IDH1",
+    "en": "Ivosidenib plus venetoclax ± azacitidine in IDH1-mutated AML"
+  },
+  "sources": [
+    {
+      "name": "Lachowiez C.A. та ін. A Phase Ib/II Study of Ivosidenib with Venetoclax ± Azacitidine in IDH1-Mutated Myeloid Malignancies. Blood Cancer Discov. 2023;4:276-293",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37102976/",
+      "version": "резюме; фаза Ib–II, 31 пацієнт",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "phase": "I-II",
+      "randomized": false,
+      "n": 31
+    },
+    "settings": ["first-line", "relapse"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Lachowiez C.A. та ін. Blood Cancer Discov. 2023;4:276-293",
+        "pmid": "37102976",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Journal Article",
+          "Research Support, N.I.H., Extramural",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood Cancer Discovery",
+          "issn": "2643-3230",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/37102976/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood Cancer Discovery» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101764786",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Мієлоїдні пухлини з мутацією IDH1 (переважно ГМЛ), вперше діагностовані й рецидивні: івосиденіб з венетоклаксом, з азацитидином або без.",
+      "en": "IDH1-mutated myeloid neoplasms (mostly AML), newly diagnosed and relapsed: ivosidenib with venetoclax, with or without azacitidine."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Івосиденіб",
+          "en": "Ivosidenib"
+        },
+        "drug_id": "ivosidenib"
+      },
+      {
+        "name": {
+          "uk": "Венетоклакс",
+          "en": "Venetoclax"
+        },
+        "drug_id": "venetoclax"
+      },
+      {
+        "name": {
+          "uk": "Азацитидин",
+          "en": "Azacitidine"
+        },
+        "drug_id": "azacitidine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Композитна повна ремісія 90% з триплетом і 83% з дуплетом; МЗХ-негативність у 63% оцінених. Медіана загальної виживаності 42 місяці.",
+        "en": "Composite complete remission 90% with the triplet and 83% with the doublet; MRD negativity in 63% of evaluable patients. Median overall survival 42 months."
+      },
+      {
+        "uk": "91% небажаних явищ 1–2 ступеня. Найбільша користь триплету — при супутніх мутаціях сигнальних шляхів.",
+        "en": "91% of adverse events grade 1 to 2. The triplet helped most with co-occurring signalling mutations."
+      }
+    ],
+    "gap": {
+      "uk": "Доз і днів резюме не наводить. Івосиденіб + азацитидин окремо є в довіднику.",
+      "en": "The abstract gives no doses or days. Ivosidenib plus azacitidine alone is in the catalogue."
+    }
+  }
+}

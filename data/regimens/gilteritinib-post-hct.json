@@ -1,0 +1,136 @@
+{
+  "$comment": "MORPHO: гілтеритиніб 120 мг раз на добу 24 місяці після алотрансплантації (тут 26 циклів по 28 днів).",
+  "id": "gilteritinib-post-hct",
+  "short_name": "Гілтеритиніб після алоТГСК (MORPHO)",
+  "name": {
+    "uk": "Гілтеритиніб як підтримка після алотрансплантації при FLT3-ITD",
+    "en": "Gilteritinib maintenance after an allogeneic transplant in FLT3-ITD AML"
+  },
+  "description": {
+    "uk": "ГМЛ з FLT3-ITD після алотрансплантації в першій ремісії, якщо до або після трансплантації визначалася МЗХ. 120 мг щодня 24 місяці.",
+    "en": "FLT3-ITD AML after an allogeneic transplant in first remission, when MRD was detectable before or after it. 120 mg daily for 24 months."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 26,
+  "sources": [
+    {
+      "name": "Levis M.J. та ін. Gilteritinib as Post-Transplant Maintenance for AML With Internal Tandem Duplication Mutation of FLT3. J Clin Oncol. 2024;42:1766-1775",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11095884/",
+      "version": "повний текст у PMC; фаза III, 356 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT02997202 (MORPHO), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT02997202",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Подвійне сліпе рандомізоване дослідження фази III: гілтеритиніб проти плацебо після алотрансплантації.",
+      "en": "A double-blind randomised phase III trial: gilteritinib against placebo after an allogeneic transplant."
+    },
+    "population": {
+      "uk": "356 дорослих з ГМЛ з FLT3-ITD у першій ремісії після алотрансплантації.",
+      "en": "356 adults with FLT3-ITD AML in first remission after an allogeneic transplant."
+    },
+    "results": {
+      "uk": "Первинна точка не досягнута: безрецидивна виживаність HR 0,679 (p=0,0518). У заздалегідь визначеній підгрупі з МЗХ до або після трансплантації (50,5%) — користь (HR 0,515; p=0,0065); без МЗХ — ні (HR 1,213).",
+      "en": "The primary end point was not met: relapse-free survival HR 0.679 (p=0.0518). In the prespecified subgroup with MRD before or after the transplant (50.5%) there was benefit (HR 0.515; p=0.0065); without MRD none (HR 1.213)."
+    },
+    "conduct": {
+      "uk": "Призначати лише МЗХ-позитивним. Контроль цитопеній, функції печінки й інтервалу QT; взаємодії з азолами.",
+      "en": "Give only to MRD-positive patients. Monitor cytopenias, liver function and the QT interval; azole interactions."
+    },
+    "trial": {
+      "acronym": "MORPHO",
+      "nct": "NCT02997202",
+      "phase": "III",
+      "randomized": true,
+      "n": 356,
+      "comparator": "плацебо",
+      "primary_met": false
+    },
+    "settings": ["maintenance"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Levis M.J. та ін. J Clin Oncol. 2024;42:1766-1775",
+        "pmid": "38471061",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Multicenter Study",
+          "Research Support, N.I.H., Extramural"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/38471061/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "gilteritinib",
+      "drug_id": "gilteritinib",
+      "route": "oral",
+      "dose_value": 120,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "120 мг раз на добу щодня, 24 місяці (MORPHO).",
+        "en": "120 mg once a day every day, for 24 months (MORPHO)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 200,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Можна підвищити до 200 мг після 4 тижнів, якщо відповіді немає (eviQ 3907).",
+            "en": "May be raised to 200 mg after 4 weeks if there is no response (eviQ 3907)."
+          },
+          "source": {
+            "name": "eviQ: Acute myeloid leukaemia — gilteritinib (протокол 3907)",
+            "url": "https://www.eviq.org.au/haematology/leukaemias/acute-myeloid-leukaemia/3907-acute-myeloid-leukaemia-gilteritinib",
+            "version": "вер. 2 від 04.02.2025",
+            "checkedOn": "2026-10-04"
+          }
+        }
+      ]
+    }
+  ]
+}

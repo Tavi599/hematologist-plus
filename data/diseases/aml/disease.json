@@ -431,6 +431,16 @@
             },
             {
               "regimen_id": "ref-aml-dac-clam"
+            },
+            {
+              "regimen_id": "dav-induction",
+              "notes": {
+                "uk": "3+7 + венетоклакс; 18–60 років",
+                "en": "3+7 plus venetoclax; aged 18 to 60"
+              }
+            },
+            {
+              "regimen_id": "ref-aml-caveat"
             }
           ]
         },
@@ -462,6 +472,20 @@
             },
             {
               "regimen_id": "ref-aml-clag"
+            },
+            {
+              "regimen_id": "ven-gilt-cycle-1",
+              "notes": {
+                "uk": "FLT3; міст до алоТГСК",
+                "en": "FLT3; bridge to an allogeneic transplant"
+              }
+            },
+            {
+              "regimen_id": "ven-gilt",
+              "notes": {
+                "uk": "Цикли 2+",
+                "en": "Cycles 2 onwards"
+              }
             }
           ]
         },
@@ -470,7 +494,7 @@
           "kind": "trial",
           "title": {
             "uk": "Літні та непридатні до інтенсивної терапії",
-            "en": "Elderly and unfit for intensive therapy"
+            "en": "Older patients and those unfit for intensive therapy"
           },
           "description": {
             "uk": "Кладрибін із малими дозами цитарабіну — низькоінтенсивна альтернатива гіпометилюючим препаратам.",
@@ -500,6 +524,46 @@
             },
             {
               "regimen_id": "ref-aml-clad-ldac-ven"
+            },
+            {
+              "regimen_id": "aza-ven-gilt-cycle-1",
+              "notes": {
+                "uk": "FLT3; повна ремісія 96%",
+                "en": "FLT3; complete remission 96%"
+              }
+            },
+            {
+              "regimen_id": "aza-ven-gilt",
+              "notes": {
+                "uk": "Цикли 2+",
+                "en": "Cycles 2 onwards"
+              }
+            },
+            {
+              "regimen_id": "ref-aml-ivo-ven-aza"
+            },
+            {
+              "regimen_id": "avoid-aml-gilt-aza"
+            },
+            {
+              "regimen_id": "avoid-aml-decitabine-10-day"
+            }
+          ]
+        },
+        {
+          "key": "trials-maintenance",
+          "kind": "trial",
+          "title": {
+            "uk": "Підтримка після алотрансплантації",
+            "en": "Maintenance after an allogeneic transplant"
+          },
+          "regimens": [
+            {
+              "regimen_id": "gilteritinib-post-hct",
+              "notes": {
+                "uk": "Лише при МЗХ",
+                "en": "Only with MRD"
+              }
             }
           ]
         }

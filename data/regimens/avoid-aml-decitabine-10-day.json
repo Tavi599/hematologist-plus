@@ -1,0 +1,98 @@
+{
+  "$comment": "Спростований розклад: зберігається лише як застереження.",
+  "id": "avoid-aml-decitabine-10-day",
+  "short_name": "Децитабін 10 днів",
+  "name": {
+    "uk": "Децитабін 10 днів замість 5 у непридатних",
+    "en": "Decitabine for 10 days instead of 5 in unfit patients"
+  },
+  "sources": [
+    {
+      "name": "Short N.J. та ін. Treatment with a 5-day versus a 10-day schedule of decitabine in older patients with newly diagnosed acute myeloid leukaemia: a randomised phase 2 trial. Lancet Haematol. 2019;6:e29-e37",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6563344/",
+      "version": "рукопис у PMC; рандомізована фаза II, 71 пацієнт",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "nct": "NCT01786343",
+      "phase": "II",
+      "randomized": true,
+      "n": 71,
+      "comparator": "децитабін 5 днів",
+      "primary_met": false
+    },
+    "settings": ["first-line", "elderly"],
+    "verdict": "avoid",
+    "appraisal": [
+      {
+        "publication": "Short N.J. та ін. Lancet Haematol. 2019;6:e29-e37",
+        "pmid": "30545576",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30545576/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Подовження децитабіну 20 мг/м² з 5 до 10 днів у літніх непридатних не покращило ні ремісії, ні виживаності, зокрема при мутації TP53.",
+      "en": "Extending decitabine 20 mg/m² from 5 to 10 days in older unfit patients improved neither remission nor survival, including with a TP53 mutation."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Децитабін",
+          "en": "Decitabine"
+        },
+        "drug_id": "decitabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Повна ремісія/ПРп/ПРн 43% (5 днів) проти 40% (10 днів); однорічна загальна виживаність 25% в обох. Смертей від інфекцій 14% з 10 днями проти 4% з 5.",
+        "en": "CR/CRp/CRi 43% (5 days) against 40% (10 days); one-year overall survival 25% in both. Infection deaths 14% with 10 days against 4% with 5."
+      }
+    ],
+    "gap": {
+      "uk": "Застосовувати стандартні 5 днів (схема «Децитабін» довідника).",
+      "en": "Use the standard 5 days (the catalogue decitabine regimen)."
+    }
+  }
+}

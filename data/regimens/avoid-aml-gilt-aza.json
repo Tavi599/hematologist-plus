@@ -1,0 +1,111 @@
+{
+  "$comment": "Спростована комбінація: зберігається лише як застереження.",
+  "id": "avoid-aml-gilt-aza",
+  "short_name": "Гілтеритиніб + азацитидин (LACEWING)",
+  "name": {
+    "uk": "Гілтеритиніб + азацитидин без венетоклаксу у непридатних",
+    "en": "Gilteritinib plus azacitidine without venetoclax in unfit patients"
+  },
+  "sources": [
+    {
+      "name": "Wang E.S. та ін. Phase 3 trial of gilteritinib plus azacitidine vs azacitidine for newly diagnosed FLT3mut+ AML ineligible for intensive chemotherapy. Blood. 2022;140:1845-1857",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35917453/",
+      "version": "резюме; фаза III, 123 пацієнти",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "LACEWING",
+      "nct": "NCT02752035",
+      "phase": "III",
+      "randomized": true,
+      "n": 123,
+      "comparator": "азацитидин",
+      "primary_met": false
+    },
+    "settings": ["first-line", "elderly"],
+    "verdict": "avoid",
+    "appraisal": [
+      {
+        "publication": "Wang E.S. та ін. Blood. 2022;140:1845-1857",
+        "pmid": "35917453",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Randomized Controlled Trial",
+          "Multicenter Study",
+          "Clinical Trial, Phase III",
+          "Journal Article"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35917453/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Гілтеритиніб 120 мг на добу до азацитидину в нелікованих непридатних з мутацією FLT3 не подовжив загальну виживаність; дослідження зупинено через марність.",
+      "en": "Gilteritinib 120 mg a day added to azacitidine in untreated unfit FLT3-mutated patients did not lengthen overall survival; the trial stopped for futility."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Гілтеритиніб",
+          "en": "Gilteritinib"
+        },
+        "drug_id": "gilteritinib"
+      },
+      {
+        "name": {
+          "uk": "Азацитидин",
+          "en": "Azacitidine"
+        },
+        "drug_id": "azacitidine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Медіана загальної виживаності 9,82 проти 8,87 місяця (HR 0,916). Композитна повна ремісія 58,1% проти 26,5%, але це не перейшло у виживаність.",
+        "en": "Median overall survival 9.82 against 8.87 months (HR 0.916). Composite complete remission 58.1% against 26.5%, but it did not carry into survival."
+      },
+      {
+        "uk": "При мутації FLT3 у непридатних краще азацитидин + венетоклакс (у тому числі триплет з гілтеритинібом у дослідженні).",
+        "en": "For FLT3-mutated unfit patients azacitidine plus venetoclax is preferable (including the triplet with gilteritinib in a trial)."
+      }
+    ],
+    "gap": {
+      "uk": "Не застосовувати поза дослідженням.",
+      "en": "Not to be used outside a trial."
+    }
+  }
+}

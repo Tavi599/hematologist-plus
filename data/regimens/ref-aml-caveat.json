@@ -1,0 +1,110 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-aml-caveat",
+  "short_name": "CAVEAT (5+2 + венетоклакс)",
+  "name": {
+    "uk": "Венетоклакс з ослабленою 5+2 у старших придатних (CAVEAT)",
+    "en": "Venetoclax with attenuated 5+2 in older fit patients (CAVEAT)"
+  },
+  "sources": [
+    {
+      "name": "Chua C.C. та ін. Chemotherapy and Venetoclax in Elderly Acute Myeloid Leukemia Trial (CAVEAT): A Phase Ib Dose-Escalation Study of Venetoclax Combined With Modified Intensive Chemotherapy. J Clin Oncol. 2020;38:3506-3517",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32687450/",
+      "version": "резюме; фаза Ib, 51 пацієнт",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "CAVEAT",
+      "phase": "I",
+      "randomized": false,
+      "n": 51
+    },
+    "settings": ["first-line", "elderly"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Chua C.C. та ін. J Clin Oncol. 2020;38:3506-3517",
+        "pmid": "32687450",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/32687450/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Від 65 років, придатні до інтенсивної терапії: венетоклакс 14 днів (передфаза з нарощуванням у дні −6…0) + цитарабін 100 мг/м² у дні 1–5 і ідарубіцин 12 мг/м² у дні 2–3; консолідація — 4 цикли з цитарабіном у дні 1–2 та ідарубіцином у день 1.",
+      "en": "Aged 65 or over, fit for intensive therapy: venetoclax for 14 days (a ramp-up prephase on days −6 to 0) plus cytarabine 100 mg/m² on days 1 to 5 and idarubicin 12 mg/m² on days 2 to 3; consolidation, 4 cycles with cytarabine on days 1 to 2 and idarubicin on day 1."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Венетоклакс",
+          "en": "Venetoclax"
+        },
+        "drug_id": "venetoclax"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Ідарубіцин",
+          "en": "Idarubicin"
+        },
+        "drug_id": "idarubicin"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Ремісія 72%: 97% при ГМЛ de novo і лише 43% при вторинному. Фебрильна нейтропенія 55%, сепсис 35%; у консолідації тромбоцити відновлюються повільно.",
+        "en": "Remission 72%: 97% in de novo AML and only 43% in secondary. Febrile neutropenia 55%, sepsis 35%; platelets recover slowly in consolidation."
+      }
+    ],
+    "gap": {
+      "uk": "Дослідження підбору дози (50–600 мг), максимальну дозу не досягнуто, рекомендованої немає; дози цитарабіну й ідарубіцину в консолідації не наведено.",
+      "en": "A dose-finding study (50 to 600 mg), the maximum dose not reached and no recommended dose; cytarabine and idarubicin doses in consolidation are not given."
+    }
+  }
+}

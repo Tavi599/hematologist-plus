@@ -1,0 +1,218 @@
+{
+  "$comment": "DAV за резюме Wang 2022: даунорубіцин 60 мг/м² в/в у дні 1–3, цитарабін 100 мг/м² в/в у дні 1–7, венетоклакс 100 мг у день 4, 200 мг у день 5, 400 мг у дні 6–11; 1–2 курси по 28–35 днів. Тривалість інфузій джерело не наводить — взято з DA 7+3 довідника (цитарабін 24-годинною інфузією).",
+  "id": "dav-induction",
+  "short_name": "DAV (3+7 + венетоклакс)",
+  "name": {
+    "uk": "DAV: 3+7 з венетоклаксом, індукція",
+    "en": "DAV: 3+7 with venetoclax, induction"
+  },
+  "description": {
+    "uk": "Вперше діагностований ГМЛ у 18–60 років, придатних до інтенсивної терапії. 1–2 курси по 28–35 днів.",
+    "en": "Newly diagnosed AML aged 18 to 60, fit for intensive therapy. One or two courses of 28 to 35 days."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Wang H. та ін. Venetoclax plus 3 + 7 daunorubicin and cytarabine chemotherapy as first-line treatment for adults with acute myeloid leukaemia: a multicentre, single-arm, phase 2 trial. Lancet Haematol. 2022;9:e415-e424",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35512726/",
+      "version": "резюме; фаза II, 33 пацієнти",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Багатоцентрове дослідження фази II без групи порівняння (три лікарні Китаю).",
+      "en": "A multicentre phase II study without a comparison group (three hospitals in China)."
+    },
+    "population": {
+      "uk": "33 пацієнти 18–60 років з нелікованим ГМЛ de novo, ECOG 0–2.",
+      "en": "33 patients aged 18 to 60 with untreated de novo AML, ECOG 0 to 2."
+    },
+    "results": {
+      "uk": "Композитна повна ремісія після одного курсу 91%; у 97% з ремісією МЗХ не визначалася (<0,1%). Однорічна загальна виживаність 97%, безподійна — 72% (спостереження 11 місяців).",
+      "en": "Composite complete remission after one course 91%; MRD undetectable (<0.1%) in 97% of those in remission. One-year overall survival 97%, event-free 72% (11 months of follow-up)."
+    },
+    "conduct": {
+      "uk": "Цитопенії 3 ступеня і вище — у всіх, фебрильна нейтропенія 55%, пневмонія 21%, сепсис 12%; смертей від лікування не було. Корекції венетоклаксу з азолами резюме не описує — знижують за інструкцією.",
+      "en": "Grade 3 or worse cytopenias in all, febrile neutropenia 55%, pneumonia 21%, sepsis 12%; no treatment-related deaths. The abstract does not describe venetoclax adjustment with azoles; reduce it per the label."
+    },
+    "trial": {
+      "phase": "II",
+      "randomized": false,
+      "n": 33
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Wang H. та ін. Lancet Haematol. 2022;9:e415-e424",
+        "pmid": "35512726",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article", "Multicenter Study"],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35512726/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "daunorubicin",
+      "drug_id": "daunorubicin",
+      "route": "iv_infusion",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "60 мг/м² в/в у дні 1–3 (Wang 2022).",
+        "en": "60 mg/m² IV on days 1 to 3 (Wang 2022)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 90,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Верхня межа діапазону UpToDate (60–90 мг/м²)",
+            "en": "Upper end of the UpToDate range (60 to 90 mg/m2)"
+          },
+          "source": {
+            "name": "UpToDate: Acute myeloid leukemia: Induction therapy in fit, younger adults",
+            "url": "https://www.uptodate.com/contents/acute-myeloid-leukemia-induction-therapy-in-fit-younger-adults",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "100 мг/м² в/в у дні 1–7 (Wang 2022); тривалість — як у DA 7+3 довідника.",
+        "en": "100 mg/m² IV on days 1 to 7 (Wang 2022); duration as in the catalogue DA 7+3."
+      },
+      "dose_options": [
+        {
+          "dose_value": 200,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Верхня межа діапазону UpToDate (100–200 мг/м² на добу)",
+            "en": "Upper end of the UpToDate range (100 to 200 mg/m2 a day)"
+          },
+          "source": {
+            "name": "UpToDate: Acute myeloid leukemia: Induction therapy in fit, younger adults",
+            "url": "https://www.uptodate.com/contents/acute-myeloid-leukemia-induction-therapy-in-fit-younger-adults",
+            "version": "перевірено 2026-10-03",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "venetoclax-d4",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [4],
+      "notes": {
+        "uk": "100 мг у день 4 (Wang 2022).",
+        "en": "100 mg on day 4 (Wang 2022)."
+      }
+    },
+    {
+      "key": "venetoclax-d5",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [5],
+      "notes": {
+        "uk": "200 мг у день 5 (Wang 2022).",
+        "en": "200 mg on day 5 (Wang 2022)."
+      }
+    },
+    {
+      "key": "venetoclax",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [6, 7, 8, 9, 10, 11],
+      "notes": {
+        "uk": "400 мг у дні 6–11 (Wang 2022). З азолами — нижча доза (галочки).",
+        "en": "400 mg on days 6 to 11 (Wang 2022). Lower with azoles (checkboxes)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "strong-cyp3a",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A (позаконазол, вориконазол)",
+            "en": "A strong CYP3A inhibitor (posaconazole, voriconazole)"
+          },
+          "dose_value": 100,
+          "source": {
+            "name": "Kadia T.M. та ін. Venetoclax plus intensive chemotherapy with cladribine, idarubicin, and cytarabine in patients with newly diagnosed acute myeloid leukaemia or high-risk myelodysplastic syndrome: a cohort from a single-centre, single-arm, phase 2 trial. Lancet Haematol. 2021;8(8):e552-e561",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8884174/",
+            "version": "рукопис автора в PMC, розділ Procedures",
+            "checkedOn": "2026-10-09"
+          }
+        },
+        {
+          "key": "moderate-cyp3a",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A",
+            "en": "A moderate CYP3A inhibitor"
+          },
+          "dose_value": 200,
+          "source": {
+            "name": "Kadia T.M. та ін. Venetoclax plus intensive chemotherapy with cladribine, idarubicin, and cytarabine in patients with newly diagnosed acute myeloid leukaemia or high-risk myelodysplastic syndrome: a cohort from a single-centre, single-arm, phase 2 trial. Lancet Haematol. 2021;8(8):e552-e561",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8884174/",
+            "version": "рукопис автора в PMC, розділ Procedures",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    }
+  ]
+}
