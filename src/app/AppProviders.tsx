@@ -20,7 +20,7 @@ export function AppProviders({ children }: { children: ReactNode }) {
   const [persistOptions] = useState(() => (isIndexedDbAvailable() ? createPersistOptions() : null))
 
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider theme={theme} defaultColorScheme="auto">
       {persistOptions ? (
         <PersistQueryClientProvider client={queryClient} persistOptions={persistOptions}>
           {children}

@@ -1,3 +1,7 @@
+.brand {
+  color: light-dark(var(--mantine-color-red-8), var(--mantine-color-red-5));
+}
+
 .link {
   display: block;
   padding: 6px 12px;
@@ -8,12 +12,12 @@
   text-decoration: none;
 
   &:hover {
-    background-color: var(--mantine-color-gray-0);
+    background-color: var(--mantine-color-default-hover);
   }
 
   &:global(.active) {
-    background-color: var(--mantine-color-red-0);
-    color: var(--mantine-color-red-8);
+    background-color: light-dark(var(--mantine-color-red-0), var(--mantine-color-red-light));
+    color: light-dark(var(--mantine-color-red-8), var(--mantine-color-red-4));
   }
 }
 

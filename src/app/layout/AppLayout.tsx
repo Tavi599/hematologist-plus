@@ -6,6 +6,7 @@ import { routes } from '../routes'
 import classes from './AppLayout.module.css'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { SessionBadge } from './SessionBadge'
+import { ThemeToggle } from './ThemeToggle'
 import { PwaUpdatePrompt } from './PwaUpdatePrompt'
 
 export function AppLayout() {
@@ -25,7 +26,7 @@ export function AppLayout() {
         <Container size="xl" h="100%">
           <Group h="100%" justify="space-between" wrap="nowrap">
             <Group gap="lg" wrap="nowrap" className={classes.navGroup}>
-              <Text fw={700} c="red.8" size="lg" visibleFrom="sm">
+              <Text fw={700} size="lg" visibleFrom="sm" className={classes.brand}>
                 {t('app.name')}
               </Text>
               <nav aria-label="main" className={classes.nav}>
@@ -40,6 +41,7 @@ export function AppLayout() {
             </Group>
             <Group gap="xs" wrap="nowrap">
               <SessionBadge />
+              <ThemeToggle />
               <LanguageSwitcher />
             </Group>
           </Group>

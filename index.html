@@ -12,6 +12,19 @@
       content="Hematologist+ — dose calculator and reference for hematologists"
     />
     <title>Hematologist+</title>
+    <script>
+      // Apply the saved light/dark choice before the first paint (Mantine stores it under this key).
+      try {
+        var saved = localStorage.getItem('mantine-color-scheme-value')
+        var scheme =
+          saved === 'light' || saved === 'dark'
+            ? saved
+            : matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+        document.documentElement.setAttribute('data-mantine-color-scheme', scheme)
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
