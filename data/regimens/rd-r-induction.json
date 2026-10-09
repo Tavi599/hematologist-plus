@@ -1,0 +1,180 @@
+{
+  "$comment": "Rd-R за Larocca, Blood 2021 (резюме) і реєстром NCT02215980: Rd — леналідомід 25 мг дні 1–21 + дексаметазон 20 мг усередину раз на тиждень, цикл 28 днів, 9 циклів; далі леналідомід 10 мг дні 1–21 без дексаметазону до прогресування. «Раз на тиждень» у 28-денному циклі записано днями 1, 8, 15, 22. Повний текст Blood не прочитаний (перевірка на бота). Ниркові поправки — з NSSG MM.18 і MM.59.",
+  "id": "rd-r-induction",
+  "short_name": "Rd-R, індукція",
+  "name": {
+    "uk": "Rd-R, індукція: леналідомід + дексаметазон 9 циклів",
+    "en": "Rd-R, induction: lenalidomide and dexamethasone for 9 cycles"
+  },
+  "description": {
+    "uk": "Літні пацієнти середньої придатності з уперше діагностованою мієломою. Цикл 28 днів, 9 циклів, далі підтримка леналідомідом 10 мг без дексаметазону. Леналідомід — лише в межах програми запобігання вагітності.",
+    "en": "Elderly intermediate-fit patients with newly diagnosed myeloma. A 28-day cycle, 9 cycles, then lenalidomide 10 mg maintenance without dexamethasone. Lenalidomide only within the pregnancy prevention programme."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 9,
+  "sources": [
+    {
+      "name": "Larocca A. та ін. Dose/schedule-adjusted Rd-R vs continuous Rd for elderly, intermediate-fit patients with newly diagnosed multiple myeloma. Blood. 2021;137(22):3027-3036",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33739404/",
+      "version": "резюме; повний текст на сайті журналу закритий перевіркою на бота, не прочитаний",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT02215980 (Rd-R проти Rd), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT02215980",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване дослідження фази III (Італія). Rd протягом 9 циклів, далі леналідомід 10 мг без дексаметазону, — проти безперервної Rd. Головний показник — виживаність без подій: прогресування, смерть, відміна леналідоміду або важка побічна дія.",
+      "en": "A randomised phase III trial (Italy). Rd for 9 cycles followed by lenalidomide 10 mg without dexamethasone, against continuous Rd. The primary endpoint was event-free survival: progression, death, stopping lenalidomide or a severe adverse event."
+    },
+    "population": {
+      "uk": "199 пацієнтів старших за 65 років з уперше діагностованою мієломою, середньої придатності за геріатричною оцінкою (ADL, IADL, індекс Чарлсона). Допускалися пацієнти з кліренсом креатиніну нижче 30 мл/хв і низькими показниками крові.",
+      "en": "199 patients over 65 with newly diagnosed myeloma, intermediate-fit by geriatric assessment (ADL, IADL, Charlson index). Patients with a creatinine clearance below 30 mL/min and low blood counts could enrol."
+    },
+    "results": {
+      "uk": "Медіана спостереження 37 місяців. Виживаність без подій 10,4 проти 6,9 місяця (HR 0,70; p=0,02). Виживаність без прогресування 20,2 проти 18,3 місяця (p=0,16), трирічна загальна виживаність 74% проти 63% (p=0,06) — не гірші, ніж при безперервній Rd.",
+      "en": "Median follow-up 37 months. Event-free survival 10.4 against 6.9 months (HR 0.70; p=0.02). Progression-free survival 20.2 against 18.3 months (p=0.16) and 3-year overall survival 74% against 63% (p=0.06): no worse than continuous Rd."
+    },
+    "conduct": {
+      "uk": "Негематологічні побічні дії 3 ступеня і вище у 33% проти 43%; найчастіші — нейтропенія 21%, інфекції 10%, шкірні реакції 7%. Побічних дій від дексаметазону (загальних і з боку нервової системи) менше. Леналідомід відмінили через побічні дії у 24% проти 30%, дозу знизили у 45% проти 62%. Корекцію дози за функцією нирок у калькуляторі взято з протоколів NSSG для Rd і підтримки леналідомідом — у доступних джерелах дослідження її немає.",
+      "en": "Grade 3 or worse non-haematological adverse events in 33% against 43%; the commonest were neutropenia 21%, infection 10% and skin reactions 7%. Fewer dexamethasone-related constitutional and nervous-system events. Lenalidomide was stopped for adverse events in 24% against 30% and reduced in 45% against 62%. The renal dose adjustment in the calculator comes from the NSSG Rd and lenalidomide maintenance protocols: the available sources of the study do not state one."
+    },
+    "trial": {
+      "nct": "NCT02215980",
+      "phase": "III",
+      "randomized": true,
+      "n": 199,
+      "comparator": "безперервна Rd",
+      "primary_met": true
+    },
+    "settings": ["ndmm-ti", "frail"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Larocca A. та ін. Blood. 2021;137(22):3027-3036",
+        "pmid": "33739404",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33739404/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "25 мг на добу в дні 1–21 (NCT02215980).",
+        "en": "25 mg a day on days 1 to 21 (NCT02215980)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "crcl-30-50",
+          "label": {
+            "uk": "Кліренс креатиніну від 30 до 50 мл/хв",
+            "en": "A creatinine clearance of 30 to 50 mL/min"
+          },
+          "dose_value": 10,
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.18 Lenalidomide with Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-18-lenalidomide-dex.pdf",
+            "version": "5.0 (06.2023)",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "key": "crcl-below-30",
+          "label": {
+            "uk": "Кліренс креатиніну нижчий за 30 мл/хв, без діалізу",
+            "en": "A creatinine clearance below 30 mL/min, without dialysis"
+          },
+          "dose_value": 15,
+          "notes": {
+            "uk": "Протокол пише «15 мг через день» — через день це розклад, а не доза, тому дні виставляють вручну.",
+            "en": "The protocol writes \"15 mg every other day\"; alternate days are a schedule and not a dose, so the days are set by hand."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.18 Lenalidomide with Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-18-lenalidomide-dex.pdf",
+            "version": "5.0 (06.2023)",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "key": "dialysis",
+          "label": {
+            "uk": "Гемодіаліз",
+            "en": "On dialysis"
+          },
+          "dose_value": 5,
+          "notes": {
+            "uk": "У день діалізу дозу дають після процедури.",
+            "en": "On a dialysis day the dose is given after the session."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.18 Lenalidomide with Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-18-lenalidomide-dex.pdf",
+            "version": "5.0 (06.2023)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "20 мг усередину раз на тиждень, лише 9 циклів індукції (NCT02215980).",
+        "en": "20 mg by mouth once a week, for the 9 induction cycles only (NCT02215980)."
+      }
+    }
+  ]
+}

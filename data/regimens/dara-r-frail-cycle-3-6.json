@@ -1,0 +1,149 @@
+{
+  "$comment": "Dara-R без тривалого дексаметазону для кволих за IFM2017-03 (Lancet Oncol 2025, повний текст, розділ Procedures) і реєстром NCT03993912: даратумумаб п/ш 1800 мг щотижня 8 тижнів, раз на 2 тижні 16 тижнів, далі раз на 4 тижні; леналідомід 25 мг дні 1–21; дексаметазон 20 мг усередину в дні 1, 8, 15, 22 лише циклів 1–2. Інші препарати премедикації стаття не перелічує.",
+  "id": "dara-r-frail-cycle-3-6",
+  "short_name": "Dara-R (кволі), цикли 3–6",
+  "name": {
+    "uk": "Dara-R (кволі), цикли 3–6",
+    "en": "Dara-R (frail), cycles 3-6"
+  },
+  "description": {
+    "uk": "Даратумумаб 1800 мг п/ш раз на 2 тижні; леналідомід дні 1–21; без дексаметазону. Для кволих пацієнтів з уперше діагностованою мієломою, непридатних до трансплантації. Леналідомід — лише в межах програми запобігання вагітності.",
+    "en": "Daratumumab 1800 mg SC every 2 weeks; lenalidomide on days 1 to 21; no dexamethasone. For frail transplant-ineligible patients with newly diagnosed myeloma. Lenalidomide only within the pregnancy prevention programme."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "Manier S. та ін. Safety and efficacy of a dexamethasone-sparing regimen with daratumumab and lenalidomide in patients with frailty and newly diagnosed multiple myeloma (IFM2017-03). Lancet Oncol. 2025;26(10):1323-1333",
+      "url": "https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(25)00280-3/fulltext",
+      "version": "повний текст (CC BY 4.0), розділ Procedures; фаза III, 295 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT03993912 (IFM2017-03), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT03993912",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване відкрите дослідження фази III у 61 центрі IFM (Франція), розподіл 2:1. Даратумумаб із леналідомідом, дексаметазон лише в перших двох циклах — проти леналідоміду з дексаметазоном до прогресування. Цикл 28 днів, лікування до прогресування або неприйнятної токсичності.",
+      "en": "A randomised open-label phase III trial at 61 IFM centres (France), 2:1 allocation. Daratumumab with lenalidomide, dexamethasone in the first two cycles only, against lenalidomide with dexamethasone until progression. A 28-day cycle, treatment until progression or unacceptable toxicity."
+    },
+    "population": {
+      "uk": "295 кволих пацієнтів з уперше діагностованою мієломою віком від 65 років: спрощений показник кволості (ECOG proxy) 2 і більше. Медіана віку 81 рік (68–92), 61% старші за 80 років, у 42% ECOG 2 і більше. Потрібні були кліренс креатиніну щонайменше 30 мл/хв, нейтрофіли ≥1,0×10⁹/л, тромбоцити ≥70×10⁹/л, гемоглобін ≥75 г/л.",
+      "en": "295 frail patients aged 65 or over with newly diagnosed myeloma: a simplified (ECOG proxy) frailty score of 2 or more. The median age was 81 (68 to 92), 61% were over 80 and 42% had an ECOG status of 2 or more. A creatinine clearance of at least 30 mL/min, neutrophils of at least 1.0×10⁹/L, platelets of at least 70×10⁹/L and haemoglobin of at least 75 g/L were required."
+    },
+    "results": {
+      "uk": "Медіана спостереження 46,3 місяця. Виживаність без прогресування 53,4 проти 22,5 місяця (HR 0,51; p<0,0001), загальна виживаність — медіана не досягнута проти 47,3 місяця (HR 0,52; p=0,001). Повна відповідь 34% проти 12%, VGPR і краще 69% проти 51%.",
+      "en": "Median follow-up 46.3 months. Progression-free survival 53.4 against 22.5 months (HR 0.51; p<0.0001); overall survival not reached against 47.3 months (HR 0.52; p=0.001). Complete response 34% against 12%, VGPR or better 69% against 51%."
+    },
+    "conduct": {
+      "uk": "Нейтропенія 3–5 ступеня у 55% проти 24% у контролі, інфекції 3–5 ступеня 19% проти 21%. Через побічні події померли 12% проти 13%. Дозу леналідоміду знижували часто: медіана відносної інтенсивності дози 34,8%. Дексаметазон 20 мг у дні 1, 8, 15, 22 давали як премедикацію лише в циклах 1–2, поки даратумумаб вводили щотижня; з циклу 3 за потреби премедикацією може бути преднізон 1 мг/кг. Стаття не описує профілактики інфекцій і тромбозів. Відповідь оцінювали кожні 28 днів.",
+      "en": "Grade 3 to 5 neutropenia in 55% against 24% in the control, grade 3 to 5 infection in 19% against 21%. Adverse events led to death in 12% against 13%. The lenalidomide dose was often reduced: a median relative dose intensity of 34.8%. Dexamethasone 20 mg on days 1, 8, 15 and 22 was given as premedication in cycles 1 and 2 only, while daratumumab was weekly; from cycle 3 prednisone 1 mg/kg may serve as premedication if needed. The article describes no infection or thrombosis prophylaxis. Response was assessed every 28 days."
+    },
+    "trial": {
+      "acronym": "IFM2017-03",
+      "nct": "NCT03993912",
+      "phase": "III",
+      "randomized": true,
+      "n": 295,
+      "comparator": "Rd",
+      "primary_met": true
+    },
+    "settings": ["ndmm-ti", "frail"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Manier S. та ін. Lancet Oncol. 2025;26(10):1323-1333",
+        "pmid": "41038184",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Clinical Trial, Phase III",
+          "Multicenter Study"
+        ],
+        "journal": {
+          "name": "The Lancet Oncology",
+          "issn": "1470-2045",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/41038184/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/100957246",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "subcutaneous",
+      "dose_value": 1800,
+      "dose_unit": "mg_flat",
+      "days": [1, 15],
+      "notes": {
+        "uk": "1800 мг підшкірно; премедикацію дають приблизно за 1 годину до ін'єкції (IFM2017-03).",
+        "en": "1800 mg subcutaneously; premedication about 1 hour before the injection (IFM2017-03)."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "25 мг на добу в дні 1–21, далі тиждень перерви, до прогресування. При нейтропенії й тромбоцитопенії дозу знижували до 15, 10 або 5 мг (IFM2017-03).",
+        "en": "25 mg a day on days 1 to 21, then a week off, until progression. For neutropenia and thrombocytopenia the dose was reduced to 15, 10 or 5 mg (IFM2017-03)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "crcl-30-60",
+          "label": {
+            "uk": "Кліренс креатиніну від 30 до 60 мл/хв",
+            "en": "A creatinine clearance of 30 to 60 mL/min"
+          },
+          "dose_value": 10,
+          "notes": {
+            "uk": "Дослідження рекомендувало стартову дозу 10 мг на розсуд лікаря.",
+            "en": "The study recommended a starting dose of 10 mg at the investigator's discretion."
+          },
+          "source": {
+            "name": "Manier S. та ін. Safety and efficacy of a dexamethasone-sparing regimen with daratumumab and lenalidomide in patients with frailty and newly diagnosed multiple myeloma (IFM2017-03). Lancet Oncol. 2025;26(10):1323-1333",
+            "url": "https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(25)00280-3/fulltext",
+            "version": "повний текст (CC BY 4.0), розділ Procedures; фаза III, 295 пацієнтів",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    }
+  ]
+}

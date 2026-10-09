@@ -188,6 +188,11 @@ function TreatmentNodeView({
                             {t('availability.unavailable')}
                           </Badge>
                         )}
+                        {regimen!.evidence?.verdict === 'caution' && (
+                          <Badge size="xs" variant="light" color="orange" tt="none">
+                            {t('trial.verdictBadge.caution')}
+                          </Badge>
+                        )}
                       </Group>
                       {name !== regimen!.short_name && (
                         <Text size="xs" c="dimmed" lineClamp={1} title={name}>

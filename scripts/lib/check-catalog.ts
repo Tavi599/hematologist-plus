@@ -222,6 +222,30 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
     warning('regimens', regimenId, `drugs not obtainable: ${[...new Set(drugIds)].join(', ')}`)
   }
 
+  // The trial section is a shortlist of what can actually be given here: a study regimen with a
+  // drug that cannot be obtained in Ukraine does not belong in it, however good the study.
+  const nodeById = new Map(rows.treatment_nodes.map((node) => [node.id, node]))
+  const inTrialSection = (nodeId: string): boolean => {
+    // A broken tree can loop; the cycle is reported below, here it only must not hang.
+    const seen = new Set<string>()
+    for (let node = nodeById.get(nodeId); node && !seen.has(node.id);) {
+      if (node.kind === 'trial') return true
+      seen.add(node.id)
+      node = nodeById.get(node.parent_id ?? '')
+    }
+    return false
+  }
+  for (const link of rows.treatment_node_regimens) {
+    const blocked = blockedByRegimen.get(link.regimen_id)
+    if (blocked && inTrialSection(link.node_id)) {
+      error(
+        'treatment_node_regimens',
+        link.id,
+        `trial section lists "${link.regimen_id}" with drugs not obtainable: ${[...new Set(blocked)].join(', ')}`,
+      )
+    }
+  }
+
   // The disease pages are the only way into a regimen, so one that hangs off no node is
   // invisible: it exists, it validates, and no physician can reach it. The same the other way
   // round — an empty line in the tree reads as "nothing is used here", which is never true.
@@ -350,6 +374,13 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
             `appraisal of "${entry.publication}" does not say where its indicators were read`,
           )
         }
+      }
+      if (regimen.evidence.settings.length === 0) {
+        warning('regimens', regimen.id, 'no clinical setting: a search by situation misses it')
+      }
+      // A refuted combination is a warning, not a course: the calculator must never offer it.
+      if (regimen.evidence.verdict === 'avoid' && (regimen.reference ?? null) === null) {
+        error('regimens', regimen.id, 'a regimen to avoid must be a reference card, not a course')
       }
     }
   }

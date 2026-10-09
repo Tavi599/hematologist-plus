@@ -8,6 +8,7 @@ import { EVIDENCE_FIELDS } from '../../schemas/common'
 
 import { SourceNotes } from '../calculator/SourceNotes'
 import { SourceAppraisal } from './SourceAppraisal'
+import { TrialFacts } from './TrialFacts'
 
 /**
  * What the chosen regimen is and where it comes from. A regimen taken from a published study
@@ -42,6 +43,7 @@ export function RegimenEvidence({ regimen }: { regimen: Regimen }) {
             {t('regimen.trialNote')}
           </Alert>
         )}
+        {isTrial && <TrialFacts evidence={evidence} />}
         {regimen.description !== null && (
           <Text size="sm">{localize(regimen.description, language)}</Text>
         )}

@@ -5,6 +5,7 @@ import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import type { Regimen } from '../../schemas/catalog'
 import { SourceNotes } from '../calculator/SourceNotes'
+import { TrialFacts } from './TrialFacts'
 
 /**
  * A course that is described and not calculated: its drugs, the short facts that matter and what
@@ -26,6 +27,16 @@ export function RegimenReference({ regimen }: { regimen: Regimen }) {
           <Badge size="xs" variant="light" color="gray" tt="none">
             {t('describedCourse.noCalculation')}
           </Badge>
+          {regimen.evidence?.verdict === 'avoid' && (
+            <Badge size="xs" variant="filled" color="red" tt="none">
+              {t('trial.verdictBadge.avoid')}
+            </Badge>
+          )}
+          {regimen.evidence?.verdict === 'caution' && (
+            <Badge size="xs" variant="light" color="orange" tt="none">
+              {t('trial.verdictBadge.caution')}
+            </Badge>
+          )}
           {reference.availability === 'unavailable' && (
             <Badge size="xs" variant="light" color="red" tt="none">
               {t('describedCourse.unavailable')}
@@ -40,6 +51,7 @@ export function RegimenReference({ regimen }: { regimen: Regimen }) {
         <Text size="sm" fw={500}>
           {localize(regimen.name, language)}
         </Text>
+        {regimen.evidence && <TrialFacts evidence={regimen.evidence} />}
         <Text size="sm">{localize(reference.summary, language)}</Text>
         <Text size="sm">
           <Text span fw={500}>

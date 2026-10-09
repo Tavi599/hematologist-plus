@@ -628,15 +628,92 @@
         "uk": "Схеми, які існують лише як опубліковані дослідження: їх немає ні в настанові, ні в інструкції до препарату. Застосування поза інструкцією потребує окремого рішення й згоди пацієнта. Біля кожної схеми в калькуляторі наведено дизайн дослідження, кого в нього включали, що з нього вийшло і чого вимагає проведення.",
         "en": "Regimens that exist only as published studies: neither a guideline nor a label carries them. Off-label use needs a decision of its own and the patient's consent. In the calculator each regimen states the design of the study, who was enrolled, what came out of it and what the conduct demands."
       },
-      "regimens": [
+      "regimens": [],
+      "children": [
         {
-          "regimen_id": "bbd"
+          "key": "trials-frail",
+          "kind": "trial",
+          "title": {
+            "uk": "Вперше діагностована: непридатні до трансплантації, кволі",
+            "en": "Newly diagnosed: transplant-ineligible, frail"
+          },
+          "description": {
+            "uk": "Схеми, що зменшують дексаметазон або інтенсивність лікування в літніх і кволих.",
+            "en": "Regimens that cut dexamethasone or intensity in the elderly and frail."
+          },
+          "regimens": [
+            {
+              "regimen_id": "dara-r-frail-cycle-1-2",
+              "notes": {
+                "uk": "IFM2017-03, кволі ≥65 років, цикли 1–2",
+                "en": "IFM2017-03, frail, 65 or over, cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "dara-r-frail-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3–6, без дексаметазону",
+                "en": "Cycles 3-6, no dexamethasone"
+              }
+            },
+            {
+              "regimen_id": "dara-r-frail",
+              "notes": {
+                "uk": "З циклу 7 до прогресування",
+                "en": "From cycle 7 until progression"
+              }
+            },
+            {
+              "regimen_id": "rd-r-induction",
+              "notes": {
+                "uk": "Середня придатність, 9 циклів",
+                "en": "Intermediate fitness, 9 cycles"
+              }
+            },
+            {
+              "regimen_id": "rd-r-maintenance",
+              "notes": {
+                "uk": "Після 9 циклів Rd",
+                "en": "After 9 cycles of Rd"
+              }
+            }
+          ]
         },
         {
-          "regimen_id": "bld"
+          "key": "trials-relapse",
+          "kind": "trial",
+          "title": {
+            "uk": "Рецидив",
+            "en": "Relapse"
+          },
+          "description": {
+            "uk": "Схеми для рецидиву, зокрема для рефрактерних до леналідоміду.",
+            "en": "Regimens for relapse, including lenalidomide-refractory disease."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ipd",
+              "notes": {
+                "uk": "Перший рецидив, рефрактерні до леналідоміду",
+                "en": "First relapse, lenalidomide-refractory"
+              }
+            },
+            {
+              "regimen_id": "rep",
+              "notes": {
+                "uk": "Рефрактерні до леналідоміду, повністю пероральна",
+                "en": "Lenalidomide-refractory, fully oral"
+              }
+            },
+            {
+              "regimen_id": "bbd"
+            },
+            {
+              "regimen_id": "bld"
+            }
+          ]
         }
-      ],
-      "children": []
+      ]
     },
     {
       "key": "reference",

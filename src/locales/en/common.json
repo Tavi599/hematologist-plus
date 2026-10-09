@@ -550,5 +550,41 @@
     "quartile": "SCImago quartile {{quartile}} ({{year}})",
     "pmid": "PubMed",
     "appraisalSources": "Where these indicators were read"
+  },
+  "trial": {
+    "phase": "phase {{phase}}",
+    "randomized": "randomised",
+    "singleArm": "not randomised",
+    "patients": "patients: {{count}}",
+    "comparator": "compared with {{comparator}}",
+    "primaryMet": "primary endpoint met",
+    "primaryNotMet": "primary endpoint not met",
+    "verdict": {
+      "caution": "Caution: the regimen works, but the study found a harm that calls for patient selection or prophylaxis. See the conduct notes.",
+      "avoid": "Do not use: a randomised study found no benefit or found harm. Kept only as a warning."
+    },
+    "verdictBadge": {
+      "caution": "caution",
+      "avoid": "do not use"
+    },
+    "setting": {
+      "first-line": "first line",
+      "relapse": "relapse",
+      "refractory": "refractory disease",
+      "pre-transplant": "before a transplant",
+      "ndmm-te": "newly diagnosed, transplant-eligible",
+      "ndmm-ti": "newly diagnosed, transplant-ineligible",
+      "frail": "frail",
+      "rrmm-early": "relapse after 1–3 lines",
+      "rrmm-late": "relapse after >3 lines",
+      "len-refractory": "lenalidomide-refractory",
+      "pi-refractory": "proteasome inhibitor-refractory",
+      "t11-14": "t(11;14)",
+      "pcl": "plasma cell leukaemia",
+      "renal": "renal impairment",
+      "neuropathy": "neuropathy",
+      "high-risk": "high cytogenetic risk",
+      "maintenance": "maintenance"
+    }
   }
 }

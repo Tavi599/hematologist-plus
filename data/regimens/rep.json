@@ -1,0 +1,196 @@
+{
+  "$comment": "REP за Nijhof, Blood 2016 (резюме): максимально переносима доза — леналідомід 25 мг дні 1–21 28-денного циклу + циклофосфамід 50 мг на добу безперервно + преднізон 20 мг на добу безперервно; лікування до прогресування (NCT01352338). Преднізон у дослідженні замінено преднізолоном у тій самій дозі: в Україні преднізону немає, а за глюкокортикоїдною активністю вони рівні. Ниркові поправки леналідоміду — з NSSG MM.18.",
+  "id": "rep",
+  "short_name": "REP",
+  "name": {
+    "uk": "REP (леналідомід + циклофосфамід + преднізолон у низьких дозах)",
+    "en": "REP (lenalidomide, low-dose cyclophosphamide and prednisolone)"
+  },
+  "description": {
+    "uk": "Мієлома, рефрактерна до леналідоміду. Повністю пероральна: цикл 28 днів, циклофосфамід і преднізолон щодня без перерви, леналідомід дні 1–21; до прогресування. Леналідомід — лише в межах програми запобігання вагітності.",
+    "en": "Lenalidomide-refractory myeloma. Fully oral: a 28-day cycle, cyclophosphamide and prednisolone every day without a break, lenalidomide on days 1 to 21; until progression. Lenalidomide only within the pregnancy prevention programme."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Nijhof I.S. та ін. Phase 1/2 study of lenalidomide combined with low-dose cyclophosphamide and prednisone in lenalidomide-refractory multiple myeloma. Blood. 2016;128(19):2297-2306",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27647864/",
+      "version": "резюме (максимально переносима доза); повний текст на сайті журналу закритий перевіркою на бота",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT01352338 (REPEAT), опис групи лікування",
+      "url": "https://clinicaltrials.gov/study/NCT01352338",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Дослідження фази I/II без групи порівняння (Нідерланди): у фазі I підбирали дозу, у фазі II оцінювали ефективність на максимально переносимій дозі.",
+      "en": "A phase I/II study without a comparison group (the Netherlands): phase I found the dose, phase II assessed efficacy at the maximum tolerated dose."
+    },
+    "population": {
+      "uk": "Пацієнти з мієломою, рефрактерною до леналідоміду, після кількох ліній; 67 пацієнтів отримали максимально переносиму дозу. Частина була рефрактерна й до бортезомібу або мала цитогенетику високого ризику.",
+      "en": "Patients with lenalidomide-refractory myeloma after several lines; 67 received the maximum tolerated dose. Some were also bortezomib-refractory or had high-risk cytogenetics."
+    },
+    "results": {
+      "uk": "Відповідь (частково і краще) 67%, хоча б мінімальна відповідь 83%. Виживаність без прогресування 12,1 місяця, загальна виживаність 29,0 місяця. Такі самі результати в рефрактерних і до леналідоміду, і до бортезомібу, і з цитогенетикою високого ризику.",
+      "en": "Response (partial or better) 67%, at least a minimal response 83%. Progression-free survival 12.1 months, overall survival 29.0 months. The results were the same in patients refractory to both lenalidomide and bortezomib and in high-risk cytogenetics."
+    },
+    "conduct": {
+      "uk": "Нейтропенія і тромбоцитопенія 3–4 ступеня — по 22%, інфекції 3–5 ступеня — 21%. Корекцію дози леналідоміду за функцією нирок у калькуляторі взято з протоколу NSSG для Rd: резюме дослідження її не наводить. Пероральний циклофосфамід 50 мг у довіднику поки не має таблетованої форми — кількість для видачі рахуйте окремо.",
+      "en": "Grade 3 to 4 neutropenia and thrombocytopenia in 22% each, grade 3 to 5 infection in 21%. The renal adjustment of lenalidomide in the calculator comes from the NSSG Rd protocol: the abstract states none. Oral cyclophosphamide 50 mg has no tablet in the catalogue yet, so count the supply separately."
+    },
+    "trial": {
+      "acronym": "REPEAT",
+      "nct": "NCT01352338",
+      "phase": "I-II",
+      "randomized": false,
+      "n": 67
+    },
+    "settings": ["rrmm-late", "len-refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Nijhof I.S. та ін. Blood. 2016;128(19):2297-2306",
+        "pmid": "27647864",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article"
+        ],
+        "journal": {
+          "name": "Blood",
+          "issn": "0006-4971",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27647864/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7603509",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "25 мг на добу в дні 1–21 — максимально переносима доза (Nijhof 2016).",
+        "en": "25 mg a day on days 1 to 21, the maximum tolerated dose (Nijhof 2016)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "crcl-30-50",
+          "label": {
+            "uk": "Кліренс креатиніну від 30 до 50 мл/хв",
+            "en": "A creatinine clearance of 30 to 50 mL/min"
+          },
+          "dose_value": 10,
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.18 Lenalidomide with Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-18-lenalidomide-dex.pdf",
+            "version": "5.0 (06.2023)",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "key": "crcl-below-30",
+          "label": {
+            "uk": "Кліренс креатиніну нижчий за 30 мл/хв, без діалізу",
+            "en": "A creatinine clearance below 30 mL/min, without dialysis"
+          },
+          "dose_value": 15,
+          "notes": {
+            "uk": "Протокол пише «15 мг через день» — через день це розклад, а не доза, тому дні виставляють вручну.",
+            "en": "The protocol writes \"15 mg every other day\"; alternate days are a schedule and not a dose, so the days are set by hand."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.18 Lenalidomide with Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-18-lenalidomide-dex.pdf",
+            "version": "5.0 (06.2023)",
+            "checkedOn": "2026-10-03"
+          }
+        },
+        {
+          "key": "dialysis",
+          "label": {
+            "uk": "Гемодіаліз",
+            "en": "On dialysis"
+          },
+          "dose_value": 5,
+          "notes": {
+            "uk": "У день діалізу дозу дають після процедури.",
+            "en": "On a dialysis day the dose is given after the session."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, MM.18 Lenalidomide with Dexamethasone",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-18-lenalidomide-dex.pdf",
+            "version": "5.0 (06.2023)",
+            "checkedOn": "2026-10-03"
+          }
+        }
+      ]
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "50 мг усередину щодня без перерви (Nijhof 2016).",
+        "en": "50 mg by mouth every day without a break (Nijhof 2016)."
+      }
+    },
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "20 мг щодня без перерви. У дослідженні — преднізон 20 мг; преднізолон у тій самій дозі рівноцінний.",
+        "en": "20 mg every day without a break. The study used prednisone 20 mg; prednisolone at the same dose is equivalent."
+      }
+    }
+  ]
+}

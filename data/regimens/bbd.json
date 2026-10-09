@@ -121,6 +121,13 @@
           }
         ]
       }
-    ]
+    ],
+    "trial": {
+      "phase": "II",
+      "randomized": false,
+      "n": 79
+    },
+    "settings": ["rrmm-early", "rrmm-late"],
+    "verdict": "option"
   }
 }

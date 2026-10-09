@@ -189,6 +189,13 @@
           }
         ]
       }
-    ]
+    ],
+    "trial": {
+      "phase": "I-II",
+      "randomized": false,
+      "n": 71
+    },
+    "settings": ["rrmm-early", "rrmm-late"],
+    "verdict": "option"
   }
 }

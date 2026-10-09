@@ -190,6 +190,70 @@ export const appraisalSchema = z.strictObject({
 export type Appraisal = z.infer<typeof appraisalSchema>
 
 /**
+ * The clinical situation a study enrolled, from a closed list so that a search by situation finds
+ * every regimen written for it. A study that enrolled several situations lists each.
+ *   ndmm-te / ndmm-ti — newly diagnosed, eligible / ineligible for an autologous transplant
+ *   frail             — frail by a published score (IMWG frailty index, IFM proxy score)
+ *   rrmm-early        — relapse after one to three lines; rrmm-late — after more
+ *   len-refractory, pi-refractory — refractory to lenalidomide / to a proteasome inhibitor
+ *   t11-14, pcl, renal, neuropathy, high-risk — a feature of the disease or of the patient
+ *   maintenance       — after induction or a transplant
+ * The first four are the same words for any disease, for studies that a myeloma term does not fit:
+ *   first-line, relapse, refractory, pre-transplant (salvage meant to lead to a transplant)
+ */
+export const TRIAL_SETTINGS = [
+  'first-line',
+  'relapse',
+  'refractory',
+  'pre-transplant',
+  'ndmm-te',
+  'ndmm-ti',
+  'frail',
+  'rrmm-early',
+  'rrmm-late',
+  'len-refractory',
+  'pi-refractory',
+  't11-14',
+  'pcl',
+  'renal',
+  'neuropathy',
+  'high-risk',
+  'maintenance',
+] as const
+export type TrialSetting = (typeof TRIAL_SETTINGS)[number]
+
+/**
+ * What a study means for practice. A study that refuted a combination is kept as carefully as one
+ * that supports it: it is what stops "found it in a paper, gave it to a patient".
+ *   option  — the study supports the regimen
+ *   caution — it works, but the study found a harm that needs selection or prophylaxis
+ *   avoid   — a randomised study found no benefit or found harm; kept only as a warning
+ */
+export const TRIAL_VERDICTS = ['option', 'caution', 'avoid'] as const
+export type TrialVerdict = (typeof TRIAL_VERDICTS)[number]
+
+export const TRIAL_PHASES = ['I', 'I-II', 'II', 'III'] as const
+
+/** The facts of a study, as its publication states them; anything not stated is left out. */
+export const trialFactsSchema = z.strictObject({
+  acronym: nonEmptyTextSchema.optional(),
+  nct: z
+    .string()
+    .regex(/^NCT\d{8}$/, 'NCT and eight digits')
+    .optional(),
+  phase: z.enum(TRIAL_PHASES),
+  randomized: z.boolean(),
+  /** Patients enrolled, or randomised for a randomised study. */
+  n: positiveNumberSchema.int().optional(),
+  /** What the regimen was compared with, as the study names it. */
+  comparator: nonEmptyTextSchema.optional(),
+  /** Whether the study met its primary endpoint. */
+  primary_met: z.boolean().optional(),
+})
+
+export type TrialFacts = z.infer<typeof trialFactsSchema>
+
+/**
  * The study a regimen comes from, for the regimens that come from a study rather than from a
  * protocol or a label. Every field is optional: an abstract states the design and the numbers,
  * rarely everything, and a field is left out instead of being filled from somewhere else.
@@ -203,6 +267,12 @@ export const evidenceSchema = z.strictObject({
   population: localizedTextSchema.optional(),
   results: localizedTextSchema.optional(),
   conduct: localizedTextSchema.optional(),
+  /** The facts of the study a search filters on, so nobody has to read them out of the text. */
+  trial: trialFactsSchema.optional(),
+  /** The clinical situations the study enrolled; see TRIAL_SETTINGS. */
+  settings: z.array(z.enum(TRIAL_SETTINGS)).default([]),
+  /** What the study means for practice; see TRIAL_VERDICTS. */
+  verdict: z.enum(TRIAL_VERDICTS).default('option'),
   /** One entry per cited publication; see appraisalSchema. */
   appraisal: z.array(appraisalSchema).default([]),
 })

@@ -254,6 +254,25 @@ describe('checkCatalog', () => {
     ])
   })
 
+  it('keeps unobtainable drugs out of the trial section and refuted regimens out of the calculator', () => {
+    const rows = loadDemo()
+    const regimen = rows.regimens[0]!
+    const link = rows.treatment_node_regimens.find((row) => row.regimen_id === regimen.id)!
+    const node = rows.treatment_nodes.find((row) => row.id === link.node_id)!
+    rows.treatment_nodes.push({ ...node, id: 'trials', kind: 'trial', parent_id: null })
+    rows.treatment_nodes.push({ ...node, id: 'trials-child', kind: 'trial', parent_id: 'trials' })
+    rows.treatment_node_regimens.push({ ...link, id: 'trial-link', node_id: 'trials-child' })
+    const drug = rows.drugs.find((row) => row.id === rows.regimen_items[0]!.drug_id)!
+    drug.availability = 'unavailable'
+    regimen.evidence = { settings: [], verdict: 'avoid', appraisal: [] }
+
+    expect(errors(rows)).toEqual([
+      `treatment_node_regimens trial-link: trial section lists "${regimen.id}" with drugs not obtainable: ${drug.id}`,
+      `regimens ${regimen.id}: a regimen from a study must cite its source`,
+      `regimens ${regimen.id}: a regimen to avoid must be a reference card, not a course`,
+    ])
+  })
+
   it('refuses units that do not match the drug', () => {
     const rows = loadDemo()
     const bleomycin = { ...rows.drugs[0]!, id: 'bleomycin', amount_unit: 'iu' as const }

@@ -1,0 +1,152 @@
+{
+  "$comment": "IPd за Alliance A061202 (Blood Adv 2024, повний текст PMC11465741): помалідомід 4 мг дні 1–21, дексаметазон 40 мг дні 1, 8, 15, 22 (20 мг понад 75 років), іксазоміб 4 мг дні 1, 8, 15; цикл 28 днів, до прогресування.",
+  "id": "ipd",
+  "short_name": "IPd",
+  "name": {
+    "uk": "IPd (іксазоміб + помалідомід + дексаметазон)",
+    "en": "IPd (ixazomib, pomalidomide and dexamethasone)"
+  },
+  "description": {
+    "uk": "Перший рецидив мієломи, рефрактерної до леналідоміду. Повністю пероральна: цикл 28 днів, до прогресування.",
+    "en": "First relapse of lenalidomide-refractory myeloma. Fully oral: a 28-day cycle, until progression."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Voorhees P.M. та ін. Alliance A061202: ixazomib, pomalidomide, and dexamethasone for patients with lenalidomide-refractory MM in first relapse. Blood Adv. 2024;8(19):5039-5050",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11465741/",
+      "version": "повний текст у PMC; рандомізована фаза II, 77 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване дослідження фази II (Alliance, США): IPd проти Pd. Після прогресування на Pd можна було перейти на IPd. Цикл 28 днів, лікування до прогресування.",
+      "en": "A randomised phase II trial (Alliance, USA): IPd against Pd. Patients progressing on Pd could cross over to IPd. A 28-day cycle, treatment until progression."
+    },
+    "population": {
+      "uk": "77 пацієнтів у першому рецидиві: одна попередня лінія з прогресуванням на леналідоміді, без попереднього помалідоміду, чутливі до інгібітора протеасом або не отримували його. Кліренс креатиніну ≥30 мл/хв, нейтрофіли ≥1,0×10⁹/л, тромбоцити ≥50×10⁹/л, нейропатія не вище 2 ступеня. Вік 41–85 років.",
+      "en": "77 patients at first relapse: one prior line with progression on lenalidomide, pomalidomide-naive, proteasome inhibitor-naive or -sensitive. Creatinine clearance of at least 30 mL/min, neutrophils of at least 1.0×10⁹/L, platelets of at least 50×10⁹/L, neuropathy no worse than grade 2. Age 41 to 85."
+    },
+    "results": {
+      "uk": "Виживаність без прогресування 20,3 проти 7,5 місяця з Pd (HR 0,437). Відповідь 63,2% проти 43,6%, VGPR і краще 28,9% проти 5,1%. Дворічна загальна виживаність однакова: 78,4% проти 79,5%. У тих, хто перейшов на IPd після прогресування на Pd, відповідь лише 23,1%, виживаність без прогресування 5,6 місяця.",
+      "en": "Progression-free survival 20.3 against 7.5 months with Pd (HR 0.437). Response 63.2% against 43.6%, VGPR or better 28.9% against 5.1%. Two-year overall survival was the same: 78.4% against 79.5%. In patients crossing over to IPd after progression on Pd, the response was only 23.1% and progression-free survival 5.6 months."
+    },
+    "conduct": {
+      "uk": "Гематологічна токсичність вища, ніж з Pd: нейтропенія 3–4 ступеня 36,9% проти 18%, тромбоцитопенія 3 ступеня 5,3%. Негематологічні побічні дії подібні. Перед кожним циклом — аналіз крові й біохімія, ЕКГ — перед початком. Профілактики тромбозів основний текст статті не описує; правила зміни доз — у додатку до статті, тут не звіреному.",
+      "en": "More haematological toxicity than with Pd: grade 3 to 4 neutropenia 36.9% against 18%, grade 3 thrombocytopenia 5.3%. Non-haematological adverse events were similar. Blood counts and chemistry before each cycle, an ECG before the start. The main text describes no thromboprophylaxis; the dose modification rules are in the supplement, not checked here."
+    },
+    "trial": {
+      "acronym": "Alliance A061202",
+      "nct": "NCT02004275",
+      "phase": "II",
+      "randomized": true,
+      "n": 77,
+      "comparator": "Pd",
+      "primary_met": true
+    },
+    "settings": ["rrmm-early", "len-refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Voorhees P.M. та ін. Blood Adv. 2024;8(19):5039-5050",
+        "pmid": "39058954",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Research Support, N.I.H., Extramural"
+        ],
+        "journal": {
+          "name": "Blood Advances",
+          "issn": "2473-9529",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39058954/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood Advances» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101698425",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "ixazomib",
+      "drug_id": "ixazomib",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "4 мг усередину в дні 1, 8, 15 (A061202).",
+        "en": "4 mg by mouth on days 1, 8 and 15 (A061202)."
+      }
+    },
+    {
+      "key": "pomalidomide",
+      "drug_id": "pomalidomide",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "4 мг на добу в дні 1–21 (A061202).",
+        "en": "4 mg a day on days 1 to 21 (A061202)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "40 мг усередину в дні 1, 8, 15, 22 (A061202).",
+        "en": "40 mg by mouth on days 1, 8, 15 and 22 (A061202)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "age-over-75",
+          "label": {
+            "uk": "Вік понад 75 років",
+            "en": "Age over 75"
+          },
+          "dose_value": 20,
+          "source": {
+            "name": "Voorhees P.M. та ін. Alliance A061202: ixazomib, pomalidomide, and dexamethasone for patients with lenalidomide-refractory MM in first relapse. Blood Adv. 2024;8(19):5039-5050",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11465741/",
+            "version": "повний текст у PMC; рандомізована фаза II, 77 пацієнтів",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    }
+  ]
+}

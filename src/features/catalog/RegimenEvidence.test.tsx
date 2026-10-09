@@ -29,6 +29,8 @@ describe('RegimenEvidence', () => {
           evidence: {
             design: { uk: 'Фаза II, 79 пацієнтів.', en: 'Phase II, 79 patients.' },
             results: { uk: 'Загальна відповідь 60,8%.', en: 'Overall response 60.8%.' },
+            settings: [],
+            verdict: 'option',
             appraisal: [
               {
                 publication: 'Blood. 2014;123(7):985-991',
@@ -51,6 +53,36 @@ describe('RegimenEvidence', () => {
     // Only the two fields that are filled; the other two say nothing and are left out.
     expect(screen.queryByText('Пацієнти')).not.toBeInTheDocument()
     expect(screen.queryByText('Особливості проведення')).not.toBeInTheDocument()
+  })
+
+  it('states the study facts, the settings and a verdict to avoid before anything else', () => {
+    renderWithProviders(
+      <RegimenEvidence
+        regimen={regimen({
+          evidence: {
+            trial: {
+              acronym: 'GEM-CLARIDEX',
+              phase: 'III',
+              randomized: true,
+              n: 286,
+              comparator: 'Rd',
+              primary_met: false,
+            },
+            settings: ['ndmm-ti'],
+            verdict: 'avoid',
+            appraisal: [],
+          },
+        })}
+      />,
+    )
+
+    expect(screen.getByText(/^Не застосовувати/)).toBeInTheDocument()
+    expect(
+      screen.getByText(
+        'GEM-CLARIDEX · фаза III · рандомізоване · пацієнтів: 286 · порівняння: Rd · головну мету не досягнуто',
+      ),
+    ).toBeInTheDocument()
+    expect(screen.getByText('вперше, непридатні до ТГСК')).toBeInTheDocument()
   })
 
   it('shows a protocol regimen without the warning', () => {
