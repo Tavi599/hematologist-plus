@@ -1,0 +1,167 @@
+{
+  "$comment": "ENRICH за резюме (PMC12549478): ібрутиніб 560 мг щодня до прогресування; ритуксимаб 375 мг/м² в/в у день 1, 6–8 циклів у ритмі обраної до рандомізації хіміотерапії — кожні 28 днів (як BR, 73% пацієнтів) або кожні 21 день (як R-CHOP). Тут — цикл 28 днів; для ритму R-CHOP змініть тривалість циклу. Після відповіді — ритуксимаб кожні 8 тижнів 2 роки (схема «Ритуксимаб, підтримка» довідника). Введення ритуксимабу — як у BR довідника.",
+  "id": "ibrutinib-rituximab-mcl",
+  "short_name": "Ібрутиніб + ритуксимаб (ENRICH)",
+  "name": {
+    "uk": "Ібрутиніб + ритуксимаб у першій лінії для літніх (ENRICH)",
+    "en": "Ibrutinib plus rituximab, first line for older patients (ENRICH)"
+  },
+  "description": {
+    "uk": "Перша лінія мантійноклітинної лімфоми від 60 років, без хіміотерапії. 6–8 циклів ритуксимабу по 28 днів (або по 21 дню); ібрутиніб щодня до прогресування; при відповіді — ритуксимаб кожні 8 тижнів 2 роки.",
+    "en": "First line in mantle cell lymphoma at 60 or over, chemotherapy-free. Six to eight cycles of rituximab every 28 days (or 21); ibrutinib daily until progression; responders get rituximab every 8 weeks for 2 years."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "Lewis D.J. та ін. Ibrutinib and rituximab versus immunochemotherapy in patients with previously untreated mantle cell lymphoma (ENRICH): a randomised, open-label, phase 2/3 superiority trial. Lancet. 2025;406:1953-1968",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12549478/",
+      "version": "повний текст у PMC; фаза II–III, 397 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Відкрите рандомізоване дослідження фази II–III (Велика Британія та Скандинавія): ібрутиніб + ритуксимаб проти R-CHOP або BR за вибором до рандомізації.",
+      "en": "An open-label randomised phase II to III trial (UK and Nordic countries): ibrutinib plus rituximab against R-CHOP or BR chosen before randomisation."
+    },
+    "population": {
+      "uk": "397 пацієнтів від 60 років з нелікованою мантійноклітинною лімфомою II–IV стадії, ECOG 0–2; медіана віку 74 роки.",
+      "en": "397 patients aged 60 or over with untreated stage II to IV mantle cell lymphoma, ECOG 0 to 2; median age 74."
+    },
+    "results": {
+      "uk": "Виживаність без прогресування краща: HR 0,69 (p=0,0034) за медіани спостереження 47,9 місяця. Перевага переважно проти R-CHOP (HR 0,37); проти BR різниці не показано (HR 0,91).",
+      "en": "Better progression-free survival: HR 0.69 (p=0.0034) at a median follow-up of 47.9 months. The benefit was mainly against R-CHOP (HR 0.37); against BR no difference was shown (HR 0.91)."
+    },
+    "conduct": {
+      "uk": "Небажані явища 3 ступеня і вище 67% проти 70%. Ібрутиніб — до прогресування; контроль фібриляції передсердь, кровотеч і артеріального тиску.",
+      "en": "Grade 3 or worse adverse events 67% against 70%. Ibrutinib until progression; watch for atrial fibrillation, bleeding and blood pressure."
+    },
+    "trial": {
+      "acronym": "ENRICH",
+      "phase": "III",
+      "randomized": true,
+      "n": 397,
+      "comparator": "R-CHOP або BR",
+      "primary_met": true
+    },
+    "settings": ["first-line", "elderly"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Lewis D.J. та ін. Lancet. 2025;406:1953-1968",
+        "pmid": "41052510",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Clinical Trial, Phase II",
+          "Randomized Controlled Trial",
+          "Clinical Trial, Phase III",
+          "Multicenter Study",
+          "Comparative Study",
+          "Equivalence Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "The Lancet",
+          "issn": "0140-6736",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/41052510/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/2985213R",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "Максимальна швидкість 400 мг/год; спостереження 30 хв перед наступними інфузіями",
+        "en": "Maximum rate 400 mg/h; observe for 30 minutes before the next infusions"
+      }
+    },
+    {
+      "key": "ibrutinib",
+      "drug_id": "ibrutinib",
+      "route": "oral",
+      "dose_value": 560,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "560 мг раз на добу щодня, до прогресування або неприйнятної токсичності (ENRICH).",
+        "en": "560 mg once a day every day, until progression or unacceptable toxicity (ENRICH)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "cyp3a4-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A4 (кетоконазол, ітраконазол, вориконазол, позаконазол, кларитроміцин, телітроміцин)",
+            "en": "Strong CYP3A4 inhibitor (ketoconazole, itraconazole, voriconazole, posaconazole, clarithromycin, telithromycin)"
+          },
+          "dose_value": 140,
+          "notes": {
+            "uk": "Одночасного призначення краще уникати. Якщо інгібітор потрібен ненадовго (протигрибковий препарат чи антибіотик на 7 днів або менше), ібрутиніб на цей час або переривають, або зменшують до 140 мг на добу. Пацієнта пильно спостерігають щодо ознак токсичності.",
+            "en": "Concomitant use is better avoided. Where the inhibitor is short-term - an antifungal or antibiotic for 7 days or less - ibrutinib is either interrupted or reduced to 140 mg daily. Watch closely for signs of toxicity."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "key": "cyp3a4-moderate",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A4",
+            "en": "Moderate CYP3A4 inhibitor"
+          },
+          "dose_value": 280,
+          "notes": {
+            "uk": "Якщо без інгібітора не обійтися. Сюди ж належать грейпфрут і севільські апельсини — їх виключають.",
+            "en": "Where the inhibitor cannot be avoided. Grapefruit and Seville oranges count as moderate inhibitors and are excluded."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-mcl-philemon",
+  "short_name": "Ібрутиніб + леналідомід + ритуксимаб (PHILEMON)",
+  "name": {
+    "uk": "Ібрутиніб + леналідомід + ритуксимаб при рецидиві (PHILEMON)",
+    "en": "Ibrutinib, lenalidomide and rituximab at relapse (PHILEMON)"
+  },
+  "sources": [
+    {
+      "name": "Jerkeman M. та ін. Ibrutinib, lenalidomide, and rituximab in relapsed or refractory mantle cell lymphoma (PHILEMON): a multicentre, open-label, single-arm, phase 2 trial. Lancet Haematol. 2018;5:e109-e116",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29396091/",
+      "version": "резюме; фаза II, 50 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "PHILEMON",
+      "nct": "NCT02460276",
+      "phase": "II",
+      "randomized": false,
+      "n": 50
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Jerkeman M. та ін. Lancet Haematol. 2018;5:e109-e116",
+        "pmid": "29396091",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article", "Multicenter Study"],
+        "journal": {
+          "name": "The Lancet Haematology",
+          "issn": "2352-3026",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29396091/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101643584",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Рецидив після схеми з ритуксимабом: 12 циклів по 28 днів — ібрутиніб 560 мг щодня, леналідомід 15 мг у дні 1–21, ритуксимаб 375 мг/м² щотижня в циклі 1, далі раз на 8 тижнів; потім ібрутиніб з ритуксимабом до прогресування.",
+      "en": "Relapse after a rituximab regimen: twelve 28-day cycles of ibrutinib 560 mg daily, lenalidomide 15 mg on days 1 to 21, rituximab 375 mg/m² weekly in cycle 1 then every 8 weeks; then ibrutinib with rituximab until progression."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ібрутиніб",
+          "en": "Ibrutinib"
+        },
+        "drug_id": "ibrutinib"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Відповідь 76%, повна — 56%. Нейтропенія 3–4 ступеня 38%, інфекції 22%, шкірна токсичність 14%; три смерті, пов'язані з лікуванням (два сепсиси й емболічний інсульт).",
+        "en": "Response 76%, complete 56%. Grade 3 to 4 neutropenia 38%, infections 22%, skin toxicity 14%; three treatment-related deaths (two sepsis and an embolic stroke)."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме не каже, в яких саме циклах вводять ритуксимаб «раз на 8 тижнів», тож схема не розраховується.",
+      "en": "The abstract does not say which cycles carry the every-8-weeks rituximab, so the regimen is not calculated."
+    }
+  }
+}

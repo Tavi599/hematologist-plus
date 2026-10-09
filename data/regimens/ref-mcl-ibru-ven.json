@@ -1,0 +1,167 @@
+{
+  "$comment": "Лише опис: доступні джерела не дають повного розкладу.",
+  "id": "ref-mcl-ibru-ven",
+  "short_name": "Ібрутиніб + венетоклакс (SYMPATICO)",
+  "name": {
+    "uk": "Ібрутиніб + венетоклакс при рецидиві (SYMPATICO)",
+    "en": "Ibrutinib plus venetoclax at relapse (SYMPATICO)"
+  },
+  "sources": [
+    {
+      "name": "Wang M. та ін. Ibrutinib plus venetoclax in relapsed or refractory mantle cell lymphoma (SYMPATICO): a multicentre, randomised, double-blind, placebo-controlled, phase 3 study. Lancet Oncol. 2025;26:200-213",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39914418/",
+      "version": "резюме; фаза III, 267 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Wang M. та ін. Concurrent ibrutinib plus venetoclax in relapsed/refractory mantle cell lymphoma: the safety run-in of the phase 3 SYMPATICO study. J Hematol Oncol. 2021;14:179",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8556975/",
+      "version": "повний текст у PMC; 21 пацієнт",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT03112174 (SYMPATICO), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT03112174",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "SYMPATICO",
+      "nct": "NCT03112174",
+      "phase": "III",
+      "randomized": true,
+      "n": 267,
+      "comparator": "ібрутиніб + плацебо",
+      "primary_met": true
+    },
+    "settings": ["relapse", "refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Wang M. та ін. Lancet Oncol. 2025;26:200-213",
+        "pmid": "39914418",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Multicenter Study",
+          "Clinical Trial, Phase III"
+        ],
+        "journal": {
+          "name": "The Lancet Oncology",
+          "issn": "1470-2045",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/39914418/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/100957246",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Wang M. та ін. J Hematol Oncol. 2021;14:179",
+        "pmid": "34717692",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Hematology & Oncology",
+          "issn": "1756-8722",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34717692/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Hematology & Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101468937",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Рецидив або рефрактерність після 1–5 ліній, без попередніх інгібіторів BTK чи BCL-2: ібрутиніб 560 мг щодня разом із венетоклаксом (з 20 мг, нарощування за 5 тижнів до 400 мг) 2 роки, далі ібрутиніб окремо до прогресування.",
+      "en": "Relapsed or refractory after one to five lines, with no prior BTK or BCL-2 inhibitor: ibrutinib 560 mg daily with venetoclax (from 20 mg, ramped up over 5 weeks to 400 mg) for 2 years, then ibrutinib alone until progression."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ібрутиніб",
+          "en": "Ibrutinib"
+        },
+        "drug_id": "ibrutinib"
+      },
+      {
+        "name": {
+          "uk": "Венетоклакс",
+          "en": "Venetoclax"
+        },
+        "drug_id": "venetoclax"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Медіана виживаності без прогресування 31,9 проти 22,1 місяця з одним ібрутинібом (HR 0,65; p=0,0052).",
+        "en": "Median progression-free survival 31.9 against 22.1 months with ibrutinib alone (HR 0.65; p=0.0052)."
+      },
+      {
+        "uk": "Нейтропенія 3–4 ступеня 31% проти 11%. Венетоклакс починають одночасно з ібрутинібом, без вступного періоду ібрутинібу; у вступній фазі безпеки в одного з 21 пацієнта був лабораторний синдром лізису пухлини.",
+        "en": "Grade 3 to 4 neutropenia 31% against 11%. Venetoclax starts together with ibrutinib, with no ibrutinib lead-in; in the safety run-in, one of 21 patients had laboratory tumour lysis."
+      }
+    ],
+    "gap": {
+      "uk": "Проміжні кроки нарощування венетоклаксу наведено лише в додатку до статті, тут не звіреному.",
+      "en": "The intermediate venetoclax ramp-up steps are only in the article supplement, not checked here."
+    }
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "$comment": "TRIANGLE, група I (без аутотрансплантації), за резюме Lancet 2024 і 2026 та реєстром NCT02858258: 6 циклів по 21 дню, R-CHOP у циклах 1, 3, 5 чергується з R-DHAP (або R-DHAOx) у циклах 2, 4, 6. R-CHOP: ритуксимаб 375 мг/м² у день 0 або 1 (тут день 1), циклофосфамід 750 мг/м², доксорубіцин 50 мг/м², вінкристин 1,4 мг/м² (не більше 2 мг) у день 1, преднізон 100 мг у дні 1–5 (замінено на преднізолон 1:1); ібрутиніб 560 мг у дні 1–19 лише циклів R-CHOP. Далі ібрутиніб 560 мг щодня 2 роки (тут 26 циклів по 28 днів = 728 днів). R-DHAP і R-DHAOx — схеми довідника з тими самими дозами. Розведення CHOP джерела не наводять.",
+  "id": "r-chop-ibrutinib-mcl",
+  "short_name": "R-CHOP + ібрутиніб (TRIANGLE)",
+  "name": {
+    "uk": "R-CHOP + ібрутиніб, цикли 1, 3, 5 (TRIANGLE)",
+    "en": "R-CHOP plus ibrutinib, cycles 1, 3 and 5 (TRIANGLE)"
+  },
+  "description": {
+    "uk": "Перша лінія мантійноклітинної лімфоми, 18–65 років. Цикли 1, 3, 5 по 21 дню; чергуються з R-DHAP або R-DHAOx у циклах 2, 4, 6. Потім 2 роки ібрутинібу без аутотрансплантації.",
+    "en": "First line in mantle cell lymphoma, aged 18 to 65. Cycles 1, 3 and 5, 21 days each, alternating with R-DHAP or R-DHAOx in cycles 2, 4 and 6. Then 2 years of ibrutinib without an autologous transplant."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "Dreyling M. та ін. Ibrutinib combined with immunochemotherapy with or without autologous stem-cell transplantation versus immunochemotherapy and autologous stem-cell transplantation in previously untreated patients with mantle cell lymphoma (TRIANGLE). Lancet. 2024;403:2293-2306",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38705160/",
+      "version": "резюме; фаза III, 870 пацієнтів",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Dreyling M. та ін. Addition of autologous stem-cell transplantation to an ibrutinib-containing first-line treatment in patients aged 18-65 years with mantle cell lymphoma (TRIANGLE): 4·5-year follow-up. Lancet. 2026;407:1953-1967",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42134356/",
+      "version": "резюме; спостереження 4,5 року",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "ClinicalTrials.gov NCT02858258 (TRIANGLE), опис груп лікування",
+      "url": "https://clinicaltrials.gov/study/NCT02858258",
+      "version": "запис на дату звірки",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Відкрите рандомізоване тригрупове дослідження фази III Європейської мережі з мантійноклітинної лімфоми: A — R-CHOP/R-DHAP з аутотрансплантацією, A+I — те саме з ібрутинібом, I — ібрутиніб без аутотрансплантації.",
+      "en": "An open-label randomised three-arm phase III trial of the European MCL Network: A, R-CHOP/R-DHAP with an autologous transplant; A+I, the same with ibrutinib; I, ibrutinib without the transplant."
+    },
+    "population": {
+      "uk": "870 пацієнтів 18–65 років з нелікованою мантійноклітинною лімфомою II–IV стадії, придатних до аутотрансплантації.",
+      "en": "870 patients aged 18 to 65 with untreated stage II to IV mantle cell lymphoma, fit for an autologous transplant."
+    },
+    "results": {
+      "uk": "За 4,5 року: чотирирічна виживаність без невдачі лікування 81% у групі I проти 70% у стандартній групі A; загальна виживаність 90% проти 81% (HR 0,57). Аутотрансплантація до ібрутинібу користі не додала (82% проти 81%), але збільшила токсичність.",
+      "en": "At 4.5 years: four-year failure-free survival 81% in arm I against 70% in the standard arm A; overall survival 90% against 81% (HR 0.57). Adding an autologous transplant to ibrutinib brought no benefit (82% against 81%) but more toxicity."
+    },
+    "conduct": {
+      "uk": "Під час підтримки ібрутинібом гематологічна токсичність 3–5 ступеня 28%, інфекції 26%. Підтримка ритуксимабом дозволялася за національними правилами; у вторинному аналізі вона подовжувала виживаність без прогресування (85% проти 73% за 4 роки), але інфекцій 3–5 ступеня було більше (34% проти 11%).",
+      "en": "During ibrutinib maintenance grade 3 to 5 haematological toxicity was 28% and infections 26%. Rituximab maintenance was allowed per national rules; in a secondary analysis it lengthened progression-free survival (85% against 73% at 4 years) but with more grade 3 to 5 infections (34% against 11%)."
+    },
+    "trial": {
+      "acronym": "TRIANGLE",
+      "nct": "NCT02858258",
+      "phase": "III",
+      "randomized": true,
+      "n": 870,
+      "comparator": "R-CHOP/R-DHAP + аутотрансплантація",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Dreyling M. та ін. Lancet. 2024;403:2293-2306",
+        "pmid": "38705160",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Clinical Trial, Phase III",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't",
+          "Equivalence Trial"
+        ],
+        "journal": {
+          "name": "The Lancet",
+          "issn": "0140-6736",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/38705160/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/2985213R",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Dreyling M. та ін. Lancet. 2026;407:1953-1967",
+        "pmid": "42134356",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Clinical Trial, Phase III",
+          "Randomized Controlled Trial",
+          "Multicenter Study",
+          "Equivalence Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "The Lancet",
+          "issn": "0140-6736",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/42134356/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/2985213R",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "100 мг у дні 1–5. У дослідженні — преднізон 100 мг або еквівалент; замінено на преднізолон 1:1.",
+        "en": "100 mg on days 1 to 5. The trial used prednisone 100 mg or equivalent; replaced 1:1 by prednisolone."
+      }
+    },
+    {
+      "key": "rituximab",
+      "drug_id": "rituximab",
+      "route": "iv_infusion",
+      "dose_value": 375,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "375 мг/м² в/в. Швидкість і розведення — за правилами відділення для ритуксимабу.",
+        "en": "375 mg/m² IV. Rate and dilution per the department rules for rituximab."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 750,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "750 мг/м² в/в у день 1.",
+        "en": "750 mg/m² IV on day 1."
+      }
+    },
+    {
+      "key": "doxorubicin",
+      "drug_id": "doxorubicin",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "50 мг/м² в/в у день 1.",
+        "en": "50 mg/m² IV on day 1."
+      }
+    },
+    {
+      "key": "vincristine",
+      "drug_id": "vincristine",
+      "route": "iv_infusion",
+      "dose_value": 1.4,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "notes": {
+        "uk": "1,4 мг/м² в/в у день 1, не більше 2 мг.",
+        "en": "1.4 mg/m² IV on day 1, no more than 2 mg."
+      },
+      "cap_amount": 2
+    },
+    {
+      "key": "ibrutinib",
+      "drug_id": "ibrutinib",
+      "route": "oral",
+      "dose_value": 560,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+      "notes": {
+        "uk": "560 мг раз на добу в дні 1–19 циклів R-CHOP (NCT02858258); у циклах R-DHAP ібрутиніб не дають.",
+        "en": "560 mg once a day on days 1 to 19 of the R-CHOP cycles (NCT02858258); no ibrutinib in the R-DHAP cycles."
+      },
+      "dose_modifiers": [
+        {
+          "key": "cyp3a4-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A4 (кетоконазол, ітраконазол, вориконазол, позаконазол, кларитроміцин, телітроміцин)",
+            "en": "Strong CYP3A4 inhibitor (ketoconazole, itraconazole, voriconazole, posaconazole, clarithromycin, telithromycin)"
+          },
+          "dose_value": 140,
+          "notes": {
+            "uk": "Одночасного призначення краще уникати. Якщо інгібітор потрібен ненадовго (протигрибковий препарат чи антибіотик на 7 днів або менше), ібрутиніб на цей час або переривають, або зменшують до 140 мг на добу. Пацієнта пильно спостерігають щодо ознак токсичності.",
+            "en": "Concomitant use is better avoided. Where the inhibitor is short-term - an antifungal or antibiotic for 7 days or less - ibrutinib is either interrupted or reduced to 140 mg daily. Watch closely for signs of toxicity."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        },
+        {
+          "key": "cyp3a4-moderate",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A4",
+            "en": "Moderate CYP3A4 inhibitor"
+          },
+          "dose_value": 280,
+          "notes": {
+            "uk": "Якщо без інгібітора не обійтися. Сюди ж належать грейпфрут і севільські апельсини — їх виключають.",
+            "en": "Where the inhibitor cannot be avoided. Grapefruit and Seville oranges count as moderate inhibitors and are excluded."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.38 Ibrutinib",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-38-ibrutinib.pdf",
+            "version": "перевірено 2026-10-02",
+            "checkedOn": "2026-10-02"
+          }
+        }
+      ]
+    }
+  ]
+}
