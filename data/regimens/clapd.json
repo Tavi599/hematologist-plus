@@ -1,0 +1,136 @@
+{
+  "$comment": "ClaPd за Mark, Blood Adv 2019 (повний текст): помалідомід 4 мг дні 1–21; кларитроміцин 500 мг двічі на добу дні 1–28; дексаметазон 40 мг у дні 1, 8, 15, 22; цикл 28 днів, до прогресування. Профілактика в дослідженні: аспірин 81 мг на добу і ко-тримоксазол.",
+  "id": "clapd",
+  "short_name": "ClaPd",
+  "name": {
+    "uk": "ClaPd (кларитроміцин + помалідомід + дексаметазон)",
+    "en": "ClaPd (clarithromycin, pomalidomide and dexamethasone)"
+  },
+  "description": {
+    "uk": "Рецидив після леналідоміду, зокрема подвійно рефрактерний. Повністю пероральна: цикл 28 днів, до прогресування.",
+    "en": "Relapse after lenalidomide, including double-refractory disease. Fully oral: a 28-day cycle, until progression."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Mark T.M. та ін. Phase 2 study of clarithromycin, pomalidomide, and dexamethasone in relapsed or refractory multiple myeloma. Blood Adv. 2019;3(4):603-611",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6391672/",
+      "version": "повний текст у PMC; фаза II, 120 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Дослідження фази II без групи порівняння.",
+      "en": "A phase II study without a comparison group."
+    },
+    "population": {
+      "uk": "120 пацієнтів з рецидивною або рефрактерною мієломою після леналідоміду, медіана 5 попередніх ліній. Нейтрофіли ≥0,75×10⁹/л, тромбоцити ≥50×10⁹/л, креатинін менш як у 2,5 раза вище норми.",
+      "en": "120 patients with relapsed or refractory myeloma after lenalidomide, a median of 5 prior lines. Neutrophils of at least 0.75×10⁹/L, platelets of at least 50×10⁹/L, creatinine under 2.5 times the upper limit."
+    },
+    "results": {
+      "uk": "Відповідь 60%, VGPR і краще 23%. Однакова при рефрактерності до леналідоміду (58%), бортезомібу (55%) чи обох (54%). Виживаність без прогресування 7,7 місяця, загальна 19,2 місяця.",
+      "en": "Response 60%, VGPR or better 23%. The same in lenalidomide-refractory (58%), bortezomib-refractory (55%) or double-refractory disease (54%). Progression-free survival 7.7 months, overall 19.2 months."
+    },
+    "conduct": {
+      "uk": "Профілактика в дослідженні: аспірин 81 мг на добу проти тромбозів і ко-тримоксазол проти пневмоцистної пневмонії. Нейтропенія 3+ ступеня 58%, тромбоцитопенія 31%, гіперглікемія 15%, легенева інфекція 13%. Кларитроміцин відмінили у 28% (переважно через шлунково-кишкові ефекти), дозу дексаметазону знижували у 57%. Кларитроміцин сповільнює виведення дексаметазону: у літніх із Rd це збільшило токсичні смерті (GEM-CLARIDEX).",
+      "en": "Prophylaxis in the study: aspirin 81 mg daily against thrombosis and co-trimoxazole against pneumocystis. Grade 3+ neutropenia 58%, thrombocytopenia 31%, hyperglycaemia 15%, lung infection 13%. Clarithromycin was stopped in 28% (mostly for gastrointestinal effects) and the dexamethasone dose reduced in 57%. Clarithromycin slows dexamethasone clearance: in the elderly on Rd this raised toxic deaths (GEM-CLARIDEX)."
+    },
+    "trial": {
+      "nct": "NCT01159574",
+      "phase": "II",
+      "randomized": false,
+      "n": 120
+    },
+    "settings": ["rrmm-late", "len-refractory", "pi-refractory"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Mark T.M. та ін. Blood Adv. 2019;3(4):603-611",
+        "pmid": "30792190",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Research Support, N.I.H., Extramural",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood Advances",
+          "issn": "2473-9529",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30792190/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood Advances» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101698425",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "clarithromycin",
+      "drug_id": "clarithromycin",
+      "route": "oral",
+      "dose_value": 500,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "500 мг двічі на добу щодня (Mark 2019).",
+        "en": "500 mg twice a day every day (Mark 2019)."
+      },
+      "administrations_per_day": 2
+    },
+    {
+      "key": "pomalidomide",
+      "drug_id": "pomalidomide",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "notes": {
+        "uk": "4 мг у дні 1–21 (Mark 2019).",
+        "en": "4 mg on days 1 to 21 (Mark 2019)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "40 мг у дні 1, 8, 15, 22 (Mark 2019).",
+        "en": "40 mg on days 1, 8, 15 and 22 (Mark 2019)."
+      }
+    }
+  ]
+}

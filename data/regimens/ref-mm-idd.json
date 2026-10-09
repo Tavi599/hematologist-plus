@@ -1,0 +1,115 @@
+{
+  "$comment": "Лише опис: резюме не дає повного розкладу, а повний текст недоступний.",
+  "id": "ref-mm-idd",
+  "short_name": "IDd",
+  "name": {
+    "uk": "Іксазоміб + даратумумаб + дексаметазон",
+    "en": "Ixazomib, daratumumab and dexamethasone"
+  },
+  "sources": [
+    {
+      "name": "Delimpasi S. та ін. Ixazomib plus daratumumab and dexamethasone: Final analysis of a phase 2 study among patients with relapsed/refractory multiple myeloma. Am J Hematol. 2024;99(9):1746-1756",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38856176/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "nct": "NCT03439293",
+      "phase": "II",
+      "randomized": false,
+      "n": 61
+    },
+    "settings": ["rrmm-early", "neuropathy"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Delimpasi S. та ін. Am J Hematol. 2024;99(9):1746-1756",
+        "pmid": "38856176",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Clinical Trial, Phase II",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "American Journal of Hematology",
+          "issn": "0361-8609",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/38856176/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «American Journal of Hematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7610369",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Рецидив після 1–3 ліній, без попереднього іксазомібу й даратумумабу. Цикл 28 днів, до прогресування.",
+      "en": "Relapse after 1 to 3 lines, naive to ixazomib and daratumumab. A 28-day cycle, until progression."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Іксазоміб",
+          "en": "Ixazomib"
+        },
+        "drug_id": "ixazomib"
+      },
+      {
+        "name": {
+          "uk": "Даратумумаб",
+          "en": "Daratumumab"
+        },
+        "drug_id": "daratumumab"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "61 пацієнт, медіана віку 69 років. Відповідь 64,4%, VGPR і краще 30,5%; виживаність без прогресування 16,8 місяця.",
+        "en": "61 patients, median age 69. Response 64.4%, VGPR or better 30.5%; progression-free survival 16.8 months."
+      },
+      {
+        "uk": "Нейропатія будь-якого ступеня 18%, 3 ступеня 1,6% — варіант без бортезомібу при нейропатії.",
+        "en": "Neuropathy of any grade 18%, grade 3 1.6%: a bortezomib-free option with neuropathy."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме не наводить доз і днів; повний текст недоступний.",
+      "en": "The abstract gives no doses or days; the full text is not accessible."
+    }
+  }
+}

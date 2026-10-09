@@ -1,0 +1,117 @@
+{
+  "$comment": "Лише опис: резюме не дає повного розкладу, а повний текст недоступний.",
+  "id": "ref-mm-kpd-weekly",
+  "short_name": "KPd щотижня",
+  "name": {
+    "uk": "Карфілзоміб раз на тиждень + помалідомід + дексаметазон",
+    "en": "Weekly carfilzomib, pomalidomide and dexamethasone"
+  },
+  "sources": [
+    {
+      "name": "Perrot A. та ін. An open-label phase 2 study treating patients with first or second relapse of multiple myeloma with carfilzomib, pomalidomide, and dexamethasone (KPd): SELECT study. Leuk Lymphoma. 2024;65(6):833-842",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38497533/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "SELECT",
+      "nct": "NCT04191616",
+      "phase": "II",
+      "randomized": false,
+      "n": 52,
+      "primary_met": false
+    },
+    "settings": ["rrmm-early", "len-refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Perrot A. та ін. Leuk Lymphoma. 2024;65(6):833-842",
+        "pmid": "38497533",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Clinical Trial, Phase II",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Leukemia & Lymphoma",
+          "issn": "1026-8022",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/38497533/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Leukemia & Lymphoma» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/9007422",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Перший або другий рецидив, рефрактерний до леналідоміду. Карфілзоміб 56 мг/м² раз на тиждень із помалідомідом і дексаметазоном.",
+      "en": "First or second relapse, lenalidomide-refractory. Carfilzomib 56 mg/m² once a week with pomalidomide and dexamethasone."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Карфілзоміб",
+          "en": "Carfilzomib"
+        },
+        "drug_id": "carfilzomib"
+      },
+      {
+        "name": {
+          "uk": "Помалідомід",
+          "en": "Pomalidomide"
+        },
+        "drug_id": "pomalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "52 пацієнти, 37% рефрактерні до трьох класів. Відповідь 58% (головну мету не досягнуто), VGPR і краще 35%; виживаність без прогресування 11,1 місяця, загальна 18,8 місяця.",
+        "en": "52 patients, 37% triple-class refractory. Response 58% (primary endpoint not met), VGPR or better 35%; progression-free survival 11.1 months, overall 18.8 months."
+      },
+      {
+        "uk": "Діяла й у рефрактерних до даратумумабу. Побічні події 3+ ступеня 67%.",
+        "en": "It worked in daratumumab-refractory disease too. Grade 3+ adverse events 67%."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме не наводить днів карфілзомібу, дози помалідоміду й дексаметазону; повний текст недоступний.",
+      "en": "The abstract gives neither the carfilzomib days nor the pomalidomide and dexamethasone doses; the full text is not accessible."
+    }
+  }
+}

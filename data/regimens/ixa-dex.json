@@ -1,0 +1,138 @@
+{
+  "$comment": "Ixa-dex за Dimopoulos, BCJ 2022 (повний текст): іксазоміб 4 мг у дні 1, 8, 15 (з циклу 2 — 5,5 мг, якщо переносився); дексаметазон 20 мг у дні 1, 2, 8, 9, 15, 16, 22, 23 (від 75 років — 10 мг); цикл 28 днів, до прогресування. Капсул 5,5 мг (2,3 + 3 мг) у довіднику немає.",
+  "id": "ixa-dex",
+  "short_name": "Ixa-dex",
+  "name": {
+    "uk": "Іксазоміб + дексаметазон",
+    "en": "Ixazomib and dexamethasone"
+  },
+  "description": {
+    "uk": "Рецидив, рефрактерний до леналідоміду, після інгібітора протеасом. Повністю пероральна: цикл 28 днів, до прогресування. Рівноцінна заміна Pd, коли помалідоміду немає.",
+    "en": "Lenalidomide-refractory relapse after a proteasome inhibitor. Fully oral: a 28-day cycle, until progression. An equivalent of Pd when pomalidomide is not available."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Dimopoulos M.A. та ін. Oral ixazomib-dexamethasone vs oral pomalidomide-dexamethasone for lenalidomide-refractory, proteasome inhibitor-exposed multiple myeloma: a randomized Phase 2 trial. Blood Cancer J. 2022;12(1):9",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8786921/",
+      "version": "повний текст у PMC; рандомізована фаза II, 122 пацієнти",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване відкрите дослідження фази II (3:2): іксазоміб з дексаметазоном проти помалідоміду з дексаметазоном.",
+      "en": "A randomised open-label phase II trial (3:2): ixazomib with dexamethasone against pomalidomide with dexamethasone."
+    },
+    "population": {
+      "uk": "122 пацієнти, рефрактерні до леналідоміду, після бортезомібу або карфілзомібу, щонайменше 2 попередні лінії. Медіана віку 72 роки в групі іксазомібу, 36% від 75 років.",
+      "en": "122 lenalidomide-refractory patients after bortezomib or carfilzomib, at least 2 prior lines. The median age was 72 in the ixazomib arm, 36% were 75 or over."
+    },
+    "results": {
+      "uk": "Різниці немає: виживаність без прогресування 7,1 проти 4,8 місяця (HR 0,847; p=0,477). Після 2 ліній — 11,0 проти 5,7 місяця, після 3 і більше — 5,7 проти 3,7.",
+      "en": "No difference: progression-free survival 7.1 against 4.8 months (HR 0.847; p=0.477). After 2 lines 11.0 against 5.7 months, after 3 or more 5.7 against 3.7."
+    },
+    "conduct": {
+      "uk": "Побічні події 3+ ступеня 69% проти 81%, серйозні 51% проти 53%; відміна через побічні події 39% проти 36%, зниження дози 44% проти 32%. Якість життя зберігалася.",
+      "en": "Grade 3+ adverse events 69% against 81%, serious 51% against 53%; discontinuation for adverse events 39% against 36%, dose reduction 44% against 32%. Quality of life was maintained."
+    },
+    "trial": {
+      "nct": "NCT03170882",
+      "phase": "II",
+      "randomized": true,
+      "n": 122,
+      "comparator": "Pd",
+      "primary_met": false
+    },
+    "settings": ["rrmm-late", "len-refractory"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Dimopoulos M.A. та ін. Blood Cancer J. 2022;12(1):9",
+        "pmid": "35075109",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood Cancer Journal",
+          "issn": "2044-5385",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35075109/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood Cancer Journal» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101568469",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "ixazomib",
+      "drug_id": "ixazomib",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "4 мг у дні 1, 8, 15; у дослідженні з циклу 2 — 5,5 мг, якщо 4 мг переносилися (такої капсули в довіднику немає).",
+        "en": "4 mg on days 1, 8 and 15; in the study 5.5 mg from cycle 2 if 4 mg was tolerated (no such capsule in the catalogue)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 9, 15, 16, 22, 23],
+      "notes": {
+        "uk": "20 мг у дні 1, 2, 8, 9, 15, 16, 22, 23.",
+        "en": "20 mg on days 1, 2, 8, 9, 15, 16, 22 and 23."
+      },
+      "dose_modifiers": [
+        {
+          "key": "age-75-or-over",
+          "label": {
+            "uk": "Вік 75 років і більше",
+            "en": "Age 75 or over"
+          },
+          "dose_value": 10,
+          "source": {
+            "name": "Dimopoulos M.A. та ін. Oral ixazomib-dexamethasone vs oral pomalidomide-dexamethasone for lenalidomide-refractory, proteasome inhibitor-exposed multiple myeloma: a randomized Phase 2 trial. Blood Cancer J. 2022;12(1):9",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8786921/",
+            "version": "повний текст у PMC; рандомізована фаза II, 122 пацієнти",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    }
+  ]
+}

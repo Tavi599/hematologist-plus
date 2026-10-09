@@ -1,0 +1,58 @@
+{
+  "$comment": "Бортезоміб + пегільований ліпосомальний доксорубіцин за інструкцією Caelyx (EMA, 4.2: 30 мг/м² у день 4 трьохтижневого циклу бортезомібу, інфузія 1 година; доза <90 мг — у 250 мл 5% глюкози, ≥90 мг — у 500 мл; перша інфузія не швидше 1 мг/хв) і рандомізованим дослідженням Orlowski (бортезоміб 1,3 мг/м² в/в у дні 1, 4, 8, 11; до 8 циклів, довше — якщо відповідь триває). Показання зареєстроване, тому це не схема з дослідження.",
+  "id": "v-pld",
+  "short_name": "V-PLD",
+  "name": {
+    "uk": "Бортезоміб + пегільований ліпосомальний доксорубіцин (V-PLD)",
+    "en": "Bortezomib and pegylated liposomal doxorubicin (V-PLD)"
+  },
+  "description": {
+    "uk": "Рецидив мієломи після щонайменше однієї лінії, у пацієнтів після трансплантації або непридатних до неї (показання в інструкції Caelyx). Цикл 21 день, до 8 циклів; довше — якщо відповідь триває й переносимість прийнятна. У рандомізованому дослідженні подовжила час до прогресування, але остаточний аналіз не показав переваги в загальній виживаності над одним бортезомібом (33 проти 30,8 місяця).",
+    "en": "Relapsed myeloma after at least one line, in patients after a transplant or unsuitable for one (the Caelyx indication). A 21-day cycle, up to 8 cycles; longer while the response lasts and tolerance allows. In the randomised trial it prolonged time to progression, but the final analysis showed no overall survival advantage over bortezomib alone (33 against 30.8 months)."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 8,
+  "sources": [
+    {
+      "name": "EMA, Caelyx pegylated liposomal (доксорубіцин пегільований ліпосомальний), коротка характеристика препарату, розділ 4.2",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/caelyx-pegylated-liposomal-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Orlowski R.Z. та ін. Final overall survival results of a randomized trial comparing bortezomib plus pegylated liposomal doxorubicin with bortezomib alone in patients with relapsed or refractory multiple myeloma. Cancer. 2016;122(13):2050-2056",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5701574/",
+      "version": "повний текст у PMC; фаза III, 646 пацієнтів",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "items": [
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "iv_bolus",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 4, 8, 11],
+      "notes": {
+        "uk": "1,3 мг/м² в/в у дні 1, 4, 8, 11 (Orlowski 2016).",
+        "en": "1.3 mg/m² IV on days 1, 4, 8 and 11 (Orlowski 2016)."
+      }
+    },
+    {
+      "key": "doxorubicin-liposomal",
+      "drug_id": "doxorubicin-liposomal",
+      "route": "iv_infusion",
+      "dose_value": 30,
+      "dose_unit": "mg_m2",
+      "days": [4],
+      "notes": {
+        "uk": "30 мг/м² у день 4 після бортезомібу, інфузія 1 година у 5% глюкозі: доза менше 90 мг — 250 мл, від 90 мг — 500 мл. Першу інфузію — не швидше 1 мг/хв (Caelyx, 4.2).",
+        "en": "30 mg/m² on day 4 after bortezomib, a 1-hour infusion in 5% glucose: under 90 mg in 250 mL, 90 mg or more in 500 mL. The first infusion no faster than 1 mg/min (Caelyx, 4.2)."
+      },
+      "duration_min": 60,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 250
+    }
+  ]
+}

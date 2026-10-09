@@ -597,6 +597,13 @@
         },
         {
           "regimen_id": "drd-sc"
+        },
+        {
+          "regimen_id": "v-pld",
+          "notes": {
+            "uk": "За інструкцією Caelyx",
+            "en": "Per the Caelyx label"
+          }
         }
       ]
     },
@@ -771,6 +778,81 @@
             },
             {
               "regimen_id": "avoid-mm-venetoclax-vd"
+            },
+            {
+              "regimen_id": "ixa-dex",
+              "notes": {
+                "uk": "Рефрактерні до леналідоміду, замість Pd",
+                "en": "Lenalidomide-refractory, in place of Pd"
+              }
+            },
+            {
+              "regimen_id": "pcp-induction",
+              "notes": {
+                "uk": "Низькі дози, 6 циклів",
+                "en": "Low doses, 6 cycles"
+              }
+            },
+            {
+              "regimen_id": "pcp-maintenance",
+              "notes": {
+                "uk": "Після 6 циклів PCP",
+                "en": "After 6 cycles of PCP"
+              }
+            },
+            {
+              "regimen_id": "clapd",
+              "notes": {
+                "uk": "Пізній рецидив, подвійна рефрактерність",
+                "en": "Late relapse, double-refractory"
+              }
+            },
+            {
+              "regimen_id": "ref-mm-kpd-weekly"
+            },
+            {
+              "regimen_id": "ref-mm-idd"
+            }
+          ]
+        },
+        {
+          "key": "trials-special",
+          "kind": "trial",
+          "title": {
+            "uk": "Особливі ситуації: t(11;14), плазмоклітинний лейкоз",
+            "en": "Special situations: t(11;14), plasma cell leukaemia"
+          },
+          "description": {
+            "uk": "Венетоклакс — лише за підтвердженої t(11;14): без неї він погіршив виживаність (BELLINI). Обов'язкові профілактика інфекцій і лізису пухлини.",
+            "en": "Venetoclax only with a confirmed t(11;14): without it, survival was worse (BELLINI). Infection and tumour lysis prophylaxis are mandatory."
+          },
+          "regimens": [
+            {
+              "regimen_id": "venkd-cycle-1",
+              "notes": {
+                "uk": "t(11;14), 1–3 лінії",
+                "en": "t(11;14), 1 to 3 lines"
+              }
+            },
+            {
+              "regimen_id": "venkd",
+              "notes": {
+                "uk": "З циклу 2",
+                "en": "From cycle 2"
+              }
+            },
+            {
+              "regimen_id": "ven-dex-t11-14",
+              "notes": {
+                "uk": "t(11;14), після 2 і більше ліній",
+                "en": "t(11;14), after 2 or more lines"
+              }
+            },
+            {
+              "regimen_id": "ref-mm-pcl-krd"
+            },
+            {
+              "regimen_id": "ref-mm-pcl-pad-vcd"
             }
           ]
         }

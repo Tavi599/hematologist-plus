@@ -1,0 +1,194 @@
+{
+  "$comment": "Ven-dex при t(11;14) за CANOVA (JCO 2026, повний текст): венетоклакс 800 мг щодня без нарощування; дексаметазон 40 мг у дні 1, 8, 15, 22 (від 75 років — 20 мг); цикл 28 днів, до прогресування. Профілактику інфекцій і лізису пухлини протокол рекомендував на розсуд дослідника.",
+  "id": "ven-dex-t11-14",
+  "short_name": "Ven-dex (t(11;14))",
+  "name": {
+    "uk": "Венетоклакс + дексаметазон, t(11;14)",
+    "en": "Venetoclax and dexamethasone, t(11;14)"
+  },
+  "description": {
+    "uk": "Рецидив мієломи з t(11;14) після щонайменше двох ліній. Повністю пероральна: цикл 28 днів, до прогресування.",
+    "en": "Relapsed myeloma with t(11;14) after at least two lines. Fully oral: a 28-day cycle, until progression."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Popat R. та ін. Venetoclax-Dexamethasone Versus Pomalidomide-Dexamethasone in t(11;14)-Positive Relapsed/Refractory Multiple Myeloma: Primary Results of the Randomized, Phase III CANOVA Study. J Clin Oncol. 2026;44(3):164-175",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12794717/",
+      "version": "повний текст у PMC; фаза III, 263 пацієнти",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "Kaufman J.L. та ін. Targeting BCL-2 with venetoclax and dexamethasone in patients with relapsed/refractory t(11;14) multiple myeloma. Am J Hematol. 2021;96(4):418-427",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33368455/",
+      "version": "резюме; фаза I/II",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване відкрите дослідження фази III: венетоклакс з дексаметазоном проти помалідоміду з дексаметазоном (1:1). Головний показник — виживаність без прогресування за незалежною оцінкою.",
+      "en": "A randomised open-label phase III trial: venetoclax with dexamethasone against pomalidomide with dexamethasone (1:1). Primary endpoint: progression-free survival by independent review."
+    },
+    "population": {
+      "uk": "263 пацієнти з рецидивною або рефрактерною мієломою з t(11;14), підтвердженою в центральній лабораторії, після щонайменше двох ліній.",
+      "en": "263 patients with relapsed or refractory myeloma with t(11;14) confirmed centrally, after at least two lines."
+    },
+    "results": {
+      "uk": "Головну мету не досягнуто: виживаність без прогресування 9,9 проти 5,8 місяця (HR 0,823; p=0,24). Відповідь 62% проти 35%, VGPR і краще 39% проти 14%. Загальна виживаність 32,4 проти 26,9 місяця (HR 0,856). У ранішому дослідженні фази I/II (Kaufman 2021) відповідь 48–60%.",
+      "en": "The primary endpoint was not met: progression-free survival 9.9 against 5.8 months (HR 0.823; p=0.24). Response 62% against 35%, VGPR or better 39% against 14%. Overall survival 32.4 against 26.9 months (HR 0.856). In the earlier phase I/II study (Kaufman 2021) the response was 48 to 60%."
+    },
+    "conduct": {
+      "uk": "Смертей під час лікування 12% проти 6% з Pd, інфекції частіші з венетоклаксом. Побічні події 3+ ступеня 67% проти 83%. Протокол рекомендував профілактику інфекцій і синдрому лізису пухлини; деталі — у додатку до статті, тут не звіреному.",
+      "en": "Treatment-emergent deaths 12% against 6% with Pd; infections were more frequent with venetoclax. Grade 3+ adverse events 67% against 83%. The protocol recommended infection and tumour lysis prophylaxis; the details are in the supplement, not checked here."
+    },
+    "trial": {
+      "acronym": "CANOVA",
+      "nct": "NCT03539744",
+      "phase": "III",
+      "randomized": true,
+      "n": 263,
+      "comparator": "Pd",
+      "primary_met": false
+    },
+    "settings": ["rrmm-late", "t11-14"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Popat R. та ін. J Clin Oncol. 2026;44(3):164-175",
+        "pmid": "41370738",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Clinical Trial, Phase III",
+          "Randomized Controlled Trial",
+          "Multicenter Study",
+          "Comparative Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/41370738/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "publication": "Kaufman J.L. та ін. Am J Hematol. 2021;96(4):418-427",
+        "pmid": "33368455",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "American Journal of Hematology",
+          "issn": "0361-8609",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33368455/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «American Journal of Hematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/7610369",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "venetoclax",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 800,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "800 мг щодня без нарощування дози (CANOVA).",
+        "en": "800 mg every day without a ramp-up (CANOVA)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "40 мг у дні 1, 8, 15, 22 (CANOVA).",
+        "en": "40 mg on days 1, 8, 15 and 22 (CANOVA)."
+      },
+      "dose_modifiers": [
+        {
+          "key": "age-75-or-over",
+          "label": {
+            "uk": "Вік 75 років і більше",
+            "en": "Age 75 or over"
+          },
+          "dose_value": 20,
+          "source": {
+            "name": "Popat R. та ін. Venetoclax-Dexamethasone Versus Pomalidomide-Dexamethasone in t(11;14)-Positive Relapsed/Refractory Multiple Myeloma: Primary Results of the Randomized, Phase III CANOVA Study. J Clin Oncol. 2026;44(3):164-175",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12794717/",
+            "version": "повний текст у PMC; фаза III, 263 пацієнти",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    }
+  ]
+}

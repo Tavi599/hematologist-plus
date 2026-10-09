@@ -1,0 +1,115 @@
+{
+  "$comment": "Лише опис: резюме не дає повного розкладу, а повний текст недоступний.",
+  "id": "ref-mm-pcl-krd",
+  "short_name": "ПКЛ: KRd (EMN12)",
+  "name": {
+    "uk": "Первинний плазмоклітинний лейкоз: KRd з трансплантацією (EMN12/HOVON-129)",
+    "en": "Primary plasma cell leukaemia: KRd with a transplant (EMN12/HOVON-129)"
+  },
+  "sources": [
+    {
+      "name": "van de Donk N.W.C.J. та ін. Treatment of primary plasma cell leukaemia with carfilzomib and lenalidomide-based therapy (EMN12/HOVON-129). Lancet Oncol. 2023;24(10):1119-1133",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37717583/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "acronym": "EMN12/HOVON-129",
+      "phase": "II",
+      "randomized": false,
+      "n": 61
+    },
+    "settings": ["pcl", "ndmm-te", "ndmm-ti"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "van de Donk N.W.C.J. та ін. Lancet Oncol. 2023;24(10):1119-1133",
+        "pmid": "37717583",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Journal Article",
+          "Multicenter Study",
+          "Clinical Trial, Phase II",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "The Lancet Oncology",
+          "issn": "1470-2045",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/37717583/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The Lancet Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/100957246",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "До 65 років: 4 цикли KRd → подвійна автотрансплантація → 4 цикли KRd → підтримка карфілзомібом із леналідомідом. Від 66 років: 8 циклів KRd → підтримка KR до прогресування.",
+      "en": "Up to 65: 4 cycles of KRd → tandem autologous transplant → 4 cycles of KRd → carfilzomib-lenalidomide maintenance. 66 or over: 8 cycles of KRd → KR maintenance until progression."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Карфілзоміб",
+          "en": "Carfilzomib"
+        },
+        "drug_id": "carfilzomib"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "KRd: карфілзоміб 36 мг/м² у дні 1, 2, 8, 9, 15, 16; леналідомід 25 мг дні 1–21; дексаметазон 20 мг у дні 1, 2, 8, 9, 15, 16, 22, 23; цикл 28 днів.",
+        "en": "KRd: carfilzomib 36 mg/m² on days 1, 2, 8, 9, 15 and 16; lenalidomide 25 mg days 1 to 21; dexamethasone 20 mg on days 1, 2, 8, 9, 15, 16, 22 and 23; a 28-day cycle."
+      },
+      {
+        "uk": "Виживаність без прогресування 15,5 місяця до 65 років і 13,8 від 66. У старших 12% смертей, пов'язаних з лікуванням, інфекції 3+ ступеня у 32% у перших циклах.",
+        "en": "Progression-free survival 15.5 months up to 65 and 13.8 at 66 or over. Among the older, 12% treatment-related deaths and grade 3+ infections in 32% in the first cycles."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме не каже, чи перше введення карфілзомібу — 20 мг/м², і не дає доз підтримки для старших; трансплантаційні етапи калькулятор не рахує.",
+      "en": "The abstract does not say whether the first carfilzomib dose is 20 mg/m² and gives no maintenance doses for the older; the calculator does not compute the transplant steps."
+    }
+  }
+}

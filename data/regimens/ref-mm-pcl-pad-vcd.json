@@ -1,0 +1,117 @@
+{
+  "$comment": "Лише опис: резюме не дає повного розкладу, а повний текст недоступний.",
+  "id": "ref-mm-pcl-pad-vcd",
+  "short_name": "ПКЛ: PAD/VCD (IFM)",
+  "name": {
+    "uk": "Первинний плазмоклітинний лейкоз: PAD почергово з VCD, далі трансплантація (IFM)",
+    "en": "Primary plasma cell leukaemia: PAD alternating with VCD, then a transplant (IFM)"
+  },
+  "sources": [
+    {
+      "name": "Royer B. та ін. Bortezomib, Doxorubicin, Cyclophosphamide, Dexamethasone Induction Followed by Stem Cell Transplantation for Primary Plasma Cell Leukemia. J Clin Oncol. 2016;34(18):2125-2132",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27114594/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    }
+  ],
+  "evidence": {
+    "trial": {
+      "phase": "II",
+      "randomized": false,
+      "n": 40
+    },
+    "settings": ["pcl", "ndmm-te"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Royer B. та ін. J Clin Oncol. 2016;34(18):2125-2132",
+        "pmid": "27114594",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27114594/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-09"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-09"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "До 70 років: 4 цикли почергово бортезоміб + дексаметазон з доксорубіцином або циклофосфамідом → збір стовбурових клітин → високодозовий мелфалан з автотрансплантацією → алотрансплантація зі зниженою інтенсивністю або друга автотрансплантація з VRd рік.",
+      "en": "Up to 70: 4 alternating cycles of bortezomib and dexamethasone with doxorubicin or cyclophosphamide → stem cell collection → high-dose melphalan with an autologous transplant → reduced-intensity allograft or a second autograft with a year of VRd."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин",
+          "en": "Doxorubicin"
+        },
+        "drug_id": "doxorubicin"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "40 пацієнтів, медіана віку 57 років. Відповідь на індукцію 69%; виживаність без прогресування 15,1 місяця, загальна 36,3 місяця.",
+        "en": "40 patients, median age 57. Response to induction 69%; progression-free survival 15.1 months, overall 36.3 months."
+      }
+    ],
+    "gap": {
+      "uk": "Резюме не наводить доз індукції; повний текст недоступний. VCD є в довіднику як схема першої лінії, PAD — ні.",
+      "en": "The abstract gives no induction doses; the full text is not accessible. VCD is in the catalogue as a first-line regimen, PAD is not."
+    }
+  }
+}
