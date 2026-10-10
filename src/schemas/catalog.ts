@@ -25,6 +25,7 @@ import {
   sortOrderSchema,
   articleSectionSchema,
   treatmentNodeKindSchema,
+  routeAlternativeSchema,
   unitEquivalenceSchema,
 } from './common'
 import { printFormsRowSchema } from './print-forms'
@@ -73,6 +74,9 @@ export const drugRowSchema = z.object({
   max_single_dose_amount: positiveNumberSchema.nullable(),
   /** What the label says this drug's mass is worth in activity; null for all but a few drugs. */
   unit_equivalence: unitEquivalenceSchema.nullable().default(null),
+  /** Routes the label allows at the same dose. Unreadable or absent means no switch at all,
+   *  which is what the drug had before the column existed. */
+  route_alternatives: z.array(routeAlternativeSchema).nullable().catch(null).default(null),
 })
 
 export const drugPresentationRowSchema = z.object({
@@ -308,7 +312,7 @@ export type TreatmentNodeRegimen = CatalogRow<'treatment_node_regimens'>
  * Bump when the catalog shape changes incompatibly: invalidates offline caches.
  * Keep in step with new migrations that change columns.
  */
-export const CATALOG_SCHEMA_VERSION = '8'
+export const CATALOG_SCHEMA_VERSION = '9'
 
 export function emptySyncRows(): SyncRows {
   return { ...emptyCatalog(), disease_articles: [] }

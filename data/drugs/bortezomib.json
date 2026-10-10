@@ -23,6 +23,23 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "route_alternatives": [
+    {
+      "routes": ["subcutaneous", "iv_bolus"],
+      "infusion": null,
+      "notes": {
+        "uk": "Та сама доза п/ш або в/в болюсно за 3–5 с. Різна концентрація після розчинення: в/в — 1 мг/мл, п/ш — 2,5 мг/мл; позначте шприц шляхом введення.",
+        "en": "Same dose subcutaneously or as a 3-5 second IV bolus. Reconstituted concentration differs: IV 1 mg/mL, subcutaneous 2.5 mg/mL; label the syringe with the route."
+      },
+      "sources": [
+        {
+          "name": "FDA label: VELCADE (bortezomib), 2.1 і 2.10 — в/в болюс 3–5 с або п/ш, однакова доза, різна концентрація",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1521d321-e724-4ffc-adad-34bf4f44fac7",
+          "checkedOn": "2026-10-10"
+        }
+      ]
+    }
+  ],
   "presentations": [
     {
       "key": "s2-5",

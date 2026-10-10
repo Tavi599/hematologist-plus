@@ -140,6 +140,31 @@ export const sourcesSchema = z.array(sourceSchema)
 export type Source = z.infer<typeof sourceSchema>
 
 /**
+ * Routes by which the label lets this drug be given at the same dose — azacitidine
+ * subcutaneously or intravenously, bortezomib subcutaneously or as an intravenous bolus. The
+ * calculator offers a switch between them only when a regimen gives the drug by one of them.
+ * A route that needs another dose or another product (daratumumab IV and SC, oral azacitidine)
+ * is never listed here: switching it would leave the dose wrong.
+ */
+export const routeAlternativeSchema = z.strictObject({
+  routes: z.array(routeSchema).min(2),
+  /** How to dilute and run it when the switch lands on an IV infusion the drug has no
+   *  infusion parameters for. */
+  infusion: z
+    .strictObject({
+      solvent: solventSchema,
+      volume_ml: positiveNumberSchema,
+      duration_min: positiveNumberSchema.int(),
+    })
+    .nullable()
+    .default(null),
+  notes: localizedTextSchema.nullable().default(null),
+  sources: z.array(sourceSchema).min(1),
+})
+
+export type RouteAlternative = z.infer<typeof routeAlternativeSchema>
+
+/**
  * How good the publication is, and the resource that carries it — by published instruments, not
  * by our opinion. Three independent things are recorded, and each is left out when it cannot be
  * read from a document:

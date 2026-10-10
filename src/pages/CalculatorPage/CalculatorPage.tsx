@@ -101,6 +101,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [support, setSupport] = useState<Record<SupportCategory, boolean>>(NO_SUPPORT)
   // Cyclophosphamide items the physician has added mesna to; the protocol's own mesna is apart.
   const [mesnaFor, setMesnaFor] = useState<string[]>([])
+  // Rows the physician gives by another route the label allows at the same dose.
+  const [chosenRoutes, setChosenRoutes] = useState<Record<string, RegimenItem['route']>>({})
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
   const regimenId = searchParams.get('regimen')
@@ -123,7 +125,14 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const ownItems = useMemo(
     () => [
       ...(regimenId
-        ? buildCourseItems(catalog, regimenId, chosenDoses, chosenModifiers, administrationModes)
+        ? buildCourseItems(
+            catalog,
+            regimenId,
+            chosenDoses,
+            chosenModifiers,
+            administrationModes,
+            chosenRoutes,
+          )
         : []),
       ...buildCourseItemsFrom(
         catalog,
@@ -131,9 +140,18 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
         chosenDoses,
         chosenModifiers,
         administrationModes,
+        chosenRoutes,
       ),
     ],
-    [catalog, regimenId, customItems, chosenDoses, chosenModifiers, administrationModes],
+    [
+      catalog,
+      regimenId,
+      customItems,
+      chosenDoses,
+      chosenModifiers,
+      administrationModes,
+      chosenRoutes,
+    ],
   )
 
   // The standard supportive care the physician has switched on and the regimen does not write
@@ -187,6 +205,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     setToggledRegimen(regimenId)
     setSupport(NO_SUPPORT)
     setMesnaFor([])
+    setChosenRoutes({})
     const premedicationOn = premedicationOnByDefault(baseItems)
     setDisabledIds(optionalIds(baseItems, customItems).filter((id) => !premedicationOn.has(id)))
   }
@@ -366,6 +385,9 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                 <DoseTable
                   premedicationMissing={premedicationMissing}
                   mesnaOffered={mesnaOffered}
+                  onRoute={(id, route) =>
+                    setChosenRoutes((current) => ({ ...current, [id]: route }))
+                  }
                   mesnaAdded={mesnaFor}
                   onMesna={(id, on) =>
                     setMesnaFor((current) =>

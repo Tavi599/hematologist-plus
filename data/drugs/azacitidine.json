@@ -29,6 +29,27 @@
       "checkedOn": "2026-10-03"
     }
   ],
+  "route_alternatives": [
+    {
+      "routes": ["subcutaneous", "iv_infusion"],
+      "infusion": {
+        "solvent": "sodium_chloride_0_9",
+        "volume_ml": 100,
+        "duration_min": 40
+      },
+      "notes": {
+        "uk": "Та сама доза п/ш або в/в. В/в: розчинити 100 мг у 10 мл води для ін'єкцій, ввести в 50–100 мл 0,9% NaCl або розчину Рінгера-лактату, інфузія 10–40 хв; завершити протягом 1 год від розчинення флакона. Інструкція ЄС (Vidaza SmPC) дає лише п/ш шлях — в/в введення за інструкцією FDA.",
+        "en": "Same dose subcutaneously or IV. IV: reconstitute 100 mg in 10 mL water for injection, add to 50-100 mL 0.9% NaCl or lactated Ringer's, infuse over 10-40 minutes; complete within 1 hour of reconstituting the vial. The EU label (Vidaza SmPC) gives the subcutaneous route only — IV is per the FDA label."
+      },
+      "sources": [
+        {
+          "name": "FDA label: VIDAZA (azacitidine), 2.2 і 2.5 — підшкірно або внутрішньовенно в тій самій дозі; в/в інфузія 10–40 хв у 50–100 мл",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3495a71a-cc04-4776-851f-f185956f32af",
+          "checkedOn": "2026-10-10"
+        }
+      ]
+    }
+  ],
   "presentations": [
     {
       "key": "s100",

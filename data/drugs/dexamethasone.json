@@ -24,6 +24,23 @@
       "checkedOn": "2026-10-03"
     }
   ],
+  "route_alternatives": [
+    {
+      "routes": ["oral", "iv_infusion"],
+      "infusion": null,
+      "notes": {
+        "uk": "Дексаметазон у схемах мієломи — внутрішньо або в/в у тій самій дозі (4, 8, 20 і 40 мг). В/в — у 100 мл 0,9% NaCl за 30 хв, як у відділенні.",
+        "en": "Dexamethasone in myeloma regimens is given orally or IV at the same dose (4, 8, 20 and 40 mg). IV in 100 mL 0.9% NaCl over 30 minutes, as in the department."
+      },
+      "sources": [
+        {
+          "name": "FDA label: KYPROLIS (carfilzomib), 2.2 і 14 — дексаметазон 4, 8, 20 і 40 мг «orally or intravenously»",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ea66eb30-e665-4693-99a1-a9d3b4bbe2d6",
+          "checkedOn": "2026-10-10"
+        }
+      ]
+    }
+  ],
   "presentations": [
     {
       "key": "s4",

@@ -1,6 +1,6 @@
 import { amountUnitOf, convertAmount, DOMAIN_DEFAULTS, type CourseDrug } from '../domain'
 import type { Drug, DrugInfusionParams, DrugPresentation, RegimenItem } from '../schemas/catalog'
-import type { DoseModifier, Solvent, Source } from '../schemas/common'
+import type { DoseModifier, RouteAlternative, Solvent, Source } from '../schemas/common'
 import type { LocalizedText } from './localized'
 import type { CatalogIndex } from './catalog-index'
 
@@ -23,6 +23,72 @@ export interface CourseItem {
   missingInfusionData: boolean
   /** The protocol gives this drug as an infusion the physician may switch to boluses. */
   switchable: boolean
+  /** Routes the physician may switch this row to at the same dose, its own route included;
+   *  empty when the label allows no other. */
+  routeChoices: Route[]
+  /** The route the regimen itself writes; differs from `item.route` after a switch. */
+  protocolRoute: Route
+}
+
+type Route = RegimenItem['route']
+
+/** The routes this drug may be given by at the same dose as `route`, or none. */
+export function routeChoicesOf(drug: Drug, route: Route): RouteAlternative | null {
+  return drug.route_alternatives?.find((alternative) => alternative.routes.includes(route)) ?? null
+}
+
+/**
+ * The routes on offer for a row: the label's alternatives the department has a pack for — no
+ * switch to a route whose vials or tablets it cannot count. Fewer than two means no switch.
+ */
+function availableRoutes(catalog: CatalogIndex, drug: Drug, protocolRoute: Route): Route[] {
+  const packs = catalog.presentationsByDrug.get(drug.id) ?? []
+  const routes = (routeChoicesOf(drug, protocolRoute)?.routes ?? []).filter(
+    (route) =>
+      route === protocolRoute ||
+      packs.length === 0 ||
+      packs.some((pack) => fitsRoute(pack.form, route)),
+  )
+  return routes.length > 1 ? routes : []
+}
+
+/**
+ * The row given by another route the label allows at the same dose. The dose stays; what
+ * belongs to the old route goes — an infusion's bag and duration — and an infusion reached by
+ * the switch takes the dilution the drug's alternative names, unless the catalog has its own.
+ */
+export function applyRoute(item: RegimenItem, drug: Drug, route: Route | undefined): RegimenItem {
+  if (route === undefined || route === item.route) return item
+  const alternative = routeChoicesOf(drug, item.route)
+  if (!alternative?.routes.includes(route)) return item
+  const block =
+    route === 'oral'
+      ? 'ward'
+      : item.block === 'ward'
+        ? item.role === 'supportive'
+          ? 'day_support'
+          : 'infusion'
+        : item.block
+  if (route !== 'iv_infusion') {
+    return {
+      ...item,
+      route,
+      block,
+      duration_min: null,
+      fallback_solvent: null,
+      fallback_volume_ml: null,
+      infusion_params_id: null,
+    }
+  }
+  const infusion = alternative.infusion
+  return {
+    ...item,
+    route,
+    block,
+    duration_min: item.duration_min ?? infusion?.duration_min ?? null,
+    fallback_solvent: item.fallback_solvent ?? infusion?.solvent ?? null,
+    fallback_volume_ml: item.fallback_volume_ml ?? infusion?.volume_ml ?? null,
+  }
 }
 
 /**
@@ -201,6 +267,7 @@ export function buildCourseItems(
   chosenDoses?: Record<string, string>,
   chosenModifiers?: Record<string, string[]>,
   administrationModes?: Record<string, AdministrationMode>,
+  chosenRoutes?: Record<string, Route>,
 ): CourseItem[] {
   return buildCourseItemsFrom(
     catalog,
@@ -208,6 +275,7 @@ export function buildCourseItems(
     chosenDoses,
     chosenModifiers,
     administrationModes,
+    chosenRoutes,
   )
 }
 
@@ -218,13 +286,17 @@ export function buildCourseItemsFrom(
   chosenDoses?: Record<string, string>,
   chosenModifiers?: Record<string, string[]>,
   administrationModes?: Record<string, AdministrationMode>,
+  chosenRoutes?: Record<string, Route>,
 ): CourseItem[] {
   const switchable = new Set(
     protocolItems.filter((item) => canSwitchAdministration(item)).map((item) => item.id),
   )
-  const items = protocolItems.map((item) =>
-    applyAdministrationMode(item, administrationModes?.[item.id] ?? PROTOCOL_MODE),
-  )
+  const protocolRoutes = new Map(protocolItems.map((item) => [item.id, item.route]))
+  const items = protocolItems.map((item) => {
+    const drug = catalog.drugs.get(item.drug_id)
+    const routed = drug ? applyRoute(item, drug, chosenRoutes?.[item.id]) : item
+    return applyAdministrationMode(routed, administrationModes?.[item.id] ?? PROTOCOL_MODE)
+  })
   const anchorItem = protocolItems.find(
     (item) => MESNA_ANCHORS.has(item.drug_id) && item.block === 'infusion',
   )
@@ -297,6 +369,8 @@ export function buildCourseItemsFrom(
         courseDrug,
         missingInfusionData: item.route === 'iv_infusion' && !infusion,
         switchable: switchable.has(item.id),
+        routeChoices: availableRoutes(catalog, drug, protocolRoutes.get(item.id) ?? item.route),
+        protocolRoute: protocolRoutes.get(item.id) ?? item.route,
       },
     ]
   })

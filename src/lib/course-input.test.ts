@@ -553,3 +553,87 @@ describe('mesna boluses after the ifosfamide', () => {
     expect(plain[1]!.courseDrug.anchorDrugId).toBeUndefined()
   })
 })
+
+describe('route switch', () => {
+  /** The demo catalog plus a drug the label lets be given subcutaneously or intravenously. */
+  const withAlternative = (forms: Array<'vial' | 'tablet'> = ['vial']) => {
+    const catalog = demoCatalog()
+    const template = catalog.drugs.find((drug) => drug.id === 'vincristine')!
+    catalog.drugs.push({
+      ...template,
+      id: 'azacitidine',
+      max_single_dose_amount: null,
+      route_alternatives: [
+        {
+          routes: ['subcutaneous', 'iv_infusion'],
+          infusion: { solvent: 'sodium_chloride_0_9', volume_ml: 100, duration_min: 40 },
+          notes: null,
+          sources: [{ name: 'label', checkedOn: '2026-10-10' }],
+        },
+      ],
+    })
+    const vial = catalog.drug_presentations.find((row) => row.drug_id === 'vincristine')!
+    catalog.drug_presentations = catalog.drug_presentations.filter(
+      (row) => row.drug_id !== 'azacitidine',
+    )
+    forms.forEach((form, index) =>
+      catalog.drug_presentations.push({
+        ...vial,
+        id: `azacitidine.${index}`,
+        drug_id: 'azacitidine',
+        form,
+        strength_amount: 100,
+      }),
+    )
+    return indexCatalog(catalog)
+  }
+  const sc = () =>
+    customCourseItem({
+      id: 'aza',
+      drugId: 'azacitidine',
+      doseValue: 75,
+      doseUnit: 'mg_m2',
+      days: [1, 2, 3, 4, 5, 6, 7],
+      route: 'subcutaneous',
+      sortOrder: 0,
+    })
+
+  it('offers the routes the label allows and keeps the regimen route by default', () => {
+    const [built] = buildCourseItemsFrom(withAlternative(), [sc()])
+    expect(built!.routeChoices).toEqual(['subcutaneous', 'iv_infusion'])
+    expect(built!.item.route).toBe('subcutaneous')
+    expect(built!.protocolRoute).toBe('subcutaneous')
+  })
+
+  it('gives the same dose intravenously with the dilution the alternative names', () => {
+    const [built] = buildCourseItemsFrom(
+      withAlternative(),
+      [sc()],
+      {},
+      {},
+      {},
+      { aza: 'iv_infusion' },
+    )
+    expect(built!.item).toMatchObject({
+      route: 'iv_infusion',
+      dose_value: 75,
+      fallback_solvent: 'sodium_chloride_0_9',
+      fallback_volume_ml: 100,
+      duration_min: 40,
+    })
+    expect(built!.protocolRoute).toBe('subcutaneous')
+    expect(built!.courseDrug.infusion?.bagVolumesMl).toEqual([100])
+  })
+
+  it('offers no switch for a drug without alternatives or a route with no pack', () => {
+    const vincristine = { ...sc(), drug_id: 'vincristine' }
+    expect(buildCourseItemsFrom(withAlternative(), [vincristine])[0]!.routeChoices).toEqual([])
+    // Tablets only: an injection cannot be counted, so no switch.
+    const tablets = withAlternative(['tablet'])
+    const oral = { ...sc(), route: 'subcutaneous' as const }
+    expect(buildCourseItemsFrom(tablets, [oral])[0]!.routeChoices).toEqual([])
+    // A route the label does not list is ignored.
+    const [kept] = buildCourseItemsFrom(withAlternative(), [sc()], {}, {}, {}, { aza: 'oral' })
+    expect(kept!.item.route).toBe('subcutaneous')
+  })
+})

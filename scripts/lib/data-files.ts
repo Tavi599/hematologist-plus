@@ -26,6 +26,7 @@ import {
   sortOrderSchema,
   sourcesSchema,
   treatmentNodeKindSchema,
+  routeAlternativeSchema,
   unitEquivalenceSchema,
 } from '../../src/schemas/common'
 import { EMPTY_PRINT_FORMS, printFormsFileSchema } from '../../src/schemas/print-forms'
@@ -86,6 +87,8 @@ export const drugFileSchema = z.strictObject({
   max_single_dose_amount: optionalPositive,
   /** Only for a drug sold and prescribed both by mass and by activity, e.g. filgrastim. */
   unit_equivalence: unitEquivalenceSchema.nullable().default(null),
+  /** Routes the label allows at the same dose; see routeAlternativeSchema. */
+  route_alternatives: z.array(routeAlternativeSchema).nullable().default(null),
   review_rules: reviewRulesSchema.nullable().default(null),
   notes: optionalLocalized,
   sort_order: sortOrder,

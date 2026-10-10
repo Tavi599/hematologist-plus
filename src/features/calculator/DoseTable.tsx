@@ -66,6 +66,8 @@ export interface DoseTableProps {
   /** Of those, the ones the physician has added it to. */
   mesnaAdded: string[]
   onMesna: (itemId: string, on: boolean) => void
+  /** Gives the row by another route the label allows at the same dose. */
+  onRoute: (itemId: string, route: CourseItem['item']['route']) => void
 }
 
 /** Value of the "typed by hand" entry in the dose-source list; not a real choice id. */
@@ -181,6 +183,7 @@ function DoseRow({
   mesnaOffered,
   mesnaAdded,
   onMesna,
+  onRoute,
 }: DoseTableProps & {
   item: CourseItem
   result: CourseDrugResult | undefined
@@ -215,10 +218,33 @@ function DoseRow({
         <Table.Td>
           <Text fw={500}>{localize(item.drug.name, language)}</Text>
           <Text size="xs" c="dimmed">
-            {t(`route.${item.item.route}`)}
-            {item.item.role !== 'main' && ` · ${t(`role.${item.item.role}`)}`}
+            {item.routeChoices.length === 0 && t(`route.${item.item.route}`)}
+            {item.routeChoices.length === 0 && item.item.role !== 'main' && ' · '}
+            {item.item.role !== 'main' && t(`role.${item.item.role}`)}
             {customIds.includes(id) && ` · ${t('calculator.doses.custom')}`}
           </Text>
+          {/* Another route the label allows at the same dose: the regimen's own is the default,
+              and a switch is marked, since the sheet then says something the protocol did not. */}
+          {item.routeChoices.length > 0 && (
+            <Group gap={6} mt={2} wrap="nowrap">
+              <SegmentedControl
+                size="xs"
+                disabled={!enabled}
+                value={item.item.route}
+                onChange={(value) => onRoute(id, value as CourseItem['item']['route'])}
+                data={item.routeChoices.map((route) => ({
+                  value: route,
+                  label: t(`route.${route}`),
+                }))}
+                aria-label={`${t('calculator.doses.route')}: ${localize(item.drug.name, language)}`}
+              />
+              {item.item.route !== item.protocolRoute && (
+                <Badge size="xs" variant="light" color="blue">
+                  {t('calculator.doses.routeChanged')}
+                </Badge>
+              )}
+            </Group>
+          )}
           {/* The label asks for premedication before this drug: always in sight, and loud when
               the course has none on one of its days. */}
           {item.item.role === 'main' && PREMEDICATION_ADVISED.has(item.item.drug_id) && (
