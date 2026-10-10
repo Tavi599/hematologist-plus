@@ -469,7 +469,10 @@
             "uk": "Крихкі пацієнти",
             "en": "Frail patients"
           },
-          "description": null,
+          "description": {
+            "uk": "Двокомпонентні, ослаблені за дозою і помірні триплети з тижневим або пероральним розкладом.",
+            "en": "Doublets, attenuated regimens and moderate triplets on a weekly or oral schedule."
+          },
           "regimens": [
             {
               "regimen_id": "bortezomib-mono"
@@ -487,7 +490,28 @@
               "regimen_id": "mp"
             },
             {
+              "regimen_id": "d-rd-cycle-1-2"
+            },
+            {
+              "regimen_id": "d-rd-cycle-3-6"
+            },
+            {
+              "regimen_id": "d-rd"
+            },
+            {
               "regimen_id": "rd"
+            },
+            {
+              "regimen_id": "ird"
+            },
+            {
+              "regimen_id": "drd-sc-cycle-1-2"
+            },
+            {
+              "regimen_id": "drd-sc-cycle-3-6"
+            },
+            {
+              "regimen_id": "drd-sc"
             },
             {
               "regimen_id": "rvd-lite-induction"
@@ -1459,8 +1483,8 @@
             "en": "Frail patients"
           },
           "description": {
-            "uk": "Схеми, легші за складом: двокомпонентні, повністю пероральні, ослаблені за дозою або антитіло в монотерапії.",
-            "en": "Regimens lighter by design: doublets, all-oral, attenuated, or an antibody alone."
+            "uk": "Схеми, легші за складом і розкладом: двокомпонентні, пероральні, ослаблені за дозою, антитіло в монотерапії та помірні триплети з тижневим або пероральним розкладом — без карфілзомібу й без бортезомібу двічі на тиждень.",
+            "en": "Regimens lighter by design and schedule: doublets, all-oral, attenuated, an antibody alone, and moderate triplets on a weekly or oral schedule, without carfilzomib or twice-weekly bortezomib."
           },
           "regimens": [
             {
@@ -1470,7 +1494,19 @@
               "regimen_id": "bortezomib-mono"
             },
             {
+              "regimen_id": "d-rd-cycle-1-2"
+            },
+            {
+              "regimen_id": "d-rd-cycle-3-6"
+            },
+            {
+              "regimen_id": "d-rd"
+            },
+            {
               "regimen_id": "rd"
+            },
+            {
+              "regimen_id": "crd"
             },
             {
               "regimen_id": "ctd-attenuated"
@@ -1488,10 +1524,55 @@
               "regimen_id": "daratumumab-mono"
             },
             {
+              "regimen_id": "dpd-cycle-1-2"
+            },
+            {
+              "regimen_id": "dpd-cycle-3-6"
+            },
+            {
+              "regimen_id": "dpd"
+            },
+            {
+              "regimen_id": "isa-pd-cycle-1"
+            },
+            {
+              "regimen_id": "isa-pd"
+            },
+            {
+              "regimen_id": "elo-rd-cycle-1-2"
+            },
+            {
+              "regimen_id": "elo-rd"
+            },
+            {
+              "regimen_id": "elo-pd-cycle-1-2"
+            },
+            {
+              "regimen_id": "elo-pd"
+            },
+            {
+              "regimen_id": "svd"
+            },
+            {
               "regimen_id": "pcd-cycle-1-9"
             },
             {
               "regimen_id": "pcd"
+            },
+            {
+              "regimen_id": "erd-eviq-cycle-1-2"
+            },
+            {
+              "regimen_id": "erd-eviq"
+            },
+            {
+              "regimen_id": "drd-sc-cycle-1-2"
+            },
+            {
+              "regimen_id": "drd-sc-cycle-3-6"
+            },
+            {
+              "regimen_id": "drd-sc"
             }
           ],
           "children": []
