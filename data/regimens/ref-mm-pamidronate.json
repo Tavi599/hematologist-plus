@@ -1,5 +1,5 @@
 {
-  "$comment": "Картка: доза є в джерелах, але препарату немає в переліку відділення. Розбіжність NSSG (30 мг) і FDA (90 мг) показано.",
+  "$comment": "Картка: доза є в джерелах, але препарату немає в переліку відділення. Розбіжність NSSG (30 мг) і FDA (90 мг) показано. У Державному реєстрі України немає жодного запису за МНН чи кодом АТС M05BA03 (reestr.csv, 2026-10-11).",
   "id": "ref-mm-pamidronate",
   "short_name": "Памідронат",
   "name": {
@@ -17,12 +17,18 @@
       "name": "FDA label: pamidronate disodium injection (Hospira), Dosage and Administration: Multiple Myeloma",
       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9b6a9a3b-71c9-4dcb-b857-5d1de25c3a23",
       "checkedOn": "2026-10-10"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (reestr.csv, ДЕЦ МОЗ): пошук за МНН і кодом АТС",
+      "url": "http://www.drlz.com.ua/ibp/zvity.nsf/all/zvit/$file/reestr.csv",
+      "version": "файл завантажено 2026-10-11",
+      "checkedOn": "2026-10-11"
     }
   ],
   "reference": {
     "summary": {
-      "uk": "Альтернатива золедроновій кислоті, коли вона протипоказана чи ризик остеонекрозу щелепи вищий (NSSG MM.3). Памідронату немає в переліку препаратів відділення, тому розрахунку немає.",
-      "en": "An alternative to zoledronic acid where it is contraindicated or the risk of osteonecrosis of the jaw is higher (NSSG MM.3). Pamidronate is not in the department's list of drugs, so there is no calculation."
+      "uk": "Альтернатива золедроновій кислоті, коли вона протипоказана чи ризик остеонекрозу щелепи вищий (NSSG MM.3). Памідронату немає в Державному реєстрі лікарських засобів України (перевірено 2026-10-11) і в переліку відділення, тому розрахунку немає.",
+      "en": "An alternative to zoledronic acid where it is contraindicated or the risk of osteonecrosis of the jaw is higher (NSSG MM.3). Pamidronate is not in the State Register of Medicinal Products of Ukraine (checked 2026-10-11) nor the department's list, so there is no calculation."
     },
     "drugs": [
       {
@@ -50,6 +56,6 @@
       "uk": "Розбіжність доз: NSSG — 30 мг за 30 хв, інструкція FDA — 90 мг за 4 години.",
       "en": "The doses differ: NSSG gives 30 mg over 30 minutes, the FDA label 90 mg over 4 hours."
     },
-    "availability": "unknown"
+    "availability": "unavailable"
   }
 }

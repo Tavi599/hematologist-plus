@@ -1,5 +1,5 @@
 {
-  "$comment": "Картка: препарату немає в переліку відділення.",
+  "$comment": "Картка: препарату немає в переліку відділення. У Державному реєстрі України немає жодного запису за МНН чи кодом АТС M05BA02 (reestr.csv, 2026-10-11).",
   "id": "ref-mm-clodronate",
   "short_name": "Клодронат",
   "name": {
@@ -12,12 +12,18 @@
       "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-3-bone-protection-in-myeloma.pdf",
       "version": "4.0 (06.2025)",
       "checkedOn": "2026-10-10"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (reestr.csv, ДЕЦ МОЗ): пошук за МНН і кодом АТС",
+      "url": "http://www.drlz.com.ua/ibp/zvity.nsf/all/zvit/$file/reestr.csv",
+      "version": "файл завантажено 2026-10-11",
+      "checkedOn": "2026-10-11"
     }
   ],
   "reference": {
     "summary": {
-      "uk": "Пероральний бісфосфонат: при нирковій недостатності, зокрема на діалізі, поганому венозному доступі чи коли хворий хоче лікуватися вдома (NSSG MM.3). У Myeloma IX золедронова кислота зменшувала кісткові ускладнення порівняно з клодронатом. Клодронату немає в переліку відділення.",
-      "en": "An oral bisphosphonate: for renal impairment including dialysis, poor venous access, or a patient who prefers treatment at home (NSSG MM.3). In Myeloma IX zoledronic acid reduced skeletal events compared with clodronate. Clodronate is not in the department's list."
+      "uk": "Пероральний бісфосфонат: при нирковій недостатності, зокрема на діалізі, поганому венозному доступі чи коли хворий хоче лікуватися вдома (NSSG MM.3). У Myeloma IX золедронова кислота зменшувала кісткові ускладнення порівняно з клодронатом. Клодронату немає в Державному реєстрі лікарських засобів України (перевірено 2026-10-11) і в переліку відділення.",
+      "en": "An oral bisphosphonate: for renal impairment including dialysis, poor venous access, or a patient who prefers treatment at home (NSSG MM.3). In Myeloma IX zoledronic acid reduced skeletal events compared with clodronate. Clodronate is not in the State Register of Medicinal Products of Ukraine (checked 2026-10-11) nor the department's list."
     },
     "drugs": [
       {
@@ -45,6 +51,6 @@
       "uk": "Доза лише за NSSG; інструкцію FDA не звірено — у США клодронат не зареєстрований.",
       "en": "The dose is from NSSG alone; there is no FDA label to check it against, as clodronate is not approved in the US."
     },
-    "availability": "unknown"
+    "availability": "unavailable"
   }
 }
