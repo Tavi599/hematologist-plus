@@ -43,275 +43,446 @@
         "uk": "Індукція трикомпонентною схемою; у придатних пацієнтів далі — високі дози мелфалану з аутологічною трансплантацією.",
         "en": "Triplet induction; in fit patients followed by high-dose melphalan with autologous transplantation."
       },
-      "regimens": [
+      "regimens": [],
+      "children": [
         {
-          "regimen_id": "vcd"
+          "key": "transplant-eligible",
+          "kind": "group",
+          "title": {
+            "uk": "Кандидати на трансплантацію",
+            "en": "Transplant candidates"
+          },
+          "description": {
+            "uk": "Індукція перед високими дозами мелфалану з аутологічною трансплантацією.",
+            "en": "Induction before high-dose melphalan with an autologous transplant."
+          },
+          "regimens": [
+            {
+              "regimen_id": "dara-vcd-cycle-1",
+              "notes": {
+                "uk": "NCCN 1.2027: даратумумаб + CyBorD — для хворих, придатних до трансплантації, і для високого ризику. Дози з LYRA (фаза II): цикл 1, даратумумаб 8 + 16 мг/кг",
+                "en": "NCCN 1.2027: daratumumab with CyBorD, for transplant candidates and for high risk. Doses from LYRA (phase II): cycle 1, daratumumab 8 then 16 mg/kg"
+              }
+            },
+            {
+              "regimen_id": "dara-vcd-cycle-2",
+              "notes": {
+                "uk": "Цикл 2: даратумумаб щотижня",
+                "en": "Cycle 2: weekly daratumumab"
+              }
+            },
+            {
+              "regimen_id": "dara-vcd",
+              "notes": {
+                "uk": "Цикли 3–6: даратумумаб кожні 2 тижні (LYRA: 4–8 циклів індукції)",
+                "en": "Cycles 3 to 6: daratumumab every 2 weeks (LYRA: 4 to 8 induction cycles)"
+              }
+            },
+            {
+              "regimen_id": "d-vtd-cycle-1-2",
+              "notes": {
+                "uk": "Індукція перед автологічною трансплантацією, цикли 1-2",
+                "en": "Induction before an autologous transplant, cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "d-vtd",
+              "notes": {
+                "uk": "Цикли 3-6; цикли 5-6 — після трансплантації",
+                "en": "Cycles 3-6; cycles 5 and 6 follow the transplant"
+              }
+            },
+            {
+              "regimen_id": "dvrd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2",
+                "en": "Cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "dvrd-cycle-3-8",
+              "notes": {
+                "uk": "Цикли 3-8",
+                "en": "Cycles 3-8"
+              }
+            },
+            {
+              "regimen_id": "vrd"
+            },
+            {
+              "regimen_id": "rvd-griffin",
+              "notes": {
+                "uk": "eviQ 3919",
+                "en": "eviQ 3919"
+              }
+            },
+            {
+              "regimen_id": "rvd-pethema",
+              "notes": {
+                "uk": "eviQ 3936",
+                "en": "eviQ 3936"
+              }
+            },
+            {
+              "regimen_id": "vtd"
+            },
+            {
+              "regimen_id": "krd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1. Альтернатива VRd, якщо трансплантація не планується.",
+                "en": "Cycle 1. An alternative to VRd where no transplant is planned."
+              }
+            },
+            {
+              "regimen_id": "krd",
+              "notes": {
+                "uk": "Цикли 2 і далі.",
+                "en": "Cycles 2 onwards."
+              }
+            },
+            {
+              "regimen_id": "vcd"
+            },
+            {
+              "regimen_id": "cybord-eviq",
+              "notes": {
+                "uk": "eviQ 556",
+                "en": "eviQ 556"
+              }
+            },
+            {
+              "regimen_id": "cybord-weekly-eviq",
+              "notes": {
+                "uk": "eviQ 1562",
+                "en": "eviQ 1562"
+              }
+            },
+            {
+              "regimen_id": "ctd"
+            },
+            {
+              "regimen_id": "kcd",
+              "notes": {
+                "uk": "За ниркової недостатності або нейропатії, коли леналідомід небажаний.",
+                "en": "In renal impairment or neuropathy, where lenalidomide is unwanted."
+              }
+            }
+          ],
+          "children": []
         },
         {
-          "regimen_id": "dara-vcd-cycle-1",
-          "notes": {
-            "uk": "NCCN 1.2027: даратумумаб + CyBorD — для хворих, придатних до трансплантації, і для високого ризику. Дози з LYRA (фаза II): цикл 1, даратумумаб 8 + 16 мг/кг",
-            "en": "NCCN 1.2027: daratumumab with CyBorD, for transplant candidates and for high risk. Doses from LYRA (phase II): cycle 1, daratumumab 8 then 16 mg/kg"
-          }
+          "key": "transplant-ineligible",
+          "kind": "group",
+          "title": {
+            "uk": "Не кандидати на трансплантацію",
+            "en": "Not transplant candidates"
+          },
+          "description": null,
+          "regimens": [
+            {
+              "regimen_id": "d-rd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2. Якщо трансплантація не планується; перевага за наявної нейропатії, бо без бортезомібу.",
+                "en": "Cycles 1-2. Where no transplant is planned; preferred with pre-existing neuropathy, as it has no bortezomib."
+              }
+            },
+            {
+              "regimen_id": "d-rd-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3-6.",
+                "en": "Cycles 3-6."
+              }
+            },
+            {
+              "regimen_id": "d-rd",
+              "notes": {
+                "uk": "Цикли 7 і далі, до прогресування.",
+                "en": "Cycle 7 onwards, until progression."
+              }
+            },
+            {
+              "regimen_id": "drd-sc-cycle-1-2",
+              "notes": {
+                "uk": "Без трансплантації; п/ш даратумумаб; eviQ 4371",
+                "en": "Without transplantation; SC daratumumab; eviQ 4371"
+              }
+            },
+            {
+              "regimen_id": "drd-sc-cycle-3-6"
+            },
+            {
+              "regimen_id": "drd-sc"
+            },
+            {
+              "regimen_id": "dvrd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2",
+                "en": "Cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "dvrd-cycle-3-8",
+              "notes": {
+                "uk": "Цикли 3-8",
+                "en": "Cycles 3-8"
+              }
+            },
+            {
+              "regimen_id": "dvrd",
+              "notes": {
+                "uk": "Цикли 9 і далі, без бортезомібу",
+                "en": "Cycle 9 onwards, without bortezomib"
+              }
+            },
+            {
+              "regimen_id": "vrd"
+            },
+            {
+              "regimen_id": "rvd-weekly",
+              "notes": {
+                "uk": "eviQ 4367",
+                "en": "eviQ 4367"
+              }
+            },
+            {
+              "regimen_id": "krd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1. Альтернатива VRd, якщо трансплантація не планується.",
+                "en": "Cycle 1. An alternative to VRd where no transplant is planned."
+              }
+            },
+            {
+              "regimen_id": "krd",
+              "notes": {
+                "uk": "Цикли 2 і далі.",
+                "en": "Cycles 2 onwards."
+              }
+            },
+            {
+              "regimen_id": "ird",
+              "notes": {
+                "uk": "Повністю пероральна схема - коли щотижневі візити утруднені.",
+                "en": "A fully oral regimen, for when weekly visits are hard to arrange."
+              }
+            },
+            {
+              "regimen_id": "rd",
+              "notes": {
+                "uk": "Для ослаблених пацієнтів зі стандартним ризиком, які не переносять потрійну схему.",
+                "en": "For frail patients with standard-risk disease who cannot tolerate a triplet."
+              }
+            },
+            {
+              "regimen_id": "mpb",
+              "notes": {
+                "uk": "Без трансплантації; eviQ 1413",
+                "en": "Without transplantation; eviQ 1413"
+              }
+            },
+            {
+              "regimen_id": "vcd"
+            },
+            {
+              "regimen_id": "cybord-eviq",
+              "notes": {
+                "uk": "eviQ 556",
+                "en": "eviQ 556"
+              }
+            },
+            {
+              "regimen_id": "cybord-weekly-eviq",
+              "notes": {
+                "uk": "eviQ 1562",
+                "en": "eviQ 1562"
+              }
+            },
+            {
+              "regimen_id": "crd"
+            },
+            {
+              "regimen_id": "kcd",
+              "notes": {
+                "uk": "За ниркової недостатності або нейропатії, коли леналідомід небажаний.",
+                "en": "In renal impairment or neuropathy, where lenalidomide is unwanted."
+              }
+            },
+            {
+              "regimen_id": "bortezomib-mono",
+              "notes": {
+                "uk": "NCCN 1.2027: бортезоміб з дексаметазоном — для хворих, непридатних до трансплантації. Розклад NSSG MM.4 (21 день)",
+                "en": "NCCN 1.2027: bortezomib with dexamethasone, for transplant-ineligible patients. NSSG MM.4 schedule (21 days)"
+              }
+            }
+          ],
+          "children": []
         },
         {
-          "regimen_id": "dara-vcd-cycle-2",
-          "notes": {
-            "uk": "Цикл 2: даратумумаб щотижня",
-            "en": "Cycle 2: weekly daratumumab"
-          }
+          "key": "frail",
+          "kind": "group",
+          "title": {
+            "uk": "Крихкі пацієнти",
+            "en": "Frail patients"
+          },
+          "description": null,
+          "regimens": [
+            {
+              "regimen_id": "rvd-lite-induction",
+              "notes": {
+                "uk": "Для літніх; eviQ 3917",
+                "en": "For older patients; eviQ 3917"
+              }
+            },
+            {
+              "regimen_id": "rvd-lite-consolidation"
+            },
+            {
+              "regimen_id": "rd",
+              "notes": {
+                "uk": "Для ослаблених пацієнтів зі стандартним ризиком, які не переносять потрійну схему.",
+                "en": "For frail patients with standard-risk disease who cannot tolerate a triplet."
+              }
+            },
+            {
+              "regimen_id": "bortezomib-mono",
+              "notes": {
+                "uk": "NCCN 1.2027: бортезоміб з дексаметазоном — для хворих, непридатних до трансплантації. Розклад NSSG MM.4 (21 день)",
+                "en": "NCCN 1.2027: bortezomib with dexamethasone, for transplant-ineligible patients. NSSG MM.4 schedule (21 days)"
+              }
+            },
+            {
+              "regimen_id": "ctd-attenuated",
+              "notes": {
+                "uk": "Коли повні дози не підходять",
+                "en": "Where the full doses are unsuitable"
+              }
+            },
+            {
+              "regimen_id": "mpt",
+              "notes": {
+                "uk": "Без автотрансплантації",
+                "en": "Without an autologous transplant"
+              }
+            },
+            {
+              "regimen_id": "mp",
+              "notes": {
+                "uk": "Без автотрансплантації",
+                "en": "Without an autologous transplant"
+              }
+            },
+            {
+              "regimen_id": "bendamustine-prednisolone",
+              "notes": {
+                "uk": "Старші за 65 років, без автотрансплантації, з нейропатією на момент діагнозу",
+                "en": "Over 65, no autologous transplant, with neuropathy at diagnosis"
+              }
+            }
+          ],
+          "children": []
         },
         {
-          "regimen_id": "dara-vcd",
-          "notes": {
-            "uk": "Цикли 3–6: даратумумаб кожні 2 тижні (LYRA: 4–8 циклів індукції)",
-            "en": "Cycles 3 to 6: daratumumab every 2 weeks (LYRA: 4 to 8 induction cycles)"
-          }
+          "key": "consolidation",
+          "kind": "group",
+          "title": {
+            "uk": "Консолідація після трансплантації",
+            "en": "Consolidation after the transplant"
+          },
+          "description": {
+            "uk": "Ті самі дози, що й в індукції.",
+            "en": "The same doses as in the induction."
+          },
+          "regimens": [
+            {
+              "regimen_id": "d-vtd-cycle-1-2",
+              "notes": {
+                "uk": "Індукція перед автологічною трансплантацією, цикли 1-2",
+                "en": "Induction before an autologous transplant, cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "d-vtd",
+              "notes": {
+                "uk": "Цикли 3-6; цикли 5-6 — після трансплантації",
+                "en": "Cycles 3-6; cycles 5 and 6 follow the transplant"
+              }
+            },
+            {
+              "regimen_id": "dvrd-cycle-3-8",
+              "notes": {
+                "uk": "Цикли 3-8",
+                "en": "Cycles 3-8"
+              }
+            },
+            {
+              "regimen_id": "rvd-griffin",
+              "notes": {
+                "uk": "eviQ 3919",
+                "en": "eviQ 3919"
+              }
+            },
+            {
+              "regimen_id": "rvd-pethema",
+              "notes": {
+                "uk": "eviQ 3936",
+                "en": "eviQ 3936"
+              }
+            }
+          ],
+          "children": []
         },
         {
-          "regimen_id": "bortezomib-mono",
-          "notes": {
-            "uk": "NCCN 1.2027: бортезоміб з дексаметазоном — для хворих, непридатних до трансплантації. Розклад NSSG MM.4 (21 день)",
-            "en": "NCCN 1.2027: bortezomib with dexamethasone, for transplant-ineligible patients. NSSG MM.4 schedule (21 days)"
-          }
-        },
-        {
-          "regimen_id": "vrd"
-        },
-        {
-          "regimen_id": "vtd"
-        },
-        {
-          "regimen_id": "d-vtd-cycle-1-2",
-          "notes": {
-            "uk": "Індукція перед автологічною трансплантацією, цикли 1-2",
-            "en": "Induction before an autologous transplant, cycles 1-2"
-          }
-        },
-        {
-          "regimen_id": "d-vtd",
-          "notes": {
-            "uk": "Цикли 3-6; цикли 5-6 — після трансплантації",
-            "en": "Cycles 3-6; cycles 5 and 6 follow the transplant"
-          }
-        },
-        {
-          "regimen_id": "bendamustine-prednisolone",
-          "notes": {
-            "uk": "Старші за 65 років, без автотрансплантації, з нейропатією на момент діагнозу",
-            "en": "Over 65, no autologous transplant, with neuropathy at diagnosis"
-          }
-        },
-        {
-          "regimen_id": "crd"
-        },
-        {
-          "regimen_id": "lenalidomide-maintenance",
-          "notes": {
-            "uk": "Підтримка після автотрансплантації",
-            "en": "Maintenance after an autologous transplant"
-          }
-        },
-        {
-          "regimen_id": "ctd"
-        },
-        {
-          "regimen_id": "ctd-attenuated",
-          "notes": {
-            "uk": "Коли повні дози не підходять",
-            "en": "Where the full doses are unsuitable"
-          }
-        },
-        {
-          "regimen_id": "mpt",
-          "notes": {
-            "uk": "Без автотрансплантації",
-            "en": "Without an autologous transplant"
-          }
-        },
-        {
-          "regimen_id": "mp",
-          "notes": {
-            "uk": "Без автотрансплантації",
-            "en": "Without an autologous transplant"
-          }
-        },
-        {
-          "regimen_id": "dvrd-cycle-1-2",
-          "notes": {
-            "uk": "Цикли 1-2",
-            "en": "Cycles 1-2"
-          }
-        },
-        {
-          "regimen_id": "dvrd-cycle-3-8",
-          "notes": {
-            "uk": "Цикли 3-8",
-            "en": "Cycles 3-8"
-          }
-        },
-        {
-          "regimen_id": "dvrd",
-          "notes": {
-            "uk": "Цикли 9 і далі, без бортезомібу",
-            "en": "Cycle 9 onwards, without bortezomib"
-          }
-        },
-        {
-          "regimen_id": "d-rd-cycle-1-2",
-          "notes": {
-            "uk": "Цикли 1-2. Якщо трансплантація не планується; перевага за наявної нейропатії, бо без бортезомібу.",
-            "en": "Cycles 1-2. Where no transplant is planned; preferred with pre-existing neuropathy, as it has no bortezomib."
-          }
-        },
-        {
-          "regimen_id": "d-rd-cycle-3-6",
-          "notes": {
-            "uk": "Цикли 3-6.",
-            "en": "Cycles 3-6."
-          }
-        },
-        {
-          "regimen_id": "d-rd",
-          "notes": {
-            "uk": "Цикли 7 і далі, до прогресування.",
-            "en": "Cycle 7 onwards, until progression."
-          }
-        },
-        {
-          "regimen_id": "rd",
-          "notes": {
-            "uk": "Для ослаблених пацієнтів зі стандартним ризиком, які не переносять потрійну схему.",
-            "en": "For frail patients with standard-risk disease who cannot tolerate a triplet."
-          }
-        },
-        {
-          "regimen_id": "krd-cycle-1",
-          "notes": {
-            "uk": "Цикл 1. Альтернатива VRd, якщо трансплантація не планується.",
-            "en": "Cycle 1. An alternative to VRd where no transplant is planned."
-          }
-        },
-        {
-          "regimen_id": "krd",
-          "notes": {
-            "uk": "Цикли 2 і далі.",
-            "en": "Cycles 2 onwards."
-          }
-        },
-        {
-          "regimen_id": "ird",
-          "notes": {
-            "uk": "Повністю пероральна схема - коли щотижневі візити утруднені.",
-            "en": "A fully oral regimen, for when weekly visits are hard to arrange."
-          }
-        },
-        {
-          "regimen_id": "kcd",
-          "notes": {
-            "uk": "За ниркової недостатності або нейропатії, коли леналідомід небажаний.",
-            "en": "In renal impairment or neuropathy, where lenalidomide is unwanted."
-          }
-        },
-        {
-          "regimen_id": "cybord-eviq",
-          "notes": {
-            "uk": "eviQ 556",
-            "en": "eviQ 556"
-          }
-        },
-        {
-          "regimen_id": "cybord-weekly-eviq",
-          "notes": {
-            "uk": "eviQ 1562",
-            "en": "eviQ 1562"
-          }
-        },
-        {
-          "regimen_id": "rvd-griffin",
-          "notes": {
-            "uk": "eviQ 3919",
-            "en": "eviQ 3919"
-          }
-        },
-        {
-          "regimen_id": "rvd-pethema",
-          "notes": {
-            "uk": "eviQ 3936",
-            "en": "eviQ 3936"
-          }
-        },
-        {
-          "regimen_id": "rvd-weekly",
-          "notes": {
-            "uk": "eviQ 4367",
-            "en": "eviQ 4367"
-          }
-        },
-        {
-          "regimen_id": "mpb",
-          "notes": {
-            "uk": "Без трансплантації; eviQ 1413",
-            "en": "Without transplantation; eviQ 1413"
-          }
-        },
-        {
-          "regimen_id": "drd-sc-cycle-1-2",
-          "notes": {
-            "uk": "Без трансплантації; п/ш даратумумаб; eviQ 4371",
-            "en": "Without transplantation; SC daratumumab; eviQ 4371"
-          }
-        },
-        {
-          "regimen_id": "drd-sc-cycle-3-6"
-        },
-        {
-          "regimen_id": "drd-sc"
-        },
-        {
-          "regimen_id": "lenalidomide-maintenance-continuous",
-          "notes": {
-            "uk": "Після автотрансплантації; eviQ 3797",
-            "en": "After autologous transplantation; eviQ 3797"
-          }
-        },
-        {
-          "regimen_id": "rvd-lite-induction",
-          "notes": {
-            "uk": "Для літніх; eviQ 3917",
-            "en": "For older patients; eviQ 3917"
-          }
-        },
-        {
-          "regimen_id": "rvd-lite-consolidation"
-        },
-        {
-          "regimen_id": "kr-maintenance",
-          "notes": {
-            "uk": "NCCN 1.2027: підтримка, інші рекомендовані (категорія 1)",
-            "en": "NCCN 1.2027: maintenance, other recommended (category 1)"
-          }
-        },
-        {
-          "regimen_id": "ixazomib-maintenance-cycle-1-4",
-          "notes": {
-            "uk": "NCCN 1.2027: підтримка, за особливих обставин (категорія 2B)",
-            "en": "NCCN 1.2027: maintenance, useful in certain circumstances (category 2B)"
-          }
-        },
-        {
-          "regimen_id": "ixazomib-maintenance",
-          "notes": {
-            "uk": "NCCN 1.2027: підтримка, за особливих обставин (категорія 2B)",
-            "en": "NCCN 1.2027: maintenance, useful in certain circumstances (category 2B)"
-          }
-        },
-        {
-          "regimen_id": "ref-mm-bortezomib-maintenance",
-          "notes": {
-            "uk": "NCCN 1.2027: підтримка бортезомібом — картка без розрахунку",
-            "en": "NCCN 1.2027: bortezomib maintenance - a card without a calculation"
-          }
+          "key": "maintenance",
+          "kind": "group",
+          "title": {
+            "uk": "Підтримка",
+            "en": "Maintenance"
+          },
+          "description": null,
+          "regimens": [
+            {
+              "regimen_id": "lenalidomide-maintenance",
+              "notes": {
+                "uk": "Підтримка після автотрансплантації",
+                "en": "Maintenance after an autologous transplant"
+              }
+            },
+            {
+              "regimen_id": "lenalidomide-maintenance-continuous",
+              "notes": {
+                "uk": "Після автотрансплантації; eviQ 3797",
+                "en": "After autologous transplantation; eviQ 3797"
+              }
+            },
+            {
+              "regimen_id": "kr-maintenance",
+              "notes": {
+                "uk": "NCCN 1.2027: підтримка, інші рекомендовані (категорія 1)",
+                "en": "NCCN 1.2027: maintenance, other recommended (category 1)"
+              }
+            },
+            {
+              "regimen_id": "ixazomib-maintenance-cycle-1-4",
+              "notes": {
+                "uk": "NCCN 1.2027: підтримка, за особливих обставин (категорія 2B)",
+                "en": "NCCN 1.2027: maintenance, useful in certain circumstances (category 2B)"
+              }
+            },
+            {
+              "regimen_id": "ixazomib-maintenance",
+              "notes": {
+                "uk": "NCCN 1.2027: підтримка, за особливих обставин (категорія 2B)",
+                "en": "NCCN 1.2027: maintenance, useful in certain circumstances (category 2B)"
+              }
+            },
+            {
+              "regimen_id": "ref-mm-bortezomib-maintenance",
+              "notes": {
+                "uk": "NCCN 1.2027: підтримка бортезомібом — картка без розрахунку",
+                "en": "NCCN 1.2027: bortezomib maintenance - a card without a calculation"
+              }
+            }
+          ],
+          "children": []
         }
       ]
     },
@@ -326,403 +497,1050 @@
         "uk": "Вибір схеми залежить від того, що пацієнт уже отримував і скільки минуло часу до рецидиву.",
         "en": "The choice depends on previous therapy and on how long the response lasted."
       },
-      "regimens": [
-        {
-          "regimen_id": "pom-dex"
-        },
-        {
-          "regimen_id": "bortezomib-mono"
-        },
-        {
-          "regimen_id": "vad"
-        },
-        {
-          "regimen_id": "d-rd-cycle-1-2",
-          "notes": {
-            "uk": "Цикли 1-2, даратумумаб щотижня",
-            "en": "Cycles 1-2, weekly daratumumab"
-          }
-        },
-        {
-          "regimen_id": "d-rd-cycle-3-6",
-          "notes": {
-            "uk": "Цикли 3-6, раз на два тижні",
-            "en": "Cycles 3-6, every two weeks"
-          }
-        },
-        {
-          "regimen_id": "d-rd",
-          "notes": {
-            "uk": "Цикл 7 і далі, раз на місяць, до прогресування",
-            "en": "Cycle 7 onwards, monthly, until progression"
-          }
-        },
-        {
-          "regimen_id": "rd"
-        },
-        {
-          "regimen_id": "crd"
-        },
-        {
-          "regimen_id": "ctd"
-        },
-        {
-          "regimen_id": "ctd-attenuated"
-        },
-        {
-          "regimen_id": "kd-cycle-1",
-          "notes": {
-            "uk": "Цикл 1",
-            "en": "Cycle 1"
-          }
-        },
-        {
-          "regimen_id": "kd",
-          "notes": {
-            "uk": "Цикли 2 і далі",
-            "en": "Cycle 2 onwards"
-          }
-        },
-        {
-          "regimen_id": "kcd"
-        },
-        {
-          "regimen_id": "krd-cycle-1",
-          "notes": {
-            "uk": "Цикл 1",
-            "en": "Cycle 1"
-          }
-        },
-        {
-          "regimen_id": "krd",
-          "notes": {
-            "uk": "Цикли 2 і далі",
-            "en": "Cycle 2 onwards"
-          }
-        },
-        {
-          "regimen_id": "ird"
-        },
-        {
-          "regimen_id": "daratumumab-cycle-1-2",
-          "notes": {
-            "uk": "Цикли 1-2",
-            "en": "Cycles 1-2"
-          }
-        },
-        {
-          "regimen_id": "daratumumab-cycle-3-6",
-          "notes": {
-            "uk": "Цикли 3-6",
-            "en": "Cycles 3-6"
-          }
-        },
-        {
-          "regimen_id": "daratumumab-mono",
-          "notes": {
-            "uk": "Цикли 7 і далі",
-            "en": "Cycle 7 onwards"
-          }
-        },
-        {
-          "regimen_id": "pvd-cycle-1-8",
-          "notes": {
-            "uk": "Цикли 1-8",
-            "en": "Cycles 1-8"
-          }
-        },
-        {
-          "regimen_id": "pvd",
-          "notes": {
-            "uk": "Цикли 9 і далі",
-            "en": "Cycle 9 onwards"
-          }
-        },
-        {
-          "regimen_id": "dpd-cycle-1-2",
-          "notes": {
-            "uk": "Цикли 1-2",
-            "en": "Cycles 1-2"
-          }
-        },
-        {
-          "regimen_id": "dpd-cycle-3-6",
-          "notes": {
-            "uk": "Цикли 3-6",
-            "en": "Cycles 3-6"
-          }
-        },
-        {
-          "regimen_id": "dpd",
-          "notes": {
-            "uk": "Цикли 7 і далі",
-            "en": "Cycle 7 onwards"
-          }
-        },
-        {
-          "regimen_id": "vtd-pace",
-          "notes": {
-            "uk": "Інтенсивна терапія порятунку",
-            "en": "Intensive salvage"
-          }
-        },
-        {
-          "regimen_id": "vtd-pace-carboplatin",
-          "notes": {
-            "uk": "Те саме при нирковій недостатності",
-            "en": "The same in renal impairment"
-          }
-        },
-        {
-          "regimen_id": "isa-pd-cycle-1",
-          "notes": {
-            "uk": "Цикл 1.",
-            "en": "Cycle 1."
-          }
-        },
-        {
-          "regimen_id": "isa-pd",
-          "notes": {
-            "uk": "Цикли 2 і далі.",
-            "en": "Cycle 2 onwards."
-          }
-        },
-        {
-          "regimen_id": "isa-kd-cycle-1",
-          "notes": {
-            "uk": "Цикл 1.",
-            "en": "Cycle 1."
-          }
-        },
-        {
-          "regimen_id": "isa-kd",
-          "notes": {
-            "uk": "Цикли 2 і далі.",
-            "en": "Cycle 2 onwards."
-          }
-        },
-        {
-          "regimen_id": "elo-rd-cycle-1-2",
-          "notes": {
-            "uk": "Цикли 1-2.",
-            "en": "Cycles 1-2."
-          }
-        },
-        {
-          "regimen_id": "elo-rd",
-          "notes": {
-            "uk": "Цикли 3 і далі.",
-            "en": "Cycle 3 onwards."
-          }
-        },
-        {
-          "regimen_id": "elo-pd-cycle-1-2",
-          "notes": {
-            "uk": "Цикли 1-2.",
-            "en": "Cycles 1-2."
-          }
-        },
-        {
-          "regimen_id": "elo-pd",
-          "notes": {
-            "uk": "Цикли 3 і далі.",
-            "en": "Cycle 3 onwards."
-          }
-        },
-        {
-          "regimen_id": "svd",
-          "notes": {
-            "uk": "Після однієї і більше ліній терапії.",
-            "en": "After one or more prior therapies."
-          }
-        },
-        {
-          "regimen_id": "selinexor-dex",
-          "notes": {
-            "uk": "Після чотирьох і більше ліній терапії.",
-            "en": "After four or more prior therapies."
-          }
-        },
-        {
-          "regimen_id": "dvd-cycle-1-3",
-          "notes": {
-            "uk": "Після ≥1 лінії; eviQ 4175",
-            "en": "After at least one line; eviQ 4175"
-          }
-        },
-        {
-          "regimen_id": "dvd-cycle-4-8"
-        },
-        {
-          "regimen_id": "daratumumab-sc-maintenance",
-          "notes": {
-            "uk": "Після DVd; eviQ 4176",
-            "en": "After DVd; eviQ 4176"
-          }
-        },
-        {
-          "regimen_id": "elranatamab-cycle-1",
-          "notes": {
-            "uk": "Після ≥4 ліній; eviQ 4555",
-            "en": "After at least four lines; eviQ 4555"
-          }
-        },
-        {
-          "regimen_id": "elranatamab-cycle-2-6"
-        },
-        {
-          "regimen_id": "elranatamab-cycle-7-12"
-        },
-        {
-          "regimen_id": "elranatamab",
-          "notes": {
-            "uk": "Цикл 13 і далі",
-            "en": "Cycle 13 onwards"
-          }
-        },
-        {
-          "regimen_id": "pcd-cycle-1-9",
-          "notes": {
-            "uk": "eviQ 3645",
-            "en": "eviQ 3645"
-          }
-        },
-        {
-          "regimen_id": "pcd",
-          "notes": {
-            "uk": "Цикл 10 і далі",
-            "en": "Cycle 10 onwards"
-          }
-        },
-        {
-          "regimen_id": "krd-cycle-13-18",
-          "notes": {
-            "uk": "eviQ 4142",
-            "en": "eviQ 4142"
-          }
-        },
-        {
-          "regimen_id": "kd-weekly-cycle-1",
-          "notes": {
-            "uk": "Щотижневий Kd; eviQ 3830",
-            "en": "Weekly Kd; eviQ 3830"
-          }
-        },
-        {
-          "regimen_id": "kd-weekly-cycle-2-9"
-        },
-        {
-          "regimen_id": "kd-weekly"
-        },
-        {
-          "regimen_id": "kcd-eviq-cycle-1",
-          "notes": {
-            "uk": "eviQ 4186",
-            "en": "eviQ 4186"
-          }
-        },
-        {
-          "regimen_id": "kcd-eviq"
-        },
-        {
-          "regimen_id": "erd-eviq-cycle-1-2",
-          "notes": {
-            "uk": "eviQ 4138",
-            "en": "eviQ 4138"
-          }
-        },
-        {
-          "regimen_id": "erd-eviq"
-        },
-        {
-          "regimen_id": "pvd-eviq-cycle-1-8",
-          "notes": {
-            "uk": "eviQ 3791",
-            "en": "eviQ 3791"
-          }
-        },
-        {
-          "regimen_id": "drd-sc-cycle-1-2",
-          "notes": {
-            "uk": "п/ш даратумумаб; eviQ 4371",
-            "en": "SC daratumumab; eviQ 4371"
-          }
-        },
-        {
-          "regimen_id": "drd-sc-cycle-3-6"
-        },
-        {
-          "regimen_id": "drd-sc"
-        },
-        {
-          "regimen_id": "v-pld",
-          "notes": {
-            "uk": "За інструкцією Caelyx",
-            "en": "Per the Caelyx label"
-          }
-        },
-        {
-          "regimen_id": "ipd",
-          "notes": {
-            "uk": "NCCN 1.2027: інші рекомендовані, після 1–3 ліній",
-            "en": "NCCN 1.2027: other recommended, after one to three lines"
-          }
-        },
-        {
-          "regimen_id": "bbd",
-          "notes": {
-            "uk": "NCCN 1.2027: за особливих обставин, після 3 і більше ліній",
-            "en": "NCCN 1.2027: useful in certain circumstances, after three or more lines"
-          }
-        },
-        {
-          "regimen_id": "bld",
-          "notes": {
-            "uk": "NCCN 1.2027: за особливих обставин, після 3 і більше ліній",
-            "en": "NCCN 1.2027: useful in certain circumstances, after three or more lines"
-          }
-        },
-        {
-          "regimen_id": "icd",
-          "notes": {
-            "uk": "NCCN 1.2027: інші рекомендовані. MUKeight (рандомізоване): не краще за Cd, більше токсичності",
-            "en": "NCCN 1.2027: other recommended. MUKeight (randomised): no better than Cd, more toxicity"
-          }
-        },
-        {
-          "regimen_id": "kctd-cycle-1",
-          "notes": {
-            "uk": "NCCN 1.2027: KCTd. Дози з CYKLONE (вперше діагностована ММ); при рецидиві NCCN доз не наводить. Цикл 1: карфілзоміб 20 мг/м²",
-            "en": "NCCN 1.2027: KCTd. Doses from CYKLONE (newly diagnosed myeloma); NCCN gives no doses for relapse. Cycle 1: carfilzomib 20 mg/m2"
-          }
-        },
-        {
-          "regimen_id": "kctd",
-          "notes": {
-            "uk": "Цикли 2+: карфілзоміб 36 мг/м²",
-            "en": "Cycles 2 onwards: carfilzomib 36 mg/m2"
-          }
-        },
-        {
-          "regimen_id": "venkd-cycle-1",
-          "notes": {
-            "uk": "NCCN 1.2027: венетоклакс з дексаметазоном ± інгібітор протеасом, лише t(11;14)",
-            "en": "NCCN 1.2027: venetoclax with dexamethasone ± a proteasome inhibitor, t(11;14) only"
-          }
-        },
-        {
-          "regimen_id": "venkd",
-          "notes": {
-            "uk": "NCCN 1.2027: венетоклакс з дексаметазоном ± інгібітор протеасом, лише t(11;14)",
-            "en": "NCCN 1.2027: venetoclax with dexamethasone ± a proteasome inhibitor, t(11;14) only"
-          }
-        },
-        {
-          "regimen_id": "ven-dex-t11-14",
-          "notes": {
-            "uk": "NCCN 1.2027: за особливих обставин, лише t(11;14)",
-            "en": "NCCN 1.2027: useful in certain circumstances, t(11;14) only"
-          }
+      "regimens": [],
+      "children": [
+        {
+          "key": "refractory-bortezomib",
+          "kind": "group",
+          "title": {
+            "uk": "Рефрактерні до бортезомібу",
+            "en": "Bortezomib-refractory"
+          },
+          "description": null,
+          "regimens": [
+            {
+              "regimen_id": "pom-dex"
+            },
+            {
+              "regimen_id": "d-rd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2, даратумумаб щотижня",
+                "en": "Cycles 1-2, weekly daratumumab"
+              }
+            },
+            {
+              "regimen_id": "d-rd-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3-6, раз на два тижні",
+                "en": "Cycles 3-6, every two weeks"
+              }
+            },
+            {
+              "regimen_id": "d-rd",
+              "notes": {
+                "uk": "Цикл 7 і далі, раз на місяць, до прогресування",
+                "en": "Cycle 7 onwards, monthly, until progression"
+              }
+            },
+            {
+              "regimen_id": "rd"
+            },
+            {
+              "regimen_id": "crd"
+            },
+            {
+              "regimen_id": "ctd"
+            },
+            {
+              "regimen_id": "ctd-attenuated"
+            },
+            {
+              "regimen_id": "kd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1",
+                "en": "Cycle 1"
+              }
+            },
+            {
+              "regimen_id": "kd",
+              "notes": {
+                "uk": "Цикли 2 і далі",
+                "en": "Cycle 2 onwards"
+              }
+            },
+            {
+              "regimen_id": "daratumumab-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2",
+                "en": "Cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "daratumumab-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3-6",
+                "en": "Cycles 3-6"
+              }
+            },
+            {
+              "regimen_id": "daratumumab-mono",
+              "notes": {
+                "uk": "Цикли 7 і далі",
+                "en": "Cycle 7 onwards"
+              }
+            },
+            {
+              "regimen_id": "dpd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2",
+                "en": "Cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "dpd-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3-6",
+                "en": "Cycles 3-6"
+              }
+            },
+            {
+              "regimen_id": "dpd",
+              "notes": {
+                "uk": "Цикли 7 і далі",
+                "en": "Cycle 7 onwards"
+              }
+            },
+            {
+              "regimen_id": "isa-pd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1.",
+                "en": "Cycle 1."
+              }
+            },
+            {
+              "regimen_id": "isa-pd",
+              "notes": {
+                "uk": "Цикли 2 і далі.",
+                "en": "Cycle 2 onwards."
+              }
+            },
+            {
+              "regimen_id": "elo-rd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2.",
+                "en": "Cycles 1-2."
+              }
+            },
+            {
+              "regimen_id": "elo-rd",
+              "notes": {
+                "uk": "Цикли 3 і далі.",
+                "en": "Cycle 3 onwards."
+              }
+            },
+            {
+              "regimen_id": "elo-pd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2.",
+                "en": "Cycles 1-2."
+              }
+            },
+            {
+              "regimen_id": "elo-pd",
+              "notes": {
+                "uk": "Цикли 3 і далі.",
+                "en": "Cycle 3 onwards."
+              }
+            },
+            {
+              "regimen_id": "pcd-cycle-1-9",
+              "notes": {
+                "uk": "eviQ 3645",
+                "en": "eviQ 3645"
+              }
+            },
+            {
+              "regimen_id": "pcd",
+              "notes": {
+                "uk": "Цикл 10 і далі",
+                "en": "Cycle 10 onwards"
+              }
+            },
+            {
+              "regimen_id": "kd-weekly-cycle-1",
+              "notes": {
+                "uk": "Щотижневий Kd; eviQ 3830",
+                "en": "Weekly Kd; eviQ 3830"
+              }
+            },
+            {
+              "regimen_id": "kd-weekly-cycle-2-9"
+            },
+            {
+              "regimen_id": "kd-weekly"
+            },
+            {
+              "regimen_id": "erd-eviq-cycle-1-2",
+              "notes": {
+                "uk": "eviQ 4138",
+                "en": "eviQ 4138"
+              }
+            },
+            {
+              "regimen_id": "erd-eviq"
+            },
+            {
+              "regimen_id": "drd-sc-cycle-1-2",
+              "notes": {
+                "uk": "п/ш даратумумаб; eviQ 4371",
+                "en": "SC daratumumab; eviQ 4371"
+              }
+            },
+            {
+              "regimen_id": "drd-sc-cycle-3-6"
+            },
+            {
+              "regimen_id": "drd-sc"
+            },
+            {
+              "regimen_id": "bld",
+              "notes": {
+                "uk": "NCCN 1.2027: за особливих обставин, після 3 і більше ліній",
+                "en": "NCCN 1.2027: useful in certain circumstances, after three or more lines"
+              }
+            },
+            {
+              "regimen_id": "icd",
+              "notes": {
+                "uk": "NCCN 1.2027: інші рекомендовані. MUKeight (рандомізоване): не краще за Cd, більше токсичності",
+                "en": "NCCN 1.2027: other recommended. MUKeight (randomised): no better than Cd, more toxicity"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "refractory-lenalidomide",
+          "kind": "group",
+          "title": {
+            "uk": "Рефрактерні до леналідоміду",
+            "en": "Lenalidomide-refractory"
+          },
+          "description": null,
+          "regimens": [
+            {
+              "regimen_id": "pom-dex"
+            },
+            {
+              "regimen_id": "bortezomib-mono"
+            },
+            {
+              "regimen_id": "ctd"
+            },
+            {
+              "regimen_id": "ctd-attenuated"
+            },
+            {
+              "regimen_id": "kd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1",
+                "en": "Cycle 1"
+              }
+            },
+            {
+              "regimen_id": "kd",
+              "notes": {
+                "uk": "Цикли 2 і далі",
+                "en": "Cycle 2 onwards"
+              }
+            },
+            {
+              "regimen_id": "kcd"
+            },
+            {
+              "regimen_id": "daratumumab-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2",
+                "en": "Cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "daratumumab-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3-6",
+                "en": "Cycles 3-6"
+              }
+            },
+            {
+              "regimen_id": "daratumumab-mono",
+              "notes": {
+                "uk": "Цикли 7 і далі",
+                "en": "Cycle 7 onwards"
+              }
+            },
+            {
+              "regimen_id": "pvd-cycle-1-8",
+              "notes": {
+                "uk": "Цикли 1-8",
+                "en": "Cycles 1-8"
+              }
+            },
+            {
+              "regimen_id": "pvd",
+              "notes": {
+                "uk": "Цикли 9 і далі",
+                "en": "Cycle 9 onwards"
+              }
+            },
+            {
+              "regimen_id": "dpd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2",
+                "en": "Cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "dpd-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3-6",
+                "en": "Cycles 3-6"
+              }
+            },
+            {
+              "regimen_id": "dpd",
+              "notes": {
+                "uk": "Цикли 7 і далі",
+                "en": "Cycle 7 onwards"
+              }
+            },
+            {
+              "regimen_id": "isa-pd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1.",
+                "en": "Cycle 1."
+              }
+            },
+            {
+              "regimen_id": "isa-pd",
+              "notes": {
+                "uk": "Цикли 2 і далі.",
+                "en": "Cycle 2 onwards."
+              }
+            },
+            {
+              "regimen_id": "isa-kd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1.",
+                "en": "Cycle 1."
+              }
+            },
+            {
+              "regimen_id": "isa-kd",
+              "notes": {
+                "uk": "Цикли 2 і далі.",
+                "en": "Cycle 2 onwards."
+              }
+            },
+            {
+              "regimen_id": "elo-pd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2.",
+                "en": "Cycles 1-2."
+              }
+            },
+            {
+              "regimen_id": "elo-pd",
+              "notes": {
+                "uk": "Цикли 3 і далі.",
+                "en": "Cycle 3 onwards."
+              }
+            },
+            {
+              "regimen_id": "svd",
+              "notes": {
+                "uk": "Після однієї і більше ліній терапії.",
+                "en": "After one or more prior therapies."
+              }
+            },
+            {
+              "regimen_id": "dvd-cycle-1-3",
+              "notes": {
+                "uk": "Після ≥1 лінії; eviQ 4175",
+                "en": "After at least one line; eviQ 4175"
+              }
+            },
+            {
+              "regimen_id": "dvd-cycle-4-8"
+            },
+            {
+              "regimen_id": "daratumumab-sc-maintenance",
+              "notes": {
+                "uk": "Після DVd; eviQ 4176",
+                "en": "After DVd; eviQ 4176"
+              }
+            },
+            {
+              "regimen_id": "pcd-cycle-1-9",
+              "notes": {
+                "uk": "eviQ 3645",
+                "en": "eviQ 3645"
+              }
+            },
+            {
+              "regimen_id": "pcd",
+              "notes": {
+                "uk": "Цикл 10 і далі",
+                "en": "Cycle 10 onwards"
+              }
+            },
+            {
+              "regimen_id": "kd-weekly-cycle-1",
+              "notes": {
+                "uk": "Щотижневий Kd; eviQ 3830",
+                "en": "Weekly Kd; eviQ 3830"
+              }
+            },
+            {
+              "regimen_id": "kd-weekly-cycle-2-9"
+            },
+            {
+              "regimen_id": "kd-weekly"
+            },
+            {
+              "regimen_id": "kcd-eviq-cycle-1",
+              "notes": {
+                "uk": "eviQ 4186",
+                "en": "eviQ 4186"
+              }
+            },
+            {
+              "regimen_id": "kcd-eviq"
+            },
+            {
+              "regimen_id": "pvd-eviq-cycle-1-8",
+              "notes": {
+                "uk": "eviQ 3791",
+                "en": "eviQ 3791"
+              }
+            },
+            {
+              "regimen_id": "v-pld",
+              "notes": {
+                "uk": "За інструкцією Caelyx",
+                "en": "Per the Caelyx label"
+              }
+            },
+            {
+              "regimen_id": "ipd",
+              "notes": {
+                "uk": "NCCN 1.2027: інші рекомендовані, після 1–3 ліній",
+                "en": "NCCN 1.2027: other recommended, after one to three lines"
+              }
+            },
+            {
+              "regimen_id": "bbd",
+              "notes": {
+                "uk": "NCCN 1.2027: за особливих обставин, після 3 і більше ліній",
+                "en": "NCCN 1.2027: useful in certain circumstances, after three or more lines"
+              }
+            },
+            {
+              "regimen_id": "icd",
+              "notes": {
+                "uk": "NCCN 1.2027: інші рекомендовані. MUKeight (рандомізоване): не краще за Cd, більше токсичності",
+                "en": "NCCN 1.2027: other recommended. MUKeight (randomised): no better than Cd, more toxicity"
+              }
+            },
+            {
+              "regimen_id": "kctd-cycle-1",
+              "notes": {
+                "uk": "NCCN 1.2027: KCTd. Дози з CYKLONE (вперше діагностована ММ); при рецидиві NCCN доз не наводить. Цикл 1: карфілзоміб 20 мг/м²",
+                "en": "NCCN 1.2027: KCTd. Doses from CYKLONE (newly diagnosed myeloma); NCCN gives no doses for relapse. Cycle 1: carfilzomib 20 mg/m2"
+              }
+            },
+            {
+              "regimen_id": "kctd",
+              "notes": {
+                "uk": "Цикли 2+: карфілзоміб 36 мг/м²",
+                "en": "Cycles 2 onwards: carfilzomib 36 mg/m2"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "refractory-thalidomide",
+          "kind": "group",
+          "title": {
+            "uk": "Рефрактерні до талідоміду",
+            "en": "Thalidomide-refractory"
+          },
+          "description": null,
+          "regimens": [
+            {
+              "regimen_id": "pom-dex"
+            },
+            {
+              "regimen_id": "bortezomib-mono"
+            },
+            {
+              "regimen_id": "d-rd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2, даратумумаб щотижня",
+                "en": "Cycles 1-2, weekly daratumumab"
+              }
+            },
+            {
+              "regimen_id": "d-rd-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3-6, раз на два тижні",
+                "en": "Cycles 3-6, every two weeks"
+              }
+            },
+            {
+              "regimen_id": "d-rd",
+              "notes": {
+                "uk": "Цикл 7 і далі, раз на місяць, до прогресування",
+                "en": "Cycle 7 onwards, monthly, until progression"
+              }
+            },
+            {
+              "regimen_id": "rd"
+            },
+            {
+              "regimen_id": "crd"
+            },
+            {
+              "regimen_id": "kd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1",
+                "en": "Cycle 1"
+              }
+            },
+            {
+              "regimen_id": "kd",
+              "notes": {
+                "uk": "Цикли 2 і далі",
+                "en": "Cycle 2 onwards"
+              }
+            },
+            {
+              "regimen_id": "kcd"
+            },
+            {
+              "regimen_id": "krd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1",
+                "en": "Cycle 1"
+              }
+            },
+            {
+              "regimen_id": "krd",
+              "notes": {
+                "uk": "Цикли 2 і далі",
+                "en": "Cycle 2 onwards"
+              }
+            },
+            {
+              "regimen_id": "ird"
+            },
+            {
+              "regimen_id": "daratumumab-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2",
+                "en": "Cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "daratumumab-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3-6",
+                "en": "Cycles 3-6"
+              }
+            },
+            {
+              "regimen_id": "daratumumab-mono",
+              "notes": {
+                "uk": "Цикли 7 і далі",
+                "en": "Cycle 7 onwards"
+              }
+            },
+            {
+              "regimen_id": "pvd-cycle-1-8",
+              "notes": {
+                "uk": "Цикли 1-8",
+                "en": "Cycles 1-8"
+              }
+            },
+            {
+              "regimen_id": "pvd",
+              "notes": {
+                "uk": "Цикли 9 і далі",
+                "en": "Cycle 9 onwards"
+              }
+            },
+            {
+              "regimen_id": "dpd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2",
+                "en": "Cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "dpd-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3-6",
+                "en": "Cycles 3-6"
+              }
+            },
+            {
+              "regimen_id": "dpd",
+              "notes": {
+                "uk": "Цикли 7 і далі",
+                "en": "Cycle 7 onwards"
+              }
+            },
+            {
+              "regimen_id": "isa-pd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1.",
+                "en": "Cycle 1."
+              }
+            },
+            {
+              "regimen_id": "isa-pd",
+              "notes": {
+                "uk": "Цикли 2 і далі.",
+                "en": "Cycle 2 onwards."
+              }
+            },
+            {
+              "regimen_id": "isa-kd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1.",
+                "en": "Cycle 1."
+              }
+            },
+            {
+              "regimen_id": "isa-kd",
+              "notes": {
+                "uk": "Цикли 2 і далі.",
+                "en": "Cycle 2 onwards."
+              }
+            },
+            {
+              "regimen_id": "elo-rd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2.",
+                "en": "Cycles 1-2."
+              }
+            },
+            {
+              "regimen_id": "elo-rd",
+              "notes": {
+                "uk": "Цикли 3 і далі.",
+                "en": "Cycle 3 onwards."
+              }
+            },
+            {
+              "regimen_id": "elo-pd-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2.",
+                "en": "Cycles 1-2."
+              }
+            },
+            {
+              "regimen_id": "elo-pd",
+              "notes": {
+                "uk": "Цикли 3 і далі.",
+                "en": "Cycle 3 onwards."
+              }
+            },
+            {
+              "regimen_id": "svd",
+              "notes": {
+                "uk": "Після однієї і більше ліній терапії.",
+                "en": "After one or more prior therapies."
+              }
+            },
+            {
+              "regimen_id": "dvd-cycle-1-3",
+              "notes": {
+                "uk": "Після ≥1 лінії; eviQ 4175",
+                "en": "After at least one line; eviQ 4175"
+              }
+            },
+            {
+              "regimen_id": "dvd-cycle-4-8"
+            },
+            {
+              "regimen_id": "daratumumab-sc-maintenance",
+              "notes": {
+                "uk": "Після DVd; eviQ 4176",
+                "en": "After DVd; eviQ 4176"
+              }
+            },
+            {
+              "regimen_id": "pcd-cycle-1-9",
+              "notes": {
+                "uk": "eviQ 3645",
+                "en": "eviQ 3645"
+              }
+            },
+            {
+              "regimen_id": "pcd",
+              "notes": {
+                "uk": "Цикл 10 і далі",
+                "en": "Cycle 10 onwards"
+              }
+            },
+            {
+              "regimen_id": "krd-cycle-13-18",
+              "notes": {
+                "uk": "eviQ 4142",
+                "en": "eviQ 4142"
+              }
+            },
+            {
+              "regimen_id": "kd-weekly-cycle-1",
+              "notes": {
+                "uk": "Щотижневий Kd; eviQ 3830",
+                "en": "Weekly Kd; eviQ 3830"
+              }
+            },
+            {
+              "regimen_id": "kd-weekly-cycle-2-9"
+            },
+            {
+              "regimen_id": "kd-weekly"
+            },
+            {
+              "regimen_id": "kcd-eviq-cycle-1",
+              "notes": {
+                "uk": "eviQ 4186",
+                "en": "eviQ 4186"
+              }
+            },
+            {
+              "regimen_id": "kcd-eviq"
+            },
+            {
+              "regimen_id": "erd-eviq-cycle-1-2",
+              "notes": {
+                "uk": "eviQ 4138",
+                "en": "eviQ 4138"
+              }
+            },
+            {
+              "regimen_id": "erd-eviq"
+            },
+            {
+              "regimen_id": "pvd-eviq-cycle-1-8",
+              "notes": {
+                "uk": "eviQ 3791",
+                "en": "eviQ 3791"
+              }
+            },
+            {
+              "regimen_id": "drd-sc-cycle-1-2",
+              "notes": {
+                "uk": "п/ш даратумумаб; eviQ 4371",
+                "en": "SC daratumumab; eviQ 4371"
+              }
+            },
+            {
+              "regimen_id": "drd-sc-cycle-3-6"
+            },
+            {
+              "regimen_id": "drd-sc"
+            },
+            {
+              "regimen_id": "v-pld",
+              "notes": {
+                "uk": "За інструкцією Caelyx",
+                "en": "Per the Caelyx label"
+              }
+            },
+            {
+              "regimen_id": "ipd",
+              "notes": {
+                "uk": "NCCN 1.2027: інші рекомендовані, після 1–3 ліній",
+                "en": "NCCN 1.2027: other recommended, after one to three lines"
+              }
+            },
+            {
+              "regimen_id": "icd",
+              "notes": {
+                "uk": "NCCN 1.2027: інші рекомендовані. MUKeight (рандомізоване): не краще за Cd, більше токсичності",
+                "en": "NCCN 1.2027: other recommended. MUKeight (randomised): no better than Cd, more toxicity"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "refractory-pomalidomide",
+          "kind": "group",
+          "title": {
+            "uk": "Рефрактерні до помалідоміду",
+            "en": "Pomalidomide-refractory"
+          },
+          "description": null,
+          "regimens": [
+            {
+              "regimen_id": "bortezomib-mono"
+            },
+            {
+              "regimen_id": "kd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1",
+                "en": "Cycle 1"
+              }
+            },
+            {
+              "regimen_id": "kd",
+              "notes": {
+                "uk": "Цикли 2 і далі",
+                "en": "Cycle 2 onwards"
+              }
+            },
+            {
+              "regimen_id": "kcd"
+            },
+            {
+              "regimen_id": "daratumumab-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2",
+                "en": "Cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "daratumumab-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3-6",
+                "en": "Cycles 3-6"
+              }
+            },
+            {
+              "regimen_id": "daratumumab-mono",
+              "notes": {
+                "uk": "Цикли 7 і далі",
+                "en": "Cycle 7 onwards"
+              }
+            },
+            {
+              "regimen_id": "isa-kd-cycle-1",
+              "notes": {
+                "uk": "Цикл 1.",
+                "en": "Cycle 1."
+              }
+            },
+            {
+              "regimen_id": "isa-kd",
+              "notes": {
+                "uk": "Цикли 2 і далі.",
+                "en": "Cycle 2 onwards."
+              }
+            },
+            {
+              "regimen_id": "svd",
+              "notes": {
+                "uk": "Після однієї і більше ліній терапії.",
+                "en": "After one or more prior therapies."
+              }
+            },
+            {
+              "regimen_id": "dvd-cycle-1-3",
+              "notes": {
+                "uk": "Після ≥1 лінії; eviQ 4175",
+                "en": "After at least one line; eviQ 4175"
+              }
+            },
+            {
+              "regimen_id": "dvd-cycle-4-8"
+            },
+            {
+              "regimen_id": "daratumumab-sc-maintenance",
+              "notes": {
+                "uk": "Після DVd; eviQ 4176",
+                "en": "After DVd; eviQ 4176"
+              }
+            },
+            {
+              "regimen_id": "kd-weekly-cycle-1",
+              "notes": {
+                "uk": "Щотижневий Kd; eviQ 3830",
+                "en": "Weekly Kd; eviQ 3830"
+              }
+            },
+            {
+              "regimen_id": "kd-weekly-cycle-2-9"
+            },
+            {
+              "regimen_id": "kd-weekly"
+            },
+            {
+              "regimen_id": "kcd-eviq-cycle-1",
+              "notes": {
+                "uk": "eviQ 4186",
+                "en": "eviQ 4186"
+              }
+            },
+            {
+              "regimen_id": "kcd-eviq"
+            },
+            {
+              "regimen_id": "v-pld",
+              "notes": {
+                "uk": "За інструкцією Caelyx",
+                "en": "Per the Caelyx label"
+              }
+            },
+            {
+              "regimen_id": "kctd-cycle-1",
+              "notes": {
+                "uk": "NCCN 1.2027: KCTd. Дози з CYKLONE (вперше діагностована ММ); при рецидиві NCCN доз не наводить. Цикл 1: карфілзоміб 20 мг/м²",
+                "en": "NCCN 1.2027: KCTd. Doses from CYKLONE (newly diagnosed myeloma); NCCN gives no doses for relapse. Cycle 1: carfilzomib 20 mg/m2"
+              }
+            },
+            {
+              "regimen_id": "kctd",
+              "notes": {
+                "uk": "Цикли 2+: карфілзоміб 36 мг/м²",
+                "en": "Cycles 2 onwards: carfilzomib 36 mg/m2"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "later-lines",
+          "kind": "group",
+          "title": {
+            "uk": "Пізні лінії",
+            "en": "Later lines"
+          },
+          "description": null,
+          "regimens": [
+            {
+              "regimen_id": "pom-dex"
+            },
+            {
+              "regimen_id": "daratumumab-cycle-1-2",
+              "notes": {
+                "uk": "Цикли 1-2",
+                "en": "Cycles 1-2"
+              }
+            },
+            {
+              "regimen_id": "daratumumab-cycle-3-6",
+              "notes": {
+                "uk": "Цикли 3-6",
+                "en": "Cycles 3-6"
+              }
+            },
+            {
+              "regimen_id": "daratumumab-mono",
+              "notes": {
+                "uk": "Цикли 7 і далі",
+                "en": "Cycle 7 onwards"
+              }
+            },
+            {
+              "regimen_id": "selinexor-dex",
+              "notes": {
+                "uk": "Після чотирьох і більше ліній терапії.",
+                "en": "After four or more prior therapies."
+              }
+            },
+            {
+              "regimen_id": "elranatamab-cycle-1",
+              "notes": {
+                "uk": "Після ≥4 ліній; eviQ 4555",
+                "en": "After at least four lines; eviQ 4555"
+              }
+            },
+            {
+              "regimen_id": "elranatamab-cycle-2-6"
+            },
+            {
+              "regimen_id": "elranatamab-cycle-7-12"
+            },
+            {
+              "regimen_id": "elranatamab",
+              "notes": {
+                "uk": "Цикл 13 і далі",
+                "en": "Cycle 13 onwards"
+              }
+            },
+            {
+              "regimen_id": "bbd",
+              "notes": {
+                "uk": "NCCN 1.2027: за особливих обставин, після 3 і більше ліній",
+                "en": "NCCN 1.2027: useful in certain circumstances, after three or more lines"
+              }
+            },
+            {
+              "regimen_id": "bld",
+              "notes": {
+                "uk": "NCCN 1.2027: за особливих обставин, після 3 і більше ліній",
+                "en": "NCCN 1.2027: useful in certain circumstances, after three or more lines"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "t11-14",
+          "kind": "group",
+          "title": {
+            "uk": "t(11;14)",
+            "en": "t(11;14)"
+          },
+          "description": null,
+          "regimens": [
+            {
+              "regimen_id": "venkd-cycle-1",
+              "notes": {
+                "uk": "NCCN 1.2027: венетоклакс з дексаметазоном ± інгібітор протеасом, лише t(11;14)",
+                "en": "NCCN 1.2027: venetoclax with dexamethasone ± a proteasome inhibitor, t(11;14) only"
+              }
+            },
+            {
+              "regimen_id": "venkd",
+              "notes": {
+                "uk": "NCCN 1.2027: венетоклакс з дексаметазоном ± інгібітор протеасом, лише t(11;14)",
+                "en": "NCCN 1.2027: venetoclax with dexamethasone ± a proteasome inhibitor, t(11;14) only"
+              }
+            },
+            {
+              "regimen_id": "ven-dex-t11-14",
+              "notes": {
+                "uk": "NCCN 1.2027: за особливих обставин, лише t(11;14)",
+                "en": "NCCN 1.2027: useful in certain circumstances, t(11;14) only"
+              }
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "aggressive",
+          "kind": "group",
+          "title": {
+            "uk": "Агресивний рецидив, плазмоклітинний лейкоз",
+            "en": "Aggressive relapse, plasma cell leukaemia"
+          },
+          "description": null,
+          "regimens": [
+            {
+              "regimen_id": "vad"
+            },
+            {
+              "regimen_id": "vtd-pace",
+              "notes": {
+                "uk": "Інтенсивна терапія порятунку",
+                "en": "Intensive salvage"
+              }
+            },
+            {
+              "regimen_id": "vtd-pace-carboplatin",
+              "notes": {
+                "uk": "Те саме при нирковій недостатності",
+                "en": "The same in renal impairment"
+              }
+            }
+          ],
+          "children": []
         }
       ]
     },

@@ -74,9 +74,20 @@ export function filterTree(
   return roots.flatMap((node) => keep(catalog, node, drugIds, onlyObtainable))
 }
 
-/** How many regimens the tree is showing — what the filter's own caption counts. */
+/**
+ * How many regimens the tree is showing — what the filter's own caption counts. A regimen that
+ * stands in several situations is one regimen.
+ */
 export function countRegimens(nodes: readonly FilteredNode[]): number {
-  return nodes.reduce((total, node) => total + node.links.length + countRegimens(node.children), 0)
+  const ids = new Set<string>()
+  const collect = (list: readonly FilteredNode[]) => {
+    for (const node of list) {
+      for (const link of node.links) ids.add(link.regimen_id)
+      collect(node.children)
+    }
+  }
+  collect(nodes)
+  return ids.size
 }
 
 function keep(
