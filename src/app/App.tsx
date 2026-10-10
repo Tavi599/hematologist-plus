@@ -6,6 +6,7 @@ import { DiseasesPage } from '../pages/DiseasesPage/DiseasesPage'
 import { NeedPage } from '../pages/NeedPage/NeedPage'
 import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage'
 import { ProposalsPage } from '../pages/ProposalsPage/ProposalsPage'
+import { ScoresPage } from '../pages/ScoresPage/ScoresPage'
 import { SourcesPage } from '../pages/SourcesPage/SourcesPage'
 import { AppLayout } from './layout/AppLayout'
 import { routes } from './routes'
@@ -19,6 +20,7 @@ export function App() {
         <Route path={routes.need} element={<NeedPage />} />
         <Route path={routes.diseases} element={<DiseasesPage />} />
         <Route path={`${routes.diseases}/:slug`} element={<DiseaseDetailPage />} />
+        <Route path={routes.scores} element={<ScoresPage />} />
         <Route path={routes.sources} element={<SourcesPage />} />
         <Route path={routes.proposals} element={<ProposalsPage />} />
         <Route path="*" element={<NotFoundPage />} />

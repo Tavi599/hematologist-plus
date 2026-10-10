@@ -4,5 +4,6 @@ export const routes = {
   diseases: '/diseases',
   sources: '/sources',
   proposals: '/proposals',
+  scores: '/scores',
   disease: (slug: string) => `/diseases/${encodeURIComponent(slug)}`,
 } as const

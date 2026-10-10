@@ -9,7 +9,8 @@
     "diseases": "Diseases",
     "sources": "Sources",
     "proposals": "Proposals",
-    "need": "Drug need"
+    "need": "Drug need",
+    "scores": "Scores"
   },
   "language": {
     "label": "Language",
@@ -653,5 +654,16 @@
     "contraindicated": "contraindicated",
     "dose_reduction": "reduce the dose",
     "caution": "caution"
+  },
+  "scores": {
+    "title": "Scores and formulas",
+    "lead": "Everyday formulas for the haematology patient and risk and prognostic scores. The cut-offs and points of each were checked against the publication named under it (2026-10-11). The result helps, it does not replace clinical judgement.",
+    "general": "Everyday formulas",
+    "risk": "Risk and prognosis",
+    "search": "Find a score",
+    "none": "Nothing found.",
+    "fill": "Fill in the fields to see the result.",
+    "invalid": "A value is out of range — check what was entered.",
+    "sources": "Sources"
   }
 }

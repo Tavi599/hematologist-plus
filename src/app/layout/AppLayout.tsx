@@ -19,6 +19,7 @@ export function AppLayout() {
     { to: routes.calculator, label: t('nav.calculator') },
     { to: routes.need, label: t('nav.need') },
     { to: routes.diseases, label: t('nav.diseases') },
+    { to: routes.scores, label: t('nav.scores') },
     { to: routes.sources, label: t('nav.sources') },
     { to: routes.proposals, label: t('nav.proposals') },
   ]
