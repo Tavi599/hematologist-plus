@@ -256,6 +256,27 @@
         },
         {
           "regimen_id": "rvd-lite-consolidation"
+        },
+        {
+          "regimen_id": "kr-maintenance",
+          "notes": {
+            "uk": "NCCN 1.2027: підтримка, інші рекомендовані (категорія 1)",
+            "en": "NCCN 1.2027: maintenance, other recommended (category 1)"
+          }
+        },
+        {
+          "regimen_id": "ixazomib-maintenance-cycle-1-4",
+          "notes": {
+            "uk": "NCCN 1.2027: підтримка, за особливих обставин (категорія 2B)",
+            "en": "NCCN 1.2027: maintenance, useful in certain circumstances (category 2B)"
+          }
+        },
+        {
+          "regimen_id": "ixazomib-maintenance",
+          "notes": {
+            "uk": "NCCN 1.2027: підтримка, за особливих обставин (категорія 2B)",
+            "en": "NCCN 1.2027: maintenance, useful in certain circumstances (category 2B)"
+          }
         }
       ]
     },
@@ -604,6 +625,48 @@
             "uk": "За інструкцією Caelyx",
             "en": "Per the Caelyx label"
           }
+        },
+        {
+          "regimen_id": "ipd",
+          "notes": {
+            "uk": "NCCN 1.2027: інші рекомендовані, після 1–3 ліній",
+            "en": "NCCN 1.2027: other recommended, after one to three lines"
+          }
+        },
+        {
+          "regimen_id": "bbd",
+          "notes": {
+            "uk": "NCCN 1.2027: за особливих обставин, після 3 і більше ліній",
+            "en": "NCCN 1.2027: useful in certain circumstances, after three or more lines"
+          }
+        },
+        {
+          "regimen_id": "bld",
+          "notes": {
+            "uk": "NCCN 1.2027: за особливих обставин, після 3 і більше ліній",
+            "en": "NCCN 1.2027: useful in certain circumstances, after three or more lines"
+          }
+        },
+        {
+          "regimen_id": "venkd-cycle-1",
+          "notes": {
+            "uk": "NCCN 1.2027: венетоклакс з дексаметазоном ± інгібітор протеасом, лише t(11;14)",
+            "en": "NCCN 1.2027: venetoclax with dexamethasone ± a proteasome inhibitor, t(11;14) only"
+          }
+        },
+        {
+          "regimen_id": "venkd",
+          "notes": {
+            "uk": "NCCN 1.2027: венетоклакс з дексаметазоном ± інгібітор протеасом, лише t(11;14)",
+            "en": "NCCN 1.2027: venetoclax with dexamethasone ± a proteasome inhibitor, t(11;14) only"
+          }
+        },
+        {
+          "regimen_id": "ven-dex-t11-14",
+          "notes": {
+            "uk": "NCCN 1.2027: за особливих обставин, лише t(11;14)",
+            "en": "NCCN 1.2027: useful in certain circumstances, t(11;14) only"
+          }
         }
       ]
     },
@@ -665,14 +728,9 @@
             },
             {
               "regimen_id": "ref-mm-pad"
-            },
-            {
-              "regimen_id": "ref-mm-dara-krd-master"
-            },
-            {
-              "regimen_id": "ref-mm-dara-cvrd-optimum"
             }
-          ]
+          ],
+          "children": []
         },
         {
           "key": "trials-frail",
@@ -738,42 +796,8 @@
             {
               "regimen_id": "avoid-mm-clarithromycin-rd"
             }
-          ]
-        },
-        {
-          "key": "trials-maintenance",
-          "kind": "trial",
-          "title": {
-            "uk": "Підтримка після трансплантації",
-            "en": "Maintenance after a transplant"
-          },
-          "description": {
-            "uk": "Підтримувальне лікування після автотрансплантації, зокрема коли леналідомід не переноситься.",
-            "en": "Maintenance after an autologous transplant, including when lenalidomide is not tolerated."
-          },
-          "regimens": [
-            {
-              "regimen_id": "ixazomib-maintenance-cycle-1-4",
-              "notes": {
-                "uk": "TOURMALINE-MM3, цикли 1–4, 3 мг",
-                "en": "TOURMALINE-MM3, cycles 1-4, 3 mg"
-              }
-            },
-            {
-              "regimen_id": "ixazomib-maintenance",
-              "notes": {
-                "uk": "З циклу 5, 4 мг, до 2 років",
-                "en": "From cycle 5, 4 mg, up to 2 years"
-              }
-            },
-            {
-              "regimen_id": "kr-maintenance",
-              "notes": {
-                "uk": "Після карфілзомібу в індукції, 2 роки",
-                "en": "After carfilzomib induction, 2 years"
-              }
-            }
-          ]
+          ],
+          "children": []
         },
         {
           "key": "trials-relapse",
@@ -788,13 +812,6 @@
           },
           "regimens": [
             {
-              "regimen_id": "ipd",
-              "notes": {
-                "uk": "Перший рецидив, рефрактерні до леналідоміду",
-                "en": "First relapse, lenalidomide-refractory"
-              }
-            },
-            {
               "regimen_id": "rep",
               "notes": {
                 "uk": "Рефрактерні до леналідоміду, повністю пероральна",
@@ -802,20 +819,18 @@
               }
             },
             {
-              "regimen_id": "bbd"
-            },
-            {
-              "regimen_id": "bld"
-            },
-            {
               "regimen_id": "cpr-relapse",
               "notes": {
-                "uk": "Повністю пероральна",
-                "en": "Fully oral"
+                "uk": "Повністю пероральна. У NCCN 1.2027 є аналог з дексаметазоном: циклофосфамід + леналідомід + дексаметазон (інші рекомендовані)",
+                "en": "Fully oral. NCCN 1.2027 has an analogue with dexamethasone: cyclophosphamide, lenalidomide and dexamethasone (other recommended)"
               }
             },
             {
-              "regimen_id": "ref-mm-vcp-weekly"
+              "regimen_id": "ref-mm-vcp-weekly",
+              "notes": {
+                "uk": "У NCCN 1.2027 є аналог з дексаметазоном: бортезоміб + циклофосфамід + дексаметазон",
+                "en": "NCCN 1.2027 has an analogue with dexamethasone: bortezomib, cyclophosphamide and dexamethasone"
+              }
             },
             {
               "regimen_id": "avoid-mm-icd-frail"
@@ -833,8 +848,8 @@
             {
               "regimen_id": "pcp-induction",
               "notes": {
-                "uk": "Низькі дози, 6 циклів",
-                "en": "Low doses, 6 cycles"
+                "uk": "Низькі дози, 6 циклів. У NCCN 1.2027 є аналог з дексаметазоном: циклофосфамід + помалідомід + дексаметазон (категорія 1)",
+                "en": "Low doses, 6 cycles. NCCN 1.2027 has an analogue with dexamethasone: cyclophosphamide, pomalidomide and dexamethasone (category 1)"
               }
             },
             {
@@ -852,9 +867,6 @@
               }
             },
             {
-              "regimen_id": "ref-mm-kpd-weekly"
-            },
-            {
               "regimen_id": "ref-mm-idd"
             },
             {
@@ -869,11 +881,9 @@
             },
             {
               "regimen_id": "ref-mm-pom-pld-dex"
-            },
-            {
-              "regimen_id": "ref-mm-dcep"
             }
-          ]
+          ],
+          "children": []
         },
         {
           "key": "trials-special",
@@ -888,33 +898,13 @@
           },
           "regimens": [
             {
-              "regimen_id": "venkd-cycle-1",
-              "notes": {
-                "uk": "t(11;14), 1–3 лінії",
-                "en": "t(11;14), 1 to 3 lines"
-              }
-            },
-            {
-              "regimen_id": "venkd",
-              "notes": {
-                "uk": "З циклу 2",
-                "en": "From cycle 2"
-              }
-            },
-            {
-              "regimen_id": "ven-dex-t11-14",
-              "notes": {
-                "uk": "t(11;14), після 2 і більше ліній",
-                "en": "t(11;14), after 2 or more lines"
-              }
-            },
-            {
               "regimen_id": "ref-mm-pcl-krd"
             },
             {
               "regimen_id": "ref-mm-pcl-pad-vcd"
             }
-          ]
+          ],
+          "children": []
         }
       ]
     },
@@ -950,6 +940,34 @@
         },
         {
           "regimen_id": "ref-mm-venetoclax"
+        },
+        {
+          "regimen_id": "ref-mm-kpd-weekly",
+          "notes": {
+            "uk": "NCCN 1.2027: карфілзоміб + помалідомід + дексаметазон — бажані; карфілзоміб раз на тиждень — бажаний режим",
+            "en": "NCCN 1.2027: carfilzomib, pomalidomide and dexamethasone are preferred; weekly carfilzomib is the preferred schedule"
+          }
+        },
+        {
+          "regimen_id": "ref-mm-dara-krd-master",
+          "notes": {
+            "uk": "NCCN 1.2027: KRd + даратумумаб — інші рекомендовані первинні схеми",
+            "en": "NCCN 1.2027: KRd plus daratumumab is an other recommended primary regimen"
+          }
+        },
+        {
+          "regimen_id": "ref-mm-dara-cvrd-optimum",
+          "notes": {
+            "uk": "NCCN 1.2027: VCRd + даратумумаб — за особливих обставин, для високого ризику і ПКЛ",
+            "en": "NCCN 1.2027: VCRd plus daratumumab, useful in certain circumstances, for high risk and PCL"
+          }
+        },
+        {
+          "regimen_id": "ref-mm-dcep",
+          "notes": {
+            "uk": "NCCN 1.2027: DCEP — за особливих обставин, для агресивної мієломи",
+            "en": "NCCN 1.2027: DCEP, useful in certain circumstances, for aggressive myeloma"
+          }
         }
       ]
     }

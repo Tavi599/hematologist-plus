@@ -73,6 +73,13 @@
             "uk": "Замінений протокол; якщо даратумумаба немає; eviQ 1466",
             "en": "A superseded protocol; if daratumumab is not available; eviQ 1466"
           }
+        },
+        {
+          "regimen_id": "ref-al-bmdex",
+          "notes": {
+            "uk": "NCCN 1.2027: бортезоміб + мелфалан + дексаметазон — за особливих обставин",
+            "en": "NCCN 1.2027: bortezomib plus melphalan plus dexamethasone, useful in certain circumstances"
+          }
         }
       ],
       "children": []
@@ -91,6 +98,27 @@
       "regimens": [
         {
           "regimen_id": "ref-al-relapse"
+        },
+        {
+          "regimen_id": "ixa-dex-al",
+          "notes": {
+            "uk": "NCCN 1.2027: іксазоміб + дексаметазон — інші рекомендовані",
+            "en": "NCCN 1.2027: ixazomib plus dexamethasone is other recommended"
+          }
+        },
+        {
+          "regimen_id": "benda-dex-al",
+          "notes": {
+            "uk": "NCCN 1.2027: бендамустин + дексаметазон — за особливих обставин",
+            "en": "NCCN 1.2027: bendamustine plus dexamethasone, useful in certain circumstances"
+          }
+        },
+        {
+          "regimen_id": "ref-al-daratumumab-relapse",
+          "notes": {
+            "uk": "NCCN 1.2027: даратумумаб окремо — інші рекомендовані",
+            "en": "NCCN 1.2027: daratumumab alone is other recommended"
+          }
         }
       ],
       "children": []
@@ -109,19 +137,6 @@
       "regimens": [],
       "children": [
         {
-          "key": "trials-first-line",
-          "kind": "trial",
-          "title": {
-            "uk": "Перша лінія без даратумумабу",
-            "en": "First line without daratumumab"
-          },
-          "regimens": [
-            {
-              "regimen_id": "ref-al-bmdex"
-            }
-          ]
-        },
-        {
           "key": "trials-relapse",
           "kind": "trial",
           "title": {
@@ -130,34 +145,18 @@
           },
           "regimens": [
             {
-              "regimen_id": "ref-al-daratumumab-relapse"
-            },
-            {
               "regimen_id": "pom-dex-al",
               "notes": {
                 "uk": "Після бортезомібу та імуномодуляторів",
                 "en": "After bortezomib and immunomodulators"
-              }
-            },
-            {
-              "regimen_id": "benda-dex-al",
-              "notes": {
-                "uk": "Фаза II",
-                "en": "Phase II"
-              }
-            },
-            {
-              "regimen_id": "ixa-dex-al",
-              "notes": {
-                "uk": "Фаза III: первинна точка не досягнута",
-                "en": "Phase III: primary end point not met"
               }
             }
           ],
           "description": {
             "uk": "Інший клас препаратів, ніж у першій лінії.",
             "en": "A different drug class from the first line."
-          }
+          },
+          "children": []
         }
       ]
     }

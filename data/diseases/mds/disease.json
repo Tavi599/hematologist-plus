@@ -78,6 +78,13 @@
             "uk": "20 мг/м² 3 або 5 днів кожні 4–6 тижнів, щонайменше 4 цикли; UpToDate. Тут розклад на 5 днів",
             "en": "20 mg/m2 for 3 or 5 days every 4 to 6 weeks, at least four cycles; UpToDate. The 5-day schedule here"
           }
+        },
+        {
+          "regimen_id": "ref-mds-atg-csa",
+          "notes": {
+            "uk": "NCCN 3.2026: імуносупресивна терапія (АТГ + циклоспорин) при гіпопластичному МДС із добрим прогнозом відповіді",
+            "en": "NCCN 3.2026: immunosuppressive therapy (ATG plus ciclosporin) for hypoplastic MDS with a good chance of response"
+          }
         }
       ],
       "children": []
@@ -163,12 +170,10 @@
               }
             },
             {
-              "regimen_id": "ref-mds-atg-csa"
-            },
-            {
               "regimen_id": "ref-mds-eltrombopag"
             }
-          ]
+          ],
+          "children": []
         }
       ]
     },

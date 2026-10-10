@@ -80,6 +80,27 @@
             "uk": "R-B (3 цикли) + R-HiDAC (3 цикли) або R-B окремо; UpToDate",
             "en": "R-B (three cycles) + R-HiDAC (three cycles) or R-B alone; UpToDate"
           }
+        },
+        {
+          "regimen_id": "r-chop-ibrutinib-mcl",
+          "notes": {
+            "uk": "NCCN 4.2026: схема TRIANGLE (фіксована тривалість) — бажана",
+            "en": "NCCN 4.2026: the TRIANGLE regimen (fixed duration) is preferred"
+          }
+        },
+        {
+          "regimen_id": "ibrutinib-maintenance-mcl",
+          "notes": {
+            "uk": "NCCN 4.2026: підтримка ковалентним інгібітором BTK 2 роки після TRIANGLE",
+            "en": "NCCN 4.2026: two years of covalent BTK inhibitor maintenance after TRIANGLE"
+          }
+        },
+        {
+          "regimen_id": "r-dhap",
+          "notes": {
+            "uk": "Цикли 2, 4, 6 схеми TRIANGLE (або R-DHAOx)",
+            "en": "Cycles 2, 4 and 6 of the TRIANGLE regimen (or R-DHAOx)"
+          }
         }
       ]
     },
@@ -137,6 +158,13 @@
           "notes": {
             "uk": "Альтернатива підтримці ритуксимабом; UpToDate",
             "en": "An alternative to rituximab maintenance; UpToDate"
+          }
+        },
+        {
+          "regimen_id": "ibrutinib-rituximab-mcl",
+          "notes": {
+            "uk": "NCCN 4.2026: ібрутиніб (безперервно) + ритуксимаб — інші рекомендовані",
+            "en": "NCCN 4.2026: ibrutinib (continuous) plus rituximab is other recommended"
           }
         }
       ]
@@ -240,48 +268,6 @@
       "regimens": [],
       "children": [
         {
-          "key": "trials-fit",
-          "kind": "trial",
-          "title": {
-            "uk": "Перша лінія: 18–65 років",
-            "en": "First line: aged 18 to 65"
-          },
-          "description": {
-            "uk": "TRIANGLE: ібрутиніб в індукції та 2 роки підтримки замість аутотрансплантації. 6 циклів по 21 дню: R-CHOP + ібрутиніб у циклах 1, 3, 5 і R-DHAP або R-DHAOx у циклах 2, 4, 6.",
-            "en": "TRIANGLE: ibrutinib in induction and 2 years of maintenance instead of an autologous transplant. Six 21-day cycles: R-CHOP plus ibrutinib in cycles 1, 3 and 5, and R-DHAP or R-DHAOx in cycles 2, 4 and 6."
-          },
-          "regimens": [
-            {
-              "regimen_id": "r-chop-ibrutinib-mcl",
-              "notes": {
-                "uk": "Цикли 1, 3, 5",
-                "en": "Cycles 1, 3 and 5"
-              }
-            },
-            {
-              "regimen_id": "r-dhap",
-              "notes": {
-                "uk": "Цикли 2, 4, 6",
-                "en": "Cycles 2, 4 and 6"
-              }
-            },
-            {
-              "regimen_id": "r-dhaox",
-              "notes": {
-                "uk": "Цикли 2, 4, 6 — замість R-DHAP",
-                "en": "Cycles 2, 4 and 6, instead of R-DHAP"
-              }
-            },
-            {
-              "regimen_id": "ibrutinib-maintenance-mcl",
-              "notes": {
-                "uk": "2 роки після індукції",
-                "en": "2 years after induction"
-              }
-            }
-          ]
-        },
-        {
           "key": "trials-elderly",
           "kind": "trial",
           "title": {
@@ -301,20 +287,14 @@
               }
             },
             {
-              "regimen_id": "ibrutinib-rituximab-mcl",
-              "notes": {
-                "uk": "ENRICH, від 60 років; без хіміотерапії",
-                "en": "ENRICH, aged 60 or over; chemotherapy-free"
-              }
-            },
-            {
               "regimen_id": "rituximab-maintenance",
               "notes": {
                 "uk": "Після відповіді, кожні 8 тижнів",
                 "en": "After a response, every 8 weeks"
               }
             }
-          ]
+          ],
+          "children": []
         },
         {
           "key": "trials-relapse",
@@ -329,12 +309,10 @@
           },
           "regimens": [
             {
-              "regimen_id": "ref-mcl-ibru-ven"
-            },
-            {
               "regimen_id": "ref-mcl-philemon"
             }
-          ]
+          ],
+          "children": []
         }
       ]
     },
@@ -364,6 +342,13 @@
         },
         {
           "regimen_id": "ref-mcl-temsirolimus"
+        },
+        {
+          "regimen_id": "ref-mcl-ibru-ven",
+          "notes": {
+            "uk": "NCCN 4.2026: ібрутиніб + венетоклакс — за особливих обставин у другій лінії",
+            "en": "NCCN 4.2026: ibrutinib plus venetoclax, useful in certain circumstances in the second line"
+          }
         }
       ]
     }

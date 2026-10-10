@@ -1,5 +1,5 @@
 {
-  "$comment": "Спростована комбінація: зберігається лише як застереження.",
+  "$comment": "Дослідження не показало переваги у виживаності; NCCN 5.2026 тим не менш включає гілтеритиніб + азацитидин для непридатних із FLT3, тож це картка «обережно». Калькулятор її не пропонує.",
   "id": "avoid-aml-gilt-aza",
   "short_name": "Гілтеритиніб + азацитидин (LACEWING)",
   "name": {
@@ -25,7 +25,7 @@
       "primary_met": false
     },
     "settings": ["first-line", "elderly"],
-    "verdict": "avoid",
+    "verdict": "caution",
     "appraisal": [
       {
         "publication": "Wang E.S. та ін. Blood. 2022;140:1845-1857",
@@ -101,6 +101,10 @@
       {
         "uk": "При мутації FLT3 у непридатних краще азацитидин + венетоклакс (у тому числі триплет з гілтеритинібом у дослідженні).",
         "en": "For FLT3-mutated unfit patients azacitidine plus venetoclax is preferable (including the triplet with gilteritinib in a trial)."
+      },
+      {
+        "uk": "NCCN 5.2026 включає гілтеритиніб + азацитидин серед варіантів для непридатних із мутацією FLT3, тож позначку «уникати» знято: це «обережно». У дослідженні виживаність не покращилася, а ремісій було більше.",
+        "en": "NCCN 5.2026 includes gilteritinib plus azacitidine among the options for unfit patients with a FLT3 mutation, so the avoid label is lifted and replaced by caution. In the trial survival did not improve, but remissions were more frequent."
       }
     ],
     "gap": {

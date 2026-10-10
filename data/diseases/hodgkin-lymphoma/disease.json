@@ -84,6 +84,20 @@
             "uk": "За думкою частини експертів, якщо хворий придатний до комбінованої терапії; UpToDate",
             "en": "Some experts use it when the patient is suitable for combined-modality therapy; UpToDate"
           }
+        },
+        {
+          "regimen_id": "bv-dtic",
+          "notes": {
+            "uk": "NCCN 2.2026: для літніх і тих, кому хіміотерапія неможлива",
+            "en": "NCCN 2.2026: for older patients and those who cannot have chemotherapy"
+          }
+        },
+        {
+          "regimen_id": "bv-nivo-elderly",
+          "notes": {
+            "uk": "NCCN 2.2026: для літніх і тих, кому хіміотерапія неможлива",
+            "en": "NCCN 2.2026: for older patients and those who cannot have chemotherapy"
+          }
         }
       ]
     },
@@ -152,6 +166,20 @@
           "notes": {
             "uk": "ABVD без блеоміцину при де-ескалації за PET",
             "en": "ABVD without bleomycin when de-escalating by PET"
+          }
+        },
+        {
+          "regimen_id": "bv-dtic",
+          "notes": {
+            "uk": "NCCN 2.2026: для літніх і тих, кому хіміотерапія неможлива",
+            "en": "NCCN 2.2026: for older patients and those who cannot have chemotherapy"
+          }
+        },
+        {
+          "regimen_id": "bv-nivo-elderly",
+          "notes": {
+            "uk": "NCCN 2.2026: для літніх і тих, кому хіміотерапія неможлива",
+            "en": "NCCN 2.2026: for older patients and those who cannot have chemotherapy"
           }
         }
       ]
@@ -248,6 +276,55 @@
             "uk": "eviQ 627",
             "en": "eviQ 627"
           }
+        },
+        {
+          "regimen_id": "pembro-gvd",
+          "notes": {
+            "uk": "NCCN 2.2026: GVD + пембролізумаб",
+            "en": "NCCN 2.2026: GVD plus pembrolizumab"
+          }
+        },
+        {
+          "regimen_id": "pembro-ice",
+          "notes": {
+            "uk": "NCCN 2.2026: ICE + пембролізумаб",
+            "en": "NCCN 2.2026: ICE plus pembrolizumab"
+          }
+        },
+        {
+          "regimen_id": "nice",
+          "notes": {
+            "uk": "NCCN 2.2026: ICE + ніволумаб",
+            "en": "NCCN 2.2026: ICE plus nivolumab"
+          }
+        },
+        {
+          "regimen_id": "bv-nivo-salvage-cycle-1",
+          "notes": {
+            "uk": "NCCN 2.2026: брентуксимаб + ніволумаб",
+            "en": "NCCN 2.2026: brentuximab plus nivolumab"
+          }
+        },
+        {
+          "regimen_id": "bv-nivo-salvage",
+          "notes": {
+            "uk": "NCCN 2.2026: брентуксимаб + ніволумаб",
+            "en": "NCCN 2.2026: brentuximab plus nivolumab"
+          }
+        },
+        {
+          "regimen_id": "begev",
+          "notes": {
+            "uk": "NCCN 2.2026: гемцитабін + бендамустин + вінорельбін",
+            "en": "NCCN 2.2026: gemcitabine plus bendamustine plus vinorelbine"
+          }
+        },
+        {
+          "regimen_id": "gvd",
+          "notes": {
+            "uk": "NCCN 2.2026: GVD",
+            "en": "NCCN 2.2026: GVD"
+          }
         }
       ]
     },
@@ -282,99 +359,9 @@
                 "uk": "Придатні до хіміотерапії",
                 "en": "Fit for chemotherapy"
               }
-            },
-            {
-              "regimen_id": "bv-dtic",
-              "notes": {
-                "uk": "Непридатні до хіміотерапії",
-                "en": "Unfit for chemotherapy"
-              }
-            },
-            {
-              "regimen_id": "bv-nivo-elderly",
-              "notes": {
-                "uk": "Непридатні; дослідження розходяться",
-                "en": "Unfit; the studies disagree"
-              }
             }
-          ]
-        },
-        {
-          "key": "trials-salvage",
-          "kind": "trial",
-          "title": {
-            "uk": "Перший рецидив перед аутотрансплантацією",
-            "en": "First relapse before an autologous transplant"
-          },
-          "description": {
-            "uk": "Мета — повна метаболічна відповідь перед трансплантацією. Інгібітор PD-1 не дають, якщо потрібна імуносупресія через аутоімунну хворобу; він підвищує ускладнення подальшої алотрансплантації.",
-            "en": "The aim is a complete metabolic response before the transplant. A PD-1 inhibitor is not given where an autoimmune disease needs immunosuppression; it raises the complications of a later allogeneic transplant."
-          },
-          "regimens": [
-            {
-              "regimen_id": "pembro-gvd",
-              "notes": {
-                "uk": "Повна відповідь 95%; амбулаторно",
-                "en": "Complete response 95%; outpatient"
-              }
-            },
-            {
-              "regimen_id": "pembro-ice",
-              "notes": {
-                "uk": "Повна відповідь 86,5%",
-                "en": "Complete response 86.5%"
-              }
-            },
-            {
-              "regimen_id": "nice",
-              "notes": {
-                "uk": "Після ніволумабу без повної відповіді",
-                "en": "After nivolumab without a complete response"
-              }
-            },
-            {
-              "regimen_id": "bv-nivo-salvage-cycle-1",
-              "notes": {
-                "uk": "Без хіміотерапії",
-                "en": "Chemotherapy-free"
-              }
-            },
-            {
-              "regimen_id": "bv-nivo-salvage",
-              "notes": {
-                "uk": "Цикли 2–4",
-                "en": "Cycles 2 to 4"
-              }
-            },
-            {
-              "regimen_id": "begev",
-              "notes": {
-                "uk": "Без інгібітора PD-1",
-                "en": "Without a PD-1 inhibitor"
-              }
-            }
-          ]
-        },
-        {
-          "key": "trials-later",
-          "kind": "trial",
-          "title": {
-            "uk": "Рецидив після трансплантації",
-            "en": "Relapse after a transplant"
-          },
-          "description": {
-            "uk": "Схема зі зниженими дозами для пацієнтів після аутотрансплантації.",
-            "en": "Reduced doses for patients after an autologous transplant."
-          },
-          "regimens": [
-            {
-              "regimen_id": "gvd",
-              "notes": {
-                "uk": "Після трансплантації — галочка зниження доз",
-                "en": "After a transplant, the reduced-dose checkbox"
-              }
-            }
-          ]
+          ],
+          "children": []
         }
       ]
     }

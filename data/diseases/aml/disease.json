@@ -140,6 +140,13 @@
         },
         {
           "regimen_id": "cpx-351-induction-2"
+        },
+        {
+          "regimen_id": "clia-ven-induction",
+          "notes": {
+            "uk": "NCCN 5.2026: CLIA + венетоклакс — інші рекомендовані (категорія 2B)",
+            "en": "NCCN 5.2026: CLIA plus venetoclax is other recommended (category 2B)"
+          }
         }
       ]
     },
@@ -216,6 +223,20 @@
             "uk": "Після індукції CPX-351; eviQ 4288",
             "en": "After CPX-351 induction; eviQ 4288"
           }
+        },
+        {
+          "regimen_id": "clia-ven-consolidation",
+          "notes": {
+            "uk": "NCCN 5.2026: схема консолідації — з дослідження; у NCCN описано лише індукцію CLIA + венетоклакс",
+            "en": "NCCN 5.2026: the consolidation schedule is from the study; NCCN describes only the CLIA plus venetoclax induction"
+          }
+        },
+        {
+          "regimen_id": "gilteritinib-post-hct",
+          "notes": {
+            "uk": "NCCN 5.2026: підтримка гілтеритинібом після алоТГСК при МЗХ FLT3-ITD",
+            "en": "NCCN 5.2026: gilteritinib maintenance after an allogeneic transplant with FLT3-ITD MRD"
+          }
         }
       ]
     },
@@ -284,6 +305,13 @@
         },
         {
           "regimen_id": "go-mono-continuation"
+        },
+        {
+          "regimen_id": "clag-m",
+          "notes": {
+            "uk": "NCCN 5.2026: CLAG-M в індукції — інші рекомендовані (категорія 2B); при рецидиві — кладрибін + цитарабін + Г-КСФ ± мітоксантрон чи ідарубіцин",
+            "en": "NCCN 5.2026: CLAG-M in induction is other recommended (category 2B); at relapse, cladribine plus cytarabine plus G-CSF with mitoxantrone or idarubicin"
+          }
         }
       ]
     },
@@ -374,6 +402,20 @@
             "uk": "Листок FDA допускає таблетки з венетоклаксом при ГМЛ (між прийомами 2 години); схема тут записана для МДС",
             "en": "The FDA label allows the tablets with venetoclax in AML (2 hours between the doses); the regimen here is written for MDS"
           }
+        },
+        {
+          "regimen_id": "ref-aml-clad-ldac-ven",
+          "notes": {
+            "uk": "NCCN 5.2026: кладрибін + LDAC + венетоклакс, чергування з азацитидином — категорія 2B",
+            "en": "NCCN 5.2026: cladribine plus LDAC plus venetoclax alternating with azacitidine, category 2B"
+          }
+        },
+        {
+          "regimen_id": "avoid-aml-gilt-aza",
+          "notes": {
+            "uk": "NCCN 5.2026: гілтеритиніб + азацитидин є серед варіантів для непридатних з FLT3; LACEWING не показав переваги у виживаності",
+            "en": "NCCN 5.2026: gilteritinib plus azacitidine is among the options for unfit FLT3-mutated patients; LACEWING showed no survival benefit"
+          }
         }
       ]
     },
@@ -410,20 +452,6 @@
               }
             },
             {
-              "regimen_id": "clia-ven-induction",
-              "notes": {
-                "uk": "18–65 років",
-                "en": "Age 18 to 65"
-              }
-            },
-            {
-              "regimen_id": "clia-ven-consolidation",
-              "notes": {
-                "uk": "Після ремісії",
-                "en": "After remission"
-              }
-            },
-            {
               "regimen_id": "ref-aml-iac"
             },
             {
@@ -442,7 +470,8 @@
             {
               "regimen_id": "ref-aml-caveat"
             }
-          ]
+          ],
+          "children": []
         },
         {
           "key": "trials-salvage",
@@ -456,13 +485,6 @@
             "en": "Cladribine salvage. In the CLIA study survival after a transplant was 78 months against 8.8 without. After DAC induction, CLAG hardly works."
           },
           "regimens": [
-            {
-              "regimen_id": "clag-m",
-              "notes": {
-                "uk": "PALG, фаза II",
-                "en": "PALG, phase II"
-              }
-            },
             {
               "regimen_id": "clia-relapse",
               "notes": {
@@ -487,7 +509,8 @@
                 "en": "Cycles 2 onwards"
               }
             }
-          ]
+          ],
+          "children": []
         },
         {
           "key": "trials-elderly",
@@ -523,9 +546,6 @@
               }
             },
             {
-              "regimen_id": "ref-aml-clad-ldac-ven"
-            },
-            {
               "regimen_id": "aza-ven-gilt-cycle-1",
               "notes": {
                 "uk": "FLT3; повна ремісія 96%",
@@ -543,29 +563,10 @@
               "regimen_id": "ref-aml-ivo-ven-aza"
             },
             {
-              "regimen_id": "avoid-aml-gilt-aza"
-            },
-            {
               "regimen_id": "avoid-aml-decitabine-10-day"
             }
-          ]
-        },
-        {
-          "key": "trials-maintenance",
-          "kind": "trial",
-          "title": {
-            "uk": "Підтримка після алотрансплантації",
-            "en": "Maintenance after an allogeneic transplant"
-          },
-          "regimens": [
-            {
-              "regimen_id": "gilteritinib-post-hct",
-              "notes": {
-                "uk": "Лише при МЗХ",
-                "en": "Only with MRD"
-              }
-            }
-          ]
+          ],
+          "children": []
         }
       ]
     },

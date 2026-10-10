@@ -85,6 +85,55 @@
             "uk": "Тижні 17–20 ритуксимабу",
             "en": "Rituximab weeks 17 to 20"
           }
+        },
+        {
+          "regimen_id": "bdr-wm",
+          "notes": {
+            "uk": "NCCN 1.2027: бортезоміб + дексаметазон + ритуксимаб — інші рекомендовані",
+            "en": "NCCN 1.2027: bortezomib plus dexamethasone plus rituximab is other recommended"
+          }
+        },
+        {
+          "regimen_id": "idr-wm-cycle-1-2",
+          "notes": {
+            "uk": "NCCN 1.2027: іксазоміб + дексаметазон + ритуксимаб — інші рекомендовані",
+            "en": "NCCN 1.2027: ixazomib plus dexamethasone plus rituximab is other recommended"
+          }
+        },
+        {
+          "regimen_id": "idr-wm",
+          "notes": {
+            "uk": "NCCN 1.2027: іксазоміб + дексаметазон + ритуксимаб — інші рекомендовані",
+            "en": "NCCN 1.2027: ixazomib plus dexamethasone plus rituximab is other recommended"
+          }
+        },
+        {
+          "regimen_id": "idr-wm-maintenance",
+          "notes": {
+            "uk": "NCCN 1.2027: підтримка за схемою IDR",
+            "en": "NCCN 1.2027: maintenance on the IDR schedule"
+          }
+        },
+        {
+          "regimen_id": "card-wm-cycle-1",
+          "notes": {
+            "uk": "NCCN 1.2027: карфілзоміб + дексаметазон + ритуксимаб — інші рекомендовані",
+            "en": "NCCN 1.2027: carfilzomib plus dexamethasone plus rituximab is other recommended"
+          }
+        },
+        {
+          "regimen_id": "card-wm",
+          "notes": {
+            "uk": "NCCN 1.2027: карфілзоміб + дексаметазон + ритуксимаб — інші рекомендовані",
+            "en": "NCCN 1.2027: carfilzomib plus dexamethasone plus rituximab is other recommended"
+          }
+        },
+        {
+          "regimen_id": "card-wm-maintenance",
+          "notes": {
+            "uk": "NCCN 1.2027: підтримка за схемою CaRD",
+            "en": "NCCN 1.2027: maintenance on the CaRD schedule"
+          }
         }
       ]
     },
@@ -140,6 +189,69 @@
             "uk": "Багаторазовий рецидив",
             "en": "Multiply relapsed disease"
           }
+        },
+        {
+          "regimen_id": "bdr-wm",
+          "notes": {
+            "uk": "NCCN 1.2027: бортезоміб + дексаметазон + ритуксимаб — інші рекомендовані",
+            "en": "NCCN 1.2027: bortezomib plus dexamethasone plus rituximab is other recommended"
+          }
+        },
+        {
+          "regimen_id": "idr-wm-cycle-1-2",
+          "notes": {
+            "uk": "NCCN 1.2027: іксазоміб + дексаметазон + ритуксимаб — інші рекомендовані",
+            "en": "NCCN 1.2027: ixazomib plus dexamethasone plus rituximab is other recommended"
+          }
+        },
+        {
+          "regimen_id": "idr-wm",
+          "notes": {
+            "uk": "NCCN 1.2027: іксазоміб + дексаметазон + ритуксимаб — інші рекомендовані",
+            "en": "NCCN 1.2027: ixazomib plus dexamethasone plus rituximab is other recommended"
+          }
+        },
+        {
+          "regimen_id": "idr-wm-maintenance",
+          "notes": {
+            "uk": "NCCN 1.2027: підтримка за схемою IDR",
+            "en": "NCCN 1.2027: maintenance on the IDR schedule"
+          }
+        },
+        {
+          "regimen_id": "card-wm-cycle-1",
+          "notes": {
+            "uk": "NCCN 1.2027: карфілзоміб + дексаметазон + ритуксимаб — інші рекомендовані",
+            "en": "NCCN 1.2027: carfilzomib plus dexamethasone plus rituximab is other recommended"
+          }
+        },
+        {
+          "regimen_id": "card-wm",
+          "notes": {
+            "uk": "NCCN 1.2027: карфілзоміб + дексаметазон + ритуксимаб — інші рекомендовані",
+            "en": "NCCN 1.2027: carfilzomib plus dexamethasone plus rituximab is other recommended"
+          }
+        },
+        {
+          "regimen_id": "card-wm-maintenance",
+          "notes": {
+            "uk": "NCCN 1.2027: підтримка за схемою CaRD",
+            "en": "NCCN 1.2027: maintenance on the CaRD schedule"
+          }
+        },
+        {
+          "regimen_id": "venetoclax-wm-week-1",
+          "notes": {
+            "uk": "NCCN 1.2027: венетоклакс при раніше лікованій хворобі",
+            "en": "NCCN 1.2027: venetoclax in previously treated disease"
+          }
+        },
+        {
+          "regimen_id": "venetoclax-wm",
+          "notes": {
+            "uk": "NCCN 1.2027: венетоклакс при раніше лікованій хворобі",
+            "en": "NCCN 1.2027: venetoclax in previously treated disease"
+          }
         }
       ]
     },
@@ -157,69 +269,6 @@
       "regimens": [],
       "children": [
         {
-          "key": "trials-proteasome",
-          "kind": "trial",
-          "title": {
-            "uk": "Схеми з інгібітором протеасом",
-            "en": "Proteasome inhibitor regimens"
-          },
-          "description": {
-            "uk": "Без хіміотерапії, фіксованої тривалості. При високому IgM — плазмаферез перед ритуксимабом. IDR і CaRD не дають нейропатії.",
-            "en": "Chemotherapy-free, fixed duration. With high IgM, plasmapheresis before rituximab. IDR and CaRD spare neuropathy."
-          },
-          "regimens": [
-            {
-              "regimen_id": "bdr-wm",
-              "notes": {
-                "uk": "Перша лінія або рецидив",
-                "en": "First line or relapse"
-              }
-            },
-            {
-              "regimen_id": "idr-wm-cycle-1-2",
-              "notes": {
-                "uk": "Пероральний; цикли 1–2",
-                "en": "Oral; cycles 1 to 2"
-              }
-            },
-            {
-              "regimen_id": "idr-wm",
-              "notes": {
-                "uk": "Цикли 3–6",
-                "en": "Cycles 3 to 6"
-              }
-            },
-            {
-              "regimen_id": "idr-wm-maintenance",
-              "notes": {
-                "uk": "Підтримка",
-                "en": "Maintenance"
-              }
-            },
-            {
-              "regimen_id": "card-wm-cycle-1",
-              "notes": {
-                "uk": "Без нейропатії; цикл 1",
-                "en": "Neuropathy-sparing; cycle 1"
-              }
-            },
-            {
-              "regimen_id": "card-wm",
-              "notes": {
-                "uk": "Цикли 2–6",
-                "en": "Cycles 2 to 6"
-              }
-            },
-            {
-              "regimen_id": "card-wm-maintenance",
-              "notes": {
-                "uk": "Підтримка",
-                "en": "Maintenance"
-              }
-            }
-          ]
-        },
-        {
           "key": "trials-relapse",
           "kind": "trial",
           "title": {
@@ -228,23 +277,10 @@
           },
           "regimens": [
             {
-              "regimen_id": "venetoclax-wm-week-1",
-              "notes": {
-                "uk": "Тиждень 1",
-                "en": "Week 1"
-              }
-            },
-            {
-              "regimen_id": "venetoclax-wm",
-              "notes": {
-                "uk": "800 мг до 2 років",
-                "en": "800 mg for up to 2 years"
-              }
-            },
-            {
               "regimen_id": "avoid-wm-ibrutinib-venetoclax"
             }
-          ]
+          ],
+          "children": []
         }
       ]
     },

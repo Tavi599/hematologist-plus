@@ -441,6 +441,20 @@
             "uk": "Цикл 10 і далі",
             "en": "Cycle 10 onwards"
           }
+        },
+        {
+          "regimen_id": "pola-r-gemox",
+          "notes": {
+            "uk": "NCCN 4.2026: бажаний варіант другої лінії для непридатних до CAR-T",
+            "en": "NCCN 4.2026: preferred second-line option for patients who are not CAR-T candidates"
+          }
+        },
+        {
+          "regimen_id": "bv-r-len",
+          "notes": {
+            "uk": "NCCN 4.2026: третя лінія, інші рекомендовані (при CD30+)",
+            "en": "NCCN 4.2026: third line, other recommended (CD30-positive)"
+          }
         }
       ]
     },
@@ -608,6 +622,20 @@
             "uk": "Цикл 10 і далі",
             "en": "Cycle 10 onwards"
           }
+        },
+        {
+          "regimen_id": "pola-r-gemox",
+          "notes": {
+            "uk": "NCCN 4.2026: бажаний варіант другої лінії для непридатних до CAR-T",
+            "en": "NCCN 4.2026: preferred second-line option for patients who are not CAR-T candidates"
+          }
+        },
+        {
+          "regimen_id": "bv-r-len",
+          "notes": {
+            "uk": "NCCN 4.2026: третя лінія, інші рекомендовані (при CD30+)",
+            "en": "NCCN 4.2026: third line, other recommended (CD30-positive)"
+          }
         }
       ]
     },
@@ -670,7 +698,8 @@
             {
               "regimen_id": "avoid-dlbcl-r2-chop"
             }
-          ]
+          ],
+          "children": []
         },
         {
           "key": "trials-maintenance",
@@ -691,7 +720,8 @@
                 "en": "REMARC, phase III; aged 60 to 80"
               }
             }
-          ]
+          ],
+          "children": []
         },
         {
           "key": "trials-relapse",
@@ -706,27 +736,14 @@
           },
           "regimens": [
             {
-              "regimen_id": "pola-r-gemox",
-              "notes": {
-                "uk": "POLARGO, фаза III; після 1 і більше ліній",
-                "en": "POLARGO, phase III; after one or more lines"
-              }
-            },
-            {
-              "regimen_id": "bv-r-len",
-              "notes": {
-                "uk": "ECHELON-3, фаза III; після 2 і більше ліній",
-                "en": "ECHELON-3, phase III; after two or more lines"
-              }
-            },
-            {
               "regimen_id": "br-dlbcl-relapse",
               "notes": {
                 "uk": "Фаза II; 1–3 попередні лінії",
                 "en": "Phase II; one to three prior lines"
               }
             }
-          ]
+          ],
+          "children": []
         }
       ]
     },

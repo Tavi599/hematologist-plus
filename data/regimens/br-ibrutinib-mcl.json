@@ -40,8 +40,8 @@
       "en": "Median progression-free survival 80.6 against 52.9 months (HR 0.75; p=0.01) at a median follow-up of 84.7 months. Overall survival did not differ. Complete response 65.5% against 57.6%."
     },
     "conduct": {
-      "uk": "Небажані явища 3–4 ступеня 81,5% проти 77,3%. Подібна схема з акалабрутинібом (ECHO) є в довіднику як BR + акалабрутиніб.",
-      "en": "Grade 3 to 4 adverse events 81.5% against 77.3%. A similar regimen with acalabrutinib (ECHO) is in the catalogue as BR plus acalabrutinib."
+      "uk": "Небажані явища 3–4 ступеня 81,5% проти 77,3%. Подібна схема з акалабрутинібом (ECHO) є в довіднику як BR + акалабрутиніб. NCCN 4.2026 не включає цю комбінацію в первинні схеми й у примітці вказує на надлишок смертей не від лімфоми в SHINE; з ібрутинібом краще схема TRIANGLE (до 65 років) чи ібрутиніб + ритуксимаб (ENRICH).",
+      "en": "Grade 3 to 4 adverse events 81.5% against 77.3%. A similar regimen with acalabrutinib (ECHO) is in the catalogue as BR plus acalabrutinib. NCCN 4.2026 does not list this combination among the primary regimens and notes the excess of non-lymphoma deaths in SHINE; TRIANGLE (up to 65) or ibrutinib plus rituximab (ENRICH) is the better ibrutinib route."
     },
     "trial": {
       "acronym": "SHINE",
@@ -53,7 +53,7 @@
       "primary_met": true
     },
     "settings": ["first-line", "elderly"],
-    "verdict": "option",
+    "verdict": "caution",
     "appraisal": [
       {
         "publication": "Wang M.L. та ін. N Engl J Med. 2022;386:2482-2494",

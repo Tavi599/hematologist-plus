@@ -73,6 +73,13 @@
             "uk": "Через 4–6 тижнів після кладрибіну — 4 щотижневі дози (консолідація); при варіанті ВКЛ-v — 8",
             "en": "Four weekly doses 4 to 6 weeks after cladribine (consolidation); eight for the HCL variant"
           }
+        },
+        {
+          "regimen_id": "cdar-hcl",
+          "notes": {
+            "uk": "NCCN 2.2027: кладрибін ± ритуксимаб; одночасний ритуксимаб 8 тижнів з дня 1 прямо названо CDAR",
+            "en": "NCCN 2.2027: cladribine with or without rituximab; concurrent rituximab for 8 weeks from day 1 is named CDAR"
+          }
         }
       ]
     },
@@ -100,38 +107,6 @@
         },
         {
           "regimen_id": "rituximab-mono"
-        }
-      ]
-    },
-    {
-      "key": "clinical-trials",
-      "kind": "trial",
-      "title": {
-        "uk": "Клінічні дослідження",
-        "en": "Clinical trials"
-      },
-      "description": {
-        "uk": "Схеми, які існують лише як опубліковані дослідження: їх немає ні в настанові, ні в інструкції до препарату. Застосування поза інструкцією потребує окремого рішення й згоди пацієнта. Біля кожної схеми в калькуляторі наведено дизайн дослідження, кого в нього включали, що з нього вийшло і чого вимагає проведення.",
-        "en": "Regimens that exist only as published studies: neither a guideline nor a label carries them. Off-label use needs a decision of its own and the patient's consent. In the calculator each regimen states the design of the study, who was enrolled, what came out of it and what the conduct demands."
-      },
-      "regimens": [],
-      "children": [
-        {
-          "key": "trials-first-line",
-          "kind": "trial",
-          "title": {
-            "uk": "Перша лінія",
-            "en": "First line"
-          },
-          "regimens": [
-            {
-              "regimen_id": "cdar-hcl",
-              "notes": {
-                "uk": "Рандомізована фаза II; залишкової хвороби немає в 94% через 8 років",
-                "en": "Randomised phase II; 94% free of residual disease at 8 years"
-              }
-            }
-          ]
         }
       ]
     },

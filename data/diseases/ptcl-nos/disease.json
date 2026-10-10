@@ -123,6 +123,20 @@
             "uk": "Особливо AITL; UpToDate",
             "en": "AITL in particular; UpToDate"
           }
+        },
+        {
+          "regimen_id": "bendamustine-ptcl",
+          "notes": {
+            "uk": "NCCN 2.2026: бендамустин при рецидиві — інші рекомендовані",
+            "en": "NCCN 2.2026: bendamustine at relapse is other recommended"
+          }
+        },
+        {
+          "regimen_id": "oral-azacitidine-tfh",
+          "notes": {
+            "uk": "NCCN 2.2026: азацитидин (перорально, в/в, п/ш) при ТФХ-лімфомі",
+            "en": "NCCN 2.2026: azacitidine (oral, IV or SC) in follicular helper T-cell lymphoma"
+          }
         }
       ]
     },
@@ -150,31 +164,8 @@
             {
               "regimen_id": "avoid-ptcl-gem-p"
             }
-          ]
-        },
-        {
-          "key": "trials-relapse",
-          "kind": "trial",
-          "title": {
-            "uk": "Рецидив",
-            "en": "Relapse"
-          },
-          "regimens": [
-            {
-              "regimen_id": "bendamustine-ptcl",
-              "notes": {
-                "uk": "BENTLY; відповіді короткі — як міст до трансплантації",
-                "en": "BENTLY; responses are short, a bridge to a transplant"
-              }
-            },
-            {
-              "regimen_id": "oral-azacitidine-tfh",
-              "notes": {
-                "uk": "Лише фенотип фолікулярних Т-хелперів (АІТЛ)",
-                "en": "Follicular helper T-cell phenotype only (AITL)"
-              }
-            }
-          ]
+          ],
+          "children": []
         }
       ]
     },

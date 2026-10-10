@@ -137,6 +137,20 @@
             "uk": "Один із кращих варіантів; UpToDate",
             "en": "One of the preferred options; UpToDate"
           }
+        },
+        {
+          "regimen_id": "fcr-cll-cycle-1",
+          "notes": {
+            "uk": "NCCN 1.2027: FC + ритуксимаб — лише коли ковалентні інгібітори BTK і BCL2 недоступні чи неможливі",
+            "en": "NCCN 1.2027: FC plus rituximab, only when covalent BTK and BCL2 inhibitors are unavailable or not feasible"
+          }
+        },
+        {
+          "regimen_id": "fcr-cll",
+          "notes": {
+            "uk": "NCCN 1.2027: FC + ритуксимаб — лише коли ковалентні інгібітори BTK і BCL2 недоступні чи неможливі",
+            "en": "NCCN 1.2027: FC plus rituximab, only when covalent BTK and BCL2 inhibitors are unavailable or not feasible"
+          }
         }
       ]
     },
@@ -230,6 +244,20 @@
         },
         {
           "regimen_id": "methylprednisolone-hd-cll"
+        },
+        {
+          "regimen_id": "fcr-cll-cycle-1",
+          "notes": {
+            "uk": "NCCN 1.2027: FC + ритуксимаб — лише коли ковалентні інгібітори BTK і BCL2 недоступні чи неможливі",
+            "en": "NCCN 1.2027: FC plus rituximab, only when covalent BTK and BCL2 inhibitors are unavailable or not feasible"
+          }
+        },
+        {
+          "regimen_id": "fcr-cll",
+          "notes": {
+            "uk": "NCCN 1.2027: FC + ритуксимаб — лише коли ковалентні інгібітори BTK і BCL2 недоступні чи неможливі",
+            "en": "NCCN 1.2027: FC plus rituximab, only when covalent BTK and BCL2 inhibitors are unavailable or not feasible"
+          }
         }
       ]
     },
@@ -276,23 +304,10 @@
               }
             },
             {
-              "regimen_id": "fcr-cll-cycle-1",
-              "notes": {
-                "uk": "CLL8, фаза III; лише мутований IGHV без TP53",
-                "en": "CLL8, phase III; mutated IGHV without TP53 only"
-              }
-            },
-            {
-              "regimen_id": "fcr-cll",
-              "notes": {
-                "uk": "Курси 2–6",
-                "en": "Courses 2 to 6"
-              }
-            },
-            {
               "regimen_id": "ref-cll-giv"
             }
-          ]
+          ],
+          "children": []
         },
         {
           "key": "trials-richter",
@@ -308,11 +323,9 @@
           "regimens": [
             {
               "regimen_id": "ref-cll-richter-vr-epoch"
-            },
-            {
-              "regimen_id": "ref-cll-richter-pembrolizumab"
             }
-          ]
+          ],
+          "children": []
         }
       ]
     },
@@ -336,6 +349,13 @@
         },
         {
           "regimen_id": "ref-cll-liso-cel"
+        },
+        {
+          "regimen_id": "ref-cll-richter-pembrolizumab",
+          "notes": {
+            "uk": "NCCN 1.2027: пембролізумаб при трансформації Ріхтера",
+            "en": "NCCN 1.2027: pembrolizumab in Richter transformation"
+          }
         }
       ]
     }

@@ -85,6 +85,20 @@
             "uk": "Ph+ ОЛЛ: стійкість до дазатинібу чи T315I; eviQ 3513",
             "en": "Ph+ ALL: dasatinib resistance or T315I; eviQ 3513"
           }
+        },
+        {
+          "regimen_id": "ref-all-dasatinib-steroids",
+          "notes": {
+            "uk": "NCCN 3.2026: ІТК + кортикостероїд — індукція при Ph+ В-ГЛЛ (потім консолідація)",
+            "en": "NCCN 3.2026: TKI plus corticosteroid is an induction for Ph-positive B-ALL, followed by consolidation"
+          }
+        },
+        {
+          "regimen_id": "ref-all-mini-hcvd-ino",
+          "notes": {
+            "uk": "NCCN 3.2026: інотузумаб + mini-hyperCVD — інші рекомендовані",
+            "en": "NCCN 3.2026: inotuzumab plus mini-hyperCVD is other recommended"
+          }
         }
       ]
     },
@@ -230,25 +244,10 @@
           },
           "regimens": [
             {
-              "regimen_id": "ref-all-mini-hcvd-ino"
-            },
-            {
               "regimen_id": "ref-all-ewall-ino"
             }
-          ]
-        },
-        {
-          "key": "trials-ph-positive",
-          "kind": "trial",
-          "title": {
-            "uk": "Ph-позитивний ГЛЛ",
-            "en": "Ph-positive ALL"
-          },
-          "regimens": [
-            {
-              "regimen_id": "ref-all-dasatinib-steroids"
-            }
-          ]
+          ],
+          "children": []
         }
       ]
     }
