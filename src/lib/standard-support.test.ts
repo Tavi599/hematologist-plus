@@ -5,6 +5,7 @@ import type { CatalogIndex } from './catalog-index'
 import type { CourseItem } from './course-input'
 import {
   categoryItemIds,
+  indicatedSupport,
   isStandardSupportId,
   NO_SUPPORT,
   standardSupportRows,
@@ -14,7 +15,15 @@ import {
 const catalog = (drugIds: string[]) =>
   ({ drugs: new Map(drugIds.map((id) => [id, {}])) }) as unknown as CatalogIndex
 
-const ALL = ['ondansetron', 'aciclovir', 'co-trimoxazole', 'fluconazole', 'acetylsalicylic-acid']
+const ALL = [
+  'ondansetron',
+  'aciclovir',
+  'co-trimoxazole',
+  'fluconazole',
+  'acetylsalicylic-acid',
+  'apixaban',
+  'enoxaparin',
+]
 
 function entry(
   id: string,
@@ -38,7 +47,7 @@ const ON = {
   antiviral: true,
   pneumocystis: true,
   antifungal: true,
-  antiplatelet: true,
+  thrombosis: true,
 }
 
 describe('supportCategoryOf', () => {
@@ -58,7 +67,7 @@ describe('supportCategoryOf', () => {
     // The same drug as part of the treatment is not support.
     expect(
       supportCategoryOf(entry('a', 'acetylsalicylic-acid', 'supportive', 'oral', [1]).item),
-    ).toBe('antiplatelet')
+    ).toBe('thrombosis')
     expect(supportCategoryOf(entry('a', 'fluconazole', 'main', 'oral', [1]).item)).toBeNull()
     expect(supportCategoryOf(entry('a', 'rituximab', 'supportive', 'oral', [1]).item)).toBeNull()
   })
@@ -92,13 +101,13 @@ describe('standardSupportRows', () => {
       role: 'supportive',
     })
     expect(by['standard-support.antiviral']!.days).toHaveLength(21)
-    expect(by['standard-support.antiplatelet']).toMatchObject({
+    expect(by['standard-support.thrombosis']).toMatchObject({
       drug_id: 'acetylsalicylic-acid',
       dose_value: 100,
       route: 'oral',
       role: 'supportive',
     })
-    expect(by['standard-support.antiplatelet']!.days).toHaveLength(21)
+    expect(by['standard-support.thrombosis']!.days).toHaveLength(21)
     expect(by['standard-support.antifungal']).toMatchObject({
       drug_id: 'fluconazole',
       dose_value: 50,
@@ -159,5 +168,65 @@ describe('standardSupportRows', () => {
       antiviral: true,
     })
     expect(rows[0]!.days).toEqual([1, 2, 3, 4, 5, 6, 7, 8])
+  })
+})
+
+describe('indicatedSupport', () => {
+  it('calls for aciclovir with a proteasome inhibitor and thromboprophylaxis with lenalidomide', () => {
+    const vrd = [
+      entry('v.bortezomib', 'bortezomib', 'main', 'subcutaneous', [1, 4, 8, 11]),
+      entry('v.lenalidomide', 'lenalidomide', 'main', 'oral', [1, 2, 3]),
+      entry('v.dexamethasone', 'dexamethasone', 'main', 'oral', [1, 2]),
+    ]
+    expect(indicatedSupport(vrd)).toEqual({
+      antiviral: ['bortezomib'],
+      thrombosis: ['lenalidomide'],
+    })
+    expect(indicatedSupport(chemo)).toEqual({})
+  })
+
+  it('is not moved by a drug given as support', () => {
+    expect(
+      indicatedSupport([entry('x.lenalidomide', 'lenalidomide', 'supportive', 'oral', [1])]),
+    ).toEqual({})
+  })
+})
+
+describe('thromboprophylaxis', () => {
+  const on = { ...NO_SUPPORT, thrombosis: true }
+
+  it('gives the drug chosen for the whole cycle', () => {
+    const [apixaban] = standardSupportRows(catalog(ALL), chemo, 28, '2026-10-05', on, 'apixaban')
+    expect(apixaban).toMatchObject({
+      drug_id: 'apixaban',
+      dose_value: 2.5,
+      administrations_per_day: 2,
+      route: 'oral',
+    })
+    expect(apixaban!.days).toHaveLength(28)
+
+    const [enoxaparin] = standardSupportRows(
+      catalog(ALL),
+      chemo,
+      28,
+      '2026-10-05',
+      on,
+      'enoxaparin',
+    )
+    expect(enoxaparin).toMatchObject({
+      drug_id: 'enoxaparin',
+      dose_value: 40,
+      route: 'subcutaneous',
+      block: 'ward',
+    })
+
+    const [aspirin] = standardSupportRows(catalog(ALL), chemo, 28, '2026-10-05', on, 'aspirin')
+    expect(aspirin).toMatchObject({ drug_id: 'acetylsalicylic-acid', dose_value: 100 })
+  })
+
+  it('adds nothing for a drug the catalog does not have', () => {
+    expect(
+      standardSupportRows(catalog(['aciclovir']), chemo, 28, '2026-10-05', on, 'apixaban'),
+    ).toEqual([])
   })
 })

@@ -4,7 +4,7 @@ import type { CourseItem } from './course-input'
 
 /**
  * The supportive care every course is surrounded by — antiemetics, prophylaxis against viral,
- * pneumocystis and fungal infection, and «Aspirin cardio» — as five switches the physician turns on or off by the
+ * pneumocystis and fungal infection, and thromboprophylaxis — as five switches the physician turns on or off by the
  * standard, instead of hunting for the rows in the regimen.
  *
  * A regimen that already writes such rows keeps them: the switch enables or disables them as a
@@ -16,13 +16,19 @@ import type { CourseItem } from './course-input'
  * co-trimoxazole 480 mg on Monday, Wednesday and Friday, fluconazole 50 mg a day), except the
  * antiviral: the department's own 400 mg twice a day, as in the regimens already in the catalog
  * (NSSG writes 200 mg three times a day). Change them here, not inline.
+ *
+ * Thromboprophylaxis offers three drugs, as the NSSG myeloma protocols do: apixaban 2.5 mg twice
+ * a day, their standard (MM.38, MM.56, MM.59); a low-molecular-weight heparin, enoxaparin 40 mg a
+ * day; and aspirin 100 mg a day, for a patient with no other risk factor. The enoxaparin and aspirin
+ * doses are those of the randomised trials (Palumbo, J Clin Oncol 2011; Larocca, Blood 2012);
+ * NSSG names no heparin dose and gives aspirin 75 mg (MM.59).
  */
 export const SUPPORT_CATEGORIES = [
   'antiemetic',
   'antiviral',
   'pneumocystis',
   'antifungal',
-  'antiplatelet',
+  'thrombosis',
 ] as const
 export type SupportCategory = (typeof SUPPORT_CATEGORIES)[number]
 
@@ -31,7 +37,37 @@ const CATEGORY_DRUGS: Record<SupportCategory, readonly string[]> = {
   antiviral: ['aciclovir', 'valaciclovir'],
   pneumocystis: ['co-trimoxazole'],
   antifungal: ['fluconazole', 'posaconazole', 'voriconazole'],
-  antiplatelet: ['acetylsalicylic-acid'],
+  thrombosis: ['acetylsalicylic-acid', 'apixaban', 'enoxaparin'],
+}
+
+export const THROMBO_AGENTS = ['apixaban', 'enoxaparin', 'aspirin'] as const
+export type ThromboAgent = (typeof THROMBO_AGENTS)[number]
+
+/**
+ * The drugs that make a kind of prophylaxis part of the course, per the NSSG myeloma protocols:
+ * aciclovir with a proteasome inhibitor or an anti-CD38 antibody (for the whole treatment and three
+ * months after), thromboprophylaxis with an immunomodulatory drug. Such a kind opens switched on.
+ */
+const INDICATED_BY: Partial<Record<SupportCategory, readonly string[]>> = {
+  antiviral: ['bortezomib', 'carfilzomib', 'ixazomib', 'daratumumab', 'isatuximab'],
+  thrombosis: ['lenalidomide', 'thalidomide', 'pomalidomide'],
+}
+
+/** For each kind the course calls for, the drugs of the regimen that call for it. */
+export function indicatedSupport(items: CourseItem[]): Partial<Record<SupportCategory, string[]>> {
+  const result: Partial<Record<SupportCategory, string[]>> = {}
+  for (const category of SUPPORT_CATEGORIES) {
+    const drugs = [
+      ...new Set(
+        items
+          .filter((entry) => entry.item.role === 'main')
+          .map((entry) => entry.item.drug_id)
+          .filter((drugId) => INDICATED_BY[category]?.includes(drugId)),
+      ),
+    ]
+    if (drugs.length > 0) result[category] = drugs
+  }
+  return result
 }
 
 export const NO_SUPPORT: Record<SupportCategory, boolean> = {
@@ -39,7 +75,7 @@ export const NO_SUPPORT: Record<SupportCategory, boolean> = {
   antiviral: false,
   pneumocystis: false,
   antifungal: false,
-  antiplatelet: false,
+  thrombosis: false,
 }
 
 const MONDAY_WEDNESDAY_FRIDAY = new Set([1, 3, 5])
@@ -114,6 +150,7 @@ export function standardSupportRows(
   cycleLengthDays: number | null,
   startDateIso: string,
   on: Record<SupportCategory, boolean>,
+  thromboAgent: ThromboAgent = 'aspirin',
 ): RegimenItem[] {
   const lastDay = Math.max(cycleLengthDays ?? 0, ...items.flatMap((entry) => entry.item.days), 1)
   const cycle = wholeCycle(lastDay)
@@ -155,19 +192,9 @@ export function standardSupportRows(
         }),
       )
     }
-    if (category === 'antiplatelet' && has('acetylsalicylic-acid')) {
-      result.push(
-        row(base, category, {
-          drug_id: 'acetylsalicylic-acid',
-          route: 'oral',
-          dose_value: 100,
-          days: cycle,
-          notes: {
-            uk: 'Аспірин кардіо 100 мг раз на добу на весь цикл — за потреби (наприклад, профілактика тромбозів при леналідоміді чи тромбоцитозі). Тромбоцити нижче 50 ×10⁹/л і ризик кровотечі — протипоказання, вирішує лікар. Додано перемикачем «Супровід за стандартом».',
-            en: 'Aspirin cardio 100 mg once a day for the whole cycle — as needed (for example thrombosis prophylaxis with lenalidomide or thrombocytosis). Platelets below 50 ×10⁹/L and a bleeding risk are contraindications; the physician decides. Added by the «Standard support» switch.',
-          },
-        }),
-      )
+    if (category === 'thrombosis') {
+      const added = thromboRow(base, cycle, thromboAgent)
+      if (has(added.drug_id)) result.push(added)
     }
     if (category === 'pneumocystis' && has('co-trimoxazole')) {
       const days = cycle.filter((day) => MONDAY_WEDNESDAY_FRIDAY.has(weekdayOf(startDateIso, day)))
@@ -218,4 +245,54 @@ export function standardSupportRows(
     }
   }
   return result
+}
+
+const THROMBO_NOTE = {
+  uk: 'Тип профілактики обирають за ризиком тромбозу й кровотечі; при тромбоцитах нижче 50 ×10⁹/л і ризику кровотечі вирішує лікар. Додано перемикачем «Супровід за стандартом».',
+  en: 'The kind of prophylaxis is chosen by the risk of thrombosis and bleeding; with platelets below 50 ×10⁹/L and a bleeding risk the physician decides. Added by the «Standard support» switch.',
+}
+
+/** The thromboprophylaxis row for the drug chosen, for the whole cycle. */
+function thromboRow(
+  base: Pick<RegimenItem, 'regimen_id' | 'sort_order'>,
+  cycle: number[],
+  agent: ThromboAgent,
+): RegimenItem {
+  if (agent === 'apixaban') {
+    return row(base, 'thrombosis', {
+      drug_id: 'apixaban',
+      route: 'oral',
+      dose_value: 2.5,
+      days: cycle,
+      administrations_per_day: 2,
+      notes: {
+        uk: `Апіксабан 2,5 мг двічі на добу — стандартна тромбопрофілактика протоколів NSSG при леналідоміді (MM.38, MM.56, MM.59); перевірити взаємодії. ${THROMBO_NOTE.uk}`,
+        en: `Apixaban 2.5 mg twice a day, the standard thromboprophylaxis of the NSSG protocols with lenalidomide (MM.38, MM.56, MM.59); check for interactions. ${THROMBO_NOTE.en}`,
+      },
+    })
+  }
+  if (agent === 'enoxaparin') {
+    return row(base, 'thrombosis', {
+      drug_id: 'enoxaparin',
+      route: 'subcutaneous',
+      dose_value: 40,
+      days: cycle,
+      // A daily injection for weeks belongs with the ward's daily drugs, not the day's infusions.
+      block: 'ward',
+      notes: {
+        uk: `Еноксапарин 40 мг підшкірно раз на добу — профілактична доза низькомолекулярного гепарину в рандомізованих дослідженнях при мієломі (Palumbo 2011, Larocca 2012); NSSG дози гепарину не називає. ${THROMBO_NOTE.uk}`,
+        en: `Enoxaparin 40 mg subcutaneously once a day, the prophylactic heparin dose of the randomised myeloma trials (Palumbo 2011, Larocca 2012); NSSG names no heparin dose. ${THROMBO_NOTE.en}`,
+      },
+    })
+  }
+  return row(base, 'thrombosis', {
+    drug_id: 'acetylsalicylic-acid',
+    route: 'oral',
+    dose_value: 100,
+    days: cycle,
+    notes: {
+      uk: `Аспірин 100 мг раз на добу — лише без додаткових чинників ризику тромбозу (NSSG); доза — з досліджень Palumbo 2011 і Larocca 2012, NSSG MM.59 дає 75 мг. Також при тромбоцитозі. ${THROMBO_NOTE.uk}`,
+      en: `Aspirin 100 mg once a day, only with no other risk factor for thrombosis (NSSG); the dose is that of Palumbo 2011 and Larocca 2012, NSSG MM.59 gives 75 mg. Also for thrombocytosis. ${THROMBO_NOTE.en}`,
+    },
+  })
 }

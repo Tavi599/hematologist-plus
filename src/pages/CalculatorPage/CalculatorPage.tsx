@@ -23,10 +23,12 @@ import { StandardSupport } from '../../features/calculator/StandardSupport'
 import { cyclophosphamideMesna } from '../../lib/cyclophosphamide-mesna'
 import {
   categoryItemIds,
+  indicatedSupport,
   isStandardSupportId,
   NO_SUPPORT,
   standardSupportRows,
   type SupportCategory,
+  type ThromboAgent,
 } from '../../lib/standard-support'
 import {
   buildCourseItems,
@@ -99,6 +101,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [header, setHeader] = useState(emptyHeader)
   const [manualRows, setManualRows] = useState<ManualRow[]>([])
   const [support, setSupport] = useState<Record<SupportCategory, boolean>>(NO_SUPPORT)
+  // NSSG's standard with an immunomodulatory drug; aspirin is for a patient with no other risk.
+  const [thromboAgent, setThromboAgent] = useState<ThromboAgent>('apixaban')
   // Cyclophosphamide items the physician has added mesna to; the protocol's own mesna is apart.
   const [mesnaFor, setMesnaFor] = useState<string[]>([])
   // Rows the physician gives by another route the label allows at the same dose.
@@ -168,6 +172,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           regimenId === null ? null : (catalog.regimens.get(regimenId)?.cycle_length_days ?? null),
           courseSettings.startDate,
           support,
+          thromboAgent,
         ),
         chosenDoses,
         chosenModifiers,
@@ -180,6 +185,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       regimenId,
       courseSettings.startDate,
       support,
+      thromboAgent,
       chosenDoses,
       chosenModifiers,
       administrationModes,
@@ -203,11 +209,24 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [toggledRegimen, setToggledRegimen] = useState<string | null | undefined>(undefined)
   if (regimenId !== toggledRegimen) {
     setToggledRegimen(regimenId)
-    setSupport(NO_SUPPORT)
+    // The prophylaxis the regimen's own drugs call for opens switched on — aciclovir with a
+    // proteasome inhibitor or daratumumab, thromboprophylaxis with lenalidomide and its kin — with
+    // the regimen's own rows of the kind, if it writes any.
+    const indicated = Object.keys(indicatedSupport(ownItems)) as SupportCategory[]
+    setSupport({
+      ...NO_SUPPORT,
+      ...Object.fromEntries(indicated.map((category) => [category, true])),
+    })
+    setThromboAgent('apixaban')
     setMesnaFor([])
     setChosenRoutes({})
     const premedicationOn = premedicationOnByDefault(baseItems)
-    setDisabledIds(optionalIds(baseItems, customItems).filter((id) => !premedicationOn.has(id)))
+    const supportOn = new Set(indicated.flatMap((category) => categoryItemIds(ownItems, category)))
+    setDisabledIds(
+      optionalIds(baseItems, customItems).filter(
+        (id) => !premedicationOn.has(id) && !supportOn.has(id),
+      ),
+    )
   }
 
   /**
@@ -313,7 +332,13 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           <PatientForm onChange={setPatient} />
           <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
           {ownItems.length > 0 && (
-            <StandardSupport items={ownItems} value={support} onChange={onSupport} />
+            <StandardSupport
+              items={ownItems}
+              value={support}
+              onChange={onSupport}
+              thromboAgent={thromboAgent}
+              onThromboAgent={setThromboAgent}
+            />
           )}
         </Stack>
       </aside>
