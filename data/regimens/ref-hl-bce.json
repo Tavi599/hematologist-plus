@@ -1,0 +1,54 @@
+{
+  "id": "ref-hl-bce",
+  "short_name": "BCE",
+  "name": {
+    "uk": "BCE (бендамустин, карбоплатин, етопозид)",
+    "en": "BCE (bendamustine, carboplatin, etoposide)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Hodgkin Lymphoma (звірка за локальним примірником; вміст не копіювався)",
+      "version": "2.2026",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "NCCN 2.2026 включає бендамустин + карбоплатин + етопозид у таблицю схем для рецидиву лімфоми Ходжкіна.",
+      "en": "NCCN 2.2026 lists bendamustine, carboplatin and etoposide in the relapse table for Hodgkin lymphoma."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бендамустин",
+          "en": "Bendamustine"
+        },
+        "drug_id": "bendamustine"
+      },
+      {
+        "name": {
+          "uk": "Карбоплатин",
+          "en": "Carboplatin"
+        },
+        "drug_id": "carboplatin"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Дози NCCN не наводить. У PubMed немає публікації цієї комбінації при лімфомі Ходжкіна; є лише схема з бендамустином, ритуксимабом, етопозидом і карбоплатином (T(R)EC) при агресивних неходжкінських лімфомах (Budde, Br J Haematol 2018, PMID 30596402).",
+        "en": "NCCN gives no doses. PubMed has no paper on this combination in Hodgkin lymphoma; there is only the regimen of bendamustine with rituximab, etoposide and carboplatin (T(R)EC) in aggressive non-Hodgkin lymphoma (Budde, Br J Haematol 2018, PMID 30596402)."
+      }
+    ],
+    "gap": {
+      "uk": "Немає джерела з дозами для лімфоми Ходжкіна, тому схему не розраховано.",
+      "en": "There is no source with doses for Hodgkin lymphoma, so the regimen is not calculated."
+    }
+  }
+}

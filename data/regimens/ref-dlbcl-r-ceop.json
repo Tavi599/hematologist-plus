@@ -1,0 +1,68 @@
+{
+  "id": "ref-dlbcl-r-ceop",
+  "short_name": "R-CEOP",
+  "name": {
+    "uk": "R-CEOP (R-CHOP з епірубіцином замість доксорубіцину)",
+    "en": "R-CEOP (R-CHOP with epirubicin instead of doxorubicin)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas (звірка за локальним примірником; вміст не копіювався)",
+      "version": "4.2026",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "NCCN 4.2026 включає CEOP + R у перелік схем для ДВКЛ; епірубіцин замінює доксорубіцин у R-CHOP.",
+      "en": "NCCN 4.2026 lists CEOP plus R among the regimens for DLBCL; epirubicin replaces doxorubicin in R-CHOP."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Епірубіцин",
+          "en": "Epirubicin"
+        },
+        "drug_id": "epirubicin"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон",
+          "en": "Prednisolone"
+        },
+        "drug_id": "prednisolone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Дози й розклад NCCN не наводить. У PubMed знайдено лише рандомізоване порівняння R-CEVP (з вінбластином) і роботи з іншими схемами, а не R-CEOP з визначеними дозами.",
+        "en": "NCCN gives no doses or schedule. PubMed gave only a randomised comparison of R-CEVP (with vinblastine) and papers on other regimens, not R-CEOP with set doses."
+      }
+    ],
+    "gap": {
+      "uk": "Немає надійного джерела з дозами, тому схему не розраховано.",
+      "en": "There is no reliable source with doses, so the regimen is not calculated."
+    }
+  }
+}
