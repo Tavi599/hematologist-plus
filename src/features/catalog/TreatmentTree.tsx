@@ -10,6 +10,7 @@ import {
   Stack,
   Switch,
   Text,
+  Title,
   UnstyledButton,
 } from '@mantine/core'
 import { useMemo, useState } from 'react'
@@ -27,6 +28,7 @@ import { PREMEDICATION_ADVISED } from '../../lib/premedication'
 import { PATIENT_CONDITIONS, type CautionLevel, type PatientCondition } from '../../schemas/common'
 import { CautionBadges } from './CautionBadges'
 import { CautionOverview } from './CautionOverview'
+import type { TreatmentNode } from '../../schemas/catalog'
 import { RegimenReference } from './RegimenReference'
 import classes from './TreatmentTree.module.css'
 import {
@@ -253,8 +255,16 @@ function TreatmentNodeView({
   const described = regimens.filter(({ regimen }) => !!regimen!.reference)
 
   const heading = (
-    <Group gap="xs" wrap="nowrap">
-      <Text fw={depth === 0 ? 600 : 500}>{localize(node.title, language)}</Text>
+    <Group gap="xs" wrap="wrap">
+      {depth === 0 ? (
+        <Title order={3} size="h4" fw={700}>
+          {localize(node.title, language)}
+        </Title>
+      ) : (
+        <Text fw={700} size="md">
+          {localize(node.title, language)}
+        </Text>
+      )}
       {/* A trial section is not another line of treatment; the badge has to say so at a glance. */}
       <Badge
         size="xs"
@@ -264,10 +274,10 @@ function TreatmentNodeView({
       >
         {t(`treatmentKind.${node.kind}`)}
       </Badge>
-      {depth === 0 && !opened && count > 0 && (
-        <Text size="xs" c="dimmed">
+      {depth === 0 && count > 0 && (
+        <Badge size="sm" variant="outline" color="gray" tt="none">
           {t('diseaseDetail.regimenCount', { count })}
-        </Text>
+        </Badge>
       )}
     </Group>
   )
@@ -280,11 +290,16 @@ function TreatmentNodeView({
       id={depth === 0 ? lineAnchor(node.id) : undefined}
     >
       {depth === 0 ? (
-        <UnstyledButton onClick={toggle} aria-expanded={opened} className={classes.toggle}>
+        <UnstyledButton
+          onClick={toggle}
+          aria-expanded={opened}
+          className={classes.toggle}
+          style={{ '--accent': `var(--mantine-color-${KIND_ACCENT[node.kind] ?? 'gray'}-filled)` }}
+        >
           <Group justify="space-between" wrap="nowrap">
             {heading}
-            <Text size="xs" c="dimmed" aria-hidden>
-              {opened ? '▲' : '▼'}
+            <Text size="xl" c="dimmed" aria-hidden>
+              {opened ? '▾' : '▸'}
             </Text>
           </Group>
         </UnstyledButton>
@@ -418,6 +433,14 @@ function TreatmentNodeView({
       </div>
     </Stack>
   )
+}
+
+/** The stripe beside a line's heading: lines in the theme colour, trials and reading apart. */
+const KIND_ACCENT: Partial<Record<TreatmentNode['kind'], string>> = {
+  line: 'red',
+  stage: 'red',
+  trial: 'yellow',
+  reference: 'cyan',
 }
 
 /** Does the regimen give a drug whose label asks for premedication? */

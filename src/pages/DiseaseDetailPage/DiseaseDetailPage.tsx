@@ -31,6 +31,7 @@ import { ArticleContents } from './ArticleContents'
 import { Markdown } from './Markdown'
 import { SectionNav } from './SectionNav'
 import navClasses from './SectionNav.module.css'
+import treeClasses from '../../features/catalog/TreatmentTree.module.css'
 import { useClosedLines } from './use-closed-lines'
 
 const ARTICLE_ANCHOR = 'disease-article'
@@ -171,13 +172,18 @@ function ArticleSection({
     <Card withBorder component="section" id={ARTICLE_ANCHOR} className={navClasses.section}>
       <Stack gap="sm">
         {/* Folds like a line of treatment: the article runs to many screens below the regimens. */}
-        <UnstyledButton onClick={onToggle} aria-expanded={opened}>
+        <UnstyledButton
+          onClick={onToggle}
+          aria-expanded={opened}
+          className={treeClasses.toggle}
+          style={{ '--accent': 'var(--mantine-color-blue-filled)' }}
+        >
           <Group justify="space-between" wrap="nowrap">
-            <Title order={2} size="h4">
+            <Title order={2} size="h4" fw={700}>
               {t('diseaseDetail.article')}
             </Title>
-            <Text size="xs" c="dimmed" aria-hidden>
-              {opened ? '▲' : '▼'}
+            <Text size="xl" c="dimmed" aria-hidden>
+              {opened ? '▾' : '▸'}
             </Text>
           </Group>
         </UnstyledButton>

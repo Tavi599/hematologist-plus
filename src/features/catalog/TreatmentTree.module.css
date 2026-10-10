@@ -6,8 +6,18 @@
   scroll-margin-top: 108px;
 }
 
+/* A line's heading has to catch the eye among the regimens: a coloured stripe on a shaded band.
+   The colour is the kind's, set on the element as --accent. */
 .toggle {
   width: 100%;
+  padding: 8px 12px;
+  border-left: 4px solid var(--accent, var(--mantine-color-gray-filled));
+  border-radius: var(--mantine-radius-sm);
+  background-color: var(--mantine-color-default-hover);
+
+  &:hover {
+    filter: brightness(1.1);
+  }
 }
 
 /* One regimen in the grid: a hover shade shows which row the arrow belongs to. */
