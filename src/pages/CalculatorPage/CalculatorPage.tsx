@@ -35,6 +35,11 @@ import {
   type CourseItem,
 } from '../../lib/course-input'
 import { formatNumber } from '../../lib/format'
+import {
+  ALWAYS_PREMEDICATED,
+  premedicationOnByDefault,
+  unpremedicated,
+} from '../../lib/premedication'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import type { RegimenItem } from '../../schemas/catalog'
@@ -94,6 +99,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [header, setHeader] = useState(emptyHeader)
   const [manualRows, setManualRows] = useState<ManualRow[]>([])
   const [support, setSupport] = useState<Record<SupportCategory, boolean>>(NO_SUPPORT)
+  // Cyclophosphamide items the physician has added mesna to; the protocol's own mesna is apart.
+  const [mesnaFor, setMesnaFor] = useState<string[]>([])
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
   const regimenId = searchParams.get('regimen')
@@ -172,13 +179,16 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
 
   // A regimen opens with its cytostatics on and its premedication and supportive therapy off:
   // what a patient actually gets of those is decided at the bedside, and the physician switches
-  // on what this course needs. A drug added by hand is never switched off — it was added on
+  // on what this course needs. The exception is the premedication of rituximab and daratumumab,
+  // which the department never gives without it: that opens switched on. A drug added by hand is never switched off — it was added on
   // purpose — and the switches a physician has set are kept until another regimen is chosen.
   const [toggledRegimen, setToggledRegimen] = useState<string | null | undefined>(undefined)
   if (regimenId !== toggledRegimen) {
     setToggledRegimen(regimenId)
     setSupport(NO_SUPPORT)
-    setDisabledIds(optionalIds(baseItems, customItems))
+    setMesnaFor([])
+    const premedicationOn = premedicationOnByDefault(baseItems)
+    setDisabledIds(optionalIds(baseItems, customItems).filter((id) => !premedicationOn.has(id)))
   }
 
   /**
@@ -192,14 +202,16 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     (enteredBsaM2 !== null || (patient.heightCm !== null && patient.weightKg !== null))
 
   // Mesna for a high cyclophosphamide dose follows the dose as calculated, so the course is
-  // calculated once, the mesna rows are added, and the course is calculated again with them.
-  const { items, course, error } = useMemo<{
+  // calculated once, the mesna on offer is found, and the course is calculated again with the
+  // mesna the physician has added.
+  const { items, course, error, mesnaOffered } = useMemo<{
     items: CourseItem[]
     course: CourseResult | null
     error: unknown
+    mesnaOffered: string[]
   }>(() => {
     if (!patient || !measured || baseItems.length === 0) {
-      return { items: baseItems, course: null, error: null }
+      return { items: baseItems, course: null, error: null, mesnaOffered: [] }
     }
     const calculate = (courseItems: CourseItem[]) =>
       calculateCourse(
@@ -232,12 +244,14 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       )
     try {
       const first = calculate(baseItems)
-      const mesna = cyclophosphamideMesna(catalog, baseItems, first)
-      if (mesna.length === 0) return { items: baseItems, course: first, error: null }
+      const offered = cyclophosphamideMesna(catalog, baseItems, first)
+      const mesnaOffered = offered.map((entry) => entry.courseDrug.anchorDrugId!)
+      const mesna = offered.filter((entry) => mesnaFor.includes(entry.courseDrug.anchorDrugId!))
+      if (mesna.length === 0) return { items: baseItems, course: first, error: null, mesnaOffered }
       const withMesna = [...baseItems, ...mesna]
-      return { items: withMesna, course: calculate(withMesna), error: null }
+      return { items: withMesna, course: calculate(withMesna), error: null, mesnaOffered }
     } catch (thrown) {
-      return { items: baseItems, course: null, error: thrown }
+      return { items: baseItems, course: null, error: thrown, mesnaOffered: [] }
     }
   }, [
     catalog,
@@ -249,6 +263,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     doseOverrideAmount,
     disabledIds,
     shiftMin,
+    mesnaFor,
   ])
 
   const regimen = regimenId === null ? undefined : catalog.regimens.get(regimenId)
@@ -256,6 +271,19 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const written = manualRows.filter((row) => row.what.trim() !== '')
 
   const sheetReady = course !== null || written.length > 0
+
+  // Drugs that ask for premedication and get none on one of their days.
+  const premedicationMissing = unpremedicated(items, disabledIds)
+  const alwaysWithout = [
+    ...new Set(
+      items
+        .filter(
+          (entry) =>
+            premedicationMissing.has(entry.item.id) && ALWAYS_PREMEDICATED.has(entry.item.drug_id),
+        )
+        .map((entry) => localize(entry.drug.name, language)),
+    ),
+  ]
 
   return (
     <div className={classes.layout}>
@@ -327,8 +355,23 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
 
           <Tabs.Panel value="doses" pt="sm">
             <Stack gap="sm">
+              {alwaysWithout.length > 0 && (
+                <Alert color="orange" title={t('calculator.doses.premedAlertTitle')}>
+                  <Text size="sm">
+                    {t('calculator.doses.premedAlert', { drugs: alwaysWithout.join(', ') })}
+                  </Text>
+                </Alert>
+              )}
               {items.length > 0 && (
                 <DoseTable
+                  premedicationMissing={premedicationMissing}
+                  mesnaOffered={mesnaOffered}
+                  mesnaAdded={mesnaFor}
+                  onMesna={(id, on) =>
+                    setMesnaFor((current) =>
+                      on ? [...new Set([...current, id])] : current.filter((entry) => entry !== id),
+                    )
+                  }
                   items={items}
                   course={course}
                   bsaVariant={courseSettings.bsaVariant === 'capped' ? 'capped' : 'actual'}

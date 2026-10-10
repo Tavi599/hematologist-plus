@@ -18,9 +18,56 @@
       "url": "https://www.eviq.org.au/haematology-and-bmt/multiple-myeloma/4176-multiple-myeloma-daratumumab-subcutaneous-mai",
       "version": "вер. 5 (квітень 2026)",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: DARZALEX FASPRO (daratumumab and hyaluronidase), Pre-medication — ацетамінофен 650–1000 мг, дифенгідрамін 25–50 мг, кортикостероїд за 1–3 год до кожної дози",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4bb241af-4299-4373-8762-2d6709515db0",
+      "checkedOn": "2026-10-10"
     }
   ],
   "items": [
+    {
+      "key": "premed-paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 1–3 год до даратумумабу (інструкція: 650–1000 мг перед кожним введенням)",
+        "en": "1 to 3 hours before daratumumab (label: 650-1000 mg before every dose)"
+      }
+    },
+    {
+      "key": "premed-diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "За 1–3 год до даратумумабу; інструкція: дифенгідрамін 25–50 мг внутрішньо або в/в",
+        "en": "1 to 3 hours before daratumumab; label: diphenhydramine 25-50 mg orally or IV"
+      }
+    },
+    {
+      "key": "premed-methylprednisolone",
+      "drug_id": "methylprednisolone",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 1–3 год до даратумумабу (інструкція, монотерапія: метилпреднізолон 100 мг; після другого введення можна зменшити до 60 мг)",
+        "en": "1 to 3 hours before daratumumab (label, monotherapy: methylprednisolone 100 mg; may reduce to 60 mg after the second dose)"
+      }
+    },
     {
       "key": "daratumumab",
       "drug_id": "daratumumab",

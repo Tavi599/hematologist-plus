@@ -15,8 +15,10 @@ const LABEL_BOLUSES = 3
 const LABEL_INTERVAL_MIN = 240
 
 /**
- * Mesna for every intravenous cyclophosphamide whose calculated single dose reaches 1000 mg,
- * unless the course already gives mesna of its own. The dose follows the cyclophosphamide as
+ * Mesna on offer for every intravenous cyclophosphamide whose calculated single dose reaches
+ * 1000 mg, unless the course already gives mesna of its own. It is only an offer: a protocol
+ * that gives none (R-CHOP) is followed as written, and the physician adds it with one click
+ * (decision of 2026-10-10). The dose follows the cyclophosphamide as
  * calculated — after the BSA variant, reductions and a dose typed by hand — so this runs on a
  * calculated course, and the course is calculated again with these rows in it.
  */
@@ -53,8 +55,8 @@ export function cyclophosphamideMesna(
       fallback_volume_ml: null,
       gap_before_min: null,
       notes: {
-        uk: `Додано, бо разова доза циклофосфаміду ${result.doseAmount} мг ≥ ${CYCLOPHOSPHAMIDE_MESNA_FROM_MG} мг. За інструкцією месни: 20% дози циклофосфаміду в/в за 15–30 хв о 0, 4 і 8 год від початку циклофосфаміду (разом 60%).`,
-        en: `Added because the single cyclophosphamide dose of ${result.doseAmount} mg is at least ${CYCLOPHOSPHAMIDE_MESNA_FROM_MG} mg. Per the mesna label: 20% of the cyclophosphamide dose IV over 15–30 min at 0, 4 and 8 hours from the start of the cyclophosphamide (60% in all).`,
+        uk: `Профілактика геморагічного циститу, додана лікарем: разова доза циклофосфаміду ${result.doseAmount} мг ≥ ${CYCLOPHOSPHAMIDE_MESNA_FROM_MG} мг, а протокол схеми месни не дає. За інструкцією месни: 20% дози циклофосфаміду в/в за 15–30 хв о 0, 4 і 8 год від початку циклофосфаміду (разом 60%).`,
+        en: `Haemorrhagic cystitis prophylaxis added by the physician: the single cyclophosphamide dose of ${result.doseAmount} mg is at least ${CYCLOPHOSPHAMIDE_MESNA_FROM_MG} mg and the regimen's protocol gives no mesna. Per the mesna label: 20% of the cyclophosphamide dose IV over 15–30 min at 0, 4 and 8 hours from the start of the cyclophosphamide (60% in all).`,
       },
       sort_order: item.sort_order,
       dose_options: [],

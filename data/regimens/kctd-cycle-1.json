@@ -18,6 +18,11 @@
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4521972/",
       "version": "повний текст у PMC; фаза Ib/II, 64 пацієнти",
       "checkedOn": "2026-10-10"
+    },
+    {
+      "name": "FDA label: KYPROLIS (carfilzomib), 2.1 — премедикація дексаметазоном перед усіма дозами циклу 1 (монотерапія: 4 мг внутрішньо або в/в)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ea66eb30-e665-4693-99a1-a9d3b4bbe2d6",
+      "checkedOn": "2026-10-10"
     }
   ],
   "evidence": {
@@ -94,6 +99,19 @@
     ]
   },
   "items": [
+    {
+      "key": "premed-dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [2, 9, 16],
+      "notes": {
+        "uk": "Перед карфілзомібом у дні без дексаметазону схеми — лише в циклі 1, далі якщо були озноб, лихоманка чи задишка на інфузію (NSSG MM.28; інструкція Kyprolis)",
+        "en": "Before carfilzomib on the days without the regimen dexamethasone — cycle 1 only, later if rigors, chills or dyspnoea occurred (NSSG MM.28; Kyprolis label)"
+      }
+    },
     {
       "key": "carfilzomib",
       "drug_id": "carfilzomib",

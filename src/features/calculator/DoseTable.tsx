@@ -2,6 +2,7 @@ import {
   ActionIcon,
   Badge,
   Box,
+  Button,
   Card,
   Checkbox,
   Collapse,
@@ -32,6 +33,7 @@ import {
   type CourseItem,
 } from '../../lib/course-input'
 import { groupCourseItems } from '../../lib/dose-groups'
+import { PREMEDICATION_ADVISED } from '../../lib/premedication'
 import { CalculationChain } from './CalculationChain'
 import { SourceNotes } from './SourceNotes'
 import { WarningList } from './WarningList'
@@ -57,6 +59,13 @@ export interface DoseTableProps {
   customIds: string[]
   /** The BSA the doses are given on; the other variant is shown under it when it differs. */
   bsaVariant: BsaVariant
+  /** Drugs that ask for premedication, by item id, with the days they get none. */
+  premedicationMissing: Map<string, number[]>
+  /** Cyclophosphamide items mesna can be added to, though their protocol gives none. */
+  mesnaOffered: string[]
+  /** Of those, the ones the physician has added it to. */
+  mesnaAdded: string[]
+  onMesna: (itemId: string, on: boolean) => void
 }
 
 /** Value of the "typed by hand" entry in the dose-source list; not a real choice id. */
@@ -168,6 +177,10 @@ function DoseRow({
   onRemove,
   customIds,
   bsaVariant,
+  premedicationMissing,
+  mesnaOffered,
+  mesnaAdded,
+  onMesna,
 }: DoseTableProps & {
   item: CourseItem
   result: CourseDrugResult | undefined
@@ -206,6 +219,43 @@ function DoseRow({
             {item.item.role !== 'main' && ` · ${t(`role.${item.item.role}`)}`}
             {customIds.includes(id) && ` · ${t('calculator.doses.custom')}`}
           </Text>
+          {/* The label asks for premedication before this drug: always in sight, and loud when
+              the course has none on one of its days. */}
+          {item.item.role === 'main' && PREMEDICATION_ADVISED.has(item.item.drug_id) && (
+            <Badge
+              size="xs"
+              mt={2}
+              variant={premedicationMissing.has(id) ? 'filled' : 'light'}
+              color={premedicationMissing.has(id) ? 'red' : 'orange'}
+            >
+              {premedicationMissing.has(id)
+                ? t('calculator.doses.premedMissing', {
+                    days: premedicationMissing.get(id)!.join(', '),
+                  })
+                : t('calculator.doses.premedBadge')}
+            </Badge>
+          )}
+          {/* A high cyclophosphamide dose the protocol gives without mesna: the prophylaxis is
+              one click away, not added behind the physician's back. */}
+          {mesnaOffered.includes(id) && (
+            <Group gap={6} mt={2} wrap="nowrap">
+              <Badge size="xs" variant="light" color="grape">
+                {t('calculator.doses.cystitisBadge')}
+              </Badge>
+              <Button
+                size="compact-xs"
+                variant={mesnaAdded.includes(id) ? 'subtle' : 'light'}
+                disabled={!enabled}
+                onClick={() => onMesna(id, !mesnaAdded.includes(id))}
+              >
+                {t(
+                  mesnaAdded.includes(id)
+                    ? 'calculator.doses.mesnaRemove'
+                    : 'calculator.doses.mesnaAdd',
+                )}
+              </Button>
+            </Group>
+          )}
           {/* A drug the department cannot simply take off the shelf. The badge in the regimen
               list says only that something in the course is missing; here it is clear which
               drug, and the drug's own note says why — most often that it is not registered. */}

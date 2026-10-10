@@ -24,6 +24,11 @@
       "url": "https://clinicaltrials.gov/study/NCT01582776",
       "version": "запис на дату звірки",
       "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "FDA label: GAZYVA (obinutuzumab), Premedication for GAZYVA Infusion — перша інфузія: в/в дексаметазон 20 мг, ацетамінофен 650–1000 мг, антигістамінний; усі наступні: ацетамінофен",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=df12ceb2-5b4b-4ab5-a317-2a36bf2a3cda",
+      "checkedOn": "2026-10-10"
     }
   ],
   "evidence": {
@@ -104,6 +109,51 @@
       "notes": {
         "uk": "20 мг раз на добу в дні 1–21 (NCT01582776).",
         "en": "20 mg once a day on days 1 to 21 (NCT01582776)."
+      }
+    },
+    {
+      "key": "premed-paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [8, 15, 22],
+      "notes": {
+        "uk": "Щонайменше за 30 хв до обінутузумабу, перед кожною інфузією (інструкція)",
+        "en": "At least 30 minutes before obinutuzumab, before every infusion (label)"
+      }
+    },
+    {
+      "key": "premed-dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [8],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Перша інфузія: в/в, завершити щонайменше за 1 год до обінутузумабу (інструкція; гідрокортизон не рекомендовано). Далі — лише після реакції 3 ступеня або при лімфоцитах >25×10⁹/л",
+        "en": "First infusion: IV, completed at least 1 hour before obinutuzumab (label; hydrocortisone not recommended). Later only after a grade 3 reaction or with lymphocytes >25×10⁹/L"
+      }
+    },
+    {
+      "key": "premed-diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [8],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Перша інфузія (інструкція: антигістамінний, напр. дифенгідрамін 50 мг); далі — після реакції на попередню інфузію",
+        "en": "First infusion (label: an antihistamine, e.g. diphenhydramine 50 mg); later after a reaction to the previous infusion"
       }
     },
     {

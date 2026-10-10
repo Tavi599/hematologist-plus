@@ -18,6 +18,11 @@
       "url": "https://www.eviq.org.au/haematology/lymphoma/other-b-cell-lymphoma/3573-o-chop21-obinutuzumab-cyclophosphamide-doxor",
       "version": "вер. 4, переглянуто 04.09.2024",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: GAZYVA (obinutuzumab), Premedication for GAZYVA Infusion — перша інфузія: в/в дексаметазон 20 мг, ацетамінофен 650–1000 мг, антигістамінний; усі наступні: ацетамінофен",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=df12ceb2-5b4b-4ab5-a317-2a36bf2a3cda",
+      "checkedOn": "2026-10-10"
     }
   ],
   "items": [
@@ -31,6 +36,19 @@
       "notes": {
         "uk": "100 мг раз на добу (eviQ 3573).",
         "en": "100 mg once a day (eviQ 3573)."
+      }
+    },
+    {
+      "key": "premed-paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Щонайменше за 30 хв до обінутузумабу, перед кожною інфузією (інструкція)",
+        "en": "At least 30 minutes before obinutuzumab, before every infusion (label)"
       }
     },
     {

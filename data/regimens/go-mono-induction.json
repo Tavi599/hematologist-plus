@@ -18,9 +18,71 @@
       "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-acute-myeloid-leukemia",
       "version": "тема оновлена 20.11.2025",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: MYLOTARG (gemtuzumab ozogamicin), 2.1 Premedication — ацетамінофен 650 мг і дифенгідрамін 50 мг за 1 год, метилпреднізолон 1 мг/кг за 30 хв до інфузії",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32fd2bb2-1cfa-4250-feb8-d7956c794e05",
+      "checkedOn": "2026-10-10"
     }
   ],
   "items": [
+    {
+      "key": "premed-paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 4, 7],
+      "dose_options": [
+        {
+          "dose_value": 650,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Доза за інструкцією MYLOTARG",
+            "en": "Dose per the MYLOTARG label"
+          },
+          "source": {
+            "name": "FDA label: MYLOTARG (gemtuzumab ozogamicin), 2.1 Premedication — ацетамінофен 650 мг і дифенгідрамін 50 мг за 1 год, метилпреднізолон 1 мг/кг за 30 хв до інфузії",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32fd2bb2-1cfa-4250-feb8-d7956c794e05",
+            "checkedOn": "2026-10-10"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "За 1 год до гемтузумабу. Інструкція: ацетамінофен 650 мг; 1000 мг — як у GO-DA за протоколом NSSG",
+        "en": "1 hour before gemtuzumab. Label: acetaminophen 650 mg; 1000 mg as in GO-DA per the NSSG protocol"
+      }
+    },
+    {
+      "key": "premed-diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 4, 7],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "За 1 год до гемтузумабу (інструкція: 50 мг внутрішньо або в/в)",
+        "en": "1 hour before gemtuzumab (label: 50 mg orally or IV)"
+      }
+    },
+    {
+      "key": "premed-methylprednisolone",
+      "drug_id": "methylprednisolone",
+      "role": "premedication",
+      "route": "iv_bolus",
+      "dose_value": 1,
+      "dose_unit": "mg_kg",
+      "days": [1, 4, 7],
+      "notes": {
+        "uk": "За 30 хв до інфузії гемтузумабу (інструкція: 1 мг/кг або еквівалент іншого кортикостероїду)",
+        "en": "Within 30 minutes before the gemtuzumab infusion (label: 1 mg/kg or an equivalent corticosteroid)"
+      }
+    },
     {
       "key": "gemtuzumab-ozogamicin",
       "drug_id": "gemtuzumab-ozogamicin",

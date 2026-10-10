@@ -24,6 +24,15 @@
       "url": "https://clinicaltrials.gov/study/NCT01470196",
       "version": "запис на дату звірки",
       "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "FDA label: RITUXAN (rituximab), 2.8 Recommended Dose for Premedication — ацетамінофен і антигістамінний препарат перед кожною інфузією",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b172773b-3905-4a1c-ad95-bab4b6126563",
+      "checkedOn": "2026-10-10"
+    },
+    {
+      "name": "Дизайн відділення «Ритуксимаб» (Google Таблиці)",
+      "checkedOn": "2026-10-10"
     }
   ],
   "evidence": {
@@ -123,6 +132,35 @@
       "notes": {
         "uk": "20 мг/м² в/в (NCT01470196); у 100 мл 5% глюкози за 30 хвилин, площу поверхні тіла беруть не більше 2,2 м² (не більш як 44 мг).",
         "en": "20 mg/m² IV (NCT01470196); in 100 mL of 5% glucose over 30 minutes, with body surface area capped at 2.2 m² (no more than 44 mg)."
+      }
+    },
+    {
+      "key": "premed-paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [2, 9],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хв до ритуксимабу (інструкція: перед кожною інфузією)",
+        "en": "At least 30 minutes before rituximab (label: before each infusion)"
+      }
+    },
+    {
+      "key": "premed-diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [2, 9],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% — 5,0 мл у 100 мл 0,9% NaCl (разом із дексаметазоном, якщо він є), до ритуксимабу — практика відділення",
+        "en": "Diphenhydramine 1% 5.0 mL in 100 mL 0.9% NaCl (with the dexamethasone, if any), before rituximab — department practice"
       }
     },
     {
