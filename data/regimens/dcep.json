@@ -1,0 +1,110 @@
+{
+  "$comment": "DCEP за Corso 2002 (Haematologica; мобілізація стовбурових клітин, 55 пацієнтів): дексаметазон 40 мг 4 дні та 4-добова безперервна інфузія циклофосфаміду 400 мг/м², етопозиду 40 мг/м² і цисплатину 10 мг/м² на добу. Ці дози збігаються з частиною PACE за NSSG MM.50 й eviQ 64. РОЗБІЖНІСТЬ: у Dadacaridou 2007 (J BUON, рецидив, 12 пацієнтів) цисплатин 15 мг/м² — він у списку доз. Об'єм і розчинник інфузій Corso не наводить: взято з NSSG MM.50 / eviQ 64 для PACE — звірте зі стабільністю розчину у вашій аптеці. Г-КСФ 5 мкг/кг на добу Corso починає через 48 год після кінця інфузії і веде до останнього лейкаферезу — тривалість залежить від збору, тож у схему не внесений: додайте вручну.",
+  "id": "dcep",
+  "short_name": "DCEP",
+  "name": {
+    "uk": "DCEP (дексаметазон, циклофосфамід, етопозид, цисплатин)",
+    "en": "DCEP (dexamethasone, cyclophosphamide, etoposide, cisplatin)"
+  },
+  "description": {
+    "uk": "Мобілізація стовбурових клітин або порятунок при рецидиві чи рефрактерній мієломі як «міст» до трансплантації. Дні 1–4: дексаметазон 40 мг; циклофосфамід, етопозид і цисплатин безперервною інфузією на добу.",
+    "en": "Stem cell mobilisation or salvage in relapsed or refractory myeloma as a bridge to a transplant. Days 1 to 4: dexamethasone 40 mg; cyclophosphamide, etoposide and cisplatin as a continuous daily infusion."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Corso A. та ін. A combination of dexamethasone, cyclophosphamide, etoposide, and cisplatin is less toxic and more effective than high-dose cyclophosphamide for peripheral stem cell mobilization in multiple myeloma. Haematologica. 2002;87(10):1041-5",
+      "url": "https://haematologica.org/article/view/2518",
+      "version": "повний текст; 55 пацієнтів, мобілізація",
+      "checkedOn": "2026-10-10"
+    },
+    {
+      "name": "Dadacaridou M. та ін. Dexamethasone, cyclophosphamide, etoposide and cisplatin (DCEP) for relapsed or refractory multiple myeloma patients. J BUON. 2007;12(1):41-44",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17436400/",
+      "version": "резюме",
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "NSSG Oxford Haematology, MM.50 VTDPACE / DTPACE",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-50-vtdpace-dtpace.pdf",
+      "version": "2.1 (06.2023)",
+      "checkedOn": "2026-10-03"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "40 мг щодня, дні 1–4 (Corso 2002). У Dadacaridou — в/в.",
+        "en": "40 mg daily on days 1 to 4 (Corso 2002). Intravenous in Dadacaridou."
+      }
+    },
+    {
+      "key": "cisplatin",
+      "drug_id": "cisplatin",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "10 мг/м² на добу безперервною 24-годинною інфузією, дні 1–4 (Corso 2002). Об'єм і розчинник — за NSSG MM.50 / eviQ 64 для PACE.",
+        "en": "10 mg/m² a day as a continuous 24-hour infusion, days 1 to 4 (Corso 2002). Volume and solvent from NSSG MM.50 / eviQ 64 for PACE."
+      },
+      "dose_options": [
+        {
+          "dose_value": 15,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Доза в дослідженні Dadacaridou 2007 (рецидив, 12 пацієнтів); коригували за функцією нирок, як — не сказано",
+            "en": "The dose in Dadacaridou 2007 (relapse, 12 patients); adjusted for renal function, how is not stated"
+          },
+          "source": {
+            "name": "Dadacaridou M. та ін. Dexamethasone, cyclophosphamide, etoposide and cisplatin (DCEP) for relapsed or refractory multiple myeloma patients. J BUON. 2007;12(1):41-44",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/17436400/",
+            "version": "резюме",
+            "checkedOn": "2026-10-09"
+          }
+        }
+      ]
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 40,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "40 мг/м² на добу безперервною 24-годинною інфузією, дні 1–4 (Corso 2002). Об'єм і розчинник — за NSSG MM.50 / eviQ 64 для PACE.",
+        "en": "40 mg/m² a day as a continuous 24-hour infusion, days 1 to 4 (Corso 2002). Volume and solvent from NSSG MM.50 / eviQ 64 for PACE."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "iv_infusion",
+      "dose_value": 400,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "400 мг/м² на добу безперервною 24-годинною інфузією, дні 1–4 (Corso 2002). Об'єм і розчинник — за NSSG MM.50 / eviQ 64 для PACE.",
+        "en": "400 mg/m² a day as a continuous 24-hour infusion, days 1 to 4 (Corso 2002). Volume and solvent from NSSG MM.50 / eviQ 64 for PACE."
+      }
+    }
+  ]
+}

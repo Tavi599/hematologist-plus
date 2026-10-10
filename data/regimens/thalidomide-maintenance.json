@@ -1,0 +1,46 @@
+{
+  "$comment": "Підтримка талідомідом. Доза 50 мг на добу — із резюме HOVON-65/GMMG-HD4 (група VAD → талідомід 50 мг); тривалість там не вказана. MRC Myeloma IX (820 пацієнтів): підтримка до прогресування подовжила PFS (p < 0,001), але не загальну виживаність; при несприятливих цитогенетичних порушеннях — гірша виживаність (p = 0,009). Дозу й графік підвищення Myeloma IX у доступних відкритих текстах не підтверджено — НЕ ВНЕСЕНО. Талідомід призначають і видають лише в межах програми запобігання вагітності.",
+  "id": "thalidomide-maintenance",
+  "short_name": "Талідомід, підтримка",
+  "name": {
+    "uk": "Талідомід, підтримка після індукції чи трансплантації",
+    "en": "Thalidomide maintenance after induction or a transplant"
+  },
+  "description": {
+    "uk": "Талідомід 50 мг щодня безперервно до прогресування чи непереносимості. Не дають при несприятливих цитогенетичних змінах (гірша виживаність у Myeloma IX); найчастіше обмежує нейропатія.",
+    "en": "Thalidomide 50 mg daily without a break until progression or intolerance. Not given with adverse cytogenetics (worse survival in Myeloma IX); neuropathy most often limits it."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Sonneveld P. та ін. Bortezomib induction and maintenance treatment in patients with newly diagnosed multiple myeloma: results of the randomized phase III HOVON-65/GMMG-HD4 trial. J Clin Oncol. 2012;30:2946-55",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22802322/",
+      "version": "резюме: підтримка талідомідом 50 мг на добу в групі VAD",
+      "checkedOn": "2026-10-10"
+    },
+    {
+      "name": "Morgan G.J. та ін. The role of maintenance thalidomide therapy in multiple myeloma: MRC Myeloma IX results and meta-analysis. Blood. 2012;119:7-15",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22021371/",
+      "version": "резюме; 820 пацієнтів",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "items": [
+    {
+      "key": "thalidomide",
+      "drug_id": "thalidomide",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "50 мг на добу (HOVON-65/GMMG-HD4); безперервно. Нейропатію оцінюють перед кожним циклом.",
+        "en": "50 mg a day (HOVON-65/GMMG-HD4); continuously. Neuropathy is assessed before each cycle."
+      }
+    }
+  ]
+}

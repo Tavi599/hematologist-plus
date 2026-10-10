@@ -1,0 +1,55 @@
+{
+  "$comment": "Підтримка карфілзомібом із дексаметазоном після сальважної автотрансплантації (NMSG, рандомізоване дослідження II фази, 168 пацієнтів): TTP 25,1 проти 16,7 міс. (ВР 0,46). Джерело каже «раз на два тижні» без днів — записано 14-денним циклом, день 1; дексаметазон поставлено в день карфілзомібу (у тексті не уточнено). Через 4 тижні дозу піднімали до 56 мг/м² за прийнятної переносимості (89% пацієнтів). Тривалість інфузії й розчинник у джерелі не наведені — як у схем Kd (інструкція Kyprolis). Лікування тривало до прогресування, непереносимості або кінця дослідження.",
+  "id": "kd-maintenance",
+  "short_name": "Kd підтримка",
+  "name": {
+    "uk": "Kd, підтримка після сальважної автотрансплантації, з 5-го тижня (NMSG)",
+    "en": "Kd maintenance after a salvage transplant, from week 5 (NMSG)"
+  },
+  "description": {
+    "uk": "Карфілзоміб 56 мг/м² в/в і дексаметазон 20 мг раз на два тижні; після перших 4 тижнів, якщо переноситься.",
+    "en": "Carfilzomib 56 mg/m² IV and dexamethasone 20 mg every second week, after the first 4 weeks if tolerated."
+  },
+  "cycle_length_days": 14,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Nordic Myeloma Study Group. Carfilzomib and dexamethasone maintenance following salvage ASCT in multiple myeloma: a randomised phase 2 trial (PMID 34536308)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9292771/",
+      "version": "повний текст; 168 рандомізованих",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "block": "day_support",
+      "anchor_offset_min": -30,
+      "notes": {
+        "uk": "20 мг усередину раз на два тижні (NMSG); день у джерелі не вказано",
+        "en": "20 mg by mouth every second week (NMSG); the day is not stated in the source"
+      }
+    },
+    {
+      "key": "carfilzomib",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 56,
+      "dose_unit": "mg_m2",
+      "cap_amount": 123,
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "56 мг/м² в/в раз на два тижні (NMSG)",
+        "en": "56 mg/m² IV every second week (NMSG)"
+      }
+    }
+  ]
+}

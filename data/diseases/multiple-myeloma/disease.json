@@ -312,6 +312,13 @@
             "uk": "NCCN 1.2027: підтримка бортезомібом — картка без розрахунку",
             "en": "NCCN 1.2027: bortezomib maintenance - a card without a calculation"
           }
+        },
+        {
+          "regimen_id": "thalidomide-maintenance",
+          "notes": {
+            "uk": "Підтримка; не при несприятливих цитогенетичних змінах (Myeloma IX)",
+            "en": "Maintenance; not with adverse cytogenetics (Myeloma IX)"
+          }
         }
       ],
       "children": [
@@ -578,6 +585,9 @@
             },
             {
               "regimen_id": "ref-mm-bortezomib-maintenance"
+            },
+            {
+              "regimen_id": "thalidomide-maintenance"
             }
           ],
           "children": []
@@ -740,6 +750,20 @@
           "notes": {
             "uk": "Те саме при нирковій недостатності",
             "en": "The same in renal impairment"
+          }
+        },
+        {
+          "regimen_id": "dt-pace",
+          "notes": {
+            "uk": "Без бортезомібу; талідомід: NSSG 50→100 мг, eviQ 400 мг",
+            "en": "Without bortezomib; thalidomide: NSSG 50 to 100 mg, eviQ 400 mg"
+          }
+        },
+        {
+          "regimen_id": "dcep",
+          "notes": {
+            "uk": "Мобілізація або «міст» до трансплантації; цисплатин 10 мг/м² (Corso), 15 мг/м² у Dadacaridou",
+            "en": "Mobilisation or a bridge to a transplant; cisplatin 10 mg/m² (Corso), 15 mg/m² in Dadacaridou"
           }
         },
         {
@@ -1002,6 +1026,16 @@
             "uk": "NCCN 1.2027: за особливих обставин, лише t(11;14)",
             "en": "NCCN 1.2027: useful in certain circumstances, t(11;14) only"
           }
+        },
+        {
+          "regimen_id": "kd-maintenance-cycle-1-2",
+          "notes": {
+            "uk": "Підтримка після сальважної автотрансплантації (NMSG)",
+            "en": "Maintenance after a salvage transplant (NMSG)"
+          }
+        },
+        {
+          "regimen_id": "kd-maintenance"
         }
       ],
       "children": [
@@ -1703,6 +1737,12 @@
             },
             {
               "regimen_id": "vtd-pace-carboplatin"
+            },
+            {
+              "regimen_id": "dt-pace"
+            },
+            {
+              "regimen_id": "dcep"
             }
           ],
           "children": []
@@ -2002,11 +2042,7 @@
           }
         },
         {
-          "regimen_id": "ref-mm-dcep",
-          "notes": {
-            "uk": "NCCN 1.2027: DCEP — за особливих обставин, для агресивної мієломи",
-            "en": "NCCN 1.2027: DCEP, useful in certain circumstances, for aggressive myeloma"
-          }
+          "regimen_id": "ref-mm-pomalidomide-maintenance"
         }
       ]
     }

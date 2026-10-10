@@ -1,0 +1,64 @@
+{
+  "$comment": "Лише опис: фази III немає, протоколів NSSG чи eviQ немає, досліджень мало й дрібні — розрахунку не робимо.",
+  "id": "ref-mm-pomalidomide-maintenance",
+  "short_name": "Підтримка помалідомідом",
+  "name": {
+    "uk": "Підтримка помалідомідом (після сальважної автотрансплантації чи після рецидиву)",
+    "en": "Pomalidomide maintenance (after a salvage transplant or a relapse)"
+  },
+  "sources": [
+    {
+      "name": "Daratumumab ± pomalidomide maintenance after salvage autologous transplantation in relapsed multiple myeloma: a phase 2 study (2026)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13615963/",
+      "version": "повний текст; 13 пацієнтів",
+      "checkedOn": "2026-10-10"
+    },
+    {
+      "name": "Continuous elotuzumab, pomalidomide, and dexamethasone maintenance following second autologous transplantation for multiple myeloma: results of a prospective phase II trial (PMID 37741459)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37741459/",
+      "version": "резюме; 18 пацієнтів",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Стандартної підтримки помалідомідом немає: рандомізованих досліджень III фази не знайдено, а NSSG і eviQ окремого протоколу не мають. Є лише дрібні дослідження II фази й повідомлення про серії.",
+      "en": "There is no standard pomalidomide maintenance: no phase III randomised trial was found, and neither NSSG nor eviQ has a protocol of its own. Only small phase II studies and case series exist."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Помалідомід",
+          "en": "Pomalidomide"
+        },
+        "drug_id": "pomalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Фаза II після сальважної автотрансплантації (2026): даратумумаб ± помалідомід 2 мг усередину в дні 1–21 кожного циклу; 13 пацієнтів (11 із двокомпонентною підтримкою), медіана PFS від початку підтримки 45,1 міс.; дослідження закрите достроково через малий набір.",
+        "en": "Phase II after a salvage transplant (2026): daratumumab with or without pomalidomide 2 mg by mouth on days 1 to 21 of each cycle; 13 patients (11 on the doublet), median PFS from the start of maintenance 45.1 months; closed early for low accrual."
+      },
+      {
+        "uk": "Одногрупове дослідження II фази: елотузумаб + помалідомід + дексаметазон після другої автотрансплантації, 18 пацієнтів; медіана PFS 19 міс.; закрите достроково, двоє припинили через токсичність.",
+        "en": "Single-arm phase II: elotuzumab, pomalidomide and dexamethasone after a second transplant, 18 patients; median PFS 19 months; closed early, two stopped for toxicity."
+      },
+      {
+        "uk": "Резюме дослідження II фази в першому рецидиві (помалідомід 4 мг у дні 1–21 + дексаметазон 20 мг щотижня після індукції PCd): близько 30% припинили помалідомід через небажані події, переважно гематологічні.",
+        "en": "Abstract of a phase II study at first relapse (pomalidomide 4 mg on days 1 to 21 with dexamethasone 20 mg weekly after PCd induction): about 30% stopped pomalidomide for adverse events, mostly haematological."
+      }
+    ],
+    "gap": {
+      "uk": "Дози різні (2 і 4 мг), порівняння з відсутністю підтримки чи з леналідомідом немає; результатів рандомізованого дослідження NCT01745588 не знайдено.",
+      "en": "The doses differ (2 and 4 mg), there is no comparison with no maintenance or with lenalidomide, and no results of the randomised study NCT01745588 were found."
+    },
+    "availability": "registered"
+  }
+}
