@@ -1,0 +1,152 @@
+{
+  "$comment": "Дози за повним текстом CYKLONE (таблиця I): карфілзоміб 30-хвилинною інфузією у дні 1, 2, 8, 9, 15, 16 (20 мг/м² у циклі 1, 36 мг/м² з циклу 2 — максимально переносимий рівень); циклофосфамід 300 мг/м² усередину дні 1, 8, 15; талідомід 100 мг усередину дні 1–28; дексаметазон 40 мг усередину дні 1, 8, 15, 22. Цикл 28 днів. Дослідження — у вперше діагностованих, придатних до трансплантації; NCCN включає схему і при рецидиві, але дози для нього не наводить.",
+  "id": "kctd-cycle-1",
+  "short_name": "KCTd (цикл 1)",
+  "name": {
+    "uk": "KCTd (CYKLONE): цикл 1",
+    "en": "KCTd (CYKLONE): cycle 1"
+  },
+  "description": {
+    "uk": "Карфілзоміб 20 мг/м² дні 1, 2, 8, 9, 15, 16; циклофосфамід 300 мг/м² дні 1, 8, 15; талідомід 100 мг дні 1–28; дексаметазон 40 мг дні 1, 8, 15, 22. Цикл 28 днів.",
+    "en": "Carfilzomib 20 mg/m2 on days 1, 2, 8, 9, 15, 16; cyclophosphamide 300 mg/m2 on days 1, 8, 15; thalidomide 100 mg on days 1-28; dexamethasone 40 mg on days 1, 8, 15, 22. 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Mikhael J.R. та ін. Phase Ib/II trial of CYKLONE (cyclophosphamide, carfilzomib, thalidomide and dexamethasone) for newly diagnosed myeloma. Br J Haematol. 2015;169:219-27",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4521972/",
+      "version": "повний текст у PMC; фаза Ib/II, 64 пацієнти",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Багатоцентрове дослідження фази Ib/II без групи порівняння; у фазі I підбирали дозу карфілзомібу.",
+      "en": "A multicentre phase Ib/II study without a comparison group; phase I found the carfilzomib dose."
+    },
+    "population": {
+      "uk": "64 пацієнти з вперше діагностованою мієломою, придатні до трансплантації; дозу, визнану максимально переносимою (20/36 мг/м²), отримали 29.",
+      "en": "64 transplant-eligible patients with newly diagnosed myeloma; 29 received the maximum tolerated dose (20/36 mg/m2)."
+    },
+    "results": {
+      "uk": "Відповідь ≥VGPR після 4 циклів у 59% на максимально переносимій дозі (первинна точка); частковa відповідь і краща у 91%. Двадцятичотиримісячна виживаність без прогресування 76%, загальна 96%.",
+      "en": "VGPR or better after 4 cycles in 59% on the maximum tolerated dose (the primary end point); partial response or better in 91%. Twenty-four-month progression-free survival 76%, overall 96%."
+    },
+    "conduct": {
+      "uk": "Лімфопенія 3 ступеня і вище 38%, нейтропенія 23%, анемія 20%; нейропатія лише 1-го ступеня (31%); задишка 20%.",
+      "en": "Grade 3 or higher lymphopenia 38%, neutropenia 23%, anaemia 20%; neuropathy only grade 1 (31%); dyspnoea 20%."
+    },
+    "trial": {
+      "acronym": "CYKLONE",
+      "nct": "NCT01057225",
+      "phase": "I-II",
+      "randomized": false,
+      "n": 64
+    },
+    "settings": ["ndmm-te", "first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Mikhael J.R. та ін. Br J Haematol. 2015;169:219-27",
+        "pmid": "25683772",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase I",
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "British Journal of Haematology",
+          "issn": "0007-1048",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/25683772/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «British Journal of Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0372544",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-10"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "carfilzomib",
+      "drug_id": "carfilzomib",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 8, 9, 15, 16],
+      "duration_min": 30,
+      "fallback_solvent": "glucose_5",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "20 мг/м² у циклі 1 (CYKLONE), інфузія 30 хв. Розчинник (100 мл 5% глюкози) — за іншими схемами довідника з карфілзомібом: у статті не названий. У циклі 1 — 250–500 мл рідини в/в до і після карфілзомібу.",
+        "en": "20 mg/m2 in cycle 1 (CYKLONE); in cycle 1, 250 to 500 mL of intravenous fluid before and after carfilzomib."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "300 мг/м² усередину (CYKLONE).",
+        "en": "300 mg/m2 by mouth (CYKLONE)."
+      }
+    },
+    {
+      "key": "thalidomide",
+      "drug_id": "thalidomide",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "100 мг щодня в дні 1–28 (CYKLONE). Потрібна профілактика тромбозів.",
+        "en": "100 mg daily on days 1 to 28 (CYKLONE). Thromboprophylaxis is needed."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "40 мг усередину (CYKLONE).",
+        "en": "40 mg by mouth (CYKLONE)."
+      }
+    }
+  ]
+}

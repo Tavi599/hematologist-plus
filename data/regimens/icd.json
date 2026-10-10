@@ -1,0 +1,135 @@
+{
+  "$comment": "Дози за повним текстом MUKeight: іксазоміб 4 мг усередину дні 1, 8, 15; циклофосфамід 500 мг усередину дні 1, 8, 15; дексаметазон 40 мг усередину дні 1–4 і 8–12 (для літніх чи менш здорових стартова доза могла бути 20 мг у дні 1–4 і 12–15). Цикл 28 днів, до прогресування. Реєстр: ISRCTN58227268 (NCT немає).",
+  "id": "icd",
+  "short_name": "ICd",
+  "name": {
+    "uk": "ICd (іксазоміб, циклофосфамід, дексаметазон)",
+    "en": "ICd (ixazomib, cyclophosphamide, dexamethasone)"
+  },
+  "description": {
+    "uk": "Рецидив мієломи. Іксазоміб 4 мг і циклофосфамід 500 мг у дні 1, 8, 15; дексаметазон 40 мг у дні 1–4 і 8–12. Цикл 28 днів.",
+    "en": "Relapsed myeloma. Ixazomib 4 mg and cyclophosphamide 500 mg on days 1, 8, 15; dexamethasone 40 mg on days 1-4 and 8-12. 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": null,
+  "sources": [
+    {
+      "name": "Auner H.W. та ін. Ixazomib with cyclophosphamide and dexamethasone in relapsed or refractory myeloma: MUKeight phase II randomised controlled trial results. Blood Cancer J. 2022;12:52",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8972903/",
+      "version": "повний текст у PMC; фаза II, 112 пацієнтів",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване відкрите дослідження фази II у 33 центрах Великої Британії: ICd проти циклофосфаміду з дексаметазоном (Cd).",
+      "en": "A randomised open-label phase II trial in 33 UK centres: ICd against cyclophosphamide with dexamethasone (Cd)."
+    },
+    "population": {
+      "uk": "112 пацієнтів з рецидивом після талідоміду, леналідоміду й інгібітора протеасоми; медіана віку 70 років, 4 попередні лінії, 74% кволих.",
+      "en": "112 patients with relapse after thalidomide, lenalidomide and a proteasome inhibitor; median age 70 years, 4 prior lines, 74% frail."
+    },
+    "results": {
+      "uk": "Медіана виживаності без прогресування 5,6 міс. з ICd проти 6,7 міс. з Cd (ВР 1,21; 80% ДІ 0,9–1,6; p = 0,36). Відповідь і загальна виживаність не відрізнялися.",
+      "en": "Median progression-free survival 5.6 months with ICd against 6.7 months with Cd (HR 1.21; 80% CI 0.9-1.6; p = 0.36). Response and overall survival did not differ."
+    },
+    "conduct": {
+      "uk": "Зміни доз, пропуски та серйозні небажані події частіші в групі ICd.",
+      "en": "Dose changes, omissions and serious adverse events were more frequent in the ICd arm."
+    },
+    "trial": {
+      "acronym": "MUKeight",
+      "phase": "II",
+      "randomized": true,
+      "n": 112,
+      "comparator": "Циклофосфамід + дексаметазон",
+      "primary_met": false
+    },
+    "settings": ["relapse", "rrmm-late", "frail"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Auner H.W. та ін. Blood Cancer J. 2022;12:52",
+        "pmid": "35365598",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Blood Cancer Journal",
+          "issn": "2044-5385",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35365598/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Blood Cancer Journal» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101568469",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-10"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "ixazomib",
+      "drug_id": "ixazomib",
+      "route": "oral",
+      "dose_value": 4,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "Усередину, щонайменше за годину до їди або через 2 години після (інструкція іксазомібу).",
+        "en": "By mouth, at least an hour before or two hours after food (ixazomib label)."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 500,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "500 мг усередину (MUKeight).",
+        "en": "500 mg by mouth (MUKeight)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 8, 9, 10, 11, 12],
+      "notes": {
+        "uk": "40 мг у дні 1–4 і 8–12. Для літніх чи менш здорових стартова доза могла бути 20 мг у дні 1–4 і 12–15.",
+        "en": "40 mg on days 1 to 4 and 8 to 12. For older or less fit patients the starting dose could be 20 mg on days 1 to 4 and 12 to 15."
+      }
+    }
+  ]
+}

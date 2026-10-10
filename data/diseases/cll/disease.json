@@ -76,6 +76,20 @@
           "regimen_id": "br-cll"
         },
         {
+          "regimen_id": "o-chlorambucil-cycle-1",
+          "notes": {
+            "uk": "CLL11: для літніх із супутніми захворюваннями, коли інгібітори BTK і BCL2 недоступні чи непридатні. Цикл 1: обінутузумаб 100/900/1000/1000 мг, хлорамбуцил 0,5 мг/кг у дні 1 і 15",
+            "en": "CLL11: for older patients with coexisting conditions when BTK and BCL2 inhibitors are unavailable or unsuitable. Cycle 1: obinutuzumab 100/900/1000/1000 mg, chlorambucil 0.5 mg/kg on days 1 and 15"
+          }
+        },
+        {
+          "regimen_id": "o-chlorambucil",
+          "notes": {
+            "uk": "Цикли 2–6: обінутузумаб 1000 мг у день 1, хлорамбуцил 0,5 мг/кг у дні 1 і 15",
+            "en": "Cycles 2 to 6: obinutuzumab 1000 mg on day 1, chlorambucil 0.5 mg/kg on days 1 and 15"
+          }
+        },
+        {
           "regimen_id": "acalabrutinib-mono",
           "notes": {
             "uk": "Зокрема при del(17p)/мутації TP53",

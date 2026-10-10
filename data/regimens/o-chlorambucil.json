@@ -1,0 +1,160 @@
+{
+  "id": "o-chlorambucil",
+  "short_name": "G-Clb (цикли 2–6)",
+  "name": {
+    "uk": "Обінутузумаб + хлорамбуцил (CLL11): цикли 2–6",
+    "en": "Obinutuzumab plus chlorambucil (CLL11): cycles 2 to 6"
+  },
+  "description": {
+    "uk": "Обінутузумаб 1000 мг день 1; хлорамбуцил 0,5 мг/кг дні 1 і 15. Цикл 28 днів, ще 5 циклів.",
+    "en": "Obinutuzumab 1000 mg on day 1; chlorambucil 0.5 mg/kg on days 1 and 15. 28-day cycle, 5 more cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 5,
+  "sources": [
+    {
+      "name": "Goede V. та ін. Obinutuzumab plus chlorambucil in patients with CLL and coexisting conditions. N Engl J Med. 2014;370:1101-10",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24401022/",
+      "version": "резюме; фаза III, 781 пацієнт",
+      "checkedOn": "2026-10-10"
+    },
+    {
+      "name": "FDA label: GAZYVA (obinutuzumab), розділ 2.2 «Рекомендована доза при ХЛЛ» і розділ 14 (CLL11)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=df12ceb2-5b4b-4ab5-a317-2a36bf2a3cda",
+      "version": "SPL від 06.10.2026",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване відкрите дослідження фази III із трьома групами: хлорамбуцил окремо, ритуксимаб + хлорамбуцил, обінутузумаб + хлорамбуцил.",
+      "en": "A randomised open-label phase III trial with three groups: chlorambucil alone, rituximab plus chlorambucil, obinutuzumab plus chlorambucil."
+    },
+    "population": {
+      "uk": "781 пацієнт із раніше не лікованим ХЛЛ і супутніми захворюваннями: CIRS понад 6 балів або кліренс креатиніну 30–69 мл/хв. Медіана віку 73 роки.",
+      "en": "781 patients with previously untreated CLL and coexisting conditions: CIRS above 6 or creatinine clearance 30 to 69 mL/min. Median age 73 years."
+    },
+    "results": {
+      "uk": "Медіана виживаності без прогресування: 26,7 міс. з обінутузумабом проти 11,1 міс. з хлорамбуцилом окремо (ВР 0,18) і 16,3 міс. з ритуксимабом (ВР проти обінутузумабу 0,39). Загальна виживаність краща, ніж з хлорамбуцилом окремо (ВР смерті 0,41). Повна відповідь 20,7% проти 7,0% з ритуксимабом.",
+      "en": "Median progression-free survival: 26.7 months with obinutuzumab against 11.1 months with chlorambucil alone (HR 0.18) and 16.3 months with rituximab (HR against obinutuzumab 0.39). Overall survival was better than with chlorambucil alone (HR for death 0.41). Complete response 20.7% against 7.0% with rituximab."
+    },
+    "conduct": {
+      "uk": "Інфузійні реакції й нейтропенія частіші з обінутузумабом, ніж з ритуксимабом; ризик інфекцій не зріс.",
+      "en": "Infusion reactions and neutropenia were more frequent with obinutuzumab than with rituximab; the risk of infection did not rise."
+    },
+    "trial": {
+      "acronym": "CLL11",
+      "nct": "NCT01010061",
+      "phase": "III",
+      "randomized": true,
+      "n": 781,
+      "comparator": "Хлорамбуцил окремо; ритуксимаб + хлорамбуцил",
+      "primary_met": true
+    },
+    "settings": ["first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Goede V. та ін. N Engl J Med. 2014;370:1101-10",
+        "pmid": "24401022",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Comparative Study",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "The New England Journal of Medicine",
+          "issn": "1533-4406",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/24401022/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «The New England Journal of Medicine» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0255562",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-10"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Не пізніше ніж за 30 хвилин до обінутузумабу (інструкція: 650–1000 мг)",
+        "en": "At least 30 minutes before obinutuzumab (label: 650 to 1000 mg)"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Антигістамінний засіб перед обінутузумабом (інструкція: дифенгідрамін 50 мг)",
+        "en": "An antihistamine before obinutuzumab (label: diphenhydramine 50 mg)"
+      }
+    },
+    {
+      "key": "obinutuzumab",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl, зі 100 мг/год, підвищуючи на 100 мг/год кожні 30 хв до 400 мг/год.",
+        "en": "In 250 mL 0.9% NaCl, from 100 mg/h, raised by 100 mg/h every 30 minutes to 400 mg/h."
+      }
+    },
+    {
+      "key": "chlorambucil",
+      "drug_id": "chlorambucil",
+      "route": "oral",
+      "dose_value": 0.5,
+      "dose_unit": "mg_kg",
+      "days": [1, 15],
+      "notes": {
+        "uk": "0,5 мг/кг у дні 1 і 15 кожного з 6 циклів (CLL11; інструкція обінутузумабу, розділ 14). Таблетки приймають натщесерце.",
+        "en": "0.5 mg/kg on days 1 and 15 of each of the 6 cycles (CLL11; obinutuzumab label, section 14). Tablets are taken on an empty stomach."
+      }
+    }
+  ]
+}

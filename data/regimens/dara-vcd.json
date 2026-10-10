@@ -1,0 +1,160 @@
+{
+  "$comment": "Дози за повним текстом LYRA (Yimer 2019): цикл 28 днів; бортезоміб 1,5 мг/м² підшкірно дні 1, 8, 15; циклофосфамід 300 мг/м² усередину дні 1, 8, 15, 22; дексаметазон 40 мг щотижня (в циклі 1 — 20 мг у дні 1 і 2, далі 40 мг); даратумумаб 8 мг/кг дні 1–2 циклу 1, потім 16 мг/кг щотижня до кінця циклу 2, кожні 2 тижні в циклах 3–6. Дозволено 4–8 циклів індукції.",
+  "id": "dara-vcd",
+  "short_name": "Dara-VCd (цикли 3–6)",
+  "name": {
+    "uk": "Даратумумаб + бортезоміб + циклофосфамід + дексаметазон (LYRA): цикли 3–6",
+    "en": "Daratumumab, bortezomib, cyclophosphamide, dexamethasone (LYRA): cycles 3 to 6"
+  },
+  "description": {
+    "uk": "Даратумумаб 16 мг/кг у дні 1 і 15; бортезоміб дні 1, 8, 15; циклофосфамід дні 1, 8, 15, 22; дексаметазон 40 мг щотижня. Цикл 28 днів; індукція — 4–8 циклів.",
+    "en": "Daratumumab 16 mg/kg on days 1 and 15; bortezomib on days 1, 8, 15; cyclophosphamide on days 1, 8, 15, 22; dexamethasone 40 mg weekly. 28-day cycle; induction is 4 to 8 cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "Yimer H. та ін. Daratumumab, bortezomib, cyclophosphamide and dexamethasone in newly diagnosed and relapsed multiple myeloma: LYRA study. Br J Haematol. 2019;185:492-502",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6593455/",
+      "version": "повний текст у PMC; фаза II, 100 пацієнтів",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Багатоцентрове дослідження фази II без групи порівняння в громадських клініках США.",
+      "en": "A multicentre phase II study without a comparison group in US community practices."
+    },
+    "population": {
+      "uk": "86 пацієнтів із вперше діагностованою і 14 з рецидивною мієломою; і придатні, і непридатні до трансплантації.",
+      "en": "86 patients with newly diagnosed and 14 with relapsed myeloma; both transplant-eligible and ineligible."
+    },
+    "results": {
+      "uk": "Після 4 циклів відповідь ≥VGPR у 44% (первинна кінцева точка), загальна відповідь 79%; наприкінці індукції 56% і 81%. Дванадцятимісячна виживаність без прогресування 87%.",
+      "en": "After 4 cycles VGPR or better in 44% (the primary end point) and overall response 79%; at the end of induction 56% and 81%. Twelve-month progression-free survival 87%."
+    },
+    "conduct": {
+      "uk": "Втома (59%); нейтропенія 3–4 ступеня 13%. Інфузійні реакції у 54%, переважно при першому введенні, 3-го ступеня лише 2%. Розділена перша доза даратумумабу виконувана.",
+      "en": "Fatigue (59%); grade 3-4 neutropenia 13%. Infusion reactions in 54%, mostly at the first dose, grade 3 in only 2%. A split first dose of daratumumab was feasible."
+    },
+    "trial": {
+      "acronym": "LYRA",
+      "nct": "NCT02951819",
+      "phase": "II",
+      "randomized": false,
+      "n": 100
+    },
+    "settings": ["ndmm-te", "ndmm-ti", "first-line"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Yimer H. та ін. Br J Haematol. 2019;185:492-502",
+        "pmid": "30828799",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "4",
+          "notes": {
+            "uk": "Дослідження без рандомізованої групи порівняння: усі пацієнти отримували ту саму схему. За оксфордською шкалою це 4-й рівень.",
+            "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article",
+          "Multicenter Study",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "British Journal of Haematology",
+          "issn": "0007-1048",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30828799/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «British Journal of Haematology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/0372544",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-10"
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "days": [1, 15],
+      "notes": {
+        "uk": "Перед даратумумабом. У публікації премедикація не описана, це практика схем довідника з даратумумабом; стероїдом служить дексаметазон схеми, а антигістамінний засіб і (у циклі 1) монтелукаст додають за інструкцією даратумумабу.",
+        "en": "Before daratumumab. The paper does not describe premedication; this follows the other daratumumab regimens in the reference. The regimen dexamethasone is the steroid; an antihistamine and, in cycle 1, montelukast are added per the daratumumab label."
+      }
+    },
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "iv_infusion",
+      "dose_value": 16,
+      "dose_unit": "mg_kg",
+      "days": [1, 15],
+      "notes": {
+        "uk": "16 мг/кг внутрішньовенно. У LYRA: щотижня до кінця циклу 2, кожні 2 тижні в циклах 3–6, далі раз на 4 тижні; після індукції — до 12 місячних доз підтримки.",
+        "en": "16 mg/kg intravenously. In LYRA: weekly to the end of cycle 2, every 2 weeks in cycles 3 to 6, then every 4 weeks; after induction up to 12 monthly maintenance doses."
+      }
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.5,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "1,5 мг/м² підшкірно (LYRA). Це вище за 1,3 мг/м² у інших схем VCd довідника.",
+        "en": "1.5 mg/m2 subcutaneously (LYRA). This is higher than the 1.3 mg/m2 of the other VCd regimens in the reference."
+      }
+    },
+    {
+      "key": "cyclophosphamide",
+      "drug_id": "cyclophosphamide",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "300 мг/м² усередину щотижня (LYRA).",
+        "en": "300 mg/m2 by mouth weekly (LYRA)."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 8, 15, 22],
+      "notes": {
+        "uk": "40 мг усередину або внутрішньовенно щотижня (LYRA).",
+        "en": "40 mg by mouth or intravenously weekly (LYRA)."
+      }
+    }
+  ]
+}

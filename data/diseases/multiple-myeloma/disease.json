@@ -48,6 +48,34 @@
           "regimen_id": "vcd"
         },
         {
+          "regimen_id": "dara-vcd-cycle-1",
+          "notes": {
+            "uk": "NCCN 1.2027: даратумумаб + CyBorD — для хворих, придатних до трансплантації, і для високого ризику. Дози з LYRA (фаза II): цикл 1, даратумумаб 8 + 16 мг/кг",
+            "en": "NCCN 1.2027: daratumumab with CyBorD, for transplant candidates and for high risk. Doses from LYRA (phase II): cycle 1, daratumumab 8 then 16 mg/kg"
+          }
+        },
+        {
+          "regimen_id": "dara-vcd-cycle-2",
+          "notes": {
+            "uk": "Цикл 2: даратумумаб щотижня",
+            "en": "Cycle 2: weekly daratumumab"
+          }
+        },
+        {
+          "regimen_id": "dara-vcd",
+          "notes": {
+            "uk": "Цикли 3–6: даратумумаб кожні 2 тижні (LYRA: 4–8 циклів індукції)",
+            "en": "Cycles 3 to 6: daratumumab every 2 weeks (LYRA: 4 to 8 induction cycles)"
+          }
+        },
+        {
+          "regimen_id": "bortezomib-mono",
+          "notes": {
+            "uk": "NCCN 1.2027: бортезоміб з дексаметазоном — для хворих, непридатних до трансплантації. Розклад NSSG MM.4 (21 день)",
+            "en": "NCCN 1.2027: bortezomib with dexamethasone, for transplant-ineligible patients. NSSG MM.4 schedule (21 days)"
+          }
+        },
+        {
           "regimen_id": "vrd"
         },
         {
@@ -276,6 +304,13 @@
           "notes": {
             "uk": "NCCN 1.2027: підтримка, за особливих обставин (категорія 2B)",
             "en": "NCCN 1.2027: maintenance, useful in certain circumstances (category 2B)"
+          }
+        },
+        {
+          "regimen_id": "ref-mm-bortezomib-maintenance",
+          "notes": {
+            "uk": "NCCN 1.2027: підтримка бортезомібом — картка без розрахунку",
+            "en": "NCCN 1.2027: bortezomib maintenance - a card without a calculation"
           }
         }
       ]
@@ -645,6 +680,27 @@
           "notes": {
             "uk": "NCCN 1.2027: за особливих обставин, після 3 і більше ліній",
             "en": "NCCN 1.2027: useful in certain circumstances, after three or more lines"
+          }
+        },
+        {
+          "regimen_id": "icd",
+          "notes": {
+            "uk": "NCCN 1.2027: інші рекомендовані. MUKeight (рандомізоване): не краще за Cd, більше токсичності",
+            "en": "NCCN 1.2027: other recommended. MUKeight (randomised): no better than Cd, more toxicity"
+          }
+        },
+        {
+          "regimen_id": "kctd-cycle-1",
+          "notes": {
+            "uk": "NCCN 1.2027: KCTd. Дози з CYKLONE (вперше діагностована ММ); при рецидиві NCCN доз не наводить. Цикл 1: карфілзоміб 20 мг/м²",
+            "en": "NCCN 1.2027: KCTd. Doses from CYKLONE (newly diagnosed myeloma); NCCN gives no doses for relapse. Cycle 1: carfilzomib 20 mg/m2"
+          }
+        },
+        {
+          "regimen_id": "kctd",
+          "notes": {
+            "uk": "Цикли 2+: карфілзоміб 36 мг/м²",
+            "en": "Cycles 2 onwards: carfilzomib 36 mg/m2"
           }
         },
         {

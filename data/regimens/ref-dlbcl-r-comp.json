@@ -1,0 +1,149 @@
+{
+  "$comment": "Лише опис: ліпосомальний доксорубіцин у довіднику — флакон 20 мг, тоді як у R-COMP (Myocet) — НЕпегільована форма 50 мг/м². Це різні препарати з різною дозою, тому розрахунок не робиться, щоб не підставити не ту форму.",
+  "id": "ref-dlbcl-r-comp",
+  "short_name": "R-COMP",
+  "name": {
+    "uk": "R-COMP (R-CHOP з непегільованим ліпосомальним доксорубіцином)",
+    "en": "R-COMP (R-CHOP with non-pegylated liposomal doxorubicin)"
+  },
+  "sources": [
+    {
+      "name": "Sancho J.M. та ін. R-COMP versus R-CHOP as first-line therapy for diffuse large B-cell lymphoma in patients ≥60 years: results of a randomized phase 2 study from the Spanish GELTAMO group. Cancer Med. 2021;10:1314-1326",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7926012/",
+      "version": "повний текст у PMC; фаза II, 90 пацієнтів",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване дослідження фази II: R-CHOP проти R-COMP, кожні 21 день, 6 циклів.",
+      "en": "A randomised phase II trial: R-CHOP against R-COMP, every 21 days for 6 cycles."
+    },
+    "population": {
+      "uk": "90 пацієнтів віком від 60 років з ДВКЛ і фракцією викиду лівого шлуночка ≥55%.",
+      "en": "90 patients aged 60 or over with DLBCL and a left ventricular ejection fraction of 55% or more."
+    },
+    "results": {
+      "uk": "Частка пацієнтів із фракцією викиду <55% наприкінці лікування не відрізнялася (11% з R-CHOP, 7% з R-COMP). Тропонін підвищений в 6-му циклі у 100% проти 63%. Ефективність не відрізнялася.",
+      "en": "The share with an ejection fraction below 55% at the end of treatment did not differ (11% with R-CHOP, 7% with R-COMP). Troponin was raised at cycle 6 in 100% against 63%. Efficacy did not differ."
+    },
+    "conduct": {
+      "uk": "Серцево-судинні події: 5 пацієнтів з R-CHOP (4 епізоди 3 ступеня і вище) і 4 з R-COMP (усі 1–2 ступеня).",
+      "en": "Cardiovascular events: 5 patients with R-CHOP (four episodes of grade 3 or higher) and 4 with R-COMP (all grade 1-2)."
+    },
+    "trial": {
+      "phase": "II",
+      "randomized": true,
+      "n": 90,
+      "nct": "NCT02012088",
+      "comparator": "R-CHOP",
+      "primary_met": false
+    },
+    "settings": ["first-line", "elderly"],
+    "verdict": "caution",
+    "appraisal": [
+      {
+        "publication": "Sancho J.M. та ін. Cancer Med. 2021;10:1314-1326",
+        "pmid": "33492774",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Comparative Study",
+          "Journal Article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Cancer Medicine",
+          "issn": "2045-7634",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/33492774/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Cancer Medicine» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/101595310",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-10"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "R-CHOP, у якому доксорубіцин замінено непегільованим ліпосомальним доксорубіцином (Myocet) 50 мг/м² у день 1; решта препаратів і розклад ті самі. Для літніх з ДВКЛ і ризиком для серця.",
+      "en": "R-CHOP in which doxorubicin is replaced by non-pegylated liposomal doxorubicin (Myocet) 50 mg/m2 on day 1; the other drugs and the schedule are the same. For older patients with DLBCL and a cardiac risk."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин ліпосомальний (непегільований)",
+          "en": "Liposomal doxorubicin (non-pegylated)"
+        },
+        "drug_id": "doxorubicin-liposomal"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон",
+          "en": "Prednisolone"
+        },
+        "drug_id": "prednisolone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Цикл 21 день, 6 циклів: ритуксимаб 375 мг/м², циклофосфамід 750 мг/м², Myocet 50 мг/м², вінкристин 1,4 мг/м² (не більше 2 мг) у день 1; преднізон 60 мг/м² у дні 1–5.",
+        "en": "21-day cycle, 6 cycles: rituximab 375 mg/m2, cyclophosphamide 750 mg/m2, Myocet 50 mg/m2, vincristine 1.4 mg/m2 (at most 2 mg) on day 1; prednisone 60 mg/m2 on days 1-5."
+      },
+      {
+        "uk": "Ліпосомальний доксорубіцин у довіднику — флакон 20 мг (імовірно пегільований, як Caelyx): його не можна підставляти на місце Myocet у цій дозі.",
+        "en": "The liposomal doxorubicin in the reference is a 20 mg vial (probably pegylated, like Caelyx): it must not stand in for Myocet at this dose."
+      }
+    ],
+    "gap": {
+      "uk": "Дослідження не показало зменшення раннього ураження серця за фракцією викиду; перевага лише за тропоніном. У довіднику Myocet немає, тому схему не розраховано.",
+      "en": "The study did not show less early cardiac damage by ejection fraction; the advantage is only in troponin. Myocet is not in the reference, so the regimen is not calculated."
+    }
+  }
+}

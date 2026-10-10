@@ -1,0 +1,119 @@
+{
+  "$comment": "Лише опис: у резюме немає шляху введення, а ефект підтримки не відокремлений від ефекту індукції схемою PAD.",
+  "id": "ref-mm-bortezomib-maintenance",
+  "short_name": "Підтримка бортезомібом",
+  "name": {
+    "uk": "Підтримувальна терапія бортезомібом після трансплантації (HOVON-65/GMMG-HD4)",
+    "en": "Bortezomib maintenance after a transplant (HOVON-65/GMMG-HD4)"
+  },
+  "sources": [
+    {
+      "name": "Sonneveld P. та ін. Bortezomib induction and maintenance treatment in patients with newly diagnosed multiple myeloma: results of the randomized phase III HOVON-65/GMMG-HD4 trial. J Clin Oncol. 2012;30:2946-55",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22802322/",
+      "version": "резюме; фаза III, 827 пацієнтів",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "evidence": {
+    "design": {
+      "uk": "Рандомізоване дослідження фази III: індукція VAD, потім талідомід 50 мг на добу, проти індукції PAD (бортезоміб, доксорубіцин, дексаметазон), потім бортезоміб; між ними — високодозний мелфалан з автотрансплантацією.",
+      "en": "A randomised phase III trial: VAD induction then thalidomide 50 mg a day against PAD induction (bortezomib, doxorubicin, dexamethasone) then bortezomib; high-dose melphalan with an autologous transplant in between."
+    },
+    "population": {
+      "uk": "827 пацієнтів із вперше діагностованою симптомною мієломою, придатні до трансплантації.",
+      "en": "827 patients with newly diagnosed symptomatic myeloma, eligible for a transplant."
+    },
+    "results": {
+      "uk": "Після PAD медіана виживаності без прогресування 35 міс. проти 28 (ВР 0,75); загальна виживаність краща в багатофакторному аналізі (ВР 0,77). Відповідь (включно з майже повною) 34% проти 49% після підтримки бортезомібом. Виграш у групах із креатиніном понад 2 мг/дл і del(17p).",
+      "en": "After PAD, median progression-free survival 35 months against 28 (HR 0.75); overall survival better in multivariate analysis (HR 0.77). Response (including near-complete) 34% against 49% after bortezomib maintenance. A gain in patients with creatinine above 2 mg/dL and del(17p)."
+    },
+    "conduct": {
+      "uk": "Резюме не наводить небажаних подій.",
+      "en": "The abstract gives no adverse events."
+    },
+    "trial": {
+      "acronym": "HOVON-65/GMMG-HD4",
+      "phase": "III",
+      "randomized": true,
+      "n": 827,
+      "comparator": "VAD з підтримкою талідомідом",
+      "primary_met": true
+    },
+    "settings": ["ndmm-te", "maintenance"],
+    "verdict": "option",
+    "appraisal": [
+      {
+        "publication": "Sonneveld P. та ін. J Clin Oncol. 2012;30:2946-55",
+        "pmid": "22802322",
+        "level": {
+          "scale": "oxford-cebm-2011",
+          "value": "2",
+          "notes": {
+            "uk": "Рандомізоване дослідження: пацієнтів розподіляли між схемами випадково. За оксфордською шкалою це 2-й рівень.",
+            "en": "A randomised trial: patients were allocated to the regimens at random. That is level 2 on the Oxford scale."
+          }
+        },
+        "publication_types": [
+          "Clinical Trial, Phase III",
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "journal": {
+          "name": "Journal of Clinical Oncology",
+          "issn": "0732-183X",
+          "medline_indexed": true
+        },
+        "sources": [
+          {
+            "name": "Запис статті в PubMed (типи публікації за класифікацією NLM)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/22802322/",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Каталог NLM, запис журналу «Journal of Clinical Oncology» (статус індексації)",
+            "url": "https://www.ncbi.nlm.nih.gov/nlmcatalog/8309333",
+            "version": "запис на дату звірки",
+            "checkedOn": "2026-10-10"
+          },
+          {
+            "name": "Oxford Centre for Evidence-Based Medicine, рівні доказовості 2011",
+            "url": "https://www.cebm.ox.ac.uk/resources/levels-of-evidence/ocebm-levels-of-evidence",
+            "version": "редакція 2011 року",
+            "checkedOn": "2026-10-10"
+          }
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "summary": {
+      "uk": "Бортезоміб 1,3 мг/м² раз на 2 тижні протягом 2 років після автотрансплантації.",
+      "en": "Bortezomib 1.3 mg/m2 once every 2 weeks for 2 years after an autologous transplant."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Підтримка в групі PAD — бортезоміб 1,3 мг/м² один раз на 2 тижні, 2 роки (у групі VAD — талідомід 50 мг щодня).",
+        "en": "Maintenance in the PAD group was bortezomib 1.3 mg/m2 once every 2 weeks for 2 years (thalidomide 50 mg daily in the VAD group)."
+      },
+      {
+        "uk": "Дослідження порівнювало цілі стратегії (індукція + підтримка), тож внесок підтримки окремо з нього не видно.",
+        "en": "The trial compared whole strategies (induction plus maintenance), so the share of maintenance cannot be seen from it."
+      }
+    ],
+    "gap": {
+      "uk": "Шлях введення і дні циклу в резюме не названі, тому схему не розраховано.",
+      "en": "The route and the cycle days are not named in the abstract, so the regimen is not calculated."
+    }
+  }
+}

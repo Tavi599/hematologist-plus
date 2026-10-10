@@ -1,0 +1,73 @@
+{
+  "$comment": "DHAP за eviQ 833 (вер. 4): без ритуксимабу, для рецидиву лімфоми Ходжкіна (протокол охоплює також неходжкінські лімфоми). Цисплатин 100 мг/м² у 1000 мл 0,9% NaCl за 24 години день 1; цитарабін 2000 мг/м² у 500 мл 0,9% NaCl за 3 години двічі на добу (через 12 годин) день 2; дексаметазон 40 мг дні 1–4. При мобілізації стовбурових клітин потрібен Г-КСФ. Для пацієнтів старших за 70 років — цитарабін 1 г/м². Для рецидиву ЛХ з наміром автотрансплантації eviQ допускає скорочення циклу з 21 до 14 днів.",
+  "id": "dhap",
+  "short_name": "DHAP",
+  "name": {
+    "uk": "DHAP (дексаметазон, цитарабін, цисплатин)",
+    "en": "DHAP (dexamethasone, cytarabine, cisplatin)"
+  },
+  "description": {
+    "uk": "Дексаметазон дні 1–4, цисплатин 100 мг/м² за 24 години день 1, цитарабін 2000 мг/м² двічі (через 12 годин) день 2. Цикл 21 день.",
+    "en": "Dexamethasone on days 1-4, cisplatin 100 mg/m2 over 24 hours on day 1, cytarabine 2000 mg/m2 twice (12 hours apart) on day 2. 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "eviQ: DHAP (дексаметазон, цитарабін, цисплатин), протокол 833, вер. 4 від 20.03.2024",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/833-dhap-dexamethasone-cytarabine-cisplatin",
+      "version": "вер. 4 від 20.03.2024",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4]
+    },
+    {
+      "key": "cisplatin",
+      "drug_id": "cisplatin",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [2],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "dose_options": [
+        {
+          "dose_value": 1000,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Понад 70 років (eviQ 833)",
+            "en": "Over 70 years (eviQ 833)"
+          },
+          "source": {
+            "name": "eviQ: DHAP (дексаметазон, цитарабін, цисплатин), протокол 833, вер. 4 від 20.03.2024",
+            "url": "https://www.eviq.org.au/haematology/lymphoma/833-dhap-dexamethasone-cytarabine-cisplatin",
+            "version": "вер. 4 від 20.03.2024",
+            "checkedOn": "2026-10-10"
+          }
+        }
+      ]
+    }
+  ]
+}
