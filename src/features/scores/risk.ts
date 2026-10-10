@@ -323,6 +323,15 @@ const khorana: Score = {
 
 // ── Lymphoma ─────────────────────────────────────────────────────────────────────────────────
 
+const SCHMITZ_2016 = {
+  name: 'Schmitz N et al. CNS International Prognostic Index: a risk model for CNS relapse in patients with diffuse large B-cell lymphoma treated with R-CHOP. J Clin Oncol 2016;34:3150–6',
+  url: 'https://ascopubs.org/doi/full/10.1200/JCO.2015.65.6520',
+  checked: t(
+    'Повний текст: шість чинників по 1 балу, групи 0–1, 2–3, 4–6 і 2-річна частота ураження ЦНС; там же визначення чинників IPI',
+    'Full text: six factors of 1 point each, groups 0–1, 2–3, 4–6 and the 2-year CNS rates; also the IPI factor definitions',
+  ),
+}
+
 const ipi: Score = {
   id: 'ipi',
   section: 'risk',
@@ -385,6 +394,7 @@ const ipi: Score = {
         'Abstract: the five factors and 5-year survival by group',
       ),
     },
+    SCHMITZ_2016,
     {
       name: 'Zhou Z et al. An enhanced International Prognostic Index (NCCN-IPI). Blood 2014;123:837–42',
       url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5527396/',
@@ -402,6 +412,119 @@ const ipi: Score = {
       ),
     },
   ],
+}
+
+const aaIpi: Score = {
+  id: 'aa-ipi',
+  section: 'risk',
+  title: t('IPI з поправкою на вік (до 60 років)', 'Age-adjusted IPI (60 or younger)'),
+  purpose: t(
+    'Для хворих ≤ 60 років: стадія, ЛДГ, ECOG',
+    'For patients 60 or younger: stage, LDH, ECOG',
+  ),
+  fields: [
+    check('ldh', 'ЛДГ вище норми', 'LDH above normal'),
+    check('ecog', 'ECOG ≥ 2', 'ECOG ≥ 2'),
+    check('stage', 'Стадія III–IV', 'Stage III–IV'),
+  ],
+  compute: (values) =>
+    grouped(['ldh', 'ecog', 'stage'].filter((key) => on(values, key)).length, [
+      {
+        upTo: 0,
+        ...LOW(
+          t(
+            '5-річна виживаність 83% (епоха до ритуксимабу).',
+            '5-year survival 83% (before rituximab).',
+          ),
+        ),
+      },
+      {
+        upTo: 1,
+        label: t('Низький проміжний', 'Low-intermediate'),
+        tone: 'yellow',
+        meaning: t('5-річна виживаність 69%.', '5-year survival 69%.'),
+      },
+      {
+        upTo: 2,
+        label: t('Високий проміжний', 'High-intermediate'),
+        tone: 'orange',
+        meaning: t('5-річна виживаність 46%.', '5-year survival 46%.'),
+      },
+      {
+        upTo: 3,
+        label: t('Високий', 'High'),
+        tone: 'red',
+        meaning: t('5-річна виживаність 32%.', '5-year survival 32%.'),
+      },
+    ]),
+  sources: [
+    {
+      name: "The International Non-Hodgkin's Lymphoma Prognostic Factors Project. A predictive model for aggressive non-Hodgkin's lymphoma. N Engl J Med 1993;329:987–94",
+      url: 'https://pubmed.ncbi.nlm.nih.gov/8141877/',
+      checked: t(
+        'Резюме: три чинники (стадія, ЛДГ, загальний стан) і 5-річна виживаність 83, 69, 46, 32% у чотирьох групах',
+        'Abstract: three factors (stage, LDH, performance status) and 5-year survival of 83, 69, 46, 32% in four groups',
+      ),
+    },
+    SCHMITZ_2016,
+  ],
+  caveat: t(
+    'Відповідність «0, 1, 2, 3 чинники → чотири групи» виведено з того, що трьом чинникам відповідають чотири групи; повного тексту NEJM 1993 у відкритому доступі немає.',
+    'The mapping of 0, 1, 2, 3 factors to the four groups follows from three factors giving four groups; the NEJM 1993 full text is not openly available.',
+  ),
+}
+
+const cnsIpi: Score = {
+  id: 'cns-ipi',
+  section: 'risk',
+  title: t('CNS-IPI (ризик ураження ЦНС при ДВКЛ)', 'CNS-IPI (CNS relapse risk in DLBCL)'),
+  purpose: t(
+    'Фактори IPI + ураження нирок чи наднирників; ДВКЛ на R-CHOP',
+    'IPI factors + kidney or adrenal involvement; DLBCL on R-CHOP',
+  ),
+  fields: [
+    check('age', 'Вік > 60 років', 'Age > 60 years'),
+    check('ldh', 'ЛДГ вище норми', 'LDH above normal'),
+    check('ecog', 'ECOG ≥ 2', 'ECOG ≥ 2'),
+    check('stage', 'Стадія III–IV', 'Stage III–IV'),
+    check('extranodal', 'Більше одного екстранодального вогнища', 'More than one extranodal site'),
+    check('kidney', 'Ураження нирок і/або наднирників', 'Kidney and/or adrenal involvement'),
+  ],
+  compute: (values) =>
+    grouped(
+      ['age', 'ldh', 'ecog', 'stage', 'extranodal', 'kidney'].filter((key) => on(values, key))
+        .length,
+      [
+        {
+          upTo: 1,
+          ...LOW(
+            t(
+              'Ураження ЦНС за 2 роки: 0,6% (перевірка — 0,8%).',
+              'CNS disease at 2 years: 0.6% (validation 0.8%).',
+            ),
+          ),
+        },
+        {
+          upTo: 3,
+          label: t('Проміжний', 'Intermediate'),
+          tone: 'orange',
+          meaning: t(
+            'Ураження ЦНС за 2 роки: 3,4% (перевірка — 3,9%).',
+            'CNS disease at 2 years: 3.4% (validation 3.9%).',
+          ),
+        },
+        {
+          upTo: 6,
+          label: t('Високий', 'High'),
+          tone: 'red',
+          meaning: t(
+            'Ураження ЦНС за 2 роки: 10,2% (перевірка — 12,0%). Автори радять обстеження ЦНС і профілактику.',
+            'CNS disease at 2 years: 10.2% (validation 12.0%). The authors advise CNS investigations and prophylaxis.',
+          ),
+        },
+      ],
+    ),
+  sources: [SCHMITZ_2016],
 }
 
 const nccnIpi: Score = {
@@ -1147,11 +1270,108 @@ const dipss: Score = {
   ],
 }
 
+const mipss70: Score = {
+  id: 'mipss70',
+  section: 'risk',
+  title: t(
+    'MIPSS70 (первинний мієлофіброз, до 70 років)',
+    'MIPSS70 (primary myelofibrosis, 70 or younger)',
+  ),
+  purpose: t(
+    'Клінічні й молекулярні чинники; для хворих віку трансплантації',
+    'Clinical and molecular factors; for transplant-age patients',
+  ),
+  fields: [
+    {
+      kind: 'select',
+      key: 'hmr',
+      label: t(
+        'Мутації високого молекулярного ризику (ASXL1, EZH2, SRSF2, IDH1/2)',
+        'High molecular risk mutations (ASXL1, EZH2, SRSF2, IDH1/2)',
+      ),
+      options: [
+        { value: '0', label: t('Немає', 'None') },
+        { value: '1', label: t('Одна (1 бал)', 'One (1 point)') },
+        { value: '3', label: t('Дві й більше (1 + 2 = 3 бали)', 'Two or more (1 + 2 = 3 points)') },
+      ],
+    },
+    check('haemoglobin', 'Гемоглобін < 100 г/л (1 бал)', 'Haemoglobin < 100 g/L (1 point)'),
+    check('leukocytes', 'Лейкоцити > 25 ×10⁹/л (2 бали)', 'White cells > 25 ×10⁹/L (2 points)'),
+    check('platelets', 'Тромбоцити < 100 ×10⁹/л (2 бали)', 'Platelets < 100 ×10⁹/L (2 points)'),
+    check('blasts', 'Бласти в крові ≥ 2% (1 бал)', 'Blood blasts ≥ 2% (1 point)'),
+    check(
+      'fibrosis',
+      'Фіброз кісткового мозку ≥ 2 ступеня (1 бал)',
+      'Marrow fibrosis grade ≥ 2 (1 point)',
+    ),
+    check('symptoms', 'Конституційні симптоми (1 бал)', 'Constitutional symptoms (1 point)'),
+    check(
+      'noCalr1',
+      'Немає мутації CALR типу 1 чи подібної (1 бал)',
+      'No CALR type 1 or type 1-like mutation (1 point)',
+    ),
+  ],
+  compute: (values) => {
+    if (values.hmr === undefined) return null
+    const points =
+      Number(values.hmr) +
+      (on(values, 'leukocytes') ? 2 : 0) +
+      (on(values, 'platelets') ? 2 : 0) +
+      ['haemoglobin', 'blasts', 'fibrosis', 'symptoms', 'noCalr1'].filter((key) => on(values, key))
+        .length
+    return grouped(points, [
+      {
+        upTo: 1,
+        ...LOW(
+          t(
+            '5-річна загальна виживаність 95%, медіана 27,7 року.',
+            '5-year OS 95%, median 27.7 years.',
+          ),
+        ),
+      },
+      {
+        upTo: 4,
+        label: t('Проміжний', 'Intermediate'),
+        tone: 'orange',
+        meaning: t(
+          '5-річна загальна виживаність 70%, медіана 7,1 року.',
+          '5-year OS 70%, median 7.1 years.',
+        ),
+      },
+      {
+        upTo: 12,
+        label: t('Високий', 'High'),
+        tone: 'red',
+        meaning: t(
+          '5-річна загальна виживаність 29%, медіана 2,3 року.',
+          '5-year OS 29%, median 2.3 years.',
+        ),
+      },
+    ])
+  },
+  sources: [
+    {
+      name: 'Guglielmelli P et al. MIPSS70: Mutation-Enhanced International Prognostic Score System for transplantation-age patients with primary myelofibrosis. J Clin Oncol 2018;36:310–8',
+      url: 'https://ascopubs.org/doi/full/10.1200/JCO.2017.76.4886',
+      checked: t(
+        'Повний текст: бали (1 і 2), загальний максимум 12, групи 0–1, 2–4, ≥ 5 і виживаність',
+        'Full text: the points (1 and 2), a maximum of 12, groups 0–1, 2–4, ≥ 5 and survival',
+      ),
+    },
+  ],
+  caveat: t(
+    'Одна мутація високого ризику дає 1 бал, дві й більше — ще 2 (разом 3): так сходиться максимум 12 балів зі статті. MIPSS70-plus (з каріотипом) тут не рахується.',
+    'One high-risk mutation scores 1, two or more add 2 more (3 in all): that is how the paper reaches its maximum of 12. MIPSS70-plus (with the karyotype) is not calculated here.',
+  ),
+}
+
 export const RISK_SCORES: Score[] = [
   tls,
   khorana,
   ipi,
+  aaIpi,
   nccnIpi,
+  cnsIpi,
   flipi,
   mipi,
   ips,
@@ -1162,4 +1382,5 @@ export const RISK_SCORES: Score[] = [
   elts,
   ipssR,
   dipss,
+  mipss70,
 ]

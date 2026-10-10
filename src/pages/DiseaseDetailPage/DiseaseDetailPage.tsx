@@ -33,6 +33,7 @@ import { SectionNav } from './SectionNav'
 import navClasses from './SectionNav.module.css'
 import treeClasses from '../../features/catalog/TreatmentTree.module.css'
 import { useClosedLines } from './use-closed-lines'
+import { scoresForDisease } from '../../features/scores/areas'
 
 const ARTICLE_ANCHOR = 'disease-article'
 
@@ -100,6 +101,8 @@ function DiseaseView({ catalog, disease }: { catalog: CatalogIndex; disease: Dis
         </Group>
       )}
       {disease.summary !== null && <Text>{localize(disease.summary, language)}</Text>}
+
+      <DiseaseScores diseaseId={disease.id} />
 
       {sections.length > 1 && (
         <SectionNav
@@ -236,5 +239,27 @@ function ArticleBody({ resolved }: { resolved: ReturnType<typeof resolveLocalize
       <ArticleContents markdown={resolved.text} />
       <Markdown>{resolved.text}</Markdown>
     </>
+  )
+}
+
+/** The scores built on this disease, each a link that opens it on the scores page. */
+function DiseaseScores({ diseaseId }: { diseaseId: string }) {
+  const { t } = useTranslation()
+  const language = currentLanguage()
+  const scores = scoresForDisease(diseaseId)
+  if (scores.length === 0) return null
+  return (
+    <Group gap={6} align="center">
+      <Text size="sm" fw={500}>
+        {t('diseaseDetail.scores')}:
+      </Text>
+      {scores.map((score) => (
+        <Anchor key={score.id} component={Link} to={`${routes.scores}?score=${score.id}`} size="sm">
+          <Badge variant="light" color="grape" tt="none" style={{ cursor: 'pointer' }}>
+            {score.title[language]}
+          </Badge>
+        </Anchor>
+      ))}
+    </Group>
   )
 }

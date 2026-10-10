@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
+import { RISK_AREAS, scoresForDisease } from './areas'
 import { GENERAL_SCORES } from './general'
 import { RISK_SCORES, tlsDiseaseRisk } from './risk'
 import type { Values } from './types'
@@ -178,5 +179,47 @@ describe('risk scores', () => {
     expect(group('dipss', { haemoglobin: true, age: true, blasts: true })).toBe('Intermediate-2')
     expect(group('khorana', { site: 'high', platelets: true })).toBe('Intermediate')
     expect(group('khorana', { site: 'very-high', anaemia: true })).toBe('High')
+  })
+})
+
+describe('score groups', () => {
+  it('puts every risk score in exactly one group, and names only diseases in the catalog', () => {
+    for (const entry of RISK_SCORES) {
+      expect(RISK_AREAS.filter((area) => area.scoreIds.includes(entry.id))).toHaveLength(1)
+    }
+    // The catalog's diseases are the folders of data/diseases.
+    const known = new Set(
+      Object.keys(import.meta.glob('../../../data/diseases/*/disease.json')).map((path) =>
+        path.split('/').at(-2)!,
+      ),
+    )
+    expect(known.size).toBeGreaterThan(10)
+    for (const area of RISK_AREAS) for (const id of area.diseases) expect(known).toContain(id)
+  })
+
+  it('lists the disease own scores before those for any malignancy', () => {
+    expect(scoresForDisease('dlbcl').map((entry) => entry.id)).toEqual([
+      'ipi',
+      'aa-ipi',
+      'nccn-ipi',
+      'cns-ipi',
+      'tls-cairo',
+      'khorana',
+    ])
+    expect(scoresForDisease('nope')).toEqual([])
+  })
+
+  it('converts ECOG and Karnofsky both ways', () => {
+    expect(run('ecog-karnofsky', { grade: 'ecog-2' })!.group!.label.en).toBe('Karnofsky 60 / 50%')
+    expect(run('ecog-karnofsky', { grade: 'kps-70' })!.group!.label.en).toBe('ECOG 1')
+  })
+
+  it('CNS-IPI, aaIPI and MIPSS70', () => {
+    const group = (id: string, values: Values) => run(id, values)!.group!.label.en
+    expect(group('cns-ipi', { age: true, ldh: true, kidney: true, stage: true })).toBe('High')
+    expect(group('aa-ipi', { ldh: true, stage: true })).toBe('High-intermediate')
+    // Two or more HMR mutations (3) + leukocytosis (2) = 5: high.
+    expect(group('mipss70', { hmr: '3', leukocytes: true })).toBe('High')
+    expect(group('mipss70', { hmr: '0', haemoglobin: true })).toBe('Low')
   })
 })

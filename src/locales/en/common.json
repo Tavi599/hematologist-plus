@@ -359,7 +359,8 @@
     "regimenCount": "regimens: {{count}}",
     "conditions": "Patient condition",
     "conditionsHint": "Marks the drugs whose label gives a contraindication, a dose reduction or a warning. Hover over or tap a mark for the threshold and the source.",
-    "hideContraindicated": "Hide contraindicated regimens"
+    "hideContraindicated": "Hide contraindicated regimens",
+    "scores": "Scores"
   },
   "catalog": {
     "loading": "Loading reference data…",
@@ -664,6 +665,7 @@
     "none": "Nothing found.",
     "fill": "Fill in the fields to see the result.",
     "invalid": "A value is out of range — check what was entered.",
-    "sources": "Sources"
+    "sources": "Sources",
+    "forAll": "Any patient"
   }
 }

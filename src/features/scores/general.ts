@@ -2,6 +2,7 @@ import { mostellerBsa } from '../../domain/bsa'
 import { DOMAIN_DEFAULTS } from '../../domain/config'
 import { calvertDose, cockcroftGault, creatinineToMgDl } from '../../domain/renal'
 import type { CreatinineUnit } from '../../domain/types'
+import { performanceStatus } from './performance'
 import type { Field, Score, Text2, Values } from './types'
 
 type NumberField = Extract<Field, { kind: 'number' }>
@@ -376,4 +377,13 @@ const anc: Score = {
   sources: [],
 }
 
-export const GENERAL_SCORES: Score[] = [bsa, bmi, crcl, ckdEpi, calvert, calcium, anc]
+export const GENERAL_SCORES: Score[] = [
+  performanceStatus,
+  bsa,
+  bmi,
+  crcl,
+  ckdEpi,
+  calvert,
+  calcium,
+  anc,
+]
