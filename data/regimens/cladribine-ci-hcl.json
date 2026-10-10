@@ -1,5 +1,5 @@
 {
-  "$comment": "Кладрибін безперервною в/в інфузією 0,1 мг/кг на добу 7 днів при волосатоклітинному лейкозі за UpToDate (серія 349 хворих: повна ремісія 91%). Об'єм розчину на добу — практика відділення.",
+  "$comment": "Кладрибін безперервною в/в інфузією 0,1 мг/кг на добу 7 днів при волосатоклітинному лейкозі за UpToDate (серія 349 хворих: повна ремісія 91%). Об'єм розчину на добу — практика відділення. Звірка 2026-10-10: інструкція FDA дає 0,09 мг/кг/добу ×7 діб (для мг/м²: 3,6 мг/м²/добу в дослідженні B); основна доза лишається 0,1 мг/кг за UpToDate, 0,09 — у списку доз.",
   "id": "cladribine-ci-hcl",
   "short_name": "Кладрибін 7 діб (ВКЛ)",
   "name": {
@@ -18,6 +18,12 @@
       "url": "https://www.uptodate.com/contents/treatment-of-hairy-cell-leukemia-hcl-and-hcl-variant",
       "version": "перевірено 2026-10-04",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: Cladribine Injection (Hisun), розділи «Dosage and Administration» і «Clinical Studies» (ГПЛ)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=71c39b37-33b5-42e1-bf4f-93ff751cc7fe",
+      "version": "SPL на дату звірки",
+      "checkedOn": "2026-10-10"
     }
   ],
   "items": [
@@ -34,7 +40,23 @@
       "notes": {
         "uk": "0,1 мг/кг на добу безперервно (UpToDate). Об'єм доби — практика відділення.",
         "en": "0.1 mg/kg a day continuously (UpToDate). The daily volume follows the department's practice."
-      }
+      },
+      "dose_options": [
+        {
+          "dose_value": 0.09,
+          "dose_unit": "mg_kg",
+          "notes": {
+            "uk": "0,09 мг/кг на добу безперервною інфузією 7 днів — доза з інструкції FDA для ГПЛ; UpToDate округлює до 0,1 мг/кг",
+            "en": "0.09 mg/kg a day by continuous infusion for 7 days - the FDA label dose for hairy cell leukaemia; UpToDate rounds it to 0.1 mg/kg"
+          },
+          "source": {
+            "name": "FDA label: Cladribine Injection (Hisun), розділи «Dosage and Administration» і «Clinical Studies» (ГПЛ)",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=71c39b37-33b5-42e1-bf4f-93ff751cc7fe",
+            "version": "SPL на дату звірки",
+            "checkedOn": "2026-10-10"
+          }
+        }
+      ]
     }
   ]
 }
