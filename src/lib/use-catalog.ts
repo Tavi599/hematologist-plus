@@ -15,6 +15,9 @@ export function catalogQueryOptions(fetcher: TableFetcher | null) {
     select: indexCatalog,
     // Kept in memory for the whole session so the persisted copy is always available offline.
     gcTime: Infinity,
+    // The catalog changes when a regimen or a drug is corrected, and a physician who was told so
+    // should see it on the next page, not an hour later; refetching it is cheap.
+    staleTime: 5 * 60 * 1000,
   })
 }
 
