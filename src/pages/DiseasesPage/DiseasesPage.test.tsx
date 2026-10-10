@@ -67,4 +67,17 @@ describe('DiseasesPage search', () => {
     renderWithProviders(<DiseasesPage />)
     expect(await screen.findByText('Клас МКХ-10: C')).toBeInTheDocument()
   })
+
+  it('lists the conditions that need irradiated components, apart from the catalog', async () => {
+    renderWithProviders(<DiseasesPage />)
+    expect(
+      await screen.findByRole('heading', {
+        name: 'Стани, що потребують переливання опромінених компонентів крові',
+      }),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText('Лімфома Ходжкіна — будь-яка стадія, дорослі й діти'),
+    ).toBeInTheDocument()
+    expect(screen.getByText('Ритуксимаб сам по собі (1B)')).toBeInTheDocument()
+  })
 })

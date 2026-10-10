@@ -667,5 +667,18 @@
     "invalid": "A value is out of range — check what was entered.",
     "sources": "Sources",
     "forAll": "Any patient"
+  },
+  "irradiated": {
+    "title": "Conditions that need irradiated blood components",
+    "lead": "Irradiating cellular components prevents transfusion-associated graft-versus-host disease, rare and nearly always fatal. The list follows the British Society for Haematology guideline (BSH 2020).",
+    "who": "Who",
+    "duration": "For how long",
+    "grade": "Grade",
+    "notNeeded": "Not routinely needed",
+    "components": "Components and practice",
+    "gradeHint": "Grade as GRADE in the guideline: 1 strong, 2 weak recommendation; A–C quality of evidence.",
+    "checked": "checked {{date}}",
+    "badge": "irradiated components",
+    "link": "Irradiated blood components"
   }
 }

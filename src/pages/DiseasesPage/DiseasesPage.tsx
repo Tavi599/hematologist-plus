@@ -1,10 +1,11 @@
 import { Anchor, Badge, Card, Group, Stack, Text, TextInput, Title } from '@mantine/core'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router'
+import { Link, useSearchParams } from 'react-router'
 
 import { routes } from '../../app/routes'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
+import { IRRADIATED_ANCHOR, IrradiatedSection } from '../../features/irradiated/IrradiatedSection'
 import { ICD10_SYSTEM_ID, primaryCode, type CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
@@ -14,8 +15,22 @@ export function DiseasesPage() {
 
   return (
     <Stack>
-      <Title order={1}>{t('diseases.title')}</Title>
+      <Group justify="space-between" align="baseline" wrap="wrap">
+        <Title order={1}>{t('diseases.title')}</Title>
+        {/* The section below the list is long to scroll to; the link takes the reader there. */}
+        <Anchor
+          component="button"
+          type="button"
+          onClick={() =>
+            document.getElementById(IRRADIATED_ANCHOR)?.scrollIntoView({ block: 'start' })
+          }
+        >
+          {t('irradiated.link')} ↓
+        </Anchor>
+      </Group>
       <CatalogGate>{(catalog) => <DiseaseList catalog={catalog} />}</CatalogGate>
+      {/* Apart from the catalog: it needs no database and is there offline too. */}
+      <IrradiatedSection />
     </Stack>
   )
 }
@@ -27,6 +42,18 @@ function icdChapter(code: string | null): string {
 
 function DiseaseList({ catalog }: { catalog: CatalogIndex }) {
   const { t } = useTranslation()
+  const [searchParams] = useSearchParams()
+  const toIrradiated = searchParams.get('section') === 'irradiated'
+  // A link from a disease page lands on the section; the list above it is laid out by now, as
+  // this runs once the catalog has loaded.
+  useEffect(() => {
+    if (!toIrradiated) return
+    const timer = window.setTimeout(
+      () => document.getElementById(IRRADIATED_ANCHOR)?.scrollIntoView({ block: 'start' }),
+      300,
+    )
+    return () => window.clearTimeout(timer)
+  }, [toIrradiated])
   const language = currentLanguage()
   const [search, setSearch] = useState('')
 

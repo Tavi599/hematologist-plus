@@ -29,6 +29,7 @@ import { PATIENT_CONDITIONS, type CautionLevel, type PatientCondition } from '..
 import { CautionBadges } from './CautionBadges'
 import { CautionOverview } from './CautionOverview'
 import type { TreatmentNode } from '../../schemas/catalog'
+import { IRRADIATION_DRUGS } from '../irradiated/indications'
 import { RegimenReference } from './RegimenReference'
 import classes from './TreatmentTree.module.css'
 import {
@@ -395,6 +396,7 @@ function TreatmentNodeView({
                         regimenId={regimen!.id}
                         conditions={conditions}
                       />
+                      <IrradiationMark catalog={catalog} regimenId={regimen!.id} />
                       {needsPremedication(catalog, regimen!.id) && (
                         <Text size="xs" c="orange.8">
                           {t('diseaseDetail.premedication')}
@@ -441,6 +443,34 @@ const KIND_ACCENT: Partial<Record<TreatmentNode['kind'], string>> = {
   stage: 'red',
   trial: 'yellow',
   reference: 'cyan',
+}
+
+/**
+ * A regimen with a purine analogue, alemtuzumab or ATG: the patient will need irradiated
+ * blood components (BSH 2020), for life after a purine analogue.
+ */
+function IrradiationMark({ catalog, regimenId }: { catalog: CatalogIndex; regimenId: string }) {
+  const { t } = useTranslation()
+  const language = currentLanguage()
+  const reasons = [
+    ...new Set(
+      (catalog.itemsByRegimen.get(regimenId) ?? [])
+        .filter((item) => item.role === 'main' && IRRADIATION_DRUGS[item.drug_id])
+        .map((item) => item.drug_id),
+    ),
+  ]
+  if (reasons.length === 0) return null
+  const why = reasons
+    .map((drugId) => {
+      const drug = catalog.drugs.get(drugId)
+      return `${drug ? localize(drug.name, language) : drugId}: ${IRRADIATION_DRUGS[drugId]![language]}`
+    })
+    .join('; ')
+  return (
+    <Text size="xs" c="grape.7" title={`BSH 2020 — ${why}`}>
+      {t('irradiated.badge')} · {why}
+    </Text>
+  )
 }
 
 /** Does the regimen give a drug whose label asks for premedication? */
