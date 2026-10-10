@@ -40,6 +40,47 @@
       ]
     }
   ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Помірна й тяжка (білірубін > 1,5 × ВМН): у циклі 1 — 0,7 мг/м², далі 1 або 0,5 мг/м² за переносимістю. Легка — без змін",
+        "en": "Moderate or severe (bilirubin > 1.5 × ULN): 0.7 mg/m² in cycle 1, then 1 or 0.5 mg/m² by tolerance. Mild: no change"
+      },
+      "source": {
+        "name": "FDA label: VELCADE (bortezomib), 2.8, 8.7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1521d321-e724-4ffc-adad-34bf4f44fac7",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "neuropathy",
+      "level": "caution",
+      "notes": {
+        "uk": "Наявна тяжка нейропатія — лише після ретельної оцінки користі й ризику; за наявної чи ризику нейропатії можна почати з п/ш введення",
+        "en": "Pre-existing severe neuropathy: only after a careful risk-benefit assessment; with pre-existing neuropathy or its risk, subcutaneous use may be started"
+      },
+      "source": {
+        "name": "FDA label: VELCADE (bortezomib), 2.7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1521d321-e724-4ffc-adad-34bf4f44fac7",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "cardiac",
+      "level": "caution",
+      "notes": {
+        "uk": "Можлива поява чи погіршення серцевої недостатності, зниження ФВ ЛШ; за наявної хвороби серця — частий контроль",
+        "en": "Heart failure may develop or worsen and LVEF fall; with existing heart disease, monitor frequently"
+      },
+      "source": {
+        "name": "FDA label: VELCADE (bortezomib), 5.3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1521d321-e724-4ffc-adad-34bf4f44fac7",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s2-5",

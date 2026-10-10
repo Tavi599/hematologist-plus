@@ -18,6 +18,21 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Комбінована терапія ММ: КК 30–60 мл/хв — 10 мг/добу; КК < 30 без діалізу — 15 мг через день; діаліз — 5 мг/добу, у дні діалізу після нього. Підтримка: 5 / 2,5 / 2,5 мг",
+        "en": "Myeloma combination therapy: CrCl 30-60 mL/min 10 mg daily; CrCl < 30 not on dialysis 15 mg every other day; dialysis 5 mg daily, after dialysis on dialysis days. Maintenance: 5 / 2.5 / 2.5 mg"
+      },
+      "source": {
+        "name": "FDA label: REVLIMID (lenalidomide), 2.6, табл. 3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fa97bf5-28a2-48f1-8955-f56012d296be",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s10",

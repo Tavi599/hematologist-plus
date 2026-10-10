@@ -23,6 +23,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "contraindicated",
+      "notes": {
+        "uk": "КК < 30 мл/хв — не застосовувати",
+        "en": "CrCl < 30 mL/min: do not use"
+      },
+      "source": {
+        "name": "FDA label: BENDEKA (bendamustine), 8.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ace9a43b-f9bd-4896-abfe-0ef4fec67ddf",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "contraindicated",
+      "notes": {
+        "uk": "АСТ або АЛТ 2,5–10 × ВМН із білірубіном 1,5–3 × ВМН, або білірубін > 3 × ВМН — не застосовувати",
+        "en": "AST or ALT 2.5-10 × ULN with bilirubin 1.5-3 × ULN, or bilirubin > 3 × ULN: do not use"
+      },
+      "source": {
+        "name": "FDA label: BENDEKA (bendamustine), 8.7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ace9a43b-f9bd-4896-abfe-0ef4fec67ddf",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s25",

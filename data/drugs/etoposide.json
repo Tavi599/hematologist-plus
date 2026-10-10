@@ -23,6 +23,21 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "КК 15–50 мл/хв: 75% дози; КК < 15 — розглянути подальше зниження",
+        "en": "CrCl 15-50 mL/min: 75% of the dose; CrCl < 15: consider a further reduction"
+      },
+      "source": {
+        "name": "FDA label: etoposide injection, Dosage and Administration",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6dfedeff-a807-4405-a482-2f7109ad31c9",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s100",

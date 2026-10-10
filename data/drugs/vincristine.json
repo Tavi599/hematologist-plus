@@ -24,6 +24,34 @@
       "checkedOn": "2026-10-03"
     }
   ],
+  "cautions": [
+    {
+      "condition": "neuropathy",
+      "level": "caution",
+      "notes": {
+        "uk": "Нейротоксичний; демієлінізуюча форма хвороби Шарко–Марі–Тута — протипоказання",
+        "en": "Neurotoxic; the demyelinating form of Charcot-Marie-Tooth disease is a contraindication"
+      },
+      "source": {
+        "name": "FDA label: vincristine sulfate injection, Contraindications, Warnings",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49596de6-ab18-49d1-9e5b-30968fc21c36",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Печінкова дисфункція може порушити метаболізм через CYP3A",
+        "en": "Liver dysfunction may impair its CYP3A metabolism"
+      },
+      "source": {
+        "name": "FDA label: vincristine sulfate injection, Clinical Pharmacology",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49596de6-ab18-49d1-9e5b-30968fc21c36",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s1",

@@ -18,6 +18,21 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "КК 50–60 мл/хв: 3,5 мг; 40–49: 3,3 мг; 30–39: 3 мг; КК < 30 — не рекомендовано",
+        "en": "CrCl 50-60 mL/min: 3.5 mg; 40-49: 3.3 mg; 30-39: 3 mg; CrCl < 30: not recommended"
+      },
+      "source": {
+        "name": "FDA label: zoledronic acid injection, 2.2, 2.4",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20cd29cc-cef5-48c4-adfe-6b3dfee0ab61",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s4",

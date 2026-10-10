@@ -18,6 +18,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "КК < 30 мл/хв або діаліз: стартова доза 3 мг",
+        "en": "CrCl < 30 mL/min or dialysis: starting dose 3 mg"
+      },
+      "source": {
+        "name": "FDA label: NINLARO (ixazomib), 2.4",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=038f2461-834b-4488-9ebd-863c83eef5a7",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Помірна й тяжка (білірубін > 1,5 × ВМН): стартова доза 3 мг",
+        "en": "Moderate or severe (bilirubin > 1.5 × ULN): starting dose 3 mg"
+      },
+      "source": {
+        "name": "FDA label: NINLARO (ixazomib), 2.3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=038f2461-834b-4488-9ebd-863c83eef5a7",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s3",

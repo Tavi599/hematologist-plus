@@ -27,6 +27,7 @@ import {
   sourcesSchema,
   treatmentNodeKindSchema,
   routeAlternativeSchema,
+  drugCautionSchema,
   unitEquivalenceSchema,
 } from '../../src/schemas/common'
 import { EMPTY_PRINT_FORMS, printFormsFileSchema } from '../../src/schemas/print-forms'
@@ -89,6 +90,8 @@ export const drugFileSchema = z.strictObject({
   unit_equivalence: unitEquivalenceSchema.nullable().default(null),
   /** Routes the label allows at the same dose; see routeAlternativeSchema. */
   route_alternatives: z.array(routeAlternativeSchema).nullable().default(null),
+  /** What the label says for kidney or liver impairment, heart disease, neuropathy. */
+  cautions: z.array(drugCautionSchema).nullable().default(null),
   review_rules: reviewRulesSchema.nullable().default(null),
   notes: optionalLocalized,
   sort_order: sortOrder,

@@ -23,6 +23,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "contraindicated",
+      "notes": {
+        "uk": "Наявна ниркова недостатність",
+        "en": "Pre-existing renal impairment"
+      },
+      "source": {
+        "name": "FDA label: cisplatin injection, Contraindications",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8d170f6f-37d7-41ce-aae2-33307a6ef3ae",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "neuropathy",
+      "level": "caution",
+      "notes": {
+        "uk": "Нейропатії, можуть бути незворотними; літні вразливіші",
+        "en": "Neuropathies, possibly irreversible; older patients more susceptible"
+      },
+      "source": {
+        "name": "FDA label: cisplatin injection, Warnings",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8d170f6f-37d7-41ce-aae2-33307a6ef3ae",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s50",

@@ -327,7 +327,10 @@
     "referencesWritten": "Written in the department from: {{source}}. The guideline's own text is not stored.",
     "sourceOwn": "Our article",
     "contents": "Contents",
-    "regimenCount": "regimens: {{count}}"
+    "regimenCount": "regimens: {{count}}",
+    "conditions": "Patient condition",
+    "conditionsHint": "Marks the drugs whose label gives a contraindication, a dose reduction or a warning. Hover over or tap a mark for the threshold and the source.",
+    "hideContraindicated": "Hide contraindicated regimens"
   },
   "catalog": {
     "loading": "Loading reference data…",
@@ -610,5 +613,16 @@
       "high-risk": "high cytogenetic risk",
       "maintenance": "maintenance"
     }
+  },
+  "condition": {
+    "renal": "Renal impairment",
+    "hepatic": "Hepatic impairment",
+    "cardiac": "Significant heart disease",
+    "neuropathy": "Severe neuropathy"
+  },
+  "cautionLevel": {
+    "contraindicated": "contraindicated",
+    "dose_reduction": "reduce the dose",
+    "caution": "caution"
   }
 }

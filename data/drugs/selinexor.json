@@ -28,6 +28,21 @@
       "checkedOn": "2026-10-03"
     }
   ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Тяжка (білірубін > 3 × ВМН): 80 мг раз на тиждень із бортезомібом і дексаметазоном, 100 мг раз на тиждень із дексаметазоном. Легка й помірна — без змін",
+        "en": "Severe (bilirubin > 3 × ULN): 80 mg weekly with bortezomib and dexamethasone, 100 mg weekly with dexamethasone. Mild or moderate: no change"
+      },
+      "source": {
+        "name": "FDA label: XPOVIO (selinexor), 2.5, 8.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6dd2682-75a6-4863-90a8-a3197f6f78a8",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "t20",

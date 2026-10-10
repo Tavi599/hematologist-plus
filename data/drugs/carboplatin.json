@@ -18,6 +18,21 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "КК 41–59 мл/хв: 250 мг/м²; 16–40 мл/хв: 200 мг/м² у день 1; КК < 15 — даних для рекомендації замало",
+        "en": "CrCl 41-59 mL/min: 250 mg/m²; 16-40 mL/min: 200 mg/m² on day 1; CrCl < 15: too few data for a recommendation"
+      },
+      "source": {
+        "name": "FDA label: carboplatin injection, Dosage and Administration",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4baa639-287b-4d97-923f-ce5c6add531c",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s150",

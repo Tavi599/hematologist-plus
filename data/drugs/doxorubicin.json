@@ -23,6 +23,47 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "cardiac",
+      "level": "contraindicated",
+      "notes": {
+        "uk": "Тяжка міокардіальна недостатність або інфаркт міокарда за останні 4–6 тижнів. Кардіоміопатія залежить від кумулятивної дози (1–20% при 300–500 мг/м²); ФВ ЛШ — до і під час лікування",
+        "en": "Severe myocardial insufficiency or myocardial infarction in the past 4-6 weeks. Cardiomyopathy grows with the cumulative dose (1-20% at 300-500 mg/m²); LVEF before and during treatment"
+      },
+      "source": {
+        "name": "FDA label: ADRIAMYCIN (doxorubicin), 4, 5.1",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0f153c1e-efce-4276-8273-d9e4c8455d16",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Білірубін 1,2–3 мг/дл (20–51 мкмоль/л): дозу на 50% менше; 3,1–5 мг/дл (52–85 мкмоль/л): на 75% менше",
+        "en": "Bilirubin 1.2-3 mg/dL (20-51 µmol/L): reduce the dose by 50%; 3.1-5 mg/dL (52-85 µmol/L): by 75%"
+      },
+      "source": {
+        "name": "FDA label: ADRIAMYCIN (doxorubicin), 2.2",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0f153c1e-efce-4276-8273-d9e4c8455d16",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "contraindicated",
+      "notes": {
+        "uk": "Child-Pugh C або білірубін > 5 мг/дл (> 85 мкмоль/л)",
+        "en": "Child-Pugh C or bilirubin > 5 mg/dL (> 85 µmol/L)"
+      },
+      "source": {
+        "name": "FDA label: ADRIAMYCIN (doxorubicin), 4",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0f153c1e-efce-4276-8273-d9e4c8455d16",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s50",

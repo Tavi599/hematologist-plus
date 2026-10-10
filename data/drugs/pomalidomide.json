@@ -23,6 +23,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Тяжка, на гемодіалізі: 3 мг/добу, у дні діалізу — після нього",
+        "en": "Severe, on haemodialysis: 3 mg daily, after dialysis on dialysis days"
+      },
+      "source": {
+        "name": "FDA label: POMALYST (pomalidomide), 2.7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2b25ef01-5c9e-11e1-b86c-0800200c9a66",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Child-Pugh A або B: 3 мг/добу; Child-Pugh C: 2 мг/добу",
+        "en": "Child-Pugh A or B: 3 mg daily; Child-Pugh C: 2 mg daily"
+      },
+      "source": {
+        "name": "FDA label: POMALYST (pomalidomide), 2.8",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2b25ef01-5c9e-11e1-b86c-0800200c9a66",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s4",

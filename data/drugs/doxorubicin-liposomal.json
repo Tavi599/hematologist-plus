@@ -13,6 +13,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "cardiac",
+      "level": "caution",
+      "notes": {
+        "uk": "Кардіоміопатія, ризик залежить від кумулятивної дози антрациклінів (11% при 450–550 мг/м²)",
+        "en": "Cardiomyopathy, the risk growing with the cumulative anthracycline dose (11% at 450-550 mg/m²)"
+      },
+      "source": {
+        "name": "FDA label: DOXIL (doxorubicin liposomal), 5.1",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c153e9e-4cf2-4ac7-9cf9-16f9b48d7dce",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Білірубін ≥ 1,2 мг/дл (≥ 20 мкмоль/л): дозу зменшити",
+        "en": "Bilirubin ≥ 1.2 mg/dL (≥ 20 µmol/L): reduce the dose"
+      },
+      "source": {
+        "name": "FDA label: DOXIL (doxorubicin liposomal), 8.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c153e9e-4cf2-4ac7-9cf9-16f9b48d7dce",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s20",

@@ -9,6 +9,7 @@ import {
   Stack,
   Switch,
   Text,
+  Tooltip,
   UnstyledButton,
 } from '@mantine/core'
 import { useMemo, useState } from 'react'
@@ -17,17 +18,20 @@ import { Link } from 'react-router'
 
 import { routes } from '../../app/routes'
 import { regimenAvailability } from '../../lib/availability'
+import { contraindicated, regimenCautions } from '../../lib/cautions'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage } from '../../lib/i18n'
 import { useOnlyObtainable } from '../../lib/only-obtainable'
 import { localize } from '../../lib/localized'
 import { PREMEDICATION_ADVISED } from '../../lib/premedication'
+import { PATIENT_CONDITIONS, type CautionLevel, type PatientCondition } from '../../schemas/common'
 import { RegimenReference } from './RegimenReference'
 import classes from './TreatmentTree.module.css'
 import {
   countRegimens,
   drugsInTree,
   filterTree,
+  regimensInTree,
   splitSituations,
   type FilteredNode,
 } from './treatment-filter'
@@ -44,14 +48,38 @@ export function TreatmentTree({
   const language = currentLanguage()
   const [drugIds, setDrugIds] = useState<string[]>([])
   const [onlyObtainable, setOnlyObtainable] = useOnlyObtainable()
+  const [conditions, setConditions] = useState<PatientCondition[]>([])
+  // Off at first: the filter does not know how severe the condition is, the physician does.
+  const [hideContraindicated, setHideContraindicated] = useState(false)
 
   const drugs = useMemo(
     () => drugsInTree(catalog, diseaseId, (drug) => localize(drug.name, language)),
     [catalog, diseaseId, language],
   )
+  // A regimen with a drug the label forbids for the patient's condition is taken out when the
+  // physician asks for it; the rest stay with their marks.
+  const excluded = useMemo(
+    () =>
+      hideContraindicated && conditions.length > 0
+        ? new Set(
+            [...regimensInTree(catalog, diseaseId)].filter((id) =>
+              contraindicated(catalog, id, conditions),
+            ),
+          )
+        : new Set<string>(),
+    [catalog, diseaseId, conditions, hideContraindicated],
+  )
   const nodes = useMemo(
-    () => filterTree(catalog, diseaseId, drugIds, onlyObtainable),
-    [catalog, diseaseId, drugIds, onlyObtainable],
+    () => filterTree(catalog, diseaseId, drugIds, onlyObtainable, excluded),
+    [catalog, diseaseId, drugIds, onlyObtainable, excluded],
+  )
+  const excludedShown = useMemo(
+    () =>
+      excluded.size === 0
+        ? 0
+        : countRegimens(filterTree(catalog, diseaseId, drugIds, onlyObtainable)) -
+          countRegimens(nodes),
+    [catalog, diseaseId, drugIds, onlyObtainable, excluded, nodes],
   )
   const hidden = useMemo(
     () =>
@@ -102,8 +130,48 @@ export function TreatmentTree({
           )}
         </Stack>
       )}
+      <Stack gap={4}>
+        <Text size="sm" fw={500}>
+          {t('diseaseDetail.conditions')}
+        </Text>
+        <Text size="xs" c="dimmed">
+          {t('diseaseDetail.conditionsHint')}
+        </Text>
+        <Chip.Group
+          multiple
+          value={conditions}
+          onChange={(value) => setConditions(value as PatientCondition[])}
+        >
+          <Group gap={6}>
+            {PATIENT_CONDITIONS.map((condition) => (
+              <Chip key={condition} value={condition} size="xs" variant="outline" color="red">
+                {t(`condition.${condition}`)}
+              </Chip>
+            ))}
+          </Group>
+        </Chip.Group>
+        {conditions.length > 0 && (
+          <Switch
+            size="xs"
+            label={t('diseaseDetail.hideContraindicated')}
+            description={
+              hideContraindicated && excludedShown > 0
+                ? t('diseaseDetail.hiddenCount', { count: excludedShown })
+                : undefined
+            }
+            checked={hideContraindicated}
+            onChange={(event) => setHideContraindicated(event.currentTarget.checked)}
+          />
+        )}
+      </Stack>
       {nodes.map((filtered) => (
-        <TreatmentNodeView key={filtered.node.id} catalog={catalog} filtered={filtered} depth={0} />
+        <TreatmentNodeView
+          key={filtered.node.id}
+          catalog={catalog}
+          filtered={filtered}
+          depth={0}
+          conditions={conditions}
+        />
       ))}
     </Stack>
   )
@@ -113,10 +181,12 @@ function TreatmentNodeView({
   catalog,
   filtered,
   depth,
+  conditions,
 }: {
   catalog: CatalogIndex
   filtered: FilteredNode
   depth: number
+  conditions: readonly PatientCondition[]
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
@@ -248,6 +318,11 @@ function TreatmentNodeView({
                           {name}
                         </Text>
                       )}
+                      <CautionBadges
+                        catalog={catalog}
+                        regimenId={regimen!.id}
+                        conditions={conditions}
+                      />
                       {needsPremedication(catalog, regimen!.id) && (
                         <Text size="xs" c="orange.8">
                           {t('diseaseDetail.premedication')}
@@ -279,11 +354,76 @@ function TreatmentNodeView({
               catalog={catalog}
               filtered={child}
               depth={depth + 1}
+              conditions={conditions}
             />
           ))}
         </Stack>
       </div>
     </Stack>
+  )
+}
+
+const LEVEL_COLOR: Record<CautionLevel, string> = {
+  contraindicated: 'red',
+  dose_reduction: 'orange',
+  caution: 'yellow',
+}
+
+/**
+ * The regimen's drugs whose label speaks to the patient's conditions: the drug and how strongly,
+ * with the label's own threshold and dose on hover or tap.
+ */
+function CautionBadges({
+  catalog,
+  regimenId,
+  conditions,
+}: {
+  catalog: CatalogIndex
+  regimenId: string
+  conditions: readonly PatientCondition[]
+}) {
+  const { t } = useTranslation()
+  const language = currentLanguage()
+  const found = regimenCautions(catalog, regimenId, conditions)
+  if (found.length === 0) return null
+  return (
+    <Group gap={4} mt={2}>
+      {found.map(({ drugId, level, cautions }) => {
+        const drug = catalog.drugs.get(drugId)
+        const name = drug ? localize(drug.name, language) : drugId
+        return (
+          <Tooltip
+            key={drugId}
+            multiline
+            w={320}
+            withArrow
+            events={{ hover: true, focus: true, touch: true }}
+            label={
+              <Stack gap={4}>
+                {cautions.map((caution, index) => (
+                  <Text key={index} size="xs">
+                    <b>{t(`condition.${caution.condition}`)}</b> ·{' '}
+                    {t(`cautionLevel.${caution.level}`)}: {localize(caution.notes, language)} (
+                    {caution.source.name})
+                  </Text>
+                ))}
+              </Stack>
+            }
+          >
+            <Badge
+              size="xs"
+              variant="light"
+              color={LEVEL_COLOR[level]}
+              tt="none"
+              tabIndex={0}
+              style={{ cursor: 'help' }}
+            >
+              {name}: {t(`cautionLevel.${level}`)}
+            </Badge>
+          </Tooltip>
+        )
+      })}
+    </Group>
   )
 }
 

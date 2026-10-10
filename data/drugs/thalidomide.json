@@ -18,6 +18,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "neuropathy",
+      "level": "caution",
+      "notes": {
+        "uk": "Спричиняє периферичну нейропатію, яка може бути незворотною; при симптомах — відмінити, відновлювати лише після повернення до вихідного стану",
+        "en": "Causes peripheral neuropathy that may be irreversible; stop on symptoms and restart only once back to baseline"
+      },
+      "source": {
+        "name": "FDA label: THALOMID (thalidomide), 5.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2eda833b-1357-4ed4-a093-194524fcb061",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "cardiac",
+      "level": "caution",
+      "notes": {
+        "uk": "Брадикардія, деякі випадки потребували втручання",
+        "en": "Bradycardia, some cases needing intervention"
+      },
+      "source": {
+        "name": "FDA label: THALOMID (thalidomide), 5.11",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2eda833b-1357-4ed4-a093-194524fcb061",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s100",

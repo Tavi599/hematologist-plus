@@ -18,6 +18,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Child-Pugh C: добову дозу на 50% менше, ретельніший нагляд",
+        "en": "Child-Pugh C: halve the daily dose and monitor more closely"
+      },
+      "source": {
+        "name": "FDA label: VENCLEXTA (venetoclax), 2.7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b118a40d-6b56-cee3-10f6-ded821a97018",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "КК < 80 мл/хв підвищує ризик синдрому лізису пухлини",
+        "en": "CrCl < 80 mL/min raises the risk of tumour lysis syndrome"
+      },
+      "source": {
+        "name": "FDA label: VENCLEXTA (venetoclax), 2.4",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b118a40d-6b56-cee3-10f6-ded821a97018",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s10",

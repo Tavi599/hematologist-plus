@@ -19,6 +19,47 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "Тяжка (КК 10–24 мл/хв): більше токсичних метаболітів — стежити за токсичністю",
+        "en": "Severe (CrCl 10-24 mL/min): more toxic metabolites; watch for toxicity"
+      },
+      "source": {
+        "name": "FDA label: cyclophosphamide capsules, 8.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d6447e3-22c9-48d9-87c0-d0b576d7ea9e",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Тяжка: менше активного метаболіту, ефективність може бути нижчою",
+        "en": "Severe: less active metabolite, efficacy may be lower"
+      },
+      "source": {
+        "name": "FDA label: cyclophosphamide capsules, 8.7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d6447e3-22c9-48d9-87c0-d0b576d7ea9e",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "cardiac",
+      "level": "caution",
+      "notes": {
+        "uk": "Міокардит, перикардит, аритмії, серцева недостатність; особлива обережність за наявної хвороби серця, ризик вищий при великих дозах",
+        "en": "Myocarditis, pericarditis, arrhythmias, heart failure; particular caution with existing heart disease, the risk higher with high doses"
+      },
+      "source": {
+        "name": "FDA label: cyclophosphamide capsules, 5.3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d6447e3-22c9-48d9-87c0-d0b576d7ea9e",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s500",

@@ -69,9 +69,11 @@ export function filterTree(
   diseaseId: string,
   drugIds: readonly string[],
   onlyObtainable = false,
+  /** Regimens taken out besides: those contraindicated for the patient's conditions. */
+  hidden: ReadonlySet<string> = new Set(),
 ): FilteredNode[] {
   const roots = catalog.rootNodesByDisease.get(diseaseId) ?? []
-  return roots.flatMap((node) => keep(catalog, node, drugIds, onlyObtainable))
+  return roots.flatMap((node) => keep(catalog, node, drugIds, onlyObtainable, hidden))
 }
 
 /**
@@ -95,19 +97,21 @@ function keep(
   node: TreatmentNode,
   drugIds: readonly string[],
   onlyObtainable: boolean,
+  hidden: ReadonlySet<string>,
 ): FilteredNode[] {
   const own = catalog.regimenLinksByNode.get(node.id) ?? []
   const links = own.filter(
     (link) =>
+      !hidden.has(link.regimen_id) &&
       regimenHasDrugs(catalog, link.regimen_id, drugIds) &&
       (!onlyObtainable || regimenAvailability(catalog, link.regimen_id) !== 'unavailable'),
   )
   const kids = catalog.childNodes.get(node.id) ?? []
-  const children = kids.flatMap((child) => keep(catalog, child, drugIds, onlyObtainable))
-  // A line whose every regimen was hidden for being unobtainable is not worth its heading; a
-  // heading that never had regimens (advice only) stays.
+  const children = kids.flatMap((child) => keep(catalog, child, drugIds, onlyObtainable, hidden))
+  // A line whose every regimen was hidden — unobtainable or contraindicated — is not worth its
+  // heading; a heading that never had regimens (advice only) stays.
   if (
-    onlyObtainable &&
+    (onlyObtainable || hidden.size > 0) &&
     (own.length > 0 || kids.length > 0) &&
     links.length === 0 &&
     children.length === 0
@@ -120,7 +124,7 @@ function keep(
   return [{ node, links, children }]
 }
 
-function regimensInTree(catalog: CatalogIndex, diseaseId: string): Set<string> {
+export function regimensInTree(catalog: CatalogIndex, diseaseId: string): Set<string> {
   const found = new Set<string>()
   const walk = (node: TreatmentNode): void => {
     for (const link of catalog.regimenLinksByNode.get(node.id) ?? []) found.add(link.regimen_id)

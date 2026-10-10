@@ -166,6 +166,36 @@ export const routeAlternativeSchema = z.strictObject({
 export type RouteAlternative = z.infer<typeof routeAlternativeSchema>
 
 /**
+ * Conditions of the patient a regimen is filtered by on a disease page: kidney or liver
+ * impairment, heart disease, severe peripheral neuropathy.
+ */
+export const PATIENT_CONDITIONS = ['renal', 'hepatic', 'cardiac', 'neuropathy'] as const
+export const patientConditionSchema = z.enum(PATIENT_CONDITIONS)
+export type PatientCondition = (typeof PATIENT_CONDITIONS)[number]
+
+/**
+ * How strongly the label speaks: contraindicated — do not give; dose_reduction — give at a lower
+ * dose the label states; caution — the label warns without a threshold or a dose.
+ */
+export const CAUTION_LEVELS = ['contraindicated', 'dose_reduction', 'caution'] as const
+export const cautionLevelSchema = z.enum(CAUTION_LEVELS)
+export type CautionLevel = (typeof CAUTION_LEVELS)[number]
+
+/**
+ * What the drug's label says for a patient with one of these conditions. Written only from the
+ * label, with the section cited: the threshold and the reduced dose go into the notes as the
+ * label states them, since a filter that invented one would be worse than none. A drug can have
+ * several for one condition — doxorubicin is reduced by the bilirubin and contraindicated above it.
+ */
+export const drugCautionSchema = z.strictObject({
+  condition: patientConditionSchema,
+  level: cautionLevelSchema,
+  notes: localizedTextSchema,
+  source: sourceSchema,
+})
+export type DrugCaution = z.infer<typeof drugCautionSchema>
+
+/**
  * How good the publication is, and the resource that carries it — by published instruments, not
  * by our opinion. Three independent things are recorded, and each is left out when it cannot be
  * read from a document:
