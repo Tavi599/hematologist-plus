@@ -219,6 +219,112 @@
               "regimen_id": "cytarabine-intrathecal"
             }
           ]
+        },
+        {
+          "key": "standard",
+          "kind": "situation",
+          "title": {
+            "uk": "Стандарт",
+            "en": "Standard"
+          },
+          "regimens": [
+            {
+              "regimen_id": "pola-r-chp-cycle-1"
+            },
+            {
+              "regimen_id": "pola-r-chp"
+            },
+            {
+              "regimen_id": "pola-r-chp-cycle-7-8"
+            },
+            {
+              "regimen_id": "r-chop-21"
+            },
+            {
+              "regimen_id": "r-chop-14"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "Імунохіміотерапія з антрацикліном.",
+            "en": "Immunochemotherapy with an anthracycline."
+          }
+        },
+        {
+          "key": "high-risk",
+          "kind": "situation",
+          "title": {
+            "uk": "Високий ризик, молодші",
+            "en": "High risk, younger patients"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-choep-14"
+            },
+            {
+              "regimen_id": "da-epoch-r"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "R-CHOEP до 60 років з aaIPI 2–3; DA-EPOCH-R при перебудовах MYC і BCL2 та/або BCL6, первинній медіастинальній лімфомі.",
+            "en": "R-CHOEP under 60 with aaIPI 2-3; DA-EPOCH-R with MYC and BCL2 and/or BCL6 rearrangements or primary mediastinal lymphoma."
+          }
+        },
+        {
+          "key": "elderly",
+          "kind": "situation",
+          "title": {
+            "uk": "Похилий вік, знижені дози",
+            "en": "Older patients, reduced doses"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-mini-chop"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "no-anthracycline",
+          "kind": "situation",
+          "title": {
+            "uk": "Антрациклін не підходить",
+            "en": "Anthracycline unsuitable"
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-dlbcl-r-comp"
+            },
+            {
+              "regimen_id": "ref-dlbcl-r-ceop"
+            },
+            {
+              "regimen_id": "r-gcvp"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "Через серце чи супутні хвороби.",
+            "en": "Because of the heart or other illness."
+          }
+        },
+        {
+          "key": "cns-prophylaxis",
+          "kind": "situation",
+          "title": {
+            "uk": "Профілактика ЦНС",
+            "en": "CNS prophylaxis"
+          },
+          "regimens": [
+            {
+              "regimen_id": "hd-methotrexate-cns"
+            },
+            {
+              "regimen_id": "methotrexate-intrathecal"
+            }
+          ],
+          "children": []
         }
       ],
       "regimens": [
@@ -470,6 +576,135 @@
             "en": "NCCN 4.2026: third line, other recommended (CD30-positive)"
           }
         }
+      ],
+      "children": [
+        {
+          "key": "late-transplant",
+          "kind": "situation",
+          "title": {
+            "uk": "Кандидати на ТГСК",
+            "en": "Transplant candidates"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-eshap"
+            },
+            {
+              "regimen_id": "r-gdp"
+            },
+            {
+              "regimen_id": "r-dhap"
+            },
+            {
+              "regimen_id": "r-dhap-eviq"
+            },
+            {
+              "regimen_id": "r-ice"
+            },
+            {
+              "regimen_id": "r-ice-fractionated"
+            },
+            {
+              "regimen_id": "r-dhaox"
+            },
+            {
+              "regimen_id": "r-dhaox-eviq"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "Реіндукція платиновмісною схемою перед високодозовою терапією з аутотрансплантацією.",
+            "en": "Platinum re-induction before high-dose therapy with an autologous transplant."
+          }
+        },
+        {
+          "key": "late-no-transplant",
+          "kind": "situation",
+          "title": {
+            "uk": "Не кандидати на ТГСК",
+            "en": "Not transplant candidates"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-gem-ox"
+            },
+            {
+              "regimen_id": "r-gem-ox-14"
+            },
+            {
+              "regimen_id": "pbr-cycle-1"
+            },
+            {
+              "regimen_id": "pbr"
+            },
+            {
+              "regimen_id": "tafasitamab-len-cycle-1"
+            },
+            {
+              "regimen_id": "tafasitamab-len-cycle-2-3"
+            },
+            {
+              "regimen_id": "tafasitamab-len"
+            },
+            {
+              "regimen_id": "tafasitamab-maintenance"
+            },
+            {
+              "regimen_id": "pola-r-gemox"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "Схеми, які за описом підходять, коли аутотрансплантація неможлива.",
+            "en": "Regimens that by their description suit patients who cannot have an autologous transplant."
+          }
+        },
+        {
+          "key": "late-later-lines",
+          "kind": "situation",
+          "title": {
+            "uk": "Після двох і більше ліній",
+            "en": "After two or more lines"
+          },
+          "regimens": [
+            {
+              "regimen_id": "epcoritamab-cycle-1"
+            },
+            {
+              "regimen_id": "epcoritamab-cycle-2-3"
+            },
+            {
+              "regimen_id": "epcoritamab-cycle-4-9"
+            },
+            {
+              "regimen_id": "epcoritamab"
+            },
+            {
+              "regimen_id": "bv-r-len"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "late-palliative",
+          "kind": "situation",
+          "title": {
+            "uk": "Паліативні",
+            "en": "Palliative"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-vp"
+            },
+            {
+              "regimen_id": "pep-c-induction"
+            },
+            {
+              "regimen_id": "pep-c-maintenance"
+            }
+          ],
+          "children": []
+        }
       ]
     },
     {
@@ -650,6 +885,147 @@
             "uk": "NCCN 4.2026: третя лінія, інші рекомендовані (при CD30+)",
             "en": "NCCN 4.2026: third line, other recommended (CD30-positive)"
           }
+        }
+      ],
+      "children": [
+        {
+          "key": "early-transplant",
+          "kind": "situation",
+          "title": {
+            "uk": "Кандидати на ТГСК",
+            "en": "Transplant candidates"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-gdp"
+            },
+            {
+              "regimen_id": "r-dhap"
+            },
+            {
+              "regimen_id": "r-dhap-eviq"
+            },
+            {
+              "regimen_id": "r-eshap"
+            },
+            {
+              "regimen_id": "r-ice"
+            },
+            {
+              "regimen_id": "r-ice-fractionated"
+            },
+            {
+              "regimen_id": "r-dhaox"
+            },
+            {
+              "regimen_id": "r-dhaox-eviq"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "Реіндукція платиновмісною схемою перед високодозовою терапією з аутотрансплантацією.",
+            "en": "Platinum re-induction before high-dose therapy with an autologous transplant."
+          }
+        },
+        {
+          "key": "early-no-transplant",
+          "kind": "situation",
+          "title": {
+            "uk": "Не кандидати на ТГСК",
+            "en": "Not transplant candidates"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-gem-ox"
+            },
+            {
+              "regimen_id": "r-gem-ox-14"
+            },
+            {
+              "regimen_id": "pbr-cycle-1"
+            },
+            {
+              "regimen_id": "pbr"
+            },
+            {
+              "regimen_id": "tafasitamab-len-cycle-1"
+            },
+            {
+              "regimen_id": "tafasitamab-len-cycle-2-3"
+            },
+            {
+              "regimen_id": "tafasitamab-len"
+            },
+            {
+              "regimen_id": "tafasitamab-maintenance"
+            },
+            {
+              "regimen_id": "pola-r-gemox"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "Схеми, які за описом підходять, коли аутотрансплантація неможлива.",
+            "en": "Regimens that by their description suit patients who cannot have an autologous transplant."
+          }
+        },
+        {
+          "key": "early-later-lines",
+          "kind": "situation",
+          "title": {
+            "uk": "Після двох і більше ліній",
+            "en": "After two or more lines"
+          },
+          "regimens": [
+            {
+              "regimen_id": "glofit-gemox-cycle-1"
+            },
+            {
+              "regimen_id": "glofit-gemox"
+            },
+            {
+              "regimen_id": "glofitamab-cycle-1"
+            },
+            {
+              "regimen_id": "glofitamab"
+            },
+            {
+              "regimen_id": "epcoritamab-cycle-1"
+            },
+            {
+              "regimen_id": "epcoritamab-cycle-2-3"
+            },
+            {
+              "regimen_id": "epcoritamab-cycle-4-9"
+            },
+            {
+              "regimen_id": "epcoritamab"
+            },
+            {
+              "regimen_id": "bv-r-len"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "early-palliative",
+          "kind": "situation",
+          "title": {
+            "uk": "Паліативні",
+            "en": "Palliative"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-vp"
+            },
+            {
+              "regimen_id": "pep-c-induction"
+            },
+            {
+              "regimen_id": "pep-c-maintenance"
+            }
+          ],
+          "children": []
         }
       ]
     },
