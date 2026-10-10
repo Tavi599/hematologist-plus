@@ -1452,6 +1452,51 @@
           "children": []
         },
         {
+          "key": "relapse-frail",
+          "kind": "situation",
+          "title": {
+            "uk": "Крихкі пацієнти",
+            "en": "Frail patients"
+          },
+          "description": {
+            "uk": "Схеми, легші за складом: двокомпонентні, повністю пероральні, ослаблені за дозою або антитіло в монотерапії.",
+            "en": "Regimens lighter by design: doublets, all-oral, attenuated, or an antibody alone."
+          },
+          "regimens": [
+            {
+              "regimen_id": "pom-dex"
+            },
+            {
+              "regimen_id": "bortezomib-mono"
+            },
+            {
+              "regimen_id": "rd"
+            },
+            {
+              "regimen_id": "ctd-attenuated"
+            },
+            {
+              "regimen_id": "ird"
+            },
+            {
+              "regimen_id": "daratumumab-cycle-1-2"
+            },
+            {
+              "regimen_id": "daratumumab-cycle-3-6"
+            },
+            {
+              "regimen_id": "daratumumab-mono"
+            },
+            {
+              "regimen_id": "pcd-cycle-1-9"
+            },
+            {
+              "regimen_id": "pcd"
+            }
+          ],
+          "children": []
+        },
+        {
           "key": "later-lines",
           "kind": "situation",
           "title": {
