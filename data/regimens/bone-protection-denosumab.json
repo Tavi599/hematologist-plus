@@ -1,0 +1,42 @@
+{
+  "$comment": "NSSG MM.3 v4.0, розділ Treatment details iv: 120 мг п/ш кожні 4 тижні в стегно, живіт чи плече; збігається з інструкцією Xgeva (2.2). За NSSG — для хворих із нирковою недостатністю, яким бісфосфонати не можна чи не переносяться; у Великій Британії не фінансується рутинно. Корекції дози за нирками немає (таблиця NSSG, інструкція 8.6).",
+  "id": "bone-protection-denosumab",
+  "short_name": "Деносумаб",
+  "name": {
+    "uk": "Кістковий захист (деносумаб)",
+    "en": "Bone protection (denosumab)"
+  },
+  "description": {
+    "uk": "Деносумаб 120 мг підшкірно кожні 4 тижні: альтернатива бісфосфонатам при нирковій недостатності.",
+    "en": "Denosumab 120 mg subcutaneously every 4 weeks: an alternative to bisphosphonates in renal impairment."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 12,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.3 Bone protection in myeloma",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-3-bone-protection-in-myeloma.pdf",
+      "version": "4.0 (06.2025)",
+      "checkedOn": "2026-10-10"
+    },
+    {
+      "name": "FDA label: XGEVA (denosumab)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=628f0998-1206-4001-aeee-18133aa9f3bf",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "items": [
+    {
+      "key": "denosumab",
+      "drug_id": "denosumab",
+      "route": "subcutaneous",
+      "dose_value": 120,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Підшкірно в стегно, живіт чи плече, кожні 4 тижні; флакон перед введенням зігріти до кімнатної температури. Кальцій і вітамін D. Після відміни — доза золедронової кислоти через 6–9 місяців після останньої дози деносумабу (рикошетний ефект, NSSG)",
+        "en": "Subcutaneously into the thigh, abdomen or upper arm every 4 weeks; let the vial reach room temperature first. Calcium and vitamin D. After stopping, a dose of zoledronic acid 6 to 9 months after the last denosumab dose (rebound, NSSG)"
+      }
+    }
+  ]
+}

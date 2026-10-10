@@ -11,13 +11,34 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "FDA label: XGEVA (denosumab), 3 Dosage forms and strengths (120 мг/1,7 мл)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=628f0998-1206-4001-aeee-18133aa9f3bf",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "Корекції дози немає, але ризик гіпокальціємії зростає зі ступенем ниркової недостатності, найбільше при КлКр < 30 мл/хв чи на діалізі: контроль кальцію, кальцій і вітамін D; наявну гіпокальціємію виправити до початку",
+        "en": "No dose adjustment, but the risk of hypocalcaemia rises with renal impairment, most with CrCl < 30 mL/min or dialysis: monitor calcium, give calcium and vitamin D; correct existing hypocalcaemia before starting"
+      },
+      "source": {
+        "name": "FDA label: XGEVA (denosumab), 4.1, 5.3, 8.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=628f0998-1206-4001-aeee-18133aa9f3bf",
+        "checkedOn": "2026-10-10"
+      }
     }
   ],
   "presentations": [
     {
       "key": "s120",
       "form": "vial",
-      "strength_amount": 120
+      "strength_amount": 120,
+      "volume_ml": 1.7
     }
   ]
 }

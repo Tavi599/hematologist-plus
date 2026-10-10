@@ -1,0 +1,55 @@
+{
+  "$comment": "Картка: доза є в джерелах, але препарату немає в переліку відділення. Розбіжність NSSG (30 мг) і FDA (90 мг) показано.",
+  "id": "ref-mm-pamidronate",
+  "short_name": "Памідронат",
+  "name": {
+    "uk": "Кістковий захист (памідронова кислота)",
+    "en": "Bone protection (pamidronate)"
+  },
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.3 Bone protection in myeloma",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-3-bone-protection-in-myeloma.pdf",
+      "version": "4.0 (06.2025)",
+      "checkedOn": "2026-10-10"
+    },
+    {
+      "name": "FDA label: pamidronate disodium injection (Hospira), Dosage and Administration: Multiple Myeloma",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9b6a9a3b-71c9-4dcb-b857-5d1de25c3a23",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Альтернатива золедроновій кислоті, коли вона протипоказана чи ризик остеонекрозу щелепи вищий (NSSG MM.3). Памідронату немає в переліку препаратів відділення, тому розрахунку немає.",
+      "en": "An alternative to zoledronic acid where it is contraindicated or the risk of osteonecrosis of the jaw is higher (NSSG MM.3). Pamidronate is not in the department's list of drugs, so there is no calculation."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Памідронова кислота",
+          "en": "Pamidronate"
+        }
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "NSSG MM.3: 30 мг в/в у 250 мл 0,9% NaCl за 30 хвилин кожні 4 тижні; 30 і 90 мг не відрізнялися за фізичним функціонуванням і часом до першого кісткового ускладнення (Nordic, Gimsing 2010).",
+        "en": "NSSG MM.3: 30 mg IV in 250 mL of 0.9% sodium chloride over 30 minutes every 4 weeks; 30 and 90 mg did not differ in physical function or time to the first skeletal event (Nordic, Gimsing 2010)."
+      },
+      {
+        "uk": "Інструкція FDA: 90 мг у 500 мл 0,45% чи 0,9% NaCl або 5% глюкози за 4 години щомісяця; не змішувати з розчинами, що містять кальцій.",
+        "en": "FDA label: 90 mg in 500 mL of 0.45% or 0.9% sodium chloride or 5% dextrose over 4 hours monthly; not to be mixed with calcium-containing solutions."
+      },
+      {
+        "uk": "Нирки (NSSG): КлКр 30–60 мл/хв — без зниження дози, швидкість не більше 90 мг за 4 год; КлКр < 30 — не вводити, крім загрозливої гіперкальціємії.",
+        "en": "Kidneys (NSSG): CrCl 30 to 60 mL/min, no reduction, rate not above 90 mg per 4 hours; CrCl below 30, not given except for life-threatening hypercalcaemia."
+      }
+    ],
+    "gap": {
+      "uk": "Розбіжність доз: NSSG — 30 мг за 30 хв, інструкція FDA — 90 мг за 4 години.",
+      "en": "The doses differ: NSSG gives 30 mg over 30 minutes, the FDA label 90 mg over 4 hours."
+    },
+    "availability": "unavailable"
+  }
+}

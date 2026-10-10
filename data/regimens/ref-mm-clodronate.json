@@ -1,0 +1,50 @@
+{
+  "$comment": "Картка: препарату немає в переліку відділення.",
+  "id": "ref-mm-clodronate",
+  "short_name": "Клодронат",
+  "name": {
+    "uk": "Кістковий захист (клодронат натрію, внутрішньо)",
+    "en": "Bone protection (sodium clodronate, oral)"
+  },
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.3 Bone protection in myeloma",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-3-bone-protection-in-myeloma.pdf",
+      "version": "4.0 (06.2025)",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Пероральний бісфосфонат: при нирковій недостатності, зокрема на діалізі, поганому венозному доступі чи коли хворий хоче лікуватися вдома (NSSG MM.3). У Myeloma IX золедронова кислота зменшувала кісткові ускладнення порівняно з клодронатом. Клодронату немає в переліку відділення.",
+      "en": "An oral bisphosphonate: for renal impairment including dialysis, poor venous access, or a patient who prefers treatment at home (NSSG MM.3). In Myeloma IX zoledronic acid reduced skeletal events compared with clodronate. Clodronate is not in the department's list."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Клодронат натрію",
+          "en": "Sodium clodronate"
+        }
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "1600 мг на добу внутрішньо, одноразово чи у 2 прийоми; зранку натще зі склянкою води, після прийому годину не їсти, не пити нічого, крім води, й не приймати інших ліків; молоко, їжу й препарати кальцію уникати за 2 години до й 1 годину після.",
+        "en": "1,600 mg a day by mouth, once or in 2 doses; in the morning on an empty stomach with a glass of water, then nothing but water and no other medicines for an hour; avoid milk, food and calcium for 2 hours before and 1 hour after."
+      },
+      {
+        "uk": "Нирки (NSSG): КлКр 50–80 мл/хв — 1600 мг; 30–<50 — 1200 мг; 10–<30 — 800 мг; < 10 — протипоказано.",
+        "en": "Kidneys (NSSG): CrCl 50 to 80 mL/min 1,600 mg; 30 to below 50, 1,200 mg; 10 to below 30, 800 mg; below 10, contraindicated."
+      },
+      {
+        "uk": "Остеонекроз щелепи на пероральних бісфосфонатах вкрай рідкісний; NSSG радить клодронат і після перенесеного остеонекрозу.",
+        "en": "Osteonecrosis of the jaw is extremely rare on oral agents; NSSG suggests clodronate after a previous one too."
+      }
+    ],
+    "gap": {
+      "uk": "Доза лише за NSSG; інструкцію FDA не звірено — у США клодронат не зареєстрований.",
+      "en": "The dose is from NSSG alone; there is no FDA label to check it against, as clodronate is not approved in the US."
+    },
+    "availability": "unavailable"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$comment": "Картка без дози: джерело дози для мієломи не знайдено, NSSG радить уникати.",
+  "id": "ref-mm-ibandronate",
+  "short_name": "Ібандронат",
+  "name": {
+    "uk": "Ібандронова кислота при мієломі",
+    "en": "Ibandronate in myeloma"
+  },
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.3 Bone protection in myeloma",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-3-bone-protection-in-myeloma.pdf",
+      "version": "4.0 (06.2025)",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "NSSG MM.3 радить уникати ібандронату (як і алендронату та етидронату) для кісткового захисту при мієломі. Ібандронова кислота є в переліку відділення, тому картку додано, щоб це було видно.",
+      "en": "NSSG MM.3 advises avoiding ibandronate (with alendronate and etidronate) for bone protection in myeloma. Ibandronic acid is in the department's list, so the card is here to make that visible."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ібандронова кислота",
+          "en": "Ibandronic acid"
+        },
+        "drug_id": "ibandronic-acid"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Перший вибір за NSSG — золедронова кислота; альтернативи — памідронат, клодронат, а при нирковій недостатності й непереносимості бісфосфонатів — деносумаб.",
+        "en": "NSSG first choice is zoledronic acid; the alternatives are pamidronate, clodronate, and denosumab in renal impairment or intolerance of bisphosphonates."
+      }
+    ],
+    "gap": {
+      "uk": "Дози для мієломи в доступних джерелах немає, тому не наводиться.",
+      "en": "No myeloma dose was found in the sources at hand, so none is given."
+    },
+    "availability": "registered"
+  }
+}
