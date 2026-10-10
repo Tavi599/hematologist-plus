@@ -1,6 +1,7 @@
-import { AppShell, Container, Group, Text } from '@mantine/core'
+import { AppShell, Burger, Container, Group, Menu, Text } from '@mantine/core'
+import { useDisclosure } from '@mantine/hooks'
 import { useTranslation } from 'react-i18next'
-import { NavLink, Outlet } from 'react-router'
+import { Link, NavLink, Outlet, useLocation } from 'react-router'
 
 import { routes } from '../routes'
 import classes from './AppLayout.module.css'
@@ -11,6 +12,8 @@ import { PwaUpdatePrompt } from './PwaUpdatePrompt'
 
 export function AppLayout() {
   const { t } = useTranslation()
+  const [menuOpened, menu] = useDisclosure(false)
+  const { pathname } = useLocation()
 
   const navItems = [
     { to: routes.calculator, label: t('nav.calculator') },
@@ -29,6 +32,26 @@ export function AppLayout() {
               <Text fw={700} size="lg" visibleFrom="sm" className={classes.brand}>
                 {t('app.name')}
               </Text>
+              {/* On a phone the five sections do not fit in a row: a menu shows them all, with
+                  the current one named beside it, instead of a bar cut off at the edge. */}
+              <Menu opened={menuOpened} onChange={menu.toggle} position="bottom-start">
+                <Menu.Target>
+                  <Group gap={6} wrap="nowrap" hiddenFrom="sm" style={{ cursor: 'pointer' }}>
+                    <Burger size="sm" opened={menuOpened} aria-label={t('nav.menu')} />
+                    <Text fw={600} size="sm">
+                      {navItems.find((item) => pathname.startsWith(item.to))?.label ??
+                        t('app.name')}
+                    </Text>
+                  </Group>
+                </Menu.Target>
+                <Menu.Dropdown>
+                  {navItems.map((item) => (
+                    <Menu.Item key={item.to} component={Link} to={item.to}>
+                      {item.label}
+                    </Menu.Item>
+                  ))}
+                </Menu.Dropdown>
+              </Menu>
               <nav aria-label="main" className={classes.nav}>
                 <Group gap={4} wrap="nowrap">
                   {navItems.map((item) => (

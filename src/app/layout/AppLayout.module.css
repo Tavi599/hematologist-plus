@@ -44,3 +44,10 @@
 .link {
   white-space: nowrap;
 }
+
+/* The phone has the menu instead. */
+@media (max-width: 47.99em) {
+  .nav {
+    display: none;
+  }
+}

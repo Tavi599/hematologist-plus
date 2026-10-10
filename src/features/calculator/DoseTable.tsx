@@ -16,6 +16,7 @@ import {
   Text,
   Title,
 } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
 import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -37,6 +38,7 @@ import { PREMEDICATION_ADVISED } from '../../lib/premedication'
 import { CalculationChain } from './CalculationChain'
 import { SourceNotes } from './SourceNotes'
 import { WarningList } from './WarningList'
+import classes from './DoseTable.module.css'
 
 export interface DoseTableProps {
   items: CourseItem[]
@@ -78,6 +80,8 @@ export function DoseTable(props: DoseTableProps) {
   const { t } = useTranslation()
   const { items, course } = props
   const [expanded, setExpanded] = useState<string | null>(null)
+  // A phone gets the rows as cards (DoseTable.module.css), not a table scrolled sideways.
+  const narrow = useMediaQuery('(max-width: 47.99em)')
   const resultById = new Map((course?.drugs ?? []).map((drug) => [drug.id, drug]))
 
   if (items.length === 0) {
@@ -98,8 +102,13 @@ export function DoseTable(props: DoseTableProps) {
           {t('calculator.doses.title')}
         </Title>
       </Box>
-      <Table.ScrollContainer minWidth={760}>
-        <Table verticalSpacing="xs" highlightOnHover aria-label={t('calculator.doses.title')}>
+      <Table.ScrollContainer minWidth={narrow ? 0 : 760}>
+        <Table
+          verticalSpacing="xs"
+          highlightOnHover
+          aria-label={t('calculator.doses.title')}
+          className={classes.table}
+        >
           <Table.Thead>
             <Table.Tr>
               <Table.Th w={52}>{t('calculator.doses.enabled')}</Table.Th>
@@ -374,7 +383,7 @@ function DoseRow({
             </Checkbox.Group>
           )}
         </Table.Td>
-        <Table.Td>
+        <Table.Td data-label={t('calculator.doses.doseActual')}>
           {result ? (
             <>
               <Group gap={6} wrap="nowrap">
@@ -418,7 +427,7 @@ function DoseRow({
             <Text c="dimmed">—</Text>
           )}
         </Table.Td>
-        <Table.Td>
+        <Table.Td data-label={t('calculator.doses.reduction')}>
           <Stack gap={4}>
             <Checkbox
               size="xs"
@@ -451,7 +460,7 @@ function DoseRow({
             )}
           </Stack>
         </Table.Td>
-        <Table.Td>
+        <Table.Td data-label={t('calculator.doses.manualDose')}>
           <NumberInput
             size="xs"
             min={0}
@@ -467,7 +476,7 @@ function DoseRow({
             aria-label={`${t('calculator.doses.manualDose')}: ${localize(item.drug.name, language)}`}
           />
         </Table.Td>
-        <Table.Td>
+        <Table.Td data-label={t('calculator.doses.units')}>
           {result?.pack ? (
             <Stack gap={2}>
               {result.pack.items.map((entry) => (
@@ -496,7 +505,7 @@ function DoseRow({
             </Text>
           )}
         </Table.Td>
-        <Table.Td>
+        <Table.Td data-label={t('calculator.doses.infusion')}>
           {result?.infusion ? (
             <Stack gap={2}>
               <Text size="sm">

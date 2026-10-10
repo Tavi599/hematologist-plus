@@ -1,0 +1,37 @@
+/**
+ * On a phone the nine columns do not fit, and a table scrolled sideways hides the dose of the
+ * very row being read. Each drug becomes a card instead: its cells stack, and the ones whose
+ * meaning came from the column heading carry that heading in front of them.
+ */
+@media (max-width: 47.99em) {
+  .table {
+    min-width: 0 !important;
+
+    & thead {
+      display: none;
+    }
+
+    & tr {
+      display: block;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--mantine-color-default-border);
+    }
+
+    & td {
+      display: block;
+      border: none;
+      padding: 2px var(--mantine-spacing-sm);
+    }
+
+    & td:empty {
+      display: none;
+    }
+
+    & td[data-label]::before {
+      content: attr(data-label);
+      display: block;
+      font-size: var(--mantine-font-size-xs);
+      color: var(--mantine-color-dimmed);
+    }
+  }
+}
