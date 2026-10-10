@@ -37,6 +37,15 @@ export const RISK_AREAS: Area[] = [
     ],
   },
   {
+    id: 'transplant',
+    title: t(
+      'Алогенна трансплантація гемопоетичних клітин',
+      'Allogeneic haematopoietic cell transplantation',
+    ),
+    scoreIds: ['hct-ci'],
+    diseases: ['aml', 'acute-lymphoblastic-leukemia', 'mds', 'primary-myelofibrosis', 'cml'],
+  },
+  {
     id: 'aggressive-lymphoma',
     title: t('ДВКЛ та інші агресивні лімфоми', 'DLBCL and other aggressive lymphomas'),
     scoreIds: ['ipi', 'aa-ipi', 'nccn-ipi', 'cns-ipi'],

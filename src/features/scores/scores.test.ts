@@ -222,4 +222,15 @@ describe('score groups', () => {
     expect(group('mipss70', { hmr: '3', leukocytes: true })).toBe('High')
     expect(group('mipss70', { hmr: '0', haemoglobin: true })).toBe('Low')
   })
+
+  it('HCT-CI by the weights of Table 4', () => {
+    const group = (values: Values) => run('hct-ci', values)!.group!.label.en
+    expect(group({ pulmonary: '0', hepatic: '0' })).toBe('Low')
+    expect(group({ pulmonary: '0', hepatic: '1', diabetes: true })).toBe('Intermediate')
+    // Severe lungs (3) alone is high.
+    expect(group({ pulmonary: '3', hepatic: '0' })).toBe('High')
+    expect(
+      run('hct-ci', { pulmonary: '2', hepatic: '3', renal: true, valve: true })!.value!.amount,
+    ).toBe(10)
+  })
 })

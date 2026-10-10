@@ -1,4 +1,5 @@
 import { AGE, num } from './general'
+import { hctCi } from './transplant'
 import type { Field, Outcome, Score, Text2, Tone, Values } from './types'
 
 const t = (uk: string, en: string): Text2 => ({ uk, en })
@@ -1383,4 +1384,5 @@ export const RISK_SCORES: Score[] = [
   ipssR,
   dipss,
   mipss70,
+  hctCi,
 ]
