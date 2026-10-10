@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import { demoCatalog } from './catalog.fixture'
 import { indexCatalog } from './catalog-index'
-import { contraindicated, regimenCautions } from './cautions'
+import { contraindicated, regimenCautions, strongestLevels } from './cautions'
 import type { DrugCaution } from '../schemas/common'
 
 const source = { name: 'FDA label', checkedOn: '2026-10-10' }
@@ -49,5 +49,16 @@ describe('regimen cautions', () => {
     expect(
       regimenCautions(catalog, regimenId, ['renal']).some((entry) => entry.drugId === drugId),
     ).toBe(false)
+  })
+
+  it('reads each regimen at its strongest level, and null where the labels say nothing', () => {
+    const { catalog, regimenId } = setup([renalNo, heart])
+    const other = [...catalog.regimens.keys()].find(
+      (id) => regimenCautions(catalog, id, ['renal', 'cardiac']).length === 0,
+    )!
+    const levels = strongestLevels(catalog, [regimenId, other], ['renal', 'cardiac'])
+    expect(levels.get(regimenId)).toBe('contraindicated')
+    expect(levels.get(other)).toBeNull()
+    expect(strongestLevels(catalog, [regimenId], ['cardiac']).get(regimenId)).toBe('caution')
   })
 })

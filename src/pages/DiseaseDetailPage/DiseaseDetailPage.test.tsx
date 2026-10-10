@@ -83,6 +83,20 @@ describe('DiseaseDetailPage', () => {
     window.localStorage.clear()
   })
 
+  it('folds the article like a line', async () => {
+    window.localStorage.clear()
+    renderWithProviders(<DiseaseDetailPage />, {
+      route: '/diseases/dlbcl',
+      path: '/diseases/:slug',
+    })
+    const locked = await screen.findByText('Текст статті доступний лише після входу.')
+    fireEvent.click(screen.getByRole('button', { name: /^Стаття/, expanded: true }))
+    expect(locked).not.toBeVisible()
+    fireEvent.click(screen.getByRole('button', { name: /^Стаття/, expanded: false }))
+    expect(locked).toBeVisible()
+    window.localStorage.clear()
+  })
+
   it('reports an unknown disease', async () => {
     renderWithProviders(<DiseaseDetailPage />, { route: '/diseases/nope', path: '/diseases/:slug' })
     expect(await screen.findByText(/«nope»/)).toBeInTheDocument()

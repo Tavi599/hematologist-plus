@@ -81,6 +81,11 @@ export function filterTree(
  * stands in several situations is one regimen.
  */
 export function countRegimens(nodes: readonly FilteredNode[]): number {
+  return regimenIdsIn(nodes).length
+}
+
+/** The regimens of a filtered tree, each once, in the order they are shown. */
+export function regimenIdsIn(nodes: readonly FilteredNode[]): string[] {
   const ids = new Set<string>()
   const collect = (list: readonly FilteredNode[]) => {
     for (const node of list) {
@@ -89,7 +94,7 @@ export function countRegimens(nodes: readonly FilteredNode[]): number {
     }
   }
   collect(nodes)
-  return ids.size
+  return [...ids]
 }
 
 function keep(

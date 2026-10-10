@@ -1,4 +1,15 @@
-import { Alert, Anchor, Badge, Card, Group, Loader, Stack, Text, Title } from '@mantine/core'
+import {
+  Alert,
+  Anchor,
+  Badge,
+  Card,
+  Group,
+  Loader,
+  Stack,
+  Text,
+  Title,
+  UnstyledButton,
+} from '@mantine/core'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router'
@@ -95,11 +106,16 @@ function DiseaseView({ catalog, disease }: { catalog: CatalogIndex; disease: Dis
           // A folded line opens when the reader asks to go to it.
           onSelect={(id) => {
             const line = lines.find((node) => lineAnchor(node.id) === id)
-            if (line && closed.has(line.id)) toggle(line.id)
+            const key = line ? line.id : id
+            if (closed.has(key)) toggle(key)
           }}
           allOpen={closed.size === 0}
           onToggleAll={() =>
-            setClosed(closed.size === 0 ? new Set(lines.map((node) => node.id)) : new Set())
+            setClosed(
+              closed.size === 0
+                ? new Set([...lines.map((node) => node.id), ARTICLE_ANCHOR])
+                : new Set(),
+            )
           }
         />
       )}
@@ -118,12 +134,24 @@ function DiseaseView({ catalog, disease }: { catalog: CatalogIndex; disease: Dis
         </Stack>
       </Card>
 
-      <ArticleSection disease={disease} />
+      <ArticleSection
+        disease={disease}
+        opened={!closed.has(ARTICLE_ANCHOR)}
+        onToggle={() => toggle(ARTICLE_ANCHOR)}
+      />
     </Stack>
   )
 }
 
-function ArticleSection({ disease }: { disease: Disease }) {
+function ArticleSection({
+  disease,
+  opened,
+  onToggle,
+}: {
+  disease: Disease
+  opened: boolean
+  onToggle: () => void
+}) {
   const { t } = useTranslation()
   const language = currentLanguage()
   const { user, loading } = useSessionUser()
@@ -142,31 +170,48 @@ function ArticleSection({ disease }: { disease: Disease }) {
   return (
     <Card withBorder component="section" id={ARTICLE_ANCHOR} className={navClasses.section}>
       <Stack gap="sm">
-        <Title order={2} size="h4">
-          {t('diseaseDetail.article')}
-        </Title>
-        <ArticleSources disease={disease} written={written} value={shown} onChange={setSection} />
-        {loading ? (
-          <Loader size="sm" />
-        ) : user === null ? (
-          <>
-            <Text c="dimmed" size="sm">
-              {t('auth.articleLocked')}
+        {/* Folds like a line of treatment: the article runs to many screens below the regimens. */}
+        <UnstyledButton onClick={onToggle} aria-expanded={opened}>
+          <Group justify="space-between" wrap="nowrap">
+            <Title order={2} size="h4">
+              {t('diseaseDetail.article')}
+            </Title>
+            <Text size="xs" c="dimmed" aria-hidden>
+              {opened ? '▲' : '▼'}
             </Text>
-            <SignInPanel />
-          </>
-        ) : articles.isPending ? (
-          <Loader size="sm" />
-        ) : articles.isError ? (
-          <Alert color="red">{articles.error.message}</Alert>
-        ) : (
-          <ArticleBody
-            resolved={resolveLocalized(
-              Object.fromEntries(forSection.map((row) => [row.language, row.body])),
-              language,
+          </Group>
+        </UnstyledButton>
+        <div hidden={!opened}>
+          <Stack gap="sm">
+            <ArticleSources
+              disease={disease}
+              written={written}
+              value={shown}
+              onChange={setSection}
+            />
+            {loading ? (
+              <Loader size="sm" />
+            ) : user === null ? (
+              <>
+                <Text c="dimmed" size="sm">
+                  {t('auth.articleLocked')}
+                </Text>
+                <SignInPanel />
+              </>
+            ) : articles.isPending ? (
+              <Loader size="sm" />
+            ) : articles.isError ? (
+              <Alert color="red">{articles.error.message}</Alert>
+            ) : (
+              <ArticleBody
+                resolved={resolveLocalized(
+                  Object.fromEntries(forSection.map((row) => [row.language, row.body])),
+                  language,
+                )}
+              />
             )}
-          />
-        )}
+          </Stack>
+        </div>
       </Stack>
     </Card>
   )

@@ -303,6 +303,16 @@
     "chapter": "ICD-10 chapter: {{letter}}"
   },
   "diseaseDetail": {
+    "cautionSummary": "Among the regimens shown ({{total}}):",
+    "cautionOpen": "List these regimens",
+    "cautionClear": "no warnings: {{count}}",
+    "showHidden": "View hidden regimens ({{count}})",
+    "cautionListHint": "From the drug labels for: {{conditions}}. For reading only; how severe the condition is and the decision are the physician's.",
+    "cautionList": {
+      "contraindicated": "Regimens with a contraindicated drug",
+      "dose_reduction": "Regimens needing a dose reduction",
+      "caution": "Regimens with warnings"
+    },
     "sections": "Page sections",
     "collapseAll": "Collapse all",
     "expandAll": "Expand all",

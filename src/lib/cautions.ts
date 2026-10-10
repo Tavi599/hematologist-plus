@@ -74,3 +74,25 @@ export function contraindicated(
     (entry) => entry.level === 'contraindicated',
   )
 }
+
+/**
+ * The strongest thing the labels say about each regimen under the conditions chosen, or null for
+ * a regimen they say nothing about. The overview counts by it, and the hidden regimens are those
+ * read as contraindicated.
+ */
+export function strongestLevels(
+  catalog: CatalogIndex,
+  regimenIds: readonly string[],
+  conditions: readonly PatientCondition[],
+): Map<string, CautionLevel | null> {
+  return new Map(
+    regimenIds.map((id) => [id, regimenCautions(catalog, id, conditions)[0]?.level ?? null]),
+  )
+}
+
+/** The colour each level is shown in, strongest the warmest. */
+export const LEVEL_COLOR: Record<CautionLevel, string> = {
+  contraindicated: 'red',
+  dose_reduction: 'orange',
+  caution: 'yellow',
+}
