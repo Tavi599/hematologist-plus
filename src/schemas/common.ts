@@ -167,9 +167,15 @@ export type RouteAlternative = z.infer<typeof routeAlternativeSchema>
 
 /**
  * Conditions of the patient a regimen is filtered by on a disease page: kidney or liver
- * impairment, heart disease, severe peripheral neuropathy.
+ * impairment, heart disease, severe peripheral neuropathy, lung disease.
  */
-export const PATIENT_CONDITIONS = ['renal', 'hepatic', 'cardiac', 'neuropathy'] as const
+export const PATIENT_CONDITIONS = [
+  'renal',
+  'hepatic',
+  'cardiac',
+  'neuropathy',
+  'pulmonary',
+] as const
 export const patientConditionSchema = z.enum(PATIENT_CONDITIONS)
 export type PatientCondition = (typeof PATIENT_CONDITIONS)[number]
 

@@ -23,6 +23,21 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "pulmonary",
+      "level": "caution",
+      "notes": {
+        "uk": "Імуно-опосередкований пневмоніт: стежити за ранніми ознаками, при тяжкому — призупинити чи остаточно відмінити",
+        "en": "Immune-mediated pneumonitis: monitor for early signs, withhold or permanently discontinue when severe"
+      },
+      "source": {
+        "name": "FDA label: KEYTRUDA (pembrolizumab), 5.1",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9333c79b-d487-4538-a9f0-71b91a02b287",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s100",

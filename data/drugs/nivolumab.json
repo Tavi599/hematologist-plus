@@ -13,6 +13,21 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "pulmonary",
+      "level": "caution",
+      "notes": {
+        "uk": "Імуно-опосередкований пневмоніт: стежити за ранніми ознаками, при 2 ступені призупинити, при 3–4 — остаточно відмінити (за таблицею корекції)",
+        "en": "Immune-mediated pneumonitis: monitor for early signs, withhold at grade 2, permanently discontinue at grade 3 to 4 (per the modification table)"
+      },
+      "source": {
+        "name": "FDA label: OPDIVO (nivolumab), 5.1",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f570b9c4-6846-4de2-abfa-4d0a4ae4e394",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s40",

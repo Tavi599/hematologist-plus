@@ -30,6 +30,21 @@
       "checkedOn": "2026-10-02"
     }
   ],
+  "cautions": [
+    {
+      "condition": "pulmonary",
+      "level": "caution",
+      "notes": {
+        "uk": "ХОЗЛ в анамнезі: розглянути короткі й тривалі бронходилататори та інгаляційні кортикостероїди після введення (потрібні додаткові препарати для респіраторних ускладнень)",
+        "en": "History of COPD: consider short- and long-acting bronchodilators and inhaled corticosteroids after the infusion (extra medication for respiratory complications may be needed)"
+      },
+      "source": {
+        "name": "FDA label: DARZALEX (daratumumab), Dosage and Administration (post-infusion medication)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a4d0efe9-5e54-467e-9eb4-56fa7d53b60b",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s400",
