@@ -24,6 +24,7 @@ function node(id: string, parent: string | null, title: string): TreatmentNode {
 describe('TreatmentTree', () => {
   afterEach(() => {
     window.localStorage.clear()
+    window.sessionStorage.clear()
     resetOnlyObtainable()
   })
 
@@ -62,6 +63,27 @@ describe('TreatmentTree', () => {
     fireEvent.click(screen.getAllByRole('button', { name: 'протипоказано: 1' })[0]!)
     const list = await screen.findByRole('dialog', { name: 'Схеми з протипоказаним препаратом' })
     expect(list).toHaveTextContent('R-CHOP-21')
+  })
+
+  it('finds a regimen by name and keeps the search for the tab', async () => {
+    const catalog = indexCatalog(demoCatalog())
+    const first = renderWithProviders(<TreatmentTree catalog={catalog} diseaseId="dlbcl" />)
+    expect(screen.getByText('R-CHOP-21')).toBeInTheDocument()
+    await act(() =>
+      fireEvent.change(screen.getByLabelText('Пошук схеми'), { target: { value: 'nothing-like' } }),
+    )
+    expect(screen.queryByText('R-CHOP-21')).not.toBeInTheDocument()
+    expect(screen.getByText('Жодна схема не має такої назви.')).toBeInTheDocument()
+
+    await act(() =>
+      fireEvent.change(screen.getByLabelText('Пошук схеми'), { target: { value: 'r-chop' } }),
+    )
+    expect(screen.getByText('R-CHOP-21')).toBeInTheDocument()
+
+    // Back from the calculator: the search is still there.
+    first.unmount()
+    renderWithProviders(<TreatmentTree catalog={catalog} diseaseId="dlbcl" />)
+    expect(screen.getByLabelText('Пошук схеми')).toHaveValue('r-chop')
   })
 
   it('leaves a regimen unlabelled when every drug of it is registered', () => {

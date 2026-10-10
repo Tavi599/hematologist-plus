@@ -5,6 +5,8 @@ import {
   Chip,
   Group,
   MultiSelect,
+  TextInput,
+  CloseButton,
   Paper,
   SimpleGrid,
   Stack,
@@ -31,6 +33,7 @@ import { CautionOverview } from './CautionOverview'
 import type { TreatmentNode } from '../../schemas/catalog'
 import { IRRADIATION_DRUGS } from '../irradiated/indications'
 import { RegimenReference } from './RegimenReference'
+import { useTreeFilters } from './use-tree-filters'
 import classes from './TreatmentTree.module.css'
 import {
   countRegimens,
@@ -38,6 +41,7 @@ import {
   filterTree,
   lineAnchor,
   regimenIdsIn,
+  regimensInTree,
   splitSituations,
   type FilteredNode,
 } from './treatment-filter'
@@ -57,11 +61,32 @@ export function TreatmentTree({
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
-  const [drugIds, setDrugIds] = useState<string[]>([])
   const [onlyObtainable, setOnlyObtainable] = useOnlyObtainable()
-  const [conditions, setConditions] = useState<PatientCondition[]>([])
-  // Off at first: the filter does not know how severe the condition is, the physician does.
-  const [hideContraindicated, setHideContraindicated] = useState(false)
+  // Kept for the tab, so a trip to the calculator does not cost the physician the patient's
+  // filters. The contraindicated regimens stay shown at first: the filter does not know how
+  // severe the condition is, the physician does.
+  const [filters, setFilters] = useTreeFilters(diseaseId)
+  const { drugIds, conditions, hideContraindicated, query } = filters
+  const setDrugIds = (next: string[]) => setFilters({ drugIds: next })
+  const setConditions = (next: PatientCondition[]) => setFilters({ conditions: next })
+  const setHideContraindicated = (next: boolean) => setFilters({ hideContraindicated: next })
+
+  // A regimen sought by name: everything whose short or full name does not hold the words is
+  // left out, wherever it stands in the tree.
+  const notNamed = useMemo(() => {
+    const words = query.trim().toLowerCase().split(/\s+/).filter(Boolean)
+    if (words.length === 0) return new Set<string>()
+    return new Set(
+      [...regimensInTree(catalog, diseaseId)].filter((id) => {
+        const regimen = catalog.regimens.get(id)
+        if (!regimen) return true
+        const text = [regimen.short_name, regimen.name.uk ?? '', regimen.name.en ?? '']
+          .join(' ')
+          .toLowerCase()
+        return !words.every((word) => text.includes(word))
+      }),
+    )
+  }, [catalog, diseaseId, query])
 
   const drugs = useMemo(
     () => drugsInTree(catalog, diseaseId, (drug) => localize(drug.name, language)),
@@ -72,8 +97,8 @@ export function TreatmentTree({
   // What the other filters leave, before any regimen is taken out for the patient's condition:
   // the counts and the list of hidden regimens are read from it.
   const beforeConditions = useMemo(
-    () => filterTree(catalog, diseaseId, drugIds, onlyObtainable),
-    [catalog, diseaseId, drugIds, onlyObtainable],
+    () => filterTree(catalog, diseaseId, drugIds, onlyObtainable, notNamed),
+    [catalog, diseaseId, drugIds, onlyObtainable, notNamed],
   )
   const levels = useMemo(
     () => strongestLevels(catalog, regimenIdsIn(beforeConditions), conditions),
@@ -87,8 +112,9 @@ export function TreatmentTree({
     [levels, hideContraindicated],
   )
   const nodes = useMemo(
-    () => filterTree(catalog, diseaseId, drugIds, onlyObtainable, excluded),
-    [catalog, diseaseId, drugIds, onlyObtainable, excluded],
+    () =>
+      filterTree(catalog, diseaseId, drugIds, onlyObtainable, new Set([...notNamed, ...excluded])),
+    [catalog, diseaseId, drugIds, onlyObtainable, notNamed, excluded],
   )
   const hidden = useMemo(
     () =>
@@ -122,6 +148,30 @@ export function TreatmentTree({
             />
             {/* Worth the room only where there is a list to cut down; two regimens are read faster than
           a filter is filled in. */}
+            <Stack gap={4}>
+              <TextInput
+                label={t('diseaseDetail.search')}
+                placeholder={t('diseaseDetail.searchPlaceholder')}
+                value={query}
+                onChange={(event) => setFilters({ query: event.currentTarget.value })}
+                rightSection={
+                  query !== '' ? (
+                    <CloseButton
+                      size="sm"
+                      aria-label={t('diseaseDetail.searchClear')}
+                      onClick={() => setFilters({ query: '' })}
+                    />
+                  ) : undefined
+                }
+              />
+              {query.trim() !== '' && (
+                <Text size="xs" c={shown === 0 ? 'red' : 'dimmed'}>
+                  {shown === 0
+                    ? t('diseaseDetail.searchNone')
+                    : t('diseaseDetail.filterCount', { shown })}
+                </Text>
+              )}
+            </Stack>
             {drugs.length > 1 && (
               <Stack gap={4}>
                 <MultiSelect

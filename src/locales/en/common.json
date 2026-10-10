@@ -364,7 +364,11 @@
     "conditions": "Patient condition",
     "conditionsHint": "Marks the drugs whose label gives a contraindication, a dose reduction or a warning. Hover over or tap a mark for the threshold and the source.",
     "hideContraindicated": "Hide contraindicated regimens",
-    "scores": "Scores"
+    "scores": "Scores",
+    "search": "Find a regimen",
+    "searchPlaceholder": "Regimen name, e.g. «VRd» or «bendamustine»",
+    "searchClear": "Clear the search",
+    "searchNone": "No regimen has that name."
   },
   "catalog": {
     "loading": "Loading reference data…",
