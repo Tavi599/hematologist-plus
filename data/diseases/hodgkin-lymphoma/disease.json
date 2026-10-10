@@ -99,6 +99,51 @@
             "en": "NCCN 2.2026: for older patients and those who cannot have chemotherapy"
           }
         }
+      ],
+      "children": [
+        {
+          "key": "hl1e-standard",
+          "kind": "situation",
+          "title": {
+            "uk": "Стандарт",
+            "en": "Standard"
+          },
+          "regimens": [
+            {
+              "regimen_id": "abvd"
+            },
+            {
+              "regimen_id": "beacopdac-escalated"
+            },
+            {
+              "regimen_id": "avd"
+            },
+            {
+              "regimen_id": "n-avd"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "hl1e-elderly",
+          "kind": "situation",
+          "title": {
+            "uk": "Літні або непридатні до стандартної хіміотерапії",
+            "en": "Older patients or unfit for standard chemotherapy"
+          },
+          "regimens": [
+            {
+              "regimen_id": "chlvpp"
+            },
+            {
+              "regimen_id": "bv-dtic"
+            },
+            {
+              "regimen_id": "bv-nivo-elderly"
+            }
+          ],
+          "children": []
+        }
       ]
     },
     {
@@ -188,6 +233,69 @@
             "uk": "NCCN 2.2026: брентуксимаб 2 цикли, потім AVD 6 циклів, потім брентуксимаб 2 цикли при відповіді (якщо інгібітори PD-1 протипоказані)",
             "en": "NCCN 2.2026: brentuximab for 2 cycles, then AVD for 6, then brentuximab for 2 more with a response (if PD-1 inhibitors are contraindicated)"
           }
+        }
+      ],
+      "children": [
+        {
+          "key": "hl1a-standard",
+          "kind": "situation",
+          "title": {
+            "uk": "Стандарт, до 60 років",
+            "en": "Standard, under 60"
+          },
+          "regimens": [
+            {
+              "regimen_id": "n-avd"
+            },
+            {
+              "regimen_id": "bv-avd"
+            },
+            {
+              "regimen_id": "brecadd"
+            },
+            {
+              "regimen_id": "abvd"
+            },
+            {
+              "regimen_id": "beacopdac-escalated"
+            },
+            {
+              "regimen_id": "beacopp-escalated"
+            },
+            {
+              "regimen_id": "avd"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "hl1a-elderly",
+          "kind": "situation",
+          "title": {
+            "uk": "Літні або непридатні до стандартної хіміотерапії",
+            "en": "Older patients or unfit for standard chemotherapy"
+          },
+          "regimens": [
+            {
+              "regimen_id": "n-avd"
+            },
+            {
+              "regimen_id": "chlvpp"
+            },
+            {
+              "regimen_id": "pvag"
+            },
+            {
+              "regimen_id": "bv-dtic"
+            },
+            {
+              "regimen_id": "bv-nivo-elderly"
+            },
+            {
+              "regimen_id": "ref-hl-bv-avd-sequential"
+            }
+          ],
+          "children": []
         }
       ]
     },
@@ -346,6 +454,120 @@
             "uk": "NCCN 2.2026: GVD",
             "en": "NCCN 2.2026: GVD"
           }
+        }
+      ],
+      "children": [
+        {
+          "key": "hlr-transplant",
+          "kind": "situation",
+          "title": {
+            "uk": "Кандидати на ТГСК",
+            "en": "Transplant candidates"
+          },
+          "regimens": [
+            {
+              "regimen_id": "igev"
+            },
+            {
+              "regimen_id": "ice"
+            },
+            {
+              "regimen_id": "gdp"
+            },
+            {
+              "regimen_id": "dhap"
+            },
+            {
+              "regimen_id": "eshap"
+            },
+            {
+              "regimen_id": "dhaox"
+            },
+            {
+              "regimen_id": "mini-beam"
+            },
+            {
+              "regimen_id": "pembro-gvd"
+            },
+            {
+              "regimen_id": "pembro-ice"
+            },
+            {
+              "regimen_id": "nice"
+            },
+            {
+              "regimen_id": "begev"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "Сальвадж перед аутотрансплантацією; схему обирають і за мобілізаційною здатністю.",
+            "en": "Salvage before an autologous transplant; the regimen is chosen for its mobilising ability too."
+          }
+        },
+        {
+          "key": "hlr-immuno",
+          "kind": "situation",
+          "title": {
+            "uk": "З анти-PD-1 або брентуксимабом",
+            "en": "With anti-PD-1 or brentuximab"
+          },
+          "regimens": [
+            {
+              "regimen_id": "pembrolizumab"
+            },
+            {
+              "regimen_id": "pembrolizumab-q6w"
+            },
+            {
+              "regimen_id": "nivolumab"
+            },
+            {
+              "regimen_id": "brentuximab-mono"
+            },
+            {
+              "regimen_id": "bv-bendamustine"
+            },
+            {
+              "regimen_id": "bv-ice"
+            },
+            {
+              "regimen_id": "pembro-gvd"
+            },
+            {
+              "regimen_id": "pembro-ice"
+            },
+            {
+              "regimen_id": "nice"
+            },
+            {
+              "regimen_id": "bv-nivo-salvage-cycle-1"
+            },
+            {
+              "regimen_id": "bv-nivo-salvage"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "hlr-no-transplant",
+          "kind": "situation",
+          "title": {
+            "uk": "Після ТГСК або непридатні",
+            "en": "After a transplant or unfit"
+          },
+          "regimens": [
+            {
+              "regimen_id": "gem-ox"
+            },
+            {
+              "regimen_id": "chlvpp"
+            },
+            {
+              "regimen_id": "gvd"
+            }
+          ],
+          "children": []
         }
       ]
     }

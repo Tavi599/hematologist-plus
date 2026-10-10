@@ -389,6 +389,113 @@
             "en": "NCCN 4.2026: the second maintenance year follows GALEN"
           }
         }
+      ],
+      "children": [
+        {
+          "key": "fl2-rituximab-refractory",
+          "kind": "situation",
+          "title": {
+            "uk": "Рефрактерні до ритуксимабу",
+            "en": "Rituximab-refractory"
+          },
+          "regimens": [
+            {
+              "regimen_id": "o-b-cycle-1"
+            },
+            {
+              "regimen_id": "o-b"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "Без відповіді або прогресування протягом 6 місяців після ритуксимабу.",
+            "en": "No response or progression within 6 months of rituximab."
+          }
+        },
+        {
+          "key": "fl2-chemo",
+          "kind": "situation",
+          "title": {
+            "uk": "Хіміоімунотерапія",
+            "en": "Chemoimmunotherapy"
+          },
+          "regimens": [
+            {
+              "regimen_id": "br"
+            },
+            {
+              "regimen_id": "r-chop-21"
+            },
+            {
+              "regimen_id": "r-cvp"
+            },
+            {
+              "regimen_id": "o-b-cycle-1"
+            },
+            {
+              "regimen_id": "o-b"
+            },
+            {
+              "regimen_id": "o-chop-cycle-1"
+            },
+            {
+              "regimen_id": "o-chop"
+            },
+            {
+              "regimen_id": "o-chop-cycle-7-8"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "fl2-nochemo",
+          "kind": "situation",
+          "title": {
+            "uk": "Без хіміотерапії",
+            "en": "Without chemotherapy"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r2-cycle-1"
+            },
+            {
+              "regimen_id": "r2"
+            },
+            {
+              "regimen_id": "obinutuzumab-mono"
+            },
+            {
+              "regimen_id": "rituximab-maintenance-rr"
+            },
+            {
+              "regimen_id": "galen-cycle-1"
+            },
+            {
+              "regimen_id": "galen"
+            },
+            {
+              "regimen_id": "galen-obinutuzumab-maintenance"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "fl2-maint",
+          "kind": "situation",
+          "title": {
+            "uk": "Підтримка",
+            "en": "Maintenance"
+          },
+          "regimens": [
+            {
+              "regimen_id": "rituximab-maintenance-rr"
+            },
+            {
+              "regimen_id": "galen-obinutuzumab-maintenance"
+            }
+          ],
+          "children": []
+        }
       ]
     },
     {
@@ -464,6 +571,60 @@
             "uk": "Раз на 8 тижнів, разом до 20 доз",
             "en": "Every 8 weeks, up to 20 doses in all"
           }
+        }
+      ],
+      "children": [
+        {
+          "key": "fl3-nochemo",
+          "kind": "situation",
+          "title": {
+            "uk": "Без хіміотерапії",
+            "en": "Without chemotherapy"
+          },
+          "regimens": [
+            {
+              "regimen_id": "obinutuzumab-mono"
+            },
+            {
+              "regimen_id": "zanubrutinib-obinutuzumab-cycle-1"
+            },
+            {
+              "regimen_id": "zanubrutinib-obinutuzumab-cycle-2-6"
+            },
+            {
+              "regimen_id": "zanubrutinib-obinutuzumab"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "fl3-palliative",
+          "kind": "situation",
+          "title": {
+            "uk": "Паліативні",
+            "en": "Palliative"
+          },
+          "regimens": [
+            {
+              "regimen_id": "chlorambucil-mono"
+            },
+            {
+              "regimen_id": "r-chlorambucil-cycle-1"
+            },
+            {
+              "regimen_id": "r-chlorambucil"
+            },
+            {
+              "regimen_id": "r-vp"
+            },
+            {
+              "regimen_id": "pep-c-induction"
+            },
+            {
+              "regimen_id": "pep-c-maintenance"
+            }
+          ],
+          "children": []
         }
       ]
     },

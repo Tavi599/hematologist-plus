@@ -102,6 +102,59 @@
             "en": "Cycles 2, 4 and 6 of the TRIANGLE regimen (or R-DHAOx)"
           }
         }
+      ],
+      "children": [
+        {
+          "key": "mcl1-triangle",
+          "kind": "situation",
+          "title": {
+            "uk": "TRIANGLE (з ібрутинібом)",
+            "en": "TRIANGLE (with ibrutinib)"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-dhaox"
+            },
+            {
+              "regimen_id": "r-dhaox-eviq"
+            },
+            {
+              "regimen_id": "r-chop-ibrutinib-mcl"
+            },
+            {
+              "regimen_id": "ibrutinib-maintenance-mcl"
+            },
+            {
+              "regimen_id": "r-dhap"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "R-CHOP з ібрутинібом у чергуванні з R-DHAP або R-DHAOx, далі 2 роки ібрутинібу.",
+            "en": "R-CHOP with ibrutinib alternating with R-DHAP or R-DHAOx, then 2 years of ibrutinib."
+          }
+        },
+        {
+          "key": "mcl1-nordic",
+          "kind": "situation",
+          "title": {
+            "uk": "Nordic MCL2 (з трансплантацією)",
+            "en": "Nordic MCL2 (with a transplant)"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-maxi-chop"
+            },
+            {
+              "regimen_id": "r-ara-c"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "R-maxi-CHOP у циклах 1, 3, 5 і R-Ara-C у циклах 2, 4, 6, далі BEAM з аутотрансплантацією.",
+            "en": "R-maxi-CHOP in cycles 1, 3, 5 and R-Ara-C in cycles 2, 4, 6, then BEAM with an autologous transplant."
+          }
+        }
       ]
     },
     {
@@ -166,6 +219,74 @@
             "uk": "NCCN 4.2026: ібрутиніб (безперервно) + ритуксимаб — інші рекомендовані",
             "en": "NCCN 4.2026: ibrutinib (continuous) plus rituximab is other recommended"
           }
+        }
+      ],
+      "children": [
+        {
+          "key": "mcl1e-btk",
+          "kind": "situation",
+          "title": {
+            "uk": "З інгібітором BTK",
+            "en": "With a BTK inhibitor"
+          },
+          "regimens": [
+            {
+              "regimen_id": "br-acala"
+            },
+            {
+              "regimen_id": "r-acala-maintenance"
+            },
+            {
+              "regimen_id": "ibrutinib-rituximab-mcl"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "mcl1e-chemo",
+          "kind": "situation",
+          "title": {
+            "uk": "Хіміоімунотерапія",
+            "en": "Chemoimmunotherapy"
+          },
+          "regimens": [
+            {
+              "regimen_id": "br"
+            },
+            {
+              "regimen_id": "vr-cap"
+            },
+            {
+              "regimen_id": "r-chop-21"
+            },
+            {
+              "regimen_id": "br-acala"
+            },
+            {
+              "regimen_id": "r-bac"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "mcl1e-maint",
+          "kind": "situation",
+          "title": {
+            "uk": "Підтримка",
+            "en": "Maintenance"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-acala-maintenance"
+            },
+            {
+              "regimen_id": "rituximab-maintenance"
+            },
+            {
+              "regimen_id": "lenalidomide-maintenance-mcl"
+            }
+          ],
+          "children": []
         }
       ]
     },
@@ -265,6 +386,127 @@
             "uk": "NCCN 4.2026: DHA + платина + ритуксимаб, за особливих обставин",
             "en": "NCCN 4.2026: DHA plus platinum plus rituximab, useful in certain circumstances"
           }
+        }
+      ],
+      "children": [
+        {
+          "key": "mclr-btk",
+          "kind": "situation",
+          "title": {
+            "uk": "Інгібітори BTK",
+            "en": "BTK inhibitors"
+          },
+          "regimens": [
+            {
+              "regimen_id": "ibrutinib-mono"
+            },
+            {
+              "regimen_id": "acalabrutinib-mono"
+            },
+            {
+              "regimen_id": "zanubrutinib-mono"
+            }
+          ],
+          "children": [],
+          "description": {
+            "uk": "Перший рецидив без попереднього інгібітора BTK.",
+            "en": "First relapse without a previous BTK inhibitor."
+          }
+        },
+        {
+          "key": "mclr-after-btk",
+          "kind": "situation",
+          "title": {
+            "uk": "Після інгібітора BTK",
+            "en": "After a BTK inhibitor"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-bac"
+            },
+            {
+              "regimen_id": "lenalidomide-mcl"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "mclr-chemo",
+          "kind": "situation",
+          "title": {
+            "uk": "Хіміоімунотерапія",
+            "en": "Chemoimmunotherapy"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-ice"
+            },
+            {
+              "regimen_id": "r-bac"
+            },
+            {
+              "regimen_id": "r-dhaox"
+            },
+            {
+              "regimen_id": "r-dhaox-eviq"
+            },
+            {
+              "regimen_id": "r-gem-ox"
+            },
+            {
+              "regimen_id": "r-dhap"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "mclr-nochemo",
+          "kind": "situation",
+          "title": {
+            "uk": "Без хіміотерапії",
+            "en": "Without chemotherapy"
+          },
+          "regimens": [
+            {
+              "regimen_id": "ibrutinib-mono"
+            },
+            {
+              "regimen_id": "acalabrutinib-mono"
+            },
+            {
+              "regimen_id": "zanubrutinib-mono"
+            },
+            {
+              "regimen_id": "lenalidomide-mcl"
+            },
+            {
+              "regimen_id": "r-lenalidomide-mcl"
+            },
+            {
+              "regimen_id": "bortezomib-mcl"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "mclr-palliative",
+          "kind": "situation",
+          "title": {
+            "uk": "Паліативні",
+            "en": "Palliative"
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-vp"
+            },
+            {
+              "regimen_id": "pep-c-induction"
+            },
+            {
+              "regimen_id": "pep-c-maintenance"
+            }
+          ],
+          "children": []
         }
       ]
     },
