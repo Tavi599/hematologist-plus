@@ -303,7 +303,11 @@
     "chapter": "ICD-10 chapter: {{letter}}"
   },
   "diseaseDetail": {
-    "cautionSummary": "Among the regimens shown ({{total}}):",
+    "cautionSummary": {
+      "shown": "Among the regimens shown ({{total}}):",
+      "line": "In this line ({{total}}):",
+      "situations": "In the situations chosen ({{total}}):"
+    },
     "cautionOpen": "List these regimens",
     "cautionClear": "no warnings: {{count}}",
     "showHidden": "View hidden regimens ({{count}})",

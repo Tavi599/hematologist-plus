@@ -24,14 +24,18 @@ export function CautionOverview({
   levels,
   conditions,
   hidden,
+  scope = 'shown',
 }: {
   catalog: CatalogIndex
-  /** The tree before contraindicated regimens are taken out. */
+  /** The regimens counted, before contraindicated ones are taken out. */
   filtered: readonly FilteredNode[]
+  /** The strongest level of each regimen; may cover more regimens than are counted. */
   levels: ReadonlyMap<string, CautionLevel | null>
   conditions: readonly PatientCondition[]
-  /** How many of the contraindicated regimens the tree is hiding now. */
+  /** How many of the contraindicated regimens counted the tree is hiding now. */
   hidden: number
+  /** Whose regimens: all shown on the page, one line, or the situations chosen in it. */
+  scope?: 'shown' | 'line' | 'situations'
 }) {
   const { t } = useTranslation()
   const [open, setOpen] = useState<CautionLevel | null>(null)
@@ -40,8 +44,10 @@ export function CautionOverview({
     CautionLevel,
     number
   >
+  const ids = regimenIdsIn(filtered)
   let clear = 0
-  for (const level of levels.values()) {
+  for (const id of ids) {
+    const level = levels.get(id) ?? null
     if (level === null) clear += 1
     else counts[level] += 1
   }
@@ -49,7 +55,7 @@ export function CautionOverview({
   return (
     <Stack gap={4}>
       <Text size="xs" c="dimmed">
-        {t('diseaseDetail.cautionSummary', { total: levels.size })}
+        {t(`diseaseDetail.cautionSummary.${scope}`, { total: ids.length })}
       </Text>
       <Group gap={6}>
         {CAUTION_LEVELS.map((level) => (

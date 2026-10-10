@@ -303,7 +303,11 @@
     "chapter": "Клас МКХ-10: {{letter}}"
   },
   "diseaseDetail": {
-    "cautionSummary": "Серед показаних схем ({{total}}):",
+    "cautionSummary": {
+      "shown": "Серед показаних схем ({{total}}):",
+      "line": "У цій лінії ({{total}}):",
+      "situations": "У вибраних ситуаціях ({{total}}):"
+    },
     "cautionOpen": "Показати перелік цих схем",
     "cautionClear": "без застережень: {{count}}",
     "showHidden": "Переглянути приховані схеми ({{count}})",

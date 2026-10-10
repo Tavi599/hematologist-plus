@@ -24,7 +24,7 @@ import { currentLanguage } from '../../lib/i18n'
 import { useOnlyObtainable } from '../../lib/only-obtainable'
 import { localize } from '../../lib/localized'
 import { PREMEDICATION_ADVISED } from '../../lib/premedication'
-import { PATIENT_CONDITIONS, type PatientCondition } from '../../schemas/common'
+import { PATIENT_CONDITIONS, type CautionLevel, type PatientCondition } from '../../schemas/common'
 import { CautionBadges } from './CautionBadges'
 import { CautionOverview } from './CautionOverview'
 import { RegimenReference } from './RegimenReference'
@@ -195,6 +195,9 @@ export function TreatmentTree({
           conditions={conditions}
           closed={closed}
           onToggle={onToggle}
+          unfiltered={beforeConditions.find((line) => line.node.id === filtered.node.id)}
+          levels={levels}
+          excluded={excluded}
         />
       ))}
     </Stack>
@@ -208,6 +211,9 @@ function TreatmentNodeView({
   conditions,
   closed,
   onToggle,
+  unfiltered,
+  levels,
+  excluded,
 }: {
   catalog: CatalogIndex
   filtered: FilteredNode
@@ -215,6 +221,10 @@ function TreatmentNodeView({
   conditions: readonly PatientCondition[]
   closed?: ReadonlySet<string>
   onToggle?: (nodeId: string) => void
+  /** A line as it is before contraindicated regimens are hidden, for its own caution counts. */
+  unfiltered?: FilteredNode
+  levels?: ReadonlyMap<string, CautionLevel | null>
+  excluded?: ReadonlySet<string>
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
@@ -228,6 +238,12 @@ function TreatmentNodeView({
   const count = countRegimens([filtered])
   const { situations, sections, links } = splitSituations(filtered, chosen)
   const narrowed = situations.some((situation) => chosen.includes(situation.node.id))
+  // The line's own counts for the patient's conditions, over the situations chosen in it; the
+  // regimens hidden as contraindicated are counted, so the list can still show them.
+  const counted =
+    unfiltered && levels && conditions.length > 0
+      ? { ...unfiltered, links: splitSituations(unfiltered, chosen).links, children: [] }
+      : null
 
   const regimens = links
     .map((link) => ({ link, regimen: catalog.regimens.get(link.regimen_id) }))
@@ -319,6 +335,16 @@ function TreatmentNodeView({
                 </Group>
               )}
             </Stack>
+          )}
+          {counted && counted.links.length > 0 && (
+            <CautionOverview
+              catalog={catalog}
+              filtered={[counted]}
+              levels={levels!}
+              conditions={conditions}
+              hidden={counted.links.filter((link) => excluded?.has(link.regimen_id)).length}
+              scope={narrowed ? 'situations' : 'line'}
+            />
           )}
           {calculable.length > 0 && (
             <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="xs" verticalSpacing={4}>

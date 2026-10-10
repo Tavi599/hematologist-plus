@@ -39,6 +39,31 @@ describe('TreatmentTree', () => {
     expect(screen.getByText('Підгрупа')).toBeInTheDocument()
   })
 
+  it('counts the regimens of the page and of each line by the patient condition', async () => {
+    const rows = demoCatalog()
+    const item = rows.regimen_items.find(
+      (entry) => entry.regimen_id === 'r-chop-21' && entry.role === 'main',
+    )!
+    rows.drugs.find((drug) => drug.id === item.drug_id)!.cautions = [
+      {
+        condition: 'renal',
+        level: 'contraindicated',
+        notes: { uk: 'п', en: 'n' },
+        source: { name: 'FDA label', checkedOn: '2026-10-10' },
+      },
+    ]
+    renderWithProviders(<TreatmentTree catalog={indexCatalog(rows)} diseaseId="dlbcl" />)
+    await act(() => fireEvent.click(screen.getByText('Ниркова недостатність')))
+
+    expect(screen.getByText(/^Серед показаних схем/)).toBeInTheDocument()
+    expect(screen.getAllByText(/^У цій лінії/).length).toBeGreaterThan(0)
+
+    // The count opens the list, where the regimen is named.
+    fireEvent.click(screen.getAllByRole('button', { name: 'протипоказано: 1' })[0]!)
+    const list = await screen.findByRole('dialog', { name: 'Схеми з протипоказаним препаратом' })
+    expect(list).toHaveTextContent('R-CHOP-21')
+  })
+
   it('leaves a regimen unlabelled when every drug of it is registered', () => {
     const rows = demoCatalog()
     renderWithProviders(<TreatmentTree catalog={indexCatalog(rows)} diseaseId="dlbcl" />)
