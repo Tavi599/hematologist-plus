@@ -156,3 +156,8 @@ export function splitSituations(
   )
   return { situations, sections, links }
 }
+
+/** Id of a line's element on the page, for the page's own navigation to scroll to. */
+export function lineAnchor(nodeId: string): string {
+  return `line-${nodeId}`
+}

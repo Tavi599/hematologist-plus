@@ -5,6 +5,7 @@ import {
   Chip,
   Group,
   MultiSelect,
+  Paper,
   SimpleGrid,
   Stack,
   Switch,
@@ -31,6 +32,7 @@ import {
   countRegimens,
   drugsInTree,
   filterTree,
+  lineAnchor,
   regimensInTree,
   splitSituations,
   type FilteredNode,
@@ -40,9 +42,14 @@ import {
 export function TreatmentTree({
   catalog,
   diseaseId,
+  closed,
+  onToggle,
 }: {
   catalog: CatalogIndex
   diseaseId: string
+  /** Lines folded away, by node id; left out, each line keeps its own state. */
+  closed?: ReadonlySet<string>
+  onToggle?: (nodeId: string) => void
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
@@ -97,73 +104,80 @@ export function TreatmentTree({
 
   return (
     <Stack gap="sm">
-      <Switch
-        label={t('diseaseDetail.hideUnavailable')}
-        description={
-          onlyObtainable && hidden > 0
-            ? t('diseaseDetail.hiddenCount', { count: hidden })
-            : undefined
-        }
-        checked={onlyObtainable}
-        onChange={(event) => setOnlyObtainable(event.currentTarget.checked)}
-      />
-      {/* Worth the room only where there is a list to cut down; two regimens are read faster than
+      {/* The filters side by side on a wide screen: the regimens start one screen sooner. */}
+      <Paper withBorder p="sm" radius="sm" bg="var(--mantine-color-default-hover)">
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md" verticalSpacing="sm">
+          <Stack gap="sm">
+            <Switch
+              label={t('diseaseDetail.hideUnavailable')}
+              description={
+                onlyObtainable && hidden > 0
+                  ? t('diseaseDetail.hiddenCount', { count: hidden })
+                  : undefined
+              }
+              checked={onlyObtainable}
+              onChange={(event) => setOnlyObtainable(event.currentTarget.checked)}
+            />
+            {/* Worth the room only where there is a list to cut down; two regimens are read faster than
           a filter is filled in. */}
-      {drugs.length > 1 && (
-        <Stack gap={4}>
-          <MultiSelect
-            label={t('diseaseDetail.filter')}
-            description={t('diseaseDetail.filterHint')}
-            data={drugs.map(({ drug, label }) => ({ value: drug.id, label }))}
-            value={drugIds}
-            onChange={setDrugIds}
-            searchable
-            clearable
-            maxDropdownHeight={280}
-          />
-          {drugIds.length > 0 && (
-            <Text size="xs" c={shown === 0 ? 'red' : 'dimmed'}>
-              {shown === 0
-                ? t('diseaseDetail.filterNone')
-                : t('diseaseDetail.filterCount', { shown })}
+            {drugs.length > 1 && (
+              <Stack gap={4}>
+                <MultiSelect
+                  label={t('diseaseDetail.filter')}
+                  description={t('diseaseDetail.filterHint')}
+                  data={drugs.map(({ drug, label }) => ({ value: drug.id, label }))}
+                  value={drugIds}
+                  onChange={setDrugIds}
+                  searchable
+                  clearable
+                  maxDropdownHeight={280}
+                />
+                {drugIds.length > 0 && (
+                  <Text size="xs" c={shown === 0 ? 'red' : 'dimmed'}>
+                    {shown === 0
+                      ? t('diseaseDetail.filterNone')
+                      : t('diseaseDetail.filterCount', { shown })}
+                  </Text>
+                )}
+              </Stack>
+            )}
+          </Stack>
+          <Stack gap={4}>
+            <Text size="sm" fw={500}>
+              {t('diseaseDetail.conditions')}
             </Text>
-          )}
-        </Stack>
-      )}
-      <Stack gap={4}>
-        <Text size="sm" fw={500}>
-          {t('diseaseDetail.conditions')}
-        </Text>
-        <Text size="xs" c="dimmed">
-          {t('diseaseDetail.conditionsHint')}
-        </Text>
-        <Chip.Group
-          multiple
-          value={conditions}
-          onChange={(value) => setConditions(value as PatientCondition[])}
-        >
-          <Group gap={6}>
-            {PATIENT_CONDITIONS.map((condition) => (
-              <Chip key={condition} value={condition} size="xs" variant="outline" color="red">
-                {t(`condition.${condition}`)}
-              </Chip>
-            ))}
-          </Group>
-        </Chip.Group>
-        {conditions.length > 0 && (
-          <Switch
-            size="xs"
-            label={t('diseaseDetail.hideContraindicated')}
-            description={
-              hideContraindicated && excludedShown > 0
-                ? t('diseaseDetail.hiddenCount', { count: excludedShown })
-                : undefined
-            }
-            checked={hideContraindicated}
-            onChange={(event) => setHideContraindicated(event.currentTarget.checked)}
-          />
-        )}
-      </Stack>
+            <Text size="xs" c="dimmed">
+              {t('diseaseDetail.conditionsHint')}
+            </Text>
+            <Chip.Group
+              multiple
+              value={conditions}
+              onChange={(value) => setConditions(value as PatientCondition[])}
+            >
+              <Group gap={6}>
+                {PATIENT_CONDITIONS.map((condition) => (
+                  <Chip key={condition} value={condition} size="xs" variant="outline" color="red">
+                    {t(`condition.${condition}`)}
+                  </Chip>
+                ))}
+              </Group>
+            </Chip.Group>
+            {conditions.length > 0 && (
+              <Switch
+                size="xs"
+                label={t('diseaseDetail.hideContraindicated')}
+                description={
+                  hideContraindicated && excludedShown > 0
+                    ? t('diseaseDetail.hiddenCount', { count: excludedShown })
+                    : undefined
+                }
+                checked={hideContraindicated}
+                onChange={(event) => setHideContraindicated(event.currentTarget.checked)}
+              />
+            )}
+          </Stack>
+        </SimpleGrid>
+      </Paper>
       {nodes.map((filtered) => (
         <TreatmentNodeView
           key={filtered.node.id}
@@ -171,6 +185,8 @@ export function TreatmentTree({
           filtered={filtered}
           depth={0}
           conditions={conditions}
+          closed={closed}
+          onToggle={onToggle}
         />
       ))}
     </Stack>
@@ -182,18 +198,24 @@ function TreatmentNodeView({
   filtered,
   depth,
   conditions,
+  closed,
+  onToggle,
 }: {
   catalog: CatalogIndex
   filtered: FilteredNode
   depth: number
   conditions: readonly PatientCondition[]
+  closed?: ReadonlySet<string>
+  onToggle?: (nodeId: string) => void
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
   const { node } = filtered
   // A top-level line folds away: on a disease with forty regimens the physician closes the lines
   // that are not the patient's and reads the rest. Everything starts open, so nothing is missed.
-  const [opened, setOpened] = useState(true)
+  const [ownOpened, setOwnOpened] = useState(true)
+  const opened = closed ? !closed.has(node.id) : ownOpened
+  const toggle = () => (onToggle ? onToggle(node.id) : setOwnOpened((current) => !current))
   const [chosen, setChosen] = useState<string[]>([])
   const count = countRegimens([filtered])
   const { situations, sections, links } = splitSituations(filtered, chosen)
@@ -227,13 +249,14 @@ function TreatmentNodeView({
   )
 
   return (
-    <Stack gap={6} pl={depth === 0 ? 0 : 'md'} className={depth === 0 ? classes.line : undefined}>
+    <Stack
+      gap={6}
+      pl={depth === 0 ? 0 : 'md'}
+      className={depth === 0 ? classes.line : undefined}
+      id={depth === 0 ? lineAnchor(node.id) : undefined}
+    >
       {depth === 0 ? (
-        <UnstyledButton
-          onClick={() => setOpened((current) => !current)}
-          aria-expanded={opened}
-          className={classes.toggle}
-        >
+        <UnstyledButton onClick={toggle} aria-expanded={opened} className={classes.toggle}>
           <Group justify="space-between" wrap="nowrap">
             {heading}
             <Text size="xs" c="dimmed" aria-hidden>

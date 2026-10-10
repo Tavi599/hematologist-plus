@@ -1,7 +1,9 @@
-/* A line of treatment: a thin rule above it separates it from the one before. */
+/* A line of treatment: a thin rule above it separates it from the one before. Jumped to from the
+   page's navigation, it lands under the header and the bar, not behind them. */
 .line {
   border-top: 1px solid var(--mantine-color-default-border);
   padding-top: var(--mantine-spacing-xs);
+  scroll-margin-top: 108px;
 }
 
 .toggle {

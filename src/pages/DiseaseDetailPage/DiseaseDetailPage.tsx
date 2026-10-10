@@ -8,6 +8,7 @@ import { SignInPanel } from '../../features/auth/SignInPanel'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
 import { ArticleSources } from '../../features/catalog/ArticleSources'
 import { TreatmentTree } from '../../features/catalog/TreatmentTree'
+import { lineAnchor } from '../../features/catalog/treatment-filter'
 import { useDiseaseArticles } from '../../lib/articles'
 import { isAuthConfigured, useSessionUser } from '../../lib/auth'
 import type { CatalogIndex } from '../../lib/catalog-index'
@@ -17,6 +18,11 @@ import { currentLanguage } from '../../lib/i18n'
 import { localize, resolveLocalized } from '../../lib/localized'
 import { ArticleContents } from './ArticleContents'
 import { Markdown } from './Markdown'
+import { SectionNav } from './SectionNav'
+import navClasses from './SectionNav.module.css'
+import { useClosedLines } from './use-closed-lines'
+
+const ARTICLE_ANCHOR = 'disease-article'
 
 export function DiseaseDetailPage() {
   const { t } = useTranslation()
@@ -34,12 +40,36 @@ export function DiseaseDetailPage() {
 
 function DiseaseDetail({ catalog, slug }: { catalog: CatalogIndex; slug: string }) {
   const { t } = useTranslation()
-  const language = currentLanguage()
   const disease = catalog.diseases.get(slug)
 
   if (!disease) {
     return <Text c="dimmed">{t('diseaseDetail.placeholder', { slug })}</Text>
   }
+  return <DiseaseView key={disease.id} catalog={catalog} disease={disease} />
+}
+
+function DiseaseView({ catalog, disease }: { catalog: CatalogIndex; disease: Disease }) {
+  const { t } = useTranslation()
+  const language = currentLanguage()
+  const lines = catalog.rootNodesByDisease.get(disease.id) ?? []
+  // Trials and courses for reading only are not what a regimen is chosen from, and on myeloma they
+  // run to half the page: they start folded, a click away in the bar.
+  const [closed, setClosed] = useClosedLines(
+    disease.id,
+    lines
+      .filter((node) => node.kind === 'trial' || node.kind === 'reference')
+      .map((node) => node.id),
+  )
+  const sections = [
+    ...lines.map((node) => ({ id: lineAnchor(node.id), label: localize(node.title, language) })),
+    ...(isAuthConfigured ? [{ id: ARTICLE_ANCHOR, label: t('diseaseDetail.article') }] : []),
+  ]
+  const toggle = (nodeId: string) =>
+    setClosed((current) => {
+      const next = new Set(current)
+      if (!next.delete(nodeId)) next.add(nodeId)
+      return next
+    })
 
   const codes = catalog.codesByDisease.get(disease.id) ?? []
 
@@ -59,12 +89,32 @@ function DiseaseDetail({ catalog, slug }: { catalog: CatalogIndex; slug: string 
       )}
       {disease.summary !== null && <Text>{localize(disease.summary, language)}</Text>}
 
+      {sections.length > 1 && (
+        <SectionNav
+          sections={sections}
+          // A folded line opens when the reader asks to go to it.
+          onSelect={(id) => {
+            const line = lines.find((node) => lineAnchor(node.id) === id)
+            if (line && closed.has(line.id)) toggle(line.id)
+          }}
+          allOpen={closed.size === 0}
+          onToggleAll={() =>
+            setClosed(closed.size === 0 ? new Set(lines.map((node) => node.id)) : new Set())
+          }
+        />
+      )}
+
       <Card withBorder component="section">
         <Stack gap="sm">
           <Title order={2} size="h4">
             {t('diseaseDetail.treatment')}
           </Title>
-          <TreatmentTree catalog={catalog} diseaseId={disease.id} />
+          <TreatmentTree
+            catalog={catalog}
+            diseaseId={disease.id}
+            closed={closed}
+            onToggle={toggle}
+          />
         </Stack>
       </Card>
 
@@ -90,7 +140,7 @@ function ArticleSection({ disease }: { disease: Disease }) {
   const forSection = (articles.data ?? []).filter((row) => row.section === shown)
 
   return (
-    <Card withBorder component="section">
+    <Card withBorder component="section" id={ARTICLE_ANCHOR} className={navClasses.section}>
       <Stack gap="sm">
         <Title order={2} size="h4">
           {t('diseaseDetail.article')}

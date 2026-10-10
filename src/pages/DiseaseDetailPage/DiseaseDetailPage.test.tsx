@@ -1,4 +1,4 @@
-import { act, screen, within } from '@testing-library/react'
+import { act, fireEvent, screen, within } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { demoCatalog } from '../../lib/catalog.fixture'
@@ -52,6 +52,35 @@ describe('DiseaseDetailPage', () => {
     })
     expect(await screen.findByText('Текст статті доступний лише після входу.')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Увійти' })).toBeInTheDocument()
+  })
+
+  it('names the lines and the article in a bar, and folds every line from it', async () => {
+    window.localStorage.clear()
+    const view = renderWithProviders(<DiseaseDetailPage />, {
+      route: '/diseases/dlbcl',
+      path: '/diseases/:slug',
+    })
+    const bar = await screen.findByRole('navigation', { name: 'Розділи сторінки' })
+    expect(within(bar).getByRole('button', { name: 'Перша лінія' })).toBeInTheDocument()
+    expect(within(bar).getByRole('button', { name: 'Стаття' })).toBeInTheDocument()
+
+    fireEvent.click(within(bar).getByRole('button', { name: 'Згорнути всі' }))
+    expect(screen.getByRole('link', { name: 'R-CHOP-21', hidden: true })).not.toBeVisible()
+    expect(within(bar).getByRole('button', { name: 'Розгорнути всі' })).toBeInTheDocument()
+
+    // Folded lines are remembered for the next visit to the disease.
+    view.unmount()
+    renderWithProviders(<DiseaseDetailPage />, {
+      route: '/diseases/dlbcl',
+      path: '/diseases/:slug',
+    })
+    await screen.findByRole('navigation', { name: 'Розділи сторінки' })
+    expect(screen.getByRole('link', { name: 'R-CHOP-21', hidden: true })).not.toBeVisible()
+
+    // Going to a folded line opens it.
+    fireEvent.click(screen.getByRole('button', { name: 'Перша лінія' }))
+    expect(screen.getByRole('link', { name: 'R-CHOP-21' })).toBeVisible()
+    window.localStorage.clear()
   })
 
   it('reports an unknown disease', async () => {

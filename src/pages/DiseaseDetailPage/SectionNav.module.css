@@ -1,0 +1,31 @@
+/* Stays under the application header while the page scrolls beneath it. */
+.bar {
+  position: sticky;
+  top: var(--app-shell-header-offset, 48px);
+  z-index: 90;
+  margin-inline: calc(var(--mantine-spacing-sm) * -1);
+  padding: 6px var(--mantine-spacing-sm);
+  background-color: var(--mantine-color-body);
+  border-bottom: 1px solid var(--mantine-color-default-border);
+}
+
+/* On a phone the sections run past the edge and are swiped; with a mouse they wrap instead, as a
+   bar scrolled sideways by mouse is awkward. */
+.scroller {
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  @media (min-width: 48em) {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}
+
+.item {
+  flex-shrink: 0;
+}
+
+/* A section jumped to lands under the header and the bar, not behind them. */
+.section {
+  scroll-margin-top: 108px;
+}
