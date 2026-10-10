@@ -181,6 +181,13 @@
             "uk": "NCCN 2.2026: для літніх і тих, кому хіміотерапія неможлива",
             "en": "NCCN 2.2026: for older patients and those who cannot have chemotherapy"
           }
+        },
+        {
+          "regimen_id": "ref-hl-bv-avd-sequential",
+          "notes": {
+            "uk": "NCCN 2.2026: брентуксимаб 2 цикли, потім AVD 6 циклів, потім брентуксимаб 2 цикли при відповіді (якщо інгібітори PD-1 протипоказані)",
+            "en": "NCCN 2.2026: brentuximab for 2 cycles, then AVD for 6, then brentuximab for 2 more with a response (if PD-1 inhibitors are contraindicated)"
+          }
         }
       ]
     },
@@ -325,43 +332,6 @@
             "uk": "NCCN 2.2026: GVD",
             "en": "NCCN 2.2026: GVD"
           }
-        }
-      ]
-    },
-    {
-      "key": "clinical-trials",
-      "kind": "trial",
-      "title": {
-        "uk": "Клінічні дослідження",
-        "en": "Clinical trials"
-      },
-      "description": {
-        "uk": "Схеми, які існують лише як опубліковані дослідження: їх немає ні в настанові, ні в інструкції до препарату. Застосування поза інструкцією потребує окремого рішення й згоди пацієнта. Біля кожної схеми в калькуляторі наведено дизайн дослідження, кого в нього включали, що з нього вийшло і чого вимагає проведення.",
-        "en": "Regimens that exist only as published studies: neither a guideline nor a label carries them. Off-label use needs a decision of its own and the patient's consent. In the calculator each regimen states the design of the study, who was enrolled, what came out of it and what the conduct demands."
-      },
-      "regimens": [],
-      "children": [
-        {
-          "key": "trials-elderly",
-          "kind": "trial",
-          "title": {
-            "uk": "Перша лінія: літні та непридатні до хіміотерапії",
-            "en": "First line: older patients and those unfit for chemotherapy"
-          },
-          "description": {
-            "uk": "Від 60 років. Результат сильно залежить від геріатричної оцінки (CIRS-G, IADL).",
-            "en": "Aged 60 or over. Outcome depends heavily on the geriatric assessment (CIRS-G, IADL)."
-          },
-          "regimens": [
-            {
-              "regimen_id": "ref-hl-bv-avd-sequential",
-              "notes": {
-                "uk": "Придатні до хіміотерапії",
-                "en": "Fit for chemotherapy"
-              }
-            }
-          ],
-          "children": []
         }
       ]
     }

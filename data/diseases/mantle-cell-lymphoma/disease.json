@@ -251,6 +251,20 @@
         },
         {
           "regimen_id": "bortezomib-mcl"
+        },
+        {
+          "regimen_id": "r-gem-ox",
+          "notes": {
+            "uk": "NCCN 4.2026: GemOx + ритуксимаб, за особливих обставин",
+            "en": "NCCN 4.2026: GemOx plus rituximab, useful in certain circumstances"
+          }
+        },
+        {
+          "regimen_id": "r-dhap",
+          "notes": {
+            "uk": "NCCN 4.2026: DHA + платина + ритуксимаб, за особливих обставин",
+            "en": "NCCN 4.2026: DHA plus platinum plus rituximab, useful in certain circumstances"
+          }
         }
       ]
     },
