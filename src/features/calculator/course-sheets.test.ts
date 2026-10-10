@@ -354,6 +354,14 @@ describe('buildCourseSheets', () => {
     expect(text(built.at(-1)!.rows.at(-1)![0] ?? null)).toBeNull()
   })
 
+  it('says at the foot of every sheet when only irradiated components may be given', () => {
+    const built = sheets({ irradiatedOnly: true })
+    expect(String(text(built[0]!.rows.at(-1)![0] ?? null))).toContain(
+      'Компоненти крові — лише ОПРОМІНЕНІ!',
+    )
+    expect(text(built.at(-1)!.rows.at(-1)![0] ?? null)).toBe('Компоненти крові — лише ОПРОМІНЕНІ!')
+  })
+
   it('writes the dose under every mark of a drug given several times a day', () => {
     const items = buildCourseItems(indexCatalog(demoCatalog()), 'r-chop-21').map((item) =>
       item.item.block === 'infusion' && item.item.drug_id === 'cyclophosphamide'

@@ -54,6 +54,11 @@ export interface CourseSheetsInput {
    * the days it is given.
    */
   layout?: SheetLayout
+  /**
+   * The patient needs irradiated blood components (BSH 2020): the sheet says so at its foot, where
+   * the nurse and the transfusion request read it.
+   */
+  irradiatedOnly?: boolean
   /** Start of the working day, HH:MM: where the times of a drug given several times a day begin. */
   dayStart?: string
   language: Language
@@ -144,6 +149,7 @@ const BLANK = {
   perDay: ' р/добу',
   times: ' та ',
   control: 'Контроль ваги, діурезу, АТ, ЧСС, температури тіла!',
+  irradiated: 'Компоненти крові — лише ОПРОМІНЕНІ!',
 } as const
 
 const MARK = '+'
@@ -291,7 +297,13 @@ function daySheet(input: CourseSheetsInput, day: SheetDay): XlsxSheet {
     })),
   )
 
-  rows.push([{ value: BLANK.control, format: NOTE_FORMAT }, ...spread('', 25, NOTE_FORMAT)])
+  rows.push([
+    {
+      value: input.irradiatedOnly ? `${BLANK.control}   ${BLANK.irradiated}` : BLANK.control,
+      format: NOTE_FORMAT,
+    },
+    ...spread('', 25, NOTE_FORMAT),
+  ])
   merges.push(`A${rows.length}:${lastColumn}${rows.length}`)
   heights.push(NOTE_HEIGHT)
 
@@ -526,7 +538,10 @@ function wardSheet(
   ]
   const ruled = appendBands(rows, merges, heights, widths, bands)
 
-  rows.push([{ value: null, format: NOTE_FORMAT }, ...spread('', 25, NOTE_FORMAT)])
+  rows.push([
+    { value: input.irradiatedOnly ? BLANK.irradiated : null, format: NOTE_FORMAT },
+    ...spread('', 25, NOTE_FORMAT),
+  ])
   merges.push(`A${rows.length}:${lastColumn}${rows.length}`)
   heights.push(NOTE_HEIGHT)
 

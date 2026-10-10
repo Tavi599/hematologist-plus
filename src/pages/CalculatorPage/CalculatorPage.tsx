@@ -21,6 +21,7 @@ import { RegimenEvidence } from '../../features/catalog/RegimenEvidence'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { StandardSupport } from '../../features/calculator/StandardSupport'
 import { cyclophosphamideMesna } from '../../lib/cyclophosphamide-mesna'
+import { irradiationReasons } from '../../features/irradiated/course'
 import {
   categoryItemIds,
   indicatedSupport,
@@ -305,6 +306,10 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   ])
 
   const regimen = regimenId === null ? undefined : catalog.regimens.get(regimenId)
+  const irradiation = useMemo(
+    () => irradiationReasons(catalog, items, regimenId),
+    [catalog, items, regimenId],
+  )
   /** Hand-written lines that actually say something; an empty one is not a sheet. */
   const written = manualRows.filter((row) => row.what.trim() !== '')
 
@@ -399,6 +404,14 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
 
           <Tabs.Panel value="doses" pt="sm">
             <Stack gap="sm">
+              {irradiation.length > 0 && (
+                <Alert color="grape" title={t('calculator.doses.irradiatedTitle')}>
+                  <Text size="sm">{irradiation.map((reason) => reason[language]).join('; ')}</Text>
+                  <Text size="xs" c="dimmed">
+                    {t('calculator.doses.irradiatedHint')}
+                  </Text>
+                </Alert>
+              )}
               {alwaysWithout.length > 0 && (
                 <Alert color="orange" title={t('calculator.doses.premedAlertTitle')}>
                   <Text size="sm">
@@ -513,6 +526,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   wait for a calculation — only for someone to put something on the paper. */}
               {patient && sheetReady ? (
                 <CourseExport
+                  // A new regimen starts from its own reasons for irradiated components.
+                  key={regimenId ?? 'none'}
                   items={items}
                   course={course}
                   patient={patient}
@@ -522,6 +537,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   dayStart={courseSettings.dayStart}
                   header={header}
                   manualRows={manualRows}
+                  irradiationReasons={irradiation}
                 />
               ) : (
                 <Text size="sm" c="dimmed">
