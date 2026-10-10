@@ -17,9 +17,7 @@
       "institution_name": "ДЕМО: назва закладу",
       "department_name": "ДЕМО: відділення гематології",
       "head_of_department": "ДЕМО: Прізвище І. П.",
-      "doctors": [
-        "ДЕМО: Прізвище І. П."
-      ],
+      "doctors": ["ДЕМО: Прізвище І. П."],
       "address": null,
       "is_default": true,
       "sort_order": 0,
@@ -230,11 +228,7 @@
       "concentration_max_mg_ml": 4,
       "stock_concentration_mg_ml": 10,
       "rate_ramp": null,
-      "bag_volumes_ml": [
-        100,
-        250,
-        500
-      ],
+      "bag_volumes_ml": [100, 250, 500],
       "duration_min": null,
       "is_default": true,
       "notes": null,
@@ -276,9 +270,7 @@
             "id": "tablets",
             "kind": "multi_day_sheet",
             "title": "ДЕМО Лист призначень",
-            "itemIds": [
-              "r-chop-21.prednisolone"
-            ],
+            "itemIds": ["r-chop-21.prednisolone"],
             "template": {}
           }
         ]
@@ -297,9 +289,7 @@
       "cap_amount": null,
       "interval_min": null,
       "anchor_offset_min": null,
-      "days": [
-        1
-      ],
+      "days": [1],
       "administrations_per_day": 1,
       "duration_min": null,
       "fallback_solvent": null,
@@ -323,9 +313,7 @@
       "cap_amount": null,
       "interval_min": null,
       "anchor_offset_min": null,
-      "days": [
-        1
-      ],
+      "days": [1],
       "administrations_per_day": 1,
       "duration_min": null,
       "fallback_solvent": null,
@@ -349,9 +337,7 @@
       "cap_amount": null,
       "interval_min": null,
       "anchor_offset_min": null,
-      "days": [
-        1
-      ],
+      "days": [1],
       "administrations_per_day": 1,
       "duration_min": null,
       "fallback_solvent": null,
@@ -375,9 +361,7 @@
       "cap_amount": 2,
       "interval_min": null,
       "anchor_offset_min": null,
-      "days": [
-        1
-      ],
+      "days": [1],
       "administrations_per_day": 1,
       "duration_min": null,
       "fallback_solvent": null,
@@ -401,13 +385,7 @@
       "cap_amount": null,
       "interval_min": null,
       "anchor_offset_min": null,
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [1, 2, 3, 4, 5],
       "administrations_per_day": 1,
       "duration_min": null,
       "fallback_solvent": null,

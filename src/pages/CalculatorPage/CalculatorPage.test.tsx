@@ -18,6 +18,8 @@ async function fillPatient() {
     set('Зріст, см', '180')
     set('Вага, кг', '80')
     set('Креатинін', '88,4')
+    // The sex is never assumed: without a choice there is no clearance.
+    fireEvent.click(screen.getByText('Чоловіча'))
   })
 }
 
@@ -60,6 +62,20 @@ describe('CalculatorPage', () => {
 
     expect(screen.getByText(/BSA 2 м²/)).toBeInTheDocument()
     expect(screen.getByText(/88,9 мл\/хв/)).toBeInTheDocument()
+  })
+
+  it('calculates no clearance until the sex is chosen', async () => {
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    await screen.findByRole('combobox', { name: 'Схема' })
+    await act(async () => {
+      fireEvent.change(screen.getByLabelText('Вік, років'), { target: { value: '60' } })
+      fireEvent.change(screen.getByLabelText('Зріст, см'), { target: { value: '180' } })
+      fireEvent.change(screen.getByLabelText('Вага, кг'), { target: { value: '80' } })
+      fireEvent.change(screen.getByLabelText('Креатинін'), { target: { value: '88,4' } })
+    })
+    expect(screen.getByText(/Оберіть стать/)).toBeInTheDocument()
+    expect(screen.queryByText(/88,9 мл\/хв/)).not.toBeInTheDocument()
+    expect(screen.getByText(/немає значення поля Стать/)).toBeInTheDocument()
   })
 
   it('shows the dose on the chosen BSA and the other variant under it when they differ', async () => {

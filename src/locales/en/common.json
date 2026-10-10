@@ -30,6 +30,7 @@
       "recordNumber": "Record number",
       "birthDate": "Date of birth",
       "ageYears": "Age, years",
+      "sexMissing": "Choose the sex: the creatinine clearance is not calculated without it",
       "sex": "Sex",
       "male": "Male",
       "female": "Female",
@@ -301,6 +302,7 @@
     "chapter": "ICD-10 chapter: {{letter}}"
   },
   "diseaseDetail": {
+    "premedication": "premedication required",
     "hideUnavailable": "Hide unavailable regimens",
     "hiddenCount": "Regimens hidden: {{count}}",
     "title": "Disease",

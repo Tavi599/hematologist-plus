@@ -39,7 +39,8 @@ export type BsaVariant = 'actual' | 'capped'
 export interface CoursePatient {
   /** Needed for the creatinine clearance and for the age-based review hints. */
   ageYears?: number
-  sex: Sex
+  /** Needed for the creatinine clearance; never assumed. */
+  sex?: Sex
   /** Needed for the Mosteller BSA; not needed at all when the BSA is entered by hand. */
   heightCm?: number
   /** Needed for the Mosteller BSA, for doses per kilogram and for the creatinine clearance. */
@@ -177,7 +178,8 @@ export function calculateCourse(
   const renal =
     patient.serumCreatinine === undefined ||
     patient.ageYears === undefined ||
-    patient.weightKg === undefined
+    patient.weightKg === undefined ||
+    patient.sex === undefined
       ? null
       : cockcroftGault({
           ageYears: patient.ageYears,
@@ -205,7 +207,14 @@ export function calculateCourse(
   if (patient.serumCreatinine !== undefined && renal === null) {
     warnings.push({
       code: 'review.clearanceUnknown',
-      params: { field: patient.ageYears === undefined ? 'ageYears' : 'weightKg' },
+      params: {
+        field:
+          patient.ageYears === undefined
+            ? 'ageYears'
+            : patient.weightKg === undefined
+              ? 'weightKg'
+              : 'sex',
+      },
     })
   }
   if (patient.ageYears === undefined && enabled.some((drug) => drug.reviewRules?.elderly)) {

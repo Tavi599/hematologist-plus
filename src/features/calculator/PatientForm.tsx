@@ -120,14 +120,22 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
                 <Text size="xs" fw={500} mb={4}>
                   {t('calculator.patient.sex')}
                 </Text>
+                {/* Nothing is chosen until the physician chooses: a sex assumed by the form
+                    would quietly change the creatinine clearance. */}
                 <SegmentedControl
                   {...field}
+                  value={field.value ?? ''}
                   fullWidth
                   data={[
                     { value: 'male', label: t('calculator.patient.male') },
                     { value: 'female', label: t('calculator.patient.female') },
                   ]}
                 />
+                {field.value === null && (
+                  <Text size="xs" c="orange.8" mt={2}>
+                    {t('calculator.patient.sexMissing')}
+                  </Text>
+                )}
               </div>
             )}
           />

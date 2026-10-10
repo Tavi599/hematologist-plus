@@ -236,7 +236,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       calculateCourse(
         {
           ageYears: patient.ageYears ?? undefined,
-          sex: patient.sex,
+          sex: patient.sex ?? undefined,
           heightCm: patient.heightCm ?? undefined,
           weightKg: patient.weightKg ?? undefined,
           serumCreatinine: patient.serumCreatinine ?? undefined,

@@ -20,6 +20,7 @@ import type { CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage } from '../../lib/i18n'
 import { useOnlyObtainable } from '../../lib/only-obtainable'
 import { localize } from '../../lib/localized'
+import { PREMEDICATION_ADVISED } from '../../lib/premedication'
 import { RegimenReference } from './RegimenReference'
 import classes from './TreatmentTree.module.css'
 import { countRegimens, drugsInTree, filterTree, type FilteredNode } from './treatment-filter'
@@ -199,6 +200,12 @@ function TreatmentNodeView({
                           {name}
                         </Text>
                       )}
+                      {needsPremedication(catalog, regimen!.id) && (
+                        <Text size="xs" c="orange.8">
+                          {t('diseaseDetail.premedication')}
+                        </Text>
+                      )}
+                      {link.notes !== null && <LinkNote text={localize(link.notes, language)} />}
                     </Stack>
                     <Button
                       size="compact-xs"
@@ -229,5 +236,38 @@ function TreatmentNodeView({
         </Stack>
       </div>
     </Stack>
+  )
+}
+
+/** Does the regimen give a drug whose label asks for premedication? */
+function needsPremedication(catalog: CatalogIndex, regimenId: string): boolean {
+  return (catalog.itemsByRegimen.get(regimenId) ?? []).some(
+    (item) => item.role === 'main' && PREMEDICATION_ADVISED.has(item.drug_id),
+  )
+}
+
+const NCCN_NOTE = /^NCCN\s+([\d.]+):\s*(.*)$/s
+
+/**
+ * Why this regimen stands in this line: the population, the protocol, or how NCCN ranks it.
+ * An NCCN note gets its version as a badge, so the comparison done against the guideline is
+ * seen at a glance and its age with it.
+ */
+function LinkNote({ text }: { text: string }) {
+  const nccn = NCCN_NOTE.exec(text)
+  if (!nccn) {
+    return (
+      <Text size="xs" c="dimmed">
+        {text}
+      </Text>
+    )
+  }
+  return (
+    <Text size="xs" c="dimmed">
+      <Badge size="xs" variant="light" color="indigo" tt="none" mr={4} component="span">
+        NCCN {nccn[1]}
+      </Badge>
+      {nccn[2]}
+    </Text>
   )
 }

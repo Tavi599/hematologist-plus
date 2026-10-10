@@ -7,6 +7,9 @@ import type { DynamicTranslate, Language } from './i18n'
  */
 const UNIT_PARAMS = new Set(['unit', 'doseUnit'])
 
+/** Params that name a field of the patient form; shown as that field's label. */
+const FIELD_PARAMS = new Set(['field'])
+
 /** Rounds numbers and translates unit codes so a step or warning reads like a worked example. */
 export function formatDynamicParams(
   params: Record<string, number | string | boolean> | undefined,
@@ -16,6 +19,7 @@ export function formatDynamicParams(
   const formatted: Record<string, string | number | boolean> = {}
   for (const [key, value] of Object.entries(params ?? {})) {
     if (UNIT_PARAMS.has(key)) formatted[key] = t(`units.${String(value)}`)
+    else if (FIELD_PARAMS.has(key)) formatted[key] = t(`calculator.patient.${String(value)}`)
     else if (typeof value === 'number') formatted[key] = formatNumber(value, language, 2)
     else formatted[key] = value
   }

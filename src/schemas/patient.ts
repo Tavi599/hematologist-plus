@@ -35,7 +35,8 @@ export const patientFormSchema = z.object({
   recordNumber: z.string().trim(),
   birthDate: z.union([z.literal(''), z.string().regex(DATE_PATTERN)]),
   ageYears: optionalNumber(0, 130),
-  sex: z.enum(['male', 'female']),
+  /** No default: it changes the creatinine clearance, so it is chosen, never assumed. */
+  sex: z.enum(['male', 'female']).nullable(),
   heightCm: optionalNumber(50, 300),
   weightKg: optionalNumber(1, 500),
   serumCreatinine: optionalNumber(0.01, 5000),
@@ -57,7 +58,7 @@ export function emptyPatientForm(): PatientFormValues {
     recordNumber: '',
     birthDate: '',
     ageYears: '',
-    sex: 'male',
+    sex: null,
     heightCm: '',
     weightKg: '',
     serumCreatinine: '',
