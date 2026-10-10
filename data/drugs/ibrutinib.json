@@ -18,6 +18,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Легка (Child-Pugh A): 140 мг на добу; помірна (B): 70 мг; тяжка (C): уникати",
+        "en": "Mild (Child-Pugh A): 140 mg daily; moderate (B): 70 mg; severe (C): avoid"
+      },
+      "source": {
+        "name": "FDA label: IMBRUVICA (ibrutinib), 2.4",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0dfd0279-ff17-4ea9-89be-9803c71bab44",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "cardiac",
+      "level": "caution",
+      "notes": {
+        "uk": "Фатальні й серйозні аритмії, серцева недостатність, раптова смерть (1% із 4896); при супутній серцевій патології ризик більший — стежити за симптомами",
+        "en": "Fatal and serious arrhythmias, heart failure and sudden death (1% of 4,896); higher risk with cardiac comorbidity; monitor for symptoms"
+      },
+      "source": {
+        "name": "FDA label: IMBRUVICA (ibrutinib), 5.3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0dfd0279-ff17-4ea9-89be-9803c71bab44",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s140",

@@ -23,6 +23,47 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "Легка й помірна (КК 30–80 мл/хв): корекції немає; тяжка (КК < 30 мл/хв) — уникати",
+        "en": "Mild and moderate (CrCl 30-80 mL/min): no adjustment; severe (CrCl < 30 mL/min): avoid"
+      },
+      "source": {
+        "name": "FDA label: ADCETRIS (brentuximab vedotin), 2.2",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3904f8dd-1aef-3490-e48f-bd55f32ed67f",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Легка (Child-Pugh A): 0,9 мг/кг (не більше 90 мг) кожні 2 тижні в 1-й лінії ЛХ і кожні 3 тижні при ДВВКЛ, 1,2 мг/кг → 0,9 мг/кг при інших показаннях; помірна й тяжка (білірубін > 1,5 × ВМН) — уникати",
+        "en": "Mild (Child-Pugh A): 0.9 mg/kg (up to 90 mg) every 2 weeks in first-line Hodgkin and every 3 weeks in LBCL, 1.2 reduced to 0.9 mg/kg for other uses; moderate and severe (bilirubin > 1.5 × ULN): avoid"
+      },
+      "source": {
+        "name": "FDA label: ADCETRIS (brentuximab vedotin), 2.3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3904f8dd-1aef-3490-e48f-bd55f32ed67f",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "neuropathy",
+      "level": "caution",
+      "notes": {
+        "uk": "Спричиняє переважно сенсорну периферичну нейропатію, кумулятивну; при 2–3 ступені — призупинити, далі зменшити до 0,9 мг/кг; моторна нейропатія — 0,9 мг/кг",
+        "en": "Causes a mainly sensory peripheral neuropathy, cumulative; at grade 2 to 3 withhold, then reduce to 0.9 mg/kg; motor neuropathy: 0.9 mg/kg"
+      },
+      "source": {
+        "name": "FDA label: ADCETRIS (brentuximab vedotin): Dosage and Administration, 5.1",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3904f8dd-1aef-3490-e48f-bd55f32ed67f",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s50",

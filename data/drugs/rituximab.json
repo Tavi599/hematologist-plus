@@ -18,6 +18,21 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "cardiac",
+      "level": "caution",
+      "notes": {
+        "uk": "Серцеві реакції (фібриляція шлуночків, інфаркт, кардіогенний шок); при аритмії чи стенокардії в анамнезі — кардіомоніторинг під час і після інфузій",
+        "en": "Cardiac reactions (ventricular fibrillation, infarction, cardiogenic shock); with a history of arrhythmia or angina, cardiac monitoring during and after infusions"
+      },
+      "source": {
+        "name": "FDA label: RITUXAN (rituximab), 5.7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b172773b-3905-4a1c-ad95-bab4b6126563",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s100",

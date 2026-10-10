@@ -14,6 +14,34 @@
       "checkedOn": "2026-10-04"
     }
   ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Тяжка (Child-Pugh C): 80 мг двічі на добу; легка й помірна — без змін",
+        "en": "Severe (Child-Pugh C): 80 mg twice daily; mild and moderate: no change"
+      },
+      "source": {
+        "name": "FDA label: BRUKINSA (zanubrutinib), 2.2",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3e08fe23-d70e-424c-bc51-1222e320f902",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "cardiac",
+      "level": "caution",
+      "notes": {
+        "uk": "Серцеві аритмії: стежити за симптомами й лікувати",
+        "en": "Cardiac arrhythmias: monitor for symptoms and treat"
+      },
+      "source": {
+        "name": "FDA label: BRUKINSA (zanubrutinib), 5.5",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3e08fe23-d70e-424c-bc51-1222e320f902",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "c80",

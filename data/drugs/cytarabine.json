@@ -18,6 +18,47 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "Порушена функція нирок чи печінки підвищує ризик токсичності для ЦНС після високих доз; застосовувати з обережністю, можливо в меншій дозі",
+        "en": "Renal or hepatic impairment raises the risk of CNS toxicity after high doses; use with caution, possibly at a reduced dose"
+      },
+      "source": {
+        "name": "FDA label: cytarabine injection, Warnings",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21e8e8e6-3f85-4fdd-8452-c9d14d2ef69a",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Печінка детоксикує значну частину дози; при поганій функції печінки — обережно, можливо менша доза",
+        "en": "The liver detoxifies much of the dose; with poor liver function, caution and possibly a lower dose"
+      },
+      "source": {
+        "name": "FDA label: cytarabine injection, Warnings",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21e8e8e6-3f85-4fdd-8452-c9d14d2ef69a",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "neuropathy",
+      "level": "caution",
+      "notes": {
+        "uk": "При високих дозах стежити за нейропатією: може знадобитись зміна схеми, щоб уникнути незворотних неврологічних порушень",
+        "en": "With high doses watch for neuropathy: the schedule may need changing to avoid irreversible neurological disorders"
+      },
+      "source": {
+        "name": "FDA label: cytarabine injection, Warnings",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21e8e8e6-3f85-4fdd-8452-c9d14d2ef69a",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s100",

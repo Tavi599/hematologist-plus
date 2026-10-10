@@ -26,6 +26,21 @@
       "checkedOn": "2026-09-19"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "КК < 50 мл/хв: дозу зменшують — КК 40–50: 70%; 30–40: 60%; 20–30: 55%; 10–20: 45%; 5–10: 40%",
+        "en": "CrCl < 50 mL/min: reduce the dose — CrCl 40-50: 70%; 30-40: 60%; 20-30: 55%; 10-20: 45%; 5-10: 40%"
+      },
+      "source": {
+        "name": "FDA label: bleomycin for injection, Dosage and Administration, Precautions",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b5806c40-12ce-48e3-8abd-9f8997ef4428",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s15000",

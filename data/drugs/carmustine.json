@@ -25,6 +25,21 @@
       "checkedOn": "2026-10-03"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "contraindicated",
+      "notes": {
+        "uk": "Не вводити при порушенні функції нирок; відмінити при КК < 10 мл/хв",
+        "en": "Do not give with compromised renal function; discontinue if CrCl < 10 mL/min"
+      },
+      "source": {
+        "name": "FDA label: carmustine for injection, Dosage and Administration 2.1",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7653a069-9cde-9ebf-5ccf-670f1a3f82b3",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "v100",

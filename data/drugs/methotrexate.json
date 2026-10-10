@@ -23,6 +23,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "Виведення знижене при КК < 90 мл/хв; ризик побічних реакцій вищий; при середніх і високих дозах — заходи для прискорення виведення",
+        "en": "Elimination is reduced at CrCl < 90 mL/min; a higher risk of adverse reactions; with intermediate and high doses, measures to promote elimination"
+      },
+      "source": {
+        "name": "FDA label: methotrexate injection, 8.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=346ec9ce-dc98-4a55-b55e-d3af11f2d703",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "При печінковій недостатності розглянути зменшення дози або відміну; фармакокінетика невідома",
+        "en": "With hepatic impairment consider reducing the dose or stopping; the pharmacokinetics are unknown"
+      },
+      "source": {
+        "name": "FDA label: methotrexate injection, 8.7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=346ec9ce-dc98-4a55-b55e-d3af11f2d703",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s50",

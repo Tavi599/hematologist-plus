@@ -23,6 +23,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Помірна й тяжка (білірубін > 1,5 × ВМН): уникати, не вивчався; легка — без обмежень",
+        "en": "Moderate and severe (bilirubin > 1.5 × ULN): avoid, not studied; mild: no restriction"
+      },
+      "source": {
+        "name": "FDA label: POLIVY (polatuzumab vedotin), 8.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20a16ab2-f338-4abb-9dcd-254bd949a2bc",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "neuropathy",
+      "level": "caution",
+      "notes": {
+        "uk": "Периферична нейропатія; з R-CHP — таблиця зміни дози: 1,8 → 1,4 мг/кг при 2–3 ступені, відміна при 4",
+        "en": "Peripheral neuropathy; with R-CHP a dose-change table applies: 1.8 reduced to 1.4 mg/kg at grade 2 to 3, stop at grade 4"
+      },
+      "source": {
+        "name": "FDA label: POLIVY (polatuzumab vedotin): Dosage and Administration, 5.1",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20a16ab2-f338-4abb-9dcd-254bd949a2bc",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s140",

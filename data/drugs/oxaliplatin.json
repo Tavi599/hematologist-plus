@@ -23,6 +23,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Тяжка (КК < 30 мл/хв): оксаліплатин 65 мг/м²",
+        "en": "Severe (CrCl < 30 mL/min): oxaliplatin 65 mg/m²"
+      },
+      "source": {
+        "name": "FDA label: oxaliplatin injection, 2.3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=29a5d098-bfa7-4a65-bb4f-5daa1fef1c2f",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "neuropathy",
+      "level": "caution",
+      "notes": {
+        "uk": "Периферична сенсорна нейропатія — гостра й стійка, залежить від дози; при стійкій нейропатії дозу зменшують або відміняють",
+        "en": "Peripheral sensory neuropathy, acute and persistent, dose dependent; the dose is reduced or the drug stopped for persistent neuropathy"
+      },
+      "source": {
+        "name": "FDA label: oxaliplatin injection: Dosage and Administration, Warnings and Precautions",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=29a5d098-bfa7-4a65-bb4f-5daa1fef1c2f",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s50",

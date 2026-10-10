@@ -23,6 +23,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Тяжка печінкова недостатність — уникати",
+        "en": "Severe hepatic impairment: avoid"
+      },
+      "source": {
+        "name": "FDA label: CALQUENCE (acalabrutinib), 8.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd4835ef-e1bc-4997-a399-1ffa2556fbfe",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "cardiac",
+      "level": "caution",
+      "notes": {
+        "uk": "Фібриляція чи тріпотіння передсердь у 7% пацієнтів (3–4 ступеня 2,2%), шлуночкові аритмії 3 ступеня й вище 0,5%",
+        "en": "Atrial fibrillation or flutter in 7% (grade 3-4 in 2.2%); grade 3 or higher ventricular arrhythmias in 0.5%"
+      },
+      "source": {
+        "name": "FDA label: CALQUENCE (acalabrutinib), Warnings and Precautions",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd4835ef-e1bc-4997-a399-1ffa2556fbfe",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s100",

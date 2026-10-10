@@ -29,6 +29,47 @@
       "checkedOn": "2026-10-02"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "Ниркова недостатність підвищує ризик синдрому лізису пухлини — профілактика",
+        "en": "Renal impairment raises the risk of tumour lysis syndrome; give prophylaxis"
+      },
+      "source": {
+        "name": "FDA label: GAZYVA (obinutuzumab): Dosage and Administration, Warnings and Precautions",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=df12ceb2-5b4b-4ab5-a317-2a36bf2a3cda",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "При печінковій недостатності не вивчався",
+        "en": "Not studied in hepatic impairment"
+      },
+      "source": {
+        "name": "FDA label: GAZYVA (obinutuzumab), Use in Specific Populations",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=df12ceb2-5b4b-4ab5-a317-2a36bf2a3cda",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "cardiac",
+      "level": "caution",
+      "notes": {
+        "uk": "При наявних серцевих захворюваннях — частіше стежити під час інфузії й після неї: реакції можуть бути тяжчими",
+        "en": "With existing cardiac conditions monitor more often during and after the infusion: reactions may be more severe"
+      },
+      "source": {
+        "name": "FDA label: GAZYVA (obinutuzumab): Dosage and Administration, Warnings and Precautions",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=df12ceb2-5b4b-4ab5-a317-2a36bf2a3cda",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s1000",

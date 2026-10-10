@@ -23,6 +23,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "ГУС або тяжка ниркова недостатність — відмінити препарат",
+        "en": "Haemolytic uraemic syndrome or severe renal impairment: discontinue"
+      },
+      "source": {
+        "name": "FDA label: gemcitabine injection, Warnings and Precautions 5.5",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=73ae04d8-38f9-4d3d-b0c2-71d22af1fc86",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Досліджень при зниженій функції печінки не проводили; стежити за печінковими пробами, при тяжкій гепатотоксичності відмінити",
+        "en": "No studies in decreased hepatic function; monitor liver tests and discontinue for severe hepatotoxicity"
+      },
+      "source": {
+        "name": "FDA label: gemcitabine injection, 5.6, 12.3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=73ae04d8-38f9-4d3d-b0c2-71d22af1fc86",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s1000",

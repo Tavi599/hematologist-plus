@@ -18,6 +18,21 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Печінкова недостатність: ретельно стежити за токсичністю, можна розглянути зменшення дози; формальних досліджень немає",
+        "en": "Hepatic impairment: monitor closely for toxicity, a dose reduction may be considered; no formal studies"
+      },
+      "source": {
+        "name": "FDA label: LEUKERAN (chlorambucil), Clinical Pharmacology, Special Populations",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58a3c995-5ad6-465d-8437-5970c9088213",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s2",

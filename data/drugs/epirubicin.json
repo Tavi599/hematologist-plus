@@ -13,6 +13,47 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "cardiac",
+      "level": "contraindicated",
+      "notes": {
+        "uk": "Тяжка міокардіальна недостатність, нещодавній інфаркт, тяжкі аритмії чи досягнута максимальна кумулятивна доза антрациклінів; кумулятивну дозу 900 мг/м² загалом уникати",
+        "en": "Severe myocardial insufficiency, recent infarction, severe arrhythmias or the maximum cumulative anthracycline dose; a cumulative 900 mg/m² should generally be avoided"
+      },
+      "source": {
+        "name": "FDA label: ELLENCE (epirubicin), 4, 5.1",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0a03c798-a652-4895-b29c-3b521a89ba42",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Білірубін 1,2–3 мг/дл або АСТ 2–4 × ВМН: ½ стартової дози; білірубін > 3 мг/дл або АСТ > 4 × ВМН: ¼",
+        "en": "Bilirubin 1.2-3 mg/dL or AST 2-4 × ULN: half the starting dose; bilirubin > 3 mg/dL or AST > 4 × ULN: a quarter"
+      },
+      "source": {
+        "name": "FDA label: ELLENCE (epirubicin), 2.3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0a03c798-a652-4895-b29c-3b521a89ba42",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "Тяжка ниркова недостатність (креатинін > 5 мг/дл): розглянути нижчі дози",
+        "en": "Severe renal impairment (creatinine > 5 mg/dL): consider lower doses"
+      },
+      "source": {
+        "name": "FDA label: ELLENCE (epirubicin), 2.3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0a03c798-a652-4895-b29c-3b521a89ba42",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s50",

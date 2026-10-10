@@ -23,6 +23,34 @@
       "checkedOn": "2026-09-18"
     }
   ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Білірубін ≤ 2,0 мг/дл: 100%; 2,1–3,0: 50%; > 3,0: 25% стартової дози",
+        "en": "Bilirubin ≤ 2.0 mg/dL: 100%; 2.1-3.0: 50%; > 3.0: 25% of the starting dose"
+      },
+      "source": {
+        "name": "FDA label: vinorelbine injection: Dosage and Administration, 8.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10a70995-e04d-4044-b1dc-c9aa27460397",
+        "checkedOn": "2026-10-10"
+      }
+    },
+    {
+      "condition": "neuropathy",
+      "level": "caution",
+      "notes": {
+        "uk": "Периферична чи автономна нейропатія 2 ступеня і вище — призупинити або зменшити дозу",
+        "en": "Peripheral or autonomic neuropathy of grade 2 or higher: withhold or reduce the dose"
+      },
+      "source": {
+        "name": "FDA label: vinorelbine injection, 2.2, 5.5",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10a70995-e04d-4044-b1dc-c9aa27460397",
+        "checkedOn": "2026-10-10"
+      }
+    }
+  ],
   "presentations": [
     {
       "key": "s50",
