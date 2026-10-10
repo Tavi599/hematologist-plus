@@ -1,0 +1,108 @@
+{
+  "$comment": "DVd за NSSG MM.47 (V. 4.0), розклад 1 — бортезоміб раз на тиждень, 24 введення за 8 циклів замість 32. Протокол радить його при поганому загальному стані, наявній нейропатії або нейропатії 2–3 ступеня під час лікування. З циклу 9 — даратумумаб 1800 мг п/ш раз на 28 днів без бортезомібу (схема «Даратумумаб п/ш, підтримка»); NSSG дає тоді премедикацію дексаметазоном 12 мг і 4 мг у дні 2–3. Тромбопрофілактика, ко-тримоксазол і противірусна профілактика не внесені: ввімкніть їх у «Супроводі за стандартом» або вручну.",
+  "id": "dvd-weekly-cycle-4-8",
+  "short_name": "DVd щотижня ц.4-8",
+  "name": {
+    "uk": "DVd з бортезомібом раз на тиждень (NSSG), цикли 4–8",
+    "en": "DVd with once-weekly bortezomib (NSSG), cycles 4-8"
+  },
+  "description": {
+    "uk": "Даратумумаб 1800 мг п/ш у день 1, бортезоміб 1,3 мг/м² п/ш у дні 1, 8, 15, дексаметазон. Цикл 21 день.",
+    "en": "Daratumumab 1800 mg SC on day 1, bortezomib 1.3 mg/m² SC on days 1, 8, 15, dexamethasone. A 21-day cycle."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 5,
+  "sources": [
+    {
+      "name": "NSSG Oxford Haematology, MM.47 DaraVelDex (DVd), розклад 1 — бортезоміб раз на тиждень",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-47-dara-vel-dex.pdf",
+      "version": "V. 4.0, червень 2023",
+      "checkedOn": "2026-10-10"
+    },
+    {
+      "name": "FDA label: DARZALEX FASPRO (daratumumab and hyaluronidase), Pre-medication — ацетамінофен 650–1000 мг, дифенгідрамін 25–50 мг, кортикостероїд за 1–3 год до кожної дози",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4bb241af-4299-4373-8762-2d6709515db0",
+      "checkedOn": "2026-10-10"
+    }
+  ],
+  "items": [
+    {
+      "key": "premed-paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 1 год до даратумумабу (NSSG MM.47)",
+        "en": "1 hour before daratumumab (NSSG MM.47)"
+      }
+    },
+    {
+      "key": "premed-diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "NSSG MM.47 дає хлорфенамін 4 мг внутрішньо; в Україні недоступний — замінено дифенгідраміном 50 мг (інструкція даратумумабу: 25–50 мг внутрішньо або в/в)",
+        "en": "NSSG MM.47 gives chlorphenamine 4 mg orally; not obtainable in Ukraine, so diphenhydramine 50 mg (daratumumab label: 25-50 mg orally or IV)"
+      }
+    },
+    {
+      "key": "premed-dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За 1 год до даратумумабу; протокол дає 12–20 мг (NSSG MM.47)",
+        "en": "1 hour before daratumumab; the protocol gives 12-20 mg (NSSG MM.47)"
+      }
+    },
+    {
+      "key": "daratumumab",
+      "drug_id": "daratumumab",
+      "route": "subcutaneous",
+      "dose_value": 1800,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "1800 мг підшкірно (NSSG MM.47)",
+        "en": "1800 mg subcutaneously (NSSG MM.47)"
+      }
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 8, 15],
+      "notes": {
+        "uk": "1,3 мг/м² підшкірно раз на тиждень (NSSG MM.47, розклад 1)",
+        "en": "1.3 mg/m² subcutaneously once weekly (NSSG MM.47, schedule 1)"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [2, 8, 9, 15, 16],
+      "notes": {
+        "uk": "20 мг зранку з їжею (NSSG MM.47)",
+        "en": "20 mg in the morning with food (NSSG MM.47)"
+      }
+    }
+  ]
+}

@@ -823,6 +823,16 @@
           "regimen_id": "dvd-cycle-4-8"
         },
         {
+          "regimen_id": "dvd-weekly-cycle-1-3",
+          "notes": {
+            "uk": "Бортезоміб раз на тиждень: при поганому загальному стані чи нейропатії (NSSG MM.47)",
+            "en": "Once-weekly bortezomib: for poor performance status or neuropathy (NSSG MM.47)"
+          }
+        },
+        {
+          "regimen_id": "dvd-weekly-cycle-4-8"
+        },
+        {
           "regimen_id": "daratumumab-sc-maintenance",
           "notes": {
             "uk": "Після DVd; eviQ 4176",
@@ -1191,6 +1201,12 @@
               "regimen_id": "dvd-cycle-4-8"
             },
             {
+              "regimen_id": "dvd-weekly-cycle-1-3"
+            },
+            {
+              "regimen_id": "dvd-weekly-cycle-4-8"
+            },
+            {
               "regimen_id": "daratumumab-sc-maintenance"
             },
             {
@@ -1344,6 +1360,12 @@
               "regimen_id": "dvd-cycle-4-8"
             },
             {
+              "regimen_id": "dvd-weekly-cycle-1-3"
+            },
+            {
+              "regimen_id": "dvd-weekly-cycle-4-8"
+            },
+            {
               "regimen_id": "daratumumab-sc-maintenance"
             },
             {
@@ -1446,6 +1468,12 @@
               "regimen_id": "dvd-cycle-4-8"
             },
             {
+              "regimen_id": "dvd-weekly-cycle-1-3"
+            },
+            {
+              "regimen_id": "dvd-weekly-cycle-4-8"
+            },
+            {
               "regimen_id": "daratumumab-sc-maintenance"
             },
             {
@@ -1524,6 +1552,12 @@
               "regimen_id": "daratumumab-mono"
             },
             {
+              "regimen_id": "pvd-cycle-1-8"
+            },
+            {
+              "regimen_id": "pvd"
+            },
+            {
               "regimen_id": "dpd-cycle-1-2"
             },
             {
@@ -1552,6 +1586,15 @@
             },
             {
               "regimen_id": "svd"
+            },
+            {
+              "regimen_id": "dvd-weekly-cycle-1-3"
+            },
+            {
+              "regimen_id": "dvd-weekly-cycle-4-8"
+            },
+            {
+              "regimen_id": "daratumumab-sc-maintenance"
             },
             {
               "regimen_id": "pcd-cycle-1-9"
