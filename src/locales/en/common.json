@@ -303,6 +303,10 @@
     "chapter": "ICD-10 chapter: {{letter}}"
   },
   "diseaseDetail": {
+    "situations": "Situation",
+    "situationCount": "Showing {{shown}} of {{total}} regimens",
+    "situationNone": "No regimen fits every chosen situation",
+    "situationReset": "Clear",
     "premedication": "premedication required",
     "hideUnavailable": "Hide unavailable regimens",
     "hiddenCount": "Regimens hidden: {{count}}",
@@ -526,7 +530,8 @@
     "stage": "stage",
     "group": "group",
     "trial": "clinical trial",
-    "reference": "for reference"
+    "reference": "for reference",
+    "situation": "situation"
   },
   "availability": {
     "department": "in the department",

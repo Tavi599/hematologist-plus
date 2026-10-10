@@ -120,6 +120,7 @@ export const TREATMENT_NODE_KINDS = [
   'group',
   'trial',
   'reference',
+  'situation',
 ] as const
 export const treatmentNodeKindSchema = z.enum(TREATMENT_NODE_KINDS)
 

@@ -10,7 +10,7 @@ import { checkCatalog } from './check-catalog'
 import { diffTable, hasChanges, stableStringify } from './diff'
 import { parseArgs } from './env'
 import { diseaseCodeId, flattenDataSet } from './flatten'
-import { regimenFileSchema } from './data-files'
+import { diseaseFileSchema, regimenFileSchema } from './data-files'
 import { contentOptions, loadDataDir, prunesArticlesBlind } from './load-data'
 import { DEMO_CATALOG_FIXTURE, demoCatalogJson } from './snapshot'
 import { catalogToSql } from './sql'
@@ -136,6 +136,44 @@ describe('a regimen that is described, not calculated', () => {
       'a described course must cite its source',
       'a described course carries no items',
       'reference drug "ghost" is not in the catalog',
+    ])
+  })
+})
+
+describe('a situation over a line', () => {
+  const text = { uk: 'т', en: 't' }
+  const disease = (situation: object, root: object[] = []) => ({
+    id: 'mm',
+    name: text,
+    treatment: [
+      {
+        key: 'relapse',
+        kind: 'line',
+        title: text,
+        regimens: [{ regimen_id: 'kd' }, { regimen_id: 'pom-dex' }],
+        children: [{ key: 'len-refractory', kind: 'situation', title: text, ...situation }],
+      },
+      ...root,
+    ],
+  })
+
+  it('names regimens of its own line', () => {
+    expect(diseaseFileSchema.safeParse(disease({ regimens: [{ regimen_id: 'kd' }] })).success).toBe(
+      true,
+    )
+  })
+
+  it('refuses a regimen the line does not have, nested nodes, and a situation at the root', () => {
+    const issues = (value: object) =>
+      (diseaseFileSchema.safeParse(value).error?.issues ?? []).map((issue) => issue.message)
+    expect(issues(disease({ regimens: [{ regimen_id: 'vrd' }] }))).toEqual([
+      'vrd is not in the line the situation filters',
+    ])
+    expect(issues(disease({ children: [{ key: 'x', kind: 'group', title: text }] }))).toEqual([
+      'a situation is a leaf under a line',
+    ])
+    expect(issues(disease({}, [{ key: 'loose', kind: 'situation', title: text }]))).toEqual([
+      'a situation needs a line above it',
     ])
   })
 })

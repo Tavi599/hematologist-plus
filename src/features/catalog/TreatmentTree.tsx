@@ -2,6 +2,7 @@ import {
   Anchor,
   Badge,
   Button,
+  Chip,
   Group,
   MultiSelect,
   SimpleGrid,
@@ -23,7 +24,13 @@ import { localize } from '../../lib/localized'
 import { PREMEDICATION_ADVISED } from '../../lib/premedication'
 import { RegimenReference } from './RegimenReference'
 import classes from './TreatmentTree.module.css'
-import { countRegimens, drugsInTree, filterTree, type FilteredNode } from './treatment-filter'
+import {
+  countRegimens,
+  drugsInTree,
+  filterTree,
+  splitSituations,
+  type FilteredNode,
+} from './treatment-filter'
 
 /** Disease → treatment → line/stage → regimen, each regimen leading into the calculator. */
 export function TreatmentTree({
@@ -113,11 +120,14 @@ function TreatmentNodeView({
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
-  const { node, links, children } = filtered
+  const { node } = filtered
   // A top-level line folds away: on a disease with forty regimens the physician closes the lines
   // that are not the patient's and reads the rest. Everything starts open, so nothing is missed.
   const [opened, setOpened] = useState(true)
+  const [chosen, setChosen] = useState<string[]>([])
   const count = countRegimens([filtered])
+  const { situations, sections, links } = splitSituations(filtered, chosen)
+  const narrowed = situations.some((situation) => chosen.includes(situation.node.id))
 
   const regimens = links
     .map((link) => ({ link, regimen: catalog.regimens.get(link.regimen_id) }))
@@ -170,6 +180,44 @@ function TreatmentNodeView({
             <Text size="sm" c="dimmed">
               {localize(node.description, language)}
             </Text>
+          )}
+          {situations.length > 0 && (
+            <Stack gap={4}>
+              <Chip.Group multiple value={chosen} onChange={setChosen}>
+                <Group gap={6} aria-label={t('diseaseDetail.situations')}>
+                  {situations.map((situation) => (
+                    <Chip
+                      key={situation.node.id}
+                      value={situation.node.id}
+                      size="xs"
+                      variant="outline"
+                      title={
+                        situation.node.description !== null
+                          ? localize(situation.node.description, language)
+                          : undefined
+                      }
+                    >
+                      {localize(situation.node.title, language)} · {situation.links.length}
+                    </Chip>
+                  ))}
+                </Group>
+              </Chip.Group>
+              {narrowed && (
+                <Group gap="xs">
+                  <Text size="xs" c={links.length === 0 ? 'red' : 'dimmed'}>
+                    {links.length === 0
+                      ? t('diseaseDetail.situationNone')
+                      : t('diseaseDetail.situationCount', {
+                          shown: links.length,
+                          total: filtered.links.length,
+                        })}
+                  </Text>
+                  <Anchor component="button" size="xs" onClick={() => setChosen([])}>
+                    {t('diseaseDetail.situationReset')}
+                  </Anchor>
+                </Group>
+              )}
+            </Stack>
           )}
           {calculable.length > 0 && (
             <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="xs" verticalSpacing={4}>
@@ -225,7 +273,7 @@ function TreatmentNodeView({
           {described.map(({ link, regimen }) => (
             <RegimenReference key={link.id} regimen={regimen!} />
           ))}
-          {children.map((child) => (
+          {sections.map((child) => (
             <TreatmentNodeView
               key={child.node.id}
               catalog={catalog}

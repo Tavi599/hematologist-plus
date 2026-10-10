@@ -205,16 +205,40 @@ interface TreatmentNodeFile {
 }
 
 const treatmentNodeFileSchema: z.ZodType<TreatmentNodeFile, unknown> = z.lazy(() =>
-  z.strictObject({
-    key: keySchema,
-    kind: treatmentNodeKindSchema,
-    title: localizedTextSchema,
-    description: optionalLocalized,
-    regimens: z
-      .array(z.strictObject({ regimen_id: idSchema, notes: optionalLocalized }))
-      .default([]),
-    children: z.array(treatmentNodeFileSchema).default([]),
-  }),
+  z
+    .strictObject({
+      key: keySchema,
+      kind: treatmentNodeKindSchema,
+      title: localizedTextSchema,
+      description: optionalLocalized,
+      regimens: z
+        .array(z.strictObject({ regimen_id: idSchema, notes: optionalLocalized }))
+        .default([]),
+      children: z.array(treatmentNodeFileSchema).default([]),
+    })
+    .superRefine((node, context) => {
+      // A situation filters its line's own list, so it can only name regimens the line has.
+      const own = new Set(node.regimens.map((link) => link.regimen_id))
+      node.children.forEach((child, index) => {
+        if (child.kind !== 'situation') return
+        if (node.kind === 'situation' || child.children.length > 0) {
+          context.addIssue({
+            code: 'custom',
+            path: ['children', index],
+            message: 'a situation is a leaf under a line',
+          })
+        }
+        child.regimens.forEach((link, linkIndex) => {
+          if (!own.has(link.regimen_id)) {
+            context.addIssue({
+              code: 'custom',
+              path: ['children', index, 'regimens', linkIndex],
+              message: `${link.regimen_id} is not in the line the situation filters`,
+            })
+          }
+        })
+      })
+    }),
 )
 
 export const diseaseFileSchema = z.strictObject({
@@ -234,7 +258,12 @@ export const diseaseFileSchema = z.strictObject({
     .default([]),
   /** Guideline pages the physician opens next; the app only links out, never copies them. */
   references: diseaseReferencesSchema.default([]),
-  treatment: z.array(treatmentNodeFileSchema).default([]),
+  treatment: z
+    .array(treatmentNodeFileSchema)
+    .default([])
+    .refine((nodes) => nodes.every((node) => node.kind !== 'situation'), {
+      message: 'a situation needs a line above it',
+    }),
 })
 
 export type HospitalsFile = z.infer<typeof hospitalsFileSchema>

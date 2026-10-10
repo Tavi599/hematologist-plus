@@ -303,6 +303,10 @@
     "chapter": "Клас МКХ-10: {{letter}}"
   },
   "diseaseDetail": {
+    "situations": "Ситуація",
+    "situationCount": "Показано схем: {{shown}} з {{total}}",
+    "situationNone": "Жодна схема не підходить до всіх вибраних ситуацій",
+    "situationReset": "Скинути",
     "premedication": "потрібна премедикація",
     "hideUnavailable": "Приховати недоступні схеми",
     "hiddenCount": "Приховано схем: {{count}}",
@@ -526,7 +530,8 @@
     "stage": "стадія",
     "group": "група",
     "trial": "клінічне дослідження",
-    "reference": "для ознайомлення"
+    "reference": "для ознайомлення",
+    "situation": "ситуація"
   },
   "availability": {
     "department": "є у відділенні",

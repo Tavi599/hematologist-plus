@@ -129,3 +129,26 @@ function regimensInTree(catalog: CatalogIndex, diseaseId: string): Set<string> {
   for (const root of catalog.rootNodesByDisease.get(diseaseId) ?? []) walk(root)
   return found
 }
+
+/**
+ * A line with situations — transplant candidates, refractory to lenalidomide — is shown whole,
+ * and the situations work as switches over its list rather than as sections of their own: a
+ * regimen fits in several of them, and reading the same tile under five headings was the
+ * complaint. The regimens left are those in **every** situation chosen, so choosing
+ * bortezomib-refractory and lenalidomide-refractory gives the double-refractory regimens.
+ * A situation chosen earlier that the drug filter has since emptied is not held against the list.
+ */
+export function splitSituations(
+  filtered: FilteredNode,
+  chosen: readonly string[],
+): { situations: FilteredNode[]; sections: FilteredNode[]; links: TreatmentNodeRegimen[] } {
+  const situations = filtered.children.filter((child) => child.node.kind === 'situation')
+  const sections = filtered.children.filter((child) => child.node.kind !== 'situation')
+  const active = situations.filter((situation) => chosen.includes(situation.node.id))
+  const links = filtered.links.filter((link) =>
+    active.every((situation) =>
+      situation.links.some((entry) => entry.regimen_id === link.regimen_id),
+    ),
+  )
+  return { situations, sections, links }
+}

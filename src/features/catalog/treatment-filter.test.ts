@@ -2,7 +2,15 @@ import { describe, expect, it } from 'vitest'
 
 import { demoCatalog } from '../../lib/catalog.fixture'
 import { indexCatalog } from '../../lib/catalog-index'
-import { countRegimens, drugsInTree, filterTree, regimenHasDrugs } from './treatment-filter'
+import type { TreatmentNode } from '../../schemas/catalog'
+import {
+  countRegimens,
+  drugsInTree,
+  filterTree,
+  regimenHasDrugs,
+  splitSituations,
+  type FilteredNode,
+} from './treatment-filter'
 
 const catalog = indexCatalog(demoCatalog())
 const disease = [...catalog.diseases.keys()][0] ?? ''
@@ -52,5 +60,53 @@ describe('treatment filter', () => {
   it('asks nothing of a regimen when no drug is named', () => {
     expect(regimenHasDrugs(catalog, 'no-such-regimen', [])).toBe(true)
     expect(regimenHasDrugs(catalog, 'no-such-regimen', ['anything'])).toBe(false)
+  })
+})
+
+describe('situations over a line', () => {
+  const node = (id: string, kind: TreatmentNode['kind'], regimens: string[]): FilteredNode => ({
+    node: {
+      id,
+      disease_id: 'mm',
+      parent_id: null,
+      kind,
+      title: { uk: id, en: id },
+      description: null,
+      sort_order: 0,
+    } as TreatmentNode,
+    links: regimens.map((regimen_id, sort_order) => ({
+      id: `${id}.${regimen_id}`,
+      node_id: id,
+      regimen_id,
+      notes: null,
+      sort_order,
+    })),
+    children: [],
+  })
+  const line: FilteredNode = {
+    ...node('relapse', 'line', ['kd', 'pom-dex', 'rd', 'dpd']),
+    children: [
+      node('bortezomib', 'situation', ['pom-dex', 'rd', 'dpd']),
+      node('lenalidomide', 'situation', ['kd', 'pom-dex', 'dpd']),
+      node('trials', 'trial', ['other']),
+    ],
+  }
+  const ids = (chosen: string[]) =>
+    splitSituations(line, chosen).links.map((link) => link.regimen_id)
+
+  it('shows the whole line, in its own order, when no situation is chosen', () => {
+    const split = splitSituations(line, [])
+    expect(split.links.map((link) => link.regimen_id)).toEqual(['kd', 'pom-dex', 'rd', 'dpd'])
+    expect(split.situations.map((entry) => entry.node.id)).toEqual(['bortezomib', 'lenalidomide'])
+    expect(split.sections.map((entry) => entry.node.id)).toEqual(['trials'])
+  })
+
+  it('keeps what fits every chosen situation', () => {
+    expect(ids(['bortezomib'])).toEqual(['pom-dex', 'rd', 'dpd'])
+    expect(ids(['bortezomib', 'lenalidomide'])).toEqual(['pom-dex', 'dpd'])
+  })
+
+  it('ignores a chosen situation that is no longer on the page', () => {
+    expect(ids(['gone', 'lenalidomide'])).toEqual(['kd', 'pom-dex', 'dpd'])
   })
 })
