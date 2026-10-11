@@ -97,5 +97,6 @@ describe('DiseasesPage search', () => {
     expect(
       screen.getByText('7. Гарячка триває, посіви негативні: наступний крок'),
     ).toBeInTheDocument()
+    expect(screen.getByText('11. Звірка з UpToDate: що збігається і що інакше')).toBeInTheDocument()
   })
 })

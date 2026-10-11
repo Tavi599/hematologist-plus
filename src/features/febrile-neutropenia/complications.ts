@@ -3,7 +3,8 @@
  * worth it and when it is not, documented infections by site, and resistant pathogens. Read in
  * full on 2026-10-11 from ECIL-4 (empirical and targeted, figures and tables), the AGIHO guidelines
  * on sepsis, catheter infections, lung infiltrates and gastrointestinal complications, ESCMID 2021
- * on C. difficile and the IDSA 2026 guidance on resistant Gram-negatives. The wording is ours; the
+ * on C. difficile and the IDSA 2026 guidance on resistant Gram-negatives; then compared with UpToDate
+ * (ECIL-10, which replaces ECIL-4, known only by its summary). The wording is ours; the
  * branches and grades are the guidelines'. Where two of them disagree, the step says so.
  */
 
@@ -43,6 +44,19 @@ export const ESCMID_CDI = {
 export const IDSA_AMR = {
   name: 'IDSA 2026 Guidance on the Treatment of Antimicrobial-Resistant Gram-Negative Infections, v4.0 (30.07.2026)',
   url: 'https://www.idsociety.org/practice-guideline/amr-guidance/',
+}
+
+export const UPTODATE_FN = {
+  name: 'UpToDate: Wingard JR. Treatment of neutropenic fever syndromes in adults with hematologic malignancies and HCT recipients (high-risk patients), topic 1400 v73, оновл. 12.03.2026',
+  url: 'https://www.uptodate.com/contents/treatment-of-neutropenic-fever-syndromes-in-adults-with-hematologic-malignancies-and-hematopoietic-cell-transplant-recipients-high-risk-patients',
+}
+export const UPTODATE_CDI = {
+  name: 'UpToDate: Clostridioides difficile infection in adults: Treatment and prevention (key points, 2026)',
+  url: 'https://www.uptodate.com/contents/clostridioides-difficile-infection-in-adults-treatment-and-prevention',
+}
+export const ECIL10 = {
+  name: 'Averbuch D et al. Empirical and targeted antimicrobial therapy in febrile neutropenia: ECIL-10. Lancet Infect Dis 2026;26:e232–47 (переглянуто лише резюме)',
+  url: 'https://doi.org/10.1016/S1473-3099(25)00619-X',
 }
 
 export const NEGATIVE_CULTURES: Stage = {
@@ -220,8 +234,8 @@ export const BY_SITE: Stage = {
     },
     {
       text: t(
-        'C. difficile (ESCMID 2021): фідаксоміцин 200 мг двічі на добу 10 днів; якщо недоступний — ванкоміцин 125 мг перорально 4 рази на добу 10 днів (можна вміст флакона для в/в); метронідазол 500 мг 3 рази — лише коли обидва недоступні і не при тяжкому перебігу. Ванкоміцин 500 мг 4 рази не рекомендовано. Рутинно додавати в/в метронідазол до перорального лікування тяжкого CDI не радять; якщо перорально неможливо — ванкоміцин чи фідаксоміцин у просвіт кишки і, можливо, в/в метронідазол 500 мг 3 рази на добу (слабка рекомендація). Розбіжність: AGIHO 2017 ще допускала метронідазол як рівноцінний варіант. Фідаксоміцин в Україні не зареєстрований',
-        'C. difficile (ESCMID 2021): fidaxomicin 200 mg twice daily for 10 days; if unavailable, oral vancomycin 125 mg four times daily for 10 days (the IV vial may be used); metronidazole 500 mg three times only when both are unavailable and never in severe disease. Vancomycin 500 mg four times is not recommended. IV metronidazole is not added routinely to oral treatment of severe CDI; when oral is impossible, intraluminal vancomycin or fidaxomicin and possibly IV metronidazole 500 mg three times daily (weak recommendation). Discrepancy: AGIHO 2017 still allowed metronidazole as an equal option. Fidaxomicin is not registered in Ukraine',
+        'C. difficile (ESCMID 2021): фідаксоміцин 200 мг двічі на добу 10 днів; якщо недоступний — ванкоміцин 125 мг перорально 4 рази на добу 10 днів (можна вміст флакона для в/в); метронідазол 500 мг 3 рази — лише коли обидва недоступні і не при тяжкому перебігу. Ванкоміцин 500 мг 4 рази не рекомендовано. Рутинно додавати в/в метронідазол до перорального лікування тяжкого CDI не радять; якщо перорально неможливо — ванкоміцин чи фідаксоміцин у просвіт кишки і, можливо, в/в метронідазол 500 мг 3 рази на добу (слабка рекомендація). Розбіжність: AGIHO 2017 ще допускала метронідазол як рівноцінний варіант; UpToDate при фульмінантному перебігу радить ванкоміцин 500 мг 4 рази + в/в метронідазол (див. п. 11). Фідаксоміцин в Україні не зареєстрований',
+        'C. difficile (ESCMID 2021): fidaxomicin 200 mg twice daily for 10 days; if unavailable, oral vancomycin 125 mg four times daily for 10 days (the IV vial may be used); metronidazole 500 mg three times only when both are unavailable and never in severe disease. Vancomycin 500 mg four times is not recommended. IV metronidazole is not added routinely to oral treatment of severe CDI; when oral is impossible, intraluminal vancomycin or fidaxomicin and possibly IV metronidazole 500 mg three times daily (weak recommendation). Discrepancy: AGIHO 2017 still allowed metronidazole as an equal option; for fulminant disease UpToDate advises vancomycin 500 mg four times + IV metronidazole (see step 11). Fidaxomicin is not registered in Ukraine',
       ),
     },
   ],
@@ -293,4 +307,98 @@ export const RESISTANT: Stage = {
   sources: [ECIL4_TARGETED, IDSA_AMR],
 }
 
-export const COMPLICATION_STAGES: Stage[] = [NEGATIVE_CULTURES, COMBINATIONS, BY_SITE, RESISTANT]
+export const UPTODATE_COMPARISON: Stage = {
+  id: 'uptodate',
+  title: t(
+    '11. Звірка з UpToDate: що збігається і що інакше',
+    '11. Checked against UpToDate: what agrees and what differs',
+  ),
+  steps: [
+    {
+      text: t(
+        'Перша лінія та сама: монотерапія піперациліном/тазобактамом, цефепімом, меропенемом чи іміпенемом (1B). Цефтазидим більшість центрів уже не застосовує через резистентність. Меропенем 1–2 г кожні 8 год (2 г — за ризику резистентних грамнегативних); піперацилін/тазобактам 4,5 г кожні 6–8 год, кожні 6 год — за підозри на синьогнійну. Подовжена інфузія — у тяжкому стані чи за ризику резистентних',
+        'The first line is the same: piperacillin/tazobactam, cefepime, meropenem or imipenem alone (1B). Most centres no longer use ceftazidime because of resistance. Meropenem 1–2 g every 8 h (2 g with a risk of resistant Gram-negatives); piperacillin/tazobactam 4.5 g every 6–8 h, every 6 h if Pseudomonas is suspected. Extended infusion when seriously ill or at risk of resistant organisms',
+      ),
+      grade: '1B',
+    },
+    {
+      text: t(
+        'Анаеробне покриття (метронідазол до цефепіму) — лише за некротичного мукозиту, синуситу, періодонтального чи перианального целюліту, інтраабдомінальної інфекції (і нейтропенічного ентероколіту), тазової інфекції чи анаеробної бактеріємії',
+        'Anaerobic cover (metronidazole with cefepime) only with necrotising mucositis, sinusitis, periodontal or perianal cellulitis, an intra-abdominal infection (neutropenic enterocolitis included), a pelvic infection or anaerobic bacteraemia',
+      ),
+    },
+    {
+      text: t(
+        'Ванкоміцин рутинно не додавати (1A). Крім показань п. 8 — також грампозитивні коки в гемокультурі до ідентифікації і тяжкий мукозит на фторхінолоновій профілактиці, якщо стартували з цефтазидиму. Відмінити через 2–3 доби, якщо грампозитивну інфекцію не підтверджено. Ванкоміцин + піперацилін/тазобактам частіше уражають нирки: за потреби ванкоміцину краще цефепім, інакше — контроль креатиніну',
+        'Do not add vancomycin routinely (1A). Besides the indications of step 8, also Gram-positive cocci in blood culture before identification and severe mucositis on fluoroquinolone prophylaxis when started on ceftazidime. Stop after 2–3 days if no Gram-positive infection is confirmed. Vancomycin with piperacillin/tazobactam injures the kidneys more often: when vancomycin is needed, prefer cefepime, otherwise watch creatinine',
+      ),
+      grade: '1A',
+    },
+    {
+      text: t(
+        'Алергія на пеніцилін: цефепім чи карбапенем зазвичай можна, інколи з тест-дозою. За тяжкої сповільненої реакції (синдром Стівенса–Джонсона, ТЕН, DRESS) — азтреонам + ванкоміцин (перевага) або ципрофлоксацин + кліндаміцин; фторхінолон — не після фторхінолонової профілактики',
+        'Penicillin allergy: cefepime or a carbapenem is usually possible, sometimes with a test dose. After a severe delayed reaction (Stevens–Johnson syndrome, TEN, DRESS): aztreonam + vancomycin (preferred) or ciprofloxacin + clindamycin; no fluoroquinolone after fluoroquinolone prophylaxis',
+      ),
+    },
+    {
+      text: t(
+        'Без вогнища і з негативними посівами UpToDate радить: після ≥ 72 год без гарячки і з клінічним покращенням відмінити емпіричні антибіотики незалежно від нейтрофілів і повернути пероральну профілактику фторхінолоном до відновлення нейтрофілів (загалом 7–8 днів в/в). Розбіжність: AGIHO — відміна після 3–5 днів без гарячки; ECIL — після ≥ 72 год терапії і ≥ 48 год без гарячки; IDSA 2010 — до нейтрофілів ≥ 500/мкл',
+        'With no source and negative cultures UpToDate advises: after ≥ 72 h afebrile with clinical improvement, stop the empirical antibiotics whatever the neutrophils and resume oral fluoroquinolone prophylaxis until recovery (7–8 days IV in all). Discrepancy: AGIHO, stop after 3–5 afebrile days; ECIL, after ≥ 72 h of therapy and ≥ 48 h afebrile; IDSA 2010, until neutrophils ≥ 500/µL',
+      ),
+    },
+    {
+      text: t(
+        'Документована інфекція: не коротше стандартного курсу для неї (бактеріємія 7–14 днів, довше при S. aureus чи ентероколіті) і щонайменше до нейтрофілів ≥ 500/мкл. Стабільного хворого з негативними повторними посівами ≥ 48 год можна перевести на пероральні, якщо дозволяє чутливість',
+        'Documented infection: no shorter than its standard course (bacteraemia 7–14 days, longer with S. aureus or enterocolitis) and at least until neutrophils ≥ 500/µL. A stable patient with repeat cultures negative for ≥ 48 h may switch to oral drugs if susceptibility allows',
+      ),
+    },
+    {
+      text: t(
+        'Катетер видаляти (1B): крім S. aureus і Candida, також при P. aeruginosa і швидкоростучих нетуберкульозних мікобактеріях, при інших грибах (1C), септичному тромбозі, ендокардиті, нестабільності, бактеріємії понад 72 год на адекватній терапії. Антибіотики ≥ 14 днів від видалення і стерильних посівів, 4–6 тижнів — при ускладненні. Розбіжність: AGIHO при грамнегативних — видалення за 48–72 год, синьогнійну окремо не виділяє',
+        'Remove the line (1B): besides S. aureus and Candida, also with P. aeruginosa and rapidly growing non-tuberculous mycobacteria, other fungi (1C), septic thrombosis, endocarditis, instability, bacteraemia beyond 72 h on adequate therapy. Antibiotics ≥ 14 days from removal and sterile cultures, 4–6 weeks if complicated. Discrepancy: AGIHO, removal within 48–72 h for Gram-negatives, Pseudomonas not singled out',
+      ),
+      grade: '1B',
+    },
+    {
+      text: t(
+        'Емпіричний антимікотик — через 4–7 днів стійкої гарячки (1C); розбіжність: AGIHO — після 72–96 год. Без профілактики і без вогнищ у легенях — ехінокандин; вузли чи інфільтрати — протиплісеневий азол (вориконазол, позаконазол, ізавуконазол) або ліпідний амфотерицин B; на протиплісеневій профілактиці — інший клас (після вориконазолу чи позаконазолу — амфотерицин B) і рівень азолу в крові. На мукормікоз вориконазол не діє',
+        'Empirical antifungal after 4–7 days of persistent fever (1C); discrepancy: AGIHO, after 72–96 h. No prophylaxis and no lung lesions: an echinocandin; nodules or infiltrates: a mould-active azole (voriconazole, posaconazole, isavuconazole) or lipid amphotericin B; on mould-active prophylaxis: another class (amphotericin B after voriconazole or posaconazole) and an azole blood level. Voriconazole does not act on mucormycosis',
+      ),
+      grade: '1C',
+    },
+    {
+      text: t(
+        'Дози UpToDate для антимікотиків: мікафунгін 100 мг 1 раз на добу; анідулафунгін 200 мг у день 1, далі 100 мг; ізавуконазол 200 мг кожні 8 год у дні 1–2, далі 200 мг 1 раз; позаконазол 300 мг двічі в день 1, далі 300 мг 1 раз; ліпосомальний амфотерицин B 3–5 мг/кг (в інструкції для емпіричної терапії — 3 мг/кг)',
+        'UpToDate antifungal doses: micafungin 100 mg once a day; anidulafungin 200 mg on day 1, then 100 mg; isavuconazole 200 mg every 8 h on days 1–2, then 200 mg once; posaconazole 300 mg twice on day 1, then 300 mg once; liposomal amphotericin B 3–5 mg/kg (the label for empirical therapy, 3 mg/kg)',
+      ),
+    },
+    {
+      text: t(
+        'Г-КСФ при вже наявній фебрильній нейтропенії UpToDate і IDSA не застосовують; ASCO і NCCN дозволяють розглянути за високого ризику ускладнень',
+        'UpToDate and IDSA do not use G-CSF for established febrile neutropenia; ASCO and NCCN allow it to be considered at high risk of complications',
+      ),
+    },
+    {
+      text: t(
+        'Фульмінантний C. difficile (гіпотензія чи шок, ілеус, мегаколон): UpToDate — ванкоміцин 500 мг 4 рази на добу перорально чи через зонд + метронідазол в/в 500 мг кожні 8 год (2C), при ілеусі — ще ванкоміцин ректально; фідаксоміцин — ні. Розбіжність з ESCMID 2021, яка не радить ванкоміцин 500 мг і рутинний в/в метронідазол (див. п. 9)',
+        'Fulminant C. difficile (hypotension or shock, ileus, megacolon): UpToDate, vancomycin 500 mg four times a day orally or by tube + IV metronidazole 500 mg every 8 h (2C), with ileus also rectal vancomycin; no fidaxomicin. Discrepancy with ESCMID 2021, which advises against vancomycin 500 mg and routine IV metronidazole (see step 9)',
+      ),
+      grade: '2C',
+    },
+    {
+      text: t(
+        'UpToDate посилається на нові настанови ECIL-10 (2026), що замінюють ECIL-4 (п. 7–10). За резюме: стабільним без колонізації резистентними грамнегативними в регіонах з низькою резистентністю — монотерапія без карбапенему; у критичному стані, з колонізацією чи в регіоні з високою резистентністю — ширше (бета-лактам + аміноглікозид, карбапенем ± інгібітор бета-лактамаз, антисиньогнійний цефалоспорин з інгібітором, цефідерокол); деескалація, щойно резистентні виключено; відміна у стабільного без гарячки після запланованого курсу незалежно від нейтрофілів. Повний текст платний і не переглянутий',
+        'UpToDate cites the new ECIL-10 (2026), which replaces ECIL-4 (steps 7–10). By the summary: stable, not colonised with resistant Gram-negatives, in low-resistance settings, carbapenem-sparing monotherapy; critically ill, colonised or in high-resistance settings, broader (beta-lactam + aminoglycoside, a carbapenem ± a beta-lactamase inhibitor, an antipseudomonal cephalosporin with an inhibitor, cefiderocol); de-escalate once resistant organisms are excluded; stop in a stable afebrile patient after the planned course whatever the neutrophils. The full text is paywalled and not reviewed',
+      ),
+    },
+  ],
+  sources: [UPTODATE_FN, UPTODATE_CDI, ECIL10],
+}
+
+export const COMPLICATION_STAGES: Stage[] = [
+  NEGATIVE_CULTURES,
+  COMBINATIONS,
+  BY_SITE,
+  RESISTANT,
+  UPTODATE_COMPARISON,
+]

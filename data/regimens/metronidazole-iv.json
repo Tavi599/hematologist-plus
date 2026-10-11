@@ -1,5 +1,5 @@
 {
-  "$comment": "SmPC 4.2: анаеробні інфекції — 500 мг (100 мл) кожні 8 год, зазвичай 7 днів, не довше 10. ESCMID 2021 (розділ III): C. difficile без перорального шляху — внутрішньопросвітно ванкоміцин чи фідаксоміцин і, можливо, додатково метронідазол в/в 500 мг 3 рази на добу (слабка рекомендація); рутинно до перорального лікування тяжкого CDI не додавати. При піперациліні/тазобактамі чи карбапенемі анаеробне покриття вже є.",
+  "$comment": "SmPC 4.2: анаеробні інфекції — 500 мг (100 мл) кожні 8 год, зазвичай 7 днів, не довше 10. ESCMID 2021 (розділ III): C. difficile без перорального шляху — внутрішньопросвітно ванкоміцин чи фідаксоміцин і, можливо, додатково метронідазол в/в 500 мг 3 рази на добу (слабка рекомендація); рутинно до перорального лікування тяжкого CDI не додавати. При піперациліні/тазобактамі чи карбапенемі анаеробне покриття вже є. UpToDate (CDI, key points): фульмінантний перебіг — ванкоміцин 500 мг 4 рази перорально + метронідазол в/в 500 мг кожні 8 год (2C) — розбіжність з ESCMID.",
   "id": "metronidazole-iv",
   "short_name": "Метронідазол (в/в)",
   "name": {
@@ -22,6 +22,12 @@
       "url": "https://elibrary.escmid.org/download/16382185018656_66.pdf",
       "version": "2021",
       "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "UpToDate: Clostridioides difficile infection in adults: Treatment and prevention (key points); Treatment of neutropenic fever syndromes in high-risk adults, topic 1400 v73",
+      "url": "https://www.uptodate.com/contents/clostridioides-difficile-infection-in-adults-treatment-and-prevention",
+      "version": "2026",
+      "checkedOn": "2026-10-11"
     }
   ],
   "items": [
@@ -35,8 +41,8 @@
       "administrations_per_day": 3,
       "interval_min": 480,
       "notes": {
-        "uk": "Зазвичай 7 днів, не довше 10. Піперацилін/тазобактам і карбапенеми вже діють на анаеробів — метронідазол до них не додають. C. difficile: ESCMID 2021 не радить рутинно додавати в/в метронідазол до перорального ванкоміцину; лише якщо перорально неможливо — разом із ванкоміцином у просвіт кишки (слабка рекомендація). Розраховано дні 1–4 — до переоцінки.",
-        "en": "Usually 7 days, no longer than 10. Piperacillin/tazobactam and carbapenems already cover anaerobes: metronidazole is not added to them. C. difficile: ESCMID 2021 advises against routinely adding IV metronidazole to oral vancomycin; only when oral is impossible, with intraluminal vancomycin (weak recommendation). Days 1-4 calculated, up to the review."
+        "uk": "Зазвичай 7 днів, не довше 10. Піперацилін/тазобактам і карбапенеми вже діють на анаеробів — метронідазол до них не додають. Показання до анаеробного покриття (UpToDate): некротичний мукозит, синусит, періодонтальний чи перианальний целюліт, інтраабдомінальна інфекція (і нейтропенічний ентероколіт), тазова інфекція, анаеробна бактеріємія. C. difficile — розбіжність: ESCMID 2021 не радить рутинно додавати в/в метронідазол до перорального ванкоміцину, лише якщо перорально неможливо (слабка рекомендація); UpToDate при фульмінантному перебігу (шок, ілеус, мегаколон) — ванкоміцин 500 мг 4 рази перорально + метронідазол в/в 500 мг кожні 8 год (2C). Розраховано дні 1–4 — до переоцінки.",
+        "en": "Usually 7 days, no longer than 10. Piperacillin/tazobactam and carbapenems already cover anaerobes: metronidazole is not added to them. Indications for anaerobic cover (UpToDate): necrotising mucositis, sinusitis, periodontal or perianal cellulitis, an intra-abdominal infection (neutropenic enterocolitis included), a pelvic infection, anaerobic bacteraemia. C. difficile, a discrepancy: ESCMID 2021 advises against routinely adding IV metronidazole to oral vancomycin, only when oral is impossible (weak recommendation); UpToDate, for fulminant disease (shock, ileus, megacolon), vancomycin 500 mg four times orally + IV metronidazole 500 mg every 8 h (2C). Days 1-4 calculated, up to the review."
       }
     }
   ]
