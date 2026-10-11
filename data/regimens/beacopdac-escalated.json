@@ -280,12 +280,9 @@
       "dose_unit": "mg_m2",
       "cap_amount": 2,
       "days": [8],
-      "duration_min": 15,
-      "fallback_solvent": "sodium_chloride_0_9",
-      "fallback_volume_ml": 50,
       "notes": {
-        "uk": "У 50 мл 0,9% NaCl за 15 хвилин, разова доза не більш як 2 мг.",
-        "en": "In 50 mL of 0.9% sodium chloride over 15 minutes, no single dose above 2 mg."
+        "uk": "Разова доза не більш як 2 мг.",
+        "en": "No single dose above 2 mg."
       }
     },
     {

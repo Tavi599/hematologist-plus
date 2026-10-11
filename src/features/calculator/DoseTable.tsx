@@ -40,6 +40,7 @@ import {
   PROTOCOL_MODE,
   solventOf,
   type AdministrationMode,
+  type InfusionLength,
   type CourseItem,
 } from '../../lib/course-input'
 import { groupCourseItems } from '../../lib/dose-groups'
@@ -440,6 +441,15 @@ function DoseRow({
               onChange={(mode) => onAdministrationMode(id, mode)}
             />
           )}
+          {item.infusionSwitchable && (
+            <InfusionLengthControl
+              drugName={localize(item.drug.name, language)}
+              protocol={item.protocolInfusion}
+              mode={administrationModes[id] ?? PROTOCOL_MODE}
+              disabled={!enabled}
+              onChange={(mode) => onAdministrationMode(id, mode)}
+            />
+          )}
           {item.doseModifiers.length > 0 && (
             // Several circumstances can hold at once — an interaction and an organ — and two of
             // them may well land on the same milligrams, so these are ticks, not a list to pick from.
@@ -687,6 +697,45 @@ function DoseRow({
         </Table.Td>
       </Table.Tr>
     </>
+  )
+}
+
+/** Short infusion each day or a 24-hour one; the protocol's own choice is the unchanged row. */
+function InfusionLengthControl({
+  drugName,
+  protocol,
+  mode,
+  disabled,
+  onChange,
+}: {
+  drugName: string
+  protocol: InfusionLength
+  mode: AdministrationMode
+  disabled: boolean
+  onChange: (mode: AdministrationMode) => void
+}) {
+  const { t } = useTranslation()
+  const current: InfusionLength =
+    mode.kind === 'short' || mode.kind === 'continuous' ? mode.kind : protocol
+  return (
+    <Stack gap={4} mt={6}>
+      <Text size="xs" c="dimmed">
+        {t('calculator.doses.infusionLength')}
+      </Text>
+      <SegmentedControl
+        size="xs"
+        disabled={disabled}
+        data={[
+          { value: 'short', label: t('calculator.doses.infusionShort') },
+          { value: 'continuous', label: t('calculator.doses.infusionContinuous') },
+        ]}
+        value={current}
+        onChange={(kind) =>
+          onChange(kind === protocol ? PROTOCOL_MODE : { kind: kind as InfusionLength })
+        }
+        aria-label={`${t('calculator.doses.infusionLength')}: ${drugName}`}
+      />
+    </Stack>
   )
 }
 

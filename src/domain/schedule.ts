@@ -145,7 +145,9 @@ export function scheduleAdministrations(
         : 0
     const gap = Math.max(item.gapBeforeMin ?? 0, chemoGap)
     const startMin = Math.max(0, cursor + gap + shiftOf(item))
-    cursor = startMin + durationOf(item)
+    // A round-the-clock infusion runs alongside the rest of the day: the next drug does not wait
+    // for it to end, it starts with it.
+    cursor = startMin + (durationOf(item) >= MINUTES_PER_DAY ? 0 : durationOf(item))
     firstStart ??= startMin
     if (item.isMain) {
       firstMainStart ??= startMin

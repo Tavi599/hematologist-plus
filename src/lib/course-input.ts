@@ -23,6 +23,10 @@ export interface CourseItem {
   missingInfusionData: boolean
   /** The protocol gives this drug as an infusion the physician may switch to boluses. */
   switchable: boolean
+  /** The protocol's multi-day infusion may be given short each day or round the clock. */
+  infusionSwitchable: boolean
+  /** How the regimen itself gives that infusion; differs from the row after a switch. */
+  protocolInfusion: InfusionLength
   /** Routes the physician may switch this row to at the same dose, its own route included;
    *  empty when the label allows no other. */
   routeChoices: Route[]
@@ -31,6 +35,31 @@ export interface CourseItem {
 }
 
 type Route = RegimenItem['route']
+
+export type InfusionLength = 'short' | 'continuous'
+
+/** Length of a round-the-clock infusion, min. */
+const CONTINUOUS_INFUSION_MIN = 24 * 60
+
+/**
+ * A drug a protocol gives for days on end either as one short infusion a day or as a 24-hour
+ * infusion: doxorubicin over four consecutive days (VAD, PAD, DT-PACE, DA-EPOCH-R), and the
+ * vincristine of VAD. Hospitals differ on which they use, so the physician may switch.
+ */
+export function canSwitchInfusionLength(
+  item: Pick<RegimenItem, 'drug_id' | 'route' | 'days' | 'regimen_id'>,
+): boolean {
+  if (item.route !== 'iv_infusion') return false
+  if (item.drug_id === 'vincristine') return item.regimen_id === 'vad'
+  if (item.drug_id !== 'doxorubicin') return false
+  const days = [...item.days].sort((a, b) => a - b)
+  return days.length >= 4 && days[days.length - 1]! - days[0]! + 1 === days.length
+}
+
+/** How the regimen's own row is given: 24 hours or less. */
+export function protocolInfusionLength(item: Pick<RegimenItem, 'duration_min'>): InfusionLength {
+  return (item.duration_min ?? 0) >= CONTINUOUS_INFUSION_MIN ? 'continuous' : 'short'
+}
 
 /** The routes this drug may be given by at the same dose as `route`, or none. */
 export function routeChoicesOf(drug: Drug, route: Route): RouteAlternative | null {
@@ -199,7 +228,10 @@ export function resolveInfusionParams(
  * apart, the first one together with the day's first chained drug.
  */
 export type AdministrationMode =
-  { kind: 'protocol' } | { kind: 'bolus'; count: number; intervalMin: number }
+  | { kind: 'protocol' }
+  | { kind: 'bolus'; count: number; intervalMin: number }
+  | { kind: 'short' }
+  | { kind: 'continuous' }
 
 export const PROTOCOL_MODE: AdministrationMode = { kind: 'protocol' }
 
@@ -231,6 +263,11 @@ export function defaultBolusMode(): AdministrationMode {
  * are all rescaled to one bolus. An infusion's duration and bags no longer apply.
  */
 export function applyAdministrationMode(item: RegimenItem, mode: AdministrationMode): RegimenItem {
+  if (mode.kind === 'short' || mode.kind === 'continuous') {
+    if (!canSwitchInfusionLength(item)) return item
+    // A short infusion takes the drug's own duration and bag; a 24-hour one keeps the bag.
+    return { ...item, duration_min: mode.kind === 'continuous' ? CONTINUOUS_INFUSION_MIN : null }
+  }
   if (mode.kind === 'protocol' || !canSwitchAdministration(item)) return item
   const factor = item.administrations_per_day / mode.count
   return {
@@ -292,6 +329,9 @@ export function buildCourseItemsFrom(
     protocolItems.filter((item) => canSwitchAdministration(item)).map((item) => item.id),
   )
   const protocolRoutes = new Map(protocolItems.map((item) => [item.id, item.route]))
+  const protocolLengths = new Map(
+    protocolItems.map((item) => [item.id, protocolInfusionLength(item)]),
+  )
   const items = protocolItems.map((item) => {
     const drug = catalog.drugs.get(item.drug_id)
     const routed = drug ? applyRoute(item, drug, chosenRoutes?.[item.id]) : item
@@ -377,6 +417,8 @@ export function buildCourseItemsFrom(
         courseDrug,
         missingInfusionData: item.route === 'iv_infusion' && !infusion,
         switchable: switchable.has(item.id),
+        infusionSwitchable: canSwitchInfusionLength(item),
+        protocolInfusion: protocolLengths.get(item.id) ?? protocolInfusionLength(item),
         routeChoices: availableRoutes(catalog, drug, protocolRoutes.get(item.id) ?? item.route),
         protocolRoute: protocolRoutes.get(item.id) ?? item.route,
       },

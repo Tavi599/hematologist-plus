@@ -207,6 +207,16 @@ describe('scheduleAdministrations', () => {
     ])
   })
 
+  it('starts round-the-clock infusions together instead of one after another', () => {
+    const placed = scheduleAdministrations('11:00', [
+      { id: 'vincristine', block: 'infusion' as const, durationMin: 1440, isMain: true },
+      { id: 'doxorubicin', block: 'infusion' as const, durationMin: 1440, isMain: true },
+      { id: 'etoposide', block: 'infusion' as const, durationMin: 1440, isMain: true },
+    ])
+    expect(placed.map((row) => row.startMin)).toEqual([660, 660, 660])
+    expect(placed.map((row) => row.endDayOffset)).toEqual([1, 1, 1])
+  })
+
   it('falls back to the first cytostatic on a day without the anchor drug', () => {
     const placed = scheduleAdministrations('09:00', [
       { id: 'gemcitabine', block: 'infusion' as const, durationMin: 30, isMain: true },

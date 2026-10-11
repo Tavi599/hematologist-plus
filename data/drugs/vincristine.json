@@ -66,8 +66,12 @@
       "solvent": "sodium_chloride_0_9",
       "bag_volumes_ml": [100],
       "is_default": true,
-      "duration_min": 15,
+      "duration_min": 30,
       "sources": [
+        {
+          "name": "Вказівка лікаря відділення (2026-10-11): вінкристин і вінорельбін вводити в 100 мл 0,9% NaCl за 30 хв",
+          "checkedOn": "2026-10-11"
+        },
         {
           "name": "Дизайн відділення «CHOEP» (Google Таблиці)",
           "checkedOn": "2026-09-19"

@@ -7,6 +7,8 @@ import type { RegimenItem } from '../schemas/catalog'
 import {
   activeModifiers,
   applyAdministrationMode,
+  canSwitchInfusionLength,
+  protocolInfusionLength,
   applyModifiers,
   buildCourseItems,
   buildCourseItemsFrom,
@@ -371,6 +373,38 @@ describe('dose modifiers', () => {
     const catalog = withModifiers()
     const item = catalog.regimen_items.find((row) => row.id === 'r-chop-21.prednisolone')!
     expect(activeModifiers(item, ['nope'])).toEqual([])
+  })
+})
+
+describe('infusion length of a multi-day drug', () => {
+  const doxorubicin = (days: number[], durationMin?: number) =>
+    customCourseItem({
+      id: 'dox',
+      drugId: 'doxorubicin',
+      doseValue: 9,
+      doseUnit: 'mg_m2',
+      days,
+      route: 'iv_infusion',
+      ...(durationMin === undefined ? {} : { durationMin }),
+      sortOrder: 0,
+    })
+
+  it('switches four consecutive days between a short and a 24-hour infusion', () => {
+    const item = doxorubicin([1, 2, 3, 4], 1440)
+    expect(canSwitchInfusionLength(item)).toBe(true)
+    expect(protocolInfusionLength(item)).toBe('continuous')
+    expect(applyAdministrationMode(item, { kind: 'short' }).duration_min).toBeNull()
+    const short = doxorubicin([1, 2, 3, 4])
+    expect(protocolInfusionLength(short)).toBe('short')
+    expect(applyAdministrationMode(short, { kind: 'continuous' }).duration_min).toBe(1440)
+  })
+
+  it('leaves days that are not four in a row, and other routes, alone', () => {
+    expect(canSwitchInfusionLength(doxorubicin([1, 15]))).toBe(false)
+    expect(canSwitchInfusionLength(doxorubicin([1, 2, 3, 5]))).toBe(false)
+    const push = { ...doxorubicin([1, 2, 3, 4]), route: 'iv_bolus' as const }
+    expect(canSwitchInfusionLength(push)).toBe(false)
+    expect(applyAdministrationMode(push, { kind: 'continuous' })).toBe(push)
   })
 })
 
