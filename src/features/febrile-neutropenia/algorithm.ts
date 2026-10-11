@@ -284,6 +284,8 @@ export interface Agent {
   name: Text2
   dose: Text2 | null
   source: { name: string; url: string } | null
+  /** The course the calculator writes for it. */
+  regimenId?: string
 }
 
 export const AGENTS: { group: Text2; agents: Agent[] }[] = [
@@ -303,6 +305,7 @@ export const AGENTS: { group: Text2; agents: Agent[] }[] = [
           name: 'SmPC Piperacillin 4 g/Tazobactam 500 mg (emc), 4.1–4.2: neutropenic adults with fever',
           url: 'https://www.medicines.org.uk/emc/product/8771/smpc',
         },
+        regimenId: 'fn-piperacillin-tazobactam',
       },
       {
         name: t('Цефепім', 'Cefepime'),
@@ -311,6 +314,7 @@ export const AGENTS: { group: Text2; agents: Agent[] }[] = [
           name: 'FDA label: Cefepime for Injection, 2.1: empiric therapy for febrile neutropenic patients',
           url: 'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e',
         },
+        regimenId: 'fn-cefepime',
       },
       {
         name: t('Меропенем', 'Meropenem'),
@@ -322,6 +326,7 @@ export const AGENTS: { group: Text2; agents: Agent[] }[] = [
           name: 'SmPC Meronem IV 1 g (emc, 03.2026), 4.1–4.2: febrile neutropenia',
           url: 'https://www.medicines.org.uk/emc/product/9834/smpc',
         },
+        regimenId: 'fn-meropenem',
       },
       { name: t('Іміпенем/циластатин', 'Imipenem/cilastatin'), dose: null, source: null },
     ],
@@ -371,6 +376,7 @@ export const AGENTS: { group: Text2; agents: Agent[] }[] = [
           name: 'FDA label: CANCIDAS (caspofungin), 2.2: empirical therapy in febrile neutropenic patients',
           url: 'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bad23a6-09a6-4194-9182-093ed61bc71c',
         },
+        regimenId: 'fn-caspofungin',
       },
       {
         name: t('Амфотерицин B ліпосомальний', 'Liposomal amphotericin B'),
@@ -379,8 +385,12 @@ export const AGENTS: { group: Text2; agents: Agent[] }[] = [
           name: 'FDA label: AmBisome (amphotericin B liposome), Dosage: empirical therapy 3 mg/kg/day',
           url: 'https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a',
         },
+        regimenId: 'fn-liposomal-amphotericin',
       },
       { name: t('Мікафунгін', 'Micafungin'), dose: null, source: null },
     ],
   },
 ]
+
+/** The catalog page whose tree holds the calculated courses; shown in this tab, not in the list. */
+export const FEBRILE_NEUTROPENIA_DISEASE = 'febrile-neutropenia'

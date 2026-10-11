@@ -1,0 +1,42 @@
+{
+  "$comment": "AGIHO 2024 називає цефепім серед антисиньогнійних бета-лактамів першої лінії, без доз; доза — FDA label, табл. 1 «Empiric therapy for febrile neutropenic patients: 2 g IV every 8 hours, 7 days or until resolution of neutropenia». Розбіжність: інструкція — 7 днів, AGIHO — відміна після 3–5 днів без гарячки.",
+  "id": "fn-cefepime",
+  "short_name": "Цефепім (ФН)",
+  "name": {
+    "uk": "Цефепім — емпірична терапія ФН",
+    "en": "Cefepime: empirical therapy of FN"
+  },
+  "description": {
+    "uk": "Перша лінія при фебрильній нейтропенії високого ризику: 2 г в/в кожні 8 год.",
+    "en": "First line in high-risk febrile neutropenia: 2 g IV every 8 h."
+  },
+  "sources": [
+    {
+      "name": "Sandherr M et al. 2024 update of the AGIHO guideline on diagnosis and empirical treatment of fever of unknown origin (FUO) in adult neutropenic patients. Lancet Reg Health Eur 2025;51:101214",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11836497/",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "FDA label: Cefepime for Injection (Sagent), 2.1 табл. 1, 2.3 табл. 2, 2.5–2.6",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+      "version": "Revised: 03/2025",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "cefepime",
+      "drug_id": "cefepime",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "2 г кожні 8 год, інфузія близько 30 хв (FDA: емпірична терапія фебрильної нейтропенії; інструкція — 7 днів або до виходу з нейтропенії). При КК ≤ 60 мл/хв — корекція, див. застереження препарату. Розраховано на 96 год (дні 1–4): AGIHO вимагає щоденної переоцінки й рішення про подальше лікування через 96 год (вкладка «Фебрильна нейтропенія»). Відміна — після 3–5 днів без гарячки незалежно від нейтрофілів.",
+        "en": "2 g every 8 h over about 30 min (FDA: empiric therapy of febrile neutropenia; the label gives 7 days or until neutropenia resolves). With CrCl ≤ 60 mL/min adjust, see the drug caution. Calculated for 96 h (days 1-4): AGIHO asks for daily review and a decision on further treatment at 96 h (the \"Febrile neutropenia\" tab). Stop after 3-5 afebrile days, whatever the neutrophil count."
+      }
+    }
+  ]
+}

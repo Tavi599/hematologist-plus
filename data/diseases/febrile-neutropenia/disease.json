@@ -1,0 +1,91 @@
+{
+  "$comment": "Фебрильна нейтропенія: окремого коду в МКХ-10 ВООЗ немає; D70 (агранулоцитоз, зокрема медикаментозний) — основний, гарячку кодують додатково (R50). Сторінка показується вкладкою «Фебрильна нейтропенія» на сторінці захворювань і в загальному переліку не повторюється.",
+  "id": "febrile-neutropenia",
+  "name": {
+    "uk": "Фебрильна нейтропенія",
+    "en": "Febrile neutropenia"
+  },
+  "summary": {
+    "uk": "Емпірична антибактеріальна й протигрибкова терапія гарячки в нейтропенії за AGIHO 2024; дози — з інструкцій.",
+    "en": "Empirical antibacterial and antifungal therapy of fever in neutropenia after AGIHO 2024; doses from the labels."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "D70",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "other",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11836497/",
+      "label": {
+        "uk": "AGIHO 2024: гарячка невідомого походження в нейтропенії",
+        "en": "AGIHO 2024: fever of unknown origin in neutropenia"
+      }
+    }
+  ],
+  "treatment": [
+    {
+      "key": "antibacterial",
+      "kind": "treatment",
+      "title": {
+        "uk": "Високий ризик: емпіричний антисиньогнійний бета-лактам",
+        "en": "High risk: an empirical antipseudomonal beta-lactam"
+      },
+      "description": {
+        "uk": "Негайно після посівів. Колонізація ESBL-E — карбапенем; MRSA — додати тейкопланін або ванкоміцин (дози не розраховуються). Переоцінка через 96 год.",
+        "en": "At once after cultures. ESBL-E colonisation: a carbapenem; MRSA: add teicoplanin or vancomycin (no doses calculated). Review at 96 h."
+      },
+      "regimens": [
+        {
+          "regimen_id": "fn-piperacillin-tazobactam"
+        },
+        {
+          "regimen_id": "fn-cefepime"
+        },
+        {
+          "regimen_id": "fn-meropenem"
+        }
+      ]
+    },
+    {
+      "key": "outpatient",
+      "kind": "treatment",
+      "title": {
+        "uk": "Стандартний ризик: амбулаторно",
+        "en": "Standard risk: outpatient"
+      },
+      "description": {
+        "uk": "MASCC ≥ 21 і всі умови безпеки.",
+        "en": "MASCC ≥ 21 and every safety condition."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-fn-outpatient-oral"
+        }
+      ]
+    },
+    {
+      "key": "antifungal",
+      "kind": "treatment",
+      "title": {
+        "uk": "Емпірична протигрибкова терапія",
+        "en": "Empirical antifungal therapy"
+      },
+      "description": {
+        "uk": "Високий ризик без системної протигрибкової профілактики, гарячка понад 72–96 год попри антибіотики (AI); при стандартному ризику — не призначати (DIII).",
+        "en": "High risk without systemic antifungal prophylaxis, fever beyond 72-96 h despite antibiotics (AI); not at standard risk (DIII)."
+      },
+      "regimens": [
+        {
+          "regimen_id": "fn-caspofungin"
+        },
+        {
+          "regimen_id": "fn-liposomal-amphotericin"
+        }
+      ]
+    }
+  ]
+}

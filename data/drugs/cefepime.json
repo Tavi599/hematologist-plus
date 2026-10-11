@@ -16,6 +16,12 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "FDA label: Cefepime for Injection (Sagent), 2.1 табл. 1, 2.3 табл. 2, 2.5–2.6",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+      "version": "Revised: 03/2025",
+      "checkedOn": "2026-10-11"
     }
   ],
   "presentations": [
@@ -28,6 +34,48 @@
       "key": "s2000",
       "form": "vial",
       "strength_amount": 2000
+    }
+  ],
+  "atc_code": "J01DE01",
+  "dose_units": ["mg_flat"],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_min_mg_ml": 1,
+      "concentration_max_mg_ml": 40,
+      "stock_concentration_mg_ml": 160,
+      "bag_volumes_ml": [50, 100],
+      "duration_min": 30,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "FDA label: Cefepime for Injection (Sagent), 2.1 табл. 1, 2.3 табл. 2, 2.5–2.6",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+          "version": "Revised: 03/2025",
+          "checkedOn": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "uk": "Флакон 2 г відновлюють 10 мл (≈ 160 мг/мл), розводять 0,9% NaCl або 5% глюкозою до 1–40 мг/мл; інфузія близько 30 хв. Мішок підібрано так, щоб концентрація лишалась у межах інструкції.",
+        "en": "The 2 g vial is reconstituted with 10 mL (about 160 mg/mL) and diluted with 0.9% NaCl or 5% dextrose to 1-40 mg/mL; infused over about 30 min. The bag is chosen to stay within the label range."
+      }
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Для схеми 2 г кожні 8 год: КК 30–60 мл/хв — 2 г кожні 12 год; 11–29 — 2 г кожні 24 год; < 11 — 1 г кожні 24 год; ПАПД — 2 г кожні 48 год; гемодіаліз — 1 г кожні 24 год, у дні діалізу після сеансу. Ризик енцефалопатії й судом при недостатній корекції.",
+        "en": "For 2 g every 8 h: CrCl 30-60 mL/min, 2 g every 12 h; 11-29, 2 g every 24 h; < 11, 1 g every 24 h; CAPD, 2 g every 48 h; haemodialysis, 1 g every 24 h, after the session on dialysis days. Encephalopathy and seizures when the dose is not adjusted."
+      },
+      "source": {
+        "name": "FDA label: Cefepime for Injection (Sagent), 2.1 табл. 1, 2.3 табл. 2, 2.5–2.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+        "version": "Revised: 03/2025",
+        "checkedOn": "2026-10-11"
+      }
     }
   ]
 }

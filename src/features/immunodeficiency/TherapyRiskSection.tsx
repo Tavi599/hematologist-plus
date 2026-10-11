@@ -14,6 +14,8 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { currentLanguage } from '../../lib/i18n'
+import { AbbreviationList } from '../abbreviations/AbbreviationList'
+import { IMMUNODEFICIENCY_ABBREVIATIONS } from '../abbreviations/abbreviations'
 import {
   GENERAL_FACTORS,
   PROPHYLAXIS_AGENTS,
@@ -62,6 +64,7 @@ export function TherapyRiskSection() {
         <Text size="sm" c="dimmed">
           {t('immunodeficiency.lead')}
         </Text>
+        <AbbreviationList keys={IMMUNODEFICIENCY_ABBREVIATIONS} />
 
         <Chip.Group multiple value={risks} onChange={setRisks}>
           <Group gap={6}>

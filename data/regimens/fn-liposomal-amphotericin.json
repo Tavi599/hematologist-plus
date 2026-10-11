@@ -1,0 +1,45 @@
+{
+  "$comment": "AGIHO 2024: амфотерицин B при ФН — лише ліпосомальний. Доза 3 мг/кг/добу для емпіричної терапії — FDA AmBisome і українська інструкція АМБІЛІП (збігаються).",
+  "id": "fn-liposomal-amphotericin",
+  "short_name": "L-AmB (ФН)",
+  "name": {
+    "uk": "Ліпосомальний амфотерицин B — емпірична протигрибкова терапія ФН",
+    "en": "Liposomal amphotericin B: empirical antifungal therapy of FN"
+  },
+  "description": {
+    "uk": "Гарячка понад 72–96 год попри антибіотики при високому ризику: 3 мг/кг в/в 1 раз на добу.",
+    "en": "Fever beyond 72-96 h despite antibiotics at high risk: 3 mg/kg IV once a day."
+  },
+  "sources": [
+    {
+      "name": "Sandherr M et al. 2024 update of the AGIHO guideline on diagnosis and empirical treatment of fever of unknown origin (FUO) in adult neutropenic patients. Lancet Reg Health Eur 2025;51:101214",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11836497/",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "FDA label: AmBisome (amphotericin B) liposome for injection, Dosage and Administration",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "version": "Revised: 11/2024",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Інструкція АМБІЛІП (UA/18341/01/01), «Спосіб застосування та дози»: емпірична терапія 3 мг/кг/добу",
+      "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/1E0905B3BB3A60AC42258E660051419D/$file/UA183410101_F3B3.pdf",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "amphotericin-b-liposomal",
+      "drug_id": "amphotericin-b-liposomal",
+      "route": "iv_infusion",
+      "dose_value": 3,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "notes": {
+        "uk": "3 мг/кг 1 раз на добу щодня; розраховано один день — тривалість за клінічною відповіддю (інструкції числа не дають). Інфузія близько 120 хв (до 60 хв при добрій переносимості). Лише ліпосомальна форма: з іншими препаратами амфотерицину B дозами не взаємозамінна. Контроль креатиніну, калію, магнію.",
+        "en": "3 mg/kg once a day, daily; one day is calculated, the length follows the clinical response (the labels give no number). Infused over about 120 min (down to 60 min when well tolerated). Only the liposomal form: not interchangeable by dose with other amphotericin B products. Watch creatinine, potassium, magnesium."
+      }
+    }
+  ]
+}

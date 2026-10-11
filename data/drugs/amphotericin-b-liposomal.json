@@ -1,0 +1,81 @@
+{
+  "$comment": "Додано 2026-10-11. Ліпосомальна форма: АМБІЛІП (UA/18341/01/01, ліофілізат 50 мг, до 01.01.2028) — інструкція прямо називає його ліпосомальним амфотерицином B. АМФОТИН-ЛІП 50 (ліпідний комплекс) і АМФОЛІП (суспензія 5 мг/мл) — інші ліпідні форми, дозами не взаємозамінні.",
+  "id": "amphotericin-b-liposomal",
+  "name": {
+    "uk": "Амфотерицин B ліпосомальний",
+    "en": "Liposomal amphotericin B"
+  },
+  "trade_names": ["Амбіліп", "AmBisome"],
+  "atc_code": "J02AA01",
+  "dose_units": ["mg_kg"],
+  "availability": "registered",
+  "notes": {
+    "uk": "Різні препарати амфотерицину B (звичайний, ліпідний комплекс, ліпосомальний) дозами не взаємозамінні.",
+    "en": "Amphotericin B products (conventional, lipid complex, liposomal) are not interchangeable by dose."
+  },
+  "sources": [
+    {
+      "name": "FDA label: AmBisome (amphotericin B) liposome for injection, Dosage and Administration",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "version": "Revised: 11/2024",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Інструкція АМБІЛІП (UA/18341/01/01), «Спосіб застосування та дози»: емпірична терапія 3 мг/кг/добу",
+      "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/1E0905B3BB3A60AC42258E660051419D/$file/UA183410101_F3B3.pdf",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv): АМБІЛІП, ліофілізат для ін'єкцій 50 мг, UA/18341/01/01 (до 01.01.2028)",
+      "url": "http://www.drlz.com.ua/",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v50",
+      "form": "vial",
+      "strength_amount": 50
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "glucose",
+      "solvent": "glucose_5",
+      "concentration_min_mg_ml": 1,
+      "concentration_max_mg_ml": 2,
+      "stock_concentration_mg_ml": 4,
+      "bag_volumes_ml": [100, 250, 500],
+      "duration_min": 120,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "FDA label: AmBisome (amphotericin B) liposome for injection, Dosage and Administration",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+          "version": "Revised: 11/2024",
+          "checkedOn": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "uk": "Флакон 50 мг відновлюють 12 мл води для ін'єкцій (4 мг/мл), розводять лише 5% глюкозою до 1–2 мг/мл; інфузія близько 120 хв, при добрій переносимості — до 60 хв; фільтр не дрібніше 1 мкм. Мішок підібрано так, щоб концентрація лишалась у межах 1–2 мг/мл.",
+        "en": "The 50 mg vial is reconstituted with 12 mL of water for injection (4 mg/mL) and diluted only with 5% glucose to 1-2 mg/mL; infused over about 120 min, down to 60 min when well tolerated; an in-line filter no finer than 1 micron. The bag is chosen to keep 1-2 mg/mL."
+      }
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "Вплив ниркової недостатності на фармакокінетику не вивчено; контроль креатиніну й калію.",
+        "en": "The effect of renal impairment has not been studied; watch creatinine and potassium."
+      },
+      "source": {
+        "name": "FDA label: AmBisome (amphotericin B) liposome for injection, Dosage and Administration",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+        "version": "Revised: 11/2024",
+        "checkedOn": "2026-10-11"
+      }
+    }
+  ]
+}

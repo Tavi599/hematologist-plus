@@ -1,0 +1,86 @@
+{
+  "$comment": "Додано 2026-10-11. Зареєстровано багато генериків 4 г/0,5 г (4,5 г) і 2 г/0,25 г (2,25 г), напр. Тазпен 4.5 UA/19110/01/02, Рефекс UA/16279/01/02, Зоперцин UA/5033/01/01. Кількість — сумарна маса піперациліну й тазобактаму (4,5 г = 4 г + 0,5 г), як пишуть на флаконі.",
+  "id": "piperacillin-tazobactam",
+  "name": {
+    "uk": "Піперацилін/тазобактам",
+    "en": "Piperacillin/tazobactam"
+  },
+  "trade_names": ["Тазпен", "Рефекс", "Зоперцин", "Тазамакс"],
+  "atc_code": "J01CR05",
+  "dose_units": ["mg_flat"],
+  "availability": "registered",
+  "notes": {
+    "uk": "Доза й фасування — сумарна маса: 4,5 г = піперацилін 4 г + тазобактам 0,5 г.",
+    "en": "Dose and packs are the combined mass: 4.5 g = piperacillin 4 g + tazobactam 0.5 g."
+  },
+  "sources": [
+    {
+      "name": "SmPC Piperacillin/Tazobactam 4 g/0.5 g Powder for Solution for Infusion (emc 8771), 4.2, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/8771/smpc",
+      "version": "01/06/2022",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv): Тазпен 4.5 (UA/19110/01/02), Тазпен 2.25 (UA/19110/01/01), Рефекс (UA/16279/01/01–02), Зоперцин (UA/5033/01/01) та інші",
+      "url": "http://www.drlz.com.ua/",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v2250",
+      "form": "vial",
+      "strength_amount": 2250,
+      "label": {
+        "uk": "2 г/0,25 г",
+        "en": "2 g/0.25 g"
+      }
+    },
+    {
+      "key": "v4500",
+      "form": "vial",
+      "strength_amount": 4500,
+      "label": {
+        "uk": "4 г/0,5 г",
+        "en": "4 g/0.5 g"
+      }
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [50, 100, 150],
+      "duration_min": 30,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "SmPC Piperacillin/Tazobactam 4 g/0.5 g Powder for Solution for Infusion (emc 8771), 4.2, 6.6",
+          "url": "https://www.medicines.org.uk/emc/product/8771/smpc",
+          "version": "01/06/2022",
+          "checkedOn": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "uk": "Флакон 4 г/0,5 г відновлюють 20 мл розчинника і розводять до 50–150 мл 0,9% NaCl або 5% глюкози; інфузія 30 хв (SmPC 4.2, 6.6).",
+        "en": "The 4 g/0.5 g vial is reconstituted with 20 mL and diluted to 50-150 mL of 0.9% NaCl or 5% glucose; infused over 30 min (SmPC 4.2, 6.6)."
+      }
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "КК > 40 мл/хв — без змін; 20–40 — не більше 4 г/0,5 г кожні 8 год; < 20 — не більше 4 г/0,5 г кожні 12 год; гемодіаліз — додатково 2 г/0,25 г після кожного сеансу.",
+        "en": "CrCl > 40 mL/min: no change; 20-40: at most 4 g/0.5 g every 8 h; < 20: at most 4 g/0.5 g every 12 h; haemodialysis: an extra 2 g/0.25 g after each session."
+      },
+      "source": {
+        "name": "SmPC Piperacillin/Tazobactam 4 g/0.5 g Powder for Solution for Infusion (emc 8771), 4.2, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/8771/smpc",
+        "version": "01/06/2022",
+        "checkedOn": "2026-10-11"
+      }
+    }
+  ]
+}

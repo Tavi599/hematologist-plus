@@ -16,6 +16,12 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "SmPC Meronem IV 1 g (emc 9834), 4.2, 6.3, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/9834/smpc",
+      "version": "03/2026",
+      "checkedOn": "2026-10-11"
     }
   ],
   "presentations": [
@@ -28,6 +34,47 @@
       "key": "s1000",
       "form": "vial",
       "strength_amount": 1000
+    }
+  ],
+  "atc_code": "J01DH02",
+  "dose_units": ["mg_flat"],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_min_mg_ml": 1,
+      "concentration_max_mg_ml": 20,
+      "bag_volumes_ml": [50, 100],
+      "duration_min": 30,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "SmPC Meronem IV 1 g (emc 9834), 4.2, 6.3, 6.6",
+          "url": "https://www.medicines.org.uk/emc/product/9834/smpc",
+          "version": "03/2026",
+          "checkedOn": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "uk": "Розводять 0,9% NaCl або 5% глюкозою до 1–20 мг/мл; інфузія 15–30 хв, дозу до 1 г можна ввести болюсно за 5 хв. Розчин у 0,9% NaCl стабільний 3 год при ≤ 25 °C. Мішок підібрано так, щоб концентрація лишалась у межах інструкції.",
+        "en": "Diluted with 0.9% NaCl or 5% glucose to 1-20 mg/mL; infused over 15-30 min, or up to 1 g as a 5-minute bolus. Stable 3 h at up to 25 °C in 0.9% NaCl. The bag is chosen to stay within the label range."
+      }
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "КК 26–50 мл/хв — одна разова доза кожні 12 год; 10–25 — половина разової дози кожні 12 год; < 10 — половина кожні 24 год. Печінкова недостатність — без корекції.",
+        "en": "CrCl 26-50 mL/min: one unit dose every 12 h; 10-25: half a unit dose every 12 h; < 10: half every 24 h. No change for hepatic impairment."
+      },
+      "source": {
+        "name": "SmPC Meronem IV 1 g (emc 9834), 4.2, 6.3, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/9834/smpc",
+        "version": "03/2026",
+        "checkedOn": "2026-10-11"
+      }
     }
   ]
 }

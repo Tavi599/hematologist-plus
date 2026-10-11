@@ -122,6 +122,15 @@ export function scheduleAdministrations(
 
   for (const item of items) {
     if (item.block !== 'infusion') continue
+    // A repeat of a drug given every N hours (cytarabine q12h, cefepime q8h) is timed from its
+    // first administration of the day and stays out of the chain: the next drug follows the first.
+    const occurrence = item.occurrence ?? 0
+    const interval = item.intervalMin ?? 0
+    const firstOfDrug = chainStarts.get(item.id.replace(/#\d+$/, '#1'))
+    if (occurrence > 0 && interval > 0 && firstOfDrug !== undefined) {
+      scheduled.push(placed(item.id, firstOfDrug + interval * occurrence, durationOf(item)))
+      continue
+    }
     const startMin = Math.max(0, cursor + (item.gapBeforeMin ?? 0) + shiftOf(item))
     cursor = startMin + durationOf(item)
     firstStart ??= startMin

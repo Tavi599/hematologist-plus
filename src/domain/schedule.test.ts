@@ -147,6 +147,39 @@ describe('scheduleAdministrations', () => {
     expect(placed.find((row) => row.id === 'mesna')!.start).toBe('10:00')
   })
 
+  it('times the repeats of a drug from its first administration, not back to back', () => {
+    const placed = scheduleAdministrations('09:00', [
+      {
+        id: 'cefepime#1',
+        block: 'infusion' as const,
+        durationMin: 30,
+        occurrence: 0,
+        intervalMin: 480,
+      },
+      {
+        id: 'cefepime#2',
+        block: 'infusion' as const,
+        durationMin: 30,
+        occurrence: 1,
+        intervalMin: 480,
+      },
+      {
+        id: 'cefepime#3',
+        block: 'infusion' as const,
+        durationMin: 30,
+        occurrence: 2,
+        intervalMin: 480,
+      },
+      { id: 'vancomycin', block: 'infusion' as const, durationMin: 60 },
+    ])
+    expect(placed.map((row) => [row.id, row.start])).toEqual([
+      ['cefepime#1', '09:00'],
+      ['vancomycin', '09:30'],
+      ['cefepime#2', '17:00'],
+      ['cefepime#3', '01:00'],
+    ])
+  })
+
   it('falls back to the first cytostatic on a day without the anchor drug', () => {
     const placed = scheduleAdministrations('09:00', [
       { id: 'gemcitabine', block: 'infusion' as const, durationMin: 30, isMain: true },

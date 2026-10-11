@@ -4,12 +4,22 @@ import { Link } from 'react-router'
 
 import { routes } from '../../app/routes'
 import { currentLanguage } from '../../lib/i18n'
-import { AGENTS, GUIDELINE, NEUTROPENIA_DEFINITION, STAGES } from './algorithm'
+import { AbbreviationList } from '../abbreviations/AbbreviationList'
+import { FEBRILE_NEUTROPENIA_ABBREVIATIONS } from '../abbreviations/abbreviations'
+import { CatalogGate } from '../catalog/CatalogGate'
+import { TreatmentTree } from '../catalog/TreatmentTree'
+import {
+  AGENTS,
+  FEBRILE_NEUTROPENIA_DISEASE,
+  GUIDELINE,
+  NEUTROPENIA_DEFINITION,
+  STAGES,
+} from './algorithm'
 
 /**
  * Febrile neutropenia as an algorithm: risk, the first line by risk and colonisation, what is done
  * after 96 hours, antifungal therapy and when to stop, with the guideline's grade at each step and
- * the label dose of each named drug.
+ * the label dose of each named drug, and the courses the calculator writes from those doses.
  */
 export function FebrileNeutropeniaSection() {
   const { t } = useTranslation()
@@ -31,6 +41,8 @@ export function FebrileNeutropeniaSection() {
           </Text>
         </Stack>
       </Card>
+
+      <AbbreviationList keys={FEBRILE_NEUTROPENIA_ABBREVIATIONS} />
 
       {STAGES.map((stage) => (
         <Card key={stage.id} withBorder component="section">
@@ -93,6 +105,16 @@ export function FebrileNeutropeniaSection() {
                                 {t('febrileNeutropenia.label')}
                               </Anchor>
                             )}
+                            {agent.regimenId && (
+                              <Anchor
+                                component={Link}
+                                to={`${routes.calculator}?regimen=${agent.regimenId}`}
+                                size="xs"
+                                fw={600}
+                              >
+                                {t('febrileNeutropenia.calculate')} →
+                              </Anchor>
+                            )}
                           </Group>
                         ) : (
                           <Text size="xs" c="dimmed">
@@ -109,6 +131,22 @@ export function FebrileNeutropeniaSection() {
           <Text size="xs" c="dimmed">
             {t('febrileNeutropenia.renal')}
           </Text>
+        </Stack>
+      </Card>
+
+      <Card withBorder component="section">
+        <Stack gap={6}>
+          <Title order={3} size="h4">
+            {t('febrileNeutropenia.courses')}
+          </Title>
+          <Text size="xs" c="dimmed">
+            {t('febrileNeutropenia.coursesHint')}
+          </Text>
+          <CatalogGate>
+            {(catalog) => (
+              <TreatmentTree catalog={catalog} diseaseId={FEBRILE_NEUTROPENIA_DISEASE} />
+            )}
+          </CatalogGate>
         </Stack>
       </Card>
 

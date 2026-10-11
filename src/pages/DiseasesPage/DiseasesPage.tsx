@@ -5,6 +5,7 @@ import { Link, useSearchParams } from 'react-router'
 
 import { routes } from '../../app/routes'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
+import { FEBRILE_NEUTROPENIA_DISEASE } from '../../features/febrile-neutropenia/algorithm'
 import { FebrileNeutropeniaSection } from '../../features/febrile-neutropenia/FebrileNeutropeniaSection'
 import { IrradiatedSection } from '../../features/irradiated/IrradiatedSection'
 import { ICD10_SYSTEM_ID, primaryCode, type CatalogIndex } from '../../lib/catalog-index'
@@ -69,6 +70,8 @@ function DiseaseList({ catalog }: { catalog: CatalogIndex }) {
   const entries = useMemo(
     () =>
       [...catalog.diseases.values()]
+        // Febrile neutropenia has a tab of its own, which shows its courses.
+        .filter((disease) => disease.id !== FEBRILE_NEUTROPENIA_DISEASE)
         .map((disease) => {
           const code = primaryCode(catalog, disease.id, ICD10_SYSTEM_ID)
           return {

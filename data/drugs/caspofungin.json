@@ -11,6 +11,17 @@
       "name": "Перелік препаратів відділення: Список_препаратів_з_доз,_ДЕЦ,_кер_дост.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "FDA label: CANCIDAS (caspofungin), 2.1–2.5",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bad23a6-09a6-4194-9182-093ed61bc71c",
+      "version": "Revised: 5/2022",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv): Касміг, Каспофунгін-Віста, Каспофунгін Зентіва — 50 і 70 мг",
+      "url": "http://www.drlz.com.ua/",
+      "checkedOn": "2026-10-11"
     }
   ],
   "presentations": [
@@ -18,6 +29,51 @@
       "key": "s50",
       "form": "vial",
       "strength_amount": 50
+    },
+    {
+      "key": "s70",
+      "form": "vial",
+      "strength_amount": 70
+    }
+  ],
+  "atc_code": "J02AX04",
+  "dose_units": ["mg_flat"],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_max_mg_ml": 0.5,
+      "bag_volumes_ml": [100, 250],
+      "duration_min": 60,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "FDA label: CANCIDAS (caspofungin), 2.1–2.5",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bad23a6-09a6-4194-9182-093ed61bc71c",
+          "version": "Revised: 5/2022",
+          "checkedOn": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "uk": "Стандартно — у 250 мл 0,9% NaCl; дозволено менший об'єм, якщо концентрація не перевищує 0,5 мг/мл. Не розводити глюкозою. Повільна інфузія близько 1 год, не болюсно.",
+        "en": "Normally in 250 mL of 0.9% NaCl; a smaller volume is allowed while the concentration stays at or below 0.5 mg/mL. Not with glucose. A slow infusion over about 1 h, never a bolus."
+      }
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Помірна печінкова недостатність (Чайлд–П'ю 7–9): 35 мг на добу після навантажувальних 70 мг; тяжка — досвіду немає. Нирки — без корекції.",
+        "en": "Moderate hepatic impairment (Child-Pugh 7-9): 35 mg a day after the 70 mg loading dose; severe: no experience. No change for the kidneys."
+      },
+      "source": {
+        "name": "FDA label: CANCIDAS (caspofungin), 2.1–2.5",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bad23a6-09a6-4194-9182-093ed61bc71c",
+        "version": "Revised: 5/2022",
+        "checkedOn": "2026-10-11"
+      }
     }
   ]
 }

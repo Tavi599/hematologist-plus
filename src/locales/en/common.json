@@ -732,8 +732,14 @@
     "agentsHint": "The guideline names the drugs without doses. Doses come from the labels, each for its febrile-neutropenia indication; where that label was not checked, there is no dose.",
     "label": "label",
     "noDose": "no dose: source not checked",
-    "renal": "Doses for normal renal function; with reduced creatinine clearance, adjust by the label.",
+    "renal": "Doses are for normal kidney function; the courses below show the label adjustment by creatinine clearance when renal impairment is ticked.",
     "source": "Source of the algorithm (full text and figures 1–4):",
-    "definitionSource": "Definition of neutropenia:"
+    "definitionSource": "Definition of neutropenia:",
+    "calculate": "calculate",
+    "courses": "Courses for the calculator",
+    "coursesHint": "Doses from the labels, each for febrile neutropenia. The antibiotics are calculated for 96 h, up to the mandatory review; the antifungals for the first days, then daily by the clinical response. The tree shows the label adjustment for the kidneys or liver when the patient condition is ticked."
+  },
+  "abbreviations": {
+    "title": "English abbreviations spelled out"
   }
 }

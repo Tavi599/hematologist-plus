@@ -1,0 +1,63 @@
+{
+  "$comment": "AGIHO 2024, рисунок 2: стандартний ризик, MASCC ≥ 21 і всі умови безпеки — амбулаторно амоксицилін/клавуланат + ципрофлоксацин, при протипоказаннях моксифлоксацин (AI). Доз настанова не наводить; інструкції цих препаратів для ФН не перевірено — тому картка без розрахунку.",
+  "id": "ref-fn-outpatient-oral",
+  "short_name": "Амокс/клав + ципро (ФН)",
+  "name": {
+    "uk": "Амоксицилін/клавуланат + ципрофлоксацин — амбулаторно при ФН стандартного ризику",
+    "en": "Amoxicillin/clavulanate + ciprofloxacin: outpatient FN at standard risk"
+  },
+  "sources": [
+    {
+      "name": "Sandherr M et al. 2024 update of the AGIHO guideline on diagnosis and empirical treatment of fever of unknown origin (FUO) in adult neutropenic patients. Lancet Reg Health Eur 2025;51:101214",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11836497/",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Стандартний ризик (нейтропенія ≤ 7 днів, без клінічних чинників), MASCC ≥ 21 і всі умови безпеки — пероральна терапія вдома з щоденним оглядом (AI).",
+      "en": "Standard risk (neutropenia ≤ 7 days, no clinical factors), MASCC ≥ 21 and every safety condition: oral therapy at home with a daily review (AI)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Амоксицилін/клавуланат",
+          "en": "Amoxicillin/clavulanate"
+        }
+      },
+      {
+        "name": {
+          "uk": "Ципрофлоксацин",
+          "en": "Ciprofloxacin"
+        },
+        "drug_id": "ciprofloxacin"
+      },
+      {
+        "name": {
+          "uk": "Моксифлоксацин — при протипоказаннях",
+          "en": "Moxifloxacin with contraindications"
+        },
+        "drug_id": "moxifloxacin"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Не застосовувати, якщо хворий отримував профілактику фторхінолонами.",
+        "en": "Not if the patient was on fluoroquinolone prophylaxis."
+      },
+      {
+        "uk": "Моксифлоксацин не діє на синьогнійну паличку.",
+        "en": "Moxifloxacin is not active against Pseudomonas."
+      },
+      {
+        "uk": "Нестабільність, гарячка понад 96 год чи втрата комплаєнсу — негайно в стаціонар.",
+        "en": "Instability, fever beyond 96 h or lost compliance: admit at once."
+      }
+    ],
+    "gap": {
+      "uk": "AGIHO доз не наводить, а інструкції цих препаратів для фебрильної нейтропенії не перевірено — дози не розраховуються.",
+      "en": "AGIHO gives no doses and the labels of these drugs were not checked for febrile neutropenia, so no doses are calculated."
+    },
+    "availability": "registered"
+  }
+}

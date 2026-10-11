@@ -1,0 +1,112 @@
+{
+  "$comment": "AGIHO 2024: емпірична протиплісенева терапія при гарячці понад 72–96 год у хворих високого ризику без системної протигрибкової профілактики (AI); ехінокандини мають найкращі дані. Доза — FDA CANCIDAS 2.2 і EMA SmPC 4.2. Тривалість у джерелах не задана числом, тому розраховано день 1 (70 мг) і день 2 (50 мг) як зразок щоденної дози.",
+  "id": "fn-caspofungin",
+  "short_name": "Каспофунгін (ФН)",
+  "name": {
+    "uk": "Каспофунгін — емпірична протигрибкова терапія ФН",
+    "en": "Caspofungin: empirical antifungal therapy of FN"
+  },
+  "description": {
+    "uk": "Гарячка понад 72–96 год попри антибіотики при високому ризику: 70 мг у день 1, далі 50 мг щодня.",
+    "en": "Fever beyond 72-96 h despite antibiotics at high risk: 70 mg on day 1, then 50 mg daily."
+  },
+  "sources": [
+    {
+      "name": "Sandherr M et al. 2024 update of the AGIHO guideline on diagnosis and empirical treatment of fever of unknown origin (FUO) in adult neutropenic patients. Lancet Reg Health Eur 2025;51:101214",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11836497/",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "FDA label: CANCIDAS (caspofungin), 2.1–2.5",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bad23a6-09a6-4194-9182-093ed61bc71c",
+      "version": "Revised: 5/2022",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "EMA SmPC: CANCIDAS (caspofungin), 4.2",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/cancidas-epar-product-information_en.pdf",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "caspofungin-loading",
+      "drug_id": "caspofungin",
+      "route": "iv_infusion",
+      "dose_value": 70,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Навантажувальна доза 70 мг одноразово, повільна інфузія близько 1 год.",
+        "en": "A single 70 mg loading dose, a slow infusion over about 1 h."
+      }
+    },
+    {
+      "key": "caspofungin",
+      "drug_id": "caspofungin",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [2],
+      "notes": {
+        "uk": "Далі 50 мг 1 раз на добу щодня; розраховано один день — тривалість за клінічною відповіддю. FDA: до виходу з нейтропенії; EMA: до 72 год після відновлення нейтрофілів (≥ 500/мкл); при підтвердженій інфекції — щонайменше 14 днів і ще 7 днів після виходу з нейтропенії й зникнення симптомів. Якщо 50 мг переноситься, але відповіді немає, — можна 70 мг на добу.",
+        "en": "Then 50 mg once a day, daily; one day is calculated, the length follows the clinical response. FDA: until neutropenia resolves; EMA: until 72 h after neutrophil recovery (≥ 500/µL); with a proven infection at least 14 days and 7 more after neutropenia and symptoms resolve. If 50 mg is tolerated without response, 70 mg a day may be given."
+      },
+      "dose_modifiers": [
+        {
+          "key": "hepatic-moderate",
+          "label": {
+            "uk": "Помірна печінкова недостатність (Чайлд–П'ю 7–9)",
+            "en": "Moderate hepatic impairment (Child-Pugh 7-9)"
+          },
+          "dose_value": 35,
+          "notes": {
+            "uk": "35 мг на добу після навантажувальних 70 мг (FDA і EMA збігаються).",
+            "en": "35 mg a day after the 70 mg loading dose (FDA and EMA agree)."
+          },
+          "source": {
+            "name": "FDA label: CANCIDAS (caspofungin), 2.1–2.5",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bad23a6-09a6-4194-9182-093ed61bc71c",
+            "version": "Revised: 5/2022",
+            "checkedOn": "2026-10-11"
+          }
+        },
+        {
+          "key": "rifampicin",
+          "label": {
+            "uk": "Рифампіцин або інший індуктор (дексаметазон, фенітоїн, карбамазепін, ефавіренз, невірапін)",
+            "en": "Rifampicin or another inducer (dexamethasone, phenytoin, carbamazepine, efavirenz, nevirapine)"
+          },
+          "dose_value": 70,
+          "notes": {
+            "uk": "FDA: з рифампіцином — 70 мг на добу; з іншими індукторами — розглянути 70 мг. EMA: з індукторами — розглянути 70 мг.",
+            "en": "FDA: with rifampicin 70 mg a day; with other inducers consider 70 mg. EMA: with inducers consider 70 mg."
+          },
+          "source": {
+            "name": "FDA label: CANCIDAS (caspofungin), 2.1–2.5",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bad23a6-09a6-4194-9182-093ed61bc71c",
+            "version": "Revised: 5/2022",
+            "checkedOn": "2026-10-11"
+          }
+        },
+        {
+          "key": "weight-over-80",
+          "label": {
+            "uk": "Маса тіла понад 80 кг (лише EMA)",
+            "en": "Body weight over 80 kg (EMA only)"
+          },
+          "dose_value": 70,
+          "notes": {
+            "uk": "Розбіжність інструкцій: EMA рекомендує 70 мг на добу при масі > 80 кг, FDA такого правила не має (50 мг).",
+            "en": "The labels differ: EMA recommends 70 mg a day above 80 kg, FDA has no such rule (50 mg)."
+          },
+          "source": {
+            "name": "EMA SmPC: CANCIDAS (caspofungin), 4.2",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/cancidas-epar-product-information_en.pdf",
+            "checkedOn": "2026-10-11"
+          }
+        }
+      ]
+    }
+  ]
+}
