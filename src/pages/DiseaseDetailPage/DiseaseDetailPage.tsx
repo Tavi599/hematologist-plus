@@ -34,6 +34,8 @@ import navClasses from './SectionNav.module.css'
 import treeClasses from '../../features/catalog/TreatmentTree.module.css'
 import { useClosedLines } from './use-closed-lines'
 import { scoresForDisease } from '../../features/scores/areas'
+import { SECONDARY_IMMUNODEFICIENCY } from '../../features/immunodeficiency/therapy-risks'
+import { TherapyRiskSection } from '../../features/immunodeficiency/TherapyRiskSection'
 import { IRRADIATION_DISEASES } from '../../features/irradiated/indications'
 
 const ARTICLE_ANCHOR = 'disease-article'
@@ -104,6 +106,8 @@ function DiseaseView({ catalog, disease }: { catalog: CatalogIndex; disease: Dis
       {disease.summary !== null && <Text>{localize(disease.summary, language)}</Text>}
 
       <DiseaseScores diseaseId={disease.id} />
+      {/* Treatment-related immunodeficiency: the therapies, their infections and the prophylaxis. */}
+      {disease.id === SECONDARY_IMMUNODEFICIENCY && <TherapyRiskSection />}
       {IRRADIATION_DISEASES[disease.id] && (
         <Alert color="orange" variant="light" title={t('irradiated.link')}>
           <Text size="sm">{IRRADIATION_DISEASES[disease.id]![language]}</Text>
