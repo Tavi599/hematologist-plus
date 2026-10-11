@@ -1757,8 +1757,8 @@
         "en": "Supportive care"
       },
       "description": {
-        "uk": "Профілактика кісткових ускладнень паралельно з протипухлинним лікуванням.",
-        "en": "Prevention of skeletal events alongside antimyeloma treatment."
+        "uk": "Профілактика кісткових ускладнень і замісна терапія імуноглобуліном паралельно з протипухлинним лікуванням.",
+        "en": "Prevention of skeletal events and immunoglobulin replacement alongside antimyeloma treatment."
       },
       "regimens": [
         {
@@ -1775,6 +1775,9 @@
         },
         {
           "regimen_id": "ref-mm-ibandronate"
+        },
+        {
+          "regimen_id": "ivig-replacement"
         }
       ]
     },

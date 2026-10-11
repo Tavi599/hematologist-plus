@@ -1,4 +1,4 @@
-import { act, screen } from '@testing-library/react'
+import { act, fireEvent, screen } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { demoCatalog } from '../../lib/catalog.fixture'
@@ -68,8 +68,12 @@ describe('DiseasesPage search', () => {
     expect(await screen.findByText('Клас МКХ-10: C')).toBeInTheDocument()
   })
 
-  it('lists the conditions that need irradiated components, apart from the catalog', async () => {
+  it('lists the conditions that need irradiated components in a tab of their own', async () => {
     renderWithProviders(<DiseasesPage />)
+    expect(
+      screen.queryByText('Лімфома Ходжкіна — будь-яка стадія, дорослі й діти'),
+    ).not.toBeInTheDocument()
+    fireEvent.click(screen.getByRole('tab', { name: 'Опромінені компоненти крові' }))
     expect(
       await screen.findByRole('heading', {
         name: 'Стани, що потребують переливання опромінених компонентів крові',

@@ -1,36 +1,48 @@
-import { Anchor, Badge, Card, Group, Stack, Text, TextInput, Title } from '@mantine/core'
-import { useEffect, useMemo, useState } from 'react'
+import { Anchor, Badge, Card, Group, Stack, Tabs, Text, TextInput, Title } from '@mantine/core'
+import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useSearchParams } from 'react-router'
 
 import { routes } from '../../app/routes'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
-import { IRRADIATED_ANCHOR, IrradiatedSection } from '../../features/irradiated/IrradiatedSection'
+import { IrradiatedSection } from '../../features/irradiated/IrradiatedSection'
 import { ICD10_SYSTEM_ID, primaryCode, type CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 
 export function DiseasesPage() {
   const { t } = useTranslation()
+  const [searchParams, setSearchParams] = useSearchParams()
+  // The irradiated components are a tab of their own, so the list is not followed by a long
+  // table; a link from a disease page opens that tab straight away.
+  const tab = searchParams.get('section') === 'irradiated' ? 'irradiated' : 'diseases'
+  const chooseTab = (value: string | null) =>
+    setSearchParams(
+      (current) => {
+        const params = new URLSearchParams(current)
+        if (value === 'irradiated') params.set('section', 'irradiated')
+        else params.delete('section')
+        return params
+      },
+      { replace: true },
+    )
 
   return (
     <Stack>
-      <Group justify="space-between" align="baseline" wrap="wrap">
-        <Title order={1}>{t('diseases.title')}</Title>
-        {/* The section below the list is long to scroll to; the link takes the reader there. */}
-        <Anchor
-          component="button"
-          type="button"
-          onClick={() =>
-            document.getElementById(IRRADIATED_ANCHOR)?.scrollIntoView({ block: 'start' })
-          }
-        >
-          {t('irradiated.link')} ↓
-        </Anchor>
-      </Group>
-      <CatalogGate>{(catalog) => <DiseaseList catalog={catalog} />}</CatalogGate>
-      {/* Apart from the catalog: it needs no database and is there offline too. */}
-      <IrradiatedSection />
+      <Title order={1}>{t('diseases.title')}</Title>
+      <Tabs value={tab} onChange={chooseTab} keepMounted={false}>
+        <Tabs.List>
+          <Tabs.Tab value="diseases">{t('diseases.tabList')}</Tabs.Tab>
+          <Tabs.Tab value="irradiated">{t('irradiated.tab')}</Tabs.Tab>
+        </Tabs.List>
+        <Tabs.Panel value="diseases" pt="md">
+          <CatalogGate>{(catalog) => <DiseaseList catalog={catalog} />}</CatalogGate>
+        </Tabs.Panel>
+        <Tabs.Panel value="irradiated" pt="md">
+          {/* Apart from the catalog: it needs no database and is there offline too. */}
+          <IrradiatedSection />
+        </Tabs.Panel>
+      </Tabs>
     </Stack>
   )
 }
@@ -42,18 +54,6 @@ function icdChapter(code: string | null): string {
 
 function DiseaseList({ catalog }: { catalog: CatalogIndex }) {
   const { t } = useTranslation()
-  const [searchParams] = useSearchParams()
-  const toIrradiated = searchParams.get('section') === 'irradiated'
-  // A link from a disease page lands on the section; the list above it is laid out by now, as
-  // this runs once the catalog has loaded.
-  useEffect(() => {
-    if (!toIrradiated) return
-    const timer = window.setTimeout(
-      () => document.getElementById(IRRADIATED_ANCHOR)?.scrollIntoView({ block: 'start' }),
-      300,
-    )
-    return () => window.clearTimeout(timer)
-  }, [toIrradiated])
   const language = currentLanguage()
   const [search, setSearch] = useState('')
 

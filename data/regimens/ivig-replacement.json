@@ -1,0 +1,41 @@
+{
+  "$comment": "NHS England, PSS9 Immunoglobulin Commissioning Guidance 2019/20, рядок «Secondary antibody deficiency – long term use»: гіпогамаглобулінемія через препарати (ритуксимаб та інші анти-CD20/CD19, даратумумаб), після ТГСК, при НХЛ, ХЛЛ, ММ чи іншій В-клітинній пухлині; + повторні чи тяжкі бактеріальні інфекції попри 6 міс. безперервних пероральних антибіотиків + IgG < 4 г/л (без парапротеїну) + відсутня відповідь на полісахаридну вакцину; доза 0,4–0,6 г/кг/міс., підібрати до мінімального IgG не нижче нижньої межі норми; щорічний перегляд. Зміни NHS England 02.2025 (change form, Appendix A Immunology, Secondary antibody deficiency): профілактичне Ig доречне при IgG < 4 г/л на початку біспецифічного антитіла (мієлома, В-клітинні лімфоми) і при В-клітинній аплазії після CAR-T проти В- чи плазмоклітинних антигенів — без вимоги інфекцій і вакцинного тесту. Каталог рахує нижню межу 0,4 г/кг кожні 4 тижні.",
+  "id": "ivig-replacement",
+  "short_name": "ВВІГ",
+  "name": {
+    "uk": "Замісна терапія в/в імуноглобуліном",
+    "en": "Intravenous immunoglobulin replacement"
+  },
+  "description": {
+    "uk": "Імуноглобулін 0,4 г/кг в/в кожні 4 тижні при вторинній гіпогамаглобулінемії (IgG < 4 г/л): з повторними тяжкими інфекціями або профілактично з початку біспецифічного антитіла чи після CAR-T.",
+    "en": "Immunoglobulin 0.4 g/kg IV every 4 weeks for secondary hypogammaglobulinaemia (IgG < 4 g/L): with recurrent severe infections, or prophylactically from the start of a bispecific antibody or after CAR-T."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 12,
+  "sources": [
+    {
+      "name": "NHS England, PSS9 Immunoglobulin Commissioning Guidance (CQUIN 2019/20): Secondary antibody deficiency – long term use",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2019/03/PSS9-Immunoglobulin-Commissioning-Guidance-CQUIN-1920.pdf",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "NHS England, Commissioning criteria policy for the use of therapeutic immunoglobulin: change form (02.2025) — Ig at inception of bispecific antibody treatment, after CAR-T",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2021/12/ccp-for-the-use-of-Ig-feb-2025-change-form.pdf",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "ivig",
+      "drug_id": "immunoglobulin-human-iv",
+      "route": "iv_infusion",
+      "dose_value": 400,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "notes": {
+        "uk": "0,4 г/кг кожні 4 тижні; за NHS England — 0,4–0,6 г/кг на місяць, дозу чи інтервал підбирають так, щоб мінімальний IgG перед введенням був не нижче нижньої межі норми. Показання: IgG < 4 г/л (без парапротеїну) і повторні чи тяжкі бактеріальні інфекції попри антибіотикопрофілактику (мієлома, ХЛЛ, НХЛ, після ТГСК, після анти-CD20 чи анти-CD38); профілактично — IgG < 4 г/л на початку біспецифічного антитіла (теклістамаб, елранатамаб, талкветамаб, глофітамаб, епкоритамаб) або В-клітинна аплазія після CAR-T. Переглядати щороку; при сезонних інфекціях можлива перерва влітку.",
+        "en": "0.4 g/kg every 4 weeks; NHS England gives 0.4-0.6 g/kg a month, the dose or interval titrated so that the trough IgG is at least the lower limit of normal. Indication: IgG < 4 g/L (excluding paraprotein) with recurrent or severe bacterial infections despite antibiotic prophylaxis (myeloma, CLL, NHL, after HSCT, after anti-CD20 or anti-CD38); prophylactically - IgG < 4 g/L when a bispecific antibody starts (teclistamab, elranatamab, talquetamab, glofitamab, epcoritamab) or B-cell aplasia after CAR-T. Review yearly; a summer break may suit seasonal infections."
+      }
+    }
+  ]
+}

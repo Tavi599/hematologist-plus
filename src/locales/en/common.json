@@ -334,7 +334,8 @@
     "search": "Search",
     "searchPlaceholder": "Name, ICD-10 code or summary",
     "notFound": "Nothing found.",
-    "chapter": "ICD-10 chapter: {{letter}}"
+    "chapter": "ICD-10 chapter: {{letter}}",
+    "tabList": "Diseases"
   },
   "diseaseDetail": {
     "cautionSummary": {
@@ -709,6 +710,7 @@
     "gradeHint": "Grade as GRADE in the guideline: 1 strong, 2 weak recommendation; A–C quality of evidence.",
     "checked": "checked {{date}}",
     "badge": "irradiated components",
-    "link": "Irradiated blood components"
+    "link": "Irradiated blood components",
+    "tab": "Irradiated blood components"
   }
 }

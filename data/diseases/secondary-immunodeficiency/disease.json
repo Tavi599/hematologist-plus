@@ -1,0 +1,52 @@
+{
+  "$comment": "Вторинний (набутий) дефіцит антитіл у гематологічних хворих. Код D80.1 (нефамільна гіпогамаглобулінемія) — вторинна гіпогамаглобулінемія; критерії й доза — NHS England (PSS9 і зміни 02.2025), див. ivig-replacement.",
+  "id": "secondary-immunodeficiency",
+  "name": {
+    "uk": "Вторинний імунодефіцит (гіпогамаглобулінемія)",
+    "en": "Secondary immunodeficiency (hypogammaglobulinaemia)"
+  },
+  "summary": {
+    "uk": "Набутий дефіцит антитіл при мієломі, ХЛЛ, лімфомах, після ТГСК, CAR-T, анти-CD20, анти-CD38 і біспецифічних антитіл; замісна терапія імуноглобуліном при IgG < 4 г/л.",
+    "en": "Acquired antibody deficiency in myeloma, CLL, lymphoma, after HSCT, CAR-T, anti-CD20, anti-CD38 and bispecific antibodies; immunoglobulin replacement at IgG < 4 g/L."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "D80.1",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Secondary%20immunodeficiency%20hypogammaglobulinemia"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.england.nhs.uk/publication/commissioning-criteria-policy-for-the-use-of-therapeutic-immunoglobulin-ig-in-england/",
+      "label": {
+        "uk": "NHS England: критерії призначення імуноглобуліну",
+        "en": "NHS England: commissioning criteria for immunoglobulin"
+      }
+    }
+  ],
+  "treatment": [
+    {
+      "key": "replacement",
+      "kind": "treatment",
+      "title": {
+        "uk": "Замісна терапія імуноглобуліном",
+        "en": "Immunoglobulin replacement"
+      },
+      "description": {
+        "uk": "IgG < 4 г/л (без парапротеїну) з повторними чи тяжкими бактеріальними інфекціями попри антибіотикопрофілактику, або профілактично з початку біспецифічного антитіла чи після CAR-T.",
+        "en": "IgG < 4 g/L (excluding paraprotein) with recurrent or severe bacterial infections despite antibiotic prophylaxis, or prophylactically from the start of a bispecific antibody or after CAR-T."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ivig-replacement"
+        }
+      ]
+    }
+  ]
+}
