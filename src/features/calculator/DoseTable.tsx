@@ -21,7 +21,7 @@ import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { BsaVariant, CourseDrugResult, CourseResult } from '../../domain'
-import { amountUnitOf, isMassUnit } from '../../domain'
+import { amountUnitOf, isFirstInfusionCourse, isMassUnit } from '../../domain'
 import { formatNumber } from '../../lib/format'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
@@ -70,6 +70,58 @@ export interface DoseTableProps {
   onMesna: (itemId: string, on: boolean) => void
   /** Gives the row by another route the label allows at the same dose. */
   onRoute: (itemId: string, route: CourseItem['item']['route']) => void
+  /** Cycle of the course: cycle 1 carries the first, slower infusion unless ticked otherwise. */
+  cycleNumber: number
+  /** The physician's tick "this course has the first infusion", by item id. */
+  firstInfusion: Record<string, boolean>
+  onFirstInfusion: (itemId: string, first: boolean) => void
+}
+
+type RateRamp = NonNullable<NonNullable<CourseItem['infusionParams']>['rate_ramp']>
+
+/**
+ * The rising rate of an antibody, with the tick that says which rate this course runs at: the
+ * first infusion of the drug starts slower, every later one by its own steps.
+ */
+function RampInfo({
+  ramp,
+  durations,
+  first,
+  disabled,
+  onFirst,
+}: {
+  ramp: RateRamp
+  durations: { first: { durationMin: number }; next: { durationMin: number } }
+  first: boolean
+  disabled: boolean
+  onFirst: (first: boolean) => void
+}) {
+  const { t } = useTranslation()
+  const steps = first || ramp.next === null ? ramp.first : ramp.next
+  return (
+    <Stack gap={2}>
+      <Checkbox
+        size="xs"
+        disabled={disabled}
+        checked={first}
+        onChange={(event) => onFirst(event.currentTarget.checked)}
+        label={
+          <Text size="xs" fw={500} c={first ? 'orange.8' : undefined}>
+            {t('calculator.doses.firstInfusion')}
+          </Text>
+        }
+      />
+      <Text size="xs" c="dimmed">
+        {t(first ? 'calculator.doses.rampFirst' : 'calculator.doses.rampNext', {
+          start: steps.start_ml_h,
+          step: steps.step_ml_h,
+          every: steps.every_min,
+          max: steps.max_ml_h,
+          minutes: (first ? durations.first : durations.next).durationMin,
+        })}
+      </Text>
+    </Stack>
+  )
 }
 
 /** Value of the "typed by hand" entry in the dose-source list; not a real choice id. */
@@ -193,6 +245,9 @@ function DoseRow({
   mesnaAdded,
   onMesna,
   onRoute,
+  cycleNumber,
+  firstInfusion,
+  onFirstInfusion,
 }: DoseTableProps & {
   item: CourseItem
   result: CourseDrugResult | undefined
@@ -522,22 +577,13 @@ function DoseRow({
                     })}
               </Text>
               {result.infusion.ramp && item.infusionParams?.rate_ramp && (
-                <>
-                  <Text size="xs" c="dimmed">
-                    {t('calculator.doses.infusionRamp', {
-                      start: item.infusionParams.rate_ramp.first.start_ml_h,
-                      step: item.infusionParams.rate_ramp.first.step_ml_h,
-                      every: item.infusionParams.rate_ramp.first.every_min,
-                      max: item.infusionParams.rate_ramp.first.max_ml_h,
-                    })}
-                  </Text>
-                  <Text size="xs" c="dimmed">
-                    {t('calculator.doses.infusionRampDuration', {
-                      first: result.infusion.ramp.first.durationMin,
-                      next: result.infusion.ramp.next.durationMin,
-                    })}
-                  </Text>
-                </>
+                <RampInfo
+                  ramp={item.infusionParams.rate_ramp}
+                  durations={result.infusion.ramp}
+                  first={isFirstInfusionCourse(id, cycleNumber, firstInfusion)}
+                  disabled={!enabled}
+                  onFirst={(first) => onFirstInfusion(id, first)}
+                />
               )}
               {result.infusion.rateMlH !== null && result.infusion.rateGttMin !== null && (
                 <Text size="xs" c="dimmed">

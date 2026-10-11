@@ -100,6 +100,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     Record<string, AdministrationMode>
   >({})
   const [shiftMin, setShiftMin] = useState<Record<string, number>>({})
+  // Ticks "this course has the drug's first, slower infusion"; untouched, cycle 1 has it.
+  const [firstInfusion, setFirstInfusion] = useState<Record<string, boolean>>({})
   const [header, setHeader] = useState(emptyHeader)
   const [manualRows, setManualRows] = useState<ManualRow[]>([])
   const [support, setSupport] = useState<Record<SupportCategory, boolean>>(NO_SUPPORT)
@@ -140,6 +142,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     const nextRegimenId = phase ? phase.id : chosenRegimenId
     if (phase) setPhaseNote(localize(phase.course!.phase, language))
     else if (chosenRegimenId !== regimenId) setPhaseNote(null)
+    // Another cycle is another course: the first-infusion ticks go back to "cycle 1 has it".
+    if (rest.cycleNumber !== courseSettings.cycleNumber) setFirstInfusion({})
     setCourseSettings(rest)
     if (nextRegimenId === regimenId) return
     setSearchParams(
@@ -305,6 +309,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           doseOverrideAmount,
           disabledIds,
           shiftMin,
+          firstInfusion,
         },
       )
     try {
@@ -328,6 +333,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     doseOverrideAmount,
     disabledIds,
     shiftMin,
+    firstInfusion,
     mesnaFor,
   ])
 
@@ -343,6 +349,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
         ? cycles.from
         : courseSettings.cycleNumber
     setPhaseNote(null)
+    if (cycleNumber !== courseSettings.cycleNumber) setFirstInfusion({})
     setCourseSettings((current) => ({ ...current, cycleNumber }))
     setSearchParams(
       (current) => {
@@ -503,6 +510,11 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                     setChosenRoutes((current) => ({ ...current, [id]: route }))
                   }
                   mesnaAdded={mesnaFor}
+                  cycleNumber={courseSettings.cycleNumber}
+                  firstInfusion={firstInfusion}
+                  onFirstInfusion={(id, first) =>
+                    setFirstInfusion((current) => ({ ...current, [id]: first }))
+                  }
                   onMesna={(id, on) =>
                     setMesnaFor((current) =>
                       on ? [...new Set([...current, id])] : current.filter((entry) => entry !== id),
@@ -609,6 +621,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   patient={patient}
                   regimenName={regimen ? localize(regimen.name, language) : null}
                   cycleNumber={courseSettings.cycleNumber}
+                  firstInfusion={firstInfusion}
                   startDate={courseSettings.startDate}
                   dayStart={courseSettings.dayStart}
                   header={header}

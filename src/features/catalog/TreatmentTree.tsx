@@ -291,7 +291,6 @@ function TreatmentNodeView({
   const opened = closed ? !closed.has(node.id) : ownOpened
   const toggle = () => (onToggle ? onToggle(node.id) : setOwnOpened((current) => !current))
   const [chosen, setChosen] = useState<string[]>([])
-  const count = countRegimens([filtered])
   const { situations, sections, links } = splitSituations(filtered, chosen)
   const narrowed = situations.some((situation) => chosen.includes(situation.node.id))
   // The line's own counts for the patient's conditions, over the situations chosen in it; the
@@ -328,11 +327,6 @@ function TreatmentNodeView({
       >
         {t(`treatmentKind.${node.kind}`)}
       </Badge>
-      {depth === 0 && count > 0 && (
-        <Badge size="sm" variant="outline" color="gray" tt="none">
-          {t('diseaseDetail.regimenCount', { count })}
-        </Badge>
-      )}
     </Group>
   )
 

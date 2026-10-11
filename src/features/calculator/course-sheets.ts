@@ -1,6 +1,7 @@
 import {
   addDays,
   formatTime,
+  isFirstInfusionCourse,
   parseTime,
   type CourseAdministrationResult,
   type CourseDrugResult,
@@ -44,6 +45,8 @@ export interface CourseSheetsInput {
   /** Name of the regimen as chosen in the calculator; null for a course put together by hand. */
   regimenName: string | null
   cycleNumber: number
+  /** The physician's tick "this course has the first infusion", by item id; see CourseAdjustments. */
+  firstInfusion?: Record<string, boolean>
   header: HeaderValue
   /** Orders written out by hand; printed as typed, never calculated. */
   manualRows?: ManualRow[]
@@ -694,8 +697,10 @@ function howLine(
   const route = item ? t(`routeShort.${item.item.route}`) : ''
   const infusion = result?.infusion
   const ramp = item?.infusionParams?.rate_ramp
-  if (infusion?.ramp && ramp) {
-    return `${route}\n${BLANK.rate}${ramp.first.start_ml_h}→${ramp.first.max_ml_h} ${t('units.ml_h')}`
+  if (infusion?.ramp && ramp && item) {
+    const first = isFirstInfusionCourse(item.item.id, input.cycleNumber, input.firstInfusion)
+    const steps = first || ramp.next === null ? ramp.first : ramp.next
+    return `${route}\n${BLANK.rate}${steps.start_ml_h}→${steps.max_ml_h} ${t('units.ml_h')}`
   }
   if (infusion && infusion.rateMlH !== null) {
     return `${route}\n${BLANK.rate}${formatAmount(infusion.rateMlH, language)} ${t('units.ml_h')}`
@@ -716,7 +721,9 @@ function rampNote(
 ): string | null {
   const ramp = item?.infusionParams?.rate_ramp
   if (!item || !ramp || !result?.infusion?.ramp) return null
-  const isFirst = input.cycleNumber === 1 && day === Math.min(...item.item.days)
+  const isFirst =
+    isFirstInfusionCourse(item.item.id, input.cycleNumber, input.firstInfusion) &&
+    day === Math.min(...item.item.days)
   const steps = isFirst || ramp.next === null ? ramp.first : ramp.next
   const n = (value: number) => formatAmount(value, input.language)
   return (

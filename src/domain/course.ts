@@ -107,6 +107,21 @@ export interface CourseAdjustments {
   disabledIds?: string[]
   /** Manual time shift by item id, min; later administrations of the day move with it. */
   shiftMin?: Record<string, number>
+  /**
+   * Whether this course carries the drug's first infusion at all, by item id, as the physician
+   * ticked it; absent means "cycle 1 is the first". A course edited by hand need not start at
+   * cycle 1, and a patient switched from another antibody brand is no longer at the first.
+   */
+  firstInfusion?: Record<string, boolean>
+}
+
+/** The first infusion of a drug given at a rising rate: the ticked choice, else cycle 1. */
+export function isFirstInfusionCourse(
+  itemId: string,
+  cycleNumber: number | undefined,
+  firstInfusion: Record<string, boolean> | undefined,
+): boolean {
+  return firstInfusion?.[itemId] ?? (cycleNumber ?? 1) === 1
 }
 
 export interface CourseDrugResult {
@@ -444,9 +459,12 @@ function buildDays(
         const id = result.administrationsPerDay === 1 ? drug.id : `${drug.id}#${index + 1}`
         drugOfInput.set(id, drug.id)
         const ramp = result.infusion?.ramp
-        // Only the very first infusion of the drug is the slow one, and only in cycle 1.
+        // Only the very first infusion of the drug is the slow one: its first day, in the course
+        // that carries it.
         const isFirstEver =
-          (adjustments.cycleNumber ?? 1) === 1 && day === Math.min(...drug.days) && index === 0
+          isFirstInfusionCourse(drug.id, adjustments.cycleNumber, adjustments.firstInfusion) &&
+          day === Math.min(...drug.days) &&
+          index === 0
         return {
           id,
           block: drug.block ?? 'infusion',

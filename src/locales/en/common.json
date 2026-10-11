@@ -116,8 +116,6 @@
       "infusion": "Dilution",
       "infusionValue": "{{solvent}} {{bag}} mL, total {{total}} mL, {{concentration}} {{unit}}",
       "infusionRate": "{{rate}} mL/h · {{drops}} drops/min",
-      "infusionRamp": "In steps: {{start}} mL/h, +{{step}} every {{every}} min, up to {{max}} mL/h",
-      "infusionRampDuration": "first infusion ≈{{first}} min, later ≈{{next}} min",
       "infusionMissing": "No dilution parameters",
       "noPresentations": "No presentations",
       "enabled": "Drug included",
@@ -155,7 +153,10 @@
       "variantCapped": "BSA 2.0",
       "infusionUndiluted": "undiluted, {{total}} mL",
       "irradiatedTitle": "Transfusions: irradiated blood components only",
-      "irradiatedHint": "After the BSH 2020 guideline. The sheet will say so; tell the transfusion laboratory and mark the request."
+      "irradiatedHint": "After the BSH 2020 guideline. The sheet will say so; tell the transfusion laboratory and mark the request.",
+      "firstInfusion": "First infusion (slow rate)",
+      "rampFirst": "First infusion: {{start}} mL/h, +{{step}} every {{every}} min, up to {{max}} mL/h (≈{{minutes}} min)",
+      "rampNext": "Later infusion: {{start}} mL/h, +{{step}} every {{every}} min, up to {{max}} mL/h (≈{{minutes}} min)"
     },
     "standardSupport": {
       "title": "Standard support",
@@ -363,7 +364,6 @@
     "referencesWritten": "Written in the department from: {{source}}. The guideline's own text is not stored.",
     "sourceOwn": "Our article",
     "contents": "Contents",
-    "regimenCount": "regimens: {{count}}",
     "conditions": "Patient condition",
     "conditionsHint": "Marks the drugs whose label gives a contraindication, a dose reduction or a warning. Hover over or tap a mark for the threshold and the source.",
     "hideContraindicated": "Hide contraindicated regimens",
