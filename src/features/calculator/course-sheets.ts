@@ -1,5 +1,6 @@
 import {
   addDays,
+  DEFAULT_DAY_START,
   formatTime,
   type RampKind,
   parseTime,
@@ -763,7 +764,7 @@ function wardHowLine(
   if (item.item.route !== 'oral') return plain
   const perDay = result?.administrationsPerDay ?? item.item.administrations_per_day
   const route = input.t(`routeShort.${item.item.route}`)
-  const times = administrationTimes(item, perDay, input.dayStart ?? '09:00')
+  const times = administrationTimes(item, perDay, input.dayStart ?? DEFAULT_DAY_START)
   return `${route} х ${perDay}${BLANK.perDay.trim()}${times ? ` (${times})` : ''}`
 }
 

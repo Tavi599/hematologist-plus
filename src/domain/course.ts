@@ -569,8 +569,8 @@ function buildDays(
   })
 }
 
-/** Default start of the treatment day; CALIBRATION: the department's real start time. */
-export const DEFAULT_DAY_START = '09:00'
+/** Default start of the first infusion of the day (not earlier than 11:00); corrected by hand in the settings. */
+export const DEFAULT_DAY_START = '11:00'
 
 function scaleSelection(selection: PackSelection, factor: number): PackSelection {
   return {

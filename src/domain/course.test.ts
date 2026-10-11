@@ -162,7 +162,7 @@ describe('calculateCourse', () => {
       [1, '2026-09-21'],
     ])
     // Day 0 has no infusion of the regimen to hang off, so its support starts the day itself.
-    expect(course.days[0]?.administrations.map((item) => item.start)).toEqual(['09:00'])
+    expect(course.days[0]?.administrations.map((item) => item.start)).toEqual(['11:00'])
   })
 
   it('converts a dose written in units of activity into the packs the drug is measured in', () => {
@@ -229,8 +229,8 @@ describe('calculateCourse', () => {
       '3:2026-09-23',
     ])
     expect(course.days[0]?.administrations).toEqual([
-      expect.objectContaining({ drugId: 'r.rituximab', start: '09:00', end: '13:00' }),
-      expect.objectContaining({ drugId: 'r.prednisolone', start: '13:00', end: '13:00' }),
+      expect.objectContaining({ drugId: 'r.rituximab', start: '11:00', end: '15:00' }),
+      expect.objectContaining({ drugId: 'r.prednisolone', start: '15:00', end: '15:00' }),
     ])
     expect(course.days[1]?.administrations.map((a) => a.drugId)).toEqual(['r.prednisolone'])
     expect(course.presentationTotals).toEqual([

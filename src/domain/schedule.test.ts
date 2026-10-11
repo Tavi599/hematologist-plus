@@ -116,7 +116,7 @@ describe('scheduleAdministrations', () => {
   })
 
   it('times a row from the chained drug it names: mesna from the ifosfamide', () => {
-    // IGEV day 1 from 09:00: vinorelbine 10 min, gemcitabine 30 min, ifosfamide from 09:40.
+    // IGEV day 1 from 09:00: vinorelbine 10 min, gemcitabine 30 min, an hour apart: ifosfamide from 11:40.
     const chain = [
       { id: 'vinorelbine', block: 'infusion' as const, durationMin: 10, isMain: true },
       { id: 'gemcitabine', block: 'infusion' as const, durationMin: 30, isMain: true },
@@ -132,8 +132,8 @@ describe('scheduleAdministrations', () => {
     }))
     const placed = scheduleAdministrations('09:00', [...chain, ...mesna])
     expect(placed.filter((row) => row.id.startsWith('mesna')).map((row) => row.start)).toEqual([
-      '09:40',
-      '12:40',
+      '11:40',
+      '14:40',
     ])
   })
 
@@ -144,7 +144,7 @@ describe('scheduleAdministrations', () => {
       { id: 'ifosfamide#2', block: 'infusion' as const, durationMin: 60, isMain: true },
       { id: 'mesna', block: 'day_support' as const, durationMin: 0, anchorId: 'ifosfamide' },
     ])
-    expect(placed.find((row) => row.id === 'mesna')!.start).toBe('10:00')
+    expect(placed.find((row) => row.id === 'mesna')!.start).toBe('11:00')
   })
 
   it('times the repeats of a drug from its first administration, not back to back', () => {
@@ -177,6 +177,33 @@ describe('scheduleAdministrations', () => {
       ['vancomycin', '09:30'],
       ['cefepime#2', '17:00'],
       ['cefepime#3', '01:00'],
+    ])
+  })
+
+  it('keeps an hour between chemotherapy drugs unless the earlier one runs round the clock', () => {
+    const times = (firstDuration: number) =>
+      scheduleAdministrations('11:00', [
+        { id: 'a', block: 'infusion' as const, durationMin: firstDuration, isMain: true },
+        { id: 'b', block: 'infusion' as const, durationMin: 30, isMain: true },
+        { id: 'flush', block: 'infusion' as const, durationMin: 10 },
+      ]).map((row) => [row.id, row.start])
+    expect(times(60)).toEqual([
+      ['a', '11:00'],
+      ['b', '13:00'],
+      ['flush', '13:30'],
+    ])
+    // A 24-hour infusion is followed at once.
+    expect(times(1440)[1]).toEqual(['b', '11:00'])
+    // A longer pause set by the regimen is kept, and premedication is not held to the hour.
+    const withGap = scheduleAdministrations('11:00', [
+      { id: 'pre', block: 'infusion' as const, durationMin: 30 },
+      { id: 'a', block: 'infusion' as const, durationMin: 30, isMain: true },
+      { id: 'b', block: 'infusion' as const, durationMin: 30, isMain: true, gapBeforeMin: 90 },
+    ])
+    expect(withGap.map((row) => [row.id, row.start])).toEqual([
+      ['pre', '11:00'],
+      ['a', '11:30'],
+      ['b', '13:30'],
     ])
   })
 

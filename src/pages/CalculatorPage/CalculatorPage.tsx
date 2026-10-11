@@ -85,7 +85,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [patient, setPatient] = useState<PatientInput | null>(null)
   const [courseSettings, setCourseSettings] = useState({
     startDate: todayIso(),
-    dayStart: '09:00',
+    dayStart: '11:00',
     bsaVariant: 'actual' as CourseSettingsValue['bsaVariant'],
     bsaM2: null as number | null,
     cycleNumber: 1,

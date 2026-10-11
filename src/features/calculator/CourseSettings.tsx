@@ -141,6 +141,7 @@ export function CourseSettings({
           <TextInput
             type="time"
             label={t('calculator.course.dayStart')}
+            description={t('calculator.course.dayStartHint')}
             value={value.dayStart}
             onChange={(event) => patch({ dayStart: event.currentTarget.value })}
           />
