@@ -11,6 +11,17 @@ describe('calculateInfusion', () => {
     stockConcentrationMgMl: 10,
   }
 
+  it('runs a large dose longer than the regimen when the drug has a fastest pace', () => {
+    const params = { bagVolumesMl: [250, 500], concentrationMaxMgMl: 5, maxRateMgMin: 10 }
+    // Vancomycin 1500 mg: at most 10 mg/min, so 150 min instead of 60.
+    const slowed = calculateInfusion({ doseAmount: 1500, params, durationMin: 60 })
+    expect(slowed.durationMin).toBe(150)
+    expect(slowed.rateMlH).toBeCloseTo(500 / 2.5)
+    expect(slowed.steps.map((step) => step.key)).toContain('infusion.maxRate')
+    // 500 mg fits the hour.
+    expect(calculateInfusion({ doseAmount: 500, params, durationMin: 60 }).durationMin).toBe(60)
+  })
+
   it('chooses the smallest bag within concentration limits', () => {
     // drug volume 682 / 10 = 68.2 mL
     // 100 mL bag: 682 / 168.2 = 4.05 mg/mL > 4 → too concentrated

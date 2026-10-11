@@ -21,6 +21,12 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.2, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
+      "version": "ред. 19.01.2026",
+      "checkedOn": "2026-10-11"
     }
   ],
   "presentations": [
@@ -28,6 +34,48 @@
       "key": "s1000",
       "form": "vial",
       "strength_amount": 1000
+    }
+  ],
+  "atc_code": "J01XA01",
+  "dose_units": ["mg_kg"],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_max_mg_ml": 5,
+      "stock_concentration_mg_ml": 50,
+      "max_rate_mg_min": 10,
+      "bag_volumes_ml": [100, 250, 500],
+      "duration_min": 60,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.2, 6.6",
+          "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
+          "version": "ред. 19.01.2026",
+          "checkedOn": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "uk": "Флакон 1000 мг розчиняють 20 мл води (50 мг/мл), далі не менше 200 мл на 1000 мг (до 5 мг/мл) 0,9% NaCl або 5% глюкози. Не менше 60 хв і не швидше 10 мг/хв — що довше. Мішок підібрано так, щоб концентрація лишалась у межах інструкції.",
+        "en": "The 1000 mg vial is dissolved in 20 mL of water (50 mg/mL), then at least 200 mL per 1000 mg (up to 5 mg/mL) of 0.9% NaCl or 5% glucose. At least 60 min and no faster than 10 mg/min, whichever is longer. The bag is chosen to stay within the label range."
+      }
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Стартову дозу при легкій і помірній недостатності не зменшують; КК 20–49 мл/хв — 15–20 мг/кг кожні 24 год; КК < 20 і замісна терапія — далі за рівнем у крові. При тяжкій недостатності подовжують інтервал, а не зменшують дозу. Навантажувальну дозу в критичному стані не зменшують. Рівень перед наступною дозою — 10–20 мг/л (15–20 при МІК ≥ 1).",
+        "en": "Do not reduce the starting dose in mild or moderate impairment; CrCl 20-49 mL/min, 15-20 mg/kg every 24 h; CrCl < 20 and renal replacement, further doses by blood level. In severe impairment lengthen the interval rather than lower the dose. The loading dose is not reduced in the critically ill. Trough 10-20 mg/L (15-20 with MIC ≥ 1)."
+      },
+      "source": {
+        "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.2, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
+        "version": "ред. 19.01.2026",
+        "checkedOn": "2026-10-11"
+      }
     }
   ]
 }

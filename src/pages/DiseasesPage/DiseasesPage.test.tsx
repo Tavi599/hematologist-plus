@@ -89,8 +89,13 @@ describe('DiseasesPage search', () => {
     renderWithProviders(<DiseasesPage />)
     fireEvent.click(screen.getByRole('tab', { name: 'Фебрильна нейтропенія' }))
     expect(
-      await screen.findByRole('heading', { name: 'Фебрильна нейтропенія: емпірична терапія' }),
+      await screen.findByRole('heading', {
+        name: 'Фебрильна нейтропенія та інфекційні ускладнення',
+      }),
     ).toBeInTheDocument()
     expect(screen.getByText('4 г/0,5 г в/в кожні 6 год (інфузія 30 хв)')).toBeInTheDocument()
+    expect(
+      screen.getByText('7. Гарячка триває, посіви негативні: наступний крок'),
+    ).toBeInTheDocument()
   })
 })

@@ -458,6 +458,9 @@ function buildInfusionParams(
     params?.stock_concentration_mg_ml === undefined
       ? {}
       : { stockConcentrationMgMl: params.stock_concentration_mg_ml }),
+    ...(params?.max_rate_mg_min === null || params?.max_rate_mg_min === undefined
+      ? {}
+      : { maxRateMgMin: params.max_rate_mg_min }),
     ...(params?.rate_ramp
       ? {
           rateRamp: {

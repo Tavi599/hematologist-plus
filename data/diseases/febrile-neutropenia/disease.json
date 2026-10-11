@@ -35,8 +35,8 @@
         "en": "High risk: an empirical antipseudomonal beta-lactam"
       },
       "description": {
-        "uk": "Негайно після посівів. Колонізація ESBL-E — карбапенем; MRSA — додати тейкопланін або ванкоміцин (дози не розраховуються). Переоцінка через 96 год.",
-        "en": "At once after cultures. ESBL-E colonisation: a carbapenem; MRSA: add teicoplanin or vancomycin (no doses calculated). Review at 96 h."
+        "uk": "Негайно після посівів. Колонізація ESBL-E — карбапенем; MRSA — додати ванкоміцин або тейкопланін (курси нижче). Переоцінка через 96 год.",
+        "en": "At once after cultures. ESBL-E colonisation: a carbapenem; MRSA: add vancomycin or teicoplanin (courses below). Review at 96 h."
       },
       "regimens": [
         {
@@ -84,6 +84,75 @@
         },
         {
           "regimen_id": "fn-liposomal-amphotericin"
+        }
+      ]
+    },
+    {
+      "key": "gram-positive",
+      "kind": "treatment",
+      "title": {
+        "uk": "Грампозитивні: MRSA, катетер, шкіра, пневмонія, VRE",
+        "en": "Gram-positive: MRSA, catheter, skin, pneumonia, VRE"
+      },
+      "description": {
+        "uk": "Не емпірично: лише колонізація MRSA/VRE, інфекція катетера чи шкіри, пневмонія чи нестабільність (ECIL-4 CIII). Відмінити, якщо грампозитивних не виявлено.",
+        "en": "Not empirically: only MRSA/VRE colonisation, a catheter or skin infection, pneumonia or instability (ECIL-4 CIII). Stop if no Gram-positive is found."
+      },
+      "regimens": [
+        {
+          "regimen_id": "vancomycin-loading"
+        },
+        {
+          "regimen_id": "vancomycin"
+        },
+        {
+          "regimen_id": "teicoplanin"
+        },
+        {
+          "regimen_id": "linezolid"
+        }
+      ]
+    },
+    {
+      "key": "gram-negative-mdr",
+      "kind": "treatment",
+      "title": {
+        "uk": "Септичний шок і резистентні грамнегативні: додати до бета-лактаму",
+        "en": "Septic shock and resistant Gram-negatives: added to a beta-lactam"
+      },
+      "description": {
+        "uk": "Аміноглікозид — при септичному шоці чи ризику резистентної синьогнійної; колістин — карбапенем-резистентні, лише в комбінації.",
+        "en": "An aminoglycoside in septic shock or with a risk of resistant Pseudomonas; colistin for carbapenem-resistant organisms, only in combination."
+      },
+      "regimens": [
+        {
+          "regimen_id": "amikacin-fn"
+        },
+        {
+          "regimen_id": "colistimethate"
+        }
+      ]
+    },
+    {
+      "key": "documented-fungal",
+      "kind": "treatment",
+      "title": {
+        "uk": "Інфільтрати в легенях: пліснява, пневмоцисти",
+        "en": "Lung infiltrates: moulds, Pneumocystis"
+      },
+      "description": {
+        "uk": "Нетипові для PcP чи лобарної пневмонії — протиплісеневий засіб (вориконазол або ліпосомальний амфотерицин B, A-II); підозра на PcP і зростання ЛДГ — високі дози ко-тримоксазолу.",
+        "en": "Not typical of PcP or lobar pneumonia: a mould-active agent (voriconazole or liposomal amphotericin B, A-II); suspected PcP with a rising LDH: high-dose co-trimoxazole."
+      },
+      "regimens": [
+        {
+          "regimen_id": "voriconazole-oral"
+        },
+        {
+          "regimen_id": "fn-liposomal-amphotericin"
+        },
+        {
+          "regimen_id": "co-trimoxazole-pcp"
         }
       ]
     }

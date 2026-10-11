@@ -111,6 +111,8 @@ export const drugInfusionParamsRowSchema = z
     rate_ramp: rateRampSchema.nullable(),
     /** Defaulted so this build can read a database where the migration has not run yet. */
     ramp_sequence: rampSequenceRowSchema.nullable().catch(null).default(null),
+    /** Fastest pace, mg/min; a client older than the column reads null and keeps the duration. */
+    max_rate_mg_min: positiveNumberSchema.nullable().catch(null).default(null),
   })
   .refine(
     (row) =>

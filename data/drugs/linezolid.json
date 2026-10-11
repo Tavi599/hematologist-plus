@@ -16,13 +16,78 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "SmPC Linezolid 2 mg/ml Solution for Infusion (emc), 4.2, 4.4, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/7300/smpc",
+      "version": "ред. 09/2021",
+      "checkedOn": "2026-10-11"
     }
   ],
   "presentations": [
     {
       "key": "s600",
       "form": "vial",
-      "strength_amount": 600
+      "strength_amount": 600,
+      "volume_ml": 300,
+      "label": {
+        "uk": "600 мг / 300 мл (2 мг/мл)",
+        "en": "600 mg / 300 mL (2 mg/mL)"
+      }
+    }
+  ],
+  "atc_code": "J01XX08",
+  "dose_units": ["mg_flat"],
+  "infusion_params": [
+    {
+      "key": "ready",
+      "solvent": "sodium_chloride_0_9",
+      "stock_concentration_mg_ml": 2,
+      "bag_volumes_ml": [],
+      "duration_min": 60,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "SmPC Linezolid 2 mg/ml Solution for Infusion (emc), 4.2, 4.4, 6.6",
+          "url": "https://www.medicines.org.uk/emc/product/7300/smpc",
+          "version": "ред. 09/2021",
+          "checkedOn": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "uk": "Готовий розчин 2 мг/мл, 300 мл, без розведення; інфузія 30–120 хв (у розрахунку — 60 хв).",
+        "en": "Ready solution 2 mg/mL, 300 mL, undiluted; infusion over 30-120 min (60 min in the calculation)."
+      }
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "Корекції не потрібно; при КК < 30 мл/хв метаболіти накопичуються (до 10 разів) — лише якщо користь переважає. На гемодіалізі — після сеансу.",
+        "en": "No adjustment; with CrCl < 30 mL/min the metabolites accumulate (up to 10-fold): only if the benefit outweighs. On haemodialysis, after the session."
+      },
+      "source": {
+        "name": "SmPC Linezolid 2 mg/ml Solution for Infusion (emc), 4.2, 4.4, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/7300/smpc",
+        "version": "ред. 09/2021",
+        "checkedOn": "2026-10-11"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Корекції не потрібно, дані обмежені — лише якщо користь переважає. Мієлосупресія: щотижня загальний аналіз крові; тривалість не більше 28 днів.",
+        "en": "No adjustment, limited data: only if the benefit outweighs. Myelosuppression: a weekly blood count; no longer than 28 days."
+      },
+      "source": {
+        "name": "SmPC Linezolid 2 mg/ml Solution for Infusion (emc), 4.2, 4.4, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/7300/smpc",
+        "version": "ред. 09/2021",
+        "checkedOn": "2026-10-11"
+      }
     }
   ]
 }

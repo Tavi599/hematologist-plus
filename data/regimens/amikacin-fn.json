@@ -1,0 +1,50 @@
+{
+  "$comment": "SmPC 4.2: 15 мг/кг/добу, не більше 1,5 г/добу; «In endocarditis and in febrile neutropenic patients, dosing should be twice daily» → 7,5 мг/кг кожні 12 год, не більше 750 мг на введення. Розбіжність: IDSA 2026 — 15 мг/кг одноразово на добу з корекцією за рівнем. Показання в нейтропенії: септичний шок або ризик резистентної синьогнійної — разом з бета-лактамом (AGIHO BIII, ECIL-4 BIII), відмінити при стабілізації.",
+  "id": "amikacin-fn",
+  "short_name": "Амікацин (ФН)",
+  "name": {
+    "uk": "Амікацин — у комбінації з бета-лактамом",
+    "en": "Amikacin: added to a beta-lactam"
+  },
+  "description": {
+    "uk": "7,5 мг/кг кожні 12 год (нейтропенія — двічі на добу), не більше 1,5 г/добу.",
+    "en": "7.5 mg/kg every 12 h (twice daily in neutropenia), no more than 1.5 g a day."
+  },
+  "sources": [
+    {
+      "name": "SmPC Amikacin 250 mg/ml Injection (Hospira, emc), 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/3784/smpc",
+      "version": "ред. 03/2024",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Kochanek M et al. Management of sepsis in neutropenic cancer patients: 2018 guidelines from AGIHO and iCHOP. Ann Hematol 2019;98:1051–69",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6469653/",
+      "version": "2019",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Averbuch D et al. Targeted therapy against multi-resistant bacteria in leukemic and HSCT recipients: ECIL-4. Haematologica 2013;98:1836–47, табл. 2",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3856958/",
+      "version": "2013",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "amikacin",
+      "drug_id": "amikacin",
+      "route": "iv_infusion",
+      "dose_value": 7.5,
+      "dose_unit": "mg_kg",
+      "cap_amount": 750,
+      "days": [1, 2, 3, 4],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Лише разом з антисиньогнійним бета-лактамом: септичний шок, ризик резистентної синьогнійної палички чи ацинетобактера. Відмінити, щойно стан стабілізувався або збудник чутливий до бета-лактаму (AGIHO AIII). Розбіжність: IDSA 2026 дає 15 мг/кг 1 раз на добу. Контроль креатиніну й рівня. Розраховано дні 1–4 — до переоцінки через 72–96 год; тривалість далі — за збудником і локалізацією (вкладка «Фебрильна нейтропенія»).",
+        "en": "Only with an antipseudomonal beta-lactam: septic shock, a risk of resistant Pseudomonas or Acinetobacter. Stop once stable or the pathogen is beta-lactam-susceptible (AGIHO AIII). Discrepancy: IDSA 2026 gives 15 mg/kg once a day. Creatinine and levels. Days 1-4 are calculated, up to the review at 72-96 h; the rest of the course follows the pathogen and the site (the \"Febrile neutropenia\" tab)."
+      }
+    }
+  ]
+}

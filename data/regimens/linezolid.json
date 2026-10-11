@@ -1,0 +1,49 @@
+{
+  "$comment": "SmPC 4.2: 600 мг в/в двічі на добу, інфузія 30–120 хв, не більше 28 днів. AGIHO: MRSA-пневмонія — альтернатива ванкоміцину (B-II), обережно — тромбоцитопенія; ECIL-4: VRE — лінезолід (AII).",
+  "id": "linezolid",
+  "short_name": "Лінезолід",
+  "name": {
+    "uk": "Лінезолід",
+    "en": "Linezolid"
+  },
+  "description": {
+    "uk": "600 мг в/в кожні 12 год; MRSA, VRE.",
+    "en": "600 mg IV every 12 h; MRSA, VRE."
+  },
+  "sources": [
+    {
+      "name": "SmPC Linezolid 2 mg/ml Solution for Infusion (emc), 4.2, 4.4, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/7300/smpc",
+      "version": "ред. 09/2021",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Maschmeyer G et al. Diagnosis and antimicrobial therapy of lung infiltrates in febrile neutropenic patients: AGIHO. Ann Oncol 2015;26:21–33",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4269340/",
+      "version": "2014 (опубл. 2015)",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Averbuch D et al. Targeted therapy against multi-resistant bacteria in leukemic and HSCT recipients: ECIL-4. Haematologica 2013;98:1836–47, табл. 2",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3856958/",
+      "version": "2013",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "linezolid",
+      "drug_id": "linezolid",
+      "route": "iv_infusion",
+      "dose_value": 600,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Мієлосупресія, зокрема тромбоцитопенія: щотижня загальний аналіз крові. Не довше 28 днів. Перехід на таблетки — без зміни дози. Розраховано дні 1–4 — до переоцінки через 72–96 год; тривалість далі — за збудником і локалізацією (вкладка «Фебрильна нейтропенія»).",
+        "en": "Myelosuppression, thrombocytopenia above all: a weekly blood count. No longer than 28 days. Switch to tablets at the same dose. Days 1-4 are calculated, up to the review at 72-96 h; the rest of the course follows the pathogen and the site (the \"Febrile neutropenia\" tab)."
+      }
+    }
+  ]
+}

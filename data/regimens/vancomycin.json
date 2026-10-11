@@ -1,0 +1,67 @@
+{
+  "$comment": "Доза — SmPC 4.2: 15–20 мг/кг кожні 8–12 год, не більше 2 г на введення; далі за рівнем у крові. AGIHO: MRSA-пневмонія — ванкоміцин (B-II), катетерна MRSA — глікопептид ≥ 2 тижні; емпірично глікопептид не рекомендований (DI).",
+  "id": "vancomycin",
+  "short_name": "Ванкоміцин",
+  "name": {
+    "uk": "Ванкоміцин — підтримувальна доза",
+    "en": "Vancomycin: maintenance dose"
+  },
+  "description": {
+    "uk": "15 мг/кг кожні 12 год (до 20 мг/кг кожні 8–12 год), не більше 2 г на введення; далі — за рівнем у крові.",
+    "en": "15 mg/kg every 12 h (up to 20 mg/kg every 8-12 h), no more than 2 g a dose; then by the blood level."
+  },
+  "sources": [
+    {
+      "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.2, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
+      "version": "ред. 19.01.2026",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Maschmeyer G et al. Diagnosis and antimicrobial therapy of lung infiltrates in febrile neutropenic patients: AGIHO. Ann Oncol 2015;26:21–33",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4269340/",
+      "version": "2014 (опубл. 2015)",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Böll B et al. Central venous catheter-related infections in hematology and oncology: 2020 updated AGIHO guidelines. Ann Hematol 2021;100:239–59, табл. 6",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7782365/",
+      "version": "2020",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "vancomycin",
+      "drug_id": "vancomycin",
+      "route": "iv_infusion",
+      "dose_value": 15,
+      "dose_unit": "mg_kg",
+      "cap_amount": 2000,
+      "days": [1, 2, 3, 4],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_kg",
+          "cap_amount": 2000,
+          "source": {
+            "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
+            "version": "ред. 19.01.2026",
+            "checkedOn": "2026-10-11"
+          },
+          "notes": {
+            "uk": "Верхня межа (кожні 8–12 год)",
+            "en": "The upper end (every 8-12 h)"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "Інструкція: 15–20 мг/кг кожні 8–12 год; у розрахунку — нижня межа кожні 12 год, змінюйте за рівнем. Рівень перед наступною дозою на 2-й день: 10–20 мг/л. Інфузія не менше 60 хв і не швидше 10 мг/хв. Не призначати емпірично без MRSA чи інфекції шкіри/катетера (AGIHO DI). Розраховано дні 1–4 — до переоцінки через 72–96 год; тривалість далі — за збудником і локалізацією (вкладка «Фебрильна нейтропенія»).",
+        "en": "Label: 15-20 mg/kg every 8-12 h; the calculation takes the lower end every 12 h, change by level. Trough before the next dose on day 2: 10-20 mg/L. At least 60 min, no faster than 10 mg/min. Not empirically without MRSA or a skin/catheter infection (AGIHO DI). Days 1-4 are calculated, up to the review at 72-96 h; the rest of the course follows the pathogen and the site (the \"Febrile neutropenia\" tab)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "$comment": "SmPC 4.2 (таблетки, ≥ 40 кг): навантаження 400 мг кожні 12 год першу добу, далі 200 мг двічі на добу. AGIHO (легеневі інфільтрати) радить в/в 6 мг/кг кожні 12 год у день 1, далі 4 мг/кг — у відділенні є лише таблетки 200 мг.",
+  "id": "voriconazole-oral",
+  "short_name": "Вориконазол (табл.)",
+  "name": {
+    "uk": "Вориконазол перорально",
+    "en": "Oral voriconazole"
+  },
+  "description": {
+    "uk": "400 мг кожні 12 год у день 1, далі 200 мг двічі на добу (маса ≥ 40 кг).",
+    "en": "400 mg every 12 h on day 1, then 200 mg twice a day (weight ≥ 40 kg)."
+  },
+  "sources": [
+    {
+      "name": "SmPC Voriconazole Pfizer tablets (emc), 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/7325/smpc",
+      "version": "ред. 07/2026",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Maschmeyer G et al. Diagnosis and antimicrobial therapy of lung infiltrates in febrile neutropenic patients: AGIHO. Ann Oncol 2015;26:21–33",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4269340/",
+      "version": "2014 (опубл. 2015)",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "loading",
+      "drug_id": "voriconazole",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Навантаження першої доби. Маса < 40 кг — 200 мг кожні 12 год. Перед стартом виправити калій, магній, кальцій.",
+        "en": "The first-day loading. Weight < 40 kg: 200 mg every 12 h. Correct potassium, magnesium and calcium before the start."
+      }
+    },
+    {
+      "key": "maintenance",
+      "drug_id": "voriconazole",
+      "route": "oral",
+      "dose_value": 200,
+      "dose_unit": "mg_flat",
+      "days": [2],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Далі щодня 200 мг двічі (маса < 40 кг — 100 мг); при недостатній відповіді — до 300 мг двічі. Тривалість — за клінічною й мікологічною відповіддю. Взаємодії: венетоклакс, вінкристин, ібрутиніб, циклоспорин, такролімус — звірити дози. AGIHO: при проривній інфекції на тлі вориконазолу чи позаконазолу — перейти на ліпосомальний амфотерицин B.",
+        "en": "Then 200 mg twice daily (weight < 40 kg, 100 mg); up to 300 mg twice with an inadequate response. Duration by clinical and mycological response. Interactions: venetoclax, vincristine, ibrutinib, ciclosporin, tacrolimus, check the doses. AGIHO: breakthrough on voriconazole or posaconazole, switch to liposomal amphotericin B."
+      }
+    }
+  ]
+}

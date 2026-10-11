@@ -1,0 +1,55 @@
+{
+  "$comment": "SmPC 4.2: підтримувальна 9 млн МО/добу у 2–3 введення; у критичному стані — навантажувальна 9 млн МО; інтервал до першої підтримувальної не встановлено. ECIL-4 табл. 2: навантажувальна 9 млн МО, далі 4,5 млн МО кожні 12 год — у розрахунку з дня 2.",
+  "id": "colistimethate",
+  "short_name": "Колістиметат",
+  "name": {
+    "uk": "Колістиметат натрію",
+    "en": "Colistimethate sodium"
+  },
+  "description": {
+    "uk": "9 млн МО одноразово, далі 4,5 млн МО кожні 12 год; резистентні грамнегативні — у комбінації.",
+    "en": "9 MIU once, then 4.5 MIU every 12 h; resistant Gram-negatives, in combination."
+  },
+  "sources": [
+    {
+      "name": "SmPC Colomycin 1 million IU (emc), 4.2, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/1094/smpc",
+      "version": "ред. 19.04.2023",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Averbuch D et al. Targeted therapy against multi-resistant bacteria in leukemic and HSCT recipients: ECIL-4. Haematologica 2013;98:1836–47, табл. 2",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3856958/",
+      "version": "2013",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "loading",
+      "drug_id": "colistimethate",
+      "route": "iv_infusion",
+      "dose_value": 9,
+      "dose_unit": "miu_flat",
+      "days": [1],
+      "notes": {
+        "uk": "Навантажувальна доза — і при нирковій недостатності. Інтервал до першої підтримувальної інструкція не встановлює; у розрахунку підтримувальна — з дня 2.",
+        "en": "The loading dose, renal impairment included. The label sets no interval to the first maintenance dose; the calculation starts it on day 2."
+      }
+    },
+    {
+      "key": "maintenance",
+      "drug_id": "colistimethate",
+      "route": "iv_infusion",
+      "dose_value": 4.5,
+      "dose_unit": "miu_flat",
+      "days": [2, 3, 4],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "Переважно в комбінації з іншим активним in vitro засобом (ECIL-4). Нефро- й нейротоксичність: щодня креатинін. Розраховано дні 1–4 — до переоцінки через 72–96 год; тривалість далі — за збудником і локалізацією (вкладка «Фебрильна нейтропенія»).",
+        "en": "Preferably combined with another agent active in vitro (ECIL-4). Nephro- and neurotoxicity: daily creatinine. Days 1-4 are calculated, up to the review at 72-96 h; the rest of the course follows the pathogen and the site (the \"Febrile neutropenia\" tab)."
+      }
+    }
+  ]
+}

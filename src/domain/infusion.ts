@@ -94,6 +94,11 @@ export interface InfusionParams {
   stockConcentrationMgMl?: number
   /** When set, the rate is raised in steps and the duration follows from the volume. */
   rateRamp?: RateRamp
+  /**
+   * Fastest the drug may run, mg/min (vancomycin: 10 mg/min). A dose too large for the regimen's
+   * duration at that pace runs longer: the duration becomes dose ÷ rate, rounded up.
+   */
+  maxRateMgMin?: number
 }
 
 export type InfusionIssue = 'concentration_out_of_range'
@@ -112,6 +117,8 @@ export interface InfusionResult {
   issue: InfusionIssue | null
   /** Set when the drug is given at a rising rate; the duration comes from here, not from the regimen. */
   ramp: RampDurations | null
+  /** Duration the rate was worked out for; longer than the regimen's when the dose needs it. */
+  durationMin: number | null
   steps: CalculationStep[]
 }
 
@@ -206,9 +213,20 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
 
   let rateMlH: number | null = null
   let rateGttMin: number | null = null
+  let durationMin: number | null = null
+  let slowedFromMin: number | null = null
   if (ramp === null && input.durationMin !== undefined) {
     assertPositive('durationMin', input.durationMin)
-    rateMlH = totalVolumeMl / (input.durationMin / 60)
+    durationMin = input.durationMin
+    if (params.maxRateMgMin !== undefined) {
+      assertPositive('maxRateMgMin', params.maxRateMgMin)
+      const needed = Math.ceil(doseMg / params.maxRateMgMin)
+      if (needed > durationMin) {
+        slowedFromMin = durationMin
+        durationMin = needed
+      }
+    }
+    rateMlH = totalVolumeMl / (durationMin / 60)
     rateGttMin = (rateMlH * dropFactor) / 60
   }
 
@@ -246,12 +264,24 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
       },
     })
   }
+  if (slowedFromMin !== null && params.maxRateMgMin !== undefined) {
+    steps.push({
+      key: 'infusion.maxRate',
+      value: durationMin!,
+      unit: 'min',
+      params: {
+        maxRateMgMin: params.maxRateMgMin,
+        regimenMin: slowedFromMin,
+        durationMin: durationMin!,
+      },
+    })
+  }
   if (rateMlH !== null && rateGttMin !== null) {
     steps.push({
       key: 'infusion.rate',
       value: rateMlH,
       unit: 'ml_h',
-      params: { durationMin: input.durationMin!, rateGttMin, dropFactor },
+      params: { durationMin: durationMin!, rateGttMin, dropFactor },
     })
   }
 
@@ -262,6 +292,7 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
     concentrationPerMl,
     concentrationUnit: amountUnit,
     ramp,
+    durationMin,
     rateMlH,
     rateGttMin,
     issue,

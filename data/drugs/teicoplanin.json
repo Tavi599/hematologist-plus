@@ -16,6 +16,12 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "SmPC Targocid 200 mg / 400 mg (emc), 4.2, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/2926/smpc",
+      "version": "ред. 11.12.2025",
+      "checkedOn": "2026-10-11"
     }
   ],
   "presentations": [
@@ -28,6 +34,24 @@
       "key": "s400",
       "form": "vial",
       "strength_amount": 400
+    }
+  ],
+  "atc_code": "J01XA02",
+  "dose_units": ["mg_kg"],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "До 4-го дня — без змін. Далі: КК 30–80 мл/хв — підтримувальна доза вдвічі менша (через день або половина щодня); КК < 30 і гемодіаліз — третина дози. Гемодіалізом не виводиться.",
+        "en": "No change until day 4. Then: CrCl 30-80 mL/min, half the maintenance dose (every other day, or half daily); CrCl < 30 and haemodialysis, a third. Not removed by haemodialysis."
+      },
+      "source": {
+        "name": "SmPC Targocid 200 mg / 400 mg (emc), 4.2, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/2926/smpc",
+        "version": "ред. 11.12.2025",
+        "checkedOn": "2026-10-11"
+      }
     }
   ]
 }

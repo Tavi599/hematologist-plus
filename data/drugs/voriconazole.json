@@ -21,6 +21,12 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "SmPC Voriconazole Pfizer tablets (emc), 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/7325/smpc",
+      "version": "ред. 07/2026",
+      "checkedOn": "2026-10-11"
     }
   ],
   "presentations": [
@@ -28,6 +34,24 @@
       "key": "s200",
       "form": "tablet",
       "strength_amount": 200
+    }
+  ],
+  "atc_code": "J02AC03",
+  "dose_units": ["mg_flat"],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Цироз Child-Pugh A і B: стандартне навантаження, підтримувальна доза вдвічі менша. Child-Pugh C не вивчали — лише якщо користь переважає, з ретельним контролем.",
+        "en": "Child-Pugh A and B cirrhosis: the standard loading dose, half the maintenance dose. Child-Pugh C not studied: only if the benefit outweighs, with close monitoring."
+      },
+      "source": {
+        "name": "SmPC Voriconazole Pfizer tablets (emc), 4.2",
+        "url": "https://www.medicines.org.uk/emc/product/7325/smpc",
+        "version": "ред. 07/2026",
+        "checkedOn": "2026-10-11"
+      }
     }
   ]
 }

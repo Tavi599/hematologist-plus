@@ -507,6 +507,7 @@
     "infusion.volume": "Volume: {{bagVolumeMl}} mL of solvent + {{drugVolumeMl}} mL of drug",
     "infusion.concentration": "Concentration for a {{dose}} {{unit}} dose",
     "infusion.ramp": "Rate raised in steps: {{startMlH}} mL/h, +{{stepMlH}} every {{everyMin}} min, up to {{maxMlH}} mL/h (later infusions {{nextDurationMin}} min)",
+    "infusion.maxRate": "No faster than {{maxRateMgMin}} mg/min: infusion {{durationMin}} min instead of {{regimenMin}}",
     "infusion.rate": "Rate over {{durationMin}} min ({{rateGttMin}} drops/min, giving set {{dropFactor}} drops/mL)"
   },
   "warning": {
@@ -729,11 +730,11 @@
   },
   "febrileNeutropenia": {
     "tab": "Febrile neutropenia",
-    "title": "Febrile neutropenia: empirical therapy",
-    "lead": "An algorithm for adults after the AGIHO/DGHO 2024 guideline: risk, the first line, what to do after 96 h, antifungal therapy and when to stop. Each step carries its grade.",
+    "title": "Febrile neutropenia and infectious complications",
+    "lead": "An algorithm for adults after the AGIHO/DGHO 2024 guideline: risk, the first line, what to do after 96 h, antifungal therapy and when to stop. Then the next step with negative cultures, acceptable combinations, infections by site and resistant pathogens (ECIL-4, AGIHO, ESCMID, IDSA 2026). Each step carries its grade.",
     "mascc": "MASCC score",
     "agents": "Drugs and doses",
-    "agentsHint": "The guideline names the drugs without doses. Doses come from the labels, each for its febrile-neutropenia indication; where that label was not checked, there is no dose.",
+    "agentsHint": "Doses come from the labels (for febrile neutropenia or the stated use), for reserve agents from the IDSA 2026 table; where sources differ, both are shown. Without \"calculate\" it is reference only.",
     "label": "label",
     "noDose": "no dose: source not checked",
     "renal": "Doses are for normal kidney function; the courses below show the label adjustment by creatinine clearance when renal impairment is ticked.",
@@ -741,7 +742,8 @@
     "definitionSource": "Definition of neutropenia:",
     "calculate": "calculate",
     "courses": "Courses for the calculator",
-    "coursesHint": "Doses from the labels, each for febrile neutropenia. The antibiotics are calculated for 96 h, up to the mandatory review; the antifungals for the first days, then daily by the clinical response. The tree shows the label adjustment for the kidneys or liver when the patient condition is ticked."
+    "coursesHint": "Doses from the labels. The antibiotics are calculated for 96 h, up to the mandatory review; the antifungals for the first days, then daily by the clinical response. The tree shows the label adjustment for the kidneys or liver when the patient condition is ticked.",
+    "stageSources": "Sources:"
   },
   "abbreviations": {
     "title": "English abbreviations spelled out"

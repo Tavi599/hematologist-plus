@@ -120,6 +120,8 @@ export const drugFileSchema = z.strictObject({
         concentration_min_mg_ml: optionalPositive,
         concentration_max_mg_ml: optionalPositive,
         stock_concentration_mg_ml: optionalPositive,
+        /** Fastest pace, mg/min (vancomycin 10): a larger dose runs longer than duration_min. */
+        max_rate_mg_min: optionalPositive,
         /** Rate raised in steps (mL/h) instead of one speed; see rateRampSchema. */
         rate_ramp: rateRampSchema.nullable().default(null),
         /** Second-infusion steps, first-dose bag, split first dose; see rampSequenceSchema. */

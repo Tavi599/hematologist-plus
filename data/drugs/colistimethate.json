@@ -14,6 +14,12 @@
       "name": "Перелік препаратів відділення на 2027 рік",
       "version": "Список_препаратів_на_2027_розрахунок1.xlsx",
       "checkedOn": "2026-09-20"
+    },
+    {
+      "name": "SmPC Colomycin 1 million IU (emc), 4.2, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/1094/smpc",
+      "version": "ред. 19.04.2023",
+      "checkedOn": "2026-10-11"
     }
   ],
   "presentations": [
@@ -21,13 +27,56 @@
       "key": "s1",
       "form": "vial",
       "strength_amount": 1,
-      "label": { "uk": "1 млн МО", "en": "1 million IU" }
+      "label": {
+        "uk": "1 млн МО",
+        "en": "1 million IU"
+      }
     },
     {
       "key": "s2",
       "form": "vial",
       "strength_amount": 2,
-      "label": { "uk": "2 млн МО", "en": "2 million IU" }
+      "label": {
+        "uk": "2 млн МО",
+        "en": "2 million IU"
+      }
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [50],
+      "duration_min": 30,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "SmPC Colomycin 1 million IU (emc), 4.2, 6.6",
+          "url": "https://www.medicines.org.uk/emc/product/1094/smpc",
+          "version": "ред. 19.04.2023",
+          "checkedOn": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "uk": "Вміст флакона розводять зазвичай у 50 мл 0,9% NaCl; повільна інфузія 30–60 хв.",
+        "en": "The vial is usually diluted in 50 mL of 0.9% NaCl; a slow infusion over 30-60 min."
+      }
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Навантажувальну дозу 9 млн МО не зменшують. Добова доза: КК 30–49 мл/хв — 5,5–7,5 млн МО; 10–29 — 4,5–5,5; < 10 — 3,5 млн МО, у 2 введення. Гемодіаліз: 2,25 млн МО у дні без діалізу, 3 млн МО після сеансу.",
+        "en": "The 9 MIU loading dose is not reduced. Daily dose: CrCl 30-49 mL/min, 5.5-7.5 MIU; 10-29, 4.5-5.5; < 10, 3.5 MIU, in 2 doses. Haemodialysis: 2.25 MIU on non-dialysis days, 3 MIU after the session."
+      },
+      "source": {
+        "name": "SmPC Colomycin 1 million IU (emc), 4.2, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/1094/smpc",
+        "version": "ред. 19.04.2023",
+        "checkedOn": "2026-10-11"
+      }
     }
   ]
 }

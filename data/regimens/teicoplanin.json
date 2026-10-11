@@ -1,0 +1,81 @@
+{
+  "$comment": "SmPC 4.2: пневмонія, складні інфекції шкіри — 6 мг/кг кожні 12 год × 3 введення, далі 6 мг/кг 1 раз на добу; кістки й суглоби, ендокардит — 12 мг/кг × 3–5, далі 12 мг/кг. В/в болюс 3–5 хв або інфузія 30 хв — у розрахунку болюс, бо об'єм розведення інструкція не дає. Навантаження 6 мг/кг = підтримувальній, тож день 2 — третя доза навантаження.",
+  "id": "teicoplanin",
+  "short_name": "Тейкопланін",
+  "name": {
+    "uk": "Тейкопланін",
+    "en": "Teicoplanin"
+  },
+  "description": {
+    "uk": "6 мг/кг кожні 12 год × 3, далі 6 мг/кг 1 раз на добу; тяжкі інфекції — 12 мг/кг.",
+    "en": "6 mg/kg every 12 h × 3, then 6 mg/kg once a day; severe infections 12 mg/kg."
+  },
+  "sources": [
+    {
+      "name": "SmPC Targocid 200 mg / 400 mg (emc), 4.2, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/2926/smpc",
+      "version": "ред. 11.12.2025",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "loading",
+      "drug_id": "teicoplanin",
+      "route": "iv_bolus",
+      "dose_value": 6,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "dose_options": [
+        {
+          "dose_value": 12,
+          "dose_unit": "mg_kg",
+          "source": {
+            "name": "SmPC Targocid 200 mg / 400 mg (emc), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/2926/smpc",
+            "version": "ред. 11.12.2025",
+            "checkedOn": "2026-10-11"
+          },
+          "notes": {
+            "uk": "Кістки й суглоби, ендокардит: 12 мг/кг × 3–5 введень",
+            "en": "Bone and joint, endocarditis: 12 mg/kg × 3-5 doses"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "Навантаження: 6 мг/кг кожні 12 год, три введення (третє — у день 2). В/в болюс 3–5 хв або інфузія 30 хв. Рівень на 3–5-й день: > 15 мг/л (FPIA).",
+        "en": "Loading: 6 mg/kg every 12 h, three doses (the third on day 2). IV bolus over 3-5 min or a 30-min infusion. Trough on days 3-5: > 15 mg/L (FPIA)."
+      }
+    },
+    {
+      "key": "maintenance",
+      "drug_id": "teicoplanin",
+      "route": "iv_bolus",
+      "dose_value": 6,
+      "dose_unit": "mg_kg",
+      "days": [2, 3, 4],
+      "dose_options": [
+        {
+          "dose_value": 12,
+          "dose_unit": "mg_kg",
+          "source": {
+            "name": "SmPC Targocid 200 mg / 400 mg (emc), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/2926/smpc",
+            "version": "ред. 11.12.2025",
+            "checkedOn": "2026-10-11"
+          },
+          "notes": {
+            "uk": "Кістки й суглоби, ендокардит",
+            "en": "Bone and joint, endocarditis"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "День 2 — третя доза навантаження, далі 6 мг/кг 1 раз на добу. Корекція при нирковій недостатності — з 4-го дня. Розраховано дні 1–4 — до переоцінки через 72–96 год; тривалість далі — за збудником і локалізацією (вкладка «Фебрильна нейтропенія»).",
+        "en": "Day 2 is the third loading dose, then 6 mg/kg once a day. Renal adjustment from day 4. Days 1-4 are calculated, up to the review at 72-96 h; the rest of the course follows the pathogen and the site (the \"Febrile neutropenia\" tab)."
+      }
+    }
+  ]
+}

@@ -15,6 +15,7 @@ import {
   NEUTROPENIA_DEFINITION,
   STAGES,
 } from './algorithm'
+import { COMPLICATION_STAGES } from './complications'
 
 /**
  * Febrile neutropenia as an algorithm: risk, the first line by risk and colonisation, what is done
@@ -44,7 +45,7 @@ export function FebrileNeutropeniaSection() {
 
       <AbbreviationList keys={FEBRILE_NEUTROPENIA_ABBREVIATIONS} />
 
-      {STAGES.map((stage) => (
+      {[...STAGES, ...COMPLICATION_STAGES].map((stage) => (
         <Card key={stage.id} withBorder component="section">
           <Stack gap={6}>
             <Title order={3} size="h4">
@@ -62,6 +63,19 @@ export function FebrileNeutropeniaSection() {
                 </List.Item>
               ))}
             </List>
+            {stage.sources && (
+              <Text size="xs" c="dimmed">
+                {t('febrileNeutropenia.stageSources')}{' '}
+                {stage.sources.map((source, index) => (
+                  <span key={source.url}>
+                    {index > 0 && '; '}
+                    <Anchor href={source.url} target="_blank" rel="noreferrer" size="xs">
+                      {source.name}
+                    </Anchor>
+                  </span>
+                ))}
+              </Text>
+            )}
           </Stack>
         </Card>
       ))}

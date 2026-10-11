@@ -1,0 +1,59 @@
+{
+  "$comment": "SmPC 4.2: пневмоцистна пневмонія — 15–20 мг/кг триметоприму і 75–100 мг/кг сульфаметоксазолу на добу у два чи більше введення, 2 тижні. 480 мг препарату = 80 мг ТМП + 400 мг СМК, тож 15–20 мг/кг ТМП = 90–120 мг/кг препарату на добу. Поділ на 3 введення — вибір розрахунку в межах «двох чи більше». AGIHO: та сама доза (A-II), щонайменше 2 тижні; при S. maltophilia — така сама (B-III).",
+  "id": "co-trimoxazole-pcp",
+  "short_name": "Ко-тримоксазол (PcP)",
+  "name": {
+    "uk": "Ко-тримоксазол — лікування пневмоцистної пневмонії",
+    "en": "Co-trimoxazole: treatment of Pneumocystis pneumonia"
+  },
+  "description": {
+    "uk": "ТМП 15–20 мг/кг/добу (препарату 90–120 мг/кг/добу) в/в, 2 тижні; та сама доза — S. maltophilia.",
+    "en": "TMP 15-20 mg/kg/day (90-120 mg/kg/day of the product) IV, 2 weeks; the same dose for S. maltophilia."
+  },
+  "sources": [
+    {
+      "name": "SmPC Co-Trimoxazole 16 mg/80 mg per ml Solution for Infusion (emc), 4.2, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/102621/smpc",
+      "version": "ред. 16.09.2026",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Maschmeyer G et al. Diagnosis and antimicrobial therapy of lung infiltrates in febrile neutropenic patients: AGIHO. Ann Oncol 2015;26:21–33",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4269340/",
+      "version": "2014 (опубл. 2015)",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "co-trimoxazole",
+      "drug_id": "co-trimoxazole",
+      "route": "iv_infusion",
+      "dose_value": 30,
+      "dose_unit": "mg_kg",
+      "days": [1, 2, 3, 4],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "dose_options": [
+        {
+          "dose_value": 40,
+          "dose_unit": "mg_kg",
+          "source": {
+            "name": "SmPC Co-Trimoxazole 16 mg/80 mg per ml Solution for Infusion (emc), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/102621/smpc",
+            "version": "ред. 16.09.2026",
+            "checkedOn": "2026-10-11"
+          },
+          "notes": {
+            "uk": "Верхня межа: ТМП 20 мг/кг/добу (препарату 120 мг/кг/добу)",
+            "en": "The upper end: TMP 20 mg/kg/day (120 mg/kg/day of the product)"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "Доза — у мг препарату (ТМП + СМК): 30 мг/кг × 3 = 90 мг/кг/добу = ТМП 15 мг/кг/добу. Почати одразу після забору матеріалу, ще до бронхоскопії при підозрі (AGIHO B-II). Щойно можливо — перорально; разом 2 тижні, далі вторинна профілактика. Контроль калію, креатиніну, крові.",
+        "en": "The dose is in mg of the product (TMP + SMX): 30 mg/kg × 3 = 90 mg/kg/day = TMP 15 mg/kg/day. Start right after sampling, before bronchoscopy when suspected (AGIHO B-II). Orally as soon as possible; 2 weeks in all, then secondary prophylaxis. Potassium, creatinine, blood count."
+      }
+    }
+  ]
+}

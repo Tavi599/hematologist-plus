@@ -1,0 +1,51 @@
+{
+  "$comment": "Доза — SmPC 4.2: «In seriously ill patients, a loading dose of 25-30 mg/kg». Окремий курс, бо перша підтримувальна доза йде через 12 год після навантажувальної.",
+  "id": "vancomycin-loading",
+  "short_name": "Ванкоміцин (навантаж.)",
+  "name": {
+    "uk": "Ванкоміцин — навантажувальна доза",
+    "en": "Vancomycin: loading dose"
+  },
+  "description": {
+    "uk": "Тяжкий стан: одноразово 25–30 мг/кг, далі підтримувальна через 12 год.",
+    "en": "Seriously ill: a single 25-30 mg/kg, then the maintenance dose 12 h later."
+  },
+  "sources": [
+    {
+      "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.2, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
+      "version": "ред. 19.01.2026",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "vancomycin",
+      "drug_id": "vancomycin",
+      "route": "iv_infusion",
+      "dose_value": 25,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "dose_options": [
+        {
+          "dose_value": 30,
+          "dose_unit": "mg_kg",
+          "source": {
+            "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
+            "version": "ред. 19.01.2026",
+            "checkedOn": "2026-10-11"
+          },
+          "notes": {
+            "uk": "Верхня межа навантажувальної дози",
+            "en": "The upper end of the loading dose"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "Розрахунок на фактичну масу тіла. При нирковій недостатності навантажувальну дозу в критичному стані не зменшують. Далі — курс «Ванкоміцин» через 12 год і рівень у крові на 2-й день.",
+        "en": "By actual body weight. In the critically ill the loading dose is not reduced for renal impairment. Then the \"Vancomycin\" course 12 h later and a blood level on day 2."
+      }
+    }
+  ]
+}

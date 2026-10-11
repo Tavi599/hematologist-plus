@@ -16,6 +16,12 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "SmPC Amikacin 250 mg/ml Injection (Hospira, emc), 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/3784/smpc",
+      "version": "ред. 03/2024",
+      "checkedOn": "2026-10-11"
     }
   ],
   "presentations": [
@@ -24,6 +30,47 @@
       "form": "ampoule",
       "strength_amount": 500,
       "volume_ml": 2
+    }
+  ],
+  "atc_code": "J01GB06",
+  "dose_units": ["mg_kg"],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_max_mg_ml": 2.5,
+      "stock_concentration_mg_ml": 250,
+      "bag_volumes_ml": [100, 250, 500],
+      "duration_min": 30,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "SmPC Amikacin 250 mg/ml Injection (Hospira, emc), 4.2",
+          "url": "https://www.medicines.org.uk/emc/product/3784/smpc",
+          "version": "ред. 03/2024",
+          "checkedOn": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "uk": "Розчин 250 мг/мл, розводять 0,9% NaCl або 5% глюкозою; в/в інфузія 0,25% (2,5 мг/мл) за 30 хв, дорослим 30–60 хв. Не змішувати з іншими препаратами.",
+        "en": "Solution 250 mg/mL, diluted with 0.9% NaCl or 5% glucose; an IV infusion of 0.25% (2.5 mg/mL) over 30 min, 30-60 min in adults. Not to be mixed with other drugs."
+      }
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "При КК < 50 мл/хв одноразове добове введення небажане. Звичайна доза 7,5 мг/кг з подовженим інтервалом: інтервал (год) = креатинін (мг/дл) × 9; або зменшена доза кожні 12 год пропорційно КК. Контроль рівня: пік < 35, залишковий < 10 мкг/мл.",
+        "en": "With CrCl < 50 mL/min once-daily dosing is not desirable. The usual 7.5 mg/kg at a longer interval: interval (h) = creatinine (mg/dL) × 9; or a reduced dose every 12 h in proportion to CrCl. Levels: peak < 35, trough < 10 mcg/mL."
+      },
+      "source": {
+        "name": "SmPC Amikacin 250 mg/ml Injection (Hospira, emc), 4.2",
+        "url": "https://www.medicines.org.uk/emc/product/3784/smpc",
+        "version": "ред. 03/2024",
+        "checkedOn": "2026-10-11"
+      }
     }
   ]
 }

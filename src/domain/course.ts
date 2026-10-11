@@ -537,7 +537,9 @@ function buildDays(
           id,
           block: drug.block ?? 'infusion',
           ...(drug.isMain === undefined ? {} : { isMain: drug.isMain }),
-          durationMin: ramp ? rampDurationMin(ramp, kind) : (drug.durationMin ?? 0),
+          durationMin: ramp
+            ? rampDurationMin(ramp, kind)
+            : (result.infusion?.durationMin ?? drug.durationMin ?? 0),
           occurrence: index,
           ...(drug.gapBeforeMin === undefined ? {} : { gapBeforeMin: drug.gapBeforeMin }),
           ...(drug.anchorOffsetMin === undefined ? {} : { anchorOffsetMin: drug.anchorOffsetMin }),

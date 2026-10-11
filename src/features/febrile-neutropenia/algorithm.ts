@@ -37,6 +37,8 @@ export interface Stage {
   id: string
   title: Text2
   steps: Step[]
+  /** Where the box comes from, when it is not the AGIHO 2024 guideline of the whole algorithm. */
+  sources?: { name: string; url: string }[]
 }
 
 export const RISK: Stage = {
@@ -279,6 +281,16 @@ export const DURATION: Stage = {
 
 export const STAGES: Stage[] = [RISK, HIGH_RISK, STANDARD_RISK, AFTER_96H, ANTIFUNGAL, DURATION]
 
+const IDSA_TABLE = {
+  name: 'IDSA 2026 AMR Guidance v4.0, Table 1 (adults, normal renal and hepatic function)',
+  url: 'https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-1.pdf',
+}
+
+const ECIL_TABLES = {
+  name: 'ECIL-4 targeted therapy (Averbuch, Haematologica 2013), tables 2–3',
+  url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3856958/',
+}
+
 /** Drugs the guideline names, with the dose of their own label for febrile neutropenia. */
 export interface Agent {
   name: Text2
@@ -328,21 +340,148 @@ export const AGENTS: { group: Text2; agents: Agent[] }[] = [
         },
         regimenId: 'fn-meropenem',
       },
-      { name: t('Іміпенем/циластатин', 'Imipenem/cilastatin'), dose: null, source: null },
+      {
+        name: t('Іміпенем/циластатин', 'Imipenem/cilastatin'),
+        dose: t(
+          '500 мг в/в кожні 6 год (інфузія 3 год, якщо можливо) або 1 г кожні 8 год (1 год); доза за іміпенемом',
+          '500 mg IV every 6 h (a 3-hour infusion if feasible) or 1 g every 8 h (1 h); dosed as imipenem',
+        ),
+        source: IDSA_TABLE,
+      },
     ],
   },
   {
-    group: t('При колонізації MRSA (додати)', 'With MRSA colonisation (added)'),
+    group: t(
+      'Проти грампозитивних (MRSA, VRE) — лише за показаннями, див. п. 8',
+      'Against Gram-positives (MRSA, VRE), only when indicated, see step 8',
+    ),
     agents: [
       {
-        name: t(
-          'Ванкоміцин — за масою тіла й рівнем у крові',
-          'Vancomycin: by weight and blood level',
+        name: t('Ванкоміцин', 'Vancomycin'),
+        dose: t(
+          '15–20 мг/кг кожні 8–12 год, не більше 2 г на введення; у тяжкому стані спершу 25–30 мг/кг; далі за рівнем у крові',
+          '15–20 mg/kg every 8–12 h, no more than 2 g a dose; 25–30 mg/kg first when seriously ill; then by the blood level',
         ),
-        dose: null,
-        source: null,
+        source: {
+          name: 'SmPC Vancomycin 1000 mg (hameln, emc, 19.01.2026), 4.2',
+          url: 'https://www.medicines.org.uk/emc/product/15737/smpc',
+        },
+        regimenId: 'vancomycin',
       },
-      { name: t('Тейкопланін', 'Teicoplanin'), dose: null, source: null },
+      {
+        name: t('Тейкопланін', 'Teicoplanin'),
+        dose: t(
+          '6 мг/кг кожні 12 год × 3, далі 6 мг/кг 1 раз на добу; тяжкі інфекції — 12 мг/кг',
+          '6 mg/kg every 12 h × 3, then 6 mg/kg once a day; severe infections 12 mg/kg',
+        ),
+        source: {
+          name: 'SmPC Targocid (emc, 11.12.2025), 4.2',
+          url: 'https://www.medicines.org.uk/emc/product/2926/smpc',
+        },
+        regimenId: 'teicoplanin',
+      },
+      {
+        name: t('Лінезолід (MRSA, VRE)', 'Linezolid (MRSA, VRE)'),
+        dose: t(
+          '600 мг в/в чи перорально кожні 12 год, не довше 28 днів',
+          '600 mg IV or orally every 12 h, no longer than 28 days',
+        ),
+        source: {
+          name: 'SmPC Linezolid 2 mg/ml Solution for Infusion (emc), 4.2',
+          url: 'https://www.medicines.org.uk/emc/product/7300/smpc',
+        },
+        regimenId: 'linezolid',
+      },
+      {
+        name: t('Даптоміцин (не при пневмонії)', 'Daptomycin (not in pneumonia)'),
+        dose: t(
+          '4–6 мг/кг в/в 1 раз на добу; можна 10–12 мг/кг',
+          '4–6 mg/kg IV once a day; 10–12 mg/kg may be considered',
+        ),
+        source: ECIL_TABLES,
+      },
+    ],
+  },
+  {
+    group: t(
+      'Додати до бета-лактаму: септичний шок, резистентні грамнегативні',
+      'Added to a beta-lactam: septic shock, resistant Gram-negatives',
+    ),
+    agents: [
+      {
+        name: t('Амікацин', 'Amikacin'),
+        dose: t(
+          '7,5 мг/кг кожні 12 год (при нейтропенії — двічі на добу), не більше 1,5 г/добу. Розбіжність: IDSA 2026 — 15 мг/кг 1 раз на добу, далі за рівнем',
+          '7.5 mg/kg every 12 h (twice daily in neutropenia), no more than 1.5 g a day. Discrepancy: IDSA 2026, 15 mg/kg once a day, then by level',
+        ),
+        source: {
+          name: 'SmPC Amikacin 250 mg/ml (Hospira, emc, 03/2024), 4.2: febrile neutropenic patients',
+          url: 'https://www.medicines.org.uk/emc/product/3784/smpc',
+        },
+        regimenId: 'amikacin-fn',
+      },
+      {
+        name: t('Колістиметат натрію', 'Colistimethate sodium'),
+        dose: t(
+          'Навантажувальна 9 млн МО, далі 9 млн МО/добу у 2–3 введення',
+          'A 9 MIU loading dose, then 9 MIU a day in 2–3 doses',
+        ),
+        source: {
+          name: 'SmPC Colomycin 1 million IU (emc, 19.04.2023), 4.2',
+          url: 'https://www.medicines.org.uk/emc/product/1094/smpc',
+        },
+        regimenId: 'colistimethate',
+      },
+    ],
+  },
+  {
+    group: t(
+      'Резервні — лише за чутливістю (дози IDSA 2026, інфузія 3 год)',
+      'Reserve, by susceptibility only (IDSA 2026 doses, 3-hour infusion)',
+    ),
+    agents: [
+      {
+        name: t('Меропенем у високій дозі', 'High-dose meropenem'),
+        dose: t(
+          '1–2 г кожні 8 год, інфузія 3 год; 2 г — ожиріння, ЦНС. Розбіжність: інструкція для ФН — 1 г за 15–30 хв',
+          '1–2 g every 8 h over 3 h; 2 g in obesity and CNS infection. Discrepancy: the FN label gives 1 g over 15–30 min',
+        ),
+        source: IDSA_TABLE,
+      },
+      {
+        name: t('Цефтазидим/авібактам (Завіцефта)', 'Ceftazidime/avibactam (Zavicefta)'),
+        dose: t('2,5 г кожні 8 год', '2.5 g every 8 h'),
+        source: IDSA_TABLE,
+      },
+      {
+        name: t('Азтреонам/авібактам (Емблавео)', 'Aztreonam/avibactam (Emblaveo)'),
+        dose: t('2,67 г одноразово, далі 2 г кожні 6 год', '2.67 g once, then 2 g every 6 h'),
+        source: IDSA_TABLE,
+      },
+      {
+        name: t(
+          'Цефтолозан/тазобактам — в Україні не зареєстрований',
+          'Ceftolozane/tazobactam: not registered in Ukraine',
+        ),
+        dose: t('3 г кожні 8 год', '3 g every 8 h'),
+        source: IDSA_TABLE,
+      },
+      {
+        name: t(
+          'Цефідерокол — в Україні не зареєстрований',
+          'Cefiderocol: not registered in Ukraine',
+        ),
+        dose: t('2 г кожні 8 год', '2 g every 8 h'),
+        source: IDSA_TABLE,
+      },
+      {
+        name: t('Тигециклін', 'Tigecycline'),
+        dose: t(
+          'IDSA 2026: 200 мг, далі 100 мг кожні 12 год. Розбіжність: ECIL-4 — 100 мг, далі 50 мг кожні 12 год',
+          'IDSA 2026: 200 mg, then 100 mg every 12 h. Discrepancy: ECIL-4, 100 mg then 50 mg every 12 h',
+        ),
+        source: IDSA_TABLE,
+      },
     ],
   },
   {
@@ -388,6 +527,35 @@ export const AGENTS: { group: Text2; agents: Agent[] }[] = [
         regimenId: 'fn-liposomal-amphotericin',
       },
       { name: t('Мікафунгін', 'Micafungin'), dose: null, source: null },
+    ],
+  },
+  {
+    group: t('Документовані грибкові інфекції, PcP', 'Documented fungal infection, PcP'),
+    agents: [
+      {
+        name: t('Вориконазол', 'Voriconazole'),
+        dose: t(
+          'Таблетки: 400 мг кожні 12 год першу добу, далі 200 мг двічі (≥ 40 кг); в/в — 6 мг/кг, далі 4 мг/кг кожні 12 год',
+          'Tablets: 400 mg every 12 h on day 1, then 200 mg twice (≥ 40 kg); IV, 6 mg/kg then 4 mg/kg every 12 h',
+        ),
+        source: {
+          name: 'SmPC Voriconazole Pfizer (emc, 07/2026), 4.2',
+          url: 'https://www.medicines.org.uk/emc/product/7325/smpc',
+        },
+        regimenId: 'voriconazole-oral',
+      },
+      {
+        name: t('Ко-тримоксазол (PcP, S. maltophilia)', 'Co-trimoxazole (PcP, S. maltophilia)'),
+        dose: t(
+          'Триметоприм 15–20 мг/кг + сульфаметоксазол 75–100 мг/кг на добу у 2 чи більше введення, 2 тижні',
+          'Trimethoprim 15–20 mg/kg + sulfamethoxazole 75–100 mg/kg a day in 2 or more doses, 2 weeks',
+        ),
+        source: {
+          name: 'SmPC Co-Trimoxazole 16 mg/80 mg per ml Solution for Infusion (emc, 16.09.2026), 4.2',
+          url: 'https://www.medicines.org.uk/emc/product/102621/smpc',
+        },
+        regimenId: 'co-trimoxazole-pcp',
+      },
     ],
   },
 ]
