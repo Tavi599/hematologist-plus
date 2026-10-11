@@ -314,7 +314,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
       'Біспецифічні антитіла при мієломі: теклістамаб, елранатамаб, талкветамаб',
       'Bispecific antibodies in myeloma: teclistamab, elranatamab, talquetamab',
     ),
-    markDrugIds: ['elranatamab'],
+    markDrugIds: ['teclistamab', 'elranatamab', 'talquetamab'],
     risks: ['hypogamma', 'herpes', 'pjp', 'hbv', 'cmv', 'bacterial'],
     why: t(
       'Глибока гіпогамаглобулінемія (MajesTEC-1: 74,5%), цитопенії; частіші тяжкі інфекції, ніж при звичайному лікуванні мієломи.',
@@ -420,7 +420,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
   {
     id: 'idelalisib',
     therapy: t('Інгібітори PI3K: іделалісиб', 'PI3K inhibitors: idelalisib'),
-    markDrugIds: [],
+    markDrugIds: ['idelalisib'],
     risks: ['pjp', 'cmv', 'herpes'],
     why: t(
       'Смертельні опортуністичні інфекції, часта реактивація CMV.',
@@ -453,7 +453,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
   {
     id: 'alemtuzumab',
     therapy: t('Алемтузумаб (анти-CD52)', 'Alemtuzumab (anti-CD52)'),
-    markDrugIds: [],
+    markDrugIds: ['alemtuzumab'],
     risks: ['pjp', 'cmv', 'hbv'],
     why: t(
       'Глибока лімфопенія, опортуністичні інфекції.',

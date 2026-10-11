@@ -432,7 +432,10 @@ function TreatmentNodeView({
             </SimpleGrid>
           )}
           {described.map(({ link, regimen }) => (
-            <RegimenReference key={link.id} regimen={regimen!} />
+            <Stack key={link.id} gap={2}>
+              <RegimenReference regimen={regimen!} />
+              <InfectionRiskMark catalog={catalog} regimenIds={[regimen!.id]} />
+            </Stack>
           ))}
           {sections.map((child) => (
             <TreatmentNodeView

@@ -84,4 +84,13 @@ describe('DiseasesPage search', () => {
     ).toBeInTheDocument()
     expect(screen.getByText('Ритуксимаб сам по собі (1B)')).toBeInTheDocument()
   })
+
+  it('shows the febrile neutropenia algorithm in a tab of its own', async () => {
+    renderWithProviders(<DiseasesPage />)
+    fireEvent.click(screen.getByRole('tab', { name: 'Фебрильна нейтропенія' }))
+    expect(
+      await screen.findByRole('heading', { name: 'Фебрильна нейтропенія: емпірична терапія' }),
+    ).toBeInTheDocument()
+    expect(screen.getByText('4 г/0,5 г в/в кожні 6 год (інфузія 30 хв)')).toBeInTheDocument()
+  })
 })

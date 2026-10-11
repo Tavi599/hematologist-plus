@@ -5,22 +5,27 @@ import { Link, useSearchParams } from 'react-router'
 
 import { routes } from '../../app/routes'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
+import { FebrileNeutropeniaSection } from '../../features/febrile-neutropenia/FebrileNeutropeniaSection'
 import { IrradiatedSection } from '../../features/irradiated/IrradiatedSection'
 import { ICD10_SYSTEM_ID, primaryCode, type CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 
+/** Tabs beside the list, each opened by `?section=` so a link can land on it. */
+const SECTIONS = ['irradiated', 'febrile-neutropenia']
+
 export function DiseasesPage() {
   const { t } = useTranslation()
   const [searchParams, setSearchParams] = useSearchParams()
-  // The irradiated components are a tab of their own, so the list is not followed by a long
-  // table; a link from a disease page opens that tab straight away.
-  const tab = searchParams.get('section') === 'irradiated' ? 'irradiated' : 'diseases'
+  // The irradiated components and febrile neutropenia are tabs of their own, so the list is not
+  // followed by long tables; a link from a disease page opens its tab straight away.
+  const section = searchParams.get('section')
+  const tab = section !== null && SECTIONS.includes(section) ? section : 'diseases'
   const chooseTab = (value: string | null) =>
     setSearchParams(
       (current) => {
         const params = new URLSearchParams(current)
-        if (value === 'irradiated') params.set('section', 'irradiated')
+        if (value !== null && SECTIONS.includes(value)) params.set('section', value)
         else params.delete('section')
         return params
       },
@@ -34,6 +39,7 @@ export function DiseasesPage() {
         <Tabs.List>
           <Tabs.Tab value="diseases">{t('diseases.tabList')}</Tabs.Tab>
           <Tabs.Tab value="irradiated">{t('irradiated.tab')}</Tabs.Tab>
+          <Tabs.Tab value="febrile-neutropenia">{t('febrileNeutropenia.tab')}</Tabs.Tab>
         </Tabs.List>
         <Tabs.Panel value="diseases" pt="md">
           <CatalogGate>{(catalog) => <DiseaseList catalog={catalog} />}</CatalogGate>
@@ -41,6 +47,9 @@ export function DiseasesPage() {
         <Tabs.Panel value="irradiated" pt="md">
           {/* Apart from the catalog: it needs no database and is there offline too. */}
           <IrradiatedSection />
+        </Tabs.Panel>
+        <Tabs.Panel value="febrile-neutropenia" pt="md">
+          <FebrileNeutropeniaSection />
         </Tabs.Panel>
       </Tabs>
     </Stack>

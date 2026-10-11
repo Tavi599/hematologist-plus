@@ -37,6 +37,12 @@ export const RISK_AREAS: Area[] = [
     ],
   },
   {
+    id: 'febrile-neutropenia',
+    title: t('Фебрильна нейтропенія', 'Febrile neutropenia'),
+    scoreIds: ['mascc'],
+    diseases: [],
+  },
+  {
     id: 'transplant',
     title: t(
       'Алогенна трансплантація гемопоетичних клітин',

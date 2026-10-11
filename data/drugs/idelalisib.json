@@ -1,0 +1,36 @@
+{
+  "$comment": "Додано 2026-10-11. У Державному реєстрі України (reestr.csv, 2026-10-11) іделалісибу немає. Форми — за інструкцією FDA, розділ 16.",
+  "id": "idelalisib",
+  "name": {
+    "uk": "Іделалісиб",
+    "en": "Idelalisib"
+  },
+  "trade_names": ["Zydelig"],
+  "dose_units": ["mg_flat"],
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: ZYDELIG (idelalisib), 16 How Supplied",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50",
+      "version": "21.09.2026",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv) — не знайдено",
+      "url": "http://www.drlz.com.ua/",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t100",
+      "form": "tablet",
+      "strength_amount": 100
+    },
+    {
+      "key": "t150",
+      "form": "tablet",
+      "strength_amount": 150
+    }
+  ]
+}

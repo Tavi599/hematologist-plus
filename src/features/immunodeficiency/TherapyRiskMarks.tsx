@@ -16,12 +16,19 @@ import {
   type TherapyRisk,
 } from './therapy-risks'
 
-/** Main drugs of the regimens, the ones a mark is decided by. */
+/**
+ * Main drugs of the regimens, the ones a mark is decided by; a reference card has no items, so
+ * the drugs it names count instead.
+ */
 function mainDrugs(catalog: CatalogIndex, regimenIds: readonly string[]): string[] {
-  return regimenIds
-    .flatMap((id) => catalog.itemsByRegimen.get(id) ?? [])
-    .filter((item) => item.role === 'main')
-    .map((item) => item.drug_id)
+  return regimenIds.flatMap((id) => [
+    ...(catalog.itemsByRegimen.get(id) ?? [])
+      .filter((item) => item.role === 'main')
+      .map((item) => item.drug_id),
+    ...(catalog.regimens.get(id)?.reference?.drugs ?? []).flatMap((drug) =>
+      drug.drug_id ? [drug.drug_id] : [],
+    ),
+  ])
 }
 
 /**

@@ -1,0 +1,38 @@
+{
+  "$comment": "Додано 2026-10-11. У Державному реєстрі України (reestr.csv, 2026-10-11) талкветамабу немає. Форми — за інструкцією FDA, розділ 16.",
+  "id": "talquetamab",
+  "name": {
+    "uk": "Талкветамаб",
+    "en": "Talquetamab"
+  },
+  "trade_names": ["Talvey"],
+  "dose_units": ["mg_kg"],
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: TALVEY (talquetamab-tgvs), 16 How Supplied",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9001355e-003d-4d4e-b4ce-337e0fd14952",
+      "version": "17.11.2025",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv) — не знайдено",
+      "url": "http://www.drlz.com.ua/",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v3",
+      "form": "vial",
+      "strength_amount": 3,
+      "volume_ml": 1.5
+    },
+    {
+      "key": "v40",
+      "form": "vial",
+      "strength_amount": 40,
+      "volume_ml": 1
+    }
+  ]
+}

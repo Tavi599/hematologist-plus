@@ -1,4 +1,5 @@
 import { AGE, num } from './general'
+import { mascc } from './mascc'
 import { hctCi } from './transplant'
 import type { Field, Outcome, Score, Text2, Tone, Values } from './types'
 
@@ -1385,4 +1386,5 @@ export const RISK_SCORES: Score[] = [
   dipss,
   mipss70,
   hctCi,
+  mascc,
 ]

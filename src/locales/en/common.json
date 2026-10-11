@@ -722,5 +722,18 @@
     "mark": "Infection risk",
     "alertTitle": "Treatment-related infection risk: what the guidelines advise",
     "more": "All risk factors: “Secondary immunodeficiency”"
+  },
+  "febrileNeutropenia": {
+    "tab": "Febrile neutropenia",
+    "title": "Febrile neutropenia: empirical therapy",
+    "lead": "An algorithm for adults after the AGIHO/DGHO 2024 guideline: risk, the first line, what to do after 96 h, antifungal therapy and when to stop. Each step carries its grade.",
+    "mascc": "MASCC score",
+    "agents": "Drugs and doses",
+    "agentsHint": "The guideline names the drugs without doses. Doses come from the labels, each for its febrile-neutropenia indication; where that label was not checked, there is no dose.",
+    "label": "label",
+    "noDose": "no dose: source not checked",
+    "renal": "Doses for normal renal function; with reduced creatinine clearance, adjust by the label.",
+    "source": "Source of the algorithm (full text and figures 1–4):",
+    "definitionSource": "Definition of neutropenia:"
   }
 }
