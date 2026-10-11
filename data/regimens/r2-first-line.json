@@ -154,6 +154,22 @@
       }
     ]
   },
+  "course": {
+    "id": "r2-first-line",
+    "title": {
+      "uk": "R2, перша лінія",
+      "en": "R2, first line"
+    },
+    "phase": {
+      "uk": "цикли 2–6",
+      "en": "cycles 2–6"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 6
+    }
+  },
   "items": [
     {
       "key": "premed-paracetamol",

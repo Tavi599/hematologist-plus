@@ -26,6 +26,22 @@
       "checkedOn": "2026-10-04"
     }
   ],
+  "course": {
+    "id": "blinatumomab-rr",
+    "title": {
+      "uk": "Блінатумомаб (рецидив B-ГЛЛ)",
+      "en": "Blinatumomab (relapsed B-ALL)"
+    },
+    "phase": {
+      "uk": "цикли 2–5",
+      "en": "cycles 2–5"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 5
+    }
+  },
   "items": [
     {
       "key": "dexamethasone",

@@ -98,6 +98,19 @@
       }
     ]
   },
+  "course": {
+    "id": "pcp",
+    "title": {
+      "uk": "PCP",
+      "en": "PCP"
+    },
+    "phase": {
+      "uk": "підтримка",
+      "en": "maintenance"
+    },
+    "order": 2,
+    "cycles": null
+  },
   "items": [
     {
       "key": "pomalidomide",

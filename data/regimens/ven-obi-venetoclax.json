@@ -20,6 +20,22 @@
       "checkedOn": "2026-10-02"
     }
   ],
+  "course": {
+    "id": "ven-obi",
+    "title": {
+      "uk": "Ven-Obi",
+      "en": "Ven-Obi"
+    },
+    "phase": {
+      "uk": "цикли 7–12",
+      "en": "cycles 7–12"
+    },
+    "order": 4,
+    "cycles": {
+      "from": 7,
+      "to": 12
+    }
+  },
   "items": [
     {
       "key": "venetoclax",

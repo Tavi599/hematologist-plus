@@ -26,6 +26,22 @@
       "checkedOn": "2026-10-04"
     }
   ],
+  "course": {
+    "id": "o-b",
+    "title": {
+      "uk": "O-B (обінутузумаб + бендамустин)",
+      "en": "O-B (obinutuzumab + bendamustine)"
+    },
+    "phase": {
+      "uk": "цикли 2–6",
+      "en": "cycles 2–6"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 6
+    }
+  },
   "items": [
     {
       "key": "dexamethasone",

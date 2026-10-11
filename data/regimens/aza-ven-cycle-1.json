@@ -20,6 +20,22 @@
       "checkedOn": "2026-10-02"
     }
   ],
+  "course": {
+    "id": "aza-ven",
+    "title": {
+      "uk": "Aza-Ven",
+      "en": "Aza-Ven"
+    },
+    "phase": {
+      "uk": "цикл 1",
+      "en": "cycle 1"
+    },
+    "order": 1,
+    "cycles": {
+      "from": 1,
+      "to": 1
+    }
+  },
   "items": [
     {
       "key": "ondansetron",

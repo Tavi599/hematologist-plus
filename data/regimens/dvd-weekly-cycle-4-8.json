@@ -25,6 +25,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "dvd-weekly",
+    "title": {
+      "uk": "DVd з бортезомібом щотижня",
+      "en": "DVd with weekly bortezomib"
+    },
+    "phase": {
+      "uk": "цикли 4–8",
+      "en": "cycles 4–8"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 4,
+      "to": 8
+    }
+  },
   "items": [
     {
       "key": "premed-paracetamol",

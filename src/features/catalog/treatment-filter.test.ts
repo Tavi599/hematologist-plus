@@ -2,14 +2,17 @@ import { describe, expect, it } from 'vitest'
 
 import { demoCatalog } from '../../lib/catalog.fixture'
 import { indexCatalog } from '../../lib/catalog-index'
-import type { TreatmentNode } from '../../schemas/catalog'
+import type { Regimen, TreatmentNode } from '../../schemas/catalog'
 import {
   countRegimens,
+  courseTiles,
   drugsInTree,
   filterTree,
   regimenHasDrugs,
   splitSituations,
   type FilteredNode,
+  type LinkedRegimen,
+  type RegimenTile,
 } from './treatment-filter'
 
 const catalog = indexCatalog(demoCatalog())
@@ -108,5 +111,35 @@ describe('situations over a line', () => {
 
   it('ignores a chosen situation that is no longer on the page', () => {
     expect(ids(['gone', 'lenalidomide'])).toEqual(['kd', 'pom-dex', 'dpd'])
+  })
+})
+
+describe('courseTiles', () => {
+  const regimen = (id: string, course: Regimen['course']): LinkedRegimen => ({
+    link: { id: `n.${id}`, node_id: 'n', regimen_id: id, notes: null, sort_order: 0 },
+    regimen: { id, course } as Regimen,
+  })
+  const phase = (order: number) => ({
+    id: 'dvcd',
+    title: { uk: 'Dara-VCd' },
+    phase: { uk: `фаза ${order}` },
+    order,
+    cycles: { from: order, to: order },
+  })
+
+  it('makes one tile of the phases of a course, in phase order, where the first stood', () => {
+    const tiles = courseTiles([
+      regimen('vcd', null),
+      regimen('dvcd-2', phase(2)),
+      regimen('vrd', null),
+      regimen('dvcd-1', phase(1)),
+    ])
+    expect(tiles.map((tile) => tile.kind)).toEqual(['single', 'course', 'single'])
+    const course = tiles[1] as Extract<RegimenTile, { kind: 'course' }>
+    expect(course.phases.map((entry) => entry.regimen.id)).toEqual(['dvcd-1', 'dvcd-2'])
+  })
+
+  it('leaves a lone phase as an ordinary tile', () => {
+    expect(courseTiles([regimen('dvcd-1', phase(1))]).map((tile) => tile.kind)).toEqual(['single'])
   })
 })

@@ -17,12 +17,19 @@ export function CautionBadges({
   conditions,
 }: {
   catalog: CatalogIndex
-  regimenId: string
+  /** One regimen, or the phases of a course: a drug of any of them is named once. */
+  regimenId: string | readonly string[]
   conditions: readonly PatientCondition[]
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
-  const found = regimenCautions(catalog, regimenId, conditions)
+  const ids = typeof regimenId === 'string' ? [regimenId] : regimenId
+  const byDrug = new Map(
+    ids
+      .flatMap((id) => regimenCautions(catalog, id, conditions))
+      .map((entry) => [entry.drugId, entry] as const),
+  )
+  const found = [...byDrug.values()]
   if (found.length === 0) return null
   return (
     <Group gap={4} mt={2}>

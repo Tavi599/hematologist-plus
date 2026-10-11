@@ -25,6 +25,22 @@
       "checkedOn": "2026-10-03"
     }
   ],
+  "course": {
+    "id": "isa-pd",
+    "title": {
+      "uk": "Isa-Pd",
+      "en": "Isa-Pd"
+    },
+    "phase": {
+      "uk": "з циклу 2",
+      "en": "cycle 2 on"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": null
+    }
+  },
   "items": [
     {
       "key": "paracetamol",

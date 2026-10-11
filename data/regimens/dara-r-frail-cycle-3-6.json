@@ -105,6 +105,22 @@
       }
     ]
   },
+  "course": {
+    "id": "dara-r-frail",
+    "title": {
+      "uk": "Dara-R (кволі)",
+      "en": "Dara-R (frail)"
+    },
+    "phase": {
+      "uk": "цикли 3–6",
+      "en": "cycles 3–6"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 3,
+      "to": 6
+    }
+  },
   "items": [
     {
       "key": "premed-paracetamol",

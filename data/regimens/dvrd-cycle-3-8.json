@@ -25,6 +25,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "dvrd",
+    "title": {
+      "uk": "DVRd → DRd",
+      "en": "DVRd → DRd"
+    },
+    "phase": {
+      "uk": "цикли 3–8",
+      "en": "cycles 3–8"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 3,
+      "to": 8
+    }
+  },
   "items": [
     {
       "key": "paracetamol",

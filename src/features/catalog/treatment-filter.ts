@@ -1,6 +1,7 @@
 import { regimenAvailability } from '../../lib/availability'
 import type { CatalogIndex } from '../../lib/catalog-index'
-import type { Drug, TreatmentNode, TreatmentNodeRegimen } from '../../schemas/catalog'
+import type { Drug, Regimen, TreatmentNode, TreatmentNodeRegimen } from '../../schemas/catalog'
+import type { RegimenCourse } from '../../schemas/common'
 
 /**
  * Narrowing a disease's treatment tree down to the regimens that use given drugs.
@@ -165,4 +166,45 @@ export function splitSituations(
 /** Id of a line's element on the page, for the page's own navigation to scroll to. */
 export function lineAnchor(nodeId: string): string {
   return `line-${nodeId}`
+}
+
+export interface LinkedRegimen {
+  link: TreatmentNodeRegimen
+  regimen: Regimen
+}
+
+export type RegimenTile =
+  | { kind: 'single'; entry: LinkedRegimen }
+  | { kind: 'course'; course: RegimenCourse; phases: LinkedRegimen[] }
+
+/**
+ * The tiles of a list of regimens: the phases of one course — cycle 1, cycles 2–6, maintenance —
+ * become one tile, in phase order, where the first of them stood; every other regimen keeps its
+ * own. A course of which the list holds a single phase (a situation picked out cycle 1 alone)
+ * stays an ordinary tile.
+ */
+export function courseTiles(entries: readonly LinkedRegimen[]): RegimenTile[] {
+  const byCourse = new Map<string, LinkedRegimen[]>()
+  for (const entry of entries) {
+    const course = entry.regimen.course
+    if (course) byCourse.set(course.id, [...(byCourse.get(course.id) ?? []), entry])
+  }
+  const tiles: RegimenTile[] = []
+  const placed = new Set<string>()
+  for (const entry of entries) {
+    const course = entry.regimen.course
+    const phases = course ? byCourse.get(course.id)! : []
+    if (!course || phases.length < 2) {
+      tiles.push({ kind: 'single', entry })
+      continue
+    }
+    if (placed.has(course.id)) continue
+    placed.add(course.id)
+    tiles.push({
+      kind: 'course',
+      course,
+      phases: [...phases].sort((a, b) => a.regimen.course!.order - b.regimen.course!.order),
+    })
+  }
+  return tiles
 }

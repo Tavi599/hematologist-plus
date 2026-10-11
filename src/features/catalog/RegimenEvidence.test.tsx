@@ -18,6 +18,7 @@ const regimen = (overrides: Partial<Regimen>): Regimen => ({
   sources: [{ name: 'Blood. 2014;123(7):985-991', checkedOn: '2026-10-03' }],
   evidence: null,
   reference: null,
+  course: null,
   ...overrides,
 })
 

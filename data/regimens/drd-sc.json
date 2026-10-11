@@ -25,6 +25,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "drd-sc",
+    "title": {
+      "uk": "DRd п/ш",
+      "en": "DRd SC"
+    },
+    "phase": {
+      "uk": "з циклу 7",
+      "en": "cycle 7 on"
+    },
+    "order": 3,
+    "cycles": {
+      "from": 7,
+      "to": null
+    }
+  },
   "items": [
     {
       "key": "premed-paracetamol",

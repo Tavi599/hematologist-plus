@@ -104,6 +104,22 @@
       }
     ]
   },
+  "course": {
+    "id": "ir-cll",
+    "title": {
+      "uk": "Ібрутиніб + ритуксимаб (ХЛЛ, E1912)",
+      "en": "Ibrutinib + rituximab (CLL, E1912)"
+    },
+    "phase": {
+      "uk": "цикли 3–7",
+      "en": "cycles 3–7"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 3,
+      "to": 7
+    }
+  },
   "items": [
     {
       "key": "ibrutinib",

@@ -154,6 +154,22 @@
       }
     ]
   },
+  "course": {
+    "id": "fcr-cll",
+    "title": {
+      "uk": "FCR (ХЛЛ)",
+      "en": "FCR (CLL)"
+    },
+    "phase": {
+      "uk": "цикли 2–6",
+      "en": "cycles 2–6"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 6
+    }
+  },
   "items": [
     {
       "key": "premed-paracetamol",

@@ -25,6 +25,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "daratumumab-mono",
+    "title": {
+      "uk": "Даратумумаб у монорежимі",
+      "en": "Daratumumab monotherapy"
+    },
+    "phase": {
+      "uk": "цикли 3–6",
+      "en": "cycles 3–6"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 3,
+      "to": 6
+    }
+  },
   "items": [
     {
       "key": "paracetamol",

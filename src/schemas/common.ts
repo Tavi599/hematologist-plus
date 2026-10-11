@@ -202,6 +202,28 @@ export const drugCautionSchema = z.strictObject({
 export type DrugCaution = z.infer<typeof drugCautionSchema>
 
 /**
+ * One phase of a course split into several records — cycle 1 with its premedication and slow
+ * first infusion, cycles 2–6, maintenance. The phases share the course id and title; a phase
+ * that follows the cycle count says which cycles it covers, so the calculator can give the right
+ * one for the cycle being written. Induction, consolidation and maintenance follow one another
+ * by `order` and carry no cycles.
+ */
+export const regimenCourseSchema = z.strictObject({
+  id: z.string().regex(/^[a-z0-9][a-z0-9-]*$/),
+  title: localizedTextSchema,
+  phase: localizedTextSchema,
+  order: z.number().int().min(1),
+  cycles: z
+    .strictObject({
+      from: z.number().int().min(1),
+      /** Null: this cycle and every one after it. */
+      to: z.number().int().min(1).nullable(),
+    })
+    .nullable(),
+})
+export type RegimenCourse = z.infer<typeof regimenCourseSchema>
+
+/**
  * How good the publication is, and the resource that carries it — by published instruments, not
  * by our opinion. Three independent things are recorded, and each is left out when it cannot be
  * read from a document:

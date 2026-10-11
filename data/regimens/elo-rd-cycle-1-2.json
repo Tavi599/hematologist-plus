@@ -20,6 +20,22 @@
       "checkedOn": "2026-10-03"
     }
   ],
+  "course": {
+    "id": "elo-rd",
+    "title": {
+      "uk": "Elo-Rd",
+      "en": "Elo-Rd"
+    },
+    "phase": {
+      "uk": "цикли 1–2",
+      "en": "cycles 1–2"
+    },
+    "order": 1,
+    "cycles": {
+      "from": 1,
+      "to": 2
+    }
+  },
   "items": [
     {
       "key": "paracetamol",

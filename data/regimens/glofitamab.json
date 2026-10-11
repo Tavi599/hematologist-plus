@@ -26,6 +26,22 @@
       "checkedOn": "2026-10-04"
     }
   ],
+  "course": {
+    "id": "glofitamab",
+    "title": {
+      "uk": "Глофітамаб",
+      "en": "Glofitamab"
+    },
+    "phase": {
+      "uk": "цикли 2–12",
+      "en": "cycles 2–12"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 12
+    }
+  },
   "items": [
     {
       "key": "dexamethasone",

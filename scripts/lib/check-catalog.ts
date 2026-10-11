@@ -426,6 +426,35 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
     linkKeys.add(key)
   }
 
+  // The phases of one course: one title, one place each in the sequence, and cycle ranges that
+  // do not overlap — the calculator picks the phase by the cycle, so two may not claim it.
+  const courses = new Map<string, typeof rows.regimens>()
+  for (const regimen of rows.regimens) {
+    if (!regimen.course) continue
+    courses.set(regimen.course.id, [...(courses.get(regimen.course.id) ?? []), regimen])
+  }
+  for (const [courseId, phases] of courses) {
+    if (phases.length < 2) error('regimens', phases[0]!.id, `course "${courseId}" has one phase`)
+    const titles = new Set(phases.map((phase) => JSON.stringify(phase.course!.title)))
+    if (titles.size > 1) error('regimens', phases[0]!.id, `course "${courseId}" has two titles`)
+    const orders = phases.map((phase) => phase.course!.order)
+    if (new Set(orders).size !== orders.length) {
+      error('regimens', phases[0]!.id, `course "${courseId}" repeats a phase order`)
+    }
+    const ranged = phases
+      .filter((phase) => phase.course!.cycles !== null)
+      .sort((a, b) => a.course!.cycles!.from - b.course!.cycles!.from)
+    ranged.forEach((phase, index) => {
+      const { from, to } = phase.course!.cycles!
+      if (to !== null && to < from)
+        error('regimens', phase.id, 'course cycles end before they start')
+      const next = ranged[index + 1]
+      if (next && (to === null || to >= next.course!.cycles!.from)) {
+        error('regimens', phase.id, `course "${courseId}" cycles overlap ${next.id}`)
+      }
+    })
+  }
+
   return issues
 }
 

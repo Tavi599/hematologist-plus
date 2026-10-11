@@ -26,6 +26,22 @@
       "checkedOn": "2026-10-03"
     }
   ],
+  "course": {
+    "id": "dec-ven",
+    "title": {
+      "uk": "Децитабін + венетоклакс",
+      "en": "Decitabine + venetoclax"
+    },
+    "phase": {
+      "uk": "цикл 1",
+      "en": "cycle 1"
+    },
+    "order": 1,
+    "cycles": {
+      "from": 1,
+      "to": 1
+    }
+  },
   "items": [
     {
       "key": "decitabine",

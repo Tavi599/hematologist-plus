@@ -29,6 +29,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "r-chlorambucil",
+    "title": {
+      "uk": "R-хлорамбуцил",
+      "en": "R-chlorambucil"
+    },
+    "phase": {
+      "uk": "цикли 2–6",
+      "en": "cycles 2–6"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 6
+    }
+  },
   "items": [
     {
       "key": "paracetamol",

@@ -27,6 +27,7 @@ import {
   treatmentNodeKindSchema,
   routeAlternativeSchema,
   drugCautionSchema,
+  regimenCourseSchema,
   unitEquivalenceSchema,
 } from './common'
 import { printFormsRowSchema } from './print-forms'
@@ -143,6 +144,8 @@ export const regimenRowSchema = z.object({
   evidence: evidenceSchema.nullable().default(null),
   /** A course described but not calculated; defaulted for the same reason as `evidence`. */
   reference: referenceSchema.nullable().default(null),
+  /** The phase of a course this regimen is; a client older than the column reads null. */
+  course: regimenCourseSchema.nullable().catch(null).default(null),
 })
 
 export const regimenItemRowSchema = z.object({
@@ -314,7 +317,7 @@ export type TreatmentNodeRegimen = CatalogRow<'treatment_node_regimens'>
  * Bump when the catalog shape changes incompatibly: invalidates offline caches.
  * Keep in step with new migrations that change columns.
  */
-export const CATALOG_SCHEMA_VERSION = '10'
+export const CATALOG_SCHEMA_VERSION = '11'
 
 export function emptySyncRows(): SyncRows {
   return { ...emptyCatalog(), disease_articles: [] }

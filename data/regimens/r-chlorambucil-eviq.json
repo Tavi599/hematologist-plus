@@ -29,6 +29,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "r-chlorambucil-eviq",
+    "title": {
+      "uk": "R-хлорамбуцил (eviQ)",
+      "en": "R-chlorambucil (eviQ)"
+    },
+    "phase": {
+      "uk": "цикли 2–5",
+      "en": "cycles 2–5"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 5
+    }
+  },
   "items": [
     {
       "key": "premed-paracetamol",

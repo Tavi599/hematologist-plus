@@ -137,6 +137,22 @@
       }
     ]
   },
+  "course": {
+    "id": "aza-ven-gilt",
+    "title": {
+      "uk": "Aza-Ven-Gilt",
+      "en": "Aza-Ven-Gilt"
+    },
+    "phase": {
+      "uk": "з циклу 2",
+      "en": "cycle 2 on"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": null
+    }
+  },
   "items": [
     {
       "key": "azacitidine",

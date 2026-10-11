@@ -25,6 +25,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "dvd",
+    "title": {
+      "uk": "DVd",
+      "en": "DVd"
+    },
+    "phase": {
+      "uk": "цикли 1–3",
+      "en": "cycles 1–3"
+    },
+    "order": 1,
+    "cycles": {
+      "from": 1,
+      "to": 3
+    }
+  },
   "items": [
     {
       "key": "paracetamol",

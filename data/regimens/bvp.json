@@ -92,6 +92,22 @@
       }
     ]
   },
+  "course": {
+    "id": "bvp",
+    "title": {
+      "uk": "BVP",
+      "en": "BVP"
+    },
+    "phase": {
+      "uk": "з циклу 2",
+      "en": "cycle 2 on"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": null
+    }
+  },
   "items": [
     {
       "key": "bendamustine",

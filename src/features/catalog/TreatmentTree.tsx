@@ -40,7 +40,10 @@ import {
   drugsInTree,
   filterTree,
   lineAnchor,
+  courseTiles,
   regimenIdsIn,
+  type LinkedRegimen,
+  type RegimenTile,
   regimensInTree,
   splitSituations,
   type FilteredNode,
@@ -414,59 +417,23 @@ function TreatmentNodeView({
           )}
           {calculable.length > 0 && (
             <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="xs" verticalSpacing={4}>
-              {calculable.map(({ link, regimen }) => {
-                const availability = regimenAvailability(catalog, regimen!.id)
-                const to = `${routes.calculator}?regimen=${regimen!.id}`
-                const name = localize(regimen!.name, language)
-                return (
-                  <Group key={link.id} gap={6} wrap="nowrap" className={classes.regimen}>
-                    <Stack gap={0} style={{ minWidth: 0, flex: 1 }}>
-                      <Group gap={6} wrap="nowrap">
-                        <Anchor component={Link} to={to} size="sm" fw={500}>
-                          {regimen!.short_name}
-                        </Anchor>
-                        {availability === 'unavailable' && (
-                          <Badge size="xs" variant="light" color="red" tt="none">
-                            {t('availability.unavailable')}
-                          </Badge>
-                        )}
-                        {regimen!.evidence?.verdict === 'caution' && (
-                          <Badge size="xs" variant="light" color="orange" tt="none">
-                            {t('trial.verdictBadge.caution')}
-                          </Badge>
-                        )}
-                      </Group>
-                      {name !== regimen!.short_name && (
-                        <Text size="xs" c="dimmed" lineClamp={1} title={name}>
-                          {name}
-                        </Text>
-                      )}
-                      <CautionBadges
-                        catalog={catalog}
-                        regimenId={regimen!.id}
-                        conditions={conditions}
-                      />
-                      <IrradiationMark catalog={catalog} regimenId={regimen!.id} />
-                      {needsPremedication(catalog, regimen!.id) && (
-                        <Text size="xs" c="orange.8">
-                          {t('diseaseDetail.premedication')}
-                        </Text>
-                      )}
-                      {link.notes !== null && <LinkNote text={localize(link.notes, language)} />}
-                    </Stack>
-                    <Button
-                      size="compact-xs"
-                      variant="light"
-                      component={Link}
-                      to={to}
-                      aria-label={t('diseaseDetail.calculate')}
-                      title={t('diseaseDetail.calculate')}
-                    >
-                      →
-                    </Button>
-                  </Group>
-                )
-              })}
+              {courseTiles(calculable as LinkedRegimen[]).map((tile) =>
+                tile.kind === 'single' ? (
+                  <RegimenTileView
+                    key={tile.entry.link.id}
+                    catalog={catalog}
+                    entry={tile.entry}
+                    conditions={conditions}
+                  />
+                ) : (
+                  <CourseTileView
+                    key={`${filtered.node.id}:${tile.course.id}`}
+                    catalog={catalog}
+                    tile={tile}
+                    conditions={conditions}
+                  />
+                ),
+              )}
             </SimpleGrid>
           )}
           {described.map(({ link, regimen }) => (
@@ -487,6 +454,138 @@ function TreatmentNodeView({
   )
 }
 
+/** One regimen in the grid: its name, its marks, and the arrow into the calculator. */
+function RegimenTileView({
+  catalog,
+  entry: { link, regimen },
+  conditions,
+}: {
+  catalog: CatalogIndex
+  entry: LinkedRegimen
+  conditions: readonly PatientCondition[]
+}) {
+  const { t } = useTranslation()
+  const language = currentLanguage()
+  const availability = regimenAvailability(catalog, regimen.id)
+  const to = `${routes.calculator}?regimen=${regimen.id}`
+  const name = localize(regimen.name, language)
+  return (
+    <Group gap={6} wrap="nowrap" className={classes.regimen}>
+      <Stack gap={0} style={{ minWidth: 0, flex: 1 }}>
+        <Group gap={6} wrap="nowrap">
+          <Anchor component={Link} to={to} size="sm" fw={500}>
+            {regimen.short_name}
+          </Anchor>
+          {availability === 'unavailable' && (
+            <Badge size="xs" variant="light" color="red" tt="none">
+              {t('availability.unavailable')}
+            </Badge>
+          )}
+          {regimen.evidence?.verdict === 'caution' && (
+            <Badge size="xs" variant="light" color="orange" tt="none">
+              {t('trial.verdictBadge.caution')}
+            </Badge>
+          )}
+        </Group>
+        {name !== regimen.short_name && (
+          <Text size="xs" c="dimmed" lineClamp={1} title={name}>
+            {name}
+          </Text>
+        )}
+        <CautionBadges catalog={catalog} regimenId={regimen.id} conditions={conditions} />
+        <IrradiationMark catalog={catalog} regimenIds={[regimen.id]} />
+        {needsPremedication(catalog, [regimen.id]) && (
+          <Text size="xs" c="orange.8">
+            {t('diseaseDetail.premedication')}
+          </Text>
+        )}
+        {link.notes !== null && <LinkNote text={localize(link.notes, language)} />}
+      </Stack>
+      <Button
+        size="compact-xs"
+        variant="light"
+        component={Link}
+        to={to}
+        aria-label={t('diseaseDetail.calculate')}
+        title={t('diseaseDetail.calculate')}
+      >
+        →
+      </Button>
+    </Group>
+  )
+}
+
+/**
+ * A course in several phases as one tile: its title, then a button for each phase into the
+ * calculator, in the order they are given. The marks are those of every phase together.
+ */
+function CourseTileView({
+  catalog,
+  tile: { course, phases },
+  conditions,
+}: {
+  catalog: CatalogIndex
+  tile: Extract<RegimenTile, { kind: 'course' }>
+  conditions: readonly PatientCondition[]
+}) {
+  const { t } = useTranslation()
+  const language = currentLanguage()
+  const ids = phases.map(({ regimen }) => regimen.id)
+  const unavailable = ids.some((id) => regimenAvailability(catalog, id) === 'unavailable')
+  const caution = phases.some(({ regimen }) => regimen.evidence?.verdict === 'caution')
+  const notes = [
+    ...new Set(
+      phases.flatMap(({ link }) => (link.notes !== null ? [localize(link.notes, language)] : [])),
+    ),
+  ]
+  return (
+    <Stack gap={2} className={classes.regimen}>
+      <Group gap={6} wrap="nowrap">
+        <Text size="sm" fw={600}>
+          {localize(course.title, language)}
+        </Text>
+        <Badge size="xs" variant="outline" color="gray" tt="none">
+          {t('diseaseDetail.coursePhases', { count: phases.length })}
+        </Badge>
+        {unavailable && (
+          <Badge size="xs" variant="light" color="red" tt="none">
+            {t('availability.unavailable')}
+          </Badge>
+        )}
+        {caution && (
+          <Badge size="xs" variant="light" color="orange" tt="none">
+            {t('trial.verdictBadge.caution')}
+          </Badge>
+        )}
+      </Group>
+      <Group gap={4}>
+        {phases.map(({ regimen }) => (
+          <Button
+            key={regimen.id}
+            size="compact-xs"
+            variant="light"
+            component={Link}
+            to={`${routes.calculator}?regimen=${regimen.id}`}
+            title={`${localize(regimen.name, language)} — ${t('diseaseDetail.calculate')}`}
+          >
+            {localize(regimen.course!.phase, language)}
+          </Button>
+        ))}
+      </Group>
+      <CautionBadges catalog={catalog} regimenId={ids} conditions={conditions} />
+      <IrradiationMark catalog={catalog} regimenIds={ids} />
+      {needsPremedication(catalog, ids) && (
+        <Text size="xs" c="orange.8">
+          {t('diseaseDetail.premedication')}
+        </Text>
+      )}
+      {notes.map((note) => (
+        <LinkNote key={note} text={note} />
+      ))}
+    </Stack>
+  )
+}
+
 /** The stripe beside a line's heading: lines in the theme colour, trials and reading apart. */
 const KIND_ACCENT: Partial<Record<TreatmentNode['kind'], string>> = {
   line: 'red',
@@ -499,12 +598,19 @@ const KIND_ACCENT: Partial<Record<TreatmentNode['kind'], string>> = {
  * A regimen with a purine analogue, alemtuzumab or ATG: the patient will need irradiated
  * blood components (BSH 2020), for life after a purine analogue.
  */
-function IrradiationMark({ catalog, regimenId }: { catalog: CatalogIndex; regimenId: string }) {
+function IrradiationMark({
+  catalog,
+  regimenIds,
+}: {
+  catalog: CatalogIndex
+  regimenIds: readonly string[]
+}) {
   const { t } = useTranslation()
   const language = currentLanguage()
   const reasons = [
     ...new Set(
-      (catalog.itemsByRegimen.get(regimenId) ?? [])
+      regimenIds
+        .flatMap((id) => catalog.itemsByRegimen.get(id) ?? [])
         .filter((item) => item.role === 'main' && IRRADIATION_DRUGS[item.drug_id])
         .map((item) => item.drug_id),
     ),
@@ -524,9 +630,11 @@ function IrradiationMark({ catalog, regimenId }: { catalog: CatalogIndex; regime
 }
 
 /** Does the regimen give a drug whose label asks for premedication? */
-function needsPremedication(catalog: CatalogIndex, regimenId: string): boolean {
-  return (catalog.itemsByRegimen.get(regimenId) ?? []).some(
-    (item) => item.role === 'main' && PREMEDICATION_ADVISED.has(item.drug_id),
+function needsPremedication(catalog: CatalogIndex, regimenIds: readonly string[]): boolean {
+  return regimenIds.some((id) =>
+    (catalog.itemsByRegimen.get(id) ?? []).some(
+      (item) => item.role === 'main' && PREMEDICATION_ADVISED.has(item.drug_id),
+    ),
   )
 }
 

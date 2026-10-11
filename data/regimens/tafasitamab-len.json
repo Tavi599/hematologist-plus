@@ -26,6 +26,22 @@
       "checkedOn": "2026-10-04"
     }
   ],
+  "course": {
+    "id": "tafasitamab-len",
+    "title": {
+      "uk": "Тафаситамаб + леналідомід",
+      "en": "Tafasitamab + lenalidomide"
+    },
+    "phase": {
+      "uk": "цикли 4–12",
+      "en": "cycles 4–12"
+    },
+    "order": 3,
+    "cycles": {
+      "from": 4,
+      "to": 12
+    }
+  },
   "items": [
     {
       "key": "tafasitamab",

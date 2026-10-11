@@ -35,6 +35,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "r-ven",
+    "title": {
+      "uk": "R-Ven",
+      "en": "R-Ven"
+    },
+    "phase": {
+      "uk": "цикли 3–7",
+      "en": "cycles 3–7"
+    },
+    "order": 3,
+    "cycles": {
+      "from": 3,
+      "to": 7
+    }
+  },
   "items": [
     {
       "key": "paracetamol",

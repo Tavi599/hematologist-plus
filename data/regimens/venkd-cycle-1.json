@@ -90,6 +90,22 @@
       }
     ]
   },
+  "course": {
+    "id": "venkd",
+    "title": {
+      "uk": "VenKd (t(11;14))",
+      "en": "VenKd (t(11;14))"
+    },
+    "phase": {
+      "uk": "цикл 1",
+      "en": "cycle 1"
+    },
+    "order": 1,
+    "cycles": {
+      "from": 1,
+      "to": 1
+    }
+  },
   "items": [
     {
       "key": "venetoclax",

@@ -20,6 +20,22 @@
       "checkedOn": "2026-10-03"
     }
   ],
+  "course": {
+    "id": "ibru-ven",
+    "title": {
+      "uk": "Ібрутиніб + венетоклакс",
+      "en": "Ibrutinib + venetoclax"
+    },
+    "phase": {
+      "uk": "цикл 4",
+      "en": "cycle 4"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 4,
+      "to": 4
+    }
+  },
   "items": [
     {
       "key": "ibrutinib",

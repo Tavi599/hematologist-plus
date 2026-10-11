@@ -97,6 +97,22 @@
       }
     ]
   },
+  "course": {
+    "id": "dara-vcd",
+    "title": {
+      "uk": "Dara-VCd",
+      "en": "Dara-VCd"
+    },
+    "phase": {
+      "uk": "цикл 1",
+      "en": "cycle 1"
+    },
+    "order": 1,
+    "cycles": {
+      "from": 1,
+      "to": 1
+    }
+  },
   "items": [
     {
       "key": "paracetamol",

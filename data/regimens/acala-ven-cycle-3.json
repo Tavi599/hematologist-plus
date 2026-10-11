@@ -20,6 +20,22 @@
       "checkedOn": "2026-10-03"
     }
   ],
+  "course": {
+    "id": "acala-ven",
+    "title": {
+      "uk": "Акалабрутиніб + венетоклакс",
+      "en": "Acalabrutinib + venetoclax"
+    },
+    "phase": {
+      "uk": "цикл 3",
+      "en": "cycle 3"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 3,
+      "to": 3
+    }
+  },
   "items": [
     {
       "key": "acalabrutinib",

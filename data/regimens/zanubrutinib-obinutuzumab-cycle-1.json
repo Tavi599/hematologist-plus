@@ -31,6 +31,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "zanubrutinib-obinutuzumab",
+    "title": {
+      "uk": "Занубрутиніб + обінутузумаб",
+      "en": "Zanubrutinib + obinutuzumab"
+    },
+    "phase": {
+      "uk": "цикл 1",
+      "en": "cycle 1"
+    },
+    "order": 1,
+    "cycles": {
+      "from": 1,
+      "to": 1
+    }
+  },
   "items": [
     {
       "key": "premed-paracetamol",

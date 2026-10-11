@@ -1,4 +1,4 @@
-import { Alert, Card, Group, Stack, Tabs, Text, Title } from '@mantine/core'
+import { Alert, Card, Group, SegmentedControl, Stack, Tabs, Text, Title } from '@mantine/core'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router'
@@ -22,6 +22,7 @@ import type { CatalogIndex } from '../../lib/catalog-index'
 import { StandardSupport } from '../../features/calculator/StandardSupport'
 import { cyclophosphamideMesna } from '../../lib/cyclophosphamide-mesna'
 import { irradiationReasons } from '../../features/irradiated/course'
+import { coursePhases } from '../../lib/course-phases'
 import {
   categoryItemIds,
   indicatedSupport,
@@ -112,8 +113,33 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
   const regimenId = searchParams.get('regimen')
   const settings: CourseSettingsValue = { ...courseSettings, regimenId }
+  const phases = useMemo(() => coursePhases(catalog, regimenId), [catalog, regimenId])
+  // Set when the calculator itself moved to another phase of the course, to say so.
+  const [phaseNote, setPhaseNote] = useState<string | null>(null)
   const updateSettings = (next: CourseSettingsValue) => {
-    const { regimenId: nextRegimenId, ...rest } = next
+    const { regimenId: chosenRegimenId, ...rest } = next
+    // A new cycle number of a course in phases brings the phase that covers it: cycle 2 of
+    // Dara-VCd is not calculated on the cycle-1 record with its split first infusion.
+    const cycleChanged =
+      chosenRegimenId !== null &&
+      chosenRegimenId === regimenId &&
+      rest.cycleNumber !== courseSettings.cycleNumber
+    // Written out here rather than called: the compiler keeps the memoised values only while
+    // nothing it cannot see into is handed them.
+    const found = cycleChanged
+      ? (phases.find((entry) => {
+          const cycles = entry.course?.cycles ?? null
+          return (
+            cycles !== null &&
+            rest.cycleNumber >= cycles.from &&
+            (cycles.to === null || rest.cycleNumber <= cycles.to)
+          )
+        }) ?? null)
+      : null
+    const phase = found && found.id !== chosenRegimenId ? found : null
+    const nextRegimenId = phase ? phase.id : chosenRegimenId
+    if (phase) setPhaseNote(localize(phase.course!.phase, language))
+    else if (chosenRegimenId !== regimenId) setPhaseNote(null)
     setCourseSettings(rest)
     if (nextRegimenId === regimenId) return
     setSearchParams(
@@ -306,6 +332,27 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   ])
 
   const regimen = regimenId === null ? undefined : catalog.regimens.get(regimenId)
+  /** Another phase picked by hand: the cycle number moves into it when it counts cycles. */
+  const choosePhase = (phaseId: string) => {
+    const phase = phases.find((entry) => entry.id === phaseId)
+    const cycles = phase?.course?.cycles ?? null
+    const cycleNumber =
+      cycles !== null &&
+      (courseSettings.cycleNumber < cycles.from ||
+        (cycles.to !== null && courseSettings.cycleNumber > cycles.to))
+        ? cycles.from
+        : courseSettings.cycleNumber
+    setPhaseNote(null)
+    setCourseSettings((current) => ({ ...current, cycleNumber }))
+    setSearchParams(
+      (current) => {
+        const params = new URLSearchParams(current)
+        params.set('regimen', phaseId)
+        return params
+      },
+      { replace: true },
+    )
+  }
   const irradiation = useMemo(
     () => irradiationReasons(catalog, items, regimenId),
     [catalog, items, regimenId],
@@ -349,6 +396,35 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       </aside>
 
       <Stack gap="sm" className={classes.results}>
+        {phases.length > 1 && (
+          <Card withBorder>
+            <Stack gap={6}>
+              <Text fw={600}>
+                {t('calculator.course.phases', {
+                  course: localize(phases[0]!.course!.title, language),
+                })}
+              </Text>
+              <SegmentedControl
+                fullWidth
+                size="xs"
+                value={regimenId ?? ''}
+                onChange={choosePhase}
+                data={phases.map((phase) => ({
+                  value: phase.id,
+                  label: localize(phase.course!.phase, language),
+                }))}
+              />
+              <Text size="xs" c={phaseNote ? 'blue' : 'dimmed'}>
+                {phaseNote
+                  ? t('calculator.course.phaseSwitched', {
+                      phase: phaseNote,
+                      cycle: courseSettings.cycleNumber,
+                    })
+                  : t('calculator.course.phasesHint')}
+              </Text>
+            </Stack>
+          </Card>
+        )}
         {regimen && <RegimenEvidence regimen={regimen} />}
 
         {!measured && items.length > 0 && (

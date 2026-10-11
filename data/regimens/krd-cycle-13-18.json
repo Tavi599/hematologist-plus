@@ -20,6 +20,22 @@
       "checkedOn": "2026-10-04"
     }
   ],
+  "course": {
+    "id": "krd",
+    "title": {
+      "uk": "KRd",
+      "en": "KRd"
+    },
+    "phase": {
+      "uk": "цикли 13–18",
+      "en": "cycles 13–18"
+    },
+    "order": 3,
+    "cycles": {
+      "from": 13,
+      "to": 18
+    }
+  },
   "items": [
     {
       "key": "carfilzomib",

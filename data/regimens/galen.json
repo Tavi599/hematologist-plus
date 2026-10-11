@@ -98,6 +98,22 @@
       }
     ]
   },
+  "course": {
+    "id": "galen",
+    "title": {
+      "uk": "GALEN (обінутузумаб + леналідомід)",
+      "en": "GALEN (obinutuzumab + lenalidomide)"
+    },
+    "phase": {
+      "uk": "цикли 2–6",
+      "en": "cycles 2–6"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 6
+    }
+  },
   "items": [
     {
       "key": "lenalidomide",

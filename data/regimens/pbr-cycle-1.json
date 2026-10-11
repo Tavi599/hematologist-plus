@@ -35,6 +35,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "pbr",
+    "title": {
+      "uk": "PBR",
+      "en": "PBR"
+    },
+    "phase": {
+      "uk": "цикл 1",
+      "en": "cycle 1"
+    },
+    "order": 1,
+    "cycles": {
+      "from": 1,
+      "to": 1
+    }
+  },
   "items": [
     {
       "key": "paracetamol",

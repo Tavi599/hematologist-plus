@@ -149,6 +149,22 @@
       }
     ]
   },
+  "course": {
+    "id": "bv-nivo-salvage",
+    "title": {
+      "uk": "BV + ніволумаб",
+      "en": "BV + nivolumab"
+    },
+    "phase": {
+      "uk": "цикли 2–4",
+      "en": "cycles 2–4"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 4
+    }
+  },
   "items": [
     {
       "key": "brentuximab-vedotin",

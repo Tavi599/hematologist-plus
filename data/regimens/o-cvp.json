@@ -26,6 +26,22 @@
       "checkedOn": "2026-10-04"
     }
   ],
+  "course": {
+    "id": "o-cvp",
+    "title": {
+      "uk": "O-CVP",
+      "en": "O-CVP"
+    },
+    "phase": {
+      "uk": "цикли 2–8",
+      "en": "cycles 2–8"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 8
+    }
+  },
   "items": [
     {
       "key": "paracetamol",

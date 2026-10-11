@@ -105,6 +105,22 @@
       }
     ]
   },
+  "course": {
+    "id": "card-wm",
+    "title": {
+      "uk": "CaRD",
+      "en": "CaRD"
+    },
+    "phase": {
+      "uk": "цикли 2–6",
+      "en": "cycles 2–6"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 6
+    }
+  },
   "items": [
     {
       "key": "dexamethasone",

@@ -68,7 +68,10 @@
       "bsaM2": "BSA, м²",
       "bsaM2Hint": "використовується замість розрахованої за зростом і вагою",
       "coursePercent": "Редукція на курс, %",
-      "cycle": "Цикл {{days}} дн., курсів: {{cycles}}"
+      "cycle": "Цикл {{days}} дн., курсів: {{cycles}}",
+      "phases": "Фази курсу {{course}}",
+      "phasesHint": "Фаза підбирається сама за номером циклу; підтримку чи консолідацію обирають тут.",
+      "phaseSwitched": "Для циклу {{cycle}} відкрито фазу «{{phase}}»."
     },
     "hospital": {
       "title": "Шапка бланка",
@@ -368,7 +371,11 @@
     "search": "Пошук схеми",
     "searchPlaceholder": "Назва схеми, наприклад «VRd» чи «бендамустин»",
     "searchClear": "Очистити пошук",
-    "searchNone": "Жодна схема не має такої назви."
+    "searchNone": "Жодна схема не має такої назви.",
+    "coursePhases_one": "{{count}} фаза",
+    "coursePhases_few": "{{count}} фази",
+    "coursePhases_many": "{{count}} фаз",
+    "coursePhases_other": "{{count}} фази"
   },
   "catalog": {
     "loading": "Завантаження довідників…",

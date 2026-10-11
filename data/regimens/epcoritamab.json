@@ -26,6 +26,22 @@
       "checkedOn": "2026-10-04"
     }
   ],
+  "course": {
+    "id": "epcoritamab",
+    "title": {
+      "uk": "Епкоритамаб",
+      "en": "Epcoritamab"
+    },
+    "phase": {
+      "uk": "з циклу 10",
+      "en": "cycle 10 on"
+    },
+    "order": 4,
+    "cycles": {
+      "from": 10,
+      "to": null
+    }
+  },
   "items": [
     {
       "key": "epcoritamab",

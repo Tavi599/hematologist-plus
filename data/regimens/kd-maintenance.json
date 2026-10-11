@@ -20,6 +20,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "kd-maintenance",
+    "title": {
+      "uk": "Kd, підтримка",
+      "en": "Kd maintenance"
+    },
+    "phase": {
+      "uk": "з циклу 3",
+      "en": "cycle 3 on"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 3,
+      "to": null
+    }
+  },
   "items": [
     {
       "key": "dexamethasone",

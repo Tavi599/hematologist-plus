@@ -68,7 +68,10 @@
       "bsaM2": "BSA, m²",
       "bsaM2Hint": "used instead of the one calculated from height and weight",
       "coursePercent": "Course reduction, %",
-      "cycle": "Cycle {{days}} days, cycles: {{cycles}}"
+      "cycle": "Cycle {{days}} days, cycles: {{cycles}}",
+      "phases": "Phases of {{course}}",
+      "phasesHint": "The phase follows the cycle number; maintenance or consolidation is chosen here.",
+      "phaseSwitched": "Cycle {{cycle}}: the «{{phase}}» phase is open."
     },
     "hospital": {
       "title": "Sheet header",
@@ -368,7 +371,11 @@
     "search": "Find a regimen",
     "searchPlaceholder": "Regimen name, e.g. «VRd» or «bendamustine»",
     "searchClear": "Clear the search",
-    "searchNone": "No regimen has that name."
+    "searchNone": "No regimen has that name.",
+    "coursePhases_one": "{{count}} phase",
+    "coursePhases_other": "{{count}} phases",
+    "coursePhases_few": "{{count}} phases",
+    "coursePhases_many": "{{count}} phases"
   },
   "catalog": {
     "loading": "Loading reference data…",

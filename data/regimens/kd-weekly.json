@@ -20,6 +20,22 @@
       "checkedOn": "2026-10-04"
     }
   ],
+  "course": {
+    "id": "kd-weekly",
+    "title": {
+      "uk": "Kd щотижня",
+      "en": "Weekly Kd"
+    },
+    "phase": {
+      "uk": "з циклу 10",
+      "en": "cycle 10 on"
+    },
+    "order": 3,
+    "cycles": {
+      "from": 10,
+      "to": null
+    }
+  },
   "items": [
     {
       "key": "carfilzomib-70",

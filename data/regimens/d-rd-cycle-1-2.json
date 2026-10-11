@@ -31,6 +31,22 @@
       "checkedOn": "2026-10-10"
     }
   ],
+  "course": {
+    "id": "d-rd",
+    "title": {
+      "uk": "D-Rd",
+      "en": "D-Rd"
+    },
+    "phase": {
+      "uk": "цикли 1–2",
+      "en": "cycles 1–2"
+    },
+    "order": 1,
+    "cycles": {
+      "from": 1,
+      "to": 2
+    }
+  },
   "items": [
     {
       "key": "paracetamol",

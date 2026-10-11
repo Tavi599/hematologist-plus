@@ -28,6 +28,7 @@ import {
   treatmentNodeKindSchema,
   routeAlternativeSchema,
   drugCautionSchema,
+  regimenCourseSchema,
   unitEquivalenceSchema,
 } from '../../src/schemas/common'
 import { EMPTY_PRINT_FORMS, printFormsFileSchema } from '../../src/schemas/print-forms'
@@ -145,6 +146,8 @@ export const regimenFileSchema = z
     evidence: evidenceSchema.nullable().default(null),
     /** A course that is described but not calculated; it then has no items. */
     reference: referenceSchema.nullable().default(null),
+    /** The phase of a multi-phase course this record is; null for a course in one record. */
+    course: regimenCourseSchema.nullable().default(null),
     /** Administration order = array order. */
     items: z
       .array(

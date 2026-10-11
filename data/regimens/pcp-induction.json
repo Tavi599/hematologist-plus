@@ -98,6 +98,19 @@
       }
     ]
   },
+  "course": {
+    "id": "pcp",
+    "title": {
+      "uk": "PCP",
+      "en": "PCP"
+    },
+    "phase": {
+      "uk": "індукція",
+      "en": "induction"
+    },
+    "order": 1,
+    "cycles": null
+  },
   "items": [
     {
       "key": "pomalidomide",

@@ -95,6 +95,22 @@
       }
     ]
   },
+  "course": {
+    "id": "ixazomib-maintenance",
+    "title": {
+      "uk": "Іксазоміб, підтримка",
+      "en": "Ixazomib maintenance"
+    },
+    "phase": {
+      "uk": "з циклу 5",
+      "en": "cycle 5 on"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 5,
+      "to": null
+    }
+  },
   "items": [
     {
       "key": "ixazomib",
