@@ -31,6 +31,7 @@ import { PATIENT_CONDITIONS, type CautionLevel, type PatientCondition } from '..
 import { CautionBadges } from './CautionBadges'
 import { CautionOverview } from './CautionOverview'
 import type { TreatmentNode } from '../../schemas/catalog'
+import { InfectionRiskMark } from '../immunodeficiency/TherapyRiskMarks'
 import { IRRADIATION_DRUGS } from '../irradiated/indications'
 import { RegimenReference } from './RegimenReference'
 import { useTreeFilters } from './use-tree-filters'
@@ -488,6 +489,7 @@ function RegimenTileView({
         )}
         <CautionBadges catalog={catalog} regimenId={regimen.id} conditions={conditions} />
         <IrradiationMark catalog={catalog} regimenIds={[regimen.id]} />
+        <InfectionRiskMark catalog={catalog} regimenIds={[regimen.id]} />
         {needsPremedication(catalog, [regimen.id]) && (
           <Text size="xs" c="orange.8">
             {t('diseaseDetail.premedication')}
@@ -568,6 +570,7 @@ function CourseTileView({
       </Group>
       <CautionBadges catalog={catalog} regimenId={ids} conditions={conditions} />
       <IrradiationMark catalog={catalog} regimenIds={ids} />
+      <InfectionRiskMark catalog={catalog} regimenIds={ids} />
       {needsPremedication(catalog, ids) && (
         <Text size="xs" c="orange.8">
           {t('diseaseDetail.premedication')}

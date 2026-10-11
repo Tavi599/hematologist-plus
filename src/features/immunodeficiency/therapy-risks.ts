@@ -23,51 +23,82 @@ export type SourceKey =
   | 'bsabMyeloma'
   | 'nhsIg'
 
-export const SOURCES: Record<SourceKey, { name: string; url: string; read: Text2 }> = {
-  agihoPjp: {
-    name: 'Classen AY et al. Primary prophylaxis of bacterial infections and Pneumocystis jirovecii pneumonia in patients with hematologic malignancies and solid tumors: 2020 updated guidelines of the AGIHO/DGHO. Ann Hematol 2021;100:1603–20',
-    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8116237/',
-    read: t('Повний текст, таблиці 7–9', 'Full text, tables 7–9'),
-  },
-  agihoHerpes: {
-    name: 'Sandherr M et al. Management of herpesvirus reactivations in patients with solid tumours and hematologic malignancies: update of the AGIHO/DGHO guidelines. Ann Hematol 2022;101:1163–78',
-    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8810475/',
-    read: t('Повний текст, таблиці 5–7', 'Full text, tables 5–7'),
-  },
-  esgichLymphoid1: {
-    name: 'Mikulska M et al. ESGICH Consensus Document on the safety of targeted and biological therapies (CD19, CD20 and CD52). Clin Microbiol Infect 2018;24 Suppl 2:S71–82',
-    url: 'https://pubmed.ncbi.nlm.nih.gov/29447988/',
-    read: t('Лише реферат', 'Abstract only'),
-  },
-  esgichLymphoid2: {
-    name: 'Drgona L et al. ESGICH Consensus Document (CD22, CD30, CD33, CD38, CD40, SLAMF-7 and CCR4). Clin Microbiol Infect 2018;24 Suppl 2:S83–94',
-    url: 'https://pubmed.ncbi.nlm.nih.gov/29572070/',
-    read: t('Лише реферат', 'Abstract only'),
-  },
-  esgichKinase: {
-    name: 'Reinwald M et al. ESGICH Consensus Document (tyrosine kinase and mTOR inhibitors). Clin Microbiol Infect 2018;24 Suppl 2:S53–70',
-    url: 'https://pubmed.ncbi.nlm.nih.gov/29454849/',
-    read: t('Лише реферат', 'Abstract only'),
-  },
-  esgichProteasome: {
-    name: 'Redelman-Sidi G et al. ESGICH Consensus Document (checkpoint, cell adhesion, S1P and proteasome inhibitors). Clin Microbiol Infect 2018;24 Suppl 2:S95–107',
-    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5971148/',
-    read: t('Реферат', 'Abstract'),
-  },
-  bsabMyeloma: {
-    name: 'Raje N et al. Monitoring, prophylaxis, and treatment of infections in patients with MM receiving bispecific antibody therapy: consensus recommendations from an expert panel. Blood Cancer J 2023;13:116',
-    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10394080/',
-    read: t('Повний текст, таблиця рекомендацій', 'Full text, table of recommendations'),
-  },
-  nhsIg: {
-    name: 'NHS England: Immunoglobulin commissioning guidance (PSS9, 2019/20) and the change form of 02.2025 to the commissioning criteria policy',
-    url: 'https://www.england.nhs.uk/wp-content/uploads/2021/12/ccp-for-the-use-of-Ig-feb-2025-change-form.pdf',
-    read: t('Повний текст', 'Full text'),
-  },
-}
+export const SOURCES: Record<SourceKey, { name: string; short: string; url: string; read: Text2 }> =
+  {
+    agihoPjp: {
+      short: 'AGIHO 2021',
+      name: 'Classen AY et al. Primary prophylaxis of bacterial infections and Pneumocystis jirovecii pneumonia in patients with hematologic malignancies and solid tumors: 2020 updated guidelines of the AGIHO/DGHO. Ann Hematol 2021;100:1603–20',
+      url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8116237/',
+      read: t('Повний текст, таблиці 7–9', 'Full text, tables 7–9'),
+    },
+    agihoHerpes: {
+      short: 'AGIHO 2022',
+      name: 'Sandherr M et al. Management of herpesvirus reactivations in patients with solid tumours and hematologic malignancies: update of the AGIHO/DGHO guidelines. Ann Hematol 2022;101:1163–78',
+      url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8810475/',
+      read: t('Повний текст, таблиці 5–7', 'Full text, tables 5–7'),
+    },
+    esgichLymphoid1: {
+      short: 'ESGICH 2018',
+      name: 'Mikulska M et al. ESGICH Consensus Document on the safety of targeted and biological therapies (CD19, CD20 and CD52). Clin Microbiol Infect 2018;24 Suppl 2:S71–82',
+      url: 'https://pubmed.ncbi.nlm.nih.gov/29447988/',
+      read: t('Лише реферат', 'Abstract only'),
+    },
+    esgichLymphoid2: {
+      short: 'ESGICH 2018',
+      name: 'Drgona L et al. ESGICH Consensus Document (CD22, CD30, CD33, CD38, CD40, SLAMF-7 and CCR4). Clin Microbiol Infect 2018;24 Suppl 2:S83–94',
+      url: 'https://pubmed.ncbi.nlm.nih.gov/29572070/',
+      read: t('Лише реферат', 'Abstract only'),
+    },
+    esgichKinase: {
+      short: 'ESGICH 2018',
+      name: 'Reinwald M et al. ESGICH Consensus Document (tyrosine kinase and mTOR inhibitors). Clin Microbiol Infect 2018;24 Suppl 2:S53–70',
+      url: 'https://pubmed.ncbi.nlm.nih.gov/29454849/',
+      read: t('Лише реферат', 'Abstract only'),
+    },
+    esgichProteasome: {
+      short: 'ESGICH 2018',
+      name: 'Redelman-Sidi G et al. ESGICH Consensus Document (checkpoint, cell adhesion, S1P and proteasome inhibitors). Clin Microbiol Infect 2018;24 Suppl 2:S95–107',
+      url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5971148/',
+      read: t('Реферат', 'Abstract'),
+    },
+    bsabMyeloma: {
+      short: 'Raje 2023',
+      name: 'Raje N et al. Monitoring, prophylaxis, and treatment of infections in patients with MM receiving bispecific antibody therapy: consensus recommendations from an expert panel. Blood Cancer J 2023;13:116',
+      url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10394080/',
+      read: t('Повний текст, таблиця рекомендацій', 'Full text, table of recommendations'),
+    },
+    nhsIg: {
+      short: 'NHS England',
+      name: 'NHS England: Immunoglobulin commissioning guidance (PSS9, 2019/20) and the change form of 02.2025 to the commissioning criteria policy',
+      url: 'https://www.england.nhs.uk/wp-content/uploads/2021/12/ccp-for-the-use-of-Ig-feb-2025-change-form.pdf',
+      read: t('Повний текст', 'Full text'),
+    },
+  }
 
 /** What the therapy puts at risk; each is a badge and a filter. */
 export type RiskKind = 'hypogamma' | 'pjp' | 'herpes' | 'hbv' | 'cmv' | 'fungal' | 'bacterial'
+
+/** Badge colour of each risk. */
+export const RISK_COLOR: Record<RiskKind, string> = {
+  hypogamma: 'grape',
+  pjp: 'red',
+  herpes: 'orange',
+  hbv: 'yellow',
+  cmv: 'pink',
+  fungal: 'teal',
+  bacterial: 'blue',
+}
+
+/** Short forms for a one-line mark under a regimen. */
+export const RISK_SHORT: Record<RiskKind, Text2> = {
+  hypogamma: t('↓IgG', '↓IgG'),
+  pjp: t('ПЦП', 'PJP'),
+  herpes: t('HSV/VZV', 'HSV/VZV'),
+  hbv: t('HBV', 'HBV'),
+  cmv: t('CMV', 'CMV'),
+  fungal: t('мікози', 'fungal'),
+  bacterial: t('бактерії', 'bacterial'),
+}
 
 export const RISK_LABELS: Record<RiskKind, Text2> = {
   hypogamma: t('Гіпогамаглобулінемія', 'Hypogammaglobulinaemia'),
@@ -89,8 +120,12 @@ export interface Measure {
 export interface TherapyRisk {
   id: string
   therapy: Text2
-  /** Catalog drug ids it covers (only those in the catalog); a calculator can match on them. */
-  drugIds: string[]
+  /**
+   * Catalog drugs whose presence as a main drug of a course marks it with this entry. Steroids
+   * and cytarabine mark nothing: nearly every regimen has them, and their risk lies in the dose
+   * and duration, which the regimen alone does not tell.
+   */
+  markDrugIds: string[]
   risks: RiskKind[]
   why: Text2
   measures: Measure[]
@@ -100,7 +135,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
   {
     id: 'anti-cd20',
     therapy: t('Анти-CD20: ритуксимаб, обінутузумаб', 'Anti-CD20: rituximab, obinutuzumab'),
-    drugIds: ['rituximab', 'obinutuzumab'],
+    markDrugIds: ['rituximab', 'obinutuzumab'],
     risks: ['hypogamma', 'hbv', 'herpes', 'pjp'],
     why: t(
       'Виснаження В-клітин; тяжкі респіраторні інфекції, реактивація HBV і VZV. Ризик герпесвірусів триває місяцями після лікування, особливо з бендамустином і на підтримці анти-CD20.',
@@ -147,7 +182,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
       'Аналоги пуринів і бендамустин: флударабін, кладрибін, бендамустин',
       'Purine analogues and bendamustine: fludarabine, cladribine, bendamustine',
     ),
-    drugIds: ['fludarabine', 'cladribine', 'bendamustine'],
+    markDrugIds: ['fludarabine', 'cladribine', 'bendamustine'],
     risks: ['pjp', 'herpes'],
     why: t(
       'Тривала Т-лімфопенія. Потрібні й опромінені компоненти крові (вкладка на сторінці захворювань).',
@@ -175,7 +210,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
   {
     id: 'steroids',
     therapy: t('Тривалі кортикостероїди', 'Long-term corticosteroids'),
-    drugIds: ['prednisolone', 'dexamethasone', 'methylprednisolone'],
+    markDrugIds: [],
     risks: ['pjp', 'herpes'],
     why: t(
       'Преднізолон > 20 мг/добу понад 4 тижні — значний ризик пневмоцистозу; ≥ 10 мг/добу понад 14 днів підвищує ризик VZV; кумулятивна доза > 2500 мг/м² — чинник ризику герпесвірусів при лімфомах.',
@@ -206,7 +241,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
       'Інгібітори протеасом: бортезоміб, карфілзоміб, іксазоміб',
       'Proteasome inhibitors: bortezomib, carfilzomib, ixazomib',
     ),
-    drugIds: ['bortezomib', 'carfilzomib', 'ixazomib'],
+    markDrugIds: ['bortezomib', 'carfilzomib', 'ixazomib'],
     risks: ['herpes', 'pjp'],
     why: t(
       'Різко підвищують ризик оперізувального герпесу (VISTA: 13% проти 4%; з профілактикою — 3%).',
@@ -234,7 +269,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
   {
     id: 'anti-cd38',
     therapy: t('Анти-CD38 (даратумумаб) та елотузумаб', 'Anti-CD38 (daratumumab) and elotuzumab'),
-    drugIds: ['daratumumab', 'elotuzumab'],
+    markDrugIds: ['daratumumab', 'elotuzumab'],
     risks: ['herpes', 'hypogamma'],
     why: t(
       'Даратумумаб підвищує ризик VZV; елотузумаб спричиняє лімфопенію й інфекції, особливо VZV. Даратумумаб — серед причин вторинної гіпогамаглобулінемії за NHS England.',
@@ -259,7 +294,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
   {
     id: 'lenalidomide',
     therapy: t('Леналідомід', 'Lenalidomide'),
-    drugIds: ['lenalidomide'],
+    markDrugIds: ['lenalidomide'],
     risks: ['herpes'],
     why: t(
       'Помірне підвищення ризику оперізувального герпесу при мієломі.',
@@ -279,7 +314,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
       'Біспецифічні антитіла при мієломі: теклістамаб, елранатамаб, талкветамаб',
       'Bispecific antibodies in myeloma: teclistamab, elranatamab, talquetamab',
     ),
-    drugIds: ['elranatamab'],
+    markDrugIds: ['elranatamab'],
     risks: ['hypogamma', 'herpes', 'pjp', 'hbv', 'cmv', 'bacterial'],
     why: t(
       'Глибока гіпогамаглобулінемія (MajesTEC-1: 74,5%), цитопенії; частіші тяжкі інфекції, ніж при звичайному лікуванні мієломи.',
@@ -342,7 +377,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
       'CAR-T проти В- чи плазмоклітинних антигенів',
       'CAR-T against B-cell or plasma-cell antigens',
     ),
-    drugIds: [],
+    markDrugIds: [],
     risks: ['hypogamma'],
     why: t(
       'В-клітинна аплазія після CAR-T; при В-лімфомах потреба в імуноглобуліні 31–64%.',
@@ -365,7 +400,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
       'Інгібітори BTK і BCL2: ібрутиніб, акалабрутиніб, занубрутиніб, венетоклакс',
       'BTK and BCL2 inhibitors: ibrutinib, acalabrutinib, zanubrutinib, venetoclax',
     ),
-    drugIds: ['ibrutinib', 'acalabrutinib', 'zanubrutinib', 'venetoclax'],
+    markDrugIds: ['ibrutinib', 'acalabrutinib', 'zanubrutinib', 'venetoclax'],
     risks: ['hypogamma', 'herpes', 'pjp', 'fungal'],
     why: t(
       'Ібрутиніб знижує гамаглобуліни; поодинокі пневмоцистоз, інвазивні мікози, ПМЛ. Венетоклакс сам по собі частоти інфекцій не підвищує, але з обінутузумабом дає нейтропенію.',
@@ -385,7 +420,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
   {
     id: 'idelalisib',
     therapy: t('Інгібітори PI3K: іделалісиб', 'PI3K inhibitors: idelalisib'),
-    drugIds: [],
+    markDrugIds: [],
     risks: ['pjp', 'cmv', 'herpes'],
     why: t(
       'Смертельні опортуністичні інфекції, часта реактивація CMV.',
@@ -418,7 +453,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
   {
     id: 'alemtuzumab',
     therapy: t('Алемтузумаб (анти-CD52)', 'Alemtuzumab (anti-CD52)'),
-    drugIds: [],
+    markDrugIds: [],
     risks: ['pjp', 'cmv', 'hbv'],
     why: t(
       'Глибока лімфопенія, опортуністичні інфекції.',
@@ -443,7 +478,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
   {
     id: 'brentuximab',
     therapy: t('Брентуксимаб ведотин (анти-CD30)', 'Brentuximab vedotin (anti-CD30)'),
-    drugIds: ['brentuximab-vedotin'],
+    markDrugIds: ['brentuximab-vedotin'],
     risks: ['pjp', 'cmv'],
     why: t('Опортуністичні інфекції.', 'Opportunistic infections.'),
     measures: [
@@ -463,7 +498,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
       'Блінатумомаб (анти-CD19) та інотузумаб озогаміцин (анти-CD22)',
       'Blinatumomab (anti-CD19) and inotuzumab ozogamicin (anti-CD22)',
     ),
-    drugIds: ['blinatumomab', 'inotuzumab-ozogamicin'],
+    markDrugIds: ['blinatumomab', 'inotuzumab-ozogamicin'],
     risks: ['hypogamma', 'bacterial'],
     why: t(
       'Блінатумомаб — гіпогамаглобулінемія, нейтропенія, катетер-асоційовані інфекції через тривалу інфузію. Інотузумаб — спектр інфекцій як при анти-CD20.',
@@ -483,7 +518,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
   {
     id: 'jak',
     therapy: t('Інгібітори JAK: руксолітиніб', 'JAK inhibitors: ruxolitinib'),
-    drugIds: ['ruxolitinib'],
+    markDrugIds: ['ruxolitinib'],
     risks: ['herpes', 'hbv', 'pjp'],
     why: t(
       'Помітно підвищують частоту інфекцій; оперізувальний герпес частіший (OR 5,2).',
@@ -511,7 +546,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
   {
     id: 'dasatinib',
     therapy: t('Дазатиніб', 'Dasatinib'),
-    drugIds: ['dasatinib'],
+    markDrugIds: ['dasatinib'],
     risks: ['cmv', 'hbv'],
     why: t(
       'Інгібітори BCR-ABL помірно підвищують ризик інфекцій; дазатиніб — реактивація CMV і HBV.',
@@ -531,7 +566,7 @@ export const THERAPY_RISKS: TherapyRisk[] = [
       'Інтенсивна хіміотерапія гострих лейкемій; триоксид арсену при ГПЛ',
       'Intensive chemotherapy of acute leukaemia; arsenic trioxide in APL',
     ),
-    drugIds: ['cytarabine', 'arsenic-trioxide'],
+    markDrugIds: ['arsenic-trioxide'],
     risks: ['herpes', 'pjp', 'bacterial'],
     why: t(
       'Герпетичний стоматит у 37–68% при інтенсивній хіміотерапії; при триоксиді арсену VZV у 17,5% без профілактики проти 4,1% з нею. ГЛЛ — значний ризик пневмоцистозу.',
@@ -611,3 +646,15 @@ export const PROPHYLAXIS_AGENTS: Measure[] = [
     source: 'agihoPjp',
   },
 ]
+
+/** The entries a course or a regimen falls under, by its main drugs, in the order listed above. */
+export function therapyRisksFor(drugIds: Iterable<string>): TherapyRisk[] {
+  const given = new Set(drugIds)
+  return THERAPY_RISKS.filter((entry) => entry.markDrugIds.some((id) => given.has(id)))
+}
+
+/** Every risk of the entries, once each, in the order of RISK_LABELS. */
+export function risksOf(entries: readonly TherapyRisk[]): RiskKind[] {
+  const all = new Set(entries.flatMap((entry) => entry.risks))
+  return (Object.keys(RISK_LABELS) as RiskKind[]).filter((risk) => all.has(risk))
+}

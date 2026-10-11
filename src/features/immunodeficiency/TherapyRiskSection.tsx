@@ -17,6 +17,7 @@ import { currentLanguage } from '../../lib/i18n'
 import {
   GENERAL_FACTORS,
   PROPHYLAXIS_AGENTS,
+  RISK_COLOR,
   RISK_LABELS,
   SOURCES,
   THERAPY_RISKS,
@@ -24,16 +25,6 @@ import {
   type RiskKind,
   type SourceKey,
 } from './therapy-risks'
-
-const RISK_COLOR: Record<RiskKind, string> = {
-  hypogamma: 'grape',
-  pjp: 'red',
-  herpes: 'orange',
-  hbv: 'yellow',
-  cmv: 'pink',
-  fungal: 'teal',
-  bacterial: 'blue',
-}
 
 /**
  * Secondary immunodeficiency from treatment: each therapy with the infections it brings and what

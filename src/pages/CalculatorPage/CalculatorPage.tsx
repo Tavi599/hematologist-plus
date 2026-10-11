@@ -21,6 +21,8 @@ import { RegimenEvidence } from '../../features/catalog/RegimenEvidence'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { StandardSupport } from '../../features/calculator/StandardSupport'
 import { cyclophosphamideMesna } from '../../lib/cyclophosphamide-mesna'
+import { therapyRisksFor } from '../../features/immunodeficiency/therapy-risks'
+import { TherapyRiskAlert } from '../../features/immunodeficiency/TherapyRiskMarks'
 import { irradiationReasons } from '../../features/irradiated/course'
 import { coursePhases } from '../../lib/course-phases'
 import {
@@ -365,6 +367,16 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     () => irradiationReasons(catalog, items, regimenId),
     [catalog, items, regimenId],
   )
+  // Drug groups of the course that bring infections: decided by its main drugs still switched on.
+  const infectionRisks = useMemo(
+    () =>
+      therapyRisksFor(
+        items
+          .filter((entry) => entry.item.role === 'main' && !disabledIds.includes(entry.item.id))
+          .map((entry) => entry.item.drug_id),
+      ),
+    [items, disabledIds],
+  )
   /** Hand-written lines that actually say something; an empty one is not a sheet. */
   const written = manualRows.filter((row) => row.what.trim() !== '')
 
@@ -496,6 +508,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   </Text>
                 </Alert>
               )}
+              <TherapyRiskAlert entries={infectionRisks} />
               {alwaysWithout.length > 0 && (
                 <Alert color="orange" title={t('calculator.doses.premedAlertTitle')}>
                   <Text size="sm">
