@@ -342,6 +342,14 @@ export function buildCourseItemsFrom(
       ...(durationMin === null ? {} : { durationMin }),
       ...(item.gap_before_min === null ? {} : { gapBeforeMin: item.gap_before_min }),
       ...(infusion ? { infusion } : {}),
+      ...(infusion?.rateRamp
+        ? {
+            infusionSeries: {
+              key: item.drug_id,
+              splitFirst: params?.ramp_sequence?.split_first ?? false,
+            },
+          }
+        : {}),
       ...(presentations.length > 0 ? { presentations } : {}),
       ...(WHOLE_PACK_DRUGS.has(item.drug_id) && presentations.length > 0
         ? { roundUpToWholePack: true }
@@ -413,6 +421,12 @@ function buildInfusionParams(
           rateRamp: {
             first: toRateSteps(params.rate_ramp.first),
             ...(params.rate_ramp.next === null ? {} : { next: toRateSteps(params.rate_ramp.next) }),
+            ...(params.ramp_sequence?.second
+              ? { second: toRateSteps(params.ramp_sequence.second) }
+              : {}),
+            ...(params.ramp_sequence?.first_bag_ml
+              ? { firstBagVolumeMl: params.ramp_sequence.first_bag_ml }
+              : {}),
           },
         }
       : {}),

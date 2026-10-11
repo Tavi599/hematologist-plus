@@ -2,6 +2,7 @@ import { z } from 'zod'
 
 import {
   amountUnitSchema,
+  rampSequenceRowSchema,
   rateRampSchema,
   scheduleBlockSchema,
   doseModifiersSchema,
@@ -108,6 +109,8 @@ export const drugInfusionParamsRowSchema = z
     sort_order: sortOrderSchema,
     sources: sourcesSchema,
     rate_ramp: rateRampSchema.nullable(),
+    /** Defaulted so this build can read a database where the migration has not run yet. */
+    ramp_sequence: rampSequenceRowSchema.nullable().catch(null).default(null),
   })
   .refine(
     (row) =>

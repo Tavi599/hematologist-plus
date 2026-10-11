@@ -1,7 +1,12 @@
 import { calculateBsa, enteredBsa, mostellerBsa, type BsaResult } from './bsa'
 import { DOMAIN_DEFAULTS } from './config'
 import { calculateDoseVariants, type DoseSpec, type DoseVariants } from './dosing'
-import { calculateInfusion, type InfusionParams, type InfusionResult } from './infusion'
+import {
+  calculateInfusion,
+  type InfusionParams,
+  type InfusionResult,
+  type RampDurations,
+} from './infusion'
 import {
   selectPresentations,
   sumSelections,
@@ -72,6 +77,12 @@ export interface CourseDrug {
   isMain?: boolean
   /** Set only for infusions; without it no solvent volume is calculated. */
   infusion?: InfusionParams
+  /**
+   * Infusions of one drug at a rising rate are counted together across the regimen's rows
+   * (daratumumab's split first dose and its later weeks are two rows): `key` is the drug.
+   * `splitFirst`: doses on consecutive days of the first infusion are halves of it.
+   */
+  infusionSeries?: { key: string; splitFirst: boolean }
   presentations?: Presentation[]
   /** Never split a pack: the rounded dose goes up to whole packs of the smallest strength. */
   roundUpToWholePack?: boolean
@@ -108,20 +119,77 @@ export interface CourseAdjustments {
   /** Manual time shift by item id, min; later administrations of the day move with it. */
   shiftMin?: Record<string, number>
   /**
-   * Whether this course carries the drug's first infusion at all, by item id, as the physician
-   * ticked it; absent means "cycle 1 is the first". A course edited by hand need not start at
-   * cycle 1, and a patient switched from another antibody brand is no longer at the first.
+   * Which infusion of the drug the course opens with, by series key (the drug): 1 the first,
+   * 2 the second, 3 any later one. Absent: cycle 1 opens with the first, a later cycle with a
+   * later one. A course edited by hand need not start at cycle 1.
    */
-  firstInfusion?: Record<string, boolean>
+  infusionStart?: Record<string, number>
 }
 
-/** The first infusion of a drug given at a rising rate: the ticked choice, else cycle 1. */
-export function isFirstInfusionCourse(
-  itemId: string,
-  cycleNumber: number | undefined,
-  firstInfusion: Record<string, boolean> | undefined,
-): boolean {
-  return firstInfusion?.[itemId] ?? (cycleNumber ?? 1) === 1
+/**
+ * Which rate a dose of a drug at a rising rate runs at: the first infusion (its undivided dose
+ * in the larger bag where the drug has one), a half of a split first dose, the second, a later.
+ */
+export type RampKind = 'first' | 'first_split' | 'second' | 'next'
+
+/** The infusion a course opens with when the physician has not said: 1 in cycle 1, else later. */
+export function defaultInfusionStart(cycleNumber: number | undefined): number {
+  return (cycleNumber ?? 1) === 1 ? 1 : 3
+}
+
+/**
+ * The kind of every dose of the drugs given at a rising rate, by item id and day. The doses of
+ * one drug are counted together in day order; consecutive days of a split first dose count as
+ * one infusion.
+ */
+export function rampKinds(
+  drugs: readonly CourseDrug[],
+  adjustments: Pick<CourseAdjustments, 'cycleNumber' | 'infusionStart'>,
+): Record<string, Record<number, RampKind>> {
+  const series = new Map<string, CourseDrug[]>()
+  for (const drug of drugs) {
+    if (!drug.infusionSeries || !drug.infusion?.rateRamp) continue
+    const key = drug.infusionSeries.key
+    series.set(key, [...(series.get(key) ?? []), drug])
+  }
+  const kinds: Record<string, Record<number, RampKind>> = {}
+  for (const [key, members] of series) {
+    const start = adjustments.infusionStart?.[key] ?? defaultInfusionStart(adjustments.cycleNumber)
+    const splitFirst = members.some((drug) => drug.infusionSeries!.splitFirst)
+    const days = [...new Set(members.flatMap((drug) => drug.days))].sort((a, b) => a - b)
+    // Infusion number of each day: a split first dose shares the number of the day before.
+    const ordinal = new Map<number, number>()
+    let current = start - 1
+    days.forEach((day, index) => {
+      const joined = splitFirst && index > 0 && current === 1 && day === days[index - 1]! + 1
+      if (!joined) current += 1
+      ordinal.set(day, current)
+    })
+    const halves = new Set(
+      days.filter(
+        (day) =>
+          ordinal.get(day) === 1 && days.some((other) => other !== day && ordinal.get(other) === 1),
+      ),
+    )
+    for (const drug of members) {
+      kinds[drug.id] = Object.fromEntries(
+        drug.days.map((day) => {
+          const n = ordinal.get(day)!
+          const kind: RampKind =
+            n === 1 ? (halves.has(day) ? 'first_split' : 'first') : n === 2 ? 'second' : 'next'
+          return [day, kind]
+        }),
+      )
+    }
+  }
+  return kinds
+}
+
+/** Minutes a dose of the given kind takes: an undivided first dose runs in its larger bag. */
+export function rampDurationMin(ramp: RampDurations, kind: RampKind): number {
+  if (kind === 'first') return (ramp.firstWhole?.ramp ?? ramp.first).durationMin
+  if (kind === 'first_split') return ramp.first.durationMin
+  return ramp[kind].durationMin
 }
 
 export interface CourseDrugResult {
@@ -169,6 +237,8 @@ export interface CourseResult {
   /** Patient-level warnings (implausible input, capped BSA). */
   warnings: DomainWarning[]
   steps: CalculationStep[]
+  /** Which rate each dose of a drug at a rising rate runs at, by item id and day. */
+  rampKinds: Record<string, Record<number, RampKind>>
 }
 
 /**
@@ -283,12 +353,14 @@ export function calculateCourse(
     }),
   )
   const resultById = new Map(results.map((result) => [result.id, result]))
+  const kinds = rampKinds(enabled, adjustments)
 
   return {
+    rampKinds: kinds,
     bsa,
     creatinineClearanceMlMin: renal?.mlMin ?? null,
     drugs: results,
-    days: buildDays(enabled, resultById, adjustments),
+    days: buildDays(enabled, resultById, adjustments, kinds),
     presentationTotals: sumSelections(
       results.flatMap((result) =>
         result.pack ? [scaleSelection(result.pack, result.administrationsInCourse)] : [],
@@ -446,6 +518,7 @@ function buildDays(
   drugs: CourseDrug[],
   results: Map<string, CourseDrugResult>,
   adjustments: CourseAdjustments,
+  kinds: Record<string, Record<number, RampKind>>,
 ): CourseDayResult[] {
   const dayNumbers = [...new Set(drugs.flatMap((drug) => drug.days))]
   const dayStart = adjustments.dayStart ?? DEFAULT_DAY_START
@@ -459,19 +532,12 @@ function buildDays(
         const id = result.administrationsPerDay === 1 ? drug.id : `${drug.id}#${index + 1}`
         drugOfInput.set(id, drug.id)
         const ramp = result.infusion?.ramp
-        // Only the very first infusion of the drug is the slow one: its first day, in the course
-        // that carries it.
-        const isFirstEver =
-          isFirstInfusionCourse(drug.id, adjustments.cycleNumber, adjustments.firstInfusion) &&
-          day === Math.min(...drug.days) &&
-          index === 0
+        const kind = index === 0 ? (kinds[drug.id]?.[day] ?? 'next') : 'next'
         return {
           id,
           block: drug.block ?? 'infusion',
           ...(drug.isMain === undefined ? {} : { isMain: drug.isMain }),
-          durationMin: ramp
-            ? (isFirstEver ? ramp.first : ramp.next).durationMin
-            : (drug.durationMin ?? 0),
+          durationMin: ramp ? rampDurationMin(ramp, kind) : (drug.durationMin ?? 0),
           occurrence: index,
           ...(drug.gapBeforeMin === undefined ? {} : { gapBeforeMin: drug.gapBeforeMin }),
           ...(drug.anchorOffsetMin === undefined ? {} : { anchorOffsetMin: drug.anchorOffsetMin }),

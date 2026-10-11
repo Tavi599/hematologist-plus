@@ -21,7 +21,16 @@ import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { BsaVariant, CourseDrugResult, CourseResult } from '../../domain'
-import { amountUnitOf, isFirstInfusionCourse, isMassUnit } from '../../domain'
+import {
+  amountUnitOf,
+  defaultInfusionStart,
+  isMassUnit,
+  rampDurationMin,
+  type RampDurations,
+  type RampKind,
+} from '../../domain'
+import { rampStepsFor } from '../../lib/ramp-steps'
+import type { DrugInfusionParams } from '../../schemas/catalog'
 import { formatNumber } from '../../lib/format'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
@@ -70,56 +79,81 @@ export interface DoseTableProps {
   onMesna: (itemId: string, on: boolean) => void
   /** Gives the row by another route the label allows at the same dose. */
   onRoute: (itemId: string, route: CourseItem['item']['route']) => void
-  /** Cycle of the course: cycle 1 carries the first, slower infusion unless ticked otherwise. */
+  /** Cycle of the course: cycle 1 opens with the first, slower infusion unless set otherwise. */
   cycleNumber: number
-  /** The physician's tick "this course has the first infusion", by item id. */
-  firstInfusion: Record<string, boolean>
-  onFirstInfusion: (itemId: string, first: boolean) => void
+  /** Which infusion of an antibody the course opens with, by drug; see CourseAdjustments. */
+  infusionStart: Record<string, number>
+  onInfusionStart: (drugId: string, start: number) => void
 }
 
-type RateRamp = NonNullable<NonNullable<CourseItem['infusionParams']>['rate_ramp']>
-
 /**
- * The rising rate of an antibody, with the tick that says which rate this course runs at: the
- * first infusion of the drug starts slower, every later one by its own steps.
+ * The rising rate of an antibody: which infusion of the drug this course opens with (the
+ * physician switches it; untouched, cycle 1 opens with the first), and under it each dose of the
+ * row with the steps and the time it runs at.
  */
 function RampInfo({
-  ramp,
+  params,
   durations,
-  first,
+  kinds,
+  start,
   disabled,
-  onFirst,
+  onStart,
 }: {
-  ramp: RateRamp
-  durations: { first: { durationMin: number }; next: { durationMin: number } }
-  first: boolean
+  params: DrugInfusionParams
+  durations: RampDurations
+  kinds: Record<number, RampKind>
+  start: number
   disabled: boolean
-  onFirst: (first: boolean) => void
+  onStart: (start: number) => void
 }) {
   const { t } = useTranslation()
-  const steps = first || ramp.next === null ? ramp.first : ramp.next
+  const tu = t as unknown as DynamicTranslate
+  const hasSecond = params.ramp_sequence?.second != null
+  // Days of the row run together while their kind stays the same: «Дні 15, 22 — наступні».
+  const groups: { kind: RampKind; days: number[] }[] = []
+  for (const [day, kind] of Object.entries(kinds)
+    .map(([day, kind]) => [Number(day), kind] as const)
+    .sort((a, b) => a[0] - b[0])) {
+    const last = groups.at(-1)
+    if (last && last.kind === kind) last.days.push(day)
+    else groups.push({ kind, days: [day] })
+  }
+  const options = [
+    { value: '1', label: t('calculator.doses.rampStart.first') },
+    ...(hasSecond ? [{ value: '2', label: t('calculator.doses.rampStart.second') }] : []),
+    { value: '3', label: t('calculator.doses.rampStart.later') },
+  ]
   return (
     <Stack gap={2}>
-      <Checkbox
+      <Text size="xs" fw={500}>
+        {t('calculator.doses.rampOpens')}
+      </Text>
+      <SegmentedControl
         size="xs"
         disabled={disabled}
-        checked={first}
-        onChange={(event) => onFirst(event.currentTarget.checked)}
-        label={
-          <Text size="xs" fw={500} c={first ? 'orange.8' : undefined}>
-            {t('calculator.doses.firstInfusion')}
-          </Text>
-        }
+        value={String(!hasSecond && start === 2 ? 3 : Math.min(start, 3))}
+        onChange={(value) => onStart(Number(value))}
+        data={options}
       />
-      <Text size="xs" c="dimmed">
-        {t(first ? 'calculator.doses.rampFirst' : 'calculator.doses.rampNext', {
-          start: steps.start_ml_h,
-          step: steps.step_ml_h,
-          every: steps.every_min,
-          max: steps.max_ml_h,
-          minutes: (first ? durations.first : durations.next).durationMin,
-        })}
-      </Text>
+      {groups.map(({ kind, days }) => {
+        const steps = rampStepsFor(params, kind)
+        if (!steps) return null
+        const whole = kind === 'first' ? durations.firstWhole : null
+        return (
+          <Text key={days.join()} size="xs" c={kind.startsWith('first') ? 'orange.8' : 'dimmed'}>
+            {t('calculator.doses.rampLine', {
+              days: t('calculator.doses.rampDays', { count: days.length, list: days.join(', ') }),
+              kind: tu(`calculator.doses.rampKind.${kind}`),
+              start: steps.start_ml_h,
+              step: steps.step_ml_h,
+              every: steps.every_min,
+              max: steps.max_ml_h,
+              minutes: rampDurationMin(durations, kind),
+            })}
+            {whole && ` ${t('calculator.doses.rampWholeBag', { bag: whole.bagVolumeMl })}`}
+          </Text>
+        )
+      })}
     </Stack>
   )
 }
@@ -246,8 +280,9 @@ function DoseRow({
   onMesna,
   onRoute,
   cycleNumber,
-  firstInfusion,
-  onFirstInfusion,
+  infusionStart,
+  onInfusionStart,
+  course,
 }: DoseTableProps & {
   item: CourseItem
   result: CourseDrugResult | undefined
@@ -578,11 +613,12 @@ function DoseRow({
               </Text>
               {result.infusion.ramp && item.infusionParams?.rate_ramp && (
                 <RampInfo
-                  ramp={item.infusionParams.rate_ramp}
+                  params={item.infusionParams}
                   durations={result.infusion.ramp}
-                  first={isFirstInfusionCourse(id, cycleNumber, firstInfusion)}
+                  kinds={course?.rampKinds[id] ?? {}}
+                  start={infusionStart[item.item.drug_id] ?? defaultInfusionStart(cycleNumber)}
                   disabled={!enabled}
-                  onFirst={(first) => onFirstInfusion(id, first)}
+                  onStart={(start) => onInfusionStart(item.item.drug_id, start)}
                 />
               )}
               {result.infusion.rateMlH !== null && result.infusion.rateGttMin !== null && (

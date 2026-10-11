@@ -1,13 +1,14 @@
 import {
   addDays,
   formatTime,
-  isFirstInfusionCourse,
+  type RampKind,
   parseTime,
   type CourseAdministrationResult,
   type CourseDrugResult,
   type CourseResult,
 } from '../../domain'
 import { solventOf, type CourseItem } from '../../lib/course-input'
+import { rampStepsFor } from '../../lib/ramp-steps'
 import { formatAmount, formatDate } from '../../lib/format'
 import type { Language } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
@@ -45,8 +46,6 @@ export interface CourseSheetsInput {
   /** Name of the regimen as chosen in the calculator; null for a course put together by hand. */
   regimenName: string | null
   cycleNumber: number
-  /** The physician's tick "this course has the first infusion", by item id; see CourseAdjustments. */
-  firstInfusion?: Record<string, boolean>
   header: HeaderValue
   /** Orders written out by hand; printed as typed, never calculated. */
   manualRows?: ManualRow[]
@@ -351,12 +350,12 @@ function dayOrders(input: CourseSheetsInput, day: SheetDay): Order[] {
     const result = resultById.get(administration.drugId)
     const note = rampNote(item, result, input, day.day)
     orders.set(administration.drugId, {
-      what: whatLine(administration.drugId, item, result, input),
+      what: whatLine(administration.drugId, item, result, input, day.day),
       how: note
         ? item
           ? input.t(`routeShort.${item.item.route}`)
           : ''
-        : howLine(item, result, input),
+        : howLine(item, result, input, day.day),
       hours: new Set([hour]),
       ...(note ? { note } : {}),
       ...(result
@@ -668,6 +667,7 @@ function whatLine(
   item: CourseItem | undefined,
   result: CourseDrugResult | undefined,
   input: CourseSheetsInput,
+  day?: number,
 ): string {
   const { language, t } = input
   const name = item ? localize(item.drug.name, language) : id
@@ -684,7 +684,19 @@ function whatLine(
     return `${name} ${formatAmount(result.doseAmount / 1000, language, 1)}${BLANK.grams} ${volume}`
   }
   const solvent = t(`solvent.${item ? solventOf(item) : 'sodium_chloride_0_9'}`)
-  return `${name}${dose}\n${solvent} ${formatAmount(infusion.bagVolumeMl, language)} ${t('units.ml')}`
+  // An undivided first dose goes into its own larger bag (daratumumab 16 mg/kg: 1000 mL).
+  const whole =
+    item && day !== undefined && rampKindOn(item, input, day) === 'first'
+      ? infusion.ramp?.firstWhole
+      : null
+  const bag = whole ? whole.bagVolumeMl : infusion.bagVolumeMl
+  return `${name}${dose}\n${solvent} ${formatAmount(bag, language)} ${t('units.ml')}`
+}
+
+/** The rate a dose runs at on the day; on a sheet without a day, at the course's first dose. */
+function rampKindOn(item: CourseItem, input: CourseSheetsInput, day?: number): RampKind {
+  const kinds = input.course?.rampKinds[item.item.id]
+  return kinds?.[day ?? Math.min(...item.item.days)] ?? 'next'
 }
 
 /** How it is given: the route, and under it the rate or how many times a day. */
@@ -692,14 +704,16 @@ function howLine(
   item: CourseItem | undefined,
   result: CourseDrugResult | undefined,
   input: CourseSheetsInput,
+  day?: number,
 ): string {
   const { language, t } = input
   const route = item ? t(`routeShort.${item.item.route}`) : ''
   const infusion = result?.infusion
-  const ramp = item?.infusionParams?.rate_ramp
-  if (infusion?.ramp && ramp && item) {
-    const first = isFirstInfusionCourse(item.item.id, input.cycleNumber, input.firstInfusion)
-    const steps = first || ramp.next === null ? ramp.first : ramp.next
+  const steps =
+    item?.infusionParams && infusion?.ramp
+      ? rampStepsFor(item.infusionParams, rampKindOn(item, input, day))
+      : null
+  if (steps) {
     return `${route}\n${BLANK.rate}${steps.start_ml_h}→${steps.max_ml_h} ${t('units.ml_h')}`
   }
   if (infusion && infusion.rateMlH !== null) {
@@ -710,8 +724,8 @@ function howLine(
 }
 
 /**
- * The rising rate of a drug that is not given at one speed: the first infusion of the course
- * starts slower, every later one by the second set of steps.
+ * The rising rate of a drug that is not given at one speed: the first infusion starts slower,
+ * the second and the later ones by their own steps.
  */
 function rampNote(
   item: CourseItem | undefined,
@@ -719,12 +733,9 @@ function rampNote(
   input: CourseSheetsInput,
   day: number,
 ): string | null {
-  const ramp = item?.infusionParams?.rate_ramp
-  if (!item || !ramp || !result?.infusion?.ramp) return null
-  const isFirst =
-    isFirstInfusionCourse(item.item.id, input.cycleNumber, input.firstInfusion) &&
-    day === Math.min(...item.item.days)
-  const steps = isFirst || ramp.next === null ? ramp.first : ramp.next
+  if (!item?.infusionParams || !result?.infusion?.ramp) return null
+  const steps = rampStepsFor(item.infusionParams, rampKindOn(item, input, day))
+  if (!steps) return null
   const n = (value: number) => formatAmount(value, input.language)
   return (
     BLANK.rampStart +

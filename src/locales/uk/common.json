@@ -154,9 +154,24 @@
       "infusionUndiluted": "без розведення, {{total}} мл",
       "irradiatedTitle": "Трансфузії — лише опромінені компоненти крові",
       "irradiatedHint": "За настановою BSH 2020. Вимогу буде вказано в листі призначень; повідомте трансфузіолога й позначте її в замовленні.",
-      "firstInfusion": "Перше введення (повільний темп)",
-      "rampFirst": "Перше введення: {{start}} мл/год, +{{step}} кожні {{every}} хв, до {{max}} мл/год (≈{{minutes}} хв)",
-      "rampNext": "Повторне введення: {{start}} мл/год, +{{step}} кожні {{every}} хв, до {{max}} мл/год (≈{{minutes}} хв)"
+      "rampOpens": "Курс відкриває введення:",
+      "rampStart": {
+        "first": "перше",
+        "second": "друге",
+        "later": "наступне"
+      },
+      "rampLine": "{{days}} — {{kind}}: {{start}} мл/год, +{{step}} кожні {{every}} хв, до {{max}} мл/год (≈{{minutes}} хв)",
+      "rampDays_one": "день {{list}}",
+      "rampDays_few": "дні {{list}}",
+      "rampDays_many": "дні {{list}}",
+      "rampDays_other": "дні {{list}}",
+      "rampKind": {
+        "first": "перше введення",
+        "first_split": "перше введення, розділене на 2 дні",
+        "second": "друге введення",
+        "next": "наступні введення"
+      },
+      "rampWholeBag": "— розвести в {{bag}} мл"
     },
     "standardSupport": {
       "title": "Супровід за стандартом",

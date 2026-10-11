@@ -67,24 +67,34 @@
           "max_ml_h": 150
         },
         "next": {
-          "start_ml_h": 50,
+          "start_ml_h": 200,
           "step_ml_h": 50,
           "every_min": 30,
           "max_ml_h": 200
         }
       },
       "notes": {
-        "uk": "Завжди 250 мл. Перша інфузія: 25 мл/год, через 60 хвилин без реакції +25 мл/год кожні 30 хвилин до 150 мл/год. Друга: 50 мл/год 30 хвилин, далі +50 мл/год, потім по 100 мл/год до 200 мл/год - у довіднику вона порахована спрощено, рівними кроками по 50. Третя й наступні інфузії йдуть одразу на 200 мл/год, тобто фактично швидше, ніж рахує довідник. Потрібен вбудований фільтр 0,22 мкм; в одну лінію з іншими препаратами не вводять.",
-        "en": "Always 250 mL. First infusion: 25 mL/h, and after 60 minutes without a reaction +25 mL/h every 30 minutes up to 150 mL/h. Second: 50 mL/h for 30 minutes, then +50 mL/h, then by 100 mL/h up to 200 mL/h - the catalogue approximates this with even 50 mL/h steps. The third and later infusions start straight at 200 mL/h, so they are in fact faster than the catalogue computes. A 0.22 micron in-line filter is required, and no other drug shares the line."
+        "uk": "Завжди 250 мл. Перше введення: 25 мл/год, через 60 хв без реакції +25 мл/год кожні 30 хв до 150 мл/год (каталог рахує сходинки від початку, тож перша година на ≈30 хв коротша). Друге: 50 мл/год 30 хв, потім +50 мл/год 30 хв, далі +100 мл/год до 200 мл/год — каталог наближує це рівними сходинками по 50 мл/год. Третє й наступні: одразу 200 мл/год. Обов'язковий фільтр 0,22 мкм, жодних інших препаратів у тій самій системі.",
+        "en": "Always 250 mL. First infusion: 25 mL/h, after 60 minutes without a reaction +25 mL/h every 30 minutes up to 150 mL/h (the catalogue steps from the start, so its first hour is about 30 minutes shorter). Second: 50 mL/h for 30 minutes, then +50 mL/h for 30 minutes, then +100 mL/h up to 200 mL/h - the catalogue approximates this with even 50 mL/h steps. Third and later: straight at 200 mL/h. A 0.22 micron in-line filter is required, and no other drug shares the line."
       },
       "sources": [
         {
           "name": "EMA, Sarclisa (ізатуксимаб), коротка характеристика препарату",
           "url": "https://www.ema.europa.eu/en/documents/product-information/sarclisa-epar-product-information_en.pdf",
           "version": "чинна редакція на дату звірки",
-          "checkedOn": "2026-10-03"
+          "checkedOn": "2026-10-11"
         }
-      ]
+      ],
+      "ramp_sequence": {
+        "second": {
+          "start_ml_h": 50,
+          "step_ml_h": 50,
+          "every_min": 30,
+          "max_ml_h": 200
+        },
+        "first_bag_ml": null,
+        "split_first": false
+      }
     },
     {
       "key": "glucose",
@@ -100,9 +110,33 @@
           "name": "EMA, Sarclisa (ізатуксимаб), коротка характеристика препарату",
           "url": "https://www.ema.europa.eu/en/documents/product-information/sarclisa-epar-product-information_en.pdf",
           "version": "чинна редакція на дату звірки",
-          "checkedOn": "2026-10-03"
+          "checkedOn": "2026-10-11"
         }
-      ]
+      ],
+      "rate_ramp": {
+        "first": {
+          "start_ml_h": 25,
+          "step_ml_h": 25,
+          "every_min": 30,
+          "max_ml_h": 150
+        },
+        "next": {
+          "start_ml_h": 200,
+          "step_ml_h": 50,
+          "every_min": 30,
+          "max_ml_h": 200
+        }
+      },
+      "ramp_sequence": {
+        "second": {
+          "start_ml_h": 50,
+          "step_ml_h": 50,
+          "every_min": 30,
+          "max_ml_h": 200
+        },
+        "first_bag_ml": null,
+        "split_first": false
+      }
     }
   ]
 }

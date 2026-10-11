@@ -18,8 +18,21 @@ export interface RateSteps {
 export interface RateRamp {
   /** The patient's first infusion of this drug. */
   first: RateSteps
+  /** The second infusion, where it differs from the later ones (daratumumab IV). */
+  second?: RateSteps
   /** Every later infusion; the same as `first` when the drug has no faster restart. */
   next?: RateSteps
+  /** Dilution of a first dose given whole, mL (daratumumab 16 mg/kg: 1000 mL instead of 500). */
+  firstBagVolumeMl?: number
+}
+
+/** Durations of each kind of infusion of a drug given at a rising rate. */
+export interface RampDurations {
+  first: RampResult
+  second: RampResult
+  next: RampResult
+  /** The undivided first dose in its own larger bag; null when the drug has none. */
+  firstWhole: { bagVolumeMl: number; totalVolumeMl: number; ramp: RampResult } | null
 }
 
 export interface RampStep {
@@ -98,7 +111,7 @@ export interface InfusionResult {
   rateGttMin: number | null
   issue: InfusionIssue | null
   /** Set when the drug is given at a rising rate; the duration comes from here, not from the regimen. */
-  ramp: { first: RampResult; next: RampResult } | null
+  ramp: RampDurations | null
   steps: CalculationStep[]
 }
 
@@ -172,10 +185,22 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
   const totalVolumeMl = bagVolumeMl + drugVolumeMl
   const concentrationPerMl = doseAmount / totalVolumeMl
 
-  const ramp = params.rateRamp
+  const rateRamp = params.rateRamp
+  const firstWholeTotal =
+    rateRamp?.firstBagVolumeMl === undefined ? null : rateRamp.firstBagVolumeMl + drugVolumeMl
+  const ramp: RampDurations | null = rateRamp
     ? {
-        first: rampSchedule(totalVolumeMl, params.rateRamp.first),
-        next: rampSchedule(totalVolumeMl, params.rateRamp.next ?? params.rateRamp.first),
+        first: rampSchedule(totalVolumeMl, rateRamp.first),
+        second: rampSchedule(totalVolumeMl, rateRamp.second ?? rateRamp.next ?? rateRamp.first),
+        next: rampSchedule(totalVolumeMl, rateRamp.next ?? rateRamp.first),
+        firstWhole:
+          firstWholeTotal === null
+            ? null
+            : {
+                bagVolumeMl: rateRamp.firstBagVolumeMl!,
+                totalVolumeMl: firstWholeTotal,
+                ramp: rampSchedule(firstWholeTotal, rateRamp.first),
+              },
       }
     : null
 

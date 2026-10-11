@@ -3,6 +3,7 @@ import { z } from 'zod'
 import {
   amountUnitSchema,
   type ArticleSection,
+  rampSequenceSchema,
   rateRampSchema,
   scheduleBlockSchema,
   diseaseReferencesSchema,
@@ -121,6 +122,8 @@ export const drugFileSchema = z.strictObject({
         stock_concentration_mg_ml: optionalPositive,
         /** Rate raised in steps (mL/h) instead of one speed; see rateRampSchema. */
         rate_ramp: rateRampSchema.nullable().default(null),
+        /** Second-infusion steps, first-dose bag, split first dose; see rampSequenceSchema. */
+        ramp_sequence: rampSequenceSchema.nullable().default(null),
         bag_volumes_ml: z.array(positiveNumberSchema).default([]),
         duration_min: optionalNonNegativeInt,
         is_default: z.boolean().default(false),

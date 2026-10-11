@@ -498,6 +498,23 @@ export const rateRampSchema = z.strictObject({
   next: rateStepsSchema.nullable().default(null),
 })
 
+/**
+ * What tells the infusions of an antibody apart beyond "first" and "later" (daratumumab IV,
+ * isatuximab): the rate of the second infusion, the larger bag of an undivided first dose, and
+ * whether a first dose split over consecutive days is one first infusion.
+ */
+const rampSequenceFields = {
+  /** Steps of the second infusion; null when it already runs like the later ones. */
+  second: rateStepsSchema.nullable().default(null),
+  /** Dilution of the first dose given whole, mL (daratumumab 16 mg/kg: 1000 mL); null if none. */
+  first_bag_ml: positiveNumberSchema.nullable().default(null),
+  /** Doses on consecutive days of the first week are halves of one first infusion. */
+  split_first: z.boolean().default(false),
+}
+export const rampSequenceSchema = z.strictObject(rampSequenceFields)
+/** The same, read from the database: a key a later build adds must not break this one. */
+export const rampSequenceRowSchema = z.object(rampSequenceFields)
+
 /** Drug-specific organ-function checks; same shape as ReviewRules in src/domain/warnings.ts. */
 export const reviewRulesSchema = z.strictObject({
   renal: z.union([z.boolean(), z.strictObject({ belowMlMin: positiveNumberSchema })]).optional(),

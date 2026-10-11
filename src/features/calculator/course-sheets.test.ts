@@ -21,12 +21,21 @@ const t = (key: string, params?: Record<string, unknown>) =>
     key,
   )
 
-function sheets(overrides: Partial<CourseSheetsInput> = {}, catalog = demoCatalog()): XlsxSheet[] {
+function sheets(
+  overrides: Partial<CourseSheetsInput> = {},
+  catalog = demoCatalog(),
+  infusionStart?: Record<string, number>,
+): XlsxSheet[] {
   const items = buildCourseItems(indexCatalog(catalog), 'r-chop-21')
   const course = calculateCourse(
     { ageYears: 60, sex: 'male', heightCm: 180, weightKg: 80, serumCreatinine: 88.4 },
     items.map((item) => item.courseDrug),
-    { startDateIso: '2026-09-21', dayStart: '09:00', cycleNumber: overrides.cycleNumber ?? 1 },
+    {
+      startDateIso: '2026-09-21',
+      dayStart: '09:00',
+      cycleNumber: overrides.cycleNumber ?? 1,
+      ...(infusionStart ? { infusionStart } : {}),
+    },
   )
   return buildCourseSheets({
     items,
@@ -115,13 +124,10 @@ describe('buildCourseSheets', () => {
       'Початкова швидкість (V1)= 50 мл/год. Пришвидшувати кожні 30 хв на 50 мл/год до досягнення максимальної швидкості (Vmax) = 200 мл/год.',
     )
 
-    // The physician's tick overrides the cycle: a course edited by hand need not begin at cycle 1.
-    const rituximab = buildCourseItems(indexCatalog(catalog), 'r-chop-21').find(
-      (item) => item.item.drug_id === 'rituximab',
-    )!.item.id
-    const notFirst = sheets({ firstInfusion: { [rituximab]: false } }, catalog)[0]!
+    // The physician's choice overrides the cycle: a course edited by hand need not begin at cycle 1.
+    const notFirst = sheets({}, catalog, { rituximab: 3 })[0]!
     expect(String(text(notFirst.rows[index + 1]![1] ?? null))).toContain('(V1)= 50 мл/год')
-    const firstLater = sheets({ cycleNumber: 3, firstInfusion: { [rituximab]: true } }, catalog)[0]!
+    const firstLater = sheets({ cycleNumber: 3 }, catalog, { rituximab: 1 })[0]!
     expect(String(text(firstLater.rows[index + 1]![1] ?? null))).toContain('(V1)= 25 мл/год')
   })
 

@@ -154,9 +154,24 @@
       "infusionUndiluted": "undiluted, {{total}} mL",
       "irradiatedTitle": "Transfusions: irradiated blood components only",
       "irradiatedHint": "After the BSH 2020 guideline. The sheet will say so; tell the transfusion laboratory and mark the request.",
-      "firstInfusion": "First infusion (slow rate)",
-      "rampFirst": "First infusion: {{start}} mL/h, +{{step}} every {{every}} min, up to {{max}} mL/h (≈{{minutes}} min)",
-      "rampNext": "Later infusion: {{start}} mL/h, +{{step}} every {{every}} min, up to {{max}} mL/h (≈{{minutes}} min)"
+      "rampOpens": "The course opens with infusion:",
+      "rampStart": {
+        "first": "first",
+        "second": "second",
+        "later": "later"
+      },
+      "rampLine": "{{days}} — {{kind}}: {{start}} mL/h, +{{step}} every {{every}} min, up to {{max}} mL/h (≈{{minutes}} min)",
+      "rampDays_one": "day {{list}}",
+      "rampDays_few": "days {{list}}",
+      "rampDays_many": "days {{list}}",
+      "rampDays_other": "days {{list}}",
+      "rampKind": {
+        "first": "first infusion",
+        "first_split": "first infusion split over 2 days",
+        "second": "second infusion",
+        "next": "later infusions"
+      },
+      "rampWholeBag": "— dilute in {{bag}} mL"
     },
     "standardSupport": {
       "title": "Standard support",

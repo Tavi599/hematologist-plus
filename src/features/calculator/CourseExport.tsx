@@ -20,8 +20,6 @@ export interface CourseExportProps {
   patient: PatientInput
   regimenName: string | null
   cycleNumber: number
-  /** The physician's tick "this course has the first infusion", by item id. */
-  firstInfusion?: Record<string, boolean>
   startDate: string
   /** Start of the working day, HH:MM: the times of a tablet given several times a day. */
   dayStart: string
@@ -54,7 +52,6 @@ export function CourseExport(props: CourseExportProps) {
       regimenName: props.regimenName,
       manualRows: props.manualRows ?? [],
       cycleNumber: props.cycleNumber,
-      ...(props.firstInfusion ? { firstInfusion: props.firstInfusion } : {}),
       header: props.header,
       layout,
       irradiatedOnly,

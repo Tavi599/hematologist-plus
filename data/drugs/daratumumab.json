@@ -85,17 +85,32 @@
         }
       },
       "notes": {
-        "uk": "Перша інфузія: 1000 мл, 50 мл/год, +50 мл/год щогодини до 200 мл/год. Друга інфузія: 500 мл і той самий початок 50 мл/год — у довіднику вона порахована за схемою першої. Наступні: 500 мл, 100 мл/год, +50 мл/год щогодини до 200 мл/год. Прискорювати можна лише за відсутності реакцій на попередню інфузію; потрібен вбудований фільтр 0,2 мкм.",
-        "en": "First infusion: 1000 mL at 50 mL/h, +50 mL/h every hour up to 200 mL/h. Second infusion: 500 mL starting at the same 50 mL/h - the catalogue computes it as a first infusion. Later ones: 500 mL at 100 mL/h, +50 mL/h every hour up to 200 mL/h. Escalate only where the previous infusion caused no reaction; a 0.2 micron in-line filter is required."
+        "uk": "Перше введення: 16 мг/кг одноразово — 1000 мл, або розділено на дні 1 і 2 по 8 мг/кг — по 500 мл; 50 мл/год, +50 мл/год щогодини до 200 мл/год. Друге введення (тиждень 2): 500 мл, той самий темп від 50 мл/год; якщо на попередньому тижні була інфузійна реакція — 1000 мл. З третього введення: 500 мл, від 100 мл/год, +50 мл/год щогодини до 200 мл/год — лише якщо на попередньому введенні не було реакції, інакше темп другого введення. Пришвидшувати лише без реакцій; обов'язковий фільтр у системі 0,2 мкм.",
+        "en": "First infusion: 16 mg/kg at once in 1000 mL, or split over days 1 and 2 as 8 mg/kg in 500 mL each; 50 mL/h, +50 mL/h every hour up to 200 mL/h. Second infusion (week 2): 500 mL at the same rate from 50 mL/h; 1000 mL if there was an infusion reaction the week before. From the third: 500 mL from 100 mL/h, +50 mL/h every hour up to 200 mL/h - only if the previous infusion brought no reaction, otherwise at the second-infusion rate. Escalate only without reactions; a 0.2 micron in-line filter is required."
       },
       "sources": [
+        {
+          "name": "EMA, DARZALEX: Summary of Product Characteristics, section 4.2, table 5 (infusion rates)",
+          "url": "https://www.ema.europa.eu/en/documents/product-information/darzalex-epar-product-information_en.pdf",
+          "checkedOn": "2026-10-11"
+        },
         {
           "name": "NSSG Oxford Haematology, MM.47 DaraVelDex, додаток 1 (внутрішньовенний даратумумаб)",
           "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-47-dara-vel-dex.pdf",
           "version": "4.0",
           "checkedOn": "2026-10-02"
         }
-      ]
+      ],
+      "ramp_sequence": {
+        "second": {
+          "start_ml_h": 50,
+          "step_ml_h": 50,
+          "every_min": 60,
+          "max_ml_h": 200
+        },
+        "first_bag_ml": 1000,
+        "split_first": true
+      }
     }
   ]
 }
