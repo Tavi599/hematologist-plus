@@ -1,0 +1,43 @@
+{
+  "$comment": "SmPC 4.2: анаеробні інфекції — 500 мг (100 мл) кожні 8 год, зазвичай 7 днів, не довше 10. ESCMID 2021 (розділ III): C. difficile без перорального шляху — внутрішньопросвітно ванкоміцин чи фідаксоміцин і, можливо, додатково метронідазол в/в 500 мг 3 рази на добу (слабка рекомендація); рутинно до перорального лікування тяжкого CDI не додавати. При піперациліні/тазобактамі чи карбапенемі анаеробне покриття вже є.",
+  "id": "metronidazole-iv",
+  "short_name": "Метронідазол (в/в)",
+  "name": {
+    "uk": "Метронідазол внутрішньовенно",
+    "en": "IV metronidazole"
+  },
+  "description": {
+    "uk": "500 мг в/в кожні 8 год: анаеробні інфекції; C. difficile — лише якщо перорально неможливо, як доповнення.",
+    "en": "500 mg IV every 8 h: anaerobic infections; C. difficile only when oral is impossible, as an adjunct."
+  },
+  "sources": [
+    {
+      "name": "SmPC Metronidazole 500 mg/100 ml Solution for Infusion (B. Braun, emc), 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/15157/smpc",
+      "version": "ред. 04.06.2026",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "van Prehn J et al. ESCMID 2021 update on the treatment guidance document for Clostridioides difficile infection in adults, розділ III",
+      "url": "https://elibrary.escmid.org/download/16382185018656_66.pdf",
+      "version": "2021",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "metronidazole",
+      "drug_id": "metronidazole",
+      "route": "iv_infusion",
+      "dose_value": 500,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "Зазвичай 7 днів, не довше 10. Піперацилін/тазобактам і карбапенеми вже діють на анаеробів — метронідазол до них не додають. C. difficile: ESCMID 2021 не радить рутинно додавати в/в метронідазол до перорального ванкоміцину; лише якщо перорально неможливо — разом із ванкоміцином у просвіт кишки (слабка рекомендація). Розраховано дні 1–4 — до переоцінки.",
+        "en": "Usually 7 days, no longer than 10. Piperacillin/tazobactam and carbapenems already cover anaerobes: metronidazole is not added to them. C. difficile: ESCMID 2021 advises against routinely adding IV metronidazole to oral vancomycin; only when oral is impossible, with intraluminal vancomycin (weak recommendation). Days 1-4 calculated, up to the review."
+      }
+    }
+  ]
+}

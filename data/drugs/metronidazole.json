@@ -1,0 +1,89 @@
+{
+  "$comment": "Додано 2026-10-11 зі слів лікаря: у відділенні є в/в форма. Фасування — розчин для інфузій 5 мг/мл по 100 мл, зареєстрований в Україні.",
+  "id": "metronidazole",
+  "name": {
+    "uk": "Метронідазол",
+    "en": "Metronidazole"
+  },
+  "availability": "department",
+  "atc_code": "J01XD01",
+  "dose_units": ["mg_flat"],
+  "sources": [
+    {
+      "name": "SmPC Metronidazole 500 mg/100 ml Solution for Infusion (B. Braun, emc), 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/15157/smpc",
+      "version": "ред. 04.06.2026",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (вивантаження data.gov.ua, reestr-lz.csv): метронідазол, розчин для інфузій 5 мг/мл по 100 мл (Метрогіл, Ефлоран, Метронідазол-Дарниця та ін.)",
+      "url": "https://data.gov.ua/dataset/reestr_likarskyh_zasobiv_moz",
+      "version": "копія реєстру від 2026-10-11",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "b500",
+      "form": "vial",
+      "strength_amount": 500,
+      "volume_ml": 100,
+      "label": {
+        "uk": "500 мг / 100 мл (5 мг/мл)",
+        "en": "500 mg / 100 mL (5 mg/mL)"
+      }
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "ready",
+      "solvent": "sodium_chloride_0_9",
+      "stock_concentration_mg_ml": 5,
+      "bag_volumes_ml": [],
+      "duration_min": 60,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "SmPC Metronidazole 500 mg/100 ml Solution for Infusion (B. Braun, emc), 4.2",
+          "url": "https://www.medicines.org.uk/emc/product/15157/smpc",
+          "version": "ред. 04.06.2026",
+          "checkedOn": "2026-10-11"
+        }
+      ],
+      "notes": {
+        "uk": "Готовий розчин 5 мг/мл: 100 мл повільно в/в, не швидше ніж за 20 хв, зазвичай за 1 год. Інші антибіотики — окремо.",
+        "en": "Ready solution 5 mg/mL: 100 mL slowly IV, no faster than 20 min, usually over 1 h. Other antibiotics separately."
+      }
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Тяжке ураження печінки — менші дози; печінкова енцефалопатія — добова доза зменшується до третини, можна 1 раз на добу.",
+        "en": "Severe liver disease: lower doses; hepatic encephalopathy, a third of the daily dose, may be once a day."
+      },
+      "source": {
+        "name": "SmPC Metronidazole 500 mg/100 ml Solution for Infusion (B. Braun, emc), 4.2",
+        "url": "https://www.medicines.org.uk/emc/product/15157/smpc",
+        "version": "ред. 04.06.2026",
+        "checkedOn": "2026-10-11"
+      }
+    },
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "Зменшувати не потрібно; на гемодіалізі — після сеансу.",
+        "en": "No reduction needed; on haemodialysis, after the session."
+      },
+      "source": {
+        "name": "SmPC Metronidazole 500 mg/100 ml Solution for Infusion (B. Braun, emc), 4.2",
+        "url": "https://www.medicines.org.uk/emc/product/15157/smpc",
+        "version": "ред. 04.06.2026",
+        "checkedOn": "2026-10-11"
+      }
+    }
+  ]
+}

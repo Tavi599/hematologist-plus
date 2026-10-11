@@ -146,6 +146,9 @@
       },
       "regimens": [
         {
+          "regimen_id": "voriconazole-iv"
+        },
+        {
           "regimen_id": "voriconazole-oral"
         },
         {
@@ -153,6 +156,23 @@
         },
         {
           "regimen_id": "co-trimoxazole-pcp"
+        }
+      ]
+    },
+    {
+      "key": "anaerobic",
+      "kind": "treatment",
+      "title": {
+        "uk": "Анаеробні інфекції; C. difficile без перорального шляху",
+        "en": "Anaerobic infections; C. difficile with no oral route"
+      },
+      "description": {
+        "uk": "Не до піперациліну/тазобактаму чи карбапенему — вони вже діють на анаеробів. C. difficile: основне — фідаксоміцин або ванкоміцин перорально; в/в метронідазол — лише доповнення, якщо перорально неможливо.",
+        "en": "Not added to piperacillin/tazobactam or a carbapenem: they cover anaerobes already. C. difficile: oral fidaxomicin or vancomycin first; IV metronidazole only as an adjunct when oral is impossible."
+      },
+      "regimens": [
+        {
+          "regimen_id": "metronidazole-iv"
         }
       ]
     }

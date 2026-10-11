@@ -1,0 +1,59 @@
+{
+  "$comment": "SmPC 4.2: в/в навантаження 6 мг/кг кожні 12 год першу добу, далі 4 мг/кг двічі на добу; не швидше 3 мг/кг/год за 1–3 год — тривалість 120 і 80 хв звідси. AGIHO (легеневі інфільтрати): вориконазол в/в 6 → 4 мг/кг — перша лінія при інвазивному аспергільозі (A-I).",
+  "id": "voriconazole-iv",
+  "short_name": "Вориконазол (в/в)",
+  "name": {
+    "uk": "Вориконазол внутрішньовенно",
+    "en": "IV voriconazole"
+  },
+  "description": {
+    "uk": "6 мг/кг кожні 12 год у день 1, далі 4 мг/кг кожні 12 год.",
+    "en": "6 mg/kg every 12 h on day 1, then 4 mg/kg every 12 h."
+  },
+  "sources": [
+    {
+      "name": "SmPC Voriconazole Pfizer 200 mg powder for solution for infusion (emc), 4.2, 6.6",
+      "url": "https://www.medicines.org.uk/emc/product/7324/smpc",
+      "version": "ред. 07/2026",
+      "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "Maschmeyer G et al. Diagnosis and antimicrobial therapy of lung infiltrates in febrile neutropenic patients: AGIHO. Ann Oncol 2015;26:21–33",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4269340/",
+      "version": "2014 (опубл. 2015)",
+      "checkedOn": "2026-10-11"
+    }
+  ],
+  "items": [
+    {
+      "key": "loading",
+      "drug_id": "voriconazole",
+      "route": "iv_infusion",
+      "dose_value": 6,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 120,
+      "notes": {
+        "uk": "Навантаження першої доби: 6 мг/кг не швидше 3 мг/кг/год — щонайменше 2 год. Перед стартом виправити калій, магній, кальцій.",
+        "en": "The first-day loading: 6 mg/kg no faster than 3 mg/kg/h, at least 2 h. Correct potassium, magnesium and calcium before the start."
+      }
+    },
+    {
+      "key": "maintenance",
+      "drug_id": "voriconazole",
+      "route": "iv_infusion",
+      "dose_value": 4,
+      "dose_unit": "mg_kg",
+      "days": [2],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "duration_min": 80,
+      "notes": {
+        "uk": "Далі щодня 4 мг/кг двічі (щонайменше 80 хв); перехід на таблетки 200 мг двічі — коли стан дозволяє. Тривалість — за клінічною й мікологічною відповіддю; при інфільтратах — до відновлення нейтрофілів і регресу (AGIHO B-III). Цироз Child-Pugh A–B — підтримувальна доза вдвічі менша. Взаємодії: венетоклакс, вінкристин, ібрутиніб, циклоспорин, такролімус.",
+        "en": "Then 4 mg/kg twice daily (at least 80 min); switch to 200 mg tablets twice when the condition allows. Duration by clinical and mycological response; with infiltrates, until neutrophil recovery and regression (AGIHO B-III). Child-Pugh A-B cirrhosis, half the maintenance dose. Interactions: venetoclax, vincristine, ibrutinib, ciclosporin, tacrolimus."
+      }
+    }
+  ]
+}

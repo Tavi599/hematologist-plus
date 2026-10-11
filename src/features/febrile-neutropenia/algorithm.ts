@@ -533,13 +533,25 @@ export const AGENTS: { group: Text2; agents: Agent[] }[] = [
     group: t('Документовані грибкові інфекції, PcP', 'Documented fungal infection, PcP'),
     agents: [
       {
-        name: t('Вориконазол', 'Voriconazole'),
+        name: t('Вориконазол в/в', 'IV voriconazole'),
         dose: t(
-          'Таблетки: 400 мг кожні 12 год першу добу, далі 200 мг двічі (≥ 40 кг); в/в — 6 мг/кг, далі 4 мг/кг кожні 12 год',
-          'Tablets: 400 mg every 12 h on day 1, then 200 mg twice (≥ 40 kg); IV, 6 mg/kg then 4 mg/kg every 12 h',
+          '6 мг/кг кожні 12 год першу добу, далі 4 мг/кг кожні 12 год; не швидше 3 мг/кг/год',
+          '6 mg/kg every 12 h on day 1, then 4 mg/kg every 12 h; no faster than 3 mg/kg/h',
         ),
         source: {
-          name: 'SmPC Voriconazole Pfizer (emc, 07/2026), 4.2',
+          name: 'SmPC Voriconazole Pfizer 200 mg powder for solution for infusion (emc, 07/2026), 4.2',
+          url: 'https://www.medicines.org.uk/emc/product/7324/smpc',
+        },
+        regimenId: 'voriconazole-iv',
+      },
+      {
+        name: t('Вориконазол перорально', 'Oral voriconazole'),
+        dose: t(
+          '400 мг кожні 12 год першу добу, далі 200 мг двічі (≥ 40 кг)',
+          '400 mg every 12 h on day 1, then 200 mg twice (≥ 40 kg)',
+        ),
+        source: {
+          name: 'SmPC Voriconazole Pfizer tablets (emc, 07/2026), 4.2',
           url: 'https://www.medicines.org.uk/emc/product/7325/smpc',
         },
         regimenId: 'voriconazole-oral',
@@ -555,6 +567,26 @@ export const AGENTS: { group: Text2; agents: Agent[] }[] = [
           url: 'https://www.medicines.org.uk/emc/product/102621/smpc',
         },
         regimenId: 'co-trimoxazole-pcp',
+      },
+    ],
+  },
+  {
+    group: t(
+      'Анаеробні інфекції; C. difficile без перорального шляху',
+      'Anaerobic infections; C. difficile with no oral route',
+    ),
+    agents: [
+      {
+        name: t('Метронідазол в/в', 'IV metronidazole'),
+        dose: t(
+          '500 мг (100 мл) кожні 8 год, зазвичай 7 днів, не довше 10; не до піперациліну/тазобактаму чи карбапенему',
+          '500 mg (100 mL) every 8 h, usually 7 days, no longer than 10; not added to piperacillin/tazobactam or a carbapenem',
+        ),
+        source: {
+          name: 'SmPC Metronidazole 500 mg/100 ml Solution for Infusion (B. Braun, emc, 04.06.2026), 4.2',
+          url: 'https://www.medicines.org.uk/emc/product/15157/smpc',
+        },
+        regimenId: 'metronidazole-iv',
       },
     ],
   },
