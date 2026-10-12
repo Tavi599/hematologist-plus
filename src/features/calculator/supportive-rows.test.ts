@@ -4,9 +4,26 @@ import {
   infusionHow,
   infusionRow,
   infusionWhat,
+  ivigSupportRows,
   presetRow,
   standardAdditives,
 } from './supportive-rows'
+
+describe('ivigSupportRows', () => {
+  it('writes the department support of immunoglobulin above it, on its days', () => {
+    const rows = ivigSupportRows('ivig', [1])
+    expect(rows.map((row) => row.what.split('\n')[0])).toEqual([
+      'Р-н Натрію хлориду 0,9% - 500 мл',
+      'Парацетамол 1000 мг',
+      'Дексаметазон 8 мг',
+    ])
+    expect(rows.every((row) => row.before && row.supportFor === 'ivig')).toBe(true)
+    expect(rows.every((row) => row.days.join() === '1' && row.block === 'infusion')).toBe(true)
+    // 500 mL carries the department's standard additives: 20 mL of KCl 4%, 2 mL of MgSO4 25%.
+    expect(rows[0]!.what).toContain('4% - 20 мл')
+    expect(rows[0]!.what).toContain('25% - 2 мл')
+  })
+})
 
 describe('standardAdditives', () => {
   it('carries potassium and magnesium in proportion to the bag', () => {

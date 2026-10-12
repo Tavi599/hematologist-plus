@@ -21,6 +21,13 @@ export interface ManualRow {
   /** Hour of the day the mark goes in; null leaves the line ruled but unmarked. */
   hour: number | null
   block: ManualBlock
+  /**
+   * Printed above the course's own drugs rather than under them: support given before the drug
+   * (hydration and premedication before immunoglobulin), in the order the ward gives it.
+   */
+  before?: boolean
+  /** The course row this line was proposed for (the standard support of immunoglobulin). */
+  supportFor?: string
 }
 
 export function newManualRow(id: string): ManualRow {
@@ -44,6 +51,17 @@ export function manualDayNumbers(rows: ManualRow[]): number[] {
 /** The hand-written lines of one sheet, on one day. */
 export function manualRowsOn(rows: ManualRow[], block: ManualBlock, day: number): ManualRow[] {
   return rows.filter((row) => isWritten(row) && row.block === block && row.days.includes(day))
+}
+
+/** Of those, the lines printed above the course's own drugs, or the ones printed under them. */
+export function manualRowsAt(
+  rows: ManualRow[],
+  day: number,
+  placement: 'before' | 'after',
+): ManualRow[] {
+  return manualRowsOn(rows, 'infusion', day).filter(
+    (row) => (row.before ?? false) === (placement === 'before'),
+  )
 }
 
 /** The hand-written lines of the inpatient sheet, in the order they were written. */

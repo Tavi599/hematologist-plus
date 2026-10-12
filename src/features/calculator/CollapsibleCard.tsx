@@ -1,12 +1,16 @@
 import { Card, Group, Text, UnstyledButton } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 
 interface CollapsibleCardProps {
   title: string
   /** Shown beside the title while the section is closed, e.g. how many rows it holds. */
   hint?: string
   defaultOpen?: boolean
+  /** Opens the section whenever it changes: a link elsewhere on the page asks to see it. */
+  openRequest?: number
+  /** Anchor id of the section, so a link elsewhere on the page can scroll to it. */
+  id?: string
   children: ReactNode
 }
 
@@ -18,12 +22,20 @@ export function CollapsibleCard({
   title,
   hint,
   defaultOpen = false,
+  openRequest,
+  id,
   children,
 }: CollapsibleCardProps) {
-  const [opened, { toggle }] = useDisclosure(defaultOpen)
+  const [opened, { toggle, open }] = useDisclosure(defaultOpen)
+  // A request seen once is answered once; folding the section again afterwards is the reader's.
+  const [seenRequest, setSeenRequest] = useState(openRequest)
+  if (openRequest !== seenRequest) {
+    setSeenRequest(openRequest)
+    open()
+  }
 
   return (
-    <Card withBorder component="section">
+    <Card withBorder component="section" id={id}>
       <UnstyledButton onClick={toggle} aria-expanded={opened} w="100%">
         <Group justify="space-between" wrap="nowrap">
           <Group gap="xs" wrap="nowrap">

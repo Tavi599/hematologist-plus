@@ -17,7 +17,13 @@ import type { XlsxBox, XlsxFormat, XlsxInput, XlsxSheet } from '../../lib/xlsx-w
 import { columnName } from '../../lib/xlsx-writer'
 import type { PatientInput } from '../../schemas/patient'
 import type { HeaderValue } from './header'
-import { daysWithManual, manualRowsOn, manualWardRows, type ManualRow } from './manual-rows'
+import {
+  daysWithManual,
+  manualRowsAt,
+  manualRowsOn,
+  manualWardRows,
+  type ManualRow,
+} from './manual-rows'
 
 /**
  * The calculated course on the department's own blanks: one sheet per day with an infusion, laid
@@ -280,7 +286,11 @@ function daySheet(input: CourseSheetsInput, day: SheetDay): XlsxSheet {
   merges.push('A4:B4')
   heights.push(15.6)
 
-  const orders = [...dayOrders(input, day), ...manualOrders(input, day)]
+  const orders = [
+    ...manualOrders(input, day, 'before'),
+    ...dayOrders(input, day),
+    ...manualOrders(input, day, 'after'),
+  ]
   const ruled = appendBands(
     rows,
     merges,
@@ -370,8 +380,12 @@ function dayOrders(input: CourseSheetsInput, day: SheetDay): Order[] {
 }
 
 /** The hand-written lines of this day, printed as typed and marked at the hour they were given. */
-function manualOrders(input: CourseSheetsInput, day: SheetDay): Order[] {
-  return manualRowsOn(input.manualRows ?? [], 'infusion', day.day).map((row) => ({
+function manualOrders(
+  input: CourseSheetsInput,
+  day: SheetDay,
+  placement: 'before' | 'after',
+): Order[] {
+  return manualRowsAt(input.manualRows ?? [], day.day, placement).map((row) => ({
     what: row.what,
     how: row.how,
     hours: row.hour === null ? new Set<number>() : new Set([row.hour]),

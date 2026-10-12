@@ -54,6 +54,7 @@ import {
 } from '../../lib/course-input'
 import { groupCourseItems } from '../../lib/dose-groups'
 import { PREMEDICATION_ADVISED } from '../../lib/premedication'
+import { IVIG_DRUG_ID } from './supportive-rows'
 import { CalculationChain } from './CalculationChain'
 import { SourceNotes } from './SourceNotes'
 import { WarningList } from './WarningList'
@@ -98,6 +99,11 @@ export interface DoseTableProps {
   /** Of those, the ones the physician has added it to. */
   mesnaAdded: string[]
   onMesna: (itemId: string, on: boolean) => void
+  /** Immunoglobulin rows whose standard support is written out among the hand-written lines. */
+  ivigSupportAdded: string[]
+  onIvigSupport: (itemId: string, on: boolean) => void
+  /** Opens the hand-written lines, where the support is changed. */
+  onIvigSupportEdit: () => void
   /** Gives the row by another route the label allows at the same dose. */
   onRoute: (itemId: string, route: CourseItem['item']['route']) => void
   /** Cycle of the course: cycle 1 opens with the first, slower infusion unless set otherwise. */
@@ -461,6 +467,9 @@ function DoseRow({
   mesnaOffered,
   mesnaAdded,
   onMesna,
+  ivigSupportAdded,
+  onIvigSupport,
+  onIvigSupportEdit,
   onRoute,
   cycleNumber,
   infusionStart,
@@ -563,6 +572,41 @@ function DoseRow({
                 )}
               </Button>
             </Group>
+          )}
+          {/* Immunoglobulin: the department's standard support, written out as lines above it
+              that a colleague edits as text, or one click away when it was removed. */}
+          {item.item.drug_id === IVIG_DRUG_ID && item.item.role === 'main' && (
+            <Stack gap={2} mt={4}>
+              <Group gap={6} wrap="nowrap">
+                <Badge size="xs" variant="light" color="teal">
+                  {t('calculator.doses.ivigSupport')}
+                </Badge>
+                {ivigSupportAdded.includes(id) && (
+                  <Button size="compact-xs" variant="light" onClick={onIvigSupportEdit}>
+                    {t('calculator.doses.ivigSupportEdit')}
+                  </Button>
+                )}
+                <Button
+                  size="compact-xs"
+                  variant={ivigSupportAdded.includes(id) ? 'subtle' : 'light'}
+                  disabled={!enabled}
+                  onClick={() => onIvigSupport(id, !ivigSupportAdded.includes(id))}
+                >
+                  {t(
+                    ivigSupportAdded.includes(id)
+                      ? 'calculator.doses.ivigSupportRemove'
+                      : 'calculator.doses.ivigSupportAdd',
+                  )}
+                </Button>
+              </Group>
+              <Text size="xs" c="dimmed">
+                {t(
+                  ivigSupportAdded.includes(id)
+                    ? 'calculator.doses.ivigSupportOn'
+                    : 'calculator.doses.ivigSupportOff',
+                )}
+              </Text>
+            </Stack>
           )}
           {/* A drug the department cannot simply take off the shelf. The badge in the regimen
               list says only that something in the course is missing; here it is clear which

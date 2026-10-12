@@ -217,7 +217,13 @@
           "mid": "Middle {{dose}}",
           "high": "Upper {{dose}}"
         }
-      }
+      },
+      "ivigSupport": "Standard IVIG support",
+      "ivigSupportOn": "3 lines added above the immunoglobulin: hydration with KCl and MgSO4, paracetamol, dexamethasone with diphenhydramine. Edit them as text.",
+      "ivigSupportOff": "Hydration, paracetamol and dexamethasone with diphenhydramine, as on the department sheet.",
+      "ivigSupportAdd": "Add",
+      "ivigSupportRemove": "Remove",
+      "ivigSupportEdit": "Edit"
     },
     "standardSupport": {
       "title": "Standard support",
@@ -275,7 +281,13 @@
         "hint": "Bags of 500, 1000 and 3000 mL come with potassium and magnesium in proportion (per 1000 mL: KCl 4% 40 mL, MgSO4 25% 4 mL); either can be switched off or changed. Nothing is filled in for smaller bags (100–400 mL): switch it on and type the amount. The line can be edited below."
       },
       "up": "Move the line up",
-      "down": "Move the line down"
+      "down": "Move the line down",
+      "before": "Before the course drugs",
+      "ivigSupport": "IVIG support",
+      "count_one": "{{count}} line",
+      "count_other": "{{count}} lines",
+      "count_few": "{{count}} lines",
+      "count_many": "{{count}} lines"
     },
     "schedule": {
       "title": "Schedule",

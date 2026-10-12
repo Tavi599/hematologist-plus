@@ -74,6 +74,41 @@ export function infusionRow(id: string, input: InfusionLineInput, days: number[]
   }
 }
 
+/** The drug whose standard support the department writes on its own sheet. */
+export const IVIG_DRUG_ID = 'immunoglobulin-human-iv'
+
+/**
+ * The department's standard support of intravenous immunoglobulin, as its «Біовен інфуз лист»
+ * writes it: hydration with potassium and magnesium, paracetamol by mouth 30 min before, and
+ * dexamethasone with diphenhydramine in 100 mL of saline before the immunoglobulin. They are
+ * ordinary hand-written lines above the drug, so a colleague changes any of them as text.
+ */
+export function ivigSupportRows(itemId: string, days: number[]): ManualRow[] {
+  const line = (key: string, what: string, how: string): ManualRow => ({
+    id: `ivig-support-${itemId}-${key}`,
+    what,
+    how,
+    days,
+    hour: null,
+    block: 'infusion',
+    before: true,
+    supportFor: itemId,
+  })
+  return [
+    line(
+      'hydration',
+      'Р-н Натрію хлориду 0,9% - 500 мл\nР-н Калію хлориду 4% - 20 мл\nР-н Магнію сульфату 25% - 2 мл',
+      'в/в крап.\nV = 150 мл/год',
+    ),
+    line('paracetamol', 'Парацетамол 1000 мг', 'р.о.\n(за 30 хв до імуноглобуліну)'),
+    line(
+      'premedication',
+      'Дексаметазон 8 мг\nДимедрол 1% - 1,0 мл\n0,9% NaCl 100,0 мл',
+      'в/в крап.\nV = 200 мл/год\n(перед імуноглобуліном)',
+    ),
+  ]
+}
+
 export type DrugPreset = 'ondansetron' | 'omeprazole'
 
 /** Ondansetron: the usual 8 mg before chemotherapy (SmPC); omeprazole as on the department sheet. */

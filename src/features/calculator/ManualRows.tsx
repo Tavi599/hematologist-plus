@@ -1,4 +1,15 @@
-import { ActionIcon, Button, Group, Select, Stack, Text, TextInput } from '@mantine/core'
+import {
+  ActionIcon,
+  Badge,
+  Button,
+  Checkbox,
+  Group,
+  Select,
+  Stack,
+  Text,
+  Textarea,
+  TextInput,
+} from '@mantine/core'
 import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -8,6 +19,12 @@ import { parseDays } from './parse-days'
 import { SupportiveBuilder } from './SupportiveBuilder'
 import { CollapsibleCard } from './CollapsibleCard'
 
+/** Height of a field in lines: as many as the text has, the sheet's own line breaks. */
+const lineCount = (text: string) => Math.max(1, text.split('\n').length)
+
+/** Anchor of the section, so a link elsewhere on the page can scroll to it. */
+export const MANUAL_ROWS_ANCHOR = 'manual-rows'
+
 /**
  * Orders written out by hand. They are printed as typed, so the physician can put a line on the
  * sheet that the catalog knows nothing about — and can make a whole sheet without a regimen.
@@ -15,9 +32,12 @@ import { CollapsibleCard } from './CollapsibleCard'
 export function ManualRows({
   rows,
   onChange,
+  openRequest,
 }: {
   rows: ManualRow[]
   onChange: (rows: ManualRow[]) => void
+  /** Opens the section whenever it changes (the immunoglobulin row asks to show its support). */
+  openRequest?: number
 }) {
   const { t } = useTranslation()
   // The days are kept as the physician typed them, so «1, 8, 15» can be edited mid-word.
@@ -36,7 +56,12 @@ export function ManualRows({
   ]
 
   return (
-    <CollapsibleCard title={t('calculator.manual.title')}>
+    <CollapsibleCard
+      title={t('calculator.manual.title')}
+      id={MANUAL_ROWS_ANCHOR}
+      {...(openRequest === undefined ? {} : { openRequest })}
+      {...(rows.length > 0 ? { hint: t('calculator.manual.count', { count: rows.length }) } : {})}
+    >
       <Stack gap="sm">
         <Text size="sm" c="dimmed">
           {t('calculator.manual.lead')}
@@ -49,19 +74,33 @@ export function ManualRows({
           const parsed = parseDays(typed)
           return (
             <Group key={row.id} align="flex-end" wrap="wrap" gap="sm">
-              <TextInput
-                label={t('calculator.manual.what')}
+              {/* Several lines, as the sheet writes them: a bag and what goes into it. */}
+              <Textarea
+                label={
+                  row.supportFor ? (
+                    <Group gap={6} wrap="nowrap" component="span">
+                      {t('calculator.manual.what')}
+                      <Badge size="xs" variant="light" component="span">
+                        {t('calculator.manual.ivigSupport')}
+                      </Badge>
+                    </Group>
+                  ) : (
+                    t('calculator.manual.what')
+                  )
+                }
                 placeholder={t('calculator.manual.whatPlaceholder')}
+                rows={lineCount(row.what)}
                 value={row.what}
                 onChange={(event) => patch(row.id, { what: event.currentTarget.value })}
                 style={{ flex: '1 1 260px' }}
               />
-              <TextInput
+              <Textarea
                 label={t('calculator.manual.how')}
                 placeholder={t('calculator.manual.howPlaceholder')}
+                rows={lineCount(row.how)}
                 value={row.how}
                 onChange={(event) => patch(row.id, { how: event.currentTarget.value })}
-                w={180}
+                w={200}
               />
               <TextInput
                 label={t('calculator.doses.addDays')}
@@ -98,6 +137,13 @@ export function ManualRows({
                 // The inpatient sheet has no clock: its lines are marked by the date alone.
                 disabled={row.block === 'ward'}
                 w={130}
+              />
+              <Checkbox
+                label={t('calculator.manual.before')}
+                checked={row.before ?? false}
+                disabled={row.block === 'ward'}
+                onChange={(event) => patch(row.id, { before: event.currentTarget.checked })}
+                mb={8}
               />
               <ActionIcon
                 variant="subtle"

@@ -15,8 +15,9 @@ import { CourseSettings, type CourseSettingsValue } from '../../features/calcula
 import { DoseTable } from '../../features/calculator/DoseTable'
 import { emptyHeader } from '../../features/calculator/header'
 import { HospitalHeader } from '../../features/calculator/HospitalHeader'
-import { ManualRows } from '../../features/calculator/ManualRows'
+import { MANUAL_ROWS_ANCHOR, ManualRows } from '../../features/calculator/ManualRows'
 import type { ManualRow } from '../../features/calculator/manual-rows'
+import { IVIG_DRUG_ID, ivigSupportRows } from '../../features/calculator/supportive-rows'
 import { PatientForm } from '../../features/calculator/PatientForm'
 import { ScheduleTable } from '../../features/calculator/ScheduleTable'
 import { SupplyTable } from '../../features/calculator/SupplyTable'
@@ -114,6 +115,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [infusionStart, setInfusionStart] = useState<Record<string, number>>({})
   const [header, setHeader] = useState(emptyHeader)
   const [manualRows, setManualRows] = useState<ManualRow[]>([])
+  // Bumped to open the hand-written lines when a row asks to show its own (immunoglobulin).
+  const [manualOpenRequest, setManualOpenRequest] = useState(0)
   const [support, setSupport] = useState<Record<SupportCategory, boolean>>(NO_SUPPORT)
   // NSSG's standard with an immunomodulatory drug; aspirin is for a patient with no other risk.
   const [thromboAgent, setThromboAgent] = useState<ThromboAgent>('apixaban')
@@ -279,6 +282,14 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     })
     setThromboAgent('apixaban')
     setMesnaFor([])
+    // Immunoglobulin opens with the department's standard support written out above it: lines
+    // a colleague edits as text. Those proposed for the previous regimen go with it.
+    setManualRows((current) => [
+      ...current.filter((row) => row.supportFor === undefined),
+      ...ownItems
+        .filter((entry) => entry.item.drug_id === IVIG_DRUG_ID && entry.item.role === 'main')
+        .flatMap((entry) => ivigSupportRows(entry.item.id, entry.item.days)),
+    ])
     setChosenRoutes({})
     const premedicationOn = premedicationOnByDefault(baseItems)
     const supportOn = new Set(indicated.flatMap((category) => categoryItemIds(ownItems, category)))
@@ -560,6 +571,24 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                     setChosenRoutes((current) => ({ ...current, [id]: route }))
                   }
                   mesnaAdded={mesnaFor}
+                  ivigSupportAdded={[
+                    ...new Set(
+                      manualRows.flatMap((row) => (row.supportFor ? [row.supportFor] : [])),
+                    ),
+                  ]}
+                  onIvigSupport={(id, on) => {
+                    const item = items.find((entry) => entry.item.id === id)
+                    setManualRows((current) => [
+                      ...current.filter((row) => row.supportFor !== id),
+                      ...(on && item ? ivigSupportRows(id, item.item.days) : []),
+                    ])
+                  }}
+                  onIvigSupportEdit={() => {
+                    setManualOpenRequest((current) => current + 1)
+                    document
+                      .getElementById(MANUAL_ROWS_ANCHOR)
+                      ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }}
                   cycleNumber={courseSettings.cycleNumber}
                   infusionStart={infusionStart}
                   onInfusionStart={(key, start) =>
@@ -663,7 +692,11 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   {t('calculator.tabs.empty')}
                 </Text>
               )}
-              <ManualRows rows={manualRows} onChange={setManualRows} />
+              <ManualRows
+                rows={manualRows}
+                onChange={setManualRows}
+                openRequest={manualOpenRequest}
+              />
             </Stack>
           </Tabs.Panel>
 

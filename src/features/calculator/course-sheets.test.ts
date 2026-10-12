@@ -511,6 +511,28 @@ describe('buildCourseSheets', () => {
     expect(text(band[2 + SHEET_HOURS.indexOf(15)] ?? null)).toBeNull()
   })
 
+  it('prints a line marked «before» above the course drugs, the rest under them', () => {
+    const built = sheets({
+      manualRows: [
+        { id: 'after', what: 'Контроль ЗАК', how: '', days: [1], hour: null, block: 'infusion' },
+        {
+          id: 'before',
+          what: 'Парацетамол 1000 мг',
+          how: 'р.о.',
+          days: [1],
+          hour: null,
+          block: 'infusion',
+          before: true,
+        },
+      ],
+    })
+    const lines = orders(built[0]!, 4).filter((line) => line !== '')
+    expect(lines[0]).toBe('Парацетамол 1000 мг')
+    expect(lines.indexOf('Контроль ЗАК')).toBeGreaterThan(
+      lines.findIndex((line) => line.startsWith('ДЕМО Ритуксимаб')),
+    )
+  })
+
   it('makes a sheet for a day the course gives nothing on, when a line was written for it', () => {
     const built = sheets({
       manualRows: [
