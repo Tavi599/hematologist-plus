@@ -53,7 +53,18 @@
       "notes": {
         "uk": "Готовий розчин 5 мг/мл: 100 мл повільно в/в, не швидше ніж за 20 хв, зазвичай за 1 год. Інші антибіотики — окремо.",
         "en": "Ready solution 5 mg/mL: 100 mL slowly IV, no faster than 20 min, usually over 1 h. Other antibiotics separately."
-      }
+      },
+      "duration_options": [
+        {
+          "duration_min": 20,
+          "extended": false
+        },
+        {
+          "duration_min": 60,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 20
     }
   ],
   "cautions": [

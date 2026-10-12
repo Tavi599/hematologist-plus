@@ -113,6 +113,13 @@ export const drugInfusionParamsRowSchema = z
     ramp_sequence: rampSequenceRowSchema.nullable().catch(null).default(null),
     /** Fastest pace, mg/min; a client older than the column reads null and keeps the duration. */
     max_rate_mg_min: positiveNumberSchema.nullable().catch(null).default(null),
+    /** Recommended durations the calculator offers; empty when the label names one. */
+    duration_options: z
+      .array(z.object({ duration_min: positiveNumberSchema.int(), extended: z.boolean() }))
+      .catch([])
+      .default([]),
+    /** Shortest infusion the label allows, min. */
+    min_duration_min: positiveNumberSchema.int().nullable().catch(null).default(null),
   })
   .refine(
     (row) =>

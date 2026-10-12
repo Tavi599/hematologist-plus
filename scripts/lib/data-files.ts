@@ -122,6 +122,17 @@ export const drugFileSchema = z.strictObject({
         stock_concentration_mg_ml: optionalPositive,
         /** Fastest pace, mg/min (vancomycin 10): a larger dose runs longer than duration_min. */
         max_rate_mg_min: optionalPositive,
+        /** Recommended durations offered in the calculator; extended = prolonged infusion. */
+        duration_options: z
+          .array(
+            z.strictObject({
+              duration_min: positiveNumberSchema.int(),
+              extended: z.boolean().default(false),
+            }),
+          )
+          .default([]),
+        /** Shortest infusion the label allows, min. */
+        min_duration_min: optionalPositiveInt,
         /** Rate raised in steps (mL/h) instead of one speed; see rateRampSchema. */
         rate_ramp: rateRampSchema.nullable().default(null),
         /** Second-infusion steps, first-dose bag, split first dose; see rampSequenceSchema. */

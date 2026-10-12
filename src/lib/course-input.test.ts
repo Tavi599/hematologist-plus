@@ -8,7 +8,9 @@ import {
   activeModifiers,
   applyAdministrationMode,
   applyBagChoices,
+  applyDurationChoices,
   canSwitchBag,
+  durationOptionsOf,
   canSwitchInfusionLength,
   protocolInfusionLength,
   applyModifiers,
@@ -442,6 +444,48 @@ describe('bag of an antimicrobial infusion', () => {
     expect(
       applyBagChoices([switchable], { dox: 250 })[0]!.courseDrug.infusion?.preferredBagMl,
     ).toBe(250)
+  })
+})
+
+describe('duration of an antimicrobial infusion', () => {
+  const params = {
+    duration_options: [
+      { duration_min: 30, extended: false },
+      { duration_min: 180, extended: true },
+    ],
+    rate_ramp: null,
+  }
+
+  it('offers the recorded durations for an anti-infective only', () => {
+    const infusion = { route: 'iv_infusion' as const }
+    expect(durationOptionsOf({ atc_code: 'J01DE01' }, infusion, params)).toEqual([
+      { durationMin: 30, extended: false },
+      { durationMin: 180, extended: true },
+    ])
+    expect(durationOptionsOf({ atc_code: 'L01DB01' }, infusion, params)).toEqual([])
+    expect(durationOptionsOf({ atc_code: 'J01DE01' }, { route: 'iv_bolus' }, params)).toEqual([])
+  })
+
+  it('sets the picked duration, never below the shortest the label allows', () => {
+    const [row] = buildCourseItemsFrom(index(), [
+      customCourseItem({
+        id: 'abx',
+        drugId: 'doxorubicin',
+        doseValue: 9,
+        doseUnit: 'mg_m2',
+        days: [1],
+        route: 'iv_infusion',
+        sortOrder: 0,
+      }),
+    ])
+    const switchable = {
+      ...row!,
+      durationOptions: [{ durationMin: 30, extended: false }],
+      minDurationMin: 20,
+    }
+    expect(applyDurationChoices([switchable], { abx: 180 })[0]!.courseDrug.durationMin).toBe(180)
+    expect(applyDurationChoices([switchable], { abx: 5 })[0]!.courseDrug.durationMin).toBe(20)
+    expect(applyDurationChoices([row!], { abx: 180 })[0]).toBe(row)
   })
 })
 

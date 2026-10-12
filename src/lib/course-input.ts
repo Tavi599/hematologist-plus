@@ -29,6 +29,12 @@ export interface CourseItem {
   protocolInfusion: InfusionLength
   /** An antimicrobial infusion with several bags the label allows: the physician picks one. */
   bagSwitchable: boolean
+  /** Durations the physician may pick for an antimicrobial infusion; empty means no choice. */
+  durationOptions: DurationOption[]
+  /** Shortest infusion the label allows, min; a typed duration never goes below it. */
+  minDurationMin: number | null
+  /** The duration the row has before any choice, min. */
+  protocolDurationMin: number | null
   /** Routes the physician may switch this row to at the same dose, its own route included;
    *  empty when the label allows no other. */
   routeChoices: Route[]
@@ -85,6 +91,39 @@ export function applyBagChoices(items: CourseItem[], chosen: Record<string, numb
       ...item,
       courseDrug: { ...item.courseDrug, infusion: { ...infusion, preferredBagMl: bag } },
     }
+  })
+}
+
+export interface DurationOption {
+  durationMin: number
+  /** A prolonged infusion (a beta-lactam over 3-4 h), not the label's usual one. */
+  extended: boolean
+}
+
+/** The durations on offer for an antimicrobial infusion that is not raised in steps. */
+export function durationOptionsOf(
+  drug: Pick<Drug, 'atc_code'>,
+  item: Pick<RegimenItem, 'route'>,
+  params: Pick<DrugInfusionParams, 'duration_options' | 'rate_ramp'> | null,
+): DurationOption[] {
+  if (item.route !== 'iv_infusion' || !(drug.atc_code ?? '').startsWith('J')) return []
+  if (!params || params.rate_ramp) return []
+  return (params.duration_options ?? []).map((option) => ({
+    durationMin: option.duration_min,
+    extended: option.extended,
+  }))
+}
+
+/** The rows with the durations the physician picked, never shorter than the label allows. */
+export function applyDurationChoices(
+  items: CourseItem[],
+  chosen: Record<string, number>,
+): CourseItem[] {
+  return items.map((item) => {
+    const minutes = chosen[item.item.id]
+    if (minutes === undefined || item.durationOptions.length === 0) return item
+    const durationMin = Math.max(minutes, item.minDurationMin ?? 1)
+    return { ...item, courseDrug: { ...item.courseDrug, durationMin } }
   })
 }
 
@@ -452,6 +491,9 @@ export function buildCourseItemsFrom(
         infusionSwitchable: canSwitchInfusionLength(item),
         protocolInfusion: protocolLengths.get(item.id) ?? protocolInfusionLength(item),
         bagSwitchable: canSwitchBag(drug, item, params),
+        durationOptions: durationOptionsOf(drug, item, params),
+        minDurationMin: params?.min_duration_min ?? null,
+        protocolDurationMin: durationMin,
         routeChoices: availableRoutes(catalog, drug, protocolRoutes.get(item.id) ?? item.route),
         protocolRoute: protocolRoutes.get(item.id) ?? item.route,
       },

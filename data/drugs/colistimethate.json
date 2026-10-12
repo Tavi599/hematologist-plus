@@ -60,7 +60,18 @@
       "notes": {
         "uk": "Вміст флакона розводять зазвичай у 50 мл 0,9% NaCl; повільна інфузія 30–60 хв.",
         "en": "The vial is usually diluted in 50 mL of 0.9% NaCl; a slow infusion over 30-60 min."
-      }
+      },
+      "duration_options": [
+        {
+          "duration_min": 30,
+          "extended": false
+        },
+        {
+          "duration_min": 60,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 30
     }
   ],
   "cautions": [

@@ -57,7 +57,22 @@
       "notes": {
         "uk": "Готовий розчин 2 мг/мл, 300 мл, без розведення; інфузія 30–120 хв (у розрахунку — 60 хв).",
         "en": "Ready solution 2 mg/mL, 300 mL, undiluted; infusion over 30-120 min (60 min in the calculation)."
-      }
+      },
+      "duration_options": [
+        {
+          "duration_min": 30,
+          "extended": false
+        },
+        {
+          "duration_min": 60,
+          "extended": false
+        },
+        {
+          "duration_min": 120,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 30
     }
   ],
   "cautions": [

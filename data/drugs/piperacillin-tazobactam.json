@@ -59,12 +59,33 @@
           "url": "https://www.medicines.org.uk/emc/product/8771/smpc",
           "version": "01/06/2022",
           "checkedOn": "2026-10-11"
+        },
+        {
+          "name": "UpToDate (Lexicomp): Piperacillin and tazobactam: Drug information, extended-infusion method (off-label)",
+          "url": "https://www.uptodate.com/contents/piperacillin-and-tazobactam-drug-information",
+          "version": "2026",
+          "checkedOn": "2026-10-12"
         }
       ],
       "notes": {
-        "uk": "Флакон 4 г/0,5 г відновлюють 20 мл розчинника і розводять до 50–150 мл 0,9% NaCl або 5% глюкози; інфузія 30 хв (SmPC 4.2, 6.6).",
-        "en": "The 4 g/0.5 g vial is reconstituted with 20 mL and diluted to 50-150 mL of 0.9% NaCl or 5% glucose; infused over 30 min (SmPC 4.2, 6.6)."
-      }
+        "uk": "Флакон 4 г/0,5 г відновлюють 20 мл розчинника і розводять до 50–150 мл 0,9% NaCl або 5% глюкози; інфузія 30 хв (SmPC 4.2, 6.6). Подовжена інфузія (поза інструкцією, Lexicomp): 4,5 г кожні 6 год за 3 год або кожні 8 год за 4 год; першу дозу можна дати за 30 хв.",
+        "en": "The 4 g/0.5 g vial is reconstituted with 20 mL and diluted to 50-150 mL of 0.9% NaCl or 5% glucose; infused over 30 min (SmPC 4.2, 6.6). Extended infusion (off-label, Lexicomp): 4.5 g every 6 h over 3 h or every 8 h over 4 h; the first dose may run over 30 min."
+      },
+      "duration_options": [
+        {
+          "duration_min": 30,
+          "extended": false
+        },
+        {
+          "duration_min": 180,
+          "extended": true
+        },
+        {
+          "duration_min": 240,
+          "extended": true
+        }
+      ],
+      "min_duration_min": 30
     }
   ],
   "cautions": [

@@ -59,7 +59,18 @@
       "notes": {
         "uk": "Флакон 50 мг відновлюють 12 мл води для ін'єкцій (4 мг/мл), розводять лише 5% глюкозою до 1–2 мг/мл; інфузія близько 120 хв, при добрій переносимості — до 60 хв; фільтр не дрібніше 1 мкм. Мішок підібрано так, щоб концентрація лишалась у межах 1–2 мг/мл.",
         "en": "The 50 mg vial is reconstituted with 12 mL of water for injection (4 mg/mL) and diluted only with 5% glucose to 1-2 mg/mL; infused over about 120 min, down to 60 min when well tolerated; an in-line filter no finer than 1 micron. The bag is chosen to keep 1-2 mg/mL."
-      }
+      },
+      "duration_options": [
+        {
+          "duration_min": 60,
+          "extended": false
+        },
+        {
+          "duration_min": 120,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 60
     }
   ],
   "cautions": [

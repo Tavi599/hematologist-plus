@@ -42,6 +42,7 @@ import {
   type AdministrationMode,
   type InfusionLength,
   type CourseItem,
+  type DurationOption,
 } from '../../lib/course-input'
 import { groupCourseItems } from '../../lib/dose-groups'
 import { PREMEDICATION_ADVISED } from '../../lib/premedication'
@@ -69,6 +70,10 @@ export interface DoseTableProps {
   onDoseModifiers: (itemId: string, keys: string[]) => void
   /** The bag an antimicrobial infusion is diluted in, picked by the physician. */
   onBagChoice: (itemId: string, bagVolumeMl: number) => void
+  /** Durations the physician picked for antimicrobial infusions, by row, min. */
+  chosenDurations: Record<string, number>
+  /** `null` goes back to the row's own duration. */
+  onDurationChoice: (itemId: string, durationMin: number | null) => void
   onRemove: (itemId: string) => void
   customIds: string[]
   /** The BSA the doses are given on; the other variant is shown under it when it differs. */
@@ -275,6 +280,8 @@ function DoseRow({
   onAdministrationMode,
   onDoseModifiers,
   onBagChoice,
+  chosenDurations,
+  onDurationChoice,
   onRemove,
   customIds,
   bsaVariant,
@@ -628,10 +635,24 @@ function DoseRow({
                 <BagVolumeControl
                   drugName={localize(item.drug.name, language)}
                   options={result.infusion.bagOptions}
+                  limits={item.infusionParams}
                   value={result.infusion.bagVolumeMl}
                   unit={tu(`units.${result.infusion.concentrationUnit}_ml`)}
                   disabled={!enabled}
                   onChange={(bag) => onBagChoice(id, bag)}
+                />
+              )}
+              {item.durationOptions.length > 0 && result.infusion.durationMin !== null && (
+                <DurationControl
+                  drugName={localize(item.drug.name, language)}
+                  options={item.durationOptions}
+                  chosen={chosenDurations[id] ?? null}
+                  protocolMin={item.protocolDurationMin}
+                  actualMin={result.infusion.durationMin}
+                  minDurationMin={item.minDurationMin}
+                  maxRateMgMin={item.infusionParams?.max_rate_mg_min ?? null}
+                  disabled={!enabled}
+                  onChange={(minutes) => onDurationChoice(id, minutes)}
                 />
               )}
               {result.infusion.ramp && item.infusionParams?.rate_ramp && (
@@ -720,6 +741,7 @@ function DoseRow({
 function BagVolumeControl({
   drugName,
   options,
+  limits,
   value,
   unit,
   disabled,
@@ -727,6 +749,7 @@ function BagVolumeControl({
 }: {
   drugName: string
   options: BagOption[]
+  limits: DrugInfusionParams | null
   value: number
   unit: string
   disabled: boolean
@@ -764,6 +787,129 @@ function BagVolumeControl({
         onChange={(bag) => onChange(Number(bag))}
         aria-label={`${t('calculator.doses.bagVolume')}: ${drugName}`}
       />
+      <Text size="xs" c="dimmed">
+        {concentrationHint(t as unknown as DynamicTranslate, language, limits)}
+      </Text>
+    </Stack>
+  )
+}
+
+type Translate = DynamicTranslate
+
+/** The label's concentration range in words: "1–20 mg/mL", "up to 5 mg/mL", "from 0.5 mg/mL". */
+function concentrationHint(
+  t: Translate,
+  language: ReturnType<typeof currentLanguage>,
+  limits: DrugInfusionParams | null,
+): string {
+  const min = limits?.concentration_min_mg_ml ?? null
+  const max = limits?.concentration_max_mg_ml ?? null
+  const value = (n: number) => formatNumber(n, language, 2)
+  if (min !== null && max !== null) {
+    return t('calculator.doses.concentrationRange', { min: value(min), max: value(max) })
+  }
+  if (max !== null) return t('calculator.doses.concentrationMax', { max: value(max) })
+  if (min !== null) return t('calculator.doses.concentrationMin', { min: value(min) })
+  return t('calculator.doses.concentrationNone')
+}
+
+/** Minutes in words: 30 min, 3 h, 1 h 30 min. */
+function durationLabel(t: Translate, minutes: number): string {
+  const hours = Math.floor(minutes / 60)
+  const rest = minutes % 60
+  if (hours === 0) return t('calculator.doses.durationMinutes', { minutes })
+  if (rest === 0) return t('calculator.doses.durationHours', { hours })
+  return t('calculator.doses.durationHoursMinutes', { hours, minutes: rest })
+}
+
+/**
+ * How long an antimicrobial runs: the durations the sources recommend, or another one typed in.
+ * The rate follows from it; a typed duration never goes below the label's shortest, and a dose too
+ * large for the drug's fastest pace still runs longer, as the calculation shows.
+ */
+function DurationControl({
+  drugName,
+  options,
+  chosen,
+  protocolMin,
+  actualMin,
+  minDurationMin,
+  maxRateMgMin,
+  disabled,
+  onChange,
+}: {
+  drugName: string
+  options: DurationOption[]
+  chosen: number | null
+  protocolMin: number | null
+  actualMin: number
+  minDurationMin: number | null
+  maxRateMgMin: number | null
+  disabled: boolean
+  onChange: (durationMin: number | null) => void
+}) {
+  const { t: translate } = useTranslation()
+  const t = translate as unknown as DynamicTranslate
+  const current = chosen ?? protocolMin
+  const standard = options.filter((option) => !option.extended)
+  const extended = options.filter((option) => option.extended)
+  const list = (entries: DurationOption[]) =>
+    entries.map((option) => durationLabel(t, option.durationMin)).join(', ')
+  const hint = [
+    standard.length > 0 && t('calculator.doses.durationStandard', { list: list(standard) }),
+    extended.length > 0 && t('calculator.doses.durationExtended', { list: list(extended) }),
+    minDurationMin !== null &&
+      t('calculator.doses.durationShortest', { duration: durationLabel(t, minDurationMin) }),
+    maxRateMgMin !== null && t('calculator.doses.durationMaxRate', { rate: maxRateMgMin }),
+  ]
+    .filter(Boolean)
+    .join(' ')
+  return (
+    <Stack gap={4} mt={4}>
+      <Text size="xs" c="dimmed">
+        {t('calculator.doses.duration')}
+      </Text>
+      <Group gap={6} wrap="wrap" align="center">
+        <SegmentedControl
+          size="xs"
+          disabled={disabled}
+          data={options.map((option) => ({
+            value: String(option.durationMin),
+            label: durationLabel(t, option.durationMin),
+          }))}
+          value={options.some((option) => option.durationMin === current) ? String(current) : ''}
+          onChange={(value) => {
+            const minutes = Number(value)
+            onChange(minutes === protocolMin ? null : minutes)
+          }}
+          aria-label={`${t('calculator.doses.duration')}: ${drugName}`}
+        />
+        <NumberInput
+          size="xs"
+          w={110}
+          disabled={disabled}
+          min={minDurationMin ?? 1}
+          max={1440}
+          step={5}
+          allowDecimal={false}
+          clampBehavior="blur"
+          suffix={` ${t('calculator.doses.durationMinUnit')}`}
+          value={current ?? ''}
+          onChange={(value) => {
+            if (typeof value !== 'number' || value <= 0) return
+            onChange(value === protocolMin ? null : value)
+          }}
+          aria-label={`${t('calculator.doses.durationCustom')}: ${drugName}`}
+        />
+      </Group>
+      {current !== null && actualMin > current && (
+        <Text size="xs" c="orange">
+          {t('calculator.doses.durationStretched', { duration: durationLabel(t, actualMin) })}
+        </Text>
+      )}
+      <Text size="xs" c="dimmed">
+        {hint}
+      </Text>
     </Stack>
   )
 }

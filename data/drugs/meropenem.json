@@ -53,12 +53,33 @@
           "url": "https://www.medicines.org.uk/emc/product/9834/smpc",
           "version": "03/2026",
           "checkedOn": "2026-10-11"
+        },
+        {
+          "name": "IDSA 2026 AMR Guidance, Table 1: suggested dosing (adults, normal renal and hepatic function)",
+          "url": "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-1.pdf",
+          "version": "v5.0, 30.07.2026",
+          "checkedOn": "2026-10-12"
         }
       ],
       "notes": {
-        "uk": "Розводять 0,9% NaCl або 5% глюкозою до 1–20 мг/мл; інфузія 15–30 хв, дозу до 1 г можна ввести болюсно за 5 хв. Розчин у 0,9% NaCl стабільний 3 год при ≤ 25 °C. Мішок підібрано так, щоб концентрація лишалась у межах інструкції. Об'єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
-        "en": "Diluted with 0.9% NaCl or 5% glucose to 1-20 mg/mL; infused over 15-30 min, or up to 1 g as a 5-minute bolus. Stable 3 h at up to 25 °C in 0.9% NaCl. The bag is chosen to stay within the label range. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
-      }
+        "uk": "Розводять 0,9% NaCl або 5% глюкозою до 1–20 мг/мл; інфузія 15–30 хв, дозу до 1 г можна ввести болюсно за 5 хв. Розчин у 0,9% NaCl стабільний 3 год при ≤ 25 °C. Мішок підібрано так, щоб концентрація лишалась у межах інструкції. Об'єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції. IDSA 2026: 1–2 г кожні 8 год за 3 год, якщо можливо. Розчин у 0,9% NaCl стабільний 3 год при ≤ 25 °C — тригодинну інфузію готувати безпосередньо перед стартом.",
+        "en": "Diluted with 0.9% NaCl or 5% glucose to 1-20 mg/mL; infused over 15-30 min, or up to 1 g as a 5-minute bolus. Stable 3 h at up to 25 °C in 0.9% NaCl. The bag is chosen to stay within the label range. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked. IDSA 2026: 1-2 g every 8 h over 3 h if feasible. The solution in 0.9% NaCl is stable 3 h at up to 25 °C: prepare a 3-hour infusion right before the start."
+      },
+      "duration_options": [
+        {
+          "duration_min": 15,
+          "extended": false
+        },
+        {
+          "duration_min": 30,
+          "extended": false
+        },
+        {
+          "duration_min": 180,
+          "extended": true
+        }
+      ],
+      "min_duration_min": 15
     }
   ],
   "cautions": [

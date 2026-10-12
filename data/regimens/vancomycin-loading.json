@@ -1,5 +1,5 @@
 {
-  "$comment": "Доза — SmPC 4.2: «In seriously ill patients, a loading dose of 25-30 mg/kg». Окремий курс, бо перша підтримувальна доза йде через 12 год після навантажувальної.",
+  "$comment": "Доза — SmPC 4.2: «In seriously ill patients, a loading dose of 25-30 mg/kg». Окремий курс, бо перша підтримувальна доза йде через 12 год після навантажувальної. Обмеження 3000 мг — UpToDate (навантажувальна доза).",
   "id": "vancomycin-loading",
   "short_name": "Ванкоміцин (навантаж.)",
   "name": {
@@ -16,6 +16,12 @@
       "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
       "version": "ред. 19.01.2026",
       "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "UpToDate: Vancomycin: Parenteral dosing, monitoring, and adverse effects in adults, Loading dose",
+      "url": "https://www.uptodate.com/contents/vancomycin-parenteral-dosing-monitoring-and-adverse-effects-in-adults",
+      "version": "2026",
+      "checkedOn": "2026-10-12"
     }
   ],
   "items": [
@@ -39,13 +45,15 @@
           "notes": {
             "uk": "Верхня межа навантажувальної дози",
             "en": "The upper end of the loading dose"
-          }
+          },
+          "cap_amount": 3000
         }
       ],
       "notes": {
-        "uk": "Розрахунок на фактичну масу тіла. При нирковій недостатності навантажувальну дозу в критичному стані не зменшують. Далі — курс «Ванкоміцин» через 12 год і рівень у крові на 2-й день.",
-        "en": "By actual body weight. In the critically ill the loading dose is not reduced for renal impairment. Then the \"Vancomycin\" course 12 h later and a blood level on day 2."
-      }
+        "uk": "Розрахунок на фактичну масу тіла. При нирковій недостатності навантажувальну дозу в критичному стані не зменшують. Далі — курс «Ванкоміцин» через 12 год і рівень у крові на 2-й день. UpToDate: 20–35 мг/кг фактичної маси, не більше 3000 мг, округлено до 250 мг; 20 мг/кг — при ожирінні та на діалізі.",
+        "en": "By actual body weight. In the critically ill the loading dose is not reduced for renal impairment. Then the \"Vancomycin\" course 12 h later and a blood level on day 2. UpToDate: 20-35 mg/kg of actual weight, no more than 3000 mg, rounded to 250 mg; 20 mg/kg with obesity and on dialysis."
+      },
+      "cap_amount": 3000
     }
   ]
 }
