@@ -16,13 +16,33 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України, відкриті дані (reestr-lz.csv): таблетки 250 і 500 мг (Лефлок, Глево, Левостад, Леволет та ін.)",
+      "version": "вивантаження з data.gov.ua",
+      "checkedOn": "2026-10-13"
+    },
+    {
+      "name": "SmPC Levofloxacin 500mg film-coated tablets (Ipca, emc), 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/12153/smpc",
+      "version": "ред. 05.2026",
+      "checkedOn": "2026-10-13"
     }
   ],
   "presentations": [
+    {
+      "key": "s250",
+      "form": "tablet",
+      "strength_amount": 250
+    },
     {
       "key": "s500",
       "form": "tablet",
       "strength_amount": 500
     }
-  ]
+  ],
+  "notes": {
+    "uk": "Риска на таблетках деяких генериків — лише для зручності ковтання, не для поділу дози: ділити, лише якщо це дозволяє інструкція конкретного препарату.",
+    "en": "The score line on some generics is only to ease swallowing, not to divide the dose: divide only where that product's label allows it."
+  }
 }

@@ -22,12 +22,18 @@ import type { CourseItem } from './course-input'
  * day; and aspirin 100 mg a day, for a patient with no other risk factor. The enoxaparin and aspirin
  * doses are those of the randomised trials (Palumbo, J Clin Oncol 2011; Larocca, Blood 2012);
  * NSSG names no heparin dose and gives aspirin 75 mg (MM.59).
+ *
+ * The antiviral can be valaciclovir instead, 500 mg twice a day: the label's dose for suppressing
+ * herpes simplex in an immunocompromised adult. Antibacterial prophylaxis is levofloxacin 500 mg a
+ * day, the NSSG myeloma protocols' dose (MM.18). Both carry the label's ranges of creatinine
+ * clearance here, since no regimen of the catalog writes them for the switch to borrow.
  */
 export const SUPPORT_CATEGORIES = [
   'antiemetic',
   'antiviral',
   'pneumocystis',
   'antifungal',
+  'antibacterial',
   'thrombosis',
 ] as const
 export type SupportCategory = (typeof SUPPORT_CATEGORIES)[number]
@@ -37,11 +43,15 @@ const CATEGORY_DRUGS: Record<SupportCategory, readonly string[]> = {
   antiviral: ['aciclovir', 'valaciclovir'],
   pneumocystis: ['co-trimoxazole'],
   antifungal: ['fluconazole', 'posaconazole', 'voriconazole'],
+  antibacterial: ['levofloxacin', 'ciprofloxacin'],
   thrombosis: ['acetylsalicylic-acid', 'apixaban', 'enoxaparin'],
 }
 
 export const THROMBO_AGENTS = ['apixaban', 'enoxaparin', 'aspirin'] as const
 export type ThromboAgent = (typeof THROMBO_AGENTS)[number]
+
+export const ANTIVIRAL_AGENTS = ['aciclovir', 'valaciclovir'] as const
+export type AntiviralAgent = (typeof ANTIVIRAL_AGENTS)[number]
 
 /**
  * The drugs that make a kind of prophylaxis part of the course, per the NSSG myeloma protocols:
@@ -75,6 +85,7 @@ export const NO_SUPPORT: Record<SupportCategory, boolean> = {
   antiviral: false,
   pneumocystis: false,
   antifungal: false,
+  antibacterial: false,
   thrombosis: false,
 }
 
@@ -152,6 +163,7 @@ export function standardSupportRows(
   startDateIso: string,
   on: Record<SupportCategory, boolean>,
   thromboAgent: ThromboAgent = 'aspirin',
+  antiviralAgent: AntiviralAgent = 'aciclovir',
 ): RegimenItem[] {
   const lastDay = Math.max(cycleLengthDays ?? 0, ...items.flatMap((entry) => entry.item.days), 1)
   const cycle = wholeCycle(lastDay)
@@ -164,7 +176,87 @@ export function standardSupportRows(
     const base = { regimen_id: regimenId, sort_order: order++ }
     const has = (drugId: string) => catalog.drugs.has(drugId)
 
-    if (category === 'antiviral' && has('aciclovir')) {
+    if (category === 'antiviral' && antiviralAgent === 'valaciclovir' && has('valaciclovir')) {
+      result.push(
+        row(base, category, {
+          drug_id: 'valaciclovir',
+          route: 'oral',
+          dose_value: 500,
+          days: cycle,
+          administrations_per_day: 2,
+          renal_bands: [
+            {
+              crcl_min: 0,
+              crcl_max: 29,
+              dose_value: 500,
+              administrations_per_day: 1,
+              withhold: null,
+              dose_min: null,
+              dose_max: null,
+              interval_min: null,
+              notes: {
+                uk: 'SmPC (пригнічення HSV в імунокомпрометованих): КК < 30 — 500 мг раз на добу; на гемодіалізі — після сеансу.',
+                en: 'SmPC (HSV suppression in the immunocompromised): CrCl < 30, 500 mg once a day; on haemodialysis, after the session.',
+              },
+              source: VALTREX_SMPC,
+            },
+          ],
+          notes: {
+            uk: 'Валацикловір 500 мг двічі на добу — доза SmPC для пригнічення HSV в імунокомпрометованих дорослих; впродовж лікування і ще 3 місяці після. Альтернатива ацикловіру. Додано перемикачем «Супровід за стандартом».',
+            en: 'Valaciclovir 500 mg twice a day, the SmPC dose for suppressing HSV in immunocompromised adults; during treatment and for 3 months after. An alternative to aciclovir. Added by the «Standard support» switch.',
+          },
+        }),
+      )
+    }
+    if (category === 'antibacterial' && has('levofloxacin')) {
+      result.push(
+        row(base, category, {
+          drug_id: 'levofloxacin',
+          route: 'oral',
+          dose_value: 500,
+          days: cycle,
+          renal_bands: [
+            {
+              crcl_min: 20,
+              crcl_max: 50,
+              dose_value: 250,
+              administrations_per_day: 1,
+              withhold: null,
+              dose_min: null,
+              dose_max: null,
+              interval_min: null,
+              first_dose_full: true,
+              notes: {
+                uk: 'SmPC: КК 20–50 — перша доза 500 мг, далі 250 мг кожні 24 год.',
+                en: 'SmPC: CrCl 20-50, a first dose of 500 mg, then 250 mg every 24 h.',
+              },
+              source: LEVOFLOXACIN_SMPC,
+            },
+            {
+              crcl_min: 0,
+              crcl_max: 19,
+              dose_value: 125,
+              administrations_per_day: 1,
+              withhold: null,
+              dose_min: null,
+              dose_max: null,
+              interval_min: null,
+              first_dose_full: true,
+              notes: {
+                uk: 'SmPC: КК < 20 (і на гемодіалізі чи ПАПД, без додаткових доз) — перша доза 500 мг, далі 125 мг кожні 24 год. Таблеток 125 мг немає: половина таблетки 250 мг, лише якщо інструкція конкретного препарату дозволяє ділити.',
+                en: 'SmPC: CrCl < 20 (and on haemodialysis or CAPD, with no extra doses), a first dose of 500 mg, then 125 mg every 24 h. There is no 125 mg tablet: half a 250 mg tablet, only where the label of that product allows dividing it.',
+              },
+              source: LEVOFLOXACIN_SMPC,
+            },
+          ],
+          notes: {
+            uk: 'Антибактеріальна профілактика: левофлоксацин 500 мг раз на добу (NSSG MM.18 — 12 тижнів від початку лікування мієломи; при тривалій глибокій нейтропенії — на її час). Дні обирає лікар. Додано перемикачем «Супровід за стандартом».',
+            en: 'Antibacterial prophylaxis: levofloxacin 500 mg once a day (NSSG MM.18: 12 weeks from the start of myeloma treatment; in long, deep neutropenia, for its duration). The physician chooses the days. Added by the «Standard support» switch.',
+          },
+        }),
+      )
+    }
+    if (category === 'antiviral' && antiviralAgent === 'aciclovir' && has('aciclovir')) {
       result.push(
         row(base, category, {
           drug_id: 'aciclovir',
@@ -245,7 +337,25 @@ export function standardSupportRows(
       }
     }
   }
-  return result.map((added) => ({ ...added, renal_bands: catalogRenalBands(catalog, added) }))
+  return result.map((added) =>
+    added.renal_bands.length > 0
+      ? added
+      : { ...added, renal_bands: catalogRenalBands(catalog, added) },
+  )
+}
+
+const VALTREX_SMPC = {
+  name: 'SmPC Valtrex 500mg Tablets (emc), 4.2',
+  url: 'https://www.medicines.org.uk/emc/product/5467/smpc',
+  version: 'ред. 18.06.2026',
+  checkedOn: '2026-10-13',
+}
+
+const LEVOFLOXACIN_SMPC = {
+  name: 'SmPC Levofloxacin 500mg film-coated tablets (Ipca, emc), 4.2',
+  url: 'https://www.medicines.org.uk/emc/product/12153/smpc',
+  version: 'ред. 05.2026',
+  checkedOn: '2026-10-13',
 }
 
 /**

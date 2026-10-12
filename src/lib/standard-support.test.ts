@@ -50,6 +50,7 @@ const ON = {
   antiviral: true,
   pneumocystis: true,
   antifungal: true,
+  antibacterial: false,
   thrombosis: true,
 }
 
@@ -255,5 +256,39 @@ describe('standard rows and the kidneys', () => {
       })
     expect(rowsWith([regimenRow(400, 2)])[0]!.renal_bands).toBe(bands)
     expect(rowsWith([regimenRow(200, 3)])[0]!.renal_bands).toEqual([])
+  })
+})
+
+describe('valaciclovir and levofloxacin', () => {
+  const drugs = catalog([...ALL, 'valaciclovir', 'levofloxacin'])
+
+  it('gives valaciclovir 500 mg twice a day in place of aciclovir, once a day below CrCl 30', () => {
+    const rows = standardSupportRows(
+      drugs,
+      chemo,
+      21,
+      '2026-10-05',
+      { ...NO_SUPPORT, antiviral: true },
+      'aspirin',
+      'valaciclovir',
+    )
+    expect(rows.map((row) => row.drug_id)).toEqual(['valaciclovir'])
+    expect(rows[0]).toMatchObject({ dose_value: 500, administrations_per_day: 2 })
+    expect(rows[0]!.renal_bands).toMatchObject([
+      { crcl_min: 0, crcl_max: 29, dose_value: 500, administrations_per_day: 1 },
+    ])
+  })
+
+  it('gives levofloxacin 500 mg a day with the label first dose in full when the kidneys fail', () => {
+    const rows = standardSupportRows(drugs, chemo, 21, '2026-10-05', {
+      ...NO_SUPPORT,
+      antibacterial: true,
+    })
+    expect(rows).toHaveLength(1)
+    expect(rows[0]).toMatchObject({ drug_id: 'levofloxacin', dose_value: 500 })
+    expect(rows[0]!.renal_bands).toMatchObject([
+      { crcl_min: 20, crcl_max: 50, dose_value: 250, first_dose_full: true },
+      { crcl_min: 0, crcl_max: 19, dose_value: 125, first_dose_full: true },
+    ])
   })
 })

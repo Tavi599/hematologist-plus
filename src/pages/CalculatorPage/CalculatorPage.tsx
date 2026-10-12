@@ -41,6 +41,7 @@ import {
   isStandardSupportId,
   NO_SUPPORT,
   standardSupportRows,
+  type AntiviralAgent,
   type SupportCategory,
   type ThromboAgent,
 } from '../../lib/standard-support'
@@ -124,6 +125,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [support, setSupport] = useState<Record<SupportCategory, boolean>>(NO_SUPPORT)
   // NSSG's standard with an immunomodulatory drug; aspirin is for a patient with no other risk.
   const [thromboAgent, setThromboAgent] = useState<ThromboAgent>('apixaban')
+  const [antiviralAgent, setAntiviralAgent] = useState<AntiviralAgent>('aciclovir')
   // Cyclophosphamide items the physician has added mesna to; the protocol's own mesna is apart.
   const [mesnaFor, setMesnaFor] = useState<string[]>([])
   // Rows the physician gives by another route the label allows at the same dose.
@@ -238,6 +240,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                 courseSettings.startDate,
                 support,
                 thromboAgent,
+                antiviralAgent,
               ),
               chosenDoses,
               chosenModifiers,
@@ -257,6 +260,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       courseSettings.startDate,
       support,
       thromboAgent,
+      antiviralAgent,
       chosenDoses,
       chosenModifiers,
       administrationModes,
@@ -289,6 +293,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       ...Object.fromEntries(indicated.map((category) => [category, true])),
     })
     setThromboAgent('apixaban')
+    setAntiviralAgent('aciclovir')
     setMesnaFor([])
     // Immunoglobulin opens with the department's standard support written out above it: lines
     // a colleague edits as text. Those proposed for the previous regimen go with it.
@@ -477,6 +482,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
               onChange={onSupport}
               thromboAgent={thromboAgent}
               onThromboAgent={setThromboAgent}
+              antiviralAgent={antiviralAgent}
+              onAntiviralAgent={setAntiviralAgent}
             />
           )}
         </Stack>
