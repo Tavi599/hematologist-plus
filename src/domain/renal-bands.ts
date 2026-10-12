@@ -28,6 +28,8 @@ export type RenalBand = { minMlMin: number; maxMlMin: number } & (
        * physician may move to the other end or the middle.
        */
       doseRange?: { min: number; max: number }
+      /** The first dose of the course stays the regimen's own, in full; the rest are corrected. */
+      firstDoseFull?: true
     }
   | { withhold: RenalWithhold }
 )

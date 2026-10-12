@@ -644,6 +644,12 @@ function DoseRow({
             {(result?.administrationsPerDay ?? item.item.administrations_per_day) > 1 &&
               ` · ${t('calculator.doses.timesPerDay', { count: result?.administrationsPerDay ?? item.item.administrations_per_day })}`}
           </Text>
+          {/* The first, full dose the label keeps uncorrected, split off its corrected row. */}
+          {item.firstDoseOf !== undefined && (
+            <Text size="xs" c="orange.8">
+              {t('calculator.doses.renal.firstDose')}
+            </Text>
+          )}
           {course?.renal[id] && (
             <RenalBandInfo
               adjustment={course.renal[id]}

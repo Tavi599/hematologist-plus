@@ -33,6 +33,8 @@ export interface CourseItem {
   courseDrug: CourseDrug
   /** Infusion that cannot be calculated: no catalog parameters and no fallback in the regimen. */
   missingInfusionData: boolean
+  /** The row of the first, full dose split off this item by the kidney correction. */
+  firstDoseOf?: string
   /** The protocol gives this drug as an infusion the physician may switch to boluses. */
   switchable: boolean
   /** The protocol's multi-day infusion may be given short each day or round the clock. */
@@ -599,6 +601,7 @@ function renalBandOf(band: RenalBandRow): RenalBand {
     ...(band.dose_min === null || band.dose_max === null
       ? {}
       : { doseRange: { min: band.dose_min, max: band.dose_max } }),
+    ...(band.first_dose_full ? { firstDoseFull: true as const } : {}),
   }
 }
 

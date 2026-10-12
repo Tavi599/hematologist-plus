@@ -50,8 +50,8 @@
           "administrations_per_day": 2,
           "interval_min": 720,
           "notes": {
-            "uk": "FDA: першу дозу дають повну (2 г), як при КК > 60 мл/хв; у розрахунку всі введення скориговані.",
-            "en": "FDA: the first dose is the full one (2 g), as with CrCl > 60 mL/min; the calculation corrects every administration."
+            "uk": "FDA: першу дозу дають повну (2 г), як при КК > 60 мл/хв; тут вона збігається зі скоригованою.",
+            "en": "FDA: the first dose is the full one (2 g), as with CrCl > 60 mL/min; here it is the corrected one anyway."
           },
           "source": {
             "name": "FDA label: Cefepime for Injection (Sagent), 2.1 табл. 1, 2.3 табл. 2, 2.5–2.6",
@@ -67,15 +67,16 @@
           "administrations_per_day": 1,
           "interval_min": null,
           "notes": {
-            "uk": "FDA: першу дозу дають повну (2 г), як при КК > 60 мл/хв; у розрахунку всі введення скориговані. UpToDate тут віддає перевагу 1 г кожні 12 год при тяжкій інфекції чи менш чутливому збуднику (та сама добова доза).",
-            "en": "FDA: the first dose is the full one (2 g), as with CrCl > 60 mL/min; the calculation corrects every administration. UpToDate prefers 1 g every 12 h here for a serious infection or a less susceptible organism (the same daily dose)."
+            "uk": "FDA: першу дозу дають повну (2 г), як при КК > 60 мл/хв; у розрахунку перша доза повна окремим рядком, якщо скоригована менша. UpToDate тут віддає перевагу 1 г кожні 12 год при тяжкій інфекції чи менш чутливому збуднику (та сама добова доза).",
+            "en": "FDA: the first dose is the full one (2 g), as with CrCl > 60 mL/min; the calculation gives the first dose in full as a row of its own where the corrected one is lower. UpToDate prefers 1 g every 12 h here for a serious infection or a less susceptible organism (the same daily dose)."
           },
           "source": {
             "name": "FDA label: Cefepime for Injection (Sagent), 2.1 табл. 1, 2.3 табл. 2, 2.5–2.6",
             "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
             "version": "Revised: 03/2025",
             "checkedOn": "2026-10-11"
-          }
+          },
+          "first_dose_full": true
         },
         {
           "crcl_min": 0,
@@ -84,15 +85,16 @@
           "administrations_per_day": 1,
           "interval_min": null,
           "notes": {
-            "uk": "FDA: першу дозу дають повну (2 г), як при КК > 60 мл/хв; у розрахунку всі введення скориговані.",
-            "en": "FDA: the first dose is the full one (2 g), as with CrCl > 60 mL/min; the calculation corrects every administration."
+            "uk": "FDA: першу дозу дають повну (2 г), як при КК > 60 мл/хв; у розрахунку перша доза повна окремим рядком, якщо скоригована менша.",
+            "en": "FDA: the first dose is the full one (2 g), as with CrCl > 60 mL/min; the calculation gives the first dose in full as a row of its own where the corrected one is lower."
           },
           "source": {
             "name": "FDA label: Cefepime for Injection (Sagent), 2.1 табл. 1, 2.3 табл. 2, 2.5–2.6",
             "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
             "version": "Revised: 03/2025",
             "checkedOn": "2026-10-11"
-          }
+          },
+          "first_dose_full": true
         }
       ]
     }

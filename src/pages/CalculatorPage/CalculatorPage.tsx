@@ -18,6 +18,7 @@ import { emptyHeader } from '../../features/calculator/header'
 import { HospitalHeader } from '../../features/calculator/HospitalHeader'
 import { MANUAL_ROWS_ANCHOR, ManualRows } from '../../features/calculator/ManualRows'
 import type { ManualRow } from '../../features/calculator/manual-rows'
+import { withFirstFullDose } from '../../lib/renal-first-dose'
 import { IVIG_DRUG_ID, ivigSupportRows } from '../../features/calculator/supportive-rows'
 import { PatientForm } from '../../features/calculator/PatientForm'
 import { ScheduleTable } from '../../features/calculator/ScheduleTable'
@@ -363,9 +364,14 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       const offered = cyclophosphamideMesna(catalog, baseItems, first)
       const mesnaOffered = offered.map((entry) => entry.courseDrug.anchorDrugId!)
       const mesna = offered.filter((entry) => mesnaFor.includes(entry.courseDrug.anchorDrugId!))
-      if (mesna.length === 0) return { items: baseItems, course: first, error: null, mesnaOffered }
-      const withMesna = [...baseItems, ...mesna]
-      return { items: withMesna, course: calculate(withMesna), error: null, mesnaOffered }
+      const withMesna = mesna.length === 0 ? baseItems : [...baseItems, ...mesna]
+      const course = mesna.length === 0 ? first : calculate(withMesna)
+      // A kidney correction whose label keeps the first dose in full: day 1 becomes its own row.
+      const split = withFirstFullDose(withMesna, course)
+      if (split.length === withMesna.length) {
+        return { items: withMesna, course, error: null, mesnaOffered }
+      }
+      return { items: split, course: calculate(split), error: null, mesnaOffered }
     } catch (thrown) {
       return { items: baseItems, course: null, error: thrown, mesnaOffered: [] }
     }

@@ -250,6 +250,9 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
           `renal_bands: ${band.crcl_min}-${band.crcl_max} dose_value must be one end of dose_min-dose_max`,
         )
       }
+      if (band.first_dose_full && band.administrations_per_day !== 1) {
+        error('regimen_items', item.id, 'renal_bands: first_dose_full only for a range once a day')
+      }
       if ((band.administrations_per_day ?? 1) > 1 && band.interval_min === null) {
         error('regimen_items', item.id, 'renal_bands: several a day need an interval_min')
       }

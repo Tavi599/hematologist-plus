@@ -471,6 +471,11 @@ export const renalBandSchema = z.strictObject({
   dose_max: positiveNumberSchema.nullable().default(null),
   /** Minutes between administrations within a day; null for once a day. */
   interval_min: positiveNumberSchema.int().nullable().default(null),
+  /**
+   * The label gives the first dose in full, as with normal kidneys, and corrects the ones after
+   * it (cefepime, fluconazole). Written only for a range given once a day; absent otherwise.
+   */
+  first_dose_full: z.literal(true).optional(),
   notes: localizedTextSchema.nullable().default(null),
   source: sourceSchema,
 })

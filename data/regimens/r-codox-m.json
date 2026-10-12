@@ -352,15 +352,16 @@
           "withhold": null,
           "interval_min": null,
           "notes": {
-            "uk": "SmPC і UpToDate: КК ≤ 50 — 50% добової дози після першої повної (першого дня 50 мг). Капсулу 50 мг не ділять: 25 мг — лише з рідкої форми для прийому внутрішньо.",
-            "en": "SmPC and UpToDate: CrCl ≤ 50, 50% of the daily dose after a full first one (50 mg on day 1). The 50 mg capsule is not split: 25 mg only from an oral liquid."
+            "uk": "SmPC і UpToDate: КК ≤ 50 — 50% добової дози після першої повної: першого дня 50 мг окремим рядком. Капсулу 50 мг не ділять: 25 мг — лише з рідкої форми для прийому внутрішньо.",
+            "en": "SmPC and UpToDate: CrCl ≤ 50, 50% of the daily dose after a full first one: 50 mg on day 1 as a row of its own. The 50 mg capsule is not split: 25 mg only from an oral liquid."
           },
           "source": {
             "name": "SmPC Diflucan 50 mg hard capsules (Pfizer, emc), 4.2",
             "url": "https://www.medicines.org.uk/emc/product/5982/smpc",
             "version": "ред. 02/2024",
             "checkedOn": "2026-10-12"
-          }
+          },
+          "first_dose_full": true
         }
       ]
     },
