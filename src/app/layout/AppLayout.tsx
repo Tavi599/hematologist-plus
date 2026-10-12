@@ -5,6 +5,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router'
 
 import { routes } from '../routes'
 import classes from './AppLayout.module.css'
+import { HistoryButtons } from './HistoryButtons'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { SessionBadge } from './SessionBadge'
 import { ThemeToggle } from './ThemeToggle'
@@ -30,6 +31,7 @@ export function AppLayout() {
         <Container size="xl" h="100%">
           <Group h="100%" justify="space-between" wrap="nowrap">
             <Group gap="lg" wrap="nowrap" className={classes.navGroup}>
+              <HistoryButtons />
               <Text fw={700} size="lg" visibleFrom="sm" className={classes.brand}>
                 {t('app.name')}
               </Text>
