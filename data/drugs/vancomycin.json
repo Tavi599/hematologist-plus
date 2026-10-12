@@ -27,6 +27,12 @@
       "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
       "version": "ред. 19.01.2026",
       "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "UpToDate: Vancomycin: Parenteral dosing, monitoring, and adverse effects in adults, Intermittent infusion",
+      "url": "https://www.uptodate.com/contents/vancomycin-parenteral-dosing-monitoring-and-adverse-effects-in-adults",
+      "version": "2026",
+      "checkedOn": "2026-10-12"
     }
   ],
   "presentations": [
@@ -92,5 +98,10 @@
         "checkedOn": "2026-10-11"
       }
     }
-  ]
+  ],
+  "dose_rounding_step": 250,
+  "notes": {
+    "uk": "Доза на фактичну масу, округлена до 250 мг.",
+    "en": "Dose on the actual weight, rounded to 250 mg."
+  }
 }

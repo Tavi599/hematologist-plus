@@ -1,6 +1,7 @@
 import { calculateBsa, enteredBsa, mostellerBsa, type BsaResult } from './bsa'
 import { DOMAIN_DEFAULTS } from './config'
 import { calculateDoseVariants, type DoseSpec, type DoseVariants } from './dosing'
+import { dosingWeight, type DosingWeightRule } from './dosing-weight'
 import {
   calculateInfusion,
   type InfusionParams,
@@ -22,7 +23,7 @@ import {
   untimedIds,
   type ScheduledAdministration,
 } from './schedule'
-import { amountUnitOf, convertAmount, type UnitEquivalence } from './units'
+import { amountUnitOf, convertAmount, doseBasisOf, type UnitEquivalence } from './units'
 import {
   DomainInputError,
   type AmountUnit,
@@ -89,6 +90,10 @@ export interface CourseDrug {
   reviewRules?: ReviewRules
   /** What this drug's label says its mass is worth in activity; the only bridge between them. */
   unitEquivalence?: UnitEquivalence | null
+  /** Which weight a dose per kilogram is given on; the actual one unless the drug says otherwise. */
+  dosingWeight?: DosingWeightRule
+  /** Rounding step of the dose, in its own unit (vancomycin 250 mg); the default step otherwise. */
+  roundingStep?: number
 }
 
 export interface CourseAdjustments {
@@ -408,11 +413,23 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
     throw new DomainInputError('serumCreatinine', 'required for AUC doses (Calvert)')
   }
 
+  // A dose per kilogram of an aminoglycoside goes on the ideal or adjusted weight, not the actual.
+  const weight =
+    doseBasisOf(drug.dose.unit) === 'kg' &&
+    drug.dosingWeight !== undefined &&
+    drug.dosingWeight !== 'actual' &&
+    context.patient.weightKg !== undefined
+      ? dosingWeight(drug.dosingWeight, {
+          weightKg: context.patient.weightKg,
+          ...(context.patient.heightCm === undefined ? {} : { heightCm: context.patient.heightCm }),
+          ...(context.patient.sex === undefined ? {} : { sex: context.patient.sex }),
+        })
+      : null
   const variants = calculateDoseVariants(
     drug.dose,
     bsa,
     {
-      weightKg: context.patient.weightKg,
+      weightKg: weight?.weightKg ?? context.patient.weightKg,
       ...(context.gfrMlMin === undefined ? {} : { gfrMlMin: context.gfrMlMin }),
     },
     context.reduction,
@@ -432,6 +449,7 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
   }))
   const roundingOptions = {
     unit: amountUnit,
+    ...(drug.roundingStep === undefined ? {} : { step: drug.roundingStep }),
     ...(presentations ? { presentations } : {}),
     ...(drug.roundUpToWholePack ? { roundUpToWholePack: true } : {}),
   }
@@ -497,6 +515,7 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
     warnings,
     steps: [
       ...bsa.steps,
+      ...(weight?.steps ?? []),
       ...variants[variant].steps,
       ...rounded[variant].steps,
       ...(overrideAmount === undefined

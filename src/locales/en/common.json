@@ -289,7 +289,8 @@
     },
     "error": {
       "title": "Calculation failed",
-      "field": "Field: {{field}}"
+      "field": "Field: {{field}}",
+      "dosingWeight": "An aminoglycoside (amikacin) is dosed on the ideal or adjusted weight, which needs the height and sex. Enter the sex and height; the calculator does not fall back to the actual weight, which would overdose an obese patient."
     },
     "tabs": {
       "doses": "Doses",
@@ -437,6 +438,7 @@
     "close": "Close"
   },
   "units": {
+    "kg": "kg",
     "mg": "mg",
     "m2": "m²",
     "ml": "mL",
@@ -514,6 +516,9 @@
     "bsa.entered": "BSA entered by hand: {{value}} m²",
     "bsa.cap": "BSA used (cap {{capM2}} m²)",
     "dose.perBsa": "{{doseValue}} {{doseUnit}} × {{bsaM2}} m²",
+    "dose.weight.actual": "Dosing weight is the actual {{actualKg}} kg: below the ideal one ({{idealKg}} kg at {{heightCm}} cm)",
+    "dose.weight.ideal": "Dosing weight is the ideal {{idealKg}} kg ({{heightCm}} cm): the actual {{actualKg}} kg is within 120% of it",
+    "dose.weight.adjusted": "Dosing weight is adjusted: {{idealKg}} + 0.4 × ({{actualKg}} − {{idealKg}}) kg, since the actual is above 120% of the ideal ({{heightCm}} cm)",
     "dose.perWeight": "{{doseValue}} {{doseUnit}} × {{weightKg}} kg",
     "dose.flat": "Flat dose",
     "dose.cap": "Limited by the maximum dose of {{capAmount}} {{unit}}",

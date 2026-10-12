@@ -467,6 +467,10 @@ export function buildCourseItemsFrom(
         : {}),
       ...(drug.review_rules ? { reviewRules: drug.review_rules } : {}),
       ...(drug.unit_equivalence ? { unitEquivalence: drug.unit_equivalence } : {}),
+      ...(drug.dosing_weight && drug.dosing_weight !== 'actual'
+        ? { dosingWeight: drug.dosing_weight }
+        : {}),
+      ...(drug.dose_rounding_step ? { roundingStep: drug.dose_rounding_step } : {}),
       block: item.block,
       isMain: item.role === 'main',
       ...(item.anchor_offset_min === null ? {} : { anchorOffsetMin: item.anchor_offset_min }),

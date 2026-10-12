@@ -475,9 +475,15 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
 
         {error !== null && (
           <Alert color="red" title={t('calculator.error.title')}>
-            <Text size="sm">{(error as Error).message}</Text>
-            {error instanceof DomainInputError && (
-              <Text size="sm">{t('calculator.error.field', { field: error.field })}</Text>
+            {error instanceof DomainInputError && /aminoglycoside/.test(error.message) ? (
+              <Text size="sm">{t('calculator.error.dosingWeight')}</Text>
+            ) : (
+              <>
+                <Text size="sm">{(error as Error).message}</Text>
+                {error instanceof DomainInputError && (
+                  <Text size="sm">{t('calculator.error.field', { field: error.field })}</Text>
+                )}
+              </>
             )}
           </Alert>
         )}

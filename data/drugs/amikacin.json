@@ -22,6 +22,12 @@
       "url": "https://www.medicines.org.uk/emc/product/3784/smpc",
       "version": "ред. 03/2024",
       "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "UpToDate: Dosing and administration of parenteral aminoglycosides (Drew RH), Dosing weight",
+      "url": "https://www.uptodate.com/contents/dosing-and-administration-of-parenteral-aminoglycosides",
+      "version": "оновл. 22.11.2024",
+      "checkedOn": "2026-10-12"
     }
   ],
   "presentations": [
@@ -89,5 +95,10 @@
         "checkedOn": "2026-10-11"
       }
     }
-  ]
+  ],
+  "dosing_weight": "aminoglycoside",
+  "notes": {
+    "uk": "Доза на кг — на ідеальну масу; фактичну, якщо вона менша за ідеальну; скориговану (ідеальна + 0,4 × надлишок), якщо фактична більша за 120% ідеальної. Потрібні зріст і стать.",
+    "en": "Dose per kg on the ideal weight; the actual one when below the ideal; the adjusted one (ideal + 0.4 x excess) when the actual is above 120% of the ideal. Needs height and sex."
+  }
 }

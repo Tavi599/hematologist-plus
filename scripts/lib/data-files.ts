@@ -95,6 +95,10 @@ export const drugFileSchema = z.strictObject({
   /** What the label says for kidney or liver impairment, heart disease, neuropathy. */
   cautions: z.array(drugCautionSchema).nullable().default(null),
   review_rules: reviewRulesSchema.nullable().default(null),
+  /** Weight a dose per kilogram goes on: actual, or ideal/adjusted for an aminoglycoside. */
+  dosing_weight: z.enum(['actual', 'aminoglycoside']).default('actual'),
+  /** Rounding step of a dose, in amount_unit (vancomycin 250 mg). */
+  dose_rounding_step: optionalPositive,
   notes: optionalLocalized,
   sort_order: sortOrder,
   sources: sourcesSchema.default([]),
