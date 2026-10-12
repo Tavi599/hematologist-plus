@@ -608,6 +608,23 @@ function DoseRow({
               </Text>
             </Stack>
           )}
+          {/* What to watch while the drug is given, folded: a reminder, not a dose change. */}
+          {item.drug.monitoring && item.drug.monitoring.length > 0 && (
+            <details>
+              <summary>
+                <Text size="xs" c="blue" component="span">
+                  {t('calculator.doses.monitoring')}
+                </Text>
+              </summary>
+              <Stack gap={2} mt={2}>
+                {item.drug.monitoring.map((line, index) => (
+                  <Text key={index} size="xs" c="dimmed" title={line.source.name}>
+                    • {localize(line.notes, language)}
+                  </Text>
+                ))}
+              </Stack>
+            </details>
+          )}
           {/* A drug the department cannot simply take off the shelf. The badge in the regimen
               list says only that something in the course is missing; here it is clear which
               drug, and the drug's own note says why — most often that it is not registered. */}

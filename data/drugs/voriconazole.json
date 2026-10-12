@@ -92,5 +92,42 @@
         "en": "The 200 mg vial is dissolved in 19 mL of water or 0.9% NaCl (20 mL, 10 mg/mL) and diluted to 0.5-5 mg/mL. No faster than 3 mg/kg/h, over 1-3 h: 6 mg/kg at least 2 h, 4 mg/kg at least 80 min. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
       }
     }
+  ],
+  "monitoring": [
+    {
+      "notes": {
+        "uk": "K, Mg, Ca — до початку й під час лікування, з корекцією (подовження QT).",
+        "en": "K, Mg, Ca before and during treatment, corrected (QT prolongation)."
+      },
+      "source": {
+        "name": "SmPC Voriconazole Pfizer tablets (emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/7325/smpc",
+        "version": "ред. 07/2026",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "notes": {
+        "uk": "АЛТ/АСТ — на початку, щонайменше щотижня перший місяць, далі щомісяця, якщо без змін. Креатинін. Шкіра: уникати сонця, регулярний огляд.",
+        "en": "ALT/AST at the start, at least weekly for the first month, then monthly if unchanged. Creatinine. Skin: avoid sunlight, regular examination."
+      },
+      "source": {
+        "name": "SmPC Voriconazole Pfizer tablets (emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/7325/smpc",
+        "version": "ред. 07/2026",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "notes": {
+        "uk": "Розбіжність: SmPC рівня не вимагає; UpToDate радить рівень перед дозою в рівноважному стані (4–7-й день, з навантаженням — з 2-го), особливо при інвазивному аспергільозі: ефективність > 1–1,5 мкг/мл, токсичність — уникати > 5–6 мкг/мл. Зір — якщо понад 28 днів.",
+        "en": "Discrepancy: the SmPC asks for no level; UpToDate advises a trough at steady state (day 4-7, from day 2 after a loading dose), above all in invasive aspergillosis: efficacy > 1-1.5 mcg/mL, avoid > 5-6 mcg/mL for toxicity. Vision if beyond 28 days."
+      },
+      "source": {
+        "name": "UpToDate (Lexicomp): Voriconazole: Drug information, Monitoring Parameters, Reference Range",
+        "url": "https://www.uptodate.com/contents/voriconazole-drug-information",
+        "checkedOn": "2026-10-13"
+      }
+    }
   ]
 }

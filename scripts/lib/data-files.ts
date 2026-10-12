@@ -30,6 +30,7 @@ import {
   treatmentNodeKindSchema,
   routeAlternativeSchema,
   drugCautionSchema,
+  drugMonitoringSchema,
   regimenCourseSchema,
   unitEquivalenceSchema,
 } from '../../src/schemas/common'
@@ -95,6 +96,8 @@ export const drugFileSchema = z.strictObject({
   route_alternatives: z.array(routeAlternativeSchema).nullable().default(null),
   /** What the label says for kidney or liver impairment, heart disease, neuropathy. */
   cautions: z.array(drugCautionSchema).nullable().default(null),
+  /** What to watch while the drug is given: levels, kidneys, blood count, hearing. */
+  monitoring: z.array(drugMonitoringSchema).nullable().default(null),
   review_rules: reviewRulesSchema.nullable().default(null),
   /** Weight a dose per kilogram goes on: actual, or ideal/adjusted for an aminoglycoside. */
   dosing_weight: z.enum(['actual', 'aminoglycoside']).default('actual'),

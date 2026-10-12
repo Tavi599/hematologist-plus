@@ -104,5 +104,43 @@
         "checkedOn": "2026-10-11"
       }
     }
+  ],
+  "monitoring": [
+    {
+      "notes": {
+        "uk": "Загальний аналіз крові щотижня, незалежно від вихідного; частіше — при цитопеніях, нирковій недостатності, понад 10–14 днів лікування.",
+        "en": "Blood count weekly whatever the baseline; more often with cytopenias, renal impairment, beyond 10-14 days of treatment."
+      },
+      "source": {
+        "name": "SmPC Linezolid 2 mg/ml Solution for Infusion (emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/7300/smpc",
+        "version": "ред. 09/2021",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "notes": {
+        "uk": "Не довше 28 днів; якщо довше — регулярно зір (оптична нейропатія).",
+        "en": "No longer than 28 days; if longer, vision regularly (optic neuropathy)."
+      },
+      "source": {
+        "name": "SmPC Linezolid 2 mg/ml Solution for Infusion (emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/7300/smpc",
+        "version": "ред. 09/2021",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "notes": {
+        "uk": "Нудота, блювання, біль у животі, низький бікарбонат — лактат-ацидоз. Із серотонінергічними препаратами — ознаки серотонінового синдрому.",
+        "en": "Nausea, vomiting, abdominal pain, low bicarbonate: lactic acidosis. With serotonergic drugs, signs of serotonin syndrome."
+      },
+      "source": {
+        "name": "SmPC Linezolid 2 mg/ml Solution for Infusion (emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/7300/smpc",
+        "version": "ред. 09/2021",
+        "checkedOn": "2026-10-13"
+      }
+    }
   ]
 }

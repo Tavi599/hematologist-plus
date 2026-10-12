@@ -103,5 +103,43 @@
   "notes": {
     "uk": "Доза на фактичну масу, округлена до 250 мг.",
     "en": "Dose on the actual weight, rounded to 250 mg."
-  }
+  },
+  "monitoring": [
+    {
+      "notes": {
+        "uk": "Рівень перед наступною дозою: при нормальній функції нирок — на 2-й день; мета 10–20 мг/л (лабораторії частіше радять 15–20). Далі — від щоденного до щотижневого у стабільних.",
+        "en": "Trough before the next dose: on day 2 with normal kidneys; target 10-20 mg/L (laboratories often advise 15-20). Then from daily to weekly once stable."
+      },
+      "source": {
+        "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
+        "version": "ред. 19.01.2026",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "notes": {
+        "uk": "Креатинін регулярно, серійно — з аміноглікозидами чи іншими нефротоксичними препаратами. Періодично: загальний аналіз крові (лейкоцити), аналіз сечі, печінкові проби.",
+        "en": "Creatinine regularly, serially with aminoglycosides or other nephrotoxic drugs. Periodically: blood count (leucocytes), urinalysis, liver tests."
+      },
+      "source": {
+        "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
+        "version": "ред. 19.01.2026",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "notes": {
+        "uk": "Слух — періодично при тривалому лікуванні; у літніх — під час і після лікування.",
+        "en": "Hearing periodically on long treatment; in the elderly, during and after it."
+      },
+      "source": {
+        "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
+        "version": "ред. 19.01.2026",
+        "checkedOn": "2026-10-13"
+      }
+    }
+  ]
 }

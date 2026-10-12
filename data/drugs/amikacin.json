@@ -100,5 +100,55 @@
   "notes": {
     "uk": "Доза на кг — на ідеальну масу; фактичну, якщо вона менша за ідеальну; скориговану (ідеальна + 0,4 × надлишок), якщо фактична більша за 120% ідеальної. Потрібні зріст і стать.",
     "en": "Dose per kg on the ideal weight; the actual one when below the ideal; the adjusted one (ideal + 0.4 x excess) when the actual is above 120% of the ideal. Needs height and sex."
-  }
+  },
+  "monitoring": [
+    {
+      "notes": {
+        "uk": "Креатинін щодня; аналіз сечі (питома вага, білок, клітини, циліндри). Наростання азотемії чи падіння діурезу — відміна.",
+        "en": "Creatinine daily; urinalysis (specific gravity, protein, cells, casts). Rising azotaemia or falling urine output: stop."
+      },
+      "source": {
+        "name": "SmPC Amikacin 250 mg/ml Injection (Hospira, emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/3784/smpc",
+        "version": "ред. 03/2024",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "notes": {
+        "uk": "Рівні: пік (30–90 хв після введення) не вище 35 мкг/мл, перед наступною дозою не вище 10 мкг/мл.",
+        "en": "Levels: peak (30-90 min after the dose) no higher than 35 mcg/mL, trough before the next dose no higher than 10 mcg/mL."
+      },
+      "source": {
+        "name": "SmPC Amikacin 250 mg/ml Injection (Hospira, emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/3784/smpc",
+        "version": "ред. 03/2024",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "notes": {
+        "uk": "Аудіограма до лікування; повторно — якщо лікування триватиме ≥ 7 днів при нирковій недостатності або ≥ 10 днів у решти.",
+        "en": "Audiogram before treatment; repeat if it lasts 7 days or more with renal impairment, 10 days or more otherwise."
+      },
+      "source": {
+        "name": "SmPC Amikacin 250 mg/ml Injection (Hospira, emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/3784/smpc",
+        "version": "ред. 03/2024",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "notes": {
+        "uk": "Зазвичай 7–10 днів; понад 10 днів — переоцінити, понад 14 днів безпечність не встановлено.",
+        "en": "Usually 7-10 days; beyond 10, re-evaluate; beyond 14, safety is not established."
+      },
+      "source": {
+        "name": "SmPC Amikacin 250 mg/ml Injection (Hospira, emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/3784/smpc",
+        "version": "ред. 03/2024",
+        "checkedOn": "2026-10-13"
+      }
+    }
+  ]
 }

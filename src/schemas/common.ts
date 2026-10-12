@@ -202,6 +202,17 @@ export const drugCautionSchema = z.strictObject({
 export type DrugCaution = z.infer<typeof drugCautionSchema>
 
 /**
+ * What the label (or a reference it is checked against) says to watch while the drug is given:
+ * blood levels, the kidneys, the blood count, hearing. Shown in the drug's row of the calculator
+ * as a reminder; it changes no dose.
+ */
+export const drugMonitoringSchema = z.strictObject({
+  notes: localizedTextSchema,
+  source: sourceSchema,
+})
+export type DrugMonitoring = z.infer<typeof drugMonitoringSchema>
+
+/**
  * One phase of a course split into several records — cycle 1 with its premedication and slow
  * first infusion, cycles 2–6, maintenance. The phases share the course id and title; a phase
  * that follows the cycle count says which cycles it covers, so the calculator can give the right

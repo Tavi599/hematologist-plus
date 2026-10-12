@@ -53,5 +53,31 @@
         "checkedOn": "2026-10-11"
       }
     }
+  ],
+  "monitoring": [
+    {
+      "notes": {
+        "uk": "Рівень перед дозою в рівноважному стані після навантаження: щонайменше 10 мг/л (ВЕРХ) чи 15 мг/л (FPIA); при ендокардиті й тяжких інфекціях 15–30 (ВЕРХ) чи 30–40 мг/л (FPIA). Далі щонайменше раз на тиждень.",
+        "en": "Trough at steady state after the loading doses: at least 10 mg/L (HPLC) or 15 mg/L (FPIA); in endocarditis and severe infections 15-30 (HPLC) or 30-40 mg/L (FPIA). Then at least weekly."
+      },
+      "source": {
+        "name": "SmPC Targocid 200 mg / 400 mg (emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/2926/smpc",
+        "version": "ред. 11.12.2025",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "notes": {
+        "uk": "Загальний аналіз крові періодично. Нирки й слух — при нирковій недостатності, високих навантажувальних дозах чи нефротоксичних супутніх препаратах.",
+        "en": "Blood count periodically. Kidneys and hearing with renal impairment, high loading doses or nephrotoxic co-medication."
+      },
+      "source": {
+        "name": "SmPC Targocid 200 mg / 400 mg (emc), 4.2, 4.4",
+        "url": "https://www.medicines.org.uk/emc/product/2926/smpc",
+        "version": "ред. 11.12.2025",
+        "checkedOn": "2026-10-13"
+      }
+    }
   ]
 }

@@ -29,6 +29,7 @@ import {
   treatmentNodeKindSchema,
   routeAlternativeSchema,
   drugCautionSchema,
+  drugMonitoringSchema,
   regimenCourseSchema,
   unitEquivalenceSchema,
 } from './common'
@@ -82,6 +83,8 @@ export const drugRowSchema = z.object({
    *  which is what the drug had before the column existed. */
   route_alternatives: z.array(routeAlternativeSchema).nullable().catch(null).default(null),
   cautions: z.array(drugCautionSchema).nullable().catch(null).default(null),
+  /** What to watch while the drug is given; a reminder in the calculator, no dose change. */
+  monitoring: z.array(drugMonitoringSchema).nullable().catch(null).default(null),
   /** Which weight a dose per kilogram is given on: the actual one, or the aminoglycoside rule. */
   dosing_weight: z.enum(['actual', 'aminoglycoside']).catch('actual').default('actual'),
   /** Rounding step of a dose of this drug, in `amount_unit` (vancomycin 250 mg). */
