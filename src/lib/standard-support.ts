@@ -245,7 +245,26 @@ export function standardSupportRows(
       }
     }
   }
-  return result
+  return result.map((added) => ({ ...added, renal_bands: catalogRenalBands(catalog, added) }))
+}
+
+/**
+ * The label's ranges of creatinine clearance for a standard row: those the catalog writes for the
+ * regimens' own rows of the same drug, dose and frequency (aciclovir 400 mg twice a day), so a
+ * row added by the switch is corrected exactly as the regimen's own would be.
+ */
+function catalogRenalBands(catalog: CatalogIndex, added: RegimenItem): RegimenItem['renal_bands'] {
+  const same = catalog.rows.regimen_items.find(
+    (item) =>
+      item.role === 'supportive' &&
+      item.drug_id === added.drug_id &&
+      item.route === added.route &&
+      item.dose_unit === added.dose_unit &&
+      item.dose_value === added.dose_value &&
+      item.administrations_per_day === added.administrations_per_day &&
+      item.renal_bands.length > 0,
+  )
+  return same?.renal_bands ?? []
 }
 
 const THROMBO_NOTE = {

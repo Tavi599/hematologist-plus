@@ -174,6 +174,30 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
     }
   }
 
+  // A supportive row of one drug, dose and frequency is corrected for the kidneys the same way in
+  // every regimen: the standard support switch copies the ranges from any of them.
+  const supportBands = new Map<string, { id: string; bands: string }>()
+  for (const item of rows.regimen_items) {
+    if (item.role !== 'supportive') continue
+    const key = [
+      item.drug_id,
+      item.route,
+      item.dose_unit,
+      item.dose_value,
+      item.administrations_per_day,
+    ].join('|')
+    const bands = JSON.stringify(item.renal_bands)
+    const first = supportBands.get(key)
+    if (!first) supportBands.set(key, { id: item.id, bands })
+    else if (first.bands !== bands) {
+      error(
+        'regimen_items',
+        item.id,
+        `renal_bands: differ from ${first.id}, the same supportive dose`,
+      )
+    }
+  }
+
   for (const item of rows.regimen_items) {
     // One document often writes several doses for one drug — a phase of the disease, a platelet
     // count, another indication. What must not repeat is the dose itself: the physician picks an

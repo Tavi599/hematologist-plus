@@ -84,7 +84,27 @@
       "notes": {
         "uk": "Впродовж лікування і 3 місяці після",
         "en": "During treatment and for 3 months after"
-      }
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 0,
+          "crcl_max": 9,
+          "dose_value": 200,
+          "administrations_per_day": 2,
+          "withhold": null,
+          "interval_min": 720,
+          "notes": {
+            "uk": "SmPC (ВПГ): КК < 10 — 200 мг 2 рази на добу з інтервалом ~12 год. UpToDate (на 1,73 м²) так само; при 10–<25 — без корекції або 200 мг кожні 12 год на розсуд.",
+            "en": "SmPC (HSV): CrCl < 10, 200 mg twice a day about 12 h apart. UpToDate (per 1.73 m²) the same; at 10-<25, no change or 200 mg every 12 h at discretion."
+          },
+          "source": {
+            "name": "SmPC Aciclovir 400mg Tablets (Wockhardt, emc), 4.2",
+            "url": "https://www.medicines.org.uk/emc/product/2352/smpc",
+            "version": "ред. 14.04.2026",
+            "checkedOn": "2026-10-12"
+          }
+        }
+      ]
     },
     {
       "key": "fluconazole",
@@ -100,7 +120,27 @@
       "notes": {
         "uk": "Протигрибкова профілактика низького ризику",
         "en": "Low-risk antifungal prophylaxis"
-      }
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 0,
+          "crcl_max": 50,
+          "dose_value": 25,
+          "administrations_per_day": 1,
+          "withhold": null,
+          "interval_min": null,
+          "notes": {
+            "uk": "SmPC і UpToDate: КК ≤ 50 — 50% добової дози після першої повної (першого дня 50 мг). Капсулу 50 мг не ділять: 25 мг — лише з рідкої форми для прийому внутрішньо.",
+            "en": "SmPC and UpToDate: CrCl ≤ 50, 50% of the daily dose after a full first one (50 mg on day 1). The 50 mg capsule is not split: 25 mg only from an oral liquid."
+          },
+          "source": {
+            "name": "SmPC Diflucan 50 mg hard capsules (Pfizer, emc), 4.2",
+            "url": "https://www.medicines.org.uk/emc/product/5982/smpc",
+            "version": "ред. 02/2024",
+            "checkedOn": "2026-10-12"
+          }
+        }
+      ]
     },
     {
       "key": "omeprazole",

@@ -182,7 +182,27 @@
       "notes": {
         "uk": "Противірусна профілактика впродовж лікування і 3 місяці після",
         "en": "Antiviral prophylaxis during treatment and for 3 months after"
-      }
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 0,
+          "crcl_max": 9,
+          "dose_value": 200,
+          "administrations_per_day": 2,
+          "withhold": null,
+          "interval_min": 720,
+          "notes": {
+            "uk": "SmPC (ВПГ): КК < 10 — 200 мг 2 рази на добу з інтервалом ~12 год. UpToDate (на 1,73 м²) так само; при 10–<25 — без корекції або 200 мг кожні 12 год на розсуд.",
+            "en": "SmPC (HSV): CrCl < 10, 200 mg twice a day about 12 h apart. UpToDate (per 1.73 m²) the same; at 10-<25, no change or 200 mg every 12 h at discretion."
+          },
+          "source": {
+            "name": "SmPC Aciclovir 400mg Tablets (Wockhardt, emc), 4.2",
+            "url": "https://www.medicines.org.uk/emc/product/2352/smpc",
+            "version": "ред. 14.04.2026",
+            "checkedOn": "2026-10-12"
+          }
+        }
+      ]
     }
   ]
 }

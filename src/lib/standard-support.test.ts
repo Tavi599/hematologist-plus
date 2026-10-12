@@ -12,8 +12,11 @@ import {
   supportCategoryOf,
 } from './standard-support'
 
-const catalog = (drugIds: string[]) =>
-  ({ drugs: new Map(drugIds.map((id) => [id, {}])) }) as unknown as CatalogIndex
+const catalog = (drugIds: string[], regimenItems: Partial<RegimenItem>[] = []) =>
+  ({
+    drugs: new Map(drugIds.map((id) => [id, {}])),
+    rows: { regimen_items: regimenItems },
+  }) as unknown as CatalogIndex
 
 const ALL = [
   'ondansetron',
@@ -228,5 +231,29 @@ describe('thromboprophylaxis', () => {
     expect(
       standardSupportRows(catalog(['aciclovir']), chemo, 28, '2026-10-05', on, 'apixaban'),
     ).toEqual([])
+  })
+})
+
+describe('standard rows and the kidneys', () => {
+  it('take the ranges the regimens write for the same dose, and none for another', () => {
+    const bands = [
+      { crcl_min: 0, crcl_max: 9, dose_value: 200, administrations_per_day: 2 },
+    ] as unknown as RegimenItem['renal_bands']
+    const regimenRow = (dose: number, perDay: number): Partial<RegimenItem> => ({
+      role: 'supportive',
+      drug_id: 'aciclovir',
+      route: 'oral',
+      dose_unit: 'mg_flat',
+      dose_value: dose,
+      administrations_per_day: perDay,
+      renal_bands: bands,
+    })
+    const rowsWith = (items: Partial<RegimenItem>[]) =>
+      standardSupportRows(catalog(ALL, items), chemo, 21, '2026-01-05', {
+        ...NO_SUPPORT,
+        antiviral: true,
+      })
+    expect(rowsWith([regimenRow(400, 2)])[0]!.renal_bands).toBe(bands)
+    expect(rowsWith([regimenRow(200, 3)])[0]!.renal_bands).toEqual([])
   })
 })
