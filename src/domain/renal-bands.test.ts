@@ -106,3 +106,44 @@ describe('renal ranges in a course', () => {
     )
   })
 })
+
+describe('a range that gives no dose', () => {
+  const vancomycin: CourseDrug = {
+    id: 'vancomycin',
+    dose: { value: 15, unit: 'mg_kg' },
+    days: [1, 2],
+    administrationsPerDay: 2,
+    intervalMin: 720,
+    renalBands: [
+      { minMlMin: 20, maxMlMin: 49, doseValue: 15, administrationsPerDay: 1 },
+      { minMlMin: 0, maxMlMin: 19, withhold: 'levels' },
+    ],
+  }
+  const other: CourseDrug = { id: 'other', dose: { value: 100, unit: 'mg_flat' }, days: [1] }
+  // CrCl ≈ 10 mL/min.
+  const patient = {
+    ageYears: 70,
+    weightKg: 70,
+    heightCm: 175,
+    sex: 'male' as const,
+    serumCreatinine: 600,
+    creatinineUnit: 'umol_l' as const,
+  }
+  const adjustments = { startDateIso: '2026-10-12' }
+
+  it('leaves the drug out of the course and says why', () => {
+    const course = calculateCourse(patient, [vancomycin, other], adjustments)
+    expect(course.drugs.map((drug) => drug.id)).toEqual(['other'])
+    expect(course.days[0]!.administrations.map((entry) => entry.drugId)).toEqual(['other'])
+    expect(course.renal.vancomycin).toMatchObject({ status: 'withheld', clearanceMlMin: 10 })
+  })
+
+  it('calculates the regimen dose when the physician switches the correction off', () => {
+    const course = calculateCourse(patient, [vancomycin], {
+      ...adjustments,
+      renalBandOffIds: ['vancomycin'],
+    })
+    expect(course.drugs[0]!.administrationsPerDay).toBe(2)
+    expect(course.drugs[0]!.warnings[0]?.code).toBe('renal.withheldOff.levels')
+  })
+})

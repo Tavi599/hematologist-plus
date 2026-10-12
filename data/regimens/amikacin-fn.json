@@ -1,5 +1,5 @@
 {
-  "$comment": "SmPC 4.2: 15 мг/кг/добу, не більше 1,5 г/добу; «In endocarditis and in febrile neutropenic patients, dosing should be twice daily» → 7,5 мг/кг кожні 12 год, не більше 750 мг на введення. Розбіжність: IDSA 2026 — 15 мг/кг одноразово на добу з корекцією за рівнем. Показання в нейтропенії: септичний шок або ризик резистентної синьогнійної — разом з бета-лактамом (AGIHO BIII, ECIL-4 BIII), відмінити при стабілізації.",
+  "$comment": "SmPC 4.2: 15 мг/кг/добу, не більше 1,5 г/добу; «In endocarditis and in febrile neutropenic patients, dosing should be twice daily» → 7,5 мг/кг кожні 12 год, не більше 750 мг на введення. Розбіжність: IDSA 2026 — 15 мг/кг одноразово на добу з корекцією за рівнем. Показання в нейтропенії: септичний шок або ризик резистентної синьогнійної — разом з бета-лактамом (AGIHO BIII, ECIL-4 BIII), відмінити при стабілізації. Корекція за КК — UpToDate (традиційне дозування, Leroy 1978); SmPC — формула інтервалу за креатиніном.",
   "id": "amikacin-fn",
   "short_name": "Амікацин (ФН)",
   "name": {
@@ -28,6 +28,11 @@
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3856958/",
       "version": "2013",
       "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "UpToDate (Lexicomp): Amikacin (systemic): Drug information, Dosing: Kidney Impairment: Adult",
+      "url": "https://www.uptodate.com/contents/amikacin-systemic-drug-information",
+      "checkedOn": "2026-10-12"
     }
   ],
   "items": [
@@ -42,9 +47,62 @@
       "administrations_per_day": 2,
       "interval_min": 720,
       "notes": {
-        "uk": "Лише разом з антисиньогнійним бета-лактамом: септичний шок, ризик резистентної синьогнійної палички чи ацинетобактера. Відмінити, щойно стан стабілізувався або збудник чутливий до бета-лактаму (AGIHO AIII). Розбіжність: IDSA 2026 дає 15 мг/кг 1 раз на добу. Контроль креатиніну й рівня. Розраховано дні 1–4 — до переоцінки через 72–96 год; тривалість далі — за збудником і локалізацією (вкладка «Фебрильна нейтропенія»).",
-        "en": "Only with an antipseudomonal beta-lactam: septic shock, a risk of resistant Pseudomonas or Acinetobacter. Stop once stable or the pathogen is beta-lactam-susceptible (AGIHO AIII). Discrepancy: IDSA 2026 gives 15 mg/kg once a day. Creatinine and levels. Days 1-4 are calculated, up to the review at 72-96 h; the rest of the course follows the pathogen and the site (the \"Febrile neutropenia\" tab)."
-      }
+        "uk": "Лише разом з антисиньогнійним бета-лактамом: септичний шок, ризик резистентної синьогнійної палички чи ацинетобактера. Відмінити, щойно стан стабілізувався або збудник чутливий до бета-лактаму (AGIHO AIII). Розбіжність: IDSA 2026 дає 15 мг/кг 1 раз на добу. Контроль креатиніну й рівня. Розраховано дні 1–4 — до переоцінки через 72–96 год; тривалість далі — за збудником і локалізацією (вкладка «Фебрильна нейтропенія»). При КК < 60 мл/хв інтервал коригується за кліренсом автоматично (UpToDate); при КК < 20 не розраховується — за рівнем у крові. Розбіжність: SmPC дає формулу інтервал = креатинін (мг/дл) × 9 год.",
+        "en": "Only with an antipseudomonal beta-lactam: septic shock, a risk of resistant Pseudomonas or Acinetobacter. Stop once stable or the pathogen is beta-lactam-susceptible (AGIHO AIII). Discrepancy: IDSA 2026 gives 15 mg/kg once a day. Creatinine and levels. Days 1-4 are calculated, up to the review at 72-96 h; the rest of the course follows the pathogen and the site (the \"Febrile neutropenia\" tab). With CrCl < 60 mL/min the interval follows the clearance automatically (UpToDate); below 20 it is not calculated, dosing follows the blood level. Discrepancy: the SmPC gives the formula interval = creatinine (mg/dL) x 9 h."
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 40,
+          "crcl_max": 59,
+          "dose_value": 7.5,
+          "administrations_per_day": 2,
+          "withhold": null,
+          "interval_min": 720,
+          "notes": {
+            "uk": "UpToDate: 5–7,5 мг/кг кожні 12 год; у розрахунку верхня межа, як у схемі.",
+            "en": "UpToDate: 5-7.5 mg/kg every 12 h; the calculation takes the upper end, as the regimen does."
+          },
+          "source": {
+            "name": "UpToDate (Lexicomp): Amikacin (systemic): Drug information, Dosing: Kidney Impairment: Adult",
+            "url": "https://www.uptodate.com/contents/amikacin-systemic-drug-information",
+            "checkedOn": "2026-10-12"
+          }
+        },
+        {
+          "crcl_min": 20,
+          "crcl_max": 39,
+          "dose_value": 7.5,
+          "administrations_per_day": 1,
+          "withhold": null,
+          "interval_min": null,
+          "notes": {
+            "uk": "UpToDate: 5–7,5 мг/кг кожні 24 год; у розрахунку верхня межа.",
+            "en": "UpToDate: 5-7.5 mg/kg every 24 h; the calculation takes the upper end."
+          },
+          "source": {
+            "name": "UpToDate (Lexicomp): Amikacin (systemic): Drug information, Dosing: Kidney Impairment: Adult",
+            "url": "https://www.uptodate.com/contents/amikacin-systemic-drug-information",
+            "checkedOn": "2026-10-12"
+          }
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 19,
+          "dose_value": null,
+          "administrations_per_day": null,
+          "withhold": "levels",
+          "interval_min": null,
+          "notes": {
+            "uk": "UpToDate: 5–7,5 мг/кг одноразово, далі — за рівнем амікацину в крові.",
+            "en": "UpToDate: 5-7.5 mg/kg once, then by the amikacin level in the blood."
+          },
+          "source": {
+            "name": "UpToDate (Lexicomp): Amikacin (systemic): Drug information, Dosing: Kidney Impairment: Adult",
+            "url": "https://www.uptodate.com/contents/amikacin-systemic-drug-information",
+            "checkedOn": "2026-10-12"
+          }
+        }
+      ]
     }
   ]
 }

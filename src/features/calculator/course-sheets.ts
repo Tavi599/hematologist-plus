@@ -361,7 +361,7 @@ function dayOrders(input: CourseSheetsInput, day: SheetDay): Order[] {
       ...(note ? { note } : {}),
       ...(result
         ? {
-            dose: `${formatAmount(result.doseAmount, input.language, 1)} ${input.t(`units.${result.amountUnit}`)}`,
+            dose: `${formatAmount(result.doseAmount, input.language, 2)} ${input.t(`units.${result.amountUnit}`)}`,
           }
         : {}),
     })
@@ -673,7 +673,7 @@ function whatLine(
   const { language, t } = input
   const name = item ? localize(item.drug.name, language) : id
   const dose = result
-    ? ` ${formatAmount(result.doseAmount, language, 1)} ${t(`units.${result.amountUnit}`)}`
+    ? ` ${formatAmount(result.doseAmount, language, 2)} ${t(`units.${result.amountUnit}`)}`
     : ''
   const infusion = result?.infusion
   if (!infusion) return name + dose
@@ -682,7 +682,7 @@ function whatLine(
   if (infusion.bagVolumeMl === 0) {
     const volume = `(${formatAmount(infusion.totalVolumeMl, language)} ${t('units.ml')})`
     if (result.amountUnit !== 'mg') return `${name}${dose} ${volume}`
-    return `${name} ${formatAmount(result.doseAmount / 1000, language, 1)}${BLANK.grams} ${volume}`
+    return `${name} ${formatAmount(result.doseAmount / 1000, language, 2)}${BLANK.grams} ${volume}`
   }
   const solvent = t(`solvent.${item ? solventOf(item) : 'sodium_chloride_0_9'}`)
   // An undivided first dose goes into its own larger bag (daratumumab 16 mg/kg: 1000 mL).

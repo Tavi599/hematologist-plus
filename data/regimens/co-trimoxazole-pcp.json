@@ -1,5 +1,5 @@
 {
-  "$comment": "SmPC 4.2: пневмоцистна пневмонія — 15–20 мг/кг триметоприму і 75–100 мг/кг сульфаметоксазолу на добу у два чи більше введення, 2 тижні. 480 мг препарату = 80 мг ТМП + 400 мг СМК, тож 15–20 мг/кг ТМП = 90–120 мг/кг препарату на добу. Поділ на 3 введення — вибір розрахунку в межах «двох чи більше». AGIHO: та сама доза (A-II), щонайменше 2 тижні; при S. maltophilia — така сама (B-III).",
+  "$comment": "SmPC 4.2: пневмоцистна пневмонія — 15–20 мг/кг триметоприму і 75–100 мг/кг сульфаметоксазолу на добу у два чи більше введення, 2 тижні. 480 мг препарату = 80 мг ТМП + 400 мг СМК, тож 15–20 мг/кг ТМП = 90–120 мг/кг препарату на добу. Поділ на 3 введення — вибір розрахунку в межах «двох чи більше». AGIHO: та сама доза (A-II), щонайменше 2 тижні; при S. maltophilia — така сама (B-III). Корекція за КК — SmPC 4.2; UpToDate при КК < 15 допускає 25–50% дози.",
   "id": "co-trimoxazole-pcp",
   "short_name": "Ко-тримоксазол (PcP)",
   "name": {
@@ -22,6 +22,11 @@
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4269340/",
       "version": "2014 (опубл. 2015)",
       "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "UpToDate (Lexicomp): Trimethoprim-sulfamethoxazole (co-trimoxazole): Drug information, Dosing: Kidney Impairment: Adult",
+      "url": "https://www.uptodate.com/contents/trimethoprim-sulfamethoxazole-co-trimoxazole-drug-information",
+      "checkedOn": "2026-10-12"
     }
   ],
   "items": [
@@ -51,9 +56,47 @@
         }
       ],
       "notes": {
-        "uk": "Доза — у мг препарату (ТМП + СМК): 30 мг/кг × 3 = 90 мг/кг/добу = ТМП 15 мг/кг/добу. Почати одразу після забору матеріалу, ще до бронхоскопії при підозрі (AGIHO B-II). Щойно можливо — перорально; разом 2 тижні, далі вторинна профілактика. Контроль калію, креатиніну, крові.",
-        "en": "The dose is in mg of the product (TMP + SMX): 30 mg/kg × 3 = 90 mg/kg/day = TMP 15 mg/kg/day. Start right after sampling, before bronchoscopy when suspected (AGIHO B-II). Orally as soon as possible; 2 weeks in all, then secondary prophylaxis. Potassium, creatinine, blood count."
-      }
+        "uk": "Доза — у мг препарату (ТМП + СМК): 30 мг/кг × 3 = 90 мг/кг/добу = ТМП 15 мг/кг/добу. Почати одразу після забору матеріалу, ще до бронхоскопії при підозрі (AGIHO B-II). Щойно можливо — перорально; разом 2 тижні, далі вторинна профілактика. Контроль калію, креатиніну, крові. При КК ≤ 30 мл/хв доза коригується за кліренсом автоматично (SmPC); при КК < 15 не розраховується.",
+        "en": "The dose is in mg of the product (TMP + SMX): 30 mg/kg × 3 = 90 mg/kg/day = TMP 15 mg/kg/day. Start right after sampling, before bronchoscopy when suspected (AGIHO B-II). Orally as soon as possible; 2 weeks in all, then secondary prophylaxis. Potassium, creatinine, blood count. With CrCl ≤ 30 mL/min the dose follows the clearance automatically (SmPC); below 15 it is not calculated."
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 15,
+          "crcl_max": 30,
+          "dose_value": 15,
+          "administrations_per_day": 3,
+          "withhold": null,
+          "interval_min": 480,
+          "notes": {
+            "uk": "SmPC: КК 15–30 — половина дози. UpToDate так само (≈ 50%, у 2–4 введення); при тяжкій інфекції дехто дає повну дозу перші 1–2 дні.",
+            "en": "SmPC: CrCl 15-30, half the dose. UpToDate the same (about 50%, in 2-4 doses); in a severe infection some give the full dose for the first 1-2 days."
+          },
+          "source": {
+            "name": "SmPC Co-Trimoxazole 16 mg/80 mg per ml Solution for Infusion (emc), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/102621/smpc",
+            "version": "ред. 16.09.2026",
+            "checkedOn": "2026-10-11"
+          }
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 14,
+          "dose_value": null,
+          "administrations_per_day": null,
+          "withhold": "not_recommended",
+          "interval_min": null,
+          "notes": {
+            "uk": "Розбіжність: UpToDate при КК < 15 допускає 25–50% дози з обережністю й контролем (напр. ТМП 4–5 мг/кг 1 раз на добу).",
+            "en": "Discrepancy: UpToDate allows 25-50% of the dose with caution and monitoring below CrCl 15 (e.g. TMP 4-5 mg/kg once daily)."
+          },
+          "source": {
+            "name": "SmPC Co-Trimoxazole 16 mg/80 mg per ml Solution for Infusion (emc), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/102621/smpc",
+            "version": "ред. 16.09.2026",
+            "checkedOn": "2026-10-11"
+          }
+        }
+      ]
     }
   ]
 }

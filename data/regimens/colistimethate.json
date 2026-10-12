@@ -1,5 +1,5 @@
 {
-  "$comment": "SmPC 4.2: підтримувальна 9 млн МО/добу у 2–3 введення; у критичному стані — навантажувальна 9 млн МО; інтервал до першої підтримувальної не встановлено. ECIL-4 табл. 2: навантажувальна 9 млн МО, далі 4,5 млн МО кожні 12 год — у розрахунку з дня 2.",
+  "$comment": "SmPC 4.2: підтримувальна 9 млн МО/добу у 2–3 введення; у критичному стані — навантажувальна 9 млн МО; інтервал до першої підтримувальної не встановлено. ECIL-4 табл. 2: навантажувальна 9 млн МО, далі 4,5 млн МО кожні 12 год — у розрахунку з дня 2. Корекція підтримувальної дози за КК — SmPC 4.2 (верхня межа діапазону); UpToDate рахує за CBA на КК зі скоригованою масою.",
   "id": "colistimethate",
   "short_name": "Колістиметат",
   "name": {
@@ -22,6 +22,11 @@
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3856958/",
       "version": "2013",
       "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "UpToDate (Lexicomp): Colistin (colistimethate): Drug information, Dosing: Kidney Impairment: Adult",
+      "url": "https://www.uptodate.com/contents/colistin-colistimethate-drug-information",
+      "checkedOn": "2026-10-12"
     }
   ],
   "items": [
@@ -47,9 +52,65 @@
       "administrations_per_day": 2,
       "interval_min": 720,
       "notes": {
-        "uk": "Переважно в комбінації з іншим активним in vitro засобом (ECIL-4). Нефро- й нейротоксичність: щодня креатинін. Розраховано дні 1–4 — до переоцінки через 72–96 год; тривалість далі — за збудником і локалізацією (вкладка «Фебрильна нейтропенія»).",
-        "en": "Preferably combined with another agent active in vitro (ECIL-4). Nephro- and neurotoxicity: daily creatinine. Days 1-4 are calculated, up to the review at 72-96 h; the rest of the course follows the pathogen and the site (the \"Febrile neutropenia\" tab)."
-      }
+        "uk": "Переважно в комбінації з іншим активним in vitro засобом (ECIL-4). Нефро- й нейротоксичність: щодня креатинін. Розраховано дні 1–4 — до переоцінки через 72–96 год; тривалість далі — за збудником і локалізацією (вкладка «Фебрильна нейтропенія»). При КК < 50 мл/хв підтримувальна доза коригується за кліренсом автоматично (SmPC); навантажувальну не зменшують.",
+        "en": "Preferably combined with another agent active in vitro (ECIL-4). Nephro- and neurotoxicity: daily creatinine. Days 1-4 are calculated, up to the review at 72-96 h; the rest of the course follows the pathogen and the site (the \"Febrile neutropenia\" tab). With CrCl < 50 mL/min the maintenance dose follows the clearance automatically (SmPC); the loading dose is not reduced."
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 30,
+          "crcl_max": 49,
+          "dose_value": 3.75,
+          "administrations_per_day": 2,
+          "withhold": null,
+          "interval_min": 720,
+          "notes": {
+            "uk": "SmPC: 5,5–7,5 млн МО на добу у 2 введення; у розрахунку верхня межа. UpToDate (дозування за CBA, КК на скоригованій масі): 30–<40 — 5,85, 40–<50 — 6,6 млн МО на добу.",
+            "en": "SmPC: 5.5-7.5 MIU a day in 2 doses; the calculation takes the upper end. UpToDate (CBA dosing, CrCl on the adjusted weight): 30-<40, 5.85; 40-<50, 6.6 MIU a day."
+          },
+          "source": {
+            "name": "SmPC Colomycin 1 million IU (emc), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/1094/smpc",
+            "version": "ред. 19.04.2023",
+            "checkedOn": "2026-10-11"
+          }
+        },
+        {
+          "crcl_min": 10,
+          "crcl_max": 29,
+          "dose_value": 2.75,
+          "administrations_per_day": 2,
+          "withhold": null,
+          "interval_min": 720,
+          "notes": {
+            "uk": "SmPC: 4,5–5,5 млн МО на добу у 2 введення; у розрахунку верхня межа. UpToDate: 10–<20 — 4,8, 20–<30 — 5,25 млн МО на добу.",
+            "en": "SmPC: 4.5-5.5 MIU a day in 2 doses; the calculation takes the upper end. UpToDate: 10-<20, 4.8; 20-<30, 5.25 MIU a day."
+          },
+          "source": {
+            "name": "SmPC Colomycin 1 million IU (emc), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/1094/smpc",
+            "version": "ред. 19.04.2023",
+            "checkedOn": "2026-10-11"
+          }
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 9,
+          "dose_value": 1.75,
+          "administrations_per_day": 2,
+          "withhold": null,
+          "interval_min": 720,
+          "notes": {
+            "uk": "SmPC: 3,5 млн МО на добу у 2 введення. UpToDate: 5–<10 — 4,35, < 5 — 3,9 млн МО на добу (більше, ніж в інструкції).",
+            "en": "SmPC: 3.5 MIU a day in 2 doses. UpToDate: 5-<10, 4.35; < 5, 3.9 MIU a day (more than the label)."
+          },
+          "source": {
+            "name": "SmPC Colomycin 1 million IU (emc), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/1094/smpc",
+            "version": "ред. 19.04.2023",
+            "checkedOn": "2026-10-11"
+          }
+        }
+      ]
     }
   ]
 }

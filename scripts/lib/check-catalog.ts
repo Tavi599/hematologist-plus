@@ -202,12 +202,20 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
           `renal_bands: ${band.crcl_min}-${band.crcl_max} should start at ${expected} mL/min`,
         )
       }
-      if (band.administrations_per_day > 1 && band.interval_min === null) {
+      const dosed = band.dose_value !== null && band.administrations_per_day !== null
+      if (dosed === (band.withhold !== null)) {
+        error(
+          'regimen_items',
+          item.id,
+          `renal_bands: ${band.crcl_min}-${band.crcl_max} needs either a dose with administrations_per_day or a withhold`,
+        )
+      }
+      if ((band.administrations_per_day ?? 1) > 1 && band.interval_min === null) {
         error('regimen_items', item.id, 'renal_bands: several a day need an interval_min')
       }
       if (
         band.interval_min !== null &&
-        band.interval_min * (band.administrations_per_day - 1) >= 24 * 60
+        band.interval_min * ((band.administrations_per_day ?? 1) - 1) >= 24 * 60
       ) {
         error('regimen_items', item.id, 'renal_bands: the administrations do not fit in a day')
       }

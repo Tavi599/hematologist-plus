@@ -1,6 +1,18 @@
-import { amountUnitOf, convertAmount, DOMAIN_DEFAULTS, type CourseDrug } from '../domain'
+import {
+  amountUnitOf,
+  convertAmount,
+  DOMAIN_DEFAULTS,
+  type CourseDrug,
+  type RenalBand,
+} from '../domain'
 import type { Drug, DrugInfusionParams, DrugPresentation, RegimenItem } from '../schemas/catalog'
-import type { DoseModifier, RouteAlternative, Solvent, Source } from '../schemas/common'
+import type {
+  DoseModifier,
+  RenalBandRow,
+  RouteAlternative,
+  Solvent,
+  Source,
+} from '../schemas/common'
 import type { LocalizedText } from './localized'
 import type { CatalogIndex } from './catalog-index'
 
@@ -485,13 +497,7 @@ export function buildCourseItemsFrom(
         ? {}
         : ownDose
           ? {
-              renalBands: renalBands.map((band) => ({
-                minMlMin: band.crcl_min,
-                maxMlMin: band.crcl_max,
-                doseValue: band.dose_value,
-                administrationsPerDay: band.administrations_per_day,
-                ...(band.interval_min === null ? {} : { intervalMin: band.interval_min }),
-              })),
+              renalBands: renalBands.map((band) => renalBandOf(band)),
             }
           : { renalBandsNotForDose: true }),
       block: item.block,
@@ -577,6 +583,19 @@ function buildInfusionParams(
           },
         }
       : {}),
+  }
+}
+
+/** A range of creatinine clearance as the calculation reads it. */
+function renalBandOf(band: RenalBandRow): RenalBand {
+  const range = { minMlMin: band.crcl_min, maxMlMin: band.crcl_max }
+  if (band.withhold !== null) return { ...range, withhold: band.withhold }
+  // The catalog check makes sure a range without `withhold` has its dose and frequency.
+  return {
+    ...range,
+    doseValue: band.dose_value!,
+    administrationsPerDay: band.administrations_per_day!,
+    ...(band.interval_min === null ? {} : { intervalMin: band.interval_min }),
   }
 }
 

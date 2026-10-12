@@ -444,9 +444,14 @@ export type DoseModifier = z.infer<typeof doseModifierSchema>
 export const renalBandSchema = z.strictObject({
   crcl_min: nonNegativeIntSchema,
   crcl_max: nonNegativeIntSchema,
-  /** Dose per administration, in the item's own dose unit. */
-  dose_value: positiveNumberSchema,
-  administrations_per_day: positiveNumberSchema.int(),
+  /** Dose per administration, in the item's own dose unit; null when the range withholds. */
+  dose_value: positiveNumberSchema.nullable().default(null),
+  administrations_per_day: positiveNumberSchema.int().nullable().default(null),
+  /**
+   * No dose in this range: the label does not recommend the drug (`not_recommended`), or the
+   * doses are set by its concentration in the blood (`levels`). Nothing is calculated.
+   */
+  withhold: z.enum(['not_recommended', 'levels']).nullable().default(null),
   /** Minutes between administrations within a day; null for once a day. */
   interval_min: positiveNumberSchema.int().nullable().default(null),
   notes: localizedTextSchema.nullable().default(null),

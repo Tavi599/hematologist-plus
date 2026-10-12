@@ -141,7 +141,8 @@ function RenalBandInfo({
   const { t } = useTranslation()
   const tu = t as unknown as DynamicTranslate
   const language = currentLanguage()
-  const unit = amountUnitOf(item.item.dose_unit)
+  // The ranges are written in the item's own dose unit: mg/kg for a dose per kilogram.
+  const unit = item.item.dose_unit
   const protocol = doseEvery(
     tu,
     language,
@@ -171,18 +172,22 @@ function RenalBandInfo({
   const row = item.item.renal_bands.find(
     (entry) => entry.crcl_min === band.minMlMin && entry.crcl_max === band.maxMlMin,
   )
-  const corrected = doseEvery(
-    tu,
-    language,
-    band.doseValue,
-    unit,
-    band.administrationsPerDay,
-    band.intervalMin,
-  )
+  const corrected =
+    band.withhold === undefined
+      ? doseEvery(tu, language, band.doseValue, unit, band.administrationsPerDay, band.intervalMin)
+      : tu(`calculator.doses.renal.withhold.${band.withhold}`)
+  const key =
+    adjustment.status === 'withheld'
+      ? 'withheld'
+      : off
+        ? band.withhold === undefined
+          ? 'off'
+          : 'withheldOff'
+        : 'applied'
   return (
     <Stack gap={2} mt={4}>
-      <Text size="xs" c={off ? 'red' : 'blue.8'} fw={500}>
-        {t(off ? 'calculator.doses.renal.off' : 'calculator.doses.renal.applied', {
+      <Text size="xs" c={off || adjustment.status === 'withheld' ? 'red' : 'blue.8'} fw={500}>
+        {tu(`calculator.doses.renal.${key}`, {
           crcl: formatNumber(adjustment.clearanceMlMin, language, 0),
           min: band.minMlMin,
           max: band.maxMlMin,
@@ -427,7 +432,7 @@ function DoseRow({
   const tu = t as unknown as DynamicTranslate
   const unit = amountUnitOf(chosen.doseUnit)
   const unitName = tu(`units.${unit}`)
-  const amount = (value: number) => `${formatNumber(value, language, 1)} ${unitName}`
+  const amount = (value: number) => `${formatNumber(value, language, 2)} ${unitName}`
 
   return (
     <>
@@ -525,9 +530,9 @@ function DoseRow({
             {(result?.administrationsPerDay ?? item.item.administrations_per_day) > 1 &&
               ` · ${t('calculator.doses.timesPerDay', { count: result?.administrationsPerDay ?? item.item.administrations_per_day })}`}
           </Text>
-          {result?.renal && (
+          {course?.renal[id] && (
             <RenalBandInfo
-              adjustment={result.renal}
+              adjustment={course.renal[id]}
               item={item}
               off={renalBandOffIds.includes(id)}
               disabled={!enabled}
@@ -702,7 +707,7 @@ function DoseRow({
             value={manualAmount ?? ''}
             placeholder={
               result
-                ? formatNumber(result.rounded[bsaVariant].roundedAmount, language, 1)
+                ? formatNumber(result.rounded[bsaVariant].roundedAmount, language, 2)
                 : undefined
             }
             onChange={(value) => onDoseOverride(id, Number(value) > 0 ? Number(value) : null)}

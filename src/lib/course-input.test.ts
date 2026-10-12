@@ -764,6 +764,7 @@ describe('renal ranges of a regimen item', () => {
         crcl_max: 30,
         dose_value: 50,
         administrations_per_day: 1,
+        withhold: null,
         interval_min: null,
         notes: null,
         source,

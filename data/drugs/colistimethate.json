@@ -89,5 +89,10 @@
         "checkedOn": "2026-10-11"
       }
     }
-  ]
+  ],
+  "dose_rounding_step": 0.25,
+  "notes": {
+    "uk": "Доза округлюється до 0,25 млн МО (чверть флакона 1 млн МО), щоб скоригована за нирками доза лишалась у межах діапазонів інструкції.",
+    "en": "The dose is rounded to 0.25 MIU (a quarter of the 1 MIU vial), so that a dose corrected for the kidneys stays within the label ranges."
+  }
 }

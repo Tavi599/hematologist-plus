@@ -15,6 +15,8 @@ export type WarningCode =
   | 'renal.bandUnchecked'
   | 'renal.bandNotForDose'
   | 'renal.bandOff'
+  | 'renal.withheldOff.not_recommended'
+  | 'renal.withheldOff.levels'
 
 /** Warnings never change a dose; they are shown to the physician for a decision. */
 export interface DomainWarning {

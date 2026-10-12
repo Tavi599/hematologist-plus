@@ -203,7 +203,13 @@
         "above": "CrCl {{crcl}} mL/min, above {{above}}: no renal correction needed",
         "unchecked": "Renal correction not checked: no creatinine clearance (needs creatinine, age, sex and weight). The dose is as in the regimen.",
         "notForDose": "The correction by clearance is written for the regimen dose only; it is not calculated for the dose chosen. Check the drug caution.",
-        "keepProtocol": "Do not correct (dose and interval as in the regimen)"
+        "keepProtocol": "Do not correct (dose and interval as in the regimen)",
+        "withheld": "CrCl {{crcl}} mL/min (range {{min}}-{{max}}): {{corrected}} The drug is not calculated.",
+        "withheldOff": "Correction off: for CrCl {{crcl}} mL/min (range {{min}}-{{max}}) {{corrected}} The calculation uses {{protocol}}.",
+        "withhold": {
+          "not_recommended": "the label does not recommend the drug.",
+          "levels": "the doses after the first follow the drug level in the blood."
+        }
       }
     },
     "standardSupport": {
@@ -562,7 +568,9 @@
     "review.ageUnknown": "Age is not given, so the age-based review hints are not shown.",
     "renal.bandUnchecked": "No creatinine clearance: the renal correction (below {{belowMlMin}} mL/min) is not checked. The dose and interval are as in the regimen.",
     "renal.bandNotForDose": "The correction by clearance is written for the regimen dose only; it is not calculated for the dose chosen.",
-    "renal.bandOff": "Renal correction switched off: for CrCl {{clearanceMlMin}} mL/min the label gives {{doseValue}} {{unit}} every {{everyH}} h."
+    "renal.bandOff": "Renal correction switched off: for CrCl {{clearanceMlMin}} mL/min the label gives {{doseValue}} {{unit}} every {{everyH}} h.",
+    "renal.withheldOff.not_recommended": "Renal correction switched off: at CrCl {{clearanceMlMin}} mL/min the label does not recommend the drug.",
+    "renal.withheldOff.levels": "Renal correction switched off: at CrCl {{clearanceMlMin}} mL/min the doses after the first follow the drug level in the blood."
   },
   "sources": {
     "title": "Sources",

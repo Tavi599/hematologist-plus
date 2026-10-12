@@ -242,6 +242,8 @@ export interface CourseDayResult {
 }
 
 export interface CourseResult {
+  /** What the creatinine clearance did to each drug that has ranges for it, by item id. */
+  renal: Record<string, RenalAdjustment>
   bsa: BsaResult
   creatinineClearanceMlMin: number | null
   drugs: CourseDrugResult[]
@@ -349,8 +351,13 @@ export function calculateCourse(
   // The label's dose and interval for the clearance replace the regimen's before anything else:
   // vials, solvent and the hourly schedule all follow the corrected drug.
   const renalOff = new Set(adjustments.renalBandOffIds ?? [])
-  const banded = enabled.map((drug) => applyRenalBand(drug, renal?.mlMin, renalOff.has(drug.id)))
+  const allBanded = enabled.map((drug) => applyRenalBand(drug, renal?.mlMin, renalOff.has(drug.id)))
+  // A range that gives no dose leaves the drug out, as if switched off; its row says why.
+  const banded = allBanded.filter((entry) => !entry.withheld)
   const adjusted = banded.map((entry) => entry.drug)
+  const renalById = Object.fromEntries(
+    allBanded.flatMap((entry) => (entry.adjustment ? [[entry.drug.id, entry.adjustment]] : [])),
+  ) as Record<string, RenalAdjustment>
   const results = banded.map(({ drug, adjustment, steps, warnings: renalWarnings }) => ({
     ...calculateDrug(drug, {
       patient,
@@ -379,6 +386,7 @@ export function calculateCourse(
 
   return {
     rampKinds: kinds,
+    renal: renalById,
     bsa,
     creatinineClearanceMlMin: renal?.mlMin ?? null,
     drugs: results,

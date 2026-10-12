@@ -138,9 +138,9 @@ describe('buildCourseSheets', () => {
     params.concentration_min_mg_ml = null
     params.concentration_max_mg_ml = null
     const day = sheets({}, catalog)[0]!
-    // 375 mg/m² × 2.0 m² = 750 mg from a 10 mg/mL concentrate: 0,8 г in 75 mL, as «Біовен ___ гр (___ мл)».
+    // 375 mg/m² × 2.0 m² = 750 mg from a 10 mg/mL concentrate: 0,75 г in 75 mL, as «Біовен ___ гр (___ мл)».
     expect(text(bandStartingWith(day, 'ДЕМО Ритуксимаб')![0] ?? null)).toBe(
-      'ДЕМО Ритуксимаб 0,8 гр (75 units.ml)',
+      'ДЕМО Ритуксимаб 0,75 гр (75 units.ml)',
     )
   })
 
