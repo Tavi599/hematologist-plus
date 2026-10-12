@@ -205,3 +205,45 @@ describe('a range of doses within one band', () => {
     expect(steps.map((step) => step.key)).toEqual(['renal.band', 'renal.bandRange'])
   })
 })
+
+describe('the full dose every other day as an alternative', () => {
+  const fluconazole: CourseDrug = {
+    id: 'fluconazole',
+    dose: { value: 50, unit: 'mg_flat' },
+    days: [1, 2, 3, 4, 5, 6, 7],
+    administrationsPerDay: 1,
+    renalBands: [
+      {
+        minMlMin: 0,
+        maxMlMin: 50,
+        doseValue: 25,
+        administrationsPerDay: 1,
+        firstDoseFull: true,
+        everyOtherDayFull: true,
+      },
+    ],
+  }
+  const patient = {
+    ageYears: 70,
+    weightKg: 70,
+    heightCm: 175,
+    sex: 'male' as const,
+    serumCreatinine: 300,
+    creatinineUnit: 'umol_l' as const,
+  }
+
+  it('gives half daily by default and the full dose on days 1, 3, 5, 7 when chosen', () => {
+    const daily = calculateCourse(patient, [fluconazole], { startDateIso: '2026-10-13' })
+    expect(daily.drugs[0]!.doseAmount).toBe(25)
+    expect(daily.drugs[0]!.administrationsInCourse).toBe(7)
+
+    const course = calculateCourse(patient, [fluconazole], {
+      startDateIso: '2026-10-13',
+      renalBandEveryOtherDayIds: ['fluconazole'],
+    })
+    expect(course.drugs[0]!.doseAmount).toBe(50)
+    expect(course.drugs[0]!.administrationsInCourse).toBe(4)
+    expect(course.days.map((day) => day.day)).toEqual([1, 3, 5, 7])
+    expect(course.renal.fluconazole).toMatchObject({ status: 'applied', everyOtherDay: true })
+  })
+})

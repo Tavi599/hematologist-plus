@@ -602,6 +602,7 @@ function renalBandOf(band: RenalBandRow): RenalBand {
       ? {}
       : { doseRange: { min: band.dose_min, max: band.dose_max } }),
     ...(band.first_dose_full ? { firstDoseFull: true as const } : {}),
+    ...(band.every_other_day_full ? { everyOtherDayFull: true as const } : {}),
   }
 }
 

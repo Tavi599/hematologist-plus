@@ -223,7 +223,13 @@
           "mid": "Middle {{dose}}",
           "high": "Upper {{dose}}"
         },
-        "firstDose": "The first dose in full, as in the regimen, uncorrected for the kidneys (as the source says); the ones after it are corrected, in the row below."
+        "firstDose": "The first dose in full, as in the regimen, uncorrected for the kidneys (as the source says); the ones after it are corrected, in the row below.",
+        "everyOtherDay": {
+          "label": "How to give the corrected dose",
+          "daily": "{{dose}} {{unit}} daily",
+          "everyOther": "{{dose}} {{unit}} every other day",
+          "note": "Alternative: the full dose every other day gives the same total from whole capsules (no oral liquid of fluconazole is registered in Ukraine). Neither the SmPC nor UpToDate describes it directly; the physician decides."
+        }
       },
       "ivigSupport": "Standard IVIG support",
       "ivigSupportOn": "3 lines added above the immunoglobulin: hydration with KCl and MgSO4, paracetamol, dexamethasone with diphenhydramine. Edit them as text.",
@@ -588,7 +594,8 @@
     "renal.band": "Correction for CrCl {{clearanceMlMin}} mL/min (range {{minMlMin}}-{{maxMlMin}}): every {{everyH}} h instead of {{protocolValue}} {{unit}} every {{protocolEveryH}} h",
     "renal.bandAbove": "CrCl above {{aboveMlMin}} mL/min: dose and interval not corrected",
     "renal.bandRange": "Dose within the label range of {{rangeMin}}-{{rangeMax}} {{unit}} per administration",
-    "renal.clearanceWeightAdjusted": "Adjusted weight for the clearance: IBW {{idealKg}} kg + 0.4 × ({{actualKg}} − {{idealKg}}) kg (BMI {{bmi}})"
+    "renal.clearanceWeightAdjusted": "Adjusted weight for the clearance: IBW {{idealKg}} kg + 0.4 × ({{actualKg}} − {{idealKg}}) kg (BMI {{bmi}})",
+    "renal.bandEveryOtherDay": "CrCl {{clearanceMlMin}} mL/min (range {{minMlMin}}-{{maxMlMin}}): the full dose every other day instead of half daily"
   },
   "warning": {
     "input.outOfRange": "{{field}}: {{value}} is outside {{min}}–{{max}}. Check the entered data.",

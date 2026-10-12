@@ -88,6 +88,8 @@ export interface DoseTableProps {
   onRenalBandOff: (itemId: string, off: boolean) => void
   /** Where in the label's range of a corrected dose the physician puts it. */
   onRenalBandLevel: (itemId: string, level: RenalBandLevel) => void
+  /** The full dose every other day instead of the lower daily one, where a range offers it. */
+  onRenalBandEveryOtherDay: (itemId: string, on: boolean) => void
   onRemove: (itemId: string) => void
   customIds: string[]
   /** The BSA the doses are given on; the other variant is shown under it when it differs. */
@@ -151,6 +153,7 @@ function RenalBandInfo({
   disabled,
   onOff,
   onLevel,
+  onEveryOtherDay,
 }: {
   adjustment: RenalAdjustment
   item: CourseItem
@@ -158,6 +161,7 @@ function RenalBandInfo({
   disabled: boolean
   onOff: (off: boolean) => void
   onLevel: (level: RenalBandLevel) => void
+  onEveryOtherDay: (on: boolean) => void
 }) {
   const { t } = useTranslation()
   const tu = t as unknown as DynamicTranslate
@@ -194,16 +198,21 @@ function RenalBandInfo({
     (entry) => entry.crcl_min === band.minMlMin && entry.crcl_max === band.maxMlMin,
   )
   const corrected =
-    band.withhold === undefined
-      ? doseEvery(
-          tu,
-          language,
-          adjustment.status === 'applied' ? adjustment.doseValue : band.doseValue,
-          unit,
-          band.administrationsPerDay,
-          band.intervalMin,
-        )
-      : tu(`calculator.doses.renal.withhold.${band.withhold}`)
+    adjustment.status === 'applied' && adjustment.everyOtherDay
+      ? t('calculator.doses.renal.everyOtherDay.everyOther', {
+          dose: formatNumber(adjustment.doseValue, language, 2),
+          unit: tu(`units.${unit}`),
+        })
+      : band.withhold === undefined
+        ? doseEvery(
+            tu,
+            language,
+            adjustment.status === 'applied' ? adjustment.doseValue : band.doseValue,
+            unit,
+            band.administrationsPerDay,
+            band.intervalMin,
+          )
+        : tu(`calculator.doses.renal.withhold.${band.withhold}`)
   const key =
     adjustment.status === 'withheld'
       ? 'withheld'
@@ -251,6 +260,40 @@ function RenalBandInfo({
             }))}
             aria-label={`${t('calculator.doses.renal.rangeLabel')}: ${localize(item.drug.name, language)}`}
           />
+        </>
+      )}
+      {/* The lower daily dose cannot always be made from the forms on hand: the full dose every
+          other day is offered as the alternative, the physician's to choose. */}
+      {band.withhold === undefined && band.everyOtherDayFull && !off && (
+        <>
+          <SegmentedControl
+            size="xs"
+            disabled={disabled}
+            value={
+              adjustment.status === 'applied' && adjustment.everyOtherDay ? 'everyOther' : 'daily'
+            }
+            onChange={(value) => onEveryOtherDay(value === 'everyOther')}
+            data={[
+              {
+                value: 'daily',
+                label: t('calculator.doses.renal.everyOtherDay.daily', {
+                  dose: formatNumber(band.doseValue, language, 2),
+                  unit: tu(`units.${unit}`),
+                }),
+              },
+              {
+                value: 'everyOther',
+                label: t('calculator.doses.renal.everyOtherDay.everyOther', {
+                  dose: formatNumber(item.item.dose_value, language, 2),
+                  unit: tu(`units.${unit}`),
+                }),
+              },
+            ]}
+            aria-label={`${t('calculator.doses.renal.everyOtherDay.label')}: ${localize(item.drug.name, language)}`}
+          />
+          <Text size="xs" c="orange.9">
+            {t('calculator.doses.renal.everyOtherDay.note')}
+          </Text>
         </>
       )}
       {row?.notes && (
@@ -460,6 +503,7 @@ function DoseRow({
   renalBandOffIds,
   onRenalBandOff,
   onRenalBandLevel,
+  onRenalBandEveryOtherDay,
   onRemove,
   customIds,
   bsaVariant,
@@ -658,6 +702,7 @@ function DoseRow({
               disabled={!enabled}
               onOff={(off) => onRenalBandOff(id, off)}
               onLevel={(level) => onRenalBandLevel(id, level)}
+              onEveryOtherDay={(on) => onRenalBandEveryOtherDay(id, on)}
             />
           )}
           {item.doseChoices.length > 1 && (

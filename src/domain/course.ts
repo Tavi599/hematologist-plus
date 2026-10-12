@@ -143,6 +143,8 @@ export interface CourseAdjustments {
   renalBandOffIds?: string[]
   /** Which weight the creatinine clearance is worked out on; the actual one when absent. */
   clearanceWeight?: ClearanceWeight
+  /** Item ids given the regimen's full dose every other day instead of a lower daily one. */
+  renalBandEveryOtherDayIds?: string[]
   /** Where in the label's range of a corrected dose the physician put it, by item id. */
   renalBandLevel?: Record<string, RenalBandLevel>
 }
@@ -405,6 +407,7 @@ export function calculateCourse(
       renal?.mlMin,
       renalOff.has(drug.id),
       adjustments.renalBandLevel?.[drug.id],
+      adjustments.renalBandEveryOtherDayIds?.includes(drug.id) ?? false,
     ),
   )
   // A range that gives no dose leaves the drug out, as if switched off; its row says why.

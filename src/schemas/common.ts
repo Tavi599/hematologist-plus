@@ -495,6 +495,12 @@ export const renalBandSchema = z.strictObject({
    * it (cefepime, fluconazole). Written only for a range given once a day; absent otherwise.
    */
   first_dose_full: z.literal(true).optional(),
+  /**
+   * Offered as an alternative the physician may switch to: the regimen's full dose every other
+   * day instead of the lower daily one, where the lower dose cannot be made from the forms on
+   * hand (fluconazole 25 mg with only 50 mg capsules). Absent otherwise.
+   */
+  every_other_day_full: z.literal(true).optional(),
   notes: localizedTextSchema.nullable().default(null),
   source: sourceSchema,
 })

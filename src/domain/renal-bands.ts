@@ -30,6 +30,8 @@ export type RenalBand = { minMlMin: number; maxMlMin: number } & (
       doseRange?: { min: number; max: number }
       /** The first dose of the course stays the regimen's own, in full; the rest are corrected. */
       firstDoseFull?: true
+      /** The physician may give the regimen's full dose every other day instead. */
+      everyOtherDayFull?: true
     }
   | { withhold: RenalWithhold }
 )
@@ -46,8 +48,17 @@ export function renalBandDose(range: { min: number; max: number }, level: RenalB
 
 /** What the clearance did to one drug, for the row that shows it. */
 export type RenalAdjustment =
-  /** The dose and interval of `band` replaced the regimen's. */
-  | { status: 'applied'; clearanceMlMin: number; band: RenalBand; doseValue: number }
+  /**
+   * The dose and interval of `band` replaced the regimen's; or, with `everyOtherDay`, the
+   * regimen's full dose is given every other day instead.
+   */
+  | {
+      status: 'applied'
+      clearanceMlMin: number
+      band: RenalBand
+      doseValue: number
+      everyOtherDay?: true
+    }
   /** The range gives no dose: the drug is not calculated at all. */
   | { status: 'withheld'; clearanceMlMin: number; band: RenalBand }
   /** The clearance is above every range: the regimen's dose stands. */
@@ -62,6 +73,7 @@ export type RenalAdjustment =
 interface BandedDrug {
   id: string
   dose: DoseSpec
+  days: number[]
   administrationsPerDay?: number
   intervalMin?: number
   renalBands?: RenalBand[]
@@ -93,6 +105,7 @@ export function applyRenalBand<T extends BandedDrug>(
   clearanceMlMin: number | undefined,
   off: boolean,
   level?: RenalBandLevel,
+  everyOtherDay = false,
 ): RenalBandResult<T> {
   const unchanged = { drug, withheld: false }
   const bands = drug.renalBands ?? []
@@ -169,6 +182,40 @@ export function applyRenalBand<T extends BandedDrug>(
     }
   }
   const protocolEveryH = everyHours(drug.administrationsPerDay ?? 1, drug.intervalMin)
+  if (band.everyOtherDayFull && everyOtherDay) {
+    // The same total as half the dose daily, made from whole forms: the full dose on day 1, 3, 5…
+    const first = Math.min(...drug.days)
+    const { intervalMin: _interval, ...kept } = drug
+    return {
+      drug: {
+        ...kept,
+        days: drug.days.filter((day) => (day - first) % 2 === 0),
+        administrationsPerDay: 1,
+      } as T,
+      withheld: false,
+      adjustment: {
+        status: 'applied',
+        clearanceMlMin: clearance,
+        band,
+        doseValue: drug.dose.value,
+        everyOtherDay: true,
+      },
+      steps: [
+        {
+          key: 'renal.bandEveryOtherDay',
+          value: drug.dose.value,
+          unit: amountUnitOf(drug.dose.unit),
+          params: {
+            clearanceMlMin: clearance,
+            minMlMin: band.minMlMin,
+            maxMlMin: band.maxMlMin,
+            unit: amountUnitOf(drug.dose.unit),
+          },
+        },
+      ],
+      warnings: [],
+    }
+  }
   const doseValue = band.doseRange && level ? renalBandDose(band.doseRange, level) : band.doseValue
   const { intervalMin: _protocolInterval, ...rest } = drug
   const adjusted = {

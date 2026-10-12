@@ -134,6 +134,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [chosenDurations, setChosenDurations] = useState<Record<string, number>>({})
   // Rows whose correction by creatinine clearance the physician switched off.
   const [renalBandOffIds, setRenalBandOffIds] = useState<string[]>([])
+  // Rows given the full dose every other day instead of a lower daily one.
+  const [renalBandEveryOtherDayIds, setRenalBandEveryOtherDayIds] = useState<string[]>([])
   // Where in the label's range the physician put a corrected dose, by row.
   const [renalBandLevel, setRenalBandLevel] = useState<Record<string, RenalBandLevel>>({})
   // The weight the creatinine clearance is worked out on, for a patient with obesity.
@@ -357,6 +359,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           shiftMin,
           infusionStart,
           renalBandOffIds,
+          renalBandEveryOtherDayIds,
           renalBandLevel,
           clearanceWeight,
         },
@@ -389,6 +392,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     shiftMin,
     infusionStart,
     renalBandOffIds,
+    renalBandEveryOtherDayIds,
     renalBandLevel,
     clearanceWeight,
     mesnaFor,
@@ -692,6 +696,13 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   renalBandOffIds={renalBandOffIds}
                   onRenalBandLevel={(id, level) =>
                     setRenalBandLevel((current) => ({ ...current, [id]: level }))
+                  }
+                  onRenalBandEveryOtherDay={(id, on) =>
+                    setRenalBandEveryOtherDayIds((current) =>
+                      on
+                        ? [...current.filter((entry) => entry !== id), id]
+                        : current.filter((entry) => entry !== id),
+                    )
                   }
                   onRenalBandOff={(id, off) =>
                     setRenalBandOffIds((current) =>
