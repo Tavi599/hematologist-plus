@@ -49,7 +49,13 @@
       "summary": "BSA {{bsa}} м² · кліренс креатиніну {{crcl}}",
       "summaryNoCrcl": "BSA {{bsa}} м² · кліренс креатиніну не розрахований (немає креатиніну)",
       "incomplete": "Заповніть зріст і вагу — або введіть BSA вручну, щоб побачити розрахунок.",
-      "orEnterBsa": "або введіть BSA вручну"
+      "orEnterBsa": "або введіть BSA вручну",
+      "clearanceWeight": {
+        "label": "Вага для кліренсу:",
+        "actual": "фактична — {{crcl}} мл/хв",
+        "adjusted": "скоригована {{kg}} кг — {{crcl}} мл/хв",
+        "hint": "ІМТ {{bmi}} кг/м². Яку вагу брати в Cockcroft-Gault при ожирінні, не вирішено (UpToDate): частіше фактичну, GOG — скориговану (ІдМТ + 0,4 × (фактична − ІдМТ)) від ІМТ 25. Обрана вага йде в кліренс, ниркові корекції й карбоплатин."
+      }
     },
     "course": {
       "title": "Курс",
@@ -570,7 +576,8 @@
     "infusion.rate": "Швидкість за {{durationMin}} хв ({{rateGttMin}} крап/хв, крапельниця {{dropFactor}} крап/мл)",
     "renal.band": "Корекція за КК {{clearanceMlMin}} мл/хв (діапазон {{minMlMin}}–{{maxMlMin}}): кожні {{everyH}} год замість {{protocolValue}} {{unit}} кожні {{protocolEveryH}} год",
     "renal.bandAbove": "КК вище {{aboveMlMin}} мл/хв — доза й інтервал без корекції",
-    "renal.bandRange": "Доза в межах діапазону інструкції {{rangeMin}}–{{rangeMax}} {{unit}} на введення"
+    "renal.bandRange": "Доза в межах діапазону інструкції {{rangeMin}}–{{rangeMax}} {{unit}} на введення",
+    "renal.clearanceWeightAdjusted": "Скоригована вага для кліренсу: ІдМТ {{idealKg}} кг + 0,4 × ({{actualKg}} − {{idealKg}}) кг (ІМТ {{bmi}})"
   },
   "warning": {
     "input.outOfRange": "{{field}}: значення {{value}} поза межами {{min}}–{{max}}. Перевірте введені дані.",

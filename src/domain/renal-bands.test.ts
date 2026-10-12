@@ -86,6 +86,35 @@ describe('renal ranges in a course', () => {
     expect(drug.steps[0]!.key).toBe('renal.band')
   })
 
+  it('works the clearance out on the adjusted weight of an obese patient when chosen', () => {
+    // 120 kg at 175 cm: BMI 39; IBW 70.5 kg, adjusted 90.3 kg. CrCl 34 on the actual weight,
+    // 26 on the adjusted one: cefepime moves from every 12 h to once a day.
+    const obese = { ...patient, weightKg: 120 }
+    const actual = calculateCourse(obese, [cefepime], adjustments)
+    expect(actual.clearanceWeights?.basis).toBe('actual')
+    expect(actual.creatinineClearanceMlMin).toBeCloseTo(34.4, 1)
+    expect(actual.clearanceWeights?.adjustedMlMin).toBeCloseTo(25.9, 1)
+    expect(actual.drugs[0]!.administrationsPerDay).toBe(2)
+
+    const adjusted = calculateCourse(obese, [cefepime], {
+      ...adjustments,
+      clearanceWeight: 'adjusted',
+    })
+    expect(adjusted.clearanceWeights?.basis).toBe('adjusted')
+    expect(adjusted.creatinineClearanceMlMin).toBeCloseTo(25.9, 1)
+    expect(adjusted.drugs[0]!.administrationsPerDay).toBe(1)
+    expect(adjusted.steps.map((step) => step.key)).toContain('renal.clearanceWeightAdjusted')
+  })
+
+  it('offers no adjusted weight below a BMI of 25', () => {
+    const course = calculateCourse(patient, [cefepime], {
+      ...adjustments,
+      clearanceWeight: 'adjusted',
+    })
+    expect(course.clearanceWeights).toBeNull()
+    expect(course.creatinineClearanceMlMin).toBeCloseTo(20.0, 0)
+  })
+
   it('keeps the regimen schedule when switched off', () => {
     const course = calculateCourse(patient, [cefepime], {
       ...adjustments,

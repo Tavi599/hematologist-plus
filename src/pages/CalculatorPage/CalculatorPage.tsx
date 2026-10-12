@@ -7,6 +7,7 @@ import {
   calculateCourse,
   DomainInputError,
   type CourseResult,
+  type ClearanceWeight,
   type RenalBandLevel,
 } from '../../domain'
 import { AddDrugForm } from '../../features/calculator/AddDrugForm'
@@ -132,6 +133,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [renalBandOffIds, setRenalBandOffIds] = useState<string[]>([])
   // Where in the label's range the physician put a corrected dose, by row.
   const [renalBandLevel, setRenalBandLevel] = useState<Record<string, RenalBandLevel>>({})
+  // The weight the creatinine clearance is worked out on, for a patient with obesity.
+  const [clearanceWeight, setClearanceWeight] = useState<ClearanceWeight>('actual')
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
   const regimenId = searchParams.get('regimen')
@@ -352,6 +355,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           infusionStart,
           renalBandOffIds,
           renalBandLevel,
+          clearanceWeight,
         },
       )
     try {
@@ -378,6 +382,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     infusionStart,
     renalBandOffIds,
     renalBandLevel,
+    clearanceWeight,
     mesnaFor,
   ])
 
@@ -530,6 +535,38 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   {t('warning.noDoseChange')}
                 </Text>
               </Group>
+              {course.clearanceWeights && (
+                <Stack gap={4} mt="xs">
+                  <Group gap="sm" wrap="wrap">
+                    <Text size="sm">{t('calculator.patient.clearanceWeight.label')}</Text>
+                    <SegmentedControl
+                      size="xs"
+                      value={course.clearanceWeights.basis}
+                      onChange={(value) => setClearanceWeight(value as ClearanceWeight)}
+                      data={[
+                        {
+                          value: 'actual',
+                          label: t('calculator.patient.clearanceWeight.actual', {
+                            crcl: formatNumber(course.clearanceWeights.actualMlMin, language, 0),
+                          }),
+                        },
+                        {
+                          value: 'adjusted',
+                          label: t('calculator.patient.clearanceWeight.adjusted', {
+                            kg: formatNumber(course.clearanceWeights.adjustedKg, language, 1),
+                            crcl: formatNumber(course.clearanceWeights.adjustedMlMin, language, 0),
+                          }),
+                        },
+                      ]}
+                    />
+                  </Group>
+                  <Text size="xs" c="dimmed">
+                    {t('calculator.patient.clearanceWeight.hint', {
+                      bmi: formatNumber(course.clearanceWeights.bmi, language, 1),
+                    })}
+                  </Text>
+                </Stack>
+              )}
             </Card>
             <WarningList warnings={course.warnings} />
           </>

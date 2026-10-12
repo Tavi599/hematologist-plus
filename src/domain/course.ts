@@ -15,7 +15,7 @@ import {
   type Presentation,
   type PresentationCount,
 } from './presentations'
-import { cockcroftGault } from './renal'
+import { clearanceWeightOf, cockcroftGault, type ClearanceWeight } from './renal'
 import {
   applyRenalBand,
   type RenalAdjustment,
@@ -141,6 +141,8 @@ export interface CourseAdjustments {
   infusionStart?: Record<string, number>
   /** Item ids whose correction by creatinine clearance the physician switched off. */
   renalBandOffIds?: string[]
+  /** Which weight the creatinine clearance is worked out on; the actual one when absent. */
+  clearanceWeight?: ClearanceWeight
   /** Where in the label's range of a corrected dose the physician put it, by item id. */
   renalBandLevel?: Record<string, RenalBandLevel>
 }
@@ -253,6 +255,17 @@ export interface CourseResult {
   renal: Record<string, RenalAdjustment>
   bsa: BsaResult
   creatinineClearanceMlMin: number | null
+  /**
+   * The clearance on either weight, for a patient with obesity whose adjusted weight differs:
+   * the physician sees both and chooses. Null where only the actual weight applies.
+   */
+  clearanceWeights: {
+    basis: ClearanceWeight
+    bmi: number
+    adjustedKg: number
+    actualMlMin: number
+    adjustedMlMin: number
+  } | null
   drugs: CourseDrugResult[]
   days: CourseDayResult[]
   /** Vials and tablets needed for the whole course. */
@@ -283,19 +296,47 @@ export function calculateCourse(
     adjustments.bsaM2 === undefined ? mostellerFor(patient) : enteredBsa(adjustments.bsaM2)
   // Cockcroft-Gault needs an age and a weight. Without them there is no clearance to check
   // against — said out loud below, never passed off as «no concern».
-  const renal =
+  const clearanceOn = (weightKg: number) =>
     patient.serumCreatinine === undefined ||
     patient.ageYears === undefined ||
-    patient.weightKg === undefined ||
     patient.sex === undefined
       ? null
       : cockcroftGault({
           ageYears: patient.ageYears,
-          weightKg: patient.weightKg,
+          weightKg,
           sex: patient.sex,
           serumCreatinine: patient.serumCreatinine,
           creatinineUnit: patient.creatinineUnit ?? 'umol_l',
         })
+  const clearanceWeight =
+    patient.weightKg === undefined || patient.sex === undefined
+      ? null
+      : clearanceWeightOf(
+          {
+            weightKg: patient.weightKg,
+            sex: patient.sex,
+            ...(patient.heightCm === undefined ? {} : { heightCm: patient.heightCm }),
+          },
+          adjustments.clearanceWeight ?? 'actual',
+        )
+  const renalOn = clearanceWeight === null ? null : clearanceOn(clearanceWeight.weightKg)
+  const renal =
+    renalOn === null || clearanceWeight === null
+      ? null
+      : { mlMin: renalOn.mlMin, steps: [...clearanceWeight.steps, ...renalOn.steps] }
+  const clearanceWeights =
+    renal === null ||
+    clearanceWeight === null ||
+    clearanceWeight.adjustedKg === null ||
+    clearanceWeight.bmi === null
+      ? null
+      : {
+          basis: clearanceWeight.basis,
+          bmi: clearanceWeight.bmi,
+          adjustedKg: clearanceWeight.adjustedKg,
+          actualMlMin: clearanceOn(patient.weightKg!)!.mlMin,
+          adjustedMlMin: clearanceOn(clearanceWeight.adjustedKg)!.mlMin,
+        }
 
   const warnings = checkPatientInputs({
     ageYears: patient.ageYears,
@@ -403,6 +444,7 @@ export function calculateCourse(
     renal: renalById,
     bsa,
     creatinineClearanceMlMin: renal?.mlMin ?? null,
+    clearanceWeights,
     drugs: results,
     days: buildDays(adjusted, resultById, adjustments, kinds),
     presentationTotals: sumSelections(

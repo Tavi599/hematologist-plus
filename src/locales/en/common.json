@@ -49,7 +49,13 @@
       "summary": "BSA {{bsa}} m² · creatinine clearance {{crcl}}",
       "summaryNoCrcl": "BSA {{bsa}} m² · creatinine clearance not calculated (no creatinine)",
       "incomplete": "Fill in height and weight — or enter the BSA by hand — to see the calculation.",
-      "orEnterBsa": "or enter the BSA by hand"
+      "orEnterBsa": "or enter the BSA by hand",
+      "clearanceWeight": {
+        "label": "Weight for the clearance:",
+        "actual": "actual, {{crcl}} mL/min",
+        "adjusted": "adjusted {{kg}} kg, {{crcl}} mL/min",
+        "hint": "BMI {{bmi}} kg/m². Which weight to use in Cockcroft-Gault with obesity is unresolved (UpToDate): most use the actual one, the GOG the adjusted one (IBW + 0.4 × (actual − IBW)) from a BMI of 25. The chosen weight goes into the clearance, the renal corrections and carboplatin."
+      }
     },
     "course": {
       "title": "Course",
@@ -570,7 +576,8 @@
     "infusion.rate": "Rate over {{durationMin}} min ({{rateGttMin}} drops/min, giving set {{dropFactor}} drops/mL)",
     "renal.band": "Correction for CrCl {{clearanceMlMin}} mL/min (range {{minMlMin}}-{{maxMlMin}}): every {{everyH}} h instead of {{protocolValue}} {{unit}} every {{protocolEveryH}} h",
     "renal.bandAbove": "CrCl above {{aboveMlMin}} mL/min: dose and interval not corrected",
-    "renal.bandRange": "Dose within the label range of {{rangeMin}}-{{rangeMax}} {{unit}} per administration"
+    "renal.bandRange": "Dose within the label range of {{rangeMin}}-{{rangeMax}} {{unit}} per administration",
+    "renal.clearanceWeightAdjusted": "Adjusted weight for the clearance: IBW {{idealKg}} kg + 0.4 × ({{actualKg}} − {{idealKg}}) kg (BMI {{bmi}})"
   },
   "warning": {
     "input.outOfRange": "{{field}}: {{value}} is outside {{min}}–{{max}}. Check the entered data.",
