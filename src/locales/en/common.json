@@ -209,6 +209,13 @@
         "withhold": {
           "not_recommended": "the label does not recommend the drug.",
           "levels": "the doses after the first follow the drug level in the blood."
+        },
+        "range": "The label gives a range, not one dose: {{min}}-{{max}} {{unit}} per administration ({{dayMin}}-{{dayMax}} {{unit}} a day). Choose where in it to dose:",
+        "rangeLabel": "Dose within the label range",
+        "level": {
+          "low": "Lower {{dose}}",
+          "mid": "Middle {{dose}}",
+          "high": "Upper {{dose}}"
         }
       }
     },
@@ -550,7 +557,8 @@
     "infusion.maxRate": "No faster than {{maxRateMgMin}} mg/min: infusion {{durationMin}} min instead of {{regimenMin}}",
     "infusion.rate": "Rate over {{durationMin}} min ({{rateGttMin}} drops/min, giving set {{dropFactor}} drops/mL)",
     "renal.band": "Correction for CrCl {{clearanceMlMin}} mL/min (range {{minMlMin}}-{{maxMlMin}}): every {{everyH}} h instead of {{protocolValue}} {{unit}} every {{protocolEveryH}} h",
-    "renal.bandAbove": "CrCl above {{aboveMlMin}} mL/min: dose and interval not corrected"
+    "renal.bandAbove": "CrCl above {{aboveMlMin}} mL/min: dose and interval not corrected",
+    "renal.bandRange": "Dose within the label range of {{rangeMin}}-{{rangeMax}} {{unit}} per administration"
   },
   "warning": {
     "input.outOfRange": "{{field}}: {{value}} is outside {{min}}–{{max}}. Check the entered data.",

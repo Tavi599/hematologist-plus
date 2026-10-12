@@ -26,12 +26,14 @@ import type {
   CourseDrugResult,
   CourseResult,
   RenalAdjustment,
+  RenalBandLevel,
 } from '../../domain'
 import {
   amountUnitOf,
   defaultInfusionStart,
   isMassUnit,
   rampDurationMin,
+  renalBandDose,
   type RampDurations,
   type RampKind,
 } from '../../domain'
@@ -83,6 +85,8 @@ export interface DoseTableProps {
   /** Rows whose correction by creatinine clearance the physician switched off. */
   renalBandOffIds: string[]
   onRenalBandOff: (itemId: string, off: boolean) => void
+  /** Where in the label's range of a corrected dose the physician puts it. */
+  onRenalBandLevel: (itemId: string, level: RenalBandLevel) => void
   onRemove: (itemId: string) => void
   customIds: string[]
   /** The BSA the doses are given on; the other variant is shown under it when it differs. */
@@ -101,6 +105,15 @@ export interface DoseTableProps {
   /** Which infusion of an antibody the course opens with, by drug; see CourseAdjustments. */
   infusionStart: Record<string, number>
   onInfusionStart: (drugId: string, start: number) => void
+}
+
+const RANGE_LEVELS: RenalBandLevel[] = ['low', 'mid', 'high']
+
+/** Which level of a range a dose sits at; the middle unless it is one of the ends. */
+function rangeLevel(range: { min: number; max: number }, dose: number): RenalBandLevel {
+  if (dose === range.min) return 'low'
+  if (dose === range.max) return 'high'
+  return 'mid'
 }
 
 /** «2 g every 12 h»: a dose and how often it is given. */
@@ -131,12 +144,14 @@ function RenalBandInfo({
   off,
   disabled,
   onOff,
+  onLevel,
 }: {
   adjustment: RenalAdjustment
   item: CourseItem
   off: boolean
   disabled: boolean
   onOff: (off: boolean) => void
+  onLevel: (level: RenalBandLevel) => void
 }) {
   const { t } = useTranslation()
   const tu = t as unknown as DynamicTranslate
@@ -174,7 +189,14 @@ function RenalBandInfo({
   )
   const corrected =
     band.withhold === undefined
-      ? doseEvery(tu, language, band.doseValue, unit, band.administrationsPerDay, band.intervalMin)
+      ? doseEvery(
+          tu,
+          language,
+          adjustment.status === 'applied' ? adjustment.doseValue : band.doseValue,
+          unit,
+          band.administrationsPerDay,
+          band.intervalMin,
+        )
       : tu(`calculator.doses.renal.withhold.${band.withhold}`)
   const key =
     adjustment.status === 'withheld'
@@ -195,8 +217,38 @@ function RenalBandInfo({
           protocol,
         })}
       </Text>
+      {/* A range rather than one dose: said out loud, with the switch between its ends. */}
+      {band.withhold === undefined && band.doseRange && !off && (
+        <>
+          <Text size="xs" c="orange.9" fw={500}>
+            {t('calculator.doses.renal.range', {
+              min: formatNumber(band.doseRange.min, language, 2),
+              max: formatNumber(band.doseRange.max, language, 2),
+              dayMin: formatNumber(band.doseRange.min * band.administrationsPerDay, language, 2),
+              dayMax: formatNumber(band.doseRange.max * band.administrationsPerDay, language, 2),
+              unit: tu(`units.${unit}`),
+            })}
+          </Text>
+          <SegmentedControl
+            size="xs"
+            disabled={disabled}
+            value={rangeLevel(
+              band.doseRange,
+              adjustment.status === 'applied' ? adjustment.doseValue : band.doseValue,
+            )}
+            onChange={(value) => onLevel(value as RenalBandLevel)}
+            data={RANGE_LEVELS.map((level) => ({
+              value: level,
+              label: t(`calculator.doses.renal.level.${level}`, {
+                dose: formatNumber(renalBandDose(band.doseRange!, level), language, 2),
+              }),
+            }))}
+            aria-label={`${t('calculator.doses.renal.rangeLabel')}: ${localize(item.drug.name, language)}`}
+          />
+        </>
+      )}
       {row?.notes && (
-        <Text size="xs" c="dimmed">
+        <Text size="xs" c={band.withhold === undefined && band.doseRange ? 'orange.9' : 'dimmed'}>
           {localize(row.notes, language)}
         </Text>
       )}
@@ -401,6 +453,7 @@ function DoseRow({
   onDurationChoice,
   renalBandOffIds,
   onRenalBandOff,
+  onRenalBandLevel,
   onRemove,
   customIds,
   bsaVariant,
@@ -537,6 +590,7 @@ function DoseRow({
               off={renalBandOffIds.includes(id)}
               disabled={!enabled}
               onOff={(off) => onRenalBandOff(id, off)}
+              onLevel={(level) => onRenalBandLevel(id, level)}
             />
           )}
           {item.doseChoices.length > 1 && (

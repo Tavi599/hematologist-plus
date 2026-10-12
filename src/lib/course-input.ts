@@ -596,6 +596,9 @@ function renalBandOf(band: RenalBandRow): RenalBand {
     doseValue: band.dose_value!,
     administrationsPerDay: band.administrations_per_day!,
     ...(band.interval_min === null ? {} : { intervalMin: band.interval_min }),
+    ...(band.dose_min === null || band.dose_max === null
+      ? {}
+      : { doseRange: { min: band.dose_min, max: band.dose_max } }),
   }
 }
 

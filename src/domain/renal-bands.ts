@@ -22,14 +22,30 @@ export type RenalBand = { minMlMin: number; maxMlMin: number } & (
       administrationsPerDay: number
       /** Minutes between administrations within a day; absent for once a day. */
       intervalMin?: number
+      /**
+       * The label gives a range per administration rather than one dose (colistimethate 30-49
+       * mL/min: 5.5-7.5 MIU a day); `doseValue` is the end the calculation starts from, and the
+       * physician may move to the other end or the middle.
+       */
+      doseRange?: { min: number; max: number }
     }
   | { withhold: RenalWithhold }
 )
 
+/** Where in a range the physician puts the dose: its lower end, the middle, its upper end. */
+export type RenalBandLevel = 'low' | 'mid' | 'high'
+
+/** The dose at a level of a range: its ends, or the middle between them. */
+export function renalBandDose(range: { min: number; max: number }, level: RenalBandLevel): number {
+  if (level === 'low') return range.min
+  if (level === 'high') return range.max
+  return (range.min + range.max) / 2
+}
+
 /** What the clearance did to one drug, for the row that shows it. */
 export type RenalAdjustment =
   /** The dose and interval of `band` replaced the regimen's. */
-  | { status: 'applied'; clearanceMlMin: number; band: RenalBand }
+  | { status: 'applied'; clearanceMlMin: number; band: RenalBand; doseValue: number }
   /** The range gives no dose: the drug is not calculated at all. */
   | { status: 'withheld'; clearanceMlMin: number; band: RenalBand }
   /** The clearance is above every range: the regimen's dose stands. */
@@ -74,6 +90,7 @@ export function applyRenalBand<T extends BandedDrug>(
   drug: T,
   clearanceMlMin: number | undefined,
   off: boolean,
+  level?: RenalBandLevel,
 ): RenalBandResult<T> {
   const unchanged = { drug, withheld: false }
   const bands = drug.renalBands ?? []
@@ -150,21 +167,22 @@ export function applyRenalBand<T extends BandedDrug>(
     }
   }
   const protocolEveryH = everyHours(drug.administrationsPerDay ?? 1, drug.intervalMin)
+  const doseValue = band.doseRange && level ? renalBandDose(band.doseRange, level) : band.doseValue
   const { intervalMin: _protocolInterval, ...rest } = drug
   const adjusted = {
     ...rest,
-    dose: { ...drug.dose, value: band.doseValue },
+    dose: { ...drug.dose, value: doseValue },
     administrationsPerDay: band.administrationsPerDay,
     ...(band.intervalMin === undefined ? {} : { intervalMin: band.intervalMin }),
   } as T
   return {
     drug: adjusted,
     withheld: false,
-    adjustment: { status: 'applied', clearanceMlMin: clearance, band },
+    adjustment: { status: 'applied', clearanceMlMin: clearance, band, doseValue },
     steps: [
       {
         key: 'renal.band',
-        value: band.doseValue,
+        value: doseValue,
         unit: amountUnitOf(drug.dose.unit),
         params: {
           clearanceMlMin: clearance,
@@ -176,6 +194,20 @@ export function applyRenalBand<T extends BandedDrug>(
           unit: amountUnitOf(drug.dose.unit),
         },
       },
+      ...(band.doseRange
+        ? [
+            {
+              key: 'renal.bandRange',
+              value: doseValue,
+              unit: amountUnitOf(drug.dose.unit),
+              params: {
+                rangeMin: band.doseRange.min,
+                rangeMax: band.doseRange.max,
+                unit: amountUnitOf(drug.dose.unit),
+              },
+            },
+          ]
+        : []),
     ],
     warnings: [],
   }

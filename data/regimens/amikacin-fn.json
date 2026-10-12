@@ -59,14 +59,16 @@
           "withhold": null,
           "interval_min": 720,
           "notes": {
-            "uk": "UpToDate: 5–7,5 мг/кг кожні 12 год; у розрахунку верхня межа, як у схемі.",
-            "en": "UpToDate: 5-7.5 mg/kg every 12 h; the calculation takes the upper end, as the regimen does."
+            "uk": "UpToDate: 5–7,5 мг/кг кожні 12 год; за замовчуванням верхня межа, як у схемі.",
+            "en": "UpToDate: 5-7.5 mg/kg every 12 h; the upper end by default, as in the regimen."
           },
           "source": {
             "name": "UpToDate (Lexicomp): Amikacin (systemic): Drug information, Dosing: Kidney Impairment: Adult",
             "url": "https://www.uptodate.com/contents/amikacin-systemic-drug-information",
             "checkedOn": "2026-10-12"
-          }
+          },
+          "dose_min": 5,
+          "dose_max": 7.5
         },
         {
           "crcl_min": 20,
@@ -76,14 +78,16 @@
           "withhold": null,
           "interval_min": null,
           "notes": {
-            "uk": "UpToDate: 5–7,5 мг/кг кожні 24 год; у розрахунку верхня межа.",
-            "en": "UpToDate: 5-7.5 mg/kg every 24 h; the calculation takes the upper end."
+            "uk": "UpToDate: 5–7,5 мг/кг кожні 24 год; за замовчуванням верхня межа.",
+            "en": "UpToDate: 5-7.5 mg/kg every 24 h; the upper end by default."
           },
           "source": {
             "name": "UpToDate (Lexicomp): Amikacin (systemic): Drug information, Dosing: Kidney Impairment: Adult",
             "url": "https://www.uptodate.com/contents/amikacin-systemic-drug-information",
             "checkedOn": "2026-10-12"
-          }
+          },
+          "dose_min": 5,
+          "dose_max": 7.5
         },
         {
           "crcl_min": 0,

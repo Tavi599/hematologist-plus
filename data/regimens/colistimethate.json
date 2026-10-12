@@ -64,15 +64,17 @@
           "withhold": null,
           "interval_min": 720,
           "notes": {
-            "uk": "SmPC: 5,5–7,5 млн МО на добу у 2 введення; у розрахунку верхня межа. UpToDate (дозування за CBA, КК на скоригованій масі): 30–<40 — 5,85, 40–<50 — 6,6 млн МО на добу.",
-            "en": "SmPC: 5.5-7.5 MIU a day in 2 doses; the calculation takes the upper end. UpToDate (CBA dosing, CrCl on the adjusted weight): 30-<40, 5.85; 40-<50, 6.6 MIU a day."
+            "uk": "SmPC: 5,5–7,5 млн МО на добу у 2 введення; за замовчуванням верхня межа. UpToDate (дозування за CBA, КК на скоригованій масі): 30–<40 — 5,85, 40–<50 — 6,6 млн МО на добу.",
+            "en": "SmPC: 5.5-7.5 MIU a day in 2 doses; the upper end by default. UpToDate (CBA dosing, CrCl on the adjusted weight): 30-<40, 5.85; 40-<50, 6.6 MIU a day."
           },
           "source": {
             "name": "SmPC Colomycin 1 million IU (emc), 4.2, 6.6",
             "url": "https://www.medicines.org.uk/emc/product/1094/smpc",
             "version": "ред. 19.04.2023",
             "checkedOn": "2026-10-11"
-          }
+          },
+          "dose_min": 2.75,
+          "dose_max": 3.75
         },
         {
           "crcl_min": 10,
@@ -82,15 +84,17 @@
           "withhold": null,
           "interval_min": 720,
           "notes": {
-            "uk": "SmPC: 4,5–5,5 млн МО на добу у 2 введення; у розрахунку верхня межа. UpToDate: 10–<20 — 4,8, 20–<30 — 5,25 млн МО на добу.",
-            "en": "SmPC: 4.5-5.5 MIU a day in 2 doses; the calculation takes the upper end. UpToDate: 10-<20, 4.8; 20-<30, 5.25 MIU a day."
+            "uk": "SmPC: 4,5–5,5 млн МО на добу у 2 введення; за замовчуванням верхня межа. UpToDate: 10–<20 — 4,8, 20–<30 — 5,25 млн МО на добу.",
+            "en": "SmPC: 4.5-5.5 MIU a day in 2 doses; the upper end by default. UpToDate: 10-<20, 4.8; 20-<30, 5.25 MIU a day."
           },
           "source": {
             "name": "SmPC Colomycin 1 million IU (emc), 4.2, 6.6",
             "url": "https://www.medicines.org.uk/emc/product/1094/smpc",
             "version": "ред. 19.04.2023",
             "checkedOn": "2026-10-11"
-          }
+          },
+          "dose_min": 2.25,
+          "dose_max": 2.75
         },
         {
           "crcl_min": 0,

@@ -16,7 +16,12 @@ import {
   type PresentationCount,
 } from './presentations'
 import { cockcroftGault } from './renal'
-import { applyRenalBand, type RenalAdjustment, type RenalBand } from './renal-bands'
+import {
+  applyRenalBand,
+  type RenalAdjustment,
+  type RenalBand,
+  type RenalBandLevel,
+} from './renal-bands'
 import { roundDose, type RoundingResult } from './rounding'
 import {
   courseDayDates,
@@ -136,6 +141,8 @@ export interface CourseAdjustments {
   infusionStart?: Record<string, number>
   /** Item ids whose correction by creatinine clearance the physician switched off. */
   renalBandOffIds?: string[]
+  /** Where in the label's range of a corrected dose the physician put it, by item id. */
+  renalBandLevel?: Record<string, RenalBandLevel>
 }
 
 /**
@@ -351,7 +358,14 @@ export function calculateCourse(
   // The label's dose and interval for the clearance replace the regimen's before anything else:
   // vials, solvent and the hourly schedule all follow the corrected drug.
   const renalOff = new Set(adjustments.renalBandOffIds ?? [])
-  const allBanded = enabled.map((drug) => applyRenalBand(drug, renal?.mlMin, renalOff.has(drug.id)))
+  const allBanded = enabled.map((drug) =>
+    applyRenalBand(
+      drug,
+      renal?.mlMin,
+      renalOff.has(drug.id),
+      adjustments.renalBandLevel?.[drug.id],
+    ),
+  )
   // A range that gives no dose leaves the drug out, as if switched off; its row says why.
   const banded = allBanded.filter((entry) => !entry.withheld)
   const adjusted = banded.map((entry) => entry.drug)

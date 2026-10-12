@@ -209,6 +209,13 @@
         "withhold": {
           "not_recommended": "інструкція не рекомендує препарат.",
           "levels": "дози після першої — за рівнем препарату в крові."
+        },
+        "range": "Інструкція дає не одну дозу, а діапазон: {{min}}–{{max}} {{unit}} на введення ({{dayMin}}–{{dayMax}} {{unit}} на добу). Оберіть, де в ньому дозувати:",
+        "rangeLabel": "Доза в межах діапазону інструкції",
+        "level": {
+          "low": "Нижня {{dose}}",
+          "mid": "Середина {{dose}}",
+          "high": "Верхня {{dose}}"
         }
       }
     },
@@ -550,7 +557,8 @@
     "infusion.maxRate": "Не швидше {{maxRateMgMin}} мг/хв: інфузія {{durationMin}} хв замість {{regimenMin}}",
     "infusion.rate": "Швидкість за {{durationMin}} хв ({{rateGttMin}} крап/хв, крапельниця {{dropFactor}} крап/мл)",
     "renal.band": "Корекція за КК {{clearanceMlMin}} мл/хв (діапазон {{minMlMin}}–{{maxMlMin}}): кожні {{everyH}} год замість {{protocolValue}} {{unit}} кожні {{protocolEveryH}} год",
-    "renal.bandAbove": "КК вище {{aboveMlMin}} мл/хв — доза й інтервал без корекції"
+    "renal.bandAbove": "КК вище {{aboveMlMin}} мл/хв — доза й інтервал без корекції",
+    "renal.bandRange": "Доза в межах діапазону інструкції {{rangeMin}}–{{rangeMax}} {{unit}} на введення"
   },
   "warning": {
     "input.outOfRange": "{{field}}: значення {{value}} поза межами {{min}}–{{max}}. Перевірте введені дані.",

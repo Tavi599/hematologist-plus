@@ -147,3 +147,32 @@ describe('a range that gives no dose', () => {
     expect(course.drugs[0]!.warnings[0]?.code).toBe('renal.withheldOff.levels')
   })
 })
+
+describe('a range of doses within one band', () => {
+  const colistin: CourseDrug = {
+    id: 'colistin',
+    dose: { value: 4.5, unit: 'miu_flat' },
+    days: [1],
+    administrationsPerDay: 2,
+    intervalMin: 720,
+    renalBands: [
+      {
+        minMlMin: 10,
+        maxMlMin: 29,
+        doseValue: 2.75,
+        administrationsPerDay: 2,
+        intervalMin: 720,
+        doseRange: { min: 2.25, max: 2.75 },
+      },
+    ],
+  }
+
+  it('starts from the end the data gives and moves to the level the physician picks', () => {
+    expect(applyRenalBand(colistin, 20, false).drug.dose.value).toBe(2.75)
+    expect(applyRenalBand(colistin, 20, false, 'low').drug.dose.value).toBe(2.25)
+    expect(applyRenalBand(colistin, 20, false, 'mid').drug.dose.value).toBe(2.5)
+    const { adjustment, steps } = applyRenalBand(colistin, 20, false, 'low')
+    expect(adjustment).toMatchObject({ status: 'applied', doseValue: 2.25 })
+    expect(steps.map((step) => step.key)).toEqual(['renal.band', 'renal.bandRange'])
+  })
+})

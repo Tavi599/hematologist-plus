@@ -3,7 +3,12 @@ import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router'
 
-import { calculateCourse, DomainInputError, type CourseResult } from '../../domain'
+import {
+  calculateCourse,
+  DomainInputError,
+  type CourseResult,
+  type RenalBandLevel,
+} from '../../domain'
 import { AddDrugForm } from '../../features/calculator/AddDrugForm'
 import { CourseExport } from '../../features/calculator/CourseExport'
 import { CourseSettings, type CourseSettingsValue } from '../../features/calculator/CourseSettings'
@@ -122,6 +127,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [chosenDurations, setChosenDurations] = useState<Record<string, number>>({})
   // Rows whose correction by creatinine clearance the physician switched off.
   const [renalBandOffIds, setRenalBandOffIds] = useState<string[]>([])
+  // Where in the label's range the physician put a corrected dose, by row.
+  const [renalBandLevel, setRenalBandLevel] = useState<Record<string, RenalBandLevel>>({})
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
   const regimenId = searchParams.get('regimen')
@@ -333,6 +340,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           shiftMin,
           infusionStart,
           renalBandOffIds,
+          renalBandLevel,
         },
       )
     try {
@@ -358,6 +366,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     shiftMin,
     infusionStart,
     renalBandOffIds,
+    renalBandLevel,
     mesnaFor,
   ])
 
@@ -597,6 +606,9 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   }}
                   chosenDurations={chosenDurations}
                   renalBandOffIds={renalBandOffIds}
+                  onRenalBandLevel={(id, level) =>
+                    setRenalBandLevel((current) => ({ ...current, [id]: level }))
+                  }
                   onRenalBandOff={(id, off) =>
                     setRenalBandOffIds((current) =>
                       off

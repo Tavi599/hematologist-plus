@@ -76,15 +76,17 @@
           "withhold": null,
           "interval_min": null,
           "notes": {
-            "uk": "SmPC: 15–20 мг/кг кожні 24 год; у розрахунку нижня межа, як і в схемі. UpToDate: КК 15–<50 — 10–15 мг/кг кожні 24 год. Далі — за рівнем перед дозою.",
-            "en": "SmPC: 15-20 mg/kg every 24 h; the calculation takes the lower end, as the regimen does. UpToDate: CrCl 15-<50, 10-15 mg/kg every 24 h. Then by the trough level."
+            "uk": "SmPC: 15–20 мг/кг кожні 24 год; за замовчуванням нижня межа, як у схемі. UpToDate: КК 15–<50 — 10–15 мг/кг кожні 24 год. Далі — за рівнем перед дозою.",
+            "en": "SmPC: 15-20 mg/kg every 24 h; the lower end by default, as in the regimen. UpToDate: CrCl 15-<50, 10-15 mg/kg every 24 h. Then by the trough level."
           },
           "source": {
             "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.2, 6.6",
             "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
             "version": "ред. 19.01.2026",
             "checkedOn": "2026-10-11"
-          }
+          },
+          "dose_min": 15,
+          "dose_max": 20
         },
         {
           "crcl_min": 0,

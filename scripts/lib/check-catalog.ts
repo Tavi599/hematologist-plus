@@ -210,6 +210,22 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
           `renal_bands: ${band.crcl_min}-${band.crcl_max} needs either a dose with administrations_per_day or a withhold`,
         )
       }
+      if ((band.dose_min === null) !== (band.dose_max === null)) {
+        error('regimen_items', item.id, 'renal_bands: dose_min and dose_max go together')
+      }
+      if (
+        band.dose_min !== null &&
+        band.dose_max !== null &&
+        (band.dose_value === null ||
+          band.dose_min >= band.dose_max ||
+          (band.dose_value !== band.dose_min && band.dose_value !== band.dose_max))
+      ) {
+        error(
+          'regimen_items',
+          item.id,
+          `renal_bands: ${band.crcl_min}-${band.crcl_max} dose_value must be one end of dose_min-dose_max`,
+        )
+      }
       if ((band.administrations_per_day ?? 1) > 1 && band.interval_min === null) {
         error('regimen_items', item.id, 'renal_bands: several a day need an interval_min')
       }

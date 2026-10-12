@@ -452,6 +452,12 @@ export const renalBandSchema = z.strictObject({
    * doses are set by its concentration in the blood (`levels`). Nothing is calculated.
    */
   withhold: z.enum(['not_recommended', 'levels']).nullable().default(null),
+  /**
+   * The label's range per administration when it gives one rather than a single dose; the
+   * physician may put the dose at either end or the middle. `dose_value` is one of the ends.
+   */
+  dose_min: positiveNumberSchema.nullable().default(null),
+  dose_max: positiveNumberSchema.nullable().default(null),
   /** Minutes between administrations within a day; null for once a day. */
   interval_min: positiveNumberSchema.int().nullable().default(null),
   notes: localizedTextSchema.nullable().default(null),
