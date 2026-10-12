@@ -82,6 +82,11 @@ export interface CourseDrug {
   anchorDrugId?: string
   /** A drug of the regimen itself: the support of the day is timed from the first of these. */
   isMain?: boolean
+  /**
+   * The catalog drug. Two rows of one drug in a row are one administration in parts (the 2-hour
+   * loading of methotrexate and its 22-hour remainder), with no pause between them.
+   */
+  drugKey?: string
   /** Set only for infusions; without it no solvent volume is calculated. */
   infusion?: InfusionParams
   /**
@@ -656,6 +661,7 @@ function buildDays(
           id,
           block: drug.block ?? 'infusion',
           ...(drug.isMain === undefined ? {} : { isMain: drug.isMain }),
+          ...(drug.drugKey === undefined ? {} : { drugKey: drug.drugKey }),
           durationMin: ramp
             ? rampDurationMin(ramp, kind)
             : (result.infusion?.durationMin ?? drug.durationMin ?? 0),

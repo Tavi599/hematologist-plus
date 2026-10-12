@@ -45,6 +45,7 @@ import { localize } from '../../lib/localized'
 import {
   DEFAULT_DOSE_CHOICE,
   defaultBolusMode,
+  isContinuousDoxorubicin,
   PROTOCOL_MODE,
   solventOf,
   type AdministrationMode,
@@ -930,6 +931,9 @@ function DoseRow({
                   drugName={localize(item.drug.name, language)}
                   options={result.infusion.bagOptions}
                   limits={item.infusionParams}
+                  {...(isContinuousDoxorubicin(item.item)
+                    ? { hint: t('calculator.doses.continuousDoxorubicinBag') }
+                    : {})}
                   value={result.infusion.bagVolumeMl}
                   unit={tu(`units.${result.infusion.concentrationUnit}_ml`)}
                   disabled={!enabled}
@@ -1036,6 +1040,7 @@ function BagVolumeControl({
   drugName,
   options,
   limits,
+  hint,
   value,
   unit,
   disabled,
@@ -1044,6 +1049,8 @@ function BagVolumeControl({
   drugName: string
   options: BagOption[]
   limits: DrugInfusionParams | null
+  /** Said in place of the label's concentration range. */
+  hint?: string
   value: number
   unit: string
   disabled: boolean
@@ -1082,7 +1089,7 @@ function BagVolumeControl({
         aria-label={`${t('calculator.doses.bagVolume')}: ${drugName}`}
       />
       <Text size="xs" c="dimmed">
-        {concentrationHint(t as unknown as DynamicTranslate, language, limits)}
+        {hint ?? concentrationHint(t as unknown as DynamicTranslate, language, limits)}
       </Text>
     </Stack>
   )

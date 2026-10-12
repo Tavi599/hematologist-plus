@@ -42,6 +42,7 @@ describe('buildCourseItems', () => {
     const rituximab = items[0]!
     expect(rituximab.courseDrug).toEqual({
       id: 'r-chop-21.rituximab',
+      drugKey: 'rituximab',
       block: 'infusion',
       isMain: true,
       dose: { value: 375, unit: 'mg_m2' },
@@ -409,6 +410,20 @@ describe('infusion length of a multi-day drug', () => {
     const push = { ...doxorubicin([1, 2, 3, 4]), route: 'iv_bolus' as const }
     expect(canSwitchInfusionLength(push)).toBe(false)
     expect(applyAdministrationMode(push, { kind: 'continuous' })).toBe(push)
+  })
+  it('gives a 24-hour doxorubicin a 500 mL bag a day, with other volumes to choose from', () => {
+    const [row] = buildCourseItemsFrom(index(), [doxorubicin([1, 2, 3, 4], 1440)])
+    expect(row!.bagSwitchable).toBe(true)
+    expect(row!.courseDrug.infusion).toMatchObject({
+      bagVolumesMl: [100, 250, 500, 1000],
+      preferredBagMl: 500,
+    })
+    const [chosen] = applyBagChoices([row!], { dox: 250 })
+    expect(chosen!.courseDrug.infusion?.preferredBagMl).toBe(250)
+
+    const [short] = buildCourseItemsFrom(index(), [doxorubicin([1, 2, 3, 4])])
+    expect(short!.bagSwitchable).toBe(false)
+    expect(short!.courseDrug.infusion?.preferredBagMl).toBeUndefined()
   })
 })
 

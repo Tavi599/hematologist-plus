@@ -87,6 +87,8 @@ export interface AdministrationInput {
    * premedication that precedes it.
    */
   isMain?: boolean
+  /** `infusion`: the catalog drug; a chemotherapy row right after another of the same drug does not wait. */
+  drugKey?: string
   /** 0-based number of this administration within the day. */
   occurrence?: number
 }
@@ -111,7 +113,7 @@ export interface ScheduledAdministration {
  * must not move them. They are returned by `untimedIds` instead.
  *
  * Between two chemotherapy (`isMain`) drugs the chain keeps at least `MIN_CHEMO_GAP_MIN`, unless the
- * earlier one is a 24-hour infusion.
+ * earlier one is a 24-hour infusion or the same drug (a loading dose and the infusion it opens).
  *
  * CALIBRATION: default gaps and whether infusions may run in parallel will be taken from real sheets.
  */
@@ -123,7 +125,7 @@ export function scheduleAdministrations(
   let cursor = dayStartMin
   let firstStart: number | null = null
   let firstMainStart: number | null = null
-  let previousMain: { durationMin: number } | null = null
+  let previousMain: { durationMin: number; drugKey: string | undefined } | null = null
   const scheduled: ScheduledAdministration[] = []
   const chainStarts = new Map<string, number>()
 
@@ -139,8 +141,12 @@ export function scheduleAdministrations(
       continue
     }
     // A chemotherapy drug waits an hour after the previous one, unless that one runs round the clock.
+    // Nor does the rest of a drug whose loading part was just given.
     const chemoGap =
-      item.isMain && previousMain !== null && previousMain.durationMin < MINUTES_PER_DAY
+      item.isMain &&
+      previousMain !== null &&
+      previousMain.durationMin < MINUTES_PER_DAY &&
+      (item.drugKey === undefined || occurrence > 0 || previousMain.drugKey !== item.drugKey)
         ? MIN_CHEMO_GAP_MIN
         : 0
     const gap = Math.max(item.gapBeforeMin ?? 0, chemoGap)
@@ -151,7 +157,7 @@ export function scheduleAdministrations(
     firstStart ??= startMin
     if (item.isMain) {
       firstMainStart ??= startMin
-      previousMain = { durationMin: durationOf(item) }
+      previousMain = { durationMin: durationOf(item), drugKey: item.drugKey }
     }
     chainStarts.set(item.id, startMin)
     scheduled.push(placed(item.id, startMin, durationOf(item)))

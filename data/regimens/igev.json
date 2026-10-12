@@ -98,10 +98,14 @@
     {
       "key": "vinorelbine",
       "drug_id": "vinorelbine",
-      "route": "iv_bolus",
+      "route": "iv_infusion",
       "dose_value": 20,
       "dose_unit": "mg_m2",
-      "days": [1]
+      "days": [1],
+      "notes": {
+        "uk": "20 мг/м² у день 1. Вводиться за стандартом відділення: у 100 мл 0,9% NaCl за 30 хв, як і в інших схемах.",
+        "en": "20 mg/m² on day 1. Given by the department standard: in 100 mL of 0.9% NaCl over 30 minutes, as in the other regimens."
+      }
     },
     {
       "key": "gemcitabine",

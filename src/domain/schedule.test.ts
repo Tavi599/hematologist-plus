@@ -207,6 +207,20 @@ describe('scheduleAdministrations', () => {
     ])
   })
 
+  it('runs the rest of a drug straight on from its loading dose', () => {
+    // Hyper-CVAD B: methotrexate 200 mg/m² over 2 h, then 800 mg/m² over 22 h.
+    const placed = scheduleAdministrations('11:00', [
+      { id: 'mp#1', block: 'infusion' as const, durationMin: 0, isMain: true },
+      { id: 'mtx-1', block: 'infusion' as const, durationMin: 120, isMain: true, drugKey: 'mtx' },
+      { id: 'mtx-2', block: 'infusion' as const, durationMin: 1320, isMain: true, drugKey: 'mtx' },
+    ])
+    expect(placed.map((row) => [row.id, row.start, row.end])).toEqual([
+      ['mp#1', '11:00', '11:00'],
+      ['mtx-1', '12:00', '14:00'],
+      ['mtx-2', '14:00', '12:00'],
+    ])
+  })
+
   it('starts round-the-clock infusions together instead of one after another', () => {
     const placed = scheduleAdministrations('11:00', [
       { id: 'vincristine', block: 'infusion' as const, durationMin: 1440, isMain: true },

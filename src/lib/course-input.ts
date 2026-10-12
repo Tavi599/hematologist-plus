@@ -79,6 +79,24 @@ export function canSwitchInfusionLength(
 }
 
 /**
+ * Doxorubicin over 24 hours is one bag a day: 500 mL by the department's standard (the
+ * physician's instruction, 2026-10-13), or another of these if the ward makes it up otherwise:
+ * 100 mL is the volume of DT-PACE and VTD-PACE, and the nearest bag to VAD's 96 mL syringe.
+ */
+export const CONTINUOUS_DOXORUBICIN_BAGS_ML = [100, 250, 500, 1000] as const
+export const CONTINUOUS_DOXORUBICIN_BAG_ML = 500
+
+export function isContinuousDoxorubicin(
+  item: Pick<RegimenItem, 'drug_id' | 'route' | 'duration_min'>,
+): boolean {
+  return (
+    item.drug_id === 'doxorubicin' &&
+    item.route === 'iv_infusion' &&
+    (item.duration_min ?? 0) >= CONTINUOUS_INFUSION_MIN
+  )
+}
+
+/**
  * An antimicrobial (ATC group J) whose label allows more than one bag. Wards dilute these in
  * whatever saline they have, so the physician picks the volume; for chemotherapy the protocol's
  * smallest bag that keeps the concentration stays the rule.
@@ -467,6 +485,7 @@ export function buildCourseItemsFrom(
 
     const courseDrug: CourseDrug = {
       id: item.id,
+      drugKey: item.drug_id,
       dose: {
         value: dosed.value,
         unit: chosen.doseUnit,
@@ -525,7 +544,7 @@ export function buildCourseItemsFrom(
         switchable: switchable.has(item.id),
         infusionSwitchable: canSwitchInfusionLength(item),
         protocolInfusion: protocolLengths.get(item.id) ?? protocolInfusionLength(item),
-        bagSwitchable: canSwitchBag(drug, item, params),
+        bagSwitchable: canSwitchBag(drug, item, params) || isContinuousDoxorubicin(item),
         durationOptions: durationOptionsOf(drug, item, params),
         minDurationMin: params?.min_duration_min ?? null,
         protocolDurationMin: durationMin,
@@ -541,9 +560,11 @@ function buildInfusionParams(
   params: DrugInfusionParams | null,
 ): CourseDrug['infusion'] {
   if (item.route !== 'iv_infusion') return undefined
+  const continuousDoxorubicin = isContinuousDoxorubicin(item)
   // Fallback volume from the regimen template is used when the catalog has no bag volumes.
-  const bagVolumesMl =
-    params && params.bag_volumes_ml.length > 0
+  const bagVolumesMl = continuousDoxorubicin
+    ? [...CONTINUOUS_DOXORUBICIN_BAGS_ML]
+    : params && params.bag_volumes_ml.length > 0
       ? params.bag_volumes_ml
       : item.fallback_volume_ml === null
         ? []
@@ -558,6 +579,7 @@ function buildInfusionParams(
 
   return {
     bagVolumesMl,
+    ...(continuousDoxorubicin ? { preferredBagMl: CONTINUOUS_DOXORUBICIN_BAG_ML } : {}),
     ...(params?.concentration_min_mg_ml === null || params?.concentration_min_mg_ml === undefined
       ? {}
       : { concentrationMinMgMl: params.concentration_min_mg_ml }),
