@@ -293,13 +293,12 @@ describe('CalculatorPage', () => {
     expect(within(supply).getAllByText(/Ритуксимаб/).length).toBeGreaterThan(0)
   })
 
-  it('asks for the measurements before calculating', async () => {
-    renderWithProviders(<CalculatorPage />)
+  it('asks for the measurements the drugs need before calculating, naming them', async () => {
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
     expect(
-      await screen.findByText(
-        'Заповніть зріст і вагу — або введіть BSA вручну, щоб побачити розрахунок.',
-      ),
+      await screen.findByText('Щоб розрахувати курс і друкувати листи, внесіть:'),
     ).toBeInTheDocument()
+    expect(screen.getByText(/^зріст, вагу — для дози на м²/)).toBeInTheDocument()
   })
 
   it('calculates on a BSA entered by hand, with no height and no weight', async () => {

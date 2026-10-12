@@ -429,13 +429,13 @@ export function DoseTable(props: DoseTableProps) {
               <Table.Th>{t('calculator.doses.scheme')}</Table.Th>
               <Table.Th>
                 {t(
-                  course?.bsa.entered
+                  course?.bsa?.entered
                     ? 'calculator.doses.doseEntered'
                     : props.bsaVariant === 'capped'
                       ? 'calculator.doses.doseCapped'
                       : 'calculator.doses.doseActual',
                 )}
-                {course && (
+                {course?.bsa && (
                   <Text span size="xs" c="dimmed" fw={400}>
                     {' '}
                     {formatNumber(

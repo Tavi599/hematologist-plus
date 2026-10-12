@@ -815,7 +815,7 @@ function dateLine(iso: string): string {
  */
 /** The body surface the sheet was made on; blank when there was nothing to calculate. */
 function bodySurface(course: CourseResult | null, language: Language, t: Translate): string {
-  return course === null ? '' : `${formatAmount(course.bsa.actualM2, language, 2)} ${t('units.m2')}`
+  return course?.bsa ? `${formatAmount(course.bsa.actualM2, language, 2)} ${t('units.m2')}` : ''
 }
 
 function given(value: number | null, language: Language, decimals = 0): string {

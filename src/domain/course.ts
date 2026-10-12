@@ -260,7 +260,8 @@ export interface CourseDayResult {
 export interface CourseResult {
   /** What the creatinine clearance did to each drug that has ranges for it, by item id. */
   renal: Record<string, RenalAdjustment>
-  bsa: BsaResult
+  /** Null when neither height and weight nor a typed BSA are given: no drug of the course needs it. */
+  bsa: BsaResult | null
   creatinineClearanceMlMin: number | null
   /**
    * The clearance on either weight, for a patient with obesity whose adjusted weight differs:
@@ -301,6 +302,7 @@ export function calculateCourse(
 
   const bsa =
     adjustments.bsaM2 === undefined ? mostellerFor(patient) : enteredBsa(adjustments.bsaM2)
+
   // Cockcroft-Gault needs an age and a weight. Without them there is no clearance to check
   // against — said out loud below, never passed off as «no concern».
   const clearanceOn = (weightKg: number) =>
@@ -354,7 +356,7 @@ export function calculateCourse(
         ? undefined
         : patient.serumCreatinine,
   })
-  if (bsa.isCapped) {
+  if (bsa?.isCapped) {
     warnings.push({
       code: 'bsa.capped',
       params: { actualM2: bsa.actualM2, capM2: bsa.capM2 },
@@ -461,28 +463,23 @@ export function calculateCourse(
       ),
     ),
     warnings,
-    steps: [...bsa.steps, ...(renal?.steps ?? [])],
+    steps: [...(bsa?.steps ?? []), ...(renal?.steps ?? [])],
   }
 }
 
 /**
- * BSA from height and weight. Both are needed here and nowhere else in the course: a physician
- * who has the BSA on the previous cycle's sheet types it in instead, and the calculation runs
- * without them.
+ * BSA from height and weight, or null without them: a course of flat doses (most antibiotics)
+ * needs neither, and a physician who has the BSA on the previous cycle's sheet types it in instead.
+ * A dose per square metre without it stops the calculation by name (`calculateDrug`).
  */
-function mostellerFor(patient: CoursePatient): BsaResult {
-  if (patient.heightCm === undefined || patient.weightKg === undefined) {
-    throw new DomainInputError(
-      patient.heightCm === undefined ? 'heightCm' : 'weightKg',
-      'is required unless the BSA is entered by hand',
-    )
-  }
+function mostellerFor(patient: CoursePatient): BsaResult | null {
+  if (patient.heightCm === undefined || patient.weightKg === undefined) return null
   return calculateBsa(patient.heightCm, patient.weightKg)
 }
 
 interface DrugContext {
   patient: CoursePatient
-  bsa: BsaResult
+  bsa: BsaResult | null
   variant: BsaVariant
   gfrMlMin: number | undefined
   reviewContext: { ageYears?: number; creatinineClearanceMlMin?: number; bilirubinUmolL?: number }
@@ -504,6 +501,12 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
   }
   if (drug.dose.unit === 'auc' && context.gfrMlMin === undefined) {
     throw new DomainInputError('serumCreatinine', 'required for AUC doses (Calvert)')
+  }
+  if (doseBasisOf(drug.dose.unit) === 'm2' && bsa === null) {
+    throw new DomainInputError(
+      context.patient.heightCm === undefined ? 'heightCm' : 'weightKg',
+      'is required for a dose per square metre unless the BSA is entered by hand',
+    )
   }
 
   // A dose per kilogram of an aminoglycoside goes on the ideal or adjusted weight, not the actual.
@@ -619,7 +622,7 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
     renal: context.renal,
     steps: [
       ...context.renalSteps,
-      ...bsa.steps,
+      ...(bsa?.steps ?? []),
       ...(weight?.steps ?? []),
       ...variants[variant].steps,
       ...rounded[variant].steps,

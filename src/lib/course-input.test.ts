@@ -608,7 +608,7 @@ describe('administration mode', () => {
     )
     const drug = course.drugs[0]!
     expect(drug.administrationsInCourse).toBe(20)
-    expect(drug.rounded.actual.roundedAmount).toBe(Math.round(520 * course.bsa.actualM2))
+    expect(drug.rounded.actual.roundedAmount).toBe(Math.round(520 * course.bsa!.actualM2))
   })
 })
 

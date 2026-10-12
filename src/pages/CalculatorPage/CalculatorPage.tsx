@@ -24,6 +24,8 @@ import { PatientForm } from '../../features/calculator/PatientForm'
 import { ScheduleTable } from '../../features/calculator/ScheduleTable'
 import { SupplyTable } from '../../features/calculator/SupplyTable'
 import { WarningList } from '../../features/calculator/WarningList'
+import { MissingDataAlert, UnadjustedSupportAlert } from '../../features/calculator/MissingData'
+import { missingRequirements } from '../../lib/course-requirements'
 import { InteractionList } from '../../features/calculator/InteractionList'
 import { courseInteractions } from '../../lib/course-interactions'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
@@ -319,9 +321,19 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
    * needs them (a dose per kilogram, a creatinine clearance) says so by name when it is missing.
    */
   const enteredBsaM2 = courseSettings.bsaVariant === 'entered' ? courseSettings.bsaM2 : null
-  const measured =
-    patient !== null &&
-    (enteredBsaM2 !== null || (patient.heightCm !== null && patient.weightKg !== null))
+  // Only what a drug switched on actually needs holds the calculation (and the printing) up: a
+  // course of flat-dose antibiotics needs no height and weight.
+  const missing = useMemo(
+    () =>
+      missingRequirements(baseItems, {
+        patient,
+        disabledIds,
+        bsaEntered: enteredBsaM2 !== null,
+        renalBandOffIds,
+      }),
+    [baseItems, patient, disabledIds, enteredBsaM2, renalBandOffIds],
+  )
+  const measured = patient !== null && missing.length === 0
 
   // Mesna for a high cyclophosphamide dose follows the dose as calculated, so the course is
   // calculated once, the mesna on offer is found, and the course is calculated again with the
@@ -413,6 +425,11 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   )
 
   const regimen = regimenId === null ? undefined : catalog.regimens.get(regimenId)
+  /** «BSA 1.85 m²», or that there is none: a course of flat doses is calculated without it. */
+  const bsaSummary = (result: CourseResult) =>
+    result.bsa === null
+      ? t('calculator.patient.bsaNone')
+      : t('calculator.patient.bsaValue', { bsa: formatNumber(result.bsa.actualM2, language, 2) })
   /** Another phase picked by hand: the cycle number moves into it when it counts cycles. */
   const choosePhase = (phaseId: string) => {
     const phase = phases.find((entry) => entry.id === phaseId)
@@ -522,12 +539,10 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
         {regimen && <RegimenEvidence regimen={regimen} />}
 
         {!measured && items.length > 0 && (
-          <Alert color="blue" variant="light">
-            {t('calculator.patient.incomplete')}
-          </Alert>
+          <MissingDataAlert items={items} missing={missing} invalid={patient === null} />
         )}
-        {!measured && items.length === 0 && (
-          <Text c="dimmed">{t('calculator.patient.incomplete')}</Text>
+        {measured && course && (
+          <UnadjustedSupportAlert items={items} patient={patient} disabledIds={disabledIds} />
         )}
 
         {error !== null && (
@@ -552,10 +567,10 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                 <Text fw={500}>
                   {course.creatinineClearanceMlMin === null
                     ? t('calculator.patient.summaryNoCrcl', {
-                        bsa: formatNumber(course.bsa.actualM2, language, 2),
+                        bsa: bsaSummary(course),
                       })
                     : t('calculator.patient.summary', {
-                        bsa: formatNumber(course.bsa.actualM2, language, 2),
+                        bsa: bsaSummary(course),
                         crcl: `${formatNumber(course.creatinineClearanceMlMin, language, 1)} ${t('units.ml_min')}`,
                       })}
                 </Text>

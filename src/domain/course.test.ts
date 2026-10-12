@@ -44,9 +44,9 @@ describe('calculateCourse', () => {
     // Mosteller on 180 cm / 80 kg is exactly 2.0; the physician enters 1.7 for an amputee.
     const course = calculateCourse(patient, [rituximab], { ...adjustments, bsaM2: 1.7 })
 
-    expect(course.bsa.actualM2).toBe(1.7)
-    expect(course.bsa.entered).toBe(true)
-    expect(course.bsa.isCapped).toBe(false)
+    expect(course.bsa!.actualM2).toBe(1.7)
+    expect(course.bsa!.entered).toBe(true)
+    expect(course.bsa!.isCapped).toBe(false)
     // 375 mg/m² × 1.7 = 637.5 → 638 mg after rounding to the step.
     expect(course.drugs[0]?.doseAmount).toBe(638)
   })
@@ -54,8 +54,8 @@ describe('calculateCourse', () => {
   it('still derives the capped variant from an entered BSA', () => {
     const course = calculateCourse(patient, [rituximab], { ...adjustments, bsaM2: 2.4 })
 
-    expect(course.bsa.cappedM2).toBe(2)
-    expect(course.bsa.isCapped).toBe(true)
+    expect(course.bsa!.cappedM2).toBe(2)
+    expect(course.bsa!.isCapped).toBe(true)
     expect(course.warnings.some((warning) => warning.code === 'bsa.capped')).toBe(true)
   })
 
@@ -67,7 +67,7 @@ describe('calculateCourse', () => {
     expect(warning).toBeDefined()
     expect(warning?.params.enteredM2).toBe(1.2)
     expect(warning?.params.calculatedM2).toBe(2)
-    expect(course.bsa.actualM2).toBe(1.2)
+    expect(course.bsa!.actualM2).toBe(1.2)
   })
 
   it('says nothing when the entered BSA matches the calculated one', () => {
@@ -75,12 +75,20 @@ describe('calculateCourse', () => {
     expect(course.warnings.some((warning) => warning.code === 'bsa.enteredDiffers')).toBe(false)
   })
 
+  it('calculates flat doses with no height and weight, and stops a dose per m² by name', () => {
+    const { heightCm: _height, weightKg: _weight, ...unmeasured } = patient
+    const course = calculateCourse(unmeasured, [prednisolone], adjustments)
+    expect(course.bsa).toBeNull()
+    expect(course.drugs[0]!.doseAmount).toBe(100)
+    expect(() => calculateCourse(unmeasured, [rituximab], adjustments)).toThrow(DomainInputError)
+  })
+
   it('calculates from an entered BSA alone, with no height and no weight', () => {
     // The physician has the BSA from the previous cycle's sheet and nothing else on the form.
     const bare: CoursePatient = { sex: 'male' }
     const course = calculateCourse(bare, [rituximab], { ...adjustments, bsaM2: 1.8 })
 
-    expect(course.bsa.actualM2).toBe(1.8)
+    expect(course.bsa!.actualM2).toBe(1.8)
     // Nothing to compare the typed figure against, so nothing is claimed about it.
     expect(course.warnings.some((warning) => warning.code === 'bsa.enteredDiffers')).toBe(false)
     // 375 mg/m² × 1.8 = 675 mg.
@@ -201,8 +209,8 @@ describe('calculateCourse', () => {
   it('calculates doses, vials, infusion and the day calendar', () => {
     const course = calculateCourse(patient, [rituximab, prednisolone], adjustments)
 
-    expect(course.bsa.actualM2).toBe(2)
-    expect(course.bsa.isCapped).toBe(false)
+    expect(course.bsa!.actualM2).toBe(2)
+    expect(course.bsa!.isCapped).toBe(false)
     expect(course.creatinineClearanceMlMin).toBeCloseTo(88.889, 3)
 
     const [rtx, pred] = course.drugs
@@ -256,7 +264,7 @@ describe('calculateCourse', () => {
     const actual = calculateCourse(big, [rituximab], { ...adjustments })
     const capped = calculateCourse(big, [rituximab], { ...adjustments, bsaVariant: 'capped' })
 
-    expect(actual.bsa.isCapped).toBe(true)
+    expect(actual.bsa!.isCapped).toBe(true)
     expect(actual.warnings).toEqual([expect.objectContaining({ code: 'bsa.capped' })])
     expect(actual.drugs[0]?.variants.differs).toBe(true)
     expect(actual.drugs[0]?.doseAmount).toBe(840) // 375 × 2.2392 = 839.7 → 840 mg

@@ -46,9 +46,10 @@
       "optional": "optional",
       "invalid": "Check this value",
       "required": "Fill in this field",
-      "summary": "BSA {{bsa}} m² · creatinine clearance {{crcl}}",
-      "summaryNoCrcl": "BSA {{bsa}} m² · creatinine clearance not calculated (no creatinine)",
-      "incomplete": "Fill in height and weight — or enter the BSA by hand — to see the calculation.",
+      "summary": "{{bsa}} · creatinine clearance {{crcl}}",
+      "summaryNoCrcl": "{{bsa}} · creatinine clearance not calculated (no creatinine)",
+      "bsaValue": "BSA {{bsa}} m²",
+      "bsaNone": "BSA not calculated (no height and weight)",
       "orEnterBsa": "or enter the BSA by hand",
       "clearanceWeight": {
         "label": "Weight for the clearance:",
@@ -366,6 +367,25 @@
         "dose_adjust": "adjust the dose",
         "caution": "caution"
       }
+    },
+    "requirements": {
+      "title": "To calculate the course and print the sheets, enter:",
+      "invalid": "The patient data hold an error: correct the marked field.",
+      "reason": {
+        "bsa": "{{fields}}: for a dose per m² (or enter the BSA by hand): {{drugs}}",
+        "perKg": "{{fields}}: for a dose per kg: {{drugs}}",
+        "dosingWeight": "{{fields}}: for a dose on the ideal or adjusted weight: {{drugs}}",
+        "auc": "{{fields}}: for an AUC dose (creatinine clearance): {{drugs}}",
+        "clearance": "{{fields}}: for the dose correction by creatinine clearance: {{drugs}}"
+      },
+      "field": {
+        "ageYears": "age",
+        "sex": "sex",
+        "heightCm": "height",
+        "weightKg": "weight",
+        "serumCreatinine": "creatinine"
+      },
+      "supportUnadjusted": "Without {{fields}} the prophylaxis is printed at the usual dose, not checked against the creatinine clearance: {{drugs}}"
     }
   },
   "need": {

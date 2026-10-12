@@ -138,13 +138,15 @@ export interface DoseVariants {
 /** Calculates the dose for both BSA variants the calculator displays side by side. */
 export function calculateDoseVariants(
   spec: DoseSpec,
-  bsa: BsaResult,
+  bsa: BsaResult | null,
   context: Omit<DoseContext, 'bsaM2'>,
   reduction?: DoseReduction,
 ): DoseVariants {
-  const actual = calculateDose(spec, { ...context, bsaM2: bsa.actualM2 }, reduction)
+  // Without a BSA only a dose that is not per square metre can be worked out; one that is fails
+  // on the zero by name.
+  const actual = calculateDose(spec, { ...context, bsaM2: bsa?.actualM2 ?? 0 }, reduction)
   const capped =
-    doseBasisOf(spec.unit) === 'm2' && bsa.isCapped
+    doseBasisOf(spec.unit) === 'm2' && bsa !== null && bsa.isCapped
       ? calculateDose(spec, { ...context, bsaM2: bsa.cappedM2 }, reduction)
       : actual
   return { actual, capped, differs: actual.doseAmount !== capped.doseAmount }
