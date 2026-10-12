@@ -400,6 +400,9 @@ export function buildCourseItemsFrom(
     protocolItems.filter((item) => canSwitchAdministration(item)).map((item) => item.id),
   )
   const protocolRoutes = new Map(protocolItems.map((item) => [item.id, item.route]))
+  const protocolPerDay = new Map(
+    protocolItems.map((item) => [item.id, item.administrations_per_day]),
+  )
   const protocolLengths = new Map(
     protocolItems.map((item) => [item.id, protocolInfusionLength(item)]),
   )
@@ -440,6 +443,13 @@ export function buildCourseItemsFrom(
     const durationMin = item.duration_min ?? params?.duration_min ?? null
     const modifiers = activeModifiers(item, chosenModifiers?.[item.id])
     const dosed = applyModifiers({ value: chosen.doseValue, capAmount }, modifiers)
+    // The label's ranges are written for the regimen's own dose given as the regimen gives it;
+    // for another dose they would be a guess, so they are not applied, and the row says so.
+    const renalBands = item.renal_bands ?? []
+    const ownDose =
+      chosen.id === DEFAULT_DOSE_CHOICE &&
+      dosed.value === chosen.doseValue &&
+      item.administrations_per_day === protocolPerDay.get(item.id)
 
     const courseDrug: CourseDrug = {
       id: item.id,
@@ -471,6 +481,19 @@ export function buildCourseItemsFrom(
         ? { dosingWeight: drug.dosing_weight }
         : {}),
       ...(drug.dose_rounding_step ? { roundingStep: drug.dose_rounding_step } : {}),
+      ...(renalBands.length === 0
+        ? {}
+        : ownDose
+          ? {
+              renalBands: renalBands.map((band) => ({
+                minMlMin: band.crcl_min,
+                maxMlMin: band.crcl_max,
+                doseValue: band.dose_value,
+                administrationsPerDay: band.administrations_per_day,
+                ...(band.interval_min === null ? {} : { intervalMin: band.interval_min }),
+              })),
+            }
+          : { renalBandsNotForDose: true }),
       block: item.block,
       isMain: item.role === 'main',
       ...(item.anchor_offset_min === null ? {} : { anchorOffsetMin: item.anchor_offset_min }),
@@ -588,6 +611,7 @@ export function customCourseItem(params: {
     sort_order: params.sortOrder,
     dose_options: [],
     dose_modifiers: [],
+    renal_bands: [],
     // A drug added by hand is placed like the rest of its kind: tablets on the ward sheet.
     block: params.route === 'oral' ? 'ward' : 'infusion',
     interval_min: null,

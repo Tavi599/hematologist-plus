@@ -1,5 +1,5 @@
 {
-  "$comment": "AGIHO 2024 називає піперацилін/тазобактам серед антисиньогнійних бета-лактамів першої лінії, без доз; доза й інтервал — з SmPC (emc 8771), показання «neutropenic adults with fever». 96 год — точка переоцінки AGIHO.",
+  "$comment": "AGIHO 2024 називає піперацилін/тазобактам серед антисиньогнійних бета-лактамів першої лінії, без доз; доза й інтервал — з SmPC (emc 8771), показання «neutropenic adults with fever». 96 год — точка переоцінки AGIHO. Корекція за КК — SmPC 4.2; UpToDate: КК 20–<40 — 4,5 г кожні 8 год або 3,375 г кожні 6 год, < 20 — 4,5 г кожні 12 год або 2,25 г кожні 6 год.",
   "id": "fn-piperacillin-tazobactam",
   "short_name": "Піп/таз (ФН)",
   "name": {
@@ -21,6 +21,11 @@
       "url": "https://www.medicines.org.uk/emc/product/8771/smpc",
       "version": "01/06/2022",
       "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "UpToDate (Lexicomp): Piperacillin and tazobactam: Drug information, Dosing: Kidney Impairment: Adult",
+      "url": "https://www.uptodate.com/contents/piperacillin-and-tazobactam-drug-information",
+      "checkedOn": "2026-10-12"
     }
   ],
   "items": [
@@ -34,9 +39,45 @@
       "administrations_per_day": 4,
       "interval_min": 360,
       "notes": {
-        "uk": "4 г/0,5 г кожні 6 год, інфузія 30 хв (SmPC: нейтропенічні дорослі з гарячкою). При КК ≤ 40 мл/хв інтервал подовжують — див. застереження препарату. Розраховано на 96 год (дні 1–4): AGIHO вимагає щоденної переоцінки й рішення про подальше лікування через 96 год (вкладка «Фебрильна нейтропенія»). Відміна — після 3–5 днів без гарячки незалежно від нейтрофілів.",
-        "en": "4 g/0.5 g every 6 h over 30 min (SmPC: neutropenic adults with fever). With CrCl ≤ 40 mL/min the interval is lengthened, see the drug caution. Calculated for 96 h (days 1-4): AGIHO asks for daily review and a decision on further treatment at 96 h (the \"Febrile neutropenia\" tab). Stop after 3-5 afebrile days, whatever the neutrophil count."
-      }
+        "uk": "4 г/0,5 г кожні 6 год, інфузія 30 хв (SmPC: нейтропенічні дорослі з гарячкою). При КК ≤ 40 мл/хв інтервал подовжується за кліренсом автоматично (SmPC); гемодіаліз не розраховується — див. застереження препарату. Розраховано на 96 год (дні 1–4): AGIHO вимагає щоденної переоцінки й рішення про подальше лікування через 96 год (вкладка «Фебрильна нейтропенія»). Відміна — після 3–5 днів без гарячки незалежно від нейтрофілів.",
+        "en": "4 g/0.5 g every 6 h over 30 min (SmPC: neutropenic adults with fever). With CrCl ≤ 40 mL/min the interval follows the clearance automatically (SmPC); haemodialysis is not calculated, see the drug caution. Calculated for 96 h (days 1-4): AGIHO asks for daily review and a decision on further treatment at 96 h (the \"Febrile neutropenia\" tab). Stop after 3-5 afebrile days, whatever the neutrophil count."
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 20,
+          "crcl_max": 40,
+          "dose_value": 4500,
+          "administrations_per_day": 3,
+          "interval_min": 480,
+          "notes": {
+            "uk": "SmPC: КК 20–40 — не більше 4 г/0,5 г кожні 8 год. UpToDate коригує з КК < 40 (при 40 — без змін) і як рівноцінний варіант дає 3,375 г кожні 6 год.",
+            "en": "SmPC: CrCl 20-40, at most 4 g/0.5 g every 8 h. UpToDate adjusts from CrCl < 40 (none at 40) and gives 3.375 g every 6 h as an equal alternative."
+          },
+          "source": {
+            "name": "SmPC Piperacillin/Tazobactam 4 g/0.5 g Powder for Solution for Infusion (emc 8771), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/8771/smpc",
+            "version": "01/06/2022",
+            "checkedOn": "2026-10-11"
+          }
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 19,
+          "dose_value": 4500,
+          "administrations_per_day": 2,
+          "interval_min": 720,
+          "notes": {
+            "uk": "SmPC: КК < 20 — не більше 4 г/0,5 г кожні 12 год. UpToDate як рівноцінний варіант дає 2,25 г кожні 6 год.",
+            "en": "SmPC: CrCl < 20, at most 4 g/0.5 g every 12 h. UpToDate gives 2.25 g every 6 h as an equal alternative."
+          },
+          "source": {
+            "name": "SmPC Piperacillin/Tazobactam 4 g/0.5 g Powder for Solution for Infusion (emc 8771), 4.2, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/8771/smpc",
+            "version": "01/06/2022",
+            "checkedOn": "2026-10-11"
+          }
+        }
+      ]
     }
   ]
 }

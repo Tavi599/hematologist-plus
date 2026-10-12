@@ -131,6 +131,7 @@ function row(
     gap_before_min: null,
     dose_options: [],
     dose_modifiers: [],
+    renal_bands: [],
     block: fields.route === 'oral' ? 'ward' : 'day_support',
     interval_min: null,
     anchor_offset_min: null,

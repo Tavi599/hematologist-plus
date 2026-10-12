@@ -9,6 +9,7 @@ import {
   diseaseReferencesSchema,
   doseModifiersSchema,
   doseOptionsSchema,
+  renalBandsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
   evidenceSchema,
@@ -198,6 +199,8 @@ export const regimenFileSchema = z
           dose_options: doseOptionsSchema.default([]),
           /** Circumstances that change the dose, ticked by the physician in the calculator. */
           dose_modifiers: doseModifiersSchema.default([]),
+          /** The label's dose and interval by creatinine clearance, for the item's own dose. */
+          renal_bands: renalBandsSchema.default([]),
         }),
       )
       .default([]),

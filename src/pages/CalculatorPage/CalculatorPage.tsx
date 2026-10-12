@@ -120,6 +120,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [chosenBags, setChosenBags] = useState<Record<string, number>>({})
   // Infusion durations the physician picked for antimicrobials, by row, min.
   const [chosenDurations, setChosenDurations] = useState<Record<string, number>>({})
+  // Rows whose correction by creatinine clearance the physician switched off.
+  const [renalBandOffIds, setRenalBandOffIds] = useState<string[]>([])
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
   const regimenId = searchParams.get('regimen')
@@ -330,6 +332,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           disabledIds,
           shiftMin,
           infusionStart,
+          renalBandOffIds,
         },
       )
     try {
@@ -354,6 +357,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     disabledIds,
     shiftMin,
     infusionStart,
+    renalBandOffIds,
     mesnaFor,
   ])
 
@@ -592,6 +596,14 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                     setAdministrationModes((current) => ({ ...current, [id]: mode }))
                   }}
                   chosenDurations={chosenDurations}
+                  renalBandOffIds={renalBandOffIds}
+                  onRenalBandOff={(id, off) =>
+                    setRenalBandOffIds((current) =>
+                      off
+                        ? [...current.filter((entry) => entry !== id), id]
+                        : current.filter((entry) => entry !== id),
+                    )
+                  }
                   onDurationChoice={(id, minutes) =>
                     setChosenDurations((current) => {
                       const { [id]: _removed, ...rest } = current

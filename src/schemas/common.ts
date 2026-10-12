@@ -437,6 +437,26 @@ export const doseModifiersSchema = z.array(doseModifierSchema)
 export type DoseModifier = z.infer<typeof doseModifierSchema>
 
 /**
+ * The dose and interval a label gives for one range of creatinine clearance, written for the
+ * regimen item's own dose (cefepime 2 g every 8 h: 30-60 mL/min, 2 g every 12 h). Whole mL/min,
+ * both ends included; above the highest range the item's own dose stands.
+ */
+export const renalBandSchema = z.strictObject({
+  crcl_min: nonNegativeIntSchema,
+  crcl_max: nonNegativeIntSchema,
+  /** Dose per administration, in the item's own dose unit. */
+  dose_value: positiveNumberSchema,
+  administrations_per_day: positiveNumberSchema.int(),
+  /** Minutes between administrations within a day; null for once a day. */
+  interval_min: positiveNumberSchema.int().nullable().default(null),
+  notes: localizedTextSchema.nullable().default(null),
+  source: sourceSchema,
+})
+
+export const renalBandsSchema = z.array(renalBandSchema)
+export type RenalBandRow = z.infer<typeof renalBandSchema>
+
+/**
  * Where a physician reads more about a disease. The app only links out: guideline text is
  * copyrighted and is never copied into the catalog.
  */

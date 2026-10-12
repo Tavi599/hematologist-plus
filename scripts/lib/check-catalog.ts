@@ -187,6 +187,31 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
     }
     // Modifiers are ticked, not picked, so each needs an identity of its own. Their doses may
     // coincide — two circumstances can lead to the same milligrams — but the keys may not.
+    // Ranges of creatinine clearance: from 0 up without a gap or an overlap, so that every
+    // clearance below the highest one falls in exactly one; above it the item's dose stands.
+    const bands = [...item.renal_bands].sort((a, b) => a.crcl_min - b.crcl_min)
+    bands.forEach((band, index) => {
+      if (band.crcl_min > band.crcl_max) {
+        error('regimen_items', item.id, `renal_bands: ${band.crcl_min}-${band.crcl_max} is empty`)
+      }
+      const expected = index === 0 ? 0 : bands[index - 1]!.crcl_max + 1
+      if (band.crcl_min !== expected) {
+        error(
+          'regimen_items',
+          item.id,
+          `renal_bands: ${band.crcl_min}-${band.crcl_max} should start at ${expected} mL/min`,
+        )
+      }
+      if (band.administrations_per_day > 1 && band.interval_min === null) {
+        error('regimen_items', item.id, 'renal_bands: several a day need an interval_min')
+      }
+      if (
+        band.interval_min !== null &&
+        band.interval_min * (band.administrations_per_day - 1) >= 24 * 60
+      ) {
+        error('regimen_items', item.id, 'renal_bands: the administrations do not fit in a day')
+      }
+    })
     const modifierKeys = item.dose_modifiers.map((modifier) => modifier.key)
     if (new Set(modifierKeys).size !== modifierKeys.length) {
       error('regimen_items', item.id, 'dose_modifiers: two modifiers share a key')

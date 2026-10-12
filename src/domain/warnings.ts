@@ -12,6 +12,9 @@ export type WarningCode =
   | 'review.ageUnknown'
   | 'review.elderly'
   | 'review.highBilirubin'
+  | 'renal.bandUnchecked'
+  | 'renal.bandNotForDose'
+  | 'renal.bandOff'
 
 /** Warnings never change a dose; they are shown to the physician for a decision. */
 export interface DomainWarning {

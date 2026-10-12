@@ -16,6 +16,7 @@ import {
   type PresentationCount,
 } from './presentations'
 import { cockcroftGault } from './renal'
+import { applyRenalBand, type RenalAdjustment, type RenalBand } from './renal-bands'
 import { roundDose, type RoundingResult } from './rounding'
 import {
   courseDayDates,
@@ -94,6 +95,10 @@ export interface CourseDrug {
   dosingWeight?: DosingWeightRule
   /** Rounding step of the dose, in its own unit (vancomycin 250 mg); the default step otherwise. */
   roundingStep?: number
+  /** The label's dose and interval by creatinine clearance, for the regimen's own dose. */
+  renalBands?: RenalBand[]
+  /** The item has such ranges, but another dose is in force they were not written for. */
+  renalBandsNotForDose?: boolean
 }
 
 export interface CourseAdjustments {
@@ -129,6 +134,8 @@ export interface CourseAdjustments {
    * later one. A course edited by hand need not start at cycle 1.
    */
   infusionStart?: Record<string, number>
+  /** Item ids whose correction by creatinine clearance the physician switched off. */
+  renalBandOffIds?: string[]
 }
 
 /**
@@ -214,6 +221,8 @@ export interface CourseDrugResult {
   packTotals: PresentationCount[]
   infusion: InfusionResult | null
   warnings: DomainWarning[]
+  /** What the creatinine clearance did to the dose and interval; null for a drug without ranges. */
+  renal: RenalAdjustment | null
   /** BSA → dose → cap → reduction → rounding, for the selected variant. */
   steps: CalculationStep[]
 }
@@ -337,8 +346,13 @@ export function calculateCourse(
     ...(patient.bilirubinUmolL === undefined ? {} : { bilirubinUmolL: patient.bilirubinUmolL }),
   }
 
-  const results = enabled.map((drug) =>
-    calculateDrug(drug, {
+  // The label's dose and interval for the clearance replace the regimen's before anything else:
+  // vials, solvent and the hourly schedule all follow the corrected drug.
+  const renalOff = new Set(adjustments.renalBandOffIds ?? [])
+  const banded = enabled.map((drug) => applyRenalBand(drug, renal?.mlMin, renalOff.has(drug.id)))
+  const adjusted = banded.map((entry) => entry.drug)
+  const results = banded.map(({ drug, adjustment, steps, warnings: renalWarnings }) => ({
+    ...calculateDrug(drug, {
       patient,
       bsa,
       variant,
@@ -355,17 +369,20 @@ export function calculateCourse(
           ? {}
           : { drugPercent: adjustments.drugPercent[drug.id] }),
       },
+      renalSteps: steps,
+      renalWarnings,
+      renal: adjustment,
     }),
-  )
+  }))
   const resultById = new Map(results.map((result) => [result.id, result]))
-  const kinds = rampKinds(enabled, adjustments)
+  const kinds = rampKinds(adjusted, adjustments)
 
   return {
     rampKinds: kinds,
     bsa,
     creatinineClearanceMlMin: renal?.mlMin ?? null,
     drugs: results,
-    days: buildDays(enabled, resultById, adjustments, kinds),
+    days: buildDays(adjusted, resultById, adjustments, kinds),
     presentationTotals: sumSelections(
       results.flatMap((result) =>
         result.pack ? [scaleSelection(result.pack, result.administrationsInCourse)] : [],
@@ -400,6 +417,10 @@ interface DrugContext {
   reduction: { coursePercent?: number; drugPercent?: number }
   /** Dose typed by the physician for this drug, in the drug's own unit. */
   overrideAmount?: number
+  /** The correction by creatinine clearance already applied to the drug, and what it said. */
+  renalSteps: CalculationStep[]
+  renalWarnings: DomainWarning[]
+  renal: RenalAdjustment | null
 }
 
 function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult {
@@ -480,7 +501,17 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
       })
     : null
 
-  const warnings = suggestDoseReview(context.reviewContext, drug.reviewRules ?? {})
+  // A drug corrected by the label's ranges needs no «consider a reduction» on the same clearance.
+  const warnings = [
+    ...context.renalWarnings,
+    ...suggestDoseReview(context.reviewContext, drug.reviewRules ?? {}).filter(
+      (warning) =>
+        warning.code !== 'review.lowCreatinineClearance' ||
+        context.renal === null ||
+        context.renal.status === 'unchecked' ||
+        context.renal.status === 'notForDose',
+    ),
+  ]
   if (variants[variant].isCapped) {
     warnings.push({
       code: 'dose.capped',
@@ -513,7 +544,9 @@ function calculateDrug(drug: CourseDrug, context: DrugContext): CourseDrugResult
     packTotals: pack ? scaleSelection(pack, drug.days.length * administrationsPerDay).items : [],
     infusion,
     warnings,
+    renal: context.renal,
     steps: [
+      ...context.renalSteps,
       ...bsa.steps,
       ...(weight?.steps ?? []),
       ...variants[variant].steps,

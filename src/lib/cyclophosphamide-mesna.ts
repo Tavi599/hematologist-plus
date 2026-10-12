@@ -61,6 +61,7 @@ export function cyclophosphamideMesna(
       sort_order: item.sort_order,
       dose_options: [],
       dose_modifiers: [],
+      renal_bands: [],
       block: 'day_support',
       interval_min: LABEL_INTERVAL_MIN,
       anchor_offset_min: 0,

@@ -7,6 +7,7 @@ import {
   scheduleBlockSchema,
   doseModifiersSchema,
   doseOptionsSchema,
+  renalBandsSchema,
   doseUnitSchema,
   drugAvailabilitySchema,
   diseaseReferencesSchema,
@@ -194,6 +195,8 @@ export const regimenItemRowSchema = z.object({
   /** Circumstances that change this dose, switched on per patient; defaulted for a database
    *  where the migration has not run yet. */
   dose_modifiers: doseModifiersSchema.default([]),
+  /** The label's dose and interval by creatinine clearance; defaulted for an older database. */
+  renal_bands: renalBandsSchema.default([]),
 })
 
 export const classificationSystemRowSchema = z.object({

@@ -20,7 +20,13 @@ import { useMediaQuery } from '@mantine/hooks'
 import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import type { BagOption, BsaVariant, CourseDrugResult, CourseResult } from '../../domain'
+import type {
+  BagOption,
+  BsaVariant,
+  CourseDrugResult,
+  CourseResult,
+  RenalAdjustment,
+} from '../../domain'
 import {
   amountUnitOf,
   defaultInfusionStart,
@@ -74,6 +80,9 @@ export interface DoseTableProps {
   chosenDurations: Record<string, number>
   /** `null` goes back to the row's own duration. */
   onDurationChoice: (itemId: string, durationMin: number | null) => void
+  /** Rows whose correction by creatinine clearance the physician switched off. */
+  renalBandOffIds: string[]
+  onRenalBandOff: (itemId: string, off: boolean) => void
   onRemove: (itemId: string) => void
   customIds: string[]
   /** The BSA the doses are given on; the other variant is shown under it when it differs. */
@@ -92,6 +101,109 @@ export interface DoseTableProps {
   /** Which infusion of an antibody the course opens with, by drug; see CourseAdjustments. */
   infusionStart: Record<string, number>
   onInfusionStart: (drugId: string, start: number) => void
+}
+
+/** «2 g every 12 h»: a dose and how often it is given. */
+function doseEvery(
+  t: DynamicTranslate,
+  language: ReturnType<typeof currentLanguage>,
+  value: number,
+  unit: string,
+  administrationsPerDay: number,
+  intervalMin: number | null | undefined,
+): string {
+  const hours = intervalMin ? intervalMin / 60 : 24 / administrationsPerDay
+  return t('calculator.doses.renal.doseEvery', {
+    dose: formatNumber(value, language, 2),
+    unit: t(`units.${unit}`),
+    hours: formatNumber(hours, language, 1),
+  })
+}
+
+/**
+ * What the creatinine clearance did to the row: the label's dose and interval in force (with the
+ * note of that range and a switch to keep the protocol's), the clearance above every range, or
+ * why nothing was checked.
+ */
+function RenalBandInfo({
+  adjustment,
+  item,
+  off,
+  disabled,
+  onOff,
+}: {
+  adjustment: RenalAdjustment
+  item: CourseItem
+  off: boolean
+  disabled: boolean
+  onOff: (off: boolean) => void
+}) {
+  const { t } = useTranslation()
+  const tu = t as unknown as DynamicTranslate
+  const language = currentLanguage()
+  const unit = amountUnitOf(item.item.dose_unit)
+  const protocol = doseEvery(
+    tu,
+    language,
+    item.item.dose_value,
+    unit,
+    item.item.administrations_per_day,
+    item.item.interval_min,
+  )
+  if (adjustment.status === 'unchecked' || adjustment.status === 'notForDose') {
+    return (
+      <Text size="xs" c="orange.8" mt={2}>
+        {t(`calculator.doses.renal.${adjustment.status}`)}
+      </Text>
+    )
+  }
+  if (adjustment.status === 'above') {
+    return (
+      <Text size="xs" c="dimmed" mt={2}>
+        {t('calculator.doses.renal.above', {
+          crcl: formatNumber(adjustment.clearanceMlMin, language, 0),
+          above: adjustment.aboveMlMin,
+        })}
+      </Text>
+    )
+  }
+  const { band } = adjustment
+  const row = item.item.renal_bands.find(
+    (entry) => entry.crcl_min === band.minMlMin && entry.crcl_max === band.maxMlMin,
+  )
+  const corrected = doseEvery(
+    tu,
+    language,
+    band.doseValue,
+    unit,
+    band.administrationsPerDay,
+    band.intervalMin,
+  )
+  return (
+    <Stack gap={2} mt={4}>
+      <Text size="xs" c={off ? 'red' : 'blue.8'} fw={500}>
+        {t(off ? 'calculator.doses.renal.off' : 'calculator.doses.renal.applied', {
+          crcl: formatNumber(adjustment.clearanceMlMin, language, 0),
+          min: band.minMlMin,
+          max: band.maxMlMin,
+          corrected,
+          protocol,
+        })}
+      </Text>
+      {row?.notes && (
+        <Text size="xs" c="dimmed">
+          {localize(row.notes, language)}
+        </Text>
+      )}
+      <Checkbox
+        size="xs"
+        disabled={disabled}
+        checked={off}
+        onChange={(event) => onOff(event.currentTarget.checked)}
+        label={t('calculator.doses.renal.keepProtocol')}
+      />
+    </Stack>
+  )
 }
 
 /**
@@ -282,6 +394,8 @@ function DoseRow({
   onBagChoice,
   chosenDurations,
   onDurationChoice,
+  renalBandOffIds,
+  onRenalBandOff,
   onRemove,
   customIds,
   bsaVariant,
@@ -408,9 +522,18 @@ function DoseRow({
           </Text>
           <Text size="xs" c="dimmed">
             {t('calculator.doses.days')}: {item.item.days.join(', ')}
-            {item.item.administrations_per_day > 1 &&
-              ` · ${t('calculator.doses.timesPerDay', { count: item.item.administrations_per_day })}`}
+            {(result?.administrationsPerDay ?? item.item.administrations_per_day) > 1 &&
+              ` · ${t('calculator.doses.timesPerDay', { count: result?.administrationsPerDay ?? item.item.administrations_per_day })}`}
           </Text>
+          {result?.renal && (
+            <RenalBandInfo
+              adjustment={result.renal}
+              item={item}
+              off={renalBandOffIds.includes(id)}
+              disabled={!enabled}
+              onOff={(off) => onRenalBandOff(id, off)}
+            />
+          )}
           {item.doseChoices.length > 1 && (
             <Select
               size="xs"

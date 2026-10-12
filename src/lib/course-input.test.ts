@@ -752,3 +752,39 @@ describe('route switch', () => {
     expect(kept!.item.route).toBe('subcutaneous')
   })
 })
+
+describe('renal ranges of a regimen item', () => {
+  const source = { name: 'ДЕМО: інструкція', checkedOn: '2026-10-12' }
+  const withBands = () => {
+    const catalog = demoCatalog()
+    const item = catalog.regimen_items.find((row) => row.id === 'r-chop-21.prednisolone')!
+    item.renal_bands = [
+      {
+        crcl_min: 0,
+        crcl_max: 30,
+        dose_value: 50,
+        administrations_per_day: 1,
+        interval_min: null,
+        notes: null,
+        source,
+      },
+    ]
+    return indexCatalog(catalog)
+  }
+
+  it('are passed for the regimen own dose', () => {
+    const prednisolone = buildCourseItems(withBands(), 'r-chop-21').at(-1)!
+    expect(prednisolone.courseDrug.renalBands).toEqual([
+      { minMlMin: 0, maxMlMin: 30, doseValue: 50, administrationsPerDay: 1 },
+    ])
+    expect(prednisolone.courseDrug.renalBandsNotForDose).toBeUndefined()
+  })
+
+  it('are not applied to another dose, which is marked instead', () => {
+    const prednisolone = buildCourseItems(withBands(), 'r-chop-21', {
+      'r-chop-21.prednisolone': '40-mg_m2',
+    }).at(-1)!
+    expect(prednisolone.courseDrug.renalBands).toBeUndefined()
+    expect(prednisolone.courseDrug.renalBandsNotForDose).toBe(true)
+  })
+})

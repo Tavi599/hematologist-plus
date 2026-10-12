@@ -1,5 +1,5 @@
 {
-  "$comment": "AGIHO 2024 називає цефепім серед антисиньогнійних бета-лактамів першої лінії, без доз; доза — FDA label, табл. 1 «Empiric therapy for febrile neutropenic patients: 2 g IV every 8 hours, 7 days or until resolution of neutropenia». Розбіжність: інструкція — 7 днів, AGIHO — відміна після 3–5 днів без гарячки.",
+  "$comment": "AGIHO 2024 називає цефепім серед антисиньогнійних бета-лактамів першої лінії, без доз; доза — FDA label, табл. 1 «Empiric therapy for febrile neutropenic patients: 2 g IV every 8 hours, 7 days or until resolution of neutropenia». Розбіжність: інструкція — 7 днів, AGIHO — відміна після 3–5 днів без гарячки. Корекція за КК — FDA табл. 2 (стовпець 2 г кожні 8 год); UpToDate збігається, крім КК 11–29: віддає перевагу 1 г кожні 12 год.",
   "id": "fn-cefepime",
   "short_name": "Цефепім (ФН)",
   "name": {
@@ -21,6 +21,11 @@
       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
       "version": "Revised: 03/2025",
       "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "UpToDate (Lexicomp): Cefepime: Drug information, Dosing: Kidney Impairment: Adult",
+      "url": "https://www.uptodate.com/contents/cefepime-drug-information",
+      "checkedOn": "2026-10-12"
     }
   ],
   "items": [
@@ -34,9 +39,62 @@
       "administrations_per_day": 3,
       "interval_min": 480,
       "notes": {
-        "uk": "2 г кожні 8 год, інфузія близько 30 хв (FDA: емпірична терапія фебрильної нейтропенії; інструкція — 7 днів або до виходу з нейтропенії). При КК ≤ 60 мл/хв — корекція, див. застереження препарату. Розраховано на 96 год (дні 1–4): AGIHO вимагає щоденної переоцінки й рішення про подальше лікування через 96 год (вкладка «Фебрильна нейтропенія»). Відміна — після 3–5 днів без гарячки незалежно від нейтрофілів.",
-        "en": "2 g every 8 h over about 30 min (FDA: empiric therapy of febrile neutropenia; the label gives 7 days or until neutropenia resolves). With CrCl ≤ 60 mL/min adjust, see the drug caution. Calculated for 96 h (days 1-4): AGIHO asks for daily review and a decision on further treatment at 96 h (the \"Febrile neutropenia\" tab). Stop after 3-5 afebrile days, whatever the neutrophil count."
-      }
+        "uk": "2 г кожні 8 год, інфузія близько 30 хв (FDA: емпірична терапія фебрильної нейтропенії; інструкція — 7 днів або до виходу з нейтропенії). При КК ≤ 60 мл/хв доза й інтервал коригуються за кліренсом автоматично (FDA, табл. 2); гемодіаліз і ПАПД не розраховуються — див. застереження препарату. Розраховано на 96 год (дні 1–4): AGIHO вимагає щоденної переоцінки й рішення про подальше лікування через 96 год (вкладка «Фебрильна нейтропенія»). Відміна — після 3–5 днів без гарячки незалежно від нейтрофілів.",
+        "en": "2 g every 8 h over about 30 min (FDA: empiric therapy of febrile neutropenia; the label gives 7 days or until neutropenia resolves). With CrCl ≤ 60 mL/min the dose and interval follow the clearance automatically (FDA, table 2); haemodialysis and CAPD are not calculated, see the drug caution. Calculated for 96 h (days 1-4): AGIHO asks for daily review and a decision on further treatment at 96 h (the \"Febrile neutropenia\" tab). Stop after 3-5 afebrile days, whatever the neutrophil count."
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 30,
+          "crcl_max": 60,
+          "dose_value": 2000,
+          "administrations_per_day": 2,
+          "interval_min": 720,
+          "notes": {
+            "uk": "FDA: першу дозу дають повну (2 г), як при КК > 60 мл/хв; у розрахунку всі введення скориговані.",
+            "en": "FDA: the first dose is the full one (2 g), as with CrCl > 60 mL/min; the calculation corrects every administration."
+          },
+          "source": {
+            "name": "FDA label: Cefepime for Injection (Sagent), 2.1 табл. 1, 2.3 табл. 2, 2.5–2.6",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+            "version": "Revised: 03/2025",
+            "checkedOn": "2026-10-11"
+          }
+        },
+        {
+          "crcl_min": 11,
+          "crcl_max": 29,
+          "dose_value": 2000,
+          "administrations_per_day": 1,
+          "interval_min": null,
+          "notes": {
+            "uk": "FDA: першу дозу дають повну (2 г), як при КК > 60 мл/хв; у розрахунку всі введення скориговані. UpToDate тут віддає перевагу 1 г кожні 12 год при тяжкій інфекції чи менш чутливому збуднику (та сама добова доза).",
+            "en": "FDA: the first dose is the full one (2 g), as with CrCl > 60 mL/min; the calculation corrects every administration. UpToDate prefers 1 g every 12 h here for a serious infection or a less susceptible organism (the same daily dose)."
+          },
+          "source": {
+            "name": "FDA label: Cefepime for Injection (Sagent), 2.1 табл. 1, 2.3 табл. 2, 2.5–2.6",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+            "version": "Revised: 03/2025",
+            "checkedOn": "2026-10-11"
+          }
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 10,
+          "dose_value": 1000,
+          "administrations_per_day": 1,
+          "interval_min": null,
+          "notes": {
+            "uk": "FDA: першу дозу дають повну (2 г), як при КК > 60 мл/хв; у розрахунку всі введення скориговані.",
+            "en": "FDA: the first dose is the full one (2 g), as with CrCl > 60 mL/min; the calculation corrects every administration."
+          },
+          "source": {
+            "name": "FDA label: Cefepime for Injection (Sagent), 2.1 табл. 1, 2.3 табл. 2, 2.5–2.6",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+            "version": "Revised: 03/2025",
+            "checkedOn": "2026-10-11"
+          }
+        }
+      ]
     }
   ]
 }

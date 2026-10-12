@@ -1,5 +1,5 @@
 {
-  "$comment": "AGIHO 2024: меропенем — антисиньогнійний бета-лактам першої лінії; карбапенем — при колонізації ESBL-E. Доза — SmPC Meronem (emc 9834, 03/2026), «Management of febrile neutropenic patients: 1 g every 8 hours».",
+  "$comment": "AGIHO 2024: меропенем — антисиньогнійний бета-лактам першої лінії; карбапенем — при колонізації ESBL-E. Доза — SmPC Meronem (emc 9834, 03/2026), «Management of febrile neutropenic patients: 1 g every 8 hours». Корекція за КК — SmPC 4.2 для 1 г кожні 8 год; UpToDate дає ті самі дози.",
   "id": "fn-meropenem",
   "short_name": "Меропенем (ФН)",
   "name": {
@@ -21,6 +21,11 @@
       "url": "https://www.medicines.org.uk/emc/product/9834/smpc",
       "version": "03/2026",
       "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "UpToDate (Lexicomp): Meropenem: Drug information, Dosing: Kidney Impairment: Adult",
+      "url": "https://www.uptodate.com/contents/meropenem-drug-information",
+      "checkedOn": "2026-10-12"
     }
   ],
   "items": [
@@ -34,9 +39,56 @@
       "administrations_per_day": 3,
       "interval_min": 480,
       "notes": {
-        "uk": "1 г кожні 8 год, інфузія 15–30 хв (SmPC: фебрильна нейтропенія). При КК ≤ 50 мл/хв — корекція, див. застереження препарату. Розраховано на 96 год (дні 1–4): AGIHO вимагає щоденної переоцінки й рішення про подальше лікування через 96 год (вкладка «Фебрильна нейтропенія»). Відміна — після 3–5 днів без гарячки незалежно від нейтрофілів.",
-        "en": "1 g every 8 h over 15-30 min (SmPC: febrile neutropenia). With CrCl ≤ 50 mL/min adjust, see the drug caution. Calculated for 96 h (days 1-4): AGIHO asks for daily review and a decision on further treatment at 96 h (the \"Febrile neutropenia\" tab). Stop after 3-5 afebrile days, whatever the neutrophil count."
-      }
+        "uk": "1 г кожні 8 год, інфузія 15–30 хв (SmPC: фебрильна нейтропенія). При КК ≤ 50 мл/хв доза й інтервал коригуються за кліренсом автоматично (SmPC; UpToDate так само); діаліз не розраховується — див. застереження препарату. Розраховано на 96 год (дні 1–4): AGIHO вимагає щоденної переоцінки й рішення про подальше лікування через 96 год (вкладка «Фебрильна нейтропенія»). Відміна — після 3–5 днів без гарячки незалежно від нейтрофілів.",
+        "en": "1 g every 8 h over 15-30 min (SmPC: febrile neutropenia). With CrCl ≤ 50 mL/min the dose and interval follow the clearance automatically (SmPC; UpToDate the same); dialysis is not calculated, see the drug caution. Calculated for 96 h (days 1-4): AGIHO asks for daily review and a decision on further treatment at 96 h (the \"Febrile neutropenia\" tab). Stop after 3-5 afebrile days, whatever the neutrophil count."
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 26,
+          "crcl_max": 50,
+          "dose_value": 1000,
+          "administrations_per_day": 2,
+          "interval_min": 720,
+          "notes": null,
+          "source": {
+            "name": "SmPC Meronem IV 1 g (emc 9834), 4.2, 6.3, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/9834/smpc",
+            "version": "03/2026",
+            "checkedOn": "2026-10-11"
+          }
+        },
+        {
+          "crcl_min": 10,
+          "crcl_max": 25,
+          "dose_value": 500,
+          "administrations_per_day": 2,
+          "interval_min": 720,
+          "notes": null,
+          "source": {
+            "name": "SmPC Meronem IV 1 g (emc 9834), 4.2, 6.3, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/9834/smpc",
+            "version": "03/2026",
+            "checkedOn": "2026-10-11"
+          }
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 9,
+          "dose_value": 500,
+          "administrations_per_day": 1,
+          "interval_min": null,
+          "notes": {
+            "uk": "UpToDate: у критичному стані можна 500 мг кожні 12 год — частіше досягає фармакодинамічної мети.",
+            "en": "UpToDate: in a critically ill patient 500 mg every 12 h may be preferred, as it reaches the pharmacodynamic target more often."
+          },
+          "source": {
+            "name": "SmPC Meronem IV 1 g (emc 9834), 4.2, 6.3, 6.6",
+            "url": "https://www.medicines.org.uk/emc/product/9834/smpc",
+            "version": "03/2026",
+            "checkedOn": "2026-10-11"
+          }
+        }
+      ]
     }
   ]
 }
