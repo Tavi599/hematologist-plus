@@ -43,7 +43,7 @@
       "key": "nacl",
       "solvent": "sodium_chloride_0_9",
       "concentration_max_mg_ml": 0.5,
-      "bag_volumes_ml": [100, 250],
+      "bag_volumes_ml": [100, 200, 250],
       "duration_min": 60,
       "is_default": true,
       "sources": [
@@ -55,8 +55,8 @@
         }
       ],
       "notes": {
-        "uk": "Стандартно — у 250 мл 0,9% NaCl; дозволено менший об'єм, якщо концентрація не перевищує 0,5 мг/мл. Не розводити глюкозою. Повільна інфузія близько 1 год, не болюсно.",
-        "en": "Normally in 250 mL of 0.9% NaCl; a smaller volume is allowed while the concentration stays at or below 0.5 mg/mL. Not with glucose. A slow infusion over about 1 h, never a bolus."
+        "uk": "Стандартно — у 250 мл 0,9% NaCl; дозволено менший об'єм, якщо концентрація не перевищує 0,5 мг/мл. Не розводити глюкозою. Повільна інфузія близько 1 год, не болюсно. Об'єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
+        "en": "Normally in 250 mL of 0.9% NaCl; a smaller volume is allowed while the concentration stays at or below 0.5 mg/mL. Not with glucose. A slow infusion over about 1 h, never a bolus. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
       }
     }
   ],

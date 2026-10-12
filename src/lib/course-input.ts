@@ -27,6 +27,8 @@ export interface CourseItem {
   infusionSwitchable: boolean
   /** How the regimen itself gives that infusion; differs from the row after a switch. */
   protocolInfusion: InfusionLength
+  /** An antimicrobial infusion with several bags the label allows: the physician picks one. */
+  bagSwitchable: boolean
   /** Routes the physician may switch this row to at the same dose, its own route included;
    *  empty when the label allows no other. */
   routeChoices: Route[]
@@ -54,6 +56,36 @@ export function canSwitchInfusionLength(
   if (item.drug_id !== 'doxorubicin') return false
   const days = [...item.days].sort((a, b) => a - b)
   return days.length >= 4 && days[days.length - 1]! - days[0]! + 1 === days.length
+}
+
+/**
+ * An antimicrobial (ATC group J) whose label allows more than one bag. Wards dilute these in
+ * whatever saline they have, so the physician picks the volume; for chemotherapy the protocol's
+ * smallest bag that keeps the concentration stays the rule.
+ */
+export function canSwitchBag(
+  drug: Pick<Drug, 'atc_code'>,
+  item: Pick<RegimenItem, 'route'>,
+  params: Pick<DrugInfusionParams, 'bag_volumes_ml'> | null,
+): boolean {
+  return (
+    item.route === 'iv_infusion' &&
+    (drug.atc_code ?? '').startsWith('J') &&
+    (params?.bag_volumes_ml.length ?? 0) > 1
+  )
+}
+
+/** The rows with the bags the physician picked; a bag that does not suit the dose is ignored there. */
+export function applyBagChoices(items: CourseItem[], chosen: Record<string, number>): CourseItem[] {
+  return items.map((item) => {
+    const bag = chosen[item.item.id]
+    const infusion = item.courseDrug.infusion
+    if (bag === undefined || !infusion || !item.bagSwitchable) return item
+    return {
+      ...item,
+      courseDrug: { ...item.courseDrug, infusion: { ...infusion, preferredBagMl: bag } },
+    }
+  })
 }
 
 /** How the regimen's own row is given: 24 hours or less. */
@@ -419,6 +451,7 @@ export function buildCourseItemsFrom(
         switchable: switchable.has(item.id),
         infusionSwitchable: canSwitchInfusionLength(item),
         protocolInfusion: protocolLengths.get(item.id) ?? protocolInfusionLength(item),
+        bagSwitchable: canSwitchBag(drug, item, params),
         routeChoices: availableRoutes(catalog, drug, protocolRoutes.get(item.id) ?? item.route),
         protocolRoute: protocolRoutes.get(item.id) ?? item.route,
       },

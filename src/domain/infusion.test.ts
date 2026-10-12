@@ -97,6 +97,38 @@ describe('calculateInfusion', () => {
     ).toThrow(DomainInputError)
   })
 })
+describe('bag picked by the physician', () => {
+  const params = { bagVolumesMl: [50, 100, 250], concentrationMinMgMl: 1, concentrationMaxMgMl: 20 }
+
+  it('uses the picked bag while the concentration stays in range and lists every bag', () => {
+    const auto = calculateInfusion({ doseAmount: 1000, params, durationMin: 30 })
+    expect(auto.bagVolumeMl).toBe(50)
+    const picked = calculateInfusion({
+      doseAmount: 1000,
+      params: { ...params, preferredBagMl: 250 },
+      durationMin: 30,
+    })
+    expect(picked.bagVolumeMl).toBe(250)
+    expect(picked.issue).toBeNull()
+    expect(picked.rateMlH).toBeCloseTo(500)
+    expect(picked.bagOptions.map((option) => [option.bagVolumeMl, option.fits])).toEqual([
+      [50, true],
+      [100, true],
+      [250, true],
+    ])
+  })
+
+  it('falls back to the smallest fitting bag when the picked one breaks the limits', () => {
+    const result = calculateInfusion({
+      doseAmount: 2000,
+      params: { ...params, preferredBagMl: 50 },
+      durationMin: 30,
+    })
+    expect(result.bagVolumeMl).toBe(100)
+    expect(result.bagOptions.find((option) => option.bagVolumeMl === 50)?.fits).toBe(false)
+  })
+})
+
 describe('rate raised in steps', () => {
   // The department gives rituximab at 25 mL/h the first time, 50 mL/h afterwards, raising the
   // rate by the same amount every 30 min up to 200 mL/h.

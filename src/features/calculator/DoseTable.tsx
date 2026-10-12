@@ -20,7 +20,7 @@ import { useMediaQuery } from '@mantine/hooks'
 import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import type { BsaVariant, CourseDrugResult, CourseResult } from '../../domain'
+import type { BagOption, BsaVariant, CourseDrugResult, CourseResult } from '../../domain'
 import {
   amountUnitOf,
   defaultInfusionStart,
@@ -67,6 +67,8 @@ export interface DoseTableProps {
   onAdministrationMode: (itemId: string, mode: AdministrationMode) => void
   /** The full set of modifier keys in force for this item after the physician's click. */
   onDoseModifiers: (itemId: string, keys: string[]) => void
+  /** The bag an antimicrobial infusion is diluted in, picked by the physician. */
+  onBagChoice: (itemId: string, bagVolumeMl: number) => void
   onRemove: (itemId: string) => void
   customIds: string[]
   /** The BSA the doses are given on; the other variant is shown under it when it differs. */
@@ -272,6 +274,7 @@ function DoseRow({
   administrationModes,
   onAdministrationMode,
   onDoseModifiers,
+  onBagChoice,
   onRemove,
   customIds,
   bsaVariant,
@@ -621,6 +624,16 @@ function DoseRow({
                       unit: tu(`units.${result.infusion.concentrationUnit}_ml`),
                     })}
               </Text>
+              {item.bagSwitchable && result.infusion.bagOptions.length > 1 && (
+                <BagVolumeControl
+                  drugName={localize(item.drug.name, language)}
+                  options={result.infusion.bagOptions}
+                  value={result.infusion.bagVolumeMl}
+                  unit={tu(`units.${result.infusion.concentrationUnit}_ml`)}
+                  disabled={!enabled}
+                  onChange={(bag) => onBagChoice(id, bag)}
+                />
+              )}
               {result.infusion.ramp && item.infusionParams?.rate_ramp && (
                 <RampInfo
                   params={item.infusionParams}
@@ -697,6 +710,61 @@ function DoseRow({
         </Table.Td>
       </Table.Tr>
     </>
+  )
+}
+
+/**
+ * The bags the label allows for an antimicrobial, each with the concentration the dose gives in
+ * it. A bag that would take the concentration out of the label's range cannot be picked.
+ */
+function BagVolumeControl({
+  drugName,
+  options,
+  value,
+  unit,
+  disabled,
+  onChange,
+}: {
+  drugName: string
+  options: BagOption[]
+  value: number
+  unit: string
+  disabled: boolean
+  onChange: (bagVolumeMl: number) => void
+}) {
+  const { t } = useTranslation()
+  const language = currentLanguage()
+  return (
+    <Stack gap={4} mt={4}>
+      <Text size="xs" c="dimmed">
+        {t('calculator.doses.bagVolume')}
+      </Text>
+      <SegmentedControl
+        size="xs"
+        disabled={disabled}
+        data={options.map((option) => ({
+          value: String(option.bagVolumeMl),
+          disabled: !option.fits,
+          label: (
+            <span
+              title={
+                option.fits
+                  ? `${formatNumber(option.concentrationPerMl, language, 2)} ${unit}`
+                  : t('calculator.doses.bagOutOfRange', {
+                      concentration: formatNumber(option.concentrationPerMl, language, 2),
+                      unit,
+                    })
+              }
+            >
+              {t('calculator.doses.bagOption', { bag: option.bagVolumeMl })}
+            </span>
+          ),
+        }))}
+        value={String(value)}
+        onChange={(bag) => onChange(Number(bag))}
+        aria-label={`${t('calculator.doses.bagVolume')}: ${drugName}`}
+      />
+    </Stack>
   )
 }
 

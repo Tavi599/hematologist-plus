@@ -7,6 +7,8 @@ import type { RegimenItem } from '../schemas/catalog'
 import {
   activeModifiers,
   applyAdministrationMode,
+  applyBagChoices,
+  canSwitchBag,
   canSwitchInfusionLength,
   protocolInfusionLength,
   applyModifiers,
@@ -405,6 +407,41 @@ describe('infusion length of a multi-day drug', () => {
     const push = { ...doxorubicin([1, 2, 3, 4]), route: 'iv_bolus' as const }
     expect(canSwitchInfusionLength(push)).toBe(false)
     expect(applyAdministrationMode(push, { kind: 'continuous' })).toBe(push)
+  })
+})
+
+describe('bag of an antimicrobial infusion', () => {
+  it('is offered for an anti-infective with more than one bag, not for chemotherapy', () => {
+    const item = { route: 'iv_infusion' as const }
+    expect(canSwitchBag({ atc_code: 'J01DH02' }, item, { bag_volumes_ml: [50, 100] })).toBe(true)
+    expect(canSwitchBag({ atc_code: 'J01DH02' }, item, { bag_volumes_ml: [50] })).toBe(false)
+    expect(canSwitchBag({ atc_code: 'L01DB01' }, item, { bag_volumes_ml: [50, 100] })).toBe(false)
+    expect(
+      canSwitchBag({ atc_code: 'J01DH02' }, { route: 'iv_bolus' }, { bag_volumes_ml: [50, 100] }),
+    ).toBe(false)
+  })
+
+  it('passes the picked bag to the calculation of a switchable row only', () => {
+    const [row] = buildCourseItemsFrom(index(), [
+      customCourseItem({
+        id: 'dox',
+        drugId: 'doxorubicin',
+        doseValue: 9,
+        doseUnit: 'mg_m2',
+        days: [1],
+        route: 'iv_infusion',
+        sortOrder: 0,
+      }),
+    ])
+    expect(applyBagChoices([row!], { dox: 250 })[0]).toBe(row)
+    const switchable = {
+      ...row!,
+      bagSwitchable: true,
+      courseDrug: { ...row!.courseDrug, infusion: { bagVolumesMl: [100, 250] } },
+    }
+    expect(
+      applyBagChoices([switchable], { dox: 250 })[0]!.courseDrug.infusion?.preferredBagMl,
+    ).toBe(250)
   })
 })
 

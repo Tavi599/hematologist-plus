@@ -45,7 +45,7 @@
       "concentration_max_mg_ml": 5,
       "stock_concentration_mg_ml": 50,
       "max_rate_mg_min": 10,
-      "bag_volumes_ml": [100, 250, 500],
+      "bag_volumes_ml": [100, 200, 250, 400, 500],
       "duration_min": 60,
       "is_default": true,
       "sources": [
@@ -57,8 +57,8 @@
         }
       ],
       "notes": {
-        "uk": "Флакон 1000 мг розчиняють 20 мл води (50 мг/мл), далі не менше 200 мл на 1000 мг (до 5 мг/мл) 0,9% NaCl або 5% глюкози. Не менше 60 хв і не швидше 10 мг/хв — що довше. Мішок підібрано так, щоб концентрація лишалась у межах інструкції.",
-        "en": "The 1000 mg vial is dissolved in 20 mL of water (50 mg/mL), then at least 200 mL per 1000 mg (up to 5 mg/mL) of 0.9% NaCl or 5% glucose. At least 60 min and no faster than 10 mg/min, whichever is longer. The bag is chosen to stay within the label range."
+        "uk": "Флакон 1000 мг розчиняють 20 мл води (50 мг/мл), далі не менше 200 мл на 1000 мг (до 5 мг/мл) 0,9% NaCl або 5% глюкози. Не менше 60 хв і не швидше 10 мг/хв — що довше. Мішок підібрано так, щоб концентрація лишалась у межах інструкції. Об'єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
+        "en": "The 1000 mg vial is dissolved in 20 mL of water (50 mg/mL), then at least 200 mL per 1000 mg (up to 5 mg/mL) of 0.9% NaCl or 5% glucose. At least 60 min and no faster than 10 mg/min, whichever is longer. The bag is chosen to stay within the label range. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
       }
     }
   ],

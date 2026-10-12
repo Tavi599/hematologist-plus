@@ -40,7 +40,7 @@
       "solvent": "sodium_chloride_0_9",
       "concentration_max_mg_ml": 2.5,
       "stock_concentration_mg_ml": 250,
-      "bag_volumes_ml": [100, 250, 500],
+      "bag_volumes_ml": [100, 200, 250, 400, 500],
       "duration_min": 30,
       "is_default": true,
       "sources": [
@@ -52,8 +52,8 @@
         }
       ],
       "notes": {
-        "uk": "Розчин 250 мг/мл, розводять 0,9% NaCl або 5% глюкозою; в/в інфузія 0,25% (2,5 мг/мл) за 30 хв, дорослим 30–60 хв. Не змішувати з іншими препаратами.",
-        "en": "Solution 250 mg/mL, diluted with 0.9% NaCl or 5% glucose; an IV infusion of 0.25% (2.5 mg/mL) over 30 min, 30-60 min in adults. Not to be mixed with other drugs."
+        "uk": "Розчин 250 мг/мл, розводять 0,9% NaCl або 5% глюкозою; в/в інфузія 0,25% (2,5 мг/мл) за 30 хв, дорослим 30–60 хв. Не змішувати з іншими препаратами. Об'єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
+        "en": "Solution 250 mg/mL, diluted with 0.9% NaCl or 5% glucose; an IV infusion of 0.25% (2.5 mg/mL) over 30 min, 30-60 min in adults. Not to be mixed with other drugs. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
       }
     }
   ],

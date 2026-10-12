@@ -45,7 +45,7 @@
       "concentration_min_mg_ml": 1,
       "concentration_max_mg_ml": 40,
       "stock_concentration_mg_ml": 160,
-      "bag_volumes_ml": [50, 100],
+      "bag_volumes_ml": [50, 100, 200, 250],
       "duration_min": 30,
       "is_default": true,
       "sources": [
@@ -57,8 +57,8 @@
         }
       ],
       "notes": {
-        "uk": "Флакон 2 г відновлюють 10 мл (≈ 160 мг/мл), розводять 0,9% NaCl або 5% глюкозою до 1–40 мг/мл; інфузія близько 30 хв. Мішок підібрано так, щоб концентрація лишалась у межах інструкції.",
-        "en": "The 2 g vial is reconstituted with 10 mL (about 160 mg/mL) and diluted with 0.9% NaCl or 5% dextrose to 1-40 mg/mL; infused over about 30 min. The bag is chosen to stay within the label range."
+        "uk": "Флакон 2 г відновлюють 10 мл (≈ 160 мг/мл), розводять 0,9% NaCl або 5% глюкозою до 1–40 мг/мл; інфузія близько 30 хв. Мішок підібрано так, щоб концентрація лишалась у межах інструкції. Об'єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
+        "en": "The 2 g vial is reconstituted with 10 mL (about 160 mg/mL) and diluted with 0.9% NaCl or 5% dextrose to 1-40 mg/mL; infused over about 30 min. The bag is chosen to stay within the label range. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
       }
     }
   ],

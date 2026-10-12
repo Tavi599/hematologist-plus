@@ -99,6 +99,19 @@ export interface InfusionParams {
    * duration at that pace runs longer: the duration becomes dose ÷ rate, rounded up.
    */
   maxRateMgMin?: number
+  /**
+   * The bag the physician picked. Used while the concentration stays within the limits; otherwise
+   * the smallest bag that keeps them is chosen as usual.
+   */
+  preferredBagMl?: number
+}
+
+/** One bag on offer for the dose: what the concentration would be in it and whether that is allowed. */
+export interface BagOption {
+  bagVolumeMl: number
+  totalVolumeMl: number
+  concentrationPerMl: number
+  fits: boolean
 }
 
 export type InfusionIssue = 'concentration_out_of_range'
@@ -115,6 +128,8 @@ export interface InfusionResult {
   rateMlH: number | null
   rateGttMin: number | null
   issue: InfusionIssue | null
+  /** Every bag of the drug with the concentration it gives; empty for an undiluted infusion. */
+  bagOptions: BagOption[]
   /** Set when the drug is given at a rising rate; the duration comes from here, not from the regimen. */
   ramp: RampDurations | null
   /** Duration the rate was worked out for; longer than the regimen's when the dose needs it. */
@@ -181,7 +196,14 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
     params.concentrationMinMgMl === undefined ||
     concentrationFor(bag) >= params.concentrationMinMgMl
 
-  let bagVolumeMl = undiluted ? 0 : bags.find((bag) => fitsMax(bag) && fitsMin(bag))
+  const fits = (bag: number) => fitsMax(bag) && fitsMin(bag)
+  const preferred =
+    params.preferredBagMl !== undefined &&
+    bags.includes(params.preferredBagMl) &&
+    fits(params.preferredBagMl)
+      ? params.preferredBagMl
+      : undefined
+  let bagVolumeMl = undiluted ? 0 : (preferred ?? bags.find(fits))
   let issue: InfusionIssue | null = null
   if (bagVolumeMl === undefined) {
     issue = 'concentration_out_of_range'
@@ -285,6 +307,13 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
     })
   }
 
+  const bagOptions: BagOption[] = bags.map((bag) => ({
+    bagVolumeMl: bag,
+    totalVolumeMl: bag + drugVolumeMl,
+    concentrationPerMl: doseAmount / (bag + drugVolumeMl),
+    fits: fits(bag),
+  }))
+
   return {
     bagVolumeMl,
     drugVolumeMl,
@@ -296,6 +325,7 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
     rateMlH,
     rateGttMin,
     issue,
+    bagOptions,
     steps,
   }
 }

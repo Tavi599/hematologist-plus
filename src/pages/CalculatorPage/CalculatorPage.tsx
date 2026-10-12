@@ -35,6 +35,7 @@ import {
   type ThromboAgent,
 } from '../../lib/standard-support'
 import {
+  applyBagChoices,
   buildCourseItems,
   buildCourseItemsFrom,
   type AdministrationMode,
@@ -114,6 +115,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [mesnaFor, setMesnaFor] = useState<string[]>([])
   // Rows the physician gives by another route the label allows at the same dose.
   const [chosenRoutes, setChosenRoutes] = useState<Record<string, RegimenItem['route']>>({})
+  // Bags the physician picked for antimicrobial infusions, by row.
+  const [chosenBags, setChosenBags] = useState<Record<string, number>>({})
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
   const regimenId = searchParams.get('regimen')
@@ -196,26 +199,33 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   // itself: antiemetics and prophylaxis, added as ordinary rows so they are calculated, scheduled
   // and printed like the rest.
   const baseItems = useMemo(
-    () => [
-      ...ownItems,
-      ...buildCourseItemsFrom(
-        catalog,
-        standardSupportRows(
-          catalog,
-          ownItems,
-          regimenId === null ? null : (catalog.regimens.get(regimenId)?.cycle_length_days ?? null),
-          courseSettings.startDate,
-          support,
-          thromboAgent,
-        ),
-        chosenDoses,
-        chosenModifiers,
-        administrationModes,
+    () =>
+      applyBagChoices(
+        [
+          ...ownItems,
+          ...buildCourseItemsFrom(
+            catalog,
+            standardSupportRows(
+              catalog,
+              ownItems,
+              regimenId === null
+                ? null
+                : (catalog.regimens.get(regimenId)?.cycle_length_days ?? null),
+              courseSettings.startDate,
+              support,
+              thromboAgent,
+            ),
+            chosenDoses,
+            chosenModifiers,
+            administrationModes,
+          ),
+        ],
+        chosenBags,
       ),
-    ],
     [
       catalog,
       ownItems,
+      chosenBags,
       regimenId,
       courseSettings.startDate,
       support,
@@ -568,6 +578,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                     })
                     setAdministrationModes((current) => ({ ...current, [id]: mode }))
                   }}
+                  onBagChoice={(id, bag) => setChosenBags((current) => ({ ...current, [id]: bag }))}
                   onDoseModifiers={(id, keys) =>
                     setChosenModifiers((current) => ({ ...current, [id]: keys }))
                   }
