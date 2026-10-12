@@ -20,5 +20,20 @@
       "form": "capsule",
       "strength_amount": 25
     }
+  ],
+  "interactions": [
+    {
+      "with": ["posaconazole", "voriconazole", "clarithromycin"],
+      "level": "caution",
+      "notes": {
+        "uk": "Сильні інгібітори CYP3A4 підвищують рівень мідостаурину, особливо на (повторному) початку: розглянути альтернативу; якщо її немає — ретельно стежити за токсичністю. SmPC наводить кетоконазол, ітраконазол, кларитроміцин; позаконазол і вориконазол — сильні інгібітори CYP3A за SmPC венетоклаксу й івосиденібу.",
+        "en": "Strong CYP3A4 inhibitors raise midostaurin levels, above all on (re)starting: consider an alternative; without one, watch closely for toxicity. The SmPC names ketoconazole, itraconazole, clarithromycin; posaconazole and voriconazole are strong CYP3A inhibitors per the venetoclax and ivosidenib SmPCs."
+      },
+      "source": {
+        "name": "SmPC Rydapt 25 mg soft capsules (emc), 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/9134/smpc",
+        "checkedOn": "2026-10-13"
+      }
+    }
   ]
 }

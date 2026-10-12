@@ -24,6 +24,8 @@ import { PatientForm } from '../../features/calculator/PatientForm'
 import { ScheduleTable } from '../../features/calculator/ScheduleTable'
 import { SupplyTable } from '../../features/calculator/SupplyTable'
 import { WarningList } from '../../features/calculator/WarningList'
+import { InteractionList } from '../../features/calculator/InteractionList'
+import { courseInteractions } from '../../lib/course-interactions'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
 import { RegimenEvidence } from '../../features/catalog/RegimenEvidence'
 import type { CatalogIndex } from '../../lib/catalog-index'
@@ -392,6 +394,15 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     mesnaFor,
   ])
 
+  // What the labels say of the drugs switched on in this course given together.
+  const interactions = useMemo(
+    () =>
+      courseInteractions(
+        items.filter((entry) => !disabledIds.includes(entry.item.id)).map((entry) => entry.drug),
+      ),
+    [items, disabledIds],
+  )
+
   const regimen = regimenId === null ? undefined : catalog.regimens.get(regimenId)
   /** Another phase picked by hand: the cycle number moves into it when it counts cycles. */
   const choosePhase = (phaseId: string) => {
@@ -575,6 +586,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
               )}
             </Card>
             <WarningList warnings={course.warnings} />
+            <InteractionList interactions={interactions} />
           </>
         )}
 

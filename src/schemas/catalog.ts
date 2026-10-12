@@ -30,6 +30,7 @@ import {
   routeAlternativeSchema,
   drugCautionSchema,
   drugMonitoringSchema,
+  drugInteractionSchema,
   regimenCourseSchema,
   unitEquivalenceSchema,
 } from './common'
@@ -89,6 +90,8 @@ export const drugRowSchema = z.object({
   dose_rounding_step: positiveNumberSchema.nullable().catch(null).default(null),
   /** What to watch while the drug is given; a reminder in the calculator, no dose change. */
   monitoring: z.array(drugMonitoringSchema).nullable().catch(null).default(null),
+  /** What the label says of giving the drug with others in the catalog; shown, never applied. */
+  interactions: z.array(drugInteractionSchema).nullable().catch(null).default(null),
 })
 
 export const drugPresentationRowSchema = z.object({

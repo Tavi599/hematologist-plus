@@ -286,6 +286,17 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
 
   // A regimen is kept even when a drug cannot be obtained; the report says which ones.
   const drugById = new Map(rows.drugs.map((drug) => [drug.id, drug]))
+  // An interaction names drugs of the catalog, never the drug itself: a misspelt id would
+  // silently never show.
+  for (const drug of rows.drugs) {
+    for (const interaction of drug.interactions ?? []) {
+      for (const other of interaction.with) {
+        if (other === drug.id || !drugById.has(other)) {
+          error('drugs', drug.id, `interactions: "${other}" is not another drug of the catalog`)
+        }
+      }
+    }
+  }
   const blockedByRegimen = new Map<string, string[]>()
   for (const item of rows.regimen_items) {
     if (drugById.get(item.drug_id)?.availability !== 'unavailable') continue

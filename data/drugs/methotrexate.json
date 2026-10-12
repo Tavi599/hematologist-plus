@@ -75,5 +75,63 @@
       "form": "vial",
       "strength_amount": 1000
     }
+  ],
+  "interactions": [
+    {
+      "with": ["co-trimoxazole"],
+      "level": "avoid",
+      "notes": {
+        "uk": "Ко-тримоксазол: поєднання краще не призначати — описане (рідко тяжке) пригнічення кровотворення.",
+        "en": "Co-trimoxazole: the combination is better avoided; (rarely severe) marrow suppression is reported."
+      },
+      "source": {
+        "name": "SmPC Methotrexate 100 mg/ml Injection (Hospira, emc), 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/6756/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 08/2026"
+      }
+    },
+    {
+      "with": ["omeprazole"],
+      "level": "avoid",
+      "notes": {
+        "uk": "ІПП з високими дозами метотрексату — уникати (сповільнюють виведення).",
+        "en": "PPIs with high-dose methotrexate: avoid (they slow its elimination)."
+      },
+      "source": {
+        "name": "SmPC Methotrexate 100 mg/ml Injection (Hospira, emc), 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/6756/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 08/2026"
+      }
+    },
+    {
+      "with": ["piperacillin-tazobactam", "ciprofloxacin"],
+      "level": "caution",
+      "notes": {
+        "uk": "Пеніциліни можуть зменшувати нирковий кліренс метотрексату; з ципрофлоксацином — ретельний контроль.",
+        "en": "Penicillins may reduce the renal clearance of methotrexate; with ciprofloxacin, careful monitoring."
+      },
+      "source": {
+        "name": "SmPC Methotrexate 100 mg/ml Injection (Hospira, emc), 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/6756/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 08/2026"
+      }
+    },
+    {
+      "with": ["vancomycin", "amikacin", "colistimethate", "amphotericin-b-liposomal"],
+      "level": "avoid",
+      "notes": {
+        "uk": "Нефротоксичні препарати — уникати: посилюють нефротоксичність.",
+        "en": "Nephrotoxic drugs: avoid, they add to the nephrotoxicity."
+      },
+      "source": {
+        "name": "SmPC Methotrexate 100 mg/ml Injection (Hospira, emc), 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/6756/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 08/2026"
+      }
+    }
   ]
 }

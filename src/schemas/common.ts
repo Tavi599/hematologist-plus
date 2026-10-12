@@ -213,6 +213,25 @@ export const drugMonitoringSchema = z.strictObject({
 export type DrugMonitoring = z.infer<typeof drugMonitoringSchema>
 
 /**
+ * How strongly a label speaks of giving two drugs together: contraindicated; avoid; give at the
+ * lower dose it states; give with caution and monitoring.
+ */
+export const INTERACTION_LEVELS = ['contraindicated', 'avoid', 'dose_adjust', 'caution'] as const
+
+/**
+ * What the drug's label says of giving it with others: written once, on the drug whose label
+ * says it, naming the drugs of the catalog it concerns. The calculator shows it when both are in
+ * the course; it changes no dose.
+ */
+export const drugInteractionSchema = z.strictObject({
+  with: z.array(idSchema).min(1),
+  level: z.enum(INTERACTION_LEVELS),
+  notes: localizedTextSchema,
+  source: sourceSchema,
+})
+export type DrugInteraction = z.infer<typeof drugInteractionSchema>
+
+/**
  * One phase of a course split into several records — cycle 1 with its premedication and slow
  * first infusion, cycles 2–6, maintenance. The phases share the course id and title; a phase
  * that follows the cycle count says which cycles it covers, so the calculator can give the right

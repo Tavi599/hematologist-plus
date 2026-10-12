@@ -57,5 +57,33 @@
       "form": "tablet",
       "strength_amount": 100
     }
+  ],
+  "interactions": [
+    {
+      "with": ["posaconazole", "voriconazole", "clarithromycin"],
+      "level": "dose_adjust",
+      "notes": {
+        "uk": "Сильні інгібітори CYP3A. ХЛЛ: на початку й під час титрування — протипоказано. ГМЛ: титрування 10 → 20 → 50 → ≤ 100 мг (дні 1–4). Після титрування — ≤ 100 мг на добу (або щонайменше на 75%, якщо доза вже змінена). Попередню дозу — через 2–3 дні після відміни інгібітора.",
+        "en": "Strong CYP3A inhibitors. CLL: contraindicated at initiation and during titration. AML: titrate 10 → 20 → 50 → ≤ 100 mg (days 1-4). After titration, ≤ 100 mg a day (or at least 75% less if already modified). The previous dose 2-3 days after the inhibitor stops."
+      },
+      "source": {
+        "name": "SmPC Venclyxto 100 mg film-coated tablets (emc), 4.2 табл. 7, 4.3, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/10476/smpc",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "with": ["fluconazole", "ciprofloxacin"],
+      "level": "dose_adjust",
+      "notes": {
+        "uk": "Помірні інгібітори CYP3A: дозу венетоклаксу зменшити щонайменше на 50%. ХЛЛ: на початку й під час титрування — уникати (або альтернатива).",
+        "en": "Moderate CYP3A inhibitors: reduce the venetoclax dose by at least 50%. CLL: avoid at initiation and during titration (or an alternative)."
+      },
+      "source": {
+        "name": "SmPC Venclyxto 100 mg film-coated tablets (emc), 4.2 табл. 7, 4.3, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/10476/smpc",
+        "checkedOn": "2026-10-13"
+      }
+    }
   ]
 }

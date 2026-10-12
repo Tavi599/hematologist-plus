@@ -24,5 +24,21 @@
       "form": "tablet",
       "strength_amount": 40
     }
+  ],
+  "interactions": [
+    {
+      "with": ["posaconazole", "voriconazole", "clarithromycin"],
+      "level": "caution",
+      "notes": {
+        "uk": "Сильні інгібітори CYP3A/P-gp підвищують рівень гілтеритинібу: розглянути альтернативу; якщо її немає — ретельно стежити за токсичністю.",
+        "en": "Strong CYP3A/P-gp inhibitors raise gilteritinib levels: consider an alternative; without one, watch closely for toxicity."
+      },
+      "source": {
+        "name": "SmPC Gilteritinib Astellas 40 mg (Xospata, emc), 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/10832/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 01.09.2025"
+      }
+    }
   ]
 }

@@ -31,6 +31,7 @@ import {
   routeAlternativeSchema,
   drugCautionSchema,
   drugMonitoringSchema,
+  drugInteractionSchema,
   regimenCourseSchema,
   unitEquivalenceSchema,
 } from '../../src/schemas/common'
@@ -98,6 +99,8 @@ export const drugFileSchema = z.strictObject({
   cautions: z.array(drugCautionSchema).nullable().default(null),
   /** What to watch while the drug is given: levels, kidneys, blood count, hearing. */
   monitoring: z.array(drugMonitoringSchema).nullable().default(null),
+  /** What the label says of giving the drug with others in the catalog. */
+  interactions: z.array(drugInteractionSchema).nullable().default(null),
   review_rules: reviewRulesSchema.nullable().default(null),
   /** Weight a dose per kilogram goes on: actual, or ideal/adjusted for an aminoglycoside. */
   dosing_weight: z.enum(['actual', 'aminoglycoside']).default('actual'),

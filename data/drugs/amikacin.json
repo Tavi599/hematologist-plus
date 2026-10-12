@@ -150,5 +150,42 @@
         "checkedOn": "2026-10-13"
       }
     }
+  ],
+  "interactions": [
+    {
+      "with": [
+        "vancomycin",
+        "amphotericin-b-liposomal",
+        "colistimethate",
+        "cisplatin",
+        "ciclosporin",
+        "tacrolimus"
+      ],
+      "level": "avoid",
+      "notes": {
+        "uk": "Інші нефро-, ото- чи нейротоксичні препарати — уникати (адитивна дія); якщо неминуче — ретельний контроль нирок, слуху й рівнів.",
+        "en": "Other nephro-, oto- or neurotoxic drugs: avoid (additive effects); if unavoidable, monitor kidneys, hearing and levels closely."
+      },
+      "source": {
+        "name": "SmPC Amikacin 250 mg/ml Injection (Hospira, emc), 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/3784/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 03/2024"
+      }
+    },
+    {
+      "with": ["furosemide"],
+      "level": "avoid",
+      "notes": {
+        "uk": "Потужні петльові діуретики — уникати: самі ототоксичні.",
+        "en": "Potent loop diuretics: avoid, they are ototoxic themselves."
+      },
+      "source": {
+        "name": "SmPC Amikacin 250 mg/ml Injection (Hospira, emc), 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/3784/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 03/2024"
+      }
+    }
   ]
 }

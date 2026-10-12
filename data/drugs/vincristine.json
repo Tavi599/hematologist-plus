@@ -91,5 +91,21 @@
       ],
       "stock_concentration_mg_ml": 1
     }
+  ],
+  "interactions": [
+    {
+      "with": ["posaconazole", "voriconazole", "fluconazole"],
+      "level": "caution",
+      "notes": {
+        "uk": "Азоли підвищують рівень вінкристину й нейротоксичність: лише якщо немає іншого протигрибкового засобу, з ретельним спостереженням; з вориконазолом — розглянути зменшення дози вінкристину.",
+        "en": "Azoles raise vincristine levels and neurotoxicity: only if no other antifungal will do, with close watch; with voriconazole, consider reducing the vincristine dose."
+      },
+      "source": {
+        "name": "SmPC Vincristine Sulfate 1 mg/ml (Hospira, emc), 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/1501/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 08/2026"
+      }
+    }
   ]
 }

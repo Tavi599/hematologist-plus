@@ -114,5 +114,41 @@
         "checkedOn": "2026-10-13"
       }
     }
+  ],
+  "interactions": [
+    {
+      "with": ["ciclosporin", "tacrolimus"],
+      "level": "caution",
+      "notes": {
+        "uk": "Інші нефротоксичні препарати: посилення нефротоксичності — контроль нирок.",
+        "en": "Other nephrotoxic drugs: added nephrotoxicity, monitor the kidneys."
+      },
+      "source": {
+        "name": "SmPC Amphotericin B Gilead liposomal 50 mg (AmBisome, emc), 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/1022/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 03.02.2025"
+      }
+    },
+    {
+      "with": [
+        "dexamethasone",
+        "methylprednisolone",
+        "prednisolone",
+        "hydrocortisone",
+        "furosemide"
+      ],
+      "level": "caution",
+      "notes": {
+        "uk": "Кортикостероїди й діуретики посилюють гіпокаліємію — контроль K.",
+        "en": "Corticosteroids and diuretics add to the hypokalaemia: monitor K."
+      },
+      "source": {
+        "name": "SmPC Amphotericin B Gilead liposomal 50 mg (AmBisome, emc), 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/1022/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 03.02.2025"
+      }
+    }
   ]
 }

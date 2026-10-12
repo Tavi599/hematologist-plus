@@ -24,5 +24,40 @@
       "form": "tablet",
       "strength_amount": 250
     }
+  ],
+  "interactions": [
+    {
+      "with": ["posaconazole", "voriconazole", "clarithromycin", "fluconazole"],
+      "level": "dose_adjust",
+      "notes": {
+        "uk": "Сильні й помірні (флуконазол) інгібітори CYP3A4: івосиденіб 250 мг на добу, якщо їх не уникнути; 500 мг — через 5 періодів напіввиведення після відміни інгібітора.",
+        "en": "Strong and moderate (fluconazole) CYP3A4 inhibitors: ivosidenib 250 mg a day if they cannot be avoided; 500 mg again 5 half-lives after the inhibitor stops."
+      },
+      "source": {
+        "name": "SmPC Tibsovo 250 mg film-coated tablets (emc), 4.2, 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/14886/smpc",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "with": [
+        "levofloxacin",
+        "ciprofloxacin",
+        "moxifloxacin",
+        "voriconazole",
+        "posaconazole",
+        "fluconazole"
+      ],
+      "level": "caution",
+      "notes": {
+        "uk": "Подовження QT: фторхінолони й тріазоли — уникати, де можливо; інакше ЕКГ до початку і щотижня щонайменше 3 тижні.",
+        "en": "QT prolongation: fluoroquinolones and triazoles to be avoided where possible; otherwise an ECG before and weekly for at least 3 weeks."
+      },
+      "source": {
+        "name": "SmPC Tibsovo 250 mg film-coated tablets (emc), 4.2, 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/14886/smpc",
+        "checkedOn": "2026-10-13"
+      }
+    }
   ]
 }

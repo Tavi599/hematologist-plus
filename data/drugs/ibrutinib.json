@@ -52,5 +52,33 @@
       "form": "tablet",
       "strength_amount": 140
     }
+  ],
+  "interactions": [
+    {
+      "with": ["posaconazole", "voriconazole", "clarithromycin"],
+      "level": "avoid",
+      "notes": {
+        "uk": "Сильні інгібітори CYP3A4 — уникати. Якщо неминуче: ібрутиніб 140 мг на добу на час інгібітора або перерва до 7 днів.",
+        "en": "Strong CYP3A4 inhibitors: avoid. If unavoidable, ibrutinib 140 mg a day while on the inhibitor, or withhold for up to 7 days."
+      },
+      "source": {
+        "name": "SmPC Imbruvica 140 mg film-coated tablets (emc), 4.2, 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/10025/smpc",
+        "checkedOn": "2026-10-13"
+      }
+    },
+    {
+      "with": ["fluconazole", "ciprofloxacin"],
+      "level": "dose_adjust",
+      "notes": {
+        "uk": "Помірні інгібітори CYP3A4: ібрутиніб 280 мг на добу на час інгібітора.",
+        "en": "Moderate CYP3A4 inhibitors: ibrutinib 280 mg a day while on the inhibitor."
+      },
+      "source": {
+        "name": "SmPC Imbruvica 140 mg film-coated tablets (emc), 4.2, 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/10025/smpc",
+        "checkedOn": "2026-10-13"
+      }
+    }
   ]
 }

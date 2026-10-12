@@ -25,5 +25,20 @@
       "form": "tablet",
       "strength_amount": 26.5
     }
+  ],
+  "interactions": [
+    {
+      "with": ["posaconazole", "voriconazole", "clarithromycin"],
+      "level": "dose_adjust",
+      "notes": {
+        "uk": "Сильні інгібітори CYP3A: індукція й консолідація — 17,7 мг замість 35,4 мг; підтримка — 17,7 мг замість 26,5 мг (перші 2 тижні) і 26,5 мг замість 53 мг. Флуконазол дози не змінює.",
+        "en": "Strong CYP3A inhibitors: induction and consolidation 17.7 mg instead of 35.4 mg; maintenance 17.7 mg instead of 26.5 mg (first 2 weeks) and 26.5 mg instead of 53 mg. Fluconazole changes no dose."
+      },
+      "source": {
+        "name": "SmPC Vanflyta 26.5 mg film-coated tablets (emc), 4.2 табл. 3, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/15558/smpc",
+        "checkedOn": "2026-10-13"
+      }
+    }
   ]
 }

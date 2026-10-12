@@ -141,5 +141,27 @@
         "checkedOn": "2026-10-13"
       }
     }
+  ],
+  "interactions": [
+    {
+      "with": [
+        "amphotericin-b-liposomal",
+        "colistimethate",
+        "piperacillin-tazobactam",
+        "cisplatin",
+        "furosemide"
+      ],
+      "level": "caution",
+      "notes": {
+        "uk": "Посилення нефро- й ототоксичності: серійний контроль креатиніну, рівня ванкоміцину, слуху.",
+        "en": "Added nephro- and ototoxicity: serial creatinine, vancomycin levels, hearing."
+      },
+      "source": {
+        "name": "SmPC Vancomycin 1000 mg powder for concentrate for solution for infusion (hameln, emc), 4.4, 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/15737/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 19.01.2026"
+      }
+    }
   ]
 }

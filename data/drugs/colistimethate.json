@@ -120,5 +120,21 @@
         "checkedOn": "2026-10-13"
       }
     }
+  ],
+  "interactions": [
+    {
+      "with": ["cefepime", "cefotaxime"],
+      "level": "caution",
+      "notes": {
+        "uk": "З цефалоспоринами можливий вищий ризик нефротоксичності.",
+        "en": "With cephalosporins the risk of nephrotoxicity may be higher."
+      },
+      "source": {
+        "name": "SmPC Colomycin 1 million IU (emc), 4.5",
+        "url": "https://www.medicines.org.uk/emc/product/1094/smpc",
+        "checkedOn": "2026-10-13",
+        "version": "ред. 19.04.2023"
+      }
+    }
   ]
 }

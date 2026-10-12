@@ -340,6 +340,15 @@
       "supply": "Vials / need",
       "print": "Print and header",
       "empty": "The result appears here once there is a patient and a regimen (or hand-written lines)."
+    },
+    "interactions": {
+      "title": "Interactions in the course",
+      "level": {
+        "contraindicated": "contraindicated",
+        "avoid": "avoid",
+        "dose_adjust": "adjust the dose",
+        "caution": "caution"
+      }
     }
   },
   "need": {
