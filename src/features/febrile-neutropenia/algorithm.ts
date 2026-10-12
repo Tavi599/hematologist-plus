@@ -492,13 +492,26 @@ export const AGENTS: { group: Text2; agents: Agent[] }[] = [
           'Амоксицилін/клавуланат + ципрофлоксацин',
           'Amoxicillin/clavulanate + ciprofloxacin',
         ),
-        dose: null,
-        source: null,
+        dose: t(
+          'Ципрофлоксацин 750 мг двічі + амоксицилін/клавуланат 500/125 мг тричі (чи 875/125 мг двічі) на добу',
+          'Ciprofloxacin 750 mg twice + amoxicillin/clavulanate 500/125 mg three times (or 875/125 mg twice) a day',
+        ),
+        source: {
+          name: 'UpToDate: Neutropenic fever syndromes in adult cancer patients at low risk for complications',
+          url: 'https://www.uptodate.com/contents/treatment-and-prevention-of-neutropenic-fever-syndromes-in-adult-cancer-patients-at-low-risk-for-complications',
+        },
+        regimenId: 'ref-fn-outpatient-oral',
       },
       {
         name: t('Моксифлоксацин — альтернатива', 'Moxifloxacin as the alternative'),
-        dose: null,
-        source: null,
+        dose: t(
+          '400 мг раз на добу — монотерапія лише при алергії і на пеніциліни, і на цефалоспорини; на синьогнійну паличку не діє',
+          '400 mg once daily, alone only with an allergy to both penicillins and cephalosporins; not active against Pseudomonas',
+        ),
+        source: {
+          name: 'UpToDate: Neutropenic fever syndromes in adult cancer patients at low risk for complications',
+          url: 'https://www.uptodate.com/contents/treatment-and-prevention-of-neutropenic-fever-syndromes-in-adult-cancer-patients-at-low-risk-for-complications',
+        },
       },
     ],
   },

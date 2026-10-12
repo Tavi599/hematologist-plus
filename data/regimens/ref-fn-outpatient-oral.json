@@ -1,63 +1,153 @@
 {
-  "$comment": "AGIHO 2024, рисунок 2: стандартний ризик, MASCC ≥ 21 і всі умови безпеки — амбулаторно амоксицилін/клавуланат + ципрофлоксацин, при протипоказаннях моксифлоксацин (AI). Доз настанова не наводить; інструкції цих препаратів для ФН не перевірено — тому картка без розрахунку.",
+  "$comment": "AGIHO 2024 (рис. 2): стандартний ризик, MASCC ≥ 21 і всі умови безпеки — амбулаторно амоксицилін/клавуланат + ципрофлоксацин, при протипоказаннях моксифлоксацин (AI); доз настанова не наводить. Дози — UpToDate (ципрофлоксацин 750 мг двічі + амоксицилін/клавуланат 500/125 тричі або 875/125 двічі). Обрано 500/125 тричі: лише для нього SmPC дає дози при КК < 30 (7:1 — 875/125 — там не рекомендовано). Корекція за КК — SmPC обох препаратів.",
   "id": "ref-fn-outpatient-oral",
   "short_name": "Амокс/клав + ципро (ФН)",
   "name": {
     "uk": "Амоксицилін/клавуланат + ципрофлоксацин — амбулаторно при ФН стандартного ризику",
     "en": "Amoxicillin/clavulanate + ciprofloxacin: outpatient FN at standard risk"
   },
+  "description": {
+    "uk": "Стандартний ризик (нейтропенія ≤ 7 днів, без клінічних чинників), MASCC ≥ 21 і всі умови безпеки: перорально вдома з щоденним оглядом (AGIHO AI). Ципрофлоксацин 750 мг двічі + амоксицилін/клавуланат 500/125 мг тричі на добу (UpToDate). Не після профілактики фторхінолонами.",
+    "en": "Standard risk (neutropenia ≤ 7 days, no clinical factors), MASCC ≥ 21 and every safety condition: oral at home with a daily review (AGIHO AI). Ciprofloxacin 750 mg twice + amoxicillin/clavulanate 500/125 mg three times a day (UpToDate). Not after fluoroquinolone prophylaxis."
+  },
   "sources": [
     {
-      "name": "Sandherr M et al. 2024 update of the AGIHO guideline on diagnosis and empirical treatment of fever of unknown origin (FUO) in adult neutropenic patients. Lancet Reg Health Eur 2025;51:101214",
+      "name": "Sandherr M et al. 2024 update of the AGIHO guideline on diagnosis and empirical treatment of fever of unknown origin (FUO) in adult neutropenic patients. Lancet Reg Health Eur 2025;51:101214, рис. 2",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11836497/",
       "checkedOn": "2026-10-11"
+    },
+    {
+      "name": "UpToDate: Treatment and prevention of neutropenic fever syndromes in adult cancer patients at low risk for complications, Empiric antibacterial regimens",
+      "url": "https://www.uptodate.com/contents/treatment-and-prevention-of-neutropenic-fever-syndromes-in-adult-cancer-patients-at-low-risk-for-complications",
+      "checkedOn": "2026-10-13"
+    },
+    {
+      "name": "SmPC Augmentin 625 mg Tablets (500 mg/125 mg) (emc), 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/281/smpc",
+      "version": "ред. 24.02.2026",
+      "checkedOn": "2026-10-13"
+    },
+    {
+      "name": "SmPC Co-amoxiclav 875mg/125mg film-coated Tablets (Brown & Burk, emc), 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/10877/smpc",
+      "version": "ред. 19.09.2025",
+      "checkedOn": "2026-10-13"
+    },
+    {
+      "name": "SmPC Ciprofloxacin 750mg film-coated tablets (Aurobindo-Milpharm, emc), 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/7258/smpc",
+      "version": "ред. 29.05.2026",
+      "checkedOn": "2026-10-13"
     }
   ],
-  "reference": {
-    "summary": {
-      "uk": "Стандартний ризик (нейтропенія ≤ 7 днів, без клінічних чинників), MASCC ≥ 21 і всі умови безпеки — пероральна терапія вдома з щоденним оглядом (AI).",
-      "en": "Standard risk (neutropenia ≤ 7 days, no clinical factors), MASCC ≥ 21 and every safety condition: oral therapy at home with a daily review (AI)."
-    },
-    "drugs": [
-      {
-        "name": {
-          "uk": "Амоксицилін/клавуланат",
-          "en": "Amoxicillin/clavulanate"
+  "items": [
+    {
+      "key": "amoxicillin-clavulanate",
+      "drug_id": "amoxicillin-clavulanate",
+      "route": "oral",
+      "dose_value": 500,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "notes": {
+        "uk": "500/125 мг тричі на добу (UpToDate; SmPC — звичайна доза). Альтернатива UpToDate — 875/125 мг двічі на добу, але при КК < 30 SmPC її не рекомендує. Алергія на пеніциліни: UpToDate — кліндаміцин 300 мг 4 рази + ципрофлоксацин; якщо безпечні цефалоспорини — цефіксим 400 мг раз на добу + ципрофлоксацин; інакше монотерапія левофлоксацином 750 мг чи моксифлоксацином 400 мг раз на добу. Розраховано дні 1–4: щоденний огляд, рішення через 72–96 год; гарячка понад 96 год, нестабільність чи втрата комплаєнсу — негайно в стаціонар. При КК ≤ 30 мл/хв доза коригується за кліренсом автоматично (SmPC).",
+        "en": "500/125 mg three times a day (UpToDate; the usual SmPC dose). The UpToDate alternative is 875/125 mg twice a day, but the SmPC advises against it below CrCl 30. Penicillin allergy: UpToDate, clindamycin 300 mg four times + ciprofloxacin; if cephalosporins are safe, cefixime 400 mg once daily + ciprofloxacin; otherwise levofloxacin 750 mg or moxifloxacin 400 mg once daily alone. Days 1-4 are calculated: daily review, a decision at 72-96 h; fever beyond 96 h, instability or lost compliance: admit at once. With CrCl ≤ 30 mL/min the dose follows the clearance automatically (SmPC)."
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 10,
+          "crcl_max": 30,
+          "dose_value": 500,
+          "administrations_per_day": 2,
+          "withhold": null,
+          "interval_min": 720,
+          "notes": {
+            "uk": "SmPC (500/125): КК 10–30 — 500/125 мг двічі на добу.",
+            "en": "SmPC (500/125): CrCl 10-30, 500/125 mg twice a day."
+          },
+          "source": {
+            "name": "SmPC Augmentin 625 mg Tablets (500 mg/125 mg) (emc), 4.2",
+            "url": "https://www.medicines.org.uk/emc/product/281/smpc",
+            "version": "ред. 24.02.2026",
+            "checkedOn": "2026-10-13"
+          }
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 9,
+          "dose_value": 500,
+          "administrations_per_day": 1,
+          "withhold": null,
+          "interval_min": null,
+          "notes": {
+            "uk": "SmPC (500/125): КК < 10 — 500/125 мг раз на добу; гемодіаліз — ще 500/125 під час і після сеансу (не розраховується).",
+            "en": "SmPC (500/125): CrCl < 10, 500/125 mg once a day; haemodialysis, another 500/125 during and after the session (not calculated)."
+          },
+          "source": {
+            "name": "SmPC Augmentin 625 mg Tablets (500 mg/125 mg) (emc), 4.2",
+            "url": "https://www.medicines.org.uk/emc/product/281/smpc",
+            "version": "ред. 24.02.2026",
+            "checkedOn": "2026-10-13"
+          }
         }
-      },
-      {
-        "name": {
-          "uk": "Ципрофлоксацин",
-          "en": "Ciprofloxacin"
-        },
-        "drug_id": "ciprofloxacin"
-      },
-      {
-        "name": {
-          "uk": "Моксифлоксацин — при протипоказаннях",
-          "en": "Moxifloxacin with contraindications"
-        },
-        "drug_id": "moxifloxacin"
-      }
-    ],
-    "key_info": [
-      {
-        "uk": "Не застосовувати, якщо хворий отримував профілактику фторхінолонами.",
-        "en": "Not if the patient was on fluoroquinolone prophylaxis."
-      },
-      {
-        "uk": "Моксифлоксацин не діє на синьогнійну паличку.",
-        "en": "Moxifloxacin is not active against Pseudomonas."
-      },
-      {
-        "uk": "Нестабільність, гарячка понад 96 год чи втрата комплаєнсу — негайно в стаціонар.",
-        "en": "Instability, fever beyond 96 h or lost compliance: admit at once."
-      }
-    ],
-    "gap": {
-      "uk": "AGIHO доз не наводить, а інструкції цих препаратів для фебрильної нейтропенії не перевірено — дози не розраховуються.",
-      "en": "AGIHO gives no doses and the labels of these drugs were not checked for febrile neutropenia, so no doses are calculated."
+      ]
     },
-    "availability": "registered"
-  }
+    {
+      "key": "ciprofloxacin",
+      "drug_id": "ciprofloxacin",
+      "route": "oral",
+      "dose_value": 750,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "750 мг двічі на добу (UpToDate: найкраща з фторхінолонів активність проти синьогнійної палички; левофлоксацин 750 мг раз на добу — альтернатива). Не застосовувати після профілактики фторхінолонами — тоді в стаціонар на в/в терапію. Моксифлоксацин на синьогнійну паличку не діє. Розраховано дні 1–4: щоденний огляд, рішення через 72–96 год; гарячка понад 96 год, нестабільність чи втрата комплаєнсу — негайно в стаціонар. При КК ≤ 60 мл/хв доза коригується за кліренсом автоматично (SmPC); розбіжність: таблиця SmPC для нирок — до 500 мг на прийом.",
+        "en": "750 mg twice a day (UpToDate: the best anti-Pseudomonas activity of the fluoroquinolones; levofloxacin 750 mg once daily is the alternative). Not after fluoroquinolone prophylaxis: then admit for IV therapy. Moxifloxacin is not active against Pseudomonas. Days 1-4 are calculated: daily review, a decision at 72-96 h; fever beyond 96 h, instability or lost compliance: admit at once. With CrCl ≤ 60 mL/min the dose follows the clearance automatically (SmPC); discrepancy: the SmPC renal table goes up to 500 mg a dose."
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 30,
+          "crcl_max": 60,
+          "dose_value": 500,
+          "administrations_per_day": 2,
+          "withhold": null,
+          "interval_min": 720,
+          "notes": {
+            "uk": "SmPC: КК 30–60 — 250–500 мг кожні 12 год; за замовчуванням верхня межа.",
+            "en": "SmPC: CrCl 30-60, 250-500 mg every 12 h; the upper end by default."
+          },
+          "source": {
+            "name": "SmPC Ciprofloxacin 750mg film-coated tablets (Aurobindo-Milpharm, emc), 4.2",
+            "url": "https://www.medicines.org.uk/emc/product/7258/smpc",
+            "version": "ред. 29.05.2026",
+            "checkedOn": "2026-10-13"
+          },
+          "dose_min": 250,
+          "dose_max": 500
+        },
+        {
+          "crcl_min": 0,
+          "crcl_max": 29,
+          "dose_value": 500,
+          "administrations_per_day": 1,
+          "withhold": null,
+          "interval_min": null,
+          "notes": {
+            "uk": "SmPC: КК < 30 — 250–500 мг кожні 24 год (гемодіаліз — після сеансу); за замовчуванням верхня межа.",
+            "en": "SmPC: CrCl < 30, 250-500 mg every 24 h (haemodialysis: after the session); the upper end by default."
+          },
+          "source": {
+            "name": "SmPC Ciprofloxacin 750mg film-coated tablets (Aurobindo-Milpharm, emc), 4.2",
+            "url": "https://www.medicines.org.uk/emc/product/7258/smpc",
+            "version": "ред. 29.05.2026",
+            "checkedOn": "2026-10-13"
+          },
+          "dose_min": 250,
+          "dose_max": 500
+        }
+      ]
+    }
+  ]
 }
