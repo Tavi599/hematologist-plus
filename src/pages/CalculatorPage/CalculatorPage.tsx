@@ -58,6 +58,7 @@ import {
   type CourseItem,
   type SheetChoice,
 } from '../../lib/course-input'
+import { daysOfDrugs, effectiveShifts, NO_SHIFT_SYNC, type ShiftSync } from '../../lib/shift-sync'
 import {
   applyTimingChoices,
   disabledWithDayOne,
@@ -128,7 +129,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [administrationModes, setAdministrationModes] = useState<
     Record<string, AdministrationMode>
   >({})
-  const [shiftMin, setShiftMin] = useState<Record<string, number>>({})
+  // The times typed into the schedule, and where a day or a drug is set free of the previous day.
+  const [shiftSync, setShiftSync] = useState<ShiftSync>(NO_SHIFT_SYNC)
   // Which infusion of an antibody the course opens with, by drug (1, 2, 3 = later); untouched,
   // cycle 1 opens with the first.
   const [infusionStart, setInfusionStart] = useState<Record<string, number>>({})
@@ -308,6 +310,12 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     [ownDoseOverrideAmount, baseItems],
   )
 
+  // The time of a drug on each day: what was typed in for it, else what the previous day has.
+  const shiftsByDay = useMemo(
+    () => effectiveShifts(daysOfDrugs(baseItems), shiftSync),
+    [baseItems, shiftSync],
+  )
+
   const onSupport = (category: SupportCategory, on: boolean) => {
     setSupport((current) => ({ ...current, [category]: on }))
     // The regimen's own rows of the kind follow the switch as a group.
@@ -348,6 +356,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     setChosenRoutes({})
     setSheetChoices({})
     setTimingChoices({})
+    setShiftSync(NO_SHIFT_SYNC)
     const premedicationOn = premedicationOnByDefault(baseItems)
     const supportOn = new Set(indicated.flatMap((category) => categoryItemIds(ownItems, category)))
     setDisabledIds(
@@ -415,7 +424,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           drugPercent,
           doseOverrideAmount,
           disabledIds,
-          shiftMin,
+          shiftMinByDay: shiftsByDay,
           infusionStart,
           renalBandOffIds,
           renalBandEveryOtherDayIds,
@@ -448,7 +457,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     drugPercent,
     doseOverrideAmount,
     disabledIds,
-    shiftMin,
+    shiftsByDay,
     infusionStart,
     renalBandOffIds,
     renalBandEveryOtherDayIds,
@@ -836,9 +845,31 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   course={course}
                   manualRows={sheetManualRows}
                   startDateIso={courseSettings.startDate}
-                  shiftMin={shiftMin}
-                  onShift={(id, minutes) =>
-                    setShiftMin((current) => ({ ...current, [id]: minutes }))
+                  shifts={shiftsByDay}
+                  sync={shiftSync}
+                  onShift={(id, day, minutes) =>
+                    setShiftSync((current) => {
+                      const { [day]: _removed, ...others } = current.explicit[id] ?? {}
+                      const next = minutes === null ? others : { ...others, [day]: minutes }
+                      return { ...current, explicit: { ...current.explicit, [id]: next } }
+                    })
+                  }
+                  onDaySync={(day, on) =>
+                    setShiftSync((current) => ({
+                      ...current,
+                      offDays: on
+                        ? current.offDays.filter((entry) => entry !== day)
+                        : [...new Set([...current.offDays, day])],
+                    }))
+                  }
+                  onDrugSync={(id, day, on) =>
+                    setShiftSync((current) => {
+                      const days = (current.offDrugDays[id] ?? []).filter((entry) => entry !== day)
+                      return {
+                        ...current,
+                        offDrugDays: { ...current.offDrugDays, [id]: on ? days : [...days, day] },
+                      }
+                    })
                   }
                 />
               ) : (

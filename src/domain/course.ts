@@ -140,6 +140,8 @@ export interface CourseAdjustments {
   disabledIds?: string[]
   /** Manual time shift by item id, min; later administrations of the day move with it. */
   shiftMin?: Record<string, number>
+  /** The same shift worked out for each course day (it follows the previous day); wins over `shiftMin`. */
+  shiftMinByDay?: Record<string, Record<number, number>>
   /**
    * Which infusion of the drug the course opens with, by series key (the drug): 1 the first,
    * 2 the second, 3 any later one. Absent: cycle 1 opens with the first, a later cycle with a
@@ -479,6 +481,11 @@ function mostellerFor(patient: CoursePatient): BsaResult | null {
   return calculateBsa(patient.heightCm, patient.weightKg)
 }
 
+/** The manual shift of a drug on one day: the one worked out for that day, else the drug's own. */
+function shiftOn(adjustments: CourseAdjustments, drugId: string, day: number): number | undefined {
+  return adjustments.shiftMinByDay?.[drugId]?.[day] ?? adjustments.shiftMin?.[drugId]
+}
+
 interface DrugContext {
   patient: CoursePatient
   bsa: BsaResult | null
@@ -676,9 +683,9 @@ function buildDays(
           ...(drug.intervalMin === undefined ? {} : { intervalMin: drug.intervalMin }),
           ...(drug.clockStartMin === undefined ? {} : { clockStartMin: drug.clockStartMin }),
           ...(drug.anchorDrugId === undefined ? {} : { anchorId: drug.anchorDrugId }),
-          ...(adjustments.shiftMin?.[drug.id] === undefined
+          ...(shiftOn(adjustments, drug.id, day) === undefined
             ? {}
-            : { shiftMin: adjustments.shiftMin[drug.id] }),
+            : { shiftMin: shiftOn(adjustments, drug.id, day) }),
         }
       })
     })

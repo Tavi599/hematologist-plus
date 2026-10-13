@@ -1,4 +1,4 @@
-import { Card, NumberInput, Stack, Table, Text, Title } from '@mantine/core'
+import { Card, Group, NumberInput, Stack, Switch, Table, Text, Title } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
 
 import { addDays, type CourseResult } from '../../domain'
@@ -6,6 +6,7 @@ import type { CourseItem } from '../../lib/course-input'
 import { formatDate } from '../../lib/format'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
+import { daysOfDrugs, isSynced, previousDayOf, type ShiftSync } from '../../lib/shift-sync'
 import { daysWithManual, manualRowsOn, manualWardRows, type ManualRow } from './manual-rows'
 
 /**
@@ -20,20 +21,30 @@ export function ScheduleTable({
   course,
   manualRows = [],
   startDateIso,
-  shiftMin,
+  shifts,
+  sync,
   onShift,
+  onDaySync,
+  onDrugSync,
 }: {
   items: CourseItem[]
   /** Null when nothing was calculated: the days then come from the hand-written lines alone. */
   course: CourseResult | null
   manualRows?: ManualRow[]
   startDateIso: string
-  shiftMin: Record<string, number>
-  onShift: (itemId: string, minutes: number) => void
+  /** The shift of every drug on every day: typed in, or taken from the previous day. */
+  shifts: Record<string, Record<number, number>>
+  sync: ShiftSync
+  /** `null` takes the typed shift away, and the day follows the previous one again. */
+  onShift: (itemId: string, day: number, minutes: number | null) => void
+  onDaySync: (day: number, on: boolean) => void
+  onDrugSync: (itemId: string, day: number, on: boolean) => void
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
   const byId = new Map(items.map((item) => [item.item.id, item]))
+  const daysOf = daysOfDrugs(items)
+  const firstDay = Math.min(...[...daysOf.values()].flat(), Infinity)
   const nameOf = (id: string) => {
     const item = byId.get(id)
     return item ? localize(item.drug.name, language) : id
@@ -76,9 +87,19 @@ export function ScheduleTable({
         </Text>
         {days.map((day) => (
           <Stack key={day.day} gap={4}>
-            <Text fw={500}>
-              {t('calculator.schedule.day', { day: day.day })} · {formatDate(day.date, language)}
-            </Text>
+            <Group gap="sm" align="center">
+              <Text fw={500}>
+                {t('calculator.schedule.day', { day: day.day })} · {formatDate(day.date, language)}
+              </Text>
+              {day.day > firstDay && (
+                <Switch
+                  size="xs"
+                  checked={!sync.offDays.includes(day.day)}
+                  onChange={(event) => onDaySync(day.day, event.currentTarget.checked)}
+                  label={t('calculator.schedule.syncDay')}
+                />
+              )}
+            </Group>
             <Table.ScrollContainer minWidth={480}>
               <Table
                 verticalSpacing={4}
@@ -107,12 +128,36 @@ export function ScheduleTable({
                       </Table.Td>
                       <Table.Td>{nameOf(administration.drugId)}</Table.Td>
                       <Table.Td>
-                        <NumberInput
-                          size="xs"
-                          step={15}
-                          value={shiftMin[administration.drugId] ?? ''}
-                          onChange={(value) => onShift(administration.drugId, Number(value) || 0)}
-                        />
+                        <Stack gap={2}>
+                          <NumberInput
+                            size="xs"
+                            step={15}
+                            value={sync.explicit[administration.drugId]?.[day.day] ?? ''}
+                            placeholder={String(shifts[administration.drugId]?.[day.day] ?? '')}
+                            onChange={(value) =>
+                              onShift(
+                                administration.drugId,
+                                day.day,
+                                value === '' ? null : Number(value) || 0,
+                              )
+                            }
+                          />
+                          {previousDayOf(daysOf, administration.drugId, day.day) !== null && (
+                            <Switch
+                              size="xs"
+                              disabled={sync.offDays.includes(day.day)}
+                              checked={isSynced(sync, administration.drugId, day.day)}
+                              onChange={(event) =>
+                                onDrugSync(
+                                  administration.drugId,
+                                  day.day,
+                                  event.currentTarget.checked,
+                                )
+                              }
+                              label={t('calculator.schedule.syncDrug')}
+                            />
+                          )}
+                        </Stack>
                       </Table.Td>
                     </Table.Tr>
                   ))}

@@ -360,7 +360,9 @@
       "bolus": "bolus",
       "noDuration": "duration not set",
       "ward": "On the inpatient sheet",
-      "wardNote": "A shift moves the infusions and the support hung off them. Rows of the inpatient sheet have no clock time and never move."
+      "wardNote": "A shift moves the infusions and the support hung off them. Rows of the inpatient sheet have no clock time and never move.",
+      "syncDay": "Same as the previous day",
+      "syncDrug": "Same as the previous day"
     },
     "supply": {
       "title": "Need for the course",
