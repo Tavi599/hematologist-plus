@@ -77,6 +77,11 @@ export interface AdministrationInput {
   /** `day_support`: minutes between the repeats of this drug within the day (q8h = 480). */
   intervalMin?: number
   /**
+   * `day_support`: a fixed time of day, minutes from midnight, the first administration is given
+   * at — instead of being hung off a cytostatic. The repeats follow it by `intervalMin`.
+   */
+  clockStartMin?: number
+  /**
    * `day_support`: time this row from the start of that chained row instead of the day's first
    * cytostatic — mesna from the ifosfamide it protects against. Ignored on a day without it.
    */
@@ -177,10 +182,8 @@ export function scheduleAdministrations(
     }
     const interval = item.intervalMin ?? 0
     assertNonNegative(`${item.id}.intervalMin`, interval)
-    const startMin = Math.max(
-      0,
-      anchor + offset + interval * (item.occurrence ?? 0) + shiftOf(item),
-    )
+    const from = item.clockStartMin ?? anchor + offset
+    const startMin = Math.max(0, from + interval * (item.occurrence ?? 0) + shiftOf(item))
     scheduled.push(placed(item.id, startMin, durationOf(item)))
   }
 

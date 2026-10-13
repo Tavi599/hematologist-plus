@@ -78,6 +78,8 @@ export interface CourseDrug {
   anchorOffsetMin?: number
   /** `day_support`: minutes between the repeats within one day (q8h = 480). */
   intervalMin?: number
+  /** `day_support`: a fixed time of day (minutes from midnight) the first administration is given at. */
+  clockStartMin?: number
   /** `day_support`: id of the course drug whose start this row is timed from on its days. */
   anchorDrugId?: string
   /** A drug of the regimen itself: the support of the day is timed from the first of these. */
@@ -672,6 +674,7 @@ function buildDays(
           ...(drug.gapBeforeMin === undefined ? {} : { gapBeforeMin: drug.gapBeforeMin }),
           ...(drug.anchorOffsetMin === undefined ? {} : { anchorOffsetMin: drug.anchorOffsetMin }),
           ...(drug.intervalMin === undefined ? {} : { intervalMin: drug.intervalMin }),
+          ...(drug.clockStartMin === undefined ? {} : { clockStartMin: drug.clockStartMin }),
           ...(drug.anchorDrugId === undefined ? {} : { anchorId: drug.anchorDrugId }),
           ...(adjustments.shiftMin?.[drug.id] === undefined
             ? {}

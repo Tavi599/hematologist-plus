@@ -35,6 +35,8 @@ export interface CourseItem {
   missingInfusionData: boolean
   /** The row of the first, full dose split off this item by the kidney correction. */
   firstDoseOf?: string
+  /** Set on the row that carries the first day of a drug whose timing differs on it. */
+  dayOneOf?: string
   /** The protocol gives this drug as an infusion the physician may switch to boluses. */
   switchable: boolean
   /** The protocol's multi-day infusion may be given short each day or round the clock. */
@@ -155,7 +157,8 @@ export function applyBlockChoices(
   chosen: Record<string, SheetChoice>,
 ): CourseItem[] {
   return items.map((entry) => {
-    const choice = chosen[entry.item.id]
+    // The first-day row of a drug with its own timing goes where the drug does.
+    const choice = chosen[entry.item.id] ?? (entry.dayOneOf ? chosen[entry.dayOneOf] : undefined)
     if (choice === undefined) return entry
     const block: RegimenItem['block'] =
       choice === 'ward' ? 'ward' : entry.item.block === 'ward' ? 'infusion' : entry.item.block

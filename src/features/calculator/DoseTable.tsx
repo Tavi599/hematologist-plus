@@ -42,6 +42,8 @@ import type { DrugInfusionParams } from '../../schemas/catalog'
 import { formatNumber } from '../../lib/format'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
+import { canChooseTiming, type TimingChoice } from '../../lib/dose-timing'
+import { TimingEditor } from './TimingEditor'
 import {
   DEFAULT_DOSE_CHOICE,
   defaultBolusMode,
@@ -110,6 +112,11 @@ export interface DoseTableProps {
   onIvigSupportEdit: () => void
   /** Gives the row by another route the label allows at the same dose. */
   onRoute: (itemId: string, route: CourseItem['item']['route']) => void
+  /** The frequency and time the physician set for a supportive drug, by row. */
+  timingChoices: Record<string, TimingChoice>
+  onTiming: (itemId: string, choice: TimingChoice | null) => void
+  /** Start of the working day, HH:MM: where a fixed time of a drug starts until it is set. */
+  dayStart: string
   /** The sheet the physician moved a row to; a row not in it is printed where the regimen puts it. */
   sheetChoices: Record<string, SheetChoice>
   onSheet: (itemId: string, sheet: SheetChoice) => void
@@ -520,6 +527,9 @@ function DoseRow({
   onIvigSupport,
   onIvigSupportEdit,
   onRoute,
+  timingChoices,
+  onTiming,
+  dayStart,
   sheetChoices,
   onSheet,
   cycleNumber,
@@ -715,6 +725,22 @@ function DoseRow({
             {(result?.administrationsPerDay ?? item.item.administrations_per_day) > 1 &&
               ` · ${t('calculator.doses.timesPerDay', { count: result?.administrationsPerDay ?? item.item.administrations_per_day })}`}
           </Text>
+          {/* How often and when: the frequency and the hour of a supportive drug are the
+              physician's to set, for the first day apart from the rest if need be. */}
+          {canChooseTiming(item.item, item.dayOneOf) && (
+            <TimingEditor
+              item={item}
+              choice={timingChoices[id]}
+              defaultClock={dayStart}
+              disabled={!enabled}
+              onChange={(choice) => onTiming(id, choice)}
+            />
+          )}
+          {item.dayOneOf !== undefined && (
+            <Text size="xs" c="orange.8">
+              {t('calculator.doses.timing.dayOneRow')}
+            </Text>
+          )}
           {/* The first, full dose the label keeps uncorrected, split off its corrected row. */}
           {item.firstDoseOf !== undefined && (
             <Text size="xs" c="orange.8">

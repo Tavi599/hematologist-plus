@@ -115,6 +115,22 @@
         "ward": "Inpatient sheet",
         "changed": "moved"
       },
+      "timing": {
+        "title": "Frequency and time",
+        "changed": "changed",
+        "allDays": "All days",
+        "otherDays": "Other days",
+        "firstDay": "First day",
+        "firstDayApart": "First day differently",
+        "perDay": "Times a day",
+        "interval": "Interval, h",
+        "fromChemo": "From chemo",
+        "atTime": "At a time",
+        "offset": "Min (−30 = 30 min before)",
+        "clock": "Time",
+        "reset": "Back to the regimen",
+        "dayOneRow": "First day, a row of its own; the settings are in the row below"
+      },
       "cystitisBadge": "haemorrhagic cystitis prophylaxis",
       "mesnaAdd": "Add mesna",
       "mesnaRemove": "Remove mesna",

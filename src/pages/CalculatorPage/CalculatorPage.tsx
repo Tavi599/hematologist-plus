@@ -58,6 +58,12 @@ import {
   type CourseItem,
   type SheetChoice,
 } from '../../lib/course-input'
+import {
+  applyTimingChoices,
+  disabledWithDayOne,
+  inheritedByDayOne,
+  type TimingChoice,
+} from '../../lib/dose-timing'
 import { formatNumber } from '../../lib/format'
 import {
   ALWAYS_PREMEDICATED,
@@ -109,9 +115,12 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     cycleNumber: 1,
   })
   const [customItems, setCustomItems] = useState<RegimenItem[]>([])
-  const [disabledIds, setDisabledIds] = useState<string[]>([])
-  const [drugPercent, setDrugPercent] = useState<Record<string, number>>({})
-  const [doseOverrideAmount, setDoseOverrideAmount] = useState<Record<string, number>>({})
+  const [ownDisabledIds, setDisabledIds] = useState<string[]>([])
+  const [ownDrugPercent, setDrugPercent] = useState<Record<string, number>>({})
+  const [ownDoseOverrideAmount, setDoseOverrideAmount] = useState<Record<string, number>>({})
+  // The frequency and time of a supportive drug, where the physician set them: ondansetron
+  // before the cytostatic on day 1, then every 8 hours at a convenient time.
+  const [timingChoices, setTimingChoices] = useState<Record<string, TimingChoice>>({})
   const [chosenDoses, setChosenDoses] = useState<Record<string, string>>({})
   // Empty until the physician touches a tick: an item with no entry here uses the modifiers its
   // own protocol assumes.
@@ -236,27 +245,30 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       applyBlockChoices(
         applyDurationChoices(
           applyBagChoices(
-            [
-              ...ownItems,
-              ...buildCourseItemsFrom(
-                catalog,
-                standardSupportRows(
+            applyTimingChoices(
+              [
+                ...ownItems,
+                ...buildCourseItemsFrom(
                   catalog,
-                  ownItems,
-                  regimenId === null
-                    ? null
-                    : (catalog.regimens.get(regimenId)?.cycle_length_days ?? null),
-                  courseSettings.startDate,
-                  support,
-                  thromboAgent,
-                  antiviralAgent,
-                  gastroAgent,
+                  standardSupportRows(
+                    catalog,
+                    ownItems,
+                    regimenId === null
+                      ? null
+                      : (catalog.regimens.get(regimenId)?.cycle_length_days ?? null),
+                    courseSettings.startDate,
+                    support,
+                    thromboAgent,
+                    antiviralAgent,
+                    gastroAgent,
+                  ),
+                  chosenDoses,
+                  chosenModifiers,
+                  administrationModes,
                 ),
-                chosenDoses,
-                chosenModifiers,
-                administrationModes,
-              ),
-            ],
+              ],
+              timingChoices,
+            ),
             chosenBags,
           ),
           chosenDurations,
@@ -267,6 +279,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       catalog,
       ownItems,
       sheetChoices,
+      timingChoices,
       chosenBags,
       chosenDurations,
       regimenId,
@@ -279,6 +292,20 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       chosenModifiers,
       administrationModes,
     ],
+  )
+
+  // What is set for a drug holds for the row split off it for day 1, unless that row has its own.
+  const disabledIds = useMemo(
+    () => disabledWithDayOne(ownDisabledIds, baseItems),
+    [ownDisabledIds, baseItems],
+  )
+  const drugPercent = useMemo(
+    () => inheritedByDayOne(ownDrugPercent, baseItems),
+    [ownDrugPercent, baseItems],
+  )
+  const doseOverrideAmount = useMemo(
+    () => inheritedByDayOne(ownDoseOverrideAmount, baseItems),
+    [ownDoseOverrideAmount, baseItems],
   )
 
   const onSupport = (category: SupportCategory, on: boolean) => {
@@ -320,6 +347,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     ])
     setChosenRoutes({})
     setSheetChoices({})
+    setTimingChoices({})
     const premedicationOn = premedicationOnByDefault(baseItems)
     const supportOn = new Set(indicated.flatMap((category) => categoryItemIds(ownItems, category)))
     setDisabledIds(
@@ -676,6 +704,14 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   mesnaOffered={mesnaOffered}
                   onRoute={(id, route) =>
                     setChosenRoutes((current) => ({ ...current, [id]: route }))
+                  }
+                  timingChoices={timingChoices}
+                  dayStart={courseSettings.dayStart}
+                  onTiming={(id, choice) =>
+                    setTimingChoices((current) => {
+                      const { [id]: _removed, ...rest } = current
+                      return choice === null ? rest : { ...rest, [id]: choice }
+                    })
                   }
                   sheetChoices={sheetChoices}
                   onSheet={(id, sheet) =>
