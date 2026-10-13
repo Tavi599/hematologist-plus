@@ -44,16 +44,19 @@ import {
   NO_SUPPORT,
   standardSupportRows,
   type AntiviralAgent,
+  type GastroAgent,
   type SupportCategory,
   type ThromboAgent,
 } from '../../lib/standard-support'
 import {
   applyBagChoices,
+  applyBlockChoices,
   applyDurationChoices,
   buildCourseItems,
   buildCourseItemsFrom,
   type AdministrationMode,
   type CourseItem,
+  type SheetChoice,
 } from '../../lib/course-input'
 import { formatNumber } from '../../lib/format'
 import {
@@ -128,10 +131,13 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   // NSSG's standard with an immunomodulatory drug; aspirin is for a patient with no other risk.
   const [thromboAgent, setThromboAgent] = useState<ThromboAgent>('apixaban')
   const [antiviralAgent, setAntiviralAgent] = useState<AntiviralAgent>('aciclovir')
+  const [gastroAgent, setGastroAgent] = useState<GastroAgent>('tablet')
   // Cyclophosphamide items the physician has added mesna to; the protocol's own mesna is apart.
   const [mesnaFor, setMesnaFor] = useState<string[]>([])
   // Rows the physician gives by another route the label allows at the same dose.
   const [chosenRoutes, setChosenRoutes] = useState<Record<string, RegimenItem['route']>>({})
+  // The sheet each row is printed on, where the physician moved it off the regimen's own.
+  const [sheetChoices, setSheetChoices] = useState<Record<string, SheetChoice>>({})
   // Bags the physician picked for antimicrobial infusions, by row.
   const [chosenBags, setChosenBags] = useState<Record<string, number>>({})
   // Infusion durations the physician picked for antimicrobials, by row, min.
@@ -227,35 +233,40 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   // and printed like the rest.
   const baseItems = useMemo(
     () =>
-      applyDurationChoices(
-        applyBagChoices(
-          [
-            ...ownItems,
-            ...buildCourseItemsFrom(
-              catalog,
-              standardSupportRows(
+      applyBlockChoices(
+        applyDurationChoices(
+          applyBagChoices(
+            [
+              ...ownItems,
+              ...buildCourseItemsFrom(
                 catalog,
-                ownItems,
-                regimenId === null
-                  ? null
-                  : (catalog.regimens.get(regimenId)?.cycle_length_days ?? null),
-                courseSettings.startDate,
-                support,
-                thromboAgent,
-                antiviralAgent,
+                standardSupportRows(
+                  catalog,
+                  ownItems,
+                  regimenId === null
+                    ? null
+                    : (catalog.regimens.get(regimenId)?.cycle_length_days ?? null),
+                  courseSettings.startDate,
+                  support,
+                  thromboAgent,
+                  antiviralAgent,
+                  gastroAgent,
+                ),
+                chosenDoses,
+                chosenModifiers,
+                administrationModes,
               ),
-              chosenDoses,
-              chosenModifiers,
-              administrationModes,
-            ),
-          ],
-          chosenBags,
+            ],
+            chosenBags,
+          ),
+          chosenDurations,
         ),
-        chosenDurations,
+        sheetChoices,
       ),
     [
       catalog,
       ownItems,
+      sheetChoices,
       chosenBags,
       chosenDurations,
       regimenId,
@@ -263,6 +274,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       support,
       thromboAgent,
       antiviralAgent,
+      gastroAgent,
       chosenDoses,
       chosenModifiers,
       administrationModes,
@@ -296,6 +308,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     })
     setThromboAgent('apixaban')
     setAntiviralAgent('aciclovir')
+    setGastroAgent('tablet')
     setMesnaFor([])
     // Immunoglobulin opens with the department's standard support written out above it: lines
     // a colleague edits as text. Those proposed for the previous regimen go with it.
@@ -306,6 +319,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
         .flatMap((entry) => ivigSupportRows(entry.item.id, entry.item.days)),
     ])
     setChosenRoutes({})
+    setSheetChoices({})
     const premedicationOn = premedicationOnByDefault(baseItems)
     const supportOn = new Set(indicated.flatMap((category) => categoryItemIds(ownItems, category)))
     setDisabledIds(
@@ -466,8 +480,18 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       ),
     [items, disabledIds],
   )
+  // The support written out for an immunoglobulin follows the drug onto the sheet it is moved to.
+  const sheetManualRows = useMemo(
+    () =>
+      manualRows.map((row) =>
+        row.supportFor !== undefined && sheetChoices[row.supportFor] === 'ward'
+          ? { ...row, block: 'ward' as const }
+          : row,
+      ),
+    [manualRows, sheetChoices],
+  )
   /** Hand-written lines that actually say something; an empty one is not a sheet. */
-  const written = manualRows.filter((row) => row.what.trim() !== '')
+  const written = sheetManualRows.filter((row) => row.what.trim() !== '')
 
   const sheetReady = course !== null || written.length > 0
 
@@ -501,6 +525,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
               onThromboAgent={setThromboAgent}
               antiviralAgent={antiviralAgent}
               onAntiviralAgent={setAntiviralAgent}
+              gastroAgent={gastroAgent}
+              onGastroAgent={setGastroAgent}
             />
           )}
         </Stack>
@@ -651,6 +677,10 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   onRoute={(id, route) =>
                     setChosenRoutes((current) => ({ ...current, [id]: route }))
                   }
+                  sheetChoices={sheetChoices}
+                  onSheet={(id, sheet) =>
+                    setSheetChoices((current) => ({ ...current, [id]: sheet }))
+                  }
                   mesnaAdded={mesnaFor}
                   ivigSupportAdded={[
                     ...new Set(
@@ -768,7 +798,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                 <ScheduleTable
                   items={items}
                   course={course}
-                  manualRows={manualRows}
+                  manualRows={sheetManualRows}
                   startDateIso={courseSettings.startDate}
                   shiftMin={shiftMin}
                   onShift={(id, minutes) =>
@@ -814,7 +844,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   startDate={courseSettings.startDate}
                   dayStart={courseSettings.dayStart}
                   header={header}
-                  manualRows={manualRows}
+                  manualRows={sheetManualRows}
                   irradiationReasons={irradiation}
                 />
               ) : (

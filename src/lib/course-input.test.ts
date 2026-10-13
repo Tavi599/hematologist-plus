@@ -8,6 +8,7 @@ import {
   activeModifiers,
   applyAdministrationMode,
   applyBagChoices,
+  applyBlockChoices,
   applyDurationChoices,
   canSwitchBag,
   durationOptionsOf,
@@ -804,5 +805,32 @@ describe('renal ranges of a regimen item', () => {
     }).at(-1)!
     expect(prednisolone.courseDrug.renalBands).toBeUndefined()
     expect(prednisolone.courseDrug.renalBandsNotForDose).toBe(true)
+  })
+})
+
+describe('the sheet a row is printed on', () => {
+  const rows = () => buildCourseItems(index(), 'r-chop-21')
+
+  it('moves a row onto the inpatient list, and back onto the hourly sheet', () => {
+    const [rituximab, , , , prednisolone] = rows()
+    expect(rituximab!.item.block).toBe('infusion')
+    expect(prednisolone!.item.block).toBe('ward')
+
+    const moved = applyBlockChoices(rows(), {
+      [rituximab!.item.id]: 'ward',
+      [prednisolone!.item.id]: 'infusion',
+    })
+    expect(moved[0]!.item.block).toBe('ward')
+    expect(moved[0]!.courseDrug.block).toBe('ward')
+    expect(moved[4]!.item.block).toBe('infusion')
+    expect(moved[4]!.courseDrug.block).toBe('infusion')
+    // The rest is left as it was.
+    expect(moved[1]).toBe(rows()[1] ? moved[1] : undefined)
+    expect(moved[1]!.item.block).toBe('infusion')
+  })
+
+  it('keeps a row on its own sheet when the choice is the one it already has', () => {
+    const items = rows()
+    expect(applyBlockChoices(items, { [items[0]!.item.id]: 'infusion' })[0]).toBe(items[0])
   })
 })

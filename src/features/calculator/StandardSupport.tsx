@@ -15,11 +15,13 @@ import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import {
   ANTIVIRAL_AGENTS,
+  GASTRO_AGENTS,
   categoryItemIds,
   indicatedSupport,
   SUPPORT_CATEGORIES,
   THROMBO_AGENTS,
   type AntiviralAgent,
+  type GastroAgent,
   type SupportCategory,
   type ThromboAgent,
 } from '../../lib/standard-support'
@@ -37,6 +39,8 @@ export function StandardSupport({
   onThromboAgent,
   antiviralAgent,
   onAntiviralAgent,
+  gastroAgent,
+  onGastroAgent,
 }: {
   items: CourseItem[]
   value: Record<SupportCategory, boolean>
@@ -45,6 +49,8 @@ export function StandardSupport({
   onThromboAgent: (agent: ThromboAgent) => void
   antiviralAgent: AntiviralAgent
   onAntiviralAgent: (agent: AntiviralAgent) => void
+  gastroAgent: GastroAgent
+  onGastroAgent: (agent: GastroAgent) => void
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
@@ -69,6 +75,7 @@ export function StandardSupport({
             const because = indicated[category]
             const choosesAgent = category === 'thrombosis' && own === 0 && value[category]
             const choosesAntiviral = category === 'antiviral' && own === 0 && value[category]
+            const choosesGastro = category === 'gastroprotection' && own === 0 && value[category]
             return (
               <Stack key={category} gap={4}>
                 <Switch
@@ -80,7 +87,9 @@ export function StandardSupport({
                         ? t(`calculator.standardSupport.thromboAgent.${thromboAgent}`)
                         : category === 'antiviral'
                           ? t(`calculator.standardSupport.antiviralAgent.${antiviralAgent}`)
-                          : t(`calculator.standardSupport.standard.${category}`)
+                          : category === 'gastroprotection'
+                            ? t(`calculator.standardSupport.gastroAgent.${gastroAgent}`)
+                            : t(`calculator.standardSupport.standard.${category}`)
                   }
                   checked={value[category]}
                   onChange={(event) => onChange(category, event.currentTarget.checked)}
@@ -107,6 +116,18 @@ export function StandardSupport({
                     data={THROMBO_AGENTS.map((agent) => ({
                       value: agent,
                       label: t(`calculator.standardSupport.thromboAgentName.${agent}`),
+                    }))}
+                  />
+                )}
+                {choosesGastro && (
+                  <SegmentedControl
+                    size="xs"
+                    fullWidth
+                    value={gastroAgent}
+                    onChange={(next) => onGastroAgent(next as GastroAgent)}
+                    data={GASTRO_AGENTS.map((agent) => ({
+                      value: agent,
+                      label: t(`calculator.standardSupport.gastroAgentName.${agent}`),
                     }))}
                   />
                 )}

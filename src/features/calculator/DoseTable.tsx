@@ -52,6 +52,7 @@ import {
   type InfusionLength,
   type CourseItem,
   type DurationOption,
+  type SheetChoice,
 } from '../../lib/course-input'
 import { groupCourseItems } from '../../lib/dose-groups'
 import { PREMEDICATION_ADVISED } from '../../lib/premedication'
@@ -109,6 +110,9 @@ export interface DoseTableProps {
   onIvigSupportEdit: () => void
   /** Gives the row by another route the label allows at the same dose. */
   onRoute: (itemId: string, route: CourseItem['item']['route']) => void
+  /** The sheet the physician moved a row to; a row not in it is printed where the regimen puts it. */
+  sheetChoices: Record<string, SheetChoice>
+  onSheet: (itemId: string, sheet: SheetChoice) => void
   /** Cycle of the course: cycle 1 opens with the first, slower infusion unless set otherwise. */
   cycleNumber: number
   /** Which infusion of an antibody the course opens with, by drug; see CourseAdjustments. */
@@ -516,6 +520,8 @@ function DoseRow({
   onIvigSupport,
   onIvigSupportEdit,
   onRoute,
+  sheetChoices,
+  onSheet,
   cycleNumber,
   infusionStart,
   onInfusionStart,
@@ -581,6 +587,26 @@ function DoseRow({
               )}
             </Group>
           )}
+          {/* Which sheet the row is printed on. A single injection or a plain push does not call
+              for a whole hourly sheet: written into the inpatient list it takes a line there. */}
+          <Group gap={6} mt={2} wrap="nowrap">
+            <SegmentedControl
+              size="xs"
+              disabled={!enabled}
+              value={item.item.block === 'ward' ? 'ward' : 'infusion'}
+              onChange={(value) => onSheet(id, value as SheetChoice)}
+              data={[
+                { value: 'infusion', label: t('calculator.doses.sheet.infusion') },
+                { value: 'ward', label: t('calculator.doses.sheet.ward') },
+              ]}
+              aria-label={`${t('calculator.doses.sheet.label')}: ${localize(item.drug.name, language)}`}
+            />
+            {id in sheetChoices && (
+              <Badge size="xs" variant="light" color="blue">
+                {t('calculator.doses.sheet.changed')}
+              </Badge>
+            )}
+          </Group>
           {/* The label asks for premedication before this drug: always in sight, and loud when
               the course has none on one of its days. */}
           {item.item.role === 'main' && PREMEDICATION_ADVISED.has(item.item.drug_id) && (

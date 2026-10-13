@@ -48,11 +48,15 @@ export function ScheduleTable({
   const untimedOn = (dayNumber: number) =>
     course?.days.find((day) => day.day === dayNumber)?.untimed ?? []
 
-  // A zero-length administration is a bolus — unless the regimen simply has no duration for it.
-  const zeroLengthNote = (id: string) =>
-    byId.get(id)?.item.route === 'iv_infusion'
-      ? t('calculator.schedule.noDuration')
-      : t('calculator.schedule.bolus')
+  // A zero-length administration is named by its route: only an intravenous push is «струминно»;
+  // an injection under the skin or into a muscle, or a tablet, is not — and an infusion with no
+  // duration in the regimen says so.
+  const zeroLengthNote = (id: string) => {
+    const route = byId.get(id)?.item.route
+    if (route === 'iv_infusion') return t('calculator.schedule.noDuration')
+    if (route === undefined || route === 'iv_bolus') return t('calculator.schedule.bolus')
+    return t(`routeShort.${route}`)
+  }
 
   const wardLine = (dayNumber: number) => [
     ...untimedOn(dayNumber).map(nameOf),

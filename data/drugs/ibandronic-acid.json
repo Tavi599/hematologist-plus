@@ -1,5 +1,5 @@
 {
-  "$comment": "Імпортовано з Список_препаратів_з_доз,_ДЕЦ,_кер_дост.xlsx, Список_препаратів_на_2027_розрахунок1.xlsx 2026-09-18. Взято лише МНН і фасування; параметри розведення та максимальні дози додаються окремо.",
+  "$comment": "Доза й розведення — за SmPC (Iasibon, emc): 6 мг кожні 3–4 тижні; зареєстрований концентрат 6 мг/6 мл (Держреєстр, перевірено 2026-10-13). Показання інструкції — метастази раку молочної залози в кістки й гіперкальціємія пухлинного генезу, не мієлома.",
   "id": "ibandronic-acid",
   "name": {
     "uk": "Ібандронова кислота",
@@ -16,6 +16,17 @@
       "name": "Перелік препаратів відділення: Список_препаратів_на_2027_розрахунок1.xlsx",
       "version": "файл від 2026-09-14",
       "checkedOn": "2026-09-18"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України, відкриті дані (reestr-lz.csv)",
+      "version": "вивантаження з data.gov.ua",
+      "checkedOn": "2026-10-13"
+    },
+    {
+      "name": "SmPC Iasibon 6 mg concentrate for solution for infusion (ibandronic acid, emc), 4.1, 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/13997/smpc",
+      "version": "ред. 19.08.2022",
+      "checkedOn": "2026-10-13"
     }
   ],
   "presentations": [
@@ -24,6 +35,44 @@
       "form": "vial",
       "strength_amount": 6,
       "volume_ml": 6
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Профілактика кісткових подій: КК ≥ 50–< 80 мл/хв — 6 мг у 100 мл за 15 хв; 30–< 50 — 4 мг у 500 мл за 1 год; < 30 — 2 мг у 500 мл за 1 год. 15-хвилинну інфузію при КК < 50 не вивчали.",
+        "en": "Prevention of skeletal events: CrCl ≥50 to <80 mL/min, 6 mg in 100 mL over 15 min; 30 to <50, 4 mg in 500 mL over 1 h; <30, 2 mg in 500 mL over 1 h. A 15-minute infusion has not been studied at CrCl <50."
+      },
+      "source": {
+        "name": "SmPC Iasibon 6 mg concentrate for solution for infusion (ibandronic acid, emc), 4.1, 4.2",
+        "url": "https://www.medicines.org.uk/emc/product/13997/smpc",
+        "version": "ред. 19.08.2022",
+        "checkedOn": "2026-10-13"
+      }
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [100],
+      "duration_min": 15,
+      "is_default": true,
+      "stock_concentration_mg_ml": 1,
+      "notes": {
+        "uk": "6 мг (6 мл концентрату) у 100 мл 0,9% NaCl або 5% глюкози, не менше 15 хв — лише при нормальній чи злегка зниженій функції нирок. При гіперкальціємії — 2 або 4 мг у 500 мл за 2 год (не розраховується).",
+        "en": "6 mg (6 mL of concentrate) in 100 mL of 0.9% sodium chloride or 5% glucose over at least 15 min, only with normal or mildly reduced renal function. In hypercalcaemia, 2 or 4 mg in 500 mL over 2 h (not calculated)."
+      },
+      "sources": [
+        {
+          "name": "SmPC Iasibon 6 mg concentrate for solution for infusion (ibandronic acid, emc), 4.1, 4.2",
+          "url": "https://www.medicines.org.uk/emc/product/13997/smpc",
+          "version": "ред. 19.08.2022",
+          "checkedOn": "2026-10-13"
+        }
+      ]
     }
   ]
 }

@@ -126,6 +126,31 @@ export function applyBagChoices(items: CourseItem[], chosen: Record<string, numb
   })
 }
 
+/** The sheet a row is printed on: the hourly infusion sheet, or the inpatient list (form №003-4/о). */
+export type SheetChoice = 'infusion' | 'ward'
+
+/**
+ * The rows on the sheet the physician picked. The regimen says where a drug goes by default — an
+ * infusion on the hourly sheet, a tablet on the inpatient list — but a single subcutaneous
+ * injection or a plain intravenous push does not call for a whole sheet of its own, and a
+ * physician may write it into the inpatient list with the tablets. `infusion` puts a row the
+ * regimen keeps on the inpatient list back onto the hourly sheet; for a supportive row timed
+ * from the cytostatic (`day_support`) it keeps it there.
+ */
+export function applyBlockChoices(
+  items: CourseItem[],
+  chosen: Record<string, SheetChoice>,
+): CourseItem[] {
+  return items.map((entry) => {
+    const choice = chosen[entry.item.id]
+    if (choice === undefined) return entry
+    const block: RegimenItem['block'] =
+      choice === 'ward' ? 'ward' : entry.item.block === 'ward' ? 'infusion' : entry.item.block
+    if (block === entry.item.block) return entry
+    return { ...entry, item: { ...entry.item, block }, courseDrug: { ...entry.courseDrug, block } }
+  })
+}
+
 export interface DurationOption {
   durationMin: number
   /** A prolonged infusion (a beta-lactam over 3-4 h), not the label's usual one. */

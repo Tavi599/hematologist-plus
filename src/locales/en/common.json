@@ -109,6 +109,12 @@
       "manualDoseBadge": "manual",
       "route": "Route",
       "routeChanged": "changed by the physician",
+      "sheet": {
+        "label": "Print sheet",
+        "infusion": "Infusion sheet",
+        "ward": "Inpatient sheet",
+        "changed": "moved"
+      },
       "cystitisBadge": "haemorrhagic cystitis prophylaxis",
       "mesnaAdd": "Add mesna",
       "mesnaRemove": "Remove mesna",
@@ -249,13 +255,16 @@
       "pneumocystis": "Pneumocystis pneumonia prophylaxis",
       "antifungal": "Antifungal prophylaxis",
       "antibacterial": "Antibacterial prophylaxis",
+      "gastroprotection": "Gastroprotection",
+      "allopurinol": "Allopurinol (tumour lysis prophylaxis)",
       "ownRows": "Rows of the regimen: {{count}}",
       "standard": {
         "antiemetic": "Adds ondansetron 8 mg twice a day on the days cytostatics are given",
         "antiviral": "Adds aciclovir 400 mg twice a day for the whole cycle",
         "pneumocystis": "Adds co-trimoxazole 480 mg on Mon, Wed and Fri",
         "antifungal": "Adds fluconazole 50 mg a day for the whole cycle",
-        "antibacterial": "Adds levofloxacin 500 mg once a day for the whole cycle"
+        "antibacterial": "Adds levofloxacin 500 mg once a day for the whole cycle",
+        "allopurinol": "Adds allopurinol 300 mg once a day, days 1-7"
       },
       "thrombosis": "Thromboprophylaxis",
       "indicated": "Called for by the protocol: {{drugs}}",
@@ -276,6 +285,16 @@
       "antiviralAgentName": {
         "aciclovir": "Aciclovir",
         "valaciclovir": "Valaciclovir"
+      },
+      "gastroAgent": {
+        "tablet": "Adds omeprazole 20 mg by mouth once a day for the whole cycle",
+        "iv_daily": "Adds omeprazole 40 mg IV every day for the whole cycle",
+        "iv_steroid": "Adds omeprazole 40 mg IV on the days a steroid is given"
+      },
+      "gastroAgentName": {
+        "tablet": "20 mg oral",
+        "iv_daily": "40 mg IV daily",
+        "iv_steroid": "40 mg IV on steroid days"
       }
     },
     "manual": {

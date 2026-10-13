@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 import { calculateCourse } from '../../domain'
 import { indexCatalog } from '../../lib/catalog-index'
 import { demoCatalog } from '../../lib/catalog.fixture'
-import { buildCourseItems } from '../../lib/course-input'
+import { applyBlockChoices, buildCourseItems } from '../../lib/course-input'
 import type { XlsxCell, XlsxInput, XlsxSheet } from '../../lib/xlsx-writer'
 import {
   buildCourseSheets,
@@ -634,5 +634,26 @@ describe('buildCourseSheets', () => {
     expect(String(text(built[0]!.rows[0]![0] ?? null))).toBe('П.І.Б.: Тестовий Пацієнт')
     expect(String(text(built[0]!.rows[2]![0] ?? null))).toBe('Дата: 21 / 09 / 2026р.')
     expect(String(text(built.at(-1)!.rows[2]![1] ?? null))).toBe('123/26')
+  })
+})
+
+describe('rows moved onto the inpatient list', () => {
+  it('print there, and leave the day sheet without them', () => {
+    const catalog = indexCatalog(demoCatalog())
+    const all = buildCourseItems(catalog, 'r-chop-21')
+    const rituximab = all.find((item) => item.item.drug_id === 'rituximab')!
+    const items = applyBlockChoices(all, { [rituximab.item.id]: 'ward' })
+    const course = calculateCourse(
+      { ageYears: 60, sex: 'male', heightCm: 180, weightKg: 80, serumCreatinine: 88.4 },
+      items.map((item) => item.courseDrug),
+      { startDateIso: '2026-09-21', dayStart: '09:00', cycleNumber: 1 },
+    )
+    const built = sheets({ items, course })
+    const day = built[0]!
+    const ward = built[built.length - 1]!
+    const first = (sheet: XlsxSheet) =>
+      sheet.rows.map((row) => String(text(row[0] ?? null) ?? '')).join(' | ')
+    expect(first(day)).not.toContain('Ритуксимаб')
+    expect(first(ward)).toContain('Ритуксимаб')
   })
 })

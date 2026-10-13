@@ -1,12 +1,23 @@
 {
-  "$comment": "Картка без дози: джерело дози для мієломи не знайдено, NSSG радить уникати.",
+  "$comment": "Доза — SmPC ібандронової кислоти (Iasibon, emc): 6 мг у 100 мл за 15 хв кожні 3–4 тижні. Розбіжність: показання інструкції — кісткові метастази раку молочної залози, а NSSG MM.3 радить уникати ібандронату при мієломі; схему створено, бо препарат є в переліку відділення, застосування за рішенням лікаря.",
   "id": "ref-mm-ibandronate",
-  "short_name": "Ібандронат",
+  "short_name": "Ібандронова кислота",
   "name": {
-    "uk": "Ібандронова кислота при мієломі",
-    "en": "Ibandronate in myeloma"
+    "uk": "Ібандронова кислота (за інструкцією)",
+    "en": "Ibandronic acid (per the label)"
   },
+  "description": {
+    "uk": "Ібандронова кислота 6 мг у 100 мл 0,9% NaCl за 15 хв кожні 3–4 тижні — доза за інструкцією (профілактика кісткових подій при метастазах раку молочної залози). Для мієломи NSSG MM.3 радить уникати ібандронату: першого вибору — золедронова кислота; рішення за лікарем.",
+    "en": "Ibandronic acid 6 mg in 100 mL of 0.9% NaCl over 15 minutes every 3-4 weeks: the label dose (prevention of skeletal events in breast cancer with bone metastases). For myeloma NSSG MM.3 advises avoiding ibandronate, zoledronic acid being the first choice; the decision is the physician's."
+  },
+  "cycle_length_days": 28,
   "sources": [
+    {
+      "name": "SmPC Iasibon 6 mg concentrate for solution for infusion (ibandronic acid, emc), 4.1, 4.2",
+      "url": "https://www.medicines.org.uk/emc/product/13997/smpc",
+      "version": "ред. 19.08.2022",
+      "checkedOn": "2026-10-13"
+    },
     {
       "name": "NSSG Oxford Haematology, MM.3 Bone protection in myeloma",
       "url": "https://nssg.oxford-haematology.org.uk/myeloma/pdf-protocols/MM-3-bone-protection-in-myeloma.pdf",
@@ -14,30 +25,57 @@
       "checkedOn": "2026-10-10"
     }
   ],
-  "reference": {
-    "summary": {
-      "uk": "NSSG MM.3 радить уникати ібандронату (як і алендронату та етидронату) для кісткового захисту при мієломі. Ібандронова кислота є в переліку відділення, тому картку додано, щоб це було видно.",
-      "en": "NSSG MM.3 advises avoiding ibandronate (with alendronate and etidronate) for bone protection in myeloma. Ibandronic acid is in the department's list, so the card is here to make that visible."
-    },
-    "drugs": [
-      {
-        "name": {
-          "uk": "Ібандронова кислота",
-          "en": "Ibandronic acid"
+  "items": [
+    {
+      "key": "ibandronic-acid",
+      "drug_id": "ibandronic-acid",
+      "route": "iv_infusion",
+      "dose_value": 6,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "duration_min": 15,
+      "notes": {
+        "uk": "Кожні 3–4 тижні (цикл 28 днів). Зі зниженням кліренсу доза й розведення змінюються: калькулятор коригує дозу; об'єм розчину (500 мл) і тривалість (1 год) при КК < 50 змінюйте вручну — вони не перераховуються. При гіперкальціємії — 2–4 мг у 500 мл за 2 год (не розраховується).",
+        "en": "Every 3-4 weeks (a 28-day cycle). With falling clearance the dose and dilution change: the calculator corrects the dose; the 500 mL volume and 1-hour duration at CrCl <50 are changed by hand, they are not recalculated. In hypercalcaemia, 2-4 mg in 500 mL over 2 h (not calculated)."
+      },
+      "renal_bands": [
+        {
+          "crcl_min": 30,
+          "crcl_max": 49,
+          "dose_value": 4,
+          "administrations_per_day": 1,
+          "withhold": null,
+          "interval_min": null,
+          "notes": {
+            "uk": "SmPC: КК 30–< 50 мл/хв — 4 мг у 500 мл 0,9% NaCl чи 5% глюкози за 1 год (об'єм і тривалість — вручну).",
+            "en": "SmPC: CrCl 30 to <50 mL/min, 4 mg in 500 mL of 0.9% NaCl or 5% glucose over 1 h (volume and duration by hand)."
+          },
+          "source": {
+            "name": "SmPC Iasibon 6 mg concentrate for solution for infusion (ibandronic acid, emc), 4.1, 4.2",
+            "url": "https://www.medicines.org.uk/emc/product/13997/smpc",
+            "version": "ред. 19.08.2022",
+            "checkedOn": "2026-10-13"
+          }
         },
-        "drug_id": "ibandronic-acid"
-      }
-    ],
-    "key_info": [
-      {
-        "uk": "Перший вибір за NSSG — золедронова кислота; альтернативи — памідронат, клодронат, а при нирковій недостатності й непереносимості бісфосфонатів — деносумаб.",
-        "en": "NSSG first choice is zoledronic acid; the alternatives are pamidronate, clodronate, and denosumab in renal impairment or intolerance of bisphosphonates."
-      }
-    ],
-    "gap": {
-      "uk": "Дози для мієломи в доступних джерелах немає, тому не наводиться.",
-      "en": "No myeloma dose was found in the sources at hand, so none is given."
-    },
-    "availability": "registered"
-  }
+        {
+          "crcl_min": 0,
+          "crcl_max": 29,
+          "dose_value": 2,
+          "administrations_per_day": 1,
+          "withhold": null,
+          "interval_min": null,
+          "notes": {
+            "uk": "SmPC: КК < 30 мл/хв — 2 мг у 500 мл 0,9% NaCl чи 5% глюкози за 1 год (об'єм і тривалість — вручну).",
+            "en": "SmPC: CrCl <30 mL/min, 2 mg in 500 mL of 0.9% NaCl or 5% glucose over 1 h (volume and duration by hand)."
+          },
+          "source": {
+            "name": "SmPC Iasibon 6 mg concentrate for solution for infusion (ibandronic acid, emc), 4.1, 4.2",
+            "url": "https://www.medicines.org.uk/emc/product/13997/smpc",
+            "version": "ред. 19.08.2022",
+            "checkedOn": "2026-10-13"
+          }
+        }
+      ]
+    }
+  ]
 }

@@ -34,6 +34,8 @@ export const SUPPORT_CATEGORIES = [
   'pneumocystis',
   'antifungal',
   'antibacterial',
+  'gastroprotection',
+  'allopurinol',
   'thrombosis',
 ] as const
 export type SupportCategory = (typeof SUPPORT_CATEGORIES)[number]
@@ -44,11 +46,31 @@ const CATEGORY_DRUGS: Record<SupportCategory, readonly string[]> = {
   pneumocystis: ['co-trimoxazole'],
   antifungal: ['fluconazole', 'posaconazole', 'voriconazole'],
   antibacterial: ['levofloxacin', 'ciprofloxacin'],
+  gastroprotection: ['omeprazole'],
+  allopurinol: ['allopurinol'],
   thrombosis: ['acetylsalicylic-acid', 'apixaban', 'enoxaparin'],
 }
 
 export const THROMBO_AGENTS = ['apixaban', 'enoxaparin', 'aspirin'] as const
 export type ThromboAgent = (typeof THROMBO_AGENTS)[number]
+
+/**
+ * Gastroprotection, the department's three ways of giving it: omeprazole 20 mg by mouth every
+ * day, 40 mg intravenously every day, or 40 mg intravenously on the days a steroid is given.
+ */
+export const GASTRO_AGENTS = ['tablet', 'iv_daily', 'iv_steroid'] as const
+export type GastroAgent = (typeof GASTRO_AGENTS)[number]
+
+/** Steroids that call for gastroprotection on the days they are given. */
+const STEROID_DRUGS = new Set([
+  'dexamethasone',
+  'prednisolone',
+  'methylprednisolone',
+  'hydrocortisone',
+])
+
+/** Days of the allopurinol prophylaxis: the first week of the cycle, as the department writes it. */
+const ALLOPURINOL_DAYS = 7
 
 export const ANTIVIRAL_AGENTS = ['aciclovir', 'valaciclovir'] as const
 export type AntiviralAgent = (typeof ANTIVIRAL_AGENTS)[number]
@@ -86,6 +108,8 @@ export const NO_SUPPORT: Record<SupportCategory, boolean> = {
   pneumocystis: false,
   antifungal: false,
   antibacterial: false,
+  gastroprotection: false,
+  allopurinol: false,
   thrombosis: false,
 }
 
@@ -164,6 +188,7 @@ export function standardSupportRows(
   on: Record<SupportCategory, boolean>,
   thromboAgent: ThromboAgent = 'aspirin',
   antiviralAgent: AntiviralAgent = 'aciclovir',
+  gastroAgent: GastroAgent = 'tablet',
 ): RegimenItem[] {
   const lastDay = Math.max(cycleLengthDays ?? 0, ...items.flatMap((entry) => entry.item.days), 1)
   const cycle = wholeCycle(lastDay)
@@ -204,6 +229,24 @@ export function standardSupportRows(
           notes: {
             uk: 'Валацикловір 500 мг двічі на добу — доза SmPC для пригнічення HSV в імунокомпрометованих дорослих; впродовж лікування і ще 3 місяці після. Альтернатива ацикловіру. Додано перемикачем «Супровід за стандартом».',
             en: 'Valaciclovir 500 mg twice a day, the SmPC dose for suppressing HSV in immunocompromised adults; during treatment and for 3 months after. An alternative to aciclovir. Added by the «Standard support» switch.',
+          },
+        }),
+      )
+    }
+    if (category === 'gastroprotection' && has('omeprazole')) {
+      const added = gastroRow(base, cycle, items, gastroAgent)
+      if (added) result.push(added)
+    }
+    if (category === 'allopurinol' && has('allopurinol')) {
+      result.push(
+        row(base, category, {
+          drug_id: 'allopurinol',
+          route: 'oral',
+          dose_value: 300,
+          days: cycle.slice(0, ALLOPURINOL_DAYS),
+          notes: {
+            uk: 'Профілактика синдрому лізису пухлини: алопуринол 300 мг раз на добу, дні 1–7 (як на листі відділення). Алопуринол і його метаболіт виводяться нирками: при зниженій функції нирок дозу зменшують за інструкцією — автоматично тут не коригується. Додано перемикачем «Супровід за стандартом».',
+            en: 'Tumour lysis prophylaxis: allopurinol 300 mg once a day, days 1-7 (as on the department sheet). Allopurinol and its metabolite are cleared by the kidneys: with reduced renal function the dose is lowered per the label, not corrected automatically here. Added by the «Standard support» switch.',
           },
         }),
       )
@@ -375,6 +418,65 @@ function catalogRenalBands(catalog: CatalogIndex, added: RegimenItem): RegimenIt
       item.renal_bands.length > 0,
   )
   return same?.renal_bands ?? []
+}
+
+/** The omeprazole row for the way the physician gave it, or null where a steroid is never given. */
+function gastroRow(
+  base: Pick<RegimenItem, 'regimen_id' | 'sort_order'>,
+  cycle: number[],
+  items: CourseItem[],
+  agent: GastroAgent,
+): RegimenItem | null {
+  const note = {
+    uk: ' Додано перемикачем «Супровід за стандартом».',
+    en: ' Added by the «Standard support» switch.',
+  }
+  if (agent === 'tablet') {
+    return row(base, 'gastroprotection', {
+      drug_id: 'omeprazole',
+      route: 'oral',
+      dose_value: 20,
+      days: cycle,
+      notes: {
+        uk: `Омепразол 20 мг всередину раз на добу вранці натще — гастропротекція на весь цикл.${note.uk}`,
+        en: `Omeprazole 20 mg by mouth once a day in the morning, fasting: gastroprotection for the whole cycle.${note.en}`,
+      },
+    })
+  }
+  const intravenous = {
+    drug_id: 'omeprazole',
+    route: 'iv_bolus' as const,
+    dose_value: 40,
+  }
+  if (agent === 'iv_daily') {
+    return row(base, 'gastroprotection', {
+      ...intravenous,
+      days: cycle,
+      // Every day for weeks belongs with the ward's daily drugs, not the day's infusions.
+      block: 'ward',
+      notes: {
+        uk: `Омепразол 40 мг в/в струминно повільно (у 20–40 мл 0,9% NaCl, як у дизайнах відділення) щодня.${note.uk}`,
+        en: `Omeprazole 40 mg by slow IV push (in 20-40 mL of 0.9% NaCl, as in the department designs) every day.${note.en}`,
+      },
+    })
+  }
+  const days = [
+    ...new Set(
+      items
+        .filter((entry) => STEROID_DRUGS.has(entry.item.drug_id))
+        .flatMap((entry) => entry.item.days),
+    ),
+  ].sort((a, b) => a - b)
+  if (days.length === 0) return null
+  return row(base, 'gastroprotection', {
+    ...intravenous,
+    days,
+    anchor_offset_min: -30,
+    notes: {
+      uk: `Омепразол 40 мг в/в струминно повільно (у 20–40 мл 0,9% NaCl) у дні введення стероїдів, перед цитостатиком.${note.uk}`,
+      en: `Omeprazole 40 mg by slow IV push (in 20-40 mL of 0.9% NaCl) on the days a steroid is given, before the cytostatic.${note.en}`,
+    },
+  })
 }
 
 const THROMBO_NOTE = {

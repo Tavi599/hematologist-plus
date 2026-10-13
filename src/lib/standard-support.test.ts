@@ -51,6 +51,8 @@ const ON = {
   pneumocystis: true,
   antifungal: true,
   antibacterial: false,
+  gastroprotection: false,
+  allopurinol: false,
   thrombosis: true,
 }
 
@@ -290,5 +292,86 @@ describe('valaciclovir and levofloxacin', () => {
       { crcl_min: 20, crcl_max: 50, dose_value: 250, first_dose_full: true },
       { crcl_min: 0, crcl_max: 19, dose_value: 125, first_dose_full: true },
     ])
+  })
+})
+
+describe('gastroprotection and allopurinol', () => {
+  const drugs = catalog([...ALL, 'omeprazole', 'allopurinol'])
+  const withSteroid = [
+    ...chemo,
+    entry('r.dexamethasone', 'dexamethasone', 'premedication', 'oral', [1, 2, 8]),
+  ]
+
+  it('gives omeprazole 20 mg by mouth every day of the cycle', () => {
+    const rows = standardSupportRows(drugs, chemo, 21, '2026-10-05', {
+      ...NO_SUPPORT,
+      gastroprotection: true,
+    })
+    expect(rows).toHaveLength(1)
+    expect(rows[0]).toMatchObject({ drug_id: 'omeprazole', route: 'oral', dose_value: 20 })
+    expect(rows[0]!.days).toHaveLength(21)
+    expect(rows[0]!.block).toBe('ward')
+  })
+
+  it('gives omeprazole 40 mg intravenously every day, on the inpatient list', () => {
+    const rows = standardSupportRows(
+      drugs,
+      chemo,
+      14,
+      '2026-10-05',
+      { ...NO_SUPPORT, gastroprotection: true },
+      'aspirin',
+      'aciclovir',
+      'iv_daily',
+    )
+    expect(rows[0]).toMatchObject({ route: 'iv_bolus', dose_value: 40, block: 'ward' })
+    expect(rows[0]!.days).toHaveLength(14)
+  })
+
+  it('gives omeprazole 40 mg intravenously only on the days a steroid is given', () => {
+    const on = { ...NO_SUPPORT, gastroprotection: true }
+    const rows = standardSupportRows(
+      drugs,
+      withSteroid,
+      21,
+      '2026-10-05',
+      on,
+      'aspirin',
+      'aciclovir',
+      'iv_steroid',
+    )
+    expect(rows[0]).toMatchObject({ route: 'iv_bolus', dose_value: 40, anchor_offset_min: -30 })
+    // Prednisolone of the regimen on days 1-5 and the premedication dexamethasone on 1, 2, 8.
+    expect(rows[0]!.days).toEqual([1, 2, 3, 4, 5, 8])
+    // No steroid in the course, no row.
+    const noSteroid = chemo.filter((entry) => entry.item.drug_id !== 'prednisolone')
+    expect(
+      standardSupportRows(
+        drugs,
+        noSteroid,
+        21,
+        '2026-10-05',
+        on,
+        'aspirin',
+        'aciclovir',
+        'iv_steroid',
+      ),
+    ).toEqual([])
+  })
+
+  it('gives allopurinol 300 mg for the first seven days', () => {
+    const rows = standardSupportRows(drugs, chemo, 21, '2026-10-05', {
+      ...NO_SUPPORT,
+      allopurinol: true,
+    })
+    expect(rows[0]).toMatchObject({ drug_id: 'allopurinol', dose_value: 300, block: 'ward' })
+    expect(rows[0]!.days).toEqual([1, 2, 3, 4, 5, 6, 7])
+  })
+
+  it('leaves the kind to the regimen that writes its own', () => {
+    const own = [...chemo, entry('r.allopurinol', 'allopurinol', 'supportive', 'oral', [1, 2])]
+    expect(
+      standardSupportRows(drugs, own, 21, '2026-10-05', { ...NO_SUPPORT, allopurinol: true }),
+    ).toEqual([])
   })
 })
