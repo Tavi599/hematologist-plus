@@ -808,6 +808,28 @@ describe('renal ranges of a regimen item', () => {
   })
 })
 
+describe('dilution of ibandronic acid', () => {
+  it('offers the bags and durations of a drug that is not an antimicrobial, 500 mL being the default', () => {
+    const drug = { id: 'ibandronic-acid', atc_code: 'M05BA06' }
+    const item = { route: 'iv_infusion' as const }
+    expect(canSwitchBag(drug, item, { bag_volumes_ml: [100, 500] })).toBe(true)
+    expect(
+      canSwitchBag({ id: 'zoledronic-acid', atc_code: 'M05BA08' }, item, {
+        bag_volumes_ml: [100, 500],
+      }),
+    ).toBe(false)
+    expect(
+      durationOptionsOf(drug, item, {
+        duration_options: [
+          { duration_min: 15, extended: false },
+          { duration_min: 120, extended: false },
+        ],
+        rate_ramp: null,
+      }).map((option) => option.durationMin),
+    ).toEqual([15, 120])
+  })
+})
+
 describe('the sheet a row is printed on', () => {
   const rows = () => buildCourseItems(index(), 'r-chop-21')
 

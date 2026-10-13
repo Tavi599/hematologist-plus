@@ -57,22 +57,42 @@
     {
       "key": "nacl",
       "solvent": "sodium_chloride_0_9",
-      "bag_volumes_ml": [100],
-      "duration_min": 15,
+      "bag_volumes_ml": [100, 500],
+      "duration_min": 120,
       "is_default": true,
       "stock_concentration_mg_ml": 1,
       "notes": {
-        "uk": "6 мг (6 мл концентрату) у 100 мл 0,9% NaCl або 5% глюкози, не менше 15 хв — лише при нормальній чи злегка зниженій функції нирок. При гіперкальціємії — 2 або 4 мг у 500 мл за 2 год (не розраховується).",
-        "en": "6 mg (6 mL of concentrate) in 100 mL of 0.9% sodium chloride or 5% glucose over at least 15 min, only with normal or mildly reduced renal function. In hypercalcaemia, 2 or 4 mg in 500 mL over 2 h (not calculated)."
+        "uk": "Стандарт відділення — 6 мг у 500 мл 0,9% NaCl за 2 год (об'єм і тривалість можна змінити в рядку). За SmPC: 6 мг у 100 мл за 15 хв — лише при нормальній чи злегка зниженій функції нирок (КК ≥ 50); при КК < 50 — 500 мл за 1 год. При гіперкальціємії — 2 або 4 мг у 500 мл за 2 год (не розраховується).",
+        "en": "The department standard is 6 mg in 500 mL of 0.9% NaCl over 2 h (volume and duration can be changed in the row). Per the SmPC: 6 mg in 100 mL over 15 min only with normal or mildly reduced renal function (CrCl ≥50); at CrCl <50, 500 mL over 1 h. In hypercalcaemia, 2 or 4 mg in 500 mL over 2 h (not calculated)."
       },
       "sources": [
         {
-          "name": "SmPC Iasibon 6 mg concentrate for solution for infusion (ibandronic acid, emc), 4.1, 4.2",
+          "name": "Вказівка лікаря відділення (2026-10-13): ібандронова кислота — стандартно в 500 мл 0,9% NaCl за 2 години",
+          "checkedOn": "2026-10-13"
+        },
+        {
+          "name": "SmPC Iasibon 6 mg concentrate for solution for infusion (ibandronic acid, emc), 4.2",
           "url": "https://www.medicines.org.uk/emc/product/13997/smpc",
           "version": "ред. 19.08.2022",
           "checkedOn": "2026-10-13"
         }
+      ],
+      "min_duration_min": 15,
+      "duration_options": [
+        {
+          "duration_min": 15,
+          "extended": false
+        },
+        {
+          "duration_min": 60,
+          "extended": false
+        },
+        {
+          "duration_min": 120,
+          "extended": false
+        }
       ]
     }
-  ]
+  ],
+  "atc_code": "M05BA06"
 }

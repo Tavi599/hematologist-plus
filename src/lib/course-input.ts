@@ -102,14 +102,27 @@ export function isContinuousDoxorubicin(
  * smallest bag that keeps the concentration stays the rule.
  */
 export function canSwitchBag(
-  drug: Pick<Drug, 'atc_code'>,
+  drug: Pick<Drug, 'atc_code'> & { id?: string },
   item: Pick<RegimenItem, 'route'>,
   params: Pick<DrugInfusionParams, 'bag_volumes_ml'> | null,
 ): boolean {
   return (
     item.route === 'iv_infusion' &&
-    (drug.atc_code ?? '').startsWith('J') &&
+    choosesDilution(drug) &&
     (params?.bag_volumes_ml.length ?? 0) > 1
+  )
+}
+
+/**
+ * Drugs other than antimicrobials whose dilution the physician picks, with the bag the department
+ * gives by default. Ibandronic acid: 500 mL over 2 hours is the department's standard; the label's
+ * 100 mL over 15 minutes is for normal or mildly reduced renal function only.
+ */
+const DEFAULT_BAG_ML: Record<string, number> = { 'ibandronic-acid': 500 }
+
+function choosesDilution(drug: Pick<Drug, 'atc_code'> & { id?: string }): boolean {
+  return (
+    (drug.atc_code ?? '').startsWith('J') || (drug.id !== undefined && drug.id in DEFAULT_BAG_ML)
   )
 }
 
@@ -159,11 +172,11 @@ export interface DurationOption {
 
 /** The durations on offer for an antimicrobial infusion that is not raised in steps. */
 export function durationOptionsOf(
-  drug: Pick<Drug, 'atc_code'>,
+  drug: Pick<Drug, 'atc_code'> & { id?: string },
   item: Pick<RegimenItem, 'route'>,
   params: Pick<DrugInfusionParams, 'duration_options' | 'rate_ramp'> | null,
 ): DurationOption[] {
-  if (item.route !== 'iv_infusion' || !(drug.atc_code ?? '').startsWith('J')) return []
+  if (item.route !== 'iv_infusion' || !choosesDilution(drug)) return []
   if (!params || params.rate_ramp) return []
   return (params.duration_options ?? []).map((option) => ({
     durationMin: option.duration_min,
@@ -605,6 +618,9 @@ function buildInfusionParams(
   return {
     bagVolumesMl,
     ...(continuousDoxorubicin ? { preferredBagMl: CONTINUOUS_DOXORUBICIN_BAG_ML } : {}),
+    ...(DEFAULT_BAG_ML[item.drug_id] === undefined
+      ? {}
+      : { preferredBagMl: DEFAULT_BAG_ML[item.drug_id] }),
     ...(params?.concentration_min_mg_ml === null || params?.concentration_min_mg_ml === undefined
       ? {}
       : { concentrationMinMgMl: params.concentration_min_mg_ml }),
