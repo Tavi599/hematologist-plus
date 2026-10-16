@@ -856,3 +856,72 @@ describe('the sheet a row is printed on', () => {
     expect(applyBlockChoices(items, { [items[0]!.item.id]: 'infusion' })[0]).toBe(items[0])
   })
 })
+
+describe("the department's pace of the cytostatics", () => {
+  const design = { name: 'Дизайн відділення «CHOEP» (Google Таблиці)', checkedOn: '2026-09-19' }
+  const params = (drugId: string, bagMl: number, durationMin: number, sources = [design]) => ({
+    id: `${drugId}.nacl`,
+    drug_id: drugId,
+    solvent: 'sodium_chloride_0_9' as const,
+    concentration_min_mg_ml: null,
+    concentration_max_mg_ml: null,
+    stock_concentration_mg_ml: null,
+    max_rate_mg_min: null,
+    duration_options: [],
+    min_duration_min: null,
+    rate_ramp: null,
+    ramp_sequence: null,
+    bag_volumes_ml: [bagMl],
+    duration_min: durationMin,
+    is_default: true,
+    notes: null,
+    sources,
+    sort_order: 0,
+  })
+  const catalog = () => {
+    const rows = demoCatalog()
+    rows.drug_infusion_params.push(
+      params('doxorubicin', 250, 30),
+      params('cyclophosphamide', 500, 60),
+      // Another protocol's bag and time, not the department's.
+      params('vincristine', 50, 10, [{ name: 'NSSG', checkedOn: '2026-10-03' }]),
+    )
+    return indexCatalog(rows)
+  }
+  const row = (drugId: string, route: 'iv_bolus' | 'iv_infusion', durationMin?: number) =>
+    buildCourseItemsFrom(catalog(), [
+      customCourseItem({
+        id: drugId,
+        drugId,
+        doseValue: 1,
+        doseUnit: 'mg_m2',
+        days: [1],
+        route,
+        ...(durationMin === undefined ? {} : { durationMin }),
+        sortOrder: 0,
+      }),
+    ])[0]!
+
+  it('gives a push diluted in the bag and over the time of the department design', () => {
+    const doxorubicin = row('doxorubicin', 'iv_bolus')
+    expect(doxorubicin.item.route).toBe('iv_infusion')
+    expect(doxorubicin.courseDrug.durationMin).toBe(30)
+    expect(doxorubicin.courseDrug.infusion?.bagVolumesMl).toEqual([250])
+  })
+
+  it('gives a push the design has no bag for in 100 mL of saline over 15 min', () => {
+    const vincristine = row('vincristine', 'iv_bolus')
+    expect(vincristine.item.route).toBe('iv_infusion')
+    expect(vincristine.courseDrug.durationMin).toBe(15)
+    expect(vincristine.courseDrug.infusion?.bagVolumesMl).toEqual([100])
+  })
+
+  it('runs an infusion no faster than the design, and a slower one as the regimen writes it', () => {
+    expect(row('cyclophosphamide', 'iv_infusion', 30).courseDrug.durationMin).toBe(60)
+    expect(row('cyclophosphamide', 'iv_infusion', 180).courseDrug.durationMin).toBe(180)
+  })
+
+  it('leaves a push that is no cytostatic alone', () => {
+    expect(row('prednisolone', 'iv_bolus').item.route).toBe('iv_bolus')
+  })
+})

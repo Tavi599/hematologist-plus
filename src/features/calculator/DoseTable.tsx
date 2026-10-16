@@ -55,6 +55,7 @@ import {
   type CourseItem,
   type DurationOption,
   type SheetChoice,
+  PERIPHERAL_MAX_RATE_ML_H,
 } from '../../lib/course-input'
 import { groupCourseItems } from '../../lib/dose-groups'
 import { PREMEDICATION_ADVISED } from '../../lib/premedication'
@@ -1006,6 +1007,12 @@ function DoseRow({
                   })}
                 </Text>
               )}
+              {result.infusion.rateMlH !== null &&
+                result.infusion.rateMlH > PERIPHERAL_MAX_RATE_ML_H && (
+                  <Text size="xs" c="orange">
+                    {t('calculator.doses.centralLine', { max: PERIPHERAL_MAX_RATE_ML_H })}
+                  </Text>
+                )}
             </Stack>
           ) : result && item.missingInfusionData ? (
             <Badge color="yellow" variant="light">

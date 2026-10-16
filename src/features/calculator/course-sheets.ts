@@ -5,7 +5,7 @@ import {
   type CourseDrugResult,
   type CourseResult,
 } from '../../domain'
-import { solventOf, type CourseItem } from '../../lib/course-input'
+import { PERIPHERAL_MAX_RATE_ML_H, solventOf, type CourseItem } from '../../lib/course-input'
 import { rampStepsFor } from '../../lib/ramp-steps'
 import { clockOfHour, SHEET_HOURS } from '../../lib/row-plan'
 import { formatAmount, formatDate } from '../../lib/format'
@@ -144,6 +144,7 @@ const BLANK = {
   wardMode: 'Режим: палатний            Дієта: стіл №5',
   registryCode: 'Код за ЄДРПОУ ',
   rate: 'V= ',
+  centralLine: '(через ЦВК)',
   grams: ' гр',
   rampStart: 'Початкова швидкість (V1)= ',
   rampStep: ' мл/год. Пришвидшувати кожні ',
@@ -727,7 +728,9 @@ function howLine(
     return `${route}\n${BLANK.rate}${steps.start_ml_h}→${steps.max_ml_h} ${t('units.ml_h')}`
   }
   if (infusion && infusion.rateMlH !== null) {
-    return `${route}\n${BLANK.rate}${formatAmount(infusion.rateMlH, language)} ${t('units.ml_h')}`
+    const rate = `${route}\n${BLANK.rate}${formatAmount(infusion.rateMlH, language)} ${t('units.ml_h')}`
+    // Faster than a peripheral cannula carries: the pace of the design is the one through a CVC.
+    return infusion.rateMlH > PERIPHERAL_MAX_RATE_ML_H ? `${rate}\n${BLANK.centralLine}` : rate
   }
   const perDay = result?.administrationsPerDay ?? item?.item.administrations_per_day ?? 1
   return perDay > 1 ? `${route}\n${perDay}${BLANK.perDay}` : route

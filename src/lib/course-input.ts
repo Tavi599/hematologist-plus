@@ -440,6 +440,91 @@ export function applyAdministrationMode(item: RegimenItem, mode: AdministrationM
   }
 }
 
+/**
+ * Cytostatics the department never gives as a push: a regimen's «струминно» for these goes diluted,
+ * over at least `DILUTED_PUSH_MIN`. Bortezomib is not among them — its label gives it as a 3–5 s
+ * bolus — nor are the steroids and antibiotics a regimen also writes as pushes.
+ */
+const DILUTED_PUSHES = new Set([
+  'cyclophosphamide',
+  'cytarabine',
+  'daunorubicin',
+  'doxorubicin',
+  'epirubicin',
+  'fluorouracil',
+  'idarubicin',
+  'methotrexate',
+  'mitoxantrone',
+  'vinblastine',
+  'vincristine',
+  'vinorelbine',
+])
+
+/** The shortest a diluted cytostatic runs, min. */
+export const DILUTED_PUSH_MIN = 15
+
+/** Where the department's own design names no bag for the drug: 100 mL of saline over 15 min. */
+const DILUTED_PUSH_BAG_ML = 100
+
+/**
+ * Fastest a cytostatic runs through a peripheral cannula, mL/h. A faster pace is the one the
+ * department's design gives through a central venous catheter, and the row and the sheet say so.
+ */
+export const PERIPHERAL_MAX_RATE_ML_H = 500
+
+/** The bag and time the department's own sheets give the drug. */
+function isDepartmentDesign(params: DrugInfusionParams | null): params is DrugInfusionParams {
+  return params?.sources?.some((source) => source.name.startsWith('Дизайн відділення')) ?? false
+}
+
+/**
+ * The row at the department's pace. A cytostatic the regimen gives as a push goes diluted — in the
+ * department's bag over its time, or in 100 mL over 15 min where its design has none. A short
+ * infusion runs no faster than the department's design gives it (cyclophosphamide 500 mL over an
+ * hour, not the half hour of eviQ's BEACOPP); a slower one the regimen asks for stays as written.
+ * Returns the infusion parameters to calculate it with: the drug's own unless replaced.
+ */
+function atDepartmentPace(
+  item: RegimenItem,
+  params: DrugInfusionParams | null,
+): { item: RegimenItem; params: DrugInfusionParams | null } {
+  if (item.role !== 'main') return { item, params }
+  const design = isDepartmentDesign(params) ? params : null
+  if (item.route === 'iv_bolus' && DILUTED_PUSHES.has(item.drug_id)) {
+    const diluted: RegimenItem = { ...item, route: 'iv_infusion', infusion_params_id: null }
+    if (design) {
+      return {
+        item: {
+          ...diluted,
+          duration_min: Math.max(design.duration_min ?? 0, DILUTED_PUSH_MIN),
+        },
+        params: design,
+      }
+    }
+    return {
+      item: {
+        ...diluted,
+        duration_min: DILUTED_PUSH_MIN,
+        fallback_solvent: 'sodium_chloride_0_9',
+        fallback_volume_ml: DILUTED_PUSH_BAG_ML,
+      },
+      // The drug's concentration limits still hold; another protocol's bag and time do not.
+      params: params
+        ? { ...params, bag_volumes_ml: [DILUTED_PUSH_BAG_ML], duration_min: DILUTED_PUSH_MIN }
+        : null,
+    }
+  }
+  if (
+    item.route === 'iv_infusion' &&
+    design?.duration_min &&
+    item.duration_min !== null &&
+    item.duration_min < design.duration_min
+  ) {
+    return { item: { ...item, duration_min: design.duration_min }, params }
+  }
+  return { item, params }
+}
+
 /** Builds the calculation input for every item of a regimen, in administration order. */
 export function buildCourseItems(
   catalog: CatalogIndex,
@@ -486,12 +571,12 @@ export function buildCourseItemsFrom(
   const anchorItem = protocolItems.find(
     (item) => MESNA_ANCHORS.has(item.drug_id) && item.block === 'infusion',
   )
-  return items.flatMap((item) => {
-    const drug = catalog.drugs.get(item.drug_id)
+  return items.flatMap((asWritten) => {
+    const drug = catalog.drugs.get(asWritten.drug_id)
     if (!drug) return []
+    const { item, params } = atDepartmentPace(asWritten, resolveInfusionParams(catalog, asWritten))
     const choices = doseChoices(catalog, item)
     const chosen = choices.find((choice) => choice.id === chosenDoses?.[item.id]) ?? choices[0]!
-    const params = resolveInfusionParams(catalog, item)
     const presentations = (catalog.presentationsByDrug.get(item.drug_id) ?? [])
       .filter((presentation) => fitsRoute(presentation.form, item.route))
       .map((presentation) => ({
