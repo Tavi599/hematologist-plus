@@ -745,7 +745,27 @@
       "drug": "drug",
       "infusion": "dilution"
     },
-    "itemTitle": "Sources behind this item"
+    "itemTitle": "Sources behind this item",
+    "searchLabel": "Search the sources",
+    "searchPlaceholder": "Document, drug, regimen or version",
+    "notFound": "Nothing found.",
+    "total": "Documents: {{value}}",
+    "found": "Found: {{value}}",
+    "oldestCheckedOn": "oldest check — {{date}}",
+    "group": {
+      "nssg": "NSSG Oxford Haematology protocols",
+      "eviq": "eviQ protocols",
+      "nccn": "NCCN",
+      "uptodate": "UpToDate",
+      "guideline": "Professional society guidelines",
+      "label": "Drug labels and product characteristics",
+      "register": "State Register of Medicinal Products of Ukraine",
+      "trial": "Clinical trial registry",
+      "publication": "Publications",
+      "indexing": "Indexing and level-of-evidence records",
+      "department": "Department data",
+      "other": "Other documents"
+    }
   },
   "error": {
     "title": "Something went wrong",
