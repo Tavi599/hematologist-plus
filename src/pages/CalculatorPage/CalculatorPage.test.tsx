@@ -30,6 +30,8 @@ const REGIMEN_ROUTE = { route: '/calculator?regimen=r-chop-21' }
 // takes close to the default 20 s.
 describe('CalculatorPage', { timeout: 60_000 }, () => {
   beforeEach(async () => {
+    // Each test starts on a clean browser: the calculator keeps a draft of the course.
+    window.localStorage.clear()
     await act(() => i18n.changeLanguage('uk'))
     const catalog = demoCatalog()
     fetch.fetchTable.mockReset()
@@ -347,5 +349,64 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
 
     await act(async () => fireEvent.click(antiviral))
     expect(within(table()).queryByText('ДЕМО Ацикловір')).not.toBeInTheDocument()
+  })
+
+  it('takes the course out again when the calculator is reopened, name only by consent', async () => {
+    const first = renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
+    await fillPatient()
+    await act(async () =>
+      fireEvent.change(screen.getByLabelText("Прізвище, ім'я, по батькові"), {
+        target: { value: 'Шевченко Т. Г.' },
+      }),
+    )
+    // A dose typed by hand for one drug: a setting of the course, not of the patient.
+    const table = () => screen.getByRole('table', { name: 'Дози', hidden: true })
+    const rituximab = within(table()).getByText('ДЕМО Ритуксимаб').closest('tr')!
+    await act(async () =>
+      fireEvent.change(within(rituximab).getByLabelText('Доза вручну: ДЕМО Ритуксимаб'), {
+        target: { value: '700' },
+      }),
+    )
+
+    // Nothing of who the patient is lies in storage while the switch is off.
+    const stored = () => window.localStorage.getItem('hp.courseDraft') ?? ''
+    expect(stored()).not.toContain('Шевченко')
+    expect(stored()).toContain('"weightKg":80')
+
+    // Leaving the calculator and coming back — a reload, or a step to the disease pages.
+    first.unmount()
+    renderWithProviders(<CalculatorPage />, { route: '/calculator' })
+    expect(await screen.findByRole('combobox', { name: 'Схема' })).toHaveValue(
+      'R-CHOP-21 — ДЕМО R-CHOP-21',
+    )
+    expect(screen.getByLabelText('Вага, кг')).toHaveValue('80')
+    expect(screen.getByLabelText('Зріст, см')).toHaveValue('180')
+    expect(screen.getByLabelText("Прізвище, ім'я, по батькові")).toHaveValue('')
+    const back = within(table()).getByText('ДЕМО Ритуксимаб').closest('tr')!
+    expect(within(back).getByLabelText('Доза вручну: ДЕМО Ритуксимаб')).toHaveValue('700')
+  })
+
+  it('keeps the name in the draft once the physician switches it on', async () => {
+    const first = renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
+    await fillPatient()
+    const remember = screen
+      .getByText("Запам'ятовувати ПІБ")
+      .closest('.mantine-Switch-root')!
+      .querySelector('input')!
+    await act(async () => fireEvent.click(remember))
+    await act(async () =>
+      fireEvent.change(screen.getByLabelText("Прізвище, ім'я, по батькові"), {
+        target: { value: 'Шевченко Т. Г.' },
+      }),
+    )
+    expect(window.localStorage.getItem('hp.courseDraft')).toContain('Шевченко')
+
+    first.unmount()
+    renderWithProviders(<CalculatorPage />, { route: '/calculator' })
+    expect(await screen.findByLabelText("Прізвище, ім'я, по батькові")).toHaveValue(
+      'Шевченко Т. Г.',
+    )
   })
 })

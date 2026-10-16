@@ -19,6 +19,7 @@ import {
   ageFromBirthDate,
   CREATININE_UNITS,
   emptyPatientForm,
+  patientFormFrom,
   patientFormSchema,
   type PatientFormValues,
   type PatientInput,
@@ -27,11 +28,21 @@ import {
 /**
  * Patient data lives only in this component's state and its parent — never sent anywhere.
  * Every change is validated; the parent gets the parsed values or null while they are incomplete.
+ *
+ * `initial` fills the form from a course taken out again — the draft of this browser or a card
+ * read from a file. It is read when the form is mounted, so a course that arrives later is given
+ * a new form rather than this one being told to forget what is typed in it.
  */
-export function PatientForm({ onChange }: { onChange: (patient: PatientInput | null) => void }) {
+export function PatientForm({
+  onChange,
+  initial = null,
+}: {
+  onChange: (patient: PatientInput | null) => void
+  initial?: PatientInput | null
+}) {
   const { t } = useTranslation()
   const form = useForm<PatientFormValues, unknown, PatientInput>({
-    defaultValues: emptyPatientForm(),
+    defaultValues: initial === null ? emptyPatientForm() : patientFormFrom(initial),
     mode: 'onChange',
     resolver: zodResolver(patientFormSchema),
   })
