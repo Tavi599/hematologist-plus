@@ -170,5 +170,8 @@ src/
 - Verify every claim. Never invent a dose a source does not give: write "без розрахунку" instead. When sources disagree, show the discrepancy.
 - NCCN: never copy its text; read it only when the user explicitly says so. UpToDate: paraphrase, never copy. The user logs in to UpToDate themselves — never enter passwords, never get past a CAPTCHA.
 - Do not ask too often. Commit, push and apply Supabase SQL without asking (Cyrillic SQL goes to the clipboard only via `Set-Clipboard`, see above).
-- Deferred until the user asks: drug need and sheets for the whole course; carrying BSA/weight between cycles.
+- The physician declined (2026-10-16) a need list or a sheet for the whole course, and carrying
+  BSA/weight between cycles: controls fall between cycles and a hospitalization shifts by a day
+  or two, so a sheet written ahead would be rewritten anyway. One cycle at a time, saved as
+  .xlsx with the physician's own edits, is the working way. Do not build either without a new ask.
 - One task per session. Read only the parts of large files that are needed; keep the gates (typecheck, lint, format:check, vitest, data:validate) complete.
