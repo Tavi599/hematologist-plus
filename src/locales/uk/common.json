@@ -111,6 +111,7 @@
       "doseCapped": "Доза (BSA 2,0)",
       "doseEntered": "Доза (BSA вручну)",
       "reduction": "Редукція, %",
+      "reductionTitle": "Редукція дози",
       "reductionNeeded": "потрібна",
       "reductionSuggested": "є підстави",
       "manualDose": "Доза вручну",
@@ -145,6 +146,12 @@
       "noPresentations": "Немає фасувань",
       "enabled": "Препарат у курсі",
       "chain": "Як порахували",
+      "edit": "Змінити",
+      "group": {
+        "dose": "Доза",
+        "administration": "Введення",
+        "plan": "Лист і час"
+      },
       "perAdministration": "на одне введення",
       "timesPerDay": "{{count}} введення на день",
       "administrationMode": "Режим введення",

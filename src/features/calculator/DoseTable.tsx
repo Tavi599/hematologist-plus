@@ -170,6 +170,7 @@ function RenalBandInfo({
   onOff,
   onLevel,
   onEveryOtherDay,
+  controls = false,
 }: {
   adjustment: RenalAdjustment
   item: CourseItem
@@ -178,6 +179,8 @@ function RenalBandInfo({
   onOff: (off: boolean) => void
   onLevel: (level: RenalBandLevel) => void
   onEveryOtherDay: (on: boolean) => void
+  /** What this copy shows: the switches of the correction, or what it did to the dose. */
+  controls?: boolean
 }) {
   const { t } = useTranslation()
   const tu = t as unknown as DynamicTranslate
@@ -192,15 +195,16 @@ function RenalBandInfo({
     item.item.administrations_per_day,
     item.item.interval_min,
   )
+  // Nothing to switch in these two: they only say that the correction did not apply.
   if (adjustment.status === 'unchecked' || adjustment.status === 'notForDose') {
-    return (
+    return controls ? null : (
       <Text size="xs" c="orange.8" mt={2}>
         {t(`calculator.doses.renal.${adjustment.status}`)}
       </Text>
     )
   }
   if (adjustment.status === 'above') {
-    return (
+    return controls ? null : (
       <Text size="xs" c="dimmed" mt={2}>
         {t('calculator.doses.renal.above', {
           crcl: formatNumber(adjustment.clearanceMlMin, language, 0),
@@ -239,48 +243,54 @@ function RenalBandInfo({
         : 'applied'
   return (
     <Stack gap={2} mt={4}>
-      <Text size="xs" c={off || adjustment.status === 'withheld' ? 'red' : 'blue.8'} fw={500}>
-        {tu(`calculator.doses.renal.${key}`, {
-          crcl: formatNumber(adjustment.clearanceMlMin, language, 0),
-          min: band.minMlMin,
-          max: band.maxMlMin,
-          corrected,
-          protocol,
-        })}
-      </Text>
+      {!controls && (
+        <Text size="xs" c={off || adjustment.status === 'withheld' ? 'red' : 'blue.8'} fw={500}>
+          {tu(`calculator.doses.renal.${key}`, {
+            crcl: formatNumber(adjustment.clearanceMlMin, language, 0),
+            min: band.minMlMin,
+            max: band.maxMlMin,
+            corrected,
+            protocol,
+          })}
+        </Text>
+      )}
       {/* A range rather than one dose: said out loud, with the switch between its ends. */}
       {band.withhold === undefined && band.doseRange && !off && (
         <>
-          <Text size="xs" c="orange.9" fw={500}>
-            {t('calculator.doses.renal.range', {
-              min: formatNumber(band.doseRange.min, language, 2),
-              max: formatNumber(band.doseRange.max, language, 2),
-              dayMin: formatNumber(band.doseRange.min * band.administrationsPerDay, language, 2),
-              dayMax: formatNumber(band.doseRange.max * band.administrationsPerDay, language, 2),
-              unit: tu(`units.${unit}`),
-            })}
-          </Text>
-          <SegmentedControl
-            size="xs"
-            disabled={disabled}
-            value={rangeLevel(
-              band.doseRange,
-              adjustment.status === 'applied' ? adjustment.doseValue : band.doseValue,
-            )}
-            onChange={(value) => onLevel(value as RenalBandLevel)}
-            data={RANGE_LEVELS.map((level) => ({
-              value: level,
-              label: t(`calculator.doses.renal.level.${level}`, {
-                dose: formatNumber(renalBandDose(band.doseRange!, level), language, 2),
-              }),
-            }))}
-            aria-label={`${t('calculator.doses.renal.rangeLabel')}: ${localize(item.drug.name, language)}`}
-          />
+          {!controls && (
+            <Text size="xs" c="orange.9" fw={500}>
+              {t('calculator.doses.renal.range', {
+                min: formatNumber(band.doseRange.min, language, 2),
+                max: formatNumber(band.doseRange.max, language, 2),
+                dayMin: formatNumber(band.doseRange.min * band.administrationsPerDay, language, 2),
+                dayMax: formatNumber(band.doseRange.max * band.administrationsPerDay, language, 2),
+                unit: tu(`units.${unit}`),
+              })}
+            </Text>
+          )}
+          {controls && (
+            <SegmentedControl
+              size="xs"
+              disabled={disabled}
+              value={rangeLevel(
+                band.doseRange,
+                adjustment.status === 'applied' ? adjustment.doseValue : band.doseValue,
+              )}
+              onChange={(value) => onLevel(value as RenalBandLevel)}
+              data={RANGE_LEVELS.map((level) => ({
+                value: level,
+                label: t(`calculator.doses.renal.level.${level}`, {
+                  dose: formatNumber(renalBandDose(band.doseRange!, level), language, 2),
+                }),
+              }))}
+              aria-label={`${t('calculator.doses.renal.rangeLabel')}: ${localize(item.drug.name, language)}`}
+            />
+          )}
         </>
       )}
       {/* The lower daily dose cannot always be made from the forms on hand: the full dose every
           other day is offered as the alternative, the physician's to choose. */}
-      {band.withhold === undefined && band.everyOtherDayFull && !off && (
+      {controls && band.withhold === undefined && band.everyOtherDayFull && !off && (
         <>
           <SegmentedControl
             size="xs"
@@ -312,18 +322,20 @@ function RenalBandInfo({
           </Text>
         </>
       )}
-      {row?.notes && (
+      {!controls && row?.notes && (
         <Text size="xs" c={band.withhold === undefined && band.doseRange ? 'orange.9' : 'dimmed'}>
           {localize(row.notes, language)}
         </Text>
       )}
-      <Checkbox
-        size="xs"
-        disabled={disabled}
-        checked={off}
-        onChange={(event) => onOff(event.currentTarget.checked)}
-        label={t('calculator.doses.renal.keepProtocol')}
-      />
+      {controls && (
+        <Checkbox
+          size="xs"
+          disabled={disabled}
+          checked={off}
+          onChange={(event) => onOff(event.currentTarget.checked)}
+          label={t('calculator.doses.renal.keepProtocol')}
+        />
+      )}
     </Stack>
   )
 }
@@ -417,6 +429,8 @@ export function DoseTable(props: DoseTableProps) {
   const { t } = useTranslation()
   const { items, course } = props
   const [expanded, setExpanded] = useState<string | null>(null)
+  // Which row has its controls open: one at a time, so the table stays a table.
+  const [settings, setSettings] = useState<string | null>(null)
   // A phone gets the rows as cards (DoseTable.module.css), not a table scrolled sideways.
   const narrow = useMediaQuery('(max-width: 47.99em)')
   const resultById = new Map((course?.drugs ?? []).map((drug) => [drug.id, drug]))
@@ -439,7 +453,7 @@ export function DoseTable(props: DoseTableProps) {
           {t('calculator.doses.title')}
         </Title>
       </Box>
-      <Table.ScrollContainer minWidth={narrow ? 0 : 760}>
+      <Table.ScrollContainer minWidth={narrow ? 0 : 620}>
         <Table
           verticalSpacing="xs"
           highlightOnHover
@@ -471,8 +485,6 @@ export function DoseTable(props: DoseTableProps) {
                   </Text>
                 )}
               </Table.Th>
-              <Table.Th w={110}>{t('calculator.doses.reduction')}</Table.Th>
-              <Table.Th w={120}>{t('calculator.doses.manualDose')}</Table.Th>
               <Table.Th>{t('calculator.doses.units')}</Table.Th>
               <Table.Th>{t('calculator.doses.infusion')}</Table.Th>
               <Table.Th w={44} />
@@ -482,7 +494,7 @@ export function DoseTable(props: DoseTableProps) {
             {groupCourseItems(items).map((group) => (
               <Fragment key={group.key}>
                 <Table.Tr bg="var(--mantine-color-default-hover)">
-                  <Table.Td colSpan={9} py={6}>
+                  <Table.Td colSpan={7} py={6}>
                     <Text size="xs" fw={600} tt="uppercase" c="dimmed">
                       {t(`calculator.doses.block.${group.kind}`)}
                     </Text>
@@ -495,6 +507,8 @@ export function DoseTable(props: DoseTableProps) {
                     result={resultById.get(item.item.id)}
                     expanded={expanded === item.item.id}
                     onExpand={() => setExpanded(expanded === item.item.id ? null : item.item.id)}
+                    settingsOpen={settings === item.item.id}
+                    onSettings={() => setSettings(settings === item.item.id ? null : item.item.id)}
                     {...props}
                   />
                 ))}
@@ -512,6 +526,8 @@ function DoseRow({
   result,
   expanded,
   onExpand,
+  settingsOpen,
+  onSettings,
   disabledIds,
   drugPercent,
   doseOverrideAmount,
@@ -555,6 +571,9 @@ function DoseRow({
   result: CourseDrugResult | undefined
   expanded: boolean
   onExpand: () => void
+  /** The row's controls are open under it. */
+  settingsOpen: boolean
+  onSettings: () => void
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
@@ -571,13 +590,27 @@ function DoseRow({
   const unitName = tu(`units.${unit}`)
   const amount = (value: number) => `${formatNumber(value, language, 2)} ${unitName}`
 
+  // Whether this row has anything to switch about the way it is given: a tablet has not, and an
+  // empty heading in the panel is worse than no heading.
+  const administrationControls =
+    item.routeChoices.length > 0 ||
+    item.switchable ||
+    item.infusionSwitchable ||
+    (result?.infusion != null &&
+      ((item.bagSwitchable && result.infusion.bagOptions.length > 1) ||
+        (item.durationOptions.length > 0 && result.infusion.durationMin !== null) ||
+        (result.infusion.ramp !== undefined && item.infusionParams?.rate_ramp != null)))
+
   // The line under the row that sets out where and when it is given. The first, full dose split
   // off by the kidney correction follows its row and has none of its own.
   const planned = item.firstDoseOf === undefined
 
   return (
     <>
-      <Table.Tr opacity={enabled ? 1 : 0.55} style={planned ? { borderBottom: 'none' } : undefined}>
+      <Table.Tr
+        opacity={enabled ? 1 : 0.55}
+        style={settingsOpen ? { borderBottom: 'none' } : undefined}
+      >
         <Table.Td>
           <Switch
             checked={enabled}
@@ -588,33 +621,17 @@ function DoseRow({
         <Table.Td>
           <Text fw={500}>{localize(item.drug.name, language)}</Text>
           <Text size="xs" c="dimmed">
-            {item.routeChoices.length === 0 && t(`route.${item.item.route}`)}
-            {item.routeChoices.length === 0 && item.item.role !== 'main' && ' · '}
-            {item.item.role !== 'main' && t(`role.${item.item.role}`)}
+            {t(`route.${item.item.route}`)}
+            {item.item.role !== 'main' && ` · ${t(`role.${item.item.role}`)}`}
             {customIds.includes(id) && ` · ${t('calculator.doses.custom')}`}
             {isVariant(id) && ` · ${t('calculator.plan.variantRow')}`}
           </Text>
-          {/* Another route the label allows at the same dose: the regimen's own is the default,
-              and a switch is marked, since the sheet then says something the protocol did not. */}
-          {item.routeChoices.length > 0 && (
-            <Group gap={6} mt={2}>
-              <SegmentedControl
-                size="xs"
-                disabled={!enabled}
-                value={item.item.route}
-                onChange={(value) => onRoute(id, value as CourseItem['item']['route'])}
-                data={item.routeChoices.map((route) => ({
-                  value: route,
-                  label: t(`route.${route}`),
-                }))}
-                aria-label={`${t('calculator.doses.route')}: ${localize(item.drug.name, language)}`}
-              />
-              {item.item.route !== item.protocolRoute && (
-                <Badge size="xs" variant="light" color="blue" styles={WRAPPING_BADGE}>
-                  {t('calculator.doses.routeChanged')}
-                </Badge>
-              )}
-            </Group>
+          {/* A route the physician switched to: the sheet then says something the protocol did
+              not, so it is marked where the row is read, not only where it is set. */}
+          {item.routeChoices.length > 0 && item.item.route !== item.protocolRoute && (
+            <Badge size="xs" variant="light" color="blue" styles={WRAPPING_BADGE}>
+              {t('calculator.doses.routeChanged')}
+            </Badge>
           )}
           {/* The label asks for premedication before this drug: always in sight, and loud when
               the course has none on one of its days. */}
@@ -740,88 +757,8 @@ function DoseRow({
               onOff={(off) => onRenalBandOff(id, off)}
               onLevel={(level) => onRenalBandLevel(id, level)}
               onEveryOtherDay={(on) => onRenalBandEveryOtherDay(id, on)}
+              controls={false}
             />
-          )}
-          {item.doseChoices.length > 1 && (
-            <Select
-              size="xs"
-              mt={4}
-              allowDeselect={false}
-              disabled={!enabled}
-              data={[
-                ...item.doseChoices.map((choice) => ({
-                  value: choice.id,
-                  // One protocol often writes several doses — a phase of the disease, a platelet
-                  // count. Then its note is what tells them apart, not its name.
-                  label:
-                    (choice.note ? localize(choice.note, language) : null) ||
-                    choice.label ||
-                    (choice.id === DEFAULT_DOSE_CHOICE
-                      ? t('calculator.doses.doseSourceRegimen')
-                      : choice.id),
-                })),
-                { value: MANUAL_CHOICE, label: t('calculator.doses.doseSourceManual') },
-              ]}
-              value={manualAmount === undefined ? item.doseChoiceId : MANUAL_CHOICE}
-              onChange={(value) => {
-                if (value === null) return
-                if (value === MANUAL_CHOICE) onDoseOverride(id, result?.doseAmount ?? null)
-                else {
-                  onDoseOverride(id, null)
-                  onDoseChoice(id, value)
-                }
-              }}
-              aria-label={`${t('calculator.doses.doseSource')}: ${localize(item.drug.name, language)}`}
-            />
-          )}
-          {item.switchable && (
-            <AdministrationModeControl
-              drugName={localize(item.drug.name, language)}
-              mode={administrationModes[id] ?? PROTOCOL_MODE}
-              disabled={!enabled}
-              onChange={(mode) => onAdministrationMode(id, mode)}
-            />
-          )}
-          {item.infusionSwitchable && (
-            <InfusionLengthControl
-              drugName={localize(item.drug.name, language)}
-              protocol={item.protocolInfusion}
-              mode={administrationModes[id] ?? PROTOCOL_MODE}
-              disabled={!enabled}
-              onChange={(mode) => onAdministrationMode(id, mode)}
-            />
-          )}
-          {item.doseModifiers.length > 0 && (
-            // Several circumstances can hold at once — an interaction and an organ — and two of
-            // them may well land on the same milligrams, so these are ticks, not a list to pick from.
-            <Checkbox.Group
-              mt={6}
-              label={t('calculator.doses.modifiers')}
-              description={t('calculator.doses.modifiersHint')}
-              value={item.activeModifierKeys}
-              onChange={(keys) => onDoseModifiers(id, keys)}
-            >
-              <Stack gap={2} mt={2}>
-                {item.doseModifiers.map((modifier) => (
-                  <Checkbox
-                    key={modifier.key}
-                    value={modifier.key}
-                    disabled={!enabled || manualAmount !== undefined}
-                    size="xs"
-                    label={
-                      <Text size="xs">
-                        {localize(modifier.label, language)}
-                        <Text span c="dimmed">
-                          {' '}
-                          — {formatNumber(modifier.dose_value, language, 2)}{' '}
-                          {tu(`units.${item.item.dose_unit}`)}
-                        </Text>
-                      </Text>
-                    }
-                  />
-                ))}
-              </Stack>
-            </Checkbox.Group>
           )}
         </Table.Td>
         <Table.Td data-label={t('calculator.doses.doseActual')}>
@@ -868,55 +805,6 @@ function DoseRow({
             <Text c="dimmed">—</Text>
           )}
         </Table.Td>
-        <Table.Td data-label={t('calculator.doses.reduction')}>
-          <Stack gap={4}>
-            <Checkbox
-              size="xs"
-              disabled={!enabled}
-              checked={reduced}
-              label={
-                suggested ? (
-                  <Text size="xs" c="orange.7">
-                    {t('calculator.doses.reductionSuggested')}
-                  </Text>
-                ) : (
-                  <Text size="xs" c="dimmed">
-                    {t('calculator.doses.reductionNeeded')}
-                  </Text>
-                )
-              }
-              onChange={(event) => onReduction(id, event.currentTarget.checked ? 0 : null)}
-              aria-label={`${t('calculator.doses.reductionNeeded')}: ${localize(item.drug.name, language)}`}
-            />
-            {reduced && (
-              <NumberInput
-                size="xs"
-                min={0}
-                max={100}
-                disabled={!enabled}
-                value={drugPercent[id] ?? 0}
-                onChange={(value) => onReduction(id, Number(value) || 0)}
-                aria-label={`${t('calculator.doses.reduction')}: ${localize(item.drug.name, language)}`}
-              />
-            )}
-          </Stack>
-        </Table.Td>
-        <Table.Td data-label={t('calculator.doses.manualDose')}>
-          <NumberInput
-            size="xs"
-            min={0}
-            step={isMassUnit(unit) ? 0.5 : 1}
-            disabled={!enabled}
-            value={manualAmount ?? ''}
-            placeholder={
-              result
-                ? formatNumber(result.rounded[bsaVariant].roundedAmount, language, 2)
-                : undefined
-            }
-            onChange={(value) => onDoseOverride(id, Number(value) > 0 ? Number(value) : null)}
-            aria-label={`${t('calculator.doses.manualDose')}: ${localize(item.drug.name, language)}`}
-          />
-        </Table.Td>
         <Table.Td data-label={t('calculator.doses.units')}>
           {result?.pack ? (
             <Stack gap={2}>
@@ -940,11 +828,8 @@ function DoseRow({
             <Text size="sm" c="dimmed">
               {t('calculator.doses.noPresentations')}
             </Text>
-          ) : (
-            <Text size="sm" c="dimmed">
-              —
-            </Text>
-          )}
+          ) : // Nothing to say yet: the cell stays empty, and on a phone it is not drawn at all.
+          null}
         </Table.Td>
         <Table.Td data-label={t('calculator.doses.infusion')}>
           {result?.infusion ? (
@@ -962,43 +847,6 @@ function DoseRow({
                       unit: tu(`units.${result.infusion.concentrationUnit}_ml`),
                     })}
               </Text>
-              {item.bagSwitchable && result.infusion.bagOptions.length > 1 && (
-                <BagVolumeControl
-                  drugName={localize(item.drug.name, language)}
-                  options={result.infusion.bagOptions}
-                  limits={item.infusionParams}
-                  {...(isContinuousDoxorubicin(item.item)
-                    ? { hint: t('calculator.doses.continuousDoxorubicinBag') }
-                    : {})}
-                  value={result.infusion.bagVolumeMl}
-                  unit={tu(`units.${result.infusion.concentrationUnit}_ml`)}
-                  disabled={!enabled}
-                  onChange={(bag) => onBagChoice(id, bag)}
-                />
-              )}
-              {item.durationOptions.length > 0 && result.infusion.durationMin !== null && (
-                <DurationControl
-                  drugName={localize(item.drug.name, language)}
-                  options={item.durationOptions}
-                  chosen={chosenDurations[id] ?? null}
-                  protocolMin={item.protocolDurationMin}
-                  actualMin={result.infusion.durationMin}
-                  minDurationMin={item.minDurationMin}
-                  maxRateMgMin={item.infusionParams?.max_rate_mg_min ?? null}
-                  disabled={!enabled}
-                  onChange={(minutes) => onDurationChoice(id, minutes)}
-                />
-              )}
-              {result.infusion.ramp && item.infusionParams?.rate_ramp && (
-                <RampInfo
-                  params={item.infusionParams}
-                  durations={result.infusion.ramp}
-                  kinds={course?.rampKinds[id] ?? {}}
-                  start={infusionStart[item.item.drug_id] ?? defaultInfusionStart(cycleNumber)}
-                  disabled={!enabled}
-                  onStart={(start) => onInfusionStart(item.item.drug_id, start)}
-                />
-              )}
               {result.infusion.rateMlH !== null && result.infusion.rateGttMin !== null && (
                 <Text size="xs" c="dimmed">
                   {t('calculator.doses.infusionRate', {
@@ -1018,14 +866,20 @@ function DoseRow({
             <Badge color="yellow" variant="light">
               {t('calculator.doses.infusionMissing')}
             </Badge>
-          ) : (
-            <Text size="sm" c="dimmed">
-              —
-            </Text>
-          )}
+          ) : // A tablet has no dilution: an empty cell instead of a dash the phone would stack.
+          null}
         </Table.Td>
         <Table.Td>
           <Group gap={4} wrap="nowrap">
+            <Button
+              size="compact-xs"
+              variant={settingsOpen ? 'light' : 'subtle'}
+              onClick={onSettings}
+              aria-expanded={settingsOpen}
+              aria-label={`${t('calculator.doses.edit')}: ${localize(item.drug.name, language)}`}
+            >
+              {t('calculator.doses.edit')}
+            </Button>
             <ActionIcon
               variant="subtle"
               aria-label={t('calculator.doses.chain')}
@@ -1046,34 +900,269 @@ function DoseRow({
           </Group>
         </Table.Td>
       </Table.Tr>
-      {/* Which sheet, at what hours, on which days. A single injection or a plain push does not
-          call for a whole hourly sheet: written into the inpatient list it takes a line there. */}
-      {planned && (
+      {/* Everything that changes the row — the dose, the way it is given, the sheet and the
+          hours — is opened by «Змінити»: a course given as the protocol writes it is read with
+          no control standing in the way. */}
+      {settingsOpen && (
         <Table.Tr opacity={enabled ? 1 : 0.55}>
           <Table.Td />
-          <Table.Td colSpan={8} pt={0}>
-            {/* No width of its own: the line wraps inside the table instead of widening it, which
-                would push the last column, with the remove button, out of sight. */}
+          <Table.Td colSpan={6} pt={0}>
+            {/* No width of its own: the panel wraps inside the table instead of widening it. */}
             <div style={{ width: 0, minWidth: '100%' }}>
-              <RowPlanControls
-                item={item}
-                result={result}
-                course={course}
-                plan={plans[id]}
-                free={isFreeRow(item.item, customIds)}
-                enabled={enabled}
-                sheetChanged={id in sheetChoices}
-                overlap={overlaps.get(id)}
-                onSheet={(sheet) => onSheet(id, sheet)}
-                onPlan={(patch) => onPlan(id, patch)}
-                onVariant={() => onVariant(id)}
-              />
+              <Stack gap="sm">
+                <Stack gap={6}>
+                  <Text size="xs" fw={600} c="dimmed" tt="uppercase">
+                    {t('calculator.doses.group.dose')}
+                  </Text>
+                  {item.doseChoices.length > 1 && (
+                    <Select
+                      size="xs"
+                      mt={4}
+                      allowDeselect={false}
+                      disabled={!enabled}
+                      data={[
+                        ...item.doseChoices.map((choice) => ({
+                          value: choice.id,
+                          // One protocol often writes several doses — a phase of the disease, a platelet
+                          // count. Then its note is what tells them apart, not its name.
+                          label:
+                            (choice.note ? localize(choice.note, language) : null) ||
+                            choice.label ||
+                            (choice.id === DEFAULT_DOSE_CHOICE
+                              ? t('calculator.doses.doseSourceRegimen')
+                              : choice.id),
+                        })),
+                        { value: MANUAL_CHOICE, label: t('calculator.doses.doseSourceManual') },
+                      ]}
+                      value={manualAmount === undefined ? item.doseChoiceId : MANUAL_CHOICE}
+                      onChange={(value) => {
+                        if (value === null) return
+                        if (value === MANUAL_CHOICE) onDoseOverride(id, result?.doseAmount ?? null)
+                        else {
+                          onDoseOverride(id, null)
+                          onDoseChoice(id, value)
+                        }
+                      }}
+                      aria-label={`${t('calculator.doses.doseSource')}: ${localize(item.drug.name, language)}`}
+                    />
+                  )}
+                  {item.doseModifiers.length > 0 && (
+                    // Several circumstances can hold at once — an interaction and an organ — and two of
+                    // them may well land on the same milligrams, so these are ticks, not a list to pick from.
+                    <Checkbox.Group
+                      mt={6}
+                      label={t('calculator.doses.modifiers')}
+                      description={t('calculator.doses.modifiersHint')}
+                      value={item.activeModifierKeys}
+                      onChange={(keys) => onDoseModifiers(id, keys)}
+                    >
+                      <Stack gap={2} mt={2}>
+                        {item.doseModifiers.map((modifier) => (
+                          <Checkbox
+                            key={modifier.key}
+                            value={modifier.key}
+                            disabled={!enabled || manualAmount !== undefined}
+                            size="xs"
+                            label={
+                              <Text size="xs">
+                                {localize(modifier.label, language)}
+                                <Text span c="dimmed">
+                                  {' '}
+                                  — {formatNumber(modifier.dose_value, language, 2)}{' '}
+                                  {tu(`units.${item.item.dose_unit}`)}
+                                </Text>
+                              </Text>
+                            }
+                          />
+                        ))}
+                      </Stack>
+                    </Checkbox.Group>
+                  )}
+                  <Text size="xs" c="dimmed">
+                    {t('calculator.doses.reductionTitle')}
+                  </Text>
+                  <Stack gap={4}>
+                    <Checkbox
+                      size="xs"
+                      disabled={!enabled}
+                      checked={reduced}
+                      label={
+                        suggested ? (
+                          <Text size="xs" c="orange.7">
+                            {t('calculator.doses.reductionSuggested')}
+                          </Text>
+                        ) : (
+                          <Text size="xs" c="dimmed">
+                            {t('calculator.doses.reductionNeeded')}
+                          </Text>
+                        )
+                      }
+                      onChange={(event) => onReduction(id, event.currentTarget.checked ? 0 : null)}
+                      aria-label={`${t('calculator.doses.reductionNeeded')}: ${localize(item.drug.name, language)}`}
+                    />
+                    {reduced && (
+                      <NumberInput
+                        size="xs"
+                        min={0}
+                        max={100}
+                        disabled={!enabled}
+                        value={drugPercent[id] ?? 0}
+                        onChange={(value) => onReduction(id, Number(value) || 0)}
+                        aria-label={`${t('calculator.doses.reduction')}: ${localize(item.drug.name, language)}`}
+                      />
+                    )}
+                  </Stack>
+                  <NumberInput
+                    size="xs"
+                    label={t('calculator.doses.manualDose')}
+                    min={0}
+                    step={isMassUnit(unit) ? 0.5 : 1}
+                    disabled={!enabled}
+                    value={manualAmount ?? ''}
+                    placeholder={
+                      result
+                        ? formatNumber(result.rounded[bsaVariant].roundedAmount, language, 2)
+                        : undefined
+                    }
+                    onChange={(value) =>
+                      onDoseOverride(id, Number(value) > 0 ? Number(value) : null)
+                    }
+                    aria-label={`${t('calculator.doses.manualDose')}: ${localize(item.drug.name, language)}`}
+                  />
+                </Stack>
+                {course?.renal[id] && (
+                  <RenalBandInfo
+                    adjustment={course.renal[id]}
+                    item={item}
+                    off={renalBandOffIds.includes(id)}
+                    disabled={!enabled}
+                    onOff={(off) => onRenalBandOff(id, off)}
+                    onLevel={(level) => onRenalBandLevel(id, level)}
+                    onEveryOtherDay={(on) => onRenalBandEveryOtherDay(id, on)}
+                    controls
+                  />
+                )}
+                {administrationControls && (
+                  <Stack gap={6}>
+                    <Text size="xs" fw={600} c="dimmed" tt="uppercase">
+                      {t('calculator.doses.group.administration')}
+                    </Text>
+                    {/* Another route the label allows at the same dose: the regimen's own is the default,
+              and a switch is marked, since the sheet then says something the protocol did not. */}
+                    {item.routeChoices.length > 0 && (
+                      <Group gap={6} mt={2}>
+                        <SegmentedControl
+                          size="xs"
+                          disabled={!enabled}
+                          value={item.item.route}
+                          onChange={(value) => onRoute(id, value as CourseItem['item']['route'])}
+                          data={item.routeChoices.map((route) => ({
+                            value: route,
+                            label: t(`route.${route}`),
+                          }))}
+                          aria-label={`${t('calculator.doses.route')}: ${localize(item.drug.name, language)}`}
+                        />
+                        {item.item.route !== item.protocolRoute && (
+                          <Badge size="xs" variant="light" color="blue" styles={WRAPPING_BADGE}>
+                            {t('calculator.doses.routeChanged')}
+                          </Badge>
+                        )}
+                      </Group>
+                    )}
+                    {item.switchable && (
+                      <AdministrationModeControl
+                        drugName={localize(item.drug.name, language)}
+                        mode={administrationModes[id] ?? PROTOCOL_MODE}
+                        disabled={!enabled}
+                        onChange={(mode) => onAdministrationMode(id, mode)}
+                      />
+                    )}
+                    {item.infusionSwitchable && (
+                      <InfusionLengthControl
+                        drugName={localize(item.drug.name, language)}
+                        protocol={item.protocolInfusion}
+                        mode={administrationModes[id] ?? PROTOCOL_MODE}
+                        disabled={!enabled}
+                        onChange={(mode) => onAdministrationMode(id, mode)}
+                      />
+                    )}
+                    {result?.infusion && (
+                      <>
+                        {item.bagSwitchable && result.infusion.bagOptions.length > 1 && (
+                          <BagVolumeControl
+                            drugName={localize(item.drug.name, language)}
+                            options={result.infusion.bagOptions}
+                            limits={item.infusionParams}
+                            {...(isContinuousDoxorubicin(item.item)
+                              ? { hint: t('calculator.doses.continuousDoxorubicinBag') }
+                              : {})}
+                            value={result.infusion.bagVolumeMl}
+                            unit={tu(`units.${result.infusion.concentrationUnit}_ml`)}
+                            disabled={!enabled}
+                            onChange={(bag) => onBagChoice(id, bag)}
+                          />
+                        )}
+                        {item.durationOptions.length > 0 &&
+                          result.infusion.durationMin !== null && (
+                            <DurationControl
+                              drugName={localize(item.drug.name, language)}
+                              options={item.durationOptions}
+                              chosen={chosenDurations[id] ?? null}
+                              protocolMin={item.protocolDurationMin}
+                              actualMin={result.infusion.durationMin}
+                              minDurationMin={item.minDurationMin}
+                              maxRateMgMin={item.infusionParams?.max_rate_mg_min ?? null}
+                              disabled={!enabled}
+                              onChange={(minutes) => onDurationChoice(id, minutes)}
+                            />
+                          )}
+                        {result.infusion.ramp && item.infusionParams?.rate_ramp && (
+                          <RampInfo
+                            params={item.infusionParams}
+                            durations={result.infusion.ramp}
+                            kinds={course?.rampKinds[id] ?? {}}
+                            start={
+                              infusionStart[item.item.drug_id] ?? defaultInfusionStart(cycleNumber)
+                            }
+                            disabled={!enabled}
+                            onStart={(start) => onInfusionStart(item.item.drug_id, start)}
+                          />
+                        )}
+                      </>
+                    )}
+                  </Stack>
+                )}
+                {/* Which sheet, at what hours, on which days. A single injection or a plain push
+                    does not call for a whole hourly sheet: written into the inpatient list it
+                    takes a line there. The first, full dose split off by the kidney correction
+                    follows its own row and has no plan of its own. */}
+                {planned && (
+                  <Stack gap={6}>
+                    <Text size="xs" fw={600} c="dimmed" tt="uppercase">
+                      {t('calculator.doses.group.plan')}
+                    </Text>
+                    <RowPlanControls
+                      item={item}
+                      result={result}
+                      course={course}
+                      plan={plans[id]}
+                      free={isFreeRow(item.item, customIds)}
+                      enabled={enabled}
+                      sheetChanged={id in sheetChoices}
+                      overlap={overlaps.get(id)}
+                      onSheet={(sheet) => onSheet(id, sheet)}
+                      onPlan={(patch) => onPlan(id, patch)}
+                      onVariant={() => onVariant(id)}
+                    />
+                  </Stack>
+                )}
+              </Stack>
             </div>
           </Table.Td>
         </Table.Tr>
       )}
       <Table.Tr>
-        <Table.Td colSpan={9} p={0} style={{ border: expanded ? undefined : 'none' }}>
+        <Table.Td colSpan={7} p={0} style={{ border: expanded ? undefined : 'none' }}>
           <Collapse expanded={expanded}>
             <Stack gap="xs" p="md">
               {result && (

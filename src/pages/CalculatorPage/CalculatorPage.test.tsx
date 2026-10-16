@@ -58,6 +58,12 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
     expect(within(rituximab).getByText('1 × 500 мг')).toBeInTheDocument()
     expect(within(rituximab).getByText('3 × 100 мг')).toBeInTheDocument()
     expect(within(rituximab).getByText(/NaCl 0,9% 250 мл/)).toBeInTheDocument()
+    // The row itself holds no controls but the switch: everything that changes it is behind
+    // «Змінити», so a course given as the protocol writes it reads as a table of numbers.
+    expect(within(rituximab).queryByLabelText(/^Доза вручну/)).not.toBeInTheDocument()
+    expect(within(rituximab).queryByLabelText(/^Джерело дози/)).not.toBeInTheDocument()
+    expect(within(rituximab).queryByLabelText(/^Лист друку/)).not.toBeInTheDocument()
+    expect(within(rituximab).getByRole('button', { name: /^Змінити/ })).toBeInTheDocument()
 
     // Vincristine 1.4 mg/m² × 2.0 = 2.8 mg, limited by the drug's 2 mg maximum.
     const vincristine = within(table).getByText('ДЕМО Вінкристин').closest('tr')!
@@ -100,6 +106,14 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
     expect(within(rituximab).getByText('за BSA 2,0: 750 мг')).toBeInTheDocument()
   })
 
+  /** Opens the row's own controls and gives back the panel they sit in, under the row. */
+  const openSettings = async (row: HTMLElement) => {
+    await act(async () => {
+      fireEvent.click(within(row).getByRole('button', { name: /^Змінити/ }))
+    })
+    return within(row.nextElementSibling as HTMLElement)
+  }
+
   it('reduces one drug only when it is marked and lets a drug be switched off', async () => {
     renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
     expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
@@ -108,13 +122,16 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
     const rituximab = within(screen.getByRole('table', { name: 'Дози' }))
       .getByText('ДЕМО Ритуксимаб')
       .closest('tr')!
-    // No percent field until the drug is marked as needing a reduction.
+    // The controls of a row are out of the way until they are asked for.
     expect(within(rituximab).queryByLabelText(/^Редукція, %/)).not.toBeInTheDocument()
+    const controls = await openSettings(rituximab)
+    // No percent field until the drug is marked as needing a reduction.
+    expect(controls.queryByLabelText(/^Редукція, %/)).not.toBeInTheDocument()
     await act(async () => {
-      fireEvent.click(within(rituximab).getByLabelText('потрібна: ДЕМО Ритуксимаб'))
+      fireEvent.click(controls.getByLabelText('потрібна: ДЕМО Ритуксимаб'))
     })
     await act(async () => {
-      fireEvent.change(within(rituximab).getByLabelText('Редукція, %: ДЕМО Ритуксимаб'), {
+      fireEvent.change(controls.getByLabelText('Редукція, %: ДЕМО Ритуксимаб'), {
         target: { value: '25' },
       })
     })
@@ -160,14 +177,15 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
     // A modifier keeps the item's unit, so this is 500 mg/m² × 2.0 m² against the regimen's 750.
     expect(within(row).getByText('1 000 мг')).toBeInTheDocument()
 
-    const azole = within(row).getByRole('checkbox', { name: /Азол за протоколом/ })
+    const controls = await openSettings(row)
+    const azole = controls.getByRole('checkbox', { name: /Азол за протоколом/ })
     await act(async () => fireEvent.click(azole))
     expect(within(row).getByText('1 500 мг')).toBeInTheDocument()
 
     // Two circumstances at once: the lower of the two doses is the one that is given.
     await act(async () => fireEvent.click(azole))
     await act(async () =>
-      fireEvent.click(within(row).getByRole('checkbox', { name: /Ниркова недостатність/ })),
+      fireEvent.click(controls.getByRole('checkbox', { name: /Ниркова недостатність/ })),
     )
     expect(within(row).getByText('500 мг')).toBeInTheDocument()
   })
@@ -180,7 +198,8 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
     expect(table.getByText('ДЕМО Ритуксимаб')).toBeInTheDocument()
     // The drugs can be switched off and marked for reduction without any patient data.
     expect(table.getAllByRole('switch').length).toBeGreaterThan(1)
-    expect(table.getByLabelText('потрібна: ДЕМО Ритуксимаб')).toBeInTheDocument()
+    const controls = await openSettings(table.getByText('ДЕМО Ритуксимаб').closest('tr')!)
+    expect(controls.getByLabelText('потрібна: ДЕМО Ритуксимаб')).toBeInTheDocument()
   })
 
   it('takes a dose typed by hand for one drug', async () => {
@@ -191,8 +210,9 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
     const rituximab = within(screen.getByRole('table', { name: 'Дози' }))
       .getByText('ДЕМО Ритуксимаб')
       .closest('tr')!
+    const controls = await openSettings(rituximab)
     await act(async () => {
-      fireEvent.change(within(rituximab).getByLabelText('Доза вручну: ДЕМО Ритуксимаб'), {
+      fireEvent.change(controls.getByLabelText('Доза вручну: ДЕМО Ритуксимаб'), {
         target: { value: '700' },
       })
     })
@@ -211,8 +231,8 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
     await act(async () => {
       fireEvent.click(within(rituximab).getByRole('button', { name: 'Як порахували' }))
     })
-    // The chain sits in the details row below the drug and the line that sets out its hours.
-    const details = within(rituximab.nextElementSibling!.nextElementSibling as HTMLElement)
+    // The chain sits in the row below the drug: its own controls are not open.
+    const details = within(rituximab.nextElementSibling as HTMLElement)
     expect(details.getByText(/BSA за Mosteller: √\(180 см × 80 кг \/ 3600\)/)).toBeInTheDocument()
     expect(details.getByText(/375 мг\/м² × 2 м²/)).toBeInTheDocument()
     expect(details.getByText(/Округлення до 1 мг/)).toBeInTheDocument()

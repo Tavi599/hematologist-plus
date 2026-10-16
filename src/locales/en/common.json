@@ -111,6 +111,7 @@
       "doseCapped": "Dose (BSA 2.0)",
       "doseEntered": "Dose (BSA entered)",
       "reduction": "Reduction, %",
+      "reductionTitle": "Dose reduction",
       "reductionNeeded": "needed",
       "reductionSuggested": "review suggests",
       "manualDose": "Manual dose",
@@ -145,6 +146,12 @@
       "noPresentations": "No presentations",
       "enabled": "Drug included",
       "chain": "How it was calculated",
+      "edit": "Change",
+      "group": {
+        "dose": "Dose",
+        "administration": "Administration",
+        "plan": "Sheet and hours"
+      },
       "perAdministration": "per administration",
       "timesPerDay": "{{count}} administrations a day",
       "administrationMode": "Way of giving",
