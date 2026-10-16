@@ -160,3 +160,8 @@ src/
 
 - The user is a hematologist, communicates in Ukrainian — reply in Ukrainian.
 - Ask before inventing structure for print forms or calculation rules not covered by `docs/requirements.md`.
+- Verify every claim. Never invent a dose a source does not give: write "без розрахунку" instead. When sources disagree, show the discrepancy.
+- NCCN: never copy its text; read it only when the user explicitly says so. UpToDate: paraphrase, never copy. The user logs in to UpToDate themselves — never enter passwords, never get past a CAPTCHA.
+- Do not ask too often. Commit, push and apply Supabase SQL without asking (Cyrillic SQL goes to the clipboard only via `Set-Clipboard`, see above).
+- Deferred until the user asks: drug need and sheets for the whole course; carrying BSA/weight between cycles.
+- One task per session. Read only the parts of large files that are needed; keep the gates (typecheck, lint, format:check, vitest, data:validate) complete.
