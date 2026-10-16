@@ -31,8 +31,6 @@ export function HospitalHeader({
       department: hospital.department_name,
       address: hospital.address ?? '',
       registryCode: hospital.registry_code ?? '',
-      head: hospital.head_of_department ?? '',
-      doctor: hospital.doctors[0] ?? '',
     })
   }, [catalog, value.hospitalId, onChange])
 
@@ -45,8 +43,6 @@ export function HospitalHeader({
       department: hospital.department_name,
       address: hospital.address ?? '',
       registryCode: hospital.registry_code ?? '',
-      head: hospital.head_of_department ?? '',
-      doctor: hospital.doctors[0] ?? '',
     })
   }
 
@@ -90,18 +86,6 @@ export function HospitalHeader({
             label={t('calculator.hospital.registryCode')}
             value={value.registryCode}
             onChange={(event) => patch({ registryCode: event.currentTarget.value })}
-          />
-        </Group>
-        <Group grow align="flex-start" wrap="wrap">
-          <TextInput
-            label={t('calculator.hospital.head')}
-            value={value.head}
-            onChange={(event) => patch({ head: event.currentTarget.value })}
-          />
-          <TextInput
-            label={t('calculator.hospital.doctor')}
-            value={value.doctor}
-            onChange={(event) => patch({ doctor: event.currentTarget.value })}
           />
         </Group>
       </Stack>

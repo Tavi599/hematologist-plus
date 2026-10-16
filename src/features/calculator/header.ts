@@ -7,8 +7,6 @@ export interface HeaderValue {
   address: string
   /** Код за ЄДРПОУ from the same stamp. */
   registryCode: string
-  head: string
-  doctor: string
 }
 
 export function emptyHeader(): HeaderValue {
@@ -18,7 +16,5 @@ export function emptyHeader(): HeaderValue {
     department: '',
     address: '',
     registryCode: '',
-    head: '',
-    doctor: '',
   }
 }
