@@ -404,6 +404,55 @@
       "scale": "Preview scale",
       "empty": "Nothing to show: the sheet is empty."
     },
+    "deviations": {
+      "title": "Deviations from the protocol: {{n}}",
+      "dosed": "change a dose: {{n}}",
+      "show": "Show",
+      "hide": "Hide",
+      "revert": "revert",
+      "revertAll": "Revert all to the protocol",
+      "level": {
+        "low": "lower end",
+        "mid": "middle",
+        "high": "upper end"
+      },
+      "bsa": {
+        "capped": "capped at 2.0 m²",
+        "entered": "typed in by the physician"
+      },
+      "line": {
+        "disabled": "drug switched off",
+        "manualDose": "dose by hand {{amount}} {{unit}}",
+        "reduction": "reduced by {{percent}}%",
+        "doseChoice": "dose from another source: {{source}}",
+        "modifiers": "circumstances applied: {{modifiers}}",
+        "route": "{{to}} instead of {{from}}",
+        "mode": "given as: {{mode}}",
+        "duration": "infusion over {{minutes}} min",
+        "bag": "solvent volume {{ml}} mL",
+        "planDays": "days set by the physician: {{days}}",
+        "planHours": "hours set by the physician ({{hours}})",
+        "planPerDay": "{{perDay}} times a day",
+        "sheet": "moved to: {{sheet}}",
+        "renalBandOff": "correction for creatinine clearance switched off",
+        "renalBandEveryOtherDay": "full dose every other day instead of a reduced one daily",
+        "renalBandLevel": "dose within the label's range: {{level}}",
+        "variant": "a separate copy of the row added",
+        "custom": "drug added by the physician",
+        "mesna": "mesna added",
+        "infusionStart": "the course opens with infusion {{start}}",
+        "bsaSource": "BSA: {{source}}",
+        "clearanceWeight": "creatinine clearance on the ideal body weight"
+      }
+    },
+    "printCheck": {
+      "title": "Before printing",
+      "clean": "Before printing: doses as the protocol writes them, premedication in place.",
+      "premedication": "Drugs without their premedication:",
+      "doses": "Deviations that change a dose:",
+      "irradiated": "The course calls for irradiated blood components — check the mark on the sheet.",
+      "others": "Other deviations from the protocol: {{n}}"
+    },
     "error": {
       "title": "Calculation failed",
       "field": "Field: {{field}}",

@@ -13,6 +13,9 @@ import { AddDrugForm } from '../../features/calculator/AddDrugForm'
 import { CourseExport } from '../../features/calculator/CourseExport'
 import { CourseDraft } from '../../features/calculator/CourseDraft'
 import { CourseSettings, type CourseSettingsValue } from '../../features/calculator/CourseSettings'
+import { DeviationSummary } from '../../features/calculator/DeviationSummary'
+import { collectDeviations, revertAll, revertDeviation } from '../../features/calculator/deviations'
+import { PrintCheck } from '../../features/calculator/PrintCheck'
 import {
   courseCard,
   courseCardFileName,
@@ -679,6 +682,20 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
 
   // Drugs that ask for premedication and get none on one of their days.
   const premedicationMissing = unpremedicated(items, disabledIds)
+  /** What the physician set against the protocol: shown as a list, and taken back from it. */
+  const deviations = useMemo(
+    () => collectDeviations(items, state, language),
+    [items, state, language],
+  )
+  // The same drugs, written out for the check before printing: name and the days without it.
+  const premedicationLines = items
+    .filter((entry) => premedicationMissing.has(entry.item.id))
+    .map(
+      (entry) =>
+        `${localize(entry.drug.name, language)} — ${t('calculator.doses.premedMissing', {
+          days: premedicationMissing.get(entry.item.id)!.join(', '),
+        })}`,
+    )
   const alwaysWithout = [
     ...new Set(
       items
@@ -840,6 +857,12 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
             <InteractionList interactions={interactions} />
           </>
         )}
+
+        <DeviationSummary
+          deviations={deviations}
+          onRevert={(deviation) => setState((current) => revertDeviation(current, deviation))}
+          onRevertAll={() => setState((current) => revertAll(current, deviations))}
+        />
 
         {/* Every block stays mounted while its tab is hidden, so nothing typed is lost by
             switching tabs; only one of them is on screen at a time. */}
@@ -1038,6 +1061,15 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
 
           <Tabs.Panel value="print" pt="sm">
             <Stack gap="sm">
+              {/* Read before the file is made, not after: the alerts of the course stand on the
+                  doses tab, and the physician prints from here. */}
+              {sheetReady && (
+                <PrintCheck
+                  deviations={deviations}
+                  premedication={premedicationLines}
+                  irradiated={irradiation.length > 0}
+                />
+              )}
               {/* A sheet of hand-written lines alone is still a sheet, so the export does not
                   wait for a calculation — only for someone to put something on the paper. */}
               {patient && sheetReady ? (
