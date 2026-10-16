@@ -1,5 +1,5 @@
 import { Alert, Card, Group, SegmentedControl, Stack, Tabs, Text, Title } from '@mantine/core'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router'
 
@@ -8,23 +8,32 @@ import {
   DomainInputError,
   type CourseResult,
   type ClearanceWeight,
-  type RenalBandLevel,
 } from '../../domain'
 import { AddDrugForm } from '../../features/calculator/AddDrugForm'
 import { CourseExport } from '../../features/calculator/CourseExport'
+import { CourseDraft } from '../../features/calculator/CourseDraft'
 import { CourseSettings, type CourseSettingsValue } from '../../features/calculator/CourseSettings'
+import {
+  courseCard,
+  courseCardFileName,
+  COURSE_CARD_MEDIA_TYPE,
+  loadDraft,
+  parseCourseCard,
+  personalInDraft,
+  saveDraft,
+  setPersonalInDraft,
+} from '../../lib/course-draft'
+import { initialCourseState, useCourseState } from '../../features/calculator/course-state'
+import { saveFile } from '../../lib/save-file'
 import { DoseTable } from '../../features/calculator/DoseTable'
-import { emptyHeader } from '../../features/calculator/header'
 import { HospitalHeader } from '../../features/calculator/HospitalHeader'
 import { MANUAL_ROWS_ANCHOR, ManualRows } from '../../features/calculator/ManualRows'
-import type { ManualRow } from '../../features/calculator/manual-rows'
 import { withFirstFullDose } from '../../lib/renal-first-dose'
 import {
   infusionTherapyRows,
   IVIG_DRUG_ID,
   ivigSupportRows,
   NO_INFUSION_THERAPY,
-  type InfusionTherapy,
 } from '../../features/calculator/supportive-rows'
 import { InfusionTherapyControls } from '../../features/calculator/InfusionTherapyControls'
 import { PatientForm } from '../../features/calculator/PatientForm'
@@ -50,19 +59,14 @@ import {
   isStandardSupportId,
   NO_SUPPORT,
   standardSupportRows,
-  type AntiviralAgent,
-  type GastroAgent,
   type SupportCategory,
-  type ThromboAgent,
 } from '../../lib/standard-support'
 import {
   applyBagChoices,
   applyBlockChoices,
   applyDurationChoices,
   buildCourseItemsFrom,
-  type AdministrationMode,
   type CourseItem,
-  type SheetChoice,
 } from '../../lib/course-input'
 import {
   applyPlans,
@@ -71,7 +75,6 @@ import {
   overlappingDays,
   variantBase,
   withVariants,
-  type RowPlan,
 } from '../../lib/row-plan'
 import { formatNumber } from '../../lib/format'
 import {
@@ -82,7 +85,7 @@ import {
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import type { RegimenItem } from '../../schemas/catalog'
-import { todayIso, type PatientInput } from '../../schemas/patient'
+import { patientFormSchema, type PatientInput } from '../../schemas/patient'
 import classes from './CalculatorPage.module.css'
 
 export function CalculatorPage() {
@@ -115,65 +118,135 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const language = currentLanguage()
   const [searchParams, setSearchParams] = useSearchParams()
 
-  const [patient, setPatient] = useState<PatientInput | null>(null)
-  const [courseSettings, setCourseSettings] = useState({
-    startDate: todayIso(),
-    dayStart: '11:00',
-    bsaVariant: 'actual' as CourseSettingsValue['bsaVariant'],
-    bsaM2: null as number | null,
-    cycleNumber: 1,
-  })
-  const [customItems, setCustomItems] = useState<RegimenItem[]>([])
-  const [disabledIds, setDisabledIds] = useState<string[]>([])
-  const [drugPercent, setDrugPercent] = useState<Record<string, number>>({})
-  const [doseOverrideAmount, setDoseOverrideAmount] = useState<Record<string, number>>({})
-  // Where and when each row is given, as the physician set it: the hours on the sheet, how many
-  // times a day, the days of the support.
-  const [plans, setPlans] = useState<Record<string, RowPlan>>({})
-  // Copies of rows: the same drug again with settings of its own (ondansetron before the
-  // cytostatic on day 1, then three times a day on the inpatient sheet).
-  const [variants, setVariants] = useState<string[]>([])
-  const [infusionTherapy, setInfusionTherapy] = useState<InfusionTherapy>(NO_INFUSION_THERAPY)
-  const [chosenDoses, setChosenDoses] = useState<Record<string, string>>({})
-  // Empty until the physician touches a tick: an item with no entry here uses the modifiers its
-  // own protocol assumes.
-  const [chosenModifiers, setChosenModifiers] = useState<Record<string, string[]>>({})
-  const [administrationModes, setAdministrationModes] = useState<
-    Record<string, AdministrationMode>
-  >({})
-  // Which infusion of an antibody the course opens with, by drug (1, 2, 3 = later); untouched,
-  // cycle 1 opens with the first.
-  const [infusionStart, setInfusionStart] = useState<Record<string, number>>({})
-  const [header, setHeader] = useState(emptyHeader)
-  const [manualRows, setManualRows] = useState<ManualRow[]>([])
+  // The course left on this device, read once: a draft of the same regimen — or of none, when the
+  // calculator is opened from the menu — is the course the physician was laying out.
+  const [draft] = useState(() => loadDraft())
+  const urlRegimen = searchParams.get('regimen')
+  const restored = draft !== null && (urlRegimen === null || urlRegimen === draft.regimenId)
+  // Its regimen goes back into the address, so the course on screen is the course the link opens.
+  const [pendingRegimen, setPendingRegimen] = useState(
+    restored && urlRegimen === null ? draft.regimenId : null,
+  )
+  const { state, setState, set } = useCourseState(restored ? draft.state : initialCourseState())
+  const [personal, setPersonal] = useState(() => personalInDraft())
+  const [cardNote, setCardNote] = useState<'opened' | 'invalid' | null>(null)
+  // Bumped when a course card is opened: the patient form is filled from its defaults, so only a
+  // remount brings the values of the card into its fields.
+  const [formKey, setFormKey] = useState(0)
   // Bumped to open the hand-written lines when a row asks to show its own (immunoglobulin).
   const [manualOpenRequest, setManualOpenRequest] = useState(0)
-  const [support, setSupport] = useState<Record<SupportCategory, boolean>>(NO_SUPPORT)
-  // NSSG's standard with an immunomodulatory drug; aspirin is for a patient with no other risk.
-  const [thromboAgent, setThromboAgent] = useState<ThromboAgent>('apixaban')
-  const [antiviralAgent, setAntiviralAgent] = useState<AntiviralAgent>('aciclovir')
-  const [gastroAgent, setGastroAgent] = useState<GastroAgent>('tablet')
-  // Cyclophosphamide items the physician has added mesna to; the protocol's own mesna is apart.
-  const [mesnaFor, setMesnaFor] = useState<string[]>([])
-  // Rows the physician gives by another route the label allows at the same dose.
-  const [chosenRoutes, setChosenRoutes] = useState<Record<string, RegimenItem['route']>>({})
-  // The sheet each row is printed on, where the physician moved it off the regimen's own.
-  const [sheetChoices, setSheetChoices] = useState<Record<string, SheetChoice>>({})
-  // Bags the physician picked for antimicrobial infusions, by row.
-  const [chosenBags, setChosenBags] = useState<Record<string, number>>({})
-  // Infusion durations the physician picked for antimicrobials, by row, min.
-  const [chosenDurations, setChosenDurations] = useState<Record<string, number>>({})
-  // Rows whose correction by creatinine clearance the physician switched off.
-  const [renalBandOffIds, setRenalBandOffIds] = useState<string[]>([])
-  // Rows given the full dose every other day instead of a lower daily one.
-  const [renalBandEveryOtherDayIds, setRenalBandEveryOtherDayIds] = useState<string[]>([])
-  // Where in the label's range the physician put a corrected dose, by row.
-  const [renalBandLevel, setRenalBandLevel] = useState<Record<string, RenalBandLevel>>({})
-  // The weight the creatinine clearance is worked out on, for a patient with obesity.
-  const [clearanceWeight, setClearanceWeight] = useState<ClearanceWeight>('actual')
+
+  const {
+    patientForm,
+    courseSettings,
+    customItems,
+    disabledIds,
+    drugPercent,
+    doseOverrideAmount,
+    // Where and when each row is given, as the physician set it: the hours on the sheet, how many
+    // times a day, the days of the support.
+    plans,
+    // Copies of rows: the same drug again with settings of its own (ondansetron before the
+    // cytostatic on day 1, then three times a day on the inpatient sheet).
+    variants,
+    infusionTherapy,
+    chosenDoses,
+    // Empty until the physician touches a tick: an item with no entry here uses the modifiers its
+    // own protocol assumes.
+    chosenModifiers,
+    administrationModes,
+    // Which infusion of an antibody the course opens with, by drug (1, 2, 3 = later); untouched,
+    // cycle 1 opens with the first.
+    infusionStart,
+    header,
+    manualRows,
+    support,
+    // NSSG's standard with an immunomodulatory drug; aspirin is for a patient with no other risk.
+    thromboAgent,
+    antiviralAgent,
+    gastroAgent,
+    // Cyclophosphamide items the physician has added mesna to; the protocol's own mesna is apart.
+    mesnaFor,
+    // Rows the physician gives by another route the label allows at the same dose.
+    chosenRoutes,
+    // The sheet each row is printed on, where the physician moved it off the regimen's own.
+    sheetChoices,
+    // Bags and infusion durations the physician picked for antimicrobials, by row.
+    chosenBags,
+    chosenDurations,
+    // Rows whose correction by creatinine clearance the physician switched off, those given the
+    // full dose every other day, and where in the label's range a corrected dose was put.
+    renalBandOffIds,
+    renalBandEveryOtherDayIds,
+    renalBandLevel,
+    // The weight the creatinine clearance is worked out on, for a patient with obesity.
+    clearanceWeight,
+  } = state
+  const {
+    courseSettings: setCourseSettings,
+    customItems: setCustomItems,
+    disabledIds: setDisabledIds,
+    drugPercent: setDrugPercent,
+    doseOverrideAmount: setDoseOverrideAmount,
+    plans: setPlans,
+    variants: setVariants,
+    infusionTherapy: setInfusionTherapy,
+    chosenDoses: setChosenDoses,
+    chosenModifiers: setChosenModifiers,
+    administrationModes: setAdministrationModes,
+    infusionStart: setInfusionStart,
+    header: setHeader,
+    manualRows: setManualRows,
+    support: setSupport,
+    thromboAgent: setThromboAgent,
+    antiviralAgent: setAntiviralAgent,
+    gastroAgent: setGastroAgent,
+    mesnaFor: setMesnaFor,
+    chosenRoutes: setChosenRoutes,
+    sheetChoices: setSheetChoices,
+    chosenBags: setChosenBags,
+    chosenDurations: setChosenDurations,
+    renalBandOffIds: setRenalBandOffIds,
+    renalBandEveryOtherDayIds: setRenalBandEveryOtherDayIds,
+    renalBandLevel: setRenalBandLevel,
+    clearanceWeight: setClearanceWeight,
+  } = set
+
+  // The measurements as the form holds them: parsed here, so the fields themselves are what the
+  // draft and the course card keep.
+  const patient = useMemo<PatientInput | null>(() => {
+    const parsed = patientFormSchema.safeParse(patientForm)
+    return parsed.success ? parsed.data : null
+  }, [patientForm])
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
-  const regimenId = searchParams.get('regimen')
+  const regimenId = urlRegimen ?? pendingRegimen
+
+  // A restored course puts its regimen back into the address, and is let go of only once the
+  // address carries it: in between, the course must not be left standing with no regimen at all.
+  useEffect(() => {
+    if (pendingRegimen === null) return
+    if (urlRegimen === pendingRegimen) {
+      setPendingRegimen(null)
+      return
+    }
+    setSearchParams(
+      (current) => {
+        const params = new URLSearchParams(current)
+        params.set('regimen', pendingRegimen)
+        return params
+      },
+      { replace: true },
+    )
+  }, [pendingRegimen, urlRegimen, setSearchParams])
+
+  // Everything the physician sets is kept on this device as it is set: leaving for the disease
+  // pages unmounts this page, and accepting an update of the app reloads the tab — a sheet laid
+  // out over four days would otherwise go with either.
+  useEffect(() => {
+    saveDraft(regimenId, state, personal)
+  }, [regimenId, state, personal])
+
   const settings: CourseSettingsValue = { ...courseSettings, regimenId }
   const phases = useMemo(() => coursePhases(catalog, regimenId), [catalog, regimenId])
   // Set when the calculator itself moved to another phase of the course, to say so.
@@ -333,7 +406,11 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   // on what this course needs. The exception is the premedication of rituximab and daratumumab,
   // which the department never gives without it: that opens switched on. A drug added by hand is never switched off — it was added on
   // purpose — and the switches a physician has set are kept until another regimen is chosen.
-  const [toggledRegimen, setToggledRegimen] = useState<string | null | undefined>(undefined)
+  // A course restored from the draft opens as the physician left it: its switches are already
+  // the ones they set, so the regimen does not count as newly chosen.
+  const [toggledRegimen, setToggledRegimen] = useState<string | null | undefined>(
+    restored ? draft.regimenId : undefined,
+  )
   if (regimenId !== toggledRegimen) {
     setToggledRegimen(regimenId)
     // The prophylaxis the regimen's own drugs call for opens switched on — aciclovir with a
@@ -368,6 +445,43 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
         (id) => !premedicationOn.has(id) && !supportOn.has(id),
       ),
     )
+  }
+
+  /** The course as a file: saved by hand, so it holds the patient as the physician typed them. */
+  const saveCard = () => {
+    const text = JSON.stringify(courseCard(regimenId, state), null, 2)
+    saveFile(
+      courseCardFileName(courseSettings.startDate),
+      new TextEncoder().encode(text),
+      COURSE_CARD_MEDIA_TYPE,
+    )
+  }
+
+  /** A course card opened from a file replaces the course on screen, regimen and all. */
+  const openCard = (file: File) => {
+    void file.text().then((text) => {
+      const card = parseCourseCard(text)
+      if (card === null) {
+        setCardNote('invalid')
+        return
+      }
+      setState(card.state)
+      // The patient form reads its values at mount, and the switches are the card's own.
+      setFormKey((current) => current + 1)
+      setPendingRegimen(null)
+      setToggledRegimen(card.regimenId)
+      setPhaseNote(null)
+      setCardNote('opened')
+      setSearchParams(
+        (current) => {
+          const params = new URLSearchParams(current)
+          if (card.regimenId) params.set('regimen', card.regimenId)
+          else params.delete('regimen')
+          return params
+        },
+        { replace: true },
+      )
+    })
   }
 
   /**
@@ -571,8 +685,18 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           the doses beside it change with it. On a narrow screen the two simply stack. */}
       <aside className={classes.inputs}>
         <Stack gap="sm">
-          <PatientForm onChange={setPatient} />
+          <PatientForm key={formKey} initialValues={patientForm} onChange={set.patientForm} />
           <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
+          <CourseDraft
+            personal={personal}
+            onPersonal={(allowed) => {
+              setPersonal(allowed)
+              setPersonalInDraft(allowed)
+            }}
+            onSave={saveCard}
+            onOpen={openCard}
+            note={cardNote}
+          />
           {ownItems.length > 0 && (
             <StandardSupport
               items={ownItems}

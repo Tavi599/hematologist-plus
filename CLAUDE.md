@@ -149,7 +149,14 @@ src/
 
 ## Data and privacy
 
-- **No patient data is ever sent to Supabase or any external service**, logged, or cached in the service worker. Patient input lives in component state only.
+- **No patient data is ever sent to Supabase or any external service**, logged, or cached in the
+  service worker. The whole course lives in one object (`CourseState` in
+  `src/features/calculator/course-state.ts`), kept as a draft in this device's `localStorage`
+  (`src/lib/course-draft.ts`) so a sheet laid out over several days survives leaving the page or
+  accepting a PWA update. The fields that name the patient (full name, record number, date of
+  birth) are written there only with the physician's explicit consent, and a draft older than 7
+  days is dropped. The same object is saved to and read from a «course card» .json file,
+  validated by `src/schemas/course-draft.ts` — a card of another version is dropped whole.
 - Supabase project `hematologist-plus` (ref `lenftpktjlxpqaajgqtm`, Frankfurt). URL + **publishable** key are committed in `.env` (browser-safe by design). The **secret** key is used only by `scripts/`, read from git-ignored `.env.local` or GitHub secrets — never committed, never in `VITE_*` vars.
 - Every table in an exposed schema must have RLS enabled in the same migration that creates it; the publishable key would otherwise expose it.
 - **Deploy before migrating.** Push the code and wait for the Pages deploy, then run the SQL: a copy of the app installed on a phone keeps its old code until the user accepts an update, and it has to survive the new column. Row schemas are `z.object` for exactly this reason — never make one strict. A copy that is too old anyway gets a "reinstall the app" button (`reinstallApp` in `src/lib/app-refresh.ts`), which drops the offline catalog, unregisters the service worker and reloads; it finishes on a URL carrying a one-off query parameter, because a plain reload can be answered from the browser cache with the same stale `index.html`.

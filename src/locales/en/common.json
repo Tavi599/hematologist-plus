@@ -83,6 +83,16 @@
       "phasesHint": "The phase follows the cycle number; maintenance or consolidation is chosen here.",
       "phaseSwitched": "Cycle {{cycle}}: the «{{phase}}» phase is open."
     },
+    "draft": {
+      "title": "Course draft",
+      "hint": "The course you lay out is kept on this device and comes back when you open the calculator again — after visiting other pages or accepting an update of the app. The draft is never sent anywhere and is dropped after 7 days.",
+      "personal": "Keep the name, record number and date of birth",
+      "personalHint": "Without this, the draft holds only sex, height, weight and laboratory values — the fields that name the patient are not written to the device.",
+      "save": "Save course card (.json)",
+      "open": "Open course card",
+      "opened": "The course was opened from the card.",
+      "invalid": "This is not a course card of this version — the course is unchanged."
+    },
     "hospital": {
       "title": "Sheet header",
       "institution": "Institution",

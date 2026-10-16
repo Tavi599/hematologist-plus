@@ -26,12 +26,19 @@ import {
 
 /**
  * Patient data lives only in this component's state and its parent — never sent anywhere.
- * Every change is validated; the parent gets the parsed values or null while they are incomplete.
+ * The parent gets the fields as they are typed and parses them itself, so a course restored from
+ * a draft comes back into the form it was typed in (`initialValues`, read once, at mount).
  */
-export function PatientForm({ onChange }: { onChange: (patient: PatientInput | null) => void }) {
+export function PatientForm({
+  initialValues,
+  onChange,
+}: {
+  initialValues?: PatientFormValues
+  onChange: (values: PatientFormValues) => void
+}) {
   const { t } = useTranslation()
   const form = useForm<PatientFormValues, unknown, PatientInput>({
-    defaultValues: emptyPatientForm(),
+    defaultValues: initialValues ?? emptyPatientForm(),
     mode: 'onChange',
     resolver: zodResolver(patientFormSchema),
   })
@@ -41,8 +48,7 @@ export function PatientForm({ onChange }: { onChange: (patient: PatientInput | n
   onChangeRef.current = onChange
   useEffect(() => {
     const report = (values: PatientFormValues) => {
-      const parsed = patientFormSchema.safeParse(values)
-      onChangeRef.current(parsed.success ? parsed.data : null)
+      onChangeRef.current(values)
     }
     // An untouched form is already a valid one: every measurement is optional, so the parent
     // hears about it straight away and can calculate from a BSA entered on the course card.

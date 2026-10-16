@@ -2,6 +2,8 @@ import { act, fireEvent, screen, within } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { demoCatalog } from '../../lib/catalog.fixture'
+import { initialCourseState } from '../../features/calculator/course-state'
+import { courseCard } from '../../lib/course-draft'
 import i18n from '../../lib/i18n'
 import { renderWithProviders } from '../../test/render'
 import { CalculatorPage } from './CalculatorPage'
@@ -30,6 +32,8 @@ const REGIMEN_ROUTE = { route: '/calculator?regimen=r-chop-21' }
 // takes close to the default 20 s.
 describe('CalculatorPage', { timeout: 60_000 }, () => {
   beforeEach(async () => {
+    // Each test opens a calculator nobody has worked in: the draft of the previous one is gone.
+    window.localStorage.clear()
     await act(() => i18n.changeLanguage('uk'))
     const catalog = demoCatalog()
     fetch.fetchTable.mockReset()
@@ -347,5 +351,98 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
 
     await act(async () => fireEvent.click(antiviral))
     expect(within(table()).queryByText('ДЕМО Ацикловір')).not.toBeInTheDocument()
+  })
+  it('brings the course back after the page is left, with no name kept on the device', async () => {
+    const first = renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    await screen.findByRole('combobox', { name: 'Схема' })
+    await fillPatient()
+    await act(async () => {
+      fireEvent.change(screen.getByLabelText(/Прізвище/), { target: { value: 'Петренко І. І.' } })
+      fireEvent.change(screen.getByLabelText('Цикл №'), { target: { value: '3' } })
+    })
+
+    // Nothing that names the patient is written to the device until the physician allows it.
+    const stored = () => window.localStorage.getItem('hp.courseDraft') ?? ''
+    expect(stored()).not.toContain('Петренко')
+    expect(stored()).toContain('r-chop-21')
+
+    // Leaving for the disease pages unmounts the calculator; the course comes back with it.
+    first.unmount()
+    renderWithProviders(<CalculatorPage />, { route: '/calculator' })
+    expect(await screen.findByRole('combobox', { name: 'Схема' })).toHaveValue(
+      'R-CHOP-21 — ДЕМО R-CHOP-21',
+    )
+    expect(screen.getByLabelText('Вага, кг')).toHaveValue('80')
+    expect(screen.getByLabelText('Цикл №')).toHaveValue('3')
+    expect(screen.getByLabelText(/Прізвище/)).toHaveValue('')
+    const table = screen.getByRole('table', { name: 'Дози', hidden: true })
+    expect(within(table).getByText('ДЕМО Ритуксимаб')).toBeInTheDocument()
+  })
+
+  it('keeps the name too once the physician allows it', async () => {
+    const first = renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    await screen.findByRole('combobox', { name: 'Схема' })
+    await fillPatient()
+    const consent = screen
+      .getByText('Зберігати ПІБ, № історії хвороби і дату народження')
+      .closest('.mantine-Switch-root')!
+      .querySelector('input')!
+    await act(async () => fireEvent.click(consent))
+    await act(async () =>
+      fireEvent.change(screen.getByLabelText(/Прізвище/), { target: { value: 'Петренко І. І.' } }),
+    )
+
+    first.unmount()
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    expect(await screen.findByLabelText(/Прізвище/)).toHaveValue('Петренко І. І.')
+  })
+  it('opens a course from a card file, fields and regimen and all', async () => {
+    const state = initialCourseState()
+    const card = courseCard('r-chop-21', {
+      ...state,
+      patientForm: {
+        ...state.patientForm,
+        fullName: 'Петренко І. І.',
+        sex: 'male',
+        ageYears: 60,
+        heightCm: 180,
+        weightKg: 80,
+      },
+      courseSettings: { ...state.courseSettings, cycleNumber: 4 },
+    })
+
+    renderWithProviders(<CalculatorPage />, { route: '/calculator' })
+    await screen.findByRole('combobox', { name: 'Схема' })
+    const input = document.querySelector('input[type="file"]')! as HTMLInputElement
+    const file = new File([JSON.stringify(card)], 'course.json', { type: 'application/json' })
+    await act(async () => {
+      fireEvent.change(input, { target: { files: [file] } })
+    })
+
+    expect(await screen.findByText('Курс відкрито з картки.')).toBeInTheDocument()
+    expect(screen.getByLabelText(/Прізвище/)).toHaveValue('Петренко І. І.')
+    expect(screen.getByLabelText('Цикл №')).toHaveValue('4')
+    expect(screen.getByRole('combobox', { name: 'Схема' })).toHaveValue(
+      'R-CHOP-21 — ДЕМО R-CHOP-21',
+    )
+    const table = screen.getByRole('table', { name: 'Дози', hidden: true })
+    expect(within(table).getByText('ДЕМО Ритуксимаб')).toBeInTheDocument()
+  })
+
+  it('says so and changes nothing when the file is not a course card', async () => {
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    await screen.findByRole('combobox', { name: 'Схема' })
+    await fillPatient()
+    const input = document.querySelector('input[type="file"]')! as HTMLInputElement
+    await act(async () => {
+      fireEvent.change(input, {
+        target: { files: [new File(['{"what":"this"}'], 'other.json')] },
+      })
+    })
+
+    expect(
+      await screen.findByText('Це не картка курсу цієї версії — курс не змінено.'),
+    ).toBeInTheDocument()
+    expect(screen.getByLabelText('Вага, кг')).toHaveValue('80')
   })
 })
