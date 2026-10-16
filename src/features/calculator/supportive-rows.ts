@@ -6,7 +6,8 @@ import type { ManualRow } from './manual-rows'
  * hand-written lines, so each can be edited afterwards.
  *
  * CALIBRATION: the additive amounts come from the department's IGEV sheet (1000 mL of saline with
- * 40 mL of 4% KCl and 4 mL of 25% MgSO4); the larger bags carry them in proportion.
+ * 40 mL of 4% KCl and 4 mL of 25% MgSO4); the larger bags carry them in proportion. 7.5% KCl is
+ * the department's alternative: 20 mL to a litre (the physician's instruction, 2026-10-16).
  */
 
 export type Solvent = 'nacl' | 'glucose'
@@ -16,19 +17,33 @@ export const PROPORTIONAL_VOLUMES_ML = [500, 1000, 3000] as const
 /** Small bags: potassium and magnesium can be added, but no amount is ever filled in for them. */
 export const SMALL_VOLUMES_ML = [100, 150, 200, 250, 400] as const
 
-const KCL_ML_PER_LITRE = 40
+/** The potassium chloride the ward has: 4% is the department's own, 7.5% the alternative. */
+export const KCL_STRENGTHS = ['4', '7.5'] as const
+export type KclStrength = (typeof KCL_STRENGTHS)[number]
+
+const KCL_ML_PER_LITRE: Record<KclStrength, number> = { '4': 40, '7.5': 20 }
 const MGSO4_ML_PER_LITRE = 4
+
+/** «4», «7,5»: the strength as the sheet writes it. */
+export function kclPercent(strength: KclStrength): string {
+  return strength.replace('.', ',')
+}
 
 export interface Additives {
   kclMl: number
   mgso4Ml: number
 }
 
+/** A bag of 500 mL or more, which carries potassium and magnesium in proportion. */
+export function isProportionalBag(volumeMl: number): boolean {
+  return (PROPORTIONAL_VOLUMES_ML as readonly number[]).includes(volumeMl)
+}
+
 /** The standard additives of a bag, or null for a bag that has no standard. */
-export function standardAdditives(volumeMl: number): Additives | null {
-  if (!(PROPORTIONAL_VOLUMES_ML as readonly number[]).includes(volumeMl)) return null
+export function standardAdditives(volumeMl: number, kcl: KclStrength = '4'): Additives | null {
+  if (!isProportionalBag(volumeMl)) return null
   return {
-    kclMl: (volumeMl / 1000) * KCL_ML_PER_LITRE,
+    kclMl: (volumeMl / 1000) * KCL_ML_PER_LITRE[kcl],
     mgso4Ml: (volumeMl / 1000) * MGSO4_ML_PER_LITRE,
   }
 }
@@ -41,8 +56,10 @@ function number(value: number): string {
 export interface InfusionLineInput {
   solvent: Solvent
   volumeMl: number
-  /** Millilitres of 4% KCl; null or 0 leaves it out. */
+  /** Millilitres of KCl; null or 0 leaves it out. */
   kclMl: number | null
+  /** 4% unless said otherwise. */
+  kclStrength?: KclStrength
   /** Millilitres of 25% MgSO4; null or 0 leaves it out. */
   mgso4Ml: number | null
   /** Millilitres per hour; null leaves the rate to the ward. */
@@ -54,7 +71,9 @@ const SOLVENT_NAME: Record<Solvent, string> = { nacl: 'NaCl 0,9%', glucose: 'Г�
 /** «NaCl 0,9% 1000 мл + KCl 4% 40 мл + MgSO4 25% 4 мл». */
 export function infusionWhat(input: InfusionLineInput): string {
   const parts = [`${SOLVENT_NAME[input.solvent]} ${number(input.volumeMl)} мл`]
-  if (input.kclMl) parts.push(`KCl 4% ${number(input.kclMl)} мл`)
+  if (input.kclMl) {
+    parts.push(`KCl ${kclPercent(input.kclStrength ?? '4')}% ${number(input.kclMl)} мл`)
+  }
   if (input.mgso4Ml) parts.push(`MgSO4 25% ${number(input.mgso4Ml)} мл`)
   return parts.join(' + ')
 }
@@ -72,6 +91,86 @@ export function infusionRow(id: string, input: InfusionLineInput, days: number[]
     hour: null,
     block: 'infusion',
   }
+}
+
+/** The additive potassium of a bag of the standard infusion: one of the strengths, or none. */
+export type KclChoice = KclStrength | 'none'
+
+/** One bag of the standard infusion: its volume and what goes into it. */
+export interface SolutionPlan {
+  on: boolean
+  volumeMl: number
+  kcl: KclChoice
+  mgso4: boolean
+}
+
+/**
+ * The infusion therapy of the department's standard support: saline, 5% glucose or both, each
+ * with potassium and magnesium in proportion to the bag (500, 1000 or 3000 mL). A smaller bag
+ * goes without them, and either bag may be given clean.
+ */
+export interface InfusionTherapy {
+  on: boolean
+  nacl: SolutionPlan
+  glucose: SolutionPlan
+  /** The days it is given on; null for the days of the cytostatics. */
+  days: number[] | null
+  /** Hour of the sheet the mark goes in; null for the hour the working day starts. */
+  hour: number | null
+}
+
+export const SOLVENTS: Solvent[] = ['nacl', 'glucose']
+
+/** Every bag on offer: the small ones go without additives. */
+export const INFUSION_VOLUMES_ML = [...SMALL_VOLUMES_ML, ...PROPORTIONAL_VOLUMES_ML] as const
+
+const STANDARD_BAG: SolutionPlan = { on: true, volumeMl: 1000, kcl: '4', mgso4: true }
+
+export const NO_INFUSION_THERAPY: InfusionTherapy = {
+  on: false,
+  nacl: STANDARD_BAG,
+  glucose: { ...STANDARD_BAG, on: false },
+  days: null,
+  hour: null,
+}
+
+/** Prefix of the lines of the standard infusion: they belong to the switch, not to the physician's list. */
+export const INFUSION_THERAPY_ID = 'std-infusion-'
+
+/** What one bag is written as: the solution, and its additives where the bag carries them. */
+export function solutionLine(solvent: Solvent, plan: SolutionPlan): InfusionLineInput {
+  const kcl = plan.kcl === 'none' ? null : standardAdditives(plan.volumeMl, plan.kcl)
+  const mgso4 = plan.mgso4 ? standardAdditives(plan.volumeMl) : null
+  return {
+    solvent,
+    volumeMl: plan.volumeMl,
+    kclMl: kcl?.kclMl ?? null,
+    ...(plan.kcl === 'none' ? {} : { kclStrength: plan.kcl }),
+    mgso4Ml: mgso4?.mgso4Ml ?? null,
+    rateMlH: null,
+  }
+}
+
+/**
+ * The lines of the standard infusion, one per bag switched on, given before the course's own
+ * drugs on the days of the cytostatics unless the physician named others.
+ */
+export function infusionTherapyRows(
+  therapy: InfusionTherapy,
+  chemoDays: number[],
+  dayStartHour: number,
+): ManualRow[] {
+  if (!therapy.on) return []
+  const days = therapy.days && therapy.days.length > 0 ? therapy.days : chemoDays
+  return SOLVENTS.filter((solvent) => therapy[solvent].on).map((solvent) => ({
+    id: `${INFUSION_THERAPY_ID}${solvent}`,
+    what: infusionWhat(solutionLine(solvent, therapy[solvent])),
+    how: infusionHow(null),
+    days: days.length > 0 ? days : [1],
+    hour: therapy.hour ?? dayStartHour,
+    block: 'infusion' as const,
+    before: true,
+  }))
 }
 
 /** The drug whose standard support the department writes on its own sheet. */

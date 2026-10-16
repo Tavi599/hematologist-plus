@@ -425,7 +425,7 @@ describe('buildCourseSheets', () => {
       expect(rituximab).toEqual(['+', '-', null, null, null, null, null])
     })
 
-    it('writes a tablet as «р.о. х 2р/добу (09:00 та 21:00)» when the protocol sets the interval', () => {
+    it('writes a tablet as «р.о. х 2р/добу», or with the hours when the physician wrote them', () => {
       const items = buildCourseItems(indexCatalog(demoCatalog()), 'r-chop-21').map((item) =>
         item.courseDrug.block === 'ward'
           ? {
@@ -442,7 +442,14 @@ describe('buildCourseSheets', () => {
       )
       const ward = sheets({ items, course, layout: 'ward', dayStart: '09:00' })[0]!
       const how = String(text(bandStartingWith(ward, 'ДЕМО Преднізолон')![1] ?? null))
-      expect(how).toBe('routeShort.oral х 2р/добу (09:00 та 21:00)')
+      expect(how).toBe('routeShort.oral х 2р/добу')
+
+      const withHours = items.map((item) =>
+        item.courseDrug.block === 'ward' ? { ...item, wardHours: [7, 15, 23] } : item,
+      )
+      const hoursSheet = sheets({ items: withHours, course, layout: 'ward' })[0]!
+      const written = bandStartingWith(hoursSheet, 'ДЕМО Преднізолон')![1] ?? null
+      expect(String(text(written))).toBe('routeShort.oral\n07:00, 15:00, 23:00')
     })
 
     it('leaves a switched-off drug off the sheet', () => {

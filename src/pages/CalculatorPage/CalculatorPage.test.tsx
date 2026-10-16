@@ -204,8 +204,8 @@ describe('CalculatorPage', () => {
     await act(async () => {
       fireEvent.click(within(rituximab).getByRole('button', { name: 'Як порахували' }))
     })
-    // The chain sits in the details row right below the drug.
-    const details = within(rituximab.nextElementSibling as HTMLElement)
+    // The chain sits in the details row below the drug and the line that sets out its hours.
+    const details = within(rituximab.nextElementSibling!.nextElementSibling as HTMLElement)
     expect(details.getByText(/BSA за Mosteller: √\(180 см × 80 кг \/ 3600\)/)).toBeInTheDocument()
     expect(details.getByText(/375 мг\/м² × 2 м²/)).toBeInTheDocument()
     expect(details.getByText(/Округлення до 1 мг/)).toBeInTheDocument()

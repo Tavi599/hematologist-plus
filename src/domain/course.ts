@@ -78,8 +78,12 @@ export interface CourseDrug {
   anchorOffsetMin?: number
   /** `day_support`: minutes between the repeats within one day (q8h = 480). */
   intervalMin?: number
-  /** `day_support`: a fixed time of day (minutes from midnight) the first administration is given at. */
-  clockStartMin?: number
+  /**
+   * The times the physician put the day's administrations at, minutes from midnight of the course
+   * day (past 1440 is the night after), one per administration. Fewer than the administrations
+   * of a day: the rest follow the last by `intervalMin`.
+   */
+  startsMin?: number[]
   /** `day_support`: id of the course drug whose start this row is timed from on its days. */
   anchorDrugId?: string
   /** A drug of the regimen itself: the support of the day is timed from the first of these. */
@@ -138,10 +142,6 @@ export interface CourseAdjustments {
   doseOverrideAmount?: Record<string, number>
   /** Item ids the physician switched off. */
   disabledIds?: string[]
-  /** Manual time shift by item id, min; later administrations of the day move with it. */
-  shiftMin?: Record<string, number>
-  /** The same shift worked out for each course day (it follows the previous day); wins over `shiftMin`. */
-  shiftMinByDay?: Record<string, Record<number, number>>
   /**
    * Which infusion of the drug the course opens with, by series key (the drug): 1 the first,
    * 2 the second, 3 any later one. Absent: cycle 1 opens with the first, a later cycle with a
@@ -481,9 +481,12 @@ function mostellerFor(patient: CoursePatient): BsaResult | null {
   return calculateBsa(patient.heightCm, patient.weightKg)
 }
 
-/** The manual shift of a drug on one day: the one worked out for that day, else the drug's own. */
-function shiftOn(adjustments: CourseAdjustments, drugId: string, day: number): number | undefined {
-  return adjustments.shiftMinByDay?.[drugId]?.[day] ?? adjustments.shiftMin?.[drugId]
+/** The time the physician put an administration at, or none: then the schedule places it. */
+function startOf(drug: CourseDrug, index: number): number | undefined {
+  const starts = drug.startsMin
+  if (starts === undefined || starts.length === 0) return undefined
+  if (index < starts.length) return starts[index]
+  return starts[starts.length - 1]! + (drug.intervalMin ?? 0) * (index - starts.length + 1)
 }
 
 interface DrugContext {
@@ -681,11 +684,8 @@ function buildDays(
           ...(drug.gapBeforeMin === undefined ? {} : { gapBeforeMin: drug.gapBeforeMin }),
           ...(drug.anchorOffsetMin === undefined ? {} : { anchorOffsetMin: drug.anchorOffsetMin }),
           ...(drug.intervalMin === undefined ? {} : { intervalMin: drug.intervalMin }),
-          ...(drug.clockStartMin === undefined ? {} : { clockStartMin: drug.clockStartMin }),
           ...(drug.anchorDrugId === undefined ? {} : { anchorId: drug.anchorDrugId }),
-          ...(shiftOn(adjustments, drug.id, day) === undefined
-            ? {}
-            : { shiftMin: shiftOn(adjustments, drug.id, day) }),
+          ...(startOf(drug, index) === undefined ? {} : { atMin: startOf(drug, index) }),
         }
       })
     })

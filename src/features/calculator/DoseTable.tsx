@@ -42,8 +42,8 @@ import type { DrugInfusionParams } from '../../schemas/catalog'
 import { formatNumber } from '../../lib/format'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
-import { canChooseTiming, type TimingChoice } from '../../lib/dose-timing'
-import { TimingEditor } from './TimingEditor'
+import { isFreeRow, isVariant, type RowPlan } from '../../lib/row-plan'
+import { RowPlanControls } from './RowPlanControls'
 import {
   DEFAULT_DOSE_CHOICE,
   defaultBolusMode,
@@ -112,11 +112,14 @@ export interface DoseTableProps {
   onIvigSupportEdit: () => void
   /** Gives the row by another route the label allows at the same dose. */
   onRoute: (itemId: string, route: CourseItem['item']['route']) => void
-  /** The frequency and time the physician set for a supportive drug, by row. */
-  timingChoices: Record<string, TimingChoice>
-  onTiming: (itemId: string, choice: TimingChoice | null) => void
-  /** Start of the working day, HH:MM: where a fixed time of a drug starts until it is set. */
-  dayStart: string
+  /** The hours, frequency and days the physician set for a row, by row. */
+  plans: Record<string, RowPlan>
+  /** `null` takes everything set for the row away. */
+  onPlan: (itemId: string, patch: Partial<RowPlan> | null) => void
+  /** Adds another row of the same drug, with settings of its own. */
+  onVariant: (itemId: string) => void
+  /** Days a drug is given on by two of its rows, by row. */
+  overlaps: Map<string, number[]>
   /** The sheet the physician moved a row to; a row not in it is printed where the regimen puts it. */
   sheetChoices: Record<string, SheetChoice>
   onSheet: (itemId: string, sheet: SheetChoice) => void
@@ -527,9 +530,10 @@ function DoseRow({
   onIvigSupport,
   onIvigSupportEdit,
   onRoute,
-  timingChoices,
-  onTiming,
-  dayStart,
+  plans,
+  onPlan,
+  onVariant,
+  overlaps,
   sheetChoices,
   onSheet,
   cycleNumber,
@@ -557,9 +561,13 @@ function DoseRow({
   const unitName = tu(`units.${unit}`)
   const amount = (value: number) => `${formatNumber(value, language, 2)} ${unitName}`
 
+  // The line under the row that sets out where and when it is given. The first, full dose split
+  // off by the kidney correction follows its row and has none of its own.
+  const planned = item.firstDoseOf === undefined
+
   return (
     <>
-      <Table.Tr opacity={enabled ? 1 : 0.55}>
+      <Table.Tr opacity={enabled ? 1 : 0.55} style={planned ? { borderBottom: 'none' } : undefined}>
         <Table.Td>
           <Switch
             checked={enabled}
@@ -574,6 +582,7 @@ function DoseRow({
             {item.routeChoices.length === 0 && item.item.role !== 'main' && ' · '}
             {item.item.role !== 'main' && t(`role.${item.item.role}`)}
             {customIds.includes(id) && ` · ${t('calculator.doses.custom')}`}
+            {isVariant(id) && ` · ${t('calculator.plan.variantRow')}`}
           </Text>
           {/* Another route the label allows at the same dose: the regimen's own is the default,
               and a switch is marked, since the sheet then says something the protocol did not. */}
@@ -597,26 +606,6 @@ function DoseRow({
               )}
             </Group>
           )}
-          {/* Which sheet the row is printed on. A single injection or a plain push does not call
-              for a whole hourly sheet: written into the inpatient list it takes a line there. */}
-          <Group gap={6} mt={2} wrap="nowrap">
-            <SegmentedControl
-              size="xs"
-              disabled={!enabled}
-              value={item.item.block === 'ward' ? 'ward' : 'infusion'}
-              onChange={(value) => onSheet(id, value as SheetChoice)}
-              data={[
-                { value: 'infusion', label: t('calculator.doses.sheet.infusion') },
-                { value: 'ward', label: t('calculator.doses.sheet.ward') },
-              ]}
-              aria-label={`${t('calculator.doses.sheet.label')}: ${localize(item.drug.name, language)}`}
-            />
-            {id in sheetChoices && (
-              <Badge size="xs" variant="light" color="blue">
-                {t('calculator.doses.sheet.changed')}
-              </Badge>
-            )}
-          </Group>
           {/* The label asks for premedication before this drug: always in sight, and loud when
               the course has none on one of its days. */}
           {item.item.role === 'main' && PREMEDICATION_ADVISED.has(item.item.drug_id) && (
@@ -725,22 +714,6 @@ function DoseRow({
             {(result?.administrationsPerDay ?? item.item.administrations_per_day) > 1 &&
               ` · ${t('calculator.doses.timesPerDay', { count: result?.administrationsPerDay ?? item.item.administrations_per_day })}`}
           </Text>
-          {/* How often and when: the frequency and the hour of a supportive drug are the
-              physician's to set, for the first day apart from the rest if need be. */}
-          {canChooseTiming(item.item, item.dayOneOf) && (
-            <TimingEditor
-              item={item}
-              choice={timingChoices[id]}
-              defaultClock={dayStart}
-              disabled={!enabled}
-              onChange={(choice) => onTiming(id, choice)}
-            />
-          )}
-          {item.dayOneOf !== undefined && (
-            <Text size="xs" c="orange.8">
-              {t('calculator.doses.timing.dayOneRow')}
-            </Text>
-          )}
           {/* The first, full dose the label keeps uncorrected, split off its corrected row. */}
           {item.firstDoseOf !== undefined && (
             <Text size="xs" c="orange.8">
@@ -1043,7 +1016,7 @@ function DoseRow({
             >
               {expanded ? '−' : '+'}
             </ActionIcon>
-            {customIds.includes(id) && (
+            {(customIds.includes(id) || isVariant(id)) && (
               <ActionIcon
                 variant="subtle"
                 color="red"
@@ -1056,6 +1029,28 @@ function DoseRow({
           </Group>
         </Table.Td>
       </Table.Tr>
+      {/* Which sheet, at what hours, on which days. A single injection or a plain push does not
+          call for a whole hourly sheet: written into the inpatient list it takes a line there. */}
+      {planned && (
+        <Table.Tr opacity={enabled ? 1 : 0.55}>
+          <Table.Td />
+          <Table.Td colSpan={8} pt={0}>
+            <RowPlanControls
+              item={item}
+              result={result}
+              course={course}
+              plan={plans[id]}
+              free={isFreeRow(item.item, customIds)}
+              enabled={enabled}
+              sheetChanged={id in sheetChoices}
+              overlap={overlaps.get(id)}
+              onSheet={(sheet) => onSheet(id, sheet)}
+              onPlan={(patch) => onPlan(id, patch)}
+              onVariant={() => onVariant(id)}
+            />
+          </Table.Td>
+        </Table.Tr>
+      )}
       <Table.Tr>
         <Table.Td colSpan={9} p={0} style={{ border: expanded ? undefined : 'none' }}>
           <Collapse expanded={expanded}>

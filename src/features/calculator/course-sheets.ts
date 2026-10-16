@@ -1,15 +1,13 @@
 import {
   addDays,
-  DEFAULT_DAY_START,
-  formatTime,
   type RampKind,
-  parseTime,
   type CourseAdministrationResult,
   type CourseDrugResult,
   type CourseResult,
 } from '../../domain'
 import { solventOf, type CourseItem } from '../../lib/course-input'
 import { rampStepsFor } from '../../lib/ramp-steps'
+import { clockOfHour, SHEET_HOURS } from '../../lib/row-plan'
 import { formatAmount, formatDate } from '../../lib/format'
 import type { Language } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
@@ -86,10 +84,7 @@ interface SheetDay {
 }
 
 /** Hours of the department's sheet: 9…24 then 1…8, so the working day comes first. */
-export const SHEET_HOURS = [
-  ...Array.from({ length: 15 }, (_unused, index) => index + 9),
-  ...Array.from({ length: 9 }, (_unused, index) => index),
-]
+export { SHEET_HOURS }
 
 /** Date columns of the inpatient sheet; the blank has exactly this many. */
 export const WARD_DAY_COLUMNS = 24
@@ -156,7 +151,7 @@ const BLANK = {
   rampMax: ' мл/год до досягнення максимальної швидкості (Vmax) = ',
   rampEnd: ' мл/год.',
   perDay: ' р/добу',
-  times: ' та ',
+  hours: ', ',
   control: 'Контроль ваги, діурезу, АТ, ЧСС, температури тіла!',
   irradiated: 'Компоненти крові — лише ОПРОМІНЕНІ!',
 } as const
@@ -766,30 +761,23 @@ function rampNote(
 }
 
 /**
- * How a line of the inpatient sheet is written: «р.о. х 2р/добу (09:00 та 21:00)». The times
- * follow from the interval the protocol gives, counted from the start of the working day.
+ * How a line of the inpatient sheet is written: «р.о. х 2р/добу», or, where the physician wrote
+ * the hours instead, the route with the hours under it — «р.о.» over «07:00, 15:00, 23:00». The
+ * hours take a line of their own so that they wrap inside the column and never widen the blank.
  */
 function wardHowLine(
   item: CourseItem,
   result: CourseDrugResult | undefined,
   input: CourseSheetsInput,
 ): string {
+  const route = input.t(`routeShort.${item.item.route}`)
+  if (item.wardHours && item.wardHours.length > 0) {
+    return `${route}\n${item.wardHours.map(clockOfHour).join(BLANK.hours)}`
+  }
   const plain = howLine(item, result, input)
   if (item.item.route !== 'oral') return plain
   const perDay = result?.administrationsPerDay ?? item.item.administrations_per_day
-  const route = input.t(`routeShort.${item.item.route}`)
-  const times = administrationTimes(item, perDay, input.dayStart ?? DEFAULT_DAY_START)
-  return `${route} х ${perDay}${BLANK.perDay.trim()}${times ? ` (${times})` : ''}`
-}
-
-function administrationTimes(item: CourseItem, perDay: number, dayStart: string): string {
-  const interval = item.item.interval_min
-  if (perDay < 2 || interval === null) return ''
-  const start = parseTime(dayStart)
-  return Array.from(
-    { length: perDay },
-    (_unused, index) => formatTime(start + index * interval).time,
-  ).join(BLANK.times)
+  return `${route} х ${perDay}${BLANK.perDay.trim()}`
 }
 
 /** The stamp at the top of the blank: institution, address, registry code. */

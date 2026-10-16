@@ -3,6 +3,8 @@ import { describe, expect, it } from 'vitest'
 import {
   infusionHow,
   infusionRow,
+  infusionTherapyRows,
+  NO_INFUSION_THERAPY,
   infusionWhat,
   ivigSupportRows,
   presetRow,
@@ -30,6 +32,8 @@ describe('standardAdditives', () => {
     expect(standardAdditives(1000)).toEqual({ kclMl: 40, mgso4Ml: 4 })
     expect(standardAdditives(500)).toEqual({ kclMl: 20, mgso4Ml: 2 })
     expect(standardAdditives(3000)).toEqual({ kclMl: 120, mgso4Ml: 12 })
+    // 7.5% KCl is the alternative at 20 mL a litre.
+    expect(standardAdditives(1000, '7.5')).toEqual({ kclMl: 20, mgso4Ml: 4 })
   })
 
   it('has no standard for a small bag', () => {
@@ -83,5 +87,60 @@ describe('rows', () => {
   it('makes the antiemetic and the proton-pump inhibitor lines', () => {
     expect(presetRow('b', 'ondansetron', [1]).what).toBe('Ондансетрон 8 мг')
     expect(presetRow('c', 'omeprazole', [1]).how).toBe('в/в струминно повільно')
+  })
+})
+
+describe('the standard infusion therapy', () => {
+  const therapy = { ...NO_INFUSION_THERAPY, on: true }
+
+  it('is saline 1000 mL with 4% KCl and MgSO4, on the days of the cytostatics, before them', () => {
+    const rows = infusionTherapyRows(therapy, [1, 2, 3], 11)
+    expect(rows).toHaveLength(1)
+    expect(rows[0]).toMatchObject({
+      what: 'NaCl 0,9% 1000 мл + KCl 4% 40 мл + MgSO4 25% 4 мл',
+      how: 'в/в крап.',
+      days: [1, 2, 3],
+      hour: 11,
+      block: 'infusion',
+      before: true,
+    })
+  })
+
+  it('takes 7.5% KCl at 20 mL a litre, and carries the additives in proportion to the bag', () => {
+    const rows = infusionTherapyRows(
+      {
+        ...therapy,
+        nacl: { on: true, volumeMl: 3000, kcl: '7.5', mgso4: true },
+        glucose: { on: true, volumeMl: 500, kcl: '4', mgso4: false },
+      },
+      [1],
+      11,
+    )
+    expect(rows.map((row) => row.what)).toEqual([
+      'NaCl 0,9% 3000 мл + KCl 7,5% 60 мл + MgSO4 25% 12 мл',
+      'Глюкоза 5% 500 мл + KCl 4% 20 мл',
+    ])
+  })
+
+  it('gives a small bag or a bag without additives clean, on the days and hour chosen', () => {
+    const rows = infusionTherapyRows(
+      {
+        ...therapy,
+        nacl: { on: true, volumeMl: 250, kcl: '4', mgso4: true },
+        glucose: { on: true, volumeMl: 1000, kcl: 'none', mgso4: false },
+        days: [2, 4],
+        hour: 14,
+      },
+      [1],
+      11,
+    )
+    expect(rows.map((row) => [row.what, row.days, row.hour])).toEqual([
+      ['NaCl 0,9% 250 мл', [2, 4], 14],
+      ['Глюкоза 5% 1000 мл', [2, 4], 14],
+    ])
+  })
+
+  it('writes nothing while switched off', () => {
+    expect(infusionTherapyRows(NO_INFUSION_THERAPY, [1], 11)).toEqual([])
   })
 })

@@ -115,22 +115,6 @@
         "ward": "Inpatient sheet",
         "changed": "moved"
       },
-      "timing": {
-        "title": "Frequency and time",
-        "changed": "changed",
-        "allDays": "All days",
-        "otherDays": "Other days",
-        "firstDay": "First day",
-        "firstDayApart": "First day differently",
-        "perDay": "Times a day",
-        "interval": "Interval, h",
-        "fromChemo": "From chemo",
-        "atTime": "At a time",
-        "offset": "Min (−30 = 30 min before)",
-        "clock": "Time",
-        "reset": "Back to the regimen",
-        "dayOneRow": "First day, a row of its own; the settings are in the row below"
-      },
       "cystitisBadge": "haemorrhagic cystitis prophylaxis",
       "mesnaAdd": "Add mesna",
       "mesnaRemove": "Remove mesna",
@@ -263,6 +247,18 @@
       "ivigSupportEdit": "Edit",
       "monitoring": "Monitoring"
     },
+    "plan": {
+      "count": "Frequency",
+      "hours": "Hours",
+      "wardMode": "How the inpatient sheet writes it",
+      "perDay": "{{count}} a day",
+      "auto": "As in the regimen",
+      "days": "Days",
+      "daysShort": "Days",
+      "variant": "+ another variant",
+      "variantRow": "separate variant",
+      "overlap": "Days shared with another row of this drug: {{days}}"
+    },
     "standardSupport": {
       "title": "Standard support",
       "lead": "Antiemetics and infection prophylaxis are switched on and off here with one switch. If the regimen has its own rows of the kind, the switch enables or disables them; if it has none, it adds the standard ones.",
@@ -311,6 +307,14 @@
         "tablet": "20 mg oral",
         "iv_daily": "40 mg IV daily",
         "iv_steroid": "40 mg IV on steroid days"
+      },
+      "infusion": {
+        "title": "Infusion therapy",
+        "none": "No solution chosen",
+        "noKcl": "no KCl",
+        "smallBag": "A bag under 500 mL goes without KCl and MgSO4",
+        "chemoDays": "empty: the chemotherapy days",
+        "hour": "Hour"
       }
     },
     "manual": {
@@ -355,14 +359,11 @@
       "day": "Day {{day}}",
       "time": "Time",
       "drug": "Drug",
-      "shift": "Shift, min",
       "nextDay": "next day",
       "bolus": "bolus",
       "noDuration": "duration not set",
       "ward": "On the inpatient sheet",
-      "wardNote": "A shift moves the infusions and the support hung off them. Rows of the inpatient sheet have no clock time and never move.",
-      "syncDay": "Same as the previous day",
-      "syncDrug": "Same as the previous day"
+      "wardNote": "The hours are set under each drug in the dose table. Drugs of the inpatient sheet have no time in the schedule."
     },
     "supply": {
       "title": "Need for the course",

@@ -67,8 +67,11 @@ export interface AdministrationInput {
   durationMin: number
   /** Pause before this administration (e.g. premedication → chemo), min. */
   gapBeforeMin?: number
-  /** Manual shift by the physician, min; later administrations of the chain move with it. */
-  shiftMin?: number
+  /**
+   * The time the physician put this administration at, minutes from midnight of the course day
+   * (past 1440 is the night after). It stands there alone: nothing before or after it moves.
+   */
+  atMin?: number
   /**
    * `day_support`: minutes from the start of the day's first chained drug; negative is before it
    * (ondansetron 30 min before the cytostatic).
@@ -76,11 +79,6 @@ export interface AdministrationInput {
   anchorOffsetMin?: number
   /** `day_support`: minutes between the repeats of this drug within the day (q8h = 480). */
   intervalMin?: number
-  /**
-   * `day_support`: a fixed time of day, minutes from midnight, the first administration is given
-   * at — instead of being hung off a cytostatic. The repeats follow it by `intervalMin`.
-   */
-  clockStartMin?: number
   /**
    * `day_support`: time this row from the start of that chained row instead of the day's first
    * cytostatic — mesna from the ifosfamide it protects against. Ignored on a day without it.
@@ -120,6 +118,10 @@ export interface ScheduledAdministration {
  * Between two chemotherapy (`isMain`) drugs the chain keeps at least `MIN_CHEMO_GAP_MIN`, unless the
  * earlier one is a 24-hour infusion or the same drug (a loading dose and the infusion it opens).
  *
+ * An administration the physician put at an hour (`atMin`) is given then, and the chain goes on
+ * as if it had not been moved: dragging one drug never drags the others. Only the support hung
+ * off the cytostatic follows it, because that is what it is timed from.
+ *
  * CALIBRATION: default gaps and whether infusions may run in parallel will be taken from real sheets.
  */
 export function scheduleAdministrations(
@@ -142,7 +144,9 @@ export function scheduleAdministrations(
     const interval = item.intervalMin ?? 0
     const firstOfDrug = chainStarts.get(item.id.replace(/#\d+$/, '#1'))
     if (occurrence > 0 && interval > 0 && firstOfDrug !== undefined) {
-      scheduled.push(placed(item.id, firstOfDrug + interval * occurrence, durationOf(item)))
+      scheduled.push(
+        placed(item.id, atOf(item) ?? firstOfDrug + interval * occurrence, durationOf(item)),
+      )
       continue
     }
     // A chemotherapy drug waits an hour after the previous one, unless that one runs round the clock.
@@ -154,11 +158,13 @@ export function scheduleAdministrations(
       (item.drugKey === undefined || occurrence > 0 || previousMain.drugKey !== item.drugKey)
         ? MIN_CHEMO_GAP_MIN
         : 0
+    assertNonNegative(`${item.id}.gapBeforeMin`, item.gapBeforeMin ?? 0)
     const gap = Math.max(item.gapBeforeMin ?? 0, chemoGap)
-    const startMin = Math.max(0, cursor + gap + shiftOf(item))
+    const chained = cursor + gap
+    const startMin = atOf(item) ?? chained
     // A round-the-clock infusion runs alongside the rest of the day: the next drug does not wait
-    // for it to end, it starts with it.
-    cursor = startMin + (durationOf(item) >= MINUTES_PER_DAY ? 0 : durationOf(item))
+    // for it to end, it starts with it. The chain goes on from where the drug would have been.
+    cursor = chained + (durationOf(item) >= MINUTES_PER_DAY ? 0 : durationOf(item))
     firstStart ??= startMin
     if (item.isMain) {
       firstMainStart ??= startMin
@@ -182,8 +188,7 @@ export function scheduleAdministrations(
     }
     const interval = item.intervalMin ?? 0
     assertNonNegative(`${item.id}.intervalMin`, interval)
-    const from = item.clockStartMin ?? anchor + offset
-    const startMin = Math.max(0, from + interval * (item.occurrence ?? 0) + shiftOf(item))
+    const startMin = atOf(item) ?? Math.max(0, anchor + offset + interval * (item.occurrence ?? 0))
     scheduled.push(placed(item.id, startMin, durationOf(item)))
   }
 
@@ -200,11 +205,12 @@ function durationOf(item: AdministrationInput): number {
   return item.durationMin
 }
 
-function shiftOf(item: AdministrationInput): number {
-  assertNonNegative(`${item.id}.gapBeforeMin`, item.gapBeforeMin ?? 0)
-  const shift = item.shiftMin ?? 0
-  if (!Number.isFinite(shift)) throw new DomainInputError(`${item.id}.shiftMin`, 'must be finite')
-  return shift
+function atOf(item: AdministrationInput): number | undefined {
+  if (item.atMin === undefined) return undefined
+  if (!Number.isFinite(item.atMin) || item.atMin < 0) {
+    throw new DomainInputError(`${item.id}.atMin`, 'must be a time of the course day')
+  }
+  return item.atMin
 }
 
 function placed(id: string, startMin: number, durationMin: number): ScheduledAdministration {

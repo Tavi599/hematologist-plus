@@ -19,7 +19,14 @@ import { HospitalHeader } from '../../features/calculator/HospitalHeader'
 import { MANUAL_ROWS_ANCHOR, ManualRows } from '../../features/calculator/ManualRows'
 import type { ManualRow } from '../../features/calculator/manual-rows'
 import { withFirstFullDose } from '../../lib/renal-first-dose'
-import { IVIG_DRUG_ID, ivigSupportRows } from '../../features/calculator/supportive-rows'
+import {
+  infusionTherapyRows,
+  IVIG_DRUG_ID,
+  ivigSupportRows,
+  NO_INFUSION_THERAPY,
+  type InfusionTherapy,
+} from '../../features/calculator/supportive-rows'
+import { InfusionTherapyControls } from '../../features/calculator/InfusionTherapyControls'
 import { PatientForm } from '../../features/calculator/PatientForm'
 import { ScheduleTable } from '../../features/calculator/ScheduleTable'
 import { SupplyTable } from '../../features/calculator/SupplyTable'
@@ -52,19 +59,20 @@ import {
   applyBagChoices,
   applyBlockChoices,
   applyDurationChoices,
-  buildCourseItems,
   buildCourseItemsFrom,
   type AdministrationMode,
   type CourseItem,
   type SheetChoice,
 } from '../../lib/course-input'
-import { daysOfDrugs, effectiveShifts, NO_SHIFT_SYNC, type ShiftSync } from '../../lib/shift-sync'
 import {
-  applyTimingChoices,
-  disabledWithDayOne,
-  inheritedByDayOne,
-  type TimingChoice,
-} from '../../lib/dose-timing'
+  applyPlans,
+  isVariant,
+  nextVariantId,
+  overlappingDays,
+  variantBase,
+  withVariants,
+  type RowPlan,
+} from '../../lib/row-plan'
 import { formatNumber } from '../../lib/format'
 import {
   ALWAYS_PREMEDICATED,
@@ -116,12 +124,16 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     cycleNumber: 1,
   })
   const [customItems, setCustomItems] = useState<RegimenItem[]>([])
-  const [ownDisabledIds, setDisabledIds] = useState<string[]>([])
-  const [ownDrugPercent, setDrugPercent] = useState<Record<string, number>>({})
-  const [ownDoseOverrideAmount, setDoseOverrideAmount] = useState<Record<string, number>>({})
-  // The frequency and time of a supportive drug, where the physician set them: ondansetron
-  // before the cytostatic on day 1, then every 8 hours at a convenient time.
-  const [timingChoices, setTimingChoices] = useState<Record<string, TimingChoice>>({})
+  const [disabledIds, setDisabledIds] = useState<string[]>([])
+  const [drugPercent, setDrugPercent] = useState<Record<string, number>>({})
+  const [doseOverrideAmount, setDoseOverrideAmount] = useState<Record<string, number>>({})
+  // Where and when each row is given, as the physician set it: the hours on the sheet, how many
+  // times a day, the days of the support.
+  const [plans, setPlans] = useState<Record<string, RowPlan>>({})
+  // Copies of rows: the same drug again with settings of its own (ondansetron before the
+  // cytostatic on day 1, then three times a day on the inpatient sheet).
+  const [variants, setVariants] = useState<string[]>([])
+  const [infusionTherapy, setInfusionTherapy] = useState<InfusionTherapy>(NO_INFUSION_THERAPY)
   const [chosenDoses, setChosenDoses] = useState<Record<string, string>>({})
   // Empty until the physician touches a tick: an item with no entry here uses the modifiers its
   // own protocol assumes.
@@ -129,8 +141,6 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const [administrationModes, setAdministrationModes] = useState<
     Record<string, AdministrationMode>
   >({})
-  // The times typed into the schedule, and where a day or a drug is set free of the previous day.
-  const [shiftSync, setShiftSync] = useState<ShiftSync>(NO_SHIFT_SYNC)
   // Which infusion of an antibody the course opens with, by drug (1, 2, 3 = later); untouched,
   // cycle 1 opens with the first.
   const [infusionStart, setInfusionStart] = useState<Record<string, number>>({})
@@ -210,9 +220,9 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const ownItems = useMemo(
     () => [
       ...(regimenId
-        ? buildCourseItems(
+        ? buildCourseItemsFrom(
             catalog,
-            regimenId,
+            withVariants(catalog.itemsByRegimen.get(regimenId) ?? [], variants),
             chosenDoses,
             chosenModifiers,
             administrationModes,
@@ -221,7 +231,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
         : []),
       ...buildCourseItemsFrom(
         catalog,
-        customItems,
+        withVariants(customItems, variants),
         chosenDoses,
         chosenModifiers,
         administrationModes,
@@ -232,56 +242,66 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       catalog,
       regimenId,
       customItems,
+      variants,
       chosenDoses,
       chosenModifiers,
       administrationModes,
       chosenRoutes,
     ],
   )
+  const customIds = useMemo(() => customItems.map((item) => item.id), [customItems])
 
   // The standard supportive care the physician has switched on and the regimen does not write
   // itself: antiemetics and prophylaxis, added as ordinary rows so they are calculated, scheduled
   // and printed like the rest.
   const baseItems = useMemo(
     () =>
-      applyBlockChoices(
-        applyDurationChoices(
-          applyBagChoices(
-            applyTimingChoices(
+      applyPlans(
+        applyBlockChoices(
+          applyDurationChoices(
+            applyBagChoices(
               [
                 ...ownItems,
                 ...buildCourseItemsFrom(
                   catalog,
-                  standardSupportRows(
-                    catalog,
-                    ownItems,
-                    regimenId === null
-                      ? null
-                      : (catalog.regimens.get(regimenId)?.cycle_length_days ?? null),
-                    courseSettings.startDate,
-                    support,
-                    thromboAgent,
-                    antiviralAgent,
-                    gastroAgent,
+                  withVariants(
+                    standardSupportRows(
+                      catalog,
+                      ownItems,
+                      regimenId === null
+                        ? null
+                        : (catalog.regimens.get(regimenId)?.cycle_length_days ?? null),
+                      courseSettings.startDate,
+                      support,
+                      thromboAgent,
+                      antiviralAgent,
+                      gastroAgent,
+                    ),
+                    variants,
                   ),
                   chosenDoses,
                   chosenModifiers,
                   administrationModes,
+                  chosenRoutes,
                 ),
               ],
-              timingChoices,
+              chosenBags,
             ),
-            chosenBags,
+            chosenDurations,
           ),
-          chosenDurations,
+          sheetChoices,
         ),
-        sheetChoices,
+        plans,
+        customIds,
       ),
     [
       catalog,
       ownItems,
+      variants,
       sheetChoices,
-      timingChoices,
+      plans,
+      customIds,
+      chosenRoutes,
       chosenBags,
       chosenDurations,
       regimenId,
@@ -296,25 +316,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     ],
   )
 
-  // What is set for a drug holds for the row split off it for day 1, unless that row has its own.
-  const disabledIds = useMemo(
-    () => disabledWithDayOne(ownDisabledIds, baseItems),
-    [ownDisabledIds, baseItems],
-  )
-  const drugPercent = useMemo(
-    () => inheritedByDayOne(ownDrugPercent, baseItems),
-    [ownDrugPercent, baseItems],
-  )
-  const doseOverrideAmount = useMemo(
-    () => inheritedByDayOne(ownDoseOverrideAmount, baseItems),
-    [ownDoseOverrideAmount, baseItems],
-  )
-
-  // The time of a drug on each day: what was typed in for it, else what the previous day has.
-  const shiftsByDay = useMemo(
-    () => effectiveShifts(daysOfDrugs(baseItems), shiftSync),
-    [baseItems, shiftSync],
-  )
+  // Days a drug is given on by two of its rows at once: said under both, not forbidden.
+  const overlaps = useMemo(() => overlappingDays(baseItems, disabledIds), [baseItems, disabledIds])
 
   const onSupport = (category: SupportCategory, on: boolean) => {
     setSupport((current) => ({ ...current, [category]: on }))
@@ -355,8 +358,9 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     ])
     setChosenRoutes({})
     setSheetChoices({})
-    setTimingChoices({})
-    setShiftSync(NO_SHIFT_SYNC)
+    setPlans({})
+    setVariants([])
+    setInfusionTherapy(NO_INFUSION_THERAPY)
     const premedicationOn = premedicationOnByDefault(baseItems)
     const supportOn = new Set(indicated.flatMap((category) => categoryItemIds(ownItems, category)))
     setDisabledIds(
@@ -424,7 +428,6 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           drugPercent,
           doseOverrideAmount,
           disabledIds,
-          shiftMinByDay: shiftsByDay,
           infusionStart,
           renalBandOffIds,
           renalBandEveryOtherDayIds,
@@ -457,7 +460,6 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     drugPercent,
     doseOverrideAmount,
     disabledIds,
-    shiftsByDay,
     infusionStart,
     renalBandOffIds,
     renalBandEveryOtherDayIds,
@@ -517,15 +519,33 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       ),
     [items, disabledIds],
   )
-  // The support written out for an immunoglobulin follows the drug onto the sheet it is moved to.
+  // The days of the cytostatics switched on: the standard infusion is given on them by default.
+  const chemoDays = useMemo(
+    () => [
+      ...new Set(
+        items
+          .filter((entry) => entry.item.role === 'main' && !disabledIds.includes(entry.item.id))
+          .flatMap((entry) => entry.item.days),
+      ),
+    ],
+    [items, disabledIds],
+  )
+  // The support written out for an immunoglobulin follows the drug onto the sheet it is moved to;
+  // the standard infusion stands above the course's own drugs, as it is given before them.
   const sheetManualRows = useMemo(
-    () =>
-      manualRows.map((row) =>
+    () => [
+      ...infusionTherapyRows(
+        infusionTherapy,
+        [...chemoDays].sort((a, b) => a - b),
+        Number(courseSettings.dayStart.split(':')[0]) || 0,
+      ),
+      ...manualRows.map((row) =>
         row.supportFor !== undefined && sheetChoices[row.supportFor] === 'ward'
           ? { ...row, block: 'ward' as const }
           : row,
       ),
-    [manualRows, sheetChoices],
+    ],
+    [manualRows, sheetChoices, infusionTherapy, chemoDays, courseSettings.dayStart],
   )
   /** Hand-written lines that actually say something; an empty one is not a sheet. */
   const written = sheetManualRows.filter((row) => row.what.trim() !== '')
@@ -564,7 +584,14 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
               onAntiviralAgent={setAntiviralAgent}
               gastroAgent={gastroAgent}
               onGastroAgent={setGastroAgent}
-            />
+            >
+              <InfusionTherapyControls
+                value={infusionTherapy}
+                onChange={setInfusionTherapy}
+                chemoDays={chemoDays}
+                dayStart={courseSettings.dayStart}
+              />
+            </StandardSupport>
           )}
         </Stack>
       </aside>
@@ -714,14 +741,17 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   onRoute={(id, route) =>
                     setChosenRoutes((current) => ({ ...current, [id]: route }))
                   }
-                  timingChoices={timingChoices}
-                  dayStart={courseSettings.dayStart}
-                  onTiming={(id, choice) =>
-                    setTimingChoices((current) => {
-                      const { [id]: _removed, ...rest } = current
-                      return choice === null ? rest : { ...rest, [id]: choice }
+                  plans={plans}
+                  onPlan={(id, patch) =>
+                    setPlans((current) => {
+                      const { [id]: own, ...rest } = current
+                      return patch === null ? rest : { ...rest, [id]: { ...own, ...patch } }
                     })
                   }
+                  onVariant={(id) =>
+                    setVariants((current) => [...current, nextVariantId(variantBase(id), current)])
+                  }
+                  overlaps={overlaps}
                   sheetChoices={sheetChoices}
                   onSheet={(id, sheet) =>
                     setSheetChoices((current) => ({ ...current, [id]: sheet }))
@@ -761,7 +791,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   disabledIds={disabledIds}
                   drugPercent={drugPercent}
                   doseOverrideAmount={doseOverrideAmount}
-                  customIds={customItems.map((item) => item.id)}
+                  customIds={customIds}
                   onToggle={(id, enabled) =>
                     setDisabledIds((current) =>
                       enabled ? current.filter((entry) => entry !== id) : [...current, id],
@@ -825,7 +855,9 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                     })
                   }
                   onRemove={(id) =>
-                    setCustomItems((current) => current.filter((item) => item.id !== id))
+                    isVariant(id)
+                      ? setVariants((current) => current.filter((entry) => entry !== id))
+                      : setCustomItems((current) => current.filter((item) => item.id !== id))
                   }
                 />
               )}
@@ -845,32 +877,6 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   course={course}
                   manualRows={sheetManualRows}
                   startDateIso={courseSettings.startDate}
-                  shifts={shiftsByDay}
-                  sync={shiftSync}
-                  onShift={(id, day, minutes) =>
-                    setShiftSync((current) => {
-                      const { [day]: _removed, ...others } = current.explicit[id] ?? {}
-                      const next = minutes === null ? others : { ...others, [day]: minutes }
-                      return { ...current, explicit: { ...current.explicit, [id]: next } }
-                    })
-                  }
-                  onDaySync={(day, on) =>
-                    setShiftSync((current) => ({
-                      ...current,
-                      offDays: on
-                        ? current.offDays.filter((entry) => entry !== day)
-                        : [...new Set([...current.offDays, day])],
-                    }))
-                  }
-                  onDrugSync={(id, day, on) =>
-                    setShiftSync((current) => {
-                      const days = (current.offDrugDays[id] ?? []).filter((entry) => entry !== day)
-                      return {
-                        ...current,
-                        offDrugDays: { ...current.offDrugDays, [id]: on ? days : [...days, day] },
-                      }
-                    })
-                  }
                 />
               ) : (
                 <Text size="sm" c="dimmed">

@@ -1,4 +1,14 @@
-import { Button, Group, NumberInput, Select, Stack, Switch, Text, TextInput } from '@mantine/core'
+import {
+  Button,
+  Group,
+  NumberInput,
+  SegmentedControl,
+  Select,
+  Stack,
+  Switch,
+  Text,
+  TextInput,
+} from '@mantine/core'
 import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -8,9 +18,12 @@ import {
   PROPORTIONAL_VOLUMES_ML,
   SMALL_VOLUMES_ML,
   infusionRow,
+  KCL_STRENGTHS,
+  kclPercent,
   presetRow,
   standardAdditives,
   type DrugPreset,
+  type KclStrength,
   type Solvent,
 } from './supportive-rows'
 
@@ -35,6 +48,8 @@ export function SupportiveBuilder({ onAdd }: { onAdd: (row: ManualRow) => void }
   const [solvent, setSolvent] = useState<Solvent>('nacl')
   const [volume, setVolume] = useState(1000)
   const [kcl, setKcl] = useState<Additive>(() => ({ on: true, ml: 40 }))
+  // 4% is the department's own potassium; 7.5% the alternative, 20 mL to a litre.
+  const [kclStrength, setKclStrength] = useState<KclStrength>('4')
   const [mgso4, setMgso4] = useState<Additive>(() => ({ on: true, ml: 4 }))
   const [rate, setRate] = useState<number | string>('')
   const [typedDays, setTypedDays] = useState('1')
@@ -44,7 +59,7 @@ export function SupportiveBuilder({ onAdd }: { onAdd: (row: ManualRow) => void }
 
   const changeVolume = (value: number) => {
     setVolume(value)
-    const standard = standardAdditives(value)
+    const standard = standardAdditives(value, kclStrength)
     // A standard bag brings its proportional additives; a small one starts clean.
     setKcl(standard ? { on: true, ml: standard.kclMl } : OFF)
     setMgso4(standard ? { on: true, ml: standard.mgso4Ml } : OFF)
@@ -107,7 +122,22 @@ export function SupportiveBuilder({ onAdd }: { onAdd: (row: ManualRow) => void }
           onChange={(value) => value && changeVolume(Number(value))}
           w={120}
         />
-        {additiveInput('KCl 4%', kcl, setKcl)}
+        <SegmentedControl
+          size="xs"
+          value={kclStrength}
+          onChange={(value) => {
+            const strength = value as KclStrength
+            setKclStrength(strength)
+            const standard = standardAdditives(volume, strength)
+            if (standard && kcl.on) setKcl({ on: true, ml: standard.kclMl })
+          }}
+          data={KCL_STRENGTHS.map((strength) => ({
+            value: strength,
+            label: `KCl ${kclPercent(strength)}%`,
+          }))}
+          aria-label="KCl"
+        />
+        {additiveInput(`KCl ${kclPercent(kclStrength)}%`, kcl, setKcl)}
         {additiveInput('MgSO4 25%', mgso4, setMgso4)}
         <NumberInput
           label={t('calculator.manual.support.rate')}
@@ -137,6 +167,7 @@ export function SupportiveBuilder({ onAdd }: { onAdd: (row: ManualRow) => void }
                   solvent,
                   volumeMl: volume,
                   kclMl: amount(kcl),
+                  kclStrength,
                   mgso4Ml: amount(mgso4),
                   rateMlH: Number(rate) > 0 ? Number(rate) : null,
                 },

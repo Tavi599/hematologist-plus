@@ -8,6 +8,7 @@ import {
   Text,
   Title,
 } from '@mantine/core'
+import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { CourseItem } from '../../lib/course-input'
@@ -41,6 +42,7 @@ export function StandardSupport({
   onAntiviralAgent,
   gastroAgent,
   onGastroAgent,
+  children,
 }: {
   items: CourseItem[]
   value: Record<SupportCategory, boolean>
@@ -51,6 +53,8 @@ export function StandardSupport({
   onAntiviralAgent: (agent: AntiviralAgent) => void
   gastroAgent: GastroAgent
   onGastroAgent: (agent: GastroAgent) => void
+  /** More of the standard support below the switches: the infusion therapy. */
+  children?: ReactNode
 }) {
   const { t } = useTranslation()
   const language = currentLanguage()
@@ -147,6 +151,7 @@ export function StandardSupport({
             )
           })}
         </SimpleGrid>
+        {children}
       </Stack>
     </Card>
   )

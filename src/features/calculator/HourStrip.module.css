@@ -1,0 +1,58 @@
+/* The 24 hours of the sheet in its own order, 9…24 then 1…8: what is marked here is the «+». */
+.strip {
+  display: flex;
+  max-width: 100%;
+  overflow-x: auto;
+  user-select: none;
+  touch-action: pan-x;
+}
+
+.hour {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--mantine-color-default-border);
+  border-left-width: 0;
+  background: var(--mantine-color-body);
+  color: var(--mantine-color-dimmed);
+  font-size: 10px;
+  line-height: 1;
+  cursor: pointer;
+
+  &:first-child {
+    border-left-width: 1px;
+    border-radius: 4px 0 0 4px;
+  }
+
+  &:last-child {
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* Every sixth hour ruled off, the way the sheet marks the shift. */
+  &[data-group] {
+    border-left: 2px solid var(--mantine-color-default-border);
+  }
+
+  /* The time the regimen gives: shown, but lighter than one the physician set. */
+  &[data-on] {
+    background: var(--mantine-color-blue-light);
+    color: var(--mantine-color-blue-light-color);
+    font-weight: 600;
+  }
+
+  &[data-on][data-pinned] {
+    background: var(--mantine-color-blue-filled);
+    color: var(--mantine-color-white);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--mantine-primary-color-filled);
+    outline-offset: -2px;
+  }
+}

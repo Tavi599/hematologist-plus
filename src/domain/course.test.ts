@@ -378,18 +378,22 @@ describe('calculateCourse', () => {
     expect(course.drugs[0]?.doseAmount).toBe(569)
   })
 
-  it('schedules several administrations a day and shifts the rest of the day with them', () => {
-    const twiceDaily: CourseDrug = { ...prednisolone, administrationsPerDay: 2, durationMin: 30 }
-    const course = calculateCourse(patient, [rituximab, twiceDaily], {
+  it('schedules several administrations a day, at the hours the physician put them at', () => {
+    const twiceDaily: CourseDrug = {
+      ...prednisolone,
+      administrationsPerDay: 2,
+      durationMin: 30,
+      startsMin: [7 * 60, 21 * 60],
+    }
+    const course = calculateCourse(patient, [{ ...rituximab, startsMin: [9 * 60] }, twiceDaily], {
       ...adjustments,
       dayStart: '08:00',
-      shiftMin: { 'r.rituximab': 60 },
     })
 
     expect(course.days[0]?.administrations).toEqual([
+      expect.objectContaining({ id: 'r.prednisolone#1', start: '07:00', end: '07:30' }),
       expect.objectContaining({ id: 'r.rituximab', start: '09:00', end: '13:00' }),
-      expect.objectContaining({ id: 'r.prednisolone#1', start: '13:00', end: '13:30' }),
-      expect.objectContaining({ id: 'r.prednisolone#2', start: '13:30', end: '14:00' }),
+      expect.objectContaining({ id: 'r.prednisolone#2', start: '21:00', end: '21:30' }),
     ])
     expect(course.drugs[1]?.administrationsInCourse).toBe(6)
     expect(course.days[0]?.presentations).toEqual([
