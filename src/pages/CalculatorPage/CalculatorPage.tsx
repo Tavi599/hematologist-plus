@@ -220,7 +220,16 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   }, [patientForm])
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
-  const regimenId = urlRegimen ?? pendingRegimen
+  // The menu link is the calculator with no regimen in it: followed from the calculator itself, it
+  // must not drop the course on screen. Only the physician's own choice takes the regimen away.
+  const [keptRegimen, setKeptRegimen] = useState<string | null>(
+    urlRegimen ?? (restored ? draft.regimenId : null),
+  )
+  if (urlRegimen !== null && urlRegimen !== keptRegimen) setKeptRegimen(urlRegimen)
+  if (urlRegimen === null && pendingRegimen === null && keptRegimen !== null) {
+    setPendingRegimen(keptRegimen)
+  }
+  const regimenId = urlRegimen ?? pendingRegimen ?? keptRegimen
 
   // A restored course puts its regimen back into the address, and is let go of only once the
   // address carries it: in between, the course must not be left standing with no regimen at all.
@@ -279,6 +288,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     if (rest.cycleNumber !== courseSettings.cycleNumber) setInfusionStart({})
     setCourseSettings(rest)
     if (nextRegimenId === regimenId) return
+    setKeptRegimen(nextRegimenId)
     setSearchParams(
       (current) => {
         const params = new URLSearchParams(current)
@@ -469,6 +479,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       // The patient form reads its values at mount, and the switches are the card's own.
       setFormKey((current) => current + 1)
       setPendingRegimen(null)
+      setKeptRegimen(card.regimenId)
       setToggledRegimen(card.regimenId)
       setPhaseNote(null)
       setCardNote('opened')

@@ -1,4 +1,5 @@
 import { act, fireEvent, screen, within } from '@testing-library/react'
+import { Link } from 'react-router'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { demoCatalog } from '../../lib/catalog.fixture'
@@ -375,6 +376,27 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
     expect(screen.getByLabelText('Вага, кг')).toHaveValue('80')
     expect(screen.getByLabelText('Цикл №')).toHaveValue('3')
     expect(screen.getByLabelText(/Прізвище/)).toHaveValue('')
+    const table = screen.getByRole('table', { name: 'Дози', hidden: true })
+    expect(within(table).getByText('ДЕМО Ритуксимаб')).toBeInTheDocument()
+  })
+
+  it('keeps the course when the menu link to the calculator is followed from the calculator', async () => {
+    renderWithProviders(
+      <>
+        <Link to="/calculator">Калькулятор</Link>
+        <CalculatorPage />
+      </>,
+      REGIMEN_ROUTE,
+    )
+    await screen.findByRole('combobox', { name: 'Схема' })
+    await fillPatient()
+
+    await act(async () => fireEvent.click(screen.getByRole('link', { name: 'Калькулятор' })))
+
+    expect(screen.getByRole('combobox', { name: 'Схема' })).toHaveValue(
+      'R-CHOP-21 — ДЕМО R-CHOP-21',
+    )
+    expect(window.localStorage.getItem('hp.courseDraft')).toContain('r-chop-21')
     const table = screen.getByRole('table', { name: 'Дози', hidden: true })
     expect(within(table).getByText('ДЕМО Ритуксимаб')).toBeInTheDocument()
   })
