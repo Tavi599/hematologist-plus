@@ -67,6 +67,21 @@ export function emptyPatientForm(): PatientFormValues {
   }
 }
 
+/**
+ * A patient taken out of a saved course, back as form values: a measurement that was never
+ * entered is an empty field again rather than a `null` the number inputs cannot show.
+ */
+export function patientFormFrom(input: PatientInput): PatientFormValues {
+  return {
+    ...input,
+    ageYears: input.ageYears ?? '',
+    heightCm: input.heightCm ?? '',
+    weightKg: input.weightKg ?? '',
+    serumCreatinine: input.serumCreatinine ?? '',
+    bilirubinUmolL: input.bilirubinUmolL ?? '',
+  }
+}
+
 /** Full years between a birth date and a reference date; null for malformed input. */
 export function ageFromBirthDate(birthDate: string, today = new Date()): number | null {
   if (!DATE_PATTERN.test(birthDate)) return null

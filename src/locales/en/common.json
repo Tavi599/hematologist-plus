@@ -29,7 +29,7 @@
     "title": "Dose calculator",
     "patient": {
       "title": "Patient",
-      "note": "Patient data is never sent anywhere and never stored: it lives only in this browser tab.",
+      "note": "Patient data is never sent anywhere. The calculation and the sheet stay in this browser only; the name, the record number and the date of birth only with your consent, under «Course card».",
       "fullName": "Full name",
       "recordNumber": "Record number",
       "birthDate": "Date of birth",
@@ -82,6 +82,15 @@
       "phases": "Phases of {{course}}",
       "phasesHint": "The phase follows the cycle number; maintenance or consolidation is chosen here.",
       "phaseSwitched": "Cycle {{cycle}}: the «{{phase}}» phase is open."
+    },
+    "draft": {
+      "title": "Course card",
+      "note": "The course laid out here stays in this browser and is restored the next time the calculator is opened. Nothing is sent to the network.",
+      "rememberName": "Remember the name",
+      "rememberNameHint": "Without it the draft keeps the height, weight, creatinine and the sheet, but not the name, the record number or the date of birth.",
+      "export": "Export the course card",
+      "import": "Import a course card",
+      "importFailed": "The file could not be read: it is not a course card, or it comes from another version of the app."
     },
     "hospital": {
       "title": "Sheet header",
@@ -711,7 +720,7 @@
   },
   "error": {
     "title": "Something went wrong",
-    "body": "The page could not be shown. Usually the saved offline copy of the catalog, written by an earlier version, is the cause. Clear it and reload: no patient data is stored anywhere, so nothing is lost.",
+    "body": "The app could not show this page. The usual reason is an offline copy of the catalog written by a previous version. Clear it and reload: it holds the catalog alone, and the draft of the course stays where it is.",
     "reset": "Clear the saved copy and reload"
   },
   "proposals": {

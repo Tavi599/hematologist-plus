@@ -1,5 +1,5 @@
 import { Alert, Card, Group, SegmentedControl, Stack, Tabs, Text, Title } from '@mantine/core'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useReducer, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router'
 
@@ -8,23 +8,30 @@ import {
   DomainInputError,
   type CourseResult,
   type ClearanceWeight,
-  type RenalBandLevel,
 } from '../../domain'
 import { AddDrugForm } from '../../features/calculator/AddDrugForm'
+import { CourseCard } from '../../features/calculator/CourseCard'
+import {
+  loadCourseDraft,
+  rememberName,
+  saveCourseDraft,
+  setRememberName,
+} from '../../features/calculator/course-draft'
+import {
+  courseReducer,
+  initialCourseState,
+  type CourseState,
+} from '../../features/calculator/course-state'
 import { CourseExport } from '../../features/calculator/CourseExport'
 import { CourseSettings, type CourseSettingsValue } from '../../features/calculator/CourseSettings'
 import { DoseTable } from '../../features/calculator/DoseTable'
-import { emptyHeader } from '../../features/calculator/header'
 import { HospitalHeader } from '../../features/calculator/HospitalHeader'
 import { MANUAL_ROWS_ANCHOR, ManualRows } from '../../features/calculator/ManualRows'
-import type { ManualRow } from '../../features/calculator/manual-rows'
 import { withFirstFullDose } from '../../lib/renal-first-dose'
 import {
   infusionTherapyRows,
   IVIG_DRUG_ID,
   ivigSupportRows,
-  NO_INFUSION_THERAPY,
-  type InfusionTherapy,
 } from '../../features/calculator/supportive-rows'
 import { InfusionTherapyControls } from '../../features/calculator/InfusionTherapyControls'
 import { PatientForm } from '../../features/calculator/PatientForm'
@@ -50,29 +57,16 @@ import {
   isStandardSupportId,
   NO_SUPPORT,
   standardSupportRows,
-  type AntiviralAgent,
-  type GastroAgent,
   type SupportCategory,
-  type ThromboAgent,
 } from '../../lib/standard-support'
 import {
   applyBagChoices,
   applyBlockChoices,
   applyDurationChoices,
   buildCourseItemsFrom,
-  type AdministrationMode,
   type CourseItem,
-  type SheetChoice,
 } from '../../lib/course-input'
-import {
-  applyPlans,
-  isVariant,
-  nextVariantId,
-  overlappingDays,
-  variantBase,
-  withVariants,
-  type RowPlan,
-} from '../../lib/row-plan'
+import { applyPlans, overlappingDays, withVariants } from '../../lib/row-plan'
 import { formatNumber } from '../../lib/format'
 import {
   ALWAYS_PREMEDICATED,
@@ -82,7 +76,6 @@ import {
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import type { RegimenItem } from '../../schemas/catalog'
-import { todayIso, type PatientInput } from '../../schemas/patient'
 import classes from './CalculatorPage.module.css'
 
 export function CalculatorPage() {
@@ -115,69 +108,92 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const language = currentLanguage()
   const [searchParams, setSearchParams] = useSearchParams()
 
-  const [patient, setPatient] = useState<PatientInput | null>(null)
-  const [courseSettings, setCourseSettings] = useState({
-    startDate: todayIso(),
-    dayStart: '11:00',
-    bsaVariant: 'actual' as CourseSettingsValue['bsaVariant'],
-    bsaM2: null as number | null,
-    cycleNumber: 1,
-  })
-  const [customItems, setCustomItems] = useState<RegimenItem[]>([])
-  const [disabledIds, setDisabledIds] = useState<string[]>([])
-  const [drugPercent, setDrugPercent] = useState<Record<string, number>>({})
-  const [doseOverrideAmount, setDoseOverrideAmount] = useState<Record<string, number>>({})
-  // Where and when each row is given, as the physician set it: the hours on the sheet, how many
-  // times a day, the days of the support.
-  const [plans, setPlans] = useState<Record<string, RowPlan>>({})
-  // Copies of rows: the same drug again with settings of its own (ondansetron before the
-  // cytostatic on day 1, then three times a day on the inpatient sheet).
-  const [variants, setVariants] = useState<string[]>([])
-  const [infusionTherapy, setInfusionTherapy] = useState<InfusionTherapy>(NO_INFUSION_THERAPY)
-  const [chosenDoses, setChosenDoses] = useState<Record<string, string>>({})
-  // Empty until the physician touches a tick: an item with no entry here uses the modifiers its
-  // own protocol assumes.
-  const [chosenModifiers, setChosenModifiers] = useState<Record<string, string[]>>({})
-  const [administrationModes, setAdministrationModes] = useState<
-    Record<string, AdministrationMode>
-  >({})
-  // Which infusion of an antibody the course opens with, by drug (1, 2, 3 = later); untouched,
-  // cycle 1 opens with the first.
-  const [infusionStart, setInfusionStart] = useState<Record<string, number>>({})
-  const [header, setHeader] = useState(emptyHeader)
-  const [manualRows, setManualRows] = useState<ManualRow[]>([])
+  // The draft of the course last laid out in this browser, read once: everything the physician
+  // set is restored from it, so a reload or a step aside to the disease pages costs nothing.
+  const [draft] = useState(loadCourseDraft)
+  const [state, dispatch] = useReducer(
+    courseReducer,
+    draft,
+    (saved) => saved ?? initialCourseState(),
+  )
+  const {
+    patient,
+    settings: courseSettings,
+    phaseNote,
+    customItems,
+    disabledIds,
+    drugPercent,
+    doseOverrideAmount,
+    plans,
+    variants,
+    infusionTherapy,
+    chosenDoses,
+    chosenModifiers,
+    administrationModes,
+    infusionStart,
+    header,
+    manualRows,
+    support,
+    thromboAgent,
+    antiviralAgent,
+    gastroAgent,
+    mesnaFor,
+    chosenRoutes,
+    sheetChoices,
+    chosenBags,
+    chosenDurations,
+    renalBandOffIds,
+    renalBandEveryOtherDayIds,
+    renalBandLevel,
+    clearanceWeight,
+  } = state
   // Bumped to open the hand-written lines when a row asks to show its own (immunoglobulin).
   const [manualOpenRequest, setManualOpenRequest] = useState(0)
-  const [support, setSupport] = useState<Record<SupportCategory, boolean>>(NO_SUPPORT)
-  // NSSG's standard with an immunomodulatory drug; aspirin is for a patient with no other risk.
-  const [thromboAgent, setThromboAgent] = useState<ThromboAgent>('apixaban')
-  const [antiviralAgent, setAntiviralAgent] = useState<AntiviralAgent>('aciclovir')
-  const [gastroAgent, setGastroAgent] = useState<GastroAgent>('tablet')
-  // Cyclophosphamide items the physician has added mesna to; the protocol's own mesna is apart.
-  const [mesnaFor, setMesnaFor] = useState<string[]>([])
-  // Rows the physician gives by another route the label allows at the same dose.
-  const [chosenRoutes, setChosenRoutes] = useState<Record<string, RegimenItem['route']>>({})
-  // The sheet each row is printed on, where the physician moved it off the regimen's own.
-  const [sheetChoices, setSheetChoices] = useState<Record<string, SheetChoice>>({})
-  // Bags the physician picked for antimicrobial infusions, by row.
-  const [chosenBags, setChosenBags] = useState<Record<string, number>>({})
-  // Infusion durations the physician picked for antimicrobials, by row, min.
-  const [chosenDurations, setChosenDurations] = useState<Record<string, number>>({})
-  // Rows whose correction by creatinine clearance the physician switched off.
-  const [renalBandOffIds, setRenalBandOffIds] = useState<string[]>([])
-  // Rows given the full dose every other day instead of a lower daily one.
-  const [renalBandEveryOtherDayIds, setRenalBandEveryOtherDayIds] = useState<string[]>([])
-  // Where in the label's range the physician put a corrected dose, by row.
-  const [renalBandLevel, setRenalBandLevel] = useState<Record<string, RenalBandLevel>>({})
-  // The weight the creatinine clearance is worked out on, for a patient with obesity.
-  const [clearanceWeight, setClearanceWeight] = useState<ClearanceWeight>('actual')
+  // A fresh patient form for a course that came from a file: the form holds its own input, so it
+  // is mounted anew rather than told to forget what is typed in it.
+  const [formGeneration, setFormGeneration] = useState(0)
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
-  const regimenId = searchParams.get('regimen')
+  const urlRegimenId = searchParams.get('regimen')
+  /**
+   * A course restored from the draft or read from a file names its own regimen, and that regimen
+   * goes back into the URL. Until it is there the restored one is what the course is calculated
+   * on: a stale URL would otherwise read as a new choice and open the rows at their defaults.
+   *
+   * A regimen in the URL always wins at the start, though: it is the physician coming from a
+   * disease page with «Розрахувати», and that is a new choice, not the course they left behind.
+   */
+  const [pendingRegimen, setPendingRegimen] = useState<string | null | undefined>(() =>
+    urlRegimenId === null && draft !== null && draft.regimenId !== null
+      ? draft.regimenId
+      : undefined,
+  )
+  const regimenId = pendingRegimen === undefined ? urlRegimenId : pendingRegimen
+  // Once the URL carries the restored regimen the override has done its work, and the URL is
+  // again the one place the regimen is read from.
+  if (pendingRegimen !== undefined && urlRegimenId === pendingRegimen) setPendingRegimen(undefined)
+  useEffect(() => {
+    if (pendingRegimen === undefined || urlRegimenId === pendingRegimen) return
+    setSearchParams(
+      (current) => {
+        const params = new URLSearchParams(current)
+        if (pendingRegimen === null) params.delete('regimen')
+        else params.set('regimen', pendingRegimen)
+        return params
+      },
+      { replace: true },
+    )
+  }, [pendingRegimen, urlRegimenId, setSearchParams])
+
+  // Whether the draft may hold who the patient is. Off by default: the measurements and the sheet
+  // are kept for everyone, the name only for a physician who asked for it.
+  const [keepName, setKeepName] = useState(rememberName)
+  useEffect(() => {
+    saveCourseDraft({ ...state, regimenId }, keepName)
+  }, [state, regimenId, keepName])
+
   const settings: CourseSettingsValue = { ...courseSettings, regimenId }
   const phases = useMemo(() => coursePhases(catalog, regimenId), [catalog, regimenId])
-  // Set when the calculator itself moved to another phase of the course, to say so.
-  const [phaseNote, setPhaseNote] = useState<string | null>(null)
   const updateSettings = (next: CourseSettingsValue) => {
     const { regimenId: chosenRegimenId, ...rest } = next
     // A new cycle number of a course in phases brings the phase that covers it: cycle 2 of
@@ -200,11 +216,14 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       : null
     const phase = found && found.id !== chosenRegimenId ? found : null
     const nextRegimenId = phase ? phase.id : chosenRegimenId
-    if (phase) setPhaseNote(localize(phase.course!.phase, language))
-    else if (chosenRegimenId !== regimenId) setPhaseNote(null)
-    // Another cycle is another course: the first-infusion ticks go back to "cycle 1 has it".
-    if (rest.cycleNumber !== courseSettings.cycleNumber) setInfusionStart({})
-    setCourseSettings(rest)
+    // The note is set when the calculator moved the course itself, and cleared when another
+    // regimen is chosen by hand; otherwise it stays as it is.
+    const noteChanges = phase !== null || chosenRegimenId !== regimenId
+    dispatch({
+      type: 'settings',
+      settings: rest,
+      ...(noteChanges ? { phaseNote: phase ? localize(phase.course!.phase, language) : null } : {}),
+    })
     if (nextRegimenId === regimenId) return
     setSearchParams(
       (current) => {
@@ -319,55 +338,35 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   // Days a drug is given on by two of its rows at once: said under both, not forbidden.
   const overlaps = useMemo(() => overlappingDays(baseItems, disabledIds), [baseItems, disabledIds])
 
-  const onSupport = (category: SupportCategory, on: boolean) => {
-    setSupport((current) => ({ ...current, [category]: on }))
-    // The regimen's own rows of the kind follow the switch as a group.
-    const ids = categoryItemIds(ownItems, category)
-    setDisabledIds((current) =>
-      on ? current.filter((id) => !ids.includes(id)) : [...new Set([...current, ...ids])],
-    )
-  }
-
   // A regimen opens with its cytostatics on and its premedication and supportive therapy off:
   // what a patient actually gets of those is decided at the bedside, and the physician switches
   // on what this course needs. The exception is the premedication of rituximab and daratumumab,
-  // which the department never gives without it: that opens switched on. A drug added by hand is never switched off — it was added on
-  // purpose — and the switches a physician has set are kept until another regimen is chosen.
-  const [toggledRegimen, setToggledRegimen] = useState<string | null | undefined>(undefined)
-  if (regimenId !== toggledRegimen) {
-    setToggledRegimen(regimenId)
+  // which the department never gives without it: that opens switched on. A drug added by hand is
+  // never switched off — it was added on purpose — and the switches a physician has set are kept
+  // until another regimen is chosen.
+  if (regimenId !== state.regimenId) {
     // The prophylaxis the regimen's own drugs call for opens switched on — aciclovir with a
     // proteasome inhibitor or daratumumab, thromboprophylaxis with lenalidomide and its kin — with
     // the regimen's own rows of the kind, if it writes any.
     const indicated = Object.keys(indicatedSupport(ownItems)) as SupportCategory[]
-    setSupport({
-      ...NO_SUPPORT,
-      ...Object.fromEntries(indicated.map((category) => [category, true])),
-    })
-    setThromboAgent('apixaban')
-    setAntiviralAgent('aciclovir')
-    setGastroAgent('tablet')
-    setMesnaFor([])
-    // Immunoglobulin opens with the department's standard support written out above it: lines
-    // a colleague edits as text. Those proposed for the previous regimen go with it.
-    setManualRows((current) => [
-      ...current.filter((row) => row.supportFor === undefined),
-      ...ownItems
-        .filter((entry) => entry.item.drug_id === IVIG_DRUG_ID && entry.item.role === 'main')
-        .flatMap((entry) => ivigSupportRows(entry.item.id, entry.item.days)),
-    ])
-    setChosenRoutes({})
-    setSheetChoices({})
-    setPlans({})
-    setVariants([])
-    setInfusionTherapy(NO_INFUSION_THERAPY)
     const premedicationOn = premedicationOnByDefault(baseItems)
     const supportOn = new Set(indicated.flatMap((category) => categoryItemIds(ownItems, category)))
-    setDisabledIds(
-      optionalIds(baseItems, customItems).filter(
+    dispatch({
+      type: 'regimen',
+      regimenId,
+      support: {
+        ...NO_SUPPORT,
+        ...Object.fromEntries(indicated.map((category) => [category, true])),
+      },
+      disabledIds: optionalIds(baseItems, customItems).filter(
         (id) => !premedicationOn.has(id) && !supportOn.has(id),
       ),
-    )
+      // Immunoglobulin opens with the department's standard support written out above it: lines
+      // a colleague edits as text.
+      ivigRows: ownItems
+        .filter((entry) => entry.item.drug_id === IVIG_DRUG_ID && entry.item.role === 'main')
+        .flatMap((entry) => ivigSupportRows(entry.item.id, entry.item.days)),
+    })
   }
 
   /**
@@ -493,9 +492,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
         (cycles.to !== null && courseSettings.cycleNumber > cycles.to))
         ? cycles.from
         : courseSettings.cycleNumber
-    setPhaseNote(null)
-    if (cycleNumber !== courseSettings.cycleNumber) setInfusionStart({})
-    setCourseSettings((current) => ({ ...current, cycleNumber }))
+    dispatch({ type: 'cycle', cycleNumber })
     setSearchParams(
       (current) => {
         const params = new URLSearchParams(current)
@@ -565,34 +562,62 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     ),
   ]
 
+  /** A course read from a file takes the place of the one on screen, regimen and all. */
+  const importCourse = (course: CourseState) => {
+    dispatch({ type: 'restore', state: course })
+    setPendingRegimen(course.regimenId ?? null)
+    setFormGeneration((current) => current + 1)
+  }
+
   return (
     <div className={classes.layout}>
       {/* The inputs stay in view while the results are read: change a weight or a regimen and
           the doses beside it change with it. On a narrow screen the two simply stack. */}
       <aside className={classes.inputs}>
         <Stack gap="sm">
-          <PatientForm onChange={setPatient} />
+          <PatientForm
+            key={formGeneration}
+            initial={patient}
+            onChange={(next) => dispatch({ type: 'patient', patient: next })}
+          />
           <CourseSettings catalog={catalog} value={settings} onChange={updateSettings} />
           {ownItems.length > 0 && (
             <StandardSupport
               items={ownItems}
               value={support}
-              onChange={onSupport}
+              onChange={(category, on) =>
+                dispatch({
+                  type: 'support',
+                  category,
+                  on,
+                  // The regimen's own rows of the kind follow the switch as a group.
+                  ids: categoryItemIds(ownItems, category),
+                })
+              }
               thromboAgent={thromboAgent}
-              onThromboAgent={setThromboAgent}
+              onThromboAgent={(agent) => dispatch({ type: 'thromboAgent', agent })}
               antiviralAgent={antiviralAgent}
-              onAntiviralAgent={setAntiviralAgent}
+              onAntiviralAgent={(agent) => dispatch({ type: 'antiviralAgent', agent })}
               gastroAgent={gastroAgent}
-              onGastroAgent={setGastroAgent}
+              onGastroAgent={(agent) => dispatch({ type: 'gastroAgent', agent })}
             >
               <InfusionTherapyControls
                 value={infusionTherapy}
-                onChange={setInfusionTherapy}
+                onChange={(value) => dispatch({ type: 'infusionTherapy', value })}
                 chemoDays={chemoDays}
                 dayStart={courseSettings.dayStart}
               />
             </StandardSupport>
           )}
+          <CourseCard
+            state={{ ...state, regimenId }}
+            rememberName={keepName}
+            onRememberName={(on) => {
+              setRememberName(on)
+              setKeepName(on)
+            }}
+            onImport={importCourse}
+          />
         </Stack>
       </aside>
 
@@ -675,7 +700,9 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                     <SegmentedControl
                       size="xs"
                       value={course.clearanceWeights.basis}
-                      onChange={(value) => setClearanceWeight(value as ClearanceWeight)}
+                      onChange={(value) =>
+                        dispatch({ type: 'clearanceWeight', value: value as ClearanceWeight })
+                      }
                       data={[
                         {
                           value: 'actual',
@@ -738,24 +765,13 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                 <DoseTable
                   premedicationMissing={premedicationMissing}
                   mesnaOffered={mesnaOffered}
-                  onRoute={(id, route) =>
-                    setChosenRoutes((current) => ({ ...current, [id]: route }))
-                  }
+                  onRoute={(id, route) => dispatch({ type: 'route', id, route })}
                   plans={plans}
-                  onPlan={(id, patch) =>
-                    setPlans((current) => {
-                      const { [id]: own, ...rest } = current
-                      return patch === null ? rest : { ...rest, [id]: { ...own, ...patch } }
-                    })
-                  }
-                  onVariant={(id) =>
-                    setVariants((current) => [...current, nextVariantId(variantBase(id), current)])
-                  }
+                  onPlan={(id, patch) => dispatch({ type: 'plan', id, patch })}
+                  onVariant={(id) => dispatch({ type: 'variant', id })}
                   overlaps={overlaps}
                   sheetChoices={sheetChoices}
-                  onSheet={(id, sheet) =>
-                    setSheetChoices((current) => ({ ...current, [id]: sheet }))
-                  }
+                  onSheet={(id, sheet) => dispatch({ type: 'sheet', id, sheet })}
                   mesnaAdded={mesnaFor}
                   ivigSupportAdded={[
                     ...new Set(
@@ -764,10 +780,11 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   ]}
                   onIvigSupport={(id, on) => {
                     const item = items.find((entry) => entry.item.id === id)
-                    setManualRows((current) => [
-                      ...current.filter((row) => row.supportFor !== id),
-                      ...(on && item ? ivigSupportRows(id, item.item.days) : []),
-                    ])
+                    dispatch({
+                      type: 'ivigSupport',
+                      id,
+                      rows: on && item ? ivigSupportRows(id, item.item.days) : [],
+                    })
                   }}
                   onIvigSupportEdit={() => {
                     setManualOpenRequest((current) => current + 1)
@@ -777,14 +794,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   }}
                   cycleNumber={courseSettings.cycleNumber}
                   infusionStart={infusionStart}
-                  onInfusionStart={(key, start) =>
-                    setInfusionStart((current) => ({ ...current, [key]: start }))
-                  }
-                  onMesna={(id, on) =>
-                    setMesnaFor((current) =>
-                      on ? [...new Set([...current, id])] : current.filter((entry) => entry !== id),
-                    )
-                  }
+                  onInfusionStart={(key, start) => dispatch({ type: 'infusionStart', key, start })}
+                  onMesna={(id, on) => dispatch({ type: 'mesna', id, on })}
                   items={items}
                   course={course}
                   bsaVariant={courseSettings.bsaVariant === 'capped' ? 'capped' : 'actual'}
@@ -792,79 +803,33 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   drugPercent={drugPercent}
                   doseOverrideAmount={doseOverrideAmount}
                   customIds={customIds}
-                  onToggle={(id, enabled) =>
-                    setDisabledIds((current) =>
-                      enabled ? current.filter((entry) => entry !== id) : [...current, id],
-                    )
-                  }
-                  onReduction={(id, percent) =>
-                    setDrugPercent((current) => {
-                      const { [id]: _removed, ...rest } = current
-                      return percent === null ? rest : { ...rest, [id]: percent }
-                    })
-                  }
-                  onDoseChoice={(id, choiceId) =>
-                    setChosenDoses((current) => ({ ...current, [id]: choiceId }))
-                  }
+                  onToggle={(id, enabled) => dispatch({ type: 'toggleRow', id, enabled })}
+                  onReduction={(id, percent) => dispatch({ type: 'reduction', id, percent })}
+                  onDoseChoice={(id, choiceId) => dispatch({ type: 'doseChoice', id, choiceId })}
                   administrationModes={administrationModes}
-                  onAdministrationMode={(id, mode) => {
-                    // The doses on offer change with the split, so a dose picked before no longer exists.
-                    setChosenDoses((current) => {
-                      const { [id]: _removed, ...rest } = current
-                      return rest
-                    })
-                    setDoseOverrideAmount((current) => {
-                      const { [id]: _removed, ...rest } = current
-                      return rest
-                    })
-                    setAdministrationModes((current) => ({ ...current, [id]: mode }))
-                  }}
+                  onAdministrationMode={(id, mode) =>
+                    dispatch({ type: 'administrationMode', id, mode })
+                  }
                   chosenDurations={chosenDurations}
                   renalBandOffIds={renalBandOffIds}
-                  onRenalBandLevel={(id, level) =>
-                    setRenalBandLevel((current) => ({ ...current, [id]: level }))
-                  }
+                  onRenalBandLevel={(id, level) => dispatch({ type: 'renalBandLevel', id, level })}
                   onRenalBandEveryOtherDay={(id, on) =>
-                    setRenalBandEveryOtherDayIds((current) =>
-                      on
-                        ? [...current.filter((entry) => entry !== id), id]
-                        : current.filter((entry) => entry !== id),
-                    )
+                    dispatch({ type: 'renalBandEveryOtherDay', id, on })
                   }
-                  onRenalBandOff={(id, off) =>
-                    setRenalBandOffIds((current) =>
-                      off
-                        ? [...current.filter((entry) => entry !== id), id]
-                        : current.filter((entry) => entry !== id),
-                    )
-                  }
-                  onDurationChoice={(id, minutes) =>
-                    setChosenDurations((current) => {
-                      const { [id]: _removed, ...rest } = current
-                      return minutes === null ? rest : { ...rest, [id]: minutes }
-                    })
-                  }
-                  onBagChoice={(id, bag) => setChosenBags((current) => ({ ...current, [id]: bag }))}
-                  onDoseModifiers={(id, keys) =>
-                    setChosenModifiers((current) => ({ ...current, [id]: keys }))
-                  }
+                  onRenalBandOff={(id, off) => dispatch({ type: 'renalBandOff', id, off })}
+                  onDurationChoice={(id, minutes) => dispatch({ type: 'duration', id, minutes })}
+                  onBagChoice={(id, bag) => dispatch({ type: 'bag', id, bag })}
+                  onDoseModifiers={(id, keys) => dispatch({ type: 'doseModifiers', id, keys })}
                   onDoseOverride={(id, doseMg) =>
-                    setDoseOverrideAmount((current) => {
-                      const { [id]: _removed, ...rest } = current
-                      return doseMg === null ? rest : { ...rest, [id]: doseMg }
-                    })
+                    dispatch({ type: 'doseOverride', id, amount: doseMg })
                   }
-                  onRemove={(id) =>
-                    isVariant(id)
-                      ? setVariants((current) => current.filter((entry) => entry !== id))
-                      : setCustomItems((current) => current.filter((item) => item.id !== id))
-                  }
+                  onRemove={(id) => dispatch({ type: 'removeRow', id })}
                 />
               )}
               <AddDrugForm
                 catalog={catalog}
                 sortOrder={items.length}
-                onAdd={(item) => setCustomItems((current) => [...current, item])}
+                onAdd={(item) => dispatch({ type: 'addDrug', item })}
               />
             </Stack>
           </Tabs.Panel>
@@ -885,7 +850,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
               )}
               <ManualRows
                 rows={manualRows}
-                onChange={setManualRows}
+                onChange={(rows) => dispatch({ type: 'manualRows', rows })}
                 openRequest={manualOpenRequest}
               />
             </Stack>
@@ -925,7 +890,11 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   {t('calculator.tabs.empty')}
                 </Text>
               )}
-              <HospitalHeader catalog={catalog} value={header} onChange={setHeader} />
+              <HospitalHeader
+                catalog={catalog}
+                value={header}
+                onChange={(value) => dispatch({ type: 'header', value })}
+              />
             </Stack>
           </Tabs.Panel>
         </Tabs>
