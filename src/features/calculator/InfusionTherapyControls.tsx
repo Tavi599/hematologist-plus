@@ -1,6 +1,7 @@
 import {
   Checkbox,
   Group,
+  NumberInput,
   SegmentedControl,
   Select,
   Stack,
@@ -21,6 +22,7 @@ import {
   kclPercent,
   solutionLine,
   SOLVENTS,
+  STANDARD_INFUSION_RATE_ML_H,
   type InfusionTherapy,
   type KclChoice,
   type SolutionPlan,
@@ -156,6 +158,27 @@ export function InfusionTherapyControls({
               data={SHEET_HOURS.map((hour) => ({ value: String(hour), label: clockOfHour(hour) }))}
               value={String(value.hour ?? startHour)}
               onChange={(next) => next !== null && onChange({ ...value, hour: Number(next) })}
+            />
+            {/* Emptied, the rate is left to the ward and the sheet says only «в/в крап.». */}
+            <NumberInput
+              size="xs"
+              w={120}
+              label={t('calculator.standardSupport.infusion.rate')}
+              placeholder={t('calculator.standardSupport.infusion.rateNone')}
+              min={10}
+              max={2000}
+              step={10}
+              allowDecimal={false}
+              clampBehavior="blur"
+              value={value.rateMlH ?? ''}
+              onChange={(next) =>
+                onChange({ ...value, rateMlH: typeof next === 'number' && next > 0 ? next : null })
+              }
+              description={
+                value.rateMlH === STANDARD_INFUSION_RATE_ML_H
+                  ? t('calculator.standardSupport.infusion.rateStandard')
+                  : null
+              }
             />
           </Group>
         </Stack>

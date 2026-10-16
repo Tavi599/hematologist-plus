@@ -117,7 +117,12 @@ export interface InfusionTherapy {
   days: number[] | null
   /** Hour of the sheet the mark goes in; null for the hour the working day starts. */
   hour: number | null
+  /** Millilitres per hour, set when the course is laid out; null leaves the rate to the ward. */
+  rateMlH: number | null
 }
+
+/** The department's pace of the standard infusion, until the physician sets another. */
+export const STANDARD_INFUSION_RATE_ML_H = 150
 
 export const SOLVENTS: Solvent[] = ['nacl', 'glucose']
 
@@ -132,6 +137,7 @@ export const NO_INFUSION_THERAPY: InfusionTherapy = {
   glucose: { ...STANDARD_BAG, on: false },
   days: null,
   hour: null,
+  rateMlH: STANDARD_INFUSION_RATE_ML_H,
 }
 
 /** Prefix of the lines of the standard infusion: they belong to the switch, not to the physician's list. */
@@ -165,7 +171,7 @@ export function infusionTherapyRows(
   return SOLVENTS.filter((solvent) => therapy[solvent].on).map((solvent) => ({
     id: `${INFUSION_THERAPY_ID}${solvent}`,
     what: infusionWhat(solutionLine(solvent, therapy[solvent])),
-    how: infusionHow(null),
+    how: infusionHow(therapy.rateMlH),
     days: days.length > 0 ? days : [1],
     hour: therapy.hour ?? dayStartHour,
     block: 'infusion' as const,

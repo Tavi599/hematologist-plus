@@ -1,6 +1,7 @@
 import { z } from 'zod'
 
 import type { CourseState } from '../features/calculator/course-state'
+import { STANDARD_INFUSION_RATE_ML_H } from '../features/calculator/supportive-rows'
 import { SUPPORT_CATEGORIES } from '../lib/standard-support'
 import { regimenItemRowSchema } from './catalog'
 import { CREATININE_UNITS, type PatientFormValues } from './patient'
@@ -69,6 +70,8 @@ const infusionTherapySchema = z.object({
   glucose: solutionPlanSchema,
   days: z.array(z.number().int().nonnegative()).nullable(),
   hour: z.number().int().min(0).max(23).nullable(),
+  // A course kept before the rate was set here runs at the department's standard one.
+  rateMlH: z.number().positive().max(2000).nullable().default(STANDARD_INFUSION_RATE_ML_H),
 })
 
 const administrationModeSchema = z.discriminatedUnion('kind', [

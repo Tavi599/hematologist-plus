@@ -98,7 +98,7 @@ describe('the standard infusion therapy', () => {
     expect(rows).toHaveLength(1)
     expect(rows[0]).toMatchObject({
       what: 'NaCl 0,9% 1000 мл + KCl 4% 40 мл + MgSO4 25% 4 мл',
-      how: 'в/в крап.',
+      how: 'в/в крап. 150 мл/год',
       days: [1, 2, 3],
       hour: 11,
       block: 'infusion',
@@ -138,6 +138,13 @@ describe('the standard infusion therapy', () => {
       ['NaCl 0,9% 250 мл', [2, 4], 14],
       ['Глюкоза 5% 1000 мл', [2, 4], 14],
     ])
+  })
+
+  it('runs at the rate the physician sets, or leaves it to the ward when emptied', () => {
+    expect(infusionTherapyRows({ ...therapy, rateMlH: 100 }, [1], 11)[0]!.how).toBe(
+      'в/в крап. 100 мл/год',
+    )
+    expect(infusionTherapyRows({ ...therapy, rateMlH: null }, [1], 11)[0]!.how).toBe('в/в крап.')
   })
 
   it('writes nothing while switched off', () => {
