@@ -402,6 +402,15 @@ function RampInfo({
 /** Value of the "typed by hand" entry in the dose-source list; not a real choice id. */
 const MANUAL_CHOICE = '__manual__'
 
+/**
+ * A note under the drug name in a narrow column: its words go on to the next line instead of
+ * being cut off with an ellipsis, so «профілактика геморагічного циститу» is read in full.
+ */
+const WRAPPING_BADGE = {
+  root: { height: 'auto', maxWidth: '100%' },
+  label: { whiteSpace: 'normal', overflow: 'visible', textOverflow: 'clip' },
+} as const
+
 /** Doses on both BSA variants, with vials, dilution, the calculation chain and warnings. */
 export function DoseTable(props: DoseTableProps) {
   const { t } = useTranslation()
@@ -587,7 +596,7 @@ function DoseRow({
           {/* Another route the label allows at the same dose: the regimen's own is the default,
               and a switch is marked, since the sheet then says something the protocol did not. */}
           {item.routeChoices.length > 0 && (
-            <Group gap={6} mt={2} wrap="nowrap">
+            <Group gap={6} mt={2}>
               <SegmentedControl
                 size="xs"
                 disabled={!enabled}
@@ -600,7 +609,7 @@ function DoseRow({
                 aria-label={`${t('calculator.doses.route')}: ${localize(item.drug.name, language)}`}
               />
               {item.item.route !== item.protocolRoute && (
-                <Badge size="xs" variant="light" color="blue">
+                <Badge size="xs" variant="light" color="blue" styles={WRAPPING_BADGE}>
                   {t('calculator.doses.routeChanged')}
                 </Badge>
               )}
@@ -614,6 +623,7 @@ function DoseRow({
               mt={2}
               variant={premedicationMissing.has(id) ? 'filled' : 'light'}
               color={premedicationMissing.has(id) ? 'red' : 'orange'}
+              styles={WRAPPING_BADGE}
             >
               {premedicationMissing.has(id)
                 ? t('calculator.doses.premedMissing', {
@@ -625,8 +635,8 @@ function DoseRow({
           {/* A high cyclophosphamide dose the protocol gives without mesna: the prophylaxis is
               one click away, not added behind the physician's back. */}
           {mesnaOffered.includes(id) && (
-            <Group gap={6} mt={2} wrap="nowrap">
-              <Badge size="xs" variant="light" color="grape">
+            <Group gap={6} mt={2}>
+              <Badge size="xs" variant="light" color="grape" styles={WRAPPING_BADGE}>
                 {t('calculator.doses.cystitisBadge')}
               </Badge>
               <Button
@@ -647,8 +657,8 @@ function DoseRow({
               that a colleague edits as text, or one click away when it was removed. */}
           {item.item.drug_id === IVIG_DRUG_ID && item.item.role === 'main' && (
             <Stack gap={2} mt={4}>
-              <Group gap={6} wrap="nowrap">
-                <Badge size="xs" variant="light" color="teal">
+              <Group gap={6}>
+                <Badge size="xs" variant="light" color="teal" styles={WRAPPING_BADGE}>
                   {t('calculator.doses.ivigSupport')}
                 </Badge>
                 {ivigSupportAdded.includes(id) && (
