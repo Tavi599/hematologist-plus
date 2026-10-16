@@ -119,6 +119,13 @@ export const drugAvailabilitySchema = z.enum(DRUG_AVAILABILITY)
  * lymphomas, the leukaemias and the myeloma under one letter and helped nobody. A disease with
  * no group is shown under "Other", so the list never hides one. The order here is the order the
  * list shows the groups in.
+ *
+ * Where a disease belongs follows the WHO classification, by the physician's decision of
+ * 2026-10-17: `chronic-leukemia` holds the chronic *lymphoid* leukaemias (CLL, hairy cell), while
+ * chronic myeloid leukaemia is a myeloproliferative neoplasm and sits with them; Waldenström
+ * macroglobulinemia is lymphoplasmacytic lymphoma and sits with the lymphomas, not with the
+ * plasma cell disorders. The key is kept as it is so that an installed copy keeps reading the
+ * group it already knows; what it is called is in the locale files.
  */
 export const CLINICAL_GROUPS = [
   'lymphoma',

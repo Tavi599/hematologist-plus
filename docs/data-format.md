@@ -141,7 +141,7 @@ GRADE свідомо не використовується: він оцінює 
 |---|---|
 | `name`, `summary` | локал. |
 | `codes[]` | `system_id`, `code` (`C83.3`), `is_primary` |
-| `clinical_group` | клінічна група, за якою згруповано список хвороб: `lymphoma`, `acute-leukemia`, `chronic-leukemia`, `plasma-cell`, `mds`, `myeloproliferative`; без неї хвороба йде в «Інші» |
+| `clinical_group` | клінічна група, за якою згруповано список хвороб: `lymphoma`, `acute-leukemia`, `chronic-leukemia` (хронічні **лімфоїдні**: ХЛЛ, ВКЛ), `plasma-cell`, `mds`, `myeloproliferative` (сюди ж ХМЛ); належність — за ВООЗ; без групи хвороба йде в «Інші» |
 | `treatment[]` | вузли дерева: `key` (унікальний у межах хвороби), `kind` (`treatment`, `line`, `stage`, `group`, `trial` — розділ зі схемами з клінічних досліджень, `reference` — розділ зі схемами лише для ознайомлення), `title`, `description`, `regimens[]` (`regimen_id`, `notes`), `children[]` |
 
 ## Команди
