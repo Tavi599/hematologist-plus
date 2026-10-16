@@ -3,6 +3,7 @@ import { useDisclosure } from '@mantine/hooks'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink, Outlet, useLocation } from 'react-router'
 
+import { GlobalSearch } from '../../features/search/GlobalSearch'
 import { routes } from '../routes'
 import classes from './AppLayout.module.css'
 import { HistoryButtons } from './HistoryButtons'
@@ -66,6 +67,7 @@ export function AppLayout() {
               </nav>
             </Group>
             <Group gap="xs" wrap="nowrap">
+              <GlobalSearch />
               <SessionBadge />
               <ThemeToggle />
               <LanguageSwitcher />

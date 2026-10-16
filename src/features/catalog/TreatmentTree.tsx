@@ -15,9 +15,9 @@ import {
   Title,
   UnstyledButton,
 } from '@mantine/core'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router'
+import { Link, useSearchParams } from 'react-router'
 
 import { routes } from '../../app/routes'
 import { regimenAvailability } from '../../lib/availability'
@@ -72,6 +72,23 @@ export function TreatmentTree({
   const [filters, setFilters] = useTreeFilters(diseaseId)
   const { drugIds, conditions, hideContraindicated, query } = filters
   const setDrugIds = (next: string[]) => setFilters({ drugIds: next })
+  // A drug named in the global search opens this page with the filter already on: ?drug=<id>.
+  // The parameter is spent at once, so a reload — or a later change of the filter — is the
+  // physician's own choice and not the link's.
+  const [searchParams, setSearchParams] = useSearchParams()
+  const wantedDrug = searchParams.get('drug')
+  useEffect(() => {
+    if (wantedDrug === null) return
+    setSearchParams(
+      (current) => {
+        const params = new URLSearchParams(current)
+        params.delete('drug')
+        return params
+      },
+      { replace: true },
+    )
+    if (catalog.drugs.has(wantedDrug)) setFilters({ drugIds: [wantedDrug] })
+  }, [wantedDrug, catalog, setFilters, setSearchParams])
   const setConditions = (next: PatientCondition[]) => setFilters({ conditions: next })
   const setHideContraindicated = (next: boolean) => setFilters({ hideContraindicated: next })
 

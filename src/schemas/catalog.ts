@@ -2,6 +2,7 @@ import { z } from 'zod'
 
 import {
   amountUnitSchema,
+  clinicalGroupSchema,
   rampSequenceRowSchema,
   rateRampSchema,
   scheduleBlockSchema,
@@ -220,6 +221,12 @@ export const diseaseRowSchema = z.object({
   sort_order: sortOrderSchema,
   /** Defaulted so a client that already knows the column can still read a database without it. */
   references_json: diseaseReferencesSchema.default([]),
+  /**
+   * Clinical group the list of diseases is grouped by. It decides a heading and nothing else,
+   * so a group this copy of the app does not know yet falls back to null — the disease is shown
+   * under "Other" instead of failing the whole catalog load.
+   */
+  clinical_group: clinicalGroupSchema.nullable().catch(null).default(null),
 })
 
 /**

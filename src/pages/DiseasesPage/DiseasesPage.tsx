@@ -11,6 +11,7 @@ import { IrradiatedSection } from '../../features/irradiated/IrradiatedSection'
 import { ICD10_SYSTEM_ID, primaryCode, type CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
+import { CLINICAL_GROUPS, type ClinicalGroup } from '../../schemas/common'
 
 /** Tabs beside the list, each opened by `?section=` so a link can land on it. */
 const SECTIONS = ['irradiated', 'febrile-neutropenia']
@@ -57,10 +58,12 @@ export function DiseasesPage() {
   )
 }
 
-/** First letter of the ICD-10 code: C — neoplasms, D — blood, and so on. */
-function icdChapter(code: string | null): string {
-  return code === null ? '—' : code.charAt(0).toUpperCase()
-}
+/**
+ * Groups of the list, in the order they are shown. A disease whose group this copy of the app
+ * does not know — or which nobody has placed yet — goes under `other`, never out of the list.
+ */
+const GROUP_ORDER = [...CLINICAL_GROUPS, 'other'] as const
+type GroupKey = ClinicalGroup | 'other'
 
 function DiseaseList({ catalog }: { catalog: CatalogIndex }) {
   const { t } = useTranslation()
@@ -99,10 +102,10 @@ function DiseaseList({ catalog }: { catalog: CatalogIndex }) {
 
   if (entries.length === 0) return <Text c="dimmed">{t('diseases.empty')}</Text>
 
-  const groups = new Map<string, typeof found>()
-  for (const entry of found) {
-    const chapter = icdChapter(entry.code)
-    groups.set(chapter, [...(groups.get(chapter) ?? []), entry])
+  const groups = new Map<GroupKey, typeof found>()
+  for (const key of GROUP_ORDER) {
+    const list = found.filter((entry) => (entry.disease.clinical_group ?? 'other') === key)
+    if (list.length > 0) groups.set(key, list)
   }
 
   return (
@@ -114,11 +117,11 @@ function DiseaseList({ catalog }: { catalog: CatalogIndex }) {
         onChange={(event) => setSearch(event.currentTarget.value)}
       />
       {found.length === 0 && <Text c="dimmed">{t('diseases.notFound')}</Text>}
-      {[...groups.entries()].map(([chapter, list]) => (
-        <Card key={chapter} withBorder component="section">
+      {[...groups.entries()].map(([key, list]) => (
+        <Card key={key} withBorder component="section">
           <Stack gap="xs">
             <Text fw={600} size="sm" c="dimmed">
-              {t('diseases.chapter', { letter: chapter })}
+              {t(`diseases.group.${key}`)}
             </Text>
             <Stack gap="xs" component="ul" p={0} m={0} style={{ listStyle: 'none' }}>
               {list.map((entry) => (

@@ -1,0 +1,12 @@
+/* A result is a row the whole width of the window: on a phone the finger has somewhere to land. */
+.hit {
+  display: block;
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: var(--mantine-radius-sm);
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--mantine-color-default-hover);
+  }
+}

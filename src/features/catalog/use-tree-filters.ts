@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 import { PATIENT_CONDITIONS, type PatientCondition } from '../../schemas/common'
 
@@ -31,7 +31,13 @@ export function useTreeFilters(
     }
   }, [diseaseId, filters])
 
-  return [filters, (change) => setFilters((current) => ({ ...current, ...change }))]
+  // Stable, so an effect that seeds a filter from the URL can name it among its dependencies.
+  const change = useCallback(
+    (patch: Partial<TreeFilters>) => setFilters((current) => ({ ...current, ...patch })),
+    [],
+  )
+
+  return [filters, change]
 }
 
 function read(diseaseId: string): TreeFilters {

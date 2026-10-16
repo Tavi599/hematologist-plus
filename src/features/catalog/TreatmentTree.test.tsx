@@ -31,7 +31,14 @@ describe('TreatmentTree', () => {
   it('renders a hierarchy', () => {
     const rows = emptyCatalog()
     rows.diseases = [
-      { id: 'cll', name: { uk: 'ХЛЛ' }, summary: null, sort_order: 0, references_json: [] },
+      {
+        id: 'cll',
+        name: { uk: 'ХЛЛ' },
+        summary: null,
+        sort_order: 0,
+        references_json: [],
+        clinical_group: 'chronic-leukemia',
+      },
     ]
     rows.treatment_nodes = [node('a', null, 'Перша лінія'), node('b', 'a', 'Підгрупа')]
     renderWithProviders(<TreatmentTree catalog={indexCatalog(rows)} diseaseId="cll" />)
@@ -167,6 +174,27 @@ describe('TreatmentTree', () => {
     expect(screen.getByText('Приховано схем: 1')).toBeInTheDocument()
     // The choice is kept for the next page.
     expect(window.localStorage.getItem('hp.onlyObtainable')).toBe('1')
+  })
+
+  it('turns the drug filter on for a drug named in the link, and spends the parameter', () => {
+    const rows = demoCatalog()
+    renderWithProviders(<TreatmentTree catalog={indexCatalog(rows)} diseaseId="dlbcl" />, {
+      route: '/diseases/dlbcl?drug=rituximab',
+    })
+
+    // The caption below the filter only appears once a drug is chosen.
+    expect(screen.getByText('Схем за фільтром: 1.')).toBeInTheDocument()
+    expect(window.sessionStorage.getItem('treeFilters:dlbcl')).toContain('rituximab')
+  })
+
+  it('ignores a link that names a drug the catalog has not got', () => {
+    const rows = demoCatalog()
+    renderWithProviders(<TreatmentTree catalog={indexCatalog(rows)} diseaseId="dlbcl" />, {
+      route: '/diseases/dlbcl?drug=carfilzomib',
+    })
+
+    expect(screen.queryByText('Схем за фільтром: 1.')).not.toBeInTheDocument()
+    expect(screen.getByText('R-CHOP-21')).toBeInTheDocument()
   })
 
   it('opens with the unobtainable regimens already hidden once the choice was made', () => {

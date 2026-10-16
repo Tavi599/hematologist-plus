@@ -63,9 +63,18 @@ describe('DiseasesPage search', () => {
     expect(screen.getByText('Нічого не знайдено.')).toBeInTheDocument()
   })
 
-  it('groups by ICD-10 chapter', async () => {
+  it('groups by clinical group, not by the letter of the ICD-10 code', async () => {
     renderWithProviders(<DiseasesPage />)
-    expect(await screen.findByText('Клас МКХ-10: C')).toBeInTheDocument()
+    expect(await screen.findByText('Лімфоми')).toBeInTheDocument()
+    expect(screen.queryByText('Клас МКХ-10: C')).not.toBeInTheDocument()
+  })
+
+  it('shows a disease with no group under "Other"', async () => {
+    const catalog = demoCatalog()
+    catalog.diseases = catalog.diseases.map((disease) => ({ ...disease, clinical_group: null }))
+    source.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
+    renderWithProviders(<DiseasesPage />)
+    expect(await screen.findByText('Інші')).toBeInTheDocument()
   })
 
   it('lists the conditions that need irradiated components in a tab of their own', async () => {

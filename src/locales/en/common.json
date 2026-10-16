@@ -498,13 +498,37 @@
       "sheet": "Need"
     }
   },
+  "search": {
+    "open": "Search the catalog",
+    "title": "Search the catalog",
+    "field": "Search",
+    "placeholder": "Regimen, drug, disease or ICD-10 code",
+    "loading": "The catalog is still loading…",
+    "notFound": "Nothing found.",
+    "hint": "Type at least two letters.",
+    "hotkey": "Open this window:",
+    "more": "{{count}} more",
+    "kind": {
+      "regimen": "Regimens",
+      "disease": "Diseases",
+      "drug": "Drugs"
+    }
+  },
   "diseases": {
     "title": "Diseases",
     "empty": "The list of diseases is empty so far.",
     "search": "Search",
     "searchPlaceholder": "Name, ICD-10 code or summary",
     "notFound": "Nothing found.",
-    "chapter": "ICD-10 chapter: {{letter}}",
+    "group": {
+      "lymphoma": "Lymphomas",
+      "acute-leukemia": "Acute leukaemias",
+      "chronic-leukemia": "Chronic leukaemias",
+      "plasma-cell": "Plasma cell disorders",
+      "mds": "Myelodysplastic syndrome",
+      "myeloproliferative": "Myeloproliferative neoplasms",
+      "other": "Other"
+    },
     "tabList": "Diseases"
   },
   "diseaseDetail": {

@@ -3,6 +3,7 @@ import { z } from 'zod'
 import {
   amountUnitSchema,
   type ArticleSection,
+  clinicalGroupSchema,
   rampSequenceSchema,
   rateRampSchema,
   scheduleBlockSchema,
@@ -293,6 +294,8 @@ export const diseaseFileSchema = z.strictObject({
     .default([]),
   /** Guideline pages the physician opens next; the app only links out, never copies them. */
   references: diseaseReferencesSchema.default([]),
+  /** Clinical group the list of diseases is grouped by; absent means shown under "Other". */
+  clinical_group: clinicalGroupSchema.nullable().default(null),
   treatment: z
     .array(treatmentNodeFileSchema)
     .default([])

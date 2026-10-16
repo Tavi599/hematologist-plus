@@ -14,6 +14,7 @@ import {
 } from './catalog'
 import {
   AMOUNT_UNITS,
+  CLINICAL_GROUPS,
   DOSE_UNITS,
   DRUG_AVAILABILITY,
   ITEM_ROLES,
@@ -238,6 +239,17 @@ describe('shared schemas', () => {
       unit_equivalence: null,
     }
     expect(catalogRowSchemas.drugs.parse(drug).availability).toBe('registered')
+
+    // A clinical group added later only decides a heading: the disease lands under "Other".
+    const disease = {
+      id: 'mm',
+      name: { uk: 'Хвороба' },
+      summary: null,
+      sort_order: 0,
+      references_json: [],
+      clinical_group: 'added-later',
+    }
+    expect(catalogRowSchemas.diseases.parse(disease).clinical_group).toBe(null)
   })
 
   it('still fails on a value that would change a dose or a sheet', () => {
@@ -296,6 +308,7 @@ describe('shared schemas', () => {
       'regimen_items.dose_unit': DOSE_UNITS,
       'regimen_items.block': SCHEDULE_BLOCKS,
       'treatment_nodes.kind': TREATMENT_NODE_KINDS,
+      'diseases.clinical_group': CLINICAL_GROUPS,
     }
     for (const [column, list] of Object.entries(expected)) {
       expect(constraints.get(column), column).toEqual([...list].sort())

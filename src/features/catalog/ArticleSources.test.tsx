@@ -13,6 +13,7 @@ const disease = (references: Disease['references_json']): Disease => ({
   summary: null,
   sort_order: 0,
   references_json: references,
+  clinical_group: 'lymphoma',
 })
 
 const withNccn = disease([

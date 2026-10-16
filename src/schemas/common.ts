@@ -113,6 +113,24 @@ export type UnitEquivalence = z.infer<typeof unitEquivalenceSchema>
 export const DRUG_AVAILABILITY = ['department', 'registered', 'unavailable'] as const
 export const drugAvailabilitySchema = z.enum(DRUG_AVAILABILITY)
 
+/**
+ * The clinical group a disease is listed under. Not a classification — the department's own way
+ * of finding a disease in the list, agreed with the physician: the ICD-10 chapter put the
+ * lymphomas, the leukaemias and the myeloma under one letter and helped nobody. A disease with
+ * no group is shown under "Other", so the list never hides one. The order here is the order the
+ * list shows the groups in.
+ */
+export const CLINICAL_GROUPS = [
+  'lymphoma',
+  'acute-leukemia',
+  'chronic-leukemia',
+  'plasma-cell',
+  'mds',
+  'myeloproliferative',
+] as const
+export const clinicalGroupSchema = z.enum(CLINICAL_GROUPS)
+export type ClinicalGroup = (typeof CLINICAL_GROUPS)[number]
+
 export const TREATMENT_NODE_KINDS = [
   'treatment',
   'line',
