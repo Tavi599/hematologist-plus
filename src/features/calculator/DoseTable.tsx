@@ -1035,19 +1035,23 @@ function DoseRow({
         <Table.Tr opacity={enabled ? 1 : 0.55}>
           <Table.Td />
           <Table.Td colSpan={8} pt={0}>
-            <RowPlanControls
-              item={item}
-              result={result}
-              course={course}
-              plan={plans[id]}
-              free={isFreeRow(item.item, customIds)}
-              enabled={enabled}
-              sheetChanged={id in sheetChoices}
-              overlap={overlaps.get(id)}
-              onSheet={(sheet) => onSheet(id, sheet)}
-              onPlan={(patch) => onPlan(id, patch)}
-              onVariant={() => onVariant(id)}
-            />
+            {/* No width of its own: the line wraps inside the table instead of widening it, which
+                would push the last column, with the remove button, out of sight. */}
+            <div style={{ width: 0, minWidth: '100%' }}>
+              <RowPlanControls
+                item={item}
+                result={result}
+                course={course}
+                plan={plans[id]}
+                free={isFreeRow(item.item, customIds)}
+                enabled={enabled}
+                sheetChanged={id in sheetChoices}
+                overlap={overlaps.get(id)}
+                onSheet={(sheet) => onSheet(id, sheet)}
+                onPlan={(patch) => onPlan(id, patch)}
+                onVariant={() => onVariant(id)}
+              />
+            </div>
           </Table.Td>
         </Table.Tr>
       )}
