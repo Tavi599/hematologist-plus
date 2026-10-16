@@ -383,6 +383,13 @@
       "irradiated": "Say on the sheet: irradiated blood components only",
       "irradiatedHint": "The regimen shows no reason. Tick it for one in the history: Hodgkin lymphoma, purine analogues, HSCT, CAR-T."
     },
+    "preview": {
+      "show": "Preview the sheet",
+      "hide": "Hide the preview",
+      "hint": "This is how the sheet goes into the file: every tab is a sheet of the Excel workbook. Anything that did not fit, or landed in the wrong place, shows here before the download.",
+      "scale": "Preview scale",
+      "empty": "Nothing to show: the sheet is empty."
+    },
     "error": {
       "title": "Calculation failed",
       "field": "Field: {{field}}",

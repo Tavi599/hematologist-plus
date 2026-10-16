@@ -1,0 +1,24 @@
+/**
+ * The sheet is a paper blank, so it is drawn as one in both themes: white page, black ink. Only
+ * the frame around it follows the theme.
+ */
+.paper {
+  overflow: auto;
+  max-height: 70vh;
+  padding: 12px;
+  border: 1px solid var(--mantine-color-default-border);
+  border-radius: var(--mantine-radius-sm);
+  background-color: #fff;
+}
+
+.sheet {
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: #000;
+}
+
+.sheet td {
+  overflow: hidden;
+  padding: 0 2px;
+  line-height: 1.15;
+}

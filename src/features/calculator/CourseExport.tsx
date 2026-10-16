@@ -1,5 +1,15 @@
-import { Button, Card, Checkbox, SegmentedControl, Stack, Text, Title } from '@mantine/core'
-import { useState } from 'react'
+import {
+  Button,
+  Card,
+  Checkbox,
+  Collapse,
+  Group,
+  SegmentedControl,
+  Stack,
+  Text,
+  Title,
+} from '@mantine/core'
+import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { CourseResult } from '../../domain'
@@ -9,6 +19,7 @@ import { saveFile } from '../../lib/save-file'
 import { buildXlsx, XLSX_MEDIA_TYPE } from '../../lib/xlsx-writer'
 import type { PatientInput } from '../../schemas/patient'
 import { buildCourseSheets, type SheetLayout, type Translate } from './course-sheets'
+import { SheetPreview } from './SheetPreview'
 import type { HeaderValue } from './header'
 import type { ManualRow } from './manual-rows'
 import type { Text2 } from '../irradiated/indications'
@@ -42,23 +53,44 @@ export function CourseExport(props: CourseExportProps) {
   const reasons = props.irradiationReasons ?? []
   const [irradiatedChoice, setIrradiatedChoice] = useState<boolean | null>(null)
   const irradiatedOnly = irradiatedChoice ?? reasons.length > 0
+  // The preview holds the whole blank as a table: it is built only once the physician opens it.
+  const [previewOpen, setPreviewOpen] = useState(false)
 
-  const download = () => {
-    const sheets = buildCourseSheets({
-      items: props.items,
-      course: props.course,
-      patient: props.patient,
-      startDateIso: props.startDate,
-      regimenName: props.regimenName,
-      manualRows: props.manualRows ?? [],
-      cycleNumber: props.cycleNumber,
-      header: props.header,
+  const sheets = useMemo(
+    () =>
+      buildCourseSheets({
+        items: props.items,
+        course: props.course,
+        patient: props.patient,
+        startDateIso: props.startDate,
+        regimenName: props.regimenName,
+        manualRows: props.manualRows ?? [],
+        cycleNumber: props.cycleNumber,
+        header: props.header,
+        layout,
+        irradiatedOnly,
+        dayStart: props.dayStart,
+        language,
+        t: t as Translate,
+      }),
+    [
+      props.items,
+      props.course,
+      props.patient,
+      props.startDate,
+      props.regimenName,
+      props.manualRows,
+      props.cycleNumber,
+      props.header,
+      props.dayStart,
       layout,
       irradiatedOnly,
-      dayStart: props.dayStart,
       language,
-      t: t as Translate,
-    })
+      t,
+    ],
+  )
+
+  const download = () => {
     if (sheets.length === 0) return
     saveFile(
       `${t('calculator.export.fileName', { date: props.startDate })}.xlsx`,
@@ -95,7 +127,22 @@ export function CourseExport(props: CourseExportProps) {
               : t('calculator.export.irradiatedHint')
           }
         />
-        <Button onClick={download}>{t('calculator.export.button')}</Button>
+        <Group gap="xs" wrap="wrap">
+          <Button onClick={download} disabled={sheets.length === 0}>
+            {t('calculator.export.button')}
+          </Button>
+          <Button
+            variant="default"
+            onClick={() => setPreviewOpen((open) => !open)}
+            aria-expanded={previewOpen}
+          >
+            {t(previewOpen ? 'calculator.preview.hide' : 'calculator.preview.show')}
+          </Button>
+        </Group>
+        {/* Built only once it is open: the blank is a table of hundreds of cells. */}
+        <Collapse expanded={previewOpen} keepMounted={false} w="100%">
+          <SheetPreview sheets={sheets} />
+        </Collapse>
       </Stack>
     </Card>
   )
