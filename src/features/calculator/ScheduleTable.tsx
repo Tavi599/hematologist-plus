@@ -77,59 +77,64 @@ export function ScheduleTable({
             <Text fw={500}>
               {t('calculator.schedule.day', { day: day.day })} · {formatDate(day.date, language)}
             </Text>
-            <Table.ScrollContainer minWidth={480}>
-              <Table
-                verticalSpacing={4}
-                withTableBorder
-                aria-label={t('calculator.schedule.day', { day: day.day })}
-              >
-                <Table.Thead>
-                  <Table.Tr>
-                    <Table.Th w={130}>{t('calculator.schedule.time')}</Table.Th>
-                    <Table.Th>{t('calculator.schedule.drug')}</Table.Th>
-                  </Table.Tr>
-                </Table.Thead>
-                <Table.Tbody>
-                  {administrationsOn(day.day).map((administration) => (
-                    <Table.Tr key={administration.id}>
-                      <Table.Td>
-                        {administration.start === administration.end
-                          ? `${administration.start} · ${zeroLengthNote(administration.drugId)}`
-                          : `${administration.start} – ${administration.end}`}
-                        {administration.endDayOffset > 0 && (
-                          <Text size="xs" c="dimmed">
-                            {t('calculator.schedule.nextDay')}
-                          </Text>
-                        )}
-                      </Table.Td>
-                      <Table.Td>{nameOf(administration.drugId)}</Table.Td>
+            {/* A day of tablets alone has no hours: no empty table for it, only the ward line. */}
+            {administrationsOn(day.day).length +
+              manualRowsOn(manualRows, 'infusion', day.day).length >
+              0 && (
+              <Table.ScrollContainer minWidth={480}>
+                <Table
+                  verticalSpacing={4}
+                  withTableBorder
+                  aria-label={t('calculator.schedule.day', { day: day.day })}
+                >
+                  <Table.Thead>
+                    <Table.Tr>
+                      <Table.Th w={130}>{t('calculator.schedule.time')}</Table.Th>
+                      <Table.Th>{t('calculator.schedule.drug')}</Table.Th>
                     </Table.Tr>
-                  ))}
-                  {manualRowsOn(manualRows, 'infusion', day.day).map((row) => (
-                    <Table.Tr key={row.id}>
-                      <Table.Td>
-                        {row.hour === null
-                          ? t('calculator.manual.hourNone')
-                          : `${String(row.hour).padStart(2, '0')}:00`}
-                      </Table.Td>
-                      <Table.Td>
-                        {row.what}
-                        {row.how !== '' && (
+                  </Table.Thead>
+                  <Table.Tbody>
+                    {administrationsOn(day.day).map((administration) => (
+                      <Table.Tr key={administration.id}>
+                        <Table.Td>
+                          {administration.start === administration.end
+                            ? `${administration.start} · ${zeroLengthNote(administration.drugId)}`
+                            : `${administration.start} – ${administration.end}`}
+                          {administration.endDayOffset > 0 && (
+                            <Text size="xs" c="dimmed">
+                              {t('calculator.schedule.nextDay')}
+                            </Text>
+                          )}
+                        </Table.Td>
+                        <Table.Td>{nameOf(administration.drugId)}</Table.Td>
+                      </Table.Tr>
+                    ))}
+                    {manualRowsOn(manualRows, 'infusion', day.day).map((row) => (
+                      <Table.Tr key={row.id}>
+                        <Table.Td>
+                          {row.hour === null
+                            ? t('calculator.manual.hourNone')
+                            : `${String(row.hour).padStart(2, '0')}:00`}
+                        </Table.Td>
+                        <Table.Td>
+                          {row.what}
+                          {row.how !== '' && (
+                            <Text size="xs" c="dimmed">
+                              {row.how}
+                            </Text>
+                          )}
                           <Text size="xs" c="dimmed">
-                            {row.how}
+                            {row.id.startsWith(INFUSION_THERAPY_ID)
+                              ? t('calculator.standardSupport.infusion.title')
+                              : t('calculator.manual.byHand')}
                           </Text>
-                        )}
-                        <Text size="xs" c="dimmed">
-                          {row.id.startsWith(INFUSION_THERAPY_ID)
-                            ? t('calculator.standardSupport.infusion.title')
-                            : t('calculator.manual.byHand')}
-                        </Text>
-                      </Table.Td>
-                    </Table.Tr>
-                  ))}
-                </Table.Tbody>
-              </Table>
-            </Table.ScrollContainer>
+                        </Table.Td>
+                      </Table.Tr>
+                    ))}
+                  </Table.Tbody>
+                </Table>
+              </Table.ScrollContainer>
+            )}
             {wardLine(day.day).length > 0 && (
               <Text size="xs" c="dimmed">
                 {t('calculator.schedule.ward')}: {wardLine(day.day).join(', ')}

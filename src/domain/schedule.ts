@@ -120,7 +120,9 @@ export interface ScheduledAdministration {
  *
  * An administration the physician put at an hour (`atMin`) is given then, and the chain goes on
  * as if it had not been moved: dragging one drug never drags the others. Only the support hung
- * off the cytostatic follows it, because that is what it is timed from.
+ * off the cytostatic follows it, because that is what it is timed from. A drug of the chain that
+ * would run into one put at an hour steps past it, keeping the hour between two cytostatics; a
+ * later drug moves only if it then runs into the one that stepped aside. The rest stay put.
  *
  * CALIBRATION: default gaps and whether infusions may run in parallel will be taken from real sheets.
  */
@@ -135,6 +137,14 @@ export function scheduleAdministrations(
   let previousMain: { durationMin: number; drugKey: string | undefined } | null = null
   const scheduled: ScheduledAdministration[] = []
   const chainStarts = new Map<string, number>()
+  // The hourly drugs the physician put at an hour, and then each drug as it is placed: the next
+  // one steps around them.
+  const pinned: Busy[] = items.flatMap((item) => {
+    const at = atOf(item)
+    if (item.block !== 'infusion' || at === undefined) return []
+    if (durationOf(item) >= MINUTES_PER_DAY) return []
+    return [busyOf(item, at)]
+  })
 
   for (const item of items) {
     if (item.block !== 'infusion') continue
@@ -161,10 +171,18 @@ export function scheduleAdministrations(
     assertNonNegative(`${item.id}.gapBeforeMin`, item.gapBeforeMin ?? 0)
     const gap = Math.max(item.gapBeforeMin ?? 0, chemoGap)
     const chained = cursor + gap
-    const startMin = atOf(item) ?? chained
+    const at = atOf(item)
+    const roundTheClock = durationOf(item) >= MINUTES_PER_DAY
+    const startMin =
+      at ?? (roundTheClock ? chained : clearOf(pinned, chained, durationOf(item), item))
+    // Each drug keeps the place the regimen gives it unless that place is taken; one that stepped
+    // aside takes its new place, so a later drug moves only when it runs into it in turn.
+    if (at === undefined && !roundTheClock) {
+      pinned.push(busyOf(item, startMin))
+    }
     // A round-the-clock infusion runs alongside the rest of the day: the next drug does not wait
-    // for it to end, it starts with it. The chain goes on from where the drug would have been.
-    cursor = chained + (durationOf(item) >= MINUTES_PER_DAY ? 0 : durationOf(item))
+    // for it to end, it starts with it.
+    cursor = chained + (roundTheClock ? 0 : durationOf(item))
     firstStart ??= startMin
     if (item.isMain) {
       firstMainStart ??= startMin
@@ -203,6 +221,49 @@ export function untimedIds(items: AdministrationInput[]): string[] {
 function durationOf(item: AdministrationInput): number {
   assertNonNegative(`${item.id}.durationMin`, item.durationMin)
   return item.durationMin
+}
+
+interface Busy {
+  startMin: number
+  endMin: number
+  isMain: boolean
+  drugKey: string | undefined
+}
+
+function busyOf(item: AdministrationInput, startMin: number): Busy {
+  return {
+    startMin,
+    endMin: startMin + durationOf(item),
+    isMain: item.isMain === true,
+    drugKey: item.drugKey,
+  }
+}
+
+/**
+ * The first start from `from` on at which a drug of `durationMin` runs into none of the drugs put
+ * at an hour. Two cytostatics keep the hour between them here as in the chain; the premedication
+ * may run right up to one.
+ */
+function clearOf(
+  busy: Busy[],
+  from: number,
+  durationMin: number,
+  item: AdministrationInput,
+): number {
+  let start = from
+  for (let moved = true; moved;) {
+    moved = false
+    for (const slot of busy) {
+      // Nor between the loading part of a drug and the rest of it, as in the chain.
+      const sameDrug = item.drugKey !== undefined && item.drugKey === slot.drugKey
+      const gap = item.isMain && slot.isMain && !sameDrug ? MIN_CHEMO_GAP_MIN : 0
+      if (start < slot.endMin + gap && start + durationMin + gap > slot.startMin) {
+        start = slot.endMin + gap
+        moved = true
+      }
+    }
+  }
+  return start
 }
 
 function atOf(item: AdministrationInput): number | undefined {

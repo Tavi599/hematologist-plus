@@ -78,6 +78,37 @@ describe('scheduleAdministrations', () => {
     ])
   })
 
+  it('steps a drug past one put at an hour instead of running into it, and the rest follow', () => {
+    const main = { block: 'infusion' as const, durationMin: 60, isMain: true }
+    const schedule = scheduleAdministrations('11:00', [
+      { id: 'etoposide', ...main, atMin: 13 * 60 },
+      // Would start at 13:00, on top of the etoposide: it waits the hour after it.
+      { id: 'carboplatin', ...main },
+      { id: 'ifosfamide', ...main },
+      // Free where the chain puts it: not moved.
+      { id: 'late', ...main, atMin: 22 * 60 },
+    ])
+    expect(schedule.map(({ id, start }) => [id, start])).toEqual([
+      ['etoposide', '13:00'],
+      ['carboplatin', '15:00'],
+      ['ifosfamide', '17:00'],
+      ['late', '22:00'],
+    ])
+  })
+
+  it('lets the premedication run right up to a cytostatic put at an hour', () => {
+    const schedule = scheduleAdministrations('09:00', [
+      { id: 'premed', block: 'infusion' as const, durationMin: 30 },
+      { id: 'rituximab', block: 'infusion' as const, durationMin: 240, atMin: 9 * 60 + 30 },
+      { id: 'saline', block: 'infusion' as const, durationMin: 60 },
+    ])
+    expect(schedule.map(({ id, start }) => [id, start])).toEqual([
+      ['premed', '09:00'],
+      ['rituximab', '09:30'],
+      ['saline', '13:30'],
+    ])
+  })
+
   it('hangs the support of the day off the first infusion, not off the chain', () => {
     const schedule = scheduleAdministrations('09:00', [
       // Ondansetron 30 min before the cytostatic and then every 8 hours.
