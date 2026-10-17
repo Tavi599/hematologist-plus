@@ -15,10 +15,13 @@ import { useTranslation } from 'react-i18next'
 import type { CourseResult } from '../../domain'
 import type { CourseItem } from '../../lib/course-input'
 import { currentLanguage } from '../../lib/i18n'
-import { saveFile } from '../../lib/save-file'
+import { courseFileTarget } from '../../lib/course-file-name'
+import type { SaveOutcome } from '../../lib/save-folder'
+import { useSaveFolder } from '../../lib/use-save-folder'
 import { buildXlsx, XLSX_MEDIA_TYPE } from '../../lib/xlsx-writer'
 import type { PatientInput } from '../../schemas/patient'
 import { buildCourseSheets, type SheetLayout, type Translate } from './course-sheets'
+import { SaveOutcomeNote } from './SaveFolder'
 import { SheetPreview } from './SheetPreview'
 import type { HeaderValue } from './header'
 import type { ManualRow } from './manual-rows'
@@ -55,6 +58,8 @@ export function CourseExport(props: CourseExportProps) {
   const irradiatedOnly = irradiatedChoice ?? reasons.length > 0
   // The preview holds the whole blank as a table: it is built only once the physician opens it.
   const [previewOpen, setPreviewOpen] = useState(false)
+  const folder = useSaveFolder()
+  const [saved, setSaved] = useState<SaveOutcome | null>(null)
 
   const sheets = useMemo(
     () =>
@@ -90,13 +95,13 @@ export function CourseExport(props: CourseExportProps) {
     ],
   )
 
+  /** Into the device's folder, in the patient's subfolder; a plain download where there is none. */
   const download = () => {
     if (sheets.length === 0) return
-    saveFile(
-      `${t('calculator.export.fileName', { date: props.startDate })}.xlsx`,
-      buildXlsx(sheets),
-      XLSX_MEDIA_TYPE,
+    const target = courseFileTarget(props.patient.fullName, new Date(), (date) =>
+      t('calculator.saveFolder.fileNameFallback', { date }),
     )
+    void folder.save(target, 'xlsx', buildXlsx(sheets), XLSX_MEDIA_TYPE).then(setSaved)
   }
 
   return (
@@ -139,6 +144,7 @@ export function CourseExport(props: CourseExportProps) {
             {t(previewOpen ? 'calculator.preview.hide' : 'calculator.preview.show')}
           </Button>
         </Group>
+        <SaveOutcomeNote outcome={saved} />
         {/* Built only once it is open: the blank is a table of hundreds of cells. */}
         <Collapse expanded={previewOpen} keepMounted={false} w="100%">
           <SheetPreview sheets={sheets} />

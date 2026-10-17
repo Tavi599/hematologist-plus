@@ -95,6 +95,24 @@
       "opened": "The course was opened from the card.",
       "invalid": "This is not a course card of this version — the course is unchanged."
     },
+    "saveFolder": {
+      "title": "Save folder",
+      "hint": "A setting of this device only. The .xlsx sheet and the course card are saved into the chosen folder (for example «Схеми»): into a subfolder named after the patient, or into the folder itself when the name is empty. The file is named after the patient and the day it is saved; an existing file is never overwritten.",
+      "unsupported": "This browser cannot choose a folder (Chrome or Edge on a computer can) — files are downloaded as usual, under the same name.",
+      "loading": "Checking the folder…",
+      "none": "No folder chosen — files are downloaded as usual.",
+      "granted": "Folder: {{name}}",
+      "prompt": "Folder: {{name}} — after a browser restart, writing has to be allowed again.",
+      "choose": "Choose folder",
+      "change": "Change folder",
+      "allow": "Allow writing",
+      "forget": "Forget folder",
+      "savedFolder": "Saved: {{path}}",
+      "savedDownload": "«{{name}}» was downloaded.",
+      "denied": "Writing to the folder was not allowed — «{{name}}» was downloaded.",
+      "failed": "Could not write to the folder — «{{name}}» was downloaded.",
+      "fileNameFallback": "Course {{date}}"
+    },
     "hospital": {
       "title": "Sheet header",
       "institution": "Institution",
@@ -402,7 +420,6 @@
       "layoutInfusion": "Infusion sheets + ward sheet",
       "layoutWard": "Ward sheet only (like VRD)",
       "hintWard": "One prescription list (form No. 003-4/o) for the whole course: every drug a line, «+» on the days it is given and «-» on the days it is not. The file is built in the browser: no patient data is sent anywhere.",
-      "fileName": "Prescription sheet {{date}}",
       "irradiated": "Say on the sheet: irradiated blood components only",
       "irradiatedHint": "The regimen shows no reason. Tick it for one in the history: Hodgkin lymphoma, purine analogues, HSCT, CAR-T."
     },

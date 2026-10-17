@@ -157,6 +157,14 @@ src/
   birth) are written there only with the physician's explicit consent, and a draft older than 7
   days is dropped. The same object is saved to and read from a «course card» .json file,
   validated by `src/schemas/course-draft.ts` — a card of another version is dropped whole.
+- Both saved files — the .xlsx sheet and the course card — go into a folder the physician chose
+  on this device («Схеми»), into a subfolder named after the patient's full name (the folder
+  itself when the name is empty), named «<full name> <DD.MM.YYYY of saving>»; an existing file
+  gets « (2)», never overwritten. Pure naming rules: `src/lib/course-file-name.ts`. The folder is
+  a File System Access API handle kept in this device's IndexedDB (`src/lib/save-folder.ts`,
+  database `hematologist-plus-device`) — never in localStorage or Supabase. Where the API is
+  missing (Firefox, Safari, phones) or writing is refused, the file is downloaded under the same
+  name. The patient's name ends up only in a local file and folder name; it is never logged.
 - Supabase project `hematologist-plus` (ref `lenftpktjlxpqaajgqtm`, Frankfurt). URL + **publishable** key are committed in `.env` (browser-safe by design). The **secret** key is used only by `scripts/`, read from git-ignored `.env.local` or GitHub secrets — never committed, never in `VITE_*` vars.
 - Every table in an exposed schema must have RLS enabled in the same migration that creates it; the publishable key would otherwise expose it.
 - **Deploy before migrating.** Push the code and wait for the Pages deploy, then run the SQL: a copy of the app installed on a phone keeps its old code until the user accepts an update, and it has to survive the new column. Row schemas are `z.object` for exactly this reason — never make one strict. A copy that is too old anyway gets a "reinstall the app" button (`reinstallApp` in `src/lib/app-refresh.ts`), which drops the offline catalog, unregisters the service worker and reloads; it finishes on a URL carrying a one-off query parameter, because a plain reload can be answered from the browser cache with the same stale `index.html`.
