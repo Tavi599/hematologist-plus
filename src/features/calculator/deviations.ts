@@ -3,7 +3,7 @@ import { formatNumber } from '../../lib/format'
 import { DEFAULT_DOSE_CHOICE, type CourseItem } from '../../lib/course-input'
 import type { Language } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
-import { isVariant, variantBase } from '../../lib/row-plan'
+import { clockOfHour, inSheetOrder, isVariant, variantBase } from '../../lib/row-plan'
 import type { Translate } from './course-sheets'
 import type { CourseState } from './course-state'
 
@@ -56,6 +56,11 @@ function defaultModifierKeys(item: CourseItem): string[] {
   return (item.item.dose_modifiers ?? [])
     .filter((modifier) => modifier.default_on)
     .map((modifier) => modifier.key)
+}
+
+/** Hours of a row as the sheet heads them: «09:00, 15:00», in the order the sheet runs. */
+function clocks(hours: number[]): string {
+  return inSheetOrder(hours).map(clockOfHour).join(', ')
 }
 
 function sameKeys(left: string[], right: string[]): boolean {
@@ -140,7 +145,11 @@ export function collectDeviations(
     if (bag !== undefined && entry.bagSwitchable) add('bag', id, name, { ml: bag })
     const plan = state.plans[id]
     if (plan?.days !== undefined) add('planDays', id, name, { days: plan.days.join(', ') })
-    if (plan?.hours !== undefined) add('planHours', id, name, { hours: plan.hours.length })
+    if (plan?.hours !== undefined) {
+      // The hours themselves, not how many of them: before a course is put back as the protocol
+      // writes it, the physician has to read which clock times are about to move.
+      add('planHours', id, name, { hours: clocks(plan.hours) })
+    }
     if (plan?.perDay !== undefined) add('planPerDay', id, name, { perDay: plan.perDay })
     const sheet = state.sheetChoices[id]
     if (sheet !== undefined) add('sheet', id, name, { sheet })

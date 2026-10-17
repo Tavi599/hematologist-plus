@@ -429,6 +429,13 @@
         "capped": "capped at 2.0 m²",
         "entered": "typed in by the physician"
       },
+      "confirm": {
+        "title": "Revert all to the protocol?",
+        "intro": "Everything you set by hand will be undone ({{n}}):",
+        "kept": "The patient, the course dates, the header and the hand-written lines stay as they are.",
+        "cancel": "Cancel",
+        "revert": "Revert to the protocol"
+      },
       "line": {
         "disabled": "drug switched off",
         "manualDose": "dose by hand {{amount}} {{unit}}",
@@ -440,7 +447,7 @@
         "duration": "infusion over {{minutes}} min",
         "bag": "solvent volume {{ml}} mL",
         "planDays": "days set by the physician: {{days}}",
-        "planHours": "hours set by the physician ({{hours}})",
+        "planHours": "hours set by the physician: {{hours}}",
         "planPerDay": "{{perDay}} times a day",
         "sheet": "moved to: {{sheet}}",
         "renalBandOff": "correction for creatinine clearance switched off",
