@@ -134,9 +134,4 @@ export function parseCourseCard(text: string): CourseCard | null {
   }
 }
 
-/** «hematologist-plus-course-2026-10-16.json» — the file the course card is saved as. */
-export function courseCardFileName(startDate: string): string {
-  return `hematologist-plus-course-${startDate}.json`
-}
-
 export const COURSE_CARD_MEDIA_TYPE = 'application/json'

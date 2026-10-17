@@ -1,6 +1,9 @@
 import { Button, Card, FileButton, Group, Stack, Switch, Text, Title } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
 
+import type { SaveOutcome } from '../../lib/save-folder'
+import { SaveOutcomeNote } from './SaveFolder'
+
 /**
  * The course kept on this device, and the file it is carried in. The draft itself needs no
  * button: it is written as the physician works and restored on the next visit. What is here is
@@ -13,6 +16,7 @@ export function CourseDraft({
   onSave,
   onOpen,
   note,
+  saved,
 }: {
   personal: boolean
   onPersonal: (allowed: boolean) => void
@@ -20,6 +24,8 @@ export function CourseDraft({
   onOpen: (file: File) => void
   /** What the last card did: opened, or not a card at all. */
   note: 'opened' | 'invalid' | null
+  /** Where the last card was saved. */
+  saved: SaveOutcome | null
 }) {
   const { t } = useTranslation()
 
@@ -50,6 +56,7 @@ export function CourseDraft({
             )}
           </FileButton>
         </Group>
+        <SaveOutcomeNote outcome={saved} />
         {note !== null && (
           <Text size="xs" c={note === 'opened' ? 'green.8' : 'red.8'}>
             {t(note === 'opened' ? 'calculator.draft.opened' : 'calculator.draft.invalid')}

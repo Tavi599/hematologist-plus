@@ -5,7 +5,6 @@ import { COURSE_CARD_VERSION } from '../schemas/course-draft'
 import {
   clearDraft,
   courseCard,
-  courseCardFileName,
   DRAFT_MAX_AGE_DAYS,
   loadDraft,
   parseCourseCard,
@@ -121,10 +120,6 @@ describe('course draft', () => {
     expect(stripped.patientForm.fullName).toBe('')
     expect(stripped.patientForm.ageYears).toBe(66)
     expect(stripped.manualRows).toHaveLength(1)
-  })
-
-  it('names the file by the start of the course', () => {
-    expect(courseCardFileName('2026-10-20')).toBe('hematologist-plus-course-2026-10-20.json')
   })
 
   it('lets the course go when it is cleared', () => {

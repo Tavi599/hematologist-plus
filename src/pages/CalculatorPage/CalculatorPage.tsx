@@ -12,13 +12,13 @@ import {
 import { AddDrugForm } from '../../features/calculator/AddDrugForm'
 import { CourseExport } from '../../features/calculator/CourseExport'
 import { CourseDraft } from '../../features/calculator/CourseDraft'
+import { SaveFolderCard } from '../../features/calculator/SaveFolder'
 import { CourseSettings, type CourseSettingsValue } from '../../features/calculator/CourseSettings'
 import { DeviationSummary } from '../../features/calculator/DeviationSummary'
 import { collectDeviations, revertAll, revertDeviation } from '../../features/calculator/deviations'
 import { PrintCheck } from '../../features/calculator/PrintCheck'
 import {
   courseCard,
-  courseCardFileName,
   COURSE_CARD_MEDIA_TYPE,
   loadDraft,
   parseCourseCard,
@@ -27,7 +27,9 @@ import {
   setPersonalInDraft,
 } from '../../lib/course-draft'
 import { initialCourseState, useCourseState } from '../../features/calculator/course-state'
-import { saveFile } from '../../lib/save-file'
+import { courseFileTarget } from '../../lib/course-file-name'
+import type { SaveOutcome } from '../../lib/save-folder'
+import { useSaveFolder } from '../../lib/use-save-folder'
 import { DoseTable } from '../../features/calculator/DoseTable'
 import { HospitalHeader } from '../../features/calculator/HospitalHeader'
 import { MANUAL_ROWS_ANCHOR, ManualRows } from '../../features/calculator/ManualRows'
@@ -133,6 +135,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   const { state, setState, set } = useCourseState(restored ? draft.state : initialCourseState())
   const [personal, setPersonal] = useState(() => personalInDraft())
   const [cardNote, setCardNote] = useState<'opened' | 'invalid' | null>(null)
+  const [cardSaved, setCardSaved] = useState<SaveOutcome | null>(null)
+  const folder = useSaveFolder()
   // Bumped when a course card is opened: the patient form is filled from its defaults, so only a
   // remount brings the values of the card into its fields.
   const [formKey, setFormKey] = useState(0)
@@ -463,11 +467,13 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   /** The course as a file: saved by hand, so it holds the patient as the physician typed them. */
   const saveCard = () => {
     const text = JSON.stringify(courseCard(regimenId, state), null, 2)
-    saveFile(
-      courseCardFileName(courseSettings.startDate),
-      new TextEncoder().encode(text),
-      COURSE_CARD_MEDIA_TYPE,
+    // Beside the sheet: the patient's subfolder of this device's folder, the same name.
+    const target = courseFileTarget(state.patientForm.fullName, new Date(), (date) =>
+      t('calculator.saveFolder.fileNameFallback', { date }),
     )
+    void folder
+      .save(target, 'json', new TextEncoder().encode(text), COURSE_CARD_MEDIA_TYPE)
+      .then(setCardSaved)
   }
 
   /** A course card opened from a file replaces the course on screen, regimen and all. */
@@ -724,7 +730,9 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
             onSave={saveCard}
             onOpen={openCard}
             note={cardNote}
+            saved={cardSaved}
           />
+          <SaveFolderCard />
           {ownItems.length > 0 && (
             <StandardSupport
               items={ownItems}
