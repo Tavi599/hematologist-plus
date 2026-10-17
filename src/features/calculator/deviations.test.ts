@@ -1,10 +1,12 @@
 import { describe, expect, it } from 'vitest'
 
+import i18n from '../../lib/i18n'
 import { indexCatalog } from '../../lib/catalog-index'
 import { demoCatalog } from '../../lib/catalog.fixture'
 import { buildCourseItems } from '../../lib/course-input'
+import type { Translate } from './course-sheets'
 import { initialCourseState, type CourseState } from './course-state'
-import { collectDeviations, revertAll, revertDeviation } from './deviations'
+import { collectDeviations, deviationLine, revertAll, revertDeviation } from './deviations'
 
 const items = buildCourseItems(indexCatalog(demoCatalog()), 'r-chop-21')
 const RITUXIMAB = 'r-chop-21.rituximab'
@@ -12,6 +14,10 @@ const RITUXIMAB = 'r-chop-21.rituximab'
 function state(patch: Partial<CourseState> = {}): CourseState {
   return { ...initialCourseState(), ...patch }
 }
+
+/** The Ukrainian strings themselves, so a line is read the way the physician reads it. */
+const translate: Translate = (key, values) =>
+  (i18n.t as (key: string, values?: Record<string, unknown>) => string)(key, values)
 
 function kinds(course: CourseState) {
   return collectDeviations(items, course, 'uk').map((deviation) => deviation.kind)
@@ -42,6 +48,20 @@ describe('collectDeviations', () => {
     expect(deviations.every((deviation) => (deviation.drug ?? '') !== '')).toBe(true)
     const manual = deviations.find((deviation) => deviation.kind === 'manualDose')
     expect(manual?.values).toMatchObject({ amount: 600, unit: 'mg' })
+  })
+
+  it('writes the hours of a row out as the sheet heads them, not as a count', () => {
+    const deviations = collectDeviations(
+      items,
+      state({ plans: { [RITUXIMAB]: { hours: [15, 9] } } }),
+      'uk',
+    )
+
+    expect(deviations).toHaveLength(1)
+    expect(deviations[0]!.values).toEqual({ hours: '09:00, 15:00' })
+    expect(deviationLine(deviations[0]!, translate, 'uk')).toBe(
+      'ДЕМО Ритуксимаб: години введення задано лікарем: 09:00, 15:00',
+    )
   })
 
   it('leaves a reduction nobody has typed a number into out of the list', () => {
