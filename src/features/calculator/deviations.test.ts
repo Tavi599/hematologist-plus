@@ -92,19 +92,19 @@ describe('collectDeviations', () => {
     expect(kinds(state({ infusionStart: { rituximab: 3 } }))).toEqual(['infusionStart'])
   })
 
-  it('takes the BSA source and the clearance weight as deviations of the whole course', () => {
-    const deviations = collectDeviations(
-      items,
-      state({
-        courseSettings: { ...initialCourseState().courseSettings, bsaVariant: 'capped' },
-        clearanceWeight: 'adjusted',
-      }),
-      'uk',
-    )
-
-    expect(deviations.map((deviation) => deviation.kind)).toEqual(['bsaSource', 'clearanceWeight'])
-    expect(deviations.every((deviation) => deviation.itemId === null)).toBe(true)
-    expect(deviations.every((deviation) => deviation.changesDose)).toBe(true)
+  it('does not count the BSA or the clearance weight: they are the patient, not the protocol', () => {
+    expect(
+      kinds(
+        state({
+          courseSettings: {
+            ...initialCourseState().courseSettings,
+            bsaVariant: 'entered',
+            bsaM2: 1.9,
+          },
+          clearanceWeight: 'adjusted',
+        }),
+      ),
+    ).toEqual([])
   })
 })
 
@@ -142,7 +142,7 @@ describe('revertDeviation', () => {
     expect(revertDeviation(current, hours).plans).toEqual({})
   })
 
-  it('keeps the patient and the dates when the whole course goes back to the protocol', () => {
+  it('keeps the patient, the BSA and the dates when the whole course goes back to the protocol', () => {
     const current = state({
       patientForm: { ...initialCourseState().patientForm, weightKg: '70' },
       doseOverrideAmount: { [RITUXIMAB]: 600 },
@@ -158,7 +158,8 @@ describe('revertDeviation', () => {
     expect(collectDeviations(items, next, 'uk')).toEqual([])
     expect(next.patientForm.weightKg).toBe('70')
     expect(next.courseSettings.startDate).toBe(current.courseSettings.startDate)
-    expect(next.courseSettings.bsaVariant).toBe('actual')
-    expect(next.courseSettings.bsaM2).toBeNull()
+    expect(next.courseSettings.bsaVariant).toBe('entered')
+    expect(next.courseSettings.bsaM2).toBe(1.9)
+    expect(next.clearanceWeight).toBe('adjusted')
   })
 })

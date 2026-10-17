@@ -425,10 +425,6 @@
         "mid": "middle",
         "high": "upper end"
       },
-      "bsa": {
-        "capped": "capped at 2.0 m²",
-        "entered": "typed in by the physician"
-      },
       "confirm": {
         "title": "Revert all to the protocol?",
         "intro": "Everything you set by hand will be undone ({{n}}):",
@@ -456,9 +452,7 @@
         "variant": "a separate copy of the row added",
         "custom": "drug added by the physician",
         "mesna": "mesna added",
-        "infusionStart": "the course opens with infusion {{start}}",
-        "bsaSource": "BSA: {{source}}",
-        "clearanceWeight": "creatinine clearance on the ideal body weight"
+        "infusionStart": "the course opens with infusion {{start}}"
       }
     },
     "printCheck": {

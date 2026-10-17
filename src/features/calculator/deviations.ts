@@ -34,8 +34,6 @@ export type DeviationKind =
   | 'custom'
   | 'mesna'
   | 'infusionStart'
-  | 'bsaSource'
-  | 'clearanceWeight'
 
 /** Values of the line this deviation is written as; raw, so the UI translates and formats them. */
 export type DeviationValues = Record<string, string | number>
@@ -170,11 +168,6 @@ export function collectDeviations(
     add('infusionStart', drugId, localize(entry.drug.name, language), { start })
   }
 
-  if (state.courseSettings.bsaVariant !== 'actual') {
-    add('bsaSource', null, null, { source: state.courseSettings.bsaVariant }, true)
-  }
-  if (state.clearanceWeight !== 'actual') add('clearanceWeight', null, null, {}, true)
-
   return list
 }
 
@@ -205,19 +198,7 @@ function withoutPlanPart(
 /** The course with this one deviation taken back; everything else the physician set stays. */
 export function revertDeviation(state: CourseState, deviation: Deviation): CourseState {
   const id = deviation.itemId
-  if (id === null) {
-    switch (deviation.kind) {
-      case 'bsaSource':
-        return {
-          ...state,
-          courseSettings: { ...state.courseSettings, bsaVariant: 'actual', bsaM2: null },
-        }
-      case 'clearanceWeight':
-        return { ...state, clearanceWeight: 'actual' }
-      default:
-        return state
-    }
-  }
+  if (id === null) return state
   switch (deviation.kind) {
     case 'disabled':
       return { ...state, disabledIds: without(state.disabledIds, id) }
@@ -296,9 +277,6 @@ function lineValues(deviation: Deviation, t: Translate, language: Language): Dev
   }
   if (typeof values.level === 'string') {
     values.level = t(`calculator.deviations.level.${values.level}`)
-  }
-  if (typeof values.source === 'string' && deviation.kind === 'bsaSource') {
-    values.source = t(`calculator.deviations.bsa.${values.source}`)
   }
   if (typeof values.amount === 'number') values.amount = formatNumber(values.amount, language, 2)
   return values
