@@ -406,12 +406,13 @@ function wardSheets(input: CourseSheetsInput): XlsxSheet[] {
 
 /**
  * What goes on the inpatient sheet: the drugs with no clock time — or, in the ward layout, every
- * drug the course gives, a switched-off one included only if the calculation still has it.
+ * drug the course gives. Either way only a drug the calculation still has: a row the physician
+ * switched off is not in the course, so it is not on the sheet as an empty line either.
  */
 function wardItemsOf(input: CourseSheetsInput): CourseItem[] {
-  if (input.layout !== 'ward') return input.items.filter((item) => item.item.block === 'ward')
   const calculated = new Set((input.course?.drugs ?? []).map((drug) => drug.id))
-  return input.items.filter((item) => calculated.has(item.item.id))
+  const given = input.items.filter((item) => calculated.has(item.item.id))
+  return input.layout === 'ward' ? given : given.filter((item) => item.item.block === 'ward')
 }
 
 /**
