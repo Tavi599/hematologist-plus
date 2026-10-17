@@ -2,10 +2,19 @@ import type { Language } from './i18n'
 
 const LOCALES: Record<Language, string> = { uk: 'uk-UA', en: 'en-GB' }
 
-/** Number for display: grouped thousands, at most `decimals` decimals, no trailing zeros. */
-export function formatNumber(value: number, language: Language, decimals = 0): string {
+/**
+ * Number for display: grouped thousands, at most `decimals` decimals, no trailing zeros — unless
+ * `minDecimals` asks for them, as a list of BSA values does to read 1,6 … 2,0 rather than 1,6 … 2.
+ */
+export function formatNumber(
+  value: number,
+  language: Language,
+  decimals = 0,
+  minDecimals = 0,
+): string {
   return new Intl.NumberFormat(LOCALES[language], {
     maximumFractionDigits: decimals,
+    minimumFractionDigits: minDecimals,
   }).format(value)
 }
 

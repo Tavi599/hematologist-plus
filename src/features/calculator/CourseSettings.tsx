@@ -19,6 +19,7 @@ import { regimenAvailability } from '../../lib/availability'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { useOnlyObtainable } from '../../lib/only-obtainable'
 import { filterRegimens, type RegimenFilter } from '../../lib/regimen-filter'
+import { formatNumber } from '../../lib/format'
 import { currentLanguage } from '../../lib/i18n'
 import { decimalInput } from '../../lib/decimal-input'
 import { localize } from '../../lib/localized'
@@ -40,6 +41,15 @@ export interface CourseSettingsValue {
  * BSA of the previous cycle.
  */
 export type BsaSource = BsaVariant | 'entered'
+
+/**
+ * The BSA values an adult course is most often written on: picked straight from the list, so the
+ * usual case — keeping the BSA of the previous cycle — takes one click instead of a typed number.
+ */
+const PRESET_BSA_M2 = [1.6, 1.7, 1.8, 1.9, 2]
+
+/** How a ready value is told apart from the three sources in the same list. */
+const presetOption = (m2: number) => `entered:${m2}`
 
 /** Regimen choice and the settings that apply to the whole course. */
 export function CourseSettings({
@@ -157,12 +167,39 @@ export function CourseSettings({
             label={t('calculator.course.bsaVariant')}
             allowDeselect={false}
             data={[
-              { value: 'actual', label: t('calculator.course.bsaActual') },
-              { value: 'capped', label: t('calculator.course.bsaCapped') },
-              { value: 'entered', label: t('calculator.course.bsaEntered') },
+              {
+                group: t('calculator.course.bsaSource'),
+                items: [
+                  { value: 'actual', label: t('calculator.course.bsaActual') },
+                  { value: 'capped', label: t('calculator.course.bsaCapped') },
+                  { value: 'entered', label: t('calculator.course.bsaEntered') },
+                ],
+              },
+              {
+                group: t('calculator.course.bsaPresets'),
+                items: PRESET_BSA_M2.map((m2) => ({
+                  value: presetOption(m2),
+                  label: `${formatNumber(m2, language, 1, 1)} ${t('units.m2')}`,
+                })),
+              },
             ]}
-            value={value.bsaVariant}
-            onChange={(variant) => patch({ bsaVariant: (variant as BsaSource | null) ?? 'actual' })}
+            // A ready value is the entered BSA; typing another number over it leaves the list on
+            // «введена вручну», which is what it then is.
+            value={
+              value.bsaVariant === 'entered' &&
+              value.bsaM2 !== null &&
+              PRESET_BSA_M2.includes(value.bsaM2)
+                ? presetOption(value.bsaM2)
+                : value.bsaVariant
+            }
+            onChange={(next) => {
+              if (next === null) return
+              const preset = next.startsWith('entered:')
+                ? Number(next.slice('entered:'.length))
+                : null
+              if (preset !== null) patch({ bsaVariant: 'entered', bsaM2: preset })
+              else patch({ bsaVariant: next as BsaSource })
+            }}
           />
           {value.bsaVariant === 'entered' && (
             <NumberInput
