@@ -1,4 +1,17 @@
-import { Anchor, Badge, Card, Group, List, Stack, Table, Text, Title } from '@mantine/core'
+import {
+  Anchor,
+  Badge,
+  Card,
+  Collapse,
+  Group,
+  List,
+  Stack,
+  Table,
+  Text,
+  Title,
+  UnstyledButton,
+} from '@mantine/core'
+import { useState, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 
@@ -16,6 +29,37 @@ import {
   STAGES,
 } from './algorithm'
 import { COMPLICATION_STAGES } from './complications'
+
+/**
+ * A card folded to its title: the page is long, and a physician looking for one step opens one
+ * card instead of scrolling past every other.
+ */
+function FoldCard({ title, children }: { title: string; children: ReactNode }) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <Card withBorder component="section">
+      <UnstyledButton
+        onClick={() => setOpen((shown) => !shown)}
+        aria-expanded={open}
+        w="100%"
+        style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}
+      >
+        <Title order={3} size="h4">
+          {title}
+        </Title>
+        <Text c="dimmed" aria-hidden>
+          {open ? '▴' : '▾'}
+        </Text>
+      </UnstyledButton>
+      <Collapse expanded={open}>
+        <Stack gap={6} pt={6}>
+          {children}
+        </Stack>
+      </Collapse>
+    </Card>
+  )
+}
 
 /**
  * Febrile neutropenia as an algorithm: risk, the first line by risk and colonisation, what is done
@@ -46,123 +90,106 @@ export function FebrileNeutropeniaSection() {
       <AbbreviationList keys={FEBRILE_NEUTROPENIA_ABBREVIATIONS} />
 
       {[...STAGES, ...COMPLICATION_STAGES].map((stage) => (
-        <Card key={stage.id} withBorder component="section">
-          <Stack gap={6}>
-            <Title order={3} size="h4">
-              {stage.title[language]}
-            </Title>
-            <List size="sm" spacing={4}>
-              {stage.steps.map((step) => (
-                <List.Item key={step.text.en}>
-                  {step.text[language]}{' '}
-                  {step.grade && (
-                    <Badge size="xs" variant="light" color="gray" tt="none">
-                      {step.grade}
-                    </Badge>
-                  )}
-                </List.Item>
+        <FoldCard key={stage.id} title={stage.title[language]}>
+          <List size="sm" spacing={4}>
+            {stage.steps.map((step) => (
+              <List.Item key={step.text.en}>
+                {step.text[language]}{' '}
+                {step.grade && (
+                  <Badge size="xs" variant="light" color="gray" tt="none">
+                    {step.grade}
+                  </Badge>
+                )}
+              </List.Item>
+            ))}
+          </List>
+          {stage.sources && (
+            <Text size="xs" c="dimmed">
+              {t('febrileNeutropenia.stageSources')}{' '}
+              {stage.sources.map((source, index) => (
+                <span key={source.url}>
+                  {index > 0 && '; '}
+                  <Anchor href={source.url} target="_blank" rel="noreferrer" size="xs">
+                    {source.name}
+                  </Anchor>
+                </span>
               ))}
-            </List>
-            {stage.sources && (
-              <Text size="xs" c="dimmed">
-                {t('febrileNeutropenia.stageSources')}{' '}
-                {stage.sources.map((source, index) => (
-                  <span key={source.url}>
-                    {index > 0 && '; '}
-                    <Anchor href={source.url} target="_blank" rel="noreferrer" size="xs">
-                      {source.name}
-                    </Anchor>
-                  </span>
-                ))}
-              </Text>
-            )}
-          </Stack>
-        </Card>
+            </Text>
+          )}
+        </FoldCard>
       ))}
 
-      <Card withBorder component="section">
-        <Stack gap={6}>
-          <Title order={3} size="h4">
-            {t('febrileNeutropenia.agents')}
-          </Title>
-          <Text size="xs" c="dimmed">
-            {t('febrileNeutropenia.agentsHint')}
-          </Text>
-          <Table.ScrollContainer minWidth={520}>
-            <Table striped withTableBorder verticalSpacing={6}>
-              <Table.Tbody>
-                {AGENTS.flatMap(({ group, agents }) => [
-                  <Table.Tr key={group.en}>
-                    <Table.Td colSpan={2}>
-                      <Text fw={700} size="sm">
-                        {group[language]}
-                      </Text>
+      <FoldCard title={t('febrileNeutropenia.agents')}>
+        <Text size="xs" c="dimmed">
+          {t('febrileNeutropenia.agentsHint')}
+        </Text>
+        <Table.ScrollContainer minWidth={520}>
+          <Table striped withTableBorder verticalSpacing={6}>
+            <Table.Tbody>
+              {AGENTS.flatMap(({ group, agents }) => [
+                <Table.Tr key={group.en}>
+                  <Table.Td colSpan={2}>
+                    <Text fw={700} size="sm">
+                      {group[language]}
+                    </Text>
+                  </Table.Td>
+                </Table.Tr>,
+                ...agents.map((agent) => (
+                  <Table.Tr key={agent.name.en}>
+                    <Table.Td>
+                      <Text size="sm">{agent.name[language]}</Text>
                     </Table.Td>
-                  </Table.Tr>,
-                  ...agents.map((agent) => (
-                    <Table.Tr key={agent.name.en}>
-                      <Table.Td>
-                        <Text size="sm">{agent.name[language]}</Text>
-                      </Table.Td>
-                      <Table.Td>
-                        {agent.dose ? (
-                          <Group gap={4} wrap="wrap">
-                            <Text size="sm">{agent.dose[language]}</Text>
-                            {agent.source && (
-                              <Anchor
-                                href={agent.source.url}
-                                target="_blank"
-                                rel="noreferrer"
-                                size="xs"
-                                title={agent.source.name}
-                              >
-                                {t('febrileNeutropenia.label')}
-                              </Anchor>
-                            )}
-                            {agent.regimenId && (
-                              <Anchor
-                                component={Link}
-                                to={`${routes.calculator}?regimen=${agent.regimenId}`}
-                                size="xs"
-                                fw={600}
-                              >
-                                {t('febrileNeutropenia.calculate')} →
-                              </Anchor>
-                            )}
-                          </Group>
-                        ) : (
-                          <Text size="xs" c="dimmed">
-                            {t('febrileNeutropenia.noDose')}
-                          </Text>
-                        )}
-                      </Table.Td>
-                    </Table.Tr>
-                  )),
-                ])}
-              </Table.Tbody>
-            </Table>
-          </Table.ScrollContainer>
-          <Text size="xs" c="dimmed">
-            {t('febrileNeutropenia.renal')}
-          </Text>
-        </Stack>
-      </Card>
+                    <Table.Td>
+                      {agent.dose ? (
+                        <Group gap={4} wrap="wrap">
+                          <Text size="sm">{agent.dose[language]}</Text>
+                          {agent.source && (
+                            <Anchor
+                              href={agent.source.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              size="xs"
+                              title={agent.source.name}
+                            >
+                              {t('febrileNeutropenia.label')}
+                            </Anchor>
+                          )}
+                          {agent.regimenId && (
+                            <Anchor
+                              component={Link}
+                              to={`${routes.calculator}?regimen=${agent.regimenId}`}
+                              size="xs"
+                              fw={600}
+                            >
+                              {t('febrileNeutropenia.calculate')} →
+                            </Anchor>
+                          )}
+                        </Group>
+                      ) : (
+                        <Text size="xs" c="dimmed">
+                          {t('febrileNeutropenia.noDose')}
+                        </Text>
+                      )}
+                    </Table.Td>
+                  </Table.Tr>
+                )),
+              ])}
+            </Table.Tbody>
+          </Table>
+        </Table.ScrollContainer>
+        <Text size="xs" c="dimmed">
+          {t('febrileNeutropenia.renal')}
+        </Text>
+      </FoldCard>
 
-      <Card withBorder component="section">
-        <Stack gap={6}>
-          <Title order={3} size="h4">
-            {t('febrileNeutropenia.courses')}
-          </Title>
-          <Text size="xs" c="dimmed">
-            {t('febrileNeutropenia.coursesHint')}
-          </Text>
-          <CatalogGate>
-            {(catalog) => (
-              <TreatmentTree catalog={catalog} diseaseId={FEBRILE_NEUTROPENIA_DISEASE} />
-            )}
-          </CatalogGate>
-        </Stack>
-      </Card>
+      <FoldCard title={t('febrileNeutropenia.courses')}>
+        <Text size="xs" c="dimmed">
+          {t('febrileNeutropenia.coursesHint')}
+        </Text>
+        <CatalogGate>
+          {(catalog) => <TreatmentTree catalog={catalog} diseaseId={FEBRILE_NEUTROPENIA_DISEASE} />}
+        </CatalogGate>
+      </FoldCard>
 
       <Stack gap={2}>
         <Text size="xs" c="dimmed">
