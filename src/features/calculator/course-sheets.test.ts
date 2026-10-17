@@ -332,6 +332,23 @@ describe('buildCourseSheets', () => {
     ])
   })
 
+  it('leaves a switched-off drug off every sheet, not as an empty line', () => {
+    const items = buildCourseItems(indexCatalog(demoCatalog()), 'r-chop-21')
+    const off = items.find((item) => item.item.block === 'ward')!
+    for (const layout of ['infusion', 'ward'] as const) {
+      const course = calculateCourse(
+        { ageYears: 60, sex: 'male', heightCm: 180, weightKg: 80 },
+        items.map((item) => item.courseDrug),
+        { startDateIso: '2026-09-21', dayStart: '09:00', disabledIds: [off.item.id] },
+      )
+      const built = sheets({ items, course, layout })
+      expect(built.length).toBeGreaterThan(0)
+      for (const sheet of built) {
+        expect(bandStartingWith(sheet, 'ДЕМО Преднізолон')).toBeUndefined()
+      }
+    }
+  })
+
   it('writes «-» on the days a drug is skipped inside its course, as VRD does', () => {
     // Dexamethasone on days 1-2, 4-5, 8-9 and 11-12: «+ + - + + - - + + - + + -».
     const items = buildCourseItems(indexCatalog(demoCatalog()), 'r-chop-21').map((item) =>
