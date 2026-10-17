@@ -106,6 +106,25 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
     expect(within(rituximab).getByText('за BSA 2,0: 750 мг')).toBeInTheDocument()
   })
 
+  it('takes a ready BSA value straight from the list', async () => {
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
+    await fillPatient()
+
+    const rituximab = within(screen.getByRole('table', { name: 'Дози' }))
+      .getByText('ДЕМО Ритуксимаб')
+      .closest('tr')!
+    // 180 cm and 80 kg give a BSA of 2.0 m²: 375 mg/m² × 2.0 = 750 mg.
+    expect(within(rituximab).getByText('750 мг')).toBeInTheDocument()
+
+    await act(async () => fireEvent.click(screen.getByRole('combobox', { name: 'Дози за BSA' })))
+    await act(async () => fireEvent.click(await screen.findByText('1,8 м²')))
+
+    // The ready value replaces the calculated one: 375 × 1.8 = 675 mg.
+    expect(within(rituximab).getByText('675 мг')).toBeInTheDocument()
+    expect(screen.getByLabelText('BSA, м²')).toHaveValue('1,8')
+  })
+
   /** Opens the row's own controls and gives back the panel they sit in, under the row. */
   const openSettings = async (row: HTMLElement) => {
     await act(async () => {
