@@ -14,6 +14,7 @@ import { useEffect, useRef } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 
+import { useFieldProblem } from './field-problem'
 import { decimalInput } from '../../lib/decimal-input'
 import {
   ageFromBirthDate,
@@ -42,7 +43,8 @@ export function PatientForm({
     mode: 'onChange',
     resolver: zodResolver(patientFormSchema),
   })
-  const { control, formState, getValues, register, setValue, watch } = form
+  const { control, formState, getValues, register, setValue, trigger, watch } = form
+  const problem = useFieldProblem()
 
   const onChangeRef = useRef(onChange)
   onChangeRef.current = onChange
@@ -53,6 +55,9 @@ export function PatientForm({
     // An untouched form is already a valid one: every measurement is optional, so the parent
     // hears about it straight away and can calculate from a BSA entered on the course card.
     report(getValues())
+    // A course restored from a draft may hold a value the form refuses: its field is marked at
+    // once, not only after the physician touches it.
+    void trigger()
     // The subscription is how react-hook-form reports every change; this component is
     // intentionally not memoized by the React Compiler.
     // oxlint-disable-next-line react/incompatible-library
@@ -64,10 +69,10 @@ export function PatientForm({
       report(values as PatientFormValues)
     })
     return () => subscription.unsubscribe()
-  }, [getValues, watch, setValue])
+  }, [getValues, watch, setValue, trigger])
 
   const invalid = (field: keyof PatientFormValues) =>
-    formState.errors[field] ? t('calculator.patient.invalid') : null
+    formState.errors[field] ? problem(field) : null
 
   return (
     <Card withBorder component="section">

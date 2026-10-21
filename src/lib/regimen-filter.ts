@@ -1,4 +1,4 @@
-import type { Regimen } from '../schemas/catalog'
+import type { Drug, Regimen } from '../schemas/catalog'
 import { regimenAvailability } from './availability'
 import type { CatalogIndex } from './catalog-index'
 
@@ -7,9 +7,27 @@ export interface RegimenFilter {
   diseaseId: string | null
   /** Hide the regimens that contain a drug the department cannot obtain. */
   onlyObtainable: boolean
+  /** Show only the regimens that contain every one of these drugs; empty shows every regimen. */
+  drugIds: readonly string[]
 }
 
-export const NO_REGIMEN_FILTER: RegimenFilter = { diseaseId: null, onlyObtainable: false }
+export const NO_REGIMEN_FILTER: RegimenFilter = {
+  diseaseId: null,
+  onlyObtainable: false,
+  drugIds: [],
+}
+
+/** The drugs the calculable regimens of the disease (or of all diseases) are built from. */
+export function drugsOfRegimens(catalog: CatalogIndex, regimens: readonly Regimen[]): Drug[] {
+  const found = new Map<string, Drug>()
+  for (const regimen of regimens) {
+    for (const item of catalog.itemsByRegimen.get(regimen.id) ?? []) {
+      const drug = catalog.drugs.get(item.drug_id)
+      if (drug) found.set(drug.id, drug)
+    }
+  }
+  return [...found.values()]
+}
 
 /** Diseases each regimen is listed under in the treatment trees. */
 export function diseasesByRegimen(catalog: CatalogIndex): Map<string, Set<string>> {
@@ -36,6 +54,10 @@ export function filterRegimens(catalog: CatalogIndex, filter: RegimenFilter): Re
       // A described course has nothing to calculate.
       if (regimen.reference !== null && regimen.reference !== undefined) return false
       if (diseases !== null && !diseases.get(regimen.id)?.has(filter.diseaseId!)) return false
+      if (filter.drugIds.length > 0) {
+        const named = new Set((catalog.itemsByRegimen.get(regimen.id) ?? []).map((i) => i.drug_id))
+        if (!filter.drugIds.every((drugId) => named.has(drugId))) return false
+      }
       return !filter.onlyObtainable || regimenAvailability(catalog, regimen.id) !== 'unavailable'
     })
     .sort((a, b) => a.sort_order - b.sort_order || a.short_name.localeCompare(b.short_name))

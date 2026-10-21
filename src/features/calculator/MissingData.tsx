@@ -9,7 +9,8 @@ import {
 } from '../../lib/course-requirements'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
-import type { PatientInput } from '../../schemas/patient'
+import type { PatientFormValues, PatientInput } from '../../schemas/patient'
+import { useFieldProblem } from './field-problem'
 
 function useNames(items: CourseItem[]) {
   const language = currentLanguage()
@@ -35,18 +36,25 @@ export function MissingDataAlert({
 }: {
   items: CourseItem[]
   missing: MissingRequirement[]
-  /** The form holds a value it cannot accept: that is said first. */
-  invalid: boolean
+  /** The fields of the form holding a value it cannot accept: they are named first. */
+  invalid: (keyof PatientFormValues)[]
 }) {
   const { t } = useTranslation()
+  const problem = useFieldProblem()
   const names = useNames(items)
   const fields = (list: PatientField[]) =>
     list.map((field) => t(`calculator.requirements.field.${field}`)).join(', ')
 
   return (
     <Alert color="orange" variant="light" title={t('calculator.requirements.title')}>
-      {invalid ? (
-        <Text size="sm">{t('calculator.requirements.invalid')}</Text>
+      {invalid.length > 0 ? (
+        <List size="sm" spacing={4}>
+          {invalid.map((field) => (
+            <List.Item key={field}>
+              <b>{t(`calculator.patient.${field}`)}</b>: {problem(field)}
+            </List.Item>
+          ))}
+        </List>
       ) : (
         <List size="sm" spacing={4}>
           {missing.map((entry) => (

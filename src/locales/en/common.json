@@ -45,6 +45,7 @@
       "bilirubinUmolL": "Bilirubin, µmol/L",
       "optional": "optional",
       "invalid": "Check this value",
+      "outOfRange": "Allowed from {{min}} to {{max}}",
       "required": "Fill in this field",
       "summary": "{{bsa}} · creatinine clearance {{crcl}}",
       "summaryNoCrcl": "{{bsa}} · creatinine clearance not calculated (no creatinine)",
@@ -65,6 +66,8 @@
       "diseaseAll": "all diseases",
       "onlyObtainable": "Only regimens of obtainable drugs",
       "regimenPlaceholder": "Select a regimen",
+      "drugFilter": "Filter by drugs",
+      "drugFilterHint": "Only regimens that contain every selected drug",
       "noRegimens": "There are no regimens in the catalog yet.",
       "cycleNumber": "Cycle no.",
       "cycleNumberHint": "the first antibody infusion is the slow one",
@@ -227,7 +230,7 @@
       "variantCapped": "BSA 2.0",
       "infusionUndiluted": "undiluted, {{total}} mL",
       "irradiatedTitle": "Transfusions: irradiated blood components only",
-      "irradiatedHint": "After the BSH 2020 guideline. The sheet will say so; tell the transfusion laboratory and mark the request.",
+      "irradiatedHint": "After the BSH 2020 guideline. Tell the transfusion laboratory and mark the request.",
       "rampOpens": "The course opens with infusion:",
       "rampStart": {
         "first": "first",
@@ -419,9 +422,7 @@
       "layout": "Sheet layout",
       "layoutInfusion": "Infusion sheets + ward sheet",
       "layoutWard": "Ward sheet only (like VRD)",
-      "hintWard": "One prescription list (form No. 003-4/o) for the whole course: every drug a line, «+» on the days it is given and «-» on the days it is not. The file is built in the browser: no patient data is sent anywhere.",
-      "irradiated": "Say on the sheet: irradiated blood components only",
-      "irradiatedHint": "The regimen shows no reason. Tick it for one in the history: Hodgkin lymphoma, purine analogues, HSCT, CAR-T."
+      "hintWard": "One prescription list (form No. 003-4/o) for the whole course: every drug a line, «+» on the days it is given and «-» on the days it is not. The file is built in the browser: no patient data is sent anywhere."
     },
     "preview": {
       "show": "Preview the sheet",
@@ -477,7 +478,7 @@
       "clean": "Before printing: doses as the protocol writes them, premedication in place.",
       "premedication": "Drugs without their premedication:",
       "doses": "Deviations that change a dose:",
-      "irradiated": "The course calls for irradiated blood components — check the mark on the sheet.",
+      "irradiated": "The course calls for irradiated blood components — mark it on the transfusion request.",
       "others": "Other deviations from the protocol: {{n}}"
     },
     "error": {

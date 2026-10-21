@@ -2,11 +2,25 @@ import { describe, expect, it } from 'vitest'
 
 import { indexCatalog } from './catalog-index'
 import { demoCatalog } from './catalog.fixture'
-import { diseasesByRegimen, filterRegimens, NO_REGIMEN_FILTER } from './regimen-filter'
+import {
+  diseasesByRegimen,
+  drugsOfRegimens,
+  filterRegimens,
+  NO_REGIMEN_FILTER,
+} from './regimen-filter'
 
 const catalog = () => indexCatalog(demoCatalog())
 
 describe('filterRegimens', () => {
+  it('keeps only the regimens that carry every drug named', () => {
+    const index = catalog()
+    const drugs = drugsOfRegimens(index, filterRegimens(index, NO_REGIMEN_FILTER))
+    expect(drugs.length).toBeGreaterThan(1)
+    const some = { ...NO_REGIMEN_FILTER, drugIds: [drugs[0]!.id] }
+    expect(filterRegimens(index, some).map((r) => r.id)).toEqual(['r-chop-21'])
+    expect(filterRegimens(index, { ...NO_REGIMEN_FILTER, drugIds: ['no-such-drug'] })).toEqual([])
+  })
+
   it('offers every regimen without a filter', () => {
     expect(filterRegimens(catalog(), NO_REGIMEN_FILTER).map((r) => r.id)).toEqual(['r-chop-21'])
   })
@@ -26,7 +40,7 @@ describe('filterRegimens', () => {
     const index = indexCatalog(rows)
 
     expect(filterRegimens(index, NO_REGIMEN_FILTER)).toHaveLength(1)
-    expect(filterRegimens(index, { diseaseId: null, onlyObtainable: true })).toEqual([])
+    expect(filterRegimens(index, { ...NO_REGIMEN_FILTER, onlyObtainable: true })).toEqual([])
   })
 
   it('never offers a course that is only described', () => {
