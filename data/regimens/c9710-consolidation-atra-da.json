@@ -1,0 +1,70 @@
+{
+  "$comment": "Інтервал між циклами NCCN не вказує — 28 днів у плані умовні, наступний курс — за відновленням показників.",
+  "id": "c9710-consolidation-atra-da",
+  "short_name": "C9710 конс. ATRA+Dauno",
+  "name": {
+    "uk": "C9710: ATRA + даунорубіцин (2 цикли)",
+    "en": "C9710: ATRA + daunorubicin (2 cycles)"
+  },
+  "description": {
+    "uk": "ATRA 45 мг/м² 7 днів + даунорубіцин 50 мг/м² 3 дні, 2 цикли. Розглянути ІТ-профілактику (2 введення на курс).",
+    "en": "ATRA 45 mg/m2 for 7 days + daunorubicin 50 mg/m2 for 3 days, 2 cycles. Consider IT prophylaxis (2 doses per course)."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, APL-B 3 of 6 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "course": {
+    "id": "c9710",
+    "title": {
+      "uk": "ATRA + даунорубіцин + цитарабін (C9710)",
+      "en": "ATRA + daunorubicin + cytarabine (C9710)"
+    },
+    "phase": {
+      "uk": "консолідація ATRA + даунорубіцин",
+      "en": "ATRA + daunorubicin consolidation"
+    },
+    "order": 3,
+    "cycles": {
+      "from": 4,
+      "to": 5
+    }
+  },
+  "items": [
+    {
+      "key": "tretinoin",
+      "drug_id": "tretinoin",
+      "route": "oral",
+      "dose_value": 22.5,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "45 мг/м² на добу двома рівними дозами (22,5 мг/м² двічі). Дні 1–7.",
+        "en": "45 mg/m2 a day in two equal doses (22.5 mg/m2 twice). Days 1-7."
+      }
+    },
+    {
+      "key": "daunorubicin",
+      "drug_id": "daunorubicin",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "50 мг/м², дні 1, 2, 3 (NCCN APL-B 3 of 6). Перед кожним курсом з антрацикліном — оцінка серцевої функції.",
+        "en": "50 mg/m2 on days 1, 2, 3 (NCCN APL-B 3 of 6). Reassess cardiac function before each anthracycline course."
+      }
+    }
+  ]
+}

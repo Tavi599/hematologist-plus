@@ -1,0 +1,77 @@
+{
+  "id": "apml4-consolidation-2",
+  "short_name": "APML4 конс. 2",
+  "name": {
+    "uk": "APML4: консолідація 2",
+    "en": "APML4: consolidation 2"
+  },
+  "description": {
+    "uk": "Через 3–4 тижні після консолідації 1: ATRA д. 1–7, 15–21, 29–35; ATO 0,15 мг/кг 5 днів на тиждень 5 тижнів.",
+    "en": "3-4 weeks after consolidation 1: ATRA d1-7, 15-21, 29-35; ATO 0.15 mg/kg 5 days a week for 5 weeks."
+  },
+  "cycle_length_days": 35,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "eviQ: Acute promyelocytic leukaemia APML4 consolidation 2 (протокол 1937)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-promyelocytic-leukaemia/1937-apml4-consolidation-2",
+      "version": "перевірено 2026-10-22",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, APL-B 2 of 6 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "course": {
+    "id": "apml4",
+    "title": {
+      "uk": "APML4 (ATRA + ідарубіцин + миш’як)",
+      "en": "APML4 (ATRA + idarubicin + arsenic)"
+    },
+    "phase": {
+      "uk": "консолідація 2",
+      "en": "consolidation 2"
+    },
+    "order": 3,
+    "cycles": {
+      "from": 3,
+      "to": 3
+    }
+  },
+  "items": [
+    {
+      "key": "tretinoin",
+      "drug_id": "tretinoin",
+      "route": "oral",
+      "dose_value": 22.5,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7, 15, 16, 17, 18, 19, 20, 21, 29, 30, 31, 32, 33, 34, 35],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "45 мг/м² на добу двома рівними дозами (22,5 мг/м² двічі). Дні 1–7, 15–21, 29–35.",
+        "en": "45 mg/m2 a day in two equal doses (22.5 mg/m2 twice). Days 1-7, 15-21, 29-35."
+      }
+    },
+    {
+      "key": "arsenic-trioxide",
+      "drug_id": "arsenic-trioxide",
+      "route": "iv_infusion",
+      "dose_value": 0.15,
+      "dose_unit": "mg_kg",
+      "days": [
+        1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 29, 30, 31, 32, 33
+      ],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "0,15 мг/кг, дні 1–5, 8–12, 15–19, 22–26, 29–33.",
+        "en": "0.15 mg/kg on days 1-5, 8-12, 15-19, 22-26, 29-33."
+      }
+    }
+  ]
+}

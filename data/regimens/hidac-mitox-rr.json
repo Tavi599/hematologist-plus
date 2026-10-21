@@ -1,0 +1,71 @@
+{
+  "id": "hidac-mitox-rr",
+  "short_name": "ВДЦ → Mitox",
+  "name": {
+    "uk": "Цитарабін у високих дозах → мітоксантрон (Р/Р)",
+    "en": "High-dose cytarabine then mitoxantrone (R/R)"
+  },
+  "description": {
+    "uk": "Інтенсивна терапія Р/Р ГМЛ: цитарабін 1,5–3 г/м² кожні 12 год д. 1–6, потім мітоксантрон 10 мг/м² д. 7–9.",
+    "en": "Intensive R/R AML therapy: cytarabine 1.5-3 g/m2 every 12 h d1-6, then mitoxantrone 10 mg/m2 d7-9."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-9, AML-E 9 of 14 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 3000,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6],
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "administrations_per_day": 2,
+      "dose_options": [
+        {
+          "dose_value": 1500,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Інша доза з діапазону NCCN",
+            "en": "Another dose from the NCCN range"
+          },
+          "source": {
+            "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-E 9 of 14 (дози й дні як факти; текст не копіювався)",
+            "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+            "version": "5.2026 від 15.07.2026",
+            "checkedOn": "2026-10-22"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "3000 мг/м² кожні 12 год, дні 1, 2, 3, 4, 5, 6 (NCCN AML-E 9 of 14). Дози ≥2 г/м² — обережно у віці ≥60 років і при нирковій недостатності; огляд на мозочкову токсичність перед кожною дозою; стероїдні очні краплі до 24 год після останньої дози.",
+        "en": "3000 mg/m2 every 12 h on days 1, 2, 3, 4, 5, 6 (NCCN AML-E 9 of 14). Doses of 2 g/m2 or more need caution from age 60 and in renal failure; check for cerebellar toxicity before each dose; steroid eye drops until 24 h after the last dose."
+      }
+    },
+    {
+      "key": "mitoxantrone",
+      "drug_id": "mitoxantrone",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "days": [7, 8, 9],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "10 мг/м², дні 7–9 (NCCN AML-E 9 of 14).",
+        "en": "10 mg/m2 on days 7 to 9 (NCCN AML-E 9 of 14)."
+      }
+    }
+  ]
+}

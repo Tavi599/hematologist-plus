@@ -1,0 +1,88 @@
+{
+  "$comment": "ГО — лише в курсах 1–2; курси 3–4 — цитарабін без ГО (hd-ara-c).",
+  "id": "hidac-go-consolidation",
+  "short_name": "ВДЦ + ГО",
+  "name": {
+    "uk": "Цитарабін у високих дозах + гемтузумаб, консолідація",
+    "en": "High-dose cytarabine + gemtuzumab, consolidation"
+  },
+  "description": {
+    "uk": "CBF-ГМЛ, якщо ГО був в індукції: цитарабін 1,5–3 г/м² кожні 12 год у дні 1, 3, 5 + ГО 3 мг/м² (≤4,5 мг) д. 1 у перших 2 курсах; загалом 3–4 курси цитарабіну.",
+    "en": "CBF-AML when GO was given in induction: cytarabine 1.5-3 g/m2 every 12 h on days 1, 3, 5 + GO 3 mg/m2 (max 4.5 mg) d1 in the first 2 courses; 3-4 cytarabine courses in all."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-6, AML-E 6 of 14 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "notes": {
+        "uk": "За годину до гемтузумабу. Протокол додає хлорфенамін 10 мг і гідрокортизону натрію сукцинат 100 мг внутрішньовенно.",
+        "en": "An hour before the gemtuzumab. The protocol adds chlorphenamine 10 mg and hydrocortisone sodium succinate 100 mg intravenously."
+      }
+    },
+    {
+      "key": "gemtuzumab-ozogamicin",
+      "drug_id": "gemtuzumab-ozogamicin",
+      "route": "iv_infusion",
+      "dose_value": 3,
+      "dose_unit": "mg_m2",
+      "cap_amount": 4.5,
+      "days": [1],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "3 мг/м² (не більше одного флакона 4,5 мг); після ГО до алоТГСК витримують 60–90 днів через ризик СОС (NCCN).",
+        "en": "3 mg/m2 (at most one 4.5 mg vial); allow 60-90 days between GO and allo-HCT because of the SOS risk (NCCN)."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 3000,
+      "dose_unit": "mg_m2",
+      "days": [1, 3, 5],
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "administrations_per_day": 2,
+      "dose_options": [
+        {
+          "dose_value": 1500,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Інша доза з діапазону NCCN",
+            "en": "Another dose from the NCCN range"
+          },
+          "source": {
+            "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-E 6 of 14 (дози й дні як факти; текст не копіювався)",
+            "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+            "version": "5.2026 від 15.07.2026",
+            "checkedOn": "2026-10-22"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "3000 мг/м² кожні 12 год, дні 1, 3, 5 (NCCN AML-E 6 of 14). Дози ≥2 г/м² — обережно у віці ≥60 років і при нирковій недостатності; огляд на мозочкову токсичність перед кожною дозою; стероїдні очні краплі до 24 год після останньої дози.",
+        "en": "3000 mg/m2 every 12 h on days 1, 3, 5 (NCCN AML-E 6 of 14). Doses of 2 g/m2 or more need caution from age 60 and in renal failure; check for cerebellar toxicity before each dose; steroid eye drops until 24 h after the last dose."
+      }
+    }
+  ]
+}

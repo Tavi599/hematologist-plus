@@ -35,6 +35,374 @@
   ],
   "treatment": [
     {
+      "key": "nccn",
+      "kind": "treatment",
+      "title": {
+        "uk": "Шляхи NCCN 5.2026 (APL-1…APL-6)",
+        "en": "NCCN 5.2026 pathways (APL-1 to APL-6)"
+      },
+      "description": {
+        "uk": "Ризик: низький — лейкоцити ≤10×10⁹/л, високий — >10×10⁹/л; окремо — кардіологічні проблеми (низька ФВ чи подовжений QTcF). ATRA — за першої підозри. Не змішувати індукцію одного протоколу з консолідацією іншого. Терапія-залежна ГПЛ лікується так само; інгібітори FLT3 не показані. Профілактика синдрому диференціювання — преднізолон, при розвитку — дексаметазон.",
+        "en": "Risk: low — WBC 10×10⁹/L or less, high — above 10×10⁹/L; separately — cardiac issues (low EF or long QTcF). ATRA at first suspicion. Do not mix induction from one protocol with consolidation from another. Therapy-related APL is treated the same; FLT3 inhibitors are not indicated. Differentiation syndrome prophylaxis — prednisone; if it develops — dexamethasone."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-low",
+          "kind": "line",
+          "title": {
+            "uk": "Низький ризик (APL-2)",
+            "en": "Low risk (APL-2)"
+          },
+          "description": {
+            "uk": "Мозок на 28-й день, якщо показники відновились (тромбоцити >100, нейтрофіли >1×10⁹/л): без морфологічної хвороби — відмінити ATRA і ATO до відновлення крові, з хворобою — продовжити й повторити мозок через тиждень. Залишкові маркери після індукції значення не мають. Далі — «Після консолідації (APL-5)».",
+            "en": "Marrow on day 28 if counts have recovered (platelets above 100, neutrophils above 1×10⁹/L): no morphologic disease — stop ATRA and ATO to let counts recover; disease present — continue and repeat the marrow a week later. Residual markers after induction carry no meaning. Next: \"After consolidation (APL-5)\"."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-low-pref",
+              "kind": "group",
+              "title": {
+                "uk": "Бажано",
+                "en": "Preferred"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "atra-ato-induction",
+                  "notes": {
+                    "uk": "Щоденний миш’як; категорія 1",
+                    "en": "Daily arsenic; category 1"
+                  }
+                },
+                {
+                  "regimen_id": "atra-ato-consolidation-1-3"
+                },
+                {
+                  "regimen_id": "atra-ato-consolidation-4"
+                },
+                {
+                  "regimen_id": "apl17-induction",
+                  "notes": {
+                    "uk": "Переривчастий миш’як (AML17); категорія 1",
+                    "en": "Intermittent arsenic (AML17); category 1"
+                  }
+                },
+                {
+                  "regimen_id": "apl17-consolidation-1-3"
+                },
+                {
+                  "regimen_id": "apl17-consolidation-4"
+                }
+              ]
+            },
+            {
+              "key": "nccn-low-circ",
+              "kind": "group",
+              "title": {
+                "uk": "За певних обставин",
+                "en": "Useful in certain circumstances"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "aida-induction",
+                  "notes": {
+                    "uk": "Миш’як недоступний чи протипоказаний; категорія 1",
+                    "en": "Arsenic unavailable or contraindicated; category 1"
+                  }
+                },
+                {
+                  "regimen_id": "aida-consolidation-1"
+                },
+                {
+                  "regimen_id": "aida-consolidation-2"
+                },
+                {
+                  "regimen_id": "aida-consolidation-3"
+                },
+                {
+                  "regimen_id": "atra-go-induction",
+                  "notes": {
+                    "uk": "Миш’як недоступний чи протипоказаний",
+                    "en": "Arsenic unavailable or contraindicated"
+                  }
+                },
+                {
+                  "regimen_id": "atra-go-consolidation"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-high",
+          "kind": "line",
+          "title": {
+            "uk": "Високий ризик (APL-3)",
+            "en": "High risk (APL-3)"
+          },
+          "description": {
+            "uk": "Мозок на 28-й день перед консолідацією. Усім із високим ризиком — розглянути люмбальну пункцію перед консолідацією; профілактика ЦНС — ІТ-хіміотерапія (наприклад 2 введення на курс) або ранній ВДЦ. Схеми з ATRA і миш’яком — обов’язкові, якщо немає протипоказань. Додатковий ГО — якщо ПЛР позитивна понад 3 міс. консолідації.",
+            "en": "Marrow on day 28 before consolidation. For all high-risk patients consider a lumbar puncture before consolidation; CNS prophylaxis — IT chemotherapy (for example 2 doses per course) or early HiDAC. ATRA and arsenic regimens are a must unless contraindicated. Extra GO if PCR stays positive beyond 3 months of consolidation."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-high-pref",
+              "kind": "group",
+              "title": {
+                "uk": "Бажано",
+                "en": "Preferred"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "apml4-induction",
+                  "notes": {
+                    "uk": "ATRA + ідарубіцин + миш’як (APML4)",
+                    "en": "ATRA + idarubicin + arsenic (APML4)"
+                  }
+                },
+                {
+                  "regimen_id": "apml4-consolidation-1"
+                },
+                {
+                  "regimen_id": "apml4-consolidation-2"
+                },
+                {
+                  "regimen_id": "apml4-maintenance"
+                },
+                {
+                  "regimen_id": "atra-ato-go-induction",
+                  "notes": {
+                    "uk": "Щоденний миш’як + ГО",
+                    "en": "Daily arsenic + GO"
+                  }
+                },
+                {
+                  "regimen_id": "atra-ato-consolidation-1-3"
+                },
+                {
+                  "regimen_id": "atra-ato-consolidation-4"
+                },
+                {
+                  "regimen_id": "apl17-go-induction",
+                  "notes": {
+                    "uk": "Переривчастий миш’як + ГО; категорія 1",
+                    "en": "Intermittent arsenic + GO; category 1"
+                  }
+                },
+                {
+                  "regimen_id": "apl17-consolidation-1-3"
+                },
+                {
+                  "regimen_id": "apl17-consolidation-4"
+                }
+              ]
+            },
+            {
+              "key": "nccn-high-circ",
+              "kind": "group",
+              "title": {
+                "uk": "За певних обставин",
+                "en": "Useful in certain circumstances"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "c9710-induction",
+                  "notes": {
+                    "uk": "Даунорубіцин ×4 дні + цитарабін",
+                    "en": "Daunorubicin x4 days + cytarabine"
+                  }
+                },
+                {
+                  "regimen_id": "c9710-consolidation-ato"
+                },
+                {
+                  "regimen_id": "c9710-consolidation-atra-da"
+                },
+                {
+                  "regimen_id": "ref-apl-dauno-ara-c",
+                  "notes": {
+                    "uk": "Даунорубіцин ×3 дні + цитарабін — без розрахунку",
+                    "en": "Daunorubicin x3 days + cytarabine — not calculated"
+                  }
+                },
+                {
+                  "regimen_id": "aida-induction",
+                  "notes": {
+                    "uk": "ATRA + ідарубіцин (вік >70 р. — ідарубіцин у дні 2, 4, 6)",
+                    "en": "ATRA + idarubicin (over 70: idarubicin on days 2, 4, 6)"
+                  }
+                },
+                {
+                  "regimen_id": "lpa-hr-consolidation-1"
+                },
+                {
+                  "regimen_id": "lpa-hr-consolidation-2"
+                },
+                {
+                  "regimen_id": "lpa-hr-consolidation-3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-cardiac",
+          "kind": "line",
+          "title": {
+            "uk": "Високий ризик із кардіологічними проблемами (APL-4)",
+            "en": "High risk with cardiac issues (APL-4)"
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-cardiac-ef",
+              "kind": "group",
+              "title": {
+                "uk": "Низька фракція викиду",
+                "en": "Low ejection fraction"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "atra-ato-go-induction",
+                  "notes": {
+                    "uk": "Щоденний миш’як + ГО",
+                    "en": "Daily arsenic + GO"
+                  }
+                },
+                {
+                  "regimen_id": "atra-ato-consolidation-1-3"
+                },
+                {
+                  "regimen_id": "atra-ato-consolidation-4"
+                },
+                {
+                  "regimen_id": "apl17-go-induction",
+                  "notes": {
+                    "uk": "Переривчастий миш’як + ГО; категорія 1",
+                    "en": "Intermittent arsenic + GO; category 1"
+                  }
+                },
+                {
+                  "regimen_id": "apl17-consolidation-1-3"
+                },
+                {
+                  "regimen_id": "apl17-consolidation-4"
+                }
+              ]
+            },
+            {
+              "key": "nccn-cardiac-qtc",
+              "kind": "group",
+              "title": {
+                "uk": "Подовжений QTcF",
+                "en": "Prolonged QTcF"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "atra-go-induction",
+                  "notes": {
+                    "uk": "ГО в день 1 (зсуньте з дня 5)",
+                    "en": "GO on day 1 (shift from day 5)"
+                  }
+                },
+                {
+                  "regimen_id": "atra-go-consolidation"
+                },
+                {
+                  "regimen_id": "ref-apl-dauno-ara-c",
+                  "notes": {
+                    "uk": "ATRA + даунорубіцин ×3 дні + цитарабін — без розрахунку",
+                    "en": "ATRA + daunorubicin x3 days + cytarabine — not calculated"
+                  }
+                },
+                {
+                  "regimen_id": "aida-induction",
+                  "notes": {
+                    "uk": "ATRA + ідарубіцин (вік >70 р. — ідарубіцин у дні 2, 4, 6)",
+                    "en": "ATRA + idarubicin (over 70: idarubicin on days 2, 4, 6)"
+                  }
+                },
+                {
+                  "regimen_id": "lpa-hr-consolidation-1"
+                },
+                {
+                  "regimen_id": "lpa-hr-consolidation-2"
+                },
+                {
+                  "regimen_id": "lpa-hr-consolidation-3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-post",
+          "kind": "line",
+          "title": {
+            "uk": "Після консолідації й моніторинг (APL-5)",
+            "en": "After consolidation and monitoring (APL-5)"
+          },
+          "description": {
+            "uk": "Після консолідації — ПЛР крові на PML::RARA (молекулярна ремісія). Високий ризик чи тривалі перерви — ПЛР кожні 3 міс. 2 роки; низький ризик у молекулярній ремісії — моніторинг поза випробуванням можна не проводити. Позитивну ПЛР перевіряють повторним зразком через 2–4 тижні в тій самій лабораторії (чутливість зазвичай 10⁻⁴); підтверджена — перший рецидив. Підтримку дають, лише якщо її передбачає протокол (наприклад APML4).",
+            "en": "After consolidation — blood PCR for PML::RARA (molecular remission). High risk or long interruptions — PCR every 3 months for 2 years; low risk in molecular remission — monitoring outside a trial may be skipped. A positive PCR is checked with a repeat sample in 2-4 weeks in the same lab (sensitivity usually 10⁻⁴); confirmed — first relapse. Maintenance only if the protocol includes it (for example APML4)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "apml4-maintenance",
+              "notes": {
+                "uk": "Підтримка за протоколом APML4",
+                "en": "Maintenance per the APML4 protocol"
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-relapse",
+          "kind": "line",
+          "title": {
+            "uk": "Перший рецидив (APL-6)",
+            "en": "First relapse (APL-6)"
+          },
+          "description": {
+            "uk": "Спершу молекулярна панель (виключити терапія-залежну ГМЛ). Ранній рецидив (<6 міс.) після ATRA + ATO без антрацикліну — схема з антрацикліном (як при високому ризику) або ГО; без попереднього миш’яку чи ранній після ATRA + антрацикліну — ATO ± ATRA ± ГО; пізній (≥6 міс.) після схеми з миш’яком — ATO ± ATRA ± антрациклін чи ГО. Друга морфологічна ремісія: ПЛР-негативна (мозок) — аутоТГСК або консолідація ATO (усього 6 циклів) + ІТ-профілактика ЦНС; ПЛР-позитивна — алоТГСК чи випробування; без ремісії — випробування чи алоТГСК. Тест не раніше ніж через 2–3 тижні після ATO.",
+            "en": "First a molecular panel (rule out therapy-related AML). Early relapse (under 6 months) after ATRA + ATO without an anthracycline — an anthracycline regimen (as in high risk) or GO; no prior arsenic or early after ATRA + anthracycline — ATO with or without ATRA and GO; late (6 months or more) after an arsenic regimen — ATO with or without ATRA and an anthracycline or GO. Second morphologic remission: PCR negative (marrow) — auto-HCT or ATO consolidation (6 cycles in all) with IT CNS prophylaxis; PCR positive — allo-HCT or a trial; no remission — a trial or allo-HCT. Test no sooner than 2-3 weeks after ATO."
+          },
+          "regimens": [
+            {
+              "regimen_id": "atra-ato-induction",
+              "notes": {
+                "uk": "ATO + ATRA до відновлення показників і підтвердження ремісії",
+                "en": "ATO + ATRA until count recovery and confirmed remission"
+              }
+            },
+            {
+              "regimen_id": "atra-ato-go-induction",
+              "notes": {
+                "uk": "+ ГО",
+                "en": "+ GO"
+              }
+            },
+            {
+              "regimen_id": "methotrexate-intrathecal",
+              "notes": {
+                "uk": "ІТ-профілактика ЦНС",
+                "en": "IT CNS prophylaxis"
+              }
+            },
+            {
+              "regimen_id": "cytarabine-intrathecal",
+              "notes": {
+                "uk": "ІТ-профілактика ЦНС",
+                "en": "IT CNS prophylaxis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "induction",
       "kind": "line",
       "title": {
@@ -117,15 +485,6 @@
         "en": "NCCN regimens whose source does not give everything needed to calculate (weekdays, age adjustments, \"until remission\")."
       },
       "regimens": [
-        {
-          "regimen_id": "ref-apl-atra-ato-intermittent"
-        },
-        {
-          "regimen_id": "ref-apl-apml4"
-        },
-        {
-          "regimen_id": "ref-apl-atra-gem"
-        },
         {
           "regimen_id": "ref-apl-dauno-ara-c"
         }

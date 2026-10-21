@@ -34,6 +34,1490 @@
   ],
   "treatment": [
     {
+      "key": "nccn",
+      "kind": "treatment",
+      "title": {
+        "uk": "Шляхи NCCN 5.2026 (AML-1…AML-9)",
+        "en": "NCCN 5.2026 pathways (AML-1 to AML-9)"
+      },
+      "description": {
+        "uk": "Повторює алгоритм настанови NCCN «Acute Myeloid Leukemia», версія 5.2026: група ризику → варіанти лікування («бажано», «інші рекомендовані», «за певних обставин») → наступний крок. Усі рекомендації — категорії 2A, якщо не вказано інше. Пояснення й критерії — у статті, розділ NCCN. Розділи нижче цього блоку зібрані за UpToDate, eviQ і NSSG.",
+        "en": "Follows the NCCN \"Acute Myeloid Leukemia\" guideline, version 5.2026: risk group → treatment options (\"preferred\", \"other recommended\", \"useful in certain circumstances\") → next step. All recommendations are category 2A unless stated. Explanations and criteria are in the article, NCCN section. The sections below this block come from UpToDate, eviQ and NSSG."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-fit",
+          "kind": "line",
+          "title": {
+            "uk": "Індукція: придатні до інтенсивної терапії (AML-1, AML-2)",
+            "en": "Induction: fit for intensive therapy (AML-1, AML-2)"
+          },
+          "description": {
+            "uk": "Придатність визначають функціональний стан і супутні хвороби, а не лише вік. Високий лейкоцитоз: лейкаферез, гідроксисечовина чи одна доза цитарабіну, і негайний старт лікування. При вичерпаній дозі антрацикліну або кардіальних проблемах — схеми без антрацикліну (FLAG; на основі клофарабіну — категорія 3). Далі → «Оцінка й реіндукція (AML-3)» або, після HMA + венетоклаксу, → «Непридатні… (AML-5)».",
+            "en": "Fitness rests on performance status and comorbidity, not age alone. High WBC: leukapheresis, hydroxyurea or a single cytarabine dose, and start treatment promptly. With the anthracycline limit reached or cardiac issues — anthracycline-free regimens (FLAG; clofarabine-based, category 3). Next: \"Assessment and reinduction (AML-3)\" or, after HMA + venetoclax, \"Unfit… (AML-5)\"."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-cbf",
+              "kind": "group",
+              "title": {
+                "uk": "Сприятливий ризик за цитогенетикою (CBF-ГМЛ)",
+                "en": "Favourable risk by cytogenetics (CBF-AML)"
+              },
+              "description": {
+                "uk": "FISH на CBF-перебудови доцільний. CBF з FLT3-TKD — перевага ГО над інгібітором FLT3; з FLT3-ITD — даних для вибору немає. Поріг CD33 не визначений (може бути ≥1% за проточною цитометрією). Між останньою дозою ГО й алоТГСК — 60–90 днів (ризик СОС).",
+                "en": "FISH for CBF rearrangements is worthwhile. CBF with FLT3-TKD — GO preferred over an FLT3 inhibitor; with FLT3-ITD — no data to choose. The CD33 threshold is not defined (may be 1% or more by flow). 60-90 days between the last GO dose and allo-HCT (SOS risk)."
+              },
+              "regimens": [],
+              "children": [
+                {
+                  "key": "nccn-cbf-pref",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Бажано",
+                    "en": "Preferred"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "go-da-induction",
+                      "notes": {
+                        "uk": "7+3 (даунорубіцин) + ГО, CD33+",
+                        "en": "7+3 (daunorubicin) + GO, CD33+"
+                      }
+                    },
+                    {
+                      "regimen_id": "ida-7-3-go",
+                      "notes": {
+                        "uk": "7+3 (ідарубіцин) + ГО, CD33+",
+                        "en": "7+3 (idarubicin) + GO, CD33+"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-cbf-other",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Інші рекомендовані",
+                    "en": "Other recommended"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "da-7-3"
+                    },
+                    {
+                      "regimen_id": "ida-7-3"
+                    },
+                    {
+                      "regimen_id": "flag-ida-go-induction",
+                      "notes": {
+                        "uk": "CD33+; категорія 2B; обережно >60 р.",
+                        "en": "CD33+; category 2B; caution above 60"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-cbf-circ",
+                  "kind": "group",
+                  "title": {
+                    "uk": "За певних обставин",
+                    "en": "Useful in certain circumstances"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "flag-go-induction",
+                      "notes": {
+                        "uk": "CD33+, антрациклін неможливий; категорія 2B",
+                        "en": "CD33+, no anthracycline possible; category 2B"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "nccn-fav-int",
+              "kind": "group",
+              "title": {
+                "uk": "Сприятливий за молекулярним профілем або проміжний ризик (ELN)",
+                "en": "Favourable by molecular profile or intermediate risk (ELN)"
+              },
+              "description": {
+                "uk": "ГО може бути корисним при мутації NPM1; при CEBPA його роль не встановлена.",
+                "en": "GO may help in NPM1-mutated AML; its role in CEBPA-mutated AML is not established."
+              },
+              "regimens": [],
+              "children": [
+                {
+                  "key": "nccn-fav-int-pref",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Бажано",
+                    "en": "Preferred"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "da-7-3",
+                      "notes": {
+                        "uk": "Категорія 1",
+                        "en": "Category 1"
+                      }
+                    },
+                    {
+                      "regimen_id": "ida-7-3",
+                      "notes": {
+                        "uk": "Категорія 1",
+                        "en": "Category 1"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-fav-int-other",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Інші рекомендовані",
+                    "en": "Other recommended"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "go-da-induction",
+                      "notes": {
+                        "uk": "CD33+",
+                        "en": "CD33+"
+                      }
+                    },
+                    {
+                      "regimen_id": "ida-7-3-go",
+                      "notes": {
+                        "uk": "CD33+",
+                        "en": "CD33+"
+                      }
+                    },
+                    {
+                      "regimen_id": "flag-ida",
+                      "notes": {
+                        "uk": "Категорія 2B; обережно у віці >60 р.",
+                        "en": "Category 2B; caution above 60"
+                      }
+                    },
+                    {
+                      "regimen_id": "flag-ida-go-induction",
+                      "notes": {
+                        "uk": "CD33+; категорія 2B; обережно >60 р.",
+                        "en": "CD33+; category 2B; caution above 60"
+                      }
+                    },
+                    {
+                      "regimen_id": "clag-m-nccn",
+                      "notes": {
+                        "uk": "Категорія 2B; обережно у віці >60 р.",
+                        "en": "Category 2B; caution above 60"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "nccn-flt3",
+              "kind": "group",
+              "title": {
+                "uk": "З мутацією FLT3",
+                "en": "FLT3-mutated"
+              },
+              "description": {
+                "uk": "RATIFY охоплювало 18–60 років; придатним до «7+3» у віці 61–70 років мідостаурин теж пропонують.",
+                "en": "RATIFY enrolled ages 18-60; fit patients aged 61-70 are also offered midostaurin."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "da-7-3-midostaurin",
+                  "notes": {
+                    "uk": "ITD або TKD; категорія 1",
+                    "en": "ITD or TKD; category 1"
+                  }
+                },
+                {
+                  "regimen_id": "ida-7-3-midostaurin",
+                  "notes": {
+                    "uk": "ITD або TKD; категорія 1",
+                    "en": "ITD or TKD; category 1"
+                  }
+                },
+                {
+                  "regimen_id": "da-7-3-quizartinib",
+                  "notes": {
+                    "uk": "Лише ITD; категорія 1",
+                    "en": "ITD only; category 1"
+                  }
+                },
+                {
+                  "regimen_id": "ida-7-3-quizartinib",
+                  "notes": {
+                    "uk": "Лише ITD; категорія 1",
+                    "en": "ITD only; category 1"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-poor",
+              "kind": "group",
+              "title": {
+                "uk": "Несприятливий ризик без TP53; терапія-залежна (не CBF); після МДС/ХММЛ; цитогенетика як при МДС",
+                "en": "Poor risk without TP53; therapy-related (not CBF); after MDS/CMML; MDS-type cytogenetics"
+              },
+              "description": {
+                "uk": "CPX-351 найкорисніший при мутаціях SRSF2, SF3B1, EZH2, U2AF1, ZRSR2, BCOR, STAG2, ASXL1; у <60 р. даних мало. Після тривалого HMA при МДС користь від HMA менша. Венетоклакс-схеми продовжують при CR/CRi, у тому числі до ТГСК.",
+                "en": "CPX-351 helps most with SRSF2, SF3B1, EZH2, U2AF1, ZRSR2, BCOR, STAG2 or ASXL1 mutations; data under 60 are limited. After long HMA exposure for MDS, HMAs help less. Venetoclax regimens continue in CR/CRi, including up to HCT."
+              },
+              "regimens": [],
+              "children": [
+                {
+                  "key": "nccn-poor-pref",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Бажано",
+                    "en": "Preferred"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "cpx-351-induction-1",
+                      "notes": {
+                        "uk": "Категорія 1; бажано у віці ≥60 р.",
+                        "en": "Category 1; preferred at 60 or over"
+                      }
+                    },
+                    {
+                      "regimen_id": "da-7-3",
+                      "notes": {
+                        "uk": "Бажано у віці <60 р.",
+                        "en": "Preferred under 60"
+                      }
+                    },
+                    {
+                      "regimen_id": "ida-7-3",
+                      "notes": {
+                        "uk": "Бажано у віці <60 р.",
+                        "en": "Preferred under 60"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-poor-other",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Інші рекомендовані",
+                    "en": "Other recommended"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "cpx-351-induction-2",
+                      "notes": {
+                        "uk": "Другий курс CPX-351 за потреби",
+                        "en": "A second CPX-351 course if needed"
+                      }
+                    },
+                    {
+                      "regimen_id": "dec-ven-cycle-1"
+                    },
+                    {
+                      "regimen_id": "dec-ven"
+                    },
+                    {
+                      "regimen_id": "aza-ven-nccn-cycle-1"
+                    },
+                    {
+                      "regimen_id": "aza-ven-nccn"
+                    },
+                    {
+                      "regimen_id": "clia-ven-induction",
+                      "notes": {
+                        "uk": "Категорія 2B",
+                        "en": "Category 2B"
+                      }
+                    },
+                    {
+                      "regimen_id": "flag-ida-ven-nccn-induction",
+                      "notes": {
+                        "uk": "Категорія 2B; обережно у віці >60 р.",
+                        "en": "Category 2B; caution above 60"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "nccn-tp53",
+              "kind": "group",
+              "title": {
+                "uk": "Несприятливий ризик з мутацією TP53 або del(17p)",
+                "en": "Poor risk with a TP53 mutation or del(17p)"
+              },
+              "description": {
+                "uk": "Бажаних схем немає — рекомендовано клінічне випробування. Результати інтенсивної хіміотерапії погані, тож поза випробуванням перевага — менш інтенсивній терапії.",
+                "en": "No preferred regimens — a clinical trial is recommended. Intensive chemotherapy does poorly, so outside a trial less intensive therapy is preferred."
+              },
+              "regimens": [],
+              "children": [
+                {
+                  "key": "nccn-tp53-other",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Інші рекомендовані",
+                    "en": "Other recommended"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "da-7-3"
+                    },
+                    {
+                      "regimen_id": "ida-7-3"
+                    },
+                    {
+                      "regimen_id": "cpx-351-induction-1",
+                      "notes": {
+                        "uk": "Категорія 2B",
+                        "en": "Category 2B"
+                      }
+                    },
+                    {
+                      "regimen_id": "flag-ida",
+                      "notes": {
+                        "uk": "Категорія 2B; обережно у віці >60 р.",
+                        "en": "Category 2B; caution above 60"
+                      }
+                    },
+                    {
+                      "regimen_id": "dec-ven-cycle-1"
+                    },
+                    {
+                      "regimen_id": "dec-ven"
+                    },
+                    {
+                      "regimen_id": "aza-ven-nccn-cycle-1"
+                    },
+                    {
+                      "regimen_id": "aza-ven-nccn"
+                    },
+                    {
+                      "regimen_id": "clag-m-nccn",
+                      "notes": {
+                        "uk": "Категорія 2B",
+                        "en": "Category 2B"
+                      }
+                    },
+                    {
+                      "regimen_id": "clia-ven-induction",
+                      "notes": {
+                        "uk": "Категорія 2B",
+                        "en": "Category 2B"
+                      }
+                    },
+                    {
+                      "regimen_id": "flag-ida-ven-nccn-induction",
+                      "notes": {
+                        "uk": "Категорія 2B; обережно у віці >60 р.",
+                        "en": "Category 2B; caution above 60"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-reinduction",
+          "kind": "line",
+          "title": {
+            "uk": "Оцінка й реіндукція після цитарабінової індукції (AML-3)",
+            "en": "Assessment and reinduction after cytarabine induction (AML-3)"
+          },
+          "description": {
+            "uk": "Кістковий мозок на 14–21-й день (при цитарабіні >100–200 мг/м² — краще на 21-й). Гіпоплазія (клітинність <20%, залишкових бластів <5%) — чекати відновлення; неоднозначно — повтор біопсії за 7 днів. Залишкова хвороба — реіндукція. Якщо в індукції був даунорубіцин 90 мг/м², у ранній реіндукції — 45 мг/м² не більше 2 доз; ідарубіцин 12 → 10 мг/м² 1–2 дози. Перед кожним курсом з антрацикліном чи мітоксантроном — оцінка серця. Ремісію документують при відновленні показників, найпізніше на 42-й день (з цитогенетикою, молекулярними тестами, МЗХ). Далі: ремісія → «Консолідація (AML-6)»; немає відповіді або первинна рефрактерність → алоТГСК, «Рецидив/рефрактерність (AML-9)», цитарабін чи антрациклін на час пошуку донора, найкраща підтримувальна терапія.",
+            "en": "Marrow on day 14-21 (day 21 with cytarabine above 100-200 mg/m2). Hypoplasia (cellularity under 20%, residual blasts under 5%) — await recovery; equivocal — repeat within 7 days. Residual disease — reinduction. After daunorubicin 90 mg/m2, early reinduction uses 45 mg/m2 for at most 2 doses; idarubicin 12 → 10 mg/m2 for 1-2 doses. Reassess the heart before each anthracycline or mitoxantrone course. Document remission at count recovery, by day 42 at the latest. Next: remission → \"Consolidation (AML-6)\"; no response or primary refractory → allo-HCT, \"Relapsed/refractory (AML-9)\", cytarabine or an anthracycline while awaiting a donor, best supportive care."
+          },
+          "regimens": [
+            {
+              "regimen_id": "hd-ara-c",
+              "notes": {
+                "uk": "ВДЦ 2–3 г/м² кожні 12 год, дні 1, 3, 5 (1–2 курси)",
+                "en": "HiDAC 2-3 g/m2 every 12 h, days 1, 3, 5 (1-2 courses)"
+              }
+            },
+            {
+              "regimen_id": "idac-consolidation",
+              "notes": {
+                "uk": "Середні дози 1–2 г/м² ×4–6 доз; не гірші за ≥2 г/м²",
+                "en": "Intermediate dose 1-2 g/m2 x4-6 doses; no worse than 2 g/m2 or more"
+              }
+            },
+            {
+              "regimen_id": "da-7-3"
+            },
+            {
+              "regimen_id": "ida-7-3"
+            },
+            {
+              "regimen_id": "da-5-2",
+              "notes": {
+                "uk": "5+2: даунорубіцин 45–60 мг/м²",
+                "en": "5+2: daunorubicin 45-60 mg/m2"
+              }
+            },
+            {
+              "regimen_id": "ida-5-2-consolidation",
+              "notes": {
+                "uk": "5+2: ідарубіцин 10–12 мг/м²",
+                "en": "5+2: idarubicin 10-12 mg/m2"
+              }
+            },
+            {
+              "regimen_id": "mitox-5-2",
+              "notes": {
+                "uk": "5+2: мітоксантрон, вік ≥60 р.",
+                "en": "5+2: mitoxantrone, age 60 or over"
+              }
+            },
+            {
+              "regimen_id": "da-7-3-midostaurin",
+              "notes": {
+                "uk": "FLT3 ITD або TKD",
+                "en": "FLT3 ITD or TKD"
+              }
+            },
+            {
+              "regimen_id": "ida-7-3-midostaurin",
+              "notes": {
+                "uk": "FLT3 ITD або TKD",
+                "en": "FLT3 ITD or TKD"
+              }
+            },
+            {
+              "regimen_id": "da-7-3-quizartinib",
+              "notes": {
+                "uk": "Лише FLT3-ITD",
+                "en": "FLT3-ITD only"
+              }
+            },
+            {
+              "regimen_id": "ida-7-3-quizartinib",
+              "notes": {
+                "uk": "Лише FLT3-ITD",
+                "en": "FLT3-ITD only"
+              }
+            },
+            {
+              "regimen_id": "da-5-2-quizartinib",
+              "notes": {
+                "uk": "Лише FLT3-ITD",
+                "en": "FLT3-ITD only"
+              }
+            },
+            {
+              "regimen_id": "hidac-dauno",
+              "notes": {
+                "uk": "ВДЦ + даунорубіцин",
+                "en": "HiDAC + daunorubicin"
+              }
+            },
+            {
+              "regimen_id": "hidac-ida",
+              "notes": {
+                "uk": "ВДЦ + ідарубіцин",
+                "en": "HiDAC + idarubicin"
+              }
+            },
+            {
+              "regimen_id": "aza-ven-nccn-cycle-1",
+              "notes": {
+                "uk": "HMA + венетоклакс",
+                "en": "HMA + venetoclax"
+              }
+            },
+            {
+              "regimen_id": "dec-ven-cycle-1",
+              "notes": {
+                "uk": "HMA + венетоклакс",
+                "en": "HMA + venetoclax"
+              }
+            },
+            {
+              "regimen_id": "cpx-351-induction-2",
+              "notes": {
+                "uk": "Бажано, лише якщо CPX-351 був в індукції; мозок через 14–21 день",
+                "en": "Preferred only after CPX-351 induction; marrow 14-21 days later"
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-unfit",
+          "kind": "line",
+          "title": {
+            "uk": "Непридатні до інтенсивної індукції або відмова (AML-4, AML-5)",
+            "en": "Unfit for intensive induction or declining it (AML-4, AML-5)"
+          },
+          "description": {
+            "uk": "Відмова від індукції — підтримувальна терапія (гідроксисечовина, трансфузії), паліатив. Відповідь на HMA — через 3–4 цикли (продовжують до прогресування); на інгібітори IDH — через 3–5 місяців, ризик синдрому диференціювання навіть через місяці. При цитопенії в ремісії — перерви між циклами (принципи венетоклаксу AML-J). Після 1–2 циклів — кістковий мозок (час залежить від засобу): відповідь → алоТГСК у першій ремісії (кандидатам з донором) або продовження тієї самої схеми → підтримка (AML-7); немає відповіді чи прогресування → «Рецидив/рефрактерність (AML-9)» або найкраща підтримувальна терапія.",
+            "en": "Declining induction — supportive care (hydroxyurea, transfusions), palliation. HMA responses take 3-4 cycles (continue to progression); IDH inhibitor responses take 3-5 months, with differentiation syndrome possible months later. With cytopenias in remission, breaks between cycles (venetoclax principles AML-J). After 1-2 cycles, a marrow (timing by agent): response → allo-HCT in first remission (candidates with a donor) or continue the same regimen → maintenance (AML-7); no response or progression → \"Relapsed/refractory (AML-9)\" or best supportive care."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-unfit-idh1",
+              "kind": "group",
+              "title": {
+                "uk": "З мутацією IDH1",
+                "en": "IDH1-mutated"
+              },
+              "regimens": [],
+              "children": [
+                {
+                  "key": "nccn-unfit-idh1-pref",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Бажано",
+                    "en": "Preferred"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "aza-ven-nccn-cycle-1",
+                      "notes": {
+                        "uk": "Категорія 1",
+                        "en": "Category 1"
+                      }
+                    },
+                    {
+                      "regimen_id": "aza-ven-nccn",
+                      "notes": {
+                        "uk": "Категорія 1",
+                        "en": "Category 1"
+                      }
+                    },
+                    {
+                      "regimen_id": "ivosidenib-azacitidine",
+                      "notes": {
+                        "uk": "Категорія 1; вік >75, ECOG 2, тяжка серцева чи легенева хвороба, білірубін >1,5 ВМН, КК <45 мл/хв або інша коморбідність",
+                        "en": "Category 1; age over 75, ECOG 2, severe cardiac or lung disease, bilirubin over 1.5 x ULN, CrCl under 45 mL/min or other comorbidity"
+                      }
+                    },
+                    {
+                      "regimen_id": "dec-ven-cycle-1"
+                    },
+                    {
+                      "regimen_id": "dec-ven"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-unfit-idh1-other",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Інші рекомендовані",
+                    "en": "Other recommended"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ivosidenib-aml"
+                    },
+                    {
+                      "regimen_id": "inqovi-ven-cycle-1",
+                      "notes": {
+                        "uk": "Вік ≥75 р. або супутні хвороби",
+                        "en": "Age 75 or over, or comorbidities"
+                      }
+                    },
+                    {
+                      "regimen_id": "inqovi-ven"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-unfit-idh1-circ",
+                  "kind": "group",
+                  "title": {
+                    "uk": "За певних обставин",
+                    "en": "Useful in certain circumstances"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ldac-ven-cycle-1",
+                      "notes": {
+                        "uk": "Після HMA",
+                        "en": "After HMA"
+                      }
+                    },
+                    {
+                      "regimen_id": "ldac-ven"
+                    },
+                    {
+                      "regimen_id": "azacitidine-mono",
+                      "notes": {
+                        "uk": "Протипоказаний венетоклакс",
+                        "en": "Venetoclax contraindicated"
+                      }
+                    },
+                    {
+                      "regimen_id": "decitabine-mono",
+                      "notes": {
+                        "uk": "Протипоказаний венетоклакс",
+                        "en": "Venetoclax contraindicated"
+                      }
+                    },
+                    {
+                      "regimen_id": "olutasidenib",
+                      "notes": {
+                        "uk": "Категорія 2B; бажані схеми й івосидениб (подовжений QTcF) недоступні",
+                        "en": "Category 2B; preferred regimens and ivosidenib (long QTcF) not possible"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "nccn-unfit-other",
+              "kind": "group",
+              "title": {
+                "uk": "Без мутації IDH1",
+                "en": "Without an IDH1 mutation"
+              },
+              "regimens": [],
+              "children": [
+                {
+                  "key": "nccn-unfit-other-pref",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Бажано",
+                    "en": "Preferred"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "aza-ven-nccn-cycle-1",
+                      "notes": {
+                        "uk": "Категорія 1",
+                        "en": "Category 1"
+                      }
+                    },
+                    {
+                      "regimen_id": "aza-ven-nccn",
+                      "notes": {
+                        "uk": "Категорія 1",
+                        "en": "Category 1"
+                      }
+                    },
+                    {
+                      "regimen_id": "dec-ven-cycle-1"
+                    },
+                    {
+                      "regimen_id": "dec-ven"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-unfit-other-other",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Інші рекомендовані",
+                    "en": "Other recommended"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "inqovi-ven-cycle-1",
+                      "notes": {
+                        "uk": "Вік ≥75 р. або супутні хвороби",
+                        "en": "Age 75 or over, or comorbidities"
+                      }
+                    },
+                    {
+                      "regimen_id": "inqovi-ven"
+                    },
+                    {
+                      "regimen_id": "clad-ldac-ven-induction",
+                      "notes": {
+                        "uk": "Категорія 2B",
+                        "en": "Category 2B"
+                      }
+                    },
+                    {
+                      "regimen_id": "clad-ldac-ven-cons-a",
+                      "notes": {
+                        "uk": "Консолідація, курси A",
+                        "en": "Consolidation, A courses"
+                      }
+                    },
+                    {
+                      "regimen_id": "clad-ldac-ven-cons-b",
+                      "notes": {
+                        "uk": "Консолідація, курси B",
+                        "en": "Consolidation, B courses"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-unfit-other-circ",
+                  "kind": "group",
+                  "title": {
+                    "uk": "За певних обставин",
+                    "en": "Useful in certain circumstances"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ldac-ven-cycle-1",
+                      "notes": {
+                        "uk": "Після HMA",
+                        "en": "After HMA"
+                      }
+                    },
+                    {
+                      "regimen_id": "ldac-ven"
+                    },
+                    {
+                      "regimen_id": "azacitidine-mono",
+                      "notes": {
+                        "uk": "Протипоказаний венетоклакс",
+                        "en": "Venetoclax contraindicated"
+                      }
+                    },
+                    {
+                      "regimen_id": "decitabine-mono",
+                      "notes": {
+                        "uk": "Протипоказаний венетоклакс",
+                        "en": "Venetoclax contraindicated"
+                      }
+                    },
+                    {
+                      "regimen_id": "ldac-glasdegib",
+                      "notes": {
+                        "uk": "Вік ≥75 р., тяжка серцева хвороба, ECOG 2, креатинін >1,3 мг/дл",
+                        "en": "Age 75 or over, severe cardiac disease, ECOG 2, creatinine above 1.3 mg/dL"
+                      }
+                    },
+                    {
+                      "regimen_id": "ldac",
+                      "notes": {
+                        "uk": "Після HMA або протипоказаний венетоклакс",
+                        "en": "After HMA, or venetoclax contraindicated"
+                      }
+                    },
+                    {
+                      "regimen_id": "gilteritinib-aml",
+                      "notes": {
+                        "uk": "FLT3 (ITD або TKD), бажані схеми неможливі",
+                        "en": "FLT3 (ITD or TKD), preferred regimens not possible"
+                      }
+                    },
+                    {
+                      "regimen_id": "avoid-aml-gilt-aza",
+                      "notes": {
+                        "uk": "NCCN: гілтеритиніб ± азацитидин; у РКД LACEWING комбінація не подовжила життя",
+                        "en": "NCCN: gilteritinib with or without azacitidine; in the LACEWING RCT the combination did not prolong survival"
+                      }
+                    },
+                    {
+                      "regimen_id": "enasidenib",
+                      "notes": {
+                        "uk": "IDH2, бажані схеми неможливі",
+                        "en": "IDH2, preferred regimens not possible"
+                      }
+                    },
+                    {
+                      "regimen_id": "aza-enasidenib",
+                      "notes": {
+                        "uk": "IDH2, бажані схеми неможливі",
+                        "en": "IDH2, preferred regimens not possible"
+                      }
+                    },
+                    {
+                      "regimen_id": "go-6-3",
+                      "notes": {
+                        "uk": "CD33+; мало користі при несприятливому ризику",
+                        "en": "CD33+; little benefit in poor risk"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-consolidation",
+          "kind": "line",
+          "title": {
+            "uk": "Консолідація після інтенсивної індукції (AML-6)",
+            "en": "Consolidation after intensive induction (AML-6)"
+          },
+          "description": {
+            "uk": "Кандидатам на алоТГСК — пошук альтернативного донора, якщо немає сумісного сиблінга; на час пошуку може знадобитися 1+ курс консолідації; за наявності донора — одразу на ТГСК. Цитарабін ≥2 г/м² обережно у віці ≥60 р. і при нирковій недостатності. Далі: алоТГСК, «Підтримка (AML-7)» або «Нагляд (AML-8)».",
+            "en": "Allo-HCT candidates — search for an alternative donor if no matched sibling; one or more consolidation courses may be needed meanwhile; with a donor, go straight to HCT. Cytarabine 2 g/m2 or more needs caution from age 60 and in renal failure. Next: allo-HCT, \"Maintenance (AML-7)\" or \"Surveillance (AML-8)\"."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-cons-fav",
+              "kind": "group",
+              "title": {
+                "uk": "Сприятливий ризик (CBF або за молекулярним профілем)",
+                "en": "Favourable risk (CBF or molecular)"
+              },
+              "description": {
+                "uk": "Далі — розглянути алоТГСК (МЗХ+, мутація KIT, неможливість завершити консолідацію), підтримку або нагляд. МЗХ при CBF і NPM1 — див. статтю.",
+                "en": "Next: consider allo-HCT (MRD positive, KIT mutation, unable to finish consolidation), maintenance or surveillance. MRD in CBF and NPM1 — see the article."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "hd-ara-c",
+                  "notes": {
+                    "uk": "ВДЦ 1,5–3 г/м², 3–4 курси",
+                    "en": "HiDAC 1.5-3 g/m2, 3-4 courses"
+                  }
+                },
+                {
+                  "regimen_id": "idac-consolidation",
+                  "notes": {
+                    "uk": "Середні дози 1–1,5 г/м²",
+                    "en": "Intermediate dose 1-1.5 g/m2"
+                  }
+                },
+                {
+                  "regimen_id": "hidac-go-consolidation",
+                  "notes": {
+                    "uk": "CD33+, лише якщо ГО був в індукції",
+                    "en": "CD33+, only if GO was given in induction"
+                  }
+                },
+                {
+                  "regimen_id": "da-7-3-consolidation",
+                  "notes": {
+                    "uk": "Цитарабін 7 днів + антрациклін",
+                    "en": "Cytarabine 7 days + an anthracycline"
+                  }
+                },
+                {
+                  "regimen_id": "ida-7-3-consolidation"
+                },
+                {
+                  "regimen_id": "mitox-7-3-consolidation",
+                  "notes": {
+                    "uk": "Вік ≥60 р.",
+                    "en": "Age 60 or over"
+                  }
+                },
+                {
+                  "regimen_id": "da-5-2",
+                  "notes": {
+                    "uk": "Цитарабін 5 днів + даунорубіцин 45 мг/м²",
+                    "en": "Cytarabine 5 days + daunorubicin 45 mg/m2"
+                  }
+                },
+                {
+                  "regimen_id": "ida-5-2-consolidation",
+                  "notes": {
+                    "uk": "Ідарубіцин 10 мг/м² за NCCN",
+                    "en": "Idarubicin 10 mg/m2 per NCCN"
+                  }
+                },
+                {
+                  "regimen_id": "mitox-5-2",
+                  "notes": {
+                    "uk": "Вік ≥60 р.",
+                    "en": "Age 60 or over"
+                  }
+                },
+                {
+                  "regimen_id": "go-da-consolidation-1",
+                  "notes": {
+                    "uk": "Середні дози + даунорубіцин + ГО; лише якщо ГО був в індукції; можливо й при KIT",
+                    "en": "Intermediate dose + daunorubicin + GO; only if GO was given in induction; also with KIT"
+                  }
+                },
+                {
+                  "regimen_id": "go-da-consolidation-2"
+                }
+              ]
+            },
+            {
+              "key": "nccn-cons-flt3",
+              "kind": "group",
+              "title": {
+                "uk": "З мутацією FLT3",
+                "en": "FLT3-mutated"
+              },
+              "description": {
+                "uk": "Бажано алоТГСК при FLT3-ITD (з урахуванням МЗХ NPM1).",
+                "en": "Allo-HCT preferred for FLT3-ITD (taking NPM1 MRD into account)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "midostaurin-hd-ara-c",
+                  "notes": {
+                    "uk": "ITD або TKD; 4 курси",
+                    "en": "ITD or TKD; 4 courses"
+                  }
+                },
+                {
+                  "regimen_id": "hidac-quizartinib-consolidation",
+                  "notes": {
+                    "uk": "Лише ITD; до 4 курсів",
+                    "en": "ITD only; up to 4 courses"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-cons-int",
+              "kind": "group",
+              "title": {
+                "uk": "Проміжний ризик",
+                "en": "Intermediate risk"
+              },
+              "description": {
+                "uk": "Варіант — алоТГСК. Немає доказів, що ≥2 г/м² цитарабіну краще за 1–2 г/м².",
+                "en": "Allo-HCT is an option. No evidence that 2 g/m2 or more beats 1-2 g/m2."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "idac-consolidation"
+                },
+                {
+                  "regimen_id": "hd-ara-c"
+                },
+                {
+                  "regimen_id": "go-da-consolidation-1",
+                  "notes": {
+                    "uk": "CD33+, лише якщо ГО був в індукції",
+                    "en": "CD33+, only if GO was given in induction"
+                  }
+                },
+                {
+                  "regimen_id": "go-da-consolidation-2"
+                }
+              ]
+            },
+            {
+              "key": "nccn-cons-poor",
+              "kind": "group",
+              "title": {
+                "uk": "Несприятливий ризик; терапія-залежна; після МДС/ХММЛ; цитогенетика як при МДС",
+                "en": "Poor risk; therapy-related; after MDS/CMML; MDS-type cytogenetics"
+              },
+              "description": {
+                "uk": "Бажано — алоТГСК.",
+                "en": "Allo-HCT preferred."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "hd-ara-c"
+                },
+                {
+                  "regimen_id": "idac-consolidation"
+                },
+                {
+                  "regimen_id": "cpx-351-consolidation",
+                  "notes": {
+                    "uk": "Бажано лише якщо CPX-351 був в індукції",
+                    "en": "Preferred only after CPX-351 induction"
+                  }
+                },
+                {
+                  "regimen_id": "flag-ida",
+                  "notes": {
+                    "uk": "Лише якщо FLAG-IDA був в індукції; обережно >60 р.",
+                    "en": "Only after FLAG-IDA induction; caution above 60"
+                  }
+                },
+                {
+                  "regimen_id": "aza-ven-nccn",
+                  "notes": {
+                    "uk": "Продовження менш інтенсивної схеми з індукції",
+                    "en": "Continuing the lower-intensity induction regimen"
+                  }
+                },
+                {
+                  "regimen_id": "dec-ven"
+                },
+                {
+                  "regimen_id": "inqovi-ven"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-maintenance",
+          "kind": "line",
+          "title": {
+            "uk": "Підтримувальна терапія (AML-7)",
+            "en": "Maintenance (AML-7)"
+          },
+          "description": {
+            "uk": "Далі — «Нагляд (AML-8)».",
+            "en": "Next: \"Surveillance (AML-8)\"."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-maint-chemo",
+              "kind": "group",
+              "title": {
+                "uk": "Після хіміотерапії, алоТГСК не планується",
+                "en": "After chemotherapy, no allo-HCT planned"
+              },
+              "description": {
+                "uk": "Не CBF-ГМЛ у ремісії після інтенсивної хіміотерапії (з консолідацією чи без). Не замінює консолідацію та ТГСК; QUAZAR — вік ≥55 р., проміжна/несприятлива цитогенетика.",
+                "en": "Non-CBF AML in remission after intensive chemotherapy (with or without consolidation). Not a substitute for consolidation or HCT; QUAZAR enrolled age 55 or over with intermediate or adverse cytogenetics."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "oral-azacitidine-maintenance",
+                  "notes": {
+                    "uk": "До прогресування; категорія 1 для віку ≥55 р.",
+                    "en": "Until progression; category 1 from age 55"
+                  }
+                },
+                {
+                  "regimen_id": "aza-maintenance",
+                  "notes": {
+                    "uk": "Пероральний недоступний; макс. 12 циклів",
+                    "en": "Oral form unavailable; at most 12 cycles"
+                  }
+                },
+                {
+                  "regimen_id": "decitabine-maintenance",
+                  "notes": {
+                    "uk": "Пероральний азацитидин недоступний; макс. 12 циклів",
+                    "en": "Oral azacitidine unavailable; at most 12 cycles"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-maint-flt3",
+              "kind": "group",
+              "title": {
+                "uk": "FLT3 в анамнезі, отримував інгібітор FLT3, без алоТГСК",
+                "en": "FLT3 history, prior FLT3 inhibitor, no allo-HCT"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "quizartinib-maintenance-cycle-1",
+                  "notes": {
+                    "uk": "Лише ITD; бажано при ITD",
+                    "en": "ITD only; preferred for ITD"
+                  }
+                },
+                {
+                  "regimen_id": "quizartinib-maintenance"
+                },
+                {
+                  "regimen_id": "midostaurin-maintenance",
+                  "notes": {
+                    "uk": "ITD або TKD",
+                    "en": "ITD or TKD"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-maint-hct-flt3",
+              "kind": "group",
+              "title": {
+                "uk": "Після алоТГСК у ремісії, FLT3 в анамнезі",
+                "en": "After allo-HCT in remission, FLT3 history"
+              },
+              "description": {
+                "uk": "При FLT3-ITD МЗХ ≥10⁻⁶ (NGS) до чи після ТГСК — гілтеритиніб (MORPHO).",
+                "en": "With FLT3-ITD MRD of 10⁻⁶ or more (NGS) before or after HCT — gilteritinib (MORPHO)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "gilteritinib-post-hct",
+                  "notes": {
+                    "uk": "ITD або TKD; бажано при ITD у CR1 без МЗХ-негативності до ТГСК",
+                    "en": "ITD or TKD; preferred for ITD in CR1 without MRD negativity before HCT"
+                  }
+                },
+                {
+                  "regimen_id": "sorafenib-maintenance-1-3",
+                  "notes": {
+                    "uk": "Лише ITD",
+                    "en": "ITD only"
+                  }
+                },
+                {
+                  "regimen_id": "sorafenib-maintenance"
+                },
+                {
+                  "regimen_id": "midostaurin-maintenance",
+                  "notes": {
+                    "uk": "ITD або TKD",
+                    "en": "ITD or TKD"
+                  }
+                },
+                {
+                  "regimen_id": "quizartinib-maintenance-cycle-1",
+                  "notes": {
+                    "uk": "Лише ITD",
+                    "en": "ITD only"
+                  }
+                },
+                {
+                  "regimen_id": "quizartinib-maintenance"
+                }
+              ]
+            },
+            {
+              "key": "nccn-maint-hct-high",
+              "kind": "group",
+              "title": {
+                "uk": "Після алоТГСК у ремісії, ГМЛ високого ризику",
+                "en": "After allo-HCT in remission, high-risk AML"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "decitabine-gcsf-post-hct",
+                  "notes": {
+                    "uk": "Категорія 2B",
+                    "en": "Category 2B"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-rr",
+          "kind": "line",
+          "title": {
+            "uk": "Нагляд і рецидив/рефрактерність (AML-8, AML-9)",
+            "en": "Surveillance and relapsed/refractory disease (AML-8, AML-9)"
+          },
+          "description": {
+            "uk": "Нагляд після консолідації: ЗАК з тромбоцитами кожні 1–3 міс. 2 роки, далі кожні 3–6 міс. до 5 років; пункція — лише при патологічному мазку чи цитопенії; молекулярна ремісія й МЗХ — де можливо. Пошук донора — з першого рецидиву. При рецидиві — повторне молекулярне профілювання (IDH1/2, FLT3, KMT2A). Варіанти: клінічне випробування (настійно), таргетна терапія чи хіміотерапія з наступною алоТГСК, найкраща підтримувальна терапія. АлоТГСК можна розглянути без CR після першої індукції або при першому рецидиві у запланованих до ТГСК.",
+            "en": "Surveillance after consolidation: CBC with platelets every 1-3 months for 2 years, then every 3-6 months to 5 years; marrow only for an abnormal smear or cytopenias; molecular remission and MRD where applicable. Start a donor search at first relapse. At relapse repeat molecular profiling (IDH1/2, FLT3, KMT2A). Options: clinical trial (strongly preferred), targeted therapy or chemotherapy followed by allo-HCT, best supportive care. Allo-HCT may be considered without CR after first induction, or at first relapse in patients already scheduled for HCT."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-rr-targeted",
+              "kind": "group",
+              "title": {
+                "uk": "Таргетна терапія",
+                "en": "Targeted therapy"
+              },
+              "description": {
+                "uk": "Найкраща послідовність таргетних засобів невідома.",
+                "en": "The best sequence of targeted agents is unknown."
+              },
+              "regimens": [],
+              "children": [
+                {
+                  "key": "nccn-rr-flt3-itd",
+                  "kind": "group",
+                  "title": {
+                    "uk": "FLT3-ITD",
+                    "en": "FLT3-ITD"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "gilteritinib-aml",
+                      "notes": {
+                        "uk": "Категорія 1",
+                        "en": "Category 1"
+                      }
+                    },
+                    {
+                      "regimen_id": "sorafenib-aza-rr"
+                    },
+                    {
+                      "regimen_id": "sorafenib-dec-rr"
+                    },
+                    {
+                      "regimen_id": "quizartinib-rr-cycle-1",
+                      "notes": {
+                        "uk": "Категорія 2B",
+                        "en": "Category 2B"
+                      }
+                    },
+                    {
+                      "regimen_id": "quizartinib-rr"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-rr-flt3-tkd",
+                  "kind": "group",
+                  "title": {
+                    "uk": "FLT3-TKD",
+                    "en": "FLT3-TKD"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "gilteritinib-aml",
+                      "notes": {
+                        "uk": "Категорія 1",
+                        "en": "Category 1"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-rr-idh2",
+                  "kind": "group",
+                  "title": {
+                    "uk": "IDH2",
+                    "en": "IDH2"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "enasidenib"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-rr-idh1",
+                  "kind": "group",
+                  "title": {
+                    "uk": "IDH1",
+                    "en": "IDH1"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ivosidenib-aml"
+                    },
+                    {
+                      "regimen_id": "olutasidenib"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-rr-cd33",
+                  "kind": "group",
+                  "title": {
+                    "uk": "CD33-позитивна",
+                    "en": "CD33-positive"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "go-mono-induction"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-rr-kmt2a",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Перебудова KMT2A",
+                    "en": "KMT2A rearrangement"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "revumenib-rr"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-rr-npm1",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Мутація NPM1",
+                    "en": "NPM1 mutation"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "revumenib-rr"
+                    },
+                    {
+                      "regimen_id": "ziftomenib-rr"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "nccn-rr-intensive",
+              "kind": "group",
+              "title": {
+                "uk": "Інтенсивна терапія",
+                "en": "Intensive therapy"
+              },
+              "description": {
+                "uk": "Відібраним хворим, особливо з короткою першою ремісією; при тривалій — можлива повторна індукція (крім CPX-351 і таргетних засобів, до яких виникла резистентність). Друга ремісія → алоТГСК.",
+                "en": "For selected patients, especially with a short first remission; with a long one, reinduction may fit (not CPX-351, nor targeted agents the disease became resistant to). Second remission → allo-HCT."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "clag-nccn",
+                  "notes": {
+                    "uk": "Кладрибін + цитарабін + Г-КСФ",
+                    "en": "Cladribine + cytarabine + G-CSF"
+                  }
+                },
+                {
+                  "regimen_id": "clag-m-nccn",
+                  "notes": {
+                    "uk": "… + мітоксантрон",
+                    "en": "… + mitoxantrone"
+                  }
+                },
+                {
+                  "regimen_id": "clag-ida-nccn",
+                  "notes": {
+                    "uk": "… + ідарубіцин",
+                    "en": "… + idarubicin"
+                  }
+                },
+                {
+                  "regimen_id": "hd-ara-c",
+                  "notes": {
+                    "uk": "Цитарабін",
+                    "en": "Cytarabine"
+                  }
+                },
+                {
+                  "regimen_id": "hidac-dauno",
+                  "notes": {
+                    "uk": "Цитарабін + даунорубіцин",
+                    "en": "Cytarabine + daunorubicin"
+                  }
+                },
+                {
+                  "regimen_id": "hidac-ida",
+                  "notes": {
+                    "uk": "Цитарабін + ідарубіцин",
+                    "en": "Cytarabine + idarubicin"
+                  }
+                },
+                {
+                  "regimen_id": "hidac-mitox-rr",
+                  "notes": {
+                    "uk": "Цитарабін → мітоксантрон",
+                    "en": "Cytarabine then mitoxantrone"
+                  }
+                },
+                {
+                  "regimen_id": "flag",
+                  "notes": {
+                    "uk": "Флударабін + цитарабін + Г-КСФ",
+                    "en": "Fludarabine + cytarabine + G-CSF"
+                  }
+                },
+                {
+                  "regimen_id": "flag-ida-rr-nccn",
+                  "notes": {
+                    "uk": "… + ідарубіцин",
+                    "en": "… + idarubicin"
+                  }
+                },
+                {
+                  "regimen_id": "flag-ida-ven-rr-nccn",
+                  "notes": {
+                    "uk": "… + ідарубіцин + венетоклакс",
+                    "en": "… + idarubicin + venetoclax"
+                  }
+                },
+                {
+                  "regimen_id": "ea-rr",
+                  "notes": {
+                    "uk": "Етопозид + цитарабін",
+                    "en": "Etoposide + cytarabine"
+                  }
+                },
+                {
+                  "regimen_id": "ema-rr",
+                  "notes": {
+                    "uk": "… + мітоксантрон",
+                    "en": "… + mitoxantrone"
+                  }
+                },
+                {
+                  "regimen_id": "clofarabine-rr"
+                },
+                {
+                  "regimen_id": "clofarabine-ara-c-rr"
+                },
+                {
+                  "regimen_id": "clofarabine-ara-c-ida-rr"
+                },
+                {
+                  "regimen_id": "clofarabine-ida-rr"
+                },
+                {
+                  "regimen_id": "clia-ven-induction",
+                  "notes": {
+                    "uk": "Категорія 2B",
+                    "en": "Category 2B"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-rr-less",
+              "kind": "group",
+              "title": {
+                "uk": "Менш інтенсивна терапія",
+                "en": "Less intensive therapy"
+              },
+              "description": {
+                "uk": "Після тривалого HMA при МДС користь HMA менша. Для венетоклаксу при Р/Р — та сама профілактика СЛП і титрування, що й у циклі 1; протигрибкова профілактика за показаннями (AML-J).",
+                "en": "After long HMA exposure for MDS, HMAs help less. For venetoclax in R/R disease, the same tumour lysis precautions and ramp-up as cycle 1; antifungal prophylaxis as indicated (AML-J)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono"
+                },
+                {
+                  "regimen_id": "decitabine-mono"
+                },
+                {
+                  "regimen_id": "ldac",
+                  "notes": {
+                    "uk": "Категорія 2B; NCCN: 20 мг/м² раз на добу д. 1–10 (у схемі довідника — 20 мг двічі на добу)",
+                    "en": "Category 2B; NCCN: 20 mg/m2 once daily d1-10 (the catalog regimen is 20 mg twice daily)"
+                  }
+                },
+                {
+                  "regimen_id": "aza-ven-nccn-cycle-1"
+                },
+                {
+                  "regimen_id": "aza-ven-nccn"
+                },
+                {
+                  "regimen_id": "dec-ven-cycle-1"
+                },
+                {
+                  "regimen_id": "dec-ven"
+                },
+                {
+                  "regimen_id": "avoid-aml-decitabine-10-day",
+                  "notes": {
+                    "uk": "NCCN допускає децитабін д. 1–10 з венетоклаксом; РКД не показало переваги над 5 днями",
+                    "en": "NCCN allows decitabine d1-10 with venetoclax; an RCT showed no gain over 5 days"
+                  }
+                },
+                {
+                  "regimen_id": "ldac-ven-cycle-1"
+                },
+                {
+                  "regimen_id": "ldac-ven"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "induction",
       "kind": "line",
       "title": {

@@ -1,0 +1,69 @@
+{
+  "id": "lpa-hr-consolidation-2",
+  "short_name": "LPA2005 ВР конс. 2",
+  "name": {
+    "uk": "ATRA + мітоксантрон, консолідація 2 (ГПЛ високого ризику)",
+    "en": "ATRA + mitoxantrone, consolidation 2 (high-risk APL)"
+  },
+  "description": {
+    "uk": "ATRA 15 днів + мітоксантрон 10 мг/м² 5 днів (при проміжному ризику — 3 дні).",
+    "en": "ATRA 15 days + mitoxantrone 10 mg/m2 for 5 days (3 days in intermediate risk)."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, APL-B 3 of 6 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "course": {
+    "id": "lpa2005-hr",
+    "title": {
+      "uk": "ATRA + ідарубіцин, високий ризик (LPA2005)",
+      "en": "ATRA + idarubicin, high risk (LPA2005)"
+    },
+    "phase": {
+      "uk": "консолідація 2",
+      "en": "consolidation 2"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 2
+    }
+  },
+  "items": [
+    {
+      "key": "tretinoin",
+      "drug_id": "tretinoin",
+      "route": "oral",
+      "dose_value": 22.5,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "45 мг/м² на добу двома рівними дозами (22,5 мг/м² двічі). Дні 1–15.",
+        "en": "45 mg/m2 a day in two equal doses (22.5 mg/m2 twice). Days 1-15."
+      }
+    },
+    {
+      "key": "mitoxantrone",
+      "drug_id": "mitoxantrone",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "10 мг/м² на добу, дні 1–5; у LPA2005 при проміжному ризику — 3 дні.",
+        "en": "10 mg/m2 a day on days 1-5; 3 days in intermediate risk in LPA2005."
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "apml4-consolidation-1",
+  "short_name": "APML4 конс. 1",
+  "name": {
+    "uk": "APML4: консолідація 1",
+    "en": "APML4: consolidation 1"
+  },
+  "description": {
+    "uk": "Через 3–4 тижні після індукції: ATRA 45 мг/м² і ATO 0,15 мг/кг щодня, дні 1–28.",
+    "en": "3-4 weeks after induction: ATRA 45 mg/m2 and ATO 0.15 mg/kg daily, days 1-28."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "eviQ: Acute promyelocytic leukaemia APML4 consolidation 1 (протокол 1936)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-promyelocytic-leukaemia/1936-apml4-consolidation-1",
+      "version": "перевірено 2026-10-22",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, APL-B 2 of 6 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "course": {
+    "id": "apml4",
+    "title": {
+      "uk": "APML4 (ATRA + ідарубіцин + миш’як)",
+      "en": "APML4 (ATRA + idarubicin + arsenic)"
+    },
+    "phase": {
+      "uk": "консолідація 1",
+      "en": "consolidation 1"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 2
+    }
+  },
+  "items": [
+    {
+      "key": "tretinoin",
+      "drug_id": "tretinoin",
+      "route": "oral",
+      "dose_value": 22.5,
+      "dose_unit": "mg_m2",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "45 мг/м² на добу двома рівними дозами (22,5 мг/м² двічі). Дні 1–28.",
+        "en": "45 mg/m2 a day in two equal doses (22.5 mg/m2 twice). Days 1-28."
+      }
+    },
+    {
+      "key": "arsenic-trioxide",
+      "drug_id": "arsenic-trioxide",
+      "route": "iv_infusion",
+      "dose_value": 0.15,
+      "dose_unit": "mg_kg",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "0,15 мг/кг щодня, дні 1–28; за eviQ допустимо блоками по 5 днів до 28 доз.",
+        "en": "0.15 mg/kg daily on days 1-28; eviQ allows 5-day blocks to 28 doses."
+      }
+    }
+  ]
+}

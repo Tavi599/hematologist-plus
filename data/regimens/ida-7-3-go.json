@@ -1,0 +1,83 @@
+{
+  "$comment": "NCCN дозволяє одну дозу ГО в день 1, 2, 3 або 4 або три дози в дні 1, 4, 7; тут — три дози, як у go-da-induction.",
+  "id": "ida-7-3-go",
+  "short_name": "7+3 Ida + ГО",
+  "name": {
+    "uk": "7+3 (цитарабін + ідарубіцин) + гемтузумаб",
+    "en": "7+3 (cytarabine + idarubicin) + gemtuzumab"
+  },
+  "description": {
+    "uk": "CD33+ ГМЛ сприятливого (CBF) чи проміжного ризику: цитарабін 200 мг/м² безперервно 7 діб, ідарубіцин 12 мг/м² д. 1–3, ГО 3 мг/м² (≤4,5 мг) у дні 1, 4, 7.",
+    "en": "CD33+ favourable (CBF) or intermediate-risk AML: cytarabine 200 mg/m2 continuous for 7 days, idarubicin 12 mg/m2 d1-3, GO 3 mg/m2 (max 4.5 mg) on days 1, 4, 7."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-1, AML-E 1 of 14 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 4, 7],
+      "notes": {
+        "uk": "За годину до гемтузумабу. Протокол додає хлорфенамін 10 мг і гідрокортизону натрію сукцинат 100 мг внутрішньовенно.",
+        "en": "An hour before the gemtuzumab. The protocol adds chlorphenamine 10 mg and hydrocortisone sodium succinate 100 mg intravenously."
+      }
+    },
+    {
+      "key": "gemtuzumab-ozogamicin",
+      "drug_id": "gemtuzumab-ozogamicin",
+      "route": "iv_infusion",
+      "dose_value": 3,
+      "dose_unit": "mg_m2",
+      "cap_amount": 4.5,
+      "days": [1, 4, 7],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 50,
+      "notes": {
+        "uk": "3 мг/м² (не більше одного флакона 4,5 мг); після ГО до алоТГСК витримують 60–90 днів через ризик СОС (NCCN).",
+        "en": "3 mg/m2 (at most one 4.5 mg vial); allow 60-90 days between GO and allo-HCT because of the SOS risk (NCCN)."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 200,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "200 мг/м² на добу безперервною інфузією, дні 1–7 (NCCN AML-E 1 of 14).",
+        "en": "200 mg/m2 a day as a continuous infusion, days 1-7 (NCCN AML-E 1 of 14)."
+      }
+    },
+    {
+      "key": "idarubicin",
+      "drug_id": "idarubicin",
+      "route": "iv_bolus",
+      "dose_value": 12,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3],
+      "notes": {
+        "uk": "12 мг/м², дні 1, 2, 3 (NCCN AML-E 1 of 14).",
+        "en": "12 mg/m2 on days 1, 2, 3 (NCCN AML-E 1 of 14)."
+      }
+    }
+  ]
+}

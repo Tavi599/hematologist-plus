@@ -1,0 +1,86 @@
+{
+  "id": "da-5-2",
+  "short_name": "5+2 (Dauno)",
+  "name": {
+    "uk": "5+2 (цитарабін + даунорубіцин)",
+    "en": "5+2 (cytarabine + daunorubicin)"
+  },
+  "description": {
+    "uk": "Реіндукція (45–60 мг/м²) або консолідація (45 мг/м²): цитарабін 100–200 мг/м² безперервно 5 діб, даунорубіцин д. 1–2.",
+    "en": "Reinduction (45-60 mg/m2) or consolidation (45 mg/m2): cytarabine 100-200 mg/m2 continuous for 5 days, daunorubicin d1-2."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-3, AML-6, AML-E 3 of 14, AML-E 6 of 14 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 1440,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "100 мг/м² на добу безперервною інфузією, дні 1–5 (NCCN AML-E 3 of 14).",
+        "en": "100 mg/m2 a day as a continuous infusion, days 1-5 (NCCN AML-E 3 of 14)."
+      },
+      "dose_options": [
+        {
+          "dose_value": 200,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Інша доза з діапазону NCCN (100 або 200 мг/м²)",
+            "en": "The other NCCN dose (100 or 200 mg/m2)"
+          },
+          "source": {
+            "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-E 3 of 14 (дози й дні як факти; текст не копіювався)",
+            "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+            "version": "5.2026 від 15.07.2026",
+            "checkedOn": "2026-10-22"
+          }
+        }
+      ]
+    },
+    {
+      "key": "daunorubicin",
+      "drug_id": "daunorubicin",
+      "route": "iv_infusion",
+      "dose_value": 60,
+      "dose_unit": "mg_m2",
+      "days": [1, 2],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "60 мг/м², дні 1, 2 (NCCN AML-E 3 of 14). Перед кожним курсом з антрацикліном — оцінка серцевої функції.",
+        "en": "60 mg/m2 on days 1, 2 (NCCN AML-E 3 of 14). Reassess cardiac function before each anthracycline course."
+      },
+      "dose_options": [
+        {
+          "dose_value": 45,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "45 мг/м², якщо в індукції був даунорубіцин 90 мг/м² (не більше 2 доз), або в консолідації",
+            "en": "45 mg/m2 after daunorubicin 90 mg/m2 in induction (at most 2 doses), or in consolidation"
+          },
+          "source": {
+            "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-E 3 of 14 (дози й дні як факти; текст не копіювався)",
+            "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+            "version": "5.2026 від 15.07.2026",
+            "checkedOn": "2026-10-22"
+          }
+        }
+      ]
+    }
+  ]
+}

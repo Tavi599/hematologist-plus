@@ -1,0 +1,162 @@
+{
+  "$comment": "Відрізняється від flag-ida-ven-induction (NSSG ML.100: цитарабін 2 г/м², венетоклакс 10/20/50/100 мг із поправкою на азол, до дня 14).",
+  "id": "flag-ida-ven-rr-nccn",
+  "short_name": "FLAG-IDA+Вен Р/Р (NCCN)",
+  "name": {
+    "uk": "FLAG-IDA + венетоклакс (NCCN, рецидив/рефрактерність)",
+    "en": "FLAG-IDA + venetoclax (NCCN, relapsed/refractory)"
+  },
+  "description": {
+    "uk": "Флударабін 30 мг/м² д. 2–6, цитарабін 1,5–2 г/м² д. 2–6, Г-КСФ д. 1–7, ідарубіцин 6 мг/м² д. 4–5, венетоклакс 400 мг д. 1–7.",
+    "en": "Fludarabine 30 mg/m2 d2-6, cytarabine 1.5-2 g/m2 d2-6, G-CSF d1-7, idarubicin 6 mg/m2 d4-5, venetoclax 400 mg d1-7."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-9, AML-E 9 of 14 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "miu_kg",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "NCCN дозу Г-КСФ не вказує («SC щодня»); значення — з NSSG ML.100. Лікар може не призначати Г-КСФ при високому лейкоцитозі.",
+        "en": "NCCN gives no G-CSF dose (\"SC daily\"); the value is from NSSG ML.100. The clinician may omit G-CSF at a high white count."
+      }
+    },
+    {
+      "key": "fludarabine",
+      "drug_id": "fludarabine",
+      "route": "iv_infusion",
+      "dose_value": 30,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4, 5, 6],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl за 30 хвилин. При ШКФ 30-70 мл/хв — 80% дози, при ШКФ < 30 мл/хв протипоказаний.",
+        "en": "In 100 mL 0.9% sodium chloride over 30 minutes. At a GFR of 30 to 70 mL/min give 80% of the dose; below 30 mL/min it is contraindicated."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 1500,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4, 5, 6],
+      "duration_min": 240,
+      "gap_before_min": 210,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "Починають через 4 години від початку інфузії флударабіну (тобто через 3,5 години після її завершення), у 250 мл 0,9% NaCl за 4 години. Обов'язкові очні краплі: преднізолон 0,5-1% або дексаметазон 0,1%, по 1 краплі в кожне око 4 рази на добу з дня 1 цитарабіну і ще 5 днів після останнього введення — у довідник не внесені, бо доза не в міліграмах.",
+        "en": "Started 4 hours after the fludarabine infusion begins (that is 3.5 hours after it ends), in 250 mL 0.9% sodium chloride over 4 hours. Mandatory eye drops - prednisolone 0.5 to 1% or dexamethasone 0.1%, one drop in each eye four times a day from day 1 of cytarabine and for 5 days after the last dose - are not in the catalogue, because the dose is not in milligrams."
+      },
+      "dose_options": [
+        {
+          "dose_value": 2000,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Інша доза з діапазону NCCN",
+            "en": "Another dose from the NCCN range"
+          },
+          "source": {
+            "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-E 2 of 14 (дози й дні як факти; текст не копіювався)",
+            "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+            "version": "5.2026 від 15.07.2026",
+            "checkedOn": "2026-10-22"
+          }
+        }
+      ]
+    },
+    {
+      "key": "idarubicin",
+      "drug_id": "idarubicin",
+      "route": "iv_bolus",
+      "dose_value": 6,
+      "dose_unit": "mg_m2",
+      "days": [4, 5],
+      "notes": {
+        "uk": "6 мг/м², дні 4, 5 (NCCN AML-E 9 of 14).",
+        "en": "6 mg/m2 on days 4, 5 (NCCN AML-E 9 of 14)."
+      }
+    },
+    {
+      "key": "venetoclax",
+      "drug_id": "venetoclax",
+      "route": "oral",
+      "dose_value": 400,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "400 мг, дні 1–7 (NCCN AML-E 9 of 14). При першому застосуванні — профілактика СЛП і, за AML-J, титрування 100/200/400 мг.",
+        "en": "400 mg on days 1 to 7 (NCCN AML-E 9 of 14). On first use, tumour lysis prophylaxis and, per AML-J, a 100/200/400 mg ramp."
+      },
+      "dose_modifiers": [
+        {
+          "key": "cyp3a-strong",
+          "label": {
+            "uk": "Сильний інгібітор CYP3A (позаконазол, вориконазол, кларитроміцин, кетоконазол, ітраконазол, ритонавір)",
+            "en": "Strong CYP3A inhibitor (posaconazole, voriconazole, clarithromycin, ketoconazole, itraconazole, ritonavir)"
+          },
+          "default_on": false,
+          "notes": {
+            "uk": "Дозу зменшують щонайменше на 75% (до 10/20/50/100 мг), як у протоколі ML.84.",
+            "en": "The dose is cut by at least 75% (to 10/20/50/100 mg), as in protocol ML.84."
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, ML.84 Azacitidine and Venetoclax",
+            "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-84-azacitidine-and-venetoclax-covid-19.pdf",
+            "version": "4.0",
+            "checkedOn": "2026-10-03"
+          },
+          "dose_value": 100
+        },
+        {
+          "key": "cyp3a-moderate",
+          "label": {
+            "uk": "Помірний інгібітор CYP3A (ципрофлоксацин, дилтіазем, еритроміцин, флуконазол, верапаміл)",
+            "en": "Moderate CYP3A inhibitor (ciprofloxacin, diltiazem, erythromycin, fluconazole, verapamil)"
+          },
+          "default_on": false,
+          "notes": {
+            "uk": "Дозу зменшують щонайменше вдвічі.",
+            "en": "The dose is halved at least."
+          },
+          "source": {
+            "name": "EMA, Venclyxto (венетоклакс), коротка характеристика препарату, таблиця 7",
+            "url": "https://www.ema.europa.eu/en/documents/product-information/venclyxto-epar-product-information_en.pdf",
+            "version": "чинна редакція на дату звірки",
+            "checkedOn": "2026-10-03"
+          },
+          "dose_value": 200
+        }
+      ]
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини разом із гідратацією. У пацієнтів високого ризику може знадобитися расбуриказа — за протоколом СЛП.",
+        "en": "Tumour lysis prophylaxis together with hydration. High-risk patients may need rasburicase, per the TLS protocol."
+      }
+    }
+  ]
+}

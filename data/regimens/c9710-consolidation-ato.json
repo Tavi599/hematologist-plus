@@ -1,0 +1,57 @@
+{
+  "id": "c9710-consolidation-ato",
+  "short_name": "C9710 конс. ATO",
+  "name": {
+    "uk": "C9710: консолідація миш’яком (2 цикли)",
+    "en": "C9710: arsenic consolidation (2 cycles)"
+  },
+  "description": {
+    "uk": "ATO 0,15 мг/кг 5 днів на тиждень 5 тижнів, кожні 7 тижнів, 2 цикли.",
+    "en": "ATO 0.15 mg/kg 5 days a week for 5 weeks, every 7 weeks, 2 cycles."
+  },
+  "cycle_length_days": 49,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, APL-B 3 of 6 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "course": {
+    "id": "c9710",
+    "title": {
+      "uk": "ATRA + даунорубіцин + цитарабін (C9710)",
+      "en": "ATRA + daunorubicin + cytarabine (C9710)"
+    },
+    "phase": {
+      "uk": "консолідація ATO",
+      "en": "arsenic consolidation"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 3
+    }
+  },
+  "items": [
+    {
+      "key": "arsenic-trioxide",
+      "drug_id": "arsenic-trioxide",
+      "route": "iv_infusion",
+      "dose_value": 0.15,
+      "dose_unit": "mg_kg",
+      "days": [
+        1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 29, 30, 31, 32, 33
+      ],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "0,15 мг/кг, дні 1–5, 8–12, 15–19, 22–26, 29–33 (5 днів на тиждень 5 тижнів).",
+        "en": "0.15 mg/kg on days 1-5, 8-12, 15-19, 22-26, 29-33 (5 days a week for 5 weeks)."
+      }
+    }
+  ]
+}

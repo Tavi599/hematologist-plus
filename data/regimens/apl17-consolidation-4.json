@@ -1,0 +1,90 @@
+{
+  "id": "apl17-consolidation-4",
+  "short_name": "AML17 конс. 4",
+  "name": {
+    "uk": "ATRA + переривчастий миш’як (AML17): консолідація 4",
+    "en": "ATRA + intermittent arsenic (AML17): consolidation 4"
+  },
+  "description": {
+    "uk": "Цикл 28 днів: ATRA д. 1–14; ATO 0,3 мг/кг д. 1–5, далі 0,25 мг/кг двічі на тиждень у тижні 2–4.",
+    "en": "28-day cycle: ATRA d1-14; ATO 0.3 mg/kg d1-5, then 0.25 mg/kg twice weekly in weeks 2-4."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, APL-B 1 of 6 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "NSSG Oxford Haematology, ML.35 ATRA (tretinoin) with arsenic trioxide (схема AML17)",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-35-atra-with-arsenic-trioxide.pdf",
+      "version": "3.0 (червень 2025)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "course": {
+    "id": "aml17",
+    "title": {
+      "uk": "ATRA + переривчастий миш’як (AML17)",
+      "en": "ATRA + intermittent arsenic (AML17)"
+    },
+    "phase": {
+      "uk": "консолідація 4",
+      "en": "consolidation 4"
+    },
+    "order": 3,
+    "cycles": {
+      "from": 5,
+      "to": 5
+    }
+  },
+  "items": [
+    {
+      "key": "tretinoin",
+      "drug_id": "tretinoin",
+      "route": "oral",
+      "dose_value": 22.5,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "45 мг/м² на добу двома рівними дозами (22,5 мг/м² двічі). Дні 1–14.",
+        "en": "45 mg/m2 a day in two equal doses (22.5 mg/m2 twice). Days 1-14."
+      }
+    },
+    {
+      "key": "arsenic-trioxide",
+      "drug_id": "arsenic-trioxide",
+      "route": "iv_infusion",
+      "dose_value": 0.3,
+      "dose_unit": "mg_kg",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "0,3 мг/кг у 100 мл 0,9% NaCl за 2 год, дні 1–5 (NCCN APL-B 1 of 6; NSSG ML.35). Тиждень 1.",
+        "en": "0.3 mg/kg in 100 mL 0.9% NaCl over 2 h, days 1-5 (NCCN APL-B 1 of 6; NSSG ML.35). Week 1."
+      }
+    },
+    {
+      "key": "arsenic-trioxide-twice-weekly",
+      "drug_id": "arsenic-trioxide",
+      "route": "iv_infusion",
+      "dose_value": 0.25,
+      "dose_unit": "mg_kg",
+      "days": [8, 11, 15, 18, 22, 25],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "0,25 мг/кг двічі на тиждень, тижні 2–4. Дні «двічі на тиждень» — умовні (1-й і 4-й день тижня): NCCN і NSSG ML.35 конкретних днів не називають; лікар зсуває за календарем відділення.",
+        "en": "0.25 mg/kg twice weekly, weeks 2-4. The \"twice weekly\" days are a convention (days 1 and 4 of each week): neither NCCN nor NSSG ML.35 names the weekdays; shift them to the ward calendar."
+      }
+    }
+  ]
+}

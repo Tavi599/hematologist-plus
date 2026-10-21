@@ -47,7 +47,23 @@
       "notes": {
         "uk": "12 мг/м² струминно за 10–15 хвилин (eviQ 342).",
         "en": "12 mg/m2 as a bolus over 10 to 15 minutes (eviQ 342)."
-      }
+      },
+      "dose_options": [
+        {
+          "dose_value": 10,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "NCCN: 10 мг/м² у консолідації (у реіндукції 10–12)",
+            "en": "NCCN: 10 mg/m2 in consolidation (10-12 in reinduction)"
+          },
+          "source": {
+            "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-E 3 of 14, AML-E 6 of 14 (дози й дні як факти; текст не копіювався)",
+            "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+            "version": "5.2026 від 15.07.2026",
+            "checkedOn": "2026-10-22"
+          }
+        }
+      ]
     }
   ]
 }

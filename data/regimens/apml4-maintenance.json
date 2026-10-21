@@ -1,0 +1,83 @@
+{
+  "id": "apml4-maintenance",
+  "short_name": "APML4 підтримка",
+  "name": {
+    "uk": "APML4: підтримувальна терапія (8 циклів по 90 днів)",
+    "en": "APML4: maintenance (8 cycles of 90 days)"
+  },
+  "description": {
+    "uk": "Через 3–4 тижні після консолідації 2, 2 роки: ATRA д. 1–14, метотрексат 5 мг/м² раз на тиждень і меркаптопурин 50 мг/м² щодня з дня 15; дози титрують до нейтрофілів 1–2×10⁹/л.",
+    "en": "3-4 weeks after consolidation 2, for 2 years: ATRA d1-14, methotrexate 5 mg/m2 weekly and mercaptopurine 50 mg/m2 daily from day 15; titrate to neutrophils of 1-2×10⁹/L."
+  },
+  "cycle_length_days": 90,
+  "default_cycles": 8,
+  "sources": [
+    {
+      "name": "eviQ: Acute promyelocytic leukaemia APML4 maintenance (протокол 1938)",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/acute-promyelocytic-leukaemia/1938-apml4-maintenance",
+      "version": "перевірено 2026-10-22",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "course": {
+    "id": "apml4",
+    "title": {
+      "uk": "APML4 (ATRA + ідарубіцин + миш’як)",
+      "en": "APML4 (ATRA + idarubicin + arsenic)"
+    },
+    "phase": {
+      "uk": "підтримка",
+      "en": "maintenance"
+    },
+    "order": 4,
+    "cycles": {
+      "from": 4,
+      "to": null
+    }
+  },
+  "items": [
+    {
+      "key": "tretinoin",
+      "drug_id": "tretinoin",
+      "route": "oral",
+      "dose_value": 22.5,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "notes": {
+        "uk": "45 мг/м² на добу двома рівними дозами (22,5 мг/м² двічі). Дні 1–14.",
+        "en": "45 mg/m2 a day in two equal doses (22.5 mg/m2 twice). Days 1-14."
+      }
+    },
+    {
+      "key": "methotrexate",
+      "drug_id": "methotrexate",
+      "route": "oral",
+      "dose_value": 5,
+      "dose_unit": "mg_m2",
+      "days": [15, 22, 29, 36, 43, 50, 57, 64, 71, 78, 85],
+      "notes": {
+        "uk": "5 мг/м² раз на тиждень (діапазон 5–15 мг/м²), титрувати до нейтрофілів 1–2×10⁹/л (eviQ 1938).",
+        "en": "5 mg/m2 once a week (range 5-15 mg/m2), titrate to neutrophils of 1-2×10⁹/L (eviQ 1938)."
+      }
+    },
+    {
+      "key": "mercaptopurine",
+      "drug_id": "mercaptopurine",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_m2",
+      "days": [
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37,
+        38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
+        61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83,
+        84, 85, 86, 87, 88, 89, 90
+      ],
+      "notes": {
+        "uk": "50 мг/м² раз на добу (діапазон 50–90 мг/м²), титрувати до нейтрофілів 1–2×10⁹/л; розглянути тестування ТПМТ (eviQ 1938).",
+        "en": "50 mg/m2 once daily (range 50-90 mg/m2), titrate to neutrophils of 1-2×10⁹/L; consider TPMT testing (eviQ 1938)."
+      }
+    }
+  ]
+}
