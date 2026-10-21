@@ -3,6 +3,7 @@ import {
   Card,
   Checkbox,
   Group,
+  MultiSelect,
   NumberInput,
   Select,
   SimpleGrid,
@@ -18,7 +19,7 @@ import type { BsaVariant } from '../../domain'
 import { regimenAvailability } from '../../lib/availability'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { useOnlyObtainable } from '../../lib/only-obtainable'
-import { filterRegimens, type RegimenFilter } from '../../lib/regimen-filter'
+import { drugsOfRegimens, filterRegimens, type RegimenFilter } from '../../lib/regimen-filter'
 import { formatNumber } from '../../lib/format'
 import { currentLanguage } from '../../lib/i18n'
 import { decimalInput } from '../../lib/decimal-input'
@@ -67,7 +68,13 @@ export function CourseSettings({
   const [diseaseId, setDiseaseId] = useState<string | null>(null)
   // Shared with the disease pages: hiding what cannot be obtained is one decision, not two.
   const [onlyObtainable, setOnlyObtainable] = useOnlyObtainable()
-  const filter: RegimenFilter = { diseaseId, onlyObtainable }
+  const [drugIds, setDrugIds] = useState<string[]>([])
+  const filter: RegimenFilter = { diseaseId, onlyObtainable, drugIds }
+
+  // Only the drugs of the regimens the other two filters leave: any other one would empty the list.
+  const drugs = drugsOfRegimens(catalog, filterRegimens(catalog, { ...filter, drugIds: [] }))
+    .map((drug) => ({ value: drug.id, label: localize(drug.name, language) }))
+    .sort((a, b) => a.label.localeCompare(b.label))
 
   const regimens = filterRegimens(catalog, filter).map((regimen) => ({
     value: regimen.id,
@@ -95,7 +102,10 @@ export function CourseSettings({
             placeholder={t('calculator.course.diseaseAll')}
             data={diseases}
             value={filter.diseaseId}
-            onChange={setDiseaseId}
+            onChange={(next) => {
+              setDiseaseId(next)
+              setDrugIds([])
+            }}
             searchable
             clearable
             style={{ minWidth: 240 }}
@@ -107,6 +117,16 @@ export function CourseSettings({
             onChange={(event) => setOnlyObtainable(event.currentTarget.checked)}
           />
         </Group>
+        <MultiSelect
+          label={t('calculator.course.drugFilter')}
+          description={t('calculator.course.drugFilterHint')}
+          data={drugs}
+          value={drugIds}
+          onChange={setDrugIds}
+          searchable
+          clearable
+          maxDropdownHeight={280}
+        />
 
         <Select
           label={t('calculator.course.regimen')}

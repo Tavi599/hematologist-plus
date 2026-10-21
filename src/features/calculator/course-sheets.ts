@@ -5,7 +5,7 @@ import {
   type CourseDrugResult,
   type CourseResult,
 } from '../../domain'
-import { PERIPHERAL_MAX_RATE_ML_H, solventOf, type CourseItem } from '../../lib/course-input'
+import { solventOf, type CourseItem } from '../../lib/course-input'
 import { rampStepsFor } from '../../lib/ramp-steps'
 import { clockOfHour, SHEET_HOURS } from '../../lib/row-plan'
 import { formatAmount, formatDate } from '../../lib/format'
@@ -61,11 +61,6 @@ export interface CourseSheetsInput {
    * the days it is given.
    */
   layout?: SheetLayout
-  /**
-   * The patient needs irradiated blood components (BSH 2020): the sheet says so at its foot, where
-   * the nurse and the transfusion request read it.
-   */
-  irradiatedOnly?: boolean
   /** Start of the working day, HH:MM: where the times of a drug given several times a day begin. */
   dayStart?: string
   language: Language
@@ -144,7 +139,6 @@ const BLANK = {
   wardMode: 'Режим: палатний            Дієта: стіл №5',
   registryCode: 'Код за ЄДРПОУ ',
   rate: 'V= ',
-  centralLine: '(через ЦВК)',
   grams: ' гр',
   rampStart: 'Початкова швидкість (V1)= ',
   rampStep: ' мл/год. Пришвидшувати кожні ',
@@ -154,7 +148,6 @@ const BLANK = {
   perDay: ' р/добу',
   hours: ', ',
   control: 'Контроль ваги, діурезу, АТ, ЧСС, температури тіла!',
-  irradiated: 'Компоненти крові — лише ОПРОМІНЕНІ!',
 } as const
 
 const MARK = '+'
@@ -306,13 +299,7 @@ function daySheet(input: CourseSheetsInput, day: SheetDay): XlsxSheet {
     })),
   )
 
-  rows.push([
-    {
-      value: input.irradiatedOnly ? `${BLANK.control}   ${BLANK.irradiated}` : BLANK.control,
-      format: NOTE_FORMAT,
-    },
-    ...spread('', 25, NOTE_FORMAT),
-  ])
+  rows.push([{ value: BLANK.control, format: NOTE_FORMAT }, ...spread('', 25, NOTE_FORMAT)])
   merges.push(`A${rows.length}:${lastColumn}${rows.length}`)
   heights.push(NOTE_HEIGHT)
 
@@ -552,10 +539,7 @@ function wardSheet(
   ]
   const ruled = appendBands(rows, merges, heights, widths, bands)
 
-  rows.push([
-    { value: input.irradiatedOnly ? BLANK.irradiated : null, format: NOTE_FORMAT },
-    ...spread('', 25, NOTE_FORMAT),
-  ])
+  rows.push([{ value: null, format: NOTE_FORMAT }, ...spread('', 25, NOTE_FORMAT)])
   merges.push(`A${rows.length}:${lastColumn}${rows.length}`)
   heights.push(NOTE_HEIGHT)
 
@@ -673,6 +657,14 @@ function spread(value: string, width: number, format: XlsxFormat): XlsxInput[] {
 
 /* ------------------------------------------------------------------------ the text --------- */
 
+/**
+ * How the department writes a drug on its sheets, where it is not the generic name of the
+ * catalog: by the name of its solution, and the dose in millilitres of it.
+ */
+const SHEET_SOLUTIONS: Record<string, { name: string; mgPerMl: number }> = {
+  diphenhydramine: { name: 'Димедрол 1% р-н', mgPerMl: 10 },
+}
+
 /** What is given: the drug and its dose, and under it the solvent it goes into. */
 function whatLine(
   id: string,
@@ -682,9 +674,13 @@ function whatLine(
   day?: number,
 ): string {
   const { language, t } = input
-  const name = item ? localize(item.drug.name, language) : id
+  const solution = item ? SHEET_SOLUTIONS[item.drug.id] : undefined
+  const name = solution?.name ?? (item ? localize(item.drug.name, language) : id)
+  const inMl = solution && result?.amountUnit === 'mg'
   const dose = result
-    ? ` ${formatAmount(result.doseAmount, language, 2)} ${t(`units.${result.amountUnit}`)}`
+    ? inMl
+      ? ` ${formatAmount(result.doseAmount / solution.mgPerMl, language, 2)} ${t('units.ml')}`
+      : ` ${formatAmount(result.doseAmount, language, 2)} ${t(`units.${result.amountUnit}`)}`
     : ''
   const infusion = result?.infusion
   if (!infusion) return name + dose
@@ -730,8 +726,7 @@ function howLine(
   }
   if (infusion && infusion.rateMlH !== null) {
     const rate = `${route}\n${BLANK.rate}${formatAmount(infusion.rateMlH, language)} ${t('units.ml_h')}`
-    // Faster than a peripheral cannula carries: the pace of the design is the one through a CVC.
-    return infusion.rateMlH > PERIPHERAL_MAX_RATE_ML_H ? `${rate}\n${BLANK.centralLine}` : rate
+    return rate
   }
   const perDay = result?.administrationsPerDay ?? item?.item.administrations_per_day ?? 1
   return perDay > 1 ? `${route}\n${perDay}${BLANK.perDay}` : route

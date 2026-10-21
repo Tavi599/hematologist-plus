@@ -90,7 +90,7 @@ import {
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import type { RegimenItem } from '../../schemas/catalog'
-import { patientFormSchema, type PatientInput } from '../../schemas/patient'
+import { patientFormIssues, patientFormSchema, type PatientInput } from '../../schemas/patient'
 import classes from './CalculatorPage.module.css'
 
 export function CalculatorPage() {
@@ -225,6 +225,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
     const parsed = patientFormSchema.safeParse(patientForm)
     return parsed.success ? parsed.data : null
   }, [patientForm])
+
+  const patientIssues = useMemo(() => patientFormIssues(patientForm), [patientForm])
 
   // The regimen lives in the URL, so a link from the disease page (and a shared link) works.
   // The menu link is the calculator with no regimen in it: followed from the calculator itself, it
@@ -789,7 +791,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
         {regimen && <RegimenEvidence regimen={regimen} />}
 
         {!measured && items.length > 0 && (
-          <MissingDataAlert items={items} missing={missing} invalid={patient === null} />
+          <MissingDataAlert items={items} missing={missing} invalid={patientIssues} />
         )}
         {measured && course && (
           <UnadjustedSupportAlert items={items} patient={patient} disabledIds={disabledIds} />
@@ -1093,7 +1095,6 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                   dayStart={courseSettings.dayStart}
                   header={header}
                   manualRows={sheetManualRows}
-                  irradiationReasons={irradiation}
                 />
               ) : (
                 <Text size="sm" c="dimmed">

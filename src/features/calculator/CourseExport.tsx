@@ -1,14 +1,4 @@
-import {
-  Button,
-  Card,
-  Checkbox,
-  Collapse,
-  Group,
-  SegmentedControl,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core'
+import { Button, Card, Collapse, Group, SegmentedControl, Stack, Text, Title } from '@mantine/core'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -25,7 +15,6 @@ import { SaveOutcomeNote } from './SaveFolder'
 import { SheetPreview } from './SheetPreview'
 import type { HeaderValue } from './header'
 import type { ManualRow } from './manual-rows'
-import type { Text2 } from '../irradiated/indications'
 
 export interface CourseExportProps {
   items: CourseItem[]
@@ -39,8 +28,6 @@ export interface CourseExportProps {
   dayStart: string
   header: HeaderValue
   manualRows?: ManualRow[]
-  /** Why the course calls for irradiated blood components; empty when it does not show it. */
-  irradiationReasons?: Text2[]
 }
 
 /**
@@ -51,11 +38,6 @@ export function CourseExport(props: CourseExportProps) {
   const { t } = useTranslation()
   const language = currentLanguage()
   const [layout, setLayout] = useState<SheetLayout>('infusion')
-  // Ticked when the course shows a reason; the physician ticks it by hand for one it cannot see
-  // (Hodgkin lymphoma treated elsewhere, fludarabine years ago) or clears it.
-  const reasons = props.irradiationReasons ?? []
-  const [irradiatedChoice, setIrradiatedChoice] = useState<boolean | null>(null)
-  const irradiatedOnly = irradiatedChoice ?? reasons.length > 0
   // The preview holds the whole blank as a table: it is built only once the physician opens it.
   const [previewOpen, setPreviewOpen] = useState(false)
   const folder = useSaveFolder()
@@ -73,7 +55,6 @@ export function CourseExport(props: CourseExportProps) {
         cycleNumber: props.cycleNumber,
         header: props.header,
         layout,
-        irradiatedOnly,
         dayStart: props.dayStart,
         language,
         t: t as Translate,
@@ -89,7 +70,6 @@ export function CourseExport(props: CourseExportProps) {
       props.header,
       props.dayStart,
       layout,
-      irradiatedOnly,
       language,
       t,
     ],
@@ -122,16 +102,6 @@ export function CourseExport(props: CourseExportProps) {
         <Text size="sm" c="dimmed">
           {t(layout === 'ward' ? 'calculator.export.hintWard' : 'calculator.export.hint')}
         </Text>
-        <Checkbox
-          checked={irradiatedOnly}
-          onChange={(event) => setIrradiatedChoice(event.currentTarget.checked)}
-          label={t('calculator.export.irradiated')}
-          description={
-            reasons.length > 0
-              ? reasons.map((reason) => reason[language]).join('; ')
-              : t('calculator.export.irradiatedHint')
-          }
-        />
         <Group gap="xs" wrap="wrap">
           <Button onClick={download} disabled={sheets.length === 0}>
             {t('calculator.export.button')}

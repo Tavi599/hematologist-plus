@@ -386,12 +386,16 @@ describe('buildCourseSheets', () => {
     expect(text(built.at(-1)!.rows.at(-1)![0] ?? null)).toBeNull()
   })
 
-  it('says at the foot of every sheet when only irradiated components may be given', () => {
-    const built = sheets({ irradiatedOnly: true })
-    expect(String(text(built[0]!.rows.at(-1)![0] ?? null))).toContain(
-      'Компоненти крові — лише ОПРОМІНЕНІ!',
-    )
-    expect(text(built.at(-1)!.rows.at(-1)![0] ?? null)).toBe('Компоненти крові — лише ОПРОМІНЕНІ!')
+  it('writes diphenhydramine the way the department does', () => {
+    const catalog = demoCatalog()
+    const drug = catalog.drugs.find((candidate) => candidate.id === 'cyclophosphamide')!
+    drug.id = 'diphenhydramine'
+    catalog.regimen_items.forEach((row) => {
+      if (row.drug_id === 'cyclophosphamide') row.drug_id = 'diphenhydramine'
+    })
+    const day = sheets({}, catalog)[0]!
+    // 1500 mg of cyclophosphamide at 10 mg/mL of the 1% solution: 150 mL
+    expect(orders(day, 0)).toContain('Димедрол 1% р-н 150 units.ml')
   })
 
   it('writes the dose under every mark of a drug given several times a day', () => {
