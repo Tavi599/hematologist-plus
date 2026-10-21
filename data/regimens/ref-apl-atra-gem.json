@@ -1,0 +1,53 @@
+{
+  "id": "ref-apl-atra-gem",
+  "short_name": "ATRA+ГО",
+  "name": {
+    "uk": "ATRA + гемтузумаб озогаміцин",
+    "en": "ATRA + gemtuzumab ozogamicin"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, APL-B 1 of 6, 4 of 6 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "ГПЛ без доступного триоксиду миш’яку, а також при кардіологічних проблемах (подовжений QTcF).",
+      "en": "APL when arsenic trioxide is unavailable, and with cardiac issues (QTcF prolongation)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Третиноїн (ATRA)",
+          "en": "Tretinoin (ATRA)"
+        },
+        "drug_id": "tretinoin"
+      },
+      {
+        "name": {
+          "uk": "Гемтузумаб озогаміцин",
+          "en": "Gemtuzumab ozogamicin"
+        },
+        "drug_id": "gemtuzumab-ozogamicin"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Індукція: ATRA 45 мг/м² на добу в 2 прийоми + одна доза ГО 6 або 9 мг/м² на день 5 (низький ризик) чи день 1 (високий ризик, кардіологічні проблеми).",
+        "en": "Induction: ATRA 45 mg/m2 a day in two doses + a single GO 6 or 9 mg/m2 on day 5 (low risk) or day 1 (high risk, cardiac issues)."
+      },
+      {
+        "uk": "Консолідація: ATRA у тижні 1–2, 5–6, 9–10, 13–14, 17–18, 21–22, 25–26; ГО 6 або 9 мг/м² щомісяця до молекулярної ремісії.",
+        "en": "Consolidation: ATRA in weeks 1-2, 5-6, 9-10, 13-14, 17-18, 21-22, 25-26; GO 6 or 9 mg/m2 monthly until molecular remission."
+      }
+    ],
+    "gap": {
+      "uk": "Тривалість індукції («до ремісії») і кількість доз ГО в консолідації не визначені.",
+      "en": "The induction length (\"until remission\") and the number of GO doses in consolidation are not fixed."
+    },
+    "availability": "unknown"
+  }
+}

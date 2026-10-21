@@ -1,0 +1,37 @@
+{
+  "id": "pivekimab-bpdcn",
+  "short_name": "Півекімаб",
+  "name": {
+    "uk": "Півекімаб суніріне (БПДКН)",
+    "en": "Pivekimab sunirine (BPDCN)"
+  },
+  "description": {
+    "uk": "БПДКН, CD123-спрямована терапія: 0,045 мг/кг в/в за 30 хв у день 1 циклу 21 день до прогресування чи неприйнятної токсичності. Виключення: ураження ЦНС, СОС в анамнезі, капілярний витік 4 ст., негенітальний набряк 4 ст.",
+    "en": "BPDCN, CD123-directed: 0.045 mg/kg IV over 30 min on day 1 of a 21-day cycle until progression or unacceptable toxicity. Exclusions: CNS involvement, prior SOS, grade 4 capillary leak, grade 4 non-cardiac oedema."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Blastic Plasmacytoid Dendritic Cell Neoplasm (в одному документі з AML), BPDCN-2 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "pivekimab-sunirine",
+      "drug_id": "pivekimab-sunirine",
+      "route": "iv_infusion",
+      "dose_value": 0.045,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "duration_min": 30,
+      "notes": {
+        "uk": "0,045 мг/кг за 30 хв, день 1 (NCCN BPDCN-2). Розчинник і об’єм джерело не вказує.",
+        "en": "0.045 mg/kg over 30 minutes, day 1 (NCCN BPDCN-2). The source gives no diluent or volume."
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "clofarabine-ara-c-rr",
+  "short_name": "Клофарабін+цитарабін",
+  "name": {
+    "uk": "Клофарабін + цитарабін (рецидив/рефрактерність)",
+    "en": "Clofarabine + cytarabine (relapsed/refractory)"
+  },
+  "description": {
+    "uk": "Клофарабін 25 мг/м² д. 1–5, цитарабін 2 г/м² за 3 год через 4 год після клофарабіну д. 1–5.",
+    "en": "Clofarabine 25 mg/m2 d1-5, cytarabine 2 g/m2 over 3 h starting 4 h after clofarabine d1-5."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-9, AML-E 9 of 14 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "clofarabine",
+      "drug_id": "clofarabine",
+      "route": "iv_infusion",
+      "dose_value": 25,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "25 мг/м² за 2 години, дні 1–5.",
+        "en": "25 mg/m2 over 2 hours on days 1 to 5."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "gap_before_min": 240,
+      "notes": {
+        "uk": "2000 мг/м² за 3 години, через 4 год після клофарабіну, дні 1–5.",
+        "en": "2000 mg/m2 over 3 hours, starting 4 hours after clofarabine, days 1 to 5."
+      }
+    }
+  ]
+}

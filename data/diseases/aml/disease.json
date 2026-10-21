@@ -148,6 +148,34 @@
             "uk": "NCCN 5.2026: CLIA + венетоклакс — інші рекомендовані (категорія 2B)",
             "en": "NCCN 5.2026: CLIA plus venetoclax is other recommended (category 2B)"
           }
+        },
+        {
+          "regimen_id": "flag-ida-ven-nccn-induction",
+          "notes": {
+            "uk": "За NCCN (категорія 2B, обережно >60 р.): венетоклакс 100/200/400 мг д. 1–7",
+            "en": "NCCN (category 2B, caution above 60): venetoclax 100/200/400 mg d1-7"
+          }
+        },
+        {
+          "regimen_id": "flag-ida-go-induction",
+          "notes": {
+            "uk": "CD33+, сприятливий/проміжний ризик (2B)",
+            "en": "CD33+, favourable/intermediate risk (2B)"
+          }
+        },
+        {
+          "regimen_id": "flag-go-induction",
+          "notes": {
+            "uk": "CD33+ CBF-ГМЛ, якщо антрациклін неможливий (2B)",
+            "en": "CD33+ CBF-AML if an anthracycline is not possible (2B)"
+          }
+        },
+        {
+          "regimen_id": "clag-m-nccn",
+          "notes": {
+            "uk": "Інший рекомендований варіант NCCN (2B; обережно >60 р.)",
+            "en": "An \"other recommended\" NCCN option (2B; caution above 60)"
+          }
         }
       ]
     },
@@ -238,6 +266,62 @@
             "uk": "NCCN 5.2026: підтримка гілтеритинібом після алоТГСК при МЗХ FLT3-ITD",
             "en": "NCCN 5.2026: gilteritinib maintenance after an allogeneic transplant with FLT3-ITD MRD"
           }
+        },
+        {
+          "regimen_id": "hidac-quizartinib-consolidation",
+          "notes": {
+            "uk": "FLT3-ITD після індукції з квізартинібом",
+            "en": "FLT3-ITD after quizartinib induction"
+          }
+        },
+        {
+          "regimen_id": "aza-maintenance",
+          "notes": {
+            "uk": "Підтримка, якщо пероральний азацитидин недоступний (макс. 12 циклів)",
+            "en": "Maintenance when oral azacitidine is unavailable (at most 12 cycles)"
+          }
+        },
+        {
+          "regimen_id": "decitabine-maintenance",
+          "notes": {
+            "uk": "Підтримка (макс. 12 циклів)",
+            "en": "Maintenance (at most 12 cycles)"
+          }
+        },
+        {
+          "regimen_id": "quizartinib-maintenance-cycle-1",
+          "notes": {
+            "uk": "Підтримка FLT3-ITD, цикл 1",
+            "en": "FLT3-ITD maintenance, cycle 1"
+          }
+        },
+        {
+          "regimen_id": "quizartinib-maintenance",
+          "notes": {
+            "uk": "Цикли 2 і далі, до 36 циклів",
+            "en": "Cycle 2 onwards, up to 36 cycles"
+          }
+        },
+        {
+          "regimen_id": "sorafenib-maintenance-1-3",
+          "notes": {
+            "uk": "Підтримка FLT3-ITD після алоТГСК, цикли 1–3",
+            "en": "FLT3-ITD maintenance after allo-HCT, cycles 1-3"
+          }
+        },
+        {
+          "regimen_id": "sorafenib-maintenance",
+          "notes": {
+            "uk": "З циклу 4, до 24 місяців терапії",
+            "en": "From cycle 4, up to 24 months of therapy"
+          }
+        },
+        {
+          "regimen_id": "decitabine-gcsf-post-hct",
+          "notes": {
+            "uk": "Після алоТГСК, високий ризик (2B)",
+            "en": "After allo-HCT, high risk (2B)"
+          }
         }
       ]
     },
@@ -313,6 +397,87 @@
             "uk": "NCCN 5.2026: CLAG-M в індукції — інші рекомендовані (категорія 2B); при рецидиві — кладрибін + цитарабін + Г-КСФ ± мітоксантрон чи ідарубіцин",
             "en": "NCCN 5.2026: CLAG-M in induction is other recommended (category 2B); at relapse, cladribine plus cytarabine plus G-CSF with mitoxantrone or idarubicin"
           }
+        },
+        {
+          "regimen_id": "revumenib-rr",
+          "notes": {
+            "uk": "KMT2A-перебудова або мутація NPM1",
+            "en": "KMT2A rearrangement or NPM1 mutation"
+          }
+        },
+        {
+          "regimen_id": "ziftomenib-rr",
+          "notes": {
+            "uk": "Мутація NPM1",
+            "en": "NPM1 mutation"
+          }
+        },
+        {
+          "regimen_id": "quizartinib-rr-cycle-1",
+          "notes": {
+            "uk": "FLT3-ITD (2B), цикл 1",
+            "en": "FLT3-ITD (2B), cycle 1"
+          }
+        },
+        {
+          "regimen_id": "quizartinib-rr",
+          "notes": {
+            "uk": "Цикли 2 і далі",
+            "en": "Cycle 2 onwards"
+          }
+        },
+        {
+          "regimen_id": "sorafenib-aza-rr",
+          "notes": {
+            "uk": "FLT3-ITD",
+            "en": "FLT3-ITD"
+          }
+        },
+        {
+          "regimen_id": "sorafenib-dec-rr",
+          "notes": {
+            "uk": "FLT3-ITD",
+            "en": "FLT3-ITD"
+          }
+        },
+        {
+          "regimen_id": "clag-m-nccn",
+          "notes": {
+            "uk": "Інтенсивна терапія Р/Р, схема NCCN (д. 2–6)",
+            "en": "Intensive R/R therapy, NCCN schedule (d2-6)"
+          }
+        },
+        {
+          "regimen_id": "clag-ida-nccn"
+        },
+        {
+          "regimen_id": "flag-ida-rr-nccn",
+          "notes": {
+            "uk": "Варіант NCCN: ідарубіцин 10 мг/м² д. 1–3",
+            "en": "NCCN variant: idarubicin 10 mg/m2 d1-3"
+          }
+        },
+        {
+          "regimen_id": "ea-rr"
+        },
+        {
+          "regimen_id": "ema-rr"
+        },
+        {
+          "regimen_id": "clofarabine-rr",
+          "notes": {
+            "uk": "Клофарабін недоступний в Україні — реєстрацію не підтверджено",
+            "en": "Clofarabine not confirmed as registered in Ukraine"
+          }
+        },
+        {
+          "regimen_id": "clofarabine-ara-c-rr"
+        },
+        {
+          "regimen_id": "clofarabine-ara-c-ida-rr"
+        },
+        {
+          "regimen_id": "clofarabine-ida-rr"
         }
       ]
     },
@@ -416,6 +581,41 @@
           "notes": {
             "uk": "NCCN 5.2026: гілтеритиніб + азацитидин є серед варіантів для непридатних з FLT3; LACEWING не показав переваги у виживаності",
             "en": "NCCN 5.2026: gilteritinib plus azacitidine is among the options for unfit FLT3-mutated patients; LACEWING showed no survival benefit"
+          }
+        },
+        {
+          "regimen_id": "inqovi-ven-cycle-1",
+          "notes": {
+            "uk": "Пероральна форма децитабіну (NCCN 4.2026): цикл 1 з титруванням",
+            "en": "Oral decitabine (NCCN 4.2026): cycle 1 with ramp-up"
+          }
+        },
+        {
+          "regimen_id": "inqovi-ven",
+          "notes": {
+            "uk": "Цикли 2 і далі",
+            "en": "Cycle 2 onwards"
+          }
+        },
+        {
+          "regimen_id": "aza-enasidenib",
+          "notes": {
+            "uk": "IDH2-мутація, якщо схема вибору недоступна",
+            "en": "IDH2 mutation when a preferred regimen is not possible"
+          }
+        },
+        {
+          "regimen_id": "ldac-glasdegib",
+          "notes": {
+            "uk": "Вік ≥75 років або тяжкі супутні стани",
+            "en": "Age 75 or severe comorbidity"
+          }
+        },
+        {
+          "regimen_id": "go-6-3",
+          "notes": {
+            "uk": "CD33+, схема вибору неможлива; мало користі при несприятливому ризику",
+            "en": "CD33+, preferred regimens not possible; little benefit in poor risk"
           }
         }
       ]

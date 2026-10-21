@@ -1,0 +1,82 @@
+{
+  "id": "clag-ida-nccn",
+  "short_name": "CLAG-Ida (NCCN)",
+  "name": {
+    "uk": "CLAG-Ida (NCCN: кладрибін д. 2–6, ідарубіцин д. 2–4)",
+    "en": "CLAG-Ida (NCCN: cladribine d2-6, idarubicin d2-4)"
+  },
+  "description": {
+    "uk": "Те саме, але ідарубіцин 8 мг/м² д. 2–4 замість мітоксантрону.",
+    "en": "The same with idarubicin 8 mg/m2 d2-4 in place of mitoxantrone."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-E 9 of 14 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "miu_kg",
+      "days": [1, 2, 3, 4, 5, 6],
+      "notes": {
+        "uk": "NCCN дозу Г-КСФ не вказує («SC щодня»); значення — з NSSG ML.100. Лікар може не призначати Г-КСФ при високому лейкоцитозі.",
+        "en": "NCCN gives no G-CSF dose (\"SC daily\"); the value is from NSSG ML.100. The clinician may omit G-CSF at a high white count."
+      }
+    },
+    {
+      "key": "cladribine",
+      "drug_id": "cladribine",
+      "route": "iv_infusion",
+      "dose_value": 5,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4, 5, 6],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "5 мг/м² за 2 години, дні 2–6 (NCCN AML-E 9 of 14).",
+        "en": "5 mg/m2 over 2 hours on days 2 to 6 (NCCN AML-E 9 of 14)."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4, 5, 6],
+      "duration_min": 240,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "2 г/м² за 4 години, починати через 2 год після початку інфузії кладрибіну, дні 2–6. Обережно ≥60 років і при нирковій недостатності.",
+        "en": "2 g/m2 over 4 hours, starting 2 hours after the cladribine infusion begins, days 2 to 6. Caution from age 60 and in renal failure."
+      }
+    },
+    {
+      "key": "idarubicin",
+      "drug_id": "idarubicin",
+      "route": "iv_infusion",
+      "dose_value": 8,
+      "dose_unit": "mg_m2",
+      "days": [2, 3, 4],
+      "duration_min": 15,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "8 мг/м² (NCCN AML-E 9 of 14).",
+        "en": "8 mg/m2 (NCCN AML-E 9 of 14)."
+      }
+    }
+  ]
+}

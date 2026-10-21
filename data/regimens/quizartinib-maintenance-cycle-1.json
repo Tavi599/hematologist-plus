@@ -1,0 +1,85 @@
+{
+  "id": "quizartinib-maintenance-cycle-1",
+  "short_name": "Квізартиніб (підтримка 1)",
+  "name": {
+    "uk": "Квізартиніб підтримувальний, цикл 1 (титрування)",
+    "en": "Quizartinib maintenance, cycle 1 (titration)"
+  },
+  "description": {
+    "uk": "FLT3-ITD, без алоТГСК, після квізартинібу в індукції: 26,5 мг д. 1–14, далі 53 мг за QTcF ≤450 мс.",
+    "en": "FLT3-ITD, no allo-HCT, after quizartinib in induction: 26.5 mg d1-14 then 53 mg if QTcF is 450 ms or less."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-7, AML-E 7 of 14 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "course": {
+    "id": "quizartinib-maintenance",
+    "title": {
+      "uk": "Квізартиніб підтримувальний",
+      "en": "Quizartinib maintenance"
+    },
+    "phase": {
+      "uk": "цикл 1",
+      "en": "cycle 1"
+    },
+    "order": 1,
+    "cycles": {
+      "from": 1,
+      "to": 1
+    }
+  },
+  "items": [
+    {
+      "key": "quizartinib-d1",
+      "drug_id": "quizartinib",
+      "route": "oral",
+      "dose_value": 26.5,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "notes": {
+        "uk": "26,5 мг раз на добу, дні 1–14, якщо QTcF ≤450 мс (NCCN, виноска u).",
+        "en": "26.5 mg once daily on days 1 to 14 if QTcF is 450 ms or less (NCCN footnote u)."
+      }
+    },
+    {
+      "key": "quizartinib-d15",
+      "drug_id": "quizartinib",
+      "route": "oral",
+      "dose_value": 53,
+      "dose_unit": "mg_flat",
+      "days": [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
+      "dose_modifiers": [
+        {
+          "key": "qtcf-over-500",
+          "label": {
+            "uk": "QTcF на день 15 >450 мс або >500 мс раніше",
+            "en": "QTcF above 450 ms on day 15, or above 500 ms earlier"
+          },
+          "default_on": false,
+          "dose_value": 26.5,
+          "notes": {
+            "uk": "Дозу 26,5 мг зберігають (NCCN, виноска u).",
+            "en": "Keep the 26.5 mg dose (NCCN footnote u)."
+          },
+          "source": {
+            "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-E 7 of 14 (дози й дні як факти; текст не копіювався)",
+            "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+            "version": "5.2026 від 15.07.2026",
+            "checkedOn": "2026-10-22"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "53 мг раз на добу до кінця циклу, якщо QTcF на день 15 лишається ≤450 мс; інакше лишають 26,5 мг (NCCN, виноска u).",
+        "en": "53 mg once daily for the rest of the cycle if QTcF on day 15 is still 450 ms or less; otherwise stay on 26.5 mg (NCCN footnote u)."
+      }
+    }
+  ]
+}

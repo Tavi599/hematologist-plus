@@ -1,0 +1,39 @@
+{
+  "id": "ziftomenib-rr",
+  "short_name": "Зіфтоменіб",
+  "name": {
+    "uk": "Зіфтоменіб (рецидив ГМЛ з мутацією NPM1)",
+    "en": "Ziftomenib (relapsed AML with an NPM1 mutation)"
+  },
+  "description": {
+    "uk": "Р/Р ГМЛ з мутацією NPM1: 600 мг раз на добу д. 1–28 (додано в NCCN 3.2026).",
+    "en": "R/R AML with an NPM1 mutation: 600 mg once daily d1-28 (added to NCCN in 3.2026)."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-9, AML-E 8 of 14 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "ziftomenib",
+      "drug_id": "ziftomenib",
+      "route": "oral",
+      "dose_value": 600,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "600 мг (3 капсули по 200 мг) раз на добу, дні 1–28.",
+        "en": "600 mg (three 200 mg capsules) once daily on days 1 to 28."
+      }
+    }
+  ]
+}

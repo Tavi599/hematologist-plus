@@ -1,0 +1,39 @@
+{
+  "id": "decitabine-maintenance",
+  "short_name": "Децитабін (підтримка)",
+  "name": {
+    "uk": "Децитабін підтримувальний (20 мг/м² д. 1–5)",
+    "en": "Decitabine maintenance (20 mg/m2 d1-5)"
+  },
+  "description": {
+    "uk": "Підтримка за відсутності перорального азацитидину: 20 мг/м² в/в д. 1–5 кожні 28–56 днів або д. 1–3 кожні 28 днів, максимум 12 циклів.",
+    "en": "Maintenance without oral azacitidine: 20 mg/m2 IV d1-5 every 28-56 days, or d1-3 every 28 days, at most 12 cycles."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 12,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-7, AML-E 7 of 14 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "decitabine",
+      "drug_id": "decitabine",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "20 мг/м² в/в, дні 1–5 (NCCN допускає цикл 28–56 днів або дні 1–3 кожні 28 днів).",
+        "en": "20 mg/m2 IV on days 1 to 5 (NCCN allows a 28-56 day cycle, or days 1-3 every 28 days)."
+      }
+    }
+  ]
+}

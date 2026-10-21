@@ -1,0 +1,25 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN AML 5.2026 (рецидив/рефрактерність). Реєстрацію в Україні не підтверджено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "id": "clofarabine",
+  "name": {
+    "uk": "Клофарабін",
+    "en": "Clofarabine"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "EMA: Evoltra (clofarabine), EPAR",
+      "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/evoltra",
+      "version": "перевірено 2026-10-22",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v20",
+      "form": "vial",
+      "strength_amount": 20,
+      "volume_ml": 20
+    }
+  ]
+}

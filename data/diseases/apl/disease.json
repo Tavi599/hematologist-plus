@@ -20,7 +20,9 @@
   "references": [
     {
       "kind": "nccn",
-      "url": "https://www.nccn.org/guidelines/category_1"
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026",
+      "updated": "2026-07-15"
     },
     {
       "kind": "uptodate",
@@ -60,6 +62,13 @@
             "uk": "Стандартний ризик, без хіміотерапії; eviQ 1941",
             "en": "Standard risk, chemotherapy-free; eviQ 1941"
           }
+        },
+        {
+          "regimen_id": "atra-ato-go-induction",
+          "notes": {
+            "uk": "Високий ризик (лейкоцити >10×10⁹/л) або кардіологічні проблеми; NCCN APL-B 2 of 6",
+            "en": "High risk (WBC above 10×10⁹/L) or cardiac issues; NCCN APL-B 2 of 6"
+          }
         }
       ]
     },
@@ -93,6 +102,32 @@
         },
         {
           "regimen_id": "atra-ato-consolidation-4"
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Схеми NCCN, у яких джерело не дає всіх даних для розрахунку (дні тижня, вікові поправки, «до ремісії»).",
+        "en": "NCCN regimens whose source does not give everything needed to calculate (weekdays, age adjustments, \"until remission\")."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-apl-atra-ato-intermittent"
+        },
+        {
+          "regimen_id": "ref-apl-apml4"
+        },
+        {
+          "regimen_id": "ref-apl-atra-gem"
+        },
+        {
+          "regimen_id": "ref-apl-dauno-ara-c"
         }
       ]
     }

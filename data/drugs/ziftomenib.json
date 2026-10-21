@@ -1,0 +1,24 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN AML 5.2026 (рецидив ГМЛ з NPM1). Реєстрацію в Україні не підтверджено — «недоступний». Капсули 200 мг — за листком FDA.",
+  "id": "ziftomenib",
+  "name": {
+    "uk": "Зіфтоменіб",
+    "en": "Ziftomenib"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: KOMZIFTI (ziftomenib)",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/220305s000lbl.pdf",
+      "version": "перевірено 2026-10-22",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "c200",
+      "form": "capsule",
+      "strength_amount": 200
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN AML 5.2026 (підтримувальна терапія FLT3-ITD, рецидив). Сорафеніб (Нексавар) має українську інструкцію на Компендіумі; номер у ДРЛЗ не перевіряли.",
+  "id": "sorafenib",
+  "name": {
+    "uk": "Сорафеніб",
+    "en": "Sorafenib"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "Компендіум: Нексавар (сорафеніб), таблетки 200 мг",
+      "url": "https://compendium.com.ua/dec/272226",
+      "version": "перевірено 2026-10-22",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t200",
+      "form": "tablet",
+      "strength_amount": 200
+    }
+  ]
+}

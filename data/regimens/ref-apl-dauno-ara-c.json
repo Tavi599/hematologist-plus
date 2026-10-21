@@ -1,0 +1,60 @@
+{
+  "id": "ref-apl-dauno-ara-c",
+  "short_name": "ATRA+DA(7)",
+  "name": {
+    "uk": "ATRA + даунорубіцин + цитарабін (C9710/PETHEMA-подібні)",
+    "en": "ATRA + daunorubicin + cytarabine"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, APL-B 3 of 6 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "ГПЛ високого ризику, якщо миш’як недоступний або протипоказаний.",
+      "en": "High-risk APL when arsenic is unavailable or contraindicated."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Третиноїн (ATRA)",
+          "en": "Tretinoin (ATRA)"
+        },
+        "drug_id": "tretinoin"
+      },
+      {
+        "name": {
+          "uk": "Даунорубіцин",
+          "en": "Daunorubicin"
+        },
+        "drug_id": "daunorubicin"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Варіант 1 (NCCN, посилання 7): ATRA + даунорубіцин 50 мг/м² 4 дні (д. 3–6) + цитарабін 200 мг/м² 7 днів (д. 3–9).",
+        "en": "Variant 1 (NCCN ref. 7): ATRA + daunorubicin 50 mg/m2 for 4 days (d3-6) + cytarabine 200 mg/m2 for 7 days (d3-9)."
+      },
+      {
+        "uk": "Варіант 2 (посилання 8): ATRA + даунорубіцин 60 мг/м² 3 дні + цитарабін 200 мг/м² 7 днів; консолідація — даунорубіцин 60 мг/м² ×3 дні + цитарабін 200 мг/м² ×7 днів, потім цитарабін 2 г/м² (<50 р.) / 1,5 г/м² (50–60) / 1 г/м² (>60) кожні 12 год ×4–5 днів + даунорубіцин 45 мг/м² ×3 дні.",
+        "en": "Variant 2 (ref. 8): ATRA + daunorubicin 60 mg/m2 for 3 days + cytarabine 200 mg/m2 for 7 days; consolidation daunorubicin 60 + cytarabine 200 ×7 d, then cytarabine 2 g/m2 (<50 y) / 1.5 g/m2 (50-60) / 1 g/m2 (>60) every 12 h ×4-5 days + daunorubicin 45 mg/m2 ×3 days."
+      }
+    ],
+    "gap": {
+      "uk": "Консолідація першого варіанта й вікові корекції другого викладені в джерелі словами; повного розкладу по днях для розрахунку немає.",
+      "en": "The consolidation of variant 1 and the age adjustments of variant 2 are given in words; there is no full day-by-day schedule to calculate."
+    },
+    "availability": "unknown"
+  }
+}

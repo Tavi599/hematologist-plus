@@ -1,0 +1,29 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN AML 5.2026 (ЦГП + гласдегіб). Реєстрацію в Україні не підтверджено — стоїть «недоступний».",
+  "id": "glasdegib",
+  "name": {
+    "uk": "Гласдегіб",
+    "en": "Glasdegib"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "NCCN AML 5.2026, AML-E 5 of 14 (доза)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t25",
+      "form": "tablet",
+      "strength_amount": 25
+    },
+    {
+      "key": "t100",
+      "form": "tablet",
+      "strength_amount": 100
+    }
+  ]
+}

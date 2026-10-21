@@ -1,0 +1,37 @@
+{
+  "id": "tagraxofusp-bpdcn",
+  "short_name": "Тагракcофусп",
+  "name": {
+    "uk": "Тагракcофусп (БПДКН)",
+    "en": "Tagraxofusp (BPDCN)"
+  },
+  "description": {
+    "uk": "БПДКН, CD123-спрямована терапія: 12 мкг/кг в/в за 15 хв щодня, дні 1–5 циклу 21 день. Умови старту: альбумін ≥3,2 г/дл, ФВ ЛШ не нижче норми, креатинін ≤1,5, білірубін ≤1,5, АСТ/АЛТ ≤2,5×ВМН. Перший цикл — стаціонар, спостереження ≥24 год.",
+    "en": "BPDCN, CD123-directed: 12 mcg/kg IV over 15 min daily on days 1-5 of a 21-day cycle. Start conditions: albumin 3.2 g/dL or more, LVEF at least the lower limit of normal, creatinine and bilirubin 1.5 or less, AST/ALT 2.5 x ULN or less. Cycle 1 as an inpatient, observed at least 24 h."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Blastic Plasmacytoid Dendritic Cell Neoplasm (в одному документі з AML), BPDCN-2, BPDCN-C (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "tagraxofusp",
+      "drug_id": "tagraxofusp",
+      "route": "iv_infusion",
+      "dose_value": 12,
+      "dose_unit": "mcg_kg",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 15,
+      "notes": {
+        "uk": "12 мкг/кг за 15 хв, дні 1–5 (допустимо 5 доз протягом 10 днів при затримках). Премедикація: H1-блокатор, парацетамол, кортикостероїд, H2-блокатор (NCCN BPDCN-C; дози не вказані). Перед кожною дозою — тиск, альбумін, трансамінази, креатинін; синдром капілярного витоку.",
+        "en": "12 mcg/kg over 15 minutes, days 1 to 5 (5 doses may be spread over 10 days for delays). Premedication: an H1 blocker, paracetamol, a corticosteroid and an H2 blocker (NCCN BPDCN-C; doses not given). Before each dose check blood pressure, albumin, transaminases, creatinine; capillary leak syndrome."
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN BPDCN (AML 5.2026). Реєстрацію в Україні не підтверджено — «недоступний». Доза записана в мкг.",
+  "id": "tagraxofusp",
+  "name": {
+    "uk": "Тагракcофусп",
+    "en": "Tagraxofusp"
+  },
+  "amount_unit": "mcg",
+  "dose_units": ["mcg_kg"],
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "Drugs.com: Elzonris (tagraxofusp-erzs) prescribing information — флакон 1000 мкг/мл, 1 мл",
+      "url": "https://drugs.com/pro/elzonris.html",
+      "version": "ред. 07/2023",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v1000",
+      "form": "vial",
+      "strength_amount": 1000,
+      "volume_ml": 1
+    }
+  ]
+}

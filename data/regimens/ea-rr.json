@@ -1,0 +1,55 @@
+{
+  "id": "ea-rr",
+  "short_name": "EA",
+  "name": {
+    "uk": "EA (етопозид + цитарабін), рецидив/рефрактерність",
+    "en": "EA (etoposide + cytarabine), relapsed/refractory"
+  },
+  "description": {
+    "uk": "Інтенсивна терапія Р/Р ГМЛ: етопозид 100 мг/м² д. 1–5 і цитарабін 3 г/м² кожні 12 год д. 1–4.",
+    "en": "Intensive R/R AML therapy: etoposide 100 mg/m2 d1-5 and cytarabine 3 g/m2 every 12 h d1-4."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Myeloid Leukemia, AML-9, AML-E 9 of 14 (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
+      "version": "5.2026 від 15.07.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4, 5],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "100 мг/м² на добу, дні 1–5 (NCCN AML-E 9 of 14). Об’єм розчинника — практика відділення.",
+        "en": "100 mg/m2 a day on days 1 to 5 (NCCN AML-E 9 of 14). The diluent volume follows the department."
+      }
+    },
+    {
+      "key": "cytarabine",
+      "drug_id": "cytarabine",
+      "route": "iv_infusion",
+      "dose_value": 3000,
+      "dose_unit": "mg_m2",
+      "days": [1, 2, 3, 4],
+      "duration_min": 180,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "3 г/м² кожні 12 год; обережно ≥60 років і при нирковій недостатності (NCCN, виноска h). Контроль мозочкових симптомів перед кожною дозою; очні краплі.",
+        "en": "3 g/m2 every 12 h; caution from age 60 and in renal failure (NCCN footnote h). Cerebellar check before each dose; eye drops."
+      }
+    }
+  ]
+}
