@@ -1,0 +1,92 @@
+{
+  "$comment": "Лише опис за NCCN T-Cell Lymphomas 2.2026: доз для розрахунку немає.",
+  "id": "ref-ptcl-newcastle",
+  "short_name": "CHOP → IVE/MTX",
+  "name": {
+    "uk": "CHOP із наступним IVE, що чергується з метотрексатом (схема Ньюкасла)",
+    "en": "CHOP followed by IVE alternating with intermediate-dose methotrexate (Newcastle)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Схема, вивчена лише при EATL: CHOP, потім іфосфамід/епірубіцин/етопозид, що чергується з метотрексатом проміжної дози; включає ТГСК (NCCN PTCL-B 1, п. i).",
+      "en": "A regimen studied only in EATL: CHOP, then ifosfamide/epirubicin/etoposide alternating with intermediate-dose methotrexate; it includes HCT (NCCN PTCL-B 1, footnote i)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин",
+          "en": "Doxorubicin"
+        },
+        "drug_id": "doxorubicin"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон",
+          "en": "Prednisolone"
+        },
+        "drug_id": "prednisolone"
+      },
+      {
+        "name": {
+          "uk": "Іфосфамід",
+          "en": "Ifosfamide"
+        },
+        "drug_id": "ifosfamide"
+      },
+      {
+        "name": {
+          "uk": "Епірубіцин",
+          "en": "Epirubicin"
+        },
+        "drug_id": "epirubicin"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Основа — Sieniawski, Blood 2010 (EATL, стандартна терапія проти нового режиму з аутоТГСК).",
+        "en": "Based on Sieniawski, Blood 2010 (EATL, standard therapy versus a novel regimen with autologous HCT)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN дозування цієї схеми не наводить; описано лише для ознайомлення, розрахунку немає.",
+      "en": "NCCN gives no dosing for this regimen; described for reference only, no calculation."
+    },
+    "availability": "registered"
+  }
+}

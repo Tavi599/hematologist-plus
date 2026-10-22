@@ -1,0 +1,64 @@
+{
+  "$comment": "Лише опис за NCCN T-Cell Lymphomas 2.2026: доз для розрахунку немає.",
+  "id": "ref-enkl-ddgp",
+  "short_name": "DDGP",
+  "name": {
+    "uk": "DDGP (дексаметазон, цисплатин, гемцитабін, пегаспаргаза)",
+    "en": "DDGP (dexamethasone, cisplatin, gemcitabine, pegaspargase)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Бажана аспарагіназовмісна схема при ENKL: ×3-6 циклів; при стадії I-II — ×3 цикли з подальшою променевою терапією 50 Гр (NCCN ENKL-B 1, TCLYM-D).",
+      "en": "A preferred asparaginase-based regimen in ENKL: 3-6 cycles; in stage I-II 3 cycles followed by 50 Gy radiotherapy (NCCN ENKL-B 1, TCLYM-D)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Цисплатин",
+          "en": "Cisplatin"
+        },
+        "drug_id": "cisplatin"
+      },
+      {
+        "name": {
+          "uk": "Гемцитабін",
+          "en": "Gemcitabine"
+        },
+        "drug_id": "gemcitabine"
+      },
+      {
+        "name": {
+          "uk": "Пегаспаргаза",
+          "en": "Pegaspargase"
+        },
+        "drug_id": "pegaspargase"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Основа — Zhang, Int J Cancer 2021 (рандомізоване: променева терапія проти DDGP + променева терапія).",
+        "en": "Based on Zhang, Int J Cancer 2021 (randomised: radiotherapy versus DDGP plus radiotherapy)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN дозування цієї схеми не наводить; описано лише для ознайомлення, розрахунку немає.",
+      "en": "NCCN gives no dosing for this regimen; described for reference only, no calculation."
+    },
+    "availability": "registered"
+  }
+}

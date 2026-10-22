@@ -1,0 +1,93 @@
+{
+  "$comment": "T-LGLL за NCCN LGLL-2, п. r: у фазі II руксолітиніб 20 мг двічі на добу; через поширену цитопенію можна 10 або 5 мг двічі на добу. Частий контроль крові.",
+  "id": "ruxolitinib-lgll",
+  "short_name": "Руксолітиніб (T-LGLL)",
+  "name": {
+    "uk": "Руксолітиніб при T-LGLL",
+    "en": "Ruxolitinib in T-LGLL"
+  },
+  "description": {
+    "uk": "20 мг двічі на добу всередину; при цитопеніях знижують до 10 чи 5 мг двічі на добу. Показання: відсутність відповіді на першу лінію чи її альтернатива; друга лінія — якщо ще не застосовували.",
+    "en": "20 mg twice daily by mouth; reduce to 10 or 5 mg twice daily for cytopenias. For no response to first-line therapy or as its alternative; second-line if not used before."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "ruxolitinib",
+      "drug_id": "ruxolitinib",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "administrations_per_day": 2,
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "dose_options": [
+        {
+          "dose_value": 10,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Зниження при цитопеніях",
+            "en": "Reduction for cytopenias"
+          },
+          "source": {
+            "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+            "url": "https://www.nccn.org/guidelines/category_1",
+            "version": "2.2026 (13.02.2026)",
+            "checkedOn": "2026-10-22"
+          }
+        },
+        {
+          "dose_value": 5,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Зниження при цитопеніях",
+            "en": "Reduction for cytopenias"
+          },
+          "source": {
+            "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+            "url": "https://www.nccn.org/guidelines/category_1",
+            "version": "2.2026 (13.02.2026)",
+            "checkedOn": "2026-10-22"
+          }
+        }
+      ]
+    }
+  ]
+}

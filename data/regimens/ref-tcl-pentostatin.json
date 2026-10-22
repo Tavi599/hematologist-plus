@@ -1,0 +1,50 @@
+{
+  "$comment": "Лише опис за NCCN T-Cell Lymphomas 2.2026: доз для розрахунку немає.",
+  "id": "ref-tcl-pentostatin",
+  "short_name": "Пентостатин",
+  "name": {
+    "uk": "Пентостатин при Т-клітинних лейкозах і лімфомах",
+    "en": "Pentostatin in T-cell leukaemias and lymphomas"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Пуриновий аналог: T-PLL (2-га лінія, бажано), HSTCL (рефрактерність), T-LGLL (пуринові аналоги).",
+      "en": "A purine analogue: T-PLL (second line, preferred), HSTCL (refractory disease), T-LGLL (purine analogues)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Пентостатин",
+          "en": "Pentostatin"
+        },
+        "drug_id": "pentostatin"
+      },
+      {
+        "name": {
+          "uk": "Кладрибін",
+          "en": "Cladribine"
+        },
+        "drug_id": "cladribine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "При T-LGLL застосовують пентостатин, кладрибін і флударабін (NCCN LGLL-2, п. t); при HSTCL — пентостатин або кладрибін після двох невдалих режимів 1-ї лінії.",
+        "en": "In T-LGLL pentostatin, cladribine and fludarabine are used (NCCN LGLL-2, footnote t); in HSTCL pentostatin or cladribine after two failed first-line regimens."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN дозування цієї схеми не наводить; описано лише для ознайомлення, розрахунку немає.",
+      "en": "NCCN gives no dosing for this regimen; described for reference only, no calculation."
+    },
+    "availability": "unavailable"
+  }
+}

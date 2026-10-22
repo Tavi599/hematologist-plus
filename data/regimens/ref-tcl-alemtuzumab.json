@@ -1,0 +1,47 @@
+{
+  "$comment": "Лише опис за NCCN T-Cell Lymphomas 2.2026. У довіднику є алемтузумаб лише у формі 12 мг/1,2 мл (Лемтрада, розсіяний склероз) — доз для T-клітинних лімфом NCCN не наводить.",
+  "id": "ref-tcl-alemtuzumab",
+  "short_name": "Алемтузумаб",
+  "name": {
+    "uk": "Алемтузумаб при Т-клітинних лімфомах і лейкозах",
+    "en": "Alemtuzumab in T-cell lymphomas and leukaemias"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Анти-CD52 антитіло: T-PLL (в/в, бажано), T-LGLL (п/ш бажано або в/в), ПТКЛ, ATLL, HSTCL у комбінації з пентостатином.",
+      "en": "An anti-CD52 antibody: T-PLL (IV, preferred), T-LGLL (SC preferred or IV), PTCL, ATLL, HSTCL combined with pentostatin."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Алемтузумаб",
+          "en": "Alemtuzumab"
+        },
+        "drug_id": "alemtuzumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Алемтузумаб комерційно не поставляється, але його можна отримати для клінічного застосування; потрібні ПЛР-контроль ЦМВ щонайменше кожні 2-3 тижні та профілактика Pneumocystis (ко-тримоксазол) й герпесу (ацикловір).",
+        "en": "Alemtuzumab is no longer commercially available but may be obtained for clinical use; CMV PCR at least every 2-3 weeks and Pneumocystis (co-trimoxazole) and herpes (aciclovir) prophylaxis are needed."
+      },
+      {
+        "uk": "При T-PLL внутрішньовенне введення краще за підшкірне: п/ш показує меншу активність (Dearden, Blood 2011); перед початком розглянути оцінку CD52.",
+        "en": "In T-PLL the IV route is preferred over SC: SC shows inferior activity (Dearden, Blood 2011); consider checking CD52 expression before starting."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN дозування цієї схеми не наводить; описано лише для ознайомлення, розрахунку немає.",
+      "en": "NCCN gives no dosing for this regimen; described for reference only, no calculation."
+    },
+    "availability": "unavailable"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN T-Cell Lymphomas 2.2026. У реєстрі України не знайдено — «недоступний». Флакон 10 мг за листком FDA (затверджений там лише для шкірної Т-клітинної лімфоми; показання при ПТКЛ вилучено).",
+  "id": "romidepsin",
+  "name": {
+    "uk": "Ромідепсин",
+    "en": "Romidepsin"
+  },
+  "atc_code": "L01XH02",
+  "availability": "unavailable",
+  "dose_units": [
+    "mg_m2"
+  ],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "витяг від 22.10.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: ISTODAX (romidepsin) kit — флакон 10 мг, відновлення 2,2 мл (5 мг/мл), розведення в 500 мл 0,9% NaCl",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03b39d40-90fe-11df-9de6-0002a5d5c51b",
+      "version": "ред. 01.2023",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v10",
+      "form": "vial",
+      "strength_amount": 10
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [
+        500
+      ],
+      "duration_min": 240,
+      "is_default": true
+    }
+  ]
+}

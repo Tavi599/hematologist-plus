@@ -1,0 +1,75 @@
+{
+  "$comment": "Лише опис за NCCN T-Cell Lymphomas 2.2026: доз для розрахунку немає.",
+  "id": "ref-alcl-alk-inhibitors",
+  "short_name": "ALK-інгібітори",
+  "name": {
+    "uk": "Інгібітори ALK при ALK-позитивній АВКЛ",
+    "en": "ALK inhibitors in ALK-positive ALCL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Алектиніб, бригатиніб, церитиніб, кризотиніб, лорлатиніб — лише для ALK+ АВКЛ при рецидиві (NCCN PTCL-B 2 і 5).",
+      "en": "Alectinib, brigatinib, ceritinib, crizotinib, lorlatinib — for ALK-positive ALCL only at relapse (NCCN PTCL-B 2 and 5)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Алектиніб",
+          "en": "Alectinib"
+        },
+        "drug_id": "alectinib"
+      },
+      {
+        "name": {
+          "uk": "Бригатиніб",
+          "en": "Brigatinib"
+        },
+        "drug_id": "brigatinib"
+      },
+      {
+        "name": {
+          "uk": "Церитиніб",
+          "en": "Ceritinib"
+        },
+        "drug_id": "ceritinib"
+      },
+      {
+        "name": {
+          "uk": "Кризотиніб",
+          "en": "Crizotinib"
+        },
+        "drug_id": "crizotinib"
+      },
+      {
+        "name": {
+          "uk": "Лорлатиніб",
+          "en": "Lorlatinib"
+        },
+        "drug_id": "lorlatinib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "NCCN Discussion: кризотиніб 250 мг двічі на добу — відповідь 83% (повна 58%) у дослідженні з 12 хворих; алектиніб 300 мг двічі на добу (150 мг двічі на добу при масі <35 кг) — відповідь 80%.",
+        "en": "NCCN Discussion: crizotinib 250 mg twice daily gave a response in 83% (complete 58%) in a 12-patient study; alectinib 300 mg twice daily (150 mg twice daily under 35 kg) gave a response in 80%."
+      },
+      {
+        "uk": "Інгібітори 2-го (алектиніб, бригатиніб, церитиніб) і 3-го (лорлатиніб) покоління активні й при ураженні ЦНС (NCCN, п. p).",
+        "en": "Second-generation (alectinib, brigatinib, ceritinib) and third-generation (lorlatinib) inhibitors are active in CNS involvement too (NCCN footnote p)."
+      }
+    ],
+    "gap": {
+      "uk": "Для розрахунку немає повного розкладу (тривалість курсу не визначена); дози з Discussion наведено як факт. Лорлатиніб в Україні не зареєстрований.",
+      "en": "No complete schedule for calculation (course duration undefined); Discussion doses are quoted as facts. Lorlatinib is not registered in Ukraine."
+    },
+    "availability": "registered"
+  }
+}

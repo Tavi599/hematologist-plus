@@ -1,0 +1,128 @@
+{
+  "$comment": "Праалатрексат при рецидивній ПТКЛ за листком FDA: 30 мг/м² в/в болюсно 3-5 хвилин раз на тиждень 6 тижнів із 7 (цикл 49 днів). Препарат у реєстрі України не знайдено. При AITL активність обмежена (NCCN PTCL-B 6, п. n). Вітамін B12 і фолієва кислота обов'язкові (NCCN TCLYM-B 3).",
+  "id": "pralatrexate-ptcl",
+  "short_name": "Праалатрексат",
+  "name": {
+    "uk": "Праалатрексат (рецидивна ПТКЛ)",
+    "en": "Pralatrexate (relapsed PTCL)"
+  },
+  "description": {
+    "uk": "30 мг/м² внутрішньовенно за 3-5 хвилин у дні 1, 8, 15, 22, 29 і 36 циклу на 49 днів. Перед початком — фолієва кислота щодня й вітамін B12 внутрішньом'язово; перед кожною дозою — мукозит не вище 1-го ступеня, тромбоцити не менше 50×10⁹/л (перша доза — 100×10⁹/л), нейтрофіли не менше 1×10⁹/л.",
+    "en": "30 mg/m2 intravenously over 3-5 minutes on days 1, 8, 15, 22, 29 and 36 of a 49-day cycle. Daily folic acid and intramuscular vitamin B12 before the start; before each dose mucositis grade 1 or less, platelets at least 50 x 10^9/L (100 for the first dose), neutrophils at least 1 x 10^9/L."
+  },
+  "cycle_length_days": 49,
+  "default_cycles": 2,
+  "sources": [
+    {
+      "name": "FDA label: FOLOTYN (pralatrexate) injection",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f3d9c4d-9386-4451-b712-0fbdc5478d8f",
+      "version": "ред. 09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "pralatrexate",
+      "drug_id": "pralatrexate",
+      "route": "iv_bolus",
+      "dose_value": 30,
+      "dose_unit": "mg_m2",
+      "days": [
+        1,
+        8,
+        15,
+        22,
+        29,
+        36
+      ],
+      "notes": {
+        "uk": "Нерозведений, 3-5 хвилин через бічний порт струменя 0,9% NaCl. Мукозит 2-го ступеня вдруге чи 3-го — пропустити дозу й відновити по 20 мг/м² (листок FDA).",
+        "en": "Undiluted over 3-5 minutes through the side port of a running 0.9% NaCl line. Grade 2 mucositis for the second time or grade 3: omit the dose and resume at 20 mg/m2 (FDA label)."
+      }
+    },
+    {
+      "key": "folic-acid",
+      "drug_id": "folic-acid",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 1,
+      "dose_unit": "mg_flat",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "notes": {
+        "uk": "1-1,25 мг щодня від 10 днів до першої дози й 30 днів після останньої (NCCN TCLYM-B).",
+        "en": "1-1.25 mg daily from 10 days before the first dose until 30 days after the last (NCCN TCLYM-B)."
+      }
+    },
+    {
+      "key": "cyanocobalamin",
+      "drug_id": "cyanocobalamin",
+      "role": "supportive",
+      "route": "intramuscular",
+      "dose_value": 1000,
+      "dose_unit": "mcg_flat",
+      "days": [
+        1
+      ],
+      "notes": {
+        "uk": "Перша доза — не раніше ніж за 10 тижнів до початку, далі кожні 8-10 тижнів (NCCN TCLYM-B).",
+        "en": "The first dose no earlier than 10 weeks before the start, then every 8-10 weeks (NCCN TCLYM-B)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "$comment": "Лише опис за NCCN T-Cell Lymphomas 2.2026: доз для розрахунку немає.",
+  "id": "ref-enkl-aspametdex",
+  "short_name": "AspaMetDex",
+  "name": {
+    "uk": "AspaMetDex (аспарагіназа, метотрексат, дексаметазон)",
+    "en": "AspaMetDex (asparaginase, methotrexate, dexamethasone)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "«Корисна за певних обставин»: для окремих хворих, які не витримають інтенсивнішої хіміотерапії (NCCN ENKL-B 1, п. f).",
+      "en": "\"Useful in certain circumstances\": for selected patients who cannot tolerate more intensive chemotherapy (NCCN ENKL-B 1, footnote f)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Аспарагіназа (пегаспаргаза в NCCN)",
+          "en": "Asparaginase (pegaspargase in NCCN)"
+        },
+        "drug_id": "pegaspargase"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Основа — Jaccard, Blood 2011 (фаза II, рефрактерна чи рецидивна ENKL). При гіперчутливості до пегаспаргази можна замінити рекомбінантною аспарагіназою Erwinia.",
+        "en": "Based on Jaccard, Blood 2011 (phase II, refractory or relapsed ENKL). For pegaspargase hypersensitivity recombinant Erwinia asparaginase can be substituted."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN дозування цієї схеми не наводить; описано лише для ознайомлення, розрахунку немає.",
+      "en": "NCCN gives no dosing for this regimen; described for reference only, no calculation."
+    },
+    "availability": "registered"
+  }
+}

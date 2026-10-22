@@ -1,0 +1,54 @@
+{
+  "$comment": "Лише опис за NCCN T-Cell Lymphomas 2.2026: доз для розрахунку немає.",
+  "id": "ref-atll-ifn-zdv",
+  "short_name": "Інтерферон + зидовудин",
+  "name": {
+    "uk": "Інтерферон альфа + зидовудин при ATLL",
+    "en": "Interferon alfa plus zidovudine in ATLL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Бажана терапія гострого, хронічного та симптомного тліючого типів ATLL; може вести з хіміотерапією (NCCN ATLL-2…4, ATLL-D).",
+      "en": "Preferred therapy of acute, chronic and symptomatic smouldering ATLL; may be given with chemotherapy (NCCN ATLL-2 to 4, ATLL-D)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Інтерферон альфа-2b",
+          "en": "Interferon alfa-2b"
+        },
+        "drug_id": "interferon-alfa-2b"
+      },
+      {
+        "name": {
+          "uk": "Зидовудин",
+          "en": "Zidovudine"
+        },
+        "drug_id": "zidovudine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Без відповіді чи при прогресії протягом 2 місяців (поза випробуванням) — припинити; за ознак користі продовжувати до найкращої відповіді; при загрозливих проявах можна й раніше.",
+        "en": "With no response or progression within 2 months (outside a trial) stop; continue to the best response if there is clinical benefit; earlier discontinuation is possible for life-threatening manifestations."
+      },
+      {
+        "uk": "Пегінтерферон альфа-2a (або ропегінтерферон альфа-2b) можна підставити замість інших інтерферонів. Перед лікуванням — серологія на стронгілоїдоз.",
+        "en": "Peginterferon alfa-2a (or ropeginterferon alfa-2b) may be substituted for other interferons. Strongyloides serology before treatment."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN доз не наводить (посилання — Bazarbachi 2010, Hermine 2002); розрахунку немає.",
+      "en": "NCCN gives no doses (references Bazarbachi 2010, Hermine 2002); no calculation."
+    },
+    "availability": "registered"
+  }
+}

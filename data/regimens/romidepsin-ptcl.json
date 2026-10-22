@@ -1,0 +1,66 @@
+{
+  "$comment": "Ромідепсин за листком FDA (затверджений лише при шкірній Т-клітинній лімфомі; показання при ПТКЛ вилучено, у NCCN лишається «бажаним»). NCCN доз не наводить. Препарат у реєстрі України не знайдено. Печінкова недостатність: початково 7 мг/м² (помірна) чи 5 мг/м² (тяжка) — листок FDA.",
+  "id": "romidepsin-ptcl",
+  "short_name": "Ромідепсин",
+  "name": {
+    "uk": "Ромідепсин (рецидивна Т-клітинна лімфома)",
+    "en": "Romidepsin (relapsed T-cell lymphoma)"
+  },
+  "description": {
+    "uk": "14 мг/м² внутрішньовенно за 4 години в дні 1, 8 і 15 циклу на 28 днів. Позарегістраційно для ПТКЛ: дози за листком FDA для шкірної Т-клітинної лімфоми.",
+    "en": "14 mg/m2 intravenously over 4 hours on days 1, 8 and 15 of a 28-day cycle. Off-label in PTCL: the doses are from the FDA label for cutaneous T-cell lymphoma."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 6,
+  "sources": [
+    {
+      "name": "FDA label: ISTODAX (romidepsin)",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03b39d40-90fe-11df-9de6-0002a5d5c51b",
+      "version": "ред. 01.2023",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "romidepsin",
+      "drug_id": "romidepsin",
+      "route": "iv_infusion",
+      "dose_value": 14,
+      "dose_unit": "mg_m2",
+      "days": [
+        1,
+        8,
+        15
+      ],
+      "duration_min": 240,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "dose_options": [
+        {
+          "dose_value": 10,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "Після повторної токсичності 3-го ступеня чи 4-го ступеня (листок FDA)",
+            "en": "After repeated grade 3 or grade 4 toxicity (FDA label)"
+          },
+          "source": {
+            "name": "FDA label: ISTODAX (romidepsin)",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03b39d40-90fe-11df-9de6-0002a5d5c51b",
+            "version": "ред. 01.2023",
+            "checkedOn": "2026-10-22"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "Флакон 10 мг відновлюють 2,2 мл розчинника (5 мг/мл), розводять у 500 мл 0,9% NaCl.",
+        "en": "Reconstitute the 10 mg vial with 2.2 mL of diluent (5 mg/mL) and dilute in 500 mL of 0.9% NaCl."
+      }
+    }
+  ]
+}

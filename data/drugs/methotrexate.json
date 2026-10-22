@@ -74,11 +74,23 @@
       "key": "s1000",
       "form": "vial",
       "strength_amount": 1000
+    },
+    {
+      "key": "t25",
+      "form": "tablet",
+      "strength_amount": 2.5
+    },
+    {
+      "key": "t10",
+      "form": "tablet",
+      "strength_amount": 10
     }
   ],
   "interactions": [
     {
-      "with": ["co-trimoxazole"],
+      "with": [
+        "co-trimoxazole"
+      ],
       "level": "avoid",
       "notes": {
         "uk": "Ко-тримоксазол: поєднання краще не призначати — описане (рідко тяжке) пригнічення кровотворення.",
@@ -92,7 +104,9 @@
       }
     },
     {
-      "with": ["omeprazole"],
+      "with": [
+        "omeprazole"
+      ],
       "level": "avoid",
       "notes": {
         "uk": "ІПП з високими дозами метотрексату — уникати (сповільнюють виведення).",
@@ -106,7 +120,10 @@
       }
     },
     {
-      "with": ["piperacillin-tazobactam", "ciprofloxacin"],
+      "with": [
+        "piperacillin-tazobactam",
+        "ciprofloxacin"
+      ],
       "level": "caution",
       "notes": {
         "uk": "Пеніциліни можуть зменшувати нирковий кліренс метотрексату; з ципрофлоксацином — ретельний контроль.",
@@ -120,7 +137,12 @@
       }
     },
     {
-      "with": ["vancomycin", "amikacin", "colistimethate", "amphotericin-b-liposomal"],
+      "with": [
+        "vancomycin",
+        "amikacin",
+        "colistimethate",
+        "amphotericin-b-liposomal"
+      ],
       "level": "avoid",
       "notes": {
         "uk": "Нефротоксичні препарати — уникати: посилюють нефротоксичність.",

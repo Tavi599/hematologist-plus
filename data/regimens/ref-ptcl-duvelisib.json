@@ -1,0 +1,47 @@
+{
+  "$comment": "Лише опис за NCCN T-Cell Lymphomas 2.2026: доз для розрахунку немає.",
+  "id": "ref-ptcl-duvelisib",
+  "short_name": "Дувелісиб",
+  "name": {
+    "uk": "Дувелісиб при рецидивній Т-клітинній лімфомі",
+    "en": "Duvelisib in relapsed T-cell lymphoma"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інгібітор PI3K-γ/δ: бажаний варіант 2-ї лінії при ПТКЛ-НБО, AITL, АВКЛ (NCCN PTCL-B 2-5).",
+      "en": "A PI3K-γ/δ inhibitor: a preferred second-line option in PTCL-NOS, AITL and ALCL (NCCN PTCL-B 2-5)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Дувелісиб",
+          "en": "Duvelisib"
+        },
+        "drug_id": "duvelisib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "У фазі II PRIMO: 75 мг двічі на добу 2 цикли, далі 25 мг двічі на добу до прогресії (NCCN, п. j і Discussion). Тривалість циклу NCCN не вказує — тому схему не розраховано.",
+        "en": "In the phase II PRIMO study: 75 mg twice daily for 2 cycles, then 25 mg twice daily until progression (NCCN footnote j and Discussion). NCCN gives no cycle length, so the regimen is not calculated."
+      },
+      {
+        "uk": "Високий ризик реактивації ЦМВ: ПЛР кожні 2-3 тижні; профілактика Pneumocystis і герпесу під час лікування й після нього (NCCN TCLYM-B).",
+        "en": "High risk of CMV reactivation: PCR every 2-3 weeks; Pneumocystis and herpes prophylaxis during and after treatment (NCCN TCLYM-B)."
+      }
+    ],
+    "gap": {
+      "uk": "Тривалість циклу в NCCN не вказана; повного розкладу з іншого джерела в довіднику немає.",
+      "en": "NCCN gives no cycle length and no complete schedule from another source is in the catalog."
+    },
+    "availability": "unavailable"
+  }
+}

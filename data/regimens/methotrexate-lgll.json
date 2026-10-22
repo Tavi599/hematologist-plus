@@ -1,0 +1,100 @@
+{
+  "$comment": "T-LGLL, перша лінія за NCCN LGLL-2: метотрексат всередину, зазвичай 20 мг на тиждень; починають з 5-10 мг і підвищують до 15-20 мг на тиждень (10 мг/м² раз на тиждень). Зазвичай із кортикостероїдом, який швидко знижують. Відповідь оцінюють на 4-му місяці. Тривалий прийом — контроль накопиченої токсичності.",
+  "id": "methotrexate-lgll",
+  "short_name": "Метотрексат (T-LGLL)",
+  "name": {
+    "uk": "Метотрексат при T-клітинному лейкозі з великих гранулярних лімфоцитів",
+    "en": "Methotrexate in T-cell large granular lymphocytic leukaemia"
+  },
+  "description": {
+    "uk": "10 мг/м² всередину раз на тиждень (20 мг — звична доза; старт 5-10 мг із підвищенням до 15-20 мг). Відповідь оцінюють через 4 місяці: за відповіді продовжують, без відповіді — інша перша лінія чи руксолітиніб. Лікування безперервне, цикл умовно 28 днів.",
+    "en": "10 mg/m2 by mouth once a week (20 mg is the usual dose; start with 5-10 mg and escalate to 15-20 mg). Response is assessed at 4 months: continue if responding, otherwise another first-line option or ruxolitinib. Treatment is continuous; a nominal 28-day cycle."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "methotrexate",
+      "drug_id": "methotrexate",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_m2",
+      "days": [
+        1,
+        8,
+        15,
+        22
+      ],
+      "dose_options": [
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Звична доза на тиждень",
+            "en": "The usual weekly dose"
+          },
+          "source": {
+            "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+            "url": "https://www.nccn.org/guidelines/category_1",
+            "version": "2.2026 (13.02.2026)",
+            "checkedOn": "2026-10-22"
+          }
+        },
+        {
+          "dose_value": 15,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Підвищення до 15-20 мг на тиждень",
+            "en": "Escalation to 15-20 mg weekly"
+          },
+          "source": {
+            "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+            "url": "https://www.nccn.org/guidelines/category_1",
+            "version": "2.2026 (13.02.2026)",
+            "checkedOn": "2026-10-22"
+          }
+        },
+        {
+          "dose_value": 10,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Початкова доза 5-10 мг (10 мг)",
+            "en": "Starting dose 5-10 mg (10 mg)"
+          },
+          "source": {
+            "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+            "url": "https://www.nccn.org/guidelines/category_1",
+            "version": "2.2026 (13.02.2026)",
+            "checkedOn": "2026-10-22"
+          }
+        },
+        {
+          "dose_value": 5,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Початкова доза 5-10 мг (5 мг)",
+            "en": "Starting dose 5-10 mg (5 mg)"
+          },
+          "source": {
+            "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+            "url": "https://www.nccn.org/guidelines/category_1",
+            "version": "2.2026 (13.02.2026)",
+            "checkedOn": "2026-10-22"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "Раз на тиждень, НЕ щодня. Абсорбція досягає плато при 20-25 мг всередину. Контроль крові й печінки.",
+        "en": "Once WEEKLY, not daily. Absorption plateaus at 20-25 mg orally. Monitor counts and liver tests."
+      }
+    }
+  ]
+}

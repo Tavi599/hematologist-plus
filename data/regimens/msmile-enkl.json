@@ -1,0 +1,169 @@
+{
+  "$comment": "mSMILE за eviQ 4041 v.2 (файл PDF мав позначку ARCHIVED — перед призначенням звірити з чинною версією). NCCN (ENKL-B) називає mSMILE ×4-6 циклів бажаним при поширеній стадії та ×2-4 цикли з наступною променевою терапією; доз не наводить, але обмежує пегаспаргазу одним флаконом (3750 МО). Філграстим 5 мкг/кг п/ш щодня з 6-го дня до відновлення нейтрофілів у схему не вписано: тривалість залежить від крові. Кальцію фолінат — від 36-ї години після початку метотрексату кожні 6 годин, поки рівень метотрексату не стане нижчим за 0,1 мкмоль/л; дні 3-4 орієнтовні. Гідратація й протиблювотні в протоколі — типові, у схемі не фіксовані.",
+  "id": "msmile-enkl",
+  "short_name": "mSMILE",
+  "name": {
+    "uk": "mSMILE (дексаметазон, метотрексат, іфосфамід, пегаспаргаза, етопозид)",
+    "en": "mSMILE (dexamethasone, methotrexate, ifosfamide, pegaspargase, etoposide)"
+  },
+  "description": {
+    "uk": "Аспарагіназовмісна схема при екстранодальній NK/T-клітинній лімфомі: поширена стадія, рецидив чи рефрактерність, а при локалізованій — разом із променевою терапією. Цикл 21 день, 2-6 циклів. Метотрексат 2000 мг/м² у день 1; дні 2-4 — дексаметазон, етопозид, іфосфамід із месною; пегаспаргаза в день 8 внутрішньом'язово. Потрібен центральний венозний доступ.",
+    "en": "An asparaginase-based regimen for extranodal NK/T-cell lymphoma: advanced stage, relapse or refractory disease, and with radiotherapy for localised disease. A 21-day cycle, 2 to 6 cycles. Methotrexate 2000 mg/m2 on day 1; dexamethasone, etoposide and ifosfamide with mesna on days 2-4; pegaspargase intramuscularly on day 8. A central venous line is needed."
+  },
+  "cycle_length_days": 21,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "eviQ 4041 v.2: NK T-Cell lymphoma modified SMILE (dexamethasone methotrexate ifosfamide pegaspargase etoposide)",
+      "url": "https://www.eviq.org.au/haematology-and-bmt/lymphoma/nk-t-cell-lymphoma/4041-nk-t-cell-lymphoma-modified-smile-dexamethasone",
+      "version": "v.2 (PDF із позначкою ARCHIVED)",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 (13.02.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "methotrexate",
+      "drug_id": "methotrexate",
+      "route": "iv_infusion",
+      "dose_value": 2000,
+      "dose_unit": "mg_m2",
+      "days": [
+        1
+      ],
+      "duration_min": 360,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [
+        2,
+        3,
+        4
+      ],
+      "notes": {
+        "uk": "Вранці з їжею.",
+        "en": "In the morning with food."
+      }
+    },
+    {
+      "key": "etoposide",
+      "drug_id": "etoposide",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_m2",
+      "days": [
+        2,
+        3,
+        4
+      ],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "За 30-60 хвилин у 500 мл 0,9% NaCl.",
+        "en": "Over 30-60 minutes in 500 mL of 0.9% NaCl."
+      }
+    },
+    {
+      "key": "ifosfamide",
+      "drug_id": "ifosfamide",
+      "route": "iv_infusion",
+      "dose_value": 1500,
+      "dose_unit": "mg_m2",
+      "days": [
+        2,
+        3,
+        4
+      ],
+      "duration_min": 360,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000
+    },
+    {
+      "key": "mesna-with-ifosfamide",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 300,
+      "dose_unit": "mg_m2",
+      "days": [
+        2,
+        3,
+        4
+      ],
+      "duration_min": 360,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "У тому самому мішку з іфосфамідом.",
+        "en": "In the same bag as ifosfamide."
+      }
+    },
+    {
+      "key": "mesna-post",
+      "drug_id": "mesna",
+      "role": "supportive",
+      "route": "iv_infusion",
+      "dose_value": 300,
+      "dose_unit": "mg_m2",
+      "days": [
+        2,
+        3,
+        4
+      ],
+      "administrations_per_day": 2,
+      "interval_min": 240,
+      "duration_min": 15,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Через 4 і 8 годин після завершення КОЖНОЇ дози іфосфаміду; час введення протокол не вказує (15 хвилин — умовно).",
+        "en": "At 4 and 8 hours after the end of EACH ifosfamide dose; the protocol gives no infusion time (15 minutes is nominal)."
+      }
+    },
+    {
+      "key": "calcium-folinate",
+      "drug_id": "calcium-folinate",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 15,
+      "dose_unit": "mg_m2",
+      "days": [
+        3,
+        4
+      ],
+      "administrations_per_day": 4,
+      "interval_min": 360,
+      "notes": {
+        "uk": "З 36-ї години від початку метотрексату кожні 6 годин, поки його рівень не стане нижчим за 0,1 мкмоль/л; кількість днів залежить від рівня.",
+        "en": "From 36 hours after the start of methotrexate every 6 hours until its level is below 0.1 micromol/L; the number of days follows the level."
+      }
+    },
+    {
+      "key": "pegaspargase",
+      "drug_id": "pegaspargase",
+      "route": "intramuscular",
+      "dose_value": 1500,
+      "dose_unit": "iu_m2",
+      "cap_amount": 3750,
+      "days": [
+        8
+      ],
+      "notes": {
+        "uk": "Внутрішньом'язово (краще переноситься, ніж в/в); у дослідженнях дози 1500-2500 МО/м². Обмеження одним флаконом 3750 МО — NCCN ENKL-B, п. c.",
+        "en": "Intramuscularly (better tolerated than IV); studies used 1500-2500 units/m2. The cap of one 3750-unit vial is from NCCN ENKL-B, footnote c."
+      }
+    }
+  ]
+}
