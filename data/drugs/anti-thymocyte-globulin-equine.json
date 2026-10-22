@@ -1,0 +1,33 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN MDS 3.2026: імуносупресивна терапія при МДС — кінський АТГ ± циклоспорин. NCCN доз не наводить. Атгам зареєстрований (безстроково); фасування 250 мг (50 мг/мл × 5 мл) — з реєстру.",
+  "id": "anti-thymocyte-globulin-equine",
+  "name": {
+    "uk": "Антитимоцитарний глобулін кінський",
+    "en": "Anti-thymocyte globulin (equine)"
+  },
+  "trade_names": ["Атгам"],
+  "atc_code": "L04AA03",
+  "availability": "registered",
+  "amount_unit": "mg",
+  "dose_units": ["mg_kg", "mg_flat"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "витяг від 22.10.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "a250",
+      "form": "ampoule",
+      "strength_amount": 250,
+      "volume_ml": 5,
+      "label": {
+        "uk": "250 мг / 5 мл (50 мг/мл)",
+        "en": "250 mg / 5 mL (50 mg/mL)"
+      }
+    }
+  ]
+}

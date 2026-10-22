@@ -1,0 +1,38 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN MDS 3.2026 (хелація заліза: дефероксамін п/ш). Дози NCCN не наводить. У реєстрі України не знайдено — «недоступний». Флакони 500 мг і 2 г — за листком FDA (Desferal).",
+  "id": "deferoxamine",
+  "name": {
+    "uk": "Дефероксамін",
+    "en": "Deferoxamine"
+  },
+  "atc_code": "V03AC01",
+  "availability": "unavailable",
+  "amount_unit": "mg",
+  "dose_units": ["mg_kg", "mg_flat"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "витяг від 22.10.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: DESFERAL (deferoxamine mesylate for injection) — флакони 500 мг і 2 г",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=deferoxamine",
+      "version": "перевірено 2026-10-22",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v500",
+      "form": "vial",
+      "strength_amount": 500
+    },
+    {
+      "key": "v2000",
+      "form": "vial",
+      "strength_amount": 2000
+    }
+  ]
+}

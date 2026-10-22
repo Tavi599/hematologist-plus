@@ -1118,6 +1118,166 @@ const elts: Score = {
 
 // ── Myelodysplastic and myeloproliferative ──────────────────────────────────────────────────
 
+const MDS_LOWER = t(
+  'За NCCN це нижчий ризик: лікують цитопенії, передусім анемію й трансфузійну залежність (MDS-4…MDS-6).',
+  'NCCN calls this lower risk: the cytopenias are treated, above all anaemia and transfusion dependence (MDS-4 to MDS-6).',
+)
+const MDS_HIGHER = t(
+  'За NCCN це вищий ризик: гіпометилювальні засоби, обговорення алогенної трансплантації (MDS-7).',
+  'NCCN calls this higher risk: hypomethylating agents and a discussion of allogeneic transplantation (MDS-7).',
+)
+
+const MDS_KARYOTYPE_GOOD = t(
+  'Добрий: норма, −Y, del(5q) або del(20q) окремо',
+  'Good: normal, −Y alone, del(5q) alone or del(20q) alone',
+)
+const MDS_KARYOTYPE_POOR = t(
+  'Поганий: комплексний (3 і більше аномалій) або аномалії хромосоми 7',
+  'Poor: complex (3 or more abnormalities) or chromosome 7 anomalies',
+)
+
+const ipss: Score = {
+  id: 'ipss',
+  section: 'risk',
+  title: t('IPSS (МДС)', 'IPSS (MDS)'),
+  purpose: t(
+    'Первинна міжнародна прогностична шкала мієлодиспластичних синдромів',
+    'Original International Prognostic Scoring System for MDS',
+  ),
+  fields: [
+    number('blasts', 'Бласти в кістковому мозку', 'Marrow blasts', t('%', '%'), 0.5),
+    {
+      kind: 'select',
+      key: 'karyotype',
+      label: t('Каріотип', 'Karyotype'),
+      options: [
+        { value: '0', label: MDS_KARYOTYPE_GOOD },
+        { value: '0.5', label: t('Проміжний: інші аномалії', 'Intermediate: other abnormalities') },
+        { value: '1', label: MDS_KARYOTYPE_POOR },
+      ],
+    },
+    {
+      kind: 'select',
+      key: 'cytopenias',
+      label: t('Цитопенії', 'Cytopenias'),
+      hint: t(
+        'Нейтрофіли <1,8·10⁹/л, тромбоцити <100·10⁹/л, гемоглобін <100 г/л',
+        'Neutrophils <1.8×10⁹/L, platelets <100×10⁹/L, haemoglobin <100 g/L',
+      ),
+      options: [
+        { value: '0', label: t('0 або 1 цитопенія', '0 or 1 cytopenia') },
+        { value: '0.5', label: t('2 або 3 цитопенії', '2 or 3 cytopenias') },
+      ],
+    },
+  ],
+  compute: (values) => {
+    const blasts = num(values, 'blasts')
+    if (blasts === undefined || values.karyotype === undefined || values.cytopenias === undefined)
+      return null
+    const points =
+      (blasts < 5 ? 0 : blasts <= 10 ? 0.5 : blasts <= 20 ? 1.5 : 2) +
+      Number(values.karyotype) +
+      Number(values.cytopenias)
+    return grouped(
+      points,
+      [
+        { upTo: 0, label: t('Низький', 'Low'), tone: 'green', meaning: MDS_LOWER },
+        { upTo: 1, label: t('Проміжний-1', 'Intermediate-1'), tone: 'yellow', meaning: MDS_LOWER },
+        { upTo: 2, label: t('Проміжний-2', 'Intermediate-2'), tone: 'orange', meaning: MDS_HIGHER },
+        { upTo: 99, label: t('Високий', 'High'), tone: 'red', meaning: MDS_HIGHER },
+      ],
+      1,
+    )
+  },
+  sources: [
+    {
+      name: 'NCCN Guidelines: Myelodysplastic Syndromes, версія 3.2026, MDS-B (1 of 4)',
+      url: 'https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1446',
+      checked: t(
+        'Таблиця балів і категорій ризику (за Greenberg PL et al. Blood 1997;89:2079–88)',
+        'The table of points and risk categories (after Greenberg PL et al. Blood 1997;89:2079-88)',
+      ),
+    },
+  ],
+  caveat: t(
+    'Бласти 20–29% за FAB — МДС, за ВООЗ — уже ГМЛ. Шкала дає початковий прогноз; для оцінки в динаміці є WPSS.',
+    'Blasts of 20-29% are MDS by FAB but AML by WHO. The score gives the starting prognosis; WPSS allows an estimate over time.',
+  ),
+}
+
+const wpss: Score = {
+  id: 'wpss',
+  section: 'risk',
+  title: t('WPSS (МДС)', 'WPSS (MDS)'),
+  purpose: t(
+    'Прогностична шкала МДС на основі класифікації ВООЗ; допускає оцінку в динаміці',
+    'WHO classification-based prognostic scoring system for MDS; allows an estimate over time',
+  ),
+  fields: [
+    {
+      kind: 'select',
+      key: 'who',
+      label: t('Категорія ВООЗ (2016)', 'WHO category (2016)'),
+      options: [
+        {
+          value: '0',
+          label: t(
+            'RCUD, RARS або МДС з ізольованою del(5q)',
+            'RCUD, RARS or MDS with isolated del(5q)',
+          ),
+        },
+        { value: '1', label: t('RCMD', 'RCMD') },
+        { value: '2', label: t('RAEB-1', 'RAEB-1') },
+        { value: '3', label: t('RAEB-2', 'RAEB-2') },
+      ],
+    },
+    {
+      kind: 'select',
+      key: 'karyotype',
+      label: t('Каріотип', 'Karyotype'),
+      options: [
+        { value: '0', label: MDS_KARYOTYPE_GOOD },
+        { value: '1', label: t('Проміжний: інші аномалії', 'Intermediate: other abnormalities') },
+        { value: '2', label: MDS_KARYOTYPE_POOR },
+      ],
+    },
+    {
+      kind: 'check',
+      key: 'anaemia',
+      label: t('Тяжка анемія', 'Severe anaemia'),
+      hint: t(
+        'Гемоглобін <90 г/л у чоловіків або <80 г/л у жінок',
+        'Haemoglobin <90 g/L in men or <80 g/L in women',
+      ),
+    },
+  ],
+  compute: (values) => {
+    if (values.who === undefined || values.karyotype === undefined) return null
+    const points = Number(values.who) + Number(values.karyotype) + (values.anaemia === true ? 1 : 0)
+    return grouped(points, [
+      { upTo: 0, label: t('Дуже низький', 'Very low'), tone: 'green', meaning: MDS_LOWER },
+      { upTo: 1, label: t('Низький', 'Low'), tone: 'green', meaning: MDS_LOWER },
+      { upTo: 2, label: t('Проміжний', 'Intermediate'), tone: 'yellow', meaning: MDS_LOWER },
+      { upTo: 4, label: t('Високий', 'High'), tone: 'orange', meaning: MDS_HIGHER },
+      { upTo: 99, label: t('Дуже високий', 'Very high'), tone: 'red', meaning: MDS_HIGHER },
+    ])
+  },
+  sources: [
+    {
+      name: 'NCCN Guidelines: Myelodysplastic Syndromes, версія 3.2026, MDS-B (2 of 4)',
+      url: 'https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1446',
+      checked: t(
+        'Таблиця балів і категорій (за Malcovati L et al. Haematologica 2011;96:1433–40; Della Porta MG et al. Leukemia 2015;29:1502–13)',
+        'The table of points and categories (after Malcovati L et al. Haematologica 2011;96:1433-40; Della Porta MG et al. Leukemia 2015;29:1502-13)',
+      ),
+    },
+  ],
+  caveat: t(
+    'Категорії ВООЗ 2016 (RCUD, RCMD, RAEB) замінені в класифікації 2022 року; шкала валідована саме на них.',
+    'The WHO 2016 categories (RCUD, RCMD, RAEB) are superseded by the 2022 classification; the score was validated on them.',
+  ),
+}
+
 const ipssR: Score = {
   id: 'ipss-r',
   section: 'risk',
@@ -1187,17 +1347,30 @@ const ipssR: Score = {
       (haemoglobin >= 100 ? 0 : haemoglobin >= 80 ? 1 : 1.5) +
       (platelets >= 100 ? 0 : platelets >= 50 ? 0.5 : 1) +
       (anc >= 0.8 ? 0 : 0.5)
-    return grouped(
+    const outcome = grouped(
       points,
       [
-        { upTo: 1.5, label: t('Дуже низький', 'Very low'), tone: 'green' },
-        { upTo: 3, label: t('Низький', 'Low'), tone: 'green' },
+        { upTo: 1.5, label: t('Дуже низький', 'Very low'), tone: 'green', meaning: MDS_LOWER },
+        { upTo: 3, label: t('Низький', 'Low'), tone: 'green', meaning: MDS_LOWER },
         { upTo: 4.5, label: t('Проміжний', 'Intermediate'), tone: 'yellow' },
-        { upTo: 6, label: t('Високий', 'High'), tone: 'orange' },
-        { upTo: 99, label: t('Дуже високий', 'Very high'), tone: 'red' },
+        { upTo: 6, label: t('Високий', 'High'), tone: 'orange', meaning: MDS_HIGHER },
+        { upTo: 99, label: t('Дуже високий', 'Very high'), tone: 'red', meaning: MDS_HIGHER },
       ],
       1,
     )
+    if (points > 3 && points <= 4.5)
+      outcome.notes.push(
+        points <= 3.5
+          ? t(
+              'Проміжний ризик із балами ≤3,5 NCCN радить вести як нижчий ризик (MDS-4…MDS-6).',
+              'NCCN manages intermediate risk with a score of 3.5 or less as lower risk (MDS-4 to MDS-6).',
+            )
+          : t(
+              'Проміжний ризик із балами >3,5 NCCN радить вести як вищий ризик (MDS-7).',
+              'NCCN manages intermediate risk with a score above 3.5 as higher risk (MDS-7).',
+            ),
+      )
+    return outcome
   },
   sources: [
     {
@@ -1382,7 +1555,9 @@ export const RISK_SCORES: Score[] = [
   r2Iss,
   sokal,
   elts,
+  ipss,
   ipssR,
+  wpss,
   dipss,
   mipss70,
   hctCi,

@@ -1,0 +1,40 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN MDS 3.2026 (MDS-5, MDS-6, виноски jj, tt): 10 мг щодня 28 днів на місяць — другий дозвіл NCCN поруч із 21 днем із 28; для МДС без del(5q) після невдачі ESA — 10 мг щодня, якщо нейтрофіли >0,5·10⁹/л і тромбоцити >50·10⁹/л.",
+  "id": "lenalidomide-mds-28",
+  "short_name": "Леналідомід 28/28 (МДС)",
+  "name": {
+    "uk": "Леналідомід щодня при анемії в МДС нижчого ризику",
+    "en": "Lenalidomide daily for anaemia in lower-risk MDS"
+  },
+  "description": {
+    "uk": "10 мг щодня, 28 днів із 28, 2–4 місяці до оцінки відповіді. Для хворих без del(5q) — лише за нейтрофілів >0,5·10⁹/л і тромбоцитів >50·10⁹/л. Обережно при низьких тромбоцитах і нейтрофілах: можна знизити дозу. Моносомія 7 — виняток: вести як вищий ризик. Леналідомід може сприяти розростанню клонів із мутацією TP53 — потрібен ретельніший нагляд. Призначають лише в межах програми запобігання вагітності.",
+    "en": "10 mg daily, 28 days out of 28, for 2 to 4 months before response is judged. Without del(5q), only with neutrophils above 0.5×10⁹/L and platelets above 50×10⁹/L. Caution with low platelets and neutrophils: the dose can be lowered. Monosomy 7 is an exception: manage as higher risk. Lenalidomide can favour the expansion of TP53-mutated clones, so closer monitoring is needed. Prescribed only within the pregnancy prevention programme."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 4,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Myelodysplastic Syndromes, MDS-6A (виноски jj, tt) (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1446",
+      "version": "3.2026 від 12.01.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 10,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Раз на добу щодня (NCCN, MDS-6A, виноска jj). Оцінка відповіді — через 2–4 місяці; відсутність приросту Hb ≥15 г/л або зменшення потреби в трансфузіях за 3–6 місяців — відсутність відповіді.",
+        "en": "Once daily every day (NCCN, MDS-6A, footnote jj). Response is assessed after 2 to 4 months; no rise in haemoglobin of 15 g/L or more or no fall in transfusion need by 3 to 6 months counts as no response."
+      }
+    }
+  ]
+}
