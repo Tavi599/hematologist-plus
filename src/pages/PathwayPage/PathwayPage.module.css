@@ -1,0 +1,76 @@
+/* One row of the flowchart: group → treatment → next, with an arrow between the columns. On a
+   narrow screen the columns stack and the arrows point down. */
+.row {
+  display: grid;
+  grid-template-columns: minmax(170px, 1fr) 24px minmax(0, 2.4fr) 24px minmax(170px, 1fr);
+  gap: var(--mantine-spacing-xs);
+  align-items: start;
+  padding: var(--mantine-spacing-sm);
+  border: 1px solid var(--mantine-color-default-border);
+  border-radius: var(--mantine-radius-sm);
+  scroll-margin-top: 108px;
+  transition: box-shadow 0.3s;
+}
+
+/* The row an arrow just landed on. */
+.row[data-focused='true'] {
+  box-shadow: 0 0 0 3px var(--mantine-color-blue-filled);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: minmax(170px, 1fr) 24px minmax(0, 2.4fr) 24px minmax(170px, 1fr);
+  gap: var(--mantine-spacing-xs);
+  padding: 0 var(--mantine-spacing-sm);
+}
+
+.arrow {
+  align-self: center;
+  text-align: center;
+  color: var(--mantine-color-dimmed);
+  font-size: var(--mantine-font-size-lg);
+}
+
+.group {
+  border-left: 4px solid var(--mantine-color-red-filled);
+  padding-left: var(--mantine-spacing-xs);
+}
+
+.groupPage {
+  border-left-color: var(--mantine-color-gray-filled);
+}
+
+.next {
+  border-left: 1px dashed var(--mantine-color-default-border);
+  padding-left: var(--mantine-spacing-xs);
+}
+
+.regimen {
+  padding: 2px 6px;
+  border-radius: var(--mantine-radius-sm);
+
+  &:hover {
+    background-color: var(--mantine-color-default-hover);
+  }
+}
+
+@media (max-width: 62em) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .head {
+    display: none;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+  .next {
+    border-left: none;
+    border-top: 1px dashed var(--mantine-color-default-border);
+    padding-left: 0;
+    padding-top: var(--mantine-spacing-xs);
+  }
+}

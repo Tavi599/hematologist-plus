@@ -13,7 +13,7 @@ Core features:
 4. Regimen designs available for calculation.
 5. Word (.docx) prescription sheets generated from JSON templates stored in the DB.
 
-User-facing pages: calculator (input → calculation → print) and diseases (list → article → treatment hierarchy → regimen → "Calculate").
+User-facing pages: calculator (input → calculation → print) and diseases (list → article → treatment hierarchy → regimen → "Calculate"). A guideline algorithm (`treatment_nodes.kind = 'pathway'`) is not in the tree but on its own page `#/diseases/<id>/pathways`: risk group → ranked treatment → next, with clickable arrows (`src/pages/PathwayPage`, layout in `src/features/pathways/pathway.ts`).
 
 Full agreed requirements and open questions: [docs/requirements.md](docs/requirements.md). Read it before changing schema, calculation rules or print forms, and update it when a decision changes.
 
@@ -84,7 +84,7 @@ scripts/               validate-data, sync-supabase, check-rls, import-sources/ 
 docs/                  requirements.md, architecture/data-model notes
 src/
   app/                 router, providers, layout, language switcher
-  pages/               CalculatorPage, DiseasesPage, DiseaseDetailPage
+  pages/               CalculatorPage, DiseasesPage, DiseaseDetailPage, PathwayPage
   features/            calculator/ (patient form, dose table, schedule, supply, header), catalog/; print later
   domain/              pure calculation logic — no React, no I/O
   schemas/             Zod schemas: catalog rows (source of DB row types), print forms, patient input

@@ -178,6 +178,68 @@ describe('a situation over a line', () => {
   })
 })
 
+describe('a guideline pathway', () => {
+  const text = { uk: 'т', en: 't' }
+  const disease = (steps: object[], nested = false) => ({
+    id: 'aml',
+    name: text,
+    treatment: [
+      {
+        key: 'nccn',
+        kind: 'pathway',
+        title: text,
+        children: [
+          {
+            key: 'induction',
+            kind: 'line',
+            title: text,
+            regimens: [{ regimen_id: 'da-7-3', preference: 'preferred', category: '1' }],
+            steps,
+            children: nested ? [{ key: 'inner', kind: 'pathway', title: text }] : [],
+          },
+          { key: 'consolidation', kind: 'line', title: text },
+        ],
+      },
+    ],
+  })
+  const step = { kind: 'page', column: 'next', label: text, target: 'consolidation' }
+
+  it('ranks regimens and turns an arrow into a link to the node', () => {
+    const parsed = diseaseFileSchema.parse(disease([step]))
+    const rows = flattenDataSet({
+      hospitals: [],
+      classificationSystems: [],
+      drugs: [],
+      regimens: [],
+      diseases: [{ ...parsed, article: null }],
+    })
+    expect(rows.treatment_nodes.find((node) => node.id === 'aml.induction')!.steps).toEqual([
+      {
+        kind: 'page',
+        column: 'next',
+        label: text,
+        target_id: 'aml.consolidation',
+        preference: null,
+        category: null,
+        notes: null,
+      },
+    ])
+    expect(rows.treatment_node_regimens[0]).toMatchObject({
+      preference: 'preferred',
+      category: '1',
+    })
+  })
+
+  it('refuses an arrow into nothing and a pathway that is not at the top', () => {
+    const issues = (value: object) =>
+      (diseaseFileSchema.safeParse(value).error?.issues ?? []).map((issue) => issue.message)
+    expect(issues(disease([{ ...step, target: 'gone' }]))).toEqual([
+      'step "т" of induction leads to unknown node gone',
+    ])
+    expect(issues(disease([], true))).toEqual(['pathway inner must be a top-level node'])
+  })
+})
+
 describe('loadDataDir', () => {
   let dir: string | undefined
   afterEach(() => {

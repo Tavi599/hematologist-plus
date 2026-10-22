@@ -29,6 +29,10 @@ import {
   sortOrderSchema,
   sourcesSchema,
   treatmentNodeKindSchema,
+  pathwayStepKindSchema,
+  pathwayColumnSchema,
+  recommendationPreferenceSchema,
+  evidenceCategorySchema,
   routeAlternativeSchema,
   drugCautionSchema,
   drugMonitoringSchema,
@@ -231,12 +235,34 @@ export const regimenFileSchema = z
     }
   })
 
+type Localized = z.infer<typeof localizedTextSchema>
+type Preference = z.infer<typeof recommendationPreferenceSchema>
+type Category = z.infer<typeof evidenceCategorySchema>
+
+/** A pathway step as authored: `target` is the key of a node in the same disease. */
+const pathwayStepFileSchema = z.strictObject({
+  kind: pathwayStepKindSchema,
+  column: pathwayColumnSchema,
+  label: localizedTextSchema,
+  target: keySchema.nullable().default(null),
+  preference: recommendationPreferenceSchema.nullable().default(null),
+  category: evidenceCategorySchema.nullable().default(null),
+  notes: optionalLocalized,
+})
+export type PathwayStepFile = z.infer<typeof pathwayStepFileSchema>
+
 interface TreatmentNodeFile {
   key: string
   kind: z.infer<typeof treatmentNodeKindSchema>
-  title: z.infer<typeof localizedTextSchema>
-  description: z.infer<typeof localizedTextSchema> | null
-  regimens: { regimen_id: string; notes: z.infer<typeof localizedTextSchema> | null }[]
+  title: Localized
+  description: Localized | null
+  regimens: {
+    regimen_id: string
+    notes: Localized | null
+    preference: Preference | null
+    category: Category | null
+  }[]
+  steps: PathwayStepFile[]
   children: TreatmentNodeFile[]
 }
 
@@ -248,8 +274,16 @@ const treatmentNodeFileSchema: z.ZodType<TreatmentNodeFile, unknown> = z.lazy(()
       title: localizedTextSchema,
       description: optionalLocalized,
       regimens: z
-        .array(z.strictObject({ regimen_id: idSchema, notes: optionalLocalized }))
+        .array(
+          z.strictObject({
+            regimen_id: idSchema,
+            notes: optionalLocalized,
+            preference: recommendationPreferenceSchema.nullable().default(null),
+            category: evidenceCategorySchema.nullable().default(null),
+          }),
+        )
         .default([]),
+      steps: z.array(pathwayStepFileSchema).default([]),
       children: z.array(treatmentNodeFileSchema).default([]),
     })
     .superRefine((node, context) => {
@@ -301,6 +335,38 @@ export const diseaseFileSchema = z.strictObject({
     .default([])
     .refine((nodes) => nodes.every((node) => node.kind !== 'situation'), {
       message: 'a situation needs a line above it',
+    })
+    .superRefine((roots, context) => {
+      // A pathway is a page of its own: only a top-level node can be one, and its arrows must
+      // land on a node of the same disease, or the reader clicks into nothing.
+      const keys = new Set<string>()
+      const walk = (nodes: TreatmentNodeFile[], visit: (node: TreatmentNodeFile) => void) =>
+        nodes.forEach((node) => {
+          visit(node)
+          walk(node.children, visit)
+        })
+      walk(roots, (node) => keys.add(node.key))
+      roots.forEach((root, index) =>
+        walk(root.children, (node) => {
+          if (node.kind === 'pathway') {
+            context.addIssue({
+              code: 'custom',
+              path: [index],
+              message: `pathway ${node.key} must be a top-level node`,
+            })
+          }
+        }),
+      )
+      walk(roots, (node) =>
+        node.steps.forEach((step) => {
+          if (step.target !== null && !keys.has(step.target)) {
+            context.addIssue({
+              code: 'custom',
+              message: `step "${step.label.uk ?? step.label.en}" of ${node.key} leads to unknown node ${step.target}`,
+            })
+          }
+        }),
+      )
     }),
 })
 

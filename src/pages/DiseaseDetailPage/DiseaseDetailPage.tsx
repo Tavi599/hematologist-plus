@@ -2,6 +2,7 @@ import {
   Alert,
   Anchor,
   Badge,
+  Button,
   Card,
   Group,
   Loader,
@@ -106,6 +107,16 @@ function DiseaseView({ catalog, disease }: { catalog: CatalogIndex; disease: Dis
       {disease.summary !== null && <Text>{localize(disease.summary, language)}</Text>}
 
       <DiseaseScores diseaseId={disease.id} />
+      {(catalog.pathwaysByDisease.get(disease.id) ?? []).length > 0 && (
+        <Group gap="sm" align="center">
+          <Button component={Link} to={routes.pathways(disease.id)} variant="light" color="indigo">
+            {t('pathway.open')} →
+          </Button>
+          <Text size="xs" c="dimmed">
+            {t('pathway.openHint')}
+          </Text>
+        </Group>
+      )}
       {/* Treatment-related immunodeficiency: the therapies, their infections and the prophylaxis. */}
       {disease.id === SECONDARY_IMMUNODEFICIENCY && <TherapyRiskSection />}
       {IRRADIATION_DISEASES[disease.id] && (

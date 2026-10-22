@@ -146,8 +146,54 @@ export const TREATMENT_NODE_KINDS = [
   'trial',
   'reference',
   'situation',
+  'pathway',
 ] as const
 export const treatmentNodeKindSchema = z.enum(TREATMENT_NODE_KINDS)
+
+/** How a guideline ranks an option: preferred, other recommended, useful in certain circumstances. */
+export const RECOMMENDATION_PREFERENCES = ['preferred', 'other', 'circumstances'] as const
+export const recommendationPreferenceSchema = z.enum(RECOMMENDATION_PREFERENCES)
+export type RecommendationPreference = (typeof RECOMMENDATION_PREFERENCES)[number]
+
+/** NCCN categories of evidence and consensus; a recommendation without one is 2A. */
+export const EVIDENCE_CATEGORIES = ['1', '2a', '2b', '3'] as const
+export const evidenceCategorySchema = z.enum(EVIDENCE_CATEGORIES)
+export type EvidenceCategory = (typeof EVIDENCE_CATEGORIES)[number]
+
+/** A pathway step that is not a regimen. Only decides an icon and a label. */
+export const PATHWAY_STEP_KINDS = [
+  'hct',
+  'trial',
+  'surveillance',
+  'maintenance',
+  'assessment',
+  'supportive',
+  'page',
+  'other',
+] as const
+export type PathwayStepKind = (typeof PATHWAY_STEP_KINDS)[number]
+
+/** 'treatment' stands beside the row's regimens; 'next' is the arrow out of the row. */
+export const PATHWAY_COLUMNS = ['treatment', 'next'] as const
+export type PathwayColumn = (typeof PATHWAY_COLUMNS)[number]
+export const pathwayStepKindSchema = z.enum(PATHWAY_STEP_KINDS)
+export const pathwayColumnSchema = z.enum(PATHWAY_COLUMNS)
+
+/**
+ * A pathway step as stored in `treatment_nodes.steps`. Everything here is a label or a link, so a
+ * value added later falls back instead of failing the catalog load (see catalog.ts).
+ */
+export const pathwayStepRowSchema = z.object({
+  kind: pathwayStepKindSchema.catch('other'),
+  column: pathwayColumnSchema.catch('next'),
+  label: localizedTextSchema,
+  /** The treatment node the step leads to: another page or row of the same pathway. */
+  target_id: idSchema.nullable().default(null),
+  preference: recommendationPreferenceSchema.nullable().default(null).catch(null),
+  category: evidenceCategorySchema.nullable().default(null).catch(null),
+  notes: localizedTextSchema.nullable().default(null),
+})
+export type PathwayStep = z.infer<typeof pathwayStepRowSchema>
 
 /**
  * Where a clinical value comes from. Every dose, cap and dilution parameter that is not

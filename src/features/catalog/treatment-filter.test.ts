@@ -83,6 +83,8 @@ describe('situations over a line', () => {
       regimen_id,
       notes: null,
       sort_order,
+      preference: null,
+      category: null,
     })),
     children: [],
   })
@@ -116,7 +118,15 @@ describe('situations over a line', () => {
 
 describe('courseTiles', () => {
   const regimen = (id: string, course: Regimen['course']): LinkedRegimen => ({
-    link: { id: `n.${id}`, node_id: 'n', regimen_id: id, notes: null, sort_order: 0 },
+    link: {
+      id: `n.${id}`,
+      node_id: 'n',
+      regimen_id: id,
+      notes: null,
+      sort_order: 0,
+      preference: null,
+      category: null,
+    },
     regimen: { id, course } as Regimen,
   })
   const phase = (order: number) => ({

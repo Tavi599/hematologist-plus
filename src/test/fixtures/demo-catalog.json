@@ -487,7 +487,8 @@
         "en": "First line"
       },
       "description": null,
-      "sort_order": 0
+      "sort_order": 0,
+      "steps": []
     }
   ],
   "treatment_node_regimens": [
@@ -496,7 +497,9 @@
       "node_id": "dlbcl.first-line",
       "regimen_id": "r-chop-21",
       "notes": null,
-      "sort_order": 0
+      "sort_order": 0,
+      "preference": null,
+      "category": null
     }
   ],
   "disease_articles": [

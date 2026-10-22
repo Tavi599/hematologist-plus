@@ -29,8 +29,11 @@ export interface CatalogIndex {
   classificationSystems: Map<string, ClassificationSystem>
   diseases: Map<string, Disease>
   codesByDisease: Map<string, DiseaseCode[]>
-  /** Top-level treatment nodes per disease (parent_id null). */
+  /** Top-level treatment nodes per disease (parent_id null), guideline pathways left out. */
   rootNodesByDisease: Map<string, TreatmentNode[]>
+  /** Top-level guideline pathways per disease: shown on a page of their own, not in the tree. */
+  pathwaysByDisease: Map<string, TreatmentNode[]>
+  treatmentNodes: Map<string, TreatmentNode>
   childNodes: Map<string, TreatmentNode[]>
   regimenLinksByNode: Map<string, TreatmentNodeRegimen[]>
 }
@@ -72,9 +75,14 @@ export function indexCatalog(rows: CatalogRows): CatalogIndex {
     diseases: byId(rows.diseases),
     codesByDisease: groupSorted(rows.disease_codes, (row) => row.disease_id),
     rootNodesByDisease: groupSorted(
-      rows.treatment_nodes.filter((node) => node.parent_id === null),
+      rows.treatment_nodes.filter((node) => node.parent_id === null && node.kind !== 'pathway'),
       (node) => node.disease_id,
     ),
+    pathwaysByDisease: groupSorted(
+      rows.treatment_nodes.filter((node) => node.parent_id === null && node.kind === 'pathway'),
+      (node) => node.disease_id,
+    ),
+    treatmentNodes: byId(rows.treatment_nodes),
     childNodes: groupSorted(rows.treatment_nodes, (node) => node.parent_id),
     regimenLinksByNode: groupSorted(rows.treatment_node_regimens, (row) => row.node_id),
   }

@@ -153,6 +153,10 @@ function flattenTreatment(
       title: node.title,
       description: node.description,
       sort_order: index,
+      steps: node.steps.map(({ target, ...step }) => ({
+        ...step,
+        target_id: target === null ? null : childId(diseaseId, target),
+      })),
     })
     node.regimens.forEach((link, linkIndex) => {
       linkRows.push({
@@ -161,6 +165,8 @@ function flattenTreatment(
         regimen_id: link.regimen_id,
         notes: link.notes,
         sort_order: linkIndex,
+        preference: link.preference,
+        category: link.category,
       })
     })
     flattenTreatment(diseaseId, id, node.children, nodeRows, linkRows)

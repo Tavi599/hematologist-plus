@@ -25,6 +25,8 @@ import {
   SCHEDULE_BLOCKS,
   SOLVENTS,
   TREATMENT_NODE_KINDS,
+  RECOMMENDATION_PREFERENCES,
+  EVIDENCE_CATEGORIES,
 } from './common'
 import { printFormsRowSchema } from './print-forms'
 import { proposalRowSchema } from './proposals'
@@ -222,6 +224,23 @@ describe('shared schemas', () => {
       sort_order: 0,
     }
     expect(catalogRowSchemas.treatment_nodes.parse(node).kind).toBe('group')
+    // Before the pathway migration the column is absent; a step kind added later reads as a step.
+    expect(catalogRowSchemas.treatment_nodes.parse(node).steps).toEqual([])
+    const steps = [{ kind: 'later', column: 'later', label: { uk: 'Крок' }, preference: 'later' }]
+    expect(catalogRowSchemas.treatment_nodes.parse({ ...node, steps }).steps[0]).toMatchObject({
+      kind: 'other',
+      column: 'next',
+      preference: null,
+      target_id: null,
+    })
+    const link = { id: 'l', node_id: 'n', regimen_id: 'r', notes: null, sort_order: 0 }
+    expect(catalogRowSchemas.treatment_node_regimens.parse(link)).toMatchObject({
+      preference: null,
+      category: null,
+    })
+    expect(
+      catalogRowSchemas.treatment_node_regimens.parse({ ...link, preference: 'x', category: '9' }),
+    ).toMatchObject({ preference: null, category: null })
 
     const drug = {
       id: 'drug',
@@ -308,6 +327,8 @@ describe('shared schemas', () => {
       'regimen_items.dose_unit': DOSE_UNITS,
       'regimen_items.block': SCHEDULE_BLOCKS,
       'treatment_nodes.kind': TREATMENT_NODE_KINDS,
+      'treatment_node_regimens.preference': RECOMMENDATION_PREFERENCES,
+      'treatment_node_regimens.category': EVIDENCE_CATEGORIES,
       'diseases.clinical_group': CLINICAL_GROUPS,
     }
     for (const [column, list] of Object.entries(expected)) {

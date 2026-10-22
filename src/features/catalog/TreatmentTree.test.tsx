@@ -18,6 +18,7 @@ function node(id: string, parent: string | null, title: string): TreatmentNode {
     title: { uk: title, en: title },
     description: null,
     sort_order: 0,
+    steps: [],
   }
 }
 
@@ -145,6 +146,8 @@ describe('TreatmentTree', () => {
       regimen_id: 'only-described',
       notes: null,
       sort_order: 0,
+      preference: null,
+      category: null,
     })
     renderWithProviders(<TreatmentTree catalog={indexCatalog(rows)} diseaseId="dlbcl" />)
 

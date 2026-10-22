@@ -901,7 +901,8 @@
     "group": "group",
     "trial": "clinical trial",
     "reference": "for reference",
-    "situation": "situation"
+    "situation": "situation",
+    "pathway": "guideline pathway"
   },
   "availability": {
     "department": "in the department",
@@ -1048,5 +1049,44 @@
   },
   "abbreviations": {
     "title": "English abbreviations spelled out"
+  },
+  "pathway": {
+    "title": "NCCN pathways",
+    "open": "NCCN pathways — flowchart",
+    "openHint": "The guideline algorithm on a page of its own: risk group → treatment → next.",
+    "back": "Back to the disease",
+    "none": "This disease has no guideline pathways.",
+    "pages": "Pages of the algorithm",
+    "columns": {
+      "group": "Group / situation",
+      "treatment": "Treatment",
+      "next": "Next"
+    },
+    "preference": {
+      "preferred": "Preferred",
+      "other": "Other recommended",
+      "circumstances": "Useful in certain circumstances"
+    },
+    "category": {
+      "1": "cat. 1",
+      "3": "cat. 3",
+      "2a": "cat. 2A",
+      "2b": "cat. 2B"
+    },
+    "step": {
+      "hct": "HCT",
+      "trial": "trial",
+      "surveillance": "surveillance",
+      "maintenance": "maintenance",
+      "assessment": "assessment",
+      "supportive": "supportive care",
+      "page": "go to",
+      "other": "step"
+    },
+    "go": "Go to “{{title}}”",
+    "highlighted": "You are here",
+    "noOptions": "No preferred options",
+    "sourceNote": "Structure and facts follow the guideline; the wording is ours, no text was copied. Unmarked means category 2A.",
+    "wholePage": "For the whole page"
   }
 }

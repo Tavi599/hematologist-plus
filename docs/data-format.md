@@ -142,7 +142,19 @@ GRADE свідомо не використовується: він оцінює 
 | `name`, `summary` | локал. |
 | `codes[]` | `system_id`, `code` (`C83.3`), `is_primary` |
 | `clinical_group` | клінічна група, за якою згруповано список хвороб: `lymphoma`, `acute-leukemia`, `chronic-leukemia` (хронічні **лімфоїдні**: ХЛЛ, ВКЛ), `plasma-cell`, `mds`, `myeloproliferative` (сюди ж ХМЛ); належність — за ВООЗ; без групи хвороба йде в «Інші» |
-| `treatment[]` | вузли дерева: `key` (унікальний у межах хвороби), `kind` (`treatment`, `line`, `stage`, `group`, `trial` — розділ зі схемами з клінічних досліджень, `reference` — розділ зі схемами лише для ознайомлення), `title`, `description`, `regimens[]` (`regimen_id`, `notes`), `children[]` |
+| `treatment[]` | вузли дерева: `key` (унікальний у межах хвороби), `kind` (`treatment`, `line`, `stage`, `group`, `trial` — розділ зі схемами з клінічних досліджень, `reference` — розділ зі схемами лише для ознайомлення, `situation`, `pathway` — шляхи настанови, див. нижче), `title`, `description`, `regimens[]` (`regimen_id`, `notes`, `preference`, `category`), `steps[]`, `children[]` |
+
+### Шляхи настанови (`kind: "pathway"`)
+
+Алгоритм настанови (NCCN) як окрема сторінка застосунку `#/diseases/<id>/pathways`, а не частина дерева. `pathway` — лише вузол верхнього рівня; його діти — сторінки алгоритму (AML-1, AML-3, …), їхні нащадки — рядки «група → лікування → далі». Рядок — будь-який вузол зі схемами чи кроками; вузол лише з дітьми — заголовок над рядками.
+
+| Поле | |
+|---|---|
+| `regimens[].preference` | `preferred` (бажано), `other` (інші рекомендовані), `circumstances` (за певних обставин); без поля — без рангу |
+| `regimens[].category` | категорія доказовості NCCN: `1`, `2a`, `2b`, `3`; без поля — 2A |
+| `steps[]` | кроки, що не є схемою: `kind` (`hct`, `trial`, `surveillance`, `maintenance`, `assessment`, `supportive`, `page`, `other`), `column` (`treatment` — поруч зі схемами, `next` — стрілка «далі»), `label` (локал.), `target` (ключ вузла цієї ж хвороби — клікабельний перехід), `preference`, `category`, `notes` |
+
+Валідація відхиляє `pathway` не на верхньому рівні й `target`, якого немає серед ключів хвороби. Усе тут — підписи й посилання: доз і розрахунку кроки не змінюють.
 
 ## Команди
 

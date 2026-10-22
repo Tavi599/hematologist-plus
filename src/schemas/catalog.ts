@@ -28,6 +28,9 @@ import {
   sortOrderSchema,
   articleSectionSchema,
   treatmentNodeKindSchema,
+  pathwayStepRowSchema,
+  recommendationPreferenceSchema,
+  evidenceCategorySchema,
   routeAlternativeSchema,
   drugCautionSchema,
   drugMonitoringSchema,
@@ -274,6 +277,11 @@ export const treatmentNodeRowSchema = z.object({
   title: localizedTextSchema,
   description: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
+  /**
+   * Pathway steps that are not regimens. Defaults to none: the code is deployed before the
+   * migration that adds the column, and a malformed list only loses labels, never a dose.
+   */
+  steps: z.array(pathwayStepRowSchema).default([]).catch([]),
 })
 
 export const treatmentNodeRegimenRowSchema = z.object({
@@ -282,6 +290,9 @@ export const treatmentNodeRegimenRowSchema = z.object({
   regimen_id: idSchema,
   notes: localizedTextSchema.nullable(),
   sort_order: sortOrderSchema,
+  /** Guideline rank here; a badge only, so an unknown value reads as unranked. */
+  preference: recommendationPreferenceSchema.nullable().default(null).catch(null),
+  category: evidenceCategorySchema.nullable().default(null).catch(null),
 })
 
 /** Tables in dependency order: parents before children (upsert order; delete in reverse). */
