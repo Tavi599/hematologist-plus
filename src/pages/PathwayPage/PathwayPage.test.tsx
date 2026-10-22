@@ -54,6 +54,15 @@ function withPathway(): SyncRows {
           category: null,
           notes: null,
         },
+        {
+          kind: 'surveillance',
+          column: 'next',
+          label: text('Кожні 3 місяці'),
+          target_id: null,
+          preference: null,
+          category: null,
+          notes: null,
+        },
       ],
     }),
     node('dlbcl.p2', 'dlbcl.nccn', 'Рецидив NCCN', { kind: 'line', sort_order: 1 }),
@@ -103,7 +112,10 @@ describe('PathwayPage', () => {
     const row = await screen.findByRole('region', { name: 'Стадія III–IV' })
     expect(within(row).getByText('Бажано')).toBeInTheDocument()
     expect(within(row).getByText('кат. 1')).toBeInTheDocument()
+    // The kind of a step is a heading of its own, left out where the text already says it.
     expect(within(row).getByText('Клінічне випробування')).toBeInTheDocument()
+    expect(within(row).getByText('Нагляд')).toBeInTheDocument()
+    expect(within(row).queryByText('Перехід')).not.toBeInTheDocument()
     expect(within(row).getByRole('link', { name: /R-CHOP/ })).toHaveAttribute(
       'href',
       expect.stringContaining('/calculator?regimen='),

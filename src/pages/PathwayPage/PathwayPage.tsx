@@ -237,37 +237,40 @@ function StepView({ step, onGo }: { step: PathwayStep; onGo: (targetId: string) 
   const { t } = useTranslation()
   const language = currentLanguage()
   const label = localize(step.label, language)
-  const kind = (
-    <Badge size="xs" variant="outline" color="gray" tt="none">
-      {t(`pathway.step.${step.kind}`)}
-    </Badge>
-  )
+  const kindName = t(`pathway.step.${step.kind}`)
+  // A heading over the step, in full: a squeezed badge before the text read as «пер…».
+  // Left out where it would only repeat the text, and for a plain arrow or step.
+  const showKind =
+    step.kind !== 'page' &&
+    step.kind !== 'other' &&
+    !label.toLocaleLowerCase(language).includes(kindName.toLocaleLowerCase(language))
   const category = step.category !== null && <CategoryBadge category={step.category} />
-  if (step.target_id !== null) {
-    const target = step.target_id
-    return (
-      <Group gap={4} wrap="nowrap" align="flex-start">
-        {kind}
-        <Anchor
-          component="button"
-          type="button"
-          size="sm"
-          ta="left"
-          onClick={() => onGo(target)}
-          title={t('pathway.go', { title: label })}
-        >
-          {label} →
-        </Anchor>
+  const target = step.target_id
+  return (
+    <Stack gap={0}>
+      {showKind && (
+        <Text size="xs" c="dimmed" fw={600}>
+          {kindName}
+        </Text>
+      )}
+      <Group gap={4} wrap="wrap" align="flex-start">
+        {target !== null ? (
+          <Anchor
+            component="button"
+            type="button"
+            size="sm"
+            ta="left"
+            onClick={() => onGo(target)}
+            title={t('pathway.go', { title: label })}
+          >
+            {label} →
+          </Anchor>
+        ) : (
+          <Text size="sm">{label}</Text>
+        )}
         {category}
       </Group>
-    )
-  }
-  return (
-    <Group gap={4} wrap="nowrap" align="flex-start">
-      {kind}
-      <Text size="sm">{label}</Text>
-      {category}
-    </Group>
+    </Stack>
   )
 }
 
