@@ -23,6 +23,8 @@ import type { Disease, TreatmentNode, TreatmentNodeRegimen } from '../../schemas
 import type { EvidenceCategory, PathwayStep, RecommendationPreference } from '../../schemas/common'
 import classes from './PathwayPage.module.css'
 
+const PAGE_HEADING = 'pathway-page'
+
 const PREFERENCE_COLOR: Record<RecommendationPreference, string> = {
   preferred: 'green',
   other: 'blue',
@@ -57,12 +59,17 @@ function PathwayView({ catalog, disease }: { catalog: CatalogIndex; disease: Dis
   const pages = root ? pathwayPages(catalog, root) : []
   const page = pages.find((entry) => entry.node.id === params.get('page')) ?? pages[0]
   const focus = params.get('focus')
+  const chosen = params.has('page')
 
   // An arrow lands on its row: scroll it into view once the page has rendered it.
   useEffect(() => {
-    if (focus === null) return
+    // A page chosen without a row to land on opens at its heading, not where the last one was left.
+    if (focus === null) {
+      if (chosen) document.getElementById(PAGE_HEADING)?.scrollIntoView?.({ block: 'start' })
+      return
+    }
     document.getElementById(rowAnchor(focus))?.scrollIntoView?.({ block: 'start' })
-  }, [focus, page?.node.id])
+  }, [focus, chosen, page?.node.id])
 
   if (!root || !page) return <Text c="dimmed">{t('pathway.none')}</Text>
 
@@ -116,7 +123,7 @@ function PageView({
   const language = currentLanguage()
   return (
     <Stack gap="sm">
-      <Title order={2} size="h3">
+      <Title order={2} size="h3" id={PAGE_HEADING} style={{ scrollMarginTop: 108 }}>
         {localize(page.node.title, language)}
       </Title>
       {page.node.description !== null && (
