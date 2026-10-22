@@ -183,6 +183,41 @@ describe('risk scores', () => {
     expect(elts.group!.label.en).toBe('Low')
   })
 
+  it('Hasford (Euro) and EUTOS by the NCCN CML-A formulas', () => {
+    // Age 50 (0.6666) + spleen 10 (0.42) + blasts 1% (0.0584) + eosinophils 2% (0.0826) = 1.2276 → 1228.
+    const hasford = run('hasford', {
+      ageYears: 50,
+      spleen: 10,
+      platelets: 400,
+      blasts: 1,
+      eosinophils: 2,
+      basophils: 1,
+    })!
+    expect(hasford.value!.amount).toBeCloseTo(1227.6, 1)
+    expect(hasford.group!.label.en).toBe('Intermediate')
+    // Younger, small spleen, nothing else: 0.042 × 5 = 210, low.
+    expect(
+      group('hasford', {
+        ageYears: 30,
+        spleen: 5,
+        platelets: 400,
+        blasts: 0,
+        eosinophils: 0,
+        basophils: 0,
+      }),
+    ).toBe('Low')
+    // Basophils 10% (0.7) + spleen 10 cm (0.402) = 1.102, high; 5% and 5 cm = 0.5511, low.
+    expect(run('eutos', { basophils: 10, spleen: 10 })!.value!.amount).toBeCloseTo(1.102, 4)
+    expect(group('eutos', { basophils: 10, spleen: 10 })).toBe('High')
+    expect(group('eutos', { basophils: 5, spleen: 5 })).toBe('Low')
+  })
+
+  it('ELTS: a score exactly at 1.568 is still low (NCCN: at most 1.5680)', () => {
+    // spleen 0, blasts 0, platelets 1000: 0.0025 × (age/10)³ + 0.4104 = 1.568 → (age/10)³ = 462.8.
+    const age = 10 * Math.cbrt((1.568 - 0.4104) / 0.0025)
+    expect(group('elts', { ageYears: age, spleen: 0, platelets: 1000, blasts: 0 })).toBe('Low')
+  })
+
   it('IPSS-R, DIPSS and Khorana', () => {
     // Good (1) + blasts 3% (1) + Hb 90 (1) = 3: low.
     expect(
