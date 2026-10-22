@@ -1,0 +1,44 @@
+{
+  "id": "ref-dlbcl-len-r",
+  "short_name": "Леналідомід ± ритуксимаб (ДВКЛ)",
+  "name": {
+    "uk": "Леналідомід ± ритуксимаб при рецидивній ДВКЛ не-GCB",
+    "en": "Lenalidomide ± rituximab in relapsed non-GCB DLBCL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Другий рецидив і далі та рецидив у некандидатів на CAR-T: «корисно за певних обставин» лише при не-GCB підтипі.",
+      "en": "Later relapse and relapse in non-candidates for CAR-T: \"useful in certain circumstances\" for the non-GCB subtype only."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "registered"
+  }
+}

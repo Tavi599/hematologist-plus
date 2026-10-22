@@ -11,6 +11,12 @@
       "url": "https://www.uptodate.com/contents/treatment-of-lower-risk-myelodysplastic-syndromes-neoplasms-mds",
       "version": "перевірено 2026-10-04",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "NCCN Guidelines: Myelodysplastic Syndromes, MDS-4 (виноска ff), MDS-8 (виноска kkk) (текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1446",
+      "version": "3.2026 від 12.01.2026",
+      "checkedOn": "2026-10-22"
     }
   ],
   "reference": {
@@ -23,7 +29,8 @@
         "name": {
           "uk": "Ромиплостим",
           "en": "Romiplostim"
-        }
+        },
+        "drug_id": "romiplostim"
       }
     ],
     "key_info": [
@@ -33,8 +40,8 @@
       }
     ],
     "gap": {
-      "uk": "Підбір дози за кількістю тромбоцитів, а препарату немає в довіднику.",
-      "en": "The dose is titrated to the platelet count, and the drug is not in the catalog."
+      "uk": "Доза підбирається за кількістю тромбоцитів, а NCCN її не називає; препарат є в довіднику, але в реєстрі України не знайдений.",
+      "en": "The dose is titrated to the platelet count and NCCN does not give it; the drug is in the catalog but not found in the Ukrainian register."
     },
     "availability": "unavailable"
   }

@@ -1,0 +1,44 @@
+{
+  "id": "ref-dlbcl-pola-r",
+  "short_name": "Полатузумаб ± ритуксимаб",
+  "name": {
+    "uk": "Полатузумаб ведотин ± ритуксимаб (рецидивна ДВКЛ)",
+    "en": "Polatuzumab vedotin ± rituximab (relapsed DLBCL)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Другий рецидив і далі, а також рецидив <12 міс. у некандидатів на CAR-T: полатузумаб ± бендамустин ± ритуксимаб (бажано; повна комбінація PBR є в довіднику); «інші рекомендовані» — полатузумаб + ритуксимаб без бендамустину. Бендамустин перед CAR-T чи біспецифічними антитілами — з обережністю.",
+      "en": "Relapse under 12 months in non-candidates for CAR-T: polatuzumab ± bendamustine ± rituximab (preferred; the full PBR combination is in the catalog); \"other recommended\" — polatuzumab + rituximab without bendamustine. Use bendamustine with caution before CAR-T or bispecifics."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Полатузумаб ведотин",
+          "en": "Polatuzumab vedotin"
+        },
+        "drug_id": "polatuzumab-vedotin"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "unavailable"
+  }
+}

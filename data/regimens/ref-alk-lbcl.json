@@ -1,0 +1,48 @@
+{
+  "id": "ref-alk-lbcl",
+  "short_name": "ALK-позитивна ВККЛ",
+  "name": {
+    "uk": "ALK-позитивна великоклітинна В-клітинна лімфома: індукція й рецидив",
+    "en": "ALK-positive large B-cell lymphoma: induction and relapse"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "CD20-негативна, ALK-позитивна (CLTC::ALK), зазвичай молоді чоловіки з поширеним процесом. Індукція (єдиного стандарту немає): DA-EPOCH, CHOEP; CHOP менш ефективний; mini-CHOP для ослаблених; HyperCVAD і CODOX-M/IVAC — потенційно токсичні. Ритуксимаб не потрібен. Локалізований процес — консолідація ISRT. Рецидив: платинова схема 2-ї лінії без ритуксимабу з аутоТГСК; інгібітори ALK наступного покоління (алектиніб, лорлатиніб — бажано, а не кризотиніб); CAR-T при CD19+.",
+      "en": "CD20-negative, ALK-positive (CLTC::ALK), mostly young men with advanced disease. Induction (no standard): DA-EPOCH, CHOEP; CHOP is less effective; mini-CHOP for the frail; HyperCVAD and CODOX-M/IVAC are potentially toxic. Rituximab is not needed. Localized disease — consolidative ISRT. Relapse: platinum-based second-line without rituximab with autologous HCT; next-generation ALK inhibitors (alectinib, lorlatinib preferred over crizotinib); CAR-T if CD19-positive."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Алектиніб",
+          "en": "Alectinib"
+        }
+      },
+      {
+        "name": {
+          "uk": "Лорлатиніб",
+          "en": "Lorlatinib"
+        }
+      },
+      {
+        "name": {
+          "uk": "Кризотиніб",
+          "en": "Crizotinib"
+        }
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "unavailable"
+  }
+}

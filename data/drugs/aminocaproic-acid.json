@@ -1,0 +1,37 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN MDS 3.2026 (антифібринолітик при кровотечі, рефрактерній до трансфузій тромбоцитів). Доз NCCN не наводить. Фасування — з відкритого реєстру: таблетки 500 мг, розчин для інфузій 50 мг/мл по 100 мл.",
+  "id": "aminocaproic-acid",
+  "name": {
+    "uk": "Амінокапронова кислота",
+    "en": "Aminocaproic acid"
+  },
+  "atc_code": "B02AA01",
+  "availability": "registered",
+  "amount_unit": "mg",
+  "dose_units": ["mg_flat", "mg_kg"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "витяг від 22.10.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t500",
+      "form": "tablet",
+      "strength_amount": 500
+    },
+    {
+      "key": "b5000",
+      "form": "other",
+      "strength_amount": 5000,
+      "volume_ml": 100,
+      "label": {
+        "uk": "5 г / 100 мл (50 мг/мл), розчин для інфузій",
+        "en": "5 g / 100 mL (50 mg/mL), solution for infusion"
+      }
+    }
+  ]
+}

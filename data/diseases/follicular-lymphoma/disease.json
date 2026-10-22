@@ -44,6 +44,840 @@
   ],
   "treatment": [
     {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 4.2026 (FOLL-3…FOLL-6)",
+        "en": "NCCN 4.2026 pathways (FOLL-3 to FOLL-6)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN для класичної фолікулярної лімфоми, версія 4.2026 (FOLL-3…FOLL-B, FOLL-6). FL 1–2 (ICC) і 3A — як класична ФЛ; FL 3B/фолікулярна великоклітинна й будь-яка ділянка ДВКЛ лікуються як ДВКЛ. Дози схем — у картках схем довідника; NCCN у цьому розділі дозує лише підтримку ритуксимабом і обінутузумабом. Початок системного лікування покращує безподієву виживаність, але загальну не змінює. Перед лікуванням — тест на гепатит B (ризик реактивації), профілактика синдрому лізису пухлини.",
+        "en": "The NCCN algorithm for classic follicular lymphoma, version 4.2026 (FOLL-3 to FOLL-B, FOLL-6). FL grade 1-2 (ICC) and 3A are managed as classic FL; FL 3B / follicular large B-cell lymphoma and any area of DLBCL are treated as DLBCL. Regimen doses are in the regimen cards; in this section NCCN itself doses only rituximab and obinutuzumab maintenance. Starting systemic therapy improves failure-free survival but not overall survival. Test for hepatitis B before treatment (reactivation risk); consider tumor lysis prophylaxis."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-early",
+          "kind": "line",
+          "title": {
+            "uk": "Стадія I–II (FOLL-3)",
+            "en": "Stage I-II (FOLL-3)"
+          },
+          "description": {
+            "uk": "Відповідь оцінюють за Lugano, PET/CT — за 5-бальною шкалою. Спостереження: огляд і аналізи кожні 3–6 міс. 5 років, далі щороку; КТ з контрастом не частіше ніж раз на 6 міс. протягом 2 років після лікування, потім не частіше ніж раз на рік. При прогресії — думати про трансформацію (зростають ЛДГ, одне вогнище росте непропорційно, екстранодальне ураження, нові В-симптоми): PET допомагає обрати місце біопсії; трансформація лікується як ДВКЛ.",
+            "en": "Response is judged by Lugano, PET/CT on the 5-point scale. Follow-up: visit and labs every 3-6 months for 5 years, then yearly; contrast CT no more than every 6 months for 2 years after treatment, then no more than yearly. On progression think of transformation (rising LDH, one site growing out of proportion, extranodal disease, new B symptoms): PET helps choose the biopsy site; transformation is treated as DLBCL."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-early-contig",
+              "kind": "group",
+              "title": {
+                "uk": "Стадія I або суміжна стадія II",
+                "en": "Stage I or contiguous stage II"
+              },
+              "description": {
+                "uk": "Після CR/PR — спостереження; при NR або прогресії — рядок «Відповідь і рецидив (FOLL-5)». Анти-CD20 ± хіміотерапія без променевої терапії — варіант за певних обставин, наприклад при великому внутрішньочеревному чи брижовому ураженні стадії I.",
+                "en": "After CR/PR — follow-up; with NR or progression — the row \"Response and relapse (FOLL-5)\". Anti-CD20 ± chemotherapy without radiation is an option in certain circumstances, for example bulky intra-abdominal or mesenteric stage I disease."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "Анти-CD20 антитіло (ритуксимаб або обінутузумаб; обінутузумаб як монотерапія не показаний) ± хіміотерапія за списком FOLL-B — у складі ISRT або окремо за певних обставин",
+                    "en": "Anti-CD20 antibody (rituximab or obinutuzumab; obinutuzumab is not indicated as a single agent) ± chemotherapy from FOLL-B — together with ISRT or alone in certain circumstances"
+                  }
+                },
+                {
+                  "regimen_id": "br"
+                },
+                {
+                  "regimen_id": "r-cvp"
+                },
+                {
+                  "regimen_id": "r-chop-21"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "ISRT 24–30 Гр, фракції 1,5–2 Гр",
+                    "en": "ISRT 24-30 Gy in 1.5-2 Gy fractions"
+                  },
+                  "preference": "preferred",
+                  "notes": {
+                    "uk": "При лікуванні самою променевою терапією об’єм ширший, ніж при ДВКЛ; поле планують із променевим терапевтом (NHODG-D).",
+                    "en": "When radiation is the only treatment the volume is wider than for DLBCL; plan the field with the radiation oncologist (NHODG-D)."
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "ISRT + анти-CD20 антитіло ± хіміотерапія",
+                    "en": "ISRT + anti-CD20 antibody ± chemotherapy"
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Відповідь (Lugano): CR/PR — спостереження; NR — далі",
+                    "en": "Response (Lugano): CR/PR — follow-up; NR — next"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Відповідь і рецидив (FOLL-5)",
+                    "en": "Response and relapse (FOLL-5)"
+                  },
+                  "target": "nccn-resp"
+                }
+              ]
+            },
+            {
+              "key": "nccn-early-noncontig",
+              "kind": "group",
+              "title": {
+                "uk": "Несуміжна стадія II",
+                "en": "Non-contiguous stage II"
+              },
+              "description": {
+                "uk": "Активне спостереження доречне, коли токсичність променевої чи системної терапії переважає користь (рішення з радіологом-онкологом). Якщо з’явились показання до лікування — анти-CD20 антитіло ± хіміотерапія (FOLL-B) ± ISRT для місцевого полегшення. Після CR/PR можна додати ISRT, якщо її не було.",
+                "en": "Active surveillance is reasonable when the toxicity of radiation or systemic therapy outweighs the benefit (decide with a radiation oncologist). Once there are indications for treatment — anti-CD20 antibody ± chemotherapy (FOLL-B) ± ISRT for local palliation. After CR/PR consider ISRT if it was not given."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono"
+                },
+                {
+                  "regimen_id": "br"
+                },
+                {
+                  "regimen_id": "r-cvp"
+                },
+                {
+                  "regimen_id": "r-chop-21"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Активне спостереження",
+                    "en": "Active surveillance"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Показання до лікування — підхід як при стадіях III–IV (FOLL-4)",
+                    "en": "Indications for treatment — approach as for stage III-IV (FOLL-4)"
+                  },
+                  "target": "nccn-adv"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "NR або прогресія (FOLL-5)",
+                    "en": "NR or progression (FOLL-5)"
+                  },
+                  "target": "nccn-resp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-adv",
+          "kind": "line",
+          "title": {
+            "uk": "Стадія III–IV (FOLL-4)",
+            "en": "Stage III-IV (FOLL-4)"
+          },
+          "description": {
+            "uk": "Показання до лікування: клінічне випробування, симптоми, загроза функції органа, клінічно значуща чи прогресивна цитопенія внаслідок лімфоми, клінічно значуща пухлинна маса, стійке або швидке прогресування (критерії GELF — FOLL-A: ≥3 вузлів по ≥3 см, будь-яке утворення ≥7 см, В-симптоми, спленомегалія, випіт у плевру чи черевну порожнину, лейкоцити <1,0 або тромбоцити <100 ×10⁹/л, лейкемія >5,0 ×10⁹/л). Без показань — активне спостереження (категорія 1) з оглядом кожні 3–6 міс.",
+            "en": "Indications for treatment: clinical trial, symptoms, threatened organ function, clinically significant or progressive cytopenia from lymphoma, clinically significant bulk, steady or rapid progression (GELF criteria, FOLL-A: 3 or more nodal sites of 3 cm or more, any mass of 7 cm or more, B symptoms, splenomegaly, pleural or peritoneal effusion, leukocytes below 1.0 or platelets below 100 x10^9/L, leukemia above 5.0 x10^9/L). With no indication — active surveillance (category 1) with visits every 3-6 months."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-adv-none",
+              "kind": "group",
+              "title": {
+                "uk": "Показань до лікування немає",
+                "en": "No indication for treatment"
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Активне спостереження (категорія 1): огляд і аналізи кожні 3–6 міс. 5 років, далі щороку; КТ з контрастом не частіше ніж раз на 6 міс. до 2 років, далі раз на рік",
+                    "en": "Active surveillance (category 1): visit and labs every 3-6 months for 5 years, then yearly; contrast CT no more than every 6 months up to 2 years, then yearly"
+                  },
+                  "category": "1"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "З’явились показання — перша лінія (FOLL-B)",
+                    "en": "Indication appears — first line (FOLL-B)"
+                  },
+                  "target": "nccn-1l"
+                }
+              ]
+            },
+            {
+              "key": "nccn-adv-ind",
+              "kind": "group",
+              "title": {
+                "uk": "Є показання до лікування",
+                "en": "Indication present"
+              },
+              "description": {
+                "uk": "Варіанти: системна терапія (FOLL-B), клінічне випробування, дуже низькі дози ISRT (за NHODG-D паліативно — 2 Гр ×2 або 4 Гр ×1). Далі — оцінка відповіді й додаткова терапія (FOLL-5).",
+                "en": "Options: systemic therapy (FOLL-B), a clinical trial, very low-dose ISRT (NHODG-D palliative: 2 Gy x2 or 4 Gy x1). Next — response assessment and additional therapy (FOLL-5)."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне випробування",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Дуже низькі дози ISRT (4 Гр)",
+                    "en": "Very low-dose ISRT (4 Gy)"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Схеми першої лінії (FOLL-B 1)",
+                    "en": "First-line regimens (FOLL-B 1)"
+                  },
+                  "target": "nccn-1l"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Відповідь і рецидив (FOLL-5)",
+                    "en": "Response and relapse (FOLL-5)"
+                  },
+                  "target": "nccn-resp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-1l",
+          "kind": "line",
+          "title": {
+            "uk": "Перша лінія (FOLL-B 1)",
+            "en": "First line (FOLL-B 1)"
+          },
+          "description": {
+            "uk": "Обінутузумаб кращий при рефрактерності до ритуксимабу (прогресія під час або в межах 6 міс. після ритуксимабу). Бендамустин: у дослідженні GALLIUM зросла смертність від опортуністичних інфекцій і вторинних пухлин — профілактика пневмоцистної та VZV-інфекції обов’язкова; перед CAR-T чи CD3×CD20 біспецифічними антитілами — з обережністю (відкласти до лейкафереза). Ритуксимаб при низькому пухлинному навантаженні доречний, якщо стартували зі спостереження або прогресія не відповідає GELF (негайна терапія без GELF загальну виживаність не покращила). Для літніх чи ослаблених, якщо жодна комбінація не буде переносимою, — ритуксимаб 375 мг/м² щотижня ×4.",
+            "en": "Obinutuzumab is preferred when rituximab-refractory (progression on or within 6 months of rituximab). Bendamustine: in GALLIUM mortality from opportunistic infections and second cancers rose — pneumocystis and VZV prophylaxis is mandatory; use with caution before CAR-T or CD3xCD20 bispecifics (delay until leukapheresis). Rituximab for low tumor burden is appropriate when surveillance was the start or progression does not meet GELF (immediate therapy without GELF did not improve overall survival). For older or infirm patients when no combination is expected to be tolerable — rituximab 375 mg/m2 weekly x4."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-1l-high",
+              "kind": "group",
+              "title": {
+                "uk": "Великий пухлинний тягар",
+                "en": "High tumor burden"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "br",
+                  "notes": {
+                    "uk": "Бендамустин + ритуксимаб",
+                    "en": "Bendamustine + rituximab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "o-b-cycle-1",
+                  "notes": {
+                    "uk": "Бендамустин + обінутузумаб (цикл 1); за NCCN обінутузумаб — альтернатива ритуксимабу",
+                    "en": "Bendamustine + obinutuzumab (cycle 1); NCCN lets obinutuzumab replace rituximab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "o-b",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r-chop-21",
+                  "notes": {
+                    "uk": "CHOP + ритуксимаб",
+                    "en": "CHOP + rituximab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "o-chop-cycle-1",
+                  "notes": {
+                    "uk": "CHOP + обінутузумаб",
+                    "en": "CHOP + obinutuzumab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "o-chop",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "o-chop-cycle-7-8",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r-cvp",
+                  "notes": {
+                    "uk": "CVP + ритуксимаб",
+                    "en": "CVP + rituximab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "o-cvp-cycle-1",
+                  "notes": {
+                    "uk": "CVP + обінутузумаб",
+                    "en": "CVP + obinutuzumab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "o-cvp",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r2-first-line-cycle-1",
+                  "notes": {
+                    "uk": "Леналідомід + ритуксимаб",
+                    "en": "Lenalidomide + rituximab"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "r2-first-line",
+                  "preference": "other"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-low",
+              "kind": "group",
+              "title": {
+                "uk": "Малий пухлинний тягар",
+                "en": "Low tumor burden"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "375 мг/м² щотижня ×4",
+                    "en": "375 mg/m2 weekly x4"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "galen-cycle-1",
+                  "notes": {
+                    "uk": "Леналідомід + обінутузумаб",
+                    "en": "Lenalidomide + obinutuzumab"
+                  },
+                  "preference": "other",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "galen",
+                  "preference": "other",
+                  "category": "2b"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-old",
+              "kind": "group",
+              "title": {
+                "uk": "Літні або ослаблені",
+                "en": "Older or infirm"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "375 мг/м² щотижня ×4",
+                    "en": "375 mg/m2 weekly x4"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-ext",
+              "kind": "group",
+              "title": {
+                "uk": "Подовжена терапія (за бажанням)",
+                "en": "Extended therapy (optional)"
+              },
+              "description": {
+                "uk": "Після хіміоімунотерапії при великому тягарі: ритуксимаб 375 мг/м² раз на 8–12 тижнів 2 роки (категорія 1; дані PRIMA — лише після R-CVP і R-CHOP) або обінутузумаб 1 г раз на 8 тижнів, 12 введень. Після монотерапії ритуксимабом — ритуксимаб 375 мг/м² раз на 8 тижнів, 4 введення.",
+                "en": "After chemoimmunotherapy for high tumor burden: rituximab 375 mg/m2 every 8-12 weeks for 2 years (category 1; PRIMA data — only after R-CVP and R-CHOP) or obinutuzumab 1 g every 8 weeks for 12 doses. After single-agent rituximab — rituximab 375 mg/m2 every 8 weeks for 4 doses."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-maintenance",
+                  "notes": {
+                    "uk": "2 роки; після монотерапії ритуксимабом — лише 4 введення",
+                    "en": "2 years; only 4 doses after single-agent rituximab"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "o-b-maintenance",
+                  "notes": {
+                    "uk": "Обінутузумаб 1 г раз на 8 тижнів, 12 введень",
+                    "en": "Obinutuzumab 1 g every 8 weeks, 12 doses"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "o-cvp-maintenance",
+                  "preference": "preferred"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "maintenance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Подовжена терапія після відповіді",
+                    "en": "Extended therapy after response"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-resp",
+          "kind": "line",
+          "title": {
+            "uk": "Відповідь і рецидив (FOLL-5)",
+            "en": "Response and relapse (FOLL-5)"
+          },
+          "description": {
+            "uk": "PET-позитивна PR скорочує виживаність без прогресування, але додаткове лікування на цьому етапі результату не змінює. Відсутність відповіді чи прогресія — повторна біопсія (трансформація → як ДВКЛ). Під час спостереження — огляд і аналізи кожні 3–6 міс. 5 років, далі щороку; КТ з контрастом до 2 років не частіше ніж кожні 6 міс., далі не частіше ніж щороку.",
+            "en": "A PET-positive PR shortens progression-free survival, but additional treatment at this point has not changed outcome. No response or progression — rebiopsy (transformation → treat as DLBCL). Follow-up: visit and labs every 3-6 months for 5 years, then yearly; contrast CT up to 2 years no more than every 6 months, then no more than yearly."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-resp-cr",
+              "kind": "group",
+              "title": {
+                "uk": "CR або PR",
+                "en": "CR or PR"
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "maintenance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Подовжена терапія (за бажанням) — див. «Перша лінія»",
+                    "en": "Extended therapy (optional) — see First line"
+                  },
+                  "target": "nccn-1l-ext"
+                },
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Активне спостереження",
+                    "en": "Active surveillance"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-resp-relapse",
+              "kind": "group",
+              "title": {
+                "uk": "Рецидив або прогресія",
+                "en": "Relapse or progression"
+              },
+              "description": {
+                "uk": "Біопсія при підозрі на трансформацію. Якщо показань до лікування немає — активне спостереження; якщо є (клінічне випробування, симптоми, загроза функції органа, значуща цитопенія, велика пухлинна маса, прогресія) — схеми другої лінії, клінічне випробування або дуже низькі дози ISRT. Першу лінію зазвичай не повторюють.",
+                "en": "Biopsy if transformation is suspected. With no indication — active surveillance; with one (trial, symptoms, threatened organ function, significant cytopenia, bulk, progression) — second-line regimens, a trial or very low-dose ISRT. A first-line regimen is generally not repeated."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Друга лінія (FOLL-B 2)",
+                    "en": "Second line (FOLL-B 2)"
+                  },
+                  "target": "nccn-2l"
+                }
+              ]
+            },
+            {
+              "key": "nccn-resp-nr",
+              "kind": "group",
+              "title": {
+                "uk": "Відсутність відповіді або прогресія після другої лінії",
+                "en": "No response or progression after second line"
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "assessment",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Повторна біопсія: без трансформації — третя лінія й далі; з трансформацією — як ДВКЛ (HTBCEL-1)",
+                    "en": "Rebiopsy: no transformation — third line and later; transformation — treat as DLBCL (HTBCEL-1)"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Третя лінія й далі (FOLL-B 3)",
+                    "en": "Third line and later (FOLL-B 3)"
+                  },
+                  "target": "nccn-3l"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-2l",
+          "kind": "line",
+          "title": {
+            "uk": "Друга лінія (FOLL-B 2)",
+            "en": "Second line (FOLL-B 2)"
+          },
+          "description": {
+            "uk": "Обінутузумаб кращий для рефрактерних до ритуксимабу. Бендамустин не рекомендований, якщо його вже давали; перед CAR-T чи біспецифічними антитілами — з обережністю. Для ослаблених — ритуксимаб 375 мг/м² щотижня ×4. Перед біспецифічними антитілами CD20×CD3 і CAR-T варто повторною біопсією підтвердити CD20 / CD19.",
+            "en": "Obinutuzumab is preferred for rituximab-refractory disease. Bendamustine is not recommended if given before; use with caution before CAR-T or bispecifics. For infirm patients — rituximab 375 mg/m2 weekly x4. Before CD20xCD3 bispecifics and CAR-T consider rebiopsy to confirm CD20 / CD19."
+          },
+          "regimens": [
+            {
+              "regimen_id": "br",
+              "notes": {
+                "uk": "Бендамустин + ритуксимаб (не рекомендується після бендамустину)",
+                "en": "Bendamustine + rituximab (not recommended after bendamustine)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "o-b-cycle-1",
+              "notes": {
+                "uk": "Бендамустин + обінутузумаб (не рекомендується після бендамустину)",
+                "en": "Bendamustine + obinutuzumab (not recommended after bendamustine)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "o-b",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "r-chop-21",
+              "notes": {
+                "uk": "CHOP + ритуксимаб",
+                "en": "CHOP + rituximab"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "o-chop-cycle-1",
+              "notes": {
+                "uk": "CHOP + обінутузумаб",
+                "en": "CHOP + obinutuzumab"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "o-chop",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "o-chop-cycle-7-8",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "r-cvp",
+              "notes": {
+                "uk": "CVP + ритуксимаб",
+                "en": "CVP + rituximab"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "o-cvp-cycle-1",
+              "notes": {
+                "uk": "CVP + обінутузумаб",
+                "en": "CVP + obinutuzumab"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "o-cvp",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-fl-r2-epcoritamab",
+              "notes": {
+                "uk": "Леналідомід + ритуксимаб + епкоритамаб",
+                "en": "Lenalidomide + rituximab + epcoritamab"
+              },
+              "preference": "preferred",
+              "category": "1"
+            },
+            {
+              "regimen_id": "ref-fl-r2-tafasitamab",
+              "notes": {
+                "uk": "Леналідомід + ритуксимаб + тафаситамаб (після ≥1 лінії з анти-CD20)",
+                "en": "Lenalidomide + rituximab + tafasitamab (after at least 1 line with an anti-CD20)"
+              },
+              "preference": "preferred",
+              "category": "1"
+            },
+            {
+              "regimen_id": "r2-cycle-1",
+              "notes": {
+                "uk": "Леналідомід + ритуксимаб або обінутузумаб",
+                "en": "Lenalidomide + rituximab or obinutuzumab"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "r2",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "galen-cycle-1",
+              "notes": {
+                "uk": "Леналідомід + обінутузумаб",
+                "en": "Lenalidomide + obinutuzumab"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "galen",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "obinutuzumab-mono",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "rituximab-mono",
+              "notes": {
+                "uk": "Для ослаблених (бажано): 375 мг/м² щотижня ×4",
+                "en": "For infirm patients (preferred): 375 mg/m2 weekly x4"
+              },
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Леналідомід без анти-CD20 — лише якщо анти-CD20 неможливий (окремої схеми в довіднику немає)",
+                "en": "Lenalidomide alone — only if an anti-CD20 is not possible (no separate regimen in the catalog)"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Відповідь і рецидив (FOLL-5)",
+                "en": "Response and relapse (FOLL-5)"
+              },
+              "target": "nccn-resp"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-2l-maint",
+              "kind": "group",
+              "title": {
+                "uk": "Подовжена терапія після другої лінії (за бажанням)",
+                "en": "Extended therapy after second line (optional)"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-maintenance-rr",
+                  "notes": {
+                    "uk": "Раз на 12 тижнів, 2 роки",
+                    "en": "Every 12 weeks, 2 years"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "galen-obinutuzumab-maintenance",
+                  "notes": {
+                    "uk": "Обінутузумаб 1 г раз на 8 тижнів, 12 введень (для рефрактерних до ритуксимабу)",
+                    "en": "Obinutuzumab 1 g every 8 weeks, 12 doses (for rituximab-refractory disease)"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-3l",
+          "kind": "line",
+          "title": {
+            "uk": "Третя лінія й далі (FOLL-B 3)",
+            "en": "Third line and later (FOLL-B 3)"
+          },
+          "description": {
+            "uk": "Схеми другої лінії, яких ще не було, теж можливі. Біспецифічні антитіла та CAR-T менш ефективні при CD20-/CD19-негативній пухлині — підтвердити антиген повторною біопсією. Невідомо, чи тафаситамаб або лонкастуксимаб знижують ефективність наступного CD19 CAR-T. Консолідація: алогенна ТГСК у відібраних випадках (невдала мобілізація, стійке ураження кісткового мозку).",
+            "en": "Second-line regimens not yet given are also options. Bispecifics and CAR-T work poorly in CD20-/CD19-negative disease — confirm the antigen by rebiopsy. It is unknown whether tafasitamab or loncastuximab lower the efficacy of later CD19 CAR-T. Consolidation: allogeneic HCT in selected cases (mobilization failure, persistent marrow disease)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-fl-mosunetuzumab",
+              "notes": {
+                "uk": "Біспецифічні антитіла: епкоритамаб, мозунетузумаб (в/в або п/ш)",
+                "en": "Bispecifics: epcoritamab, mosunetuzumab (IV or SC)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-car-t-cd19",
+              "notes": {
+                "uk": "CAR-T: аксикабтаген цилолейцел, лізокабтаген маралейцел, тисагенлеклейцел",
+                "en": "CAR-T: axicabtagene ciloleucel, lisocabtagene maraleucel, tisagenlecleucel"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "zanubrutinib-obinutuzumab-cycle-1",
+              "notes": {
+                "uk": "Занубрутиніб + обінутузумаб",
+                "en": "Zanubrutinib + obinutuzumab"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "zanubrutinib-obinutuzumab-cycle-2-6",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "zanubrutinib-obinutuzumab",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-fl-loncastuximab-rituximab",
+              "notes": {
+                "uk": "Лонкастуксимаб + ритуксимаб",
+                "en": "Loncastuximab + rituximab"
+              },
+              "preference": "other",
+              "category": "2b"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "Алогенна ТГСК у відібраних випадках",
+                "en": "Allogeneic HCT in selected cases"
+              },
+              "preference": "circumstances"
+            }
+          ]
+        },
+        {
+          "key": "nccn-ptfl",
+          "kind": "line",
+          "title": {
+            "uk": "Педіатричний тип ФЛ у дорослих (FOLL-6)",
+            "en": "Pediatric-type FL in adults (FOLL-6)"
+          },
+          "description": {
+            "uk": "Локалізована (I–II) пухлина, переважно голова-шия (мигдалики, шийні, підщелепні, привушні вузли) або пах; частіше чоловіки; ІГХ: BCL6, CD10, іноді IRF4/MUM1 (~20%), Ki-67 >30%; перебудов BCL2, BCL6, IRF4/MUM1 немає. Стадія вище II за визначенням — не педіатричний тип. Прогноз відмінний; більшості візуалізація в спостереженні не потрібна, підтримка не показана.",
+            "en": "Localized (stage I-II) disease, mostly head and neck (tonsillar, cervical, submandibular, parotid nodes) or inguinal; male predominant; IHC: BCL6, CD10, sometimes IRF4/MUM1 (~20%), Ki-67 above 30%; no BCL2, BCL6 or IRF4/MUM1 rearrangement. Above stage II it is by definition not pediatric-type. Prognosis is excellent; most patients need no surveillance imaging and maintenance is not indicated."
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-chop-21",
+              "notes": {
+                "uk": "Лише при розлогому місцевому ураженні, коли не можна виконати ексцизію чи ISRT",
+                "en": "Only with extensive local disease when excision or ISRT is not possible"
+              }
+            }
+          ],
+          "steps": [
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Ексцизія (бажано) або ISRT",
+                "en": "Excision (preferred) or ISRT"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "surveillance",
+              "column": "treatment",
+              "label": {
+                "uk": "CR — активне спостереження; <CR — рестадіювання PET/CT і далі FOLL-5",
+                "en": "CR — active surveillance; <CR — restage with PET/CT, then FOLL-5"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Відповідь і рецидив (FOLL-5)",
+                "en": "Response and relapse (FOLL-5)"
+              },
+              "target": "nccn-resp"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "first-line",
       "kind": "line",
       "title": {

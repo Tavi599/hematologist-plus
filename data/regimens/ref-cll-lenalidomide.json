@@ -1,0 +1,54 @@
+{
+  "$comment": "Лише опис за NCCN CLL/SLL 1.2027: доз для розрахунку немає.",
+  "id": "ref-cll-lenalidomide",
+  "short_name": "Леналідомід±R (ХЛЛ)",
+  "name": {
+    "uk": "Леналідомід ± ритуксимаб при рецидивному ХЛЛ",
+    "en": "Lenalidomide with or without rituximab in relapsed CLL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma, версія 1.2027 від 20.08.2026",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1478",
+      "version": "1.2027 (20.08.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидив після інгібіторів BTK і BCL2 (NCCN: «інші рекомендовані»). Дозують безперервно або з перервами; цитопенії коригують факторами росту та/або зниженням дози, не обов'язково зупиняючи лікування.",
+      "en": "Relapse after BTK and BCL2 inhibitors (NCCN: 'other recommended'). Given continuously or intermittently; cytopenias are handled with growth factors and/or a dose reduction without necessarily stopping."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Профілактика тромбозів: ацетилсаліцилова кислота 81 мг на добу, якщо тромбоцити вище 50×10⁹/л (хворим на антикоагулянтах не потрібна).",
+        "en": "Thromboprophylaxis: aspirin 81 mg daily if platelets are above 50 x 10^9/L (not needed on an anticoagulant)."
+      },
+      {
+        "uk": "Реакція «спалаху пухлини»: лікувати преднізолоном 25-50 мг на добу 5-10 днів; при лімфовузлах понад 5 см профілактично преднізолон 20 мг 5-7 днів із швидким зниженням.",
+        "en": "Tumour flare: treat with prednisone 25-50 mg daily for 5 to 10 days; with nodes over 5 cm give prednisone 20 mg for 5 to 7 days followed by a rapid taper as prophylaxis."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить, а повного розкладу з іншого джерела ще немає, тому доз для розрахунку тут нема. Перед призначенням — за інструкцією препарату.",
+      "en": "The NCCN document gives no doses here and no complete schedule from another source is in the catalog yet, so there are no doses to calculate. Check the prescribing information before use."
+    },
+    "availability": "unknown"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "ref-dlbcl-selinexor",
+  "short_name": "Селінексор (ДВКЛ)",
+  "name": {
+    "uk": "Селінексор при рецидивній ДВКЛ",
+    "en": "Selinexor in relapsed DLBCL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Третя лінія й далі (інші рекомендовані), зокрема після трансплантації чи CAR-T; при трансформованій ФЛ — лише після щонайменше двох ліній.",
+      "en": "Third line and later (other recommended), including after transplant or CAR-T; for transformed FL only after at least two lines."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Селінексор",
+          "en": "Selinexor"
+        },
+        "drug_id": "selinexor"
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "unavailable"
+  }
+}

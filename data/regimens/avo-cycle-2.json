@@ -1,0 +1,166 @@
+{
+  "$comment": "eviQ 5011: цикл 2 - обінутузумаб 100 мг день 1, 900 мг день 2, 1000 мг дні 8 і 15 разом з акалабрутинібом. Премедикація - димедрол замість протокольного лоратадину (як у відділенні).",
+  "id": "avo-cycle-2",
+  "short_name": "AVO (цикл 2)",
+  "name": {
+    "uk": "AVO, цикл 2 (обінутузумаб)",
+    "en": "AVO, cycle 2 (obinutuzumab)"
+  },
+  "description": {
+    "uk": "Акалабрутиніб 100 мг двічі на добу, дні 1-28; обінутузумаб 100 мг день 1, 900 мг день 2, 1000 мг дні 8 і 15.",
+    "en": "Acalabrutinib 100 mg twice daily on days 1-28; obinutuzumab 100 mg on day 1, 900 mg on day 2, 1000 mg on days 8 and 15."
+  },
+  "default_cycles": 1,
+  "cycle_length_days": 28,
+  "sources": [
+    {
+      "name": "eviQ: Chronic lymphocytic leukaemia AVO (acalabrutinib, venetoclax, obinutuzumab), протокол 5011",
+      "url": "https://www.eviq.org.au/haematology/leukaemias/chronic-lymphocytic-leukaemia/5011-chronic-lymphocytic-leukemia-avo-acalabrutin",
+      "version": "вер. 1",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "NSSG Oxford Haematology, L.130 Venetoclax with Obinutuzumab",
+      "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-130-venetoclax-and-obinutuzumab.pdf",
+      "version": "2.1 (07.2023)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "course": {
+    "id": "avo",
+    "title": {
+      "uk": "AVO (акалабрутиніб + венетоклакс + обінутузумаб)",
+      "en": "AVO (acalabrutinib, venetoclax, obinutuzumab)"
+    },
+    "phase": {
+      "uk": "цикл 2",
+      "en": "cycle 2"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 2
+    }
+  },
+  "items": [
+    {
+      "key": "acalabrutinib",
+      "drug_id": "acalabrutinib",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "notes": {
+        "uk": "Приблизно кожні 12 годин, таблетки ковтають цілими, запиваючи водою. Якщо дозу пропущено більш ніж на 3 години, наступну приймають у звичайний час; подвійну дозу не приймають. Варфарин та інші антагоністи вітаміну К не призначають. Із сильним інгібітором CYP3A4 поєднання уникають: якщо інгібітор потрібен ненадовго (протиінфекційний препарат до 7 днів), акалабрутиніб на цей час переривають. Для помірних інгібіторів корекція дози не потрібна — лише пильне спостереження.",
+        "en": "About every 12 hours, the tablets swallowed whole with water. A dose missed by more than 3 hours is skipped and the next taken at its usual time; the dose is never doubled. Warfarin and other vitamin K antagonists are not given. A strong CYP3A4 inhibitor is avoided: where it is needed short-term, an anti-infective for up to 7 days, the acalabrutinib is interrupted instead. Moderate inhibitors need no dose change, only close watching."
+      }
+    },
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 15],
+      "notes": {
+        "uk": "Не пізніше ніж за 1 годину до обінутузумабу",
+        "en": "At least one hour before obinutuzumab"
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 8, 15],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "Димедрол 1% - 5,0 мл (у протоколі - лоратадин 10 мг усередину і фамотидин 40 мг)",
+        "en": "Diphenhydramine 1% 5.0 mL (the protocol gives loratadine 10 mg by mouth and famotidine 40 mg)"
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2],
+      "duration_min": 30,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "За 1 годину до обінутузумабу; за eviQ обов'язковий для двох перших доз обінутузумабу (дні 1 і 2). Далі - лише якщо немає підстав його пропустити.",
+        "en": "One hour before obinutuzumab; eviQ requires it for the first two obinutuzumab doses (days 1 and 2). Later only when the criteria for leaving it out are not met."
+      }
+    },
+    {
+      "key": "obinutuzumab-d1",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [1],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
+      "notes": {
+        "uk": "У 100 мл 0,9% NaCl, щонайменше 4 години. За звичайного ризику - 25 мг/год без підвищення (разом близько 4 годин); за додаткових чинників ризику тяжкої інфузійної реакції - 6 мг/год першу годину, далі 12 мг/год годину, далі 24 мг/год до кінця.",
+        "en": "In 100 mL 0.9% NaCl over at least 4 hours. At ordinary risk, 25 mg/h without increase (about 4 hours in all); with additional risk factors for a severe infusion reaction, 6 mg/h for an hour, then 12 mg/h for an hour, then 24 mg/h to the end."
+      }
+    },
+    {
+      "key": "obinutuzumab-d2",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 900,
+      "dose_unit": "mg_flat",
+      "days": [2],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl. Починати з 50 мг/год, підвищуючи на 50 мг/год кожні 30 хв до 400 мг/год (разом близько 4 годин).",
+        "en": "In 250 mL 0.9% NaCl. Start at 50 mg/h and raise by 50 mg/h every 30 minutes to 400 mg/h (about 4 hours in all)."
+      }
+    },
+    {
+      "key": "obinutuzumab-d8-15",
+      "drug_id": "obinutuzumab",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [8, 15],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "У 250 мл 0,9% NaCl. Починати зі 100 мг/год, підвищуючи на 100 мг/год кожні 30 хв до 400 мг/год (разом близько 3 годин 15 хв).",
+        "en": "In 250 mL 0.9% NaCl. Start at 100 mg/h and raise by 100 mg/h every 30 minutes to 400 mg/h (about 3 hours 15 minutes in all)."
+      }
+    },
+    {
+      "key": "allopurinol",
+      "drug_id": "allopurinol",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 300,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "notes": {
+        "uk": "Профілактика синдрому лізису пухлини. eviQ вважає її обов'язковою в першому циклі з венетоклаксом, але ліків і доз у протоколі не називає; 300 мг узято з протоколу відділення Ven-Obi (NSSG L.130).",
+        "en": "Tumour lysis prophylaxis. eviQ calls it routine in the first venetoclax cycle but names no drug or dose; the 300 mg is taken from the department's Ven-Obi protocol (NSSG L.130)."
+      }
+    }
+  ]
+}

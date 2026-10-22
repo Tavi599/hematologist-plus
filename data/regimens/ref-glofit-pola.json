@@ -1,0 +1,49 @@
+{
+  "id": "ref-glofit-pola",
+  "short_name": "Глофітамаб + полатузумаб",
+  "name": {
+    "uk": "Глофітамаб + полатузумаб ведотин (ДВКЛ, лімфома Беркітта)",
+    "en": "Glofitamab + polatuzumab vedotin (DLBCL, Burkitt lymphoma)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидивна ДВКЛ у кандидатів, яким CAR-T не підходить: категорія 2B (рецидив <12 міс. і >12 міс. без наміру на трансплантацію). Лімфома Беркітта: «мостова» терапія до алогенної ТГСК у кандидатів.",
+      "en": "Relapsed DLBCL in patients not suited to CAR-T: category 2B (relapse under 12 months, and over 12 months with no intention to transplant). Burkitt lymphoma: bridge to allogeneic HCT in candidates."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Глофітамаб",
+          "en": "Glofitamab"
+        },
+        "drug_id": "glofitamab"
+      },
+      {
+        "name": {
+          "uk": "Полатузумаб ведотин",
+          "en": "Polatuzumab vedotin"
+        },
+        "drug_id": "polatuzumab-vedotin"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Власна схема глофітамабу з обінутузумабом є в довіднику (глофітамаб, цикли 1–12); цю комбінацію з полатузумабом NCCN без доз не наводить.",
+        "en": "A glofitamab regimen with obinutuzumab pretreatment exists in the catalog (glofitamab, cycles 1-12); NCCN gives no doses for the combination with polatuzumab."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "unavailable"
+  }
+}

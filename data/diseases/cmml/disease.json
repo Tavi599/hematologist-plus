@@ -1,0 +1,190 @@
+{
+  "id": "cmml",
+  "name": {
+    "uk": "Хронічний мієломоноцитарний лейкоз і МДС/МПН",
+    "en": "Chronic myelomonocytic leukaemia and other MDS/MPN overlap neoplasms"
+  },
+  "summary": {
+    "uk": "Клональне захворювання з ознаками і дисплазії, і мієлопроліферації: моноцити ≥0,5·10⁹/л і ≥10%, клональність. Лікування за NCCN (таблиця МДС/МПН) — за аналогією з МДС.",
+    "en": "A clonal disease with features of both dysplasia and myeloproliferation: monocytes 0.5×10⁹/L or more and 10% or more, clonality. NCCN (the MDS/MPN table) treats it by analogy with MDS."
+  },
+  "clinical_group": "mds",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C93.1",
+      "is_primary": true
+    },
+    {
+      "system_id": "icd-10",
+      "code": "C92.2",
+      "is_primary": false
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1446",
+      "version": "3.2026",
+      "updated": "2026-01-12"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "cmml-1",
+      "kind": "line",
+      "title": {
+        "uk": "ХММЛ-1 (бласти <10%)",
+        "en": "CMML-1 (blasts under 10%)"
+      },
+      "description": {
+        "uk": "За таблицею МДС/МПН NCCN: розглянути гіпометилювальні засоби або гідроксисечовину. Гідроксисечовина зменшує надмірний лейкоцитоз чи тромбоцитоз. Пероральний децитабін із цедазуридином може замінити децитабін в/в при ХММЛ IPSS проміжний-1 і вище. Проліферативний варіант (лейкоцити >12 000/мм³) гірший за диспластичний. Мутація ASXL1 — несприятлива.",
+        "en": "By the NCCN MDS/MPN table: consider hypomethylating agents or hydroxyurea. Hydroxyurea lowers excessive leukocytosis or thrombocytosis. Oral decitabine with cedazuridine can replace IV decitabine in CMML of IPSS intermediate-1 and above. The proliferative variant (WBC above 12,000/mm3) has a worse prognosis than the dysplastic one. An ASXL1 mutation is unfavourable."
+      },
+      "regimens": [
+        {
+          "regimen_id": "azacitidine-mono"
+        },
+        {
+          "regimen_id": "decitabine-mono"
+        },
+        {
+          "regimen_id": "inqovi-mds",
+          "notes": {
+            "uk": "Може замінити децитабін в/в при IPSS проміжний-1 і вище.",
+            "en": "May replace IV decitabine at IPSS intermediate-1 and above."
+          }
+        },
+        {
+          "regimen_id": "hydroxycarbamide-mpn",
+          "notes": {
+            "uk": "Циторедукція при лейкоцитозі чи тромбоцитозі; схема й титрування з МПН, NCCN доз для ХММЛ не називає.",
+            "en": "Cytoreduction for leukocytosis or thrombocytosis; the regimen and titration come from MPN, NCCN gives no CMML doses."
+          }
+        }
+      ]
+    },
+    {
+      "key": "cmml-2",
+      "kind": "line",
+      "title": {
+        "uk": "ХММЛ-2 (бласти 10 – <20%)",
+        "en": "CMML-2 (blasts 10 to under 20%)"
+      },
+      "description": {
+        "uk": "Гіпометилювальні засоби ± венетоклакс і/або алогенна ТГСК. У кандидатів не на трансплантацію ризик цитопеній від венетоклаксу слід зважити окремо. Для симптомів чи спленомегалії до HMA можна додати руксолітиніб.",
+        "en": "Hypomethylating agents ± venetoclax and/or allogeneic HCT. In non-transplant candidates the risk of cytopenias with venetoclax should be weighed separately. Ruxolitinib may be added to the HMA for symptoms or splenomegaly."
+      },
+      "regimens": [
+        {
+          "regimen_id": "azacitidine-mono"
+        },
+        {
+          "regimen_id": "decitabine-mono"
+        },
+        {
+          "regimen_id": "inqovi-mds",
+          "notes": {
+            "uk": "Може замінити децитабін в/в при IPSS проміжний-1 і вище.",
+            "en": "May replace IV decitabine at IPSS intermediate-1 and above."
+          }
+        },
+        {
+          "regimen_id": "aza-ven-nccn",
+          "notes": {
+            "uk": "Схема з ГМЛ; NCCN для ХММЛ доз венетоклаксу не називає — тривалість і дозу уточніть окремо.",
+            "en": "A regimen from AML; NCCN gives no venetoclax dose for CMML — confirm the duration and dose separately."
+          },
+          "preference": "circumstances"
+        }
+      ],
+      "steps": [
+        {
+          "kind": "hct",
+          "column": "treatment",
+          "label": {
+            "uk": "Алогенна ТГСК (придатність: стан, вік, наявність донора); HMA як міст до ТГСК",
+            "en": "Allo-HCT (eligibility: fitness, age, donor); an HMA as a bridge to HCT"
+          }
+        },
+        {
+          "kind": "other",
+          "column": "treatment",
+          "label": {
+            "uk": "Руксолітиніб — додати до HMA при симптомах чи спленомегалії (доз для ХММЛ NCCN не називає)",
+            "en": "Ruxolitinib — add to the HMA for symptoms or splenomegaly (NCCN gives no CMML dose)"
+          }
+        }
+      ]
+    },
+    {
+      "key": "cmml-special",
+      "kind": "group",
+      "title": {
+        "uk": "Особливі варіанти ХММЛ",
+        "en": "Special CMML variants"
+      },
+      "description": {
+        "uk": "Перш ніж ставити ХММЛ, виключають мієлоїдні й лімфоїдні пухлини з еозинофілією та злиттями тирозинкіназних генів (PDGFRA/B, FGFR1, PCM1::JAK2).",
+        "en": "Before CMML is diagnosed, myeloid and lymphoid neoplasms with eosinophilia and tyrosine kinase fusions (PDGFRA/B, FGFR1, PCM1::JAK2) are excluded."
+      },
+      "regimens": [],
+      "steps": [
+        {
+          "kind": "other",
+          "column": "treatment",
+          "label": {
+            "uk": "Перебудова PDGFRB (t(5;12), ETV6::PDGFRB) — іматиніб (NCCN «Myeloid/Lymphoid Neoplasms with Eosinophilia»)",
+            "en": "PDGFRB rearrangement (t(5;12), ETV6::PDGFRB) — imatinib (NCCN \"Myeloid/Lymphoid Neoplasms with Eosinophilia\")"
+          }
+        },
+        {
+          "kind": "other",
+          "column": "treatment",
+          "label": {
+            "uk": "Системний мастоцитоз з ХММЛ (SM-AHN, мутація KIT D816V; NGS малочутливий — потрібна алель-специфічна ПЛР) — мідостаурин або авапритиніб; кожну хворобу лікують окремо",
+            "en": "Systemic mastocytosis with CMML (SM-AHN, KIT D816V; NGS is insensitive — allele-specific PCR is needed) — midostaurin or avapritinib; each disease is treated on its own"
+          }
+        }
+      ]
+    },
+    {
+      "key": "mds-mpn-other",
+      "kind": "group",
+      "title": {
+        "uk": "Інші МДС/МПН (без розрахунку)",
+        "en": "Other MDS/MPN overlap neoplasms (not calculated)"
+      },
+      "description": {
+        "uk": "Таблиця NCCN MDS-A (3 з 5): атиповий ХМЛ без BCR::ABL1 (мутації SETBP1 ± ASXL1) — HMA і/або руксолітиніб і/або алогенна ТГСК; МДС/МПН із кільцевими сидеробластами й тромбоцитозом (SF3B1 ± JAK2) — HMA і/або леналідомід або луспатерцепт (при анемії); МДС/МПН неуточнений — HMA і/або алогенна ТГСК; МДС/МПН з i(17q) — алогенна ТГСК; ювенільний мієломоноцитарний лейкоз (дитячий) — алогенна ТГСК.",
+        "en": "NCCN table MDS-A (3 of 5): atypical CML without BCR::ABL1 (SETBP1 ± ASXL1 mutations) — an HMA and/or ruxolitinib and/or allogeneic HCT; MDS/MPN with ring sideroblasts and thrombocytosis (SF3B1 ± JAK2) — an HMA and/or lenalidomide, or luspatercept for anaemia; MDS/MPN unclassifiable — an HMA and/or allogeneic HCT; MDS/MPN with i(17q) — allogeneic HCT; juvenile myelomonocytic leukaemia (paediatric) — allogeneic HCT."
+      },
+      "regimens": [
+        {
+          "regimen_id": "azacitidine-mono",
+          "notes": {
+            "uk": "HMA — для атипового ХМЛ, МДС/МПН-RS-T, МДС/МПН неуточненого.",
+            "en": "An HMA — for atypical CML, MDS/MPN-RS-T and unclassifiable MDS/MPN."
+          }
+        },
+        {
+          "regimen_id": "luspatercept-mds",
+          "notes": {
+            "uk": "МДС/МПН-RS-T: при анемії; доза із МДС.",
+            "en": "MDS/MPN-RS-T: for anaemia; the dose is from MDS."
+          }
+        }
+      ],
+      "steps": [
+        {
+          "kind": "hct",
+          "column": "treatment",
+          "label": {
+            "uk": "Алогенна ТГСК: i(17q), ювенільний ММЛ, за показаннями — інші",
+            "en": "Allo-HCT: i(17q), juvenile CMML, others by indication"
+          }
+        }
+      ]
+    }
+  ]
+}

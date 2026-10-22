@@ -1,0 +1,44 @@
+{
+  "$comment": "Лише опис за NCCN CLL/SLL 1.2027: доз для розрахунку немає.",
+  "id": "ref-cll-richter-tislelizumab-zanu",
+  "short_name": "Тислелізумаб+Занубр (Ріхтер)",
+  "name": {
+    "uk": "Тислелізумаб + занубрутиніб при трансформації Ріхтера",
+    "en": "Tislelizumab and zanubrutinib in Richter transformation"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma, версія 1.2027 від 20.08.2026",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1478",
+      "version": "1.2027 (20.08.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Трансформація Ріхтера в ДВВКЛ (NCCN 1.2027, дослідження RT1 фази II).",
+      "en": "Richter transformation to DLBCL (NCCN 1.2027, the phase II RT1 study)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Тислелізумаб",
+          "en": "Tislelizumab"
+        }
+      },
+      {
+        "name": {
+          "uk": "Занубрутиніб",
+          "en": "Zanubrutinib"
+        },
+        "drug_id": "zanubrutinib"
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить, а повного розкладу з іншого джерела ще немає, тому доз для розрахунку тут нема. Перед призначенням — за інструкцією препарату.",
+      "en": "The NCCN document gives no doses here and no complete schedule from another source is in the catalog yet, so there are no doses to calculate. Check the prescribing information before use."
+    },
+    "availability": "unknown"
+  }
+}

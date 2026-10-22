@@ -1,0 +1,52 @@
+{
+  "id": "ref-mosun-pola",
+  "short_name": "Мозунетузумаб + полатузумаб",
+  "name": {
+    "uk": "Мозунетузумаб + полатузумаб ведотин (ДВКЛ, МКЛ)",
+    "en": "Mosunetuzumab + polatuzumab vedotin (DLBCL, MCL)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидивна ДВКЛ у кандидатів, яким CAR-T не підходить: бажаний варіант NCCN (рецидив <12 міс. і >12 міс. без наміру на трансплантацію). Мантійноклітинна лімфома після інгібітора BTK — T-клітинна терапія в 2-й лінії. Мозунетузумаб може бути в/в або п/ш (різні інструкції введення).",
+      "en": "Relapsed DLBCL in patients not suited to CAR-T: a preferred NCCN option (relapse under 12 months, and over 12 months with no intention to transplant). Mantle cell lymphoma after a BTK inhibitor — T-cell therapy in the second line. Mosunetuzumab can be given IV or SC (different administration instructions)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Мозунетузумаб",
+          "en": "Mosunetuzumab"
+        }
+      },
+      {
+        "name": {
+          "uk": "Полатузумаб ведотин",
+          "en": "Polatuzumab vedotin"
+        },
+        "drug_id": "polatuzumab-vedotin"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Біспецифічні антитіла CD20×CD3 мало ефективні при CD20-негативній пухлині — повторна біопсія для підтвердження антигена.",
+        "en": "CD20xCD3 bispecifics work poorly in CD20-negative disease — rebiopsy to confirm the antigen."
+      },
+      {
+        "uk": "При МКЛ біспецифічні антитіла дають частіший синдром вивільнення цитокінів, ніж при ДВКЛ.",
+        "en": "In MCL bispecifics cause cytokine release syndrome more often than in DLBCL."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "unavailable"
+  }
+}

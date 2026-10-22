@@ -1,0 +1,70 @@
+{
+  "id": "ref-dlbcl-r-ceop-nccn",
+  "short_name": "R-CEOP (NCCN)",
+  "name": {
+    "uk": "R-CEOP за NCCN: циклофосфамід, етопозид, вінкристин, преднізолон + ритуксимаб",
+    "en": "R-CEOP per NCCN: cyclophosphamide, etoposide, vincristine, prednisone + rituximab"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "ДВКЛ у пацієнтів із поганою функцією лівого шлуночка (без антрацикліну); у NCCN — серед «інших рекомендованих» схем першої лінії і в другій лінії (CEOP ± ритуксимаб); PTLD — для ослаблених, які не переносять антрациклін; етопозид замінює доксорубіцин.",
+      "en": "DLBCL with poor left ventricular function (no anthracycline); in NCCN among other recommended first-line regimens and in the second line (CEOP ± rituximab); PTLD — for frail patients who cannot take an anthracycline; etoposide replaces doxorubicin."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон",
+          "en": "Prednisolone"
+        },
+        "drug_id": "prednisolone"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Не плутати з наявною карткою «R-CEOP (R-CHOP з епірубіцином замість доксорубіцину)»: це інша схема, у ній немає етопозиду.",
+        "en": "Not to be confused with the existing card \"R-CEOP (R-CHOP with epirubicin instead of doxorubicin)\": that is a different regimen without etoposide."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "registered"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "ref-burk-glofit-pola",
+  "short_name": "Глофітамаб + полатузумаб (Беркітт)",
+  "name": {
+    "uk": "Глофітамаб + полатузумаб як міст до алоТГСК при рецидиві лімфоми Беркітта",
+    "en": "Glofitamab + polatuzumab as a bridge to allogeneic HCT in relapsed Burkitt lymphoma"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "У NCCN — у переліку «корисно за певних обставин» другої лінії для кандидатів на алогенну ТГСК.",
+      "en": "In NCCN under \"useful in certain circumstances\" in the second line for allogeneic HCT candidates."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Глофітамаб",
+          "en": "Glofitamab"
+        },
+        "drug_id": "glofitamab"
+      },
+      {
+        "name": {
+          "uk": "Полатузумаб ведотин",
+          "en": "Polatuzumab vedotin"
+        },
+        "drug_id": "polatuzumab-vedotin"
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "unavailable"
+  }
+}
