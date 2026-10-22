@@ -94,6 +94,10 @@ function PathwayView({ catalog, disease }: { catalog: CatalogIndex; disease: Dis
           <Button
             key={entry.node.id}
             size="compact-sm"
+            // A long page title wraps on a phone instead of running off the screen.
+            h="auto"
+            py={4}
+            styles={{ label: { whiteSpace: 'normal', textAlign: 'left' } }}
             variant={entry.node.id === page.node.id ? 'filled' : 'light'}
             onClick={() => setParams({ page: entry.node.id })}
             aria-current={entry.node.id === page.node.id ? 'page' : undefined}
