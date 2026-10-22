@@ -1,0 +1,94 @@
+{
+  "id": "ref-all-salvage-misc",
+  "short_name": "FLAM, HiDAC-ідарубіцин, EIM (R/R)",
+  "name": {
+    "uk": "Рецидивні схеми на основі флударабіну, цитарабіну й алкілаторів",
+    "en": "Salvage regimens based on fludarabine, cytarabine and alkylators"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Giebel S. та ін. Ann Hematol 2006;85:717-722",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Weiss MA. та ін. Cancer 2002;95:581-587",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Schiller G. та ін. Am J Hematol 1993;43:195-199",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "FLAM: флударабін, цитарабін, мітоксантрон. Цитарабін у високих дозах з ідарубіцином і інтратекальним метотрексатом. Алкілаторні: етопозид, іфосфамід, мітоксантрон. FLAG-IDA — у каталозі (flag-ida).",
+      "en": "FLAM: fludarabine, cytarabine, mitoxantrone. High-dose cytarabine with idarubicin and intrathecal methotrexate. Alkylator: etoposide, ifosfamide, mitoxantrone. FLAG-IDA is in the catalogue (flag-ida)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Флударабін",
+          "en": "Fludarabine"
+        },
+        "drug_id": "fludarabine"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Мітоксантрон",
+          "en": "Mitoxantrone"
+        },
+        "drug_id": "mitoxantrone"
+      },
+      {
+        "name": {
+          "uk": "Ідарубіцин",
+          "en": "Idarubicin"
+        },
+        "drug_id": "idarubicin"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Іфосфамід",
+          "en": "Ifosfamide"
+        },
+        "drug_id": "ifosfamide"
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "NCCN називає схему, але не дає доз і розкладу (відсилає до першоджерела або шаблону призначень) — без розрахунку.",
+      "en": "NCCN names the regimen but gives no doses or schedule (it refers to the original protocol or order templates) — no calculation."
+    },
+    "availability": "unknown"
+  }
+}

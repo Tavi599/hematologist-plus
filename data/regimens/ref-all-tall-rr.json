@@ -1,0 +1,103 @@
+{
+  "id": "ref-all-tall-rr",
+  "short_name": "T-ГЛЛ R/R: неларабін + E/C, бортезоміб, даратумумаб, MEC",
+  "name": {
+    "uk": "Рецидивний/рефрактерний T-ГЛЛ: додаткові варіанти NCCN",
+    "en": "Relapsed/refractory T-ALL: further NCCN options"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Horton TM. та ін. Br J Haematol 2019;186:274-285",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Liedtke M. та ін. Leuk Res 2014;38:1441-1445",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Luskin MR. та ін. Br J Haematol 2016;174:332-334",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Неларабін ± етопозид, циклофосфамід; схема з бортезомібом; схема з даратумумабом (кат. 2B); цитарабін у високих дозах; мітоксантрон + етопозид + цитарабін (MEC); а також схеми Ph− В-ГЛЛ. При пізньому рецидиві (>3 років) — повтор початкової схеми.",
+      "en": "Nelarabine ± etoposide, cyclophosphamide; a bortezomib-containing regimen; a daratumumab-containing regimen (category 2B); high-dose cytarabine; mitoxantrone, etoposide, cytarabine (MEC); and the Ph-negative B-ALL regimens. In late relapse (>3 years) repeat the initial regimen."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Неларабін",
+          "en": "Nelarabine"
+        },
+        "drug_id": "nelarabine"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Даратумумаб",
+          "en": "Daratumumab"
+        },
+        "drug_id": "daratumumab"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Мітоксантрон",
+          "en": "Mitoxantrone"
+        },
+        "drug_id": "mitoxantrone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Фаза II COG: бортезоміб до реіндукції — ПР 68% при T-ГЛЛ (Horton 2019).",
+        "en": "COG phase II: bortezomib with reinduction — CR 68% in T-ALL (Horton 2019)."
+      },
+      {
+        "uk": "Неларабін як монотерапія дорослим: ПР 31% (DeAngelo 2007); у каталозі — nelarabine-tall.",
+        "en": "Nelarabine alone in adults: CR 31% (DeAngelo 2007); in the catalogue — nelarabine-tall."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN називає схему, але не дає доз і розкладу (відсилає до першоджерела або шаблону призначень) — без розрахунку.",
+      "en": "NCCN names the regimen but gives no doses or schedule (it refers to the original protocol or order templates) — no calculation."
+    },
+    "availability": "unknown"
+  }
+}

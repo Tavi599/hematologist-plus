@@ -1,0 +1,89 @@
+{
+  "id": "ref-all-aug-hypercvad",
+  "short_name": "Augmented hyper-CVAD (R/R)",
+  "name": {
+    "uk": "Augmented hyperCVAD при рецидивному В-ГЛЛ і T-ГЛЛ",
+    "en": "Augmented hyperCVAD in relapsed B-ALL and T-ALL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Faderl S. та ін. Clin Lymphoma Myeloma Leuk 2011;11:54-59",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інші рекомендовані: гіперфракціонований циклофосфамід, посилені вінкристин і дексаметазон, доксорубіцин, пегаспаргаза, що чергуються з метотрексатом високих доз і цитарабіном.",
+      "en": "Other recommended: hyperfractionated cyclophosphamide, intensified vincristine and dexamethasone, doxorubicin, pegaspargase alternating with high-dose methotrexate and cytarabine."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин",
+          "en": "Doxorubicin"
+        },
+        "drug_id": "doxorubicin"
+      },
+      {
+        "name": {
+          "uk": "Пегаспаргаза",
+          "en": "Pegaspargase"
+        },
+        "drug_id": "pegaspargase"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Фаза II (n=90): ПР 47%, +13% CRp, медіана OS 6,3 міс.; 32% дійшли до ТГСК (Faderl 2011).",
+        "en": "Phase II (n=90): CR 47%, plus 13% CRp, median OS 6.3 months; 32% reached HCT (Faderl 2011)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN називає схему, але не дає доз і розкладу (відсилає до першоджерела або шаблону призначень) — без розрахунку.",
+      "en": "NCCN names the regimen but gives no doses or schedule (it refers to the original protocol or order templates) — no calculation."
+    },
+    "availability": "unknown"
+  }
+}

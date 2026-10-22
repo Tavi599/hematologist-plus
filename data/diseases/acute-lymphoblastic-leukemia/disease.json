@@ -20,7 +20,9 @@
   "references": [
     {
       "kind": "nccn",
-      "url": "https://www.nccn.org/guidelines/category_1"
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026",
+      "updated": "2026-09-17"
     },
     {
       "kind": "uptodate",
@@ -32,6 +34,1247 @@
     }
   ],
   "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 3.2026 (ALL-1…ALL-G)",
+        "en": "NCCN pathways 3.2026 (ALL-1 to ALL-G)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN для гострого лімфобластного лейкозу, версія 3.2026 від 17.09.2026. Направляти до спеціалізованих центрів. AYA — 15–39 років (орієнтир, не жорсткий поріг); дорослі діляться за 65 роками й значною коморбідністю — вік не є заміною придатності. Усі схеми містять профілактику ЦНС; вибір ТКІ враховує мутації ABL1. NCCN доз майже не дає: схеми, якими його не розписано, — довідкові картки «без розрахунку»; розраховувані схеми взято з eviQ та NSSG.",
+        "en": "The NCCN algorithm for acute lymphoblastic leukemia, version 3.2026 of 17 September 2026. Refer to specialized centers. AYA is 15-39 years (a guide, not a firm threshold); adults are split at 65 and by substantial comorbidity — age is no substitute for fitness. All regimens include CNS prophylaxis; TKI choice follows ABL1 mutations. NCCN gives no doses: regimens it does not spell out are reference cards «no calculation»; calculable regimens come from eviQ and NSSG."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-dx",
+          "kind": "line",
+          "title": {
+            "uk": "Діагноз, ризик, обстеження (ALL-1…ALL-3)",
+            "en": "Diagnosis, risk, workup (ALL-1 to ALL-3)"
+          },
+          "description": {
+            "uk": "Діагноз ГЛЛ — ≥20% лімфобластів у кістковому мозку (аспірат і трепанобіопсія), повний імунофенотип проточною цитометрією, базова характеристика клону для подальшої MRD, каріотип; FISH, ОТ-ПЛР BCR::ABL1 (p190 проти p210), панель генів (MGPT). Мієлоїдні антигени CD13/CD33 не виключають ГЛЛ і не погіршують прогноз. Лімфобластна лімфома лікується за схемами ГЛЛ у центрі з досвідом; лімфому Беркітта дивись у настанові з В-клітинних лімфом. Периферична кров замість кісткового мозку — якщо бластів ≥1000/мкл і аспірат неможливий; клональна популяція <20% у виняткових випадках теж ГЛЛ. Обстеження: анамнез, ЗАК, біохімія, печінкові проби, коагулограма (D-димер, фібриноген), панель лізису пухлини, гепатити B/C, ВІЛ, тест на вагітність і збереження фертильності, КТ/МРТ голови при неврологічних ознаках, люмбальна пункція з інтратекальною терапією, КТ шиї/грудей/живота/таза за симптомами, ПЕТ/КТ при лімфомному ураженні, огляд яєчок ± УЗД, ехокардіографія/MUGA, центральний венозний доступ, раннє HLA-типування і пошук донора, оцінка спадкової схильності. Ph+ без IKZF1plus і без попередньої ХМЛ — стандартний ризик; бластна криза ХМЛ лікується як Ph+ ГЛЛ з метою ТГСК.",
+            "en": "ALL needs ≥20% marrow lymphoblasts (aspirate and biopsy), full flow immunophenotype, baseline clone characterization for later MRD, and karyotype; FISH, RT-PCR for BCR::ABL1 (p190 vs p210), a multigene panel. Myeloid antigens CD13/CD33 do not exclude ALL or worsen prognosis. Lymphoblastic lymphoma is treated with ALL regimens at an experienced centre; Burkitt lymphoma is in the B-cell lymphoma guideline. Blood may replace marrow when blasts ≥1000/uL and aspirate is impossible; a clonal population <20% can occasionally still be ALL. Workup: history, CBC, chemistry, liver tests, coagulation (D-dimer, fibrinogen), tumor lysis panel, hepatitis B/C, HIV, pregnancy test and fertility preservation, head CT/MRI with neurologic signs, lumbar puncture with intrathecal therapy, neck/chest/abdomen/pelvis CT by symptoms, PET/CT for lymphomatous disease, testicular exam ± ultrasound, echocardiogram/MUGA, central venous access, early HLA typing and donor search, hereditary predisposition assessment. Ph-positive without IKZF1 plus and without antecedent CML is standard risk; blast-phase CML is treated like Ph-positive ALL aiming for HCT."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Поганий ризик В-ГЛЛ: гіподиплоїдія (<44, 30–39), майже триплоїдія (60–78), мутація TP53, перебудова KMT2A (t(4;11)), IGH, HLF, ZNF384, MEF2D, MYC; Ph-подібний (JAK-STAT: CRLF2r, EPORr, JAK1/2/3r, TYK2r, SH2B3, IL7R; ABL-клас: ABL1, ABL2, PDGFRA/B, FGFR; інші: NTRK, FLT3r, LYNr, PTK2Br); PAX5alt; Ph+ з IKZF1plus або з попередньою ХМЛ; iAMP21; зміни IKZF1; комплексний каріотип (≥5)",
+                "en": "Poor-risk B-ALL: hypodiploidy (<44, 30-39), near triploidy (60-78), TP53 mutation, KMT2A rearrangement (t(4;11)), IGH, HLF, ZNF384, MEF2D, MYC; Ph-like (JAK-STAT: CRLF2r, EPORr, JAK1/2/3r, TYK2r, SH2B3, IL7R; ABL class: ABL1, ABL2, PDGFRA/B, FGFR; other: NTRK, FLT3r, LYNr, PTK2Br); PAX5alt; Ph-positive with IKZF1 plus or antecedent CML; iAMP21; IKZF1 alterations; complex karyotype (5 or more)"
+              }
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Стандартний ризик В-ГЛЛ: гіпердиплоїдія 51–65 (кращі при трисомії 4, 10, 17), ETV6::RUNX1, TCF3::PBX1, перебудова DUX4 (IKZF1 тут не погіршує прогноз), PAX5 P80R, Ph+ без IKZF1plus",
+                "en": "Standard-risk B-ALL: hyperdiploidy 51-65 (best with trisomy 4, 10, 17), ETV6::RUNX1, TCF3::PBX1, DUX4 rearrangement (IKZF1 does not worsen it), PAX5 P80R, Ph-positive without IKZF1 plus"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Ph+ В-ГЛЛ (ALL-4)",
+                "en": "Ph-positive B-ALL (ALL-4)"
+              },
+              "target": "nccn-phpos"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Ph− В-ГЛЛ (ALL-5)",
+                "en": "Ph-negative B-ALL (ALL-5)"
+              },
+              "target": "nccn-phneg"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "T-ГЛЛ (ALL-6)",
+                "en": "T-ALL (ALL-6)"
+              },
+              "target": "nccn-tall"
+            }
+          ]
+        },
+        {
+          "key": "nccn-phpos",
+          "kind": "line",
+          "title": {
+            "uk": "Ph+ В-ГЛЛ (ALL-4, ALL-D 5–9)",
+            "en": "Ph-positive B-ALL (ALL-4, ALL-D 5-9)"
+          },
+          "description": {
+            "uk": "Дорослі <65 років і AYA: клінічне випробування (бажано) або системна терапія + ТКІ. Оцінка відповіді (ALL-E); у морфологічній ремісії — MRD (ALL-F; бажано NGS). Консолідація: блінатумомаб + ТКІ (бажано, особливо при MRD+) / мультиагентна терапія + ТКІ / ТКІ (виняток: непридатні до іншого). MRD− після консолідації: підтримка ТКІ, або алоТГСК + ТКІ ≥2 років; алоТГСК не рутинна при MRD−, але розглядають при рецидиві чи MRD+ після консолідації. MRD+ (персистуюча/наростальна): тест мутацій домену ABL1 і лікування як R/R. Менше ніж ремісія: тест мутацій ABL1, потім R/R. ТКІ: асцимініб ± інший ТКІ, босутиніб, дазатиніб, іматиніб, нілотиніб, понатиніб; іматиніб у 1-й лінії лише при непереносимості широких ТКІ; асцимініб — категорія 2B за особливих обставин. Понатиніб — високий ризик судинних подій, після MRD-негативної ремісії зменшити до 15 мг. MRD+ після індукції: мультиагентна терапія + ТКІ можна продовжувати, якщо MRD знижується; зміну розглядають, якщо MRD+ після 3 міс.",
+            "en": "Adults <65 and AYA: a clinical trial (preferred) or systemic therapy plus a TKI. Response assessment (ALL-E); in marrow CR — MRD (ALL-F; NGS preferred). Consolidation: blinatumomab plus TKI (preferred, especially when MRD-positive) / multiagent therapy plus TKI / TKI alone (only if unfit for more). MRD-negative after consolidation: TKI maintenance, or allogeneic HCT plus TKI for at least 2 years; HCT is not routine for MRD-negative, but is considered for relapse or MRD-positive after consolidation. MRD-positive (persistent/rising): ABL1 kinase-domain testing and treat as R/R. Less than CR: ABL1 testing, then R/R. TKIs: asciminib ± another TKI, bosutinib, dasatinib, imatinib, nilotinib, ponatinib; imatinib in first line only if broader TKIs are not tolerated; asciminib is category 2B in special circumstances. Ponatinib carries a high vascular risk; after MRD-negative remission reduce to 15 mg. MRD-positive after induction: multiagent plus TKI may continue if MRD keeps falling; change is considered if still MRD-positive at 3 months."
+          },
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Перед блінатумомабом — знизити лейкоцити <10×10⁹/л ТКІ зі стероїдом; відновлення показників крові перед післяремісійною терапією; контроль мієлосупресії ТКІ",
+                "en": "Before blinatumomab bring WBC below 10×10⁹/L with TKI plus steroid; count recovery before post-remission therapy; watch for TKI myelosuppression"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Нагляд (ALL-7)",
+                "en": "Surveillance (ALL-7)"
+              },
+              "target": "nccn-surv"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив/рефрактерність (ALL-8)",
+                "en": "Relapse/refractory (ALL-8)"
+              },
+              "target": "nccn-rr"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-phpos-ind-young",
+              "kind": "group",
+              "title": {
+                "uk": "Індукція: дорослі <65 років та AYA (ALL-D 5)",
+                "en": "Induction: adults <65 and AYA (ALL-D 5)"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-all-tki-blinatumomab",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "hyper-cvad-a-it",
+                  "notes": {
+                    "uk": "ТКІ + hyper-CVAD; ритуксимаб при CD20+ (eviQ 571)",
+                    "en": "TKI plus hyper-CVAD; rituximab if CD20-positive (eviQ 571)"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "hyper-cvad-b-it",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-tki-hypercvad",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "b-all-rituximab",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "dasatinib-all",
+                  "notes": {
+                    "uk": "Один із ТКІ (eviQ 4416)",
+                    "en": "One of the TKIs (eviQ 4416)"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ponatinib-all",
+                  "notes": {
+                    "uk": "Один із ТКІ (eviQ 3513); PhALLCON — вищі показники MRD-негативності, ніж іматиніб",
+                    "en": "One of the TKIs (eviQ 3513); PhALLCON gave better MRD response than imatinib"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-tki-vcr-dex",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-all-tki-steroid-hd",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-all-dasatinib-steroids",
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне випробування",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-phpos-ind-old",
+              "kind": "group",
+              "title": {
+                "uk": "Індукція: ≥65 років або значна коморбідність (ALL-D 5–6)",
+                "en": "Induction: ≥65 or substantial comorbidity (ALL-D 5-6)"
+              },
+              "description": {
+                "uk": "Низька інтенсивність: ТКІ + блінатумомаб / кортикостероїд / вінкристин + дексаметазон. Помірна: ТКІ + DA-EPOCH, mini-hyperCVD, PhALLCON. Усі режими з профілактикою ЦНС, антимікробною профілактикою й Г-КСФ.",
+                "en": "Low intensity: TKI plus blinatumomab / corticosteroid / vincristine plus dexamethasone. Moderate: TKI plus DA-EPOCH, mini-hyperCVD, PhALLCON. All with CNS prophylaxis, antimicrobial prophylaxis and G-CSF."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-all-tki-blinatumomab",
+                  "notes": {
+                    "uk": "Низька інтенсивність",
+                    "en": "Low intensity"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-tki-steroid-hd",
+                  "notes": {
+                    "uk": "Низька інтенсивність",
+                    "en": "Low intensity"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-dasatinib-steroids",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-tki-vcr-dex",
+                  "notes": {
+                    "uk": "Низька інтенсивність; PhALLCON — помірна",
+                    "en": "Low intensity; PhALLCON is moderate"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-da-epoch-tki",
+                  "notes": {
+                    "uk": "Помірна інтенсивність",
+                    "en": "Moderate intensity"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-mini-hcvd",
+                  "notes": {
+                    "uk": "Помірна інтенсивність",
+                    "en": "Moderate intensity"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-mini-hcvd-ino",
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне випробування",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-phpos-cons",
+              "kind": "group",
+              "title": {
+                "uk": "Консолідація (ALL-D 7)",
+                "en": "Consolidation (ALL-D 7)"
+              },
+              "description": {
+                "uk": "Блінатумомаб + ТКІ — бажано при MRD+, розглядають і при MRD−. Мультиагентна терапія + ТКІ: hyper-CVAD, вінкристин + дексаметазон (циклофосфамід, цитарабін, доксорубіцин, метотрексат), DA-EPOCH, mini-hyperCVD, PhALLCON (метотрексат ↔ цитарабін). ТКІ як монотерапія рідко ефективна — лише для нездатних до іншого.",
+                "en": "Blinatumomab plus TKI is preferred when MRD-positive and considered even if MRD-negative. Multiagent plus TKI: hyper-CVAD, vincristine plus dexamethasone (cyclophosphamide, cytarabine, doxorubicin, high-dose methotrexate), DA-EPOCH, mini-hyperCVD, PhALLCON (methotrexate alternating with cytarabine). TKI alone is seldom effective — only if unfit for more."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "blinatumomab-mrd",
+                  "notes": {
+                    "uk": "Блінатумомаб + ТКІ; MRD+ ремісія (eviQ 3483)",
+                    "en": "Blinatumomab plus TKI; MRD-positive remission (eviQ 3483)"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-all-tki-blinatumomab",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "hyper-cvad-a-it",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "hyper-cvad-b-it",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-tki-hypercvad",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-da-epoch-tki",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-mini-hcvd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-tki-vcr-dex",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "dasatinib-all",
+                  "notes": {
+                    "uk": "ТКІ як монотерапія — лише якщо нездатний до іншого",
+                    "en": "TKI alone only if unfit for more"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ponatinib-all",
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "АлоТГСК у відповідних кандидатів (ALL-G): бажана при поганому ризику й повільній MRD-кліренс; для ≤21 року перевага над хіміотерапією + ТКІ не доведена",
+                    "en": "Allogeneic HCT in appropriate candidates (ALL-G): favoured for poor risk and slow MRD clearance; for ≤21 years no advantage over chemotherapy plus TKI is proven"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-phpos-maint",
+              "kind": "group",
+              "title": {
+                "uk": "Підтримка (ALL-D 8)",
+                "en": "Maintenance (ALL-D 8)"
+              },
+              "description": {
+                "uk": "POMP + ТКІ; вінкристин + преднізон + ТКІ; ТКІ як монотерапія — після ТГСК або після блінатумомаб + ТКІ. ТКІ ≥2 роки після ТГСК; тривалість під час підтримки — щонайменше до її завершення. Дози антиметаболітів зменшують при мієлосупресії/гепатотоксичності.",
+                "en": "POMP plus TKI; vincristine plus prednisone plus TKI; TKI alone after HCT or after blinatumomab plus TKI. TKI at least 2 years after HCT; during maintenance at least until chemotherapy ends. Reduce antimetabolites for myelosuppression or hepatotoxicity."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "pomp-maintenance",
+                  "notes": {
+                    "uk": "POMP + ТКІ",
+                    "en": "POMP plus TKI"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-low-intensity",
+                  "notes": {
+                    "uk": "Вінкристин + преднізон + ТКІ",
+                    "en": "Vincristine plus prednisone plus TKI"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "dasatinib-all",
+                  "notes": {
+                    "uk": "ТКІ-монотерапія (після ТГСК чи блін + ТКІ)",
+                    "en": "TKI alone (after HCT or blinatumomab plus TKI)"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ponatinib-all",
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "supportive",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "TPMT/NUDT15 перед меркаптопурином; ТКІ + PPI — взаємодія з біодоступністю",
+                    "en": "TPMT/NUDT15 before mercaptopurine; PPI interacts with TKI bioavailability"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-phneg",
+          "kind": "line",
+          "title": {
+            "uk": "Ph− В-ГЛЛ (ALL-5, ALL-D 10–16)",
+            "en": "Ph-negative B-ALL (ALL-5, ALL-D 10-16)"
+          },
+          "description": {
+            "uk": "Клінічне випробування (бажано) або системна терапія. Менше ніж CR: розглянути NGS, далі R/R. У морфологічній ремісії — MRD. Консолідація при MRD− та MRD+: блінатумомаб (бажано) + продовження мультиагентної терапії, або блінатумомаб самостійно; алоТГСК розглянути при MRD− з високим ризиком; при MRD+ — алоТГСК (особливо при ознаках високого ризику). MRD− CR після консолідації: алоТГСК (бажана при поганому ризику; Ph-подібний з ABL-класом та IKZF1 можуть не потребувати при стійкій MRD−) або підтримка POMP (може включати блінатумомаб, ІТ). Персистуюча/наростальна MRD, прогресія, позакістковомозкове ураження — R/R. Дані про CAR-T як консолідацію при MRD+ ще накопичуються. Зрілий В-ГЛЛ — лімфома Беркітта (настанова з В-клітинних лімфом).",
+            "en": "A clinical trial (preferred) or systemic therapy. Less than CR: consider NGS, then R/R. In marrow CR — MRD. Consolidation for MRD-negative and MRD-positive: blinatumomab (preferred) with continued multiagent therapy, or blinatumomab alone; allogeneic HCT considered for MRD-negative with high-risk features; for MRD-positive — allogeneic HCT (especially with high-risk features). MRD-negative CR after consolidation: allogeneic HCT (favoured for poor risk; Ph-like with ABL-class and IKZF1 alterations may not need it in persistent MRD-negative remission) or POMP maintenance (may include blinatumomab, IT). Persistent/rising MRD, progression or extramedullary disease — R/R. CAR-T as consolidation for MRD-positive is only emerging. Mature B-ALL is Burkitt lymphoma (B-cell lymphoma guideline)."
+          },
+          "steps": [
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Нагляд (ALL-7)",
+                "en": "Surveillance (ALL-7)"
+              },
+              "target": "nccn-surv"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив/рефрактерність (ALL-8)",
+                "en": "Relapse/refractory (ALL-8)"
+              },
+              "target": "nccn-rr"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-phneg-ind-aya",
+              "kind": "group",
+              "title": {
+                "uk": "Індукція: лише AYA без значної коморбідності (ALL-D 10–11)",
+                "en": "Induction: AYA only, no substantial comorbidity (ALL-D 10-11)"
+              },
+              "description": {
+                "uk": "Педіатричні схеми. Пегаспаргаза у віці 15–21 р. замінюється каласпаргазою пегол; при алергії на E. coli-аспарагіназу — ERW-rywn.",
+                "en": "Pediatric-inspired. Pegaspargase is replaced by calaspargase pegol at ages 15-21; ERW-rywn for E. coli asparaginase allergy."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-all-calgb-10403",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-all-dfci-00-01",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "all-phase-1-induction",
+                  "notes": {
+                    "uk": "Наявна індукція NSSG ML.51 (25–60 років), поза переліком NCCN",
+                    "en": "Existing NSSG ML.51 induction (25-60 years), not an NCCN regimen"
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне випробування",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-phneg-ind-adult",
+              "kind": "group",
+              "title": {
+                "uk": "Індукція: AYA та дорослі <65 років без коморбідності (ALL-D 10–11)",
+                "en": "Induction: AYA and adults <65 without substantial comorbidity (ALL-D 10-11)"
+              },
+              "description": {
+                "uk": "Ритуксимаб при CD20+ (особливо <60 років).",
+                "en": "Rituximab if CD20-positive (especially <60)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-all-ecog-1910",
+                  "notes": {
+                    "uk": "Лише 30–70 років",
+                    "en": "Studied only at 30-70 years"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "hyper-cvad-a-it",
+                  "notes": {
+                    "uk": "HyperCVAD ± ритуксимаб (eviQ 571/572)",
+                    "en": "HyperCVAD ± rituximab (eviQ 571/572)"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "hyper-cvad-b-it",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "b-all-rituximab",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-msk-ccg1882",
+                  "notes": {
+                    "uk": "18–<60 років",
+                    "en": "Aged 18 to <60"
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне випробування",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-phneg-ind-old",
+              "kind": "group",
+              "title": {
+                "uk": "Індукція: ≥65 років або значна коморбідність (ALL-D 10, 12)",
+                "en": "Induction: ≥65 or substantial comorbidity (ALL-D 10, 12)"
+              },
+              "description": {
+                "uk": "Низька, помірна й висока інтенсивність; пегаспаргаза 1000 МО/м², антрациклін 50% — розглянути. Профілактика ЦНС, антимікробна, Г-КСФ обов’язкові.",
+                "en": "Low, moderate and high intensity; consider pegaspargase 1000 IU/m² and anthracycline at 50%. CNS prophylaxis, antimicrobial prophylaxis and G-CSF are required."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-all-low-intensity",
+                  "notes": {
+                    "uk": "Низька інтенсивність: вінкристин + преднізон; POMP",
+                    "en": "Low intensity: vincristine plus prednisone; POMP"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-ino-dex",
+                  "notes": {
+                    "uk": "Помірна інтенсивність",
+                    "en": "Moderate intensity"
+                  },
+                  "preference": "other",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "ref-all-ino-blina-a041703",
+                  "notes": {
+                    "uk": "Помірна інтенсивність",
+                    "en": "Moderate intensity"
+                  },
+                  "preference": "other",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "ref-all-ino-minihcvd-sequential",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-mini-hcvd-ino",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-mod-dfci-91-01",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-mini-hcvd",
+                  "notes": {
+                    "uk": "Mini-hyperCVD ± венетоклакс",
+                    "en": "Mini-hyperCVD ± venetoclax"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-ecog-1910",
+                  "notes": {
+                    "uk": "Висока інтенсивність",
+                    "en": "High intensity"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-older-protocols",
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне випробування",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-phneg-cons",
+              "kind": "group",
+              "title": {
+                "uk": "Консолідація (ALL-D 13–14)",
+                "en": "Consolidation (ALL-D 13-14)"
+              },
+              "description": {
+                "uk": "Блінатумомаб (бажано) + продовження мультиагентної терапії або блінатумомаб самостійно (якщо мультиагентна протипоказана). Блінатумомаб як післяремісійний підхід — за ECOG 1910.",
+                "en": "Blinatumomab (preferred) with continued multiagent therapy, or blinatumomab alone (if multiagent is contraindicated). Blinatumomab as a post-remission approach follows ECOG 1910."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "blinatumomab-mrd",
+                  "notes": {
+                    "uk": "Блінатумомаб; MRD+ ремісія (eviQ 3483)",
+                    "en": "Blinatumomab; MRD-positive remission (eviQ 3483)"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "all-consolidation",
+                  "notes": {
+                    "uk": "Наявна консолідація NSSG ML.45",
+                    "en": "Existing NSSG ML.45 consolidation"
+                  }
+                },
+                {
+                  "regimen_id": "all-consolidation-3"
+                },
+                {
+                  "regimen_id": "all-intensification"
+                },
+                {
+                  "regimen_id": "methotrexate-intrathecal",
+                  "notes": {
+                    "uk": "Профілактика ЦНС",
+                    "en": "CNS prophylaxis"
+                  }
+                },
+                {
+                  "regimen_id": "cytarabine-intrathecal"
+                },
+                {
+                  "regimen_id": "ref-all-ecog-1910",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-calgb-10403",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-all-dfci-00-01",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-all-msk-ccg1882",
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "АлоТГСК (ALL-G)",
+                    "en": "Allogeneic HCT (ALL-G)"
+                  }
+                },
+                {
+                  "kind": "maintenance",
+                  "column": "next",
+                  "label": {
+                    "uk": "POMP-підтримка; блінатумомаб ↔ POMP після hyper-CVAD/mini-hyperCVD + блін",
+                    "en": "POMP maintenance; blinatumomab alternating with POMP after hyper-CVAD or mini-hyperCVD plus blinatumomab"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-phneg-maint",
+              "kind": "group",
+              "title": {
+                "uk": "Підтримка (ALL-D 15)",
+                "en": "Maintenance (ALL-D 15)"
+              },
+              "description": {
+                "uk": "POMP: меркаптопурин, вінкристин, метотрексат, преднізон; блінатумомаб ↔ POMP (після схем з блінатумомабом). Зазвичай 2–3 роки; тест на TPMT/NUDT15.",
+                "en": "POMP: mercaptopurine, vincristine, methotrexate, prednisone; blinatumomab alternating with POMP (after blinatumomab-containing regimens). Usually 2-3 years; TPMT/NUDT15 testing."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "pomp-maintenance",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "all-maintenance",
+                  "notes": {
+                    "uk": "Наявна підтримка NSSG ML.50",
+                    "en": "Existing NSSG ML.50 maintenance"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-tall",
+          "kind": "line",
+          "title": {
+            "uk": "T-ГЛЛ (ALL-6, ALL-D 17–23)",
+            "en": "T-ALL (ALL-6, ALL-D 17-23)"
+          },
+          "description": {
+            "uk": "Клінічне випробування (бажано) або системна терапія. Менше ніж CR — NGS, потім R/R. У морфологічній ремісії — MRD. Консолідація незалежно від MRD: продовжити мультиагентну терапію; неларабін може бути корисним. MRD− CR після консолідації: алоТГСК (бажана при ETP-фенотипі, RAS/PTEN та/або NOTCH1/FBXW7 дикого типу, повільній MRD-кліренс) або підтримка POMP (± ІТ). Персистуюча/наростальна MRD — R/R. Тестикулярне ураження перевіряють при діагнозі.",
+            "en": "A clinical trial (preferred) or systemic therapy. Less than CR — NGS, then R/R. In marrow CR — MRD. Consolidation irrespective of MRD: continue multiagent therapy; nelarabine may help. MRD-negative CR after consolidation: allogeneic HCT (favoured for ETP phenotype, RAS/PTEN and/or NOTCH1/FBXW7 wild-type classifier, slow MRD clearance) or POMP maintenance (± IT). Persistent/rising MRD — R/R. Testicular involvement is checked at diagnosis."
+          },
+          "steps": [
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Нагляд (ALL-7)",
+                "en": "Surveillance (ALL-7)"
+              },
+              "target": "nccn-surv"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив/рефрактерність (ALL-8)",
+                "en": "Relapse/refractory (ALL-8)"
+              },
+              "target": "nccn-rr"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-tall-ind",
+              "kind": "group",
+              "title": {
+                "uk": "Індукція (ALL-D 17–19)",
+                "en": "Induction (ALL-D 17-19)"
+              },
+              "description": {
+                "uk": "AYA: CALGB 10403 і COG AALL0434 бажано; DFCI, MSKCC (≥18 р.) — інші. AYA та дорослі <65: hyperCVAD ± неларабін, hyperCVAD + венетоклакс (нове). Дорослі <65: dose-adjusted GRAALL-2014. ≥65: вінкристин + преднізон, POMP, ALLOLD07, GMALL, GRAALL, mini-hyperCVD ± неларабін, модифікований DFCI 91-01.",
+                "en": "AYA: CALGB 10403 and COG AALL0434 preferred; DFCI and MSKCC (≥18) other. AYA and adults <65: hyperCVAD ± nelarabine, hyperCVAD plus venetoclax (new). Adults <65: dose-adjusted GRAALL-2014. ≥65: vincristine plus prednisone, POMP, ALLOLD07, GMALL, GRAALL, mini-hyperCVD ± nelarabine, modified DFCI 91-01."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-all-calgb-10403",
+                  "notes": {
+                    "uk": "Лише AYA",
+                    "en": "AYA only"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-all-cog-aall0434",
+                  "notes": {
+                    "uk": "Лише AYA",
+                    "en": "AYA only"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-all-dfci-00-01",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-msk-ccg1882",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "hyper-cvad-a-it",
+                  "notes": {
+                    "uk": "HyperCVAD ± неларабін (eviQ 571/572)",
+                    "en": "HyperCVAD ± nelarabine (eviQ 571/572)"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "hyper-cvad-b-it",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-hcvad-ven-tall",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-graall-2014",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-low-intensity",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-mini-hcvd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-mod-dfci-91-01",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-older-protocols",
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне випробування",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-tall-cons",
+              "kind": "group",
+              "title": {
+                "uk": "Консолідація й підтримка (ALL-D 20–22)",
+                "en": "Consolidation and maintenance (ALL-D 20-22)"
+              },
+              "description": {
+                "uk": "Неларабін розглянути при віці ≤30 років і високому ризику ЦНС-рецидиву (CNS-3, високі лейкоцити). Підтримка: щотижневий метотрексат + щоденний меркаптопурин + щомісячні пульси вінкристин/преднізон.",
+                "en": "Consider nelarabine at ≤30 years with high CNS relapse risk (CNS-3, high WBC). Maintenance: weekly methotrexate, daily mercaptopurine, monthly vincristine/prednisone pulses."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-all-tall-nelarabine-add",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "nelarabine-tall"
+                },
+                {
+                  "regimen_id": "pomp-maintenance",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-cog-aall0434",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-all-graall-2014",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-hcvad-ven-tall",
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "АлоТГСК (ALL-G)",
+                    "en": "Allogeneic HCT (ALL-G)"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-surv",
+          "kind": "line",
+          "title": {
+            "uk": "Нагляд (ALL-7)",
+            "en": "Surveillance (ALL-7)"
+          },
+          "description": {
+            "uk": "Після завершення хіміотерапії, включно з підтримкою. Рік 1 — кожні 1–3 міс.: огляд, ЗАК, печінкові проби до норми; рік 2 — кожні 3–6 міс.: огляд, ЗАК; рік 3 і далі — кожні 6–12 міс. Аспірат кісткового мозку за показаннями до 1 разу на 3–6 міс. щонайменше 5 років (проточна цитометрія, за потреби цитогенетика, FISH, молекулярні дослідження, MRD). Ph+: періодична кількісна оцінка BCR::ABL1. Рекомендації з виживання (NCCN Survivorship; COG Long-Term Follow-Up).",
+            "en": "After chemotherapy including maintenance. Year 1 — every 1-3 months: examination, CBC, liver tests until normal; year 2 — every 3-6 months: examination, CBC; year 3 onwards — every 6-12 months. Marrow aspirate as indicated, up to every 3-6 months for at least 5 years (flow cytometry, cytogenetics, FISH, molecular studies, MRD). Ph-positive: periodic BCR::ABL1 quantification. Survivorship recommendations (NCCN Survivorship; COG Long-Term Follow-Up)."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "surveillance",
+              "column": "treatment",
+              "label": {
+                "uk": "Рецидив — повторити діагностику за ALL-1 і ALL-3",
+                "en": "At relapse repeat the workup per ALL-1 and ALL-3"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив (ALL-8)",
+                "en": "Relapse (ALL-8)"
+              },
+              "target": "nccn-rr"
+            }
+          ]
+        },
+        {
+          "key": "nccn-rr",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив і рефрактерність (ALL-8, ALL-D 24–29)",
+            "en": "Relapsed/refractory (ALL-8, ALL-D 24-29)"
+          },
+          "description": {
+            "uk": "Ізольований позакістковомозковий рецидив (ЦНС, яєчка) потребує системної терапії; профілактика ЦНС розглядається. Ph+: тест мутацій домену ABL1. Ph− В-ГЛЛ: молекулярна характеристика й MRD, якщо не проводили. Пізній рецидив (>3 років): та сама схема, що при діагнозі. Другий CR до ТГСК — консолідативна алоТГСК, якщо раніше не було; після ТГСК — повторна алоТГСК та/або ДЛІ. Роль алоТГСК після клітинної терапії неясна. Безпека схем R/R у ≥65 років не встановлена.",
+            "en": "Isolated extramedullary relapse (CNS, testes) needs systemic therapy; CNS prophylaxis is considered. Ph-positive: ABL1 kinase-domain testing. Ph-negative B-ALL: molecular characterization and MRD if not done. Late relapse (>3 years): the same regimen as at diagnosis. Second CR before HCT — consolidative allogeneic HCT if not previously transplanted; after HCT — a second allogeneic HCT and/or DLI. The role of HCT after cell therapy is unclear. Safety of R/R regimens at ≥65 is not established."
+          },
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "next",
+              "label": {
+                "uk": "АлоТГСК у 2-й ремісії (ALL-G); після ТГСК — повторна алоТГСК та/або ДЛІ",
+                "en": "Allogeneic HCT in second remission (ALL-G); after HCT a second HCT and/or DLI"
+              }
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-rr-phpos",
+              "kind": "group",
+              "title": {
+                "uk": "R/R Ph+ В-ГЛЛ (ALL-D 24)",
+                "en": "R/R Ph-positive B-ALL (ALL-D 24)"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-all-rr-ph-tki",
+                  "notes": {
+                    "uk": "ТКІ; асцимініб ± інший ТКІ",
+                    "en": "TKI; asciminib ± another TKI"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "dasatinib-all",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ponatinib-all",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "blinatumomab-rr-cycle-1",
+                  "notes": {
+                    "uk": "Блінатумомаб ± ТКІ",
+                    "en": "Blinatumomab ± TKI"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "blinatumomab-rr-cycle-2-5",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "inotuzumab-cycle-1",
+                  "notes": {
+                    "uk": "Інотузумаб ± ТКІ",
+                    "en": "Inotuzumab ± TKI"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "inotuzumab-remission",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-car-t",
+                  "notes": {
+                    "uk": "Тиса-цел (<26 р., ≥2 ТКІ), брексу-цел, обе-цел — після ТКІ",
+                    "en": "Tisa-cel (<26, ≥2 TKIs), brexu-cel, obe-cel — after TKIs"
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне випробування",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rr-phneg",
+              "kind": "group",
+              "title": {
+                "uk": "R/R Ph− В-ГЛЛ (ALL-D 26)",
+                "en": "R/R Ph-negative B-ALL (ALL-D 26)"
+              },
+              "description": {
+                "uk": "Інотузумаб асоційований із гепатотоксичністю та SOS — зарезервувати час перед ТГСК (≥4 тижні) і уникати подвійної алкілуючої кондиції.",
+                "en": "Inotuzumab is associated with hepatotoxicity and SOS — allow at least 4 weeks before HCT and avoid double-alkylator conditioning."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "blinatumomab-rr-cycle-1",
+                  "notes": {
+                    "uk": "Блінатумомаб ± мультиагентна терапія (eviQ 3404)",
+                    "en": "Blinatumomab ± multiagent therapy (eviQ 3404)"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "blinatumomab-rr-cycle-2-5",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "inotuzumab-cycle-1",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "inotuzumab-remission",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-all-car-t",
+                  "notes": {
+                    "uk": "Брексу-цел, обе-цел; тиса-цел для <26 р. при рефрактерності чи ≥2 рецидивах",
+                    "en": "Brexu-cel, obe-cel; tisa-cel for <26 with refractory disease or ≥2 relapses"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-all-ino-minihcvd-sequential",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-aug-hypercvad",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "clofarabine-rr",
+                  "notes": {
+                    "uk": "Клофарабін самостійно або з циклофосфамідом, етопозидом",
+                    "en": "Clofarabine alone or with cyclophosphamide and etoposide"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-mopad",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "flag-ida",
+                  "notes": {
+                    "uk": "FLAG-IDA",
+                    "en": "FLAG-IDA"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-salvage-misc",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-revumenib",
+                  "notes": {
+                    "uk": "KMT2A-перебудований; синдром диференціювання",
+                    "en": "KMT2A-rearranged; differentiation syndrome"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-ven-salvage",
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне випробування",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rr-tall",
+              "kind": "group",
+              "title": {
+                "uk": "R/R T-ГЛЛ (ALL-D 28)",
+                "en": "R/R T-ALL (ALL-D 28)"
+              },
+              "description": {
+                "uk": "Таргетна терапія за мутаціями — за обмеженими описами випадків. Схеми R/R Ph− В-ГЛЛ можуть бути прийнятні.",
+                "en": "Mutation-directed therapy has only limited case reports. Regimens for R/R Ph-negative B-ALL may be appropriate."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "nelarabine-tall",
+                  "notes": {
+                    "uk": "Неларабін ± етопозид, циклофосфамід (eviQ 4510)",
+                    "en": "Nelarabine ± etoposide, cyclophosphamide (eviQ 4510)"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-tall-rr",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-revumenib",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-ven-salvage",
+                  "preference": "other",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "ref-all-aug-hypercvad",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "clofarabine-rr",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-mopad",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "flag-ida",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-all-salvage-misc",
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне випробування",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-cns",
+          "kind": "line",
+          "title": {
+            "uk": "ЦНС і позакістковомозкове ураження (ALL-B)",
+            "en": "CNS and extramedullary disease (ALL-B)"
+          },
+          "description": {
+            "uk": "Усі пацієнти отримують профілактику ЦНС (системна терапія з метотрексатом/цитарабіном та/або інтратекальна: метотрексат, цитарабін, кортикостероїд). ІТ-терапія вводиться при першій люмбальній пункції; ІТ починають під час індукції. CNS-1 — лімфобластів у лікворі немає; CNS-2 — <5 лейк./мкл з лімфобластами; CNS-3 — ≥5 лейк./мкл з лімфобластами. Травматична пункція з бластами в крові: співвідношення лейкоцити/еритроцити в лікворі ≥2× від співвідношення в крові → CNS-3, інакше CNS-2. Без системної терапії ЦНС-лейкоз розвивається у >50%. CNS-3 та/або ураження черепних нервів, або персистуюче після індукції — опромінення 18 Гр (1,8–2,0 Гр/фракція; весь мозок і задня половина ока, до C2); при адекватній системній терапії й ІТ можна уникнути профілактичного опромінення. Яєчка: якщо ураження не зникло до кінця індукції — 24 Гр (2,0 Гр/фракція) на мошонку, зазвичай разом із 1-м циклом підтримки.",
+            "en": "All patients receive CNS prophylaxis (systemic therapy with methotrexate/cytarabine and/or intrathecal: methotrexate, cytarabine, corticosteroid). IT therapy is given with the first lumbar puncture and started during induction. CNS-1 — no lymphoblasts in CSF; CNS-2 — WBC <5/uL with lymphoblasts; CNS-3 — WBC ≥5/uL with lymphoblasts. Traumatic tap with blasts in blood: CSF WBC/RBC ratio at least twice the blood ratio → CNS-3, otherwise CNS-2. Without systemic therapy CNS leukemia develops in over 50%. CNS-3 and/or cranial nerve involvement, or persistence after induction — cranial irradiation 18 Gy (1.8-2.0 Gy/fraction; whole brain and posterior half of the globe, to C2); with adequate systemic therapy and IT upfront prophylactic irradiation may be avoided. Testes: if disease does not resolve by the end of induction — 24 Gy (2.0 Gy/fraction) to the scrotum, usually with the first maintenance cycle."
+          },
+          "regimens": [
+            {
+              "regimen_id": "methotrexate-intrathecal",
+              "notes": {
+                "uk": "Інтратекально, при першій ЛП",
+                "en": "Intrathecal, with the first LP"
+              }
+            },
+            {
+              "regimen_id": "cytarabine-intrathecal"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Опромінення ЦНС 18 Гр; яєчок 24 Гр",
+                "en": "CNS irradiation 18 Gy; testes 24 Gy"
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-support",
+          "kind": "line",
+          "title": {
+            "uk": "Підтримувальна терапія й токсичність (ALL-C)",
+            "en": "Supportive care and toxicity (ALL-C)"
+          },
+          "description": {
+            "uk": "Профілактика інфекцій; гострий синдром лізису пухлини. Метотрексат у високих дозах: триметоприм/сульфаметоксазол призупинити; при затримці виведення — глюкарпідаза (рівень метотрексату на 2 SD вище очікуваного за MTXPK.org або >30 мкМ на 36 год, >10 на 42 год, >5 на 48 год; оптимально протягом 48–60 год), лейковорин ≥2 діб після неї (за ≥2 год до або після глюкарпідази). Стероїди: інсулін при гіперглікемії, H2-блокатор/PPI (взаємодія PPI з метотрексатом і біодоступністю ТКІ), остеонекроз — вітамін D і кальцій. Опромінені лейкоредуковані трансфузії; Г-КСФ на мієлосупресивних блоках; кишковий режим при вінкристині; антиеметики без рутинних кортикостероїдів. Інотузумаб: циторедукція при бластах ≥10 000/мкл; SOS (білірубін!), урсодіол, дефібротид при SOS; ≥4 тижні до ТГСК. Блінатумомаб: циторедукція при бластах ≥15 000/мкл; CRS (тоцилізумаб при тяжкому), нейротоксичність, профілактика судом при синдромі Дауна. CAR-T: CRS/нейротоксичність за REMS, тоцилізумаб і стероїди. Аспарагіназа: кап дози піпегаспаргази/каласпаргази — один флакон (3750 МО); внутрішньовенне введення бажане; ТДМ активності (мінімальна концентрація ≥0,1, оптимально ≥0,4 МО/мл; піпегаспаргаза — 14-й день, каласпаргаза — 21-й, ERW-rywn — 48 год); ERW-rywn при алергії; 3–4 ст. алергія/панкреатит/внутрішньочерепна кровотеча — остаточна відміна; тромбоз ≥2 ст. — пауза й антитромботична терапія; гіпофібриногенемія — не поповнювати профілактично без кровотечі; гіпертригліцеридемія 4 ст. — пауза; білірубін прямий >3,0 мг/дл — пауза.",
+            "en": "Infection control; acute tumor lysis. High-dose methotrexate: hold trimethoprim/sulfamethoxazole; delayed elimination — glucarpidase (level 2 SD above the MTXPK.org expectation, or >30 uM at 36 h, >10 at 42 h, >5 at 48 h; best within 48-60 h), leucovorin for at least 2 days afterwards (at least 2 h before or after glucarpidase). Steroids: insulin for hyperglycaemia, H2 blocker/PPI (PPI interacts with methotrexate and TKI bioavailability), osteonecrosis — vitamin D and calcium. Irradiated leukoreduced transfusions; G-CSF on myelosuppressive blocks; a bowel regimen with vincristine; antiemetics without routine corticosteroids. Inotuzumab: cytoreduce at blasts ≥10,000/uL; SOS (watch bilirubin), ursodiol, defibrotide for SOS; allow at least 4 weeks before HCT. Blinatumomab: cytoreduce at blasts ≥15,000/uL; CRS (tocilizumab for severe), neurotoxicity, seizure prophylaxis in Down syndrome. CAR-T: CRS/neurotoxicity per REMS, tocilizumab and steroids. Asparaginase: cap pegaspargase/calaspargase at one vial (3750 IU); IV preferred; activity monitoring (trough ≥0.1, ideally ≥0.4 IU/mL; pegaspargase day 14, calaspargase day 21, ERW-rywn 48 h); ERW-rywn for allergy; grade 3-4 allergy/pancreatitis/intracranial haemorrhage — permanent discontinuation; thrombosis grade ≥2 — hold and anticoagulate; hypofibrinogenaemia — no prophylactic repletion without bleeding; grade 4 hypertriglyceridaemia — hold; direct bilirubin >3.0 mg/dL — hold."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Препарати: глюкарпідаза, дефібротид, урсодіол, тоцилізумаб, каласпаргаза пегол, ERW-rywn — у каталозі",
+                "en": "Drugs: glucarpidase, defibrotide, ursodiol, tocilizumab, calaspargase pegol, ERW-rywn — in the catalogue"
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-assess",
+          "kind": "line",
+          "title": {
+            "uk": "Відповідь, MRD, алоТГСК (ALL-E…ALL-G)",
+            "en": "Response, MRD, allogeneic HCT (ALL-E to ALL-G)"
+          },
+          "description": {
+            "uk": "CR: немає бластів у крові й позакістковомозкового ураження, трилінійний гемопоез, бласти <5%, ANC ≥1000/мкл, тромбоцити ≥100 000/мкл. CRh: тромбоцити ≥50 000 і ANC ≥500. CRi: ANC <1000 або тромбоцити <100 000. MLFS: бласти <5%, клітинність ≥10%, ANC <500 і тромбоцити <50. Рефрактерність — без CR наприкінці індукції; прогресія — ріст бластів ≥25% або позакістковомозкове ураження; рецидив — >5% бластів після CR. ЦНС: ремісія = CNS-1; рецидив — нова поява CNS-2/3 або клініка. Лімфомний компонент: КТ + ПЕТ (CR; PR >50% зменшення; PD >25% зростання). MRD: бажано NGS (чутливість 10⁻⁴…10⁻⁶), потік 10⁻⁴, ПЛР; перший невеликий об’єм аспірату (до 3 мл); час: після індукції, наприкінці консолідації, перед алоТГСК. АлоТГСК у 1-й ремісії: Ph− В-ГЛЛ — при високоризикових мутаціях, стійкій MRD після імунної консолідації; Ph+ — при MRD+ або рецидиві; T-ГЛЛ — ETP, RAS/PTEN та/або NOTCH1/FBXW7 дикого типу, стійка MRD.",
+            "en": "CR: no blasts in blood or extramedullary disease, trilineage haematopoiesis, blasts <5%, ANC ≥1000/uL, platelets ≥100,000/uL. CRh: platelets ≥50,000 and ANC ≥500. CRi: ANC <1000 or platelets <100,000. MLFS: blasts <5%, cellularity ≥10%, ANC <500 and platelets <50. Refractory — no CR at the end of induction; progression — blasts up ≥25% or extramedullary disease; relapse — >5% blasts after CR. CNS: remission = CNS-1; relapse — new CNS-2/3 or clinical signs. Lymphomatous component: CT plus PET (CR; PR >50% decrease; PD >25% increase). MRD: NGS preferred (sensitivity 10⁻⁴ to 10⁻⁶), flow 10⁻⁴, PCR; first small aspirate pull (up to 3 mL); timing: after induction, end of consolidation, before allogeneic HCT. HCT in first remission: Ph-negative B-ALL — high-risk lesions, persistent MRD after immunologic consolidation; Ph-positive — MRD-positive or relapse; T-ALL — ETP, RAS/PTEN and/or NOTCH1/FBXW7 wild type, persistent MRD."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Спадкова схильність (ALL-A): RUNX1, ETV6, PAX5, IKZF1, TP53 (Лі-Фраумені при низькій гіподиплоїдії) — генетичне консультування, особливо перед ТГСК від родича",
+                "en": "Hereditary predisposition (ALL-A): RUNX1, ETV6, PAX5, IKZF1, TP53 (Li-Fraumeni in low hypodiploidy) — genetic counselling, especially before a related-donor HCT"
+              }
+            }
+          ]
+        }
+      ]
+    },
     {
       "key": "induction",
       "kind": "line",

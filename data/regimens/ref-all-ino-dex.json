@@ -1,0 +1,103 @@
+{
+  "id": "ref-all-ino-dex",
+  "short_name": "Інотузумаб + дексаметазон (ALL-INITIAL-1)",
+  "name": {
+    "uk": "Індукція інотузумабом з дексаметазоном для ≥55 років (ALL-INITIAL-1)",
+    "en": "Induction with inotuzumab plus dexamethasone for ≥55 years (ALL-INITIAL-1)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Stelljes M. та ін. J Clin Oncol 2024;42:273-282",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Помірна інтенсивність, категорія 2B, для ≥65 років або коморбідних з Ph− В-ГЛЛ; консолідація — циклофосфамід, цитарабін, дексаметазон, ідарубіцин, метотрексат у високих дозах, пегаспаргаза, вінкристин з ритуксимабом при CD20+.",
+      "en": "Moderate intensity, category 2B, for ≥65 or comorbid Ph-negative B-ALL; consolidation — cyclophosphamide, cytarabine, dexamethasone, idarubicin, high-dose methotrexate, pegaspargase, vincristine with rituximab if CD20-positive."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Інотузумаб озогаміцин",
+          "en": "Inotuzumab ozogamicin"
+        },
+        "drug_id": "inotuzumab-ozogamicin"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Ідарубіцин",
+          "en": "Idarubicin"
+        },
+        "drug_id": "idarubicin"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Пегаспаргаза",
+          "en": "Pegaspargase"
+        },
+        "drug_id": "pegaspargase"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "До 3 циклів індукції; після 2–3 циклів усі в CR/CRi, MRD-негативних 53% після 2-го циклу; 3-річні EFS 55%, OS 73% (Stelljes, JCO 2024).",
+        "en": "Up to 3 induction cycles; all in CR/CRi after 2-3 cycles, 53% MRD-negative after cycle 2; 3-year EFS 55%, OS 73% (Stelljes, JCO 2024)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN називає схему, але не дає доз і розкладу (відсилає до першоджерела або шаблону призначень) — без розрахунку.",
+      "en": "NCCN names the regimen but gives no doses or schedule (it refers to the original protocol or order templates) — no calculation."
+    },
+    "availability": "unknown"
+  }
+}

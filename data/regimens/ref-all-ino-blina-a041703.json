@@ -1,0 +1,58 @@
+{
+  "id": "ref-all-ino-blina-a041703",
+  "short_name": "Інотузумаб → блінатумомаб (Alliance A041703)",
+  "name": {
+    "uk": "Безхіміотерапевтична схема: інотузумаб, потім блінатумомаб, для ≥60 років (Alliance A041703)",
+    "en": "Chemotherapy-free inotuzumab followed by blinatumomab for ≥60 years (Alliance A041703)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Wieduwilt MJ. та ін. J Clin Oncol 2023;41:7006",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Помірна інтенсивність, категорія 2B, для ≥65 років або коморбідних з CD22+ Ph− В-ГЛЛ; індукція інотузумабом, консолідація блінатумомабом (3–4 цикли по 28 днів).",
+      "en": "Moderate intensity, category 2B, for ≥65 or comorbid CD22-positive Ph-negative B-ALL; inotuzumab induction, blinatumomab consolidation (3-4 cycles of 28 days)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Інотузумаб озогаміцин",
+          "en": "Inotuzumab ozogamicin"
+        },
+        "drug_id": "inotuzumab-ozogamicin"
+      },
+      {
+        "name": {
+          "uk": "Блінатумомаб",
+          "en": "Blinatumomab"
+        },
+        "drug_id": "blinatumomab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Цикл IA: інотузумаб 0,8 мг/м² у день 1 і 0,5 мг/м² у дні 8 і 15 (21 день); IB — 0,5 мг/м² дні 1, 8, 15 (28 днів, за CR/CRi); IC — 0,8 мг/м² дні 1, 8, 15 (28 днів, без CR/CRi). Дозу взято з розділу Discussion; це опис дослідження, не розрахункова схема.",
+        "en": "Course IA: inotuzumab 0.8 mg/m² on day 1 and 0.5 mg/m² on days 8 and 15 (21 days); IB — 0.5 mg/m² on days 1, 8, 15 (28 days, if CR/CRi); IC — 0.8 mg/m² on days 1, 8, 15 (28 days, if not). The dose is from the Discussion section; this is a study description, not a calculated regimen."
+      },
+      {
+        "uk": "1-річна EFS 75%, OS 84%; блінатумомаб: 3 цикли після CR/CRi на інотузумабі, інакше 4.",
+        "en": "1-year EFS 75%, OS 84%; blinatumomab: 3 cycles after CR/CRi on inotuzumab, otherwise 4."
+      }
+    ],
+    "gap": {
+      "uk": "Календар блінатумомабу в консолідації й критерії переходу NCCN не розписує; у каталозі є eviQ-схеми блінатумомабу та інотузумабу (ML.82) для окремого розрахунку.",
+      "en": "NCCN does not write out the blinatumomab consolidation calendar and switch criteria; the catalogue has eviQ blinatumomab and ML.82 inotuzumab regimens for separate calculation."
+    },
+    "availability": "unknown"
+  }
+}

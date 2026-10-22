@@ -1,0 +1,121 @@
+{
+  "id": "ref-all-ecog-1910",
+  "short_name": "ECOG 1910",
+  "name": {
+    "uk": "ECOG 1910: інтенсивна схема з блінатумомабом у консолідації",
+    "en": "ECOG 1910: intensive regimen with blinatumomab consolidation"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Litzow MR. та ін. N Engl J Med 2024;391:320-333",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інші рекомендовані: дорослі <65 років (Ph− В-ГЛЛ), висока інтенсивність для ≥65 років (пегаспаргаза — до 55 років). Циклофосфамід, цитарабін, даунорубіцин, дексаметазон, меркаптопурин, пегаспаргаза, вінкристин, ритуксимаб при CD20+; консолідація — етопозид, метотрексат у високих дозах, що чергуються з блінатумомабом.",
+      "en": "Other recommended: adults <65 (Ph-negative B-ALL), high intensity for ≥65 (pegaspargase only below 55). Cyclophosphamide, cytarabine, daunorubicin, dexamethasone, mercaptopurine, pegaspargase, vincristine, rituximab if CD20-positive; consolidation — etoposide, high-dose methotrexate alternating with blinatumomab."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Даунорубіцин",
+          "en": "Daunorubicin"
+        },
+        "drug_id": "daunorubicin"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Меркаптопурин",
+          "en": "Mercaptopurine"
+        },
+        "drug_id": "mercaptopurine"
+      },
+      {
+        "name": {
+          "uk": "Пегаспаргаза",
+          "en": "Pegaspargase"
+        },
+        "drug_id": "pegaspargase"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Блінатумомаб",
+          "en": "Blinatumomab"
+        },
+        "drug_id": "blinatumomab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Вивчена лише у віці 30–70 років (ALL-D 10, примітка c).",
+        "en": "Studied only between ages 30 and 70 (ALL-D 10 footnote c)."
+      },
+      {
+        "uk": "Блінатумомаб у консолідації дав перевагу в MRD-негативних (Litzow, NEJM 2024).",
+        "en": "Blinatumomab consolidation helped MRD-negative patients (Litzow, NEJM 2024)."
+      }
+    ],
+    "gap": {
+      "uk": "Педіатричні схеми; повні фази (індукція IA/IB, фаза ЦНС, рання й відстрочена інтенсифікація, продовження) — у протоколі-першоджерелі.",
+      "en": "Pediatric-inspired; the full phases (induction IA/IB, CNS phase, early and delayed intensification, continuation) are in the original protocol."
+    },
+    "availability": "unknown"
+  }
+}

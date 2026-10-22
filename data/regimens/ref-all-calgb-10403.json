@@ -1,0 +1,93 @@
+{
+  "id": "ref-all-calgb-10403",
+  "short_name": "CALGB 10403",
+  "name": {
+    "uk": "CALGB 10403: педіатрична схема для підлітків і молодих дорослих (AYA)",
+    "en": "CALGB 10403: pediatric-inspired regimen for adolescents and young adults (AYA)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Stock W. та ін. Blood 2019;133:1548-1559",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Бажана індукція для AYA без значної коморбідності при Ph− В-ГЛЛ і T-ГЛЛ. Індукція: даунорубіцин, пегаспаргаза, преднізон, вінкристин; консолідація: циклофосфамід, цитарабін, меркаптопурин, пегаспаргаза, вінкристин.",
+      "en": "Preferred induction for AYA without substantial comorbidity in Ph-negative B-ALL and T-ALL. Induction: daunorubicin, pegaspargase, prednisone, vincristine; consolidation: cyclophosphamide, cytarabine, mercaptopurine, pegaspargase, vincristine."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Даунорубіцин",
+          "en": "Daunorubicin"
+        },
+        "drug_id": "daunorubicin"
+      },
+      {
+        "name": {
+          "uk": "Пегаспаргаза",
+          "en": "Pegaspargase"
+        },
+        "drug_id": "pegaspargase"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон (у NCCN — преднізон)",
+          "en": "Prednisolone (NCCN: prednisone)"
+        },
+        "drug_id": "prednisolone"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Меркаптопурин",
+          "en": "Mercaptopurine"
+        },
+        "drug_id": "mercaptopurine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Пегаспаргазу обмежують одним флаконом (3750 МО); для віку ≤21 року — каласпаргаза пегол (ALL-C 3).",
+        "en": "Pegaspargase is capped at one vial (3750 IU); calaspargase pegol is used up to age 21 (ALL-C 3)."
+      },
+      {
+        "uk": "Блінатумомаб як післяремісійний підхід — за даними ECOG 1910.",
+        "en": "Blinatumomab is incorporated as a post-remission approach based on ECOG 1910."
+      }
+    ],
+    "gap": {
+      "uk": "Педіатричні схеми; повні фази (індукція IA/IB, фаза ЦНС, рання й відстрочена інтенсифікація, продовження) — у протоколі-першоджерелі.",
+      "en": "Pediatric-inspired; the full phases (induction IA/IB, CNS phase, early and delayed intensification, continuation) are in the original protocol."
+    },
+    "availability": "unknown"
+  }
+}

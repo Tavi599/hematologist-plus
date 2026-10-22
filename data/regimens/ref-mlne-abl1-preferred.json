@@ -1,0 +1,44 @@
+{
+  "id": "ref-mlne-abl1-preferred",
+  "short_name": "Дазатиніб, нілотиніб (ABL1)",
+  "name": {
+    "uk": "Дазатиніб або нілотиніб при перебудові ABL1",
+    "en": "Dasatinib or nilotinib for ABL1 rearrangement"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Myeloid/Lymphoid Neoplasms with Eosinophilia and Tyrosine Kinase Gene Fusions",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 від 05.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Бажані ТКІ у хронічній фазі при перебудові ABL1 (найчастіше ETV6::ABL1); при ETV6::ABL1 вони ефективніші за іматиніб для стійких повних ремісій.",
+      "en": "Preferred TKIs in chronic phase for ABL1 rearrangement (most often ETV6::ABL1); with ETV6::ABL1 they are more effective than imatinib at inducing durable complete remissions."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Дазатиніб",
+          "en": "Dasatinib"
+        },
+        "drug_id": "dasatinib"
+      },
+      {
+        "name": {
+          "uk": "Нілотиніб",
+          "en": "Nilotinib"
+        },
+        "drug_id": "nilotinib"
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить; схема описана лише для ознайомлення. Перед призначенням — за інструкцією препарату.",
+      "en": "NCCN gives no doses in this guideline; the regimen is described for reference only. Check the prescribing information before use."
+    },
+    "availability": "unknown"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "ref-all-tall-nelarabine-add",
+  "short_name": "Неларабін у консолідацію (T-ГЛЛ)",
+  "name": {
+    "uk": "Додавання неларабіну до консолідації T-ГЛЛ",
+    "en": "Adding nelarabine to T-ALL consolidation"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Dunsmore KP. та ін. J Clin Oncol 2020;38:3283-3293",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Може зменшити ризик ураження ЦНС; розглянути при віці ≤30 років і високому ризику (CNS-3, високі лейкоцити). Додається до COG AALL0434, hyperCVAD і GRAALL-2014.",
+      "en": "May lower CNS relapse risk; consider at ≤30 years with high risk (CNS-3, high WBC). Added to COG AALL0434, hyperCVAD and GRAALL-2014."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Неларабін",
+          "en": "Nelarabine"
+        },
+        "drug_id": "nelarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Окрема схема неларабіну (R/R) — nelarabine-tall, eviQ 4510.",
+        "en": "The separate nelarabine regimen (R/R) is nelarabine-tall, eviQ 4510."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN називає схему, але не дає доз і розкладу (відсилає до першоджерела або шаблону призначень) — без розрахунку.",
+      "en": "NCCN names the regimen but gives no doses or schedule (it refers to the original protocol or order templates) — no calculation."
+    },
+    "availability": "unknown"
+  }
+}
