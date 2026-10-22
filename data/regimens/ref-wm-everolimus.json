@@ -1,0 +1,42 @@
+{
+  "id": "ref-wm-everolimus",
+  "short_name": "Еверолімус (WM)",
+  "name": {
+    "uk": "Еверолімус при макроглобулінемії Вальденстрема",
+    "en": "Everolimus in Waldenström macroglobulinemia"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Waldenström Macroglobulinemia/Lymphoplasmacytic Lymphoma, version 1.2027 (WM/LPL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 11.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Раніше лікована хвороба: за певних обставин.",
+      "en": "Previously treated disease: for certain circumstances."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Еверолімус",
+          "en": "Everolimus"
+        },
+        "drug_id": "everolimus"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Фаза II (60 хворих): відповідь (мінімальна й краща) 73%, часткова 50%, медіана ВБП 21 міс.; токсичність 3–4 ступеня 67%, зменшення дози в 62%, легенева токсичність 5%.",
+        "en": "Phase II (60 patients): response (minor or better) 73%, partial 50%, median PFS 21 months; grade 3-4 toxicity 67%, dose reductions 62%, pulmonary toxicity 5%."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "registered"
+  }
+}

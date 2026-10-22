@@ -1,0 +1,57 @@
+{
+  "id": "ref-wm-fludarabine",
+  "short_name": "Флударабін ± R (WM)",
+  "name": {
+    "uk": "Флударабін окремо або з ритуксимабом (WM)",
+    "en": "Fludarabine alone or with rituximab (WM)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Waldenström Macroglobulinemia/Lymphoplasmacytic Lymphoma, version 1.2027 (WM/LPL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 11.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Раніше лікована хвороба: за певних обставин. Аналоги нуклеозидів можуть бути пов’язані з трансформацією, МДС і вторинним ГМЛ; їх уникають у кандидатів на ауто-ТГСК. Також «інша рекомендована» схема при синдромі Бінга–Ніля.",
+      "en": "Previously treated disease: for certain circumstances. Nucleoside analogs may be associated with transformation, MDS and secondary AML; avoid in autologous HCT candidates. Also an other-recommended option in Bing-Neel syndrome."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Флударабін",
+          "en": "Fludarabine"
+        },
+        "drug_id": "fludarabine"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Флударабін проти хлорамбуцилу (фаза III): ВБП 36,3 проти 27,1 міс., ЗВ не досягнуто проти 69,8 міс.",
+        "en": "Fludarabine vs chlorambucil (phase III): PFS 36.3 vs 27.1 months, OS not reached vs 69.8 months."
+      },
+      {
+        "uk": "Флударабін + ритуксимаб (43 хворих): відповідь 95%; 3 трансформації й 3 випадки МДС/ГМЛ.",
+        "en": "Fludarabine plus rituximab (43 patients): ORR 95%; 3 transformations and 3 cases of MDS/AML."
+      },
+      {
+        "uk": "FCR у версії 1.2027 з таблиць вилучено; профілактика пневмоцистної пневмонії рекомендована при FCR (і розглядається при BR).",
+        "en": "FCR was removed from the tables in version 1.2027; PJP prophylaxis is recommended for FCR (and considered for BR)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "registered"
+  }
+}

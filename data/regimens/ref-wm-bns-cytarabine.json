@@ -1,0 +1,42 @@
+{
+  "id": "ref-wm-bns-cytarabine",
+  "short_name": "Цитарабін (BNS)",
+  "name": {
+    "uk": "Цитарабін при синдромі Бінга–Ніля",
+    "en": "Cytarabine in Bing-Neel syndrome"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Waldenström Macroglobulinemia/Lymphoplasmacytic Lymphoma, version 1.2027 (WM/LPL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 11.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Симптомний синдром Бінга–Ніля: інша рекомендована терапія (ритуксимаб можна додати для системного контролю).",
+      "en": "Symptomatic Bing-Neel syndrome: other recommended therapy (rituximab can be added if systemic control is needed)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "NCCN не вказує режиму цитарабіну (системний чи інтратекальний, доза) для цього показання.",
+        "en": "NCCN does not state the cytarabine mode (systemic or intrathecal, dose) for this indication."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "registered"
+  }
+}

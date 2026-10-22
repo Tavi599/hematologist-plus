@@ -1,0 +1,56 @@
+{
+  "id": "ref-wm-cp-r",
+  "short_name": "CP-R (WM)",
+  "name": {
+    "uk": "Циклофосфамід + преднізолон + ритуксимаб (WM)",
+    "en": "Cyclophosphamide + prednisone + rituximab (WM)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Waldenström Macroglobulinemia/Lymphoplasmacytic Lymphoma, version 1.2027 (WM/LPL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 11.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інша рекомендована схема і при первинній терапії, і при раніше лікованій хворобі.",
+      "en": "Other recommended in both primary and previously treated disease."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон (NCCN: преднізон)",
+          "en": "Prednisolone (NCCN: prednisone)"
+        },
+        "drug_id": "prednisolone"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Ретроспективно (R-CHOP 23, R-CVP 16, CP-R 19 хворих): частота відповіді 96%, 88%, 95%; нейтропенічна лихоманка й нейропатія частіші при R-CHOP і R-CVP, ніж при CP-R.",
+        "en": "Retrospective (R-CHOP 23, R-CVP 16, CP-R 19 patients): ORR 96%, 88%, 95%; febrile neutropenia and neuropathy more frequent with R-CHOP and R-CVP than with CP-R."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "registered"
+  }
+}
