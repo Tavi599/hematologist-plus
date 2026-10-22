@@ -1,0 +1,63 @@
+{
+  "id": "ref-al-len-dex",
+  "short_name": "Rd ± Dara (AL)",
+  "name": {
+    "uk": "Леналідомід + дексаметазон (± даратумумаб) при AL-амілоїдозі",
+    "en": "Lenalidomide and dexamethasone (with or without daratumumab) in AL amyloidosis"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Systemic Light Chain Amyloidosis, version 1.2027 (AMYL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 19.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Первинна терапія за певних обставин при значущій нейропатії; у повторній терапії — Rd ± даратумумаб (NCCN 1.2027).",
+      "en": "Primary therapy in certain circumstances with significant neuropathy; in previously treated disease Rd with or without daratumumab (NCCN 1.2027)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Даратумумаб",
+          "en": "Daratumumab"
+        },
+        "drug_id": "daratumumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Початкова доза леналідоміду при AL — 10–15 мг, нижча, ніж при мієломі, навіть при нормальній функції нирок (виноски h, n).",
+        "en": "The starting lenalidomide dose in AL is 10 to 15 mg, lower than in myeloma even with normal renal function (footnotes h, n)."
+      },
+      {
+        "uk": "Не застосовувати при вираженому ураженні серця чи вегетативних нервів; у вперше діагностованих із нетестованою функцією серця токсичність вища. Імуномодулятори тимчасово підвищують серцеві біомаркери — за кардіальних пацієнтів стежити. Функція нирок — постійно, для дози.",
+        "en": "Not for advanced cardiac or autonomic nerve involvement; toxicity is higher in newly diagnosed patients with untested cardiac function. Immunomodulators transiently raise cardiac biomarkers, so watch cardiac patients. Renal function is monitored continuously for dosing."
+      },
+      {
+        "uk": "Дані: гематологічна відповідь 67% (29% ПВ) при 15 мг на добу; 61% (20% ПВ) після талідоміду чи бортезомібу; ретроспективно при рецидиві 31% через 3 місяці. Rd + даратумумаб при AL із мієломою (n = 10): відповідь 90% на 6-му місяці.",
+        "en": "Data: haematological response 67% (29% complete) at 15 mg daily; 61% (20% complete) after thalidomide or bortezomib; 31% at 3 months in a retrospective relapsed series. Rd plus daratumumab in AL with myeloma (n = 10): 90% response at 6 months."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    }
+  }
+}

@@ -103,8 +103,8 @@
         {
           "regimen_id": "ixa-dex-al",
           "notes": {
-            "uk": "NCCN 1.2027: іксазоміб + дексаметазон — інші рекомендовані",
-            "en": "NCCN 1.2027: ixazomib plus dexamethasone is other recommended"
+            "uk": "NCCN 1.2027: у списку «повторити початкову терапію» (без рангу)",
+            "en": "NCCN 1.2027: in the \"repeat initial therapy\" list (no rank)"
           }
         },
         {
@@ -117,9 +117,66 @@
         {
           "regimen_id": "ref-al-daratumumab-relapse",
           "notes": {
-            "uk": "NCCN 1.2027: даратумумаб окремо — інші рекомендовані",
-            "en": "NCCN 1.2027: daratumumab alone is other recommended"
+            "uk": "NCCN 1.2027: даратумумаб окремо — у списку «повторити початкову терапію» (без рангу)",
+            "en": "NCCN 1.2027: daratumumab alone is in the \"repeat initial therapy\" list (no rank)"
           }
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "description": {
+        "uk": "Схеми NCCN 1.2027 для AL-амілоїдозу, яких немає в довіднику з дозами: NCCN дозу не наводить, лише дослідні дози в тексті.",
+        "en": "NCCN 1.2027 options for AL amyloidosis that the catalog does not hold with doses: NCCN gives no regimen dose, only study doses in its text."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-al-dara-mono"
+        },
+        {
+          "regimen_id": "ref-al-cyd-dara"
+        },
+        {
+          "regimen_id": "ref-al-len-dex"
+        },
+        {
+          "regimen_id": "ref-al-cfz-dex"
+        },
+        {
+          "regimen_id": "ref-al-bortezomib"
+        },
+        {
+          "regimen_id": "ref-al-ixa-cyd"
+        },
+        {
+          "regimen_id": "ref-al-cyd-len"
+        },
+        {
+          "regimen_id": "ref-al-ixa-len-dex"
+        },
+        {
+          "regimen_id": "ref-al-isatuximab"
+        },
+        {
+          "regimen_id": "ref-al-belantamab"
+        },
+        {
+          "regimen_id": "ref-al-elranatamab"
+        },
+        {
+          "regimen_id": "ref-al-teclistamab"
+        },
+        {
+          "regimen_id": "ref-al-venetoclax"
+        },
+        {
+          "regimen_id": "ref-al-hdm-asct"
         }
       ],
       "children": []
@@ -158,6 +215,685 @@
             "en": "A different drug class from the first line."
           },
           "children": []
+        }
+      ]
+    },
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 1.2027 (AMYL-1…AMYL-D)",
+        "en": "NCCN pathways 1.2027 (AMYL-1 to AMYL-D)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN «Systemic Light Chain Amyloidosis», версія 1.2027 від 19.08.2026: обстеження → стадія → лікування → далі. Усі рекомендації категорії 2A, якщо не вказано інше. NCCN дозує схеми лише в тексті Discussion; доза береться з наявної схеми каталогу, а якщо її немає — картка «без розрахунку».",
+        "en": "The NCCN \"Systemic Light Chain Amyloidosis\" algorithm, version 1.2027 of 19.08.2026: workup → stage → treatment → next. All recommendations are category 2A unless stated. NCCN gives regimen doses only in the Discussion text; the dose comes from the catalog regimen, and where there is none the card is \"not calculated\"."
+      },
+      "children": [
+        {
+          "key": "nccn-workup",
+          "kind": "line",
+          "title": {
+            "uk": "Початкове обстеження й ураження органів (AMYL-1, AMYL-2)",
+            "en": "Initial workup and organ involvement (AMYL-1, AMYL-2)"
+          },
+          "description": {
+            "uk": "Клінічне: анамнез і огляд, ортостатичні показники, КТ усього тіла низькодозова або ПЕТ/КТ (рентгенологічний скелет — лише за обмежених можливостей), ЕКГ, ехокардіографія з GLS, тест 6-хвилинної ходьби; оцінка крихкості в літніх. Лабораторне: ЗАК із формулою й мазок; кількісні імуноглобуліни, SPEP і сироваткова імунофіксація; вільні легкі ланцюги сироватки. Органи — серце: NT-proBNP/BNP, тропонін T; ліпіди; нирки: добовий білок, UPEP/UIFE, сечовина/креатинін, електроліти, альбумін, кальцій, сечова кислота, ЛДГ, β2-мікроглобулін, кліренс креатиніну; печінка: ЛФ, АСТ, АЛТ, білірубін; коагуляція: ПЧ, АЧТЧ, фактор X. Патоморфологія: аспірат і біопсія кісткового мозку (Конго червоний), FISH плазматичних клітин, біопсія жирової клітковини і/або ураженого органа, типування амілоїду мас-спектрометрією (імуногістохімія — лише якщо МС недоступна); при лімфоплазмоцитарному клоні — MYD88 L265P, CXCR4 і TP53 (NGS), del(17p). Обовʼязково підтвердити, що амілоїд складається з легких ланцюгів (а не спадковий, ATTR дикого типу чи вторинний); виявлення легких ланцюгів у сироватці без підтвердження амілоїду в тканині недостатнє. Додатково за ураженням: серце — МРТ із контрастом (за показаннями); печінка й ШКТ — спорожнення шлунка, УЗД/КТ (краніокаудальний розмір печінки), ендоскопії; нерви — ЕМГ, вегетативний рефлекторний скринінг; легені — функція дихання, КТ грудної клітки; ендокринне — ТТГ, кортизол. Тестувати на ВІЛ, гепатити B і C за показаннями.",
+            "en": "Clinical: history and examination, orthostatic vitals, low-dose whole-body CT or PET/CT (skeletal survey only where resources are limited), ECG, echocardiogram with GLS, 6-minute walk test; frailty assessment in older adults. Laboratory: CBC with differential and smear; quantitative immunoglobulins, SPEP and serum immunofixation; serum free light chains. Organs — heart: NT-proBNP/BNP, troponin T; lipids; kidney: 24-hour urine protein, UPEP/UIFE, urea/creatinine, electrolytes, albumin, calcium, uric acid, LDH, beta-2 microglobulin, creatinine clearance; liver: ALP, AST, ALT, bilirubin; coagulation: PT, PTT, factor X. Pathology: bone marrow aspirate and biopsy (Congo red), plasma cell FISH, fat pad and/or involved organ biopsy, amyloid typing by mass spectrometry (immunohistochemistry only if MS is unavailable); with a lymphoplasmacytic clone, MYD88 L265P, CXCR4 and TP53 (NGS), del(17p). It is essential to confirm that the amyloid is made of light chains (not hereditary, wild-type ATTR or secondary); light chains in serum without amyloid confirmed in tissue are not enough. Extra tests by organ: heart — contrast MRI as indicated; liver and GI — gastric emptying, ultrasound/CT (craniocaudal liver span), endoscopies; nerves — EMG, autonomic reflex screen; lung — pulmonary function, chest CT; endocrine — TSH, cortisol. Screen for HIV and hepatitis B and C as indicated."
+          },
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Оцінка кандидатури на ТГСК при ураженні органів",
+                "en": "HCT candidacy assessment when organs are involved"
+              },
+              "notes": {
+                "uk": "Дуже малий пухлинний тягар — індукція може не знадобитися; якщо ТГСК спершу не показана — переоцінити після початку терапії. Якщо ТГСК відкладають, зібрати й зберегти стовбурові клітини.",
+                "en": "With a very low tumour burden induction may not be needed; if HCT is not an option at first, reassess after starting therapy. If HCT is delayed, collect and store stem cells."
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Підозра на локалізований амілоїдоз (AMYL-3)",
+                "en": "Suspected localized amyloidosis (AMYL-3)"
+              },
+              "target": "nccn-localized"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Підозра на ізольований кардіальний амілоїдоз (AMYL-4)",
+                "en": "Suspected isolated cardiac amyloidosis (AMYL-4)"
+              },
+              "target": "nccn-cardiac"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Стадіювання (AMYL-A)",
+                "en": "Staging (AMYL-A)"
+              },
+              "target": "nccn-staging"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Лікування вперше діагностованого AL (AMYL-B)",
+                "en": "Newly diagnosed SLCA treatment (AMYL-B)"
+              },
+              "target": "nccn-primary"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "nccn-localized",
+          "kind": "line",
+          "title": {
+            "uk": "Локалізований амілоїдоз (AMYL-3)",
+            "en": "Localized amyloidosis (AMYL-3)"
+          },
+          "description": {
+            "uk": "Обстеження: SPEP і SIFE; добовий білок, UPEP і UIFE (імунофіксація і в сироватці, і в сечі — лише електрофорез малочутливий); вільні легкі ланцюги; ЕКГ; ехо з GLS; NT-proBNP, тропонін T; печінкові проби; функція нирок і аналіз сечі; органи за показаннями. Локалізований тип підтверджують мас-спектрометрією (імуногістохімія/імунофлуоресценція — якщо МС недоступна). Типово уражені гортань, трахея, легені, шкіра, сечові шляхи; прогноз зазвичай відмінний.",
+            "en": "Workup: SPEP and SIFE; 24-hour urine protein, UPEP and UIFE (immunofixation in both serum and urine — electrophoresis alone is insensitive); free light chains; ECG; echo with GLS; NT-proBNP, troponin T; liver tests; renal function and urinalysis; organs as indicated. The localized type is confirmed by mass spectrometry (immunohistochemistry or immunofluorescence if MS is unavailable). The larynx, trachea, lung, skin and urinary tract are typical sites; the prognosis is usually excellent."
+          },
+          "children": [
+            {
+              "key": "nccn-localized-mprot",
+              "kind": "group",
+              "title": {
+                "uk": "Є моноклональний білок чи ізотипова перевага легких ланцюгів і/або підозра на ураження інших органів",
+                "en": "Monoclonal protein or isotypic light chain predominance and/or suspected other organ involvement"
+              },
+              "steps": [
+                {
+                  "kind": "assessment",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Біопсія кісткового мозку й тканини (можна жирову клітковину) з Конго червоним і рідинною хроматографією з МС; біопсія іншого органа за показаннями",
+                    "en": "Bone marrow and tissue (fat pad allowed) biopsy with Congo red and liquid chromatography-MS; other organ biopsy as indicated"
+                  }
+                },
+                {
+                  "kind": "surveillance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Системної хвороби немає: операція за показаннями (симптоми, косметика); тривале спостереження за ознаками системної хвороби",
+                    "en": "No systemic disease: surgery if clinically indicated (symptoms, cosmetic); long-term follow-up for signs of systemic disease"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Системна хвороба підтверджена: вести як системну (AMYL-B)",
+                    "en": "Systemic disease confirmed: manage as systemic (AMYL-B)"
+                  },
+                  "target": "nccn-primary"
+                }
+              ],
+              "children": []
+            },
+            {
+              "key": "nccn-localized-none",
+              "kind": "group",
+              "title": {
+                "uk": "Моноклонального білка немає й немає підозри на ураження інших органів",
+                "en": "No monoclonal protein and no suspicion of other organ involvement"
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Низький ризик прогресування: спостереження за клінікою, тривалий нагляд",
+                    "en": "Low risk of progression: follow as clinically indicated, long-term follow-up"
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "next",
+                  "label": {
+                    "uk": "Ураження лімфовузлів — розглянути низькозлоякісну В-клітинну лімфому (МЗЛ/MALT/ВМ/ЛПЛ)",
+                    "en": "Lymph node involvement — consider low-grade B-cell lymphoma (MZL, MALT, WM, LPL)"
+                  },
+                  "notes": {
+                    "uk": "Див. настанови NCCN з В-клітинних лімфом і з макроглобулінемії Вальденстрема/ЛПЛ; у довіднику — сторінки «Лімфома маргінальної зони» та «Макроглобулінемія Вальденстрема».",
+                    "en": "See the NCCN guidelines for B-cell lymphomas and for Waldenström macroglobulinemia/LPL; in the catalogue — the marginal zone lymphoma and Waldenström macroglobulinemia pages."
+                  }
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "nccn-cardiac",
+          "kind": "line",
+          "title": {
+            "uk": "Підозра на кардіальний амілоїдоз (AMYL-4)",
+            "en": "Suspected cardiac amyloidosis (AMYL-4)"
+          },
+          "description": {
+            "uk": "Ознаки підозри: синкопе/пресинкопе/аритмія, необґрунтована гіпертрофія лівого шлуночка, нижчий за очікуваний вольтаж ЕКГ при товщині стінки, потовщена міжшлуночкова перегородка, стійке підвищення NT-proBNP чи тропоніну, симптоми правосерцевої недостатності. Обстеження: МРТ серця (якщо неможлива — ехо з GLS), вільні легкі ланцюги, SPEP і SIFE, добовий білок, UPEP і UIFE, ехо з GLS, ЕКГ, NT-proBNP, тропонін T; інше за показаннями.",
+            "en": "Triggers: syncope, presyncope or arrhythmia, unexplained left ventricular hypertrophy, ECG voltage lower than expected for the wall thickness, thick septum, persistent unexplained NT-proBNP or troponin elevation, right heart failure symptoms. Workup: cardiac MRI (echo with GLS if MRI is not feasible), free light chains, SPEP and SIFE, 24-hour urine protein, UPEP and UIFE, echo with GLS, ECG, NT-proBNP, troponin T; other tests as indicated."
+          },
+          "children": [
+            {
+              "key": "nccn-cardiac-mprot",
+              "kind": "group",
+              "title": {
+                "uk": "Є моноклональний білок або підвищені вільні легкі ланцюги з порушеним співвідношенням",
+                "en": "Monoclonal protein or raised free light chains with an abnormal ratio"
+              },
+              "description": {
+                "uk": "МРТ підозріла на кардіальний амілоїдоз → біопсія кісткового мозку й тканини (± іншого органа) з Конго червоним і МС; позитивна — лікувати за результатом, негативна — біопсія серця. МРТ не підозріла: за інших системних ознак амілоїдозу — біопсія кісткового мозку й жирової клітковини з Конго червоним і МС (стару біопсію за 1–2 роки можна пофарбувати); системних ознак немає — можлива MGUS, тліюча ММ чи ММ.",
+                "en": "CMR suspicious for cardiac amyloidosis → bone marrow and tissue (± other organ) biopsy with Congo red and MS; if positive, treat accordingly, if negative, cardiac biopsy. CMR not suspicious: with other systemic signs of amyloidosis — bone marrow and fat pad biopsy with Congo red and MS (a biopsy from the last 1–2 years can be restained); without systemic signs — possible MGUS, smouldering MM or MM."
+              },
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Підтверджений AL — лікування (AMYL-B)",
+                    "en": "Confirmed AL — treatment (AMYL-B)"
+                  },
+                  "target": "nccn-primary"
+                }
+              ],
+              "children": []
+            },
+            {
+              "key": "nccn-cardiac-none",
+              "kind": "group",
+              "title": {
+                "uk": "Моноклонального білка й підвищених вільних ланцюгів немає",
+                "en": "No monoclonal protein or raised free light chains"
+              },
+              "description": {
+                "uk": "МРТ підозріла: сцинтиграфія серця (пірофосфатна, 123I-MIBG чи 99mTc-DPD). Ступінь 0–1 — потрібен тканинний діагноз (біопсія серця чи іншого органа); ступінь 2–3 — лікувати як ATTR без біопсії. Якщо моноклонального білка немає й МРТ не підозріла — шукати інші причини хвороби серця.",
+                "en": "CMR suspicious: cardiac scintigraphy (pyrophosphate, 123I-MIBG or 99mTc-DPD). Grade 0–1 needs tissue diagnosis (cardiac or other organ biopsy); grade 2–3 is treated as ATTR without biopsy. If there is no monoclonal protein and CMR is not suspicious, look for other causes of heart disease."
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "nccn-staging",
+          "kind": "line",
+          "title": {
+            "uk": "Стадіювання (AMYL-A)",
+            "en": "Staging (AMYL-A)"
+          },
+          "description": {
+            "uk": "AL International Staging System (AL-ISS) замінила стадіювання Mayo 2004 і 2014. Чинники ризику: тропонін (cTnT ≥0,035 мкг/л, hs-cTnT ≥50 нг/л або cTnI ≥0,1 мкг/л); NT-proBNP ≥332 нг/л (або BNP ≥400 нг/л); GLS ≥−9 %. Стадія I — чинників немає; II — один; IIIA — два (NT-proBNP від 332 до <8500 нг/л або BNP 81 до <700 нг/л); IIIB — два чинники, NT-proBNP ≥8500 нг/л і hs-TnT ≥50 нг/л при GLS <−9 %; IIIC — три чинники (NT-proBNP ≥8500, hs-TnT ≥50, GLS ≥−9 %). Mayo 2012 (бал за кожний чинник): cTnT ≥0,025 мкг/л (hs-cTnT ≥40 нг/л або cTnI ≥0,1 мкг/л); NT-proBNP ≥1800 нг/л (BNP ≥400 нг/л); dFLC ≥18 мг/дл (180 мг/л). Стадії I–IV — 0, 1, 2 і 3 чинники (за Discussion медіана виживаності 94, 40, 14 і 6 міс.).",
+            "en": "The AL International Staging System (AL-ISS) replaced the Mayo 2004 and 2014 systems. Risk factors: troponin (cTnT 0.035 µg/L or more, hs-cTnT 50 ng/L or more, or cTnI 0.1 µg/L or more); NT-proBNP 332 ng/L or more (or BNP 400 ng/L or more); GLS −9% or higher (less negative). Stage I no factors; II one; IIIA two (NT-proBNP 332 to under 8500 ng/L or BNP 81 to under 700 ng/L); IIIB two factors, NT-proBNP 8500 ng/L or more and hs-TnT 50 ng/L or more with GLS below −9%; IIIC three factors (NT-proBNP 8500 or more, hs-TnT 50 or more, GLS −9% or higher). Mayo 2012 (one point per factor): cTnT 0.025 µg/L or more (hs-cTnT 40 ng/L or more, or cTnI 0.1 µg/L or more); NT-proBNP 1800 ng/L or more (BNP 400 ng/L or more); dFLC 18 mg/dL (180 mg/L) or more. Stages I to IV have 0, 1, 2 and 3 factors (the Discussion gives median survival 94, 40, 14 and 6 months)."
+          },
+          "steps": [
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Лікування (AMYL-B)",
+                "en": "Treatment (AMYL-B)"
+              },
+              "target": "nccn-primary"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Ураження органів і відповідь (AMYL-C, AMYL-D)",
+                "en": "Organ involvement and response (AMYL-C, AMYL-D)"
+              },
+              "target": "nccn-response"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "nccn-response",
+          "kind": "line",
+          "title": {
+            "uk": "Ураження органів і критерії відповіді (AMYL-C, AMYL-D)",
+            "en": "Organ involvement and response criteria (AMYL-C, AMYL-D)"
+          },
+          "description": {
+            "uk": "Ураження органів (консенсус): нирки — добовий білок >0,5 г, переважно альбумін; серце — товщина стінки за ехо >12 мм без іншої причини або NT-proBNP >332 нг/л без ниркової недостатності чи фібриляції передсердь (МРТ: глобальне субендокардіальне накопичення гадолінію — не частина консенсусу); печінка — розмір >15 см без серцевої недостатності або ЛФ >1,5 × ВМН; нерви — симетрична сенсомоторна полінейропатія нижніх кінцівок, вегетативні: порушення спорожнення шлунка, псевдообструкція, розлади сечовипускання; ШКТ і легені — біопсія при специфічних симптомах (легені — ще інтерстиціальний рентгенологічний патерн); мʼякі тканини — збільшення язика, артропатія, переміжна кульгавість, шкіра, міопатія, лімфовузли, синдром зап’ястного каналу. Гематологічна відповідь (dFLC = різниця між залученими й незалученими вільними ланцюгами): ПВ — нормалізація ВЛЛ і співвідношення, негативна імунофіксація сироватки й сечі; ДХЧВ — dFLC <40 мг/л; ЧВ — зниження dFLC >50 %; без відповіді — менше ЧВ. Прогресування: з ПВ — будь-який виявний М-білок чи аномальне співвідношення; з ЧВ — зростання М-білка сироватки на 50 % до >0,5 г/дл або сечі на 50 % до >200 мг/добу, чи ВЛЛ на 50 % до >100 мг/л. Базальний dFLC має бути ≥50 мг/л для оцінки ЧВ/ДХЧВ; при 20–<50 мг/л «низька відповідь» — dFLC <10 мг/л (прирівнюється до ДХЧВ), прогресування — dFLC ≥20 мг/л. Органна відповідь — серце: ПВ — NT-proBNP ≤350 нг/л чи BNP <80 нг/л; ДХЧВ — зниження >60 %; ЧВ — 31–60 %; без відповіді ≤30 %; прогресування — NT-proBNP/BNP >30 % і >300 нг/л (BNP >70 нг/л від надира), тропонін >33 %, ФВ −10 %. Нирки: ПВ — протеїнурія ≤200 мг/добу; ДХЧВ — зниження >60 %; ЧВ — 31–60 %; без відповіді ≤30 %; прогресування — зниження eGFR >25 %. Печінка: ПВ — ЛФ у межах норми (<2 × нижньої межі); ДХЧВ — зниження >60 % до рівня вище; ЧВ — 31–60 %; прогресування — ЛФ +50 % від найнижчого. Нерви: відповідь — покращення швидкості провідності (рідко); прогресування — за ЕМГ/швидкістю провідності. Світлові ланцюги нормалізуються раніше за органну відповідь.",
+            "en": "Organ involvement (consensus): kidney — 24-hour protein over 0.5 g, mainly albumin; heart — echo wall thickness over 12 mm with no other cause, or NT-proBNP over 332 ng/L without renal failure or atrial fibrillation (MRI global subendocardial gadolinium enhancement is not part of the consensus); liver — span over 15 cm without heart failure or ALP over 1.5 × ULN; nerve — symmetric lower-limb sensorimotor polyneuropathy, autonomic: gastric emptying disorder, pseudo-obstruction, voiding dysfunction; GI tract and lung — biopsy with specific symptoms (lung also an interstitial radiographic pattern); soft tissue — tongue enlargement, arthropathy, claudication, skin, myopathy, lymph nodes, carpal tunnel syndrome. Haematological response (dFLC = involved minus uninvolved free light chain): CR — normal FLC and ratio, negative serum and urine immunofixation; VGPR — dFLC under 40 mg/L; PR — dFLC fall over 50%; no response — less than PR. Progression: from CR — any detectable M protein or abnormal ratio; from PR — serum M protein up 50% to over 0.5 g/dL or urine up 50% to over 200 mg/day, or FLC up 50% to over 100 mg/L. Baseline dFLC must be 50 mg/L or more to judge PR/VGPR; at 20 to under 50 mg/L a «low-dFLC response» is dFLC under 10 mg/L (counts as VGPR), progression is dFLC 20 mg/L or more. Organ response — heart: CR — NT-proBNP 350 ng/L or less or BNP under 80 ng/L; VGPR — fall over 60%; PR — 31 to 60%; none 30% or less; progression — NT-proBNP/BNP over 30% and over 300 ng/L (BNP over 70 ng/L from nadir), troponin over 33%, EF −10%. Kidney: CR — proteinuria 200 mg/24 h or less; VGPR — fall over 60%; PR — 31 to 60%; none 30% or less; progression — eGFR fall over 25%. Liver: CR — ALP within 2 × lower limit; VGPR — fall over 60% to a nadir above that; PR — 31 to 60%; progression — ALP up 50% from the lowest. Nerve: response — better conduction velocity (rare); progression — by EMG or conduction velocity. Light chain normalisation typically precedes organ response."
+          },
+          "steps": [
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Лікування (AMYL-B)",
+                "en": "Treatment (AMYL-B)"
+              },
+              "target": "nccn-primary"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив або рефрактерність (AMYL-B 4)",
+                "en": "Relapsed or refractory (AMYL-B 4)"
+              },
+              "target": "nccn-relapse"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "nccn-primary",
+          "kind": "line",
+          "title": {
+            "uk": "Первинна терапія AL-амілоїдозу (AMYL-B 1–3 з 6)",
+            "en": "Primary therapy of SLCA (AMYL-B 1 to 3 of 6)"
+          },
+          "description": {
+            "uk": "Мета — повна гематологічна відповідь; бажано клінічне дослідження. Змінити терапію, якщо відповідь <ДХЧВ до 3-го циклу чи <ЧВ до 2-го, або немає ПВ і зберігається дисфункція органів наприкінці лікування. Якщо спершу не кандидат на ТГСК — переоцінити після початку терапії. Сприятливі стратегії залежать від нейропатії та стадії. Дексаметазон 20 мг щотижня можна розглянути при віці >70 років, ІМТ <18,5, гіперволемії, погано контрольованому діабеті чи попередній непереносимості стероїдів; циклофосфамід — не більш як 500 мг на тиждень. Бортезоміб: підшкірно, щотижневі схеми; знизити дозу чи відмінити при значущій нейропатії. Даратумумаб переважно підшкірно, в/в — якщо п/ш не переноситься; перед ним група крові й скринінг антитіл. Карфілзоміб — раз на тиждень (бажано) чи двічі, серцево-легенева токсичність. Леналідомід — старт 10–15 мг, не при вираженому ураженні серця чи вегетативних нервів, контроль функції нирок. При кардіальному амілоїдозі чи нефротичному синдромі на стероїдах — контроль перевантаження рідиною. Профілактика оперізувального герпесу при інгібіторах протеасом чи даратумумабі; скринінг на ВІЛ, гепатити B і C за показаннями. IgM-парапротеїн: при лімфоплазмоцитарному клоні лікувати як ВМ/ЛПЛ (настанова NCCN WM/LPL), при плазмоклітинному — за цією таблицею.",
+            "en": "The goal is a complete haematological response; a clinical trial is preferred. Modify therapy if the response is below VGPR by cycle 3 or below PR by cycle 2, or there is no CR and organ dysfunction persists at the end of treatment. If not an HCT candidate at first, reassess after starting therapy. The choice depends on neuropathy and stage. Dexamethasone 20 mg weekly may be used for age over 70, BMI below 18.5, hypervolaemia, poorly controlled diabetes or earlier steroid intolerance; cyclophosphamide is capped at 500 mg a week. Bortezomib: subcutaneous, weekly schedules; reduce or stop with significant neuropathy. Daratumumab mainly subcutaneous, IV if the subcutaneous form is not tolerated; type and screen first. Carfilzomib once weekly (preferred) or twice, cardiopulmonary toxicity. Lenalidomide — start 10 to 15 mg, not with advanced cardiac or autonomic nerve involvement, monitor renal function. With cardiac amyloidosis or nephrotic syndrome on steroids monitor volume overload. Herpes zoster prophylaxis with proteasome inhibitors or daratumumab; screen for HIV and hepatitis B and C as indicated. IgM paraprotein: treat a lymphoplasmacytic clone as WM/LPL (NCCN WM/LPL guideline), a plasma cell clone by this table."
+          },
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження — бажано",
+                "en": "Clinical trial — preferred"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "AL-амілоїдоз, повʼязаний з макроглобулінемією Вальденстрема — за настановою WM/LPL",
+                "en": "WM-related amyloidosis — see the WM/LPL guideline"
+              },
+              "notes": {
+                "uk": "У довіднику — сторінка «Макроглобулінемія Вальденстрема».",
+                "en": "In the catalogue — the Waldenström macroglobulinemia page."
+              }
+            },
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Найкраща підтримувальна терапія; трансплантація органа за показаннями",
+                "en": "Best supportive care; organ transplant as clinically indicated"
+              },
+              "notes": {
+                "uk": "NCCN відсилає до оглядів Maroun (Blood Res 2022) і Muchtar (Amyloid 2025).",
+                "en": "NCCN refers to the reviews by Maroun (Blood Res 2022) and Muchtar (Amyloid 2025)."
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "ТГСК: кандидати, виключення, доза мелфалану (AMYL-B 3)",
+                "en": "HCT: candidates, exclusions, melphalan dose (AMYL-B 3)"
+              },
+              "target": "nccn-hct"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Відповідь на терапію (AMYL-D)",
+                "en": "Response (AMYL-D)"
+              },
+              "target": "nccn-response"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив або рефрактерність (AMYL-B 4)",
+                "en": "Relapsed or refractory (AMYL-B 4)"
+              },
+              "target": "nccn-relapse"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-primary-nosn",
+              "kind": "group",
+              "title": {
+                "uk": "Без значущої нейропатії",
+                "en": "No significant neuropathy"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "dara-cybord-cycle-1-2",
+                  "notes": {
+                    "uk": "Бортезоміб + циклофосфамід + дексаметазон + даратумумаб (категорія 1); знизити чи відмінити бортезоміб при значущій нейропатії. NCCN розписує дози лише текстом; розклад — eviQ 4205",
+                    "en": "Bortezomib plus cyclophosphamide, dexamethasone and daratumumab (category 1); reduce or stop bortezomib if significant neuropathy develops. NCCN gives doses only in text; the schedule is eviQ 4205"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dara-cybord-cycle-3-6",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dara-amyloidosis-maintenance",
+                  "notes": {
+                    "uk": "У ANDROMEDA монотерапію даратумумабом давали як підтримку до 2 років",
+                    "en": "In ANDROMEDA single-agent daratumumab was given as maintenance for up to 2 years"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-al-hdm-asct",
+                  "notes": {
+                    "uk": "Автологічна ТГСК, якщо підходить: одноорганне ураження, <10 % плазматичних клітин, добрий функціональний стан",
+                    "en": "Autologous HCT if eligible: single-organ involvement, under 10% plasma cells, good performance status"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "cybord-amyloidosis",
+                  "notes": {
+                    "uk": "Також якщо даратумумаб недоступний; знизити чи відмінити бортезоміб при значущій нейропатії",
+                    "en": "Also if daratumumab is not available; reduce or stop bortezomib if significant neuropathy develops"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-al-bmdex",
+                  "notes": {
+                    "uk": "Якщо ТГСК не показана",
+                    "en": "If ineligible for HCT"
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "children": []
+            },
+            {
+              "key": "nccn-primary-sn",
+              "kind": "group",
+              "title": {
+                "uk": "Значуща нейропатія",
+                "en": "Significant neuropathy"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-al-cyd-dara",
+                  "notes": {
+                    "uk": "Можна додати бортезоміб у зниженій дозі залежно від нейропатії",
+                    "en": "Dose-reduced bortezomib may be added depending on the neuropathy"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-al-len-dex",
+                  "notes": {
+                    "uk": "Не при вираженому ураженні серця чи вегетативних нервів; старт 10–15 мг",
+                    "en": "Not with advanced cardiac or autonomic nerve involvement; start 10 to 15 mg"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-al-cfz-dex",
+                  "notes": {
+                    "uk": "З обережністю при ризику серцево-легеневої токсичності",
+                    "en": "With caution if at risk of cardiopulmonary toxicity"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "melphalan-dex-al",
+                  "notes": {
+                    "uk": "Якщо ТГСК не показана; протокол eviQ 1466 позначено як замінений",
+                    "en": "If ineligible for HCT; eviQ 1466 is marked superseded"
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "children": []
+            },
+            {
+              "key": "nccn-primary-adv",
+              "kind": "group",
+              "title": {
+                "uk": "Поширена стадія або ураження органів",
+                "en": "Advanced stage or organ involvement"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-al-dara-mono",
+                  "preference": "preferred"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "nccn-hct",
+          "kind": "line",
+          "title": {
+            "uk": "Автологічна ТГСК (AMYL-B 3 з 6)",
+            "en": "Autologous HCT (AMYL-B 3 of 6)"
+          },
+          "description": {
+            "uk": "ТГСК — для ретельно відібраних (одноорганне ураження, <10 % плазматичних клітин, добрий ПС), у центрі з досвідом при AL; бажано в клінічному дослідженні. Її можна відкласти, якщо індукція дала повну гематологічну відповідь. Перед ТГСК розглянути індукцію. Після — консолідація й підтримка не рекомендуються рутинно; при супутній ММ, ≥20 % плазматичних клітин чи високому ризику за FISH [del(17p), t(4;14), t(14;16), t(14;20), 1q+] можна подовжену терапію як при мієломі; консолідація — при ДХЧВ чи ПВ із персистуючою МЗХ без відповіді органа. Категоричні виключення: симптомні чи рефрактерні аритмії й плевральні випоти; декомпенсована серцева недостатність; рефрактерна ортостатична гіпотензія; дефіцит фактора X <25 % чи активна кровотеча; поширене ураження ШКТ із кровотечею чи її ризиком. Мелфалан 200 мг/м² — вік ≤65, серцева стадія I–II, eGFR >50 (усі критерії); 200 мг/м² після мультидисциплінарного обговорення (альтернатива — даратумумаб + бортезоміб) — вік >65, стадія II–III, eGFR 30–50; 140 мг/м² — eGFR <30 (діаліз — лише стабільний хронічний).",
+            "en": "HCT is for carefully selected patients (single-organ involvement, under 10% plasma cells, good performance status), at a centre experienced in AL; a clinical trial is encouraged. It can be deferred when induction gives a complete haematological response. Consider induction before HCT. Afterwards consolidation and maintenance are not routine; with concurrent MM, 20% or more plasma cells or high-risk FISH [del(17p), t(4;14), t(14;16), t(14;20), 1q gain] extended therapy as in myeloma may be considered; consolidation — with VGPR or CR and persistent MRD without organ response. Definite exclusions: symptomatic or refractory arrhythmias and pleural effusions; uncompensated heart failure; refractory orthostatic hypotension; factor X below 25% or active bleeding; extensive GI involvement with bleeding or risk of it. Melphalan 200 mg/m² — age up to 65, cardiac stage I–II, eGFR above 50 (all criteria); 200 mg/m² after a multidisciplinary discussion (alternative: daratumumab plus bortezomib) — age over 65, stage II–III, eGFR 30 to 50; 140 mg/m² — eGFR below 30 (dialysis only if stable chronic)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-al-hdm-asct",
+              "preference": "preferred"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "Збір і зберігання стовбурових клітин, якщо ТГСК відкладають",
+                "en": "Collect and store stem cells if HCT is deferred"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив (AMYL-B 4)",
+                "en": "Relapse (AMYL-B 4)"
+              },
+              "target": "nccn-relapse"
+            }
+          ],
+          "children": []
+        },
+        {
+          "key": "nccn-relapse",
+          "kind": "line",
+          "title": {
+            "uk": "Повторна терапія (AMYL-B 4 з 6)",
+            "en": "Therapy for previously treated disease (AMYL-B 4 of 6)"
+          },
+          "description": {
+            "uk": "Клінічних даних для вибору немає: залежить від попередньої терапії, побажань і токсичності. Розглянути повтор початкової терапії, особливо якщо рецидив через кілька років; тим, хто не отримував даратумумаб, радять схему з ним. Розглянути збір стовбурових клітин. Леналідомід — старт 10–15 мг. Белантамаб — регулярні огляди окуліста; елранатамаб і теклістамаб — розглянути профілактичний тоцилізумаб перед першою дозою (СВЦ). У рецидиві при t(11;14) — серйозно розглянути венетоклакс. Карфілзоміб — лише без серцевого ураження. Перший список у таблиці NCCN не має позначки рангу.",
+            "en": "There are no trial data to guide the choice: it depends on prior therapy, patient preference and toxicity. Consider repeating initial therapy, especially if the relapse comes after several years; a daratumumab-based regimen is advised for those who did not have it. Consider stem cell collection. Lenalidomide — start 10 to 15 mg. Belantamab — regular eye examinations; elranatamab and teclistamab — consider prophylactic tocilizumab before the first dose (CRS). At relapse with t(11;14) venetoclax deserves serious consideration. Carfilzomib — only without cardiac involvement. The first list in the NCCN table carries no rank label."
+          },
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "Збір стовбурових клітин, якщо доречно",
+                "en": "Consider collecting stem cells"
+              }
+            },
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Найкраща підтримувальна терапія",
+                "en": "Best supportive care"
+              }
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Рецидив WM-асоційованого амілоїдозу — настанова WM/LPL",
+                "en": "Relapsed WM-related amyloidosis — WM/LPL guideline"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Критерії відповіді й прогресування (AMYL-D)",
+                "en": "Response and progression criteria (AMYL-D)"
+              },
+              "target": "nccn-response"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-relapse-repeat",
+              "kind": "group",
+              "title": {
+                "uk": "Можна повторити початкову терапію, особливо при ремісії кілька років",
+                "en": "Initial therapy may be repeated, especially after several years of remission"
+              },
+              "description": {
+                "uk": "Без позначки рангу; для не лікованих даратумумабом — схема з ним.",
+                "en": "No rank label; for those not treated with daratumumab, a regimen with it."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-al-bortezomib",
+                  "notes": {
+                    "uk": "Бортезоміб; бортезоміб + дексаметазон ± даратумумаб",
+                    "en": "Bortezomib; bortezomib plus dexamethasone with or without daratumumab"
+                  }
+                },
+                {
+                  "regimen_id": "cybord-amyloidosis",
+                  "notes": {
+                    "uk": "Бортезоміб + циклофосфамід + дексаметазон ± даратумумаб (з даратумумабом — схеми нижче)",
+                    "en": "Bortezomib, cyclophosphamide and dexamethasone with or without daratumumab (with daratumumab — the regimens below)"
+                  }
+                },
+                {
+                  "regimen_id": "dara-cybord-cycle-1-2"
+                },
+                {
+                  "regimen_id": "dara-cybord-cycle-3-6"
+                },
+                {
+                  "regimen_id": "ref-al-ixa-cyd"
+                },
+                {
+                  "regimen_id": "ref-al-cyd-len"
+                },
+                {
+                  "regimen_id": "ref-al-daratumumab-relapse",
+                  "notes": {
+                    "uk": "Даратумумаб окремо",
+                    "en": "Daratumumab alone"
+                  }
+                },
+                {
+                  "regimen_id": "ref-al-isatuximab"
+                },
+                {
+                  "regimen_id": "ixa-dex-al"
+                },
+                {
+                  "regimen_id": "ref-al-ixa-len-dex"
+                },
+                {
+                  "regimen_id": "ref-al-len-dex",
+                  "notes": {
+                    "uk": "Леналідомід + дексаметазон ± даратумумаб",
+                    "en": "Lenalidomide plus dexamethasone with or without daratumumab"
+                  }
+                },
+                {
+                  "regimen_id": "pom-dex-al",
+                  "notes": {
+                    "uk": "Помалідомід + дексаметазон ± даратумумаб (дози — лише для схеми без даратумумабу)",
+                    "en": "Pomalidomide plus dexamethasone with or without daratumumab (doses only for the regimen without daratumumab)"
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "key": "nccn-relapse-ucc",
+              "kind": "group",
+              "title": {
+                "uk": "Корисні за певних обставин",
+                "en": "Useful in certain circumstances"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-al-belantamab",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "benda-dex-al",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-al-bmdex",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-al-elranatamab",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-al-hdm-asct",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "melphalan-dex-al",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-al-teclistamab",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-al-venetoclax",
+                  "notes": {
+                    "uk": "Окремо, з дексаметазоном чи з даратумумабом; лише при t(11;14)",
+                    "en": "Alone, with dexamethasone or with daratumumab; only with t(11;14)"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-al-cfz-dex",
+                  "notes": {
+                    "uk": "Карфілзоміб ± дексаметазон — лише при некардіальному амілоїдозі",
+                    "en": "Carfilzomib with or without dexamethasone — only in non-cardiac amyloidosis"
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "children": []
+            }
+          ]
         }
       ]
     }
