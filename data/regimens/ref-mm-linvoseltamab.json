@@ -1,0 +1,49 @@
+{
+  "id": "ref-mm-linvoseltamab",
+  "short_name": "Лінвосельтамаб",
+  "name": {
+    "uk": "Лінвосельтамаб (BCMA×CD3, рецидив після ≥3 ліній)",
+    "en": "Linvoseltamab (BCMA x CD3, relapse after 3+ lines)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Multiple Myeloma, version 1.2027 (MYEL-H, Discussion)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1445",
+      "version": "1.2027 від 09.09.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Біспецифічне антитіло до BCMA; бажана опція NCCN після ≥3 ліній, зокрема анти-CD38, інгібітор протеасом й IMiD.",
+      "en": "A BCMA-directed bispecific antibody; an NCCN preferred option after 3 or more lines including an anti-CD38 antibody, a proteasome inhibitor and an IMiD."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Лінвосельтамаб",
+          "en": "Linvoseltamab"
+        }
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "LINKER-MM1 (фаза II, 117 хворих після ≥3 ліній або потрійної терапії): частота відповіді 71%, половина — ≥ПВ; медіана тривалості відповіді 29,4 міс.",
+        "en": "LINKER-MM1 (phase II, 117 patients after 3+ lines): ORR 71%, half of them CR or better; median duration of response 29.4 months."
+      },
+      {
+        "uk": "Гематологічна й інфекційна токсичність 3–4 ступеня — 74%; СВЦ 1–2 ступеня — 46%, ІКАНС усіх ступенів — 7,7%.",
+        "en": "Grade 3-4 haematological and infectious toxicity 74%; grade 1-2 CRS 46%, ICANS of any grade 7.7%."
+      },
+      {
+        "uk": "Профілактика: імуноглобулін з початку лікування незалежно від рівня IgG, противірусна й пневмоцистна; можна розглянути профілактичний тоцилізумаб перед першою дозою.",
+        "en": "Prophylaxis: immunoglobulin from the start irrespective of the IgG level, antiviral and Pneumocystis cover; prophylactic tocilizumab may be considered before the first dose."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "unavailable"
+  }
+}

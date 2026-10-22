@@ -2061,6 +2061,1960 @@
           "regimen_id": "ref-mm-pomalidomide-maintenance"
         }
       ]
+    },
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 1.2027 (MYEL-1…MYEL-7, CNSM-1, MGCS-1…POEMS-4)",
+        "en": "NCCN pathways 1.2027 (MYEL-1 to MYEL-7, CNSM-1, MGCS-1 to POEMS-4)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN «Multiple Myeloma», версія 1.2027 від 09.09.2026: стадія/діагноз → лікування → далі. Усі рекомендації категорії 2A, якщо не вказано інше. Перелік схем NCCN «вибраний, не вичерпний»; у межах рангу вони йдуть за категорією доказів і за алфавітом. NCCN доз у схемах не наводить: доза береться з наявної схеми каталогу; якщо схеми немає — картка «без розрахунку».",
+        "en": "The NCCN \"Multiple Myeloma\" algorithm, version 1.2027 of 09.09.2026: stage/diagnosis → treatment → next. All recommendations are category 2A unless stated. The NCCN regimen lists are \"selected, not inclusive\"; within a rank they follow the category of evidence and then alphabetical order. NCCN gives no doses in its regimens: the dose comes from the catalog regimen; where there is none, the card is \"not calculated\"."
+      },
+      "children": [
+        {
+          "key": "nccn-workup",
+          "kind": "line",
+          "title": {
+            "uk": "Первинне обстеження, визначення й стратифікація (MYEL-1, MYEL-A, MYEL-B)",
+            "en": "Initial workup, definitions and risk stratification (MYEL-1, MYEL-A, MYEL-B)"
+          },
+          "description": {
+            "uk": "Обовʼязковий мінімум: анамнез і огляд, загальний аналіз крові з формулою, мазок або проточна цитометрія на циркулюючі плазматичні клітини, сечовина/креатинін, електроліти, печінкові проби, альбумін, кальцій, сечова кислота, ЛДГ, β2-мікроглобулін, кліренс креатиніну, кількісні імуноглобуліни, електрофорез і імунофіксація сироватки, добова сеча (білок, електрофорез, імунофіксація), вільні легкі ланцюги, ПЕТ-КТ усього тіла (бажано) або низькодозова КТ, одностороння аспіраційна й трепанобіопсія кісткового мозку, FISH на плазматичних клітинах, NGS на мутацію TP53, NT-proBNP (BNP, якщо немає), за можливості — вихідна клональність для майбутньої МЗХ за NGS. FISH: матеріал очищений від CD138-негативних клітин; шукають del(13), del(17p13), t(4;14), t(11;14), t(14;16), t(14;20), посилення 1q21 (gain — 3 копії, ампліфікація — ≥4 копій), del(1p). За обставин: МРТ усього тіла, якщо КТ/ПЕТ-КТ негативні (щоб відрізнити тліючу мієлому від ММ), біопсія тканини при підозрі на плазмоцитому, ехокардіографія, оцінка на AL-амілоїдоз, вʼязкість сироватки, HBV/HCV/ВІЛ, біопсія нирки при альбумінурії чи незясованій нирковій недостатності. Крихкість у літніх оцінюють окремо. Класифікація: солітарна плазмоцитома → «Солітарна плазмоцитома»; тліюча (безсимптомна) мієлома → «Тліюча мієлома»; симптомна ММ → «Первинна терапія»; моноклональні гамапатії клінічного значення, POEMS → «Споріднені стани»; позамедулярна мієлома й ПКЛ ведуться за алгоритмом ММ, ураження ЦНС — окремо. Визначення (MYEL-A). Тліюча мієлома: моноклональний білок у сироватці ≥3 г/дл або білок Бенс-Джонса ≥500 мг/добу та/або 10–59% клональних плазматичних клітин у кістковому мозку, без подій, що визначають мієлому, і без амілоїдозу. Симптомна ММ: ≥10% клональних плазматичних клітин або доведена біопсією кісткова чи позамедулярна плазмоцитома плюс одна подія, що визначає мієлому: кальцій на >0,25 ммоль/л вище норми чи >2,75 ммоль/л, кліренс креатиніну <40 мл/хв або креатинін >177 мкмоль/л, гемоглобін на >20 г/л нижче норми чи <100 г/л, ≥1 остеолітичне вогнище; або біомаркер: ≥60% клональних плазматичних клітин, відношення залучений/незалучений вільний легкий ланцюг ≥100, >1 вогнищевого ураження на МРТ. Солітарна плазмоцитома: доведене біопсією одиночне ураження кістки чи мʼяких тканин, нормальні скелетний огляд і МРТ (КТ) хребта й тазу, немає подій, що визначають мієлому, і немає клональних плазматичних клітин у кістковому мозку (при «мінімальному залученні» — <10%). Плазмоклітинний лейкоз: ≥5% плазматичних клітин у периферичній крові.",
+            "en": "Mandatory minimum: history and examination, CBC with differential, smear or flow cytometry for circulating plasma cells, urea/creatinine, electrolytes, liver tests, albumin, calcium, uric acid, LDH, beta-2 microglobulin, creatinine clearance, quantitative immunoglobulins, serum electrophoresis and immunofixation, 24-hour urine (protein, electrophoresis, immunofixation), free light chains, whole-body FDG-PET/CT (preferred) or low-dose CT, unilateral marrow aspirate and biopsy, plasma-cell FISH, NGS for TP53 mutation, NT-proBNP (BNP if unavailable), and where possible a baseline clonotype for later NGS MRD. FISH on CD138-enriched cells: del(13), del(17p13), t(4;14), t(11;14), t(14;16), t(14;20), 1q21 gain (3 copies) or amplification (4+ copies), del(1p). In certain circumstances: whole-body MRI if CT/PET-CT is negative (to tell smoldering myeloma from MM), tissue biopsy for a suspected plasmacytoma, echocardiography, evaluation for AL amyloidosis, serum viscosity, HBV/HCV/HIV, renal biopsy for albuminuria or unexplained renal failure. Frailty in older adults is assessed separately. Classification: solitary plasmacytoma → \"Solitary plasmacytoma\"; smoldering (asymptomatic) myeloma → \"Smoldering myeloma\"; symptomatic MM → \"Primary therapy\"; monoclonal gammopathies of clinical significance and POEMS → \"Related conditions\"; extramedullary myeloma and PCL follow the MM algorithm, CNS disease separately. Definitions (MYEL-A). Smoldering myeloma: serum monoclonal protein 3 g/dL or more or Bence Jones protein 500 mg/24 h or more and/or 10-59% clonal marrow plasma cells, no myeloma-defining event and no amyloidosis. Symptomatic MM: 10% or more clonal plasma cells or a biopsy-proven bone or extramedullary plasmacytoma plus one myeloma-defining event: calcium above ULN by more than 0.25 mmol/L or above 2.75 mmol/L, creatinine clearance below 40 mL/min or creatinine above 177 umol/L, haemoglobin more than 20 g/L below normal or below 100 g/L, one or more osteolytic lesions; or a biomarker: 60% or more clonal plasma cells, involved/uninvolved FLC ratio 100 or more, more than one focal lesion on MRI. Solitary plasmacytoma: a biopsy-proven single bone or soft-tissue lesion, normal skeletal survey and spine/pelvis MRI (or CT), no myeloma-defining events and no clonal marrow plasma cells (with minimal marrow involvement, below 10%). Plasma cell leukaemia: 5% or more plasma cells in the peripheral blood."
+          },
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Обстеження за списком MYEL-1, FISH, NGS TP53, візуалізація",
+                "en": "Workup per MYEL-1, FISH, TP53 NGS, imaging"
+              },
+              "notes": {
+                "uk": "Системну терапію не відкладають заради розширеної візуалізації, якщо діагноз активної мієломи зрозумілий.",
+                "en": "Systemic therapy is not delayed for advanced imaging when active myeloma is clear."
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Солітарна плазмоцитома (MYEL-2)",
+                "en": "Solitary plasmacytoma (MYEL-2)"
+              },
+              "target": "nccn-plasmacytoma"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Тліюча мієлома (MYEL-3)",
+                "en": "Smoldering myeloma (MYEL-3)"
+              },
+              "target": "nccn-smoldering"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Симптомна ММ: первинна терапія (MYEL-4)",
+                "en": "Symptomatic MM: primary therapy (MYEL-4)"
+              },
+              "target": "nccn-primary"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Моноклональні гамапатії клінічного значення, POEMS",
+                "en": "Monoclonal gammopathies of clinical significance, POEMS"
+              },
+              "target": "nccn-related"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Ураження ЦНС (CNSM-1)",
+                "en": "CNS involvement (CNSM-1)"
+              },
+              "target": "nccn-cns"
+            }
+          ]
+        },
+        {
+          "key": "nccn-staging",
+          "kind": "line",
+          "title": {
+            "uk": "Стадіювання й чинники ризику (MYEL-B)",
+            "en": "Staging and risk factors (MYEL-B)"
+          },
+          "description": {
+            "uk": "Стадіювання при вперше діагностованій ММ (MYEL-B). ISS: I — β2-мікроглобулін <3,5 мг/л й альбумін ≥3,5 г/дл; III — β2-мікроглобулін ≥5,5 мг/л; II — решта. R-ISS: I — ISS I, стандартний ризик за FISH, ЛДГ ≤ВМН; III — ISS III і або високий ризик за FISH [del(17p), t(4;14) чи t(14;16)], або ЛДГ >ВМН; II — решта. R2-ISS (бали): ISS III — 1,5; ISS II — 1; del(17p) — 1; t(4;14) — 1; 1q+ — 0,5; ЛДГ >ВМН — 1. Групи: низький 0; низький-проміжний 0,5–1; проміжний-високий 1,5–2,5; високий 3–5 балів. IMS-IMWG, високий ризик — будь-що з: del(17p) (>20% клітин) і/або мутація TP53; t(4;14), t(14;16) або t(14;20) разом із 1q+ та/або del(1p32); моноалельна del(1p32) разом із 1q+ або біалельна del(1p32); β2-мікроглобулін >5,5 мг/л при нормальному креатиніні (<1,2 мг/дл). Решта — стандартний ризик. Чинники високого ризику прогресування/рецидиву. Вперше діагностована: R-ISS III, позамедулярне ураження, циркулюючі плазматичні клітини, цитогенетика (del(1p32), t(4;14), t(14;16), t(14;20), del(17p)/моносомія 17/мутація TP53, посилення 1q21, MYC-транслокація; ізольована зміна 1q21 високим ризиком не вважається; ≥2 таких аномалій — дуже високий ризик), високий ризик за експресійним профілем, високий проліферативний індекс. Рецидив: за ≤2 років після початкової терапії з ТГСК і підтримкою, за ≤18 міс. після схеми без ТГСК, набуття 1q+ та/або del(17p)/TP53, позамедулярна хвороба чи циркулюючі плазматичні клітини під час рецидиву.",
+            "en": "Staging in newly diagnosed MM (MYEL-B). ISS: I — beta-2 microglobulin below 3.5 mg/L and albumin 3.5 g/dL or more; III — beta-2 microglobulin 5.5 mg/L or more; II — the rest. R-ISS: I — ISS I, standard-risk FISH, LDH at or below ULN; III — ISS III plus either high-risk FISH [del(17p), t(4;14) or t(14;16)] or LDH above ULN; II — the rest. R2-ISS (points): ISS III 1.5; ISS II 1; del(17p) 1; t(4;14) 1; 1q+ 0.5; LDH above ULN 1. Groups: low 0; low-intermediate 0.5-1; intermediate-high 1.5-2.5; high 3-5 points. IMS-IMWG high risk — any of: del(17p) (over 20% of cells) and/or TP53 mutation; t(4;14), t(14;16) or t(14;20) together with 1q+ and/or del(1p32); monoallelic del(1p32) with 1q+ or biallelic del(1p32); beta-2 microglobulin above 5.5 mg/L with normal creatinine (below 1.2 mg/dL). The rest is standard risk. Factors of high risk of progression/relapse. Newly diagnosed: R-ISS III, extramedullary disease, circulating plasma cells, cytogenetics (del(1p32), t(4;14), t(14;16), t(14;20), del(17p)/monosomy 17/TP53 mutation, 1q21 gain or amplification, MYC translocation; sole 1q21 change is not high risk; 2 or more such abnormalities mean very high risk), high-risk expression profile, high proliferation. Relapse: within 2 years of initial therapy with HCT and maintenance, within 18 months of non-transplant therapy, acquired 1q+ and/or del(17p)/TP53, extramedullary disease or circulating plasma cells at relapse."
+          },
+          "steps": [
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Симптомна ММ: первинна терапія (MYEL-4)",
+                "en": "Symptomatic MM: primary therapy (MYEL-4)"
+              },
+              "target": "nccn-primary"
+            }
+          ]
+        },
+        {
+          "key": "nccn-plasmacytoma",
+          "kind": "line",
+          "title": {
+            "uk": "Солітарна плазмоцитома (MYEL-2, MYEL-D)",
+            "en": "Solitary plasmacytoma (MYEL-2, MYEL-D)"
+          },
+          "description": {
+            "uk": "Променева терапія — основний метод. Планування за сучасними принципами (МРТ, КТ з контрастом чи ПЕТ-КТ для GTV/CTV/PTV, поле ISRT, за можливості IMRT/VMAT/протони); запас CTV щонайменше 0,5 см, до 2–3 см при ураженні довгих кісток; сусідні хребці без підозри на ураження не опромінюють. Доза 40–50 Гр по 1,8–2,0 Гр (20–25 фракцій) на уражену ділянку; для плазмоцитом <5 см прийнятна альтернатива 35–40 Гр. Операція — при структурній нестабільності чи неврологічному дефіциті від масового ефекту. Системна терапія може бути показана при високому ризику прогресування. Плазмоцитома при ≥10% плазматичних клітин у кістковому мозку вважається активною мієломою. Відповідь на ЛТ оцінюють не раніше ніж через 3 місяці. Ризик прогресування в ММ чи рецидиву — 14–38% за перші 3 роки (кістка — 35% за 2 роки, позамедулярна — 7%).",
+            "en": "Radiotherapy is the primary treatment. Plan with modern principles (MRI, contrast CT or PET-CT for GTV/CTV/PTV, ISRT field, IMRT/VMAT/protons when they spare organs at risk); CTV margin at least 0.5 cm, up to 2-3 cm for long bones; adjacent vertebrae without suspected involvement are not irradiated. Dose 40-50 Gy in 1.8-2.0 Gy fractions (20-25 fractions) to the involved site; for plasmacytomas under 5 cm 35-40 Gy is an acceptable alternative. Surgery for structural instability or neurological compromise from mass effect. Systemic therapy may be indicated when the risk of progression is high. A plasmacytoma with 10% or more marrow plasma cells is regarded as active myeloma. Response to RT is assessed at 3 months or later. Risk of progression to MM or relapse is 14-38% in the first 3 years (osseous 35% at 2 years, extramedullary 7%)."
+          },
+          "steps": [
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Променева терапія ± операція",
+                "en": "Radiotherapy ± surgery"
+              },
+              "notes": {
+                "uk": "ЛТ 40–50 Гр (20–25 фракцій); <5 см — 35–40 Гр. Операція — за нестабільності чи неврологічного дефіциту.",
+                "en": "RT 40-50 Gy (20-25 fractions); under 5 cm 35-40 Gy. Surgery for instability or neurological deficit."
+              }
+            },
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              }
+            },
+            {
+              "kind": "surveillance",
+              "column": "next",
+              "label": {
+                "uk": "Кожні 3–6 міс.: загальний аналіз крові, кальцій, креатинін, імуноглобуліни, електрофорез + імунофіксація, вільні легкі ланцюги, сеча — за потреби, кістковий мозок — за показаннями; візуалізація щороку ≥5 років тією ж методикою",
+                "en": "Every 3-6 months: CBC, calcium, creatinine, immunoglobulins, electrophoresis + immunofixation, free light chains, urine as needed, marrow as indicated; imaging yearly for at least 5 years with the same technique"
+              },
+              "notes": {
+                "uk": "Ближче стеження доцільне при клональних клітинах у кістковому мозку.",
+                "en": "Closer follow-up may be considered when clonal cells are present in the marrow."
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Прогресування або рецидив: повторне обстеження як при ММ (MYEL-4)",
+                "en": "Progression or relapse: restage with the myeloma workup (MYEL-4)"
+              },
+              "target": "nccn-primary"
+            }
+          ]
+        },
+        {
+          "key": "nccn-smoldering",
+          "kind": "line",
+          "title": {
+            "uk": "Тліюча (безсимптомна) мієлома (MYEL-3)",
+            "en": "Smoldering (asymptomatic) myeloma (MYEL-3)"
+          },
+          "description": {
+            "uk": "Ризик за критеріями Mayo 2018 (20/2/20): >20% плазматичних клітин у кістковому мозку, моноклональний білок >2 г/дл, відношення вільних легких ланцюгів >20. 0 чинників — низький ризик; 1 — проміжний; 2–3 — підвищений (високий). У когорті з 421 хворого медіана часу до прогресування становила 110, 68 і 29 міс.; у валідації (2004 хворих) ризик прогресування за 2 роки — 5–6%, 17–18% і 44–46%. Модель IMWG додає генетику (t(4;14), t(14;16), посилення 1q, del(13q)): 0 чинників — низький ризик (2-річний ризик 6%), 1 — низький-проміжний (23%), 2 — проміжний (46%), ≥3 — високий (63%). Ризик змінюється з часом, тому тактику переглядають. NCCN наполегливо радить включення в клінічні дослідження. Збір стовбурових клітин для майбутнього використання можна розглянути. Лікування — лише обраним хворим після спільного рішення з пацієнтом: даратумумаб (AQUILA, п/ш 3 роки: 5-річна ВБП 63,1% проти 40,8% при нагляді; перевага явна при високому ризику, ВР 0,36) або леналідомід (категорія 2B).",
+            "en": "Risk by the Mayo 2018 (20/2/20) criteria: over 20% marrow plasma cells, monoclonal protein over 2 g/dL, free light chain ratio over 20. 0 factors — low risk; 1 — intermediate; 2-3 — high. In a cohort of 421 patients median time to progression was 110, 68 and 29 months; in validation (2004 patients) the 2-year progression risk was 5-6%, 17-18% and 44-46%. The IMWG model adds genetics (t(4;14), t(14;16), 1q gain, del(13q)): 0 factors — low risk (2-year risk 6%), 1 — low-intermediate (23%), 2 — intermediate (46%), 3 or more — high (63%). Risk changes over time, so the strategy is reconsidered. NCCN strongly recommends clinical trials. Stem cell collection for future use may be considered. Treatment only for selected patients after shared decision-making: daratumumab (AQUILA, SC for 3 years: 5-year PFS 63.1% vs 40.8% on monitoring; clear benefit in high risk, HR 0.36) or lenalidomide (category 2B)."
+          },
+          "children": [
+            {
+              "key": "nccn-smo-low",
+              "kind": "group",
+              "title": {
+                "uk": "Низький ризик",
+                "en": "Low risk"
+              },
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Спостереження кожні 3–6 міс.",
+                    "en": "Observation every 3-6 months"
+                  },
+                  "category": "1",
+                  "notes": {
+                    "uk": "Кожні 3–6 міс.: загальний аналіз крові, креатинін, кальцій, імуноглобуліни, електрофорез + імунофіксація, вільні легкі ланцюги; кістковий мозок з FISH/NGS чи проточна цитометрія за показаннями; МРТ усього тіла, низькодозова КТ або ПЕТ-КТ щороку, бажано тією ж методикою.",
+                    "en": "Every 3-6 months: CBC, creatinine, calcium, immunoglobulins, electrophoresis + immunofixation, free light chains; marrow with FISH/NGS or flow as indicated; whole-body MRI, low-dose CT or PET-CT yearly, ideally with the same technique."
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-smo-high",
+              "kind": "group",
+              "title": {
+                "uk": "Високий ризик",
+                "en": "High risk"
+              },
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Спостереження кожні 3 міс. за показаннями",
+                    "en": "Observation every 3 months as indicated"
+                  },
+                  "preference": "other",
+                  "notes": {
+                    "uk": "Зростання показників — високий ризик, потрібен ближчий нагляд.",
+                    "en": "Rising parameters mean high risk and closer monitoring."
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Даратумумаб (обрані хворі)",
+                    "en": "Daratumumab (selected patients)"
+                  },
+                  "preference": "circumstances",
+                  "category": "1",
+                  "notes": {
+                    "uk": "AQUILA: п/ш даратумумаб 3 роки; доза — за листком-вкладкою.",
+                    "en": "AQUILA: SC daratumumab for 3 years; dose per the label."
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Леналідомід (обрані хворі)",
+                    "en": "Lenalidomide (selected patients)"
+                  },
+                  "preference": "circumstances",
+                  "category": "2b",
+                  "notes": {
+                    "uk": "Одноагентна терапія за даними PETHEMA (з дексаметазоном) і двох інших досліджень; ≥3 ступінь НЯ — 41%.",
+                    "en": "Single agent, supported by PETHEMA (with dexamethasone) and another trial; grade 3-4 adverse events 41%."
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Прогресування в симптомну ММ (MYEL-4)",
+                    "en": "Progression to symptomatic myeloma (MYEL-4)"
+                  },
+                  "target": "nccn-primary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-primary",
+          "kind": "line",
+          "title": {
+            "uk": "Первинна терапія симптомної ММ (MYEL-4, MYEL-G, MYEL-H)",
+            "en": "Primary therapy of symptomatic MM (MYEL-4, MYEL-G, MYEL-H)"
+          },
+          "description": {
+            "uk": "Починають лікування мієломи, кісткову терапію (бісфосфонат — категорія 1 — або деносумаб) і підтримувальну терапію; після старту оцінюють кандидатуру на ТГСК (скеровують у трансплантаційний центр, збирають стовбурові клітини) і повторно — з покращенням стану. Ниркова недостатність і похилий вік не є протипоказаннями до ТГСК. Категорія 1: автологічна ТГСК одразу після первинної терапії; збір і відтермінування ТГСК також прийнятні (IFM 2009, DETERMINATION: відтермінування не погіршує загальної виживаності). У МЗХ-негативних після Isa-KRd ТГСК не дала додаткової користі (MIDAS). Загальні принципи (MYEL-G): не відкладати терапію заради візуалізації; дозу коригувати за віком і функціональним станом; дексаметазон скасовувати якомога раніше; оцінка крихкості (калькулятор IMWG). Особливі популяції: у темношкірих частіше транслокації 14q (t(11;14), t(14;16), t(14;20)) і рідше del(17p) та 1q+; більше анемії, гіперкальціємії, ниркової дисфункції й позамедулярної хвороби; гіперпігментація від IMiD і вищий ризик СВЦ при CAR-T; нейтропенія при Duffy-null — не привід знижувати дози. Моніторинг у ході терапії: загальний аналіз крові з формулою й біохімія, кількісні імуноглобуліни, електрофорез і вільні легкі ланцюги (імунофіксація — лише якщо електрофорез негативний), візуалізація щороку чи за показаннями, кістковий мозок при рецидиві, МЗХ — за спільним рішенням.",
+            "en": "Start myeloma therapy, bone-targeting treatment (bisphosphonate — category 1 — or denosumab) and supportive care; after the start assess HCT candidacy (refer to a transplant centre, collect stem cells) and reassess as the patient improves. Renal impairment and older age are not contraindications to HCT. Category 1: autologous HCT right after primary therapy; collecting and deferring HCT is also acceptable (IFM 2009, DETERMINATION: deferral does not worsen overall survival). In patients MRD negative after Isa-KRd HCT added no benefit (MIDAS). General principles (MYEL-G): do not delay therapy for imaging; adjust dose for age and functional status; stop dexamethasone as early as possible; assess frailty (IMWG calculator). Special populations: Black patients have more 14q translocations (t(11;14), t(14;16), t(14;20)) and fewer del(17p) and 1q+; more anaemia, hypercalcaemia, renal dysfunction and extramedullary disease; IMiD hyperpigmentation and a higher CRS risk with CAR-T; neutropenia in Duffy-null is not a reason to reduce doses. Monitoring on therapy: CBC with differential and chemistry, quantitative immunoglobulins, electrophoresis and free light chains (immunofixation only if electrophoresis is negative), imaging yearly or as indicated, marrow at relapse, MRD by shared decision."
+          },
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "Оцінка кандидатури на ТГСК; збір стовбурових клітин (на 2 ТГСК за потреби)",
+                "en": "HCT candidacy assessment; stem cell collection (for 2 HCTs if needed)"
+              },
+              "notes": {
+                "uk": "Скерувати в трансплантаційний центр; збір клітин у перші 6 циклів.",
+                "en": "Refer to a transplant centre; collect within the first 6 cycles."
+              }
+            },
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Кісткова терапія й підтримувальна терапія",
+                "en": "Bone-targeting and supportive care"
+              },
+              "notes": {
+                "uk": "Див. розділ про супровід у статті NCCN.",
+                "en": "See the supportive care section of the NCCN article."
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Відповідь на терапію, ТГСК і підтримка (MYEL-5)",
+                "en": "Response, HCT and maintenance (MYEL-5)"
+              },
+              "target": "nccn-hct-maint"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив або прогресування (MYEL-6)",
+                "en": "Relapse or progression (MYEL-6)"
+              },
+              "target": "nccn-relapse"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-primary-hct",
+              "kind": "group",
+              "title": {
+                "uk": "Кандидати на ТГСК або відкладена ТГСК (MYEL-H, 1 з 6)",
+                "en": "HCT candidates or deferred HCT (MYEL-H, 1 of 6)"
+              },
+              "description": {
+                "uk": "Бажані — чотирикомпонентні схеми. Мелфалан і нітрозосечовини не застосовують до збору клітин; збір краще в межах перших 6 циклів, до тривалої дії леналідоміду й даратумумабу (оптимально ≤4 цикли індукції); збирати клітин на дві ТГСК, якщо розглядають тандем, повтор чи підсилення після клітинної терапії. Перелік обраний, не вичерпний; у межах рангу — за категорією доказів і за алфавітом. Бортезоміб п/ш — бажаний шлях, щотижневий розклад бажаний; карфілзоміб — раз чи двічі на тиждень; даратумумаб бажано п/ш; ізатуксимаб — п/ш фіксованою дозою (бажано) або в/в. Стероїди слід зменшувати при плато відповіді чи токсичності. Бортезоміб чи карфілзоміб можна замінити іксазомібом лише в окремих хворих (непереносимість, логістика). VCd, VCd + даратумумаб, KCd — варіанти при нирковій недостатності й/або нейропатії (після покращення функції нирок можна перейти на Dara-VRd); VTD-PACE — лише для агресивної ММ.",
+                "en": "Four-drug regimens are preferred. Melphalan and nitrosoureas are avoided before collection; collect within the first 6 cycles, before prolonged lenalidomide and daratumumab (optimally 4 or fewer induction cycles); collect for two HCTs if tandem, repeat or a boost after cell therapy is considered. The list is selected, not exhaustive; within a rank by category of evidence and alphabetically. SC bortezomib is the preferred route, weekly dosing preferred; carfilzomib once or twice weekly; daratumumab preferably SC; isatuximab SC as a fixed dose (preferred) or IV. Steroids are reduced with a response plateau or toxicity. Bortezomib or carfilzomib may be replaced by ixazomib only in selected patients (intolerance, logistics). VCd, VCd + daratumumab and KCd are options in renal insufficiency and/or neuropathy (switch to Dara-VRd once renal function improves); VTD-PACE only for aggressive MM."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "dvrd-cycle-1-2",
+                  "notes": {
+                    "uk": "Бажана: даратумумаб + VRd",
+                    "en": "Preferred: daratumumab + VRd"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dvrd-cycle-3-8",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dvrd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-isa-vrd",
+                  "notes": {
+                    "uk": "Бажана: ізатуксимаб + VRd",
+                    "en": "Preferred: isatuximab + VRd"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-isa-krd",
+                  "notes": {
+                    "uk": "Інша рекомендована: KRd + ізатуксимаб",
+                    "en": "Other recommended: KRd + isatuximab"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-dara-krd-master",
+                  "notes": {
+                    "uk": "Інша рекомендована: KRd + даратумумаб (дані MASTER та ін.)",
+                    "en": "Other recommended: KRd + daratumumab (MASTER and others)"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "vcd",
+                  "notes": {
+                    "uk": "Ниркова недостатність і/або нейропатія",
+                    "en": "Renal insufficiency and/or neuropathy"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "dara-vcd-cycle-1",
+                  "notes": {
+                    "uk": "Ниркова недостатність і/або нейропатія; перехід на Dara-VRd після покращення",
+                    "en": "Renal insufficiency and/or neuropathy; switch to Dara-VRd once improved"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "dara-vcd-cycle-2",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "dara-vcd",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mm-dara-cvrd-optimum",
+                  "notes": {
+                    "uk": "VCRd + даратумумаб: для високого ризику й ПКЛ",
+                    "en": "Bortezomib/cyclophosphamide/lenalidomide/dexamethasone + daratumumab: high risk and PCL"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "vrd",
+                  "notes": {
+                    "uk": "Перенесено з «інших рекомендованих» у версії 1.2027",
+                    "en": "Moved from other recommended in version 1.2027"
+                  },
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "krd-cycle-1",
+                  "notes": {
+                    "uk": "Перенесено з «інших рекомендованих» у версії 1.2027",
+                    "en": "Moved from other recommended in version 1.2027"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "krd",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "krd-cycle-13-18",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "kcd",
+                  "notes": {
+                    "uk": "Ниркова недостатність і/або нейропатія",
+                    "en": "Renal insufficiency and/or neuropathy"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "vtd-pace",
+                  "notes": {
+                    "uk": "Лише для агресивної ММ",
+                    "en": "Reserved for aggressive MM"
+                  },
+                  "preference": "circumstances"
+                }
+              ]
+            },
+            {
+              "key": "nccn-primary-nohct",
+              "kind": "group",
+              "title": {
+                "uk": "ТГСК не показана (MYEL-H, 2 з 6)",
+                "en": "HCT not indicated (MYEL-H, 2 of 6)"
+              },
+              "description": {
+                "uk": "Первинну терапію зазвичай продовжують до прогресування, змінюючи (дозу й тривалість) за потреби. Бажані чотирикомпонентні схеми; за функціональним станом можна почати з 2–3 препаратів і додавати решту з покращенням. Dara-VRd чи Isa-VRd — для віком <80 років без крихкості; щотижневий бортезоміб зменшує нейропатію. Dara-Rd: у крихких літніх — схема зі скороченим дексаметазоном (IFM2017-03: ВБП 53,4 проти 22,5 міс.). Доцільно рано припинити дексаметазон у літніх; у крихких без користі довго застосовувати високі дози — тоді знижують до 20 мг на тиждень і припиняють при плато чи токсичності. Ізатуксимаб + KRd для нетрансплантаційних — лише при високому цитогенетичному ризику (категорія 2B, екстраполяція).",
+                "en": "Primary therapy is usually continued until progression, modified (dose and duration) as needed. Four-drug regimens preferred; depending on functional status start with 2-3 drugs and add the rest as the patient improves. Dara-VRd or Isa-VRd for those under 80 and not frail; weekly bortezomib reduces neuropathy. Dara-Rd: in frail older patients a dexamethasone-sparing schedule (IFM2017-03: PFS 53.4 vs 22.5 months). Consider stopping dexamethasone early in older patients; high doses are not worth continuing in frail patients — reduce to 20 mg weekly and stop on a response plateau or toxicity. Isa-KRd for non-transplant patients only with high-risk cytogenetics (category 2B, extrapolation)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "dvrd-cycle-1-2",
+                  "notes": {
+                    "uk": "Бажана (<80 років, не крихкі): даратумумаб + VRd",
+                    "en": "Preferred (under 80, not frail): daratumumab + VRd"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dvrd-cycle-3-8",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dvrd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-isa-vrd",
+                  "notes": {
+                    "uk": "Бажана (<80 років, не крихкі): ізатуксимаб + VRd",
+                    "en": "Preferred (under 80, not frail): isatuximab + VRd"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "drd-sc-cycle-1-2",
+                  "notes": {
+                    "uk": "Бажана: даратумумаб + Rd (п/ш)",
+                    "en": "Preferred: daratumumab + Rd (SC)"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "drd-sc-cycle-3-6",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "drd-sc",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "vrd",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "krd-cycle-1",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "krd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "krd-cycle-13-18",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-mm-isa-rd",
+                  "notes": {
+                    "uk": "Варіант при периферичній нейропатії",
+                    "en": "An option in peripheral neuropathy"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "rd",
+                  "notes": {
+                    "uk": "Rd з низькою дозою дексаметазону, безперервно (FIRST)",
+                    "en": "Rd with low-dose dexamethasone, continuous (FIRST)"
+                  },
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "vcd",
+                  "notes": {
+                    "uk": "Ниркова недостатність або немає доступу до IMiD-комбінації",
+                    "en": "Renal insufficiency or no access to an IMiD combination"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "bortezomib-mono",
+                  "notes": {
+                    "uk": "Розклад NSSG MM.4 (21 день) — він складений саме для Vd",
+                    "en": "NSSG MM.4 schedule (21 days), written for Vd"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "rvd-lite-induction",
+                  "notes": {
+                    "uk": "Для крихких хворих",
+                    "en": "For frail patients"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "rvd-lite-consolidation",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "kcd",
+                  "notes": {
+                    "uk": "Ниркова недостатність і/або нейропатія",
+                    "en": "Renal insufficiency and/or neuropathy"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "dara-vcd-cycle-1",
+                  "notes": {
+                    "uk": "Ниркова недостатність чи гостра ниркова травма; перехід на Dara-VRd після покращення",
+                    "en": "Renal insufficiency or AKI; switch to Dara-VRd once improved"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "dara-vcd-cycle-2",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "dara-vcd",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mm-isa-krd",
+                  "notes": {
+                    "uk": "Лише при високому цитогенетичному ризику",
+                    "en": "Only with high-risk cytogenetics"
+                  },
+                  "preference": "circumstances",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "ird",
+                  "notes": {
+                    "uk": "Пероральна схема, коли поїздки обмежені",
+                    "en": "All-oral option when travel is limited"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "crd",
+                  "preference": "circumstances"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-hct-maint",
+          "kind": "line",
+          "title": {
+            "uk": "Відповідь, ТГСК і підтримувальна терапія (MYEL-5, MYEL-H)",
+            "en": "Response, HCT and maintenance (MYEL-5, MYEL-H)"
+          },
+          "description": {
+            "uk": "Відповідь оцінюють за IMWG (див. статтю NCCN); «відповідь чи стабільна хвороба» як гілка зникла, стабільна хвороба більше не показання до ТГСК окремо. ПЕТ-КТ усього тіла — приблизно на 100-й день після автологічної ТГСК; МЗХ — після індукції, після ТГСК чи CAR-T (через 100 днів/3 міс.) і за змінами терапії, далі щороку. Кандидатам після відповіді — автологічна ТГСК (категорія 1) і підтримка (категорія 1). Тандемна чи алогенна ТГСК — лише за певних обставин при високому ризику прогресування/рецидиву, далі підтримка. Не кандидатам — безперервна терапія чи підтримка. Тривалість лікування збалансовують з токсичністю, глибиною відповіді й станом хвороби. Двокомпонентна підтримка рекомендована при високому ризику. Леналідомід після ТГСК підвищує ризик вторинних пухлин — користь і ризик обговорюють із пацієнтом. При підтримці даратумумабом після ≥2 років, ≥ПВ і стійкої МЗХ-негативності ≥12 міс. (PERSEUS) даратумумаб припиняють, леналідомід продовжують.",
+            "en": "Response is assessed by IMWG (see the NCCN article); \"response or stable disease\" is no longer a branch, and stable disease alone is no longer an indication for HCT. Whole-body PET-CT around day 100 after autologous HCT; MRD after induction, after HCT or CAR-T (100 days/3 months), on treatment change, then yearly. Candidates after response: autologous HCT (category 1) and maintenance (category 1). Tandem or allogeneic HCT only in certain circumstances with a high risk of progression/relapse, then maintenance. Non-candidates: continuous therapy or maintenance. The length of therapy is balanced against toxicity, depth of response and disease status. Two-drug maintenance is recommended in high risk. Lenalidomide after HCT raises the risk of second cancers — benefit and risk are discussed with the patient. With daratumumab maintenance, after 2 years or more, CR or better and sustained MRD negativity for 12 months or more (PERSEUS), daratumumab is stopped and lenalidomide continued."
+          },
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "Автологічна ТГСК (категорія 1)",
+                "en": "Autologous HCT (category 1)"
+              },
+              "category": "1",
+              "notes": {
+                "uk": "Прямо після первинної терапії або відтермінована після збору клітин; повтор ТГСК при рецидиві — якщо тривала відповідь на першу (мінімум 2–3 роки).",
+                "en": "Right after primary therapy or deferred after collection; a repeat HCT at relapse if the response to the first was long (2-3 years at minimum)."
+              }
+            },
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "Тандемна або алогенна ТГСК",
+                "en": "Tandem or allogeneic HCT"
+              },
+              "preference": "circumstances",
+              "notes": {
+                "uk": "Лише при високому ризику прогресування/рецидиву; тандем — друга ТГСК у межах 6 міс.; алогенна — переважно в дослідженні.",
+                "en": "Only with a high risk of progression/relapse; tandem is a second HCT within 6 months; allogeneic mainly in trials."
+              }
+            },
+            {
+              "kind": "surveillance",
+              "column": "treatment",
+              "label": {
+                "uk": "Аналізи й візуалізація як після первинної терапії; МЗХ за рішенням",
+                "en": "Tests and imaging as after primary therapy; MRD by decision"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив або прогресування (MYEL-6)",
+                "en": "Relapse or progression (MYEL-6)"
+              },
+              "target": "nccn-relapse"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-maint",
+              "kind": "group",
+              "title": {
+                "uk": "Підтримувальна терапія (MYEL-H, 1 з 6)",
+                "en": "Maintenance (MYEL-H, 1 of 6)"
+              },
+              "description": {
+                "uk": "Для кандидатів на ТГСК: леналідомід — бажаний (категорія 1); K+R — інша рекомендована (категорія 1, FORTE; ATLAS показав перевагу KRd над R); R + даратумумаб — інша рекомендована (GRIFFIN, PERSEUS, AURIGA — МЗХ-негативність 50,5% проти 18,8% при R); за певних обставин — V ± R (категорія 1; при непереносимості леналідоміду чи високому ризику), даратумумаб (CASSIOPEIA), іксазоміб (категорія 2B; TOURMALINE-MM3, MM4).",
+                "en": "For HCT candidates: lenalidomide preferred (category 1); K+R other recommended (category 1, FORTE; ATLAS showed KRd over R); R + daratumumab other recommended (GRIFFIN, PERSEUS, AURIGA — MRD negativity 50.5% vs 18.8% with R); in certain circumstances V ± R (category 1; lenalidomide intolerance or high risk), daratumumab (CASSIOPEIA), ixazomib (category 2B; TOURMALINE-MM3, MM4)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "lenalidomide-maintenance",
+                  "notes": {
+                    "uk": "Бажана",
+                    "en": "Preferred"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "lenalidomide-maintenance-continuous",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "kr-maintenance",
+                  "notes": {
+                    "uk": "Карфілзоміб + леналідомід (FORTE)",
+                    "en": "Carfilzomib + lenalidomide (FORTE)"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "daratumumab-sc-maintenance",
+                  "notes": {
+                    "uk": "Даратумумаб п/ш у поєднанні з леналідомідом (GRIFFIN, PERSEUS, AURIGA); леналідомід — зі схеми підтримки леналідоміду. Окремо даратумумаб (CASSIOPEIA, категорія 1) — за певних обставин",
+                    "en": "SC daratumumab together with lenalidomide (GRIFFIN, PERSEUS, AURIGA); lenalidomide from the lenalidomide maintenance regimen. Daratumumab alone (CASSIOPEIA, category 1) is for certain circumstances"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-mm-bortezomib-maintenance",
+                  "notes": {
+                    "uk": "Бортезоміб ± леналідомід",
+                    "en": "Bortezomib ± lenalidomide"
+                  },
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ixazomib-maintenance-cycle-1-4",
+                  "preference": "circumstances",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "ixazomib-maintenance",
+                  "preference": "circumstances",
+                  "category": "2b"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-relapse",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив і рефрактерність після 1–3 ліній (MYEL-6, MYEL-H 3–4)",
+            "en": "Relapse and refractory disease after 1-3 lines (MYEL-6, MYEL-H 3-4)"
+          },
+          "description": {
+            "uk": "Рефрактерність — прогресування на терапії або протягом 60 днів після введення препарату. Нову потрійну схему краще будувати на препаратах і класах, які пацієнт не отримував або не отримував ≥6 міс.; при рефрактерності до препарату з дуплетного ядра — вибирати трійку без нього. Схему можна повторити, якщо рецидив через ≥6 міс. після її завершення. Алкілувальні агенти (бендамустин) погіршують збір Т-клітин для CAR-T. Автологічну ТГСК розглядають, якщо її не було чи була тривала відповідь на першу. Усіх хворих при першому рецидиві слід скерувати до центру CAR-T і до паліативної допомоги; на кожній оцінці обговорюють побажання пацієнта. Стратегія: рефрактерна до леналідоміду й чутлива до анти-CD38 і ІП — анти-CD38 + ІП + помалідомід або схеми з белантамабом; рефрактерна до анти-CD38, чутлива до леналідоміду й ІП — IMiD + ІП без анти-CD38; рефрактерна до анти-CD38, леналідоміду й бортезомібу — схеми з помалідомідом і/або карфілзомібом без анти-CD38; чутлива до всіх трьох — усі варіанти зі списків 3 і 4. При IgG <400 мг/дл розглянути заміну імуноглобуліну (від IgG віднімають М-градієнт). Для CAR-T/біспецифічних — IVIG з початку лікування, профілактика VZV/HSV, пневмоцистна, протигрибкова при АНК <500, скринінг HBV/CMV. Увага до змін версії 1.2027: схеми VPd, IPd, Pd + елотузумаб перенесені з «бажаних» в «інші рекомендовані»; Pd + ізатуксимаб і Pd + даратумумаб лишились бажаними; з'явилися комбінації з талкветамабом, іберомідом і белантамабом.",
+            "en": "Refractory means progression on or within 60 days of the drug. A new triplet should preferably be built on drugs and classes not received, or not received for 6 months or more; with refractoriness to the drug in the doublet backbone choose a triplet without it. A regimen may be repeated if relapse is 6 or more months after it ended. Alkylating agents (bendamustine) impair T-cell collection for CAR-T. Autologous HCT is considered if none was done or the response to the first was long. All patients should be referred at first relapse to a CAR-T centre and to palliative care; preferences are revisited at each reassessment. Strategy: lenalidomide-refractory and anti-CD38/PI-sensitive — anti-CD38 + PI + pomalidomide or belantamab regimens; anti-CD38-refractory, lenalidomide/PI-sensitive — IMiD + PI without anti-CD38; refractory to anti-CD38, lenalidomide and bortezomib — pomalidomide and/or carfilzomib regimens without anti-CD38; sensitive to all three — all options of pages 3 and 4. With IgG below 400 mg/dL consider immunoglobulin replacement (subtract the M spike from IgG). For CAR-T/bispecifics — IVIG from the start, VZV/HSV prophylaxis, Pneumocystis, antifungal at ANC below 500, HBV/CMV screening. Changes in version 1.2027: VPd, IPd and Pd + elotuzumab moved from preferred to other recommended; Isa-Pd and Dara-Pd remain preferred; talquetamab, iberdomide and belantamab combinations are new."
+          },
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              }
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Оцінка рефрактерності (анти-CD38, леналідомід, бортезоміб) і скерування до центру CAR-T",
+                "en": "Refractoriness assessment (anti-CD38, lenalidomide, bortezomib) and referral to a CAR-T centre"
+              }
+            },
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Паліативна допомога й підтримувальна терапія за потреби",
+                "en": "Palliative and supportive care as needed"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Після ≥3 ліній (MYEL-7)",
+                "en": "After 3 or more lines (MYEL-7)"
+              },
+              "target": "nccn-late"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-rel-tcr",
+              "kind": "group",
+              "title": {
+                "uk": "Т-клітинна переадресація — бажана (MYEL-H 3 з 6)",
+                "en": "T-cell redirection — preferred (MYEL-H 3 of 6)"
+              },
+              "description": {
+                "uk": "Талкветамаб можна розглянути як місток до BCMA CAR-T; оптимальна послідовність BCMA-терапій невідома; профілактичний тоцилізумаб перед першою дозою можна розглянути.",
+                "en": "Talquetamab may be a bridge to BCMA CAR-T; the optimal sequence of BCMA therapies is unknown; prophylactic tocilizumab before the first dose may be considered."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-mm-car-t",
+                  "notes": {
+                    "uk": "Цильтакабтаген аутолейцел (CARTITUDE-4: після 1 лінії з IMiD і ІП та рефрактерності до леналідоміду; ЗВ 30 міс. 76,4% проти 63,8%) і ідекабтаген віклеуцел (KarMMa-3: після 2 ліній з IMiD, анти-CD38 і ІП)",
+                    "en": "Ciltacabtagene autoleucel (CARTITUDE-4: after 1 line with IMiD and PI and lenalidomide-refractory; 30-month OS 76.4% vs 63.8%) and idecabtagene vicleucel (KarMMa-3: after 2 lines with IMiD, anti-CD38 and PI)"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-teclistamab",
+                  "notes": {
+                    "uk": "Теклістамаб ± даратумумаб (анти-BCMA)",
+                    "en": "Teclistamab ± daratumumab (anti-BCMA)"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rel-cd38",
+              "kind": "group",
+              "title": {
+                "uk": "Рефрактерна до анти-CD38",
+                "en": "Anti-CD38-refractory"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "krd-cycle-1",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "krd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "krd-cycle-13-18",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-kpd-weekly",
+                  "notes": {
+                    "uk": "KPd: NCCN не уточнює розклад; наявна схема — щотижневий карфілзоміб (SELECT)",
+                    "en": "KPd: NCCN gives no schedule; the catalog card is weekly carfilzomib (SELECT)"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rel-bort",
+              "kind": "group",
+              "title": {
+                "uk": "Рефрактерна до бортезомібу",
+                "en": "Bortezomib-refractory"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "krd-cycle-1",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "krd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "krd-cycle-13-18",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-dkd",
+                  "notes": {
+                    "uk": "Kd + даратумумаб (CANDOR)",
+                    "en": "Kd + daratumumab (CANDOR)"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-kd-cycle-1",
+                  "notes": {
+                    "uk": "Kd + ізатуксимаб (IKEMA: ВБП 35,7 проти 19,15 міс.)",
+                    "en": "Kd + isatuximab (IKEMA: PFS 35.7 vs 19.15 months)"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-kd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "drd-sc-cycle-1-2",
+                  "notes": {
+                    "uk": "Rd + даратумумаб (POLLUX)",
+                    "en": "Rd + daratumumab (POLLUX)"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "drd-sc-cycle-3-6",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "drd-sc",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-isa-rd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dpd-cycle-1-2",
+                  "notes": {
+                    "uk": "Pd + даратумумаб (APOLLO: ВБП 12,4 проти 6,9 міс.)",
+                    "en": "Pd + daratumumab (APOLLO: PFS 12.4 vs 6.9 months)"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dpd-cycle-3-6",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dpd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-pd-cycle-1",
+                  "notes": {
+                    "uk": "Pd + ізатуксимаб (ICARIA-MM)",
+                    "en": "Pd + isatuximab (ICARIA-MM)"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-pd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-kpd-weekly",
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rel-len",
+              "kind": "group",
+              "title": {
+                "uk": "Рефрактерна до леналідоміду",
+                "en": "Lenalidomide-refractory"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-mm-belantamab",
+                  "notes": {
+                    "uk": "Vd + белантамаб мафодотин (DREAMM-7: ВБП 36,6 проти 13,4 міс.; очна токсичність 79% — регулярні огляди окуліста)",
+                    "en": "Vd + belantamab mafodotin (DREAMM-7: PFS 36.6 vs 13.4 months; ocular events 79% — regular eye exams)"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dvd-cycle-1-3",
+                  "notes": {
+                    "uk": "Vd + даратумумаб (CASTOR)",
+                    "en": "Vd + daratumumab (CASTOR)"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dvd-cycle-4-8",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dvd-weekly-cycle-1-3",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dvd-weekly-cycle-4-8",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-dkd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-kd-cycle-1",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-kd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dpd-cycle-1-2",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dpd-cycle-3-6",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dpd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-pd-cycle-1",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-pd",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-kpd-weekly",
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rel-other",
+              "kind": "group",
+              "title": {
+                "uk": "Інші рекомендовані (MYEL-H 4 з 6)",
+                "en": "Other recommended (MYEL-H 4 of 6)"
+              },
+              "description": {
+                "uk": "Для пацієнтів із непереносимістю стероїдів — леналідомід чи помалідомід як окремий препарат.",
+                "en": "For steroid intolerance consider single-agent lenalidomide or pomalidomide."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "pvd-cycle-1-8",
+                  "notes": {
+                    "uk": "VPd: перенесено з «бажаних»",
+                    "en": "VPd: moved from preferred"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "pvd",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "pvd-eviq-cycle-1-8",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "svd",
+                  "notes": {
+                    "uk": "VSd (BOSTON, раз на тиждень селінексор)",
+                    "en": "VSd (BOSTON, weekly selinexor)"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "pcd-cycle-1-9",
+                  "notes": {
+                    "uk": "CPd",
+                    "en": "CPd"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "pcd",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-tal-combos",
+                  "notes": {
+                    "uk": "Даратумумаб + талкветамаб/дексаметазон; Pd + даратумумаб + талкветамаб",
+                    "en": "Daratumumab + talquetamab/dexamethasone; Pd + daratumumab + talquetamab"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ird",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "elo-rd-cycle-1-2",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "elo-rd",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-elo-vd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "vcd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "dara-vcd-cycle-1",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "dara-vcd-cycle-2",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "dara-vcd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "vrd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "kcd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-mm-dara-kpd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "crd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-mm-iberdd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "icd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ipd",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "elo-pd-cycle-1-2",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "elo-pd",
+                  "preference": "other"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rel-hct",
+              "kind": "group",
+              "title": {
+                "uk": "ТГСК за показаннями",
+                "en": "HCT as indicated"
+              },
+              "description": {
+                "uk": "Повторна автологічна ТГСК — якщо відповідь на першу була тривала (за ретроспективними даними мінімум 2–3 роки; рандомізовано при ≥18 міс.). Алогенна ТГСК — переважно в дослідженні; при рецидиві після неї — інфузія донорських лімфоцитів. Кандидатів, які не мали ТГСК, оцінюють на автологічну.",
+                "en": "A repeat autologous HCT if the response to the first was long (retrospective data suggest 2-3 years at minimum; randomised at 18 months or more). Allogeneic HCT mainly in trials; donor lymphocyte infusion for relapse after it. Candidates who never had HCT are assessed for autologous."
+              },
+              "steps": [
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Автологічна ТГСК",
+                    "en": "Autologous HCT"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Алогенна ТГСК (± інфузія донорських лімфоцитів при рецидиві)",
+                    "en": "Allogeneic HCT (± donor lymphocyte infusion for relapse)"
+                  },
+                  "preference": "other"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rel-circ",
+              "kind": "group",
+              "title": {
+                "uk": "Корисні за певних обставин",
+                "en": "Useful in certain circumstances"
+              },
+              "description": {
+                "uk": "t(11;14): венетоклакс/дексаметазон ± даратумумаб чи ІП.",
+                "en": "t(11;14): venetoclax/dexamethasone ± daratumumab or a PI."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "bortezomib-mono",
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "kd-cycle-1",
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "kd",
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "kd-weekly-cycle-1",
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "kd-weekly-cycle-2-9",
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "kd-weekly",
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "rd",
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "pom-dex",
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-belantamab",
+                  "notes": {
+                    "uk": "Pd + белантамаб (категорія 1); Kd + белантамаб",
+                    "en": "Pd + belantamab (category 1); Kd + belantamab"
+                  },
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "kctd-cycle-1",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "kctd",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mm-ksd",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "daratumumab-cycle-1-2",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "daratumumab-cycle-3-6",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "daratumumab-mono",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mm-spd",
+                  "notes": {
+                    "uk": "Також категорія 1 у списку",
+                    "en": "Also category 1 on the list"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mm-sd-dara",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ven-dex-t11-14",
+                  "notes": {
+                    "uk": "Лише t(11;14)",
+                    "en": "t(11;14) only"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "venkd-cycle-1",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "venkd",
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Карфілзоміб/дексаметазон + белантамаб мафодотин",
+                    "en": "Carfilzomib/dexamethasone + belantamab mafodotin"
+                  },
+                  "preference": "circumstances",
+                  "notes": {
+                    "uk": "У списку NCCN; окремих даних у розділі Discussion немає.",
+                    "en": "On the NCCN list; the Discussion has no separate data."
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-rel-aggr",
+              "kind": "group",
+              "title": {
+                "uk": "Агресивна ММ",
+                "en": "Aggressive MM"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "dcep",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "dt-pace",
+                  "notes": {
+                    "uk": "± бортезоміб (VTD-PACE)",
+                    "en": "± bortezomib (VTD-PACE)"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "vtd-pace",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mm-tal-tec",
+                  "preference": "circumstances"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-late",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив після ≥3 ліній (MYEL-7, MYEL-H 5)",
+            "en": "Relapse after 3 or more lines (MYEL-7, MYEL-H 5)"
+          },
+          "description": {
+            "uk": "Схеми для 1–3 ліній можна застосовувати й пізніше; потрібні препарати, яких пацієнт не отримував чи отримував >1 лінії тому; комбінації з анти-CD38 — якщо з останнього введення анти-CD38 минуло >6 міс. Клінічне дослідження. При прогресуванні після BCMA-терапії — див. наступну сторінку. Бажані: CAR-T (цильтакабтаген, ідекабтаген — після ≥4 попередніх ліній, включно з анти-CD38, ІП й IMiD) і біспецифічні антитіла (BCMA: елранатамаб, лінвосельтамаб, теклістамаб; GPRC5D: талкветамаб). Інфекції — головна причина смертності не від рецидиву: профілактика VZV/HSV, пневмоцистна, протигрибкова при АНК <500, скринінг HBV/CMV, IVIG. Тоцилізумаб перед першою дозою біспецифічного антитіла можна розглянути. Бендамустин чи високодозову алкілувальну терапію не давати перед Т-клітинною терапією. Для швидко прогресуючої хвороби швидший доступ дають біспецифічні антитіла. Між BCMA-терапіями — перерва ≥6 міс. покращує відповідь; негайний перехід на другу BCMA-терапію може давати нижчу відповідь.",
+            "en": "Regimens for 1-3 lines may also be used later; use drugs the patient has not had or had more than one line ago; anti-CD38 combinations if more than 6 months since the last anti-CD38 exposure. Clinical trial. For progression after BCMA therapy, see the next page. Preferred: CAR-T (ciltacabtagene, idecabtagene — after at least 4 prior lines including anti-CD38, a PI and an IMiD) and bispecific antibodies (BCMA: elranatamab, linvoseltamab, teclistamab; GPRC5D: talquetamab). Infections are the main cause of non-relapse mortality: VZV/HSV prophylaxis, Pneumocystis, antifungal at ANC below 500, HBV/CMV screening, IVIG. Tocilizumab before the first bispecific dose may be considered. Do not give bendamustine or high-dose alkylators before T-cell therapy. For rapidly progressive disease bispecifics give faster access. A gap of 6 months or more between BCMA therapies improves response; an immediate second BCMA therapy may give lower response rates."
+          },
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              }
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Оцінка придатності до Т-клітинної терапії, якщо ще не проводилась",
+                "en": "Assess eligibility for T-cell therapy if not done"
+              }
+            },
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Паліативна допомога й підтримувальна терапія",
+                "en": "Palliative and supportive care"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Після BCMA-терапії (MYEL-H 6)",
+                "en": "After BCMA therapy (MYEL-H 6)"
+              },
+              "target": "nccn-post-bcma"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-late-preferred",
+              "kind": "group",
+              "title": {
+                "uk": "Бажані",
+                "en": "Preferred"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-mm-car-t",
+                  "notes": {
+                    "uk": "Цильтакабтаген і ідекабтаген: після ≥4 ліній з анти-CD38, ІП й IMiD",
+                    "en": "Ciltacabtagene and idecabtagene: after 4+ lines with anti-CD38, a PI and an IMiD"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "elranatamab-cycle-1",
+                  "notes": {
+                    "uk": "BCMA × CD3",
+                    "en": "BCMA x CD3"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "elranatamab-cycle-2-6",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "elranatamab-cycle-7-12",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "elranatamab",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-mm-linvoseltamab",
+                  "notes": {
+                    "uk": "BCMA × CD3",
+                    "en": "BCMA x CD3"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-mm-teclistamab",
+                  "notes": {
+                    "uk": "BCMA × CD3",
+                    "en": "BCMA x CD3"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-mm-talquetamab",
+                  "notes": {
+                    "uk": "GPRC5D × CD3",
+                    "en": "GPRC5D x CD3"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-late-circ",
+              "kind": "group",
+              "title": {
+                "uk": "За певних обставин",
+                "en": "Useful in certain circumstances"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "v-pld",
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-mm-belantamab",
+                  "notes": {
+                    "uk": "Схеми з белантамабом",
+                    "en": "Belantamab-containing regimens"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mm-benda-kd",
+                  "notes": {
+                    "uk": "Бендамустин + карфілзоміб + дексаметазон",
+                    "en": "Bendamustine + carfilzomib + dexamethasone"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "bbd",
+                  "notes": {
+                    "uk": "Бендамустин + бортезоміб + дексаметазон",
+                    "en": "Bendamustine + bortezomib + dexamethasone"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "bld",
+                  "notes": {
+                    "uk": "Бендамустин + леналідомід + дексаметазон",
+                    "en": "Bendamustine + lenalidomide + dexamethasone"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mm-tal-combos",
+                  "notes": {
+                    "uk": "Даратумумаб + талкветамаб; помалідомід + талкветамаб",
+                    "en": "Daratumumab + talquetamab; pomalidomide + talquetamab"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "selinexor-dex",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mm-tal-tec",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ven-dex-t11-14",
+                  "notes": {
+                    "uk": "Лише t(11;14)",
+                    "en": "t(11;14) only"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "venkd-cycle-1",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "venkd",
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Бендамустин (монотерапія)",
+                    "en": "Bendamustine (single agent)"
+                  },
+                  "preference": "circumstances",
+                  "notes": {
+                    "uk": "Дослідження: відповідь у 55% при зростаючих дозах (90–100 мг/м² — ВБП 36 тижнів); у відомих схемах бендамустин входить у BBD і BLD. Алкілувальні препарати погіршують збір Т-клітин.",
+                    "en": "Study: response in 55% with escalating doses (90-100 mg/m2 gave PFS 36 weeks); bendamustine is part of BBD and BLD. Alkylators impair T-cell collection."
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Високодозовий або фракціонований циклофосфамід",
+                    "en": "High-dose or fractionated cyclophosphamide"
+                  },
+                  "preference": "circumstances",
+                  "notes": {
+                    "uk": "Корисний, коли потрібен швидкий контроль хвороби після багатьох ліній; дози NCCN не наводить.",
+                    "en": "Useful when quick control is needed after many lines; NCCN gives no dose."
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Алкілувальна терапія",
+                    "en": "Alkylator therapy"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Автологічна ТГСК",
+                    "en": "Autologous HCT"
+                  },
+                  "preference": "circumstances"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-post-bcma",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив після BCMA-терапії (MYEL-H, 6 з 6)",
+            "en": "Relapse after BCMA therapy (MYEL-H, 6 of 6)"
+          },
+          "description": {
+            "uk": "Важливо: час від останньої BCMA-терапії — якщо <6 міс., обрати іншу мішень, ніж BCMA; комбінації з анти-CD38 — якщо з останнього введення анти-CD38 >6 міс.; терапія алкілувальними препаратами може дати тимчасовий контроль, щоб розглянути CAR-T; вибір іншого BCMA-біспецифічного антитіла після прогресування на BCMA-біспецифічному малоймовірно допоможе.",
+            "en": "Important: time since the last BCMA therapy — if under 6 months choose a target other than BCMA; anti-CD38 combinations if more than 6 months since the last anti-CD38 exposure; alkylator therapy may give temporary control to allow CAR-T to be considered; a different BCMA bispecific after progression on one is unlikely to help."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-mm-talquetamab",
+              "notes": {
+                "uk": "Талкветамаб (GPRC5D)",
+                "en": "Talquetamab (GPRC5D)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-mm-tal-tec",
+              "notes": {
+                "uk": "Талкветамаб + теклістамаб",
+                "en": "Talquetamab + teclistamab"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-mm-teclistamab",
+              "notes": {
+                "uk": "Теклістамаб",
+                "en": "Teclistamab"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "svd",
+              "notes": {
+                "uk": "Бортезоміб + селінексор + дексаметазон",
+                "en": "Bortezomib + selinexor + dexamethasone"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-mm-belantamab",
+              "notes": {
+                "uk": "Комбінації з белантамабом",
+                "en": "Belantamab combinations"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ven-dex-t11-14",
+              "notes": {
+                "uk": "Лише t(11;14)",
+                "en": "t(11;14) only"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "venkd-cycle-1",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "venkd",
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              }
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Другий BCMA CAR-T, якщо доступний",
+                "en": "Second BCMA CAR-T, if available"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "Автологічна ТГСК",
+                "en": "Autologous HCT"
+              }
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Схеми з карфілзомібом",
+                "en": "Carfilzomib-containing regimens"
+              },
+              "preference": "other"
+            }
+          ]
+        },
+        {
+          "key": "nccn-cns",
+          "kind": "line",
+          "title": {
+            "uk": "Ураження ЦНС при ММ (CNSM-1, MYEL-I)",
+            "en": "CNS myeloma (CNSM-1, MYEL-I)"
+          },
+          "description": {
+            "uk": "Ознаки: сплутаність, головний біль, зорові порушення, слабкість, ураження черепних нервів. Гіперамоніємічна енцефалопатія, гіпервʼязкість чи гіперкальціємія з неврологічними симптомами — не ураження ЦНС. Поширення плазмоцитоми черепа чи хребта без менінгеальної інфільтрації — не ураження ЦНС, лікують як ММ. Обовʼязково: МРТ головного мозку й хребта з контрастом і без, люмбальна пункція з проточною цитометрією, цитопатологією, підрахунком клітин, білком; виключити інфекцію. За обставин — біопсія тканини. Електрофорез ліквору для діагностики непридатний. Остаточний діагноз: клональні плазматичні клітини в ліквору за імунофенотипом або тканинний діагноз у ЦНС. Імовірний: лептоменінгеальне посилення чи паренхіматозні вогнища на МРТ без доведених клональних клітин. Лікування мультимодальне. Опромінення: фокальне — для швидкого усунення чи запобігання неврологічного дефіциту; усього мозку — при погано локалізованому чи черепно-нервовому ураженні (≤23,4 Гр за 13 фракцій — низька токсичність); краніоспінальне — для хворих із негативною чи контрольованою позаЦНС-хворобою, як місток до консолідації (CAR-T, автоТГСК). Інтратекально: тіотепа/гідрокортизон або метотрексат/цитарабін/гідрокортизон; метотрексат і ЛТ — не ближче ніж за 2 тижні (ризик мієлопатії). Системно: високі дози метотрексату, цитарабін або бендамустин у разі відсутності альтернатив; IMiD проникають через гематоенцефалічний бар'єр; селінексор, венетоклакс (t(11;14)) — розглядають; ІП мають обмежене проникнення. Анамнез лікованого ураження ЦНС не виключає CAR-T і біспецифічні антитіла (як консолідація поза ЦНС). Паліативну допомогу включають. Відповідь оцінюють люмбальною пункцією та/або повторною МРТ.",
+            "en": "Signs: confusion, headache, visual symptoms, weakness, cranial nerve palsies. Hyperammonaemic encephalopathy, hyperviscosity or hypercalcaemia with neurological symptoms are not CNS involvement. Extension of a skull or spinal plasmacytoma without meningeal infiltration is not CNS disease and is treated as MM. Essential: brain and spine MRI with and without contrast, lumbar puncture with flow cytometry, cytopathology, cell count and protein; exclude infection. Tissue biopsy in certain circumstances. CSF electrophoresis is not appropriate for diagnosis. Definitive: clonal plasma cells in CSF by immunophenotyping or a tissue diagnosis in CNS tissue. Probable: leptomeningeal enhancement or parenchymal lesions on MRI without proven clonal cells. Multimodality treatment. Radiotherapy: focal to quickly reverse or prevent neurological deficit; whole brain for poorly localised or cranial nerve disease (up to 23.4 Gy in 13 fractions has low toxicity); craniospinal for patients with negative or controlled extra-CNS disease, as a bridge to consolidation (CAR-T, autologous HCT). Intrathecal: thiotepa/hydrocortisone or methotrexate/cytarabine/hydrocortisone; methotrexate and RT at least 2 weeks apart (myelopathy risk). Systemic: high-dose methotrexate, cytarabine or bendamustine when there is no alternative; IMiDs cross the blood-brain barrier; selinexor and venetoclax (t(11;14)) may be considered; PIs penetrate poorly. A history of treated CNS disease does not exclude CAR-T and bispecifics (as consolidation of extra-CNS disease). Palliative care is included. Response by lumbar puncture and/or repeat MRI."
+          },
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "МРТ мозку й хребта, люмбальна пункція з проточною цитометрією, виключення інфекції",
+                "en": "Brain and spine MRI, lumbar puncture with flow cytometry, exclusion of infection"
+              }
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Мультимодальна терапія: ЛТ, інтратекальна хіміотерапія, системна терапія з IMiD",
+                "en": "Multimodality therapy: RT, intrathecal chemotherapy, systemic therapy with an IMiD"
+              }
+            },
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Паліативна допомога",
+                "en": "Palliative care"
+              }
+            },
+            {
+              "kind": "surveillance",
+              "column": "next",
+              "label": {
+                "uk": "Оцінка відповіді: люмбальна пункція та/або повторна МРТ",
+                "en": "Response: lumbar puncture and/or repeat MRI"
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-related",
+          "kind": "line",
+          "title": {
+            "uk": "Споріднені стани: MGCS, MGRS, MIDD, MGNS, POEMS",
+            "en": "Related conditions: MGCS, MGRS, MIDD, MGNS, POEMS"
+          },
+          "description": {
+            "uk": "Моноклональні гамапатії клінічного значення (MGCS) — немалігнові стани з клональною проліферацією плазматичних чи лімфоплазмоцитарних клітин (<10% у кістковому мозку), що виробляють патогенний моноклональний білок: уражені шкіра, очі, нерви, нирки. До MGCS належать MGRS, MGNS, MIDD, POEMS і AL-амілоїдоз (окрема настанова).",
+            "en": "Monoclonal gammopathy of clinical significance (MGCS) covers non-malignant states with a clonal plasma or lymphoplasmacytic proliferation (under 10% in the marrow) producing a pathogenic monoclonal protein that damages skin, eyes, nerves or kidneys. MGCS includes MGRS, MGNS, MIDD, POEMS and AL amyloidosis (a separate guideline)."
+          },
+          "children": [
+            {
+              "key": "nccn-mgcs-table",
+              "kind": "group",
+              "title": {
+                "uk": "Рідкісні синдроми MGCS (MGCS-1)",
+                "en": "Rarer MGCS syndromes (MGCS-1)"
+              },
+              "description": {
+                "uk": "Холодова аглютинінова хвороба (IgM-κ; гемоліз від холоду, ПАТ позитивна за комплементом): аферез, ритуксимаб ± бендамустин, сутімліміаб. Кріоглобулінемія типів I–II (васкуліт, виразки, протеїнурія; часто на тлі HCV): ритуксимаб проти клону, лікування HCV. CANOMAD (атаксія, офтальмоплегія, IgM, холодові аглютиніни, антитіла до дисіалозилгангліозидів): ВВІГ, ритуксимаб. Синдром Шніцлера (IgM, рідше IgG; гарячка, кропивниця, болі в кістках чи суглобах, лімфаденопатія, підвищена ШОЕ): анакінра, канакінумаб. TEMPI (телеангіектазії, еритроцитоз, моноклональна гамапатія IgGκ, навколониркові скупчення рідини, внутрішньолегеневе шунтування): терапія, спрямована на плазматичні клітини, — бортезоміб, леналідомід, автоТГСК. Склеромікседема (IgA; склеродермоподібні зміни шкіри, папули; може бути дисфагія): високодозовий ВВІГ, бортезоміб, IMiD, інша терапія проти плазматичних клітин. Якщо знайдено клон хвороби Вальденстрема — розглянути відповідне лікування.",
+                "en": "Cold agglutinin disease (IgM-kappa; cold-induced haemolysis, DAT positive for complement): apheresis, rituximab ± bendamustine, sutimlimab. Cryoglobulinaemia types I-II (vasculitis, ulcers, proteinuria; often with HCV): rituximab against the clone, HCV treatment. CANOMAD (ataxia, ophthalmoplegia, IgM, cold agglutinins, disialosyl antibodies): IVIG, rituximab. Schnitzler syndrome (IgM, occasionally IgG; fever, urticaria, bone or joint pain, lymphadenopathy, raised ESR): anakinra, canakinumab. TEMPI (telangiectasias, erythrocytosis, IgGkappa gammopathy, perinephric fluid, intrapulmonary shunting): plasma-cell-directed therapy — bortezomib, lenalidomide, autologous HCT. Scleromyxedema (IgA; scleroderma-like skin, papules; dysphagia possible): high-dose IVIG, bortezomib, IMiDs, other plasma-cell-directed therapy. If a Waldenstrom clone is found, consider Waldenstrom-directed therapy."
+              }
+            },
+            {
+              "key": "nccn-mgrs",
+              "kind": "group",
+              "title": {
+                "uk": "MGRS: моноклональна гамапатія ниркового значення (MGRS-1, MGRS-2)",
+                "en": "MGRS: renal significance (MGRS-1, MGRS-2)"
+              },
+              "description": {
+                "uk": "Оцінка ниркової хвороби: розрахункова ШКФ, загальний аналіз сечі, білок за добу, електрофорез і імунофіксація сечі, біохімія. Підтвердження: світлова мікроскопія біоптату, імунофлуоресценція (підкласи IgG, IgA, IgM, κ і λ), електронна мікроскопія; М-білок у сироватці/сечі має збігатися з виявленим у біоптаті нирки. Кістковий мозок — якщо підозрюють ММ чи хворобу Вальденстрема/лімфоплазмоцитарну лімфому. Біопсія нирки показана: гостра ниркова травма 3 стадії; рШКФ <60 мл/хв і зниження >2 мл/хв на рік; протеїнурія >1 г/добу (відношення альбумін/креатинін >30 мг/ммоль); синдром Фанконі. Розглянути: ГНТ 1–2 стадій; рШКФ <60 при зниженні <2 мл/хв на рік; відношення 3–30 мг/ммоль при ШКФ <60; легколанцюгова протеїнурія. Відкласти: стабільна рШКФ, нормальний аналіз сечі, немає легколанцюгової протеїнурії. Лікування за клоном: плазмоклітинна MGRS — алгоритм ММ (MYEL-4); лімфоплазмоцитарна — настанова щодо хвороби Вальденстрема (обережно з нейротоксичними препаратами); з ознаками МВЛ — настанова щодо ХЛЛ. Відповідь: для IgG/IgA — критерії ММ (MYEL-F); IgM — критерії Вальденстрема; легколанцюгова — критерії амілоїдозу; якщо парапротеїн не вимірюється — функція нирок, кістковий мозок, візуалізація. При рецидиві — індивідуально за відповіддю й токсичністю попередньої терапії, станом і функцією нирок.",
+                "en": "Kidney evaluation: eGFR, urinalysis, 24-hour protein, urine electrophoresis and immunofixation, chemistry. Confirmation: light microscopy of the biopsy, immunofluorescence (IgG subclasses, IgA, IgM, kappa and lambda), electron microscopy; the serum/urine M protein must match the one in the renal biopsy. Marrow if MM or Waldenstrom/lymphoplasmacytic lymphoma is suspected. Renal biopsy recommended: AKI stage 3; eGFR below 60 mL/min with a decline over 2 mL/min per year; proteinuria over 1 g/day (albumin:creatinine over 30 mg/mmol); Fanconi syndrome. Consider: AKI stage 1-2; eGFR below 60 with a decline under 2 mL/min per year; ratio 3-30 mg/mmol with GFR below 60; light-chain proteinuria. Defer: stable eGFR, normal urinalysis, no light-chain proteinuria. Treatment follows the clone: plasma-cell MGRS — the MM algorithm (MYEL-4); lymphoplasmacytic — the Waldenstrom guideline (caution with neurotoxic agents); with MBL features — the CLL guideline. Response: IgG/IgA — MM criteria (MYEL-F); IgM — Waldenstrom criteria; light-chain — amyloidosis criteria; if the paraprotein is unmeasurable — renal function, marrow, imaging. At relapse individualise by response and toxicity of prior therapy, performance status and renal function."
+              },
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Плазмоклітинна MGRS — як ММ (MYEL-4)",
+                    "en": "Plasma-cell MGRS — as MM (MYEL-4)"
+                  },
+                  "target": "nccn-primary"
+                }
+              ]
+            },
+            {
+              "key": "nccn-midd",
+              "kind": "group",
+              "title": {
+                "uk": "MIDD: хвороба відкладення моноклональних імуноглобулінів (MIDD-1)",
+                "en": "MIDD: monoclonal immunoglobulin deposition disease (MIDD-1)"
+              },
+              "description": {
+                "uk": "Підтипи: легколанцюгова (≈80%, з них 80–90% κ), важколанцюгова (≈10%), змішана (≈10%). Ураження за частотою: нирки ≈96%, серце ≈21%, печінка ≈19%, периферична нервова система ≈8%. Обстеження: як у MYEL-1 для виявлення плазмоклітинної аномалії; оцінити ниркове (MGRS-1) та інше ураження органів (настанова з амілоїдозу). Лікувати, якщо є ураження органів патогенним клоном: плазмоклітинна MIDD — за MM (MYEL-4, MYEL-H); лімфоплазмоцитарна — за Вальденстремом; з ознаками МВЛ — за ХЛЛ. АутоТГСК як консолідація бажана у придатних (залежно від підтипу клону). При глибокій і стійкій відповіді після індукції (з аутоТГСК чи без) для хворих, які можуть отримати нирку чи інший орган, розглядають трансплантацію солідного органа; кандидатуру приймають і без консолідуючої аутоТГСК за глибокої тривалої відповіді.",
+                "en": "Subtypes: light-chain (about 80%, 80-90% of them kappa), heavy-chain (about 10%), light-and-heavy chain (about 10%). Organs by frequency: kidney about 96%, heart about 21%, liver about 19%, peripheral nerves about 8%. Workup: tests of MYEL-1 to identify the plasma cell abnormality; assess the kidney (MGRS-1) and other organs (the amyloidosis guideline). Treat if there is organ damage by the pathogenic clone: plasma-cell MIDD — as MM (MYEL-4, MYEL-H); lymphoplasmacytic — as Waldenstrom; with MBL features — as CLL. Autologous HCT consolidation is preferable in eligible patients (by clone subtype). With a deep and sustained response after induction (with or without autologous HCT), consider solid organ transplantation for the affected organs in eligible patients; candidacy is acceptable without consolidating autologous HCT if the response is deep and durable."
+              },
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Плазмоклітинна MIDD — як ММ (MYEL-4)",
+                    "en": "Plasma-cell MIDD — as MM (MYEL-4)"
+                  },
+                  "target": "nccn-primary"
+                }
+              ]
+            },
+            {
+              "key": "nccn-mgns",
+              "kind": "group",
+              "title": {
+                "uk": "MGNS: моноклональна гамапатія неврологічного значення, IgM (MGNS-1)",
+                "en": "MGNS: neurological significance, IgM (MGNS-1)"
+              },
+              "description": {
+                "uk": "Виключити інші причини нейропатії: діабет, дефіцит кобаламіну, дисфункцію щитоподібної залози, хворобу Лайма, ВІЛ, сифіліс, аутоімунні хвороби, кріоглобулінемію. За потреби — AL-амілоїдоз, хвороба Вальденстрема, POEMS. Антитіла до MAG, панель антитіл до гангліозидів, дослідження нервової провідності/ЕМГ, консультація невролога, ПЛР з алель-специфічним праймером на MYD88 L265P у кістковому мозку (MYD88 wild-type у <10% — діагноз Вальденстрема не виключає), КТ грудної клітки/живота/тазу. За обставин: біопсія литкового нерва, мутація CXCR4. Висока підозра (сенсорна, довжино-залежна, повільно прогресує роками, двостороння симетрична, антитіла є, демієлінізація на ЕМГ) або проміжна з порушенням повсякденної активності — настанова щодо Вальденстрема чи лімфоплазмоцитарної лімфоми. Низька підозра (моторна/больова, не довжино-залежна, швидка прогресія, одностороння, антитіл немає, без демієлінізації) або проміжна/висока без порушення повсякденної активності — спостереження.",
+                "en": "Rule out other causes of neuropathy: diabetes, cobalamin deficiency, thyroid dysfunction, Lyme disease, HIV, syphilis, autoimmune disease, cryoglobulinaemia. As appropriate — AL amyloidosis, Waldenstrom, POEMS. Anti-MAG antibodies, ganglioside antibody panel, nerve conduction/EMG, neurology consult, AS-PCR for MYD88 L265P in the marrow (MYD88 wild-type in under 10% does not exclude Waldenstrom), chest/abdomen/pelvis CT. In certain circumstances: sural nerve biopsy, CXCR4 mutation. High suspicion (sensory, length-dependent, slow over years, bilateral and symmetrical, antibodies present, demyelination on EMG) or intermediate affecting daily living — the Waldenstrom/lymphoplasmacytic lymphoma guideline. Low suspicion (motor/pain, not length-dependent, rapid, unilateral, no antibodies, no demyelination) or intermediate/high not affecting daily living — observation."
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Спостереження при низькій підозрі",
+                    "en": "Observation when suspicion is low"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-poems",
+              "kind": "group",
+              "title": {
+                "uk": "POEMS (POEMS-1…POEMS-4)",
+                "en": "POEMS (POEMS-1 to POEMS-4)"
+              },
+              "description": {
+                "uk": "Діагноз (POEMS-3): обидва обов'язкові великі критерії — поліневропатія (типова демієлінізуюча) і моноклональна плазмоклітинна проліферація (майже завжди λ); плюс один з інших великих (хвороба Кастлемана, склеротичні кісткові вогнища, підвищений VEGF); плюс один з малих (органомегалія, надлишок позасудинної рідини, ендокринопатія, зміни шкіри, набряк диска зорового нерва, тромбоцитоз/поліцитемія). Обстеження: огляд, очне дно, гіпергідроз, діарея, схуднення, статева функція; детальний неврологічний анамнез і огляд; електрофізіологія; КТ грудної клітки/живота/тазу; гормони (тестостерон, естрадіол, глюкоза натще, ТТГ, паратгормон, пролактин, кортизол, ЛГ); загальний аналіз крові, біохімія, імуноглобуліни, електрофорез, вільні легкі ланцюги, добова сеча, VEGF, інтерлейкін-6; кістковий мозок з FISH; ехокардіографія (тиск у легеневій артерії); КТ кісток/ПЕТ-КТ. Лікування (POEMS-2): ЛТ самостійно при ізольованому кістковому вогнищі (<3 осередки) без клональних плазматичних клітин у кістковому мозку; автологічна ТГСК у придатних як єдина терапія чи консолідація після індукції. Індукція: леналідомід/дексаметазон ± даратумумаб, бортезоміб/дексаметазон (бортезоміб може посилювати нейропатію; в окремих хворих — карфілзоміб), циклофосфамід/дексаметазон, помалідомід/дексаметазон. Непридатним до ТГСК — усі ці схеми та мелфалан/дексаметазон. За певних обставин — схеми для ММ (MYEL-H). Відповідь — за критеріями POEMS (VEGF, M-спайк, ПЕТ, mNIS+7, набряки, ехокардіографія, диск зорового нерва, DLCO). Прогресування — індивідуально.",
+                "en": "Diagnosis (POEMS-3): both mandatory major criteria — polyneuropathy (typical demyelinating) and a monoclonal plasma cell proliferative disorder (almost always lambda); plus one of the other major criteria (Castleman disease, sclerotic bone lesions, raised VEGF); plus one of the minor criteria (organomegaly, extravascular volume overload, endocrinopathy, skin changes, papilledema, thrombocytosis/polycythaemia). Workup: examination, fundoscopy, hyperhidrosis, diarrhoea, weight loss, sexual function; detailed neurological history and examination; electrophysiology; chest/abdomen/pelvis CT; hormones (testosterone, estradiol, fasting glucose, TSH, parathyroid hormone, prolactin, cortisol, LH); CBC, chemistry, immunoglobulins, electrophoresis, free light chains, 24-hour urine, VEGF, interleukin-6; marrow with FISH; echocardiography (pulmonary artery pressure); bone CT/PET-CT. Treatment (POEMS-2): RT alone for an isolated bone lesion (under 3 sites) without clonal marrow plasma cells; autologous HCT in eligible patients as sole therapy or consolidation after induction. Induction: lenalidomide/dexamethasone ± daratumumab, bortezomib/dexamethasone (bortezomib may worsen neuropathy; carfilzomib in selected patients), cyclophosphamide/dexamethasone, pomalidomide/dexamethasone. Not HCT candidates: all these plus melphalan/dexamethasone. In certain circumstances MM regimens (MYEL-H). Response by POEMS criteria (VEGF, M spike, PET, mNIS+7, oedema, echocardiography, papilledema, DLCO). Progression — individualise."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rd",
+                  "notes": {
+                    "uk": "Леналідомід/дексаметазон (POEMS: ± даратумумаб)",
+                    "en": "Lenalidomide/dexamethasone (POEMS: ± daratumumab)"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "bortezomib-mono",
+                  "notes": {
+                    "uk": "Бортезоміб/дексаметазон — обережно: може посилювати нейропатію; схема NSSG MM.4",
+                    "en": "Bortezomib/dexamethasone — caution: may worsen neuropathy; NSSG MM.4 schedule"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "pom-dex",
+                  "notes": {
+                    "uk": "Помалідомід/дексаметазон",
+                    "en": "Pomalidomide/dexamethasone"
+                  },
+                  "preference": "preferred"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "ЛТ при ізольованому кістковому вогнищі (<3 осередків) без клональних плазматичних клітин у кістковому мозку",
+                    "en": "RT for an isolated bone lesion (under 3 sites) without clonal marrow plasma cells"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Автологічна ТГСК самостійно або як консолідація після індукції",
+                    "en": "Autologous HCT as sole therapy or consolidation after induction"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Циклофосфамід/дексаметазон",
+                    "en": "Cyclophosphamide/dexamethasone"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Мелфалан/дексаметазон (непридатним до ТГСК)",
+                    "en": "Melphalan/dexamethasone (not HCT candidates)"
+                  },
+                  "preference": "other"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
