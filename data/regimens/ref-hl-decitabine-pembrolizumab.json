@@ -1,0 +1,53 @@
+{
+  "$comment": "Лише опис: NCCN HL 2.2026 називає схему без доз і днів; розрахунку немає, бо джерела з дозами в довіднику ще нема.",
+  "id": "ref-hl-decitabine-pembrolizumab",
+  "short_name": "Децитабін + пембролізумаб",
+  "name": {
+    "uk": "Децитабін з інгібітором PD-1 при рецидивній ЛХ",
+    "en": "Decitabine with a PD-1 inhibitor in relapsed Hodgkin lymphoma"
+  },
+  "sources": [
+    {
+      "name": "NCCN Clinical Practice Guidelines: Hodgkin Lymphoma, версія 2.2026 від 01.07.2026, HODG-B 5 з 8 (посилання: Nie J. та ін. J Clin Oncol 2019;37:1479-1489; Liu Y. та ін. J Immunother Cancer 2021;9:e002347; Wang C. та ін. Clin Cancer Res 2021;27:2782-2791)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1439",
+      "version": "2.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Низькі дози децитабіну до інгібітора PD-1; у цитованих дослідженнях застосовано камрелізумаб, у настанові названо пембролізумаб.",
+      "en": "Low-dose decitabine added to a PD-1 inhibitor; the cited studies used camrelizumab, the guideline names pembrolizumab."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Децитабін",
+          "en": "Decitabine"
+        },
+        "drug_id": "decitabine"
+      },
+      {
+        "name": {
+          "uk": "Пембролізумаб",
+          "en": "Pembrolizumab"
+        },
+        "drug_id": "pembrolizumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Є в переліку схем 2-ї лінії й наступних при рецидивній чи рефрактерній класичній ЛХ (HODG-B 5 з 8). Попередні лінії й токсичність визначають вибір; бажаних схем у переліку немає.",
+        "en": "It is in the list of second-line and subsequent regimens for relapsed or refractory classical HL (HODG-B 5 of 8). Prior lines and toxicity decide the choice; the list has no preferred regimens."
+      },
+      {
+        "uk": "Цитовані дані стосуються й хворих, що прогресували після монотерапії інгібітором PD-1.",
+        "en": "The cited data include patients who progressed after PD-1 inhibitor monotherapy."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN не наводить доз, днів і кількості циклів; щоб розрахувати схему, потрібне джерело з повним дизайном (eviQ, NSSG, UpToDate чи оригінальна публікація).",
+      "en": "NCCN gives no doses, days or number of cycles; to calculate the regimen a source with the full design is needed (eviQ, NSSG, UpToDate or the original publication)."
+    }
+  }
+}
