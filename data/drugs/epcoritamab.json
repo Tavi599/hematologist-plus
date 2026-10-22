@@ -1,12 +1,18 @@
 {
-  "$comment": "Додано 2026-10-04 для схем eviQ 4554. Наявність в Україні не перевірено — стоїть «недоступний»; змініть, коли це буде відомо.",
+  "$comment": "Додано 2026-10-04 для схем eviQ 4554. Зареєстрований в Україні як Тепкінлі (UA/21335/01/01–02, 4 мг/0,8 мл і 48 мг/0,8 мл, чинне до 17.06.2031) — звірено з реєстром 2026-10-22.",
   "id": "epcoritamab",
   "name": {
     "uk": "Епкоритамаб",
     "en": "Epcoritamab"
   },
-  "availability": "unavailable",
+  "availability": "registered",
   "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv, drlz.com.ua / data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "витяг від 22.10.2026: Тепкінлі, UA/21335/01/01 і UA/21335/01/02, до 17.06.2031",
+      "checkedOn": "2026-10-22"
+    },
     {
       "name": "FDA label: EPKINLY (epcoritamab-bysp) — флакони 4 мг/0,8 мл і 48 мг/0,8 мл для підшкірного введення",
       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7836711-b677-412d-bf2d-0f7c8444103a",
