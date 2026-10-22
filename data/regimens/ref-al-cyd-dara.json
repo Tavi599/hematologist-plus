@@ -1,0 +1,63 @@
+{
+  "id": "ref-al-cyd-dara",
+  "short_name": "CyDex + Dara (AL)",
+  "name": {
+    "uk": "Циклофосфамід + дексаметазон + даратумумаб при AL-амілоїдозі зі значущою нейропатією",
+    "en": "Cyclophosphamide, dexamethasone and daratumumab in AL amyloidosis with significant neuropathy"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Systemic Light Chain Amyloidosis, version 1.2027 (AMYL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 19.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Бажана первинна терапія при значущій нейропатії (NCCN 1.2027, AMYL-B 2 з 6).",
+      "en": "The preferred primary regimen with significant neuropathy (NCCN 1.2027, AMYL-B 2 of 6)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Даратумумаб",
+          "en": "Daratumumab"
+        },
+        "drug_id": "daratumumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Бортезоміб у цій схемі відсутній — через нейропатію. NCCN радить розглянути додавання бортезомібу в зниженій дозі залежно від вираженості нейропатії (виноска g).",
+        "en": "Bortezomib is left out because of the neuropathy. NCCN suggests considering dose-reduced bortezomib depending on the degree of neuropathy (footnote g)."
+      },
+      {
+        "uk": "Дексаметазон 20 мг щотижня — на розсуд лікаря при віці >70 років, ІМТ <18,5, гіперволемії, погано контрольованому діабеті або попередній непереносимості стероїдів; циклофосфамід — не більш як 500 мг на тиждень (виноска d).",
+        "en": "Dexamethasone 20 mg weekly may be used at the physician's discretion for age over 70, BMI below 18.5, hypervolaemia, poorly controlled diabetes or earlier steroid intolerance; cyclophosphamide is capped at 500 mg a week (footnote d)."
+      },
+      {
+        "uk": "При кардіальному амілоїдозі чи нефротичному синдромі на стероїдах — стеження за перевантаженням рідиною; може знадобитися зменшення дози чи відміна.",
+        "en": "With cardiac amyloidosis or nephrotic syndrome on steroids, watch for volume overload; a dose reduction or withdrawal may be needed."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    }
+  }
+}

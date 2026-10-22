@@ -1,0 +1,50 @@
+{
+  "$comment": "Лише опис за NCCN Hairy Cell Leukemia 2.2027: доз для розрахунку немає.",
+  "id": "ref-hcl-peginterferon",
+  "short_name": "Пегінтерферон альфа-2a (ВКЛ)",
+  "name": {
+    "uk": "Пегінтерферон альфа-2a при рецидивному ВКЛ",
+    "en": "Peginterferon alfa-2a in relapsed HCL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Hairy Cell Leukemia, версія 2.2027 від 14.09.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2027 (14.09.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "NCCN: «інші рекомендовані» при рецидиві <2 років чи неповному гематологічному відновленні. Виробництво інтерферону альфа припинено, тому пегінтерферон альфа-2a можна замінити на інші препарати інтерферону.",
+      "en": "NCCN: 'other recommended' in relapse under 2 years or incomplete haematological recovery. Manufacture of interferon alfa has been discontinued, so peginterferon alfa-2a may be substituted for other interferon preparations."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Пегінтерферон альфа-2a",
+          "en": "Peginterferon alfa-2a"
+        },
+        "drug_id": "peginterferon-alfa-2a"
+      },
+      {
+        "name": {
+          "uk": "Інтерферон альфа-2b",
+          "en": "Interferon alfa-2b"
+        },
+        "drug_id": "interferon-alfa-2b"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Довготривалі дані з інтерфероном альфа: стійкий контроль хвороби.",
+        "en": "Long-term data with interferon alfa show durable disease control."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN не наводить дозу й тривалість. Пегінтерферону альфа-2a немає в реєстрі України (є лише 2b); інтерферон альфа-2b у відділенні позначено «не замовляється». Доз для розрахунку нема.",
+      "en": "NCCN gives neither dose nor duration. Peginterferon alfa-2a is not in the Ukrainian register (only 2b is); interferon alfa-2b is marked 'not ordered' in the department list. There are no doses to calculate."
+    },
+    "availability": "unavailable"
+  }
+}
