@@ -1,0 +1,80 @@
+{
+  "id": "ref-all-rr-ph-tki",
+  "short_name": "R/R Ph+: ТКІ (в т.ч. асцимініб)",
+  "name": {
+    "uk": "Рецидивний/рефрактерний Ph+ В-ГЛЛ: ТКІ, асцимініб, ТКІ з іншою терапією",
+    "en": "Relapsed/refractory Ph-positive B-ALL: TKIs, asciminib, TKI with other therapy"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Chanut M. та ін. Blood Adv 2025;9:4580-4584",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Luskin MR. та ін. Blood 2025;145:577-589",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "ТКІ за алфавітом: асцимініб ± інший ТКІ, босутиніб, дазатиніб, іматиніб, нілотиніб, понатиніб — інший, ніж в індукції; можна з будь-якою схемою ALL-D 5, що не давали. Вибір за мутаціями ABL1 (ALL-D 2). Блінатумомаб ± ТКІ; інотузумаб ± ТКІ.",
+      "en": "TKIs in alphabetical order: asciminib ± another TKI, bosutinib, dasatinib, imatinib, nilotinib, ponatinib — different from the induction TKI; any ALL-D 5 regimen not yet given may be added. Choice by ABL1 mutations (ALL-D 2). Blinatumomab ± TKI; inotuzumab ± TKI."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Інгібітор тирозинкінази (ТКІ): дазатиніб, іматиніб, нілотиніб, босутиніб, понатиніб; асцимініб — за особливих обставин",
+          "en": "TKI: dasatinib, imatinib, nilotinib, bosutinib, ponatinib; asciminib in special circumstances"
+        }
+      },
+      {
+        "name": {
+          "uk": "Асцимініб",
+          "en": "Asciminib"
+        },
+        "drug_id": "asciminib"
+      },
+      {
+        "name": {
+          "uk": "Блінатумомаб",
+          "en": "Blinatumomab"
+        },
+        "drug_id": "blinatumomab"
+      },
+      {
+        "name": {
+          "uk": "Інотузумаб озогаміцин",
+          "en": "Inotuzumab ozogamicin"
+        },
+        "drug_id": "inotuzumab-ozogamicin"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Мутації стійкості: асцимініб — A337T, P465S, M244V, F359V/I/C; босутиніб — T315I, V299L, G250E, F317L; дазатиніб — T315I/A, F317L/V/I/C, V299L; нілотиніб — T315I, Y253H, E255K/V, F359V/C/I, G250E; понатиніб — немає (складні мутації рідкісні).",
+        "en": "Resistance mutations: asciminib — A337T, P465S, M244V, F359V/I/C; bosutinib — T315I, V299L, G250E, F317L; dasatinib — T315I/A, F317L/V/I/C, V299L; nilotinib — T315I, Y253H, E255K/V, F359V/C/I, G250E; ponatinib — none (compound mutations are rare)."
+      },
+      {
+        "uk": "Понатиніб і асцимініб у високій дозі діють при T315I. Нілотиніб може бути кращим за босутиніб при F317L.",
+        "en": "Ponatinib and high-dose asciminib act on T315I. Nilotinib may be preferred over bosutinib with F317L."
+      },
+      {
+        "uk": "Асцимініб + дазатиніб + преднізон (Luskin 2025): повна гематологічна відповідь 84% на 28-й день.",
+        "en": "Asciminib plus dasatinib plus prednisone (Luskin 2025): complete haematologic response 84% by day 28."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN називає схему, але не дає доз і розкладу (відсилає до першоджерела або шаблону призначень) — без розрахунку.",
+      "en": "NCCN names the regimen but gives no doses or schedule (it refers to the original protocol or order templates) — no calculation."
+    },
+    "availability": "unknown"
+  }
+}

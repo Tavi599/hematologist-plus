@@ -1,0 +1,35 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN ALL 3.2026 (профілактика SOS при інотузумабі, ALL-C 2 з 6). Доз NCCN не наводить. Фасування — з відкритого реєстру: капсули/таблетки 250 і 500 мг.",
+  "id": "ursodeoxycholic-acid",
+  "name": {
+    "uk": "Урсодезоксихолева кислота",
+    "en": "Ursodeoxycholic acid"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "NCCN Acute Lymphoblastic Leukemia 3.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "витяг від 22.10.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "c250",
+      "form": "capsule",
+      "strength_amount": 250
+    },
+    {
+      "key": "t500",
+      "form": "tablet",
+      "strength_amount": 500
+    }
+  ]
+}

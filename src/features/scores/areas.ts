@@ -90,7 +90,7 @@ export const RISK_AREAS: Area[] = [
   {
     id: 'cml',
     title: t('Хронічний мієлолейкоз', 'Chronic myeloid leukaemia'),
-    scoreIds: ['sokal', 'elts'],
+    scoreIds: ['sokal', 'elts', 'hasford', 'eutos'],
     diseases: ['cml'],
   },
   {

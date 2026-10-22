@@ -1,0 +1,63 @@
+{
+  "id": "ref-all-tki-steroid-hd",
+  "short_name": "ТКІ + кортикостероїд (Ph+)",
+  "name": {
+    "uk": "ТКІ з кортикостероїдом при Ph+ В-ГЛЛ",
+    "en": "TKI with corticosteroid in Ph-positive B-ALL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Vignetti M. та ін. Blood 2007;109:3676-3678",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Martinelli G. та ін. Blood 2017;139:99",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Luskin MR. та ін. Blood 2025;145:577-589",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Індукція «за певних обставин» (<65) і низької інтенсивності (≥65); потім консолідація ТКІ + мультиагентна терапія або ТКІ + блінатумомаб, якщо не паліатив.",
+      "en": "Useful in certain circumstances (<65) and low intensity (≥65); followed by consolidation with TKI plus multiagent therapy or TKI plus blinatumomab unless palliative."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Інгібітор тирозинкінази (ТКІ): дазатиніб, іматиніб, нілотиніб, босутиніб, понатиніб; асцимініб — за особливих обставин",
+          "en": "TKI: dasatinib, imatinib, nilotinib, bosutinib, ponatinib; asciminib in special circumstances"
+        }
+      },
+      {
+        "name": {
+          "uk": "Преднізолон (у NCCN — преднізон)",
+          "en": "Prednisolone (NCCN: prednisone)"
+        },
+        "drug_id": "prednisolone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Дазатиніб + стероїд — наявна картка GIMEMA LAL1205. Інші роботи: GIMEMA LAL0201-B (іматиніб + преднізон), LAL1811 (понатиніб + преднізон), асцимініб + дазатиніб + преднізон (Luskin 2025).",
+        "en": "Dasatinib plus steroid is the existing GIMEMA LAL1205 card. Other work: GIMEMA LAL0201-B (imatinib plus prednisone), LAL1811 (ponatinib plus prednisone), asciminib plus dasatinib plus prednisone (Luskin 2025)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN називає схему, але не дає доз і розкладу (відсилає до першоджерела або шаблону призначень) — без розрахунку.",
+      "en": "NCCN names the regimen but gives no doses or schedule (it refers to the original protocol or order templates) — no calculation."
+    },
+    "availability": "unknown"
+  }
+}

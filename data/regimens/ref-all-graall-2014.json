@@ -1,0 +1,117 @@
+{
+  "id": "ref-all-graall-2014",
+  "short_name": "GRAALL-2014",
+  "name": {
+    "uk": "Dose-adjusted GRAALL-2014 для T-ГЛЛ (дорослі <65 років)",
+    "en": "Dose-adjusted GRAALL-2014 for T-ALL (adults <65)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Boissel N. та ін. Blood 2022;140(Suppl 1):112-114",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Trinquand A. та ін. J Clin Oncol 2013;31:4333-4342",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інші рекомендовані. Індукція: циклофосфамід, даунорубіцин, пегаспаргаза, преднізон, вінкристин; консолідація: циклофосфамід, цитарабін, дексаметазон, етопозид, меркаптопурин, метотрексат у високих дозах, пегаспаргаза, вінкристин ± неларабін.",
+      "en": "Other recommended. Induction: cyclophosphamide, daunorubicin, pegaspargase, prednisone, vincristine; consolidation: cyclophosphamide, cytarabine, dexamethasone, etoposide, mercaptopurine, high-dose methotrexate, pegaspargase, vincristine ± nelarabine."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Даунорубіцин",
+          "en": "Daunorubicin"
+        },
+        "drug_id": "daunorubicin"
+      },
+      {
+        "name": {
+          "uk": "Пегаспаргаза",
+          "en": "Pegaspargase"
+        },
+        "drug_id": "pegaspargase"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон (у NCCN — преднізон)",
+          "en": "Prednisolone (NCCN: prednisone)"
+        },
+        "drug_id": "prednisolone"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Меркаптопурин",
+          "en": "Mercaptopurine"
+        },
+        "drug_id": "mercaptopurine"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Неларабін",
+          "en": "Nelarabine"
+        },
+        "drug_id": "nelarabine"
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "Педіатричні схеми; повні фази (індукція IA/IB, фаза ЦНС, рання й відстрочена інтенсифікація, продовження) — у протоколі-першоджерелі.",
+      "en": "Pediatric-inspired; the full phases (induction IA/IB, CNS phase, early and delayed intensification, continuation) are in the original protocol."
+    },
+    "availability": "unknown"
+  }
+}
