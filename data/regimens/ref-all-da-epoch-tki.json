@@ -1,0 +1,92 @@
+{
+  "id": "ref-all-da-epoch-tki",
+  "short_name": "ТКІ + DA-EPOCH (Ph+)",
+  "name": {
+    "uk": "ТКІ з DA-EPOCH ± ритуксимаб при Ph+ В-ГЛЛ",
+    "en": "TKI with DA-EPOCH ± rituximab in Ph-positive B-ALL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Cassaday RD. та ін. Leuk Lymphoma 2023;64:927-937",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Помірна інтенсивність для ≥65 років або коморбідних: етопозид, преднізон, вінкристин, циклофосфамід, доксорубіцин + ТКІ; ритуксимаб при CD20+.",
+      "en": "Moderate intensity for ≥65 or comorbid patients: etoposide, prednisone, vincristine, cyclophosphamide, doxorubicin plus TKI; rituximab if CD20-positive."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Інгібітор тирозинкінази (ТКІ): дазатиніб, іматиніб, нілотиніб, босутиніб, понатиніб; асцимініб — за особливих обставин",
+          "en": "TKI: dasatinib, imatinib, nilotinib, bosutinib, ponatinib; asciminib in special circumstances"
+        }
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон (у NCCN — преднізон)",
+          "en": "Prednisolone (NCCN: prednisone)"
+        },
+        "drug_id": "prednisolone"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин",
+          "en": "Doxorubicin"
+        },
+        "drug_id": "doxorubicin"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Фаза II (Cassaday): дазатиніб у 82%, іматиніб у 18%; при збереженні хвороби після 8 циклів — перехід на блінатумомаб; 2-річна OS 77%.",
+        "en": "Phase II (Cassaday): dasatinib in 82%, imatinib in 18%; persistent disease after 8 cycles was moved to blinatumomab; 2-year OS 77%."
+      },
+      {
+        "uk": "У каталозі є DA-EPOCH-R для лімфом (da-epoch-r); для ГЛЛ окремої схеми немає.",
+        "en": "The catalogue has DA-EPOCH-R for lymphomas (da-epoch-r); there is no separate ALL regimen."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN називає схему, але не дає доз і розкладу (відсилає до першоджерела або шаблону призначень) — без розрахунку.",
+      "en": "NCCN names the regimen but gives no doses or schedule (it refers to the original protocol or order templates) — no calculation."
+    },
+    "availability": "unknown"
+  }
+}

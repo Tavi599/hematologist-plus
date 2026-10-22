@@ -1,0 +1,43 @@
+{
+  "$comment": "Лише опис за NCCN Hairy Cell Leukemia 2.2027: доз для розрахунку немає.",
+  "id": "ref-hcl-obinutuzumab",
+  "short_name": "Обінутузумаб (ВКЛ)",
+  "name": {
+    "uk": "Обінутузумаб при рецидивному ВКЛ",
+    "en": "Obinutuzumab in relapsed HCL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Hairy Cell Leukemia, версія 2.2027 від 14.09.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2027 (14.09.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Анти-CD20 антитіло. NCCN: «за певних обставин» при рецидиві для тих, хто не може отримати пуриновий аналог; «інші рекомендовані» при прогресуванні після другої лінії; альтернатива ритуксимабу при непереносимості чи тяжких реакціях на нього.",
+      "en": "An anti-CD20 antibody. NCCN: 'useful in certain circumstances' in relapse for those unable to take a purine analogue; 'other recommended' in progression after second-line therapy; an alternative to rituximab for intolerance or severe reactions."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Обінутузумаб",
+          "en": "Obinutuzumab"
+        },
+        "drug_id": "obinutuzumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Італійське фаза-2 дослідження (HCL-PG04, реферат Blood 2023) при рецидиві/рефрактерності після медіани 2 ліній: повна відповідь 48%; у хворих із повною відповіддю виживаність без прогресування 100% на 56 місяців медіани спостереження.",
+        "en": "Italian phase 2 trial (HCL-PG04, Blood 2023 abstract) in relapsed or refractory disease after a median of two prior lines: complete response 48%; progression-free survival 100% at a median of 56 months in complete responders."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN не наводить схеми обінутузумабу при ВКЛ, а наявна в довіднику схема obinutuzumab-mono (1000 мг раз на 2 місяці) створена для іншого показання, тому не підставлена. Доз для розрахунку нема.",
+      "en": "NCCN gives no obinutuzumab schedule for HCL, and the catalog's obinutuzumab-mono (1000 mg every 2 months) was built for another indication, so it is not substituted. There are no doses to calculate."
+    },
+    "availability": "unknown"
+  }
+}

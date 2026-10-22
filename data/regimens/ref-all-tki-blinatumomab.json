@@ -1,0 +1,66 @@
+{
+  "id": "ref-all-tki-blinatumomab",
+  "short_name": "ТКІ + блінатумомаб (Ph+)",
+  "name": {
+    "uk": "ТКІ з блінатумомабом без хіміотерапії при Ph+ В-ГЛЛ",
+    "en": "TKI with blinatumomab without chemotherapy in Ph-positive B-ALL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Foà R. та ін. J Clin Oncol 2024;42:881-885",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Kantarjian H. та ін. J Clin Oncol 2024;42:4246-4251",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Індукція «інші рекомендовані» для Ph+ В-ГЛЛ (дорослі <65 років і ≥65 років, низька інтенсивність); консолідація — бажана при MRD+ (блінатумомаб + ТКІ).",
+      "en": "Other recommended induction for Ph-positive B-ALL (adults <65 and ≥65, low intensity); consolidation — preferred when MRD-positive (blinatumomab plus TKI)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Інгібітор тирозинкінази (ТКІ): дазатиніб, іматиніб, нілотиніб, босутиніб, понатиніб; асцимініб — за особливих обставин",
+          "en": "TKI: dasatinib, imatinib, nilotinib, bosutinib, ponatinib; asciminib in special circumstances"
+        }
+      },
+      {
+        "name": {
+          "uk": "Блінатумомаб",
+          "en": "Blinatumomab"
+        },
+        "drug_id": "blinatumomab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Перед блінатумомабом знизити лейкоцити периферичної крові до <10×10⁹/л ТКІ зі стероїдом (Foà, JCO 2024).",
+        "en": "Before blinatumomab, bring the peripheral WBC below 10×10⁹/L with a TKI plus corticosteroid (Foà, JCO 2024)."
+      },
+      {
+        "uk": "Основні дані: дазатиніб + блінатумомаб (GIMEMA); понатиніб + блінатумомаб (MDACC).",
+        "en": "The main data: dasatinib plus blinatumomab (GIMEMA); ponatinib plus blinatumomab (MDACC)."
+      },
+      {
+        "uk": "Понатиніб дає серйозні судинні події; після MRD-негативної ремісії зменшують до 15 мг (ALL-D 1).",
+        "en": "Ponatinib carries serious vascular events; after MRD-negative remission reduce to 15 mg (ALL-D 1)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN називає схему, але не дає доз і розкладу (відсилає до першоджерела або шаблону призначень) — без розрахунку.",
+      "en": "NCCN names the regimen but gives no doses or schedule (it refers to the original protocol or order templates) — no calculation."
+    },
+    "availability": "unknown"
+  }
+}

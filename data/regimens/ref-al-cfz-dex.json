@@ -1,0 +1,56 @@
+{
+  "id": "ref-al-cfz-dex",
+  "short_name": "Cfz ± Dex (AL)",
+  "name": {
+    "uk": "Карфілзоміб ± дексаметазон при AL-амілоїдозі",
+    "en": "Carfilzomib with or without dexamethasone in AL amyloidosis"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Systemic Light Chain Amyloidosis, version 1.2027 (AMYL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 19.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Первинна терапія за певних обставин при значущій нейропатії; при рецидиві — лише без серцевого ураження (NCCN 1.2027).",
+      "en": "Primary therapy in certain circumstances with significant neuropathy; at relapse only without cardiac involvement (NCCN 1.2027)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Карфілзоміб",
+          "en": "Carfilzomib"
+        },
+        "drug_id": "carfilzomib"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Карфілзоміб може спричинити серцеву й легеневу токсичність, особливо в літніх; у групі ризику — з обережністю. Раз на тиждень — бажаний режим, можливий і двічі на тиждень, у різних дозах.",
+        "en": "Carfilzomib can cause cardiac and pulmonary toxicity, especially in older patients; use with caution in those at risk. Once weekly is preferred, twice weekly is possible, at different doses."
+      },
+      {
+        "uk": "Фаза 1/2 при рецидиві: максимально переносима доза 36 мг/м² двічі на тиждень після стартової 20 мг/м²; відповідь 63%; 3–4 ступеня — 71%, у т. ч. серцеві події; у 11 хворих NT-proBNP зріс.",
+        "en": "Phase 1/2 at relapse: maximum tolerated dose 36 mg/m² twice weekly after an initial 20 mg/m²; response 63%; grade 3 to 4 events 71%, including cardiac events; NT-proBNP rose in 11 patients."
+      },
+      {
+        "uk": "Первинна терапія: п'ять хворих із серцем і нейропатією — після 1 циклу dFLC знизився на 80,6%, 3 ПВ і 2 ДХЧВ; даних мало.",
+        "en": "Primary therapy: five patients with cardiac involvement and neuropathy — after one cycle dFLC fell 80.6%, three complete and two very good partial responses; data are limited."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    }
+  }
+}

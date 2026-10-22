@@ -1,0 +1,97 @@
+{
+  "id": "ref-all-tki-hypercvad",
+  "short_name": "ТКІ + hyper-CVAD (Ph+)",
+  "name": {
+    "uk": "ТКІ з hyper-CVAD при Ph+ В-ГЛЛ",
+    "en": "TKI with hyper-CVAD in Ph-positive B-ALL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Ravandi F. та ін. Blood 2010;116:2070-2077",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Jabbour EJ. та ін. Lancet Oncol 2015;16:1547-1555",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Індукція «інші рекомендовані» для дорослих <65 років: ТКІ + hyper-CVAD (A/B). У консолідації — той самий каркас + ТКІ.",
+      "en": "Other recommended induction for adults <65: TKI plus hyper-CVAD (A/B). The same backbone plus TKI is used for consolidation."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Інгібітор тирозинкінази (ТКІ): дазатиніб, іматиніб, нілотиніб, босутиніб, понатиніб; асцимініб — за особливих обставин",
+          "en": "TKI: dasatinib, imatinib, nilotinib, bosutinib, ponatinib; asciminib in special circumstances"
+        }
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин",
+          "en": "Doxorubicin"
+        },
+        "drug_id": "doxorubicin"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Схеми hyper-CVAD A/B — у каталозі (eviQ 571/572); ТКІ додається окремою схемою (дазатиніб, понатиніб).",
+        "en": "The hyper-CVAD A/B regimens are in the catalogue (eviQ 571/572); the TKI is added as a separate regimen (dasatinib, ponatinib)."
+      },
+      {
+        "uk": "Дані: дазатиніб + hyper-CVAD (MDACC), понатиніб + hyper-CVAD (3-річна EFS 70%), іматиніб + hyper-CVAD.",
+        "en": "Data: dasatinib plus hyper-CVAD (MDACC), ponatinib plus hyper-CVAD (3-year EFS 70%), imatinib plus hyper-CVAD."
+      }
+    ],
+    "gap": {
+      "uk": "Дози — у картках hyper-CVAD з eviQ; поєднання з ТКІ NCCN не розписує.",
+      "en": "The doses are in the eviQ hyper-CVAD regimens; NCCN does not write out the combination with a TKI."
+    },
+    "availability": "unknown"
+  }
+}

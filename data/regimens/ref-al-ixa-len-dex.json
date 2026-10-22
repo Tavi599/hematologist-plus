@@ -1,0 +1,59 @@
+{
+  "id": "ref-al-ixa-len-dex",
+  "short_name": "Ixa-Rd (AL)",
+  "name": {
+    "uk": "Іксазоміб + леналідомід + дексаметазон при AL-амілоїдозі",
+    "en": "Ixazomib, lenalidomide and dexamethasone in AL amyloidosis"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Systemic Light Chain Amyloidosis, version 1.2027 (AMYL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 19.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Варіант повторної терапії (NCCN 1.2027, AMYL-B 4 з 6).",
+      "en": "An option for previously treated disease (NCCN 1.2027, AMYL-B 4 of 6)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Іксазоміб",
+          "en": "Ixazomib"
+        },
+        "drug_id": "ixazomib"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Фаза I/II при рецидиві (n = 40): відповідь через 3 місяці 57,9%, медіана ВБП 17 міс. (28,8 міс. у ПВ/ДХЧВ). Серйозні події: інфекції 40%, перевантаження рідиною 33%, аритмії 13%.",
+        "en": "Phase I/II at relapse (n = 40): response at 3 months 57.9%, median PFS 17 months (28.8 in complete or very good partial responders). Serious events: infection 40%, fluid overload 33%, arrhythmia 13%."
+      },
+      {
+        "uk": "Початкова доза леналідоміду — 10–15 мг (виноска n).",
+        "en": "The starting lenalidomide dose is 10 to 15 mg (footnote n)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    }
+  }
+}

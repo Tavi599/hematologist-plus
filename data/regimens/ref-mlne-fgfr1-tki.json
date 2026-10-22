@@ -1,0 +1,49 @@
+{
+  "id": "ref-mlne-fgfr1-tki",
+  "short_name": "ТКІ проти FGFR1",
+  "name": {
+    "uk": "ТКІ з активністю проти FGFR1 (мідостаурин, понатиніб)",
+    "en": "TKIs with activity against FGFR1 (midostaurin, ponatinib)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Myeloid/Lymphoid Neoplasms with Eosinophilia and Tyrosine Kinase Gene Fusions",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 від 05.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інші рекомендовані варіанти при перебудові FGFR1 у хронічній фазі; у бластній — разом з індукційною хіміотерапією типу ГМЛ (мієлоїдна) або ГЛЛ (лімфоїдна) і подальшою алоТГСК. Докази — клінічні випадки.",
+      "en": "Other recommended options for FGFR1 rearrangement in chronic phase; in blast phase with AML-type (myeloid) or ALL-type (lymphoid) induction followed by allo-HCT. Evidence is case reports."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Мідостаурин",
+          "en": "Midostaurin"
+        },
+        "drug_id": "midostaurin"
+      },
+      {
+        "name": {
+          "uk": "Понатиніб",
+          "en": "Ponatinib"
+        },
+        "drug_id": "ponatinib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Після алоТГСК у групі високого ризику рецидиву можна розглянути підтримку ТКІ (понатиніб) або азацитидином — лише поодинокі описи.",
+        "en": "After allo-HCT in patients at high risk of relapse, TKI maintenance (ponatinib) or azacitidine can be considered — single case reports only."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить; схема описана лише для ознайомлення. Перед призначенням — за інструкцією препарату.",
+      "en": "NCCN gives no doses in this guideline; the regimen is described for reference only. Check the prescribing information before use."
+    },
+    "availability": "unknown"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "ref-all-tki-vcr-dex",
+  "short_name": "ТКІ + вінкристин + дексаметазон (Ph+)",
+  "name": {
+    "uk": "ТКІ з вінкристином і дексаметазоном (в т.ч. схема PhALLCON) при Ph+ В-ГЛЛ",
+    "en": "TKI with vincristine and dexamethasone (including the PhALLCON regimen) in Ph-positive B-ALL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Jabbour E. та ін. JAMA 2024;331:1814-1823",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Chalandon Y. та ін. Blood 2015;125:3711-3719",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "«За певних обставин» для дорослих <65 років; низька інтенсивність для ≥65 років. PhALLCON (понатиніб проти іматинібу): індукція вінкристин + дексаметазон, консолідація — метотрексат, що чергується з цитарабіном; помірна інтенсивність.",
+      "en": "Useful in certain circumstances for adults <65; low intensity for ≥65. PhALLCON (ponatinib vs imatinib): induction vincristine plus dexamethasone, consolidation methotrexate alternating with cytarabine; moderate intensity."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Інгібітор тирозинкінази (ТКІ): дазатиніб, іматиніб, нілотиніб, босутиніб, понатиніб; асцимініб — за особливих обставин",
+          "en": "TKI: dasatinib, imatinib, nilotinib, bosutinib, ponatinib; asciminib in special circumstances"
+        }
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "PhALLCON: 20 циклів (3 індукції, 6 консолідації, 11 після консолідації), потім ТКІ до прогресії; MRD-негативна ПР частіша з понатинібом (34,4% проти 16,7%).",
+        "en": "PhALLCON: 20 cycles (3 induction, 6 consolidation, 11 post-consolidation), then TKI until progression; MRD-negative CR more frequent with ponatinib (34.4% vs 16.7%)."
+      },
+      {
+        "uk": "У 1-й лінії іматиніб — лише коли не переносять ширші ТКІ.",
+        "en": "In first line, imatinib only if broader TKIs are not tolerated."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN називає схему, але не дає доз і розкладу (відсилає до першоджерела або шаблону призначень) — без розрахунку.",
+      "en": "NCCN names the regimen but gives no doses or schedule (it refers to the original protocol or order templates) — no calculation."
+    },
+    "availability": "unknown"
+  }
+}

@@ -1083,13 +1083,13 @@ const elts: Score = {
     return {
       value: { amount: score, decimals: 4, label: t('Індекс', 'Index') },
       group:
-        score < 1.568
+        score <= 1.568
           ? { label: t('Низький', 'Low'), tone: 'green' }
           : score <= 2.2185
             ? { label: t('Проміжний', 'Intermediate'), tone: 'orange' }
             : { label: t('Високий', 'High'), tone: 'red' },
       notes: [
-        score < 1.568
+        score <= 1.568
           ? t(
               '10-річна загальна виживаність 88%, смерть від ХМЛ за 6 років 2%.',
               '10-year OS 88%, death from CML at 6 years 2%.',
@@ -1114,6 +1114,120 @@ const elts: Score = {
     },
     ELN_2020,
   ],
+}
+
+const NCCN_CML = {
+  name: 'NCCN Guidelines: Chronic Myeloid Leukemia, версія 2.2027 від 10.07.2026, CML-A',
+  url: 'https://www.nccn.org/guidelines/category_1',
+  checked: t(
+    'Формули та межі груп у таблиці CML-A (нумерація посилань у таблиці зсунута відносно назв шкал)',
+    'Formulas and group limits in table CML-A (the reference numbers in the table are shifted against the score names)',
+  ),
+}
+
+const hasford: Score = {
+  id: 'hasford',
+  section: 'risk',
+  title: t('Hasford / Euro (ХМЛ)', 'Hasford / Euro (CML)'),
+  purpose: t(
+    'Ризик при діагнозі хронічної фази; дані до лікування',
+    'Risk at diagnosis of chronic phase; pre-treatment values',
+  ),
+  fields: [
+    AGE_ANY,
+    number(
+      'spleen',
+      'Селезінка нижче реберної дуги',
+      'Spleen below the costal margin',
+      t('см', 'cm'),
+      0.5,
+    ),
+    number('platelets', 'Тромбоцити', 'Platelets', G9),
+    number('blasts', 'Бласти в крові', 'Blood blasts', t('%', '%'), 0.1),
+    number('eosinophils', 'Еозинофіли в крові', 'Blood eosinophils', t('%', '%'), 0.1),
+    number('basophils', 'Базофіли в крові', 'Blood basophils', t('%', '%'), 0.1),
+  ],
+  compute: (values) => {
+    const age = num(values, 'ageYears')
+    const spleen = num(values, 'spleen')
+    const platelets = num(values, 'platelets')
+    const blasts = num(values, 'blasts')
+    const eos = num(values, 'eosinophils')
+    const baso = num(values, 'basophils')
+    if (
+      age === undefined ||
+      spleen === undefined ||
+      platelets === undefined ||
+      blasts === undefined ||
+      eos === undefined ||
+      baso === undefined
+    )
+      return null
+    const score =
+      (0.6666 * (age >= 50 ? 1 : 0) +
+        0.042 * spleen +
+        0.0584 * blasts +
+        0.0413 * eos +
+        0.2039 * (baso >= 3 ? 1 : 0) +
+        1.0956 * (platelets >= 1500 ? 1 : 0)) *
+      1000
+    return {
+      value: { amount: score, decimals: 0, label: t('Індекс', 'Index') },
+      group:
+        score <= 780
+          ? { label: t('Низький', 'Low'), tone: 'green' }
+          : score <= 1480
+            ? { label: t('Проміжний', 'Intermediate'), tone: 'orange' }
+            : { label: t('Високий', 'High'), tone: 'red' },
+      notes: [
+        t(
+          'За NCCN бажана шкала ELTS; Hasford (Euro) — альтернатива.',
+          'NCCN prefers ELTS; Hasford (Euro) is an alternative.',
+        ),
+      ],
+    }
+  },
+  sources: [NCCN_CML],
+}
+
+const eutos: Score = {
+  id: 'eutos',
+  section: 'risk',
+  title: t('EUTOS (ХМЛ)', 'EUTOS (CML)'),
+  purpose: t(
+    'Дві змінні: базофіли й селезінка; ризик недосягнення CCyR за 18 місяців на іматинібі',
+    'Two variables, basophils and spleen; risk of missing CCyR at 18 months on imatinib',
+  ),
+  fields: [
+    number('basophils', 'Базофіли в крові', 'Blood basophils', t('%', '%'), 0.1),
+    number(
+      'spleen',
+      'Селезінка нижче реберної дуги',
+      'Spleen below the costal margin',
+      t('см', 'cm'),
+      0.5,
+    ),
+  ],
+  compute: (values) => {
+    const baso = num(values, 'basophils')
+    const spleen = num(values, 'spleen')
+    if (baso === undefined || spleen === undefined) return null
+    const score = 0.07 * baso + 0.0402 * spleen
+    return {
+      value: { amount: score, decimals: 4, label: t('Індекс', 'Index') },
+      group:
+        score <= 0.8754
+          ? { label: t('Низький', 'Low'), tone: 'green' }
+          : { label: t('Високий', 'High'), tone: 'red' },
+      notes: [
+        t(
+          'Формула в NCCN — 0,07 × базофіли + 0,0402 × селезінка, межа 0,8754 (первісна публікація: 7 × базофіли + 4 × селезінка, межа 87).',
+          'NCCN formula: 0.07 x basophils + 0.0402 x spleen, cutoff 0.8754 (the original publication: 7 x basophils + 4 x spleen, cutoff 87).',
+        ),
+      ],
+    }
+  },
+  sources: [NCCN_CML],
 }
 
 // ── Myelodysplastic and myeloproliferative ──────────────────────────────────────────────────
@@ -1687,6 +1801,8 @@ export const RISK_SCORES: Score[] = [
   r2Iss,
   sokal,
   elts,
+  hasford,
+  eutos,
   ipss,
   ipssR,
   wpss,

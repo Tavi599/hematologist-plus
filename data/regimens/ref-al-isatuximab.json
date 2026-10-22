@@ -1,0 +1,42 @@
+{
+  "id": "ref-al-isatuximab",
+  "short_name": "Ізатуксимаб (AL)",
+  "name": {
+    "uk": "Ізатуксимаб окремо при рецидивному AL-амілоїдозі",
+    "en": "Isatuximab alone in relapsed AL amyloidosis"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Systemic Light Chain Amyloidosis, version 1.2027 (AMYL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 19.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Новий у версії 1.2027 варіант повторної терапії (SWOG S1702).",
+      "en": "A regimen added to previously treated disease in version 1.2027 (SWOG S1702)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ізатуксимаб",
+          "en": "Isatuximab"
+        },
+        "drug_id": "isatuximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "NCCN посилається на проспективну фазу II SWOG S1702 (Parker та ін., Blood 2025); у Discussion схему не розбирають.",
+        "en": "NCCN cites the prospective phase II SWOG S1702 (Parker et al., Blood 2025); the Discussion does not describe the regimen."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "unavailable"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "id": "ref-all-msk-ccg1882",
+  "short_name": "MSKCC (CCG-1882)",
+  "name": {
+    "uk": "MSKCC ALL за схемою CCG-1882 (18–<60 років)",
+    "en": "MSKCC ALL regimen based on CCG-1882 (aged 18 to <60)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Douer D. та ін. J Clin Oncol 2014;32:905-911",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Geyer MB. та ін. Haematologica 2021;106:2086-2094",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інші рекомендовані (Ph− В-ГЛЛ <65; T-ГЛЛ AYA ≥18 років). Індукція: циклофосфамід, цитарабін, даунорубіцин, меркаптопурин, пегаспаргаза, преднізон, вінкристин; консолідація додає дексаметазон, метотрексат у високих дозах, тіогуанін.",
+      "en": "Other recommended (Ph-negative B-ALL <65; AYA T-ALL ≥18). Induction: cyclophosphamide, cytarabine, daunorubicin, mercaptopurine, pegaspargase, prednisone, vincristine; consolidation adds dexamethasone, high-dose methotrexate, thioguanine."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Даунорубіцин",
+          "en": "Daunorubicin"
+        },
+        "drug_id": "daunorubicin"
+      },
+      {
+        "name": {
+          "uk": "Меркаптопурин",
+          "en": "Mercaptopurine"
+        },
+        "drug_id": "mercaptopurine"
+      },
+      {
+        "name": {
+          "uk": "Пегаспаргаза",
+          "en": "Pegaspargase"
+        },
+        "drug_id": "pegaspargase"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон (у NCCN — преднізон)",
+          "en": "Prednisolone (NCCN: prednisone)"
+        },
+        "drug_id": "prednisolone"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Тіогуанін",
+          "en": "Thioguanine"
+        },
+        "drug_id": "thioguanine"
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "Педіатричні схеми; повні фази (індукція IA/IB, фаза ЦНС, рання й відстрочена інтенсифікація, продовження) — у протоколі-першоджерелі.",
+      "en": "Pediatric-inspired; the full phases (induction IA/IB, CNS phase, early and delayed intensification, continuation) are in the original protocol."
+    },
+    "availability": "unknown"
+  }
+}

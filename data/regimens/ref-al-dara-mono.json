@@ -1,0 +1,53 @@
+{
+  "id": "ref-al-dara-mono",
+  "short_name": "Дара (AL, 1-ша лінія)",
+  "name": {
+    "uk": "Даратумумаб окремо при AL-амілоїдозі, первинна терапія",
+    "en": "Daratumumab alone in AL amyloidosis, primary therapy"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Systemic Light Chain Amyloidosis, version 1.2027 (AMYL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 19.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Бажана первинна терапія при поширеній стадії або вираженому ураженні органів (NCCN 1.2027, AMYL-B 2 з 6).",
+      "en": "A preferred primary option in advanced stage or marked organ involvement (NCCN 1.2027, AMYL-B 2 of 6)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Даратумумаб",
+          "en": "Daratumumab"
+        },
+        "drug_id": "daratumumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "П/ш форма — даратумумаб 1800 мг з гіалуронідазою 30 000 од.; в/в — 16 мг/кг. П/ш даратумумаб дає менше інфузійних реакцій і швидше вводиться; NCCN радить саме п/ш форму, в/в — якщо п/ш не переноситься.",
+        "en": "Subcutaneous form is daratumumab 1800 mg with hyaluronidase 30,000 units; IV is 16 mg/kg. The subcutaneous form gives fewer infusion reactions and is faster; NCCN prefers it and keeps IV for patients who cannot tolerate it."
+      },
+      {
+        "uk": "Загальна гематологічна відповідь 66,6–90%. Профіль токсичності як при мієломі, але інфекцій при AL більше.",
+        "en": "Overall haematological response 66.6 to 90%. The toxicity profile matches myeloma, but infections are more frequent in AL."
+      },
+      {
+        "uk": "Перед даратумумабом — група крові й скринінг антитіл: може бути хибнопозитивний непрямий тест Кумбса; при IgG-каппа можлива хибнопозитивна імунофіксація (потрібен тест на інтерференцію або мас-спектрометрія).",
+        "en": "Type and screen before daratumumab: the indirect Coombs test may be falsely positive; with IgG kappa the immunofixation may be falsely positive (interference testing or mass spectrometry tells them apart)."
+      },
+      {
+        "uk": "Профілактика оперізувального герпесу — рекомендована (інгібітори протеасом і даратумумаб).",
+        "en": "Herpes zoster prophylaxis is recommended (proteasome inhibitors and daratumumab)."
+      }
+    ],
+    "gap": {
+      "uk": "Каталог має ритм даратумумабу у складі Dara-CyBorD (eviQ 4205) і п/ш підтримку цикли 7–24; окремого курсу «даратумумаб моно» для AL NCCN не розписує — дози й ритм береться з інструкції; без розрахунку.",
+      "en": "The catalogue holds the daratumumab rhythm inside Dara-CyBorD (eviQ 4205) and the cycle 7 to 24 subcutaneous maintenance; NCCN does not lay out a single-agent course for AL — dose and rhythm come from the label; not calculated."
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "ref-wm-bcdr",
+  "short_name": "BCDR (WM)",
+  "name": {
+    "uk": "Бортезоміб + циклофосфамід + дексаметазон + ритуксимаб (WM)",
+    "en": "Bortezomib + cyclophosphamide + dexamethasone + rituximab (WM)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Waldenström Macroglobulinemia/Lymphoplasmacytic Lymphoma, version 1.2027 (WM/LPL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 11.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інша рекомендована схема і при первинній терапії, і при раніше лікованій хворобі; додана у версії 1.2027.",
+      "en": "Other recommended in both primary and previously treated disease; added in version 1.2027."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Рандомізована фаза III (204 хворих без лікування): R-CD + бортезоміб проти R-CD — 2-річна ВБП 80,6% проти 72,8%, перша відповідь через 3 проти 5,5 міс.; побічні події 3 ступеня 49,2%.",
+        "en": "Randomised phase III (204 untreated patients): R-CD plus bortezomib vs R-CD — 2-year PFS 80.6% vs 72.8%, time to first response 3 vs 5.5 months; grade 3 events 49.2%."
+      },
+      {
+        "uk": "Бортезоміб — підшкірно й раз на тиждень (бажаний шлях і розклад); нейропатія — основна токсичність.",
+        "en": "Bortezomib subcutaneously and weekly (preferred route and schedule); neuropathy is the main toxicity."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "registered"
+  }
+}
