@@ -1,0 +1,50 @@
+{
+  "id": "ref-mpn-peginterferon",
+  "short_name": "Пегінтерферон α-2a (МПН)",
+  "name": {
+    "uk": "Пегінтерферон альфа-2a при ПВ, ЕТ і мієлофіброзі",
+    "en": "Peginterferon alfa-2a in PV, ET and myelofibrosis"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Myeloproliferative Neoplasms, версія 3.2026 від 18.09.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Циторедукція при ПВ і ЕТ для молодших пацієнтів, при вагітності або коли пацієнт не хоче гідроксисечовини; при нижчому ризику МФ із симптомами — «за певних обставин». Якщо альфа-2a недоступний, NCCN допускає інший пегільований інтерферон (напр., ропегінтерферон).",
+      "en": "Cytoreduction in PV and ET for younger patients, in pregnancy or for those who defer hydroxyurea; in lower-risk symptomatic MF \"useful in certain circumstances\". If alfa-2a is unavailable, NCCN accepts another pegylated interferon (eg, ropeginterferon)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Пегінтерферон альфа-2a",
+          "en": "Peginterferon alfa-2a"
+        },
+        "drug_id": "peginterferon-alfa-2a"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Старт 45 мкг на тиждень підшкірно; за потреби підвищувати на 45 мкг кожні 4 тижні до максимуму 180 мкг (NCCN, MPN-G 2/2).",
+        "en": "Start 45 mcg a week subcutaneously; if needed raise by 45 mcg every 4 weeks to a maximum of 180 mcg (NCCN, MPN-G 2/2)."
+      },
+      {
+        "uk": "Перед лікуванням — скринінг психічних розладів (депресія); під час лікування стежити за настроєм і автоімунними хворобами; ТТГ на старті й щороку; печінкові ферменти на старті й під час лікування; огляд очей на старті (періодично — при ретинопатії).",
+        "en": "Screen for psychiatric disorder (depression) before treatment and monitor mood and autoimmune disease; thyroid function at baseline and yearly; liver enzymes at baseline and during treatment; eye examination at baseline (periodic with pre-existing retinopathy)."
+      },
+      {
+        "uk": "Єдиний циторедуктивний засіб, який NCCN дозволяє розглянути при вагітності, якщо користь переважає ризик для плода (даних недостатньо).",
+        "en": "The only cytoreductive agent NCCN allows considering in pregnancy if benefit outweighs fetal risk (data are insufficient)."
+      }
+    ],
+    "gap": {
+      "uk": "Пегінтерферон альфа-2a в Україні не зареєстрований (є лише альфа-2b, Альфапег); підвищення дози залежить від переносимості, тому розрахунку в довіднику немає.",
+      "en": "Peginterferon alfa-2a is not registered in Ukraine (only alfa-2b, Alfapeg); escalation depends on tolerance, so there is no calculation."
+    },
+    "availability": "unavailable"
+  }
+}

@@ -145,6 +145,463 @@
           "regimen_id": "ref-mpn-ropeginterferon"
         }
       ]
+    },
+    {
+      "key": "nccn-et",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN МПН 3.2026 — есенціальна тромбоцитемія (ET-1…ET-3)",
+        "en": "NCCN MPN 3.2026 pathways — essential thrombocythemia (ET-1 to ET-3)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN «Myeloproliferative Neoplasms», версія 3.2026 від 18.09.2026: ризик → лікування → далі. Рекомендації категорії 2A, якщо не вказано інше; дози — у схемах довідника, критерії діагнозу й відповіді — у статті, розділ NCCN.",
+        "en": "The NCCN \"Myeloproliferative Neoplasms\" algorithm, version 3.2026 of 18 September 2026: risk → treatment → next. Recommendations are category 2A unless stated; doses are in the catalog regimens; diagnostic and response criteria are in the article, NCCN section."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-et-risk",
+          "kind": "group",
+          "title": {
+            "uk": "Діагноз і ризик при ЕТ (MPN-1, MPN-2, ET-B)",
+            "en": "Diagnosis and risk in ET (MPN-1, MPN-2, ET-B)"
+          },
+          "description": {
+            "uk": "Обстеження — як при підозрі на МПН (BCR::ABL1, мозок із трихромом і ретикуліном, цитогенетика, молекулярна панель JAK2/CALR/MPL, при підвищених тромбоцитах чи кровотечі — тест на набутий синдром фон Віллебранда). Діагноз ЕТ (ВООЗ/ICC): тромбоцити ≥450 ×10⁹/л; мозок із проліферацією переважно мегакаріоцитарного ряду; не виконуються критерії ХМЛ, ПВ, ПМФ чи інших мієлоїдних пухлин; мутація JAK2, CALR чи MPL; малий критерій — клональний маркер чи виключення реактивного тромбоцитозу. Ризик за IPSET-thrombosis (revised): дуже низький — вік ≤60, без JAK2, без тромбозу; низький — вік ≤60, з JAK2, без тромбозу; проміжний — вік >60, без JAK2, без тромбозу; високий — тромбоз у будь-якому віці або вік >60 з JAK2. Для виживання — MIPSS-ET (чоловік 1, лейкоцити ≥11 — 1, несприятливі мутації SRSF2/SF3B1/U2AF1/TP53 — 2, вік >60 — 4; низький 0–1, проміжний 2–5, високий ≥6).",
+            "en": "Work-up as for a suspected MPN (BCR::ABL1, marrow with trichrome and reticulin, cytogenetics, a JAK2/CALR/MPL panel, and with a high platelet count or bleeding a test for acquired von Willebrand syndrome). ET diagnosis (WHO/ICC): platelets 450 ×10⁹/L or more; marrow with mainly megakaryocytic proliferation; criteria for CML, PV, PMF or other myeloid neoplasms not met; a JAK2, CALR or MPL mutation; the minor criterion is a clonal marker or exclusion of reactive thrombocytosis. Risk by IPSET-thrombosis (revised): very low is age 60 or under, no JAK2, no thrombosis; low is age 60 or under, with JAK2, no thrombosis; intermediate is age over 60, no JAK2, no thrombosis; high is thrombosis at any age or age over 60 with JAK2. For survival, MIPSS-ET (male 1, leukocytes 11 or more 1, adverse mutations SRSF2/SF3B1/U2AF1/TP53 2, age over 60 4; low 0-1, intermediate 2-5, high 6 or more)."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Дуже низький, низький, проміжний ризик (ET-1)",
+                "en": "Very low, low, intermediate risk (ET-1)"
+              },
+              "target": "nccn-et-low"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Високий ризик (ET-2)",
+                "en": "High risk (ET-2)"
+              },
+              "target": "nccn-et-high"
+            }
+          ]
+        },
+        {
+          "key": "nccn-et-low",
+          "kind": "group",
+          "title": {
+            "uk": "Лікування ЕТ дуже низького, низького й проміжного ризику (ET-1)",
+            "en": "Treatment of very-low, low and intermediate-risk ET (ET-1)"
+          },
+          "description": {
+            "uk": "Контроль серцево-судинних чинників ризику. Аспірин 81–100 мг на добу — при вазомоторних/мікроциркуляторних порушеннях (дуже низький ризик) і для низького та проміжного ризику; обережно при набутому синдромі фон Віллебранда; більші дози (>100 мг) зважувати проти ризику кровотечі; двічі на добу можна при рефрактерних симптомах чи серцево-судинних чинниках ризику. Перед початком циторедукції — аспірат і біопсія для виключення прогресування в МФ.",
+            "en": "Manage cardiovascular risk factors. Aspirin 81-100 mg a day for vasomotor/microvascular disturbances (very low risk) and for low and intermediate risk; with caution in acquired von Willebrand syndrome; doses over 100 mg are weighed against bleeding risk; twice daily may be used for refractory symptoms or cardiovascular risk factors. Before cytoreduction, marrow aspirate and biopsy are done to rule out progression to MF."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-et-low-base",
+              "kind": "line",
+              "title": {
+                "uk": "Без симптомів і без показань до циторедукції",
+                "en": "Asymptomatic with no indication for cytoreduction"
+              },
+              "description": {
+                "uk": "Аспірин 81–100 мг на добу (для дуже низького ризику — лише при вазомоторних порушеннях); контроль тромбозу, набутого синдрому фон Віллебранда й кровотечі, ознак прогресування за клінікою.",
+                "en": "Aspirin 81-100 mg a day (at very low risk only with vasomotor disturbances); monitor for thrombosis, acquired von Willebrand syndrome, bleeding and signs of progression as clinically indicated."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "aspirin-mpn"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Спостереження за тромбозом, кровотечею, прогресуванням",
+                    "en": "Monitoring for thrombosis, bleeding, progression"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Симптоми чи показання до циторедукції — як при високому ризику (ET-2)",
+                    "en": "Symptoms or indications for cytoreduction — as in high risk (ET-2)"
+                  },
+                  "target": "nccn-et-high"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Пост-ЕТ мієлофіброз — див. МФ",
+                    "en": "Post-ET myelofibrosis — see MF"
+                  },
+                  "target": "nccn-et-support"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Прогресування до прискореної/бластної фази МПН (MPN-AP/BP-1)",
+                    "en": "Progression to accelerated/blast phase MPN (MPN-AP/BP-1)"
+                  },
+                  "target": "nccn-et-apbp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-et-high",
+          "kind": "group",
+          "title": {
+            "uk": "Лікування ЕТ високого ризику (ET-2, ET-3)",
+            "en": "Treatment of high-risk ET (ET-2, ET-3)"
+          },
+          "description": {
+            "uk": "Контроль серцево-судинних чинників, аспірин 81–100 мг на добу, циторедукція. Показання до циторедукції при інших ризиках: новий тромбоз, набутий синдром фон Віллебранда чи велика кровотеча, спленомегалія, прогресуючий тромбоцитоз чи лейкоцитоз, симптоми, вазомоторні порушення, що не реагують на аспірин (головний біль, біль у грудях, еритромелалгія). Оцінка відповіді — за симптомами; нормалізація показників не доведена як мета, окрім тяжкого тромбозу чи симптомів. Резистентність чи непереносимість гідроксисечовини при ЕТ за ELN: тромбоцити >600 після 3 місяців ≥2 г/добу (2,5 г при вазі ≥80 кг); тромбоцити >400 і лейкоцити <2,5 при будь-якій дозі; тромбоцити >400 і Hb <10 при будь-якій дозі; виразки гомілок; лихоманка. Анагрелід: старт 0,5 мг двічі на добу, збільшувати на 0,5 мг щотижня; ЕКГ на старті; тахікардія, головний біль, запаморочення; обережно при серцевій недостатності; стежити за пост-ЕТ мієлофіброзом. Плазмаферез — при невідкладних станах (тяжкий тромбоцитоз з неврологічними ускладненнями чи загрозливий тромбоз чи кровотеча).",
+            "en": "Manage cardiovascular risk factors, aspirin 81-100 mg a day, cytoreduction. Indications for cytoreduction at lower risks: new thrombosis, acquired von Willebrand syndrome or major bleeding, splenomegaly, progressive thrombocytosis or leukocytosis, symptoms, vasomotor disturbances unresponsive to aspirin (headache, chest pain, erythromelalgia). Response is judged by symptoms; normalising counts is not shown to be a goal except in severe thrombosis or symptoms. Resistance or intolerance to hydroxyurea in ET by ELN: platelets over 600 after 3 months of 2 g/d or more (2.5 g at 80 kg or more); platelets over 400 with WBC under 2.5 at any dose; platelets over 400 with Hb under 10 at any dose; leg ulcers; fever. Anagrelide: start 0.5 mg twice daily, raise by 0.5 mg weekly; baseline ECG; tachycardia, headache, dizziness; caution in heart failure; monitor for post-ET myelofibrosis. Plateletpheresis for emergencies (severe thrombocytosis with neurologic complications, life-threatening thrombosis or bleeding)."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-et-high-first",
+              "kind": "line",
+              "title": {
+                "uk": "Початкова циторедукція (високий ризик)",
+                "en": "Initial cytoreduction (high risk)"
+              },
+              "description": {
+                "uk": "Бажано: клінічне дослідження чи гідроксисечовина. Інші рекомендовані: пегінтерферон альфа-2a (за іншими характеристиками пацієнта; при недоступності — інший пегільований інтерферон) чи анагрелід.",
+                "en": "Preferred: a clinical trial or hydroxyurea. Other recommended: peginterferon alfa-2a (by other patient-specific variables; another pegylated interferon if unavailable) or anagrelide."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "hydroxycarbamide-et",
+                  "notes": {
+                    "uk": "NCCN доз не називає; 15 мг/кг на добу — за UpToDate.",
+                    "en": "NCCN gives no dose; 15 mg/kg a day from UpToDate."
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-mpn-peginterferon",
+                  "notes": {
+                    "uk": "Для молодших пацієнтів, вагітних чи тих, хто відмовляється від гідроксисечовини.",
+                    "en": "For younger or pregnant patients or those who defer hydroxyurea."
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "anagrelide-et",
+                  "notes": {
+                    "uk": "Старт 0,5 мг двічі на добу, +0,5 мг щотижня (NCCN, MPN-G).",
+                    "en": "Start 0.5 mg twice daily, +0.5 mg weekly (NCCN, MPN-G)."
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "aspirin-mpn"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Моніторинг відповіді, симптомів і прогресування",
+                    "en": "Monitoring of response, symptoms and progression"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Неадекватна відповідь чи втрата відповіді (ET-3)",
+                    "en": "Inadequate response or loss of response (ET-3)"
+                  },
+                  "target": "nccn-et-change"
+                }
+              ]
+            },
+            {
+              "key": "nccn-et-change",
+              "kind": "line",
+              "title": {
+                "uk": "Зміна циторедукції (ET-3): непереносимість чи резистентність до гідроксисечовини, пегінтерферону чи анагреліду; тромбоз, набутий синдром фон Віллебранда, велика кровотеча; спленомегалія; тромбоцитоз/лейкоцитоз; симптоми; вазомоторні порушення",
+                "en": "Change of cytoreduction (ET-3): intolerance or resistance to hydroxyurea, peginterferon or anagrelide; thrombosis, acquired von Willebrand syndrome, major bleeding; splenomegaly; thrombocytosis/leukocytosis; symptoms; vasomotor disturbances"
+              },
+              "description": {
+                "uk": "Бажано: клінічне дослідження; ропегінтерферон альфа-2b (категорія 1); гідроксисечовина, якщо не застосовувалась. Інші рекомендовані: пегінтерферон альфа-2a, якщо не застосовувався. За певних обставин: анагрелід, якщо не застосовувався; плазмаферез (невідкладно); руксолітиніб.",
+                "en": "Preferred: a clinical trial; ropeginterferon alfa-2b (category 1); hydroxyurea if not used before. Other recommended: peginterferon alfa-2a if not used before. In certain circumstances: anagrelide if not used before; plateletpheresis (emergencies); ruxolitinib."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-mpn-ropeginterferon",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "hydroxycarbamide-et",
+                  "notes": {
+                    "uk": "NCCN доз не називає; 15 мг/кг на добу — за UpToDate.",
+                    "en": "NCCN gives no dose; 15 mg/kg a day from UpToDate."
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-mpn-peginterferon",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "anagrelide-et",
+                  "notes": {
+                    "uk": "Якщо раніше не застосовувався.",
+                    "en": "If not used before."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "avoid-et-ruxolitinib",
+                  "notes": {
+                    "uk": "NCCN: руксолітиніб — за певних обставин; у дослідженні MAJIC-ET переваги над другою лінією не було.",
+                    "en": "NCCN: ruxolitinib in certain circumstances; the MAJIC-ET study showed no advantage over second-line treatment."
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Плазмаферез — при невідкладних станах",
+                    "en": "Plateletpheresis — for emergencies"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Пост-ЕТ мієлофіброз — див. МФ",
+                    "en": "Post-ET myelofibrosis — see MF"
+                  },
+                  "target": "nccn-et-support"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Прогресування до прискореної/бластної фази МПН (MPN-AP/BP-1)",
+                    "en": "Progression to accelerated/blast phase MPN (MPN-AP/BP-1)"
+                  },
+                  "target": "nccn-et-apbp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-et-apbp",
+          "kind": "group",
+          "title": {
+            "uk": "Прискорена та бластна фаза МПН (MPN-AP/BP-1)",
+            "en": "Accelerated and blast phase MPN (MPN-AP/BP-1)"
+          },
+          "description": {
+            "uk": "Обстеження: аспірат і біопсія кісткового мозку із трихромом і ретикуліном, цитогенетика (каріотип ± FISH), проточна цитометрія, широка NGS-панель з мутаціями, типовими для AML. Прискорена фаза — бласти 10–19% у крові чи кістковому мозку; бластна — ≥20% або мієлоїдна саркома. Кандидата на трансплантацію оцінюють за віком, функціональним станом, супутніми хворобами, психосоціальним станом, бажанням пацієнта й наявністю опікуна; рання консультація трансплант-команди потрібна для планування, зокрема містка. Деякі пацієнти з прискореною фазою йдуть на трансплантацію без містка. JAK-інгібітор можна продовжувати майже до початку кондиціювання. Режими типу AML-індукції та ГМА + венетоклакс при прогресуванні МПН дають низькі відповіді й значну токсичність.",
+            "en": "Work-up: marrow aspirate and biopsy with trichrome and reticulin, cytogenetics (karyotype ± FISH), flow cytometry and a broad NGS panel including AML-associated mutations. Accelerated phase is 10-19% blasts in blood or marrow; blast phase is 20% or more, or myeloid sarcoma. A transplant candidate is chosen by age, performance status, comorbidity, psychosocial status, preference and caregiver availability; early referral to the transplant team is advised to plan bridging. Some accelerated-phase patients proceed to transplant directly without bridging. A JAK inhibitor can be continued close to the start of conditioning. AML-type induction and HMA plus venetoclax in MPN progression give low response rates and significant toxicity."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-et-apbp-accel",
+              "kind": "line",
+              "title": {
+                "uk": "Прискорена фаза, кандидат на алоТГСК",
+                "en": "Accelerated phase, transplant candidate"
+              },
+              "description": {
+                "uk": "Клінічне дослідження або місток (ГМА; ГМА + JAK-інгібітор; ГМА + венетоклакс; інтенсивна індукційна хіміотерапія за настановою AML) з наступною алогенною ТГСК. Для паліації спленомегалії й симптомів JAK-інгібітор поєднують з азацитидином чи децитабіном; даних про федратиніб, момелотиніб чи пакритиніб з ГМА дуже мало. За NGS можна розглянути таргетні засоби (IDH1/2, FLT3) окремо чи з ГМА. При індукції — профілактика синдрому лізису пухлини.",
+                "en": "A clinical trial, or a bridge (HMA; HMA + JAK inhibitor; HMA + venetoclax; intensive induction per the AML guideline) followed by allogeneic HCT. A JAK inhibitor is combined with azacitidine or decitabine to palliate splenomegaly and symptoms; data on fedratinib, momelotinib or pacritinib with HMAs are very limited. By NGS, targeted drugs (IDH1/2, FLT3) can be considered alone or with HMAs. Tumour lysis prophylaxis with induction."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono",
+                  "notes": {
+                    "uk": "Гіпометилувальний засіб як місток; доза стандартна для МДС/AML, NCCN доз для МПН не називає.",
+                    "en": "An HMA as a bridge; the standard MDS/AML dose, NCCN gives no MPN-specific dose."
+                  }
+                },
+                {
+                  "regimen_id": "aza-ven",
+                  "notes": {
+                    "uk": "ГМА + венетоклакс як місток; схема й дози — з AML.",
+                    "en": "HMA plus venetoclax as a bridge; the AML schedule and doses."
+                  }
+                },
+                {
+                  "regimen_id": "ref-mpn-ap-bp-hma-jaki",
+                  "notes": {
+                    "uk": "ГМА + JAK-інгібітор; дані обмежені.",
+                    "en": "HMA plus a JAK inhibitor; limited data."
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "Алогенна ТГСК після містка (деяким пацієнтам — без містка)",
+                    "en": "Allogeneic HCT after bridging (directly in selected patients)"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-et-apbp-blast",
+              "kind": "line",
+              "title": {
+                "uk": "Бластна фаза (≥20%) — кандидат на алоТГСК",
+                "en": "Blast phase (20% or more) — transplant candidate"
+              },
+              "description": {
+                "uk": "Клінічне дослідження або місток (ГМА, ГМА + JAK-інгібітор, ГМА + венетоклакс, інтенсивна індукція) з наступною алоТГСК.",
+                "en": "A clinical trial, or a bridge (HMA, HMA + JAK inhibitor, HMA + venetoclax, intensive induction) followed by allogeneic HCT."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono"
+                },
+                {
+                  "regimen_id": "aza-ven"
+                },
+                {
+                  "regimen_id": "ref-mpn-ap-bp-hma-jaki"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "Алогенна ТГСК",
+                    "en": "Allogeneic HCT"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-et-apbp-no-hct",
+              "kind": "line",
+              "title": {
+                "uk": "Бластна фаза, не кандидат на трансплантацію",
+                "en": "Blast phase, not a transplant candidate"
+              },
+              "description": {
+                "uk": "Клінічне дослідження, ГМА, ГМА + JAK-інгібітор, ГМА + венетоклакс або менш інтенсивна хіміотерапія чи таргетна терапія (за настановою AML; IDH1/2, FLT3-інгібітори за результатами NGS).",
+                "en": "A clinical trial, an HMA, HMA + JAK inhibitor, HMA + venetoclax, or lower-intensity chemotherapy or targeted therapy (per the AML guideline; IDH1/2 and FLT3 inhibitors by NGS)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono"
+                },
+                {
+                  "regimen_id": "aza-ven"
+                },
+                {
+                  "regimen_id": "ref-mpn-ap-bp-hma-jaki"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-et-support",
+          "kind": "group",
+          "title": {
+            "uk": "Супровідне лікування й особливі ситуації (MPN-F, MPN-G, MPN-H)",
+            "en": "Supportive care and special situations (MPN-F, MPN-G, MPN-H)"
+          },
+          "description": {
+            "uk": "Усім: оцінка й зменшення серцево-судинних чинників ризику (куріння, дієта, рух, АТ, цукровий діабет, ліпіди) і тромботичних та геморагічних чинників; симптоми оцінюють шкалою MPN-SAF TSS (0–100) на початку й під час лікування, відповідь — зменшення ≥50%; зміна симптомів може бути ознакою прогресування. Свербіж: шкіряні засоби, антигістамінні, місцеві стероїди, далі SSRI, вузькосмугова UVB, пегінтерферон, габапентин, апрепітант, руксолітиніб. Біль у кістках: лоратадин, НПЗЗ (напроксен), одноразове опромінення. Головний біль і шум у вухах: виключити тромбоз; аспірин 80–100 мг на добу, при резистентності — двічі на добу або клопідогрель 75 мг на добу; цитозниження чи флеботомія, якщо аспірин не допомагає. JAK-інгібітори: ризик синдрому відміни (лихоманка, дихальна недостатність, гіпотензія, поліорганна недостатність) — знижувати дозу поступово, крім тромбоцитопенії чи нейтропенії; щорічний огляд дерматолога (неменаномні раки шкіри); ліпіди кожні 6 місяців; інфекції, зокрема реактивація вірусів; вакцинація, у тому числі рекомбінантна (інактивована) проти оперізувального лишаю. Тромбоз: антикоагулянт за настановою ACCP; аспірин + антикоагулянт підвищує ризик кровотечі. Кровотеча: виключити інші причини, аспірин відкласти; розглянути набутий синдром фон Віллебранда. Операція: мультидисциплінарне планування, аспірин відмінити за тиждень і відновити через 24 год, Ht <45% при ПВ за 3 місяці до планової операції. Вагітність: гідроксисечовину скасувати; пегінтерферон альфа-2a — за потреби циторедукції; низькі дози аспірину та НМГ (при високому ризику — протягом вагітності й 6 тижнів після пологів); Ht при ПВ <41%/<38%/<39% за триместрами.",
+            "en": "For everyone: assess and reduce cardiovascular risk factors (smoking, diet, exercise, blood pressure, diabetes, lipids) and thrombotic and haemorrhagic risk factors; symptoms are scored with MPN-SAF TSS (0-100) at baseline and during treatment, response being a 50% or greater fall; a change in symptoms may signal progression. Pruritus: skin care, antihistamines, topical steroids, then SSRIs, narrow-band UVB, peginterferon, gabapentin, aprepitant, ruxolitinib. Bone pain: loratadine, NSAIDs (naproxen), single-fraction radiation. Headache and tinnitus: exclude thrombosis; aspirin 80-100 mg a day, twice daily or clopidogrel 75 mg a day when resistant; cytoreduction or phlebotomy if aspirin fails. JAK inhibitors: a withdrawal syndrome (fever, respiratory distress, hypotension, multi-organ failure) is possible, so taper rather than stop abruptly except for thrombocytopenia or neutropenia; yearly dermatology exam (non-melanoma skin cancer); lipids every 6 months; infections including viral reactivation; vaccination including recombinant (killed) zoster vaccine. Thrombosis: anticoagulation per ACCP; aspirin plus an anticoagulant raises bleeding risk. Bleeding: exclude other causes, hold aspirin, consider acquired von Willebrand syndrome. Surgery: multidisciplinary planning, stop aspirin one week before and restart after 24 hours, Hct under 45% in PV for 3 months before elective surgery. Pregnancy: stop hydroxyurea; peginterferon alfa-2a if cytoreduction is needed; low-dose aspirin and LMWH (throughout pregnancy and 6 weeks postpartum in high risk); Hct in PV under 41%/38%/39% by trimester."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-mpn-peginterferon",
+              "notes": {
+                "uk": "Єдиний циторедуктивний засіб, який NCCN дозволяє розглянути при вагітності.",
+                "en": "The only cytoreductive agent NCCN allows considering in pregnancy."
+              },
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "aspirin-mpn",
+              "notes": {
+                "uk": "Низька доза 81–100 мг на добу; двічі на добу — при рефрактерних симптомах чи серцево-судинних чинниках ризику.",
+                "en": "Low dose 81-100 mg a day; twice daily for refractory symptoms or cardiovascular risk factors."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
