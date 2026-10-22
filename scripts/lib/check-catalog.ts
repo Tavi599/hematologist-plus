@@ -364,6 +364,25 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
     }
   }
 
+  // A branch of NCCN pathways restates a guideline, and a guideline is only meaningful with its
+  // version: without it nobody can tell whether the branch is current. The disease must cite the
+  // guideline with the version the branch was written from.
+  const diseaseById = new Map(rows.diseases.map((disease) => [disease.id, disease]))
+  for (const node of rows.treatment_nodes) {
+    if (node.kind !== 'pathway' || node.parent_id !== null) continue
+    if (!node.id.slice(node.disease_id.length + 1).startsWith('nccn')) continue
+    const cited = diseaseById
+      .get(node.disease_id)
+      ?.references_json.some((ref) => ref.kind === 'nccn' && ref.version)
+    if (!cited) {
+      error(
+        'treatment_nodes',
+        node.id,
+        'an NCCN pathway branch needs an nccn reference with a version on its disease',
+      )
+    }
+  }
+
   // A note that says a drug is not in the catalog is advice to go and prescribe it elsewhere.
   // Once the drug is added, that sentence quietly becomes a lie, and nothing else would catch it:
   // the note is prose, and prose validates. So: a sentence claiming something is missing must not

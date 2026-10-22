@@ -740,6 +740,125 @@
                   "category": "2b"
                 }
               ]
+            },
+            {
+              "key": "nccn-unfit-no-idh1",
+              "kind": "group",
+              "title": {
+                "uk": "Без мутації IDH1",
+                "en": "Without an IDH1 mutation"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "aza-ven-nccn-cycle-1",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "aza-ven-nccn",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "dec-ven-cycle-1",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "dec-ven",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "inqovi-ven-cycle-1",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "inqovi-ven",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "clad-ldac-ven-induction",
+                  "notes": {
+                    "uk": "Індукція; без CR/CRi можна повторити",
+                    "en": "Induction; may be repeated without CR/CRi"
+                  },
+                  "preference": "other",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "clad-ldac-ven-cons-a",
+                  "notes": {
+                    "uk": "Консолідація: курси A і B чергуються",
+                    "en": "Consolidation: courses A and B alternate"
+                  },
+                  "preference": "other",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "clad-ldac-ven-cons-b",
+                  "notes": {
+                    "uk": "Консолідація: курси A і B чергуються",
+                    "en": "Consolidation: courses A and B alternate"
+                  },
+                  "preference": "other",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "ldac-ven-cycle-1",
+                  "notes": {
+                    "uk": "Після HMA",
+                    "en": "After HMA"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ldac-ven",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "azacitidine-mono",
+                  "notes": {
+                    "uk": "Протипоказаний венетоклакс",
+                    "en": "Venetoclax contraindicated"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "decitabine-mono",
+                  "notes": {
+                    "uk": "Протипоказаний венетоклакс",
+                    "en": "Venetoclax contraindicated"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ldac-glasdegib",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ldac",
+                  "notes": {
+                    "uk": "Після HMA або протипоказаний венетоклакс",
+                    "en": "After HMA or venetoclax contraindicated"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "aza-enasidenib",
+                  "notes": {
+                    "uk": "Мутація IDH2, не підходить для бажаних схем",
+                    "en": "An IDH2 mutation, not eligible for a preferred regimen"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "go-mono-induction",
+                  "notes": {
+                    "uk": "CD33-позитивна, не підходить для бажаних схем",
+                    "en": "CD33 positive, not eligible for a preferred regimen"
+                  },
+                  "preference": "circumstances"
+                }
+              ]
             }
           ],
           "steps": [

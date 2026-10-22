@@ -354,6 +354,28 @@ describe('checkCatalog', () => {
     ])
   })
 
+  it('requires a versioned nccn reference on a disease with an NCCN pathway branch', () => {
+    const rows = loadDemo()
+    const disease = rows.diseases[0]!
+    const node = rows.treatment_nodes.find((row) => row.disease_id === disease.id)!
+    const pathway = { ...node, id: `${disease.id}.nccn`, kind: 'pathway' as const, parent_id: null }
+    rows.treatment_nodes.push(pathway)
+    const message = `treatment_nodes ${pathway.id}: an NCCN pathway branch needs an nccn reference with a version on its disease`
+
+    disease.references_json = []
+    expect(errors(rows)).toContain(message)
+
+    disease.references_json = [
+      { kind: 'nccn', url: 'https://www.nccn.org', label: null, version: null, updated: null },
+    ]
+    expect(errors(rows)).toContain(message)
+
+    disease.references_json = [
+      { kind: 'nccn', url: 'https://www.nccn.org', label: null, version: '1.2027', updated: null },
+    ]
+    expect(errors(rows)).not.toContain(message)
+  })
+
   it('keeps unobtainable drugs out of the trial section and refuted regimens out of the calculator', () => {
     const rows = loadDemo()
     const regimen = rows.regimens[0]!
