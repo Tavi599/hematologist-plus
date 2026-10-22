@@ -1,0 +1,54 @@
+{
+  "$comment": "Лише опис: NCCN HL 2.2026 називає схему без доз і днів; розрахунку немає, бо джерела з дозами в довіднику ще нема.",
+  "id": "ref-hl-vorinostat-pembrolizumab",
+  "short_name": "Вориностат + пембролізумаб",
+  "name": {
+    "uk": "Вориностат з пембролізумабом при рецидивній ЛХ",
+    "en": "Vorinostat with pembrolizumab in relapsed Hodgkin lymphoma"
+  },
+  "sources": [
+    {
+      "name": "NCCN Clinical Practice Guidelines: Hodgkin Lymphoma, версія 2.2026 від 01.07.2026, HODG-B 5 з 8 (посилання: Mei M. та ін. Blood 2023;142:1359-1370)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1439",
+      "version": "2.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Пембролізумаб з інгібітором гістондеацетилази вориностатом у хворих, рефрактерних до попередньої блокади PD-1.",
+      "en": "Pembrolizumab with the histone-deacetylase inhibitor vorinostat in patients refractory to earlier PD-1 blockade."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Пембролізумаб",
+          "en": "Pembrolizumab"
+        },
+        "drug_id": "pembrolizumab"
+      },
+      {
+        "name": {
+          "uk": "Вориностат",
+          "en": "Vorinostat"
+        },
+        "drug_id": "vorinostat"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Є в переліку схем 2-ї лінії й наступних при рецидивній чи рефрактерній класичній ЛХ (HODG-B 5 з 8). Попередні лінії й токсичність визначають вибір; бажаних схем у переліку немає.",
+        "en": "It is in the list of second-line and subsequent regimens for relapsed or refractory classical HL (HODG-B 5 of 8). Prior lines and toxicity decide the choice; the list has no preferred regimens."
+      },
+      {
+        "uk": "Вориностат у каталозі позначено як недоступний: реєстрацію в Україні не підтверджено.",
+        "en": "Vorinostat is marked unavailable in the catalogue: registration in Ukraine is not confirmed."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN не наводить доз, днів і кількості циклів; щоб розрахувати схему, потрібне джерело з повним дизайном (eviQ, NSSG, UpToDate чи оригінальна публікація).",
+      "en": "NCCN gives no doses, days or number of cycles; to calculate the regimen a source with the full design is needed (eviQ, NSSG, UpToDate or the original publication)."
+    },
+    "availability": "unavailable"
+  }
+}

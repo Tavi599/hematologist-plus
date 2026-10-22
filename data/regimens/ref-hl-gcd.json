@@ -1,0 +1,56 @@
+{
+  "$comment": "Лише опис: NCCN HL 2.2026 називає схему без доз і днів; розрахунку немає, бо джерела з дозами в довіднику ще нема.",
+  "id": "ref-hl-gcd",
+  "short_name": "GCD (гемцитабін/цисплатин/дексаметазон)",
+  "name": {
+    "uk": "Гемцитабін, цисплатин і дексаметазон при рецидивній ЛХ",
+    "en": "Gemcitabine, cisplatin and dexamethasone in relapsed Hodgkin lymphoma"
+  },
+  "sources": [
+    {
+      "name": "NCCN Clinical Practice Guidelines: Hodgkin Lymphoma, версія 2.2026 від 01.07.2026, HODG-B 5 з 8 (посилання: Crump M. та ін. J Clin Oncol 2014;32:3490-3496)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1439",
+      "version": "2.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Схема гемцитабін + цисплатин + дексаметазон, порівняна з DHAP у дослідженні NCIC-CTG LY.12.",
+      "en": "Gemcitabine + cisplatin + dexamethasone, compared with DHAP in NCIC-CTG LY.12."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Гемцитабін",
+          "en": "Gemcitabine"
+        },
+        "drug_id": "gemcitabine"
+      },
+      {
+        "name": {
+          "uk": "Цисплатин",
+          "en": "Cisplatin"
+        },
+        "drug_id": "cisplatin"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Є в переліку схем 2-ї лінії й наступних при рецидивній чи рефрактерній класичній ЛХ (HODG-B 5 з 8). Попередні лінії й токсичність визначають вибір; бажаних схем у переліку немає.",
+        "en": "It is in the list of second-line and subsequent regimens for relapsed or refractory classical HL (HODG-B 5 of 8). Prior lines and toxicity decide the choice; the list has no preferred regimens."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN не наводить доз, днів і кількості циклів; щоб розрахувати схему, потрібне джерело з повним дизайном (eviQ, NSSG, UpToDate чи оригінальна публікація).",
+      "en": "NCCN gives no doses, days or number of cycles; to calculate the regimen a source with the full design is needed (eviQ, NSSG, UpToDate or the original publication)."
+    }
+  }
+}
