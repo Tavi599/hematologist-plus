@@ -1,0 +1,56 @@
+{
+  "$comment": "Лише опис: NCCN HL 2.2026 називає схему без доз і днів; розрахунку немає, бо джерела з дозами в довіднику ще нема.",
+  "id": "ref-hl-bendamustine-carboplatin-etoposide",
+  "short_name": "Бендамустин/карбоплатин/етопозид",
+  "name": {
+    "uk": "Бендамустин, карбоплатин і етопозид при рецидивній ЛХ",
+    "en": "Bendamustine, carboplatin and etoposide in relapsed Hodgkin lymphoma"
+  },
+  "sources": [
+    {
+      "name": "NCCN Clinical Practice Guidelines: Hodgkin Lymphoma, версія 2.2026 від 01.07.2026, HODG-B 5 з 8 (посилання: Budde L.E. та ін. Br J Haematol 2018;183:601-607)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1439",
+      "version": "2.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Комбінація бендамустин + карбоплатин + етопозид (у цитованому дослідженні — з ритуксимабом при В-клітинних лімфомах; при класичній ЛХ ритуксимаб не додають).",
+      "en": "The combination of bendamustine + carboplatin + etoposide (in the cited study with rituximab for B-cell lymphomas; in classical HL rituximab is not added)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бендамустин",
+          "en": "Bendamustine"
+        },
+        "drug_id": "bendamustine"
+      },
+      {
+        "name": {
+          "uk": "Карбоплатин",
+          "en": "Carboplatin"
+        },
+        "drug_id": "carboplatin"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Є в переліку схем 2-ї лінії й наступних при рецидивній чи рефрактерній класичній ЛХ (HODG-B 5 з 8). Попередні лінії й токсичність визначають вибір; бажаних схем у переліку немає.",
+        "en": "It is in the list of second-line and subsequent regimens for relapsed or refractory classical HL (HODG-B 5 of 8). Prior lines and toxicity decide the choice; the list has no preferred regimens."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN не наводить доз, днів і кількості циклів; щоб розрахувати схему, потрібне джерело з повним дизайном (eviQ, NSSG, UpToDate чи оригінальна публікація).",
+      "en": "NCCN gives no doses, days or number of cycles; to calculate the regimen a source with the full design is needed (eviQ, NSSG, UpToDate or the original publication)."
+    }
+  }
+}
