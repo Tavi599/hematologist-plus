@@ -1,0 +1,70 @@
+{
+  "$comment": "Лише опис: NCCN HL 2.2026 називає схему без доз і днів; розрахунку немає, бо джерела з дозами в довіднику ще нема.",
+  "id": "ref-hl-single-agents",
+  "short_name": "Монотерапії при рефрактерній ЛХ",
+  "name": {
+    "uk": "Паліативні монотерапії при ЛХ, рефрактерній до ≥3 ліній",
+    "en": "Palliative single agents in Hodgkin lymphoma refractory to 3 or more lines"
+  },
+  "sources": [
+    {
+      "name": "NCCN Clinical Practice Guidelines: Hodgkin Lymphoma, версія 2.2026 від 01.07.2026, HODG-B 5 з 8",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1439",
+      "version": "2.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Для хвороби, рефрактерної до щонайменше 3 попередніх ліній наступної терапії, настанова називає паліативні монотерапії: бендамустин, еверолімус, гемцитабін, леналідомід, вінбластин (а також ніволумаб, пембролізумаб, брентуксимаб і ISRT, які в довіднику мають власні схеми).",
+      "en": "For disease refractory to at least 3 prior lines of subsequent therapy the guideline names palliative single agents: bendamustine, everolimus, gemcitabine, lenalidomide, vinblastine (and nivolumab, pembrolizumab, brentuximab and ISRT, which have their own catalogue regimens)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бендамустин",
+          "en": "Bendamustine"
+        },
+        "drug_id": "bendamustine"
+      },
+      {
+        "name": {
+          "uk": "Еверолімус",
+          "en": "Everolimus"
+        },
+        "drug_id": "everolimus"
+      },
+      {
+        "name": {
+          "uk": "Гемцитабін",
+          "en": "Gemcitabine"
+        },
+        "drug_id": "gemcitabine"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Вінбластин",
+          "en": "Vinblastine"
+        },
+        "drug_id": "vinblastine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Лікування індивідуальне; консультація в центрі з досвідом; для локалізованого рецидиву — розглянути консолідуючу ISRT.",
+        "en": "Treatment is individual; consult an expert centre; for localised relapse consider consolidating ISRT."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN не наводить доз, днів і кількості циклів; щоб розрахувати схему, потрібне джерело з повним дизайном (eviQ, NSSG, UpToDate чи оригінальна публікація).",
+      "en": "NCCN gives no doses, days or number of cycles; to calculate the regimen a source with the full design is needed (eviQ, NSSG, UpToDate or the original publication)."
+    }
+  }
+}

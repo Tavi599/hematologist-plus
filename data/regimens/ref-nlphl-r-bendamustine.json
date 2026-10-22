@@ -1,0 +1,49 @@
+{
+  "$comment": "Лише опис: NCCN HL 2.2026 називає схему без доз і днів; розрахунку немає, бо джерела з дозами в довіднику ще нема.",
+  "id": "ref-nlphl-r-bendamustine",
+  "short_name": "R + бендамустин (НЛПЛХ)",
+  "name": {
+    "uk": "Ритуксимаб з бендамустином при рецидиві НЛПЛХ",
+    "en": "Rituximab with bendamustine in relapsed NLPHL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Clinical Practice Guidelines: Hodgkin Lymphoma, версія 2.2026 від 01.07.2026, HODG-B 6 з 8 (посилання: Prusila R.E.I. та ін. Acta Oncol 2018;57:1265-1267)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1439",
+      "version": "2.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Ритуксимаб + бендамустин — варіант терапії 2-ї лінії й наступних при НЛПЛХ.",
+      "en": "Rituximab + bendamustine — a second-line and subsequent option in NLPHL."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Бендамустин",
+          "en": "Bendamustine"
+        },
+        "drug_id": "bendamustine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Є в переліку НЛПЛХ (HODG-B 3 і 6 з 8). Для НЛПЛХ бажаних схем 2-ї лінії немає; вибір залежить від попереднього лікування й токсичності.",
+        "en": "It is on the NLPHL lists (HODG-B 3 and 6 of 8). There are no preferred second-line regimens for NLPHL; the choice depends on prior therapy and toxicity."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN не наводить доз, днів і кількості циклів; щоб розрахувати схему, потрібне джерело з повним дизайном (eviQ, NSSG, UpToDate чи оригінальна публікація).",
+      "en": "NCCN gives no doses, days or number of cycles; to calculate the regimen a source with the full design is needed (eviQ, NSSG, UpToDate or the original publication)."
+    }
+  }
+}
