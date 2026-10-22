@@ -98,6 +98,27 @@
           }
         },
         {
+          "regimen_id": "ao-cycle-1",
+          "notes": {
+            "uk": "Акалабрутиніб + обінутузумаб (ELEVATE-TN). Цикл 1: лише акалабрутиніб",
+            "en": "Acalabrutinib and obinutuzumab (ELEVATE-TN). Cycle 1: acalabrutinib alone"
+          }
+        },
+        {
+          "regimen_id": "ao-cycle-2",
+          "notes": {
+            "uk": "Цикл 2: обінутузумаб 100/900/1000/1000 мг",
+            "en": "Cycle 2: obinutuzumab 100/900/1000/1000 mg"
+          }
+        },
+        {
+          "regimen_id": "ao-cycle-3-7",
+          "notes": {
+            "uk": "Цикли 3–7, далі акалабрутиніб у монорежимі",
+            "en": "Cycles 3-7, then acalabrutinib alone"
+          }
+        },
+        {
           "regimen_id": "ibrutinib-mono",
           "notes": {
             "uk": "Делеція 17p або мутація TP53",
@@ -123,6 +144,41 @@
           "notes": {
             "uk": "Цикли 4-14",
             "en": "Cycles 4-14"
+          }
+        },
+        {
+          "regimen_id": "avo-cycle-1",
+          "notes": {
+            "uk": "AVO (AMPLIFY, eviQ 5011): цикл 1 — акалабрутиніб",
+            "en": "AVO (AMPLIFY, eviQ 5011): cycle 1, acalabrutinib"
+          }
+        },
+        {
+          "regimen_id": "avo-cycle-2",
+          "notes": {
+            "uk": "Цикл 2: + обінутузумаб",
+            "en": "Cycle 2: add obinutuzumab"
+          }
+        },
+        {
+          "regimen_id": "avo-cycle-3",
+          "notes": {
+            "uk": "Цикл 3: титрування венетоклаксу",
+            "en": "Cycle 3: the venetoclax ramp-up"
+          }
+        },
+        {
+          "regimen_id": "avo-cycle-4-7",
+          "notes": {
+            "uk": "Цикли 4–7: трійка",
+            "en": "Cycles 4-7: all three"
+          }
+        },
+        {
+          "regimen_id": "avo-cycle-8-14",
+          "notes": {
+            "uk": "Цикли 8–14: без обінутузумабу",
+            "en": "Cycles 8-14: no obinutuzumab"
           }
         },
         {
@@ -371,6 +427,1585 @@
             "uk": "NCCN 1.2027: пембролізумаб при трансформації Ріхтера",
             "en": "NCCN 1.2027: pembrolizumab in Richter transformation"
           }
+        },
+        {
+          "regimen_id": "ref-cll-ven-zanu-mrd"
+        },
+        {
+          "regimen_id": "ref-cll-avo-mrd"
+        },
+        {
+          "regimen_id": "ref-cll-ven-ibru-mrd"
+        },
+        {
+          "regimen_id": "ref-cll-lenalidomide"
+        },
+        {
+          "regimen_id": "ref-cll-alemtuzumab"
+        },
+        {
+          "regimen_id": "ref-cll-duvelisib"
+        },
+        {
+          "regimen_id": "ref-cll-pirtobrutinib-ven-obi"
+        },
+        {
+          "regimen_id": "ref-cll-richter-atezo-ven-obi"
+        },
+        {
+          "regimen_id": "ref-cll-richter-nivolumab"
+        },
+        {
+          "regimen_id": "ref-cll-richter-tislelizumab-zanu"
+        },
+        {
+          "regimen_id": "ref-cll-richter-bispecifics"
+        },
+        {
+          "regimen_id": "ref-cll-richter-car-t"
+        },
+        {
+          "regimen_id": "ref-cll-richter-ofa-r"
+        },
+        {
+          "regimen_id": "ref-cll-richter-hypercvad-r"
+        },
+        {
+          "regimen_id": "ref-cll-richter-vr-chop"
+        }
+      ]
+    },
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 1.2027 (CSLL-1…5A, HT-1…4)",
+        "en": "NCCN pathways 1.2027 (CSLL-1 to 5A, HT-1 to 4)"
+      },
+      "children": [
+        {
+          "key": "nccn-diag",
+          "kind": "line",
+          "title": {
+            "uk": "Діагноз, обстеження, показання до лікування (CSLL-1…3)",
+            "en": "Diagnosis, workup, indications for treatment (CSLL-1 to 3)"
+          },
+          "description": {
+            "uk": "ХЛЛ: моноклональні B-лімфоцити ≥5×10⁹/л у крові (проточна цитометрія CD19, CD20, CD5, CD23, CD10, CD200, κ/λ; FISH на t(11;14) для виключення МКЛ). SLL: лімфаденопатія та/або спленомегалія при <5×10⁹/л клональних B-клітин, підтверджується біопсією вузла (тонкоголкової недостатньо) або кров'ю/кістковим мозком. Прогностичні: FISH +12, del(11q), del(13q), del(17p); секвенування TP53; каріотип з CpG-стимуляцією; IGHV; β2-мікроглобулін. КТ поза дослідженнями не потрібна для діагнозу чи моніторингу.",
+            "en": "CLL: monoclonal B lymphocytes of 5x10^9/L or more in blood (flow cytometry CD19, CD20, CD5, CD23, CD10, CD200, kappa/lambda; FISH for t(11;14) to exclude MCL). SLL: lymphadenopathy and/or splenomegaly with under 5x10^9/L clonal B cells, confirmed by node biopsy (needle aspiration is inadequate) or blood or marrow. Prognostic: FISH +12, del(11q), del(13q), del(17p); TP53 sequencing; CpG-stimulated karyotype; IGHV; beta-2 microglobulin. Outside trials a CT is not needed for diagnosis or monitoring."
+          },
+          "children": [
+            {
+              "key": "nccn-mbl",
+              "kind": "group",
+              "title": {
+                "uk": "Моноклональний В-клітинний лімфоцитоз (MBL)",
+                "en": "Monoclonal B-cell lymphocytosis (MBL)"
+              },
+              "description": {
+                "uk": "Клональних B-клітин <5×10⁹/л стабільно понад 3 місяці, вузли <1,5 см, без анемії, тромбоцитопенії, органомегалії й конституційних симптомів.",
+                "en": "Clonal B cells under 5x10^9/L for over 3 months, nodes under 1.5 cm, no anaemia, thrombocytopenia, organomegaly or constitutional symptoms."
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Спостереження",
+                    "en": "Observation"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-sll-local",
+              "kind": "group",
+              "title": {
+                "uk": "Локалізована SLL (Lugano I)",
+                "en": "Localised SLL (Lugano stage I)"
+              },
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Локорегіонарна променева терапія (ISRT), якщо показана",
+                    "en": "Locoregional involved-site radiotherapy (ISRT) if indicated"
+                  }
+                },
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Спостереження",
+                    "en": "Observation"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Прогресування після ISRT — як SLL II–IV (перша лінія)",
+                    "en": "Progression after ISRT is treated as SLL stage II-IV (first line)"
+                  },
+                  "target": "nccn-first"
+                }
+              ]
+            },
+            {
+              "key": "nccn-advanced",
+              "kind": "group",
+              "title": {
+                "uk": "ХЛЛ (Rai 0–IV) або SLL (Lugano II–IV)",
+                "en": "CLL (Rai 0-IV) or SLL (Lugano II-IV)"
+              },
+              "description": {
+                "uk": "Показання до лікування: участь у клінічному дослідженні; значущі симптоми (виражена втома, нічна пітливість, втрата ваги ≥10% за 6 місяців, лихоманка без інфекції); загроза функції органів; прогресуюча, симптомна чи об'ємна хвороба (селезінка >6 см нижче реберної дуги, вузли >10 см); прогресуюча тромбоцитопенія чи анемія; стероїдорезистентні автоімунні цитопенії. Лише лімфоцитоз показанням не є (без лейкостазу). Тромбоцити >100 тис/мкл ризику не несуть; м'яку стабільну цитопенію (АЧН <1000, Hb <11 г/дл, тромбоцити <100 тис) можна спостерігати, виключивши інші причини. Тест на гепатит B (HBsAg, анти-HBc) — до будь-якого лікування.",
+                "en": "Indications to treat: a clinical trial; significant symptoms (severe fatigue, drenching night sweats, weight loss of 10% or more over 6 months, fever without infection); threatened end-organ function; progressive, symptomatic or bulky disease (spleen more than 6 cm below the costal margin, nodes over 10 cm); progressive thrombocytopenia or anaemia; steroid-refractory autoimmune cytopenias. Lymphocytosis alone is not an indication (without leukostasis). Platelets over 100,000/uL carry no clinical risk; mild stable cytopenia (ANC under 1000, Hb under 11 g/dL, platelets under 100,000) may be observed after excluding other causes. Hepatitis B testing (HBsAg, anti-HBc) before any treatment."
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Немає показань — спостереження",
+                    "en": "No indication: observation"
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Перед лікуванням: FISH на del(17p), мутація TP53, каріотип із CpG, IGHV, візуалізація за потреби, кістковий мозок за показаннями",
+                    "en": "Before treatment: FISH for del(17p), TP53 mutation, CpG karyotype, IGHV, imaging as needed, marrow if indicated"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Є показання — перша лінія (CSLL-4)",
+                    "en": "Indication present: first line (CSLL-4)"
+                  },
+                  "target": "nccn-first"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Підозра на трансформацію — Річтер (HT-1)",
+                    "en": "Suspected transformation: Richter (HT-1)"
+                  },
+                  "target": "nccn-richter"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-first",
+          "kind": "line",
+          "title": {
+            "uk": "Перша лінія (CSLL-4, CSLL-D 1–1A)",
+            "en": "First line (CSLL-4, CSLL-D 1-1A)"
+          },
+          "description": {
+            "uk": "Перед вибором: del(17p)/мутація TP53 (NGS чутливості ≥5% VAF бажаніше за Сенгера), IGHV, кардіологічний ризик перед cBTKi, ниркова функція й ризик лізису перед венетоклаксом. Порядок у кожному списку — за перевагою; підпункти — за алфавітом (даних РКД для ранжування нема).",
+            "en": "Before choosing: del(17p) or a TP53 mutation (NGS with 5% VAF sensitivity beats Sanger), IGHV, cardiac risk before a cBTKi, renal function and lysis risk before venetoclax. The order within each list is by preference; sub-items are alphabetical because randomised data for ranking are absent."
+          },
+          "children": [
+            {
+              "key": "nccn-1l-frail",
+              "kind": "group",
+              "title": {
+                "uk": "Без del(17p)/TP53; ослаблені, з супутніми захворюваннями",
+                "en": "No del(17p)/TP53; frail with comorbidities"
+              },
+              "description": {
+                "uk": "Застереження щодо препаратів (для всіх, і для придатних): серцево-судинний ризик і кровотеча (cBTKi), інфекції (обінутузумаб), ниркова недостатність і обмежений доступ до медзакладу (венетоклакс), велике навантаження хворобою й ризик лізису (венетоклакс, обінутузумаб). Вибір між безперервним і фіксованим курсом, пероральним і в/в — з урахуванням бажання хворого.",
+                "en": "Agent precautions (for every patient, fit ones too): cardiovascular and bleeding risk (cBTKi), infection (obinutuzumab), renal insufficiency and limited access to care (venetoclax), high disease burden and lysis risk (venetoclax, obinutuzumab). Continuous versus time-limited and oral versus IV is chosen with the patient's preference."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "acalabrutinib-mono",
+                  "notes": {
+                    "uk": "Акалабрутиніб у монорежимі, безперервно",
+                    "en": "Acalabrutinib alone, continuously"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ao-cycle-1",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикл 1 — лише акалабрутиніб",
+                    "en": "With obinutuzumab: cycle 1 is acalabrutinib alone"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ao-cycle-2",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикл 2 — обінутузумаб 100/900/1000/1000 мг",
+                    "en": "With obinutuzumab: cycle 2, obinutuzumab 100/900/1000/1000 mg"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ao-cycle-3-7",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикли 3–7, далі акалабрутиніб до прогресування",
+                    "en": "With obinutuzumab: cycles 3-7, then acalabrutinib until progression"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "zanubrutinib-mono",
+                  "notes": {
+                    "uk": "Безперервно до прогресування чи непереносимості",
+                    "en": "Continuously until progression or intolerance"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acala-ven-cycle-1-2",
+                  "notes": {
+                    "uk": "Фіксований курс, 14 циклів",
+                    "en": "Fixed duration, 14 cycles"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acala-ven-cycle-3",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acala-ven",
+                  "notes": {
+                    "uk": "Цикли 4–14",
+                    "en": "Цикли 4–14"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi-cycle-1",
+                  "notes": {
+                    "uk": "Фіксований курс, 12 циклів",
+                    "en": "Fixed duration, 12 cycles"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi-cycle-2",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi",
+                  "notes": {
+                    "uk": "Цикли 3–6",
+                    "en": "Цикли 3–6"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi-venetoclax",
+                  "notes": {
+                    "uk": "Цикли 7–12: лише венетоклакс",
+                    "en": "Цикли 7–12: лише венетоклакс"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження — бажано на будь-якій лінії",
+                    "en": "Clinical trial is preferred on every line"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив або прогресування — друга й наступні лінії (CSLL-5)",
+                    "en": "Relapse or progression: second and later lines (CSLL-5)"
+                  },
+                  "target": "nccn-second"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-fit-mut",
+              "kind": "group",
+              "title": {
+                "uk": "Без del(17p)/TP53; придатні, IGHV-мутований",
+                "en": "No del(17p)/TP53; fit, IGHV-mutated"
+              },
+              "description": {
+                "uk": "Спершу терапія з BCL2i (обмежена за часом), потім cBTKi. Венетоклакс/акалабрутиніб — фіксований курс.",
+                "en": "BCL2i-based time-limited therapy first, then a cBTKi. Venetoclax and acalabrutinib is a fixed course."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "acala-ven-cycle-1-2",
+                  "notes": {
+                    "uk": "Фіксований курс, 14 циклів",
+                    "en": "Fixed duration, 14 cycles"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acala-ven-cycle-3",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acala-ven",
+                  "notes": {
+                    "uk": "Цикли 4–14",
+                    "en": "Цикли 4–14"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi-cycle-1",
+                  "notes": {
+                    "uk": "Фіксований курс, 12 циклів",
+                    "en": "Fixed duration, 12 cycles"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi-cycle-2",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi",
+                  "notes": {
+                    "uk": "Цикли 3–6",
+                    "en": "Цикли 3–6"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi-venetoclax",
+                  "notes": {
+                    "uk": "Цикли 7–12: лише венетоклакс",
+                    "en": "Цикли 7–12: лише венетоклакс"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acalabrutinib-mono",
+                  "notes": {
+                    "uk": "Акалабрутиніб у монорежимі, безперервно",
+                    "en": "Acalabrutinib alone, continuously"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ao-cycle-1",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикл 1 — лише акалабрутиніб",
+                    "en": "With obinutuzumab: cycle 1 is acalabrutinib alone"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ao-cycle-2",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикл 2 — обінутузумаб 100/900/1000/1000 мг",
+                    "en": "With obinutuzumab: cycle 2, obinutuzumab 100/900/1000/1000 mg"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ao-cycle-3-7",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикли 3–7, далі акалабрутиніб до прогресування",
+                    "en": "With obinutuzumab: cycles 3-7, then acalabrutinib until progression"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "zanubrutinib-mono",
+                  "notes": {
+                    "uk": "Безперервно до прогресування чи непереносимості",
+                    "en": "Continuously until progression or intolerance"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження — бажано на будь-якій лінії",
+                    "en": "Clinical trial is preferred on every line"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив або прогресування — друга й наступні лінії (CSLL-5)",
+                    "en": "Relapse or progression: second and later lines (CSLL-5)"
+                  },
+                  "target": "nccn-second"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-fit-unmut",
+              "kind": "group",
+              "title": {
+                "uk": "Без del(17p)/TP53; придатні, IGHV-немутований",
+                "en": "No del(17p)/TP53; fit, IGHV-unmutated"
+              },
+              "description": {
+                "uk": "Венетоклакс/акалабрутиніб — із обінутузумабом або без нього. cBTKi безперервно — альтернатива.",
+                "en": "Venetoclax and acalabrutinib, with or without obinutuzumab. A continuous cBTKi is the alternative."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "avo-cycle-1",
+                  "notes": {
+                    "uk": "AVO (AMPLIFY, eviQ 5011): цикл 1",
+                    "en": "AVO (AMPLIFY, eviQ 5011): cycle 1"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "avo-cycle-2",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "avo-cycle-3",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "avo-cycle-4-7",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "avo-cycle-8-14",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acala-ven-cycle-1-2",
+                  "notes": {
+                    "uk": "Фіксований курс, 14 циклів",
+                    "en": "Fixed duration, 14 cycles"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acala-ven-cycle-3",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acala-ven",
+                  "notes": {
+                    "uk": "Цикли 4–14",
+                    "en": "Цикли 4–14"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi-cycle-1",
+                  "notes": {
+                    "uk": "Фіксований курс, 12 циклів",
+                    "en": "Fixed duration, 12 cycles"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi-cycle-2",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi",
+                  "notes": {
+                    "uk": "Цикли 3–6",
+                    "en": "Цикли 3–6"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ven-obi-venetoclax",
+                  "notes": {
+                    "uk": "Цикли 7–12: лише венетоклакс",
+                    "en": "Цикли 7–12: лише венетоклакс"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acalabrutinib-mono",
+                  "notes": {
+                    "uk": "Акалабрутиніб у монорежимі, безперервно",
+                    "en": "Acalabrutinib alone, continuously"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ao-cycle-1",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикл 1 — лише акалабрутиніб",
+                    "en": "With obinutuzumab: cycle 1 is acalabrutinib alone"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ao-cycle-2",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикл 2 — обінутузумаб 100/900/1000/1000 мг",
+                    "en": "With obinutuzumab: cycle 2, obinutuzumab 100/900/1000/1000 mg"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ao-cycle-3-7",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикли 3–7, далі акалабрутиніб до прогресування",
+                    "en": "With obinutuzumab: cycles 3-7, then acalabrutinib until progression"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "zanubrutinib-mono",
+                  "notes": {
+                    "uk": "Безперервно до прогресування чи непереносимості",
+                    "en": "Continuously until progression or intolerance"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження — бажано на будь-якій лінії",
+                    "en": "Clinical trial is preferred on every line"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив або прогресування — друга й наступні лінії (CSLL-5)",
+                    "en": "Relapse or progression: second and later lines (CSLL-5)"
+                  },
+                  "target": "nccn-second"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-del17p",
+              "kind": "group",
+              "title": {
+                "uk": "З del(17p)/мутацією TP53",
+                "en": "With del(17p) or a TP53 mutation"
+              },
+              "description": {
+                "uk": "Хіміоімунотерапія не застосовується. Венетоклакс/акалабрутиніб + обінутузумаб і венетоклакс/занубрутиніб — під контролем MRD (див. розділ про MRD у статті NCCN); при низькому VAF (<10%) мутація TP53 може поводитись як дикий тип.",
+                "en": "Chemoimmunotherapy is not used. Venetoclax with acalabrutinib and obinutuzumab and venetoclax with zanubrutinib are MRD-guided (see the MRD section of the NCCN article); a low-VAF TP53 mutation (<10%) may behave as wild type."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "acalabrutinib-mono",
+                  "notes": {
+                    "uk": "Акалабрутиніб ± обінутузумаб, безперервно",
+                    "en": "Acalabrutinib with or without obinutuzumab, continuously"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ao-cycle-1",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикл 1 — лише акалабрутиніб",
+                    "en": "With obinutuzumab: cycle 1 is acalabrutinib alone"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ao-cycle-2",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикл 2 — обінутузумаб 100/900/1000/1000 мг",
+                    "en": "With obinutuzumab: cycle 2, obinutuzumab 100/900/1000/1000 mg"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ao-cycle-3-7",
+                  "notes": {
+                    "uk": "З обінутузумабом: цикли 3–7, далі акалабрутиніб до прогресування",
+                    "en": "With obinutuzumab: cycles 3-7, then acalabrutinib until progression"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "zanubrutinib-mono",
+                  "notes": {
+                    "uk": "Безперервно до прогресування чи непереносимості",
+                    "en": "Continuously until progression or intolerance"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-cll-avo-mrd",
+                  "notes": {
+                    "uk": "Під контролем MRD",
+                    "en": "MRD-guided"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-cll-ven-zanu-mrd",
+                  "notes": {
+                    "uk": "Під контролем MRD",
+                    "en": "MRD-guided"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ven-obi-cycle-1",
+                  "notes": {
+                    "uk": "Фіксований курс, 12 циклів",
+                    "en": "Fixed duration, 12 cycles"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ven-obi-cycle-2",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ven-obi",
+                  "notes": {
+                    "uk": "Цикли 3–6",
+                    "en": "Цикли 3–6"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ven-obi-venetoclax",
+                  "notes": {
+                    "uk": "Цикли 7–12: лише венетоклакс",
+                    "en": "Цикли 7–12: лише венетоклакс"
+                  },
+                  "preference": "preferred"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження — бажано на будь-якій лінії",
+                    "en": "Clinical trial is preferred on every line"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив або прогресування — друга й наступні лінії (CSLL-5)",
+                    "en": "Relapse or progression: second and later lines (CSLL-5)"
+                  },
+                  "target": "nccn-second"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-other",
+              "kind": "group",
+              "title": {
+                "uk": "Без del(17p)/TP53: інші рекомендовані та за певних обставин (CSLL-D 1A)",
+                "en": "No del(17p)/TP53: other recommended and in certain circumstances (CSLL-D 1A)"
+              },
+              "description": {
+                "uk": "Ібрутиніб не є бажаним через профіль токсичності. Нижній блок (бендамустин, FC, хлорамбуцил, обінутузумаб) — лише коли cBTKi і BCL2i недоступні чи неможливі.",
+                "en": "Ibrutinib is not preferred because of its toxicity profile. The last block (bendamustine, FC, chlorambucil, obinutuzumab) only when a cBTKi and a BCL2i are unavailable or not feasible."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ibru-ven-cycle-1-3",
+                  "notes": {
+                    "uk": "Фіксований курс, 15 циклів",
+                    "en": "Fixed duration, 15 cycles"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ibru-ven-cycle-4",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ibru-ven",
+                  "notes": {
+                    "uk": "Цикли 5–15",
+                    "en": "Цикли 5–15"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-cll-ven-ibru-mrd",
+                  "notes": {
+                    "uk": "Під контролем MRD: ібрутиніб 8 тижнів, далі з венетоклаксом",
+                    "en": "MRD-guided: ibrutinib for 8 weeks, then with venetoclax"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-cll-ven-zanu-mrd",
+                  "notes": {
+                    "uk": "Під контролем MRD",
+                    "en": "MRD-guided"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ibrutinib-mono",
+                  "notes": {
+                    "uk": "Безперервно",
+                    "en": "Continuous"
+                  },
+                  "preference": "circumstances",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ir-cll-cycle-2",
+                  "notes": {
+                    "uk": "Ібрутиніб + анти-CD20 (E1912): цикл 2",
+                    "en": "Ibrutinib plus anti-CD20 (E1912): cycle 2"
+                  },
+                  "preference": "circumstances",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "ir-cll",
+                  "notes": {
+                    "uk": "Цикли 3–7",
+                    "en": "Cycles 3-7"
+                  },
+                  "preference": "circumstances",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "ref-cll-pirtobrutinib",
+                  "notes": {
+                    "uk": "Лише для літніх із кардіологічною коморбідністю, яким достатньо одного курсу лікування на життя",
+                    "en": "Only for older patients with cardiac comorbidity who may need a single lifetime treatment"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "methylprednisolone-hd-cll",
+                  "notes": {
+                    "uk": "З анти-CD20 (ритуксимаб або обінутузумаб); категорія 3 для <65 років без значущої коморбідності. Схема ритуксимабу — окремо",
+                    "en": "With an anti-CD20 antibody (rituximab or obinutuzumab); category 3 under 65 without significant comorbidity. The antibody is a separate regimen"
+                  },
+                  "preference": "circumstances",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "br-cll",
+                  "notes": {
+                    "uk": "Лише коли cBTKi і BCL2i недоступні. Не для ослаблених. ≥65 років або КК <70 мл/хв: 70 мг/м² у циклі 1, далі 90 за переносимості",
+                    "en": "Only when a cBTKi and a BCL2i are unavailable. Not for frail patients. Age 65 or more or CrCl <70 mL/min: 70 mg/m² in cycle 1, then 90 if tolerated"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "fcr-cll-cycle-1",
+                  "notes": {
+                    "uk": "FC + ритуксимаб — лише коли cBTKi і BCL2i недоступні, <65 років без значущої коморбідності. Не при del(17p)/TP53; при AIHA від флударабіну — не застосовувати",
+                    "en": "FC plus rituximab, only when a cBTKi and a BCL2i are unavailable, under 65 without significant comorbidity. Not with del(17p)/TP53; avoid after fludarabine-associated AIHA"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "fcr-cll",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "o-chlorambucil-cycle-1",
+                  "notes": {
+                    "uk": "Лише коли cBTKi і BCL2i недоступні; ≥65 років або КК <70 мл/хв",
+                    "en": "Only when a cBTKi and a BCL2i are unavailable; age 65 or more or CrCl <70 mL/min"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "o-chlorambucil",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "obinutuzumab-mono",
+                  "notes": {
+                    "uk": "Лише коли cBTKi і BCL2i недоступні",
+                    "en": "Only when a cBTKi and a BCL2i are unavailable"
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив або прогресування — друга й наступні лінії (CSLL-5)",
+                    "en": "Relapse or progression: second and later lines (CSLL-5)"
+                  },
+                  "target": "nccn-second"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-other-17p",
+              "kind": "group",
+              "title": {
+                "uk": "З del(17p)/TP53: інші рекомендовані та за певних обставин (CSLL-D 1A)",
+                "en": "With del(17p)/TP53: other recommended and in certain circumstances (CSLL-D 1A)"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ibru-ven-cycle-1-3",
+                  "notes": {
+                    "uk": "Фіксований курс, 15 циклів",
+                    "en": "Fixed duration, 15 cycles"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ibru-ven-cycle-4",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ibru-ven",
+                  "notes": {
+                    "uk": "Цикли 5–15",
+                    "en": "Цикли 5–15"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ibrutinib-mono",
+                  "notes": {
+                    "uk": "Безперервно",
+                    "en": "Continuous"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-cll-pirtobrutinib",
+                  "notes": {
+                    "uk": "Лише для літніх із кардіологічною коморбідністю",
+                    "en": "Only for older patients with cardiac comorbidity"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "methylprednisolone-hd-cll",
+                  "notes": {
+                    "uk": "З анти-CD20",
+                    "en": "With an anti-CD20 antibody"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "obinutuzumab-mono",
+                  "notes": {
+                    "uk": "Лише коли cBTKi і BCL2i недоступні чи неможливі",
+                    "en": "Only when a cBTKi and a BCL2i are unavailable or not feasible"
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив або прогресування — друга й наступні лінії (CSLL-5)",
+                    "en": "Relapse or progression: second and later lines (CSLL-5)"
+                  },
+                  "target": "nccn-second"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-second",
+          "kind": "line",
+          "title": {
+            "uk": "Друга й наступні лінії (CSLL-4, CSLL-5, CSLL-D 2)",
+            "en": "Second and later lines (CSLL-4, CSLL-5, CSLL-D 2)"
+          },
+          "description": {
+            "uk": "Перед новою лінією при прогресуванні: повторити FISH на del(17p), мутацію TP53 і CpG-каріотип; виключити гістологічну трансформацію (біопсія); тести на мутації BTK/PLCG2 корисні лише при прогресуванні чи відсутності відповіді на BTKi. Різке припинення BTKi при прогресуванні може спричинити «спалах» (швидкий ріст лімфоцитів і вузлів, псевдотрансформація на ПЕТ): перехід до наступного лікування якнайшвидше, BTKi перекривати з титруванням венетоклаксу.",
+            "en": "Before a new line at progression: repeat FISH for del(17p), TP53 and CpG karyotype; exclude histologic transformation (biopsy); BTK/PLCG2 mutation testing helps only at progression or no response on a BTKi. Abrupt BTKi withdrawal at progression can cause a flare (fast lymphocyte and node growth, pseudotransformation on PET): move to the next treatment at once and overlap the BTKi with the venetoclax ramp-up."
+          },
+          "children": [
+            {
+              "key": "nccn-2l-list",
+              "kind": "group",
+              "title": {
+                "uk": "Перелік для другої й наступних ліній (CSLL-D 2)",
+                "en": "List for second and later lines (CSLL-D 2)"
+              },
+              "description": {
+                "uk": "Венетоклакс ± анти-CD20 (бажано обінутузумаб) або венетоклакс + cBTKi — варіанти при рецидиві після періоду ремісії; монотерапія венетоклаксом (безперервно) теж можлива. Акалабрутиніб і занубрутиніб не показали ефективності при ібрутиніб-рефрактерному ХЛЛ з BTK C481S. Комбінації венетоклаксу з cBTKi непридатні, якщо cBTKi не переносили чи на ньому було прогресування.",
+                "en": "Venetoclax with or without an anti-CD20 antibody (obinutuzumab preferred) or venetoclax with a cBTKi is an option for relapse after a remission; continuous venetoclax alone is also possible. Acalabrutinib or zanubrutinib have not been shown to work in ibrutinib-refractory CLL with BTK C481S. Venetoclax-cBTKi combinations are unsuitable after intolerance of, or progression on, the cBTKi."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ven-obi-cycle-1",
+                  "notes": {
+                    "uk": "Фіксований курс, 12 циклів",
+                    "en": "Fixed duration, 12 cycles"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ven-obi-cycle-2",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ven-obi",
+                  "notes": {
+                    "uk": "Цикли 3–6",
+                    "en": "Цикли 3–6"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ven-obi-venetoclax",
+                  "notes": {
+                    "uk": "Цикли 7–12: лише венетоклакс",
+                    "en": "Цикли 7–12: лише венетоклакс"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "acalabrutinib-mono",
+                  "notes": {
+                    "uk": "Безперервно",
+                    "en": "Continuous"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "zanubrutinib-mono",
+                  "notes": {
+                    "uk": "Безперервно",
+                    "en": "Continuous"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-cll-pirtobrutinib",
+                  "notes": {
+                    "uk": "Після резистентності чи непереносимості cBTKi",
+                    "en": "After resistance or intolerance to a cBTKi"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "r-ven-cycle-1",
+                  "notes": {
+                    "uk": "Венетоклакс + ритуксимаб, 24 місяці: цикл 1",
+                    "en": "Venetoclax and rituximab, 24 months: cycle 1"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "r-ven-cycle-2",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "r-ven",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acala-ven-cycle-1-2",
+                  "notes": {
+                    "uk": "Фіксований курс, 14 циклів",
+                    "en": "Fixed duration, 14 cycles"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "acala-ven-cycle-3",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "acala-ven",
+                  "notes": {
+                    "uk": "Цикли 4–14",
+                    "en": "Цикли 4–14"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ibru-ven-cycle-1-3",
+                  "notes": {
+                    "uk": "Фіксований курс, 15 циклів",
+                    "en": "Fixed duration, 15 cycles"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ibru-ven-cycle-4",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ibru-ven",
+                  "notes": {
+                    "uk": "Цикли 5–15",
+                    "en": "Цикли 5–15"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-cll-ven-zanu-mrd",
+                  "notes": {
+                    "uk": "Венетоклакс/cBTKi: час-обмежено (фіксований курс або за MRD)",
+                    "en": "Venetoclax with a cBTKi: time-limited (fixed or MRD-guided)"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ibrutinib-mono",
+                  "notes": {
+                    "uk": "Безперервно",
+                    "en": "Continuous"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Венетоклакс у монорежимі (безперервно) — як варіант; схеми в довіднику немає",
+                    "en": "Venetoclax alone (continuous) is an option; no regimen in the catalog"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Прогресування після cBTKi- і BCL2i-схем (CSLL-5A)",
+                    "en": "Progression after cBTKi- and BCL2i-based regimens (CSLL-5A)"
+                  },
+                  "target": "nccn-rr-final"
+                }
+              ]
+            },
+            {
+              "key": "nccn-2l-after-cit",
+              "kind": "group",
+              "title": {
+                "uk": "Після HDMP + анти-CD20 або ХІТ у першій лінії",
+                "en": "After HDMP plus anti-CD20 or CIT in first line"
+              },
+              "description": {
+                "uk": "Відповідь після завершення ХІТ — спостереження до рецидиву з показаннями до лікування. Рецидив після ремісії чи прогресування: час-обмежена терапія з BCL2i або безперервна на основі cBTKi.",
+                "en": "A response after CIT ends is observed until relapse with an indication to treat. Relapse after a remission or progression: time-limited BCL2i-based or continuous cBTKi-based therapy."
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Спостереження до рецидиву з показаннями до лікування",
+                    "en": "Observe until relapse with an indication to treat"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Вибір — за переліком CSLL-D 2",
+                    "en": "Choose from the CSLL-D 2 list"
+                  },
+                  "target": "nccn-2l-list"
+                }
+              ]
+            },
+            {
+              "key": "nccn-2l-after-bcl2i",
+              "kind": "group",
+              "title": {
+                "uk": "Рецидив після BCL2i-схеми (час-обмеженої)",
+                "en": "Relapse after a (time-limited) BCL2i-based regimen"
+              },
+              "description": {
+                "uk": "Після відповіді та завершення — спостереження до рецидиву з показаннями. Далі: cBTKi безперервно, а при непереносимості BCL2i — cBTKi. При прогресуванні на BCL2i + cBTKi: нековалентний BTKi і направлення на оцінку CAR-T.",
+                "en": "After a response and completion, observe until relapse with an indication. Then a cBTKi continuously, or a cBTKi if the BCL2i is not tolerated. Progression on a BCL2i plus a cBTKi: a noncovalent BTKi and referral for CAR T-cell assessment."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "acalabrutinib-mono",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "zanubrutinib-mono",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-cll-pirtobrutinib",
+                  "preference": "preferred",
+                  "category": "1"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Після завершення — спостереження до рецидиву",
+                    "en": "After completion, observe until relapse"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Прогресування на BCL2i + cBTKi (CSLL-5A)",
+                    "en": "Progression on BCL2i plus cBTKi (CSLL-5A)"
+                  },
+                  "target": "nccn-rr-final"
+                }
+              ]
+            },
+            {
+              "key": "nccn-2l-after-cbtki",
+              "kind": "group",
+              "title": {
+                "uk": "Прогресування або непереносимість на cBTKi",
+                "en": "Progression on, or intolerance of, a cBTKi"
+              },
+              "description": {
+                "uk": "Відповідь без непереносимості: той самий cBTKi до прогресування чи непереносимості, дози коригують за інструкцією. Непереносимість без прогресування й без del(17p)/TP53: можна лишатись без лікування тривалий час, поки нема симптомів, потім змінний cBTKi. Непереносимість ібрутинібу успішно обходили акалабрутинібом чи занубрутинібом.",
+                "en": "Response without intolerance: the same cBTKi until progression or intolerance with dose changes per the label. Intolerance without progression and without del(17p)/TP53: the patient may stay off treatment for a long time until symptomatic, then an alternate cBTKi. Ibrutinib intolerance has been managed successfully with acalabrutinib or zanubrutinib."
+              },
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Прогресування: BCL2i-схема або нековалентний BTKi",
+                    "en": "Progression: a BCL2i-based regimen or a noncovalent BTKi"
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Непереносимість: змінний cBTKi, ncBTKi або BCL2i ± анти-CD20",
+                    "en": "Intolerance: an alternate cBTKi, an ncBTKi or a BCL2i with or without anti-CD20"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Вибір — за переліком CSLL-D 2",
+                    "en": "Choose from the CSLL-D 2 list"
+                  },
+                  "target": "nccn-2l-list"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-rr-final",
+          "kind": "line",
+          "title": {
+            "uk": "Після cBTKi/ncBTKi- і BCL2i-схем (CSLL-5A, CSLL-D 2)",
+            "en": "After cBTKi/ncBTKi- and BCL2i-based regimens (CSLL-5A, CSLL-D 2)"
+          },
+          "description": {
+            "uk": "Кожен варіант, окрім дослідження й алоТГСК, супроводжується направленням на оцінку придатності до CAR-T. АлоТГСК розглядають, якщо немає значущої коморбідності.",
+            "en": "Every option other than a trial or allo-HCT comes with a referral to assess CAR T-cell eligibility. Allogeneic HCT is considered if there is no significant comorbidity."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-cll-liso-cel",
+              "notes": {
+                "uk": "CD19-CAR-T ± ібрутиніб",
+                "en": "CD19 CAR T cells with or without ibrutinib"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-cll-pirtobrutinib",
+              "notes": {
+                "uk": "Якщо ще не застосовували",
+                "en": "If not given before"
+              },
+              "preference": "preferred",
+              "category": "1"
+            },
+            {
+              "regimen_id": "ref-cll-duvelisib",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-cll-idelalisib",
+              "notes": {
+                "uk": "± ритуксимаб; якщо монотерапія ритуксимабом доречна через коморбідність (КК <60 мл/хв чи цитопенії 3+ ст. після попередньої терапії)",
+                "en": "With or without rituximab; where rituximab alone would suit because of comorbidity (CrCl <60 mL/min or grade 3+ cytopenias after earlier therapy)"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "fcr-cll-cycle-1",
+              "notes": {
+                "uk": "FC + ритуксимаб — не при del(17p)/TP53; лише <65 років без значущої коморбідності",
+                "en": "FC plus rituximab, not with del(17p)/TP53; only under 65 without significant comorbidity"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "fcr-cll",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-cll-lenalidomide",
+              "notes": {
+                "uk": "± ритуксимаб",
+                "en": "With or without rituximab"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "obinutuzumab-mono",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-cll-alemtuzumab",
+              "notes": {
+                "uk": "± ритуксимаб, при del(17p)/TP53",
+                "en": "With or without rituximab, with del(17p)/TP53"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "br-cll",
+              "notes": {
+                "uk": "Не при del(17p)/TP53. Категорія 2B для ≥65 років або <65 з коморбідністю",
+                "en": "Not with del(17p)/TP53. Category 2B for age 65 or more or under 65 with comorbidity"
+              },
+              "preference": "other",
+              "category": "2b"
+            },
+            {
+              "regimen_id": "methylprednisolone-hd-cll",
+              "notes": {
+                "uk": "З анти-CD20; категорія 2A при del(17p), 2B без нього",
+                "en": "With an anti-CD20 antibody; category 2A with del(17p), 2B without"
+              },
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              }
+            },
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "АлоТГСК, якщо немає значущої коморбідності",
+                "en": "Allogeneic HCT if there is no significant comorbidity"
+              }
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Направлення на оцінку придатності до CAR-T-терапії",
+                "en": "Referral to assess CAR T-cell eligibility"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Трансформація Ріхтера при прогресуванні (HT-1)",
+                "en": "Richter transformation at progression (HT-1)"
+              },
+              "target": "nccn-richter"
+            }
+          ]
+        },
+        {
+          "key": "nccn-richter",
+          "kind": "line",
+          "title": {
+            "uk": "Гістологічна трансформація Річтера (HT-1…HT-4, HT-A)",
+            "en": "Histologic (Richter) transformation (HT-1 to HT-4, HT-A)"
+          },
+          "description": {
+            "uk": "Підозра: швидке прогресування, нова B-симптоматика, зростання ЛДГ, ПЕТ/КТ із вузлом SUV ≥5 або вищим, ніж в інших осередках. Діагноз — ексцизійна чи інцизійна біопсія (тонкоголкова недостатня). ДВВКЛ: листки великих B-клітин поза центрами проліферації. Клональний зв'язок із ХЛЛ встановлюють NGS чи ПЛР Ig, але початок лікування не затримують. Прискорений ХЛЛ і ХЛЛ із пролімфоцитами >15% — не Річтер. Перед антрациклінами — МУГА/ЕхоКГ.",
+            "en": "Suspect with fast progression, new B symptoms, rising LDH, or a PET/CT node with SUV of 5 or more or higher than the rest of the disease. Diagnosis is by excisional or incisional biopsy (needle aspiration alone is inadequate). DLBCL: sheets of large B cells outside proliferation centres. Clonal relation to the CLL is tested by NGS or Ig PCR, but starting treatment is not delayed. Accelerated CLL and CLL with over 15% prolymphocytes are not Richter. MUGA or echocardiography before anthracyclines."
+          },
+          "children": [
+            {
+              "key": "nccn-rt-untreated",
+              "kind": "group",
+              "title": {
+                "uk": "ДВВКЛ: нелікований ХЛЛ або клонально неспоріднений",
+                "en": "DLBCL: untreated CLL or clonally unrelated"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "r-chop-21",
+                  "notes": {
+                    "uk": "Ритуксимаб + CHOP; з венетоклаксом — категорія 2B",
+                    "en": "Rituximab plus CHOP; with venetoclax category 2B"
+                  }
+                },
+                {
+                  "regimen_id": "ref-cll-richter-vr-chop",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "da-epoch-r"
+                },
+                {
+                  "regimen_id": "ref-cll-richter-hypercvad-r"
+                },
+                {
+                  "regimen_id": "ref-cll-richter-ofa-r"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження — бажано на будь-якій лінії",
+                    "en": "Clinical trial is preferred on every line"
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Ослаблені чи з низькою ФВ ЛШ: схеми з настанови NCCN з В-клітинних лімфом (BCEL-C)",
+                    "en": "Frail or low LVEF: regimens in the NCCN B-cell lymphomas guideline (BCEL-C)"
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Оцінка відповіді ПЕТ/КТ за 5-бальною шкалою",
+                    "en": "Response by PET/CT on the 5-point scale"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "При повній відповіді — розглянути алоТГСК; при частковій чи прогресуванні — подальші варіанти",
+                    "en": "In complete response consider allo-HCT; partial response or progression leads to further options"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-rt-treated",
+              "kind": "group",
+              "title": {
+                "uk": "ДВВКЛ: раніше лікований ХЛЛ і клонально споріднений (або зв'язок невідомий)",
+                "en": "DLBCL: previously treated CLL, clonally related or relation unknown"
+              },
+              "description": {
+                "uk": "Варіанти залежать від попереднього лікування ХЛЛ. ІКП-комбінації з тим самим ковалентним BTKi непридатні, якщо його не переносили чи на ньому прогресували. Безпечно поєднувати безперервний cBTKi з ХІТ без інших таргетних засобів.",
+                "en": "Options depend on the prior CLL treatment. ICI combinations with the same covalent BTKi are unsuitable after intolerance of, or progression on, it. A covalent BTKi can reasonably be combined with CIT without other targeted agents."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-cll-richter-car-t",
+                  "notes": {
+                    "uk": "Після щонайменше однієї системної лінії; для придатних",
+                    "en": "After at least one systemic line; if eligible"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-cll-richter-atezo-ven-obi"
+                },
+                {
+                  "regimen_id": "ref-cll-richter-nivolumab",
+                  "notes": {
+                    "uk": "± ібрутиніб",
+                    "en": "With or without ibrutinib"
+                  }
+                },
+                {
+                  "regimen_id": "ref-cll-richter-pembrolizumab",
+                  "notes": {
+                    "uk": "± ібрутиніб",
+                    "en": "With or without ibrutinib"
+                  }
+                },
+                {
+                  "regimen_id": "ref-cll-richter-tislelizumab-zanu"
+                },
+                {
+                  "regimen_id": "ref-cll-pirtobrutinib",
+                  "notes": {
+                    "uk": "Піртобрутиніб як монотерапія при Ріхтері",
+                    "en": "Pirtobrutinib alone in Richter"
+                  }
+                },
+                {
+                  "regimen_id": "ref-cll-pirtobrutinib-ven-obi",
+                  "category": "2a"
+                },
+                {
+                  "regimen_id": "ref-cll-richter-bispecifics"
+                },
+                {
+                  "regimen_id": "r-chop-21",
+                  "notes": {
+                    "uk": "ХІТ як окрема опція",
+                    "en": "CIT as a separate option"
+                  }
+                },
+                {
+                  "regimen_id": "da-epoch-r"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження — бажано",
+                    "en": "Clinical trial is preferred"
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "ПЕТ/КТ: повна відповідь — спостереження або алоТГСК/направлення на CAR-T",
+                    "en": "PET/CT: complete response means observation or allo-HCT or CAR T referral"
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "next",
+                  "label": {
+                    "uk": "Часткова відповідь, рефрактерність чи прогресування: CAR-T або ще не вживана не-ХІТ-схема",
+                    "en": "Partial response, refractory disease or progression: CAR T cells or a non-CIT regimen not used before"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-rt-chl",
+              "kind": "group",
+              "title": {
+                "uk": "Трансформація в класичну лімфому Ходжкіна",
+                "en": "Transformation to classical Hodgkin lymphoma"
+              },
+              "description": {
+                "uk": "Лікують за настановою NCCN з лімфоми Ходжкіна; клінічне дослідження допустиме. Поодинокі клітини Ходжкіна/Рід-Штернберга на тлі ХЛЛ поводяться як трансформація; їх слід відрізняти від реактивації EBV за ретельною морфологією CD30-позитивних клітин.",
+                "en": "Treated by the NCCN Hodgkin lymphoma guideline; a trial is acceptable. Scattered Hodgkin/Reed-Sternberg cells on a CLL background behave like transformation; they must be told apart from EBV reactivation by careful morphology of the CD30-positive cells."
+              },
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Див. сторінку «Хвороба Ходжкіна» цього довідника",
+                    "en": "See the Hodgkin lymphoma page of this catalog"
+                  }
+                },
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження — бажано на будь-якій лінії",
+                    "en": "Clinical trial is preferred on every line"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

@@ -358,7 +358,8 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
     // and carries its content in its description, so it owes no regimen. Every other kind names a
     // line or a stage of treatment, and an empty one reads as "nothing is used here".
     if (node.kind === 'group') continue
-    if (!nodesWithRegimens.has(node.id) && !parentNodes.has(node.id)) {
+    // A pathway page can hold only steps (a transplant, a trial, observation): that is content too.
+    if (!nodesWithRegimens.has(node.id) && !parentNodes.has(node.id) && node.steps.length === 0) {
       warning('treatment_nodes', node.id, 'has neither regimens nor child nodes')
     }
   }

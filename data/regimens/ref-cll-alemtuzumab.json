@@ -1,0 +1,54 @@
+{
+  "$comment": "Лише опис за NCCN CLL/SLL 1.2027: доз для розрахунку немає.",
+  "id": "ref-cll-alemtuzumab",
+  "short_name": "Алемтузумаб±R (ХЛЛ)",
+  "name": {
+    "uk": "Алемтузумаб ± ритуксимаб при ХЛЛ з del(17p)/TP53",
+    "en": "Alemtuzumab with or without rituximab in CLL with del(17p) or TP53"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma, версія 1.2027 від 20.08.2026",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1478",
+      "version": "1.2027 (20.08.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидив після інгібіторів BTK і BCL2 при del(17p)/мутації TP53 (NCCN: «інші рекомендовані»). Для ХЛЛ комерційно не випускається, але можна отримати для клінічного використання.",
+      "en": "Relapse after BTK and BCL2 inhibitors with del(17p) or a TP53 mutation (NCCN: 'other recommended'). No longer sold commercially for CLL but obtainable for clinical use."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Алемтузумаб",
+          "en": "Alemtuzumab"
+        },
+        "drug_id": "alemtuzumab"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Менш ефективний при лімфовузлах понад 5 см; обов'язковий моніторинг реактивації ЦМВ (ПЛР щонайменше кожні 4 тижні).",
+        "en": "Less effective with nodes over 5 cm; CMV reactivation must be monitored (PCR at least every 4 weeks)."
+      },
+      {
+        "uk": "Профілактика: ацикловір (чи еквівалент) і ко-тримоксазол під час і після лікування.",
+        "en": "Prophylaxis: aciclovir (or equivalent) and co-trimoxazole during and after treatment."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить, а повного розкладу з іншого джерела ще немає, тому доз для розрахунку тут нема. Перед призначенням — за інструкцією препарату.",
+      "en": "The NCCN document gives no doses here and no complete schedule from another source is in the catalog yet, so there are no doses to calculate. Check the prescribing information before use."
+    },
+    "availability": "unknown"
+  }
+}

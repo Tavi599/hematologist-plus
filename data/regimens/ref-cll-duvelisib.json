@@ -1,0 +1,42 @@
+{
+  "$comment": "Лише опис за NCCN CLL/SLL 1.2027: доз для розрахунку немає.",
+  "id": "ref-cll-duvelisib",
+  "short_name": "Дувелісиб (ХЛЛ)",
+  "name": {
+    "uk": "Дувелісиб при рецидивному ХЛЛ",
+    "en": "Duvelisib in relapsed CLL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma, версія 1.2027 від 20.08.2026",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1478",
+      "version": "1.2027 (20.08.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інгібітор PI3K для рецидиву після інгібіторів BTK і BCL2 (NCCN: «інші рекомендовані»).",
+      "en": "A PI3K inhibitor for relapse after BTK and BCL2 inhibitors (NCCN: 'other recommended')."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Дувелісиб",
+          "en": "Duvelisib"
+        }
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Високий ризик реактивації ЦМВ: ПЛР-контроль щонайменше кожні 4 тижні; профілактика ацикловіром і ко-тримоксазолом під час лікування й далі.",
+        "en": "High risk of CMV reactivation: PCR at least every 4 weeks; aciclovir and co-trimoxazole prophylaxis during and after treatment."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить, а повного розкладу з іншого джерела ще немає, тому доз для розрахунку тут нема. Перед призначенням — за інструкцією препарату.",
+      "en": "The NCCN document gives no doses here and no complete schedule from another source is in the catalog yet, so there are no doses to calculate. Check the prescribing information before use."
+    },
+    "availability": "unknown"
+  }
+}

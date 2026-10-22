@@ -1,0 +1,75 @@
+{
+  "id": "ref-mm-isa-vrd",
+  "short_name": "Isa-VRd",
+  "name": {
+    "uk": "Isa-VRd (ізатуксимаб + бортезоміб + леналідомід + дексаметазон)",
+    "en": "Isa-VRd (isatuximab + bortezomib + lenalidomide + dexamethasone)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Multiple Myeloma, version 1.2027 (MYEL-H, Discussion)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1445",
+      "version": "1.2027 від 09.09.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Бажана (категорія 1) первинна терапія: для кандидатів на ТГСК (GMMG-HD7) і для тих, кому ТГСК відкладена або не показана, віком до 80 років без крихкості (IMROZ, BENEFIT).",
+      "en": "A preferred (category 1) primary regimen: for HCT candidates (GMMG-HD7) and for those whose HCT is deferred or not indicated, under 80 and not frail (IMROZ, BENEFIT)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ізатуксимаб",
+          "en": "Isatuximab"
+        },
+        "drug_id": "isatuximab"
+      },
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "GMMG-HD7: 3 цикли індукції по 42 дні перед ТГСК; ізатуксимаб підвищив частку МЗХ-негативності після індукції (50% проти 36% при VRd), частішою була нейтропенія 3–4 ступеня (23% проти 7%).",
+        "en": "GMMG-HD7: three 42-day induction cycles before HCT; isatuximab raised MRD negativity after induction (50% vs 36% with VRd) at the price of more grade 3-4 neutropenia (23% vs 7%)."
+      },
+      {
+        "uk": "IMROZ (без ТГСК, ≤80 років): 4 цикли по 6 тижнів Isa-VRd, далі безперервно Isa-Rd 4-тижневими циклами; 5-річна ВБП 63,2% проти 45,2% при VRd, ≥ПВ 74,7% проти 64,1%.",
+        "en": "IMROZ (no HCT, up to 80): four 6-week cycles of Isa-VRd, then Isa-Rd continuously in 4-week cycles; PFS 63.2% vs 45.2% with VRd, CR or better 74.7% vs 64.1%."
+      },
+      {
+        "uk": "BENEFIT: з бортезомібом п/ш щотижня (цикли 1–12), далі раз на 2 тижні (цикли 13–18) нейропатія ≥2 ступеня — 27% проти 10% при Isa-Rd; NCCN радить щотижневий бортезоміб.",
+        "en": "BENEFIT: with weekly SC bortezomib (cycles 1-12, then every 2 weeks in cycles 13-18) grade 2 or worse neuropathy was 27% vs 10% with Isa-Rd; NCCN advises weekly bortezomib."
+      },
+      {
+        "uk": "Ізатуксимаб можна вводити п/ш фіксованою дозою (бажано) або в/в — за листком-вкладкою.",
+        "en": "Isatuximab can be given SC as a fixed dose (preferred) or IV — per the label."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "unavailable"
+  }
+}
