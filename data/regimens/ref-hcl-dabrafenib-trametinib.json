@@ -1,0 +1,54 @@
+{
+  "$comment": "Лише опис за NCCN Hairy Cell Leukemia 2.2027: доз для розрахунку немає.",
+  "id": "ref-hcl-dabrafenib-trametinib",
+  "short_name": "Дабрафеніб + траметиніб",
+  "name": {
+    "uk": "Дабрафеніб + траметиніб при рецидивному ВКЛ",
+    "en": "Dabrafenib with trametinib in relapsed HCL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Hairy Cell Leukemia, версія 2.2027 від 14.09.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2027 (14.09.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Комбінація інгібіторів BRAF і MEK без ритуксимабу, позареєстраційно. NCCN: «бажано» при рецидиві <2 років, первинній рефрактерності й при прогресуванні після другої лінії — якщо BRAF-інгібітор ще не застосовували.",
+      "en": "A BRAF plus MEK inhibitor combination without rituximab, off-label. NCCN: 'preferred' in relapse under 2 years, primary refractory disease and progression after second-line therapy - if no BRAF inhibitor was used before."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Дабрафеніб",
+          "en": "Dabrafenib"
+        },
+        "drug_id": "dabrafenib"
+      },
+      {
+        "name": {
+          "uk": "Траметиніб",
+          "en": "Trametinib"
+        },
+        "drug_id": "trametinib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Фаза II, 55 хворих із BRAF V600E-позитивним ВКЛ (рефрактерність до першої лінії пуринового аналога чи рецидив після ≥2 ліній): відповідь за оцінкою дослідника 89%, повна 66%, часткова 24%; 24-місячна виживаність без прогресування 94%, загальна 95%.",
+        "en": "Phase II, 55 patients with BRAF V600E-positive HCL (refractory to first-line purine analogue or relapsed after 2 or more lines): investigator-assessed response 89%, complete 66%, partial 24%; 24-month progression-free survival 94% and overall survival 95%."
+      },
+      {
+        "uk": "Найчастіші небажані явища: гарячка (58%), озноб (47%), гіперглікемія (40%).",
+        "en": "The commonest adverse events: pyrexia (58%), chills (47%) and hyperglycaemia (40%)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN не наводить доз і тривалості цієї комбінації — доз для розрахунку нема. Перед призначенням — за інструкціями препаратів.",
+      "en": "NCCN gives neither doses nor the duration of this combination, so there are no doses to calculate. Check the prescribing information of both drugs before use."
+    },
+    "availability": "registered"
+  }
+}
