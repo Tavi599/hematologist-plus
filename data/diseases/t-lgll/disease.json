@@ -1,0 +1,247 @@
+{
+  "id": "t-lgll",
+  "name": {
+    "uk": "T-клітинний лейкоз із великих гранулярних лімфоцитів (T-LGLL)",
+    "en": "T-cell large granular lymphocytic leukaemia (T-LGLL)"
+  },
+  "summary": {
+    "uk": "Індолентний лімфопроліферативний розлад зрілих цитотоксичних Т-клітин (CD3+, CD8+, CD57+, TCRαβ), нерідко з активуючими мутаціями STAT3/STAT5B; характерні аутоімунна нейтропенія, ревматоїдний артрит; ~10% — NK-варіант, що лікується подібно.",
+    "en": "An indolent lymphoproliferative disorder of mature cytotoxic T cells (CD3+, CD8+, CD57+, TCR alpha/beta), often with activating STAT3/STAT5B mutations; autoimmune neutropenia and rheumatoid arthritis are typical; about 10% are of NK-cell type, treated similarly."
+  },
+  "clinical_group": "chronic-leukemia",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C91.7",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026",
+      "updated": "2026-02-13"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=T-cell%20large%20granular%20lymphocytic%20leukemia"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=T-cell%20large%20granular%20lymphocytic%20leukemia"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 2.2026 (LGLL-1…2)",
+        "en": "NCCN 2.2026 pathways (LGLL-1 to 2)"
+      },
+      "description": {
+        "uk": "NCCN T-Cell Lymphomas 2.2026: діагностика, показання до лікування, перша лінія (клінічне дослідження, циклофосфамід, метотрексат) з оцінкою на 4-му місяці, друга лінія. NCCN наводить дози циклофосфаміду, метотрексату й руксолітинібу — ці схеми розраховуються в каталозі.",
+        "en": "NCCN T-Cell Lymphomas 2.2026: diagnosis, indications for treatment, first line (clinical trial, cyclophosphamide, methotrexate) with assessment at month 4, second line. NCCN states doses of cyclophosphamide, methotrexate and ruxolitinib — these regimens are calculable in the catalog."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-dx",
+          "kind": "line",
+          "title": {
+            "uk": "Діагностика й показання до лікування (LGLL-1, LGLL-2)",
+            "en": "Diagnosis and indications for treatment (LGLL-1, LGLL-2)"
+          },
+          "description": {
+            "uk": "Діагноз: стійке (>6 міс.) збільшення LGL (зазвичай >2000/мкл) із типовою морфологією в крові/кістковому мозку; проточна цитометрія крові (CD3, CD4, CD5, CD7, CD8, CD16, CD56, CD57, TCRαβ/γδ, TRBC1), оцінка клональності; за обставин — кістковий мозок (обов’язково при LGL <0,5×10⁹/л й підозрі на недостатність кісткового мозку), мутації STAT3/STAT5B, EBER. Виключити реактивний лімфоцитоз; при малих клональних популяціях (<0,5×10⁹/л) чи поліклональних — повтор через 6 міс. Обстеження: огляд (селезінка, печінка), аутоімунні хвороби (РА, СЧВ), ECOG, ЗАК, біохімія; за обставин — ВІЛ, гепатити B/C, ЦМВ (перед алемтузумабом), HTLV-1/2, ехо при задишці/правосерцевій недостатності. Показання до лікування: нейтрофіли <0,5×10⁹/л; Hb <10 г/дл чи потреба в трансфузіях еритроцитів; тромбоцити <50×10⁹/л; аутоімунне захворювання, що потребує лікування; симптомна спленомегалія; тяжкі B-симптоми; легенева гіпертензія внаслідок LGLL; нейтрофіли <1,5×10⁹/л з рецидивними інфекціями. Без показань — спостереження.",
+            "en": "Diagnosis: a persistent (>6 months) increase of LGLs (usually >2000/uL) with typical morphology in blood/marrow; blood flow cytometry (CD3, CD4, CD5, CD7, CD8, CD16, CD56, CD57, TCR alpha/beta and gamma/delta, TRBC1), clonality; if needed — bone marrow (essential when LGLs <0.5 x 10^9/L and a marrow failure disorder is suspected), STAT3/STAT5B mutations, EBER. Exclude reactive lymphocytosis; for small clones (<0.5 x 10^9/L) or polyclonal LGLs — repeat in 6 months. Workup: exam (spleen, liver), autoimmune disease (RA, SLE), ECOG, CBC, chemistry; if needed — HIV, hepatitis B/C, CMV (before alemtuzumab), HTLV-1/2, echo for dyspnoea/right heart failure. Indications for treatment: ANC <0.5 x 10^9/L; Hb <10 g/dL or RBC transfusion need; platelets <50 x 10^9/L; autoimmune disease requiring therapy; symptomatic splenomegaly; severe B symptoms; pulmonary hypertension due to LGLL; ANC <1.5 x 10^9/L with recurrent infections. No indication — observation."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "surveillance",
+              "column": "treatment",
+              "label": {
+                "uk": "Без показань — спостереження",
+                "en": "No indication — observation"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Перша лінія",
+                "en": "First line"
+              },
+              "target": "nccn-1l"
+            }
+          ]
+        },
+        {
+          "key": "nccn-1l",
+          "kind": "line",
+          "title": {
+            "uk": "Перша лінія й відповідь на 4-му місяці (LGLL-2)",
+            "en": "First line and response at month 4 (LGLL-2)"
+          },
+          "description": {
+            "uk": "Показання є: клінічне дослідження (бажано), циклофосфамід всередину чи метотрексат; кортикостероїд можна додати спочатку для зменшення цитопенії, але знижувати якнайшвидше; метотрексат ± стероїд — при аутоімунній хворобі, циклофосфамід чи циклоспорин — при анемії. Лікування лише цитопенії може бути доречним. Оцінка на 4-му місяці: CR/PR — продовжити лікування чи переривчасто; немає відповіді — інша перша лінія чи руксолітиніб. CR: Hb >12 г/дл, нейтрофіли >1,5, тромбоцити >150, лімфоцити <4, LGL <0,5 (×10⁹/л); PR: Hb >8, нейтрофіли >0,5, тромбоцити >50, без трансфузій. Циклофосфамід: без відповіді — не довше 4 міс.; при PR на 4-му місяці — розглянути ≤12 міс. (ризик токсичності для сечового міхура, мутагенезу, лейкемогенезу). Метотрексат: накопичена токсичність — контроль при тривалому прийомі.",
+            "en": "Indication present: a clinical trial (preferred), oral cyclophosphamide or methotrexate; a corticosteroid may be added at first to reduce cytopenias but weaned as soon as possible; methotrexate ± steroid for autoimmune disease, cyclophosphamide or cyclosporine for anaemia. Management of the cytopenia alone may be appropriate. Assessment at month 4: CR/PR — continue treatment or intermittent therapy; no response — alternate first line or ruxolitinib. CR: Hb >12 g/dL, ANC >1.5, platelets >150, lymphocytes <4, LGLs <0.5 (x10^9/L); PR: Hb >8, ANC >0.5, platelets >50, no transfusions. Cyclophosphamide: no response — no longer than 4 months; PR at month 4 — consider <=12 months (bladder toxicity, mutagenesis, leukaemogenesis). Methotrexate: monitor cumulative toxicity during long use."
+          },
+          "regimens": [
+            {
+              "regimen_id": "cyclophosphamide-lgll",
+              "notes": {
+                "uk": "100 мг на добу всередину",
+                "en": "100 mg a day by mouth"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "methotrexate-lgll",
+              "notes": {
+                "uk": "10 мг/м² на тиждень (звично 20 мг)",
+                "en": "10 mg/m2 weekly (usually 20 mg)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ruxolitinib-lgll",
+              "notes": {
+                "uk": "Після відсутності відповіді на першу лінію",
+                "en": "After no response to first line"
+              },
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Оцінка відповіді на 4-му місяці",
+                "en": "Response assessment at month 4"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Друга лінія",
+                "en": "Second line"
+              },
+              "target": "nccn-2l"
+            }
+          ]
+        },
+        {
+          "key": "nccn-2l",
+          "kind": "line",
+          "title": {
+            "uk": "Друга лінія (LGLL-2)",
+            "en": "Second line (LGLL-2)"
+          },
+          "description": {
+            "uk": "Прогресія чи рефрактерність до всіх перших ліній: бажано клінічне дослідження, циклоспорин, руксолітиніб (якщо не застосовували), пуринові аналоги (пентостатин, кладрибін, флударабін); інша рекомендована — алемтузумаб (п/ш бажано, або в/в; низькодозовий п/ш подібний за ефективністю з меншою токсичністю й реактивацією вірусів). Алемтузумаб комерційно не поставляється, але його можна отримати; потрібні ПЛР ЦМВ і профілактика Pneumocystis; обережно при тяжкій нейтропенії й рецидивних інфекціях.",
+            "en": "Progression or refractory disease to all first-line therapies: a clinical trial is preferred, cyclosporine, ruxolitinib (if not used before), purine analogues (pentostatin, cladribine, fludarabine); other recommended — alemtuzumab (SC preferred, or IV; low-dose SC has similar efficacy with lower toxicity and viral reactivation). Alemtuzumab is not commercially available but may be obtained; CMV PCR and Pneumocystis prophylaxis are needed; use caution with severe neutropenia and recurrent infections."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ruxolitinib-lgll",
+              "notes": {
+                "uk": "Якщо не застосовували раніше",
+                "en": "If not used before"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-tcl-pentostatin",
+              "notes": {
+                "uk": "Пуринові аналоги",
+                "en": "Purine analogues"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-tcl-alemtuzumab",
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Циклоспорин (з кортикостероїдом чи без)",
+                "en": "Cyclosporine (with or without a corticosteroid)"
+              },
+              "preference": "preferred"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "description": {
+        "uk": "За показаннями: циклофосфамід, метотрексат (± кортикостероїд) чи клінічне дослідження.",
+        "en": "By indication: cyclophosphamide, methotrexate (± corticosteroid) or a clinical trial."
+      },
+      "regimens": [
+        {
+          "regimen_id": "cyclophosphamide-lgll"
+        },
+        {
+          "regimen_id": "methotrexate-lgll"
+        }
+      ]
+    },
+    {
+      "key": "relapsed",
+      "kind": "line",
+      "title": {
+        "uk": "Друга лінія",
+        "en": "Second line"
+      },
+      "description": {
+        "uk": "Руксолітиніб, циклоспорин, пуринові аналоги, алемтузумаб.",
+        "en": "Ruxolitinib, cyclosporine, purine analogues, alemtuzumab."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ruxolitinib-lgll"
+        },
+        {
+          "regimen_id": "ref-tcl-pentostatin"
+        },
+        {
+          "regimen_id": "ref-tcl-alemtuzumab"
+        }
+      ]
+    }
+  ]
+}

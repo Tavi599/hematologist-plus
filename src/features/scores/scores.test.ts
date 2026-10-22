@@ -129,6 +129,26 @@ describe('risk scores', () => {
     expect(group('wpss', { who: '3', karyotype: '2', anaemia: true })).toBe('Very high')
   })
 
+  it('PIT, PINK and ATL-PI follow the NCCN T-cell tables', () => {
+    // Age + LDH + marrow = 3: PIT group 4; modified PIT counts Ki-67 instead of marrow (2 here).
+    const pitOutcome = run('pit', { age: true, ldh: true, marrow: true })!
+    expect(pitOutcome.group!.label.en).toBe('Group 4')
+    expect(pitOutcome.notes[0]!.en).toContain('2 — group 2')
+    expect(group('pit', {})).toBe('Low')
+    expect(group('pit', { age: true })).toBe('Group 2')
+    // PINK: one factor is intermediate, two high; EBV DNA is the extra factor of PINK-E.
+    expect(group('pink', { age: true })).toBe('Intermediate')
+    const pinkOutcome = run('pink', { age: true, stage: true, ebv: true })!
+    expect(pinkOutcome.group!.label.en).toBe('High')
+    expect(pinkOutcome.notes[0]!.en).toContain('high risk')
+    expect(run('pink', { age: true, ebv: true })!.notes[0]!.en).toContain('intermediate')
+    expect(group('pink', {})).toBe('Low')
+    // ATL-PI: 0–1 low, 2–3 intermediate, 4–5 high.
+    expect(group('atl-pi', { acute: true })).toBe('Low')
+    expect(group('atl-pi', { acute: true, crp: true, ecog: true })).toBe('Intermediate')
+    expect(group('atl-pi', { acute: true, crp: true, ecog: true, il2r: true })).toBe('High')
+  })
+
   it('IPI with R-IPI', () => {
     const outcome = run('ipi', { age: true, ldh: true, stage: true })!
     expect(outcome.group!.label.en).toBe('High-intermediate')

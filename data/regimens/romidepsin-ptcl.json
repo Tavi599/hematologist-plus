@@ -33,11 +33,7 @@
       "route": "iv_infusion",
       "dose_value": 14,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        8,
-        15
-      ],
+      "days": [1, 8, 15],
       "duration_min": 240,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,

@@ -1,0 +1,699 @@
+{
+  "id": "alcl",
+  "name": {
+    "uk": "Анапластична великоклітинна лімфома (системна)",
+    "en": "Anaplastic large cell lymphoma (systemic)"
+  },
+  "summary": {
+    "uk": "Системна CD30+ АВКЛ: ALK-позитивна (t(2;5), NPM1::ALK; сприятливий прогноз) та ALK-негативна (у т. ч. з перебудовами DUSP22, TP63, JAK2/TYK2). Перша лінія — CHP + брентуксимаб ведотин (ECHELON-2, кат. 1). Первинна шкірна АВКЛ і BIA-ALCL — окремо.",
+    "en": "Systemic CD30-positive ALCL: ALK-positive (t(2;5), NPM1::ALK; favourable prognosis) and ALK-negative (including DUSP22, TP63 and JAK2/TYK2 rearrangements). First line is CHP plus brentuximab vedotin (ECHELON-2, category 1). Primary cutaneous ALCL and BIA-ALCL are separate."
+  },
+  "clinical_group": "lymphoma",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C84.6",
+      "is_primary": true
+    },
+    {
+      "system_id": "icd-10",
+      "code": "C84.7",
+      "is_primary": false
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026",
+      "updated": "2026-02-13"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Anaplastic%20large%20cell%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Anaplastic%20large%20cell%20lymphoma"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 2.2026 (PTCL-1…8)",
+        "en": "NCCN 2.2026 pathways (PTCL-1 to 8)"
+      },
+      "description": {
+        "uk": "NCCN T-Cell Lymphomas 2.2026 для ALK+ та ALK− АВКЛ: ALK+ — лікування за стадією з рестадіюванням після 3-4 циклів; ALK− — клінічне дослідження бажане. Рецидив: брентуксимаб, ALK-інгібітори (лише ALK+) та інші.",
+        "en": "NCCN T-Cell Lymphomas 2.2026 for ALK-positive and ALK-negative ALCL: ALK-positive — stage-directed treatment with restaging after 3-4 cycles; ALK-negative — a clinical trial is preferred. Relapse: brentuximab, ALK inhibitors (ALK-positive only) and others."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-dx",
+          "kind": "line",
+          "title": {
+            "uk": "Діагностика й обстеження (PTCL-1…4)",
+            "en": "Diagnosis and workup (PTCL-1 to 4)"
+          },
+          "description": {
+            "uk": "Обов’язково: перегляд усіх препаратів гематопатологом із досвідом ПТКЛ; ексцизійна/інцизійна біопсія (тонкоголкова аспірація недостатня); імунофенотип (CD20, CD3, CD10, BCL6, Ki-67, CD5, CD30, CD2, CD4, CD8, CD7, CD56, CD21, CD23, TCRβ/δ, PD1, ALK, TP63; при підозрі на ТФХ-лімфому — щонайменше 2-3 ТФХ-маркери з CD10, BCL6, PD1, CXCL13, ICOS); EBER-ISH. За обставин: клональність TRB/TRG (сама клональність не є діагнозом), DUSP22 при ALK− АВКЛ, TP63, JAK2/TYK2, панель мутацій для ТФХ, серологія HTLV-1/2. Обстеження: огляд з оглядом шкіри й кільця Вальдеєра, ECOG, B-симптоми, ЗАК, кістковий мозок, ЛДГ, біохімія, сечова кислота, ПЕТ/КТ (бажано) або КТ ОГК/ОЧП, IPI, ехо/MUGA перед антрациклінами, тест на вагітність, фертильність. IPI: вік >60, ЛДГ > норми, ECOG 2-4, стадія III-IV, екстранодальних уражень >1 (групи: 0-1 низький, 2 низький-проміжний, 3 високо-проміжний, 4-5 високий). Для ПТКЛ-НБО також PIT, модифікований PIT і шкала T-cell; докладно — на сторінці «Шкали». Для CD30+ пухлин завжди визначати ALK (FISH чи імуногістохімія); при ALK− — DUSP22 (FISH), TP63, JAK2/TYK2.",
+            "en": "Essential: review of all slides by a haematopathologist experienced in PTCL; excisional/incisional biopsy (fine-needle aspiration alone is insufficient); immunophenotype (CD20, CD3, CD10, BCL6, Ki-67, CD5, CD30, CD2, CD4, CD8, CD7, CD56, CD21, CD23, TCR beta/delta, PD1, ALK, TP63; at least 2-3 TFH markers of CD10, BCL6, PD1, CXCL13, ICOS if a TFH lymphoma is suspected); EBER-ISH. In certain circumstances: TRB/TRG clonality (clonality alone is not a diagnosis), DUSP22 in ALK-negative ALCL, TP63, JAK2/TYK2, a mutation panel for TFH, HTLV-1/2 serology. Workup: physical exam including skin and Waldeyer ring, ECOG, B symptoms, CBC, bone marrow, LDH, chemistry, uric acid, PET/CT (preferred) or chest/abdomen/pelvis CT, IPI, echo/MUGA before anthracyclines, pregnancy test, fertility. IPI: age >60, LDH above normal, ECOG 2-4, stage III-IV, more than 1 extranodal site (groups: 0-1 low, 2 low-intermediate, 3 high-intermediate, 4-5 high). PIT, modified PIT and the T-cell score also exist for PTCL-NOS; see the Scores page. Always determine ALK in CD30-positive tumours (FISH or IHC); in ALK-negative cases DUSP22 (FISH), TP63, JAK2/TYK2."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Стадіювання за Лугано; ПЕТ — відповідь за 5-бальною шкалою (Deauville)",
+                "en": "Lugano staging; PET response by the 5-point scale (Deauville)"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Перша лінія",
+                "en": "First line"
+              },
+              "target": "nccn-1l"
+            }
+          ]
+        },
+        {
+          "key": "nccn-1l",
+          "kind": "line",
+          "title": {
+            "uk": "Перша лінія (PTCL-4, PTCL-B 1)",
+            "en": "First line (PTCL-4, PTCL-B 1)"
+          },
+          "description": {
+            "uk": "Антрациклінові режими дають сприятливий прогноз при ALK+ АВКЛ; для інших гістологій таких результатів немає, тому там бажане клінічне дослідження. ALCL ALK− з перебудовою DUSP22 має мінливий прогноз: деякі автори вважають його подібним до ALK+, інші — ні; за ALK+ алгоритмом його можна лікувати за розсудом (NCCN PTCL-4, п. n).",
+            "en": "Anthracycline-based regimens give a favourable prognosis in ALK-positive ALCL; other histologies do not do as well, so a clinical trial is preferred for them. ALK-negative ALCL with a DUSP22 rearrangement has a variable prognosis: some report it resembles ALK-positive disease, others not; it may be managed by the ALK-positive algorithm (NCCN PTCL-4, footnote n)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "bv-chp",
+              "notes": {
+                "uk": "CHP + брентуксимаб ведотин ×6 циклів (ECHELON-2)",
+                "en": "CHP + brentuximab vedotin x6 cycles (ECHELON-2)"
+              },
+              "preference": "preferred",
+              "category": "1"
+            },
+            {
+              "regimen_id": "ref-ptcl-chep-bv",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "choep-21",
+              "notes": {
+                "uk": "При пероральному етопозиді: 200 мг/м² (вдвічі від в/в) у дні 2 і 3 можна замість в/в",
+                "en": "Oral etoposide 200 mg/m2 (twice the IV dose) may replace IV etoposide on days 2 and 3"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "chop-21",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "da-epoch",
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "ALK+ АВКЛ: стадії I-II — хіміотерапія ×6 циклів, або ×6 + ISRT, або ×3-4 цикли + ISRT (кат. 2B; дані обмежені); стадії III-IV — хіміотерапія ×6. Рестадіювання після 3-4 циклів (ПЕТ/КТ бажано)",
+                "en": "ALK-positive ALCL: stage I-II — chemotherapy x6, or x6 plus ISRT, or x3-4 plus ISRT (category 2B; limited data); stage III-IV — chemotherapy x6. Restage after 3-4 cycles (PET/CT preferred)"
+              }
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "ALK− АВКЛ (і ПТКЛ-подібні): клінічне дослідження бажане, або хіміотерапія ×6 ± ISRT; рестадіювання після 3-4 циклів",
+                "en": "ALK-negative ALCL: clinical trial preferred, or chemotherapy x6 ± ISRT; restage after 3-4 cycles"
+              }
+            },
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Оцінка відповіді",
+                "en": "Response assessment"
+              },
+              "target": "nccn-restage"
+            }
+          ]
+        },
+        {
+          "key": "nccn-restage",
+          "kind": "line",
+          "title": {
+            "uk": "Відповідь наприкінці лікування й консолідація (PTCL-5, PTCL-6)",
+            "en": "End-of-treatment response and consolidation (PTCL-5, PTCL-6)"
+          },
+          "description": {
+            "uk": "Наприкінці лікування — ПЕТ/КТ (бажано) або КТ. CR (ПЕТ−): спостереження або аутоТГСК при високому ризику за IPI. PR (ПЕТ+) чи прогресія — повторна біопсія розглядається (при ПЕТ+ ураженні до додаткового лікування); далі лікування рецидиву. Відсутність відповіді чи прогресія під час лікування — одразу до лікування рецидиву. Наглядання: огляд кожні 3-6 міс. 2 роки, далі за потреби; візуалізація не частіше ніж раз на 6 міс. 2 роки, потім щорічно 5 років.",
+            "en": "At the end of treatment — PET/CT (preferred) or CT. CR (PET-negative): observation or autologous HCT for a high IPI. PR (PET-positive) or progression: consider repeat biopsy of PET-positive lesions before more therapy; then relapse therapy. No response or progression during treatment goes straight to relapse therapy. Follow-up: visits every 3-6 months for 2 years, then as indicated; imaging no more often than every 6 months for 2 years, then yearly for 5 years."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "CR (ПЕТ−): спостереження або аутоТГСК при високому ризику за IPI (локальні зони можна опромінити до чи після ТГСК)",
+                "en": "CR (PET-negative): observation or autologous HCT for a high IPI (localised areas can receive RT before or after HCT)"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "surveillance",
+              "column": "treatment",
+              "label": {
+                "uk": "Огляд кожні 3-6 міс. 2 роки; візуалізація не частіше ніж раз на 6 міс. 2 роки, далі щороку 5 років",
+                "en": "Visits every 3-6 months for 2 years; imaging no more often than every 6 months for 2 years, then yearly for 5 years"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив / рефрактерність",
+                "en": "Relapse / refractory disease"
+              },
+              "target": "nccn-rel"
+            }
+          ]
+        },
+        {
+          "key": "nccn-rel",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив / рефрактерність — з наміром до ТГСК (PTCL-7, PTCL-B 3-5)",
+            "en": "Relapse / refractory — intent to transplant (PTCL-7, PTCL-B 3-5)"
+          },
+          "description": {
+            "uk": "Бажано клінічне дослідження. Повторна біопсія розглядається при стійких чи нових ПЕТ-позитивних ураженнях (при AITL — наполегливо). CR/PR → алогенна чи аутологічна ТГСК (алогенна рекомендована) або продовження лікування чи спостереження; відсутність відповіді → альтернативна 2-га лінія. Профілактика ЦМВ/Pneumocystis при алемтузумабі й PI3K-інгібіторах. Профілактика синдрому лізису пухлини розглядається перед усіма схемами (NCCN TCLYM-B).",
+            "en": "A clinical trial is preferred. Repeat biopsy is considered for persistent or new PET-positive lesions (strongly in AITL). CR/PR → allogeneic or autologous HCT (allogeneic is recommended) or continued treatment or observation; no response → an alternative second line. CMV/Pneumocystis prophylaxis with alemtuzumab and PI3K inhibitors. Consider tumour lysis prophylaxis before all regimens (NCCN TCLYM-B)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "brentuximab-mono",
+              "notes": {
+                "uk": "Бажаний для ALCL (CD30+)",
+                "en": "Preferred for ALCL (CD30-positive)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-alcl-alk-inhibitors",
+              "notes": {
+                "uk": "Лише ALK+ АВКЛ",
+                "en": "ALK-positive ALCL only"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "belinostat-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "bendamustine-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-ptcl-duvelisib",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "pralatrexate-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "romidepsin-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "dhap",
+              "notes": {
+                "uk": "DHA + цисплатин; карбоплатин — також допустимий платиновий компонент",
+                "en": "DHA + cisplatin; carboplatin is also an accepted platinum partner"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "dhaox",
+              "notes": {
+                "uk": "DHA + оксаліплатин",
+                "en": "DHA + oxaliplatin"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "eshap",
+              "notes": {
+                "uk": "ESHA + цисплатин (або оксаліплатин)",
+                "en": "ESHA + cisplatin (or oxaliplatin)"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "gdp",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "gem-ox",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ice",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "gvd",
+              "notes": {
+                "uk": "Після брентуксимабу — пауза 3-4 тижні (ризик легеневої токсичності)",
+                "en": "Wait 3-4 weeks after brentuximab (pulmonary toxicity risk)"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "bv-bendamustine",
+              "notes": {
+                "uk": "За експресії CD30 (будь-який рівень)",
+                "en": "CD30-positive (any level)"
+              },
+              "preference": "other",
+              "category": "2b"
+            },
+            {
+              "regimen_id": "ref-ptcl-duvelisib-romidepsin",
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Гемцитабін (монотерапія)",
+                "en": "Gemcitabine (single agent)"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Руксолітиніб (кат. 2B)",
+                "en": "Ruxolitinib (category 2B)"
+              },
+              "preference": "other",
+              "category": "2b"
+            },
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "Алогенна чи аутологічна ТГСК за CR/PR (алогенна — коли її рекомендує NCCN; перед ТГСК пауза після могамулізумабу/ІСІ)",
+                "en": "Allogeneic or autologous HCT in CR/PR (allogeneic where NCCN recommends it)"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив №2 і більше",
+                "en": "Relapse #2 or greater"
+              },
+              "target": "nccn-rel2"
+            }
+          ]
+        },
+        {
+          "key": "nccn-rel-nt",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив / рефрактерність — без наміру до ТГСК (PTCL-7, PTCL-B 3-5)",
+            "en": "Relapse / refractory — no intent to transplant (PTCL-7, PTCL-B 3-5)"
+          },
+          "description": {
+            "uk": "Бажано клінічне дослідження. Повторна біопсія розглядається при стійких чи нових ПЕТ-позитивних ураженнях (при AITL — наполегливо). CR/PR → алогенна чи аутологічна ТГСК (алогенна рекомендована) або продовження лікування чи спостереження; відсутність відповіді → альтернативна 2-га лінія. Профілактика ЦМВ/Pneumocystis при алемтузумабі й PI3K-інгібіторах. Профілактика синдрому лізису пухлини розглядається перед усіма схемами (NCCN TCLYM-B).",
+            "en": "A clinical trial is preferred. Repeat biopsy is considered for persistent or new PET-positive lesions (strongly in AITL). CR/PR → allogeneic or autologous HCT (allogeneic is recommended) or continued treatment or observation; no response → an alternative second line. CMV/Pneumocystis prophylaxis with alemtuzumab and PI3K inhibitors. Consider tumour lysis prophylaxis before all regimens (NCCN TCLYM-B)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "brentuximab-mono",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-alcl-alk-inhibitors",
+              "notes": {
+                "uk": "Лише ALK+ АВКЛ",
+                "en": "ALK-positive ALCL only"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "belinostat-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "bendamustine-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-ptcl-duvelisib",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "pralatrexate-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "romidepsin-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "bv-bendamustine",
+              "notes": {
+                "uk": "За експресії CD30 (будь-який рівень)",
+                "en": "CD30-positive (any level)"
+              },
+              "preference": "other",
+              "category": "2b"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Циклофосфамід та/або етопозид (в/в або всередину)",
+                "en": "Cyclophosphamide and/or etoposide (IV or by mouth)"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Гемцитабін (монотерапія)",
+                "en": "Gemcitabine (single agent)"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Променева терапія (ISRT): після хіміотерапії CR 30-36 Гр, PR 40-50 Гр; як первинне лікування при рефрактерності чи неможливості хіміотерапії 40-55 Гр; з ТГСК 20-36 Гр",
+                "en": "Radiotherapy (ISRT): after chemotherapy CR 30-36 Gy, PR 40-50 Gy; as primary treatment for refractory disease or non-candidates for chemotherapy 40-55 Gy; with HCT 20-36 Gy"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Руксолітиніб (кат. 2B)",
+                "en": "Ruxolitinib (category 2B)"
+              },
+              "preference": "other",
+              "category": "2b"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив №2 і більше",
+                "en": "Relapse #2 or greater"
+              },
+              "target": "nccn-rel2"
+            }
+          ]
+        },
+        {
+          "key": "nccn-rel2",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив №2 і наступні (PTCL-8)",
+            "en": "Relapse #2 and later (PTCL-8)"
+          },
+          "description": {
+            "uk": "Клінічне дослідження, або альтернативна 2-га лінія з таблиць PTCL-B 3-5, або паліативна ПТ та/або найкраща підтримуюча терапія. Наглядання після завершення — огляд кожні 3-6 міс. 2 роки, візуалізація не частіше ніж раз на 6 міс.",
+            "en": "Clinical trial, or alternative second-line therapy from tables PTCL-B 3-5, or palliative RT and/or best supportive care. Follow-up after completion: visits every 3-6 months for 2 years, imaging no more often than every 6 months."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Променева терапія (ISRT): після хіміотерапії CR 30-36 Гр, PR 40-50 Гр; як первинне лікування при рефрактерності чи неможливості хіміотерапії 40-55 Гр; з ТГСК 20-36 Гр",
+                "en": "Radiotherapy (ISRT): after chemotherapy CR 30-36 Gy, PR 40-50 Gy; as primary treatment for refractory disease or non-candidates for chemotherapy 40-55 Gy; with HCT 20-36 Gy"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Найкраща підтримуюча терапія (NCCN Palliative Care)",
+                "en": "Best supportive care (NCCN Palliative Care)"
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-pall",
+          "kind": "line",
+          "title": {
+            "uk": "Первинна паліативна терапія (PTCL-B 2)",
+            "en": "Initial palliative-intent therapy (PTCL-B 2)"
+          },
+          "description": {
+            "uk": "Для вибраних хворих — симптоматична терапія замість радикальної: перелік схем (однаковий із другою лінією без ТГСК) наведено нижче. Зазвичай бажано клінічне дослідження.",
+            "en": "For selected patients — symptom-directed therapy instead of curative-intent treatment: the list below is the same as for second line without transplant. A clinical trial is usually preferred."
+          },
+          "regimens": [
+            {
+              "regimen_id": "brentuximab-mono",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-alcl-alk-inhibitors",
+              "notes": {
+                "uk": "Лише ALK+ АВКЛ",
+                "en": "ALK-positive ALCL only"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "belinostat-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "bendamustine-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-ptcl-duvelisib",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "pralatrexate-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "romidepsin-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "bv-bendamustine",
+              "notes": {
+                "uk": "За експресії CD30 (будь-який рівень)",
+                "en": "CD30-positive (any level)"
+              },
+              "preference": "other",
+              "category": "2b"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Циклофосфамід та/або етопозид (в/в або всередину)",
+                "en": "Cyclophosphamide and/or etoposide (IV or by mouth)"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Гемцитабін (монотерапія)",
+                "en": "Gemcitabine (single agent)"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Променева терапія (ISRT): після хіміотерапії CR 30-36 Гр, PR 40-50 Гр; як первинне лікування при рефрактерності чи неможливості хіміотерапії 40-55 Гр; з ТГСК 20-36 Гр",
+                "en": "Radiotherapy (ISRT): after chemotherapy CR 30-36 Gy, PR 40-50 Gy; as primary treatment for refractory disease or non-candidates for chemotherapy 40-55 Gy; with HCT 20-36 Gy"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Руксолітиніб (кат. 2B)",
+                "en": "Ruxolitinib (category 2B)"
+              },
+              "preference": "other",
+              "category": "2b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "description": {
+        "uk": "CHP + брентуксимаб ведотин (бажано, кат. 1) або CHOEP/CHOP/DA-EPOCH.",
+        "en": "CHP plus brentuximab vedotin (preferred, category 1) or CHOEP/CHOP/DA-EPOCH."
+      },
+      "regimens": [
+        {
+          "regimen_id": "bv-chp"
+        },
+        {
+          "regimen_id": "choep-21"
+        },
+        {
+          "regimen_id": "chop-21"
+        },
+        {
+          "regimen_id": "da-epoch"
+        }
+      ]
+    },
+    {
+      "key": "relapsed",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив і рефрактерність",
+        "en": "Relapsed and refractory disease"
+      },
+      "description": {
+        "uk": "Схеми другої лінії та варіанти без трансплантації — на сторінці «Шляхи NCCN».",
+        "en": "Second-line and non-transplant options are on the NCCN pathways page."
+      },
+      "regimens": [
+        {
+          "regimen_id": "brentuximab-mono"
+        },
+        {
+          "regimen_id": "gdp"
+        },
+        {
+          "regimen_id": "ice"
+        },
+        {
+          "regimen_id": "dhap"
+        },
+        {
+          "regimen_id": "dhaox"
+        },
+        {
+          "regimen_id": "eshap"
+        },
+        {
+          "regimen_id": "gem-ox"
+        },
+        {
+          "regimen_id": "gvd"
+        },
+        {
+          "regimen_id": "belinostat-ptcl"
+        },
+        {
+          "regimen_id": "pralatrexate-ptcl"
+        },
+        {
+          "regimen_id": "romidepsin-ptcl"
+        },
+        {
+          "regimen_id": "bendamustine-ptcl"
+        },
+        {
+          "regimen_id": "bv-bendamustine"
+        }
+      ]
+    }
+  ]
+}

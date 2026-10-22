@@ -5,9 +5,7 @@
     "uk": "Циклофосфамід",
     "en": "Cyclophosphamide"
   },
-  "trade_names": [
-    "Ендоксан"
-  ],
+  "trade_names": ["Ендоксан"],
   "availability": "department",
   "sources": [
     {
@@ -96,9 +94,7 @@
     {
       "key": "nacl",
       "solvent": "sodium_chloride_0_9",
-      "bag_volumes_ml": [
-        500
-      ],
+      "bag_volumes_ml": [500],
       "is_default": true,
       "duration_min": 60,
       "sources": [

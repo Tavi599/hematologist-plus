@@ -1540,6 +1540,138 @@ const mipss70: Score = {
   ),
 }
 
+// ── T-cell lymphomas (NCCN T-Cell Lymphomas 2.2026) ──────────────────────────────────────────
+
+const NCCN_TCELL = {
+  name: 'NCCN Guidelines: T-Cell Lymphomas, версія 2.2026 від 13.02.2026',
+  url: 'https://www.nccn.org/guidelines/category_1',
+}
+
+const pit: Score = {
+  id: 'pit',
+  section: 'risk',
+  title: t('PIT і модифікований PIT (ПТКЛ-НБО)', 'PIT and modified PIT (PTCL-NOS)'),
+  purpose: t(
+    'Прогностичні індекси неуточненої периферичної Т-клітинної лімфоми',
+    'Prognostic indices for peripheral T-cell lymphoma, not otherwise specified',
+  ),
+  fields: [
+    check('age', 'Вік > 60 років', 'Age > 60 years'),
+    check('ldh', 'ЛДГ вище норми', 'LDH above normal'),
+    check('ecog', 'ECOG 2–4', 'ECOG 2–4'),
+    check('marrow', 'Ураження кісткового мозку', 'Bone marrow involvement'),
+    check('ki67', 'Ki-67 ≥ 80%', 'Ki-67 ≥ 80%'),
+  ],
+  compute: (values) => {
+    const pitPoints = ['age', 'ldh', 'ecog', 'marrow'].filter((key) => on(values, key)).length
+    const modified = ['age', 'ldh', 'ecog', 'ki67'].filter((key) => on(values, key)).length
+    const outcome = grouped(pitPoints, [
+      { upTo: 0, ...LOW(t('PIT: група 1 (0 чинників).', 'PIT: group 1 (0 factors).')) },
+      { upTo: 1, label: t('Група 2', 'Group 2'), tone: 'yellow' },
+      { upTo: 2, label: t('Група 3', 'Group 3'), tone: 'orange' },
+      { upTo: 4, label: t('Група 4', 'Group 4'), tone: 'red' },
+    ])
+    outcome.notes.push(
+      t(
+        `Модифікований PIT (замість кісткового мозку — Ki-67 ≥ 80%): ${modified} — група ${modified <= 1 ? 1 : modified === 2 ? 2 : 3}.`,
+        `Modified PIT (Ki-67 ≥ 80% instead of marrow involvement): ${modified} — group ${modified <= 1 ? 1 : modified === 2 ? 2 : 3}.`,
+      ),
+    )
+    return outcome
+  },
+  sources: [
+    {
+      ...NCCN_TCELL,
+      checked: t(
+        'PTCL-A: PIT (групи 0, 1, 2, 3–4 чинники) і модифікований PIT (0–1, 2, 3–4). IPI — на окремій картці; тут також T-cell score не рахується',
+        'PTCL-A: PIT (groups 0, 1, 2, 3–4 factors) and modified PIT (0–1, 2, 3–4). The IPI has its own card; the T-cell score is not calculated here',
+      ),
+    },
+  ],
+  caveat: t(
+    'У модифікованому PIT групи 1, 2 і 3 — це 0–1, 2 і 3–4 чинники: четвертий чинник (Ki-67) входить лише в нього.',
+    'In the modified PIT groups 1, 2 and 3 are 0–1, 2 and 3–4 factors: the fourth factor (Ki-67) belongs to it alone.',
+  ),
+}
+
+const pink: Score = {
+  id: 'pink',
+  section: 'risk',
+  title: t('PINK і PINK-E (NK/T-клітинна лімфома)', 'PINK and PINK-E (NK/T-cell lymphoma)'),
+  purpose: t(
+    'Прогностичний індекс NK-лімфоми після неантрациклінового лікування; E — з EBV-ДНК',
+    'Prognostic index of NK-cell lymphoma after non-anthracycline treatment; E adds EBV DNA',
+  ),
+  fields: [
+    check('age', 'Вік > 60 років', 'Age > 60 years'),
+    check('stage', 'Стадія III–IV', 'Stage III–IV'),
+    check('nodes', 'Віддалені лімфатичні вузли', 'Distant lymph node involvement'),
+    check('nonNasal', 'Неназальний тип', 'Non-nasal type'),
+    check('ebv', 'EBV-ДНК у крові виявлена', 'EBV DNA detectable in blood'),
+  ],
+  compute: (values) => {
+    const pinkPoints = ['age', 'stage', 'nodes', 'nonNasal'].filter((key) => on(values, key)).length
+    const withEbv = pinkPoints + (on(values, 'ebv') ? 1 : 0)
+    const outcome = grouped(pinkPoints, [
+      { upTo: 0, ...LOW() },
+      { upTo: 1, label: t('Проміжний', 'Intermediate'), tone: 'yellow' },
+      { upTo: 4, label: t('Високий', 'High'), tone: 'red' },
+    ])
+    outcome.notes.push(
+      t(
+        `PINK-E (з EBV-ДНК): ${withEbv} — ${withEbv <= 1 ? 'низький' : withEbv === 2 ? 'проміжний' : 'високий'} ризик.`,
+        `PINK-E (with EBV DNA): ${withEbv} — ${withEbv <= 1 ? 'low' : withEbv === 2 ? 'intermediate' : 'high'} risk.`,
+      ),
+    )
+    return outcome
+  },
+  sources: [
+    {
+      ...NCCN_TCELL,
+      checked: t(
+        'ENKL-A: PINK (0 — низький, 1 — проміжний, ≥ 2 — високий) і PINK-E (0–1, 2, ≥ 3)',
+        'ENKL-A: PINK (0 low, 1 intermediate, ≥ 2 high) and PINK-E (0–1, 2, ≥ 3)',
+      ),
+    },
+  ],
+}
+
+const atlPi: Score = {
+  id: 'atl-pi',
+  section: 'risk',
+  title: t('ATL-PI (ATLL, гострий і лімфомний типи)', 'ATL-PI (ATLL, acute and lymphoma types)'),
+  purpose: t(
+    'Прогностичний індекс гострого й лімфомного типів Т-клітинного лейкозу/лімфоми дорослих',
+    'Prognostic index of the acute and lymphoma types of adult T-cell leukaemia/lymphoma',
+  ),
+  fields: [
+    check('acute', 'Гострий тип ATLL', 'Acute ATLL subtype'),
+    check('crp', 'CRP ≥ 2,5 мг/дл', 'CRP ≥ 2.5 mg/dL'),
+    check('ecog', 'ECOG 2–4', 'ECOG 2–4'),
+    check('il2r', 'Розчинний рецептор IL-2 > 5000 Од/мл', 'Soluble IL-2 receptor > 5000 U/mL'),
+    check('calcium', 'Скоригований кальцій ≥ 12 мг/дл', 'Adjusted calcium ≥ 12 mg/dL'),
+  ],
+  compute: (values) => {
+    const points = ['acute', 'crp', 'ecog', 'il2r', 'calcium'].filter((key) =>
+      on(values, key),
+    ).length
+    return grouped(points, [
+      { upTo: 1, ...LOW() },
+      { upTo: 3, label: t('Проміжний', 'Intermediate'), tone: 'yellow' },
+      { upTo: 5, label: t('Високий', 'High'), tone: 'red' },
+    ])
+  },
+  sources: [
+    {
+      ...NCCN_TCELL,
+      checked: t(
+        'ATLL-C: п’ять чинників, групи 0–1, 2–3, 4–5. Модифікований індекс для віку до 70 років (стадія, ECOG, вік, альбумін, sIL-2R) тут не рахується',
+        'ATLL-C: five factors, groups 0–1, 2–3, 4–5. The modified index for ages under 70 (stage, ECOG, age, albumin, sIL-2R) is not calculated here',
+      ),
+    },
+  ],
+}
+
 export const RISK_SCORES: Score[] = [
   tls,
   khorana,
@@ -1560,6 +1692,9 @@ export const RISK_SCORES: Score[] = [
   wpss,
   dipss,
   mipss70,
+  pit,
+  pink,
+  atlPi,
   hctCi,
   mascc,
 ]

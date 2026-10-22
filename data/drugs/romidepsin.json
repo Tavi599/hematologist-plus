@@ -7,9 +7,7 @@
   },
   "atc_code": "L01XH02",
   "availability": "unavailable",
-  "dose_units": [
-    "mg_m2"
-  ],
+  "dose_units": ["mg_m2"],
   "sources": [
     {
       "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
@@ -41,9 +39,7 @@
     {
       "key": "nacl",
       "solvent": "sodium_chloride_0_9",
-      "bag_volumes_ml": [
-        500
-      ],
+      "bag_volumes_ml": [500],
       "duration_min": 240,
       "is_default": true
     }

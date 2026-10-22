@@ -1,0 +1,421 @@
+{
+  "id": "enkl",
+  "name": {
+    "uk": "Екстранодальна NK/T-клітинна лімфома (ENKL) та агресивний NK-лейкоз",
+    "en": "Extranodal NK/T-cell lymphoma (ENKL) and aggressive NK-cell leukaemia"
+  },
+  "summary": {
+    "uk": "EBV-асоційована лімфома з NK- чи цитотоксичних Т-клітин: назальна й екстраназальна; прогноз — за PINK/PINK-E. Основа — аспарагіназовмісна хіміотерапія й променева терапія (при локалізованій назальній хворобі — істотна); антрациклінові схеми неефективні.",
+    "en": "An EBV-associated lymphoma of NK or cytotoxic T cells: nasal and extranasal; prognosis by PINK/PINK-E. The mainstay is asparaginase-based chemotherapy and radiotherapy (essential in localised nasal disease); anthracycline regimens are ineffective."
+  },
+  "clinical_group": "lymphoma",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C86.0",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026",
+      "updated": "2026-02-13"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Extranodal%20NK/T-cell%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Extranodal%20NK/T-cell%20lymphoma"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 2.2026 (ENKL-1…C)",
+        "en": "NCCN 2.2026 pathways (ENKL-1 to C)"
+      },
+      "description": {
+        "uk": "NCCN T-Cell Lymphomas 2.2026: діагностика, індукція за стадією (променева терапія, комбінована модальність, аспарагіназова хіміотерапія), оцінка наприкінці лікування, рецидив/рефрактерність, агресивний NK-лейкоз. Лікування бажано в центрах із досвідом. Пегаспаргаза — не більше одного флакона (3750 МО); при гіперчутливості — рекомбінантна аспарагіназа Erwinia.",
+        "en": "NCCN T-Cell Lymphomas 2.2026: diagnosis, stage-based induction (radiotherapy, combined modality, asparaginase-based chemotherapy), end-of-treatment evaluation, relapse/refractory disease, aggressive NK-cell leukaemia. Treatment is preferably given in expert centres. Pegaspargase is capped at one vial (3750 IU); for hypersensitivity use recombinant Erwinia asparaginase."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-dx",
+          "kind": "line",
+          "title": {
+            "uk": "Діагностика й обстеження (ENKL-1, ENKL-2, ENKL-A)",
+            "en": "Diagnosis and workup (ENKL-1, ENKL-2, ENKL-A)"
+          },
+          "description": {
+            "uk": "Біопсія має включати краї ураження (некроз частий; кілька біопсій носоглотки навіть із неураженої зони). Імунофенотип NK: CD2+, цитоплазматичний CD3ε+ (поверхневий CD3−), CD56+, TIA1+, EBER+, TCR зародкові; Т-варіант — TCRαβ/γδ клональні. EBER-ISH обов’язковий (негативний результат — перегляд діагнозу). Обстеження: огляд (кільце Вальдеєра, яєчка, шкіра), ЛОР з оглядом носоглотки, ЛДГ, кістковий мозок (EBER+ агрегати), ПЕТ/КТ, МРТ ± КТ для планування ПТ, EBV-ДНК у крові (кількісна ПЛР; незникнення віремії — непрямий доказ хвороби), ехо/MUGA, PINK/PINK-E, термінова консультація радіотерапевта. PINK (вік >60, стадія III-IV, віддалені вузли, неназальний тип; 0/1/≥2 — низький/проміжний/високий) та PINK-E (додається EBV-ДНК; 0-1/2/≥3).",
+            "en": "The biopsy should include lesion edges (necrosis is common; multiple nasopharyngeal biopsies even of uninvolved areas). NK phenotype: CD2+, cytoplasmic CD3 epsilon+ (surface CD3-), CD56+, TIA1+, EBER+, germline TCR; T-cell variant — clonal TCR alpha/beta or gamma/delta. EBER-ISH is essential (a negative result prompts pathology review). Workup: exam (Waldeyer ring, testes, skin), ENT nasopharynx evaluation, LDH, bone marrow (EBER+ aggregates), PET/CT, MRI ± CT for RT planning, blood EBV DNA (quantitative PCR; failure to normalise is indirect evidence of persistent disease), echo/MUGA, PINK/PINK-E, concurrent radiation oncology referral. PINK (age >60, stage III-IV, distant nodes, non-nasal type; 0/1/>=2 — low/intermediate/high) and PINK-E (EBV DNA added; 0-1/2/>=3)."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Індукція",
+                "en": "Induction"
+              },
+              "target": "nccn-ind"
+            }
+          ]
+        },
+        {
+          "key": "nccn-ind",
+          "kind": "line",
+          "title": {
+            "uk": "Індукція за стадією й придатністю (ENKL-3, ENKL-B 1)",
+            "en": "Induction by stage and fitness (ENKL-3, ENKL-B 1)"
+          },
+          "description": {
+            "uk": "Назальна, стадії I-II: непридатний до хіміотерапії — променева терапія самостійно (50-55 Гр; суттєво покращує виживаність при локалізованій назальній хворобі у верхніх дихальних шляхах) чи випробування; придатний — випробування чи комбінована модальність. Назальна III-IV й екстраназальна I-IV: випробування, або комбінована модальність, або аспарагіназова хіміотерапія ± ПТ. Бажані комбіновані варіанти: одночасна хіміопроменева (ПТ 50 Гр + DeVIC ×3); послідовна (mSMILE ×2-4 → ПТ 45-50,4 Гр; при стадії I-II — mSMILE ×2); «сендвіч» (GELAD ×2 → ПТ 50-56 Гр → GELAD ×2; або P-GEMOX ×2 → ПТ 56 Гр → P-GEMOX ×2-4). Інші: ПТ з цисплатином → VIPD ×3; DDGP ×3-6 → ПТ 50 Гр (стадії I-II — DDGP ×3). Хіміотерапія (аспарагіназова): бажано DDGP ×3-6, P-GEMOX, mSMILE ×4-6 при поширеній стадії; AspaMetDex — для вибраних хворих, що не витримають інтенсивнішої терапії. Схеми на основі пегаспаргази бажані. Профілактика лізису пухлини й інфекцій.",
+            "en": "Nasal, stage I-II: unfit for chemotherapy — radiotherapy alone (50-55 Gy; improves survival in localised nasal disease of the upper aerodigestive tract) or a trial; fit — a trial or combined modality. Nasal stage III-IV and extranasal I-IV: a trial, or combined modality, or asparaginase-based chemotherapy ± RT. Preferred combined options: concurrent chemoradiotherapy (RT 50 Gy + DeVIC x3); sequential (mSMILE x2-4 → RT 45-50.4 Gy; stage I-II — mSMILE x2); \"sandwich\" (GELAD x2 → RT 50-56 Gy → GELAD x2; or P-GEMOX x2 → RT 56 Gy → P-GEMOX x2-4). Others: RT with cisplatin → VIPD x3; DDGP x3-6 → RT 50 Gy (stage I-II — DDGP x3). Chemotherapy (asparaginase-based): preferred DDGP x3-6, P-GEMOX, mSMILE x4-6 for advanced stage; AspaMetDex for selected patients who cannot tolerate more intensive therapy. Pegaspargase-based regimens are preferred. TLS and anti-infective prophylaxis."
+          },
+          "regimens": [
+            {
+              "regimen_id": "msmile-enkl",
+              "notes": {
+                "uk": "×4-6 циклів при поширеній стадії; ×2-4 з наступною ПТ; ×2 при I-II стадії",
+                "en": "x4-6 for advanced stage; x2-4 followed by RT; x2 for stage I-II"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-enkl-ddgp",
+              "notes": {
+                "uk": "×3-6 циклів; при I-II + ПТ 50 Гр — ×3 (інша рекомендована послідовна схема)",
+                "en": "x3-6 cycles; in stage I-II with 50 Gy RT — x3 (an other-recommended sequential option)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-enkl-pgemox",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-enkl-aspametdex",
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "ref-enkl-devic",
+              "notes": {
+                "uk": "Одночасно з ПТ 50 Гр",
+                "en": "Concurrent with 50 Gy RT"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-enkl-gelad",
+              "notes": {
+                "uk": "«Сендвіч» із ПТ",
+                "en": "\"Sandwich\" with RT"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-enkl-vipd",
+              "notes": {
+                "uk": "Після одночасної ПТ з цисплатином",
+                "en": "After concurrent RT with cisplatin"
+              },
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Променева терапія самостійно (непридатні до хіміотерапії): 50-55 Гр; ISRT охоплює всю порожнину, IMRT бажана",
+                "en": "Radiotherapy alone (unfit for chemotherapy): 50-55 Gy; the ISRT volume covers the whole cavity, IMRT is preferred"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Оцінка наприкінці лікування",
+                "en": "End-of-treatment evaluation"
+              },
+              "target": "nccn-eot"
+            }
+          ]
+        },
+        {
+          "key": "nccn-eot",
+          "kind": "line",
+          "title": {
+            "uk": "Оцінка наприкінці лікування й рецидив (ENKL-4)",
+            "en": "End-of-treatment evaluation and relapse (ENKL-4)"
+          },
+          "description": {
+            "uk": "Повторити візуалізацію (КТ, МРТ чи ПЕТ/КТ), ендоскопію з біопсіями, EBV-ДНК. Назальна I-II: CR — спостереження; PR — біопсія (негативна → спостереження; позитивна → R/R-терапія чи ТГСК); немає відповіді — випробування, інша аспарагіназова схема чи підтримуюча терапія. Назальна III-IV й екстраназальна: CR — розглянути ТГСК (немає чітких даних алогенна чи аутологічна — індивідуально); PR/немає відповіді — випробування (бажано), R/R-терапія чи ТГСК за придатності.",
+            "en": "Repeat imaging (CT, MRI or PET/CT), endoscopy with biopsies, EBV DNA. Nasal I-II: CR — observe; PR — biopsy (negative → observe; positive → R/R therapy or HCT); no response — a trial, another asparaginase regimen or supportive care. Nasal III-IV and extranasal: CR — consider HCT (no clear data on allogeneic vs autologous — individualise); PR/no response — a trial (preferred), R/R therapy or HCT if eligible."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "CR (стадії III-IV й екстраназальна): розглянути ТГСК; алогенна чи аутологічна — індивідуально",
+                "en": "CR (stage III-IV and extranasal): consider HCT; allogeneic or autologous individualised"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Біопсія при PR; EBV-ДНК; ендоскопія",
+                "en": "Biopsy for PR; EBV DNA; endoscopy"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив / рефрактерність",
+                "en": "Relapse / refractory disease"
+              },
+              "target": "nccn-rr"
+            }
+          ]
+        },
+        {
+          "key": "nccn-rr",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив / рефрактерність (ENKL-B 2)",
+            "en": "Relapse / refractory disease (ENKL-B 2)"
+          },
+          "description": {
+            "uk": "Бажано клінічне дослідження; поза ним — авелумаб, ніволумаб чи пембролізумаб (ІСІ до алоТГСК можуть підвищити пов’язану з трансплантацією смертність і спричинити тяжку гіпергостру РТПХ). Інші: брентуксимаб (CD30+), праалатрексат, аспарагіназова комбінація, не використана в першій лінії, DHA + платина (карбоплатин — кат. 2B), ESHA + платина, GDP, GemOx, ICE; за певних обставин — ПТ, беліностат, ромідепсин (при HDAC-інгібіторах описана реактивація EBV — моніторити).",
+            "en": "A clinical trial is preferred; otherwise avelumab, nivolumab or pembrolizumab (checkpoint inhibitors before allogeneic HCT may raise transplant-related mortality and cause severe hyperacute GVHD). Others: brentuximab (CD30+), pralatrexate, an asparaginase combination not used first line, DHA + platinum (carboplatin — category 2B), ESHA + platinum, GDP, GemOx, ICE; in certain circumstances — RT, belinostat, romidepsin (EBV reactivation is described with HDAC inhibitors — monitor)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-enkl-pd1",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "brentuximab-mono",
+              "notes": {
+                "uk": "За експресії CD30 (будь-який рівень)",
+                "en": "CD30-positive (any level)"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "pralatrexate-ptcl",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "msmile-enkl",
+              "notes": {
+                "uk": "Аспарагіназова схема, не застосована в першій лінії",
+                "en": "An asparaginase regimen not used first line"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "dhap",
+              "notes": {
+                "uk": "DHA + цисплатин (карбоплатин — кат. 2B)",
+                "en": "DHA + cisplatin (carboplatin — category 2B)"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "dhaox",
+              "notes": {
+                "uk": "DHA + оксаліплатин",
+                "en": "DHA + oxaliplatin"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "eshap",
+              "notes": {
+                "uk": "ESHA + платина",
+                "en": "ESHA + platinum"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "gdp",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "gem-ox",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ice",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "belinostat-ptcl",
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "romidepsin-ptcl",
+              "preference": "circumstances"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Променева терапія (ISRT): після хіміотерапії CR 30-36 Гр, PR 40-50 Гр; як первинне лікування при рефрактерності чи неможливості хіміотерапії 40-55 Гр; з ТГСК 20-36 Гр",
+                "en": "Radiotherapy (ISRT): after chemotherapy CR 30-36 Gy, PR 40-50 Gy; as primary treatment for refractory disease or non-candidates for chemotherapy 40-55 Gy; with HCT 20-36 Gy"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "ТГСК за придатності",
+                "en": "HCT if eligible"
+              },
+              "preference": "other"
+            }
+          ]
+        },
+        {
+          "key": "nccn-ankl",
+          "kind": "line",
+          "title": {
+            "uk": "Агресивний NK-лейкоз (ENKL-C)",
+            "en": "Aggressive NK-cell leukaemia (ENKL-C)"
+          },
+          "description": {
+            "uk": "Рідкісний лейкемічний варіант NK-неоплазії, медіана віку 40 років, B-симптоми, HLH, гепатоспленомегалія; ураження носа/шкіри нетипове; CD16+, EBER+, мутації JAK/STAT (STAT3), JAK3 немає. Діагноз частіше за кістковим мозком. Антрациклінові схеми неефективні — аспарагіназовмісні комбіновані режими (ENKL-B 1); у першій ремісії NCCN надає перевагу алоТГСК над аутологічною.",
+            "en": "A rare leukaemic form of NK-cell neoplasm, median age 40, B symptoms, HLH, hepatosplenomegaly; nasal/skin involvement is unusual; CD16+, EBER+, JAK/STAT (STAT3) mutations, no JAK3. Usually diagnosed on bone marrow. Anthracycline-based regimens are ineffective — asparaginase-based combination regimens (ENKL-B 1); NCCN favours allogeneic over autologous HCT in first remission."
+          },
+          "regimens": [
+            {
+              "regimen_id": "msmile-enkl",
+              "notes": {
+                "uk": "Аспарагіназова комбінація",
+                "en": "An asparaginase combination"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-enkl-ddgp",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-enkl-pgemox",
+              "preference": "preferred"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "У першій ремісії — алогенна ТГСК (перевага над аутологічною)",
+                "en": "In first remission — allogeneic HCT (favoured over autologous)"
+              },
+              "preference": "preferred"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Індукція",
+        "en": "Induction"
+      },
+      "description": {
+        "uk": "Аспарагіназова хіміотерапія (mSMILE, DDGP, P-GEMOX) та променева терапія; комбінована модальність при локалізованій хворобі.",
+        "en": "Asparaginase-based chemotherapy (mSMILE, DDGP, P-GEMOX) and radiotherapy; combined modality for localised disease."
+      },
+      "regimens": [
+        {
+          "regimen_id": "msmile-enkl"
+        },
+        {
+          "regimen_id": "ref-enkl-ddgp"
+        },
+        {
+          "regimen_id": "ref-enkl-pgemox"
+        },
+        {
+          "regimen_id": "ref-enkl-devic"
+        },
+        {
+          "regimen_id": "ref-enkl-gelad"
+        }
+      ]
+    },
+    {
+      "key": "relapsed",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив й рефрактерність",
+        "en": "Relapsed and refractory disease"
+      },
+      "description": {
+        "uk": "Інгібітори контрольних точок; інші схеми другої лінії.",
+        "en": "Checkpoint inhibitors; other second-line regimens."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-enkl-pd1"
+        },
+        {
+          "regimen_id": "pralatrexate-ptcl"
+        },
+        {
+          "regimen_id": "dhap"
+        },
+        {
+          "regimen_id": "gdp"
+        },
+        {
+          "regimen_id": "gem-ox"
+        },
+        {
+          "regimen_id": "ice"
+        }
+      ]
+    }
+  ]
+}

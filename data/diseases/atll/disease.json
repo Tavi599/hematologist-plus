@@ -1,0 +1,521 @@
+{
+  "id": "atll",
+  "name": {
+    "uk": "Т-клітинний лейкоз/лімфома дорослих (ATLL, HTLV-1)",
+    "en": "Adult T-cell leukaemia/lymphoma (ATLL, HTLV-1)"
+  },
+  "summary": {
+    "uk": "Т-клітинна неоплазія, пов’язана з HTLV-1: тліючий, хронічний, гострий і лімфомний типи за Shimoyama. Вибір лікування залежить від типу, ризику й наміру до алогенної ТГСК; гострий і лімфомний типи потребують профілактики ураження ЦНС.",
+    "en": "An HTLV-1-associated T-cell neoplasm: smouldering, chronic, acute and lymphoma subtypes by Shimoyama. Treatment depends on the subtype, risk and intent to transplant; acute and lymphoma subtypes need CNS prophylaxis."
+  },
+  "clinical_group": "lymphoma",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C91.5",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026",
+      "updated": "2026-02-13"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Adult%20T-cell%20leukemia%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Adult%20T-cell%20leukemia%20lymphoma"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 2.2026 (ATLL-1…D)",
+        "en": "NCCN 2.2026 pathways (ATLL-1 to D)"
+      },
+      "description": {
+        "uk": "NCCN T-Cell Lymphomas 2.2026: діагностика й тип, лікування тліючого, хронічного, гострого й лімфомного типів, схеми першої та наступних ліній. Противірусна терапія без хіміо/інтерферону при гострому й лімфомному типах неефективна.",
+        "en": "NCCN T-Cell Lymphomas 2.2026: diagnosis and subtype, treatment of smouldering, chronic, acute and lymphoma subtypes, first and later regimens. Antiviral therapy alone is not effective in the acute and lymphoma subtypes."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-dx",
+          "kind": "line",
+          "title": {
+            "uk": "Діагностика й типи (ATLL-1, ATLL-A)",
+            "en": "Diagnosis and subtypes (ATLL-1, ATLL-A)"
+          },
+          "description": {
+            "uk": "Обов’язково: ЗАК і мазок (>5% атипових клітин; «квіткові» клітини), імунофенотип крові (CD2, CD3, CD4, CD5, CD7, CD8, CD25, CD30, TCRαβ, TRBC1; типово CD4+CD25+CD7−), серологія HTLV-1/2; біопсія вузла/шкіри/ШКТ/кісткового мозку, якщо діагноз не встановлено, також для виключення інфекції (туберкульоз, гістоплазмоз, токсоплазмоз); серологія на стронгілоїдоз; ПЕТ/КТ; ЛДГ, біохімія. За обставин: ВІЛ, гепатити, CRP, розчинний рецептор IL-2, альбумін, сечовина, ендоскопія, ЦНС (КТ/МРТ ± люмбальна пункція при гострому/лімфомному типі), HLA-типування, фертильність. Типи (Shimoyama): тліючий — лімфоцити <4×10⁹/л, ≥5% атипових Т-клітин, ЛДГ ≤1,5N, Ca <2,74 ммоль/л, без вузлів/печінки/селезінки/ЦНС/кісток/ШКТ; хронічний — лімфоцитоз ≥4×10⁹/л, ЛДГ ≤2N, без ураження ЦНС/кісток/ШКТ; лімфомний — лімфоцити <4×10⁹/л, ≤1% атипових клітин, гістологічно підтверджена лімфаденопатія; гострий — решта. Прогноз: для гострого/лімфомного — ATL-PI (гострий тип, CRP ≥2,5 мг/дл, ECOG 2-4, sIL-2R >5000 Од/мл, скоригований Ca ≥12 мг/дл: 0-1 низький, 2-3 проміжний, 4-5 високий) або модифікований індекс до 70 років (стадія III-IV, ECOG >1, вік >70, альбумін <3,5 г/дл, sIL-2R >20 000: 1-2/3-4/5-6); для хронічного й тліючого — індекс Katsuya (високий ризик: підвищена ЛДГ, низький альбумін, висока сечовина, sIL-2R >6000; низький — sIL-2R <1000; проміжний — 1000-6000).",
+            "en": "Essential: CBC and smear (>5% atypical cells; \"flower cells\"), blood immunophenotype (CD2, CD3, CD4, CD5, CD7, CD8, CD25, CD30, TCR alpha/beta, TRBC1; typically CD4+CD25+CD7-), HTLV-1/2 serology; biopsy of node/skin/GI tract/marrow if the diagnosis is not established and to exclude infection (tuberculosis, histoplasmosis, toxoplasmosis); Strongyloides serology; PET/CT; LDH, chemistry. If needed: HIV, hepatitis, CRP, soluble IL-2 receptor, albumin, BUN, endoscopy, CNS (CT/MRI ± LP for acute/lymphoma), HLA typing, fertility. Subtypes (Shimoyama): smouldering — lymphocytes <4 x 10^9/L, >=5% atypical T cells, LDH <=1.5N, Ca <2.74 mmol/L, no nodes/liver/spleen/CNS/bone/GI; chronic — lymphocytosis >=4 x 10^9/L, LDH <=2N, no CNS/bone/GI; lymphoma — lymphocytes <4 x 10^9/L, <=1% atypical cells, histology-proven lymphadenopathy; acute — the rest. Prognosis: acute/lymphoma — ATL-PI (acute subtype, CRP >=2.5 mg/dL, ECOG 2-4, sIL-2R >5000 U/mL, adjusted Ca >=12 mg/dL: 0-1 low, 2-3 intermediate, 4-5 high) or the modified index under 70 (stage III-IV, ECOG >1, age >70, albumin <3.5 g/dL, sIL-2R >20 000: 1-2/3-4/5-6); chronic and smouldering — the Katsuya index (high risk: raised LDH, low albumin, high BUN, sIL-2R >6000; low — sIL-2R <1000; intermediate — 1000-6000)."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Тліючий тип",
+                "en": "Smouldering subtype"
+              },
+              "target": "nccn-smold"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Хронічний тип",
+                "en": "Chronic subtype"
+              },
+              "target": "nccn-chronic"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Гострий і лімфомний типи",
+                "en": "Acute and lymphoma subtypes"
+              },
+              "target": "nccn-acute"
+            }
+          ]
+        },
+        {
+          "key": "nccn-smold",
+          "kind": "line",
+          "title": {
+            "uk": "Тліючий тип (ATLL-2)",
+            "en": "Smouldering subtype (ATLL-2)"
+          },
+          "description": {
+            "uk": "Безсимптомний (без шкірних уражень, без опортуністичних інфекцій): клінічне дослідження чи спостереження. Симптомний: клінічне дослідження, або шкірно-спрямована терапія (за настановою з шкірних лімфом), або інтерферон/зидовудин. Оцінка відповіді через 2 міс.: відповідь — продовжити; без відповіді — клінічне дослідження, інтерферон/зидовудин (якщо не застосовували), друга лінія (ATLL-D) чи найкраща підтримуюча терапія. Поза дослідженням, якщо немає відповіді чи є прогресія за 2 міс. — інтерферон/зидовудин припинити (раніше — при загрозливих проявах).",
+            "en": "Asymptomatic (no skin lesions, no opportunistic infections): a clinical trial or observation. Symptomatic: a clinical trial, or skin-directed therapy (per the cutaneous lymphoma guideline), or interferon/zidovudine. Response at 2 months: responders continue; non-responders — a clinical trial, interferon/zidovudine (if not used), second line (ATLL-D) or best supportive care. Outside a trial, stop interferon/zidovudine if there is no response or progression within 2 months (earlier for life-threatening manifestations)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-atll-ifn-zdv",
+              "notes": {
+                "uk": "Інтерферон/зидовудин: гострий, хронічний і симптомний тліючий типи; пегінтерферон чи ропегінтерферон можна підставити",
+                "en": "Interferon/zidovudine: acute, chronic and symptomatic smouldering subtypes; peginterferon or ropeginterferon may be substituted"
+              },
+              "preference": "preferred"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "surveillance",
+              "column": "treatment",
+              "label": {
+                "uk": "Безсимптомний тліючий тип: спостереження",
+                "en": "Asymptomatic smouldering: observation"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Шкірно-спрямована терапія при симптомному типі",
+                "en": "Skin-directed therapy for the symptomatic type"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Оцінка відповіді через 2 місяці (критерії ATLL-B)",
+                "en": "Response at 2 months (ATLL-B criteria)"
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-chronic",
+          "kind": "line",
+          "title": {
+            "uk": "Хронічний тип (ATLL-3)",
+            "en": "Chronic subtype (ATLL-3)"
+          },
+          "description": {
+            "uk": "Низький ризик (sIL-2R <1000) або проміжний (1000-6000): клінічне дослідження чи інтерферон/зидовудин; оцінка через 2 міс.; відповідь — продовжити; без відповіді — клінічне дослідження, альтернативна системна терапія (друга лінія) чи підтримуюча терапія. Високий ризик (підвищена ЛДГ, низький альбумін, висока сечовина, sIL-2R >6000): клінічне дослідження, інтерферон/зидовудин чи системна терапія; відповідь — продовжити або розглянути алоТГСК; без відповіді — клінічне дослідження, друга лінія чи підтримуюча терапія.",
+            "en": "Low risk (sIL-2R <1000) or intermediate (1000-6000): a clinical trial or interferon/zidovudine; response at 2 months; responders continue; non-responders — a clinical trial, alternative systemic therapy (second line) or supportive care. High risk (raised LDH, low albumin, high BUN, sIL-2R >6000): a clinical trial, interferon/zidovudine or systemic therapy; responders continue or consider allogeneic HCT; non-responders — a clinical trial, second line or supportive care."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-atll-ifn-zdv",
+              "notes": {
+                "uk": "Інтерферон/зидовудин: гострий, хронічний і симптомний тліючий типи; пегінтерферон чи ропегінтерферон можна підставити",
+                "en": "Interferon/zidovudine: acute, chronic and symptomatic smouldering subtypes; peginterferon or ropeginterferon may be substituted"
+              },
+              "preference": "preferred"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "Високий ризик, відповідь: розглянути алогенну ТГСК",
+                "en": "High risk, response: consider allogeneic HCT"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Схеми ATLL-D",
+                "en": "ATLL-D regimens"
+              },
+              "target": "nccn-regimens"
+            }
+          ]
+        },
+        {
+          "key": "nccn-acute",
+          "kind": "line",
+          "title": {
+            "uk": "Гострий і лімфомний типи (ATLL-4)",
+            "en": "Acute and lymphoma subtypes (ATLL-4)"
+          },
+          "description": {
+            "uk": "Клінічне дослідження, або системна терапія (ATLL-D), або інтерферон/зидовудин. Оцінка після 2 циклів: відповідь — продовжити чи розглянути алоТГСК (довготривала ефективність початкових режимів обмежена; алоТГСК може вилікувати частину хворих); без відповіді — клінічне дослідження, альтернативні схеми, не застосовані в першій лінії, чи друга лінія, чи найкраща підтримуюча терапія. Ураження ЦНС часте — профілактика рекомендована. Перед алоТГСК — довга перерва після могамулізумабу.",
+            "en": "A clinical trial, or systemic therapy (ATLL-D), or interferon/zidovudine. Response after 2 cycles: responders continue or consider allogeneic HCT (the long-term efficacy of initial regimens is limited; allogeneic HCT may cure some patients); non-responders — a clinical trial, alternative regimens not used first line, or second line, or best supportive care. CNS involvement is common — prophylaxis is recommended. A long washout after mogamulizumab is needed before allogeneic HCT."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-atll-ifn-zdv",
+              "notes": {
+                "uk": "Інтерферон/зидовудин: гострий, хронічний і симптомний тліючий типи; пегінтерферон чи ропегінтерферон можна підставити",
+                "en": "Interferon/zidovudine: acute, chronic and symptomatic smouldering subtypes; peginterferon or ropeginterferon may be substituted"
+              },
+              "preference": "preferred"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "Відповідь після 2 циклів: алогенна ТГСК",
+                "en": "Response after 2 cycles: allogeneic HCT"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Профілактика ураження ЦНС (інтратекально/системно) — рекомендована",
+                "en": "CNS prophylaxis recommended"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Схеми ATLL-D",
+                "en": "ATLL-D regimens"
+              },
+              "target": "nccn-regimens"
+            }
+          ]
+        },
+        {
+          "key": "nccn-regimens",
+          "kind": "line",
+          "title": {
+            "uk": "Схеми лікування (ATLL-D)",
+            "en": "Treatment regimens (ATLL-D)"
+          },
+          "description": {
+            "uk": "Комбінована хіміотерапія зазвичай для гострого, лімфомного й високоризикового хронічного типів. Перша лінія: бажано — CHP + брентуксимаб (CD30+), CHOP + могамулізумаб (без наміру до ТГСК), DA-EPOCH, інтерферон/зидовудин; інші — CHOEP, HyperCVAD з високодозовими метотрексатом/цитарабіном; за обставин — CHOP (непереносимість інтенсивних схем чи CD30−). Друга лінія: бажано — брентуксимаб (CD30+), леналідомід, могамулізумаб, DHA/ESHA + платина, GDP, GemOx, GVD, ICE, інтерферон/зидовудин; альтернатива — алемтузумаб, трьохокис миш’яку, беліностат, бендамустин, гемцитабін, праалатрексат, ПТ при локалізованій симптомній хворобі. Профілактика лізису пухлини й інфекцій; стронгілоїдоз.",
+            "en": "Combination chemotherapy is usually reserved for acute, lymphoma and high-risk chronic subtypes. First line: preferred — CHP + brentuximab (CD30+), CHOP + mogamulizumab (no intent to transplant), DA-EPOCH, interferon/zidovudine; other — CHOEP, HyperCVAD with high-dose methotrexate/cytarabine; in certain circumstances — CHOP (unable to tolerate intensive regimens or CD30-negative). Second line: preferred — brentuximab (CD30+), lenalidomide, mogamulizumab, DHA/ESHA + platinum, GDP, GemOx, GVD, ICE, interferon/zidovudine; alternative — alemtuzumab, arsenic trioxide, belinostat, bendamustine, gemcitabine, pralatrexate, RT for localised symptomatic disease. TLS and anti-infective prophylaxis; strongyloidiasis."
+          },
+          "regimens": [
+            {
+              "regimen_id": "bv-chp",
+              "notes": {
+                "uk": "Перша лінія, CD30+",
+                "en": "First line, CD30-positive"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-atll-chop-mogamulizumab",
+              "notes": {
+                "uk": "Перша лінія, без наміру до трансплантації",
+                "en": "First line, no intent to transplant"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "da-epoch",
+              "notes": {
+                "uk": "Перша лінія",
+                "en": "First line"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-atll-ifn-zdv",
+              "notes": {
+                "uk": "Інтерферон/зидовудин: гострий, хронічний і симптомний тліючий типи; пегінтерферон чи ропегінтерферон можна підставити",
+                "en": "Interferon/zidovudine: acute, chronic and symptomatic smouldering subtypes; peginterferon or ropeginterferon may be substituted"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "choep-21",
+              "notes": {
+                "uk": "Перша лінія",
+                "en": "First line"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "hyper-cvad-a",
+              "notes": {
+                "uk": "Перша лінія",
+                "en": "First line"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "hyper-cvad-b",
+              "notes": {
+                "uk": "Перша лінія, чергується з HyperCVAD-A",
+                "en": "First line, alternates with HyperCVAD-A"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "chop-21",
+              "notes": {
+                "uk": "Перша лінія: непереносимість інтенсивних схем чи CD30−",
+                "en": "First line: unable to tolerate intensive regimens or CD30-negative"
+              },
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "brentuximab-mono",
+              "notes": {
+                "uk": "Друга лінія, CD30+",
+                "en": "Second line, CD30-positive"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-atll-mogamulizumab",
+              "notes": {
+                "uk": "Друга лінія",
+                "en": "Second line"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "dhap",
+              "notes": {
+                "uk": "Друга лінія: DHA + цисплатин (чи карбоплатин)",
+                "en": "Second line: DHA + cisplatin (or carboplatin)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "dhaox",
+              "notes": {
+                "uk": "Друга лінія: DHA + оксаліплатин",
+                "en": "Second line: DHA + oxaliplatin"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "eshap",
+              "notes": {
+                "uk": "Друга лінія: ESHA + платина",
+                "en": "Second line: ESHA + platinum"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "gdp",
+              "notes": {
+                "uk": "Друга лінія",
+                "en": "Second line"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "gem-ox",
+              "notes": {
+                "uk": "Друга лінія",
+                "en": "Second line"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "gvd",
+              "notes": {
+                "uk": "Друга лінія",
+                "en": "Second line"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ice",
+              "notes": {
+                "uk": "Друга лінія",
+                "en": "Second line"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-tcl-alemtuzumab",
+              "notes": {
+                "uk": "Альтернатива",
+                "en": "Alternative"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "belinostat-ptcl",
+              "notes": {
+                "uk": "Альтернатива",
+                "en": "Alternative"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "bendamustine-ptcl",
+              "notes": {
+                "uk": "Альтернатива",
+                "en": "Alternative"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "pralatrexate-ptcl",
+              "notes": {
+                "uk": "Альтернатива",
+                "en": "Alternative"
+              },
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Леналідомід (друга лінія, бажано; може підвищувати РТПХ після алоТГСК)",
+                "en": "Lenalidomide (second line, preferred; may raise GVHD after allogeneic HCT)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Трьохокис миш’яку (альтернатива)",
+                "en": "Arsenic trioxide (alternative)"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Гемцитабін (монотерапія)",
+                "en": "Gemcitabine (single agent)"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Променева терапія (ISRT): після хіміотерапії CR 30-36 Гр, PR 40-50 Гр; як первинне лікування при рефрактерності чи неможливості хіміотерапії 40-55 Гр; з ТГСК 20-36 Гр",
+                "en": "Radiotherapy (ISRT): after chemotherapy CR 30-36 Gy, PR 40-50 Gy; as primary treatment for refractory disease or non-candidates for chemotherapy 40-55 Gy; with HCT 20-36 Gy"
+              },
+              "preference": "other"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "description": {
+        "uk": "Залежно від типу: інтерферон/зидовудин, CHP + брентуксимаб, CHOP + могамулізумаб, DA-EPOCH, CHOEP.",
+        "en": "By subtype: interferon/zidovudine, CHP + brentuximab, CHOP + mogamulizumab, DA-EPOCH, CHOEP."
+      },
+      "regimens": [
+        {
+          "regimen_id": "bv-chp"
+        },
+        {
+          "regimen_id": "da-epoch"
+        },
+        {
+          "regimen_id": "choep-21"
+        },
+        {
+          "regimen_id": "ref-atll-ifn-zdv"
+        },
+        {
+          "regimen_id": "ref-atll-chop-mogamulizumab"
+        }
+      ]
+    }
+  ]
+}

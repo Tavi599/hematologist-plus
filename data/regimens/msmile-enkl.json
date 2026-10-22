@@ -33,9 +33,7 @@
       "route": "iv_infusion",
       "dose_value": 2000,
       "dose_unit": "mg_m2",
-      "days": [
-        1
-      ],
+      "days": [1],
       "duration_min": 360,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500
@@ -46,11 +44,7 @@
       "route": "oral",
       "dose_value": 40,
       "dose_unit": "mg_flat",
-      "days": [
-        2,
-        3,
-        4
-      ],
+      "days": [2, 3, 4],
       "notes": {
         "uk": "Вранці з їжею.",
         "en": "In the morning with food."
@@ -62,11 +56,7 @@
       "route": "iv_infusion",
       "dose_value": 100,
       "dose_unit": "mg_m2",
-      "days": [
-        2,
-        3,
-        4
-      ],
+      "days": [2, 3, 4],
       "duration_min": 60,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
@@ -81,11 +71,7 @@
       "route": "iv_infusion",
       "dose_value": 1500,
       "dose_unit": "mg_m2",
-      "days": [
-        2,
-        3,
-        4
-      ],
+      "days": [2, 3, 4],
       "duration_min": 360,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 1000
@@ -97,11 +83,7 @@
       "route": "iv_infusion",
       "dose_value": 300,
       "dose_unit": "mg_m2",
-      "days": [
-        2,
-        3,
-        4
-      ],
+      "days": [2, 3, 4],
       "duration_min": 360,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 1000,
@@ -117,11 +99,7 @@
       "route": "iv_infusion",
       "dose_value": 300,
       "dose_unit": "mg_m2",
-      "days": [
-        2,
-        3,
-        4
-      ],
+      "days": [2, 3, 4],
       "administrations_per_day": 2,
       "interval_min": 240,
       "duration_min": 15,
@@ -139,10 +117,7 @@
       "route": "iv_bolus",
       "dose_value": 15,
       "dose_unit": "mg_m2",
-      "days": [
-        3,
-        4
-      ],
+      "days": [3, 4],
       "administrations_per_day": 4,
       "interval_min": 360,
       "notes": {
@@ -157,9 +132,7 @@
       "dose_value": 1500,
       "dose_unit": "iu_m2",
       "cap_amount": 3750,
-      "days": [
-        8
-      ],
+      "days": [8],
       "notes": {
         "uk": "Внутрішньом'язово (краще переноситься, ніж в/в); у дослідженнях дози 1500-2500 МО/м². Обмеження одним флаконом 3750 МО — NCCN ENKL-B, п. c.",
         "en": "Intramuscularly (better tolerated than IV); studies used 1500-2500 units/m2. The cap of one 3750-unit vial is from NCCN ENKL-B, footnote c."

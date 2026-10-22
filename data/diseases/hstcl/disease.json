@@ -1,0 +1,220 @@
+{
+  "id": "hstcl",
+  "name": {
+    "uk": "Гепатоспленічна Т-клітинна лімфома (HSTCL)",
+    "en": "Hepatosplenic T-cell lymphoma (HSTCL)"
+  },
+  "summary": {
+    "uk": "Рідкісна агресивна лімфома цитотоксичних Т-клітин (частіше TCRγδ) зі ураженням селезінки, печінки й кісткового мозку; переважно чоловіки, медіана віку близько 35 років; до 20% — на тлі хронічної імуносупресії; часто HLH. Довготривала ремісія — в основному після консолідації ТГСК; CHOP недостатній.",
+    "en": "A rare aggressive lymphoma of cytotoxic T cells (more often TCR gamma/delta) involving spleen, liver and bone marrow; predominantly male, median age about 35; up to 20% arise during chronic immunosuppression; HLH is frequent. Long remissions occur mostly after consolidating HCT; CHOP is not adequate."
+  },
+  "clinical_group": "lymphoma",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C86.1",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026",
+      "updated": "2026-02-13"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Hepatosplenic%20T-cell%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Hepatosplenic%20T-cell%20lymphoma"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 2.2026 (HSTCL-1…A)",
+        "en": "NCCN 2.2026 pathways (HSTCL-1 to A)"
+      },
+      "description": {
+        "uk": "NCCN T-Cell Lymphomas 2.2026: діагностика (кістковий мозок чи печінка), перша лінія до CR/PR та алоТГСК. Лікування бажано в центрах із досвідом.",
+        "en": "NCCN T-Cell Lymphomas 2.2026: diagnosis (marrow or liver), first line to CR/PR and allogeneic HCT. Treatment is preferably given in expert centres."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-dx",
+          "kind": "line",
+          "title": {
+            "uk": "Діагностика й обстеження (HSTCL-1, HSTCL-2)",
+            "en": "Diagnosis and workup (HSTCL-1, HSTCL-2)"
+          },
+          "description": {
+            "uk": "Потрібна кістковомозкова або печінкова трепан-біопсія (аспірат, ТАБ печінки, мазок — недостатні; при неоднозначності — біопсія селезінки чи спленектомія в досвідчених центрах). Типово CD3+, TCRδ+, TCRβ−, CD4−, CD8−/+, CD56±, CD5−, TIA1+, гранзим B−. Генетика: ізохромосома 7q, трисомія 8, мутації STAT3/STAT5B, SETD2, INO80. Диференціація: T-LGLL γδ, АNKL, реактивні γδ-проліферації. Обстеження: ECOG, B-симптоми, ЗАК, кістковий мозок, ЛДГ, біохімія, обстеження на HLH, сечова кислота, ПЕТ/КТ чи КТ, ехо/MUGA, HLA-типування; ПЕТ сам не достатній для оцінки відповіді (лише підтверджений біопсією кісткового мозку/печінки; критерії Лугано не застосовуються — хвороба не нодальна).",
+            "en": "A bone marrow or liver core biopsy is required (aspirate, FNA of the liver, smear are insufficient; if equivocal — splenic core biopsy or splenectomy in expert centres). Typically CD3+, TCR delta+, TCR beta-, CD4-, CD8-/+, CD56+/-, CD5-, TIA1+, granzyme B-. Genetics: isochromosome 7q, trisomy 8, STAT3/STAT5B, SETD2, INO80 mutations. Differential: gamma/delta T-LGLL, ANKL, reactive gamma/delta proliferations. Workup: ECOG, B symptoms, CBC, bone marrow, LDH, chemistry, HLH workup, uric acid, PET/CT or CT, echo/MUGA, HLA typing; PET alone is inadequate for response (confirm by marrow/liver biopsy; Lugano criteria do not apply — the disease is non-nodal)."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Перша лінія",
+                "en": "First line"
+              },
+              "target": "nccn-1l"
+            }
+          ]
+        },
+        {
+          "key": "nccn-1l",
+          "kind": "line",
+          "title": {
+            "uk": "Перша лінія й консолідація (HSTCL-3, HSTCL-A)",
+            "en": "First line and consolidation (HSTCL-3, HSTCL-A)"
+          },
+          "description": {
+            "uk": "Бажано клінічне дослідження. Схеми: ICE (бажана); інші — DHA + платина, DA-EPOCH, HyperCVAD/високодозові метотрексат–цитарабін, IVAC; за певних обставин — пентостатин + алемтузумаб, CHOEP, CHP + брентуксимаб (CD30+; кат. 2B; у ECHELON-2 хворих на HSTCL не було). CHOP недостатній. Мета — CR чи майже CR з дуже малою пухлинною масою перед ТГСК (повний курс може бути зайвим). CR/PR → алогенна ТГСК (бажана; аутологічна — якщо немає донора чи непридатний); без відповіді/прогресія → клінічне дослідження чи інші схеми. Рефрактерність після двох перших ліній: клінічне дослідження, схеми 2-ї лінії при ПТКЛ-НБО (відповіді описані при алемтузумабі, праалатрексаті, ESHAP), пентостатин чи кладрибін; при невідповіді — найкраща підтримуюча терапія.",
+            "en": "A clinical trial is preferred. Regimens: ICE (preferred); others — DHA + platinum, DA-EPOCH, HyperCVAD/high-dose methotrexate-cytarabine, IVAC; in certain circumstances — pentostatin + alemtuzumab, CHOEP, CHP + brentuximab (CD30+; category 2B; no HSTCL patients were enrolled in ECHELON-2). CHOP is not adequate. The aim is CR or near-CR with a very low tumour burden before HCT (a full course may not be needed). CR/PR → allogeneic HCT (preferred; autologous if unfit or no donor); no response/progression → a clinical trial or other regimens. Refractory after two first-line regimens: a clinical trial, PTCL-NOS second-line regimens (responses reported with alemtuzumab, pralatrexate, ESHAP), pentostatin or cladribine; no response — best supportive care."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ice",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "dhap",
+              "notes": {
+                "uk": "DHA + цисплатин (чи карбоплатин)",
+                "en": "DHA + cisplatin (or carboplatin)"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "dhaox",
+              "notes": {
+                "uk": "DHA + оксаліплатин",
+                "en": "DHA + oxaliplatin"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "da-epoch",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "hyper-cvad-a",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "hyper-cvad-b",
+              "notes": {
+                "uk": "Чергується з HyperCVAD-A",
+                "en": "Alternates with HyperCVAD-A"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-hstcl-ivac",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-tcl-pentostatin-alemtuzumab",
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "choep-21",
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "bv-chp",
+              "notes": {
+                "uk": "CD30+",
+                "en": "CD30-positive"
+              },
+              "preference": "circumstances",
+              "category": "2b"
+            },
+            {
+              "regimen_id": "ref-tcl-pentostatin",
+              "notes": {
+                "uk": "Рефрактерність після двох режимів: пентостатин чи кладрибін",
+                "en": "Refractory after two regimens: pentostatin or cladribine"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "eshap",
+              "notes": {
+                "uk": "2-га лінія як при ПТКЛ-НБО",
+                "en": "Second line as for PTCL-NOS"
+              },
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "CR/PR: алогенна ТГСК (бажана); аутологічна — якщо непридатний чи немає донора",
+                "en": "CR/PR: allogeneic HCT (preferred); autologous if unfit or no donor"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Оцінка відповіді: біопсія кісткового мозку (± печінки); ПЕТ сам недостатній",
+                "en": "Response: bone marrow biopsy (± liver); PET alone is insufficient"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "description": {
+        "uk": "ICE; DHA + платина; DA-EPOCH; IVAC; HyperCVAD; потім алогенна ТГСК.",
+        "en": "ICE; DHA + platinum; DA-EPOCH; IVAC; HyperCVAD; then allogeneic HCT."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ice"
+        },
+        {
+          "regimen_id": "dhap"
+        },
+        {
+          "regimen_id": "da-epoch"
+        },
+        {
+          "regimen_id": "hyper-cvad-a"
+        },
+        {
+          "regimen_id": "hyper-cvad-b"
+        }
+      ]
+    }
+  ]
+}

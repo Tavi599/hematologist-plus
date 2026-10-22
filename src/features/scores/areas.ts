@@ -55,7 +55,13 @@ export const RISK_AREAS: Area[] = [
     id: 'aggressive-lymphoma',
     title: t('ДВКЛ та інші агресивні лімфоми', 'DLBCL and other aggressive lymphomas'),
     scoreIds: ['ipi', 'aa-ipi', 'nccn-ipi', 'cns-ipi'],
-    diseases: ['dlbcl', 'ptcl-nos'],
+    diseases: ['dlbcl', 'ptcl-nos', 'aitl', 'alcl', 'eatl-meitl'],
+  },
+  {
+    id: 't-cell',
+    title: t('Т-клітинні лімфоми', 'T-cell lymphomas'),
+    scoreIds: ['pit', 'pink', 'atl-pi'],
+    diseases: ['ptcl-nos', 'aitl', 'alcl', 'eatl-meitl', 'enkl', 'atll'],
   },
   {
     id: 'follicular',
