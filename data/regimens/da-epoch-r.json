@@ -45,7 +45,9 @@
       "anchor_offset_min": -30,
       "dose_value": 1000,
       "dose_unit": "mg_flat",
-      "days": [1],
+      "days": [
+        1
+      ],
       "notes": {
         "uk": "Не менш як за 30 хвилин до ритуксимабу. Протокол додає хлорфенамін 10 мг внутрішньовенно.",
         "en": "At least 30 minutes before the rituximab. The protocol adds chlorphenamine 10 mg intravenously."
@@ -57,7 +59,13 @@
       "route": "oral",
       "dose_value": 60,
       "dose_unit": "mg_m2",
-      "days": [1, 2, 3, 4, 5],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
       "notes": {
         "uk": "Вранці з їжею; у день 1 — не менш як за 30 хвилин до ритуксимабу. Дозу заокруглюють до розміру таблетки. У дослідженнях преднізолон давали двічі на добу, але в цьому протоколі дозу зменшено до одного разу через переносимість.",
         "en": "In the morning with food; on day 1 at least 30 minutes before the rituximab. The dose is rounded to a tablet size. The reference studies gave it twice daily; this protocol halves that to once daily for tolerability."
@@ -86,7 +94,9 @@
       "route": "iv_infusion",
       "dose_value": 50,
       "dose_unit": "mg_flat",
-      "days": [1],
+      "days": [
+        1
+      ],
       "duration_min": 30,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 100,
@@ -102,7 +112,9 @@
       "route": "iv_infusion",
       "dose_value": 20,
       "dose_unit": "mg_flat",
-      "days": [1],
+      "days": [
+        1
+      ],
       "duration_min": 30,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 100,
@@ -118,7 +130,9 @@
       "route": "iv_bolus",
       "dose_value": 40,
       "dose_unit": "mg_flat",
-      "days": [1],
+      "days": [
+        1
+      ],
       "notes": {
         "uk": "У 20–40 мл 0,9% NaCl, в/в струминно повільно — практика відділення",
         "en": "In 20-40 mL 0.9% NaCl, slow IV push — department practice"
@@ -130,7 +144,9 @@
       "route": "iv_infusion",
       "dose_value": 375,
       "dose_unit": "mg_m2",
-      "days": [1],
+      "days": [
+        1
+      ],
       "notes": {
         "uk": "У 500 мл 0,9% NaCl, максимальна швидкість 400 мг/год. Після інфузії пацієнта спостерігають 30 хвилин і лише потім починають решту введень.",
         "en": "In 500 mL of 0.9% sodium chloride at up to 400 mg/hour. The patient is watched for 30 minutes afterwards before the other infusions start."
@@ -142,7 +158,12 @@
       "route": "iv_infusion",
       "dose_value": 0.4,
       "dose_unit": "mg_m2",
-      "days": [1, 2, 3, 4],
+      "days": [
+        1,
+        2,
+        3,
+        4
+      ],
       "duration_min": 1440,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
@@ -195,7 +216,12 @@
       "route": "iv_infusion",
       "dose_value": 10,
       "dose_unit": "mg_m2",
-      "days": [1, 2, 3, 4],
+      "days": [
+        1,
+        2,
+        3,
+        4
+      ],
       "duration_min": 1440,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
@@ -240,7 +266,12 @@
       "route": "iv_infusion",
       "dose_value": 50,
       "dose_unit": "mg_m2",
-      "days": [1, 2, 3, 4],
+      "days": [
+        1,
+        2,
+        3,
+        4
+      ],
       "duration_min": 1440,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
@@ -285,12 +316,42 @@
       "route": "iv_bolus",
       "dose_value": 750,
       "dose_unit": "mg_m2",
-      "days": [5],
+      "days": [
+        5
+      ],
       "notes": {
         "uk": "Внутрішньовенно струминно в день 5. Це єдиний препарат схеми, доза якого змінюється на всіх п'яти рівнях.",
         "en": "Intravenous bolus on day 5. It is the only drug of the regimen whose dose differs at all five levels."
       },
       "dose_options": [
+        {
+          "dose_value": 187.5,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "ВІЛ-асоційована лімфома, CD4 <50/мм³ у циклі 1: вищі дози за 187,5 мг/м² не публікувались (NCCN HIVLYM-B). Не плутати з рівнями доз за нейтрофілами.",
+            "en": "HIV-associated lymphoma, CD4 below 50/mm3 in cycle 1: doses above 187.5 mg/m2 have not been published (NCCN HIVLYM-B). Not to be confused with the neutrophil-based dose levels."
+          },
+          "source": {
+            "name": "NCCN Guidelines: B-Cell Lymphomas, HIVLYM-B (R-EPOCH для ВІЛ-асоційованих лімфом, цикл 1)",
+            "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+            "version": "4.2026 від 20.05.2026",
+            "checkedOn": "2026-10-22"
+          }
+        },
+        {
+          "dose_value": 375,
+          "dose_unit": "mg_m2",
+          "notes": {
+            "uk": "ВІЛ-асоційована лімфома, CD4 50–200/мм³ у циклі 1 (NCCN HIVLYM-B); при CD4 >200 — стартова доза 750 мг/м². Далі за NCCN: підвищувати на 187 мг/м² на цикл до 750 при нейтрофілах ≥0,5×10⁹/л і тромбоцитах ≥50×10⁹/л у попередньому циклі; знижувати на 187 мг/м² при нейтрофілах <0,5×10⁹/л у двох непослідовних днях ≥3 дні чи тромбоцитах <25×10⁹/л.",
+            "en": "HIV-associated lymphoma, CD4 50-200/mm3 in cycle 1 (NCCN HIVLYM-B); at CD4 above 200 start at 750 mg/m2. After that per NCCN: raise by 187 mg/m2 per cycle up to 750 when the previous cycle had ANC at least 0.5 and platelets at least 50 x10^9/L; lower by 187 mg/m2 for ANC below 0.5 on two nonconsecutive days at least 3 days apart or platelets below 25 x10^9/L."
+          },
+          "source": {
+            "name": "NCCN Guidelines: B-Cell Lymphomas, HIVLYM-B (R-EPOCH для ВІЛ-асоційованих лімфом, цикл 1)",
+            "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+            "version": "4.2026 від 20.05.2026",
+            "checkedOn": "2026-10-22"
+          }
+        },
         {
           "dose_value": 480,
           "dose_unit": "mg_m2",
