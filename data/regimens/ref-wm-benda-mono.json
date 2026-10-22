@@ -1,0 +1,42 @@
+{
+  "id": "ref-wm-benda-mono",
+  "short_name": "Бендамустин (WM)",
+  "name": {
+    "uk": "Бендамустин при макроглобулінемії Вальденстрема",
+    "en": "Bendamustine in Waldenström macroglobulinemia"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Waldenström Macroglobulinemia/Lymphoplasmacytic Lymphoma, version 1.2027 (WM/LPL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 11.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інша рекомендована первинна терапія; при раніше лікованій хворобі — за певних обставин.",
+      "en": "Other recommended primary therapy; in previously treated disease, for certain circumstances."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бендамустин",
+          "en": "Bendamustine"
+        },
+        "drug_id": "bendamustine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Тривалі відповіді при рецидивній/рефрактерній хворобі як монотерапія у хворих, що не переносять ритуксимаб (фаза II: частота відповіді 83%, медіана ВБП 13,2 міс. при рефрактерній хворобі).",
+        "en": "Durable responses in relapsed/refractory disease as monotherapy in rituximab-intolerant patients (phase II: ORR 83%, median PFS 13.2 months in refractory disease)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "registered"
+  }
+}

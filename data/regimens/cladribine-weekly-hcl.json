@@ -1,0 +1,46 @@
+{
+  "$comment": "Кладрибін раз на тиждень, 5 тижнів, за NCCN HCL 2.2027 (обговорення MS-7: РКД 100 хворих, 0,14 мг/кг раз на тиждень ×5 проти щодня ×5; через 10 тижнів ORR 68% проти 78%, токсичність без значущих відмінностей). Тривалість інфузії NCCN не вказує: 2 години взято зі схеми cladribine-iv-hcl (UpToDate), об'єм — практика відділення. Один курс.",
+  "id": "cladribine-weekly-hcl",
+  "short_name": "Кладрибін раз на тиждень (ВКЛ)",
+  "name": {
+    "uk": "Кладрибін раз на тиждень, 5 тижнів (волосатоклітинний лейкоз)",
+    "en": "Cladribine once weekly for 5 weeks (hairy cell leukaemia)"
+  },
+  "description": {
+    "uk": "0,14 мг/кг за 2 години раз на тиждень, дні 1, 8, 15, 22, 29; один курс. Альтернатива щоденному 5-денному введенню зі схожою безпекою й дещо нижчою відповіддю через 10 тижнів.",
+    "en": "0.14 mg/kg over 2 hours once a week on days 1, 8, 15, 22 and 29; one course. An alternative to the daily 5-day schedule with similar safety and a somewhat lower response at 10 weeks."
+  },
+  "cycle_length_days": 35,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Hairy Cell Leukemia, версія 2.2027 від 14.09.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2027 (14.09.2026)",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "UpToDate: Treatment of hairy cell leukemia (HCL) and HCL variant",
+      "url": "https://www.uptodate.com/contents/treatment-of-hairy-cell-leukemia-hcl-and-hcl-variant",
+      "version": "перевірено 2026-10-04",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "items": [
+    {
+      "key": "cladribine",
+      "drug_id": "cladribine",
+      "route": "iv_infusion",
+      "dose_value": 0.14,
+      "dose_unit": "mg_kg",
+      "days": [1, 8, 15, 22, 29],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
+      "notes": {
+        "uk": "0,14 мг/кг раз на тиждень, 5 тижнів (NCCN HCL 2.2027). Тривалість інфузії — за схемою кладрибіну в/в (UpToDate); об'єм — практика відділення.",
+        "en": "0.14 mg/kg once a week for 5 weeks (NCCN HCL 2.2027). The infusion duration follows the IV cladribine regimen (UpToDate); the volume follows the department's practice."
+      }
+    }
+  ]
+}
