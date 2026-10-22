@@ -113,6 +113,22 @@ describe('tumour lysis syndrome (Cairo 2010)', () => {
 describe('risk scores', () => {
   const group = (id: string, values: Values) => run(id, values)!.group!.label.en
 
+  it('IPSS and WPSS follow the NCCN MDS-B tables', () => {
+    // Blasts 12% (1.5) + poor karyotype (1) + two cytopenias (0.5) = 3: high.
+    expect(group('ipss', { blasts: 12, karyotype: '1', cytopenias: '0.5' })).toBe('High')
+    // Blasts 3% (0) + good (0) + two cytopenias (0.5) = 0.5: intermediate-1, managed as lower risk.
+    const lower = run('ipss', { blasts: 3, karyotype: '0', cytopenias: '0.5' })!
+    expect(lower.group!.label.en).toBe('Intermediate-1')
+    expect(lower.notes[0]!.en).toContain('lower risk')
+    expect(group('ipss', { blasts: 3, karyotype: '0', cytopenias: '0' })).toBe('Low')
+    expect(group('ipss', { blasts: 15, karyotype: '0.5', cytopenias: '0' })).toBe('Intermediate-2')
+    // RAEB-1 (2) + intermediate karyotype (1) + severe anaemia (1) = 4: high.
+    expect(group('wpss', { who: '2', karyotype: '1', anaemia: true })).toBe('High')
+    expect(group('wpss', { who: '1', karyotype: '0' })).toBe('Low')
+    expect(group('wpss', { who: '0', karyotype: '0' })).toBe('Very low')
+    expect(group('wpss', { who: '3', karyotype: '2', anaemia: true })).toBe('Very high')
+  })
+
   it('IPI with R-IPI', () => {
     const outcome = run('ipi', { age: true, ldh: true, stage: true })!
     expect(outcome.group!.label.en).toBe('High-intermediate')
@@ -175,6 +191,25 @@ describe('risk scores', () => {
     expect(
       group('ipss-r', { cytogenetics: '4', blasts: 12, haemoglobin: 70, platelets: 30, anc: 0.5 }),
     ).toBe('Very high')
+    // Good (1) + blasts 3% (1) + Hb 90 (1) + platelets 60 (0.5) = 3.5: intermediate, managed as lower risk.
+    const borderline = run('ipss-r', {
+      cytogenetics: '1',
+      blasts: 3,
+      haemoglobin: 90,
+      platelets: 60,
+      anc: 1,
+    })!
+    expect(borderline.group!.label.en).toBe('Intermediate')
+    expect(borderline.notes[0]!.en).toContain('3.5 or less as lower risk')
+    // Intermediate (2) + blasts 3% (1) + Hb 90 (1) = 4: above 3.5, managed as higher risk.
+    const above = run('ipss-r', {
+      cytogenetics: '2',
+      blasts: 3,
+      haemoglobin: 90,
+      platelets: 120,
+      anc: 1,
+    })!
+    expect(above.notes[0]!.en).toContain('above 3.5 as higher risk')
     expect(group('dipss', { haemoglobin: true })).toBe('Intermediate-1')
     expect(group('dipss', { haemoglobin: true, age: true, blasts: true })).toBe('Intermediate-2')
     expect(group('khorana', { site: 'high', platelets: true })).toBe('Intermediate')

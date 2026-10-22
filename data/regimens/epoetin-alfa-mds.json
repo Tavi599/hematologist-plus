@@ -1,0 +1,53 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN MDS 3.2026 (MDS-5, MDS-6, виноски kk, qq): дози з настанови; препарат без фасувань у переліку відділення. Замінює довідкову картку ref-mds-esa.",
+  "id": "epoetin-alfa-mds",
+  "short_name": "Епоетин альфа (МДС)",
+  "name": {
+    "uk": "Епоетин альфа при анемії в МДС нижчого ризику",
+    "en": "Epoetin alfa for anaemia in lower-risk MDS"
+  },
+  "description": {
+    "uk": "40 000–60 000 МО підшкірно 1–2 рази на тиждень; ціль гемоглобіну 100–120 г/л, не вище 120. Оцінка відповіді за 6–8 тижнів.",
+    "en": "40,000 to 60,000 IU subcutaneously once or twice a week; haemoglobin target 100 to 120 g/L, not above 120. Response is judged at 6 to 8 weeks."
+  },
+  "cycle_length_days": 7,
+  "default_cycles": 8,
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Myelodysplastic Syndromes, MDS-6A (виноски kk, qq, tt) (дози й дні як факти; текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1446",
+      "version": "3.2026 від 12.01.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "items": [
+    {
+      "key": "epoetin-alfa",
+      "drug_id": "epoetin-alfa",
+      "route": "subcutaneous",
+      "dose_value": 40000,
+      "dose_unit": "iu_flat",
+      "days": [1],
+      "notes": {
+        "uk": "40 000–60 000 МО 1–2 рази на тиждень (NCCN). Тут перший щотижневий прийом у день 1; другу дозу тижня (наприклад, день 4) додайте вручну. Без відповіді — збільшувати дозу.",
+        "en": "40,000 to 60,000 IU once or twice a week (NCCN). The first weekly dose is on day 1; add the second dose of the week (for example on day 4) by hand. Without a response, escalate the dose."
+      },
+      "dose_options": [
+        {
+          "dose_value": 60000,
+          "dose_unit": "iu_flat",
+          "notes": {
+            "uk": "Верхня межа діапазону NCCN",
+            "en": "Upper end of the NCCN range"
+          },
+          "source": {
+            "name": "NCCN Guidelines: Myelodysplastic Syndromes, MDS-6A (виноска kk) (дози й дні як факти; текст не копіювався)",
+            "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1446",
+            "version": "3.2026 від 12.01.2026",
+            "checkedOn": "2026-10-22"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN MDS 3.2026 (тяжка тромбоцитопенія при МДС нижчого ризику). Дози NCCN не наводить. У реєстрі України не знайдено — «недоступний». Флакони 125, 250 і 500 мкг — за листком FDA (Nplate).",
+  "id": "romiplostim",
+  "name": {
+    "uk": "Ромиплостим",
+    "en": "Romiplostim"
+  },
+  "atc_code": "B02BX04",
+  "availability": "unavailable",
+  "amount_unit": "mcg",
+  "dose_units": ["mcg_kg", "mcg_flat"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "витяг від 22.10.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: NPLATE (romiplostim) for injection — флакони 125, 250 і 500 мкг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=romiplostim",
+      "version": "перевірено 2026-10-22",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v125",
+      "form": "vial",
+      "strength_amount": 125
+    },
+    {
+      "key": "v250",
+      "form": "vial",
+      "strength_amount": 250
+    },
+    {
+      "key": "v500",
+      "form": "vial",
+      "strength_amount": 500
+    }
+  ]
+}

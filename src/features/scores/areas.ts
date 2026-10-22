@@ -96,7 +96,7 @@ export const RISK_AREAS: Area[] = [
   {
     id: 'mds',
     title: t('Мієлодиспластичні синдроми', 'Myelodysplastic syndromes'),
-    scoreIds: ['ipss-r'],
+    scoreIds: ['ipss-r', 'ipss', 'wpss'],
     diseases: ['mds'],
   },
   {

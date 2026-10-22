@@ -34,6 +34,1229 @@
   ],
   "treatment": [
     {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 3.2026 (MDS-4…MDS-8)",
+        "en": "NCCN 3.2026 pathways (MDS-4 to MDS-8)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN «Myelodysplastic Syndromes», версія 3.2026 від 12.01.2026 (MDS-4…MDS-8): група ризику → лікування → далі. Рекомендації категорії 2A, якщо не вказано інше; діагностика, класифікація й шкали — у статті, розділ NCCN.",
+        "en": "The NCCN \"Myelodysplastic Syndromes\" algorithm, version 3.2026 of 12 January 2026 (MDS-4 to MDS-8): risk group → treatment → next. Recommendations are category 2A unless stated; diagnostics, classification and scores are in the article, NCCN section."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-lower",
+          "kind": "line",
+          "title": {
+            "uk": "Нижчий ризик: цитопенії (MDS-4)",
+            "en": "Lower risk: cytopenias (MDS-4)"
+          },
+          "description": {
+            "uk": "IPSS-R дуже низький, низький і проміжний ризик. Проміжний ризик ≤3,5 бала ведуть як нижчий, >3,5 — як вищий. Враховують супутні хвороби. Якщо спершу вели як нижчий ризик, але відповіді немає — переходять до стратегій вищого ризику. Підтримувальна терапія — доповнення до лікування. Невдача: немає відповіді за 3–6 місяців (критерії IWG); перед зміною лікування повторюють аспірат/біопсію й молекулярний аналіз.",
+            "en": "IPSS-R very low, low and intermediate risk. Intermediate risk with 3.5 points or fewer is managed as lower risk, above 3.5 as higher risk. Comorbidity is taken into account. If disease was first managed as lower risk but does not respond, move to higher-risk strategies. Supportive care complements treatment. Failure means no response within 3-6 months (IWG criteria); marrow and molecular testing are repeated before changing treatment."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Підтримувальна терапія як доповнення до лікування (MDS-8)",
+                "en": "Supportive care as an adjunct to treatment (MDS-8)"
+              },
+              "target": "nccn-supportive"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-lower-anaemia",
+              "kind": "group",
+              "title": {
+                "uk": "Симптомна анемія",
+                "en": "Symptomatic anaemia"
+              },
+              "description": {
+                "uk": "Перед лікуванням шукають і лікують супутні причини, відновлюють залізо, фолат, B12, переливають еритроцити (безпечні щодо ЦМВ). Цільовий гемоглобін 100–120 г/л, не вище 120. Подальший вибір залежить від del(5q), кільцевих сидеробластів і рівня ЕПО.",
+                "en": "Coexisting causes are sought and treated, iron, folate and B12 replaced, and red cells (CMV-safe) transfused. The haemoglobin target is 100 to 120 g/L, not above 120. The next choice depends on del(5q), ring sideroblasts and the EPO level."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Із del(5q) ± ще одна аномалія, крім хромосоми 7 (MDS-5)",
+                    "en": "With del(5q) ± one more abnormality except chromosome 7 (MDS-5)"
+                  },
+                  "target": "nccn-5q"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Без del(5q), кільцеві сидеробласти ≥15% (або ≥5% із SF3B1) (MDS-5)",
+                    "en": "No del(5q), ring sideroblasts 15% or more (or 5% or more with SF3B1) (MDS-5)"
+                  },
+                  "target": "nccn-sf3b1"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Без del(5q), кільцеві сидеробласти <15% (або <5% із SF3B1) (MDS-6)",
+                    "en": "No del(5q), ring sideroblasts under 15% (or under 5% with SF3B1) (MDS-6)"
+                  },
+                  "target": "nccn-6"
+                }
+              ]
+            },
+            {
+              "key": "nccn-lower-cytopenia",
+              "kind": "group",
+              "title": {
+                "uk": "Клінічно значуща тромбоцитопенія або нейтропенія",
+                "en": "Clinically relevant thrombocytopenia or neutropenia"
+              },
+              "description": {
+                "uk": "Без del(5q) і з іншими цитогенетичними змінами. При тяжкій чи рефрактерній тромбоцитопенії можна розглянути елтромбопаг або ромиплостим; при загрозливій для життя — агоніст рецептора тромбопоетину (MDS-8). Низькі дози азацитидину чи децитабіну при нижчому ризику дали клінічну користь у дослідженнях; NCCN доз не називає.",
+                "en": "No del(5q), with or without other cytogenetic changes. For severe or refractory thrombocytopenia eltrombopag or romiplostim can be considered; for life-threatening thrombocytopenia a thrombopoietin-receptor agonist (MDS-8). Low doses of azacitidine or decitabine have shown clinical benefit in studies at lower risk; NCCN gives no doses."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono",
+                  "notes": {
+                    "uk": "Схема й доза — стандартні (75 мг/м² 7 днів); низькі дози NCCN не уточнює.",
+                    "en": "The standard regimen (75 mg/m2 for 7 days); NCCN does not specify low doses."
+                  }
+                },
+                {
+                  "regimen_id": "decitabine-mono",
+                  "notes": {
+                    "uk": "Стандартна схема 20 мг/м² 5 днів.",
+                    "en": "The standard 20 mg/m2 for 5 days schedule."
+                  }
+                },
+                {
+                  "regimen_id": "inqovi-mds",
+                  "notes": {
+                    "uk": "Може замінити децитабін в/в при IPSS проміжний-1 і вище.",
+                    "en": "May replace IV decitabine at IPSS intermediate-1 and above."
+                  }
+                },
+                {
+                  "regimen_id": "ref-mds-atg-csa",
+                  "notes": {
+                    "uk": "Імуносупресія (кінський АТГ ± циклоспорин ± елтромбопаг) для окремих хворих: ≤60 років, бласти ≤5%, гіпоклітинний мозок, клон ПНГ або STAT3-мутантні цитотоксичні Т-клітинні клони. NCCN доз не наводить.",
+                    "en": "Immunosuppression (equine ATG ± ciclosporin ± eltrombopag) for selected patients: age 60 or less, blasts 5% or less, hypocellular marrow, a PNH clone or STAT3-mutant cytotoxic T-cell clones. NCCN gives no doses."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mds-eltrombopag",
+                  "notes": {
+                    "uk": "Елтромбопаг окремо при тяжкій тромбоцитопенії (NCCN, MDS-4, виноски cc, ff).",
+                    "en": "Eltrombopag alone for severe thrombocytopenia (NCCN, MDS-4, footnotes cc, ff)."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mds-romiplostim",
+                  "notes": {
+                    "uk": "При тяжкій чи рефрактерній тромбоцитопенії (NCCN, MDS-4, виноска ff).",
+                    "en": "For severe or refractory thrombocytopenia (NCCN, MDS-4, footnote ff)."
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Прогресування, відсутність відповіді чи рецидив",
+                    "en": "Progression, no response or relapse"
+                  },
+                  "target": "nccn-lower-failure"
+                }
+              ]
+            },
+            {
+              "key": "nccn-lower-failure",
+              "kind": "group",
+              "title": {
+                "uk": "Прогресування, відсутність відповіді чи рецидив",
+                "en": "Disease progression, no response or relapse"
+              },
+              "description": {
+                "uk": "Рекомендують гіпометилювальний засіб (якщо ще не отримував) або інгібітор IDH за мутацією: івосиденіб при mIDH1, енасиденіб при mIDH2. Без мутації IDH — клінічне дослідження або алогенна ТГСК для окремих хворих (кандидатами вважають і IPSS проміжний-1, IPSS-R проміжний, WPSS проміжний із тяжкими цитопеніями).",
+                "en": "A hypomethylating agent (if not already given) or an IDH inhibitor by mutation: ivosidenib for mIDH1, enasidenib for mIDH2. Without an IDH mutation, a clinical trial or allo-HCT for selected patients (IPSS intermediate-1, IPSS-R intermediate and WPSS intermediate with severe cytopenias are also candidates)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono",
+                  "notes": {
+                    "uk": "Якщо ще не отримував.",
+                    "en": "If not already given."
+                  }
+                },
+                {
+                  "regimen_id": "decitabine-mono",
+                  "notes": {
+                    "uk": "Якщо ще не отримував.",
+                    "en": "If not already given."
+                  }
+                },
+                {
+                  "regimen_id": "inqovi-mds",
+                  "notes": {
+                    "uk": "Якщо ще не отримував.",
+                    "en": "If not already given."
+                  }
+                },
+                {
+                  "regimen_id": "ivosidenib-aml",
+                  "notes": {
+                    "uk": "NCCN дози для МДС не наводить: схема й доза — з ГМЛ (NCCN AML). Лише при mIDH1; якщо не застосовували раніше.",
+                    "en": "NCCN gives no MDS doses: the regimen and dose are from AML (NCCN AML). Only with mIDH1; if not used before."
+                  }
+                },
+                {
+                  "regimen_id": "enasidenib",
+                  "notes": {
+                    "uk": "NCCN дози для МДС не наводить: схема й доза — з ГМЛ (NCCN AML). Лише при mIDH2; якщо не застосовували раніше.",
+                    "en": "NCCN gives no MDS doses: the regimen and dose are from AML (NCCN AML). Only with mIDH2; if not used before."
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Алогенна ТГСК для окремих хворих",
+                    "en": "Allo-HCT for selected patients"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Якщо нижчий ризик не відповідає — стратегії вищого ризику (MDS-7)",
+                    "en": "If lower risk does not respond — higher-risk strategies (MDS-7)"
+                  },
+                  "target": "nccn-higher"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-5q",
+          "kind": "line",
+          "title": {
+            "uk": "Симптомна анемія з del(5q) (MDS-5)",
+            "en": "Symptomatic anaemia with del(5q) (MDS-5)"
+          },
+          "description": {
+            "uk": "MDS-5q з низьким вмістом бластів: del(5q) ± ще одна цитогенетична аномалія, крім пов’язаних із хромосомою 7. Вибір за рівнем ендогенного еритропоетину (ЕПО). Цільовий гемоглобін 100–120 г/л, не вище 120.",
+            "en": "MDS-5q with low blasts: del(5q) ± one more cytogenetic abnormality except those involving chromosome 7. The choice follows the endogenous erythropoietin (EPO) level. The haemoglobin target is 100 to 120 g/L, not above 120."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-5q-epo-low",
+              "kind": "group",
+              "title": {
+                "uk": "ЕПО ≤500 мЕД/мл",
+                "en": "EPO 500 mU/mL or less"
+              },
+              "description": {
+                "uk": "Леналідомід — 10 мг/добу 21 з 28 днів або 28 днів на місяць протягом 2–4 місяців, щоб оцінити відповідь. Монозомія 7 — виняток: лікувати як вищий ризик. Леналідомід пов’язаний із селективним розростанням TP53-мутантних клонів.",
+                "en": "Lenalidomide 10 mg/day for 21 of 28 days or 28 days a month for 2-4 months to assess response. Monosomy 7 is an exception: treat as higher risk. Lenalidomide is linked to selective expansion of TP53-mutated clones."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "lenalidomide-mds",
+                  "notes": {
+                    "uk": "21 день із 28.",
+                    "en": "21 days out of 28."
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "lenalidomide-mds-28",
+                  "notes": {
+                    "uk": "28 днів із 28.",
+                    "en": "28 days out of 28."
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "epoetin-alfa-mds",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "darbepoetin-alfa-mds",
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "maintenance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Відповідь: продовжувати леналідомід чи ESA, зменшуючи дозу до переносимої",
+                    "en": "Response: continue lenalidomide or the ESA, lowering the dose to tolerance"
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Немає відповіді на леналідомід (3–6 міс.) чи ESA (6–8 тижнів) або рецидив",
+                    "en": "No response to lenalidomide (3-6 months) or an ESA (6-8 weeks) or relapse"
+                  },
+                  "notes": {
+                    "uk": "Відсутність відповіді — приріст Hb <15 г/л або без зменшення потреби в трансфузіях.",
+                    "en": "No response means a rise in haemoglobin under 15 g/L or no fall in transfusion need."
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Далі — шлях для ЕПО >500 мЕД/мл (MDS-6)",
+                    "en": "Next — the pathway for EPO above 500 mU/mL (MDS-6)"
+                  },
+                  "target": "nccn-6-high"
+                }
+              ]
+            },
+            {
+              "key": "nccn-5q-epo-high",
+              "kind": "group",
+              "title": {
+                "uk": "ЕПО >500 мЕД/мл",
+                "en": "EPO above 500 mU/mL"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "lenalidomide-mds",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "lenalidomide-mds-28",
+                  "preference": "preferred",
+                  "category": "1"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Немає відповіді чи рецидив — шлях для ЕПО >500 мЕД/мл (MDS-6)",
+                    "en": "No response or relapse — the pathway for EPO above 500 mU/mL (MDS-6)"
+                  },
+                  "target": "nccn-6-high"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-sf3b1",
+          "kind": "line",
+          "title": {
+            "uk": "Симптомна анемія: MDS-SF3B1, кільцеві сидеробласти (MDS-5)",
+            "en": "Symptomatic anaemia: MDS-SF3B1, ring sideroblasts (MDS-5)"
+          },
+          "description": {
+            "uk": "Без del(5q) ± інші цитогенетичні зміни; кільцеві сидеробласти ≥15% (або ≥5% при мутації SF3B1); низький вміст бластів. Луспатерцепт діє при кільцево-сидеробластному МДС, а за новішими даними — й при несидеробластному, з тривалішою відповіддю, ніж ESA. Якщо ЕПО ≤200 мЕД/мл, можна розглянути епоетин чи дарбепоетин.",
+            "en": "No del(5q) ± other cytogenetic changes; ring sideroblasts 15% or more (or 5% or more with an SF3B1 mutation); low blasts. Luspatercept works in ring-sideroblast MDS and, by newer data, also in non-sideroblastic disease with longer responses than ESAs. If EPO is 200 mU/mL or less, epoetin or darbepoetin can be considered."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-sf3b1-first",
+              "kind": "group",
+              "title": {
+                "uk": "Перша лінія",
+                "en": "First line"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "luspatercept-mds",
+                  "notes": {
+                    "uk": "Старт 1 мг/кг раз на 3 тижні; якщо без незалежності від трансфузій після ≥2 введень — 1,33, потім 1,75 мг/кг.",
+                    "en": "Start with 1 mg/kg every 3 weeks; if not transfusion-free after 2 or more doses — 1.33, then 1.75 mg/kg."
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "imetelstat-mds",
+                  "notes": {
+                    "uk": "Якщо ЕПО >500 мЕД/мл (немає права на ESA).",
+                    "en": "If EPO is above 500 mU/mL (ineligible for ESAs)."
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Немає відповіді (Hb <15 г/л за 3–6 міс. чи без зменшення потреби в трансфузіях) або рецидив",
+                    "en": "No response (haemoglobin rise under 15 g/L by 3-6 months or no fall in transfusion need) or relapse"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "ЕПО ≤500 мЕД/мл",
+                    "en": "EPO 500 mU/mL or less"
+                  },
+                  "target": "nccn-sf3b1-epo-low"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "ЕПО >500 мЕД/мл",
+                    "en": "EPO above 500 mU/mL"
+                  },
+                  "target": "nccn-sf3b1-epo-high"
+                }
+              ]
+            },
+            {
+              "key": "nccn-sf3b1-epo-low",
+              "kind": "group",
+              "title": {
+                "uk": "Після невдачі: ЕПО ≤500 мЕД/мл",
+                "en": "After failure: EPO 500 mU/mL or less"
+              },
+              "description": {
+                "uk": "Іметелстат: 7,1 мг/кг в/в раз на місяць із можливим зменшенням дози через часту транзиторну тромбоцитопенію й нейтропенію; на старті тромбоцити ≥75·10⁹/л, нейтрофіли ≥1,5·10⁹/л.",
+                "en": "Imetelstat: 7.1 mg/kg IV monthly with possible dose reductions because transient thrombocytopenia and neutropenia are frequent; at the start platelets 75×10⁹/L or more and neutrophils 1.5×10⁹/L or more."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "imetelstat-mds",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "epoetin-alfa-gcsf-mds",
+                  "notes": {
+                    "uk": "З Г-КСФ або без нього (без Г-КСФ — схема «Епоетин альфа (МДС)»).",
+                    "en": "With or without G-CSF (without G-CSF — the epoetin alfa regimen)."
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "epoetin-alfa-mds",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "darbepoetin-alfa-gcsf-mds",
+                  "notes": {
+                    "uk": "З Г-КСФ або без нього.",
+                    "en": "With or without G-CSF."
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "darbepoetin-alfa-mds",
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Немає відповіді на іметелстат чи ESA ± Г-КСФ або рецидив — шлях для ЕПО >500 мЕД/мл (MDS-6)",
+                    "en": "No response to imetelstat or ESAs ± G-CSF or relapse — the pathway for EPO above 500 mU/mL (MDS-6)"
+                  },
+                  "target": "nccn-6-high"
+                }
+              ]
+            },
+            {
+              "key": "nccn-sf3b1-epo-high",
+              "kind": "group",
+              "title": {
+                "uk": "Після невдачі: ЕПО >500 мЕД/мл",
+                "en": "After failure: EPO above 500 mU/mL"
+              },
+              "description": {
+                "uk": "Іметелстат не вивчали в групі MDS-5q. Леналідомід 10 мг щодня — за нейтрофілів >0,5·10⁹/л і тромбоцитів >50·10⁹/л.",
+                "en": "Imetelstat was not studied in MDS-5q. Lenalidomide 10 mg daily — with neutrophils above 0.5×10⁹/L and platelets above 50×10⁹/L."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "imetelstat-mds",
+                  "notes": {
+                    "uk": "Якщо не застосовували раніше.",
+                    "en": "If not used before."
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "luspatercept-mds",
+                  "notes": {
+                    "uk": "Якщо не застосовували раніше.",
+                    "en": "If not used before."
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "lenalidomide-mds-28",
+                  "notes": {
+                    "uk": "Розглянути.",
+                    "en": "Consider."
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Немає відповіді чи рецидив",
+                    "en": "No response or relapse"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Інші рекомендовані: івосиденіб при mIDH1 або енасиденіб при mIDH2",
+                    "en": "Other recommended: ivosidenib for mIDH1 or enasidenib for mIDH2"
+                  },
+                  "target": "nccn-lower-failure",
+                  "preference": "other"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-6",
+          "kind": "line",
+          "title": {
+            "uk": "Симптомна анемія без del(5q), кільцеві сидеробласти <15% (MDS-6)",
+            "en": "Symptomatic anaemia, no del(5q), ring sideroblasts under 15% (MDS-6)"
+          },
+          "description": {
+            "uk": "Або <5% при мутації SF3B1. Шлях залежить від ЕПО: ≤500 мЕД/мл — ESA чи луспатерцепт; >500 мЕД/мл — за ймовірністю відповіді на імуносупресію (ІСТ). Хороша ймовірність: вік ≤60 років і бласти ≤5%, або гіпоклітинний мозок, клон ПНГ чи STAT3-мутантні цитотоксичні Т-клітинні клони; у решти — погана.",
+            "en": "Or under 5% with an SF3B1 mutation. The path depends on EPO: 500 mU/mL or less — an ESA or luspatercept; above 500 mU/mL — by the probability of responding to immunosuppression (IST). A good probability: age 60 or less and blasts 5% or less, or a hypocellular marrow, a PNH clone or STAT3-mutant cytotoxic T-cell clones; the rest have a poor one."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-6-low",
+              "kind": "group",
+              "title": {
+                "uk": "ЕПО ≤500 мЕД/мл",
+                "en": "EPO 500 mU/mL or less"
+              },
+              "description": {
+                "uk": "Луспатерцепт бажаний при ЕПО >200 мЕД/мл; при ЕПО ≤200 мЕД/мл розглядають епоетин чи дарбепоетин.",
+                "en": "Luspatercept is preferred when EPO is above 200 mU/mL; at 200 mU/mL or less epoetin or darbepoetin is considered."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "epoetin-alfa-mds"
+                },
+                {
+                  "regimen_id": "darbepoetin-alfa-mds"
+                },
+                {
+                  "regimen_id": "luspatercept-mds",
+                  "notes": {
+                    "uk": "Бажаний при ЕПО >200 мЕД/мл.",
+                    "en": "Preferred when EPO is above 200 mU/mL."
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "maintenance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Відповідь: продовжувати епоетин чи дарбепоетин, зменшуючи дозу до переносимої, або продовжувати луспатерцепт",
+                    "en": "Response: continue epoetin or darbepoetin lowering the dose to tolerance, or continue luspatercept"
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Немає відповіді на ESA (6–8 тижнів, при достатніх запасах заліза) чи луспатерцепт (3–6 міс.) або рецидив",
+                    "en": "No response to ESAs (6-8 weeks, with adequate iron stores) or luspatercept (3-6 months) or relapse"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Далі — «Після невдачі першої лінії при ЕПО ≤500»",
+                    "en": "Next — \"After first-line failure with EPO 500 or less\""
+                  },
+                  "target": "nccn-6-low-failure"
+                }
+              ]
+            },
+            {
+              "key": "nccn-6-low-failure",
+              "kind": "group",
+              "title": {
+                "uk": "Після невдачі першої лінії при ЕПО ≤500",
+                "en": "After first-line failure with EPO 500 or less"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "imetelstat-mds",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "luspatercept-mds",
+                  "notes": {
+                    "uk": "Якщо не застосовували раніше.",
+                    "en": "If not used before."
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "epoetin-alfa-gcsf-mds",
+                  "notes": {
+                    "uk": "Епоетин ± Г-КСФ.",
+                    "en": "Epoetin ± G-CSF."
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "darbepoetin-alfa-gcsf-mds",
+                  "notes": {
+                    "uk": "Дарбепоетин ± Г-КСФ.",
+                    "en": "Darbepoetin ± G-CSF."
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "lenalidomide-mds-28",
+                  "notes": {
+                    "uk": "Або леналідомід: 10 мг щодня, якщо нейтрофіли >0,5 і тромбоцити >50·10⁹/л.",
+                    "en": "Or lenalidomide: 10 mg daily if neutrophils above 0.5 and platelets above 50×10⁹/L."
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "maintenance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Відповідь на ESA: зменшити дозу до переносимої",
+                    "en": "Response to an ESA: lower the dose to tolerance"
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Немає відповіді на іметелстат, ESA ± леналідомід чи Г-КСФ, луспатерцепт або рецидив",
+                    "en": "No response to imetelstat, ESAs ± lenalidomide or G-CSF, luspatercept or relapse"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Шлях для ЕПО >500 мЕД/мл (погана ймовірність відповіді на ІСТ) або іметелстат (категорія 1), якщо не застосовували",
+                    "en": "The pathway for EPO above 500 mU/mL (poor probability of IST response) or imetelstat (category 1) if not used"
+                  },
+                  "target": "nccn-6-poor"
+                }
+              ]
+            },
+            {
+              "key": "nccn-6-high",
+              "kind": "group",
+              "title": {
+                "uk": "ЕПО >500 мЕД/мл",
+                "en": "EPO above 500 mU/mL"
+              },
+              "regimens": [],
+              "children": [
+                {
+                  "key": "nccn-6-ist",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Хороша ймовірність відповіді на ІСТ",
+                    "en": "Good probability of responding to IST"
+                  },
+                  "description": {
+                    "uk": "Кінський АТГ + циклоспорин A ± елтромбопаг; АТГ можна пропустити, коли клінічно доречно. NCCN доз не наводить. Невдача — немає відповіді, непереносимість чи рецидив → шлях для ЕПО >500 мЕД/мл із поганою ймовірністю.",
+                    "en": "Equine ATG + ciclosporin A ± eltrombopag; ATG may be omitted when clinically indicated. NCCN gives no doses. Failure — no response, intolerance or relapse → the pathway for EPO above 500 with a poor probability."
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ref-mds-atg-csa",
+                      "notes": {
+                        "uk": "Кінський АТГ (Атгам) є в довіднику препаратів; доз NCCN не дає.",
+                        "en": "Equine ATG (Atgam) is in the drug catalog; NCCN gives no doses."
+                      }
+                    }
+                  ],
+                  "steps": [
+                    {
+                      "kind": "page",
+                      "column": "next",
+                      "label": {
+                        "uk": "Немає відповіді, непереносимість чи рецидив",
+                        "en": "No response, intolerance or relapse"
+                      },
+                      "target": "nccn-6-poor"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-6-poor",
+                  "kind": "group",
+                  "title": {
+                    "uk": "Погана ймовірність відповіді на ІСТ",
+                    "en": "Poor probability of responding to IST"
+                  },
+                  "description": {
+                    "uk": "Невдача гіпометилювальних засобів — немає відповіді за 6 циклів азацитидину чи 4 цикли децитабіну (в т.ч. перорального з цедазуридином); іметелстату чи леналідоміду — за 3–6 місяців; або непереносимість чи рецидив.",
+                    "en": "HMA failure — no response within 6 cycles of azacitidine or 4 cycles of decitabine (including oral with cedazuridine); imetelstat or lenalidomide — within 3-6 months; or intolerance or relapse."
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "imetelstat-mds",
+                      "notes": {
+                        "uk": "Якщо не застосовували раніше; не для MDS-5q.",
+                        "en": "If not used before; not for MDS-5q."
+                      },
+                      "preference": "preferred",
+                      "category": "1"
+                    },
+                    {
+                      "regimen_id": "azacitidine-mono",
+                      "preference": "other"
+                    },
+                    {
+                      "regimen_id": "decitabine-mono",
+                      "preference": "other"
+                    },
+                    {
+                      "regimen_id": "inqovi-mds",
+                      "preference": "other"
+                    },
+                    {
+                      "regimen_id": "lenalidomide-mds-28",
+                      "notes": {
+                        "uk": "Розглянути; 10 мг щодня, якщо нейтрофіли >0,5 і тромбоцити >50·10⁹/л.",
+                        "en": "Consider; 10 mg daily if neutrophils above 0.5 and platelets above 50×10⁹/L."
+                      },
+                      "preference": "circumstances"
+                    },
+                    {
+                      "regimen_id": "ivosidenib-aml",
+                      "notes": {
+                        "uk": "NCCN дози для МДС не наводить: схема й доза — з ГМЛ (NCCN AML). Лише mIDH1, якщо не застосовували раніше.",
+                        "en": "NCCN gives no MDS doses: the regimen and dose are from AML (NCCN AML). Only mIDH1, if not used before."
+                      }
+                    },
+                    {
+                      "regimen_id": "enasidenib",
+                      "notes": {
+                        "uk": "NCCN дози для МДС не наводить: схема й доза — з ГМЛ (NCCN AML). Лише mIDH2, якщо не застосовували раніше.",
+                        "en": "NCCN gives no MDS doses: the regimen and dose are from AML (NCCN AML). Only mIDH2, if not used before."
+                      }
+                    }
+                  ],
+                  "steps": [
+                    {
+                      "kind": "trial",
+                      "column": "treatment",
+                      "label": {
+                        "uk": "Клінічне дослідження",
+                        "en": "Clinical trial"
+                      }
+                    },
+                    {
+                      "kind": "hct",
+                      "column": "next",
+                      "label": {
+                        "uk": "Алогенна ТГСК для окремих хворих",
+                        "en": "Allo-HCT for selected patients"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-higher",
+          "kind": "line",
+          "title": {
+            "uk": "Вищий ризик (MDS-7)",
+            "en": "Higher risk (MDS-7)"
+          },
+          "description": {
+            "uk": "IPSS-R проміжний (>3,5 бала), високий, дуже високий ризик. Придатність до трансплантації визначають за віком (до щонайменше 75 років), загальним станом, супутніми хворобами, психосоціальним станом, бажанням хворого й наявністю опікуна. Азацитидин, децитабін чи перорональний децитабін із цедазуридином продовжують ~4–6 місячних циклів, щоб оцінити відповідь; при клінічній користі — як підтримувальну терапію. Виживання в рандомізованих дослідженнях III фази доведене для азацитидину, а не для децитабіну. Стандартна доза азацитидину 75 мг/м² п/ш або в/в 7 днів, децитабіну — 20 мг/м² в/в 5 днів.",
+            "en": "IPSS-R intermediate (above 3.5 points), high and very high risk. Transplant eligibility rests on age (up to at least 75), performance status, comorbidity, psychosocial status, patient preference and a caregiver. Azacitidine, decitabine or oral decitabine with cedazuridine are continued for about 4-6 monthly cycles to assess response; with clinical benefit, as maintenance. A survival benefit in randomised phase III trials is shown for azacitidine, not decitabine. Standard azacitidine is 75 mg/m2 SC or IV for 7 days, decitabine 20 mg/m2 IV for 5 days."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-higher-hct",
+              "kind": "group",
+              "title": {
+                "uk": "Кандидат на трансплантацію",
+                "en": "Transplant candidate"
+              },
+              "description": {
+                "uk": "Алогенна ТГСК від найкращого донора (рідний HLA-ідентичний, неспоріднений, гаплоідентичний, пуповинна кров). Раннє направлення на оцінку трансплантації. Циторедукцію до <5% бластів до ТГСК радять, хоча оптимальна стратегія не визначена (азацитидин, децитабін, індукційна хіміотерапія); особливо важлива при зниженій інтенсивності кондиціонування. У частині центрів невдача зменшити бласти не виключає ТГСК. Мутація TP53, особливо біалельна, — поганий прогноз і при трансплантації: обговорити з трансплантологом, за можливості включити в дослідження.",
+                "en": "Allogeneic HCT from the best donor (HLA-matched sibling, unrelated, haploidentical, cord blood). Early referral for transplant evaluation. Debulking to under 5% blasts before HCT is advised, though the best strategy is not defined (azacitidine, decitabine, induction chemotherapy); it matters most with reduced-intensity conditioning. At some centres failing to lower blasts does not rule out HCT. A TP53 mutation, especially biallelic, has a poor prognosis even with transplant: discuss with a transplant physician and enrol in a trial where possible."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono",
+                  "notes": {
+                    "uk": "Із венетоклаксом або без нього — додавання залежить від стану й переносимості хворого.",
+                    "en": "With or without venetoclax — adding it depends on the patient’s status and tolerance."
+                  }
+                },
+                {
+                  "regimen_id": "decitabine-mono",
+                  "notes": {
+                    "uk": "Із венетоклаксом або без нього.",
+                    "en": "With or without venetoclax."
+                  }
+                },
+                {
+                  "regimen_id": "inqovi-mds",
+                  "notes": {
+                    "uk": "Із венетоклаксом або без нього.",
+                    "en": "With or without venetoclax."
+                  }
+                },
+                {
+                  "regimen_id": "aza-ven-nccn",
+                  "notes": {
+                    "uk": "Для МДС NCCN радить венетоклакс щонайбільше 14 днів у місячних курсах (збір даних), доз не називає; ця схема — з ГМЛ (28 днів) — тривалість і дозу для МДС уточніть окремо.",
+                    "en": "For MDS NCCN mentions venetoclax for 14 days in monthly courses (emerging data) and gives no doses; this regimen is from AML (28 days) — confirm the duration and dose for MDS separately."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "dec-ven",
+                  "notes": {
+                    "uk": "Так само: схема з ГМЛ; для МДС NCCN — 14 днів, доз не називає.",
+                    "en": "Likewise from AML; for MDS NCCN says 14 days and gives no doses."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "inqovi-ven",
+                  "notes": {
+                    "uk": "Так само: схема з ГМЛ; для МДС NCCN — 14 днів, доз не називає.",
+                    "en": "Likewise from AML; for MDS NCCN says 14 days and gives no doses."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ivosidenib-azacitidine",
+                  "notes": {
+                    "uk": "При mIDH1, категорія 2B, перед алогенною ТГСК. Схема й дози — з ГМЛ; для МДС дози NCCN не називає.",
+                    "en": "With mIDH1, category 2B, before allo-HCT. The regimen and doses are from AML; NCCN gives no MDS doses."
+                  },
+                  "category": "2b"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Алогенна ТГСК (одразу чи після мостового лікування)",
+                    "en": "Allo-HCT (at once or after bridging therapy)"
+                  }
+                },
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Інтенсивна хіміотерапія: клінічні дослідження (бажано) або стандартна індукція, коли дослідження немає чи як міст до ТГСК — схеми з розділу ГМЛ",
+                    "en": "High-intensity chemotherapy: clinical trials (preferred) or standard induction when no trial is available or as a bridge to HCT — regimens from the AML section"
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "next",
+                  "label": {
+                    "uk": "Клінічне дослідження перед алогенною ТГСК",
+                    "en": "A clinical trial before allo-HCT"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Після лікування за відповіддю й мутацією",
+                    "en": "After treatment, by response and mutation"
+                  },
+                  "target": "nccn-higher-after"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив після ТГСК чи немає відповіді",
+                    "en": "Relapse after HCT or no response"
+                  },
+                  "target": "nccn-higher-relapse"
+                }
+              ]
+            },
+            {
+              "key": "nccn-higher-after",
+              "kind": "group",
+              "title": {
+                "uk": "Після терапії перед ТГСК: за відповіддю й мутацією",
+                "en": "After pre-transplant therapy: by response and mutation"
+              },
+              "description": {
+                "uk": "Відповідь або без мутації IDH — алогенна ТГСК. При відсутності відповіді з mIDH1 — монотерапія івосиденібом, монотерапія олутасиденібом (категорія 2B) або азацитидин/олутасиденіб (категорія 2B), потім алогенна ТГСК. Без відповіді з mIDH2 — енасиденіб.",
+                "en": "Response or no IDH mutation — allo-HCT. No response with mIDH1 — single-agent ivosidenib, single-agent olutasidenib (category 2B) or azacitidine/olutasidenib (category 2B), then allo-HCT. No response with mIDH2 — enasidenib."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ivosidenib-aml",
+                  "notes": {
+                    "uk": "NCCN дози для МДС не наводить: схема й доза — з ГМЛ (NCCN AML). mIDH1, немає відповіді.",
+                    "en": "NCCN gives no MDS doses: the regimen and dose are from AML (NCCN AML). mIDH1, no response."
+                  }
+                },
+                {
+                  "regimen_id": "olutasidenib",
+                  "notes": {
+                    "uk": "NCCN дози для МДС не наводить: схема й доза — з ГМЛ (NCCN AML). mIDH1, немає відповіді.",
+                    "en": "NCCN gives no MDS doses: the regimen and dose are from AML (NCCN AML). mIDH1, no response."
+                  },
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "enasidenib",
+                  "notes": {
+                    "uk": "NCCN дози для МДС не наводить: схема й доза — з ГМЛ (NCCN AML). mIDH2, немає відповіді.",
+                    "en": "NCCN gives no MDS doses: the regimen and dose are from AML (NCCN AML). mIDH2, no response."
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Азацитидин + олутасиденіб (mIDH1) перед ТГСК — категорія 2B; у довіднику схеми немає, доз NCCN не називає",
+                    "en": "Azacitidine + olutasidenib (mIDH1) before HCT — category 2B; not in the catalog and NCCN gives no doses"
+                  },
+                  "category": "2b"
+                },
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "Алогенна ТГСК (відповідь або немає мутації IDH)",
+                    "en": "Allo-HCT (response or no IDH mutation)"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-higher-relapse",
+              "kind": "group",
+              "title": {
+                "uk": "Рецидив після алоТГСК чи немає відповіді",
+                "en": "Relapse after allo-HCT or no response"
+              },
+              "description": {
+                "uk": "Для хворих із тривалою ремісією після першої ТГСК — друга трансплантація чи інфузія донорських лімфоцитів.",
+                "en": "For patients with a prolonged remission after the first transplant — a second transplant or donor lymphocyte infusion."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono"
+                },
+                {
+                  "regimen_id": "decitabine-mono"
+                },
+                {
+                  "regimen_id": "inqovi-mds"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Розглянути другу алоТГСК або інфузію донорських лімфоцитів",
+                    "en": "Consider a second allo-HCT or donor lymphocyte infusion"
+                  }
+                },
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "maintenance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Відповідь: продовжувати",
+                    "en": "Response: continue"
+                  }
+                },
+                {
+                  "kind": "supportive",
+                  "column": "next",
+                  "label": {
+                    "uk": "Немає відповіді чи рецидив: клінічне дослідження або підтримувальна терапія",
+                    "en": "No response or relapse: a clinical trial or supportive care"
+                  },
+                  "target": "nccn-supportive"
+                }
+              ]
+            },
+            {
+              "key": "nccn-higher-nohct",
+              "kind": "group",
+              "title": {
+                "uk": "Не кандидат на трансплантацію",
+                "en": "Not a transplant candidate"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "decitabine-mono",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "inqovi-mds",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "aza-ven-nccn",
+                  "notes": {
+                    "uk": "Венетоклакс можна додати до HMA в окремих хворих. Для МДС NCCN — 14 днів у місячних курсах, доз не називає; ця схема з ГМЛ (28 днів) — уточніть окремо.",
+                    "en": "Venetoclax may be added to the HMA in select patients. For MDS NCCN says 14 days in monthly courses and gives no doses; this AML regimen (28 days) needs separate confirmation."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "dec-ven",
+                  "notes": {
+                    "uk": "Так само.",
+                    "en": "Likewise."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "inqovi-ven",
+                  "notes": {
+                    "uk": "Так само.",
+                    "en": "Likewise."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ivosidenib-azacitidine",
+                  "notes": {
+                    "uk": "mIDH1: івосиденіб ± азацитидин, категорія 2B. Схема й доза з ГМЛ; для МДС NCCN доз не називає.",
+                    "en": "mIDH1: ivosidenib ± azacitidine, category 2B. The regimen and dose are from AML; NCCN gives no MDS doses."
+                  },
+                  "preference": "circumstances",
+                  "category": "2b"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Олутасиденіб + азацитидин (mIDH1) — категорія 2B; у довіднику схеми немає, доз NCCN не називає",
+                    "en": "Olutasidenib + azacitidine (mIDH1) — category 2B; not in the catalog and NCCN gives no doses"
+                  },
+                  "preference": "circumstances",
+                  "category": "2b"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Немає відповіді (6 циклів азацитидину чи 4 цикли децитабіну), непереносимість чи рецидив",
+                    "en": "No response (6 cycles of azacitidine or 4 of decitabine), intolerance or relapse"
+                  },
+                  "target": "nccn-higher-nohct-failure"
+                }
+              ]
+            },
+            {
+              "key": "nccn-higher-nohct-failure",
+              "kind": "group",
+              "title": {
+                "uk": "Не кандидат на ТГСК: після невдачі HMA",
+                "en": "Not a transplant candidate: after HMA failure"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ivosidenib-aml",
+                  "notes": {
+                    "uk": "NCCN дози для МДС не наводить: схема й доза — з ГМЛ (NCCN AML). mIDH1; якщо інгібітор IDH1 не застосовували.",
+                    "en": "NCCN gives no MDS doses: the regimen and dose are from AML (NCCN AML). mIDH1; if an IDH1 inhibitor was not used."
+                  }
+                },
+                {
+                  "regimen_id": "olutasidenib",
+                  "notes": {
+                    "uk": "NCCN дози для МДС не наводить: схема й доза — з ГМЛ (NCCN AML). mIDH1; якщо інгібітор IDH1 не застосовували.",
+                    "en": "NCCN gives no MDS doses: the regimen and dose are from AML (NCCN AML). mIDH1; if an IDH1 inhibitor was not used."
+                  },
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "enasidenib",
+                  "notes": {
+                    "uk": "NCCN дози для МДС не наводить: схема й доза — з ГМЛ (NCCN AML). mIDH2.",
+                    "en": "NCCN gives no MDS doses: the regimen and dose are from AML (NCCN AML). mIDH2."
+                  }
+                },
+                {
+                  "regimen_id": "aza-ven-nccn",
+                  "notes": {
+                    "uk": "Без мутації IDH: додати венетоклакс до HMA, якщо не застосовували; дозу й тривалість для МДС NCCN не називає.",
+                    "en": "No IDH mutation: add venetoclax to the HMA if not used; NCCN gives no dose or duration for MDS."
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "mIDH1: немає відповіді чи рецидив → клінічне дослідження",
+                    "en": "mIDH1: no response or relapse → a clinical trial"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-supportive",
+          "kind": "line",
+          "title": {
+            "uk": "Підтримувальна терапія (MDS-8)",
+            "en": "Supportive care (MDS-8)"
+          },
+          "description": {
+            "uk": "Клінічний моніторинг, психосоціальна підтримка й оцінка якості життя. Трансфузії: еритроцити (безпечні щодо ЦМВ) — при симптомній анемії; тромбоцити — при кровотечі, рутинно не переливають, якщо немає кровотечі й тромбоцитів ≥10 000/мкл; для кандидатів на трансплантацію — опромінені продукти. Не переливати за довільним порогом гемоглобіну без симптомів ішемії серця, серцевої недостатності чи інсульту, і брати мінімум одиниць. Антибіотики — при бактеріальних інфекціях; профілактика — коли починають терапію, за місцевими протоколами. Для кровотечі, рефрактерної до тромбоцитів, або глибокої тромбоцитопенії — амінокапронова кислота чи інші антифібринолітики. Хелація заліза: після >20–30 переливань еритроцитів розглянути щоденний дефероксамін п/ш або деферазирокс всередину, особливо при нижчому ризику чи кандидатам на ТГСК; при феритині >2500 нг/мл — знизити до <1000 нг/мл; при кліренсі креатиніну <40 мл/хв хелатори не застосовувати; при деферазироксі щорічно офтальмологічні й слухові тести та регулярний креатинін. Г-КСФ (філграстим) не для рутинної профілактики інфекцій; розглянути при нейтропенії з повторними чи резистентними інфекціями. При тяжкій чи загрозливій для життя тромбоцитопенії нижчого ризику — агоніст рецептора тромбопоетину. Після трансплантації протимікробна профілактика щонайменше доки триває ІСТ.",
+            "en": "Clinical monitoring, psychosocial support and quality-of-life assessment. Transfusions: red cells (CMV-safe) for symptomatic anaemia; platelets for bleeding, not routinely unless there is bleeding or platelets are under 10,000/mcL; irradiated products for transplant candidates. Do not transfuse to an arbitrary haemoglobin threshold without symptoms of coronary disease, heart failure or stroke, and give the minimum units. Antibiotics for bacterial infection; prophylaxis may be considered when starting therapy, per local protocols. Aminocaproic acid or other antifibrinolytics for bleeding refractory to platelets or profound thrombocytopenia. Iron chelation: after more than 20-30 red-cell transfusions consider daily subcutaneous deferoxamine or oral deferasirox, especially at lower risk or for transplant candidates; with ferritin above 2500 ng/mL aim for under 1000 ng/mL; with creatinine clearance under 40 mL/min do not use chelators; with deferasirox yearly eye and hearing tests and regular creatinine. G-CSF (filgrastim) is not for routine infection prophylaxis; consider it for neutropenia with recurrent or resistant infections. For severe or life-threatening thrombocytopenia at lower risk — a thrombopoietin-receptor agonist. After transplant, antimicrobial prophylaxis at least as long as immunosuppression continues."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-mds-eltrombopag",
+              "notes": {
+                "uk": "Агоніст рецептора тромбопоетину при тяжкій тромбоцитопенії нижчого ризику.",
+                "en": "A thrombopoietin-receptor agonist for severe lower-risk thrombocytopenia."
+              }
+            },
+            {
+              "regimen_id": "ref-mds-romiplostim",
+              "notes": {
+                "uk": "Агоніст рецептора тромбопоетину при тяжкій тромбоцитопенії нижчого ризику.",
+                "en": "A thrombopoietin-receptor agonist for severe lower-risk thrombocytopenia."
+              }
+            }
+          ],
+          "steps": [
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Дефероксамін, деферазирокс, амінокапронова кислота, філграстим, елтромбопаг, ромиплостим — препарати є в довіднику; доз NCCN для них у цьому розділі не називає",
+                "en": "Deferoxamine, deferasirox, aminocaproic acid, filgrastim, eltrombopag, romiplostim — the drugs are in the catalog; NCCN gives no doses for them in this section"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "lower-risk",
       "kind": "line",
       "title": {
@@ -48,8 +1271,43 @@
         {
           "regimen_id": "lenalidomide-mds",
           "notes": {
-            "uk": "Делеція 5q",
-            "en": "A 5q deletion"
+            "uk": "Делеція 5q. NCCN 3.2026: бажано при ЕПО ≤500 і >500 (категорія 1); 10 мг 21 з 28 днів або 28 днів.",
+            "en": "A 5q deletion. NCCN 3.2026: preferred at EPO of 500 or less and above 500 (category 1); 10 mg for 21 of 28 days or 28 days."
+          }
+        },
+        {
+          "regimen_id": "lenalidomide-mds-28",
+          "notes": {
+            "uk": "NCCN 3.2026: 10 мг щодня 28 днів із 28; без del(5q) після невдачі ESA — лише за нейтрофілів >0,5 і тромбоцитів >50·10⁹/л.",
+            "en": "NCCN 3.2026: 10 mg daily, 28 days out of 28; without del(5q) after ESA failure — only with neutrophils above 0.5 and platelets above 50×10⁹/L."
+          }
+        },
+        {
+          "regimen_id": "epoetin-alfa-mds",
+          "notes": {
+            "uk": "Симптомна анемія, ЕПО ≤500 мЕД/мл. NCCN 3.2026.",
+            "en": "Symptomatic anaemia, EPO 500 mU/mL or less. NCCN 3.2026."
+          }
+        },
+        {
+          "regimen_id": "darbepoetin-alfa-mds",
+          "notes": {
+            "uk": "Симптомна анемія, ЕПО ≤500 мЕД/мл. NCCN 3.2026.",
+            "en": "Symptomatic anaemia, EPO 500 mU/mL or less. NCCN 3.2026."
+          }
+        },
+        {
+          "regimen_id": "epoetin-alfa-gcsf-mds",
+          "notes": {
+            "uk": "ESA + Г-КСФ — при нейтропенії з рецидивними інфекціями чи після невдачі ESA.",
+            "en": "ESA + G-CSF — for neutropenia with recurrent infections or after ESA failure."
+          }
+        },
+        {
+          "regimen_id": "darbepoetin-alfa-gcsf-mds",
+          "notes": {
+            "uk": "ESA + Г-КСФ — при нейтропенії з рецидивними інфекціями чи після невдачі ESA.",
+            "en": "ESA + G-CSF — for neutropenia with recurrent infections or after ESA failure."
           }
         },
         {
@@ -197,9 +1455,6 @@
         "en": "Courses the sources describe whose schedule is incomplete or whose drug is not in the catalog yet: no patient doses here, only short facts about the course."
       },
       "regimens": [
-        {
-          "regimen_id": "ref-mds-esa"
-        },
         {
           "regimen_id": "ref-mds-romiplostim"
         }
