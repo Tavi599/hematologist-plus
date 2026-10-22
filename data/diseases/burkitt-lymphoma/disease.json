@@ -1,0 +1,486 @@
+{
+  "id": "burkitt-lymphoma",
+  "name": {
+    "uk": "Лімфома Беркітта",
+    "en": "Burkitt lymphoma"
+  },
+  "summary": {
+    "uk": "Дуже агресивна виліковна В-клітинна лімфома з перебудовою MYC; потребує інтенсивної імунохіміотерапії з профілактикою ураження ЦНС.",
+    "en": "A very aggressive, curable B-cell lymphoma with MYC rearrangement; needs intensive immunochemotherapy with CNS prophylaxis."
+  },
+  "clinical_group": "lymphoma",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C83.7",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026",
+      "updated": "2026-05-20"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Burkitt%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Burkitt%20lymphoma"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 4.2026 (BURK-1…BURK-A, HIVLYM-A)",
+        "en": "NCCN 4.2026 pathways (BURK-1 to BURK-A, HIVLYM-A)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN для лімфоми Беркітта, версія 4.2026. Хвороба складна й виліковна — лікувати бажано в центрах із досвідом. Діагноз: sIg+, CD10+, CD20+, TdT−, Ki-67 ≥95%, BCL2−, BCL6+; FISH t(8;14) або варіанти (MYC), BCL2, BCL6; EBER; при подібності до BL без MYC — мікрочіп на аберації 11q. Для double/triple-hit — HGBL (сторінка ДВКЛ). Обов’язково: ПЕТ/КТ (не затримувати старт), люмбальна пункція з проточною цитометрією ліквору, тест на ВІЛ (позитивний → HIVLYM), гепатити B/C, ехокардіографія. CHOP недостатній. Усі схеми включають профілактику/терапію ураження ЦНС. Профілактика синдрому лізису пухлини обов’язкова.",
+        "en": "The NCCN algorithm for Burkitt lymphoma, version 4.2026. The disease is complex and curable — treatment is best at experienced centers. Diagnosis: sIg+, CD10+, CD20+, TdT-, Ki-67 95% or more, BCL2-, BCL6+; FISH t(8;14) or variants (MYC), BCL2, BCL6; EBER; chromosomal microarray for 11q aberrations when BL-like but MYC-negative. Double/triple hit is HGBL (the DLBCL page). Essential: PET/CT (do not delay therapy), lumbar puncture with CSF flow cytometry, HIV testing (positive → HIVLYM), hepatitis B/C, echocardiography. CHOP is not adequate. All regimens include CNS prophylaxis/therapy. Tumor lysis prophylaxis is mandatory."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-risk",
+          "kind": "line",
+          "title": {
+            "uk": "Оцінка ризику й індукція (BURK-2)",
+            "en": "Risk assessment and induction (BURK-2)"
+          },
+          "description": {
+            "uk": "Низький ризик: нормальна ЛДГ і стадія I (одне позаочеревинне вогнище <10 см) або повністю резекована абдомінальна пухлина. Високий ризик: решта (стадія I з абдомінальним чи позаочеревинним вогнищем >10 см; стадії II–IV). Клінічне випробування або схеми BURK-A. Відповідь за Lugano. CR: КТ з контрастом не частіше ніж раз на 6 міс. протягом року, далі за показаннями (рецидив після року рідкісний). <CR: клінічне випробування або паліативна ISRT; деякі центри використовують неперехресні схеми 2-ї лінії.",
+            "en": "Low risk: normal LDH and stage I (a single extra-abdominal mass under 10 cm) or a completely resected abdominal lesion. High risk: all others (stage I with an abdominal mass or an extra-abdominal mass over 10 cm; stage II-IV). A clinical trial or the BURK-A regimens. Response by Lugano. CR: contrast CT no more than every 6 months for 1 year, then as indicated (relapse after a year is uncommon). Less than CR: a trial or palliative ISRT; some centers use non-cross-resistant second-line regimens."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-risk-low",
+              "kind": "group",
+              "title": {
+                "uk": "Низький ризик",
+                "en": "Low risk"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "r-codox-m",
+                  "notes": {
+                    "uk": "CODOX-M (початковий або модифікований) + ритуксимаб: низький ризик — 3 цикли; високий ризик — чергувати з IVAC",
+                    "en": "CODOX-M (original or modified) + rituximab: low risk — 3 cycles; high risk — alternate with IVAC"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "r-ivac",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "da-epoch-r",
+                  "notes": {
+                    "uk": "DA-EPOCH + ритуксимаб; у NCCN для лімфоми Беркітта ритуксимаб у дні 1 і 5 (DA-EPOCH-RR, див. картку нижче), 2 цикли → PET",
+                    "en": "DA-EPOCH + rituximab; for Burkitt NCCN gives rituximab on days 1 and 5 (DA-EPOCH-RR, see the card below), 2 cycles → PET"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-burk-da-epoch-rr",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "hyper-cvad-a",
+                  "notes": {
+                    "uk": "HyperCVAD (A) чергується з цитарабіном/метотрексатом у високих дозах (B) + ритуксимаб; схема включає інтратекальну терапію. Ритуксимаб — окремою схемою «Ритуксимаб до хіміотерапії B-ГЛЛ»; картки Hyper-CVAD — за eviQ для ГЛЛ",
+                    "en": "HyperCVAD (A) alternating with high-dose cytarabine/methotrexate (B) + rituximab; the regimen includes intrathecal therapy. Rituximab as the separate regimen \"Rituximab with chemotherapy for B-ALL\"; the Hyper-CVAD cards are eviQ ALL protocols"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "hyper-cvad-b",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "b-all-rituximab",
+                  "preference": "other"
+                }
+              ]
+            },
+            {
+              "key": "nccn-risk-high",
+              "kind": "group",
+              "title": {
+                "uk": "Високий ризик",
+                "en": "High risk"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "r-codox-m",
+                  "notes": {
+                    "uk": "CODOX-M (початковий або модифікований) + ритуксимаб: низький ризик — 3 цикли; високий ризик — чергувати з IVAC",
+                    "en": "CODOX-M (original or modified) + rituximab: low risk — 3 cycles; high risk — alternate with IVAC"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "r-ivac",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "da-epoch-r",
+                  "notes": {
+                    "uk": "DA-EPOCH + ритуксимаб; у NCCN для лімфоми Беркітта ритуксимаб у дні 1 і 5 (DA-EPOCH-RR, див. картку нижче), 2 цикли → PET",
+                    "en": "DA-EPOCH + rituximab; for Burkitt NCCN gives rituximab on days 1 and 5 (DA-EPOCH-RR, see the card below), 2 cycles → PET"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-burk-da-epoch-rr",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "hyper-cvad-a",
+                  "notes": {
+                    "uk": "HyperCVAD (A) чергується з цитарабіном/метотрексатом у високих дозах (B) + ритуксимаб; схема включає інтратекальну терапію. Ритуксимаб — окремою схемою «Ритуксимаб до хіміотерапії B-ГЛЛ»; картки Hyper-CVAD — за eviQ для ГЛЛ",
+                    "en": "HyperCVAD (A) alternating with high-dose cytarabine/methotrexate (B) + rituximab; the regimen includes intrathecal therapy. Rituximab as the separate regimen \"Rituximab with chemotherapy for B-ALL\"; the Hyper-CVAD cards are eviQ ALL protocols"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "hyper-cvad-b",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "b-all-rituximab",
+                  "preference": "other"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-1l",
+          "kind": "line",
+          "title": {
+            "uk": "Перша лінія (BURK-A 1)",
+            "en": "First line (BURK-A 1)"
+          },
+          "description": {
+            "uk": "Схеми за алфавітом, будь-який вік і ризик: CODOX-M + ритуксимаб (3 цикли; для високого ризику чергується з IVAC); DA-EPOCH + RR ×2 цикли → PET: CR (PET−) — ще 1 цикл DA-EPOCH-RR (разом 3), PR (PET+) — ще 4 цикли DA-EPOCH-R (ритуксимаб лише в день 1), разом 6, + інтратекальний метотрексат; HyperCVAD (A) чергується з цитарабіном/метотрексатом у високих дозах (B) + ритуксимаб, інтратекальна терапія включена. Симптомне ураження ЦНС: почати з частини схеми, що містить препарати з проникненням у ЦНС (CODOX-M ↔ IVAC + інтратекальний метотрексат + ритуксимаб; HyperCVAD ↔ цитарабін/метотрексат у високих дозах + ритуксимаб); для тих, хто не переносить агресивну терапію, — DA-EPOCH + ритуксимаб 6 циклів + інтенсивний інтратекальний метотрексат (при активному ураженні ліквору — двічі на тиждень не менше 4 тижнів, далі щотижня 6 тижнів, далі щомісяця 6 місяців; внутрішньовенний метотрексат не дозволявся). Дослідження DA-EPOCH включали лептоменінгеальне, але не паренхіматозне ураження ЦНС.",
+            "en": "Regimens in alphabetical order, any age and risk: CODOX-M + rituximab (3 cycles; alternating with IVAC for high risk); DA-EPOCH + RR for 2 cycles → PET: CR (PET-) — 1 more cycle of DA-EPOCH-RR (3 in all), PR (PET+) — 4 more cycles of DA-EPOCH-R (rituximab on day 1 only), 6 in all, + intrathecal methotrexate; HyperCVAD (A) alternating with high-dose cytarabine/methotrexate (B) + rituximab, intrathecal therapy included. Symptomatic CNS disease: start with the part of the regimen that contains CNS-penetrating drugs (CODOX-M ↔ IVAC + intrathecal methotrexate + rituximab; HyperCVAD ↔ high-dose cytarabine/methotrexate + rituximab); for those who cannot tolerate aggressive therapy — DA-EPOCH + rituximab for 6 cycles + intensive intrathecal methotrexate (with active CSF disease twice weekly for at least 4 weeks, then weekly for 6 weeks, then monthly for 6 months; intravenous methotrexate was not permitted). The DA-EPOCH studies included leptomeningeal but not parenchymal CNS disease."
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-codox-m",
+              "notes": {
+                "uk": "CODOX-M (початковий або модифікований) + ритуксимаб: низький ризик — 3 цикли; високий ризик — чергувати з IVAC",
+                "en": "CODOX-M (original or modified) + rituximab: low risk — 3 cycles; high risk — alternate with IVAC"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "r-ivac",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "da-epoch-r",
+              "notes": {
+                "uk": "DA-EPOCH + ритуксимаб; у NCCN для лімфоми Беркітта ритуксимаб у дні 1 і 5 (DA-EPOCH-RR, див. картку нижче), 2 цикли → PET",
+                "en": "DA-EPOCH + rituximab; for Burkitt NCCN gives rituximab on days 1 and 5 (DA-EPOCH-RR, see the card below), 2 cycles → PET"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-burk-da-epoch-rr",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "hyper-cvad-a",
+              "notes": {
+                "uk": "HyperCVAD (A) чергується з цитарабіном/метотрексатом у високих дозах (B) + ритуксимаб; схема включає інтратекальну терапію. Ритуксимаб — окремою схемою «Ритуксимаб до хіміотерапії B-ГЛЛ»; картки Hyper-CVAD — за eviQ для ГЛЛ",
+                "en": "HyperCVAD (A) alternating with high-dose cytarabine/methotrexate (B) + rituximab; the regimen includes intrathecal therapy. Rituximab as the separate regimen \"Rituximab with chemotherapy for B-ALL\"; the Hyper-CVAD cards are eviQ ALL protocols"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "hyper-cvad-b",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "b-all-rituximab",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "methotrexate-intrathecal",
+              "notes": {
+                "uk": "Інтратекальний метотрексат — складова всіх схем",
+                "en": "Intrathecal methotrexate — part of all regimens"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "cytarabine-intrathecal",
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Профілактика синдрому лізису пухлини — обов’язкова",
+                "en": "Tumor lysis prophylaxis is mandatory"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив (BURK-3, BURK-A 2)",
+                "en": "Relapse (BURK-3, BURK-A 2)"
+              },
+              "target": "nccn-2l"
+            }
+          ]
+        },
+        {
+          "key": "nccn-2l",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив (BURK-3, BURK-A 2)",
+            "en": "Relapse (BURK-3, BURK-A 2)"
+          },
+          "description": {
+            "uk": "Рецидив через >6–18 міс. після адекватної першої лінії — альтернативна схема. Визначених 2-ї лінії немає, дані обмежені. Рецидив <6 міс. — клінічне випробування або найкраща підтримувальна терапія. Відповідь: CR → розглянути HDT/ASCR ± ISRT або алоТГСК у відібраних випадках (невдала мобілізація, стійкий кістковий мозок); PR/NR → додаткова 2-га лінія, HDT/ASCR, алоТГСК, клінічне випробування; найкраща підтримувальна терапія з паліативною ISRT.",
+            "en": "Relapse more than 6-18 months after adequate first-line therapy — an alternate regimen. There is no defined second line, data are limited. Relapse under 6 months — a clinical trial or best supportive care. Response: CR → consider HDT/ASCR ± ISRT or allogeneic HCT in selected cases (mobilization failure, persistent marrow disease); PR/NR → additional second-line therapy, HDT/ASCR, allogeneic HCT, a trial; best supportive care with palliative ISRT."
+          },
+          "regimens": [
+            {
+              "regimen_id": "da-epoch-r",
+              "notes": {
+                "uk": "DA-EPOCH + ритуксимаб ×6 (якщо не давали) + інтенсивний інтратекальний метотрексат при симптомному ураженні ЦНС",
+                "en": "DA-EPOCH + rituximab x6 (if not given before) + intensive intrathecal methotrexate for symptomatic CNS disease"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "r-ice",
+              "notes": {
+                "uk": "ICE + ритуксимаб; інтратекальний метотрексат, якщо не було",
+                "en": "ICE + rituximab; intrathecal methotrexate if not given before"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "r-ice-fractionated",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "r-ivac",
+              "notes": {
+                "uk": "IVAC + ритуксимаб; інтратекальний метотрексат, якщо не було",
+                "en": "IVAC + rituximab; intrathecal methotrexate if not given before"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "hd-ara-c",
+              "notes": {
+                "uk": "Цитарабін у високих дозах + ритуксимаб",
+                "en": "High-dose cytarabine + rituximab"
+              },
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "r-gdp",
+              "notes": {
+                "uk": "GDP + ритуксимаб",
+                "en": "GDP + rituximab"
+              },
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "ref-burk-glofit-pola",
+              "notes": {
+                "uk": "Міст до алоТГСК у кандидатів",
+                "en": "Bridge to allogeneic HCT in candidates"
+              },
+              "preference": "circumstances"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "next",
+              "label": {
+                "uk": "CR: HDT/ASCR ± ISRT або алоТГСК у відібраних випадках",
+                "en": "CR: HDT/ASCR ± ISRT or allogeneic HCT in selected cases"
+              }
+            },
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне випробування",
+                "en": "Clinical trial"
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-hiv",
+          "kind": "line",
+          "title": {
+            "uk": "Лімфома Беркітта при ВІЛ (HIVLYM-A)",
+            "en": "Burkitt lymphoma in HIV (HIVLYM-A)"
+          },
+          "description": {
+            "uk": "Бажано: модифіковані CODOX-M/IVAC + ритуксимаб; DA-EPOCH + ритуксимаб. Інші: HyperCVAD, що чергується з цитарабіном/метотрексатом у високих дозах, + ритуксимаб. При високому ризику й симптомному ураженні ЦНС починати з частини схеми з препаратами, що проникають у ЦНС. АРТ разом із хіміотерапією (без зидовудину, кобіцистату, ритонавіру); Г-КСФ усім; CD4 <50 — максимальна підтримка. Профілактика лізису обов’язкова.",
+            "en": "Preferred: modified CODOX-M/IVAC + rituximab; DA-EPOCH + rituximab. Other: HyperCVAD alternating with high-dose cytarabine/methotrexate + rituximab. For high-risk and symptomatic CNS disease start with the part of the regimen with CNS-penetrating drugs. ART with chemotherapy (no zidovudine, cobicistat, ritonavir); G-CSF for all; CD4 below 50 — maximize supportive care. Tumor lysis prophylaxis is mandatory."
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-codox-m",
+              "notes": {
+                "uk": "Модифіковані CODOX-M/IVAC + ритуксимаб",
+                "en": "Modified CODOX-M/IVAC + rituximab"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "r-ivac",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "da-epoch-r",
+              "notes": {
+                "uk": "DA-EPOCH + ритуксимаб; цикл 1 циклофосфамід за CD4 (варіанти дози в картці)",
+                "en": "DA-EPOCH + rituximab; cycle 1 cyclophosphamide by CD4 (dose options in the card)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "ref-burk-da-epoch-rr",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "hyper-cvad-a",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "hyper-cvad-b",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "b-all-rituximab",
+              "preference": "other"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "regimens": [
+        {
+          "regimen_id": "r-codox-m",
+          "notes": {
+            "uk": "CODOX-M (початковий або модифікований) + ритуксимаб: низький ризик — 3 цикли; високий ризик — чергувати з IVAC",
+            "en": "CODOX-M (original or modified) + rituximab: low risk — 3 cycles; high risk — alternate with IVAC"
+          },
+          "preference": "other"
+        },
+        {
+          "regimen_id": "r-ivac",
+          "preference": "other"
+        },
+        {
+          "regimen_id": "da-epoch-r",
+          "notes": {
+            "uk": "DA-EPOCH + ритуксимаб; у NCCN для лімфоми Беркітта ритуксимаб у дні 1 і 5 (DA-EPOCH-RR, див. картку нижче), 2 цикли → PET",
+            "en": "DA-EPOCH + rituximab; for Burkitt NCCN gives rituximab on days 1 and 5 (DA-EPOCH-RR, see the card below), 2 cycles → PET"
+          },
+          "preference": "other"
+        },
+        {
+          "regimen_id": "ref-burk-da-epoch-rr",
+          "preference": "other"
+        },
+        {
+          "regimen_id": "hyper-cvad-a",
+          "notes": {
+            "uk": "HyperCVAD (A) чергується з цитарабіном/метотрексатом у високих дозах (B) + ритуксимаб; схема включає інтратекальну терапію. Ритуксимаб — окремою схемою «Ритуксимаб до хіміотерапії B-ГЛЛ»; картки Hyper-CVAD — за eviQ для ГЛЛ",
+            "en": "HyperCVAD (A) alternating with high-dose cytarabine/methotrexate (B) + rituximab; the regimen includes intrathecal therapy. Rituximab as the separate regimen \"Rituximab with chemotherapy for B-ALL\"; the Hyper-CVAD cards are eviQ ALL protocols"
+          },
+          "preference": "other"
+        },
+        {
+          "regimen_id": "hyper-cvad-b",
+          "preference": "other"
+        },
+        {
+          "regimen_id": "b-all-rituximab",
+          "preference": "other"
+        },
+        {
+          "regimen_id": "methotrexate-intrathecal"
+        },
+        {
+          "regimen_id": "cytarabine-intrathecal"
+        }
+      ]
+    },
+    {
+      "key": "relapse",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив",
+        "en": "Relapse"
+      },
+      "regimens": [
+        {
+          "regimen_id": "r-ice"
+        },
+        {
+          "regimen_id": "r-ice-fractionated"
+        },
+        {
+          "regimen_id": "r-ivac"
+        },
+        {
+          "regimen_id": "hd-ara-c"
+        },
+        {
+          "regimen_id": "r-gdp"
+        },
+        {
+          "regimen_id": "da-epoch-r"
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-burk-da-epoch-rr"
+        },
+        {
+          "regimen_id": "ref-burk-glofit-pola"
+        }
+      ]
+    }
+  ]
+}

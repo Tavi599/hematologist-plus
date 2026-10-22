@@ -1,0 +1,226 @@
+{
+  "id": "primary-mediastinal-b-cell-lymphoma",
+  "name": {
+    "uk": "Первинна медіастинальна В-великоклітинна лімфома",
+    "en": "Primary mediastinal large B-cell lymphoma"
+  },
+  "summary": {
+    "uk": "Агресивна В-клітинна лімфома переднього середостіння, частіше в молодих жінок; перекривається з класичною лімфомою Ходжкіна.",
+    "en": "An aggressive B-cell lymphoma of the anterior mediastinum, more often in young women; overlaps with classic Hodgkin lymphoma."
+  },
+  "clinical_group": "lymphoma",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C85.2",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026",
+      "updated": "2026-05-20"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Primary%20mediastinal%20large%20B-cell%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Primary%20mediastinal%20large%20B-cell%20lymphoma"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 4.2026 (PMBL-1)",
+        "en": "NCCN 4.2026 pathways (PMBL-1)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN для первинної медіастинальної В-великоклітинної лімфоми (ПМВКЛ), версія 4.2026. Оптимальна перша лінія суперечлива; найуживаніші варіанти наведено нижче. ПМВКЛ — клінічна сутність: первинне ураження переднього середостіння ± інші ділянки, гістологія ДВКЛ; потрібна клініко-патологічна кореляція; перекривається з медіастинальною «сірою зоною» (MGZL, див. хворобу ДВКЛ). Профілактика синдрому лізису пухлини; тест на гепатит B; для AYA — додаткові міркування (NHODG-B 4).",
+        "en": "The NCCN algorithm for primary mediastinal large B-cell lymphoma (PMBL), version 4.2026. The optimal first line is controversial; the commonest options are below. PMBL is a clinical entity: a primary anterior mediastinal site ± other sites with DLBCL histology; clinicopathologic correlation is required; it overlaps with mediastinal gray zone lymphoma (MGZL, see the DLBCL disease). Tumor lysis prophylaxis; hepatitis B testing; special considerations for AYA patients (NHODG-B 4)."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-1l",
+          "kind": "line",
+          "title": {
+            "uk": "Перша лінія й відповідь (PMBL-1)",
+            "en": "First line and response (PMBL-1)"
+          },
+          "description": {
+            "uk": "Після DA-EPOCH-R ×6 або R-CHOP-14 ×6: CR (PET−, 5-PS 1–3) — активне спостереження або ISRT; після R-CHOP-21 ×6 — те саме; після R-CHOP-14 ×4 — консолідація ICE ×3 ± ритуксимаб (категорія 2B). Залишкові маси в середостінні часті; PET/CT після лікування обов’язкова; біопсія PET-позитивної маси, якщо розглядають додаткову системну терапію. Стійка PET-позитивна маса після DA-EPOCH-R (5-PS 4 з мінімальним накопиченням над печінкою) — спостереження без біопсії. PR (5-PS 4): повторна біопсія → при негативній — ISRT і повторне рестадіювання; позитивна → терапія рецидиву. Відсутність відповіді/прогресія (5-PS 5): біопсія, терапія як при рецидивній ДВКЛ.",
+            "en": "After DA-EPOCH-R x6 or R-CHOP-14 x6: CR (PET-, 5-PS 1-3) — active surveillance or ISRT; after R-CHOP-21 x6 — the same; after R-CHOP-14 x4 — consolidation with ICE x3 ± rituximab (category 2B). Residual mediastinal masses are common; PET/CT after treatment is essential; biopsy a PET-positive mass if more systemic therapy is contemplated. A persistent PET-positive mass after DA-EPOCH-R (5-PS 4 with minimal uptake above liver) can be observed without biopsy. PR (5-PS 4): repeat biopsy → if negative, ISRT and restaging; positive → relapse therapy. No response/progression (5-PS 5): biopsy and manage as relapsed DLBCL."
+          },
+          "regimens": [
+            {
+              "regimen_id": "da-epoch-r",
+              "notes": {
+                "uk": "DA-EPOCH-R ×6 циклів",
+                "en": "DA-EPOCH-R x6 cycles"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "r-chop-14",
+              "notes": {
+                "uk": "R-CHOP-14 ×4–6 циклів (після 4 — консолідація ICE ×3 ± ритуксимаб, категорія 2B)",
+                "en": "R-CHOP-14 x4-6 cycles (after 4 — consolidation with ICE x3 ± rituximab, category 2B)"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "r-chop-21",
+              "notes": {
+                "uk": "R-CHOP-21 ×6 циклів",
+                "en": "R-CHOP-21 x6 cycles"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ice",
+              "notes": {
+                "uk": "Консолідація ICE ×3 після R-CHOP-14 ×4",
+                "en": "ICE x3 consolidation after R-CHOP-14 x4"
+              },
+              "preference": "other",
+              "category": "2b"
+            },
+            {
+              "regimen_id": "r-ice",
+              "preference": "other",
+              "category": "2b"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "ISRT консолідативно: у CR 30–36 Гр; ISRT після PR (5-PS 4) — 36–50 Гр",
+                "en": "Consolidative ISRT: 30-36 Gy in CR; ISRT after PR (5-PS 4) — 36-50 Gy"
+              }
+            },
+            {
+              "kind": "surveillance",
+              "column": "treatment",
+              "label": {
+                "uk": "Активне спостереження: огляд і аналізи кожні 3–6 міс. 5 років, далі щороку; КТ з контрастом не частіше ніж кожні 6 міс. до 2 років",
+                "en": "Active surveillance: visits and labs every 3-6 months for 5 years, then yearly; contrast CT no more than every 6 months up to 2 years"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив / рефрактерність",
+                "en": "Relapse / refractory disease"
+              },
+              "target": "nccn-rel"
+            }
+          ]
+        },
+        {
+          "key": "nccn-rel",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив або рефрактерність",
+            "en": "Relapse or refractory disease"
+          },
+          "description": {
+            "uk": "Пембролізумаб або ніволумаб ± брентуксимаб ведотин (ніволумаб ± BV — категорія 2B; відповіді на BV є й при низькій експресії CD30). Можливе також лікування як рецидивної ДВКЛ: <12 міс. — BCEL-7, >12 міс. — BCEL-8 (див. хворобу ДВКЛ).",
+            "en": "Pembrolizumab or nivolumab ± brentuximab vedotin (nivolumab ± BV is category 2B; responses to BV occur even with low CD30 expression). Alternatively manage as relapsed DLBCL: under 12 months — BCEL-7, over 12 months — BCEL-8 (see the DLBCL disease)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "pembrolizumab",
+              "notes": {
+                "uk": "Пембролізумаб",
+                "en": "Pembrolizumab"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "nivolumab",
+              "notes": {
+                "uk": "Ніволумаб ± брентуксимаб ведотин",
+                "en": "Nivolumab ± brentuximab vedotin"
+              },
+              "preference": "other",
+              "category": "2b"
+            },
+            {
+              "regimen_id": "brentuximab-mono",
+              "preference": "other",
+              "category": "2b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "regimens": [
+        {
+          "regimen_id": "da-epoch-r",
+          "notes": {
+            "uk": "DA-EPOCH-R ×6 циклів",
+            "en": "DA-EPOCH-R x6 cycles"
+          },
+          "preference": "other"
+        },
+        {
+          "regimen_id": "r-chop-14",
+          "notes": {
+            "uk": "R-CHOP-14 ×4–6 циклів (після 4 — консолідація ICE ×3 ± ритуксимаб, категорія 2B)",
+            "en": "R-CHOP-14 x4-6 cycles (after 4 — consolidation with ICE x3 ± rituximab, category 2B)"
+          },
+          "preference": "other"
+        },
+        {
+          "regimen_id": "r-chop-21",
+          "notes": {
+            "uk": "R-CHOP-21 ×6 циклів",
+            "en": "R-CHOP-21 x6 cycles"
+          },
+          "preference": "other"
+        },
+        {
+          "regimen_id": "ice"
+        },
+        {
+          "regimen_id": "r-ice"
+        }
+      ]
+    },
+    {
+      "key": "relapse",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив або рефрактерність",
+        "en": "Relapse or refractory disease"
+      },
+      "regimens": [
+        {
+          "regimen_id": "pembrolizumab"
+        },
+        {
+          "regimen_id": "nivolumab"
+        },
+        {
+          "regimen_id": "brentuximab-mono"
+        }
+      ]
+    }
+  ]
+}

@@ -39,9 +39,7 @@
       "anchor_offset_min": -30,
       "dose_value": 1000,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "За 30 хвилин до ритуксимабу. Протокол додає гідрокортизон 100 мг і хлорфенамін 10 мг внутрішньовенно.",
         "en": "30 minutes before the rituximab. The protocol adds hydrocortisone 100 mg and chlorphenamine 10 mg intravenously."
@@ -54,9 +52,7 @@
       "route": "iv_infusion",
       "dose_value": 50,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "duration_min": 30,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 100,
@@ -72,9 +68,7 @@
       "route": "iv_infusion",
       "dose_value": 20,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "duration_min": 30,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 100,
@@ -90,9 +84,7 @@
       "route": "iv_bolus",
       "dose_value": 40,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "У 20–40 мл 0,9% NaCl, в/в струминно повільно — практика відділення",
         "en": "In 20-40 mL 0.9% NaCl, slow IV push — department practice"
@@ -104,9 +96,7 @@
       "route": "iv_infusion",
       "dose_value": 375,
       "dose_unit": "mg_m2",
-      "days": [
-        1
-      ],
+      "days": [1],
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
       "notes": {
