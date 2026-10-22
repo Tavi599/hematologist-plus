@@ -1,0 +1,70 @@
+{
+  "id": "ref-mlne-flt3-tki",
+  "short_name": "ТКІ проти FLT3",
+  "name": {
+    "uk": "ТКІ з активністю проти FLT3",
+    "en": "TKIs with activity against FLT3"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Myeloid/Lymphoid Neoplasms with Eosinophilia and Tyrosine Kinase Gene Fusions",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 від 05.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "«Інші рекомендовані» при перебудові FLT3 (найчастіше ETV6::FLT3): гілтеритиніб, мідостаурин, квізартиніб, сорафеніб, сунітиніб; у бластній фазі — з індукцією типу ГМЛ/ГЛЛ і подальшою алоТГСК.",
+      "en": "'Other recommended' for FLT3 rearrangement (most often ETV6::FLT3): gilteritinib, midostaurin, quizartinib, sorafenib, sunitinib; in blast phase with AML-/ALL-type induction followed by allo-HCT."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Гілтеритиніб",
+          "en": "Gilteritinib"
+        },
+        "drug_id": "gilteritinib"
+      },
+      {
+        "name": {
+          "uk": "Мідостаурин",
+          "en": "Midostaurin"
+        },
+        "drug_id": "midostaurin"
+      },
+      {
+        "name": {
+          "uk": "Квізартиніб",
+          "en": "Quizartinib"
+        },
+        "drug_id": "quizartinib"
+      },
+      {
+        "name": {
+          "uk": "Сорафеніб",
+          "en": "Sorafenib"
+        },
+        "drug_id": "sorafenib"
+      },
+      {
+        "name": {
+          "uk": "Сунітиніб",
+          "en": "Sunitinib"
+        },
+        "drug_id": "sunitinib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Гілтеритиніб, мідостаурин і квізартиніб включені за екстраполяцією з ГМЛ; сорафеніб і сунітиніб — за клінічними описами.",
+        "en": "Gilteritinib, midostaurin and quizartinib are included by extrapolation from AML; sorafenib and sunitinib on case reports."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить; схема описана лише для ознайомлення. Перед призначенням — за інструкцією препарату.",
+      "en": "NCCN gives no doses in this guideline; the regimen is described for reference only. Check the prescribing information before use."
+    },
+    "availability": "unknown"
+  }
+}

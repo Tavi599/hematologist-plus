@@ -1,0 +1,42 @@
+{
+  "id": "ref-mlne-pemigatinib",
+  "short_name": "Пемігатиніб (FGFR1)",
+  "name": {
+    "uk": "Пемігатиніб при ММН з перебудовою FGFR1",
+    "en": "Pemigatinib for MLNE with FGFR1 rearrangement"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Myeloid/Lymphoid Neoplasms with Eosinophilia and Tyrosine Kinase Gene Fusions",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 від 05.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Бажаний варіант (як і клінічне дослідження) при перебудові FGFR1, у хронічній і бластній фазі; бластну фазу поєднують з ранньою алоТГСК або з індукційною хіміотерапією типу ГМЛ/ГЛЛ за лінією бластів. Схвалений FDA для рецидивної/рефрактерної хвороби.",
+      "en": "Preferred (with a clinical trial) for FGFR1 rearrangement in chronic and blast phase; in blast phase it is combined with early allo-HCT or with AML-/ALL-type induction by blast lineage. FDA-approved for relapsed or refractory disease."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Пемігатиніб",
+          "en": "Pemigatinib"
+        },
+        "drug_id": "pemigatinib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "У дослідженні FIGHT-203 (45 хворих): повна відповідь 96% у хронічній фазі проти 44% у бластній, повна цитогенетична — 88% проти 50%; медіана ВБП 73,9 міс. (за обговоренням NCCN).",
+        "en": "FIGHT-203 (45 patients): complete response 96% in chronic vs 44% in blast phase, complete cytogenetic 88% vs 50%; median PFS 73.9 months (NCCN discussion)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить; схема описана лише для ознайомлення. Перед призначенням — за інструкцією препарату.",
+      "en": "NCCN gives no doses in this guideline; the regimen is described for reference only. Check the prescribing information before use."
+    },
+    "availability": "unavailable"
+  }
+}

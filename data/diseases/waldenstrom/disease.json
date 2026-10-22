@@ -111,8 +111,8 @@
         {
           "regimen_id": "idr-wm-maintenance",
           "notes": {
-            "uk": "NCCN 1.2027: підтримка за схемою IDR",
-            "en": "NCCN 1.2027: maintenance on the IDR schedule"
+            "uk": "Підтримка за схемою IDR — з дослідження; NCCN 1.2027 підтримку цієї схеми не наводить",
+            "en": "Maintenance on the IDR schedule — from the trial; NCCN 1.2027 does not list this maintenance"
           }
         },
         {
@@ -132,8 +132,8 @@
         {
           "regimen_id": "card-wm-maintenance",
           "notes": {
-            "uk": "NCCN 1.2027: підтримка за схемою CaRD",
-            "en": "NCCN 1.2027: maintenance on the CaRD schedule"
+            "uk": "Підтримка за схемою CaRD — з дослідження; NCCN 1.2027 підтримку цієї схеми не наводить",
+            "en": "Maintenance on the CaRD schedule — from the trial; NCCN 1.2027 does not list this maintenance"
           }
         }
       ]
@@ -187,8 +187,8 @@
         {
           "regimen_id": "fcr-wm",
           "notes": {
-            "uk": "Багаторазовий рецидив",
-            "en": "Multiply relapsed disease"
+            "uk": "Багаторазовий рецидив; NCCN 1.2027 вилучила FCR зі своїх таблиць",
+            "en": "Multiply relapsed disease; NCCN 1.2027 removed FCR from its tables"
           }
         },
         {
@@ -215,8 +215,8 @@
         {
           "regimen_id": "idr-wm-maintenance",
           "notes": {
-            "uk": "NCCN 1.2027: підтримка за схемою IDR",
-            "en": "NCCN 1.2027: maintenance on the IDR schedule"
+            "uk": "Підтримка за схемою IDR — з дослідження; NCCN 1.2027 підтримку цієї схеми не наводить",
+            "en": "Maintenance on the IDR schedule — from the trial; NCCN 1.2027 does not list this maintenance"
           }
         },
         {
@@ -236,8 +236,8 @@
         {
           "regimen_id": "card-wm-maintenance",
           "notes": {
-            "uk": "NCCN 1.2027: підтримка за схемою CaRD",
-            "en": "NCCN 1.2027: maintenance on the CaRD schedule"
+            "uk": "Підтримка за схемою CaRD — з дослідження; NCCN 1.2027 підтримку цієї схеми не наводить",
+            "en": "Maintenance on the CaRD schedule — from the trial; NCCN 1.2027 does not list this maintenance"
           }
         },
         {
@@ -299,6 +299,893 @@
       "regimens": [
         {
           "regimen_id": "ref-wm-pirtobrutinib"
+        }
+      ]
+    },
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 1.2027 (WM/LPL-1…WM/LPL-C, WM/AL-1, BNS-1)",
+        "en": "NCCN pathways 1.2027 (WM/LPL-1 to WM/LPL-C, WM/AL-1, BNS-1)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN «Waldenström Macroglobulinemia/Lymphoplasmacytic Lymphoma», версія 1.2027 від 11.08.2026: діагноз і стратифікація → лікування → далі. Усі рекомендації категорії 2A, якщо не вказано інше. У межах рангу схеми йдуть за категорією доказів і за алфавітом. NCCN доз у схемах не наводить: доза береться з наявної схеми каталогу; якщо схеми немає — картка «без розрахунку». Рішення про лікування ґрунтується на симптомах, а не на рівні IgM.",
+        "en": "The NCCN \"Waldenström Macroglobulinemia/Lymphoplasmacytic Lymphoma\" algorithm, version 1.2027 of 11.08.2026: diagnosis and risk → treatment → next. All recommendations are category 2A unless stated. Within a rank regimens follow the category of evidence and then alphabetical order. NCCN gives no doses in its regimens: the dose comes from the catalog regimen; where there is none, the card is \"not calculated\". Treatment is decided by symptoms, not by the IgM level."
+      },
+      "children": [
+        {
+          "key": "nccn-workup",
+          "kind": "line",
+          "title": {
+            "uk": "Діагноз і первинне обстеження (WM/LPL-1, WM/LPL-A)",
+            "en": "Diagnosis and initial workup (WM/LPL-1, WM/LPL-A)"
+          },
+          "description": {
+            "uk": "Обов’язково: гістологічний огляд усіх препаратів з принаймні одним парафіновим блоком (при недіагностичному консультативному матеріалі — повторна біопсія), адекватна біопсія для імунофенотипу; типовий імунофенотип CD19+, CD20+, sIgM+ (CD5, CD10, CD23 у 10–20% випадків і діагнозу не виключають). Анамнез і огляд; загальний аналіз крові з формулою й тромбоцитами; мазок периферичної крові; біохімія (сечовина/креатинін, електроліти, альбумін, кальцій, печінкові проби); сечова кислота, ЛДГ, β2-мікроглобулін; кліренс креатиніну; кількісні імуноглобуліни, електрофорез і імунофіксація сироватки; одностороння аспіраційна й трепанобіопсія кісткового мозку з ІГХ і/або проточною цитометрією; КТ грудної клітки/черевної порожнини/таза (± контраст) та/або ПЕТ/КТ усього тіла, коли можливо; тестування MYD88 L265P методом ASO-PCR у кістковому мозку (дикий тип MYD88 у <10% і діагнозу не виключає); слід розглянути NGS на мутації CXCR4 і TP53 та FISH на del(17p) (вони впливають на відповідь на BTK-інгібітор). За обставин: в’язкість сироватки; гепатит B (якщо планується ритуксимаб), гепатит C, ВІЛ; кріокрит (за позитивного — всі подальші IgM визначати в теплому стані); коагулограма й тест на хворобу фон Віллебранда при кровоточивості; холодові аглютиніни; консультація невролога, антитіла до MAG/GM1, нейроміографія при нейропатії; жирова клітковина/конго червоний на амілоїд (при нейропатії, нефротичному синдромі, незясованих серцевих проблемах), типування амілоїду мас-спектрометрією; огляд очного дна (IgM ≥3,0 г/дл або підозра на гіпервʼязкість); добова сеча (білок, електрофорез, імунофіксація); вільні легкі ланцюги сироватки; при симптомах з боку ЦНС — розділ про синдром Бінга–Ніля. У літніх розглянути оцінку крихкості. Лімфоплазмоцитарна лімфома охоплює також IgG, IgA, лише вільні легкі ланцюги й несекретуючі варіанти (<5% усіх ЛПЛ); лікування таке саме, як IgM-секретуючих; потрібно відрізняти від IgM-МГНЗ і IgM-мієломи. Критерії ВООЗ: ЛПЛ — пухлина дрібних B-лімфоцитів, плазмоцитоїдних лімфоцитів і плазматичних клітин, зазвичай у кістковому мозку (іноді лімфовузли, селезінка), що не відповідає критеріям іншої дрібноклітинної B-пухлини з плазмоцитарною диференціацією; WM — ЛПЛ з ураженням кісткового мозку й IgM-моноклональною гамапатією будь-якої концентрації.",
+            "en": "Essential: haematopathology review of all slides with at least one paraffin block (rebiopsy if consult material is non-diagnostic), adequate tissue for immunophenotype; typical CD19+, CD20+, sIgM+ (CD5, CD10, CD23 in 10-20% and do not exclude the diagnosis). History and examination; CBC with differential and platelets; peripheral smear; chemistry (urea/creatinine, electrolytes, albumin, calcium, liver tests); uric acid, LDH, beta-2 microglobulin; creatinine clearance; quantitative immunoglobulins, serum electrophoresis and immunofixation; unilateral marrow aspirate and biopsy with IHC and/or flow cytometry; CT chest/abdomen/pelvis (± contrast) and/or whole-body FDG-PET/CT when possible; MYD88 L265P by ASO-PCR in marrow (wild type in <10% and does not exclude the diagnosis); consider NGS for CXCR4 and TP53 mutations and FISH for del(17p) (they affect BTK-inhibitor response). In certain circumstances: serum viscosity; hepatitis B (if rituximab planned), hepatitis C, HIV; cryocrit (if positive, all later IgM values under warm conditions); coagulation and von Willebrand testing if bleeding; cold agglutinins; neurology consult, anti-MAG/GM1 antibodies, nerve conduction/EMG for neuropathy; fat-pad/Congo red staining for amyloid (neuropathy, nephrotic syndrome, unexplained cardiac problems), amyloid typing by mass spectrometry; retinal examination (IgM 3.0 g/dL or more, or suspected hyperviscosity); 24-hour urine (protein, electrophoresis, immunofixation); serum free light chains; for CNS symptoms see Bing-Neel syndrome. Consider frailty assessment in older adults. Lymphoplasmacytic lymphoma also covers IgG, IgA, FLC-only and non-secretory variants (<5% of all LPL), treated like IgM-secreting disease; distinguish from IgM MGUS and IgM myeloma. WHO criteria: LPL is a neoplasm of small B lymphocytes, plasmacytoid lymphocytes and plasma cells, usually in marrow (sometimes nodes, spleen), not fitting another small B-cell neoplasm with plasmacytic differentiation; WM is LPL with marrow involvement and IgM monoclonal gammopathy of any concentration."
+          },
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Обстеження за списком WM/LPL-1; MYD88 L265P, CXCR4/TP53, del(17p)",
+                "en": "Workup per WM/LPL-1; MYD88 L265P, CXCR4/TP53, del(17p)"
+              },
+              "notes": {
+                "uk": "Під час обстеження перевіряють, що симптоми не зумовлені супутніми захворюваннями.",
+                "en": "Confirm that symptoms are not caused by comorbidities."
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Безсимптомна або малосимптомна WM: стратифікація ризику й спостереження (WM/LPL-2)",
+                "en": "Asymptomatic or minimally symptomatic WM: risk score and monitoring (WM/LPL-2)"
+              },
+              "target": "nccn-asymptomatic"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Симптоми, пов’язані з хворобою: первинне лікування (WM/LPL-3)",
+                "en": "Disease-related symptoms: primary treatment (WM/LPL-3)"
+              },
+              "target": "nccn-primary"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "WM-асоційований системний AL-амілоїдоз (WM/AL-1)",
+                "en": "WM-related systemic AL amyloidosis (WM/AL-1)"
+              },
+              "target": "nccn-amyloid"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Симптоми з боку ЦНС — синдром Бінга–Ніля (BNS-1)",
+                "en": "CNS symptoms — Bing-Neel syndrome (BNS-1)"
+              },
+              "target": "nccn-bns"
+            }
+          ]
+        },
+        {
+          "key": "nccn-staging",
+          "kind": "line",
+          "title": {
+            "uk": "Стратифікація ризику: MSS-WM і ризик безсимптомної WM (WM/LPL-A, WM/LPL-2)",
+            "en": "Risk stratification: MSS-WM and asymptomatic WM risk score (WM/LPL-A, WM/LPL-2)"
+          },
+          "description": {
+            "uk": "Спрощена модель стратифікації MSS-WM (Zanwar та співавт., J Clin Oncol 2024; панель рекомендує її замість старої IPSS-WM). Бали: вік 66–75 років — 1; вік понад 75 — 2; підвищена ЛДГ — 2; альбумін сироватки <3,5 г/дл — 1. Сума балів: 0 — низький ризик; 1 — низько-проміжний; 2 — проміжний; 3 — високий (так у таблиці NCCN). Ризик прогресування безсимптомної WM оцінюють калькулятором (www.awmrisk.com) за відсотком залучення кісткового мозку, IgM (мг/дл), β2-мікроглобуліном (мг/л) й альбуміном (г/дл), виміряними приблизно в один час: низький ризик — медіана часу до прогресування 9,2 року; проміжний — 4,8; високий — 1,8.",
+            "en": "Simplified MSS-WM model (Zanwar et al., J Clin Oncol 2024; the panel recommends it in place of the older IPSS-WM). Points: age 66-75 — 1; age over 75 — 2; elevated LDH — 2; serum albumin below 3.5 g/dL — 1. Sum: 0 — low risk; 1 — low-intermediate; 2 — intermediate; 3 — high (as printed in the NCCN table). Progression risk of asymptomatic WM is assessed with a calculator (www.awmrisk.com) from marrow involvement (%), IgM (mg/dL), beta-2 microglobulin (mg/L) and albumin (g/dL) taken at about the same time: low risk — median time to progression 9.2 years; intermediate — 4.8; high — 1.8."
+          },
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Бали MSS-WM: вік, ЛДГ, альбумін",
+                "en": "MSS-WM points: age, LDH, albumin"
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-asymptomatic",
+          "kind": "line",
+          "title": {
+            "uk": "Безсимптомна або малосимптомна WM (WM/LPL-2)",
+            "en": "Asymptomatic or minimally symptomatic WM (WM/LPL-2)"
+          },
+          "description": {
+            "uk": "Лікування лише симптомних хворих: нелікованих безсимптомних порівнюють за виживанням із загальною популяцією того ж віку й статі. Високий IgM сам по собі не є показанням. Холодові аглютиніни чи кріоглобуліни без симптомів — не показання. Показання до лікування (підтверджені як не зумовлені коморбідністю): гіпервʼязкість, нейропатія, органомегалія, амілоїдоз, хвороба холодових аглютинінів, кріоглобулінемія, анемія й інші цитопенії, зумовлені хворобою, об’ємна аденопатія, B-симптоми; або безсимптомним хворим при IgM >6000 мг/дл. Ретинальний огляд щороку, якщо IgM >3000 мг/дл.",
+            "en": "Treat only symptomatic patients: untreated asymptomatic patients have survival similar to age- and sex-matched people. A high IgM alone is not an indication. Cold agglutinins or cryoglobulins without symptoms are not an indication. Indications (confirmed as not caused by comorbidities): hyperviscosity, neuropathy, organomegaly, amyloidosis, cold agglutinin disease, cryoglobulinaemia, anaemia and other disease-related cytopenias, bulky adenopathy, B symptoms; or in an asymptomatic patient IgM above 6000 mg/dL. Retinal examination yearly if IgM is above 3000 mg/dL."
+          },
+          "steps": [
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Симптоми, пов’язані з хворобою, або IgM >6000 мг/дл: первинне лікування (WM/LPL-3)",
+                "en": "Disease-related symptoms or IgM above 6000 mg/dL: primary treatment (WM/LPL-3)"
+              },
+              "target": "nccn-primary"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-asym-low",
+              "kind": "group",
+              "title": {
+                "uk": "Низький ризик",
+                "en": "Low risk"
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Кожні 12 міс.: аналіз крові, біохімія, електрофорез, імуноглобуліни",
+                    "en": "Every 12 months: CBC, CMP, SPEP, immunoglobulins"
+                  },
+                  "notes": {
+                    "uk": "Медіана часу до прогресування 9,2 року.",
+                    "en": "Median time to progression 9.2 years."
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-asym-int",
+              "kind": "group",
+              "title": {
+                "uk": "Проміжний ризик",
+                "en": "Intermediate risk"
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Кожні 6 міс.: аналіз крові, біохімія, електрофорез, імуноглобуліни",
+                    "en": "Every 6 months: CBC, CMP, SPEP, immunoglobulins"
+                  },
+                  "notes": {
+                    "uk": "Медіана часу до прогресування 4,8 року.",
+                    "en": "Median time to progression 4.8 years."
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-asym-high",
+              "kind": "group",
+              "title": {
+                "uk": "Високий ризик",
+                "en": "High risk"
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Кожні 3 міс.: аналіз крові, біохімія, електрофорез, імуноглобуліни",
+                    "en": "Every 3 months: CBC, CMP, SPEP, immunoglobulins"
+                  },
+                  "notes": {
+                    "uk": "Медіана часу до прогресування 1,8 року.",
+                    "en": "Median time to progression 1.8 years."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-principles",
+          "kind": "line",
+          "title": {
+            "uk": "Загальні принципи системної терапії (WM/LPL-B, 1 з 4)",
+            "en": "General principles of systemic therapy (WM/LPL-B, 1 of 4)"
+          },
+          "description": {
+            "uk": "Крихкість у літніх оцінюють (NCCN Older Adult Oncology). Кандидатам на ТГСК слід уникати аналогів нуклеозидів (флударабін, кладрибін) — і тривалого прийому алкілаторів до збору стовбурових клітин. Плазмаферез: при симптомній гіпервʼязкості спершу плазмаферез; також розглянути перед ритуксимабом при безсимптомній WM з IgM ≥4000 мг/дл або симптомній, щоб не посилити в’язкість через «сплеск» IgM після ритуксимабу; ритуксимаб можна затримати у хворих з високим IgM на перші цикли; при кріопреципітаті/кріоглобуліні — зігрівачі крові. Скринінг: ВІЛ, гепатити B і C за показаннями. Профілактика: пневмоцистна пневмонія — розглянути при бендамустині/ритуксимабі (і при флударабін/циклофосфамід/ритуксимабі); оперізувальний герпес — для всіх, хто отримує інгібітори протеасоми, моноклональні антитіла й аналоги нуклеозидів; ентекавір — для HBsAg-позитивних на анти-CD20 терапії (при активній хворобі HBV-DNA+ це лікування, а не профілактика; при HBcAb-позитивності профілактика бажана, але за високого рівня анти-HBs можна стежити за вірусним навантаженням). Побічні ефекти й лабораторний контроль: карфілзоміб може спричиняти серцеву й легеневу токсичність, особливо в літніх; рівень IgG слід ретельно контролювати (може виснажуватися); схеми з бортезомібом і вінкристином мають вищий ризик нейропатії, особливо при вихідній нейропатії. Інгібітори протеасом: бортезоміб бажано підшкірно, щотижня (допустимі й двічі на тиждень); карфілзоміб — раз (бажано) або двічі на тиждень, у різних дозах. Заміни: біосиміляр, схвалений FDA, замінює будь-який рекомендований біологічний препарат; підшкірний ритуксимаб із гіалуронідазою можна застосовувати після першої повної внутрішньовенної дози. Обінутузумаб можна розглянути при нетерпимості ритуксимабу. Після відміни BTK-інгібіторів можливе швидке зростання IgM («ребаунд»): продовжувати BTK-інгібітор до початку наступної лінії або стежити за IgM.",
+            "en": "Assess frailty in older adults (NCCN Older Adult Oncology). HCT candidates should avoid nucleoside analogs (fludarabine, cladribine), and prolonged oral alkylators before stem-cell collection. Plasmapheresis: for symptomatic hyperviscosity do it first; also consider it before rituximab in asymptomatic WM with IgM 4000 mg/dL or more, or in symptomatic WM, to avoid worsening viscosity from the rituximab IgM flare; rituximab may be held for the first cycles in patients with a high IgM; use blood warmers if cryoprecipitate or cryoglobulin is present. Screening: HIV, hepatitis B and C as indicated. Prophylaxis: pneumocystis — consider with bendamustine/rituximab (and fludarabine/cyclophosphamide/rituximab); herpes zoster — all patients on proteasome inhibitors, monoclonal antibodies and nucleoside analogs; entecavir — HBsAg-positive patients on anti-CD20 therapy (active disease, PCR+, is treatment, not prophylaxis; with HBcAb positivity prophylaxis is preferred, but with a concurrent high anti-HBs titre serial viral loads are acceptable). Side effects and laboratory tests: carfilzomib can cause cardiac and pulmonary toxicity, especially in older patients; monitor IgG closely (it can be depleted); bortezomib and vincristine regimens carry a higher risk of neuropathy, especially with baseline neuropathy. Proteasome inhibitors: bortezomib subcutaneously and weekly preferred (twice weekly also acceptable); carfilzomib once (preferred) or twice weekly at different doses. Substitutions: an FDA-approved biosimilar replaces any recommended biologic; subcutaneous rituximab with hyaluronidase may replace rituximab after the first full intravenous dose. Obinutuzumab may be considered if rituximab is not tolerated. After stopping a BTK inhibitor IgM can rebound quickly: continue the BTK inhibitor until the next line starts, or monitor IgM."
+          },
+          "steps": [
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Профілактика інфекцій, скринінг HBV/HCV/ВІЛ, контроль IgG",
+                "en": "Infection prophylaxis, HBV/HCV/HIV screening, IgG monitoring"
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-primary",
+          "kind": "line",
+          "title": {
+            "uk": "Первинне лікування (WM/LPL-3, WM/LPL-B 2 з 4)",
+            "en": "Primary treatment (WM/LPL-3, WM/LPL-B 2 of 4)"
+          },
+          "description": {
+            "uk": "Мета лікування — полегшення симптомів, а не обов’язково рівень IgM (окрім симптомної гіпервʼязкості). При симптомній гіпервʼязкості чи тяжких симптомах кріоглобулінемії — спершу плазмаферез; також перед схемою з ритуксимабом при IgM ≥4000 мг/дл (потім стежити за IgM і повторити плазмаферез при рецидиві гіпервʼязкості або IgM ≥4000 мг/дл на ритуксимабі; переливання еритроцитів — після плазмаферезу). Переліки схем упорядковані за категорією доказів і за алфавітом. При трансформації — алгоритм «Histologic Transformation of Indolent Lymphomas to DLBCL» (NCCN B-Cell Lymphomas). Ібрутиніб і занубрутиніб не застосовують першою лінією при ЛПЛ-асоційованому амілоїдозі. Обінутузумаб — розглянути, якщо не переноситься ритуксимаб. Клінічне дослідження наполегливо заохочується.",
+            "en": "The aim is relief of symptoms, not necessarily the IgM level (except symptomatic hyperviscosity). For symptomatic hyperviscosity or severe cryoglobulin symptoms start with plasmapheresis; also before a rituximab-containing regimen when IgM is 4000 mg/dL or more (then monitor IgM and repeat plasmapheresis if hyperviscosity recurs or IgM reaches 4000 mg/dL on rituximab; transfuse red cells after plasmapheresis). Regimen lists are ordered by category of evidence and alphabetically. For transformation use \"Histologic Transformation of Indolent Lymphomas to DLBCL\" (NCCN B-Cell Lymphomas). Ibrutinib and zanubrutinib are not first-line in LPL-associated amyloidosis. Obinutuzumab may be considered if rituximab is not tolerated. Clinical trial participation is strongly encouraged."
+          },
+          "steps": [
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Плазмаферез при симптомній гіпервʼязкості й перед ритуксимабом при IgM ≥4000 мг/дл",
+                "en": "Plasmapheresis for symptomatic hyperviscosity and before rituximab if IgM is 4000 mg/dL or more"
+              }
+            },
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне дослідження",
+                "en": "Clinical trial"
+              }
+            },
+            {
+              "kind": "surveillance",
+              "column": "next",
+              "label": {
+                "uk": "Фіксована хіміоімунотерапія: спостереження — аналіз крові, біохімія й IgM кожні 3 міс. 2 роки, далі кожні 4–6 міс. ще 3 роки, потім кожні 6–12 міс.; лікувати знову при симптомному прогресуванні",
+                "en": "Fixed-duration chemoimmunotherapy: observe — CBC, CMP and IgM every 3 months for 2 years, then every 4-6 months for 3 more years, then every 6-12 months; retreat at symptomatic progression"
+              },
+              "notes": {
+                "uk": "Прогресування лише за IgM без симптомів — не привід для повторного лікування. Ритуксимаб-підтримку можна розглянути у відібраних хворих після хіміоімунотерапії (у рандомізованому дослідженні після 6 циклів BR вигоди не показано; можливо, користь у хворих >65 років і з високим ризиком).",
+                "en": "Progression on IgM alone without symptoms is not a reason to retreat. Maintenance rituximab may be considered in selected patients after chemoimmunotherapy (a randomised trial after 6 cycles of BR showed no benefit; possibly some in patients over 65 and high risk)."
+              }
+            },
+            {
+              "kind": "maintenance",
+              "column": "next",
+              "label": {
+                "uk": "Схема з BTK-інгібітором: продовжувати до симптомного прогресування (понад біохімічне) або неприйнятної токсичності",
+                "en": "BTK-inhibitor regimen: continue until symptomatic progression (beyond biochemical) or unacceptable toxicity"
+              },
+              "notes": {
+                "uk": "У хворих з нейропатією метою може бути стабільність симптомів: вони зникають повільно. Після відміни — стежити за ребаундом IgM.",
+                "en": "In neuropathy, stable symptoms may be the goal: they take time to improve. After stopping watch for IgM rebound."
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Немає відповіді або прогресування, стійкі симптоми: лікування раніше леченої хвороби (WM/LPL-B 3 з 4)",
+                "en": "No response, progression or persistent symptoms: previously treated disease (WM/LPL-B 3 of 4)"
+              },
+              "target": "nccn-relapse"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Оцінка відповіді (IWWM-11)",
+                "en": "Response assessment (IWWM-11)"
+              },
+              "target": "nccn-response"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-primary-pref",
+              "kind": "group",
+              "title": {
+                "uk": "Бажана первинна терапія",
+                "en": "Preferred primary therapy"
+              },
+              "description": {
+                "uk": "BR: збір фактів — PFS 5 років 66,6% (FILO, 69 хворих); у StiL проти R-CHOP медіана ВБП 69,5 проти 28,5 міс. і менше нейтропенії, інфекцій, алопеції. Розглянути профілактику пневмоцистної пневмонії. Занубрутиніб (категорія 1; ASPEN): VGPR 28% проти 19% з ібрутинібом; 42-міс. ВБП 78% проти 70%; фібриляція передсердь 4% проти 17%, нейтропенія частіша (3 ст. 20% проти 8%).",
+                "en": "BR: PFS at 5 years 66.6% (FILO, 69 patients); in StiL vs R-CHOP median PFS 69.5 vs 28.5 months with less neutropenia, infection and alopecia. Consider PJP prophylaxis. Zanubrutinib (category 1; ASPEN): VGPR 28% vs 19% with ibrutinib; 42-month PFS 78% vs 70%; atrial fibrillation 4% vs 17%, more neutropenia (grade 3 20% vs 8%)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "zanubrutinib-mono",
+                  "notes": {
+                    "uk": "Не застосовувати першою лінією при ЛПЛ-асоційованому амілоїдозі",
+                    "en": "Not first line in LPL-associated amyloidosis"
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "br",
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-primary-oth",
+              "kind": "group",
+              "title": {
+                "uk": "Інші рекомендовані первинні схеми",
+                "en": "Other recommended primary regimens"
+              },
+              "description": {
+                "uk": "Ібрутиніб ± ритуксимаб (категорія 1; iNNOVATE: 54-міс. ВБП 68% проти 25% на ритуксимабі; ібрутиніб зменшує реакції на ритуксимаб; мутація CXCR4 знижує глибину відповіді, але не ВБП). BDR: слід перевіряти нейропатію; підшкірно й раз на тиждень — менше нейропатії. CaRD: нейропатія мінімальна, але виснаження IgA/IgG, кардіо-легенева токсичність. IDR (іксазоміб): відповідь 96%, ВБП 40 міс. DRC (R-CD): відповідь 83%, 2-річна ВБП 67%; додавання бортезомібу скорочує час до відповіді. Вінкристин у схемах із циклофосфамідом підвищує ризик нейропатії — краще без нього. Один ритуксимаб: відповідь 25–50%, «сплеск» IgM у 40–50%.",
+                "en": "Ibrutinib with or without rituximab (category 1; iNNOVATE: 54-month PFS 68% vs 25% on rituximab; ibrutinib reduces rituximab infusion reactions; CXCR4 mutation lowers depth of response but not PFS). BDR: watch neuropathy; subcutaneous and weekly gives less. CaRD: minimal neuropathy but IgA/IgG depletion and cardiopulmonary toxicity. IDR (ixazomib): response 96%, PFS 40 months. DRC (R-CD): response 83%, 2-year PFS 67%; adding bortezomib shortens time to response. Vincristine with cyclophosphamide raises neuropathy risk — prefer regimens without it. Rituximab alone: response 25-50%, IgM flare in 40-50%."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ibrutinib-mono",
+                  "notes": {
+                    "uk": "Не застосовувати першою лінією при ЛПЛ-асоційованому амілоїдозі",
+                    "en": "Not first line in LPL-associated amyloidosis"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ibrutinib-rituximab-cycle-1",
+                  "notes": {
+                    "uk": "Ритуксимаб — тижні 1–4 (і 17–20 за схемою iNNOVATE)",
+                    "en": "Rituximab weeks 1-4 (and 17-20 on the iNNOVATE schedule)"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ibrutinib-rituximab-cycle-5",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ref-wm-benda-mono",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-wm-bcdr",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "bdr-wm",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "card-wm-cycle-1",
+                  "notes": {
+                    "uk": "Карфілзоміб — раз (бажано) або двічі на тиждень",
+                    "en": "Carfilzomib once (preferred) or twice weekly"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "card-wm",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "drc",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-wm-cp-r",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "idr-wm-cycle-1-2",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "idr-wm",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "rituximab-mono",
+                  "preference": "other"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-relapse",
+          "kind": "line",
+          "title": {
+            "uk": "Раніше лікована WM/ЛПЛ (WM/LPL-B, 3 з 4; рецидив — WM/LPL-3)",
+            "en": "Previously treated WM/LPL (WM/LPL-B 3 of 4; relapse — WM/LPL-3)"
+          },
+          "description": {
+            "uk": "Повторити схему першої лінії, якщо її добре переносили й була тривала відповідь; обережно з повторною мієлосупресивною хіміотерапією через кумулятивну токсичність. При ремісії <24 міс. або прогресуванні/резистентності — інший клас препаратів. У кандидатів на ауто-ТГСК уникати алкілаторів і аналогів нуклеозидів, особливо якщо клітини не збирали. Усі схеми первинної терапії вважаються варіантами при раніше лікованій хворобі. Після BTK-інгібітора — ребаунд IgM: розглянути продовження BTKi до наступної лінії. Прогресування за IgM без симптомів не є приводом до зміни терапії. При трансформації — алгоритм NCCN B-Cell Lymphomas. Обінутузумаб можна розглянути, якщо не переноситься ритуксимаб.",
+            "en": "Repeat the first-line regimen if it was well tolerated and gave a prolonged response; be careful with repeated myelosuppressive chemotherapy because of cumulative toxicity. For remission under 24 months or progression/resistance use a different drug class. In autologous HCT candidates avoid alkylators and nucleoside analogs, especially if cells were not collected. All primary-therapy regimens are options in previously treated disease. After a BTK inhibitor IgM may rebound: consider continuing the BTKi until the next line. Progression by IgM alone without symptoms is not a reason to change therapy. For transformation use the NCCN B-Cell Lymphomas algorithm. Obinutuzumab may be considered if rituximab is not tolerated."
+          },
+          "steps": [
+            {
+              "kind": "surveillance",
+              "column": "next",
+              "label": {
+                "uk": "Спостереження до симптомного прогресування (понад біохімічне) або неприйнятної токсичності",
+                "en": "Observe until symptomatic progression (beyond biochemical) or unacceptable toxicity"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "WM-асоційований AL-амілоїдоз (WM/AL-1)",
+                "en": "WM-related AL amyloidosis (WM/AL-1)"
+              },
+              "target": "nccn-amyloid"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Синдром Бінга–Ніля (BNS-1)",
+                "en": "Bing-Neel syndrome (BNS-1)"
+              },
+              "target": "nccn-bns"
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-rel-nobtki",
+              "kind": "group",
+              "title": {
+                "uk": "Раніше лікована ковалентним BTKi або протипоказання до BTKi",
+                "en": "Previously treated with a covalent BTKi, or contraindications to BTKi therapy"
+              },
+              "description": {
+                "uk": "Піртобрутиніб: відповідь (major) 68% у 72 хворих (BRUIN) при BTKi, хіміо-антиCD20 або обох у анамнезі. R-CD: медіана ВБП 32 міс. при рецидиві. Венетоклакс: медіана ВБП 30–36 міс., ЧВ 84%, нейтропенія 42%. Кладрибін і флударабін — можуть бути пов’язані з трансформацією (і МДС/ГМЛ). Лонкастуксимаб тезирин — після BTKi й схеми на основі ритуксимабу, може бути доречним при високоризиковій хворобі. R-CHOP не шкодить стовбуровим клітинам, але вінкристин ризикує нейропатією.",
+                "en": "Pirtobrutinib: major response 68% in 72 patients (BRUIN) with prior BTKi, chemo-anti-CD20 or both. R-CD: median PFS 32 months in relapse. Venetoclax: median PFS 30-36 months, ORR 84%, neutropenia 42%. Cladribine and fludarabine may be associated with transformation (and MDS/AML). Loncastuximab tesirine — after a BTKi and rituximab-based regimen, may be appropriate for high-risk disease. R-CHOP is stem-cell sparing, but vincristine risks neuropathy."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "br",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-wm-pirtobrutinib",
+                  "notes": {
+                    "uk": "Піртобрутиніб; препарата немає в каталозі",
+                    "en": "Pirtobrutinib; the drug is not in the catalog"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "drc",
+                  "notes": {
+                    "uk": "Циклофосфамід/дексаметазон + ритуксимаб",
+                    "en": "Cyclophosphamide/dexamethasone + rituximab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-wm-bcdr",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "bdr-wm",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "card-wm-cycle-1",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "card-wm",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-wm-cp-r",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "idr-wm-cycle-1-2",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "idr-wm",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "venetoclax-wm-week-1",
+                  "notes": {
+                    "uk": "Венетоклакс при раніше лікованій WM",
+                    "en": "Venetoclax in previously treated WM"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "venetoclax-wm",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-wm-benda-mono",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "cladribine-r-wm",
+                  "notes": {
+                    "uk": "Кладрибін ± ритуксимаб; NCCN називає і кладрибін окремо",
+                    "en": "Cladribine with or without rituximab; NCCN also names cladribine alone"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-wm-everolimus",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-wm-fludarabine",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "loncastuximab-cycle-1-2",
+                  "notes": {
+                    "uk": "Лонкастуксимаб тезирин: доза каталогу — з показання ДВКЛ, NCCN дози для WM не наводить",
+                    "en": "Loncastuximab tesirine: the catalog dose is the DLBCL one, NCCN gives none for WM"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "loncastuximab",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "rituximab-mono",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "r-chop-21",
+                  "notes": {
+                    "uk": "R-CHOP; доза каталогу — зі схеми для ДВКЛ",
+                    "en": "R-CHOP; the catalog dose is the DLBCL one"
+                  },
+                  "preference": "circumstances"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rel-btki",
+              "kind": "group",
+              "title": {
+                "uk": "Раніше не лікована ковалентним BTKi",
+                "en": "Not previously treated with a covalent BTKi"
+              },
+              "description": {
+                "uk": "Занубрутиніб — бажаний (категорія 1). Інші: акалабрутиніб (фаза II, 106 хворих), ібрутиніб ± ритуксимаб (категорія 1). Ібрутиніб: 5-річна ВБП 54%, ЗВ 87% при раніше лікованій WM; мутація CXCR4 уповільнює відповідь.",
+                "en": "Zanubrutinib is preferred (category 1). Others: acalabrutinib (phase II, 106 patients), ibrutinib with or without rituximab (category 1). Ibrutinib: 5-year PFS 54%, OS 87% in previously treated WM; CXCR4 mutation slows response."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "zanubrutinib-mono",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "acalabrutinib-mono",
+                  "notes": {
+                    "uk": "Акалабрутиніб; доза каталогу — з ХЛЛ, NCCN дози для WM не наводить",
+                    "en": "Acalabrutinib; the catalog dose is the CLL one, NCCN gives none for WM"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ibrutinib-mono",
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ibrutinib-rituximab-cycle-1",
+                  "notes": {
+                    "uk": "Ритуксимаб — тижні 1–4 (і 17–20 за схемою iNNOVATE)",
+                    "en": "Rituximab weeks 1-4 (and 17-20 on the iNNOVATE schedule)"
+                  },
+                  "preference": "other",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ibrutinib-rituximab-cycle-5",
+                  "preference": "other",
+                  "category": "1"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rel-hct",
+              "kind": "group",
+              "title": {
+                "uk": "Трансплантація гемопоетичних клітин",
+                "en": "Hematopoietic cell transplant"
+              },
+              "steps": [
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Ауто-ТГСК (високодозова терапія зі стовбуровою підтримкою) — у відібраних хворих",
+                    "en": "Autologous HCT (high-dose therapy with stem-cell rescue) — in selected patients"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Алогенна ТГСК (мієлоаблативна або немієлоаблативна) — бажано в межах клінічного дослідження",
+                    "en": "Allogeneic HCT (myeloablative or nonmyeloablative) — ideally in a clinical trial"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-response",
+          "kind": "line",
+          "title": {
+            "uk": "Оцінка відповіді: критерії IWWM-11 (WM/LPL-C)",
+            "en": "Response assessment: IWWM-11 criteria (WM/LPL-C)"
+          },
+          "description": {
+            "uk": "Критерії 11-го Міжнародного workshop з WM. Повна відповідь (CR): відсутність моноклонального IgM за електрофорезом та імунофіксацією, IgM у межах норми, нормальна морфологія кісткового мозку без ЛПЛ, зникнення позамедулярної хвороби (вузли <1,5 см, селезінка <15 см). VGPR: зниження IgM ≥90% або нормалізація. PR: зниження IgM 50% до <90%. MR (мінімальна): зниження 25% до <50%. SD: зниження <25% до зростання <25%. PD: зростання IgM ≥25% з абсолютним приростом ≥500 мг/дл від надира, підтверджене двома послідовними вимірами; або новий осередок >1,5 см чи зростання >50% по будь-якій осі раніше ураженого позамедулярного осередку до >1,5 см; або ознаки трансформації. PD за візуалізацією підтвердження не потребує; при розбіжності IgM і візуалізації — PD. Підозра на «сплеск» IgM чи ребаунд, відсутність даних чи помилка — не оцінюється (NE) і не PD. Загальна відповідь включає MR, PR, VGPR, CR; велика (major) — PR, VGPR, CR. Категорійна відповідь передбачає відсутність ознак прогресування. Рітуксимаб викликає сплеск IgM, а бортезоміб і ібрутиніб можуть знижувати IgM незалежно від вбивства пухлини — якщо IgM не відповідає клінічній картині, розглянути біопсію кісткового мозку. Більшість хворих не досягають CR; ціль — ліквідація симптомів, а відповідь на деякі препарати затримується.",
+            "en": "Criteria of the 11th International Workshop on WM. Complete response (CR): no monoclonal IgM by electrophoresis and immunofixation, IgM within normal range, normal marrow morphology without LPL, resolution of extramedullary disease (nodes below 1.5 cm, spleen below 15 cm). VGPR: IgM reduction of 90% or more or normalisation. PR: reduction of 50% to <90%. MR (minor): reduction of 25% to <50%. SD: reduction <25% to increase <25%. PD: IgM increase of 25% or more with an absolute rise of at least 500 mg/dL from nadir, confirmed on two consecutive measurements; or a new lesion >1.5 cm or >50% growth on any axis of a previously involved extramedullary site to >1.5 cm; or evidence of transformation. PD by imaging needs no confirmation; with discordant IgM and imaging it is PD. Suspected IgM flare or rebound, missing data or an error — not evaluable (NE), not PD. Overall response includes MR, PR, VGPR, CR; major response — PR, VGPR, CR. A categorical response assumes no signs of progression. Rituximab causes an IgM flare while bortezomib and ibrutinib can lower IgM independent of tumour kill — if IgM is out of step with the clinical picture consider a marrow biopsy. Most patients do not reach CR; the goal is symptom relief, and responses to some drugs are delayed."
+          },
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "IgM (електрофорез + імунофіксація), кістковий мозок, візуалізація позамедулярної хвороби",
+                "en": "IgM (electrophoresis + immunofixation), marrow, imaging of extramedullary disease"
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-amyloid",
+          "kind": "line",
+          "title": {
+            "uk": "WM-асоційований системний AL-амілоїдоз (WM/AL-1)",
+            "en": "WM-related systemic AL amyloidosis (WM/AL-1)"
+          },
+          "description": {
+            "uk": "Загальні принципи — з настанови NCCN «Systemic Light Chain Amyloidosis». Ритуксимаб затримують на перший(і) цикл(и), якщо IgM ≥4000 мг/дл. Бортезоміб або іксазоміб зменшують чи відміняють при вираженій нейропатії; бортезоміб бажано підшкірно щотижня. При рецидивній/рефрактерній хворобі — розглянути повторну біопсію кісткового мозку для перевірки клону й, якщо виявлено плазмоклітинний клон, настанову з AL-амілоїдозу. Інші варіанти — з системної терапії WM/ЛПЛ. BTKi в амілоїдозі вивчені мало: застосовувати з обережністю, особливо при серцевому амілоїдозі; піртобрутиніб — лише при непереносимості занубрутинібу або прогресуванні на ньому. Ауто-ТГСК (кондиціювання мелфаланом або BEAM) — за настановою з AL-амілоїдозу.",
+            "en": "General principles come from the NCCN guideline for Systemic Light Chain Amyloidosis. Hold rituximab for the first cycle(s) if IgM is 4000 mg/dL or more. Reduce or stop bortezomib or ixazomib for significant neuropathy; subcutaneous weekly bortezomib is preferred. In relapsed/refractory disease consider a repeat marrow biopsy to check the clone and, if a plasma cell clone is found, the AL amyloidosis guideline. Other options come from systemic therapy of WM/LPL. BTK inhibitors are little studied in amyloidosis: use with caution, especially in cardiac amyloidosis; pirtobrutinib only after intolerance of or progression on zanubrutinib. Autologous HCT (melphalan or BEAM conditioning) follows the AL amyloidosis guideline."
+          },
+          "children": [
+            {
+              "key": "nccn-am-primary",
+              "kind": "group",
+              "title": {
+                "uk": "Первинна терапія WM-асоційованого AL-амілоїдозу",
+                "en": "Primary therapy of WM-related AL amyloidosis"
+              },
+              "description": {
+                "uk": "Без вираженої нейропатії можна: бортезоміб/циклофосфамід/дексаметазон + ритуксимаб, бортезоміб/дексаметазон + ритуксимаб, іксазоміб/дексаметазон + ритуксимаб.",
+                "en": "Without significant neuropathy also: bortezomib/cyclophosphamide/dexamethasone + rituximab, bortezomib/dexamethasone + rituximab, ixazomib/dexamethasone + rituximab."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "br",
+                  "notes": {
+                    "uk": "Бендамустин + ритуксимаб",
+                    "en": "Bendamustine + rituximab"
+                  }
+                },
+                {
+                  "regimen_id": "drc",
+                  "notes": {
+                    "uk": "Циклофосфамід/дексаметазон + ритуксимаб",
+                    "en": "Cyclophosphamide/dexamethasone + rituximab"
+                  }
+                },
+                {
+                  "regimen_id": "ref-wm-bcdr",
+                  "notes": {
+                    "uk": "Лише без вираженої нейропатії",
+                    "en": "Only without significant neuropathy"
+                  }
+                },
+                {
+                  "regimen_id": "bdr-wm",
+                  "notes": {
+                    "uk": "Лише без вираженої нейропатії",
+                    "en": "Only without significant neuropathy"
+                  }
+                },
+                {
+                  "regimen_id": "idr-wm-cycle-1-2",
+                  "notes": {
+                    "uk": "Лише без вираженої нейропатії",
+                    "en": "Only without significant neuropathy"
+                  }
+                },
+                {
+                  "regimen_id": "idr-wm",
+                  "notes": {
+                    "uk": "Лише без вираженої нейропатії",
+                    "en": "Only without significant neuropathy"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-am-prev",
+              "kind": "group",
+              "title": {
+                "uk": "Раніше лікований WM-асоційований AL-амілоїдоз",
+                "en": "Previously treated WM-related AL amyloidosis"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "bdr-wm",
+                  "notes": {
+                    "uk": "При значній нейропатії — зменшити чи відмінити бортезоміб",
+                    "en": "Reduce or stop bortezomib in significant neuropathy"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-wm-bcdr",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "drc",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "idr-wm-cycle-1-2",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "idr-wm",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "br",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "venetoclax-wm-week-1",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "venetoclax-wm",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "zanubrutinib-mono",
+                  "notes": {
+                    "uk": "Обмежені дані",
+                    "en": "Limited data"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-wm-pirtobrutinib",
+                  "notes": {
+                    "uk": "Лише при непереносимості або прогресуванні на занубрутинібі",
+                    "en": "Only after intolerance of or progression on zanubrutinib"
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Ауто-ТГСК (мелфалан або BEAM як кондиціювання) — за настановою AL-амілоїдозу",
+                    "en": "Autologous HCT (melphalan or BEAM conditioning) — per the AL amyloidosis guideline"
+                  },
+                  "preference": "circumstances"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-bns",
+          "kind": "line",
+          "title": {
+            "uk": "Синдром Бінга–Ніля (BNS-1)",
+            "en": "Bing-Neel syndrome (BNS-1)"
+          },
+          "description": {
+            "uk": "Підозрювати при неврологічних відхиленнях: головний біль, судоми, ураження черепних нервів, слабкість у кінцівках, атипова нейропатія. Диференціювати з синдромом гіпервʼязкості з ураженням ЦНС (там IgM відповідно високий, а клональні B-клітини в лікворі/тканині відсутні). Обовʼязково: МРТ головного мозку й усього хребта з контрастом (до люмбальної пункції — щоб не отримати посиленням оболонок після пункції); люмбальна пункція з ліквором (цитологія, мультипараметрична проточна цитометрія, ПЛР на перебудову IgH, ASO-PCR на MYD88 L265P). За обставин: біопсія ураженої тканини; супутня аспірація/біопсія кісткового мозку на перебудову IgH і MYD88 L265P. Остаточний діагноз: клональні B-клітини в лікворі або біоптаті з профілем, подібним до системної хвороби, ± лептоменінгеальне посилення чи утворення на МРТ. Імовірний діагноз: відхилення на МРТ без клональних B-клітин у лікворі чи біоптаті.",
+            "en": "Suspect with neurological deficits: headache, seizures, cranial nerve palsies, limb weakness, atypical neuropathy. Distinguish from hyperviscosity with CNS manifestations (there IgM is correspondingly high and there are no clonal B cells in CSF or tissue). Essential: contrast-enhanced MRI of brain and the entire spine (before lumbar puncture, so the puncture does not cause meningeal enhancement); lumbar puncture with CSF analysis (cytology, multiparameter flow cytometry, PCR for IgH rearrangement, ASO-PCR for MYD88 L265P). In certain circumstances: biopsy of affected tissue; concurrent marrow aspirate and biopsy for IgH rearrangement and MYD88 L265P. Definitive diagnosis: clonal B cells in CSF or a biopsy with a profile like systemic disease, with or without leptomeningeal enhancement or masses on MRI. Probable diagnosis: abnormal MRI without clonal B cells in CSF or biopsy."
+          },
+          "children": [
+            {
+              "key": "nccn-bns-asym",
+              "kind": "group",
+              "title": {
+                "uk": "Безсимптомний BNS",
+                "en": "Asymptomatic BNS"
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Спостереження",
+                    "en": "Observation"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-bns-sym",
+              "kind": "group",
+              "title": {
+                "uk": "Симптомний BNS",
+                "en": "Symptomatic BNS"
+              },
+              "description": {
+                "uk": "До цих схем можна додати ритуксимаб, якщо потрібен системний контроль. Піртобрутиніб додано у версії 1.2027; метотрексат переведено в «за певних обставин». NCCN не наводить режимів і доз для цього показання; схеми метотрексату й цитарабіну в каталозі — з інших показань.",
+                "en": "Rituximab can be added to these regimens if systemic control is needed. Pirtobrutinib was added in version 1.2027; methotrexate moved to certain circumstances. NCCN gives no schedules or doses for this indication; the methotrexate and cytarabine regimens in the catalog belong to other indications."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ibrutinib-mono",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "zanubrutinib-mono",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-wm-benda-mono",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-wm-bns-cytarabine",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-wm-fludarabine",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-wm-pirtobrutinib",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "methotrexate-intrathecal",
+                  "notes": {
+                    "uk": "Інтратекальний метотрексат; режим каталогу — з іншого показання",
+                    "en": "Intrathecal methotrexate; the catalog schedule is from another indication"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "hd-methotrexate-cns",
+                  "notes": {
+                    "uk": "Метотрексат (системно); режим каталогу — профілактика ЦНС, не BNS",
+                    "en": "Methotrexate (systemic); the catalog schedule is CNS prophylaxis, not BNS"
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Променева терапія",
+                    "en": "Radiotherapy"
+                  },
+                  "preference": "circumstances"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
