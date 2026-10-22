@@ -1,0 +1,42 @@
+{
+  "id": "ref-pbl-epoch-dara",
+  "short_name": "EPOCH + даратумумаб (плазмобластна лімфома)",
+  "name": {
+    "uk": "EPOCH із корекцією доз ± даратумумаб при плазмобластній лімфомі",
+    "en": "Dose-adjusted EPOCH ± daratumumab in plasmablastic lymphoma"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Плазмобластна лімфома (ВІЛ-асоційована; тактика застосовується й при ВІЛ-негативній — тоді ризик вищий): бажано EPOCH ± даратумумаб; інші — CODOX-M/IVAC (модифіковані), HyperCVAD. Стандартний CHOP недостатній. Консолідація аутоТГСК у першій ремісії при високому ризику; ISRT при локалізованому процесі; інтратекальна профілактика.",
+      "en": "Plasmablastic lymphoma (HIV-associated; the approach also applies in HIV-negative disease, which carries higher risk): preferred EPOCH ± daratumumab; others — modified CODOX-M/IVAC, HyperCVAD. Standard CHOP is not adequate. Consolidation with autologous HCT in first remission in high-risk disease; ISRT for localized disease; intrathecal prophylaxis."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Даратумумаб",
+          "en": "Daratumumab"
+        },
+        "drug_id": "daratumumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Корекція EPOCH (дні 1–4 безперервна інфузія) — див. схему DA-EPOCH-R; для ВІЛ NCCN дає дозу циклофосфаміду за CD4: >200 — 750 мг/м², 50–200 — 375 мг/м², <50 — 187,5 мг/м² (у схемі DA-EPOCH-R додані як варіанти дози).",
+        "en": "EPOCH adjustment (continuous infusion on days 1-4) — see the DA-EPOCH-R regimen; for HIV NCCN gives the cyclophosphamide dose by CD4: above 200 — 750 mg/m2, 50-200 — 375 mg/m2, below 50 — 187.5 mg/m2 (added to DA-EPOCH-R as dose options)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "registered"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "ref-car-t-cd19",
+  "short_name": "CAR-T CD19 (В-клітинні лімфоми)",
+  "name": {
+    "uk": "CAR-T проти CD19: аксикабтаген цилолейцел, лізокабтаген маралейцел, тисагенлеклейцел",
+    "en": "CD19 CAR-T: axicabtagene ciloleucel, lisocabtagene maraleucel, tisagenlecleucel"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Клітинна терапія з препаратів NCCN для рецидивних В-клітинних лімфом: ДВКЛ (друга лінія при ранньому рецидиві чи первинній рефрактерності — аксі-цел і ліко-цел, категорія 1; третя лінія — також тиса-цел), фолікулярна (третя лінія), маргінальної зони (третя лінія: ліко-цел бажано, аксі-цел — інший варіант), трансформація індолентної лімфоми.",
+      "en": "Cell therapy listed by NCCN for relapsed B-cell lymphomas: DLBCL (second line for early relapse or primary refractory disease — axi-cel and liso-cel, category 1; third line — also tisa-cel), follicular (third line), marginal zone (third line: liso-cel preferred, axi-cel another option), transformed indolent lymphoma."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Аксикабтаген цилолейцел",
+          "en": "Axicabtagene ciloleucel"
+        }
+      },
+      {
+        "name": {
+          "uk": "Лізокабтаген маралейцел",
+          "en": "Lisocabtagene maraleucel"
+        }
+      },
+      {
+        "name": {
+          "uk": "Тисагенлеклейцел",
+          "en": "Tisagenlecleucel"
+        }
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Перед CD19 CAR-T, якщо можливо, повторною біопсією підтвердити експресію CD19; невідомо, чи тафаситамаб, лонкастуксимаб або інша CD19-терапія знижують її ефективність.",
+        "en": "Before CD19 CAR-T, if feasible, confirm CD19 expression by rebiopsy; it is unknown whether tafasitamab, loncastuximab or other CD19 therapy lowers its efficacy."
+      },
+      {
+        "uk": "Бендамустин до лейкафереза затримують; для утримувальної (до афереза) і мостової (після афереза) терапії NCCN називає DHA + платина ± ритуксимаб, GDP, GemOx, ICE, полатузумаб ± ритуксимаб ± бендамустин, ISRT.",
+        "en": "Delay bendamustine until after leukapheresis; for holding (before apheresis) and bridging (after apheresis) therapy NCCN names DHA + platinum ± rituximab, GDP, GemOx, ICE, polatuzumab ± rituximab ± bendamustine, ISRT."
+      },
+      {
+        "uk": "Після CD19 CAR-T аутоТГСК не рекомендована; за потреби допускається алогенна ТГСК. За потреби в окремих випадках можна дати інший CAR-T при прогресії.",
+        "en": "Autologous HCT is not recommended after CD19 CAR-T; allogeneic HCT may be considered. In selected cases an alternate CAR-T can be used at progression."
+      },
+      {
+        "uk": "Токсичність веде за настановою NCCN з токсичності CAR-T і біспецифічних антитіл.",
+        "en": "Toxicity is managed per the NCCN guideline for CAR-T and lymphocyte engager toxicities."
+      }
+    ],
+    "gap": {
+      "uk": "Клітинна терапія без дози для розрахунку.",
+      "en": "Cell therapy with no dose to calculate."
+    },
+    "availability": "unavailable"
+  }
+}

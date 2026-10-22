@@ -1,0 +1,42 @@
+{
+  "id": "ref-mcl-glofitamab",
+  "short_name": "Глофітамаб (МКЛ)",
+  "name": {
+    "uk": "Глофітамаб при рецидивній мантійноклітинній лімфомі",
+    "en": "Glofitamab in relapsed mantle cell lymphoma"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Прогресія після ковалентного інгібітора BTK: біспецифічне антитіло в рамках T-клітинної терапії (NCCN MANT-A).",
+      "en": "Progression after a covalent BTK inhibitor: a bispecific antibody under T-cell mediated therapy (NCCN MANT-A)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Глофітамаб",
+          "en": "Glofitamab"
+        },
+        "drug_id": "glofitamab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Глофітамаб для ДВКЛ є в довіднику (з обінутузумабом); дозування при МКЛ NCCN не наводить.",
+        "en": "A glofitamab regimen for DLBCL is in the catalog (with obinutuzumab); NCCN gives no MCL dosing."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "unavailable"
+  }
+}

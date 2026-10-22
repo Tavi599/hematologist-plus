@@ -1,0 +1,44 @@
+{
+  "id": "ref-mzl-cyclophosphamide",
+  "short_name": "Циклофосфамід ± ритуксимаб (МЗЛ)",
+  "name": {
+    "uk": "Циклофосфамід усередину ± ритуксимаб при лімфомі маргінальної зони",
+    "en": "Cyclophosphamide ± rituximab in marginal zone lymphoma"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Перша лінія для літніх і ослаблених (інший рекомендований варіант NCCN) та друга лінія для ослаблених.",
+      "en": "First line for older or infirm patients (another NCCN option) and second line for the infirm."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "registered"
+  }
+}

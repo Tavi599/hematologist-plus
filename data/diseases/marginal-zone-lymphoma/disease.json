@@ -1,0 +1,1095 @@
+{
+  "id": "marginal-zone-lymphoma",
+  "name": {
+    "uk": "Лімфома маргінальної зони",
+    "en": "Marginal zone lymphoma"
+  },
+  "summary": {
+    "uk": "Індолентна В-клітинна лімфома: екстранодальна (MALT, найчастіше шлунок), нодальна й селезінкова.",
+    "en": "Indolent B-cell lymphoma: extranodal (MALT, most often gastric), nodal and splenic."
+  },
+  "clinical_group": "lymphoma",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C83.0",
+      "is_primary": true
+    },
+    {
+      "system_id": "icd-10",
+      "code": "C88.4",
+      "is_primary": false
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026",
+      "updated": "2026-05-20"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Marginal%20zone%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=Marginal%20zone%20lymphoma"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 4.2026 (EMZLG, EMZLNG, NMZL, SMZL, MZL-A)",
+        "en": "NCCN 4.2026 pathways (EMZLG, EMZLNG, NMZL, SMZL, MZL-A)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN для лімфом маргінальної зони, версія 4.2026: екстранодальна (шлунок; не шлункові локалізації без шкіри), нодальна й селезінкова. Первинна шкірна МЗЛ — у настанові NCCN з шкірних лімфом. Будь-яка ділянка ДВКЛ лікується як ДВКЛ. Перед імунохіміотерапією — тест на гепатит B. PET/CT при МЗЛ може бути негативним — тоді КТ. Профілактика синдрому лізису пухлини; при абсолютній кількості лімфоцитів >25 000/мкл розглянути поділ дози ритуксимабу (100 мг флат у день 1, решта 375 мг/м² у день 2) і додаткову премедикацію глюкокортикоїдом.",
+        "en": "The NCCN algorithm for marginal zone lymphomas, version 4.2026: extranodal (stomach; nongastric noncutaneous sites), nodal and splenic. Primary cutaneous MZL is in the NCCN cutaneous lymphoma guideline. Any area of DLBCL is treated as DLBCL. Test for hepatitis B before immunochemotherapy. PET/CT can be negative in MZL — use CT then. Tumor lysis prophylaxis; with an absolute lymphocyte count above 25,000/mcL consider splitting the rituximab dose (100 mg flat on day 1, the rest of 375 mg/m2 on day 2) and extra glucocorticoid premedication."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-gastric",
+          "kind": "line",
+          "title": {
+            "uk": "EMZL шлунка (EMZLG-2…EMZLG-6)",
+            "en": "Gastric EMZL (EMZLG-2 to EMZLG-6)"
+          },
+          "description": {
+            "uk": "Діагноз потребує ендоскопічної біопсії (аспірація тонкою голкою недостатня). Стадіювання — за Lugano (EMZLG-A). Перед лікуванням перевірити H. pylori (гістологія, за негативу — неінвазивний тест) і t(11;18) (передбачає відсутність відповіді <5% на антибіотики). Гастроскопічне рестадіювання з біопсією через 6 міс.: перевірити H. pylori й лімфому; відповідь може наростати до 18 міс. (категорія 2B), тому при повільній відповіді без прогресії можна продовжити спостереження. Ушкодження підслизової та регіонарних вузлів гірше відповідає на антибіотики — при стійкій хворобі ISRT розглянути раніше.",
+            "en": "The diagnosis needs an endoscopic biopsy (fine-needle aspiration is never adequate). Stage by Lugano (EMZLG-A). Before treatment test for H. pylori (histology, then a noninvasive test if negative) and t(11;18) (predicts under 5% response to antibiotics). Restage with endoscopy and biopsy at 6 months: check for H. pylori and lymphoma; response can take up to 18 months (category 2B), so slowly responding disease without progression may stay under surveillance. Submucosal and regional node involvement respond less to antibiotics — with persistent disease consider ISRT earlier."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-gastric-hp",
+              "kind": "group",
+              "title": {
+                "uk": "Стадія IE (I1–I2) або II1; H. pylori позитивний, t(11;18) негативна чи невідома",
+                "en": "Stage IE (I1-I2) or II1; H. pylori positive, t(11;18) negative or unknown"
+              },
+              "description": {
+                "uk": "Антибіотикотерапія за чинними схемами ерадикації H. pylori (NCCN конкретних схем і доз не наводить — лікар керується місцевим протоколом). Рестадіювання через 6 міс.: H. pylori−/лімфома− → спостереження; H. pylori+/лімфома− → друга лінія антибіотиків і повторна оцінка; лімфома+ при безсимптомному стані → повторити ендоскопію через 3 міс.; прогресія або симптоми → ISRT ± друга лінія антибіотиків.",
+                "en": "Antibiotic therapy by the current H. pylori eradication regimens (NCCN gives no specific regimens or doses — follow the local protocol). Restage at 6 months: H. pylori-/lymphoma- — follow-up; H. pylori+/lymphoma- — second-line antibiotics and reassess; lymphoma+ and asymptomatic — repeat endoscopy at 3 months; progression or symptoms — ISRT ± second-line antibiotics."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "supportive",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Ерадикація H. pylori антибіотиками",
+                    "en": "H. pylori eradication with antibiotics"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "assessment",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Рестадіювання з ендоскопією й біопсією через 6 міс.",
+                    "en": "Restaging with endoscopy and biopsy at 6 months"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив після лікування (EMZLG-3/6)",
+                    "en": "Recurrence after treatment (EMZLG-3/6)"
+                  },
+                  "target": "nccn-gastric-rel"
+                }
+              ]
+            },
+            {
+              "key": "nccn-gastric-t1118",
+              "kind": "group",
+              "title": {
+                "uk": "H. pylori позитивний і t(11;18) позитивна",
+                "en": "H. pylori positive and t(11;18) positive"
+              },
+              "description": {
+                "uk": "Антибіотики потрібні для ерадикації H. pylori, але лімфома на них не відповість — додати лікування лімфоми: ISRT (бажано) або ритуксимаб, якщо ISRT протипоказана чи недоступна.",
+                "en": "Antibiotics are needed to eradicate H. pylori but the lymphoma will not respond to them — add lymphoma treatment: ISRT (preferred) or rituximab if ISRT is contraindicated or unavailable."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "Якщо ISRT протипоказана чи недоступна",
+                    "en": "If ISRT is contraindicated or unavailable"
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "supportive",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Ерадикація H. pylori антибіотиками",
+                    "en": "H. pylori eradication with antibiotics"
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "ISRT (бажано); при EMZL шлунка — фракції 1,5 Гр, доза 24 Гр",
+                    "en": "ISRT (preferred); for gastric EMZL — 1.5 Gy fractions, 24 Gy"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив після лікування (EMZLG-3/6)",
+                    "en": "Recurrence after treatment (EMZLG-3/6)"
+                  },
+                  "target": "nccn-gastric-rel"
+                }
+              ]
+            },
+            {
+              "key": "nccn-gastric-neg",
+              "kind": "group",
+              "title": {
+                "uk": "H. pylori негативний (і за гістологією, і за серологією)",
+                "en": "H. pylori negative (by histology and serology)"
+              },
+              "description": {
+                "uk": "ISRT рекомендована (бажано) або ритуксимаб, якщо ISRT протипоказана чи недоступна. Для пізніших стадій (IIE з N2 чи T4, IV) NCCN також дає ISRT або ритуксимаб і веде до оцінки показань (EMZLG-3). Після ISRT чи ритуксимабу — рестадіювання через 6 міс.; H. pylori+ → друга лінія антибіотиків.",
+                "en": "ISRT is recommended (preferred), or rituximab if ISRT is contraindicated or unavailable. For later stages (IIE with N2 or T4, IV) NCCN likewise gives ISRT or rituximab and leads to the indication check (EMZLG-3). After ISRT or rituximab — restage at 6 months; H. pylori+ — second-line antibiotics."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "Якщо ISRT протипоказана чи недоступна; після монотерапії ритуксимабом можна подовжити лікування підтримкою (раз на 8–12 тижнів, до 2 років)",
+                    "en": "If ISRT is contraindicated or unavailable; after single-agent rituximab optional maintenance (every 8-12 weeks, up to 2 years)"
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "ISRT (бажано)",
+                    "en": "ISRT (preferred)"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив після лікування (EMZLG-3/6)",
+                    "en": "Recurrence after treatment (EMZLG-3/6)"
+                  },
+                  "target": "nccn-gastric-rel"
+                }
+              ]
+            },
+            {
+              "key": "nccn-gastric-rel",
+              "kind": "group",
+              "title": {
+                "uk": "Рецидив або прогресія",
+                "en": "Recurrence or progression"
+              },
+              "description": {
+                "uk": "Місцевий рецидив після ритуксимабу чи антибіотиків — ISRT, якщо її не було. Системний рецидив чи прогресія: оцінити показання (клінічне випробування, симптоми, кровотеча зі ШКТ, загроза функції органа, значна пухлинна маса, прогресія); без показань — активне спостереження; із показаннями — друга лінія й далі (MZL-A 2–3) або підхід як при поширеній нодальній МЗЛ. Хірургічне лікування лише в особливих ситуаціях (життєзагрозлива кровотеча). Через невиліковність звичайною терапією розглянути дослідницьку терапію вже в першій лінії.",
+                "en": "Local recurrence after rituximab or antibiotics — ISRT if not previously given. Systemic recurrence or progression: weigh the indications (trial, symptoms, GI bleeding, threatened organ function, bulk, progression); with none — active surveillance; with them — second line and later (MZL-A 2-3) or the advanced nodal approach. Surgery only in special situations (life-threatening bleeding). Since conventional therapy is not curative, investigational therapy may be considered even first line."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Без показань — активне спостереження; огляд кожні 3–6 міс. 5 років, далі щороку",
+                    "en": "No indication — active surveillance; visits every 3-6 months for 5 years, then yearly"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Друга лінія й далі (MZL-A 2–3)",
+                    "en": "Second line and later (MZL-A 2-3)"
+                  },
+                  "target": "nccn-2l"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-nongastric",
+          "kind": "line",
+          "title": {
+            "uk": "EMZL не шлункових локалізацій, без шкіри (EMZLNG-2/3)",
+            "en": "Nongastric noncutaneous EMZL (EMZLNG-2/3)"
+          },
+          "description": {
+            "uk": "Типові локалізації: кишечник, молочна залоза, голова-шия, легені, тверда мозкова оболонка, придатки ока, яєчник, привушна й слинна залози, простата. Додатково: оцінка аутоімунних хвороб (наприклад Шегрена). Через анекдотичні відповіді на антибіотики при очній (і шкірній) МЗЛ деякі лікарі дають емпіричний курс доксицикліну. Для орбіти й привушної залози бажана доза-адаптована ISRT (спочатку 4 Гр; 20–24 Гр послідовно при слабкій відповіді чи рецидиві) — вона зменшує ризик ксерофтальмії та ксеростомії.",
+            "en": "Typical sites: bowel, breast, head and neck, lung, dura, ocular adnexa, ovary, parotid and salivary gland, prostate. Also assess autoimmune disease (for example Sjogren). Because of anecdotal responses to antibiotics in ocular (and cutaneous) MZL some physicians give an empiric course of doxycycline. Dose-adapted ISRT (4 Gy first; 20-24 Gy sequentially for poor response or relapse) is preferred for the orbit and parotid to lower the risk of xerophthalmia and xerostomia."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-nongastric-local",
+              "kind": "group",
+              "title": {
+                "uk": "Стадія IE або суміжна IIE",
+                "en": "Stage IE or contiguous IIE"
+              },
+              "description": {
+                "uk": "ISRT 24 Гр (бажано); для окремих ділянок (легеня, молочна залоза — лампектомія, щитоподібна залоза, товста й тонка кишка) можливе хірургічне лікування — позитивні краї: розглянути ISRT, негативні: активне спостереження; ритуксимаб — у відібраних випадках; спостереження — коли діагностична біопсія була ексцизійною чи ISRT загрожує значною захворюваністю. Після завершення: огляд кожні 3–6 міс. 5 років, далі щороку.",
+                "en": "ISRT 24 Gy (preferred); surgery may be considered for certain sites (lung, breast lumpectomy, thyroid, colon/small bowel) — positive margins: consider ISRT, negative: active surveillance; rituximab in selected cases; surveillance when the diagnostic biopsy was excisional or ISRT would cause significant morbidity. Afterward: visits every 3-6 months for 5 years, then yearly."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "У відібраних випадках",
+                    "en": "In selected cases"
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "ISRT 24 Гр або доза-адаптована ISRT (орбіта, привушна)",
+                    "en": "ISRT 24 Gy or dose-adapted ISRT (orbit, parotid)"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Хірургічне видалення для окремих локалізацій",
+                    "en": "Surgery for certain sites"
+                  }
+                },
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Активне спостереження у відібраних випадках",
+                    "en": "Active surveillance in selected cases"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-nongastric-iv",
+              "kind": "group",
+              "title": {
+                "uk": "Стадія IV",
+                "en": "Stage IV"
+              },
+              "description": {
+                "uk": "ISRT (множинні осередки, наприклад двобічне ураження орбіт без іншого ураження, або паліативно для симптомних осередків), активне спостереження у відібраних випадках або лікування як поширеної нодальної МЗЛ (NMZL-3).",
+                "en": "ISRT (multiple sites, for example bilateral orbital disease without other disease, or palliative for symptomatic sites), active surveillance in selected cases, or management as advanced nodal MZL (NMZL-3)."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "ISRT",
+                    "en": "ISRT"
+                  }
+                },
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Активне спостереження у відібраних випадках",
+                    "en": "Active surveillance in selected cases"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Поширена нодальна МЗЛ (NMZL-3/4)",
+                    "en": "Advanced nodal MZL (NMZL-3/4)"
+                  },
+                  "target": "nccn-nodal-adv"
+                }
+              ]
+            },
+            {
+              "key": "nccn-nongastric-rel",
+              "kind": "group",
+              "title": {
+                "uk": "Рецидив",
+                "en": "Recurrence"
+              },
+              "description": {
+                "uk": "Місцевий — ISRT, якщо не було, або як поширена нодальна МЗЛ. Системний — оцінити показання; без показань — спостереження; перша лінія (ще не лікований) — MZL-A 1; після ритуксимабу — MZL-A 2–3. Трансформація — HTBCEL-1.",
+                "en": "Local — ISRT if not given, or as advanced nodal MZL. Systemic — weigh the indications; none — surveillance; treatment-naive — MZL-A 1; after rituximab — MZL-A 2-3. Transformation — HTBCEL-1."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Перша лінія (MZL-A 1)",
+                    "en": "First line (MZL-A 1)"
+                  },
+                  "target": "nccn-1l"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Друга лінія й далі (MZL-A 2–3)",
+                    "en": "Second line and later (MZL-A 2-3)"
+                  },
+                  "target": "nccn-2l"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-nodal-early",
+          "kind": "line",
+          "title": {
+            "uk": "Нодальна МЗЛ, стадія I–II (NMZL-2)",
+            "en": "Nodal MZL, stage I-II (NMZL-2)"
+          },
+          "description": {
+            "uk": "Педіатричну нодальну МЗЛ розглядають при локалізованому процесі в молодих. Відповідь — за Lugano (PET 5-PS). Спостереження після лікування: огляд і аналізи кожні 3–6 міс. 5 років, далі щороку; КТ з контрастом до 2 років не частіше ніж кожні 6 міс. Початок системного лікування покращує безподієву виживаність, але не загальну.",
+            "en": "Pediatric nodal MZL is considered with localized disease in a young patient. Response by Lugano (PET 5-PS). Follow-up: visits and labs every 3-6 months for 5 years, then yearly; contrast CT up to 2 years no more than every 6 months. Starting systemic therapy improves failure-free survival but not overall survival."
+          },
+          "regimens": [
+            {
+              "regimen_id": "rituximab-mono"
+            },
+            {
+              "regimen_id": "br"
+            },
+            {
+              "regimen_id": "o-b-cycle-1"
+            },
+            {
+              "regimen_id": "o-b"
+            },
+            {
+              "regimen_id": "r-chop-21"
+            },
+            {
+              "regimen_id": "r-cvp"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "ISRT (бажано) — стадія I або суміжна II",
+                "en": "ISRT (preferred) — stage I or contiguous II"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "ISRT + анти-CD20 антитіло ± хіміотерапія",
+                "en": "ISRT + anti-CD20 antibody ± chemotherapy"
+              }
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Анти-CD20 антитіло ± хіміотерапія (MZL-A) за певних обставин, наприклад при великому внутрішньочеревному чи брижовому ураженні стадії I",
+                "en": "Anti-CD20 antibody ± chemotherapy (MZL-A) in certain circumstances, for example bulky intra-abdominal or mesenteric stage I disease"
+              },
+              "preference": "circumstances"
+            },
+            {
+              "kind": "surveillance",
+              "column": "treatment",
+              "label": {
+                "uk": "Несуміжна стадія II — активне спостереження; за появи показань — анти-CD20 ± хіміотерапія ± ISRT для місцевого полегшення",
+                "en": "Non-contiguous stage II — active surveillance; once indications appear — anti-CD20 ± chemotherapy ± ISRT for local palliation"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "NR або прогресія — як поширена хвороба (NMZL-4)",
+                "en": "NR or progression — as advanced disease (NMZL-4)"
+              },
+              "target": "nccn-nodal-adv"
+            }
+          ]
+        },
+        {
+          "key": "nccn-nodal-adv",
+          "kind": "line",
+          "title": {
+            "uk": "Нодальна МЗЛ, стадія III–IV і рецидив (NMZL-3/4)",
+            "en": "Nodal MZL, stage III-IV and relapse (NMZL-3/4)"
+          },
+          "description": {
+            "uk": "Показання до лікування: клінічне випробування, симптоми, загроза функції органа, клінічно значуща чи прогресивна цитопенія внаслідок лімфоми, клінічно значуща пухлинна маса (критерії GELF — FOLL-A), стійке або швидке прогресування. Без показань — активне спостереження (категорія 1). При показаннях — схеми MZL-A, клінічне випробування або дуже низькі дози ISRT. PET-позитивна PR скорочує виживаність без прогресування, але додаткове лікування результату не змінює; після відповіді на монотерапію ритуксимабом — за бажанням подовжена терапія. Відсутність відповіді чи прогресія — повторна біопсія (трансформація → як ДВКЛ).",
+            "en": "Indications for treatment: trial, symptoms, threatened organ function, clinically significant or progressive cytopenia from lymphoma, bulk (GELF, FOLL-A), steady or rapid progression. With none — active surveillance (category 1). With them — MZL-A regimens, a trial or very low-dose ISRT. A PET-positive PR shortens progression-free survival but extra treatment has not changed outcome; after response to single-agent rituximab optional extended therapy. No response or progression — rebiopsy (transformation — treat as DLBCL)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "br",
+              "notes": {
+                "uk": "Схеми першої лінії — на сторінці «Перша лінія»; тут лише найуживаніші",
+                "en": "First-line regimens are on the \"First line\" page; only the commonest are listed here"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "r-chop-21",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "r-cvp",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "rituximab-mono",
+              "notes": {
+                "uk": "Малий пухлинний тягар",
+                "en": "Low tumor burden"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "r2-cycle-1",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "r2",
+              "preference": "other"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "surveillance",
+              "column": "treatment",
+              "label": {
+                "uk": "Без показань — активне спостереження (категорія 1)",
+                "en": "No indication — active surveillance (category 1)"
+              },
+              "category": "1"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Дуже низькі дози ISRT (4 Гр)",
+                "en": "Very low-dose ISRT (4 Gy)"
+              }
+            },
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне випробування",
+                "en": "Clinical trial"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Перша лінія (MZL-A 1)",
+                "en": "First line (MZL-A 1)"
+              },
+              "target": "nccn-1l"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Друга лінія й далі (MZL-A 2–3)",
+                "en": "Second line and later (MZL-A 2-3)"
+              },
+              "target": "nccn-2l"
+            }
+          ]
+        },
+        {
+          "key": "nccn-spleen",
+          "kind": "line",
+          "title": {
+            "uk": "Селезінкова МЗЛ (SMZL-2/3)",
+            "en": "Splenic MZL (SMZL-2/3)"
+          },
+          "description": {
+            "uk": "Передбачувано діагноз можна поставити за периферичною кров’ю ± кістковим мозком (малі лімфоїдні клітини з обмеженням легких ланцюгів, без CD5, CD10, цикліну D1); остаточно — після спленектомії. Диференціальний діагноз із волосатоклітинним лейкозом (BRAF, CD103−, анексин A1−) і лімфоплазмоцитарною лімфомою (MYD88). Вакцинація проти пневмокока, менінгокока, Haemophilus influenzae й гепатиту B — щонайменше за 2 тижні до спленектомії.",
+            "en": "A presumptive diagnosis can rest on peripheral blood ± marrow (small lymphoid cells with light-chain restriction and no CD5, CD10, cyclin D1); definitive after splenectomy. Differentiate from hairy cell leukemia (BRAF, CD103-, annexin A1-) and lymphoplasmacytic lymphoma (MYD88). Vaccinate against pneumococcus, meningococcus, Haemophilus influenzae and hepatitis B at least 2 weeks before splenectomy."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-spleen-hcv",
+              "kind": "group",
+              "title": {
+                "uk": "Безсимптомна, без прогресивної цитопенії й спленомегалії; гепатит C позитивний",
+                "en": "Asymptomatic, no progressive cytopenia or splenomegaly; hepatitis C positive"
+              },
+              "description": {
+                "uk": "Якщо немає протипоказань до лікування гепатиту — противірусна терапія за відповідною схемою гепатиту C (консультація гепатолога); при CR/PR — спостереження, при відсутності відповіді — як при спленомегалії з симптомами.",
+                "en": "If there are no contraindications to hepatitis treatment — antiviral therapy with an appropriate hepatitis C regimen (hepatology consult); CR/PR — follow-up, no response — as symptomatic splenomegaly."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "supportive",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Противірусне лікування гепатиту C",
+                    "en": "Antiviral treatment of hepatitis C"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-spleen-sympt",
+              "kind": "group",
+              "title": {
+                "uk": "Спленомегалія з цитопенією чи симптомами (гепатит C негативний)",
+                "en": "Splenomegaly with cytopenia or symptoms (hepatitis C negative)"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "375 мг/м² щотижня ×4; після відповіді можна подовжити (раз на 8–12 тижнів до 2 років)",
+                    "en": "375 mg/m2 weekly x4; after response optional extension (every 8-12 weeks up to 2 years)"
+                  },
+                  "preference": "preferred"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Спленектомія",
+                    "en": "Splenectomy"
+                  },
+                  "preference": "other",
+                  "category": "2b"
+                },
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Без симптомів — активне спостереження",
+                    "en": "No symptoms — active surveillance"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-spleen-fu",
+              "kind": "group",
+              "title": {
+                "uk": "Спостереження й рецидив (SMZL-3)",
+                "en": "Follow-up and recurrence (SMZL-3)"
+              },
+              "description": {
+                "uk": "Огляд кожні 3–6 міс. 5 років, далі щороку. Рецидив: оцінити показання (випробування, симптоми, загроза функції органа, цитопенія, зокрема аутоімунна, значна пухлинна маса, прогресія); без показань — спостереження; ще не лікований — перша лінія MZL-A 1; після ритуксимабу — MZL-A 2–3; спленектомія; дуже низькі дози ISRT. Трансформація — HTBCEL-1.",
+                "en": "Visits every 3-6 months for 5 years, then yearly. Recurrence: weigh the indications (trial, symptoms, threatened organ function, cytopenia including autoimmune, bulk, progression); none — surveillance; treatment-naive — first line MZL-A 1; after rituximab — MZL-A 2-3; splenectomy; very low-dose ISRT. Transformation — HTBCEL-1."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Перша лінія (MZL-A 1)",
+                    "en": "First line (MZL-A 1)"
+                  },
+                  "target": "nccn-1l"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Друга лінія й далі (MZL-A 2–3)",
+                    "en": "Second line and later (MZL-A 2-3)"
+                  },
+                  "target": "nccn-2l"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-1l",
+          "kind": "line",
+          "title": {
+            "uk": "Перша лінія (MZL-A 1)",
+            "en": "First line (MZL-A 1)"
+          },
+          "description": {
+            "uk": "Для літніх чи ослаблених, якщо жодна комбінація не буде переносимою: ритуксимаб 375 мг/м² щотижня ×4 (бажано), ISRT при локальній хворобі; інший варіант — циклофосфамід ± ритуксимаб. Подовжена терапія (за бажанням) після CR/PR на монотерапію ритуксимабом: 375 мг/м² раз на 8–12 тижнів до 2 років.",
+            "en": "For older or infirm patients when no combination is expected to be tolerable: rituximab 375 mg/m2 weekly x4 (preferred), ISRT for local disease; another option — cyclophosphamide ± rituximab. Extended therapy (optional) after CR/PR on single-agent rituximab: 375 mg/m2 every 8-12 weeks for up to 2 years."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-1l-nmzl",
+              "kind": "group",
+              "title": {
+                "uk": "Нодальна МЗЛ",
+                "en": "Nodal MZL"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "br",
+                  "notes": {
+                    "uk": "Бендамустин + ритуксимаб",
+                    "en": "Bendamustine + rituximab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r-chop-21",
+                  "notes": {
+                    "uk": "CHOP + ритуксимаб",
+                    "en": "CHOP + rituximab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r-cvp",
+                  "notes": {
+                    "uk": "CVP + ритуксимаб",
+                    "en": "CVP + rituximab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "Малий пухлинний тягар: 375 мг/м² щотижня ×4",
+                    "en": "Low tumor burden: 375 mg/m2 weekly x4"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r2-cycle-1",
+                  "notes": {
+                    "uk": "Леналідомід + ритуксимаб (лише нодальна МЗЛ)",
+                    "en": "Lenalidomide + rituximab (nodal MZL only)"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "r2",
+                  "preference": "other"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-smzl",
+              "kind": "group",
+              "title": {
+                "uk": "Селезінкова МЗЛ",
+                "en": "Splenic MZL"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "375 мг/м² щотижня ×4",
+                    "en": "375 mg/m2 weekly x4"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-emzl",
+              "kind": "group",
+              "title": {
+                "uk": "Екстранодальна МЗЛ (множинні осередки)",
+                "en": "Extranodal MZL (multifocal)"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "375 мг/м² щотижня ×4",
+                    "en": "375 mg/m2 weekly x4"
+                  },
+                  "preference": "other"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-old",
+              "kind": "group",
+              "title": {
+                "uk": "Літні або ослаблені",
+                "en": "Older or infirm"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "375 мг/м² щотижня ×4",
+                    "en": "375 mg/m2 weekly x4"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-mzl-cyclophosphamide",
+                  "notes": {
+                    "uk": "Циклофосфамід ± ритуксимаб",
+                    "en": "Cyclophosphamide ± rituximab"
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "ISRT при локальній хворобі",
+                    "en": "ISRT for local disease"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-1l-ext",
+              "kind": "group",
+              "title": {
+                "uk": "Подовжена терапія (за бажанням)",
+                "en": "Extended therapy (optional)"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-maintenance",
+                  "notes": {
+                    "uk": "375 мг/м² раз на 8–12 тижнів до 2 років (після відповіді на монотерапію ритуксимабом)",
+                    "en": "375 mg/m2 every 8-12 weeks up to 2 years (after response to single-agent rituximab)"
+                  },
+                  "preference": "preferred"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "maintenance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Лише після монотерапії ритуксимабом",
+                    "en": "Only after single-agent rituximab"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-2l",
+          "kind": "line",
+          "title": {
+            "uk": "Друга лінія й далі (MZL-A 2–3)",
+            "en": "Second line and later (MZL-A 2-3)"
+          },
+          "description": {
+            "uk": "Бендамустин не рекомендований після попереднього бендамустину; перед CAR-T — відкласти до лейкафереза. Занубрутиніб — безперервно, після щонайменше однієї схеми з анти-CD20; піртобрутиніб — після ковалентного інгібітора BTK. Ритуксимаб як подовжена терапія, якщо довша ремісія; після бендамустину + обінутузумабу — підтримка обінутузумабом 1 г раз на 8 тижнів, 12 введень (для рефрактерних до ритуксимабу). Для ослаблених: інгібітори BTK, леналідомід + ритуксимаб, ритуксимаб ×4.",
+            "en": "Bendamustine is not recommended after prior bendamustine; before CAR-T delay it until leukapheresis. Zanubrutinib — continuous, after at least one anti-CD20 regimen; pirtobrutinib — after a covalent BTK inhibitor. Rituximab as extended therapy if a longer remission; after bendamustine + obinutuzumab — obinutuzumab maintenance 1 g every 8 weeks, 12 doses (for rituximab-refractory disease). For the infirm: BTK inhibitors, lenalidomide + rituximab, rituximab x4."
+          },
+          "regimens": [
+            {
+              "regimen_id": "zanubrutinib-mono",
+              "notes": {
+                "uk": "Безперервно, після щонайменше однієї схеми з анти-CD20",
+                "en": "Continuous, after at least one anti-CD20 regimen"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "br",
+              "notes": {
+                "uk": "Бендамустин + ритуксимаб (не рекомендується після бендамустину)",
+                "en": "Bendamustine + rituximab (not recommended after bendamustine)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "r-chop-21",
+              "notes": {
+                "uk": "CHOP + ритуксимаб",
+                "en": "CHOP + rituximab"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "r-cvp",
+              "notes": {
+                "uk": "CVP + ритуксимаб",
+                "en": "CVP + rituximab"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "r2-cycle-1",
+              "notes": {
+                "uk": "Леналідомід + ритуксимаб",
+                "en": "Lenalidomide + rituximab"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "r2",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "o-b-cycle-1",
+              "notes": {
+                "uk": "Бендамустин + обінутузумаб (не рекомендується після бендамустину)",
+                "en": "Bendamustine + obinutuzumab (not recommended after bendamustine)"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "o-b",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "acalabrutinib-mono",
+              "notes": {
+                "uk": "Безперервно; у дослідженнях виключали супутні антагоністи вітаміну K",
+                "en": "Continuous; trials excluded concomitant vitamin K antagonists"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-mzl-pirtobrutinib",
+              "notes": {
+                "uk": "Безперервно, після ковалентного інгібітора BTK",
+                "en": "Continuous, after a covalent BTK inhibitor"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "galen-cycle-1",
+              "notes": {
+                "uk": "Леналідомід + обінутузумаб",
+                "en": "Lenalidomide + obinutuzumab"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "galen",
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-mzl-cyclophosphamide",
+              "notes": {
+                "uk": "Для ослаблених",
+                "en": "For the infirm"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "rituximab-mono",
+              "notes": {
+                "uk": "Також як подовжена терапія, якщо відповідь була тривалою; для ослаблених 375 мг/м² щотижня ×4",
+                "en": "Also as extended therapy if remission was longer; for the infirm 375 mg/m2 weekly x4"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-car-t-cd19",
+              "notes": {
+                "uk": "Третя лінія й далі: ліко-цел (бажано), аксі-цел (інший варіант)",
+                "en": "Third line and later: liso-cel (preferred), axi-cel (other)"
+              },
+              "preference": "preferred"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "treatment",
+              "label": {
+                "uk": "Консолідація (за бажанням): алогенна ТГСК у виключно відібраних випадках",
+                "en": "Consolidation (optional): allogeneic HCT in highly selected cases"
+              },
+              "preference": "circumstances"
+            },
+            {
+              "kind": "maintenance",
+              "column": "treatment",
+              "label": {
+                "uk": "Після бендамустину + обінутузумабу — підтримка обінутузумабом (див. схему «Обінутузумаб, підтримувальна»)",
+                "en": "After bendamustine + obinutuzumab — obinutuzumab maintenance (see the obinutuzumab maintenance regimen)"
+              }
+            },
+            {
+              "kind": "other",
+              "column": "next",
+              "label": {
+                "uk": "Трансформація — як ДВКЛ (HTBCEL-1)",
+                "en": "Transformation — treat as DLBCL (HTBCEL-1)"
+              }
+            }
+          ],
+          "children": [
+            {
+              "key": "nccn-2l-maint",
+              "kind": "group",
+              "title": {
+                "uk": "Подовжена терапія після бендамустину + обінутузумабу",
+                "en": "Extended therapy after bendamustine + obinutuzumab"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "o-b-maintenance",
+                  "notes": {
+                    "uk": "Обінутузумаб 1 г раз на 8 тижнів, 12 введень (для рефрактерних до ритуксимабу)",
+                    "en": "Obinutuzumab 1 g every 8 weeks, 12 doses (for rituximab-refractory disease)"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "regimens": [
+        {
+          "regimen_id": "rituximab-mono"
+        },
+        {
+          "regimen_id": "br"
+        },
+        {
+          "regimen_id": "o-b-cycle-1"
+        },
+        {
+          "regimen_id": "o-b"
+        },
+        {
+          "regimen_id": "r-chop-21"
+        },
+        {
+          "regimen_id": "r-cvp"
+        },
+        {
+          "regimen_id": "r2-cycle-1"
+        },
+        {
+          "regimen_id": "r2"
+        },
+        {
+          "regimen_id": "rituximab-maintenance"
+        },
+        {
+          "regimen_id": "ref-mzl-cyclophosphamide"
+        }
+      ]
+    },
+    {
+      "key": "relapse",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив і рефрактерна хвороба",
+        "en": "Relapsed and refractory disease"
+      },
+      "regimens": [
+        {
+          "regimen_id": "zanubrutinib-mono"
+        },
+        {
+          "regimen_id": "acalabrutinib-mono"
+        },
+        {
+          "regimen_id": "br"
+        },
+        {
+          "regimen_id": "o-b-cycle-1"
+        },
+        {
+          "regimen_id": "o-b"
+        },
+        {
+          "regimen_id": "r-chop-21"
+        },
+        {
+          "regimen_id": "r-cvp"
+        },
+        {
+          "regimen_id": "r2-cycle-1"
+        },
+        {
+          "regimen_id": "r2"
+        },
+        {
+          "regimen_id": "galen-cycle-1"
+        },
+        {
+          "regimen_id": "galen"
+        },
+        {
+          "regimen_id": "rituximab-mono"
+        },
+        {
+          "regimen_id": "o-b-maintenance"
+        }
+      ]
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (not calculated)"
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-mzl-pirtobrutinib"
+        },
+        {
+          "regimen_id": "ref-car-t-cd19"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "ref-hiv-bortezomib-ice",
+  "short_name": "Бортезоміб + ICE (ВІЛ-лімфома)",
+  "name": {
+    "uk": "Бортезоміб + ICE ± ритуксимаб при рецидиві ВІЛ-асоційованої ДВКЛ",
+    "en": "Bortezomib + ICE ± rituximab in relapsed HIV-associated DLBCL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Рецидив ВІЛ-асоційованої ДВКЛ, ГВ8-позитивної ДВКЛ і первинної випітної лімфоми: за NCCN або схеми 2-ї лінії ДВКЛ, або бортезоміб/ICE (категорія 2B).",
+      "en": "Relapse of HIV-associated DLBCL, HHV8-positive DLBCL and primary effusion lymphoma: per NCCN either second-line DLBCL regimens or bortezomib/ICE (category 2B)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Іфосфамід, карбоплатин, етопозид",
+          "en": "Ifosfamide, carboplatin, etoposide"
+        }
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "registered"
+  }
+}

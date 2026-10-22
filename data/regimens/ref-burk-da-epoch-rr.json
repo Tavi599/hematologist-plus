@@ -1,0 +1,52 @@
+{
+  "id": "ref-burk-da-epoch-rr",
+  "short_name": "DA-EPOCH-RR (Беркітт)",
+  "name": {
+    "uk": "DA-EPOCH + ритуксимаб у дні 1 і 5 (лімфома Беркітта)",
+    "en": "DA-EPOCH + rituximab on days 1 and 5 (Burkitt lymphoma)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Варіант першої лінії NCCN (у переліку для низького й високого ризику). Після 2 циклів — PET: CR → ще 1 цикл DA-EPOCH-RR (разом 3); PR → ще 4 цикли DA-EPOCH-R (ритуксимаб лише в день 1), разом 6, + інтратекальний метотрексат. При симптомному ураженні ЦНС — DA-EPOCH-R 6 циклів + інтенсивний інтратекальний метотрексат.",
+      "en": "An NCCN first-line option (listed for both low and high risk). After 2 cycles — PET: CR → 1 more cycle of DA-EPOCH-RR (3 in all); PR → 4 more cycles of DA-EPOCH-R (rituximab on day 1 only), 6 in all, + intrathecal methotrexate. With symptomatic CNS disease — DA-EPOCH-R for 6 cycles + intensive intrathecal methotrexate."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Етопозид, преднізолон, вінкристин, циклофосфамід, доксорубіцин",
+          "en": "Etoposide, prednisolone, vincristine, cyclophosphamide, doxorubicin"
+        }
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб (дні 1 і 5)",
+          "en": "Rituximab (days 1 and 5)"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Базова схема DA-EPOCH-R з рівнями доз є в довіднику («DA-EPOCH-R»); NCCN для лімфоми Беркітта не наводить доз ритуксимабу у дні 1 і 5 — їх беруть із першоджерела (Dunleavy 2013, Roschewski 2020).",
+        "en": "The base DA-EPOCH-R regimen with dose levels is in the catalog (\"DA-EPOCH-R\"); for Burkitt lymphoma NCCN gives no rituximab doses for days 1 and 5 — take them from the primary source (Dunleavy 2013, Roschewski 2020)."
+      },
+      {
+        "uk": "Профілактика синдрому лізису пухлини при лімфомі Беркітта обов’язкова.",
+        "en": "Tumor lysis prophylaxis is mandatory in Burkitt lymphoma."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN дози не наводить; схема описана лише для ознайомлення.",
+      "en": "NCCN gives no doses; the regimen is described for reference only."
+    },
+    "availability": "registered"
+  }
+}
