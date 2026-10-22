@@ -1,0 +1,50 @@
+{
+  "$comment": "Лише опис за NCCN CLL/SLL 1.2027: доз для розрахунку немає.",
+  "id": "ref-cll-richter-bispecifics",
+  "short_name": "Біспецифічні (Ріхтер)",
+  "name": {
+    "uk": "Біспецифічні антитіла (епкоритамаб, глофітамаб) при трансформації Ріхтера",
+    "en": "Bispecific antibodies (epcoritamab, glofitamab) in Richter transformation"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma, версія 1.2027 від 20.08.2026",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1478",
+      "version": "1.2027 (20.08.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Трансформація Ріхтера в ДВВКЛ (NCCN 1.2027). Обидва препарати є в довіднику.",
+      "en": "Richter transformation to DLBCL (NCCN 1.2027). Both drugs are in the catalog."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Епкоритамаб",
+          "en": "Epcoritamab"
+        },
+        "drug_id": "epcoritamab"
+      },
+      {
+        "name": {
+          "uk": "Глофітамаб",
+          "en": "Glofitamab"
+        },
+        "drug_id": "glofitamab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Синдром вивільнення цитокінів і неврологічну токсичність лікують за настановою NCCN щодо токсичності CAR-T і біспецифічних антитіл.",
+        "en": "Cytokine release syndrome and neurotoxicity are managed by the NCCN guideline on CAR T-cell and lymphocyte-engager toxicity."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить, а повного розкладу з іншого джерела ще немає, тому доз для розрахунку тут нема. Перед призначенням — за інструкцією препарату.",
+      "en": "The NCCN document gives no doses here and no complete schedule from another source is in the catalog yet, so there are no doses to calculate. Check the prescribing information before use."
+    },
+    "availability": "unknown"
+  }
+}

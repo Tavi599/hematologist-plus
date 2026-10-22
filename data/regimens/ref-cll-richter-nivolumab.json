@@ -1,0 +1,45 @@
+{
+  "$comment": "Лише опис за NCCN CLL/SLL 1.2027: доз для розрахунку немає.",
+  "id": "ref-cll-richter-nivolumab",
+  "short_name": "Ніволумаб±Ібру (Ріхтер)",
+  "name": {
+    "uk": "Ніволумаб ± ібрутиніб при трансформації Ріхтера",
+    "en": "Nivolumab with or without ibrutinib in Richter transformation"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma, версія 1.2027 від 20.08.2026",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1478",
+      "version": "1.2027 (20.08.2026)",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Трансформація Ріхтера в ДВВКЛ (NCCN 1.2027). Комбінації з ковалентним інгібітором BTK непридатні, якщо його не переносили або на ньому було прогресування.",
+      "en": "Richter transformation to DLBCL (NCCN 1.2027). Combinations with a covalent BTK inhibitor are unsuitable after intolerance of, or progression on, that inhibitor."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ніволумаб",
+          "en": "Nivolumab"
+        },
+        "drug_id": "nivolumab"
+      },
+      {
+        "name": {
+          "uk": "Ібрутиніб",
+          "en": "Ibrutinib"
+        },
+        "drug_id": "ibrutinib"
+      }
+    ],
+    "key_info": [],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить, а повного розкладу з іншого джерела ще немає, тому доз для розрахунку тут нема. Перед призначенням — за інструкцією препарату.",
+      "en": "The NCCN document gives no doses here and no complete schedule from another source is in the catalog yet, so there are no doses to calculate. Check the prescribing information before use."
+    },
+    "availability": "unknown"
+  }
+}

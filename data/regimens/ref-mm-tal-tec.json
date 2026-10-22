@@ -1,0 +1,53 @@
+{
+  "id": "ref-mm-tal-tec",
+  "short_name": "Талкветамаб + теклістамаб",
+  "name": {
+    "uk": "Талкветамаб + теклістамаб (RedirecTT-1)",
+    "en": "Talquetamab + teclistamab (RedirecTT-1)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Multiple Myeloma, version 1.2027 (MYEL-H, Discussion)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1445",
+      "version": "1.2027 від 09.09.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Комбінація двох біспецифічних антитіл (GPRC5D×CD3 і BCMA×CD3) для агресивного рецидиву, після ≥3 ліній і при прогресуванні після BCMA-терапії.",
+      "en": "A combination of two bispecific antibodies (GPRC5D x CD3 and BCMA x CD3) for aggressive relapse, after 3 or more lines and for progression after BCMA therapy."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Талкветамаб",
+          "en": "Talquetamab"
+        },
+        "drug_id": "talquetamab"
+      },
+      {
+        "name": {
+          "uk": "Теклістамаб",
+          "en": "Teclistamab"
+        },
+        "drug_id": "teclistamab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "RedirecTT-1 (фаза Ib/IIa, 94 хворих): рекомендований режим фази II — талкветамаб 0,8 мг/кг + теклістамаб 3,0 мг/кг раз на 2 тижні (нижчі дози — щотижня); відповідь у 80% на цьому режимі, у 78% на всіх рівнях доз; ймовірність утримати відповідь 18 міс. — 86%.",
+        "en": "RedirecTT-1 (phase Ib/IIa, 94 patients): recommended phase II regimen — talquetamab 0.8 mg/kg + teclistamab 3.0 mg/kg every 2 weeks (lower doses weekly); response in 80% on this regimen and 78% across all dose levels; probability of keeping the response at 18 months 86%."
+      },
+      {
+        "uk": "Можна розглянути профілактичний тоцилізумаб перед першою дозою. Інфекції — головна причина смертності не від рецидиву: противірусна, пневмоцистна, антибактеріальна профілактика й імуноглобулін.",
+        "en": "Prophylactic tocilizumab may be considered before the first dose. Infections are the main cause of non-relapse mortality: antiviral, Pneumocystis and antibacterial cover and immunoglobulin."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "unavailable"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$comment": "Лише опис: NCCN HL 2.2026 називає схему без доз і днів; розрахунку немає, бо джерела з дозами в довіднику ще нема.",
+  "id": "ref-nlphl-cvbp-r",
+  "short_name": "R-CVbP (НЛПЛХ)",
+  "name": {
+    "uk": "Ритуксимаб + циклофосфамід, вінбластин і преднізолон при НЛПЛХ",
+    "en": "Rituximab + cyclophosphamide, vinblastine and prednisolone in NLPHL"
+  },
+  "sources": [
+    {
+      "name": "NCCN Clinical Practice Guidelines: Hodgkin Lymphoma, версія 2.2026 від 01.07.2026, HODG-B 3 з 8 (посилання: Shankar A. та ін. Eur J Cancer 2012;48:1700-1706)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1439",
+      "version": "2.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "CVbP (циклофосфамід, вінбластин, преднізолон) з ритуксимабом — одна з найчастіших схем лікування НЛПЛХ у центрах NCCN.",
+      "en": "CVbP (cyclophosphamide, vinblastine, prednisolone) with rituximab — one of the commonest NLPHL regimens at NCCN centres."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Вінбластин",
+          "en": "Vinblastine"
+        },
+        "drug_id": "vinblastine"
+      },
+      {
+        "name": {
+          "uk": "Преднізолон",
+          "en": "Prednisolone"
+        },
+        "drug_id": "prednisolone"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Є в переліку НЛПЛХ (HODG-B 3 і 6 з 8). Для НЛПЛХ бажаних схем 2-ї лінії немає; вибір залежить від попереднього лікування й токсичності.",
+        "en": "It is on the NLPHL lists (HODG-B 3 and 6 of 8). There are no preferred second-line regimens for NLPHL; the choice depends on prior therapy and toxicity."
+      },
+      {
+        "uk": "Підшкірну форму ритуксимабу можна вводити після першої повної внутрішньовенної дози.",
+        "en": "Subcutaneous rituximab may be used after the first full intravenous dose."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN не наводить доз, днів і кількості циклів; щоб розрахувати схему, потрібне джерело з повним дизайном (eviQ, NSSG, UpToDate чи оригінальна публікація).",
+      "en": "NCCN gives no doses, days or number of cycles; to calculate the regimen a source with the full design is needed (eviQ, NSSG, UpToDate or the original publication)."
+    }
+  }
+}

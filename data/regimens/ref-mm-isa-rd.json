@@ -1,0 +1,60 @@
+{
+  "id": "ref-mm-isa-rd",
+  "short_name": "Isa-Rd",
+  "name": {
+    "uk": "Isa-Rd (ізатуксимаб + леналідомід + дексаметазон)",
+    "en": "Isa-Rd (isatuximab + lenalidomide + dexamethasone)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Multiple Myeloma, version 1.2027 (MYEL-H, Discussion)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1445",
+      "version": "1.2027 від 09.09.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інша рекомендована первинна терапія, коли ТГСК не показана; варіант при периферичній нейропатії.",
+      "en": "An other-recommended primary regimen when HCT is not indicated; an option in peripheral neuropathy."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ізатуксимаб",
+          "en": "Isatuximab"
+        },
+        "drug_id": "isatuximab"
+      },
+      {
+        "name": {
+          "uk": "Леналідомід",
+          "en": "Lenalidomide"
+        },
+        "drug_id": "lenalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "BENEFIT: частка ≥ПВ на 18-му місяці вища при Isa-Rd (58%), ніж при Isa-VRd (31%); 24-місячна ВБП 80% проти 85,2%, різниця за ВБП і ЗВ незначна.",
+        "en": "BENEFIT: CR or better at 18 months was higher with Isa-Rd (58%) than Isa-VRd (31%); 24-month PFS 80% vs 85.2%, with marginal differences in PFS and OS."
+      },
+      {
+        "uk": "Без бортезомібу менше побічних явищ, що призводили до переривання лікування.",
+        "en": "Without bortezomib fewer adverse events led to interruption of treatment."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "unavailable"
+  }
+}

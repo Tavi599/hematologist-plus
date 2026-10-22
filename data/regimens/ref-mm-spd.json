@@ -1,0 +1,56 @@
+{
+  "id": "ref-mm-spd",
+  "short_name": "SPd",
+  "name": {
+    "uk": "Селінексор + помалідомід + дексаметазон",
+    "en": "Selinexor + pomalidomide + dexamethasone"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Multiple Myeloma, version 1.2027 (MYEL-H, Discussion)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1445",
+      "version": "1.2027 від 09.09.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Схема за певних обставин (категорія 1 у списку NCCN) після ≥2 ліній з IMiD та бортезомібом і прогресуванням на терапії або протягом 60 днів після неї.",
+      "en": "A regimen for certain circumstances (category 1 on the NCCN list) after 2 or more lines including an IMiD and bortezomib, with progression on or within 60 days of the last therapy."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Селінексор",
+          "en": "Selinexor"
+        },
+        "drug_id": "selinexor"
+      },
+      {
+        "name": {
+          "uk": "Помалідомід",
+          "en": "Pomalidomide"
+        },
+        "drug_id": "pomalidomide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Фаза I/II (STOMP): серед 20 хворих на дозі фази II частота відповіді 65%; щотижнева доза селінексору 40 мг дала кращу переносимість, ніж 60 мг (SPd-40 проти SPd-60).",
+        "en": "Phase I/II (STOMP): among 20 patients on the phase II dose ORR 65%; weekly selinexor 40 mg was better tolerated than 60 mg (SPd-40 vs SPd-60)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "unavailable"
+  }
+}

@@ -132,7 +132,7 @@ function PageView({
       </Title>
       {page.node.description !== null && (
         <Spoiler maxHeight={66} showLabel="▾" hideLabel="▴">
-          <Text size="sm" c="dimmed">
+          <Text size="sm" c="dimmed" style={{ whiteSpace: 'pre-line' }}>
             {localize(page.node.description, language)}
           </Text>
         </Spoiler>
