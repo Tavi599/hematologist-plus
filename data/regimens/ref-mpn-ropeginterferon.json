@@ -17,6 +17,12 @@
       "url": "https://www.uptodate.com/contents/essential-thrombocythemia-treatment-and-prognosis",
       "version": "перевірено 2026-10-04",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "NCCN Guidelines: Myeloproliferative Neoplasms, версія 3.2026 від 18.09.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026",
+      "checkedOn": "2026-10-22"
     }
   ],
   "reference": {
@@ -29,7 +35,8 @@
         "name": {
           "uk": "Ропегінтерферон альфа-2b",
           "en": "Ropeginterferon alfa-2b"
-        }
+        },
+        "drug_id": "ropeginterferon-alfa-2b"
       }
     ],
     "key_info": [
@@ -40,11 +47,15 @@
       {
         "uk": "При переході з гідроксикарбаміду інтерферон починають із 50 мкг раз на 2 тижні, а дозу гідроксикарбаміду знижують на 20–40% кожні 2 тижні й відміняють до 13-го тижня.",
         "en": "When switching from hydroxycarbamide, interferon starts at 50 mcg every two weeks while the hydroxycarbamide dose is cut by 20 to 40% every two weeks and stopped by week 13."
+      },
+      {
+        "uk": "NCCN 3.2026: бажаний варіант при ПВ (низького й високого ризику) та при ЕТ високого ризику після неадекватної відповіді (категорія 1 при ЕТ). Старт 100 мкг раз на 2 тижні (50 мкг на тиждень при переході з гідроксисечовини), підвищення на 50 мкг кожні 2 тижні.",
+        "en": "NCCN 3.2026: a preferred option in PV (low and high risk) and in high-risk ET after an inadequate response (category 1 in ET). Start 100 mcg every 2 weeks (50 mcg a week when switching from hydroxyurea), raise by 50 mcg every 2 weeks."
       }
     ],
     "gap": {
-      "uk": "Препарату немає в довіднику (немає джерела на форму випуску), а доза змінюється щодвотижня.",
-      "en": "The drug is not in the catalog (no source for its presentation), and the dose changes every two weeks."
+      "uk": "Ропегінтерферон в Україні не зареєстрований; доза змінюється щодвотижня, тому розрахунку в довіднику немає.",
+      "en": "Ropeginterferon is not registered in Ukraine and the dose changes every two weeks, so there is no calculation."
     },
     "availability": "unavailable"
   }

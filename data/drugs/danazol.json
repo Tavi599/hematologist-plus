@@ -1,0 +1,20 @@
+{
+  "$comment": "Додано 2026-10-22 за NCCN MPN 3.2026 (MF-3: анемія при мієлофіброзі, категорія 2B). У реєстрі України не знайдено — «недоступний». Дози NCCN не наводить (600 мг на добу — за UpToDate, див. картку ref-mf-anemia).",
+  "id": "danazol",
+  "name": {
+    "uk": "Даназол",
+    "en": "Danazol"
+  },
+  "atc_code": "G03XA01",
+  "availability": "unavailable",
+  "amount_unit": "mg",
+  "dose_units": ["mg_flat"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "витяг від 22.10.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ]
+}

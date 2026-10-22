@@ -11,6 +11,12 @@
       "url": "https://www.uptodate.com/contents/polycythemia-vera-and-secondary-polycythemia-treatment-and-prognosis",
       "version": "перевірено 2026-10-04",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "NCCN Guidelines: Myeloproliferative Neoplasms, версія 3.2026 від 18.09.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026",
+      "checkedOn": "2026-10-22"
     }
   ],
   "reference": {
@@ -29,13 +35,18 @@
         "name": {
           "uk": "Русфертид",
           "en": "Rusfertide"
-        }
+        },
+        "drug_id": "rusfertide"
       }
     ],
     "key_info": [
       {
         "uk": "Русфертид: дози >54 мг дві ін'єкції, >82 мг — в окремі дні; реакції в місці введення.",
         "en": "Rusfertide: doses over 54 mg need two injections, over 82 mg on separate days; injection-site reactions."
+      },
+      {
+        "uk": "NCCN 3.2026 (нова виноска PV-1, PV-2; категорія 1): русфертид п/ш, титрувати до Ht <45%; може замінити чи доповнити циторедукцію при частих флеботоміях або їх непереносимості; не замінює циторедукцію, коли вона потрібна для контролю лейкоцитозу, тромбоцитозу чи інших проявів.",
+        "en": "NCCN 3.2026 (new footnote PV-1, PV-2; category 1): subcutaneous rusfertide titrated to Hct under 45% may replace or add to cytoreduction for frequent phlebotomy or phlebotomy intolerance; it does not replace cytoreduction needed for leukocytosis, thrombocytosis or other features."
       }
     ],
     "gap": {

@@ -129,6 +129,849 @@
           "regimen_id": "ref-mf-anemia"
         }
       ]
+    },
+    {
+      "key": "nccn-mf",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN МПН 3.2026 — мієлофіброз (MPN-1…MF-C)",
+        "en": "NCCN MPN 3.2026 pathways — myelofibrosis (MPN-1 to MF-C)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN «Myeloproliferative Neoplasms», версія 3.2026 від 18.09.2026: ризик → лікування → далі. Охоплює первинний і пост-ПВ/пост-ЕТ мієлофіброз. Рекомендації категорії 2A, якщо не вказано інше; дози — у схемах довідника, діагностичні критерії ВООЗ/ICC, шкали (DIPSS, DIPSS-Plus, MIPSS-70, MIPSS-70+ v2.0, MYSEC-PM), значення мутацій і критерії відповіді — у статті, розділ NCCN.",
+        "en": "The NCCN \"Myeloproliferative Neoplasms\" algorithm, version 3.2026 of 18 September 2026: risk → treatment → next. It covers primary and post-PV/post-ET myelofibrosis. Recommendations are category 2A unless stated; doses are in the catalog regimens; WHO/ICC criteria, the scores (DIPSS, DIPSS-Plus, MIPSS-70, MIPSS-70+ v2.0, MYSEC-PM), mutation significance and response criteria are in the article, NCCN section."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-mf-risk",
+          "kind": "group",
+          "title": {
+            "uk": "Діагноз і стратифікація ризику при МФ (MPN-1, MPN-2, MF-A)",
+            "en": "Diagnosis and risk stratification in MF (MPN-1, MPN-2, MF-A)"
+          },
+          "description": {
+            "uk": "Обстеження при підозрі на МПН: анамнез і огляд (розмір селезінки пальпаторно, тромботичні/геморагічні події, серцево-судинні чинники), ЗАК із формулою й мазком, біохімія з сечовою кислотою, ЛДГ і печінковими пробами, BCR::ABL1 (FISH чи ПЛР) для виключення ХМЛ, аспірат кісткового мозку із залізом, біопсія з трихромом і ретикуліном, цитогенетика, молекулярна панель (JAK2, CALR, MPL та інші мутації), MPN-SAF TSS, історія трансфузій, HLA-типування при розгляді алоТГСК, ЕПО й залізо сироватки; при підвищених тромбоцитах чи кровотечі — тест на набутий синдром фон Віллебранда. Усім хворим радять направлення до центру з досвідом лікування МПН. Первинний МФ: бажані MIPSS-70 або MIPSS-70+ v2.0; DIPSS, якщо свіжого каріотипу немає; DIPSS-Plus, якщо немає молекулярного тестування. Пост-ПВ/пост-ЕТ МФ: бажана MIPSS-70+ v2.0; також DIPSS-Plus і MYSEC-PM. Нижчий ризик: MIPSS-70 ≤3, MIPSS-70+ v2.0 ≤3, DIPSS-Plus ≤1, DIPSS ≤2, MYSEC-PM <14. Вищий ризик: MIPSS-70 ≥4, MIPSS-70+ v2.0 ≥4, DIPSS-Plus >1, DIPSS >2, MYSEC-PM ≥14. Таблиці балів — у статті, розділ NCCN.",
+            "en": "Work-up when an MPN is suspected: history and examination (palpable spleen, thrombotic and haemorrhagic events, cardiovascular risk factors), CBC with differential and smear, chemistry with uric acid, LDH and liver tests, BCR::ABL1 (FISH or PCR) to exclude CML, marrow aspirate with iron stain, biopsy with trichrome and reticulin, cytogenetics, a molecular panel (JAK2, CALR, MPL and other mutations), MPN-SAF TSS, transfusion history, HLA typing when allogeneic HCT is considered, serum EPO and iron; with a high platelet count or bleeding, test for acquired von Willebrand syndrome. Referral to a centre with MPN expertise is advised for all patients. Primary MF: MIPSS-70 or MIPSS-70+ v2.0 preferred; DIPSS if recent karyotype is unavailable; DIPSS-Plus if molecular testing is unavailable. Post-PV/post-ET MF: MIPSS-70+ v2.0 preferred; also DIPSS-Plus and MYSEC-PM. Lower risk: MIPSS-70 3 or less, MIPSS-70+ v2.0 3 or less, DIPSS-Plus 1 or less, DIPSS 2 or less, MYSEC-PM under 14. Higher risk: MIPSS-70 4 or more, MIPSS-70+ v2.0 4 or more, DIPSS-Plus above 1, DIPSS above 2, MYSEC-PM 14 or more. The score tables are in the article, NCCN section."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Нижчий ризик (MF-1)",
+                "en": "Lower risk (MF-1)"
+              },
+              "target": "nccn-mf-lower"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Вищий ризик (MF-2)",
+                "en": "Higher risk (MF-2)"
+              },
+              "target": "nccn-mf-higher"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Прискорена/бластна фаза (MPN-AP/BP-1)",
+                "en": "Accelerated/blast phase (MPN-AP/BP-1)"
+              },
+              "target": "nccn-mf-apbp"
+            }
+          ]
+        },
+        {
+          "key": "nccn-mf-lower",
+          "kind": "group",
+          "title": {
+            "uk": "Лікування МФ нижчого ризику (MF-1)",
+            "en": "Treatment of lower-risk MF (MF-1)"
+          },
+          "description": {
+            "uk": "Оцінка клітин крові й симптомів (MPN-SAF TSS). Алогенна ТГСК розглядається при низьких тромбоцитах чи складному каріотипі; вищі за ризик мутації можуть вплинути на рішення; MTSS допомагає передбачити виживання після трансплантації. Критерії відповіді IWG-MRT/ELN створено для досліджень; клінічну користь оцінюють за поліпшенням симптомів на розсуд лікаря, можна використовувати модель RR6 (для руксолітинібу); продовження JAK-інгібітора — на розсуд лікаря.",
+            "en": "Assess blood counts and symptoms (MPN-SAF TSS). Allogeneic HCT is considered with low platelets or a complex karyotype; higher-risk mutations may influence the decision; the MTSS helps predict post-transplant survival. IWG-MRT/ELN response criteria were made for trials; clinical benefit is judged by symptom improvement at the clinician's discretion, and the RR6 model can be used (for ruxolitinib); continuing a JAK inhibitor is at the clinician's discretion."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-mf-lower-asymp",
+              "kind": "line",
+              "title": {
+                "uk": "Без симптомів",
+                "en": "Asymptomatic"
+              },
+              "description": {
+                "uk": "Клінічне дослідження або спостереження; контроль ознак і симптомів прогресування (MPN-SAF TSS) кожні 3–6 місяців; при симптомах — як нижче.",
+                "en": "A clinical trial or observation; monitor for signs and symptoms of progression (MPN-SAF TSS) every 3-6 months; with symptoms, as below."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Спостереження, контроль кожні 3–6 місяців",
+                    "en": "Observation, review every 3-6 months"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-mf-lower-symp",
+              "kind": "line",
+              "title": {
+                "uk": "Симптомний (загальні симптоми, спленомегалія, цитози)",
+                "en": "Symptomatic (constitutional symptoms, splenomegaly, cytoses)"
+              },
+              "description": {
+                "uk": "Клінічне дослідження або, за певних обставин: гідроксисечовина (якщо циторедукція принесе симптоматичну користь), пакритиніб (тромбоцити <50 ×10⁹/л), пегінтерферон альфа-2a (при недоступності — інший пегільований інтерферон), руксолітиніб, момелотиніб (категорія 2B). Супровідна терапія (MPN-F). Моніторинг переносимості, відповіді й ознак прогресування.",
+                "en": "A clinical trial or, in certain circumstances: hydroxyurea (if cytoreduction would be symptomatically beneficial), pacritinib (platelets under 50 ×10⁹/L), peginterferon alfa-2a (another pegylated interferon if unavailable), ruxolitinib, momelotinib (category 2B). Supportive care (MPN-F). Monitor tolerance, response and signs of progression."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "hydroxycarbamide-mf",
+                  "notes": {
+                    "uk": "Якщо циторедукція принесе симптоматичну користь; NCCN доз не називає, схема — за UpToDate.",
+                    "en": "If cytoreduction would be symptomatically beneficial; NCCN gives no dose, the regimen is from UpToDate."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "pacritinib-mf",
+                  "notes": {
+                    "uk": "Тромбоцити <50 ×10⁹/л.",
+                    "en": "Platelets under 50 ×10⁹/L."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mpn-peginterferon",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ruxolitinib-mf",
+                  "notes": {
+                    "uk": "Початкова доза — за тромбоцитами (EMA).",
+                    "en": "The starting dose follows the platelet count (EMA)."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "momelotinib-mf",
+                  "preference": "circumstances",
+                  "category": "2b"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "supportive",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Супровідна терапія (MPN-F)",
+                    "en": "Supportive care (MPN-F)"
+                  },
+                  "target": "nccn-mf-support"
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Моніторинг: переносимість, відповідь, прогресування",
+                    "en": "Monitoring: tolerance, response, progression"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Анемія (MF-3)",
+                    "en": "Anaemia (MF-3)"
+                  },
+                  "target": "nccn-mf-anemia"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Непереносимість, відсутність або втрата відповіді",
+                    "en": "Intolerance, no response or loss of response"
+                  },
+                  "target": "nccn-mf-lower-fail"
+                }
+              ]
+            },
+            {
+              "key": "nccn-mf-lower-fail",
+              "kind": "line",
+              "title": {
+                "uk": "Непереносимість, відсутність відповіді, втрата відповіді чи прогресування",
+                "en": "Intolerance, no response, loss of response or progression"
+              },
+              "description": {
+                "uk": "Альтернативний JAK-інгібітор, який не використовувався для початкового лікування (категорія 2B для момелотинібу) з подальшим моніторингом прогресування; при анемії — MF-3; або перехід до тактики вищого ризику (MF-2); при прогресуванні — прискорена/бластна фаза. Перед зміною повторюють аспірат/біопсію з NGS і каріотипом.",
+                "en": "An alternative JAK inhibitor not used for initial treatment (category 2B for momelotinib) with continued monitoring for progression; for anaemia see MF-3; or move to higher-risk management (MF-2); with progression, accelerated/blast phase. Marrow with NGS and karyotype is repeated before the change."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ruxolitinib-mf",
+                  "notes": {
+                    "uk": "Якщо не застосовувався раніше.",
+                    "en": "If not used before."
+                  }
+                },
+                {
+                  "regimen_id": "fedratinib-mf",
+                  "notes": {
+                    "uk": "Тромбоцити >50 ×10⁹/л (UpToDate).",
+                    "en": "Platelets over 50 ×10⁹/L (UpToDate)."
+                  }
+                },
+                {
+                  "regimen_id": "pacritinib-mf",
+                  "notes": {
+                    "uk": "Якщо не застосовувався раніше.",
+                    "en": "If not used before."
+                  },
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "momelotinib-mf",
+                  "notes": {
+                    "uk": "Якщо не застосовувався раніше.",
+                    "en": "If not used before."
+                  },
+                  "category": "2b"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Вищий ризик (MF-2)",
+                    "en": "Higher risk (MF-2)"
+                  },
+                  "target": "nccn-mf-higher"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Анемія (MF-3)",
+                    "en": "Anaemia (MF-3)"
+                  },
+                  "target": "nccn-mf-anemia"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Прогресування до прискореної/бластної фази МПН (MPN-AP/BP-1)",
+                    "en": "Progression to accelerated/blast phase MPN (MPN-AP/BP-1)"
+                  },
+                  "target": "nccn-mf-apbp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-mf-higher",
+          "kind": "group",
+          "title": {
+            "uk": "Лікування МФ вищого ризику (MF-2)",
+            "en": "Treatment of higher-risk MF (MF-2)"
+          },
+          "description": {
+            "uk": "Вибір залежить від кількості тромбоцитів (<50 чи ≥50 ×10⁹/л) і від того, чи є пацієнт кандидатом на алогенну ТГСК (MF-C). Кандидат на трансплантацію: алоТГСК; донор і кондиціювання визначають індивідуально; при симптомній спленомегалії чи загальних симптомах JAK-інгібітор призначають щонайменше за 2 місяці до трансплантації, навіть якщо пацієнт уже придатний, і можна поступово знижувати під час кондиціювання. Критерії відповіді та модель RR6 — як при нижчому ризику.",
+            "en": "The choice depends on the platelet count (under or over 50 ×10⁹/L) and on whether the patient is a candidate for allogeneic HCT (MF-C). A transplant candidate has allogeneic HCT; donor and conditioning are decided case by case; with symptomatic splenomegaly or constitutional symptoms a JAK inhibitor is given for at least 2 months before transplant even if the patient is already eligible and can be tapered during conditioning. Response criteria and the RR6 model are as at lower risk."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-mf-higher-hct",
+              "kind": "line",
+              "title": {
+                "uk": "Кандидат на трансплантацію",
+                "en": "Transplant candidate"
+              },
+              "description": {
+                "uk": "Алогенна ТГСК. Рекомендована при DIPSS-Plus чи MYSEC проміжному-2 і високому ризику, MIPSS-70/70+ високому ризику; у відібраних випадках — при залежності від трансфузій еритроцитів, високоризикових мутаціях (ASXL1, RAS, TP53) чи втраті відповіді на JAK-інгібітор. Бласти >10% у крові — розглянути азацитидин ± JAK-інгібітор перед алоТГСК. Після трансплантації — моніторинг залишкової хвороби (мутації-драйвери, химеризм).",
+                "en": "Allogeneic HCT. Recommended at DIPSS-Plus or MYSEC intermediate-2 and high risk and MIPSS-70/70+ high risk; in selected cases with red-cell transfusion dependence, high-risk mutations (ASXL1, RAS, TP53) or loss of response to a JAK inhibitor. With over 10% blasts in blood consider azacitidine with or without a JAK inhibitor before transplant. After transplant, monitor measurable residual disease (driver mutations, chimerism)."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Алогенна ТГСК (MF-C)",
+                    "en": "Allogeneic HCT (MF-C)"
+                  },
+                  "target": "nccn-mf-hct"
+                },
+                {
+                  "kind": "surveillance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Відповідь: продовжити лікування й стежити за прогресуванням",
+                    "en": "Response: continue treatment and monitor for progression"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-mf-higher-lowplt",
+              "kind": "line",
+              "title": {
+                "uk": "Тромбоцити <50 ×10⁹/л, не кандидат на трансплантацію чи вона зараз неможлива",
+                "en": "Platelets under 50 ×10⁹/L, not a transplant candidate or transplant not currently feasible"
+              },
+              "description": {
+                "uk": "Клінічне дослідження; бажаний пакритиніб (категорія 1); інший рекомендований — момелотиніб (категорія 2B).",
+                "en": "A clinical trial; preferred pacritinib (category 1); other recommended momelotinib (category 2B)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "pacritinib-mf",
+                  "notes": {
+                    "uk": "Тромбоцити <50 ×10⁹/л (прискорене схвалення FDA).",
+                    "en": "Platelets under 50 ×10⁹/L (FDA accelerated approval)."
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "momelotinib-mf",
+                  "preference": "other",
+                  "category": "2b"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Моніторинг переносимості, відповіді, прогресування",
+                    "en": "Monitoring of tolerance, response and progression"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Анемія (MF-3)",
+                    "en": "Anaemia (MF-3)"
+                  },
+                  "target": "nccn-mf-anemia"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Невдача: альтернативний JAK-інгібітор",
+                    "en": "Failure: an alternative JAK inhibitor"
+                  },
+                  "target": "nccn-mf-higher-fail"
+                }
+              ]
+            },
+            {
+              "key": "nccn-mf-higher-highplt",
+              "kind": "line",
+              "title": {
+                "uk": "Тромбоцити ≥50 ×10⁹/л, не кандидат на трансплантацію чи вона зараз неможлива, із симптомною спленомегалією чи загальними симптомами",
+                "en": "Platelets 50 ×10⁹/L or more, not a transplant candidate or transplant not currently feasible, with symptomatic splenomegaly or constitutional symptoms"
+              },
+              "description": {
+                "uk": "Клінічне дослідження, федратиніб (категорія 1), руксолітиніб (категорія 1), момелотиніб або пакритиніб (категорія 2B).",
+                "en": "A clinical trial, fedratinib (category 1), ruxolitinib (category 1), momelotinib or pacritinib (category 2B)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "fedratinib-mf",
+                  "notes": {
+                    "uk": "Тромбоцити >50 ×10⁹/л; 400 мг на добу в дослідженнях JAKARTA, FREEDOM.",
+                    "en": "Platelets over 50 ×10⁹/L; 400 mg a day in JAKARTA and FREEDOM."
+                  },
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "ruxolitinib-mf",
+                  "notes": {
+                    "uk": "Початкова доза за тромбоцитами; обережно при 50–100 ×10⁹/л (5–10 мг двічі на добу в дослідженнях).",
+                    "en": "The starting dose follows the platelets; cautiously at 50-100 ×10⁹/L (5-10 mg twice daily in studies)."
+                  },
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "momelotinib-mf"
+                },
+                {
+                  "regimen_id": "pacritinib-mf",
+                  "category": "2b"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Моніторинг переносимості, відповіді, прогресування",
+                    "en": "Monitoring of tolerance, response and progression"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Анемія (MF-3)",
+                    "en": "Anaemia (MF-3)"
+                  },
+                  "target": "nccn-mf-anemia"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Невдача: альтернативний JAK-інгібітор",
+                    "en": "Failure: an alternative JAK inhibitor"
+                  },
+                  "target": "nccn-mf-higher-fail"
+                }
+              ]
+            },
+            {
+              "key": "nccn-mf-higher-fail",
+              "kind": "line",
+              "title": {
+                "uk": "Непереносимість, відсутність чи втрата відповіді, прогресування",
+                "en": "Intolerance, no response, loss of response or progression"
+              },
+              "description": {
+                "uk": "Клінічне дослідження або альтернативний JAK-інгібітор, не використаний раніше (категорія 2B для пакритинібу), з моніторингом прогресування; анемія — MF-3. Прогресування — прискорена/бластна фаза МПН. Масивна спленомегалія без відповіді на JAK-інгібітор: розглянути опромінення селезінки, емболізацію селезінкової артерії чи спленектомію.",
+                "en": "A clinical trial or an alternative JAK inhibitor not used before (category 2B for pacritinib) with monitoring for progression; anaemia, MF-3. Progression means accelerated/blast phase MPN. Massive splenomegaly not responding to a JAK inhibitor: consider splenic radiation, splenic artery embolisation or splenectomy."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ruxolitinib-mf"
+                },
+                {
+                  "regimen_id": "fedratinib-mf"
+                },
+                {
+                  "regimen_id": "momelotinib-mf"
+                },
+                {
+                  "regimen_id": "pacritinib-mf",
+                  "category": "2b"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Прогресування до прискореної/бластної фази МПН (MPN-AP/BP-1)",
+                    "en": "Progression to accelerated/blast phase MPN (MPN-AP/BP-1)"
+                  },
+                  "target": "nccn-mf-apbp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-mf-anemia",
+          "kind": "group",
+          "title": {
+            "uk": "Анемія, пов’язана з МФ (MF-3)",
+            "en": "MF-associated anaemia (MF-3)"
+          },
+          "description": {
+            "uk": "Спершу виключити й лікувати інші причини анемії (кровотеча, дефіцити поживних речовин, гемоліз). ЕСА — епоетин альфа чи дарбепоетин альфа (біосиміляр допустимий), якщо ЕПО сироватки <500 мОд/мл. Даназол: скринінг раку простати й контроль печінкових проб, обережність зі статинами (ризик рабдоміолізу). Леналідомід/преднізолон — комбінація з поступовим зниженням преднізолону за 3 місяці. Підтримка: трансфузії при симптомній анемії, леукоредуковані продукти кандидатам на трансплантацію; хелатування заліза можна розглянути при >20 трансфузіях чи феритині >2500 нг/мл при нижчому ризику (роль неясна).",
+            "en": "First exclude and treat other causes of anaemia (bleeding, nutritional deficiency, haemolysis). ESAs are epoetin alfa or darbepoetin alfa (a biosimilar is acceptable) when serum EPO is under 500 mU/mL. Danazol: screen for prostate cancer and monitor liver tests, take care with statins (rhabdomyolysis). Lenalidomide/prednisone is a combination with prednisone tapered over 3 months. Support: transfusion for symptomatic anaemia, leukocyte-reduced products for transplant candidates; iron chelation can be considered after over 20 transfusions or ferritin over 2500 ng/mL at lower risk (role unclear)."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-mf-anemia-spleen",
+              "kind": "line",
+              "title": {
+                "uk": "Анемія з триваючою симптомною спленомегалією чи загальними симптомами",
+                "en": "Anaemia with ongoing symptomatic splenomegaly or constitutional symptoms"
+              },
+              "description": {
+                "uk": "Бажано: клінічне дослідження, момелотиніб (категорія 1). Інші рекомендовані: пакритиніб, комбінація з руксолітинібом, луспатерцепт, даназол (категорія 2B), ЕСА при ЕПО <500 мОд/мл (категорія 2B).",
+                "en": "Preferred: a clinical trial, momelotinib (category 1). Other recommended: pacritinib, a ruxolitinib combination, luspatercept, danazol (category 2B), ESAs when EPO is under 500 mU/mL (category 2B)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "momelotinib-mf",
+                  "notes": {
+                    "uk": "З анемією; тромбоцити ≥50 ×10⁹/л.",
+                    "en": "With anaemia; platelets 50 ×10⁹/L or more."
+                  },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "pacritinib-mf",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-mf-anemia",
+                  "notes": {
+                    "uk": "Даназол (2B), ЕСА при ЕПО <500 (2B), луспатерцепт — дозування в картці.",
+                    "en": "Danazol (2B), ESAs when EPO is under 500 (2B), luspatercept — dosing in the card."
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-mf-anemia-none",
+              "kind": "line",
+              "title": {
+                "uk": "Анемія без спленомегалії й загальних симптомів",
+                "en": "Anaemia without splenomegaly or constitutional symptoms"
+              },
+              "description": {
+                "uk": "Бажано клінічне дослідження. Інші: даназол, ЕСА (ЕПО <500 мОд/мл), луспатерцепт, момелотиніб (2B), пакритиніб (2B). За певних обставин — леналідомід/преднізолон при del(5q) (2B).",
+                "en": "A clinical trial preferred. Others: danazol, ESAs (EPO under 500 mU/mL), luspatercept, momelotinib (2B), pacritinib (2B). In certain circumstances lenalidomide/prednisone for del(5q) (2B)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-mf-anemia",
+                  "notes": {
+                    "uk": "Даназол, ЕСА, луспатерцепт; леналідомід/преднізолон при del(5q) — за певних обставин (2B).",
+                    "en": "Danazol, ESAs, luspatercept; lenalidomide/prednisone for del(5q) in certain circumstances (2B)."
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "momelotinib-mf",
+                  "preference": "other",
+                  "category": "2b"
+                },
+                {
+                  "regimen_id": "pacritinib-mf",
+                  "preference": "other",
+                  "category": "2b"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-mf-anemia-jaki",
+              "kind": "line",
+              "title": {
+                "uk": "Анемія, симптоми селезінки добре контрольовані на JAK-інгібіторі",
+                "en": "Anaemia with splenomegaly and symptoms well controlled on a JAK inhibitor"
+              },
+              "description": {
+                "uk": "Бажано клінічне дослідження; інші рекомендовані: комбінація з JAK-інгібітором (продовжити для спленомегалії й симптомів) та додати ЕСА (ЕПО <500 мОд/мл), луспатерцепт або даназол (2B); за певних обставин — замінити на момелотиніб чи пакритиніб.",
+                "en": "A clinical trial preferred; other recommended: a JAK-inhibitor combination (continue it for splenomegaly and symptoms) adding ESAs (EPO under 500 mU/mL), luspatercept or danazol (2B); in certain circumstances change to momelotinib or pacritinib."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-mf-anemia",
+                  "notes": {
+                    "uk": "Додати ЕСА, луспатерцепт чи даназол до JAK-інгібітора.",
+                    "en": "Add ESAs, luspatercept or danazol to the JAK inhibitor."
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "momelotinib-mf",
+                  "notes": {
+                    "uk": "Замінити JAK-інгібітор.",
+                    "en": "Change the JAK inhibitor."
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "pacritinib-mf",
+                  "notes": {
+                    "uk": "Замінити JAK-інгібітор.",
+                    "en": "Change the JAK inhibitor."
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-mf-hct",
+          "kind": "group",
+          "title": {
+            "uk": "Особливості алогенної ТГСК при МФ (MF-C)",
+            "en": "Special considerations for allogeneic HCT in MF (MF-C)"
+          },
+          "description": {
+            "uk": "Направлення до експерта з ТГСК для всіх із DIPSS-Plus проміжним-1 чи вище або MIPSS проміжним чи вище. Добір пацієнтів — за віком, функціональним станом, супутніми хворобами, психосоціальним станом, бажанням і наявністю опікуна. Рекомендована при DIPSS-Plus чи MYSEC проміжному-2 й високому ризику та MIPSS-70/70+ високому ризику; у відібраних випадках — залежність від трансфузій, мутації ASXL1/RAS/TP53, втрата відповіді на JAK-інгібітор. MTSS — найкращі результати при низькому й проміжному ризику. Масивна спленомегалія без відповіді на JAK-інгібітор: опромінення, емболізація селезінкової артерії чи спленектомія перед трансплантацією. Бласти >10% у крові: азацитидин ± JAK-інгібітор перед ТГСК. Бажаний донор — HLA-ідентичний родич; також прийнятні неродинний 7/8 чи гаплоідентичний. Після ТГСК — моніторинг залишкової хвороби за мутаціями-драйверами й химеризмом.",
+            "en": "Refer to an HCT expert all patients with DIPSS-Plus intermediate-1 or higher, or MIPSS intermediate or higher. Selection is by age, performance status, comorbidity, psychosocial status, preference and caregiver availability. Recommended at DIPSS-Plus or MYSEC intermediate-2 and high risk and MIPSS-70/70+ high risk; in selected cases with transfusion dependence, ASXL1/RAS/TP53 mutations or loss of response to a JAK inhibitor. By the MTSS, low and intermediate risk is best. Massive splenomegaly not responding to a JAK inhibitor: radiation, splenic artery embolisation or splenectomy before transplant. Over 10% blasts in blood: azacitidine with or without a JAK inhibitor before HCT. The preferred donor is an HLA-matched sibling; matched unrelated, 7/8-mismatched unrelated and haploidentical donors are also appropriate. After HCT monitor measurable residual disease by driver mutations and chimerism."
+          },
+          "regimens": [
+            {
+              "regimen_id": "azacitidine-mono",
+              "notes": {
+                "uk": "При бластах >10% у крові перед ТГСК; NCCN доз не називає.",
+                "en": "With over 10% blasts in blood before HCT; NCCN gives no dose."
+              }
+            }
+          ]
+        },
+        {
+          "key": "nccn-mf-apbp",
+          "kind": "group",
+          "title": {
+            "uk": "Прискорена та бластна фаза МПН (MPN-AP/BP-1)",
+            "en": "Accelerated and blast phase MPN (MPN-AP/BP-1)"
+          },
+          "description": {
+            "uk": "Обстеження: аспірат і біопсія кісткового мозку із трихромом і ретикуліном, цитогенетика (каріотип ± FISH), проточна цитометрія, широка NGS-панель з мутаціями, типовими для AML. Прискорена фаза — бласти 10–19% у крові чи кістковому мозку; бластна — ≥20% або мієлоїдна саркома. Кандидата на трансплантацію оцінюють за віком, функціональним станом, супутніми хворобами, психосоціальним станом, бажанням пацієнта й наявністю опікуна; рання консультація трансплант-команди потрібна для планування, зокрема містка. Деякі пацієнти з прискореною фазою йдуть на трансплантацію без містка. JAK-інгібітор можна продовжувати майже до початку кондиціювання. Режими типу AML-індукції та ГМА + венетоклакс при прогресуванні МПН дають низькі відповіді й значну токсичність.",
+            "en": "Work-up: marrow aspirate and biopsy with trichrome and reticulin, cytogenetics (karyotype ± FISH), flow cytometry and a broad NGS panel including AML-associated mutations. Accelerated phase is 10-19% blasts in blood or marrow; blast phase is 20% or more, or myeloid sarcoma. A transplant candidate is chosen by age, performance status, comorbidity, psychosocial status, preference and caregiver availability; early referral to the transplant team is advised to plan bridging. Some accelerated-phase patients proceed to transplant directly without bridging. A JAK inhibitor can be continued close to the start of conditioning. AML-type induction and HMA plus venetoclax in MPN progression give low response rates and significant toxicity."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-mf-apbp-accel",
+              "kind": "line",
+              "title": {
+                "uk": "Прискорена фаза, кандидат на алоТГСК",
+                "en": "Accelerated phase, transplant candidate"
+              },
+              "description": {
+                "uk": "Клінічне дослідження або місток (ГМА; ГМА + JAK-інгібітор; ГМА + венетоклакс; інтенсивна індукційна хіміотерапія за настановою AML) з наступною алогенною ТГСК. Для паліації спленомегалії й симптомів JAK-інгібітор поєднують з азацитидином чи децитабіном; даних про федратиніб, момелотиніб чи пакритиніб з ГМА дуже мало. За NGS можна розглянути таргетні засоби (IDH1/2, FLT3) окремо чи з ГМА. При індукції — профілактика синдрому лізису пухлини.",
+                "en": "A clinical trial, or a bridge (HMA; HMA + JAK inhibitor; HMA + venetoclax; intensive induction per the AML guideline) followed by allogeneic HCT. A JAK inhibitor is combined with azacitidine or decitabine to palliate splenomegaly and symptoms; data on fedratinib, momelotinib or pacritinib with HMAs are very limited. By NGS, targeted drugs (IDH1/2, FLT3) can be considered alone or with HMAs. Tumour lysis prophylaxis with induction."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono",
+                  "notes": {
+                    "uk": "Гіпометилувальний засіб як місток; доза стандартна для МДС/AML, NCCN доз для МПН не називає.",
+                    "en": "An HMA as a bridge; the standard MDS/AML dose, NCCN gives no MPN-specific dose."
+                  }
+                },
+                {
+                  "regimen_id": "aza-ven",
+                  "notes": {
+                    "uk": "ГМА + венетоклакс як місток; схема й дози — з AML.",
+                    "en": "HMA plus venetoclax as a bridge; the AML schedule and doses."
+                  }
+                },
+                {
+                  "regimen_id": "ref-mpn-ap-bp-hma-jaki",
+                  "notes": {
+                    "uk": "ГМА + JAK-інгібітор; дані обмежені.",
+                    "en": "HMA plus a JAK inhibitor; limited data."
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "Алогенна ТГСК після містка (деяким пацієнтам — без містка)",
+                    "en": "Allogeneic HCT after bridging (directly in selected patients)"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-mf-apbp-blast",
+              "kind": "line",
+              "title": {
+                "uk": "Бластна фаза (≥20%) — кандидат на алоТГСК",
+                "en": "Blast phase (20% or more) — transplant candidate"
+              },
+              "description": {
+                "uk": "Клінічне дослідження або місток (ГМА, ГМА + JAK-інгібітор, ГМА + венетоклакс, інтенсивна індукція) з наступною алоТГСК.",
+                "en": "A clinical trial, or a bridge (HMA, HMA + JAK inhibitor, HMA + venetoclax, intensive induction) followed by allogeneic HCT."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono"
+                },
+                {
+                  "regimen_id": "aza-ven"
+                },
+                {
+                  "regimen_id": "ref-mpn-ap-bp-hma-jaki"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "Алогенна ТГСК",
+                    "en": "Allogeneic HCT"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-mf-apbp-no-hct",
+              "kind": "line",
+              "title": {
+                "uk": "Бластна фаза, не кандидат на трансплантацію",
+                "en": "Blast phase, not a transplant candidate"
+              },
+              "description": {
+                "uk": "Клінічне дослідження, ГМА, ГМА + JAK-інгібітор, ГМА + венетоклакс або менш інтенсивна хіміотерапія чи таргетна терапія (за настановою AML; IDH1/2, FLT3-інгібітори за результатами NGS).",
+                "en": "A clinical trial, an HMA, HMA + JAK inhibitor, HMA + venetoclax, or lower-intensity chemotherapy or targeted therapy (per the AML guideline; IDH1/2 and FLT3 inhibitors by NGS)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "azacitidine-mono"
+                },
+                {
+                  "regimen_id": "aza-ven"
+                },
+                {
+                  "regimen_id": "ref-mpn-ap-bp-hma-jaki"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-mf-support",
+          "kind": "group",
+          "title": {
+            "uk": "Супровідне лікування й особливі ситуації (MPN-F, MPN-G, MPN-H)",
+            "en": "Supportive care and special situations (MPN-F, MPN-G, MPN-H)"
+          },
+          "description": {
+            "uk": "Усім: оцінка й зменшення серцево-судинних чинників ризику (куріння, дієта, рух, АТ, цукровий діабет, ліпіди) і тромботичних та геморагічних чинників; симптоми оцінюють шкалою MPN-SAF TSS (0–100) на початку й під час лікування, відповідь — зменшення ≥50%; зміна симптомів може бути ознакою прогресування. Свербіж: шкіряні засоби, антигістамінні, місцеві стероїди, далі SSRI, вузькосмугова UVB, пегінтерферон, габапентин, апрепітант, руксолітиніб. Біль у кістках: лоратадин, НПЗЗ (напроксен), одноразове опромінення. Головний біль і шум у вухах: виключити тромбоз; аспірин 80–100 мг на добу, при резистентності — двічі на добу або клопідогрель 75 мг на добу; цитозниження чи флеботомія, якщо аспірин не допомагає. JAK-інгібітори: ризик синдрому відміни (лихоманка, дихальна недостатність, гіпотензія, поліорганна недостатність) — знижувати дозу поступово, крім тромбоцитопенії чи нейтропенії; щорічний огляд дерматолога (неменаномні раки шкіри); ліпіди кожні 6 місяців; інфекції, зокрема реактивація вірусів; вакцинація, у тому числі рекомбінантна (інактивована) проти оперізувального лишаю. Тромбоз: антикоагулянт за настановою ACCP; аспірин + антикоагулянт підвищує ризик кровотечі. Кровотеча: виключити інші причини, аспірин відкласти; розглянути набутий синдром фон Віллебранда. Операція: мультидисциплінарне планування, аспірин відмінити за тиждень і відновити через 24 год, Ht <45% при ПВ за 3 місяці до планової операції. Вагітність: гідроксисечовину скасувати; пегінтерферон альфа-2a — за потреби циторедукції; низькі дози аспірину та НМГ (при високому ризику — протягом вагітності й 6 тижнів після пологів); Ht при ПВ <41%/<38%/<39% за триместрами.",
+            "en": "For everyone: assess and reduce cardiovascular risk factors (smoking, diet, exercise, blood pressure, diabetes, lipids) and thrombotic and haemorrhagic risk factors; symptoms are scored with MPN-SAF TSS (0-100) at baseline and during treatment, response being a 50% or greater fall; a change in symptoms may signal progression. Pruritus: skin care, antihistamines, topical steroids, then SSRIs, narrow-band UVB, peginterferon, gabapentin, aprepitant, ruxolitinib. Bone pain: loratadine, NSAIDs (naproxen), single-fraction radiation. Headache and tinnitus: exclude thrombosis; aspirin 80-100 mg a day, twice daily or clopidogrel 75 mg a day when resistant; cytoreduction or phlebotomy if aspirin fails. JAK inhibitors: a withdrawal syndrome (fever, respiratory distress, hypotension, multi-organ failure) is possible, so taper rather than stop abruptly except for thrombocytopenia or neutropenia; yearly dermatology exam (non-melanoma skin cancer); lipids every 6 months; infections including viral reactivation; vaccination including recombinant (killed) zoster vaccine. Thrombosis: anticoagulation per ACCP; aspirin plus an anticoagulant raises bleeding risk. Bleeding: exclude other causes, hold aspirin, consider acquired von Willebrand syndrome. Surgery: multidisciplinary planning, stop aspirin one week before and restart after 24 hours, Hct under 45% in PV for 3 months before elective surgery. Pregnancy: stop hydroxyurea; peginterferon alfa-2a if cytoreduction is needed; low-dose aspirin and LMWH (throughout pregnancy and 6 weeks postpartum in high risk); Hct in PV under 41%/38%/39% by trimester."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-mpn-peginterferon",
+              "notes": {
+                "uk": "Єдиний циторедуктивний засіб, який NCCN дозволяє розглянути при вагітності.",
+                "en": "The only cytoreductive agent NCCN allows considering in pregnancy."
+              },
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "aspirin-mpn",
+              "notes": {
+                "uk": "Низька доза 81–100 мг на добу; двічі на добу — при рефрактерних симптомах чи серцево-судинних чинниках ризику.",
+                "en": "Low dose 81-100 mg a day; twice daily for refractory symptoms or cardiovascular risk factors."
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
