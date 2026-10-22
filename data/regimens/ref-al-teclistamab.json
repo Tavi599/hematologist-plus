@@ -1,0 +1,46 @@
+{
+  "id": "ref-al-teclistamab",
+  "short_name": "Теклістамаб (AL)",
+  "name": {
+    "uk": "Теклістамаб при рецидивному AL-амілоїдозі",
+    "en": "Teclistamab in relapsed AL amyloidosis"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Systemic Light Chain Amyloidosis, version 1.2027 (AMYL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 19.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Корисний за певних обставин у повторній терапії; нове в 1.2027 (AMYL-B 4 з 6).",
+      "en": "Useful in certain circumstances in previously treated disease; new in 1.2027 (AMYL-B 4 of 6)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Теклістамаб",
+          "en": "Teclistamab"
+        },
+        "drug_id": "teclistamab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Профілактичний тоцилізумаб перед першою дозою можна розглянути (виноска p).",
+        "en": "Prophylactic tocilizumab before the first dose may be considered (footnote p)."
+      },
+      {
+        "uk": "Джерело NCCN — Stalker та ін., Eur J Haematol 2025.",
+        "en": "The NCCN source is Stalker et al., Eur J Haematol 2025."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    },
+    "availability": "unavailable"
+  }
+}

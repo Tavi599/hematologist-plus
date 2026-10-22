@@ -1,0 +1,57 @@
+{
+  "id": "ref-al-hdm-asct",
+  "short_name": "Мел-ТГСК (AL)",
+  "name": {
+    "uk": "Високодозовий мелфалан з аутологічною ТГСК при AL-амілоїдозі",
+    "en": "High-dose melphalan with autologous HCT in AL amyloidosis"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Systemic Light Chain Amyloidosis, version 1.2027 (AMYL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 19.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Бажаний варіант первинної терапії для ретельно відібраних; за певних обставин — при рецидиві (NCCN 1.2027, AMYL-B 2–4 з 6).",
+      "en": "A preferred primary option for carefully selected patients; useful in certain circumstances at relapse (NCCN 1.2027, AMYL-B 2 to 4 of 6)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Мелфалан",
+          "en": "Melphalan"
+        },
+        "drug_id": "melphalan"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Кандидат — одноорганне ураження, <10% плазматичних клітин у кістковому мозку, добрий функціональний стан. Направляти в центр із досвідом при AL.",
+        "en": "The candidate has single-organ involvement, under 10% marrow plasma cells and good performance status. Refer to a centre experienced in AL."
+      },
+      {
+        "uk": "Категоричні виключення: симптомні або медикаментозно-рефрактерні шлуночкові й передсердні аритмії та плевральні випоти; декомпенсована серцева недостатність; ортостатична гіпотензія, рефрактерна до лікування; дефіцит фактора X <25% чи активна кровотеча; поширене ураження ШКТ із кровотечею чи її ризиком.",
+        "en": "Definite exclusions: symptomatic or medically refractory ventricular and atrial arrhythmias and pleural effusions; uncompensated heart failure; orthostatic hypotension refractory to treatment; factor X below 25% or active bleeding; extensive GI involvement with bleeding or risk of it."
+      },
+      {
+        "uk": "Доза мелфалану (таблиця NCCN, не вивчена в рандомізованих дослідженнях): 200 мг/м² — вік ≤65, серцева стадія I–II, eGFR >50 мл/хв/м² (виконати всі критерії); 200 мг/м² після мультидисциплінарного обговорення (проти індукції даратумумабом і бортезомібом) — вік >65, стадія II–III, eGFR 30–50; 140 мг/м² — eGFR <30 (діаліз — лише при стабільному хронічному режимі).",
+        "en": "Melphalan dose (NCCN table, not tested in randomised studies): 200 mg/m² — age up to 65, cardiac stage I or II, eGFR above 50 mL/min/m² (all criteria must be met); 200 mg/m² after a multidisciplinary discussion (against daratumumab and bortezomib induction) — age over 65, stage II or III, eGFR 30 to 50; 140 mg/m² — eGFR below 30 (dialysis only if on a stable chronic schedule)."
+      },
+      {
+        "uk": "ТГСК можна відкласти, якщо індукція дала повну гематологічну відповідь; перед ТГСК розглянути індукцію. Консолідація й підтримка після ТГСК рутинно не рекомендовані; при супутній мієломі, ≥20% плазматичних клітин чи високому ризику за FISH [del(17p), t(4;14), t(14;16), t(14;20), 1q+] — можна подовжену терапію як при мієломі.",
+        "en": "HCT may be deferred when induction gives a complete haematological response; consider induction before HCT. Consolidation and maintenance after HCT are not routine; with concurrent myeloma, 20% or more plasma cells or high-risk FISH [del(17p), t(4;14), t(14;16), t(14;20), 1q gain] extended therapy as in myeloma may be considered."
+      },
+      {
+        "uk": "Летальність, пов'язана з трансплантацією, знизилася з 40% до близько 7%; глибина гематологічної відповіді після ТГСК — головний показник користі.",
+        "en": "Transplant-related mortality has fallen from about 40% to about 7%; the depth of haematological response after HCT is the main indicator of benefit."
+      }
+    ],
+    "gap": {
+      "uk": "Мелфалан 200 і 140 мг/м² узято з таблиці NCCN; режим мобілізації, кондиціювання й день інфузії NCCN не розписує — трансплантаційні схеми каталог не веде; без розрахунку.",
+      "en": "Melphalan 200 and 140 mg/m² are from the NCCN table; NCCN does not lay out mobilisation, conditioning or infusion day, and the catalogue holds no transplant schedules; not calculated."
+    }
+  }
+}

@@ -130,6 +130,588 @@
           "regimen_id": "ref-hcl-vemurafenib"
         }
       ]
+    },
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 2.2027 (HCL-1…C)",
+        "en": "NCCN pathways 2.2027 (HCL-1 to C)"
+      },
+      "children": [
+        {
+          "key": "nccn-diag",
+          "kind": "line",
+          "title": {
+            "uk": "Діагноз і обстеження (HCL-1)",
+            "en": "Diagnosis and workup (HCL-1)"
+          },
+          "description": {
+            "uk": "Настанова стосується класичного ВКЛ (cHCL). Діагноз: характерні волосаті клітини в крові чи кістковому мозку й інфільтрат із підвищеним ретикуліном у трепанобіопсії (часто «суха пункція»). Проточна цитометрія чи IHC: CD19, CD20, CD5, CD10, CD11c, CD22, CD25, CD103, CD123, циклін D1, CD200; типово CD5−, CD10−, CD11c+, CD20+ яскраво, CD22+, CD25+, CD103+, CD123+, циклін D1+, аннексин A1+, CD200+ яскраво, моноцитопенія. BRAF V600E (IHC чи молекулярно) — обов'язково, коли імунофенотип нетиповий; варіант ВКЛ (HCLv за ICC / SBLPN за ВООЗ-5) CD25−, CD123−, аннексин A1−, BRAF V600E−. За певних обставин — IGHV4-34: ~10% В-клітинних новоутворень із фенотипом cHCL мають його, зазвичай без BRAF V600E, гірше відповідають на пуринові аналоги й поводяться як варіант; при негативному BRAF V600E розглянути NGS на BRAF і MAP2K1. Обстеження: анамнез і огляд (розміри печінки й селезінки, вузли), ECOG, мазок крові, загальний аналіз із формулою, біохімія з увагою до функції нирок, ЛДГ, кількісні імуноглобуліни, трепанобіопсія ± аспірат, гепатити B і C перед лікуванням. За обставин: КТ ОГК/ЧП із контрастом, тест на вагітність, обговорення збереження фертильності. Діагностика й лікування варіанту — окремий консенсус (Zent та ін., Blood 2026).",
+            "en": "The guideline covers classic HCL (cHCL). Diagnosis: characteristic hairy cells in blood or marrow and an infiltrate with increased reticulin on trephine biopsy (often a dry tap). Flow cytometry or IHC: CD19, CD20, CD5, CD10, CD11c, CD22, CD25, CD103, CD123, cyclin D1, CD200; typically CD5-, CD10-, CD11c+, CD20 bright, CD22+, CD25+, CD103+, CD123+, cyclin D1+, annexin A1+, CD200 bright, with monocytopenia. BRAF V600E (IHC or molecular) is essential when the immunophenotype is atypical; the variant (HCLv per ICC / SBLPN per WHO-5) is CD25-, CD123-, annexin A1- and BRAF V600E-negative. Under certain circumstances IGHV4-34: about 10% of B-cell neoplasms with a cHCL phenotype carry it, usually without BRAF V600E, respond worse to purine analogues and behave like the variant; if BRAF V600E is negative consider NGS for BRAF and MAP2K1. Workup: history and examination (liver and spleen size, nodes), performance status, blood smear, CBC with differential, metabolic panel with attention to renal function, LDH, quantitative immunoglobulins, marrow biopsy with or without aspirate, hepatitis B and C before treatment. Under certain circumstances: CT chest/abdomen/pelvis with contrast, pregnancy test, fertility preservation discussion. Diagnosis and treatment of the variant are in a separate consensus (Zent et al., Blood 2026)."
+          },
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Тест на гепатит B (HBsAg, анти-HBc) і C до лікування; кількісні імуноглобуліни",
+                "en": "Hepatitis B (HBsAg, anti-HBc) and C testing and quantitative immunoglobulins before treatment"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Далі — показання до лікування (HCL-2)",
+                "en": "Next: indications for treatment (HCL-2)"
+              },
+              "target": "nccn-indications"
+            }
+          ]
+        },
+        {
+          "key": "nccn-indications",
+          "kind": "line",
+          "title": {
+            "uk": "Показання до лікування й оцінка відповіді (HCL-2, HCL-B)",
+            "en": "Indications for treatment and response (HCL-2, HCL-B)"
+          },
+          "description": {
+            "uk": "Не кожному хворому з новим діагнозом треба лікування: безсимптомну хворобу спостерігають до появи показань. Показання: системні симптоми (незрозуміла втрата ваги >10% за 6 місяців, виражена втома); гемоглобін <11 г/дл; тромбоцити <100 000/мкл; АЧН <1000/мкл; симптомна органомегалія; прогресуючий лімфоцитоз чи лімфаденопатія. Повторні інфекції в версії 1.2027 із переліку показань прибрано.",
+            "en": "Not every newly diagnosed patient needs treatment: asymptomatic disease is observed until an indication appears. Indications: systemic symptoms (unexplained weight loss over 10% in 6 months, excessive fatigue); haemoglobin below 11 g/dL; platelets below 100,000/uL; ANC below 1000/uL; symptomatic organomegaly; progressive lymphocytosis or lymphadenopathy. Recurrent infection was removed from the list in version 1.2027."
+          },
+          "children": [
+            {
+              "key": "nccn-no-indication",
+              "kind": "group",
+              "title": {
+                "uk": "Немає показань",
+                "en": "No indication"
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Спостереження",
+                    "en": "Observation"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-indication",
+              "kind": "group",
+              "title": {
+                "uk": "Є показання",
+                "en": "Indication present"
+              },
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Початкова терапія (HCL-A)",
+                    "en": "Initial therapy (HCL-A)"
+                  },
+                  "target": "nccn-initial"
+                }
+              ]
+            },
+            {
+              "key": "nccn-response",
+              "kind": "group",
+              "title": {
+                "uk": "Оцінка відповіді (HCL-B)",
+                "en": "Response assessment (HCL-B)"
+              },
+              "description": {
+                "uk": "Кістковий мозок після кладрибіну оцінюють не раніше ніж через 4 місяці; після пентостатину — коли склад крові майже нормалізувався й селезінка не пальпується. ПР: гемоглобін >11 г/дл без трансфузій, тромбоцити >100 000/мкл, АЧН >1500/мкл, регрес спленомегалії, немає морфологічних ознак ВКЛ у мазку й мозку; за наявності ПР корисна IHC-оцінка МЗХ (MRD). ЧР: та сама нормалізація крові, ≥50% зменшення органомегалії та інфільтрації мозку. Стабілізація не є прийнятною відповіддю (лікують за показаннями). Прогресування: наростання симптомів, збільшення органомегалії на 25% чи падіння показників крові на 25% (відрізнити від мієлосупресії терапії). Морфологічний рецидив (клітини в крові чи мозку без цитопенії) лікування не потребує; гематологічний рецидив — цитопенії нижче порогів ПР/ЧР, рішення залежить від показань. МЗХ поза дослідженнями рутинно не рекомендовано.",
+                "en": "Marrow is assessed no earlier than 4 months after cladribine; after pentostatin once counts have nearly normalised and the spleen is not palpable. CR: haemoglobin over 11 g/dL without transfusion, platelets over 100,000/uL, ANC over 1500/uL, regression of splenomegaly, no morphological evidence of HCL in blood and marrow; once in CR, an IHC assessment of MRD is useful. PR: the same blood recovery with at least 50% improvement in organomegaly and marrow infiltration. Stable disease is not an acceptable response (treatment is for indications). Progression: more symptoms, a 25% increase in organomegaly or a 25% fall in blood counts (distinguish from therapy myelosuppression). Morphological relapse (cells in blood or marrow without cytopenia) needs no treatment; haematological relapse is cytopenia below the CR/PR thresholds and the decision rests on indications. MRD is not recommended routinely outside trials."
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Повне гематологічне відновлення, відповідність ПР — спостереження до появи показань",
+                    "en": "Full haematological recovery consistent with CR: observe until an indication appears"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Неповне гематологічне відновлення з показаннями чи рецидив <2 років",
+                    "en": "Incomplete haematological recovery with indications, or relapse under 2 years"
+                  },
+                  "target": "nccn-rr-early"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив через ≥2 роки",
+                    "en": "Relapse at 2 years or more"
+                  },
+                  "target": "nccn-rr-late"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Прогресування після терапії рецидиву/рефрактерності",
+                    "en": "Progression after relapsed/refractory therapy"
+                  },
+                  "target": "nccn-progression"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-initial",
+          "kind": "line",
+          "title": {
+            "uk": "Початкова терапія (HCL-A 1)",
+            "en": "Initial therapy (HCL-A 1)"
+          },
+          "description": {
+            "uk": "Кладрибін і пентостатин не порівнювали між собою в РКД, активність схожа. Стандартні дози пуринових аналогів не дають при активній загрозливій для життя чи хронічній інфекції: спершу лікують інфекцію, а якщо контролювати її неможливо — розглядають пентостатин у низьких дозах, а потім стандартні дози аналогів. Ритуксимаб до кладрибіну поглиблює відповідь (без залишкової хвороби 94% проти 47% [MS-6] чи 12% [MS-8] при відстроченому ритуксимабі — NCCN сама наводить обидві цифри), але підвищує токсичність — розглядати вибірково: 8 щотижневих доз з дня 1 (CDAR) або через 4 тижні після 5-денного кладрибіну. Підшкірний ритуксимаб — після щонайменше однієї повної в/в дози; біоподібні препарати прийнятні.",
+            "en": "Cladribine and pentostatin have not been compared head to head in randomised trials; activity is similar. Standard-dose purine analogues are not given in active life-threatening or chronic infection: the infection is treated first, and if it cannot be controlled low-dose pentostatin is considered before standard-dose analogues. Rituximab with cladribine deepens the response (undetectable MRD 94% against 47% [MS-6] or 12% [MS-8] with delayed rituximab - NCCN itself gives both figures) but raises toxicity, so is considered selectively: 8 weekly doses from day 1 (CDAR) or 4 weeks after the 5-day cladribine. Subcutaneous rituximab is allowed after at least one full IV dose; biosimilars are acceptable."
+          },
+          "children": [
+            {
+              "key": "nccn-initial-pa",
+              "kind": "group",
+              "title": {
+                "uk": "Пуринові аналоги (бажано)",
+                "en": "Purine analogues (preferred)"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "cladribine-mono",
+                  "notes": {
+                    "uk": "Кладрибін 0,14 мг/кг підшкірно, 5 днів",
+                    "en": "Cladribine 0.14 mg/kg subcutaneously for 5 days"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "cladribine-iv-hcl",
+                  "notes": {
+                    "uk": "Кладрибін 0,14 мг/кг в/в, 5 днів",
+                    "en": "Cladribine 0.14 mg/kg IV for 5 days"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "cladribine-weekly-hcl",
+                  "notes": {
+                    "uk": "Кладрибін раз на тиждень, 5 тижнів (NCCN, обговорення)",
+                    "en": "Cladribine once weekly for 5 weeks (NCCN discussion)"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "cdar-hcl",
+                  "notes": {
+                    "uk": "Кладрибін 5 днів + ритуксимаб 8 щотижневих доз з дня 1",
+                    "en": "Cladribine for 5 days plus 8 weekly rituximab doses from day 1"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "Ритуксимаб; після кладрибіну — через 4 тижні (відстрочений варіант)",
+                    "en": "Rituximab; after cladribine, 4 weeks later (delayed variant)"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-hcl-pentostatin",
+                  "preference": "preferred"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Оцінка відповіді й повторна оцінка показань (HCL-2)",
+                    "en": "Response assessment and re-evaluation of indications (HCL-2)"
+                  },
+                  "target": "nccn-response"
+                }
+              ]
+            },
+            {
+              "key": "nccn-initial-braf",
+              "kind": "group",
+              "title": {
+                "uk": "Не кандидати на пуринові аналоги (ослаблені, активна інфекція)",
+                "en": "Not candidates for purine analogues (frail, active infection)"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-hcl-vemurafenib",
+                  "notes": {
+                    "uk": "Вемурафеніб ± анти-CD20 (ритуксимаб чи обінутузумаб)",
+                    "en": "Vemurafenib with or without an anti-CD20 antibody (rituximab or obinutuzumab)"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-hcl-obinutuzumab"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Оцінка відповіді (HCL-2)",
+                    "en": "Response assessment (HCL-2)"
+                  },
+                  "target": "nccn-response"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-rr-early",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив/рефрактерність: неповне відновлення чи рецидив <2 років (HCL-A 1)",
+            "en": "Relapsed/refractory: incomplete recovery or relapse under 2 years (HCL-A 1)"
+          },
+          "description": {
+            "uk": "Інгібітори BRAF ефективні лише при BRAF V600E-позитивному ВКЛ. Вемурафеніб вивчали при первинній рефрактерності й раннього рецидиву (1–2 роки) після першого курсу пуринового аналога.",
+            "en": "BRAF inhibitors are effective only in BRAF V600E-positive HCL. Vemurafenib was studied in primary refractory disease and early relapse (1-2 years) after a first purine analogue course."
+          },
+          "children": [
+            {
+              "key": "nccn-rr-early-pref",
+              "kind": "group",
+              "title": {
+                "uk": "Бажано",
+                "en": "Preferred"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-hcl-dabrafenib-trametinib",
+                  "notes": {
+                    "uk": "Якщо BRAF-інгібітор раніше не давали",
+                    "en": "If no BRAF inhibitor was given before"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-hcl-vemurafenib",
+                  "notes": {
+                    "uk": "± ритуксимаб, якщо раніше не давали",
+                    "en": "With or without rituximab, if not given before"
+                  },
+                  "preference": "preferred"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rr-early-other",
+              "kind": "group",
+              "title": {
+                "uk": "Інші рекомендовані",
+                "en": "Other recommended"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-hcl-peginterferon",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "cladribine-iv-hcl",
+                  "notes": {
+                    "uk": "Альтернативний пуриновий аналог ± ритуксимаб",
+                    "en": "Alternative purine analogue with or without rituximab"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "cdar-hcl",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-hcl-pentostatin",
+                  "preference": "other"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rr-early-circ",
+              "kind": "group",
+              "title": {
+                "uk": "За певних обставин (аналог неможливий)",
+                "en": "Useful in certain circumstances (unable to receive a purine analogue)"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-hcl-obinutuzumab",
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Оцінка відповіді (HCL-2)",
+                    "en": "Response assessment (HCL-2)"
+                  },
+                  "target": "nccn-response"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-rr-late",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив через ≥2 роки (HCL-A 1)",
+            "en": "Relapse at 2 years or more (HCL-A 1)"
+          },
+          "description": {
+            "uk": "Повторне лікування тим самим пуриновим аналогом дає розумний контроль, але кожен наступний курс коротший; тому додають ритуксимаб. Моксетумомаб пасудотокс (знятий з виробництва у США 2023) NCCN більше не рекомендує.",
+            "en": "Retreatment with the same purine analogue gives reasonable control, but each course lasts less, hence rituximab is added. Moxetumomab pasudotox (withdrawn in the US in 2023) is no longer recommended by NCCN."
+          },
+          "children": [
+            {
+              "key": "nccn-rr-late-pref",
+              "kind": "group",
+              "title": {
+                "uk": "Бажано",
+                "en": "Preferred"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "cdar-hcl",
+                  "notes": {
+                    "uk": "Повторне лікування початковим аналогом + ритуксимаб (кладрибін) ",
+                    "en": "Retreatment with the initial purine analogue plus rituximab (cladribine)"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "cladribine-iv-hcl",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "cladribine-mono",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "rituximab-mono",
+                  "notes": {
+                    "uk": "Ритуксимаб до/після аналога",
+                    "en": "Rituximab with or after the analogue"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-hcl-pentostatin",
+                  "notes": {
+                    "uk": "Альтернативний аналог + ритуксимаб",
+                    "en": "Alternative analogue plus rituximab"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rr-late-other",
+              "kind": "group",
+              "title": {
+                "uk": "Інші рекомендовані",
+                "en": "Other recommended"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-hcl-vemurafenib",
+                  "notes": {
+                    "uk": "± ритуксимаб: для тих, кому пуринові аналоги не підходять (ослаблені, активна інфекція)",
+                    "en": "With or without rituximab: for those who are not candidates for purine analogues (frail, active infection)"
+                  },
+                  "preference": "other"
+                }
+              ]
+            },
+            {
+              "key": "nccn-rr-late-circ",
+              "kind": "group",
+              "title": {
+                "uk": "За певних обставин (аналог неможливий)",
+                "en": "Useful in certain circumstances (unable to receive a purine analogue)"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-mono",
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-hcl-obinutuzumab",
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Оцінка відповіді (HCL-2)",
+                    "en": "Response assessment (HCL-2)"
+                  },
+                  "target": "nccn-response"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-progression",
+          "kind": "line",
+          "title": {
+            "uk": "Прогресування після терапії рецидиву/рефрактерності (HCL-A 1)",
+            "en": "Progression after relapsed/refractory therapy (HCL-A 1)"
+          },
+          "children": [
+            {
+              "key": "nccn-prog-pref",
+              "kind": "group",
+              "title": {
+                "uk": "Бажано",
+                "en": "Preferred"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-hcl-dabrafenib-trametinib",
+                  "notes": {
+                    "uk": "Якщо BRAF-інгібітор раніше не давали",
+                    "en": "If no BRAF inhibitor was given before"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-hcl-vemurafenib",
+                  "notes": {
+                    "uk": "± ритуксимаб",
+                    "en": "With or without rituximab"
+                  },
+                  "preference": "preferred"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-prog-other",
+              "kind": "group",
+              "title": {
+                "uk": "Інші рекомендовані",
+                "en": "Other recommended"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ibrutinib-mono",
+                  "notes": {
+                    "uk": "У дослідженні 420 мг чи 840 мг на добу (ORR 24% на 32 тижні, 36% на 48)",
+                    "en": "420 mg or 840 mg daily in the study (ORR 24% at 32 weeks, 36% at 48)"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-hcl-obinutuzumab",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "zanubrutinib-mono",
+                  "notes": {
+                    "uk": "У дослідженні ORR 58%, повна 17%",
+                    "en": "ORR 58%, complete 17% in the study"
+                  },
+                  "preference": "other"
+                }
+              ]
+            },
+            {
+              "key": "nccn-prog-circ",
+              "kind": "group",
+              "title": {
+                "uk": "За певних обставин",
+                "en": "Useful in certain circumstances"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-hcl-venetoclax",
+                  "notes": {
+                    "uk": "± ритуксимаб: хвороба, резистентна до BRAF-інгібіторів",
+                    "en": "With or without rituximab: disease resistant to BRAF inhibitors"
+                  },
+                  "preference": "circumstances"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-support",
+          "kind": "line",
+          "title": {
+            "uk": "Супровід (HCL-C)",
+            "en": "Supportive care (HCL-C)"
+          },
+          "description": {
+            "uk": "Після лімфодеплеційного лікування чи при підозрі на імуносупресію стежити за CD4: ацикловір (чи аналог) не менше 3 місяців і до CD4 ≥200/мкл; ко-тримоксазол для профілактики пневмоцистної пневмонії так само; широкого спектра антибактеріальне покриття під час нейтропенії; щеплення бажано до початку імуносупресії (пуринові аналоги, анти-CD20). Вірус гепатиту B: профілактика й моніторинг при високому ризику (ентекавір ефективніший за ламівудин, ламівудину уникати). Філграстим — при фебрильній нейтропенії після терапії. Усі компоненти крові опромінювати. Синдром лізису при ВКЛ рідкісний, алопуринол протипоказаний (тяжкі висипи). Рідкісні шкірно-слизові реакції на антитіла (паранеопластична пухирчатка, синдром Стівенса—Джонсона, токсичний епідермальний некроліз): консультація дерматолога, повторно те саме антитіло не вводити; при непереносимості ритуксимабу — обінутузумаб. Швидка інфузія ритуксимабу за 90 хвилин — якщо попередній цикл без тяжких реакцій.",
+            "en": "After lymphodepleting treatment or when immunosuppression is suspected, monitor CD4: aciclovir (or equivalent) for at least 3 months and until CD4 is 200/uL or more; co-trimoxazole for pneumocystis prophylaxis likewise; broad-spectrum antibacterial cover during neutropenia; vaccination before immunosuppression (purine analogues, anti-CD20) where possible. Hepatitis B: prophylaxis and monitoring in high risk (entecavir beats lamivudine, which is avoided). Filgrastim for febrile neutropenia after therapy. Irradiate all blood products. Tumour lysis is rare in HCL and allopurinol is contraindicated (severe rash). Rare mucocutaneous reactions to antibodies (paraneoplastic pemphigus, Stevens-Johnson syndrome, toxic epidermal necrolysis): see a dermatologist and do not rechallenge with the same antibody; use obinutuzumab for rituximab intolerance. Rapid 90-minute rituximab infusion if the previous cycle had no severe reaction."
+          },
+          "steps": [
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Ацикловір, ко-тримоксазол, ентекавір (HBV), філграстим — за потреби; алопуринол не призначати",
+                "en": "Aciclovir, co-trimoxazole, entecavir (HBV), filgrastim as needed; no allopurinol"
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
