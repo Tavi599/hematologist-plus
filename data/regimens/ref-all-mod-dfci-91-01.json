@@ -1,0 +1,82 @@
+{
+  "id": "ref-all-mod-dfci-91-01",
+  "short_name": "Модифікований DFCI 91-01",
+  "name": {
+    "uk": "Модифікований протокол DFCI 91-01 для старших",
+    "en": "Modified DFCI 91-01 for older patients"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Martell MP. та ін. Br J Haematol 2013;163:458-464",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Помірна інтенсивність для ≥65 років або коморбідних (B- і T-ГЛЛ). Індукція: дексаметазон, доксорубіцин, метотрексат, пегаспаргаза, вінкристин; консолідація: дексаметазон, доксорубіцин, меркаптопурин, пегаспаргаза, вінкристин.",
+      "en": "Moderate intensity for ≥65 or comorbid patients (B- and T-ALL). Induction: dexamethasone, doxorubicin, methotrexate, pegaspargase, vincristine; consolidation: dexamethasone, doxorubicin, mercaptopurine, pegaspargase, vincristine."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин",
+          "en": "Doxorubicin"
+        },
+        "drug_id": "doxorubicin"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Пегаспаргаза",
+          "en": "Pegaspargase"
+        },
+        "drug_id": "pegaspargase"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Меркаптопурин",
+          "en": "Mercaptopurine"
+        },
+        "drug_id": "mercaptopurine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Вік 60–79: ПР 71%, індукційна смертність 20%, 5-річна OS 40,5% (Martell 2013).",
+        "en": "Age 60-79: CR 71%, induction mortality 20%, 5-year OS 40.5% (Martell 2013)."
+      }
+    ],
+    "gap": {
+      "uk": "Педіатричні схеми; повні фази (індукція IA/IB, фаза ЦНС, рання й відстрочена інтенсифікація, продовження) — у протоколі-першоджерелі.",
+      "en": "Pediatric-inspired; the full phases (induction IA/IB, CNS phase, early and delayed intensification, continuation) are in the original protocol."
+    },
+    "availability": "unknown"
+  }
+}

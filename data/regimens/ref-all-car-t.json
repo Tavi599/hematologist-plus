@@ -1,0 +1,76 @@
+{
+  "id": "ref-all-car-t",
+  "short_name": "CAR-T при В-ГЛЛ",
+  "name": {
+    "uk": "CAR-T проти CD19 при рецидивному/рефрактерному В-ГЛЛ: тисагенлеклейцел, брексукабтаген, обекабтаген",
+    "en": "CD19 CAR-T in relapsed/refractory B-ALL: tisagenlecleucel, brexucabtagene, obecabtagene"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Acute Lymphoblastic Leukemia",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "3.2026 від 17.09.2026",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Maude SL. та ін. N Engl J Med 2018;378:439-448",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Shah BD. та ін. Lancet 2021;398:491-502",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "Roddie C. та ін. N Engl J Med 2024;391:2219-2230",
+      "version": "посилання з настанови NCCN",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Ph− В-ГЛЛ — бажано (брексу-цел, обе-цел; тиса-цел для <26 років із рефрактерністю або ≥2 рецидивами); Ph+ — після ТКІ (тиса-цел <26 років, ≥2 ТКІ; брексу-цел і обе-цел після ТКІ). Роль алоТГСК після CAR-T нечітка.",
+      "en": "Preferred in Ph-negative B-ALL (brexu-cel, obe-cel; tisa-cel for <26 with refractory disease or ≥2 relapses); Ph-positive — after TKIs (tisa-cel <26 and ≥2 TKIs; brexu-cel and obe-cel after TKIs). The role of allogeneic HCT after CAR-T is unclear."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Тисагенлеклейцел",
+          "en": "Tisagenlecleucel"
+        }
+      },
+      {
+        "name": {
+          "uk": "Брексукабтаген аутолейцел",
+          "en": "Brexucabtagene autoleucel"
+        }
+      },
+      {
+        "name": {
+          "uk": "Обекабтаген аутолейцел",
+          "en": "Obecabtagene autoleucel"
+        }
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Тисагенлеклейцел і брексукабтаген — за програмою REMS (тоцилізумаб — для CRS, стероїди при рефрактерному CRS/нейротоксичності); обекабтаген REMS не має.",
+        "en": "Tisagenlecleucel and brexucabtagene follow a REMS programme (tocilizumab for CRS, steroids for refractory CRS/neurotoxicity); obecabtagene has no REMS."
+      },
+      {
+        "uk": "Профілактика судом можлива в перший місяць; при нейтропенії та B-клітинній аплазії — Г-КСФ, антимікробна профілактика, IgG.",
+        "en": "Seizure prophylaxis may be considered in the first month; for neutropenia and B-cell aplasia — G-CSF, antimicrobial prophylaxis, IgG."
+      },
+      {
+        "uk": "Роль профілактики ЦНС при клітинній терапії ще вивчається.",
+        "en": "The role of CNS prophylaxis around cell therapy is still being studied."
+      }
+    ],
+    "gap": {
+      "uk": "Клітинна терапія без дози для розрахунку.",
+      "en": "Cell therapy with no dose to calculate."
+    },
+    "availability": "unavailable"
+  }
+}
