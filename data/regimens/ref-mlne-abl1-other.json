@@ -1,0 +1,63 @@
+{
+  "id": "ref-mlne-abl1-other",
+  "short_name": "Інші ТКІ проти ABL1",
+  "name": {
+    "uk": "Інші ТКІ проти ABL1: асциміниб, босутиніб, іматиніб, понатиніб",
+    "en": "Other TKIs against ABL1: asciminib, bosutinib, imatinib, ponatinib"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Myeloid/Lymphoid Neoplasms with Eosinophilia and Tyrosine Kinase Gene Fusions",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 від 05.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "«Інші рекомендовані» ТКІ у хронічній фазі при перебудові ABL1; у бластній фазі будь-який ТКІ проти ABL1 поєднують з індукцією типу ГМЛ/ГЛЛ і подальшою алоТГСК.",
+      "en": "'Other recommended' TKIs in chronic phase for ABL1 rearrangement; in blast phase any TKI against ABL1 goes with AML-/ALL-type induction followed by allo-HCT."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Асциміниб",
+          "en": "Asciminib"
+        },
+        "drug_id": "asciminib"
+      },
+      {
+        "name": {
+          "uk": "Босутиніб",
+          "en": "Bosutinib"
+        },
+        "drug_id": "bosutinib"
+      },
+      {
+        "name": {
+          "uk": "Іматиніб",
+          "en": "Imatinib"
+        },
+        "drug_id": "imatinib"
+      },
+      {
+        "name": {
+          "uk": "Понатиніб",
+          "en": "Ponatinib"
+        },
+        "drug_id": "ponatinib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Асциміниб, босутиніб і понатиніб включені за екстраполяцією з ХМЛ.",
+        "en": "Asciminib, bosutinib and ponatinib are included by extrapolation from CML."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить; схема описана лише для ознайомлення. Перед призначенням — за інструкцією препарату.",
+      "en": "NCCN gives no doses in this guideline; the regimen is described for reference only. Check the prescribing information before use."
+    },
+    "availability": "unknown"
+  }
+}
