@@ -1,0 +1,55 @@
+{
+  "id": "ref-al-ixa-cyd",
+  "short_name": "Ixa-CyDex (AL)",
+  "name": {
+    "uk": "Іксазоміб + циклофосфамід + дексаметазон при AL-амілоїдозі",
+    "en": "Ixazomib, cyclophosphamide and dexamethasone in AL amyloidosis"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Systemic Light Chain Amyloidosis, version 1.2027 (AMYL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 19.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Варіант повторної терапії (NCCN 1.2027, AMYL-B 4 з 6).",
+      "en": "An option for previously treated disease (NCCN 1.2027, AMYL-B 4 of 6)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Іксазоміб",
+          "en": "Ixazomib"
+        },
+        "drug_id": "ixazomib"
+      },
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Фаза II (n = 35, вік 67 років, вперше діагностований AL, далі підтримка іксазомібом): гематологічна відповідь 63%, ПВ 11,4%, ДХЧВ 37,1%; 2-річна ВБП 74%, ЗВ 78% (NCT01864018).",
+        "en": "Phase II (n = 35, median age 67, newly diagnosed AL, then ixazomib maintenance): haematological response 63%, complete 11.4%, very good partial 37.1%; 2-year PFS 74%, OS 78% (NCT01864018)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у схемі називає препарати, але не наводить доз і днів введення — їх треба брати з інструкцій і з первинного дослідження; без розрахунку.",
+      "en": "NCCN names the drugs but gives no doses or days — take them from the labels and the primary trial; not calculated."
+    }
+  }
+}

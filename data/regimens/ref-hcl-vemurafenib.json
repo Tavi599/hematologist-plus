@@ -1,11 +1,18 @@
 {
+  "$comment": "Лише опис за NCCN Hairy Cell Leukemia 2.2027: доз для розрахунку немає.",
   "id": "ref-hcl-vemurafenib",
-  "short_name": "Вемурафеніб ± R",
+  "short_name": "Вемурафеніб ± R / обінутузумаб",
   "name": {
-    "uk": "Вемурафеніб ± ритуксимаб при рецидивному ВКЛ",
-    "en": "Vemurafenib ± rituximab in relapsed HCL"
+    "uk": "Вемурафеніб ± анти-CD20 при ВКЛ",
+    "en": "Vemurafenib with or without an anti-CD20 antibody in HCL"
   },
   "sources": [
+    {
+      "name": "NCCN Guidelines: Hairy Cell Leukemia, версія 2.2027 від 14.09.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2027 (14.09.2026)",
+      "checkedOn": "2026-10-22"
+    },
     {
       "name": "UpToDate: Treatment of hairy cell leukemia (HCL) and HCL variant",
       "url": "https://www.uptodate.com/contents/treatment-of-hairy-cell-leukemia-hcl-and-hcl-variant",
@@ -15,15 +22,16 @@
   ],
   "reference": {
     "summary": {
-      "uk": "Для хворих, рефрактерних до пуринових аналогів, чи для тих, у кого аналоги неможливі через активну інфекцію; позареєстраційно. Доза в дослідженнях — 960 мг двічі на добу.",
-      "en": "For patients refractory to purine analogs or those who cannot take analogs because of active infection; off-label. The dose in the studies was 960 mg twice a day."
+      "uk": "Інгібітор BRAF V600E, позареєстраційно. NCCN: у першій лінії — «за певних обставин», коли пуринові аналоги неможливі (ослаблені, активна інфекція); при рецидиві <2 років чи рефрактерності — «бажано» (якщо BRAF-інгібітор ще не давали); при рецидиві ≥2 років — «інші рекомендовані» для тих, кому аналоги не підходять; при прогресуванні після другої лінії — «бажано». Без мутації BRAF V600E користі зазвичай нема.",
+      "en": "BRAF V600E inhibitor, off-label. NCCN: first line it is 'useful in certain circumstances' when a purine analogue is not possible (frail, active infection); in relapse under 2 years or refractory disease 'preferred' (if no BRAF inhibitor was given before); in relapse at 2 years or more 'other recommended' for those unsuited to analogues; in progression after second-line therapy 'preferred'. Without the BRAF V600E mutation there is usually no benefit."
     },
     "drugs": [
       {
         "name": {
           "uk": "Вемурафеніб",
           "en": "Vemurafenib"
-        }
+        },
+        "drug_id": "vemurafenib"
       },
       {
         "name": {
@@ -31,22 +39,33 @@
           "en": "Rituximab"
         },
         "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Обінутузумаб",
+          "en": "Obinutuzumab"
+        },
+        "drug_id": "obinutuzumab"
       }
     ],
     "key_info": [
       {
-        "uk": "При рефрактерності пуринового аналога після повторної біопсії мозку — інший аналог або вемурафеніб + ритуксимаб.",
-        "en": "For resistance to a purine analog, after repeating the marrow evaluation — another analog or vemurafenib plus rituximab."
+        "uk": "Дослідження, які наводить NCCN: при рецидиві/рефрактерності 960 мг двічі на добу 8 тижнів з ритуксимабом 375 мг/м² (8 доз протягом 18 тижнів, одночасно й послідовно) — повна відповідь 87%, без залишкової хвороби 65% повних відповідей; монотерапія 960 мг двічі на добу — загальна відповідь 96–100%, повна 35–42%.",
+        "en": "Studies cited by NCCN: in relapse or refractory disease 960 mg twice a day for 8 weeks with rituximab 375 mg/m2 (8 doses over 18 weeks, concurrent and sequential) gave a complete response in 87%, undetectable residual disease in 65% of complete responders; monotherapy at 960 mg twice a day gave an overall response of 96-100% and a complete response of 35-42%."
       },
       {
-        "uk": "При ремісії >24 місяців — повторне лікування тим самим або іншим пуриновим аналогом з ритуксимабом.",
-        "en": "With a remission over 24 months — retreatment with the same or the other purine analog followed by rituximab."
+        "uk": "Первинна терапія: вемурафеніб + обінутузумаб, 30 хворих — повна відповідь 96% через 4 місяці, 100% через 10; найчастіше висип (61%, ступінь 3 — 46%) і артралгія. Вемурафеніб у низьких дозах 240–1920 мг/добу в 21 хворого без попереднього лікування — повна відповідь 40%, є повідомлення про ГМЛ M6 і прискорення хвороби.",
+        "en": "Initial therapy: vemurafenib with obinutuzumab, 30 patients - complete response 96% at 4 months and 100% at 10; rash (61%, grade 3 in 46%) and arthralgia were most frequent. Low-dose vemurafenib 240-1920 mg/day in 21 untreated patients gave a complete response in 40%, with a report of AML M6 and possible disease acceleration."
+      },
+      {
+        "uk": "UpToDate: для хворих, рефрактерних до пуринових аналогів, чи тих, у кого аналоги неможливі через активну інфекцію; доза в дослідженнях 960 мг двічі на добу.",
+        "en": "UpToDate: for patients refractory to purine analogues or unable to take them because of active infection; the dose in the studies was 960 mg twice a day."
       }
     ],
     "gap": {
-      "uk": "UpToDate не наводить тривалості курсу вемурафенібу, а препарату немає в довіднику.",
-      "en": "UpToDate gives no duration of the vemurafenib course, and the drug is not in the catalog."
+      "uk": "Дні введення ритуксимабу (8 доз за 18 тижнів) і схема обінутузумабу в NCCN не наведені — окремий розклад не складено, щоб не вигадувати. Вемурафеніб 960 мг двічі на добу 8 тижнів — лише з тексту обговорення. Перед призначенням — за інструкцією; перевірити BRAF V600E.",
+      "en": "NCCN gives neither the days for the 8 rituximab doses over 18 weeks nor an obinutuzumab schedule, so no separate schedule is built rather than invented. Vemurafenib 960 mg twice a day for 8 weeks comes only from the discussion text. Check the prescribing information and BRAF V600E before use."
     },
-    "availability": "unavailable"
+    "availability": "registered"
   }
 }

@@ -7,6 +7,12 @@
   },
   "sources": [
     {
+      "name": "NCCN Guidelines: Hairy Cell Leukemia, версія 2.2027 від 14.09.2026",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2027 (14.09.2026)",
+      "checkedOn": "2026-10-22"
+    },
+    {
       "name": "UpToDate: Treatment of hairy cell leukemia (HCL) and HCL variant",
       "url": "https://www.uptodate.com/contents/treatment-of-hairy-cell-leukemia-hcl-and-hcl-variant",
       "version": "перевірено 2026-10-04",
@@ -15,15 +21,16 @@
   ],
   "reference": {
     "summary": {
-      "uk": "Альтернатива кладрибіну; відповідь схожа (повна ремісія 82% проти 76%), але лікування триває місяці. Не вживають кладрибін при активній інфекції — тоді пентостатин у низьких дозах чи вемурафеніб.",
-      "en": "An alternative to cladribine with a similar response (complete remission 82% versus 76%), but treatment runs for months. Cladribine is not used with an active infection — then low-dose pentostatin or vemurafenib."
+      "uk": "NCCN: пуриновий аналог першої лінії (поряд із кладрибіном) — «бажано»; їх не порівнювали в рандомізованих дослідженнях, активність схожа. UpToDate: відповідь схожа (повна ремісія 82% проти 76%), але лікування триває місяці.",
+      "en": "NCCN: a first-line purine analogue (alongside cladribine) - 'preferred'; they were not compared in randomised trials and the activity is similar. UpToDate: a similar response (complete remission 82% against 76%), but treatment lasts months."
     },
     "drugs": [
       {
         "name": {
           "uk": "Пентостатин",
           "en": "Pentostatin"
-        }
+        },
+        "drug_id": "pentostatin"
       }
     ],
     "key_info": [
@@ -34,12 +41,21 @@
       {
         "uk": "Боксове попередження про тяжку ниркову токсичність при дозах вище рекомендованих.",
         "en": "A boxed warning for severe kidney toxicity at doses above the recommended."
+      },
+      {
+        "uk": "NCCN: стандартні дози пуринових аналогів не дають при активній загрозливій для життя чи хронічній інфекції; спершу лікують інфекцію. Якщо контролювати її неможливо — розглянути пентостатин у низьких дозах, щоб забезпечити стійку відповідь, і лише потім стандартні дози аналогів.",
+        "en": "NCCN: standard-dose purine analogues are not given in active life-threatening or chronic infection; the infection is treated first. If it cannot be controlled, consider low-dose pentostatin to secure a durable response before standard-dose analogues."
+      },
+      {
+        "uk": "Фаза III (319 хворих): пентостатин проти інтерферону альфа — повна ремісія 76% проти 11%; 5- і 10-річна загальна виживаність 89% і 80%. Ступінь 3–4 нейтропенія 20%, інфекції будь-якого ступеня 53%.",
+        "en": "Phase III (319 patients): pentostatin against interferon alfa - complete remission 76% against 11%; 5- and 10-year overall survival 89% and 80%. Grade 3-4 neutropenia 20%, infection of any grade 53%."
       }
     ],
     "gap": {
-      "uk": "Препарату немає в довіднику (немає джерела на форму випуску).",
-      "en": "The drug is not in the catalog (no source for its presentation)."
+      "uk": "NCCN доз пентостатину в алгоритмі не наводить (лише згадка низьких доз при інфекції); значення вище — з UpToDate. Препарату немає в реєстрі України, а джерела на форму випуску нема, тому схеми для розрахунку немає.",
+      "en": "The NCCN algorithm gives no pentostatin doses (only a mention of low doses in infection); the values above come from UpToDate. The drug is not in the Ukrainian register and no source for a presentation exists, so there is no regimen to calculate."
     },
     "availability": "unavailable"
-  }
+  },
+  "$comment": "Картка за UpToDate, доповнена NCCN Hairy Cell Leukemia 2.2027 (14.09.2026). Пентостатину немає в Державному реєстрі (22.10.2026) — препарат у довіднику «недоступний»."
 }

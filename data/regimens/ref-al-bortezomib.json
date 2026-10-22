@@ -1,0 +1,63 @@
+{
+  "id": "ref-al-bortezomib",
+  "short_name": "Бортезоміб ± Dex ± Dara (AL)",
+  "name": {
+    "uk": "Бортезоміб ± дексаметазон ± даратумумаб при повторній терапії AL-амілоїдозу",
+    "en": "Bortezomib with or without dexamethasone and daratumumab in previously treated AL amyloidosis"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Systemic Light Chain Amyloidosis, version 1.2027 (AMYL-B, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 19.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Три варіанти зі списку повторної терапії: бортезоміб; бортезоміб + дексаметазон ± даратумумаб (NCCN 1.2027, AMYL-B 4 з 6).",
+      "en": "Three options from the list for previously treated disease: bortezomib; bortezomib plus dexamethasone with or without daratumumab (NCCN 1.2027, AMYL-B 4 of 6)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Даратумумаб",
+          "en": "Daratumumab"
+        },
+        "drug_id": "daratumumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "П/ш бортезоміб — бажаний шлях; рекомендовані щотижневі схеми. Дослідження: переносять до 1,6 мг/м² раз на тиждень або 1,3 мг/м² двічі на тиждень; раз на тиждень менше нейротоксичності.",
+        "en": "Subcutaneous bortezomib is the preferred route; weekly schedules are recommended. In a dose-finding study up to 1.6 mg/m² weekly or 1.3 mg/m² twice weekly was tolerated; weekly gave less neurotoxicity."
+      },
+      {
+        "uk": "Бортезоміб (± дексаметазон) при рецидиві: відповідь 54–94% залежно від дослідження, ПВ 20–44%; у трьох центрах 71% при ПВ 25%.",
+        "en": "Bortezomib (with or without dexamethasone) at relapse: response 54 to 94% depending on the study, complete response 20 to 44%; three centres reported 71% with 25% complete."
+      },
+      {
+        "uk": "Ризик периферичної й вегетативної нейропатії вищий при вихідній нейропатії; слідкувати або обрати альтернативу. Даратумумаб — тим, хто не отримував його первинно (виноска m).",
+        "en": "The risk of peripheral and autonomic neuropathy is higher with baseline neuropathy; monitor or choose an alternative. Daratumumab is advised for those who did not have it as primary therapy (footnote m)."
+      }
+    ],
+    "gap": {
+      "uk": "Каталог має «Бортезоміб у монорежимі» (NSSG MM.4) — розклад мієломи, не AL; NCCN дозу й ритм для AL не наводить (лише дослідження з дозами 1,6 і 1,3 мг/м²); без розрахунку.",
+      "en": "The catalogue holds «Bortezomib alone» (NSSG MM.4), a myeloma schedule, not AL; NCCN gives no dose or rhythm for AL (only the study doses of 1.6 and 1.3 mg/m²); not calculated."
+    }
+  }
+}

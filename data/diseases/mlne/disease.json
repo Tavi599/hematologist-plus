@@ -1,0 +1,974 @@
+{
+  "id": "mlne",
+  "name": {
+    "uk": "Мієлоїдні/лімфоїдні новоутворення з еозинофілією та злиттями тирозинкіназних генів",
+    "en": "Myeloid/lymphoid neoplasms with eosinophilia and tyrosine kinase gene fusions"
+  },
+  "summary": {
+    "uk": "Рідкісні клональні хвороби з перебудовою PDGFRA, PDGFRB, FGFR1, JAK2, ABL1 або FLT3: від хронічної еозинофільної лейкемії та МПН/ХММЛ з еозинофілією до бластної фази (ГМЛ, ГЛЛ, змішаний фенотип) і лімфом. Перебудови PDGFRA/PDGFRB чутливі до іматинібу; при інших потрібні таргетні ТКІ та рання алоТГСК.",
+    "en": "Rare clonal diseases with PDGFRA, PDGFRB, FGFR1, JAK2, ABL1 or FLT3 rearrangement, from chronic eosinophilic leukaemia and MPN/CMML with eosinophilia to blast phase (AML, ALL, mixed phenotype) and lymphomas. PDGFRA/PDGFRB rearrangements are imatinib-sensitive; the others need targeted TKIs and early allo-HCT."
+  },
+  "clinical_group": "myeloproliferative",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "D47.5",
+      "is_primary": true
+    },
+    {
+      "system_id": "icd-10",
+      "code": "D72.1",
+      "is_primary": false
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026",
+      "updated": "2026-08-05"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 2.2026 (MLNE-1…9)",
+        "en": "NCCN 2.2026 pathways (MLNE-1 to MLNE-9)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN «Myeloid/Lymphoid Neoplasms with Eosinophilia and Tyrosine Kinase Gene Fusions», версія 2.2026 від 05.08.2026: обстеження, діагностичні алгоритми за генами злиттів і лікування за типом перебудови (PDGFRA, PDGFRB, FGFR1, JAK2, ABL1/FLT3) у хронічній і бластній фазі. Доз NCCN майже не наводить: розраховуються лише схеми іматинібу; решта — довідкові картки. Усі рекомендації категорії 2A.",
+        "en": "The NCCN algorithm for myeloid/lymphoid neoplasms with eosinophilia and tyrosine kinase gene fusions, version 2.2026 of 5 Aug 2026: evaluation, diagnostic algorithms by fusion gene, and treatment by rearrangement (PDGFRA, PDGFRB, FGFR1, JAK2, ABL1/FLT3) in chronic and blast phase. NCCN gives almost no doses: only the imatinib regimens are calculated, the rest are reference cards. All recommendations are category 2A."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-eval",
+          "kind": "line",
+          "title": {
+            "uk": "Первинна оцінка й діагностичні ознаки (MLNE-1)",
+            "en": "Initial evaluation and diagnostic tip-offs (MLNE-1)"
+          },
+          "description": {
+            "uk": "Підозра на клональну еозинофілію: стійка еозинофілія ≥1,5×10⁹/л або тканинна (будь-яка кількість) з характерними розривами, спленомегалія, анемія/тромбоцитопенія, лейкоеритробластоз, підвищена тріптаза сироватки, атипові тучні клітини в КМ (при PDGFRA — інтерстиціальні, не щільні скупчення), ознаки ХММЛ з еозинофілією (PDGFRB), еозинофілія, що зберігається після інтенсивного лікування ГМЛ/ГЛЛ/лімфоми. Спершу виключити вторинну (реактивну) еозинофілію (причини в MLNE-A: паразити, вірусні й грибкові інфекції, алергія, легеневі, серцеві, шкірні й автоімунні хвороби, ліки/DRESS, солідні пухлини, лімфоми, ГЛЛ, надниркова недостатність, імунодефіцити, РТПХ), а також BCR::ABL1-позитивний ХМЛ, ІП, есенціальну тромбоцитемію, ПМФ, ХНЛ та атиповий ХМЛ. Усі хворі — мультидисциплінарна команда в спеціалізованому центрі; при загрозі органам — негайно пероральні чи високодозові в/в кортикостероїди; оцінити дистрес.",
+            "en": "Suspect clonal eosinophilia with a sustained count ≥1.5×10⁹/L or tissue eosinophilia (any count) with characteristic breakpoints, splenomegaly, anaemia/thrombocytopenia, leukoerythroblastosis, raised serum tryptase, atypical marrow mast cells (interstitial, not dense aggregates, in PDGFRA), CMML-like features with eosinophilia (PDGFRB), or eosinophilia persisting after intensive AML/ALL/lymphoma treatment. First exclude secondary (reactive) eosinophilia (causes in MLNE-A: parasites, viral and fungal infections, allergy, lung, cardiac, skin and autoimmune disease, drugs/DRESS, solid tumours, lymphomas, ALL, adrenal insufficiency, immunodeficiencies, GVHD), BCR::ABL1-positive CML, PV, ET, PMF, CNL and atypical CML. All patients go to a multidisciplinary team in a specialised centre; with threatened organs start oral or high-dose IV corticosteroids at once; assess distress."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Результат: перебудова PDGFRA/PDGFRB/FGFR1/JAK2/ABL1/FLT3 → відповідна сторінка нижче; системний мастоцитоз (1 основний + 1 додатковий або 3 додаткові критерії) → настанова з мастоцитозу; ХЕЛ-NOS, лімфоцитарний варіант ГЕ/ГЕС, ідіопатичний ГЕС/ГЕ — поза цією настановою",
+                "en": "Result: PDGFRA/PDGFRB/FGFR1/JAK2/ABL1/FLT3 rearrangement → the matching page below; systemic mastocytosis (1 major + 1 minor or 3 minor criteria) → the mastocytosis guideline; CEL-NOS, lymphocyte-variant HE/HES, idiopathic HES/HE — outside this guideline"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Обстеження й діагностика",
+                "en": "Workup and diagnostic testing"
+              },
+              "target": "nccn-workup"
+            }
+          ]
+        },
+        {
+          "key": "nccn-workup",
+          "kind": "line",
+          "title": {
+            "uk": "Обстеження та діагностика за генами злиттів (MLNE-2, 3, 4, B, C)",
+            "en": "Workup and fusion-gene diagnostics (MLNE-2, 3, 4, B, C)"
+          },
+          "description": {
+            "uk": "Загальне: анамнез і огляд (шкіра, пальпація селезінки; сімейна еозинофілія, ознаки імунодефіциту), загальний аналіз із формулою, мазок крові, біохімія з сечовою кислотою, ЛДГ і печінковими пробами, тріптаза сироватки, ШОЕ/СРБ, кількісні Ig (з IgE); аспірат і біопсія КМ з IHC на тріптазу/CD117/CD25/CD30/CD2 і/або проточна цитометрія, ретикулін/колаген (фіброз); у крові FISH і/або вкладена RT-qPCR на PDGFRA; підтверджувальний FISH, якщо каріотип показав розрив 4q12 (PDGFRA), 5q31~33 (PDGFRB), 8p11~12 (FGFR1), 9p24 (JAK2), 9q34 (ABL1) або 13q12 (FLT3); проточна цитометрія Т-клітин (бажано) та/або IHC, за потреби молекулярна клональність; мієлоїдна NGS-панель (для FLT3 RT-PCR може бути кращою). Органи-мішені: рентген грудної клітки, ЕКГ, КТ/МРТ за симптомами, тропонін і/або NT-proBNP (при підвищенні чи ознаках ураження серця — ЕхоКГ і/або МРТ серця), легені — спірометрія, бронхоскопія з БАЛ і біопсія, ШКТ — ендоскопія з біопсією, печінка — біопсія, нейропатія — ЕМГ/біопсія нерва, ЛОР, шкіра — біопсія, еозинофільний фасціїт — глибока біопсія й МРТ. Біопсія органа зазвичай потрібна для підтвердження тканинної еозинофілії.",
+            "en": "General: history and examination (skin, spleen palpation; family eosinophilia, signs of immunodeficiency), CBC with differential, blood smear, chemistry with uric acid, LDH and liver tests, serum tryptase, ESR/CRP, quantitative Ig (with IgE); marrow aspirate and biopsy with IHC for tryptase/CD117/CD25/CD30/CD2 and/or flow cytometry, reticulin/collagen stains; blood FISH and/or nested RT-qPCR for PDGFRA; confirmatory FISH if the karyotype shows a 4q12 (PDGFRA), 5q31~33 (PDGFRB), 8p11~12 (FGFR1), 9p24 (JAK2), 9q34 (ABL1) or 13q12 (FLT3) breakpoint; T-cell flow cytometry (preferred) and/or IHC with molecular clonality if needed; a myeloid NGS panel (RT-PCR may be better for FLT3). Target organs: chest x-ray, ECG, symptom-directed CT/MRI, troponin and/or NT-proBNP (echo and/or cardiac MRI if raised or cardiac injury is suspected), lung — function tests, bronchoscopy with lavage and biopsy, GI — endoscopy with biopsy, liver biopsy, neuropathy — EMG/nerve biopsy, ENT, skin biopsy, eosinophilic fasciitis — deep biopsy and MRI. An organ biopsy is generally needed to confirm tissue eosinophilia."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Алгоритм (MLNE-3). Каріотип нормальний → FISH на PDGFRA (CHIC2); негативний → RT-qPCR на FIP1L1::PDGFRA; позитивний → сторінка PDGFRA. Каріотип змінений → оцінити PDGFRB (FISH), FGFR1, JAK2, FLT3, ABL1 підтверджувальним FISH; PDGFRB-негативний → NGS чи інші методи для прихованих перебудов",
+                "en": "Algorithm (MLNE-3). Normal karyotype → PDGFRA FISH (CHIC2); negative → FIP1L1::PDGFRA RT-qPCR; positive → the PDGFRA page. Abnormal karyotype → assess PDGFRB (FISH), FGFR1, JAK2, FLT3 and ABL1 with confirmatory FISH; PDGFRB-negative → NGS or other methods for cryptic rearrangements"
+              }
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "FIP1L1::PDGFRA — криптична делеція ≈800 кб на 4q12: каріотип нормальний, діагноз ставлять FISH (втрата CHIC2) і/або RT-PCR; найчутливіша комбінація обох. Не використовувати декальцинований КМ. Рідкі партнери PDGFRA (BCR, ETV6, KIF5B та ін.) виявляє break-apart FISH. Підвищена тріптаза й проліферація тучних клітин у КМ — сурогатні ознаки (KIT D816V негативний)",
+                "en": "FIP1L1::PDGFRA is a cryptic ≈800-kb deletion at 4q12: the karyotype is normal and the diagnosis rests on FISH (loss of CHIC2) and/or RT-PCR, the two together being the most sensitive. Do not use decalcified marrow. Rare PDGFRA partners (BCR, ETV6, KIF5B and others) are found by break-apart FISH. Raised tryptase and marrow mast-cell proliferation are surrogate markers (KIT D816V negative)"
+              }
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "ETV6::PDGFRB t(5;12) — найчастіша (картина як ХММЛ); понад 30 партнерів, тож найекономніша цитогенетика, а при розриві 5q31~33 — підтвердження FISH. Еозинофілія без перебудови PDGFRB до іматинібу стійка. FGFR1: найчастіше ZMYM2::FGFR1 t(8;13), часто з Т-лімфобластною лімфомою. JAK2: PCM1::JAK2, ETV6::JAK2, BCR::JAK2. FLT3: найчастіше ETV6::FLT3. ABL1: найчастіше ETV6::ABL1 — каріотип і FISH можуть не виявити, надійніші FISH з ETV6/ABL1, RT-PCR, РНК-секвенування",
+                "en": "ETV6::PDGFRB t(5;12) is the commonest (a CMML-like picture); there are over 30 partners, so cytogenetics is the most economical method, with FISH confirmation for any 5q31~33 breakpoint. Eosinophilia without a PDGFRB rearrangement is imatinib-resistant. FGFR1: most often ZMYM2::FGFR1 t(8;13), often with T-lymphoblastic lymphoma. JAK2: PCM1::JAK2, ETV6::JAK2, BCR::JAK2. FLT3: most often ETV6::FLT3. ABL1: most often ETV6::ABL1 — karyotype and FISH can miss it; FISH with ETV6/ABL1 probes, RT-PCR or RNA sequencing are more reliable"
+              }
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Стадіювання (MLNE-4): 1) поширеність — КМ, кров, позакістковомозкове ураження (візуалізація при підозрі); 2) фаза: хронічна (МПН чи МДС/МПН з еозинофілією або без) чи бластна (≥20% бластів; ураження поза КМ рахується бластною компонентою; «прискорена фаза» не визначена, умовно 10–19% бластів); 3) лінія (імунофенотип КМ/крові та позакістковомозкового осередку, лінії можуть відрізнятися). Диференціальна діагностика при ГЛЛ-фенотипі JAK2 і ABL1 — Ph-подібний ГЛЛ",
+                "en": "Staging (MLNE-4): 1) extent — marrow, blood, extramedullary disease (image if suspected); 2) phase: chronic (MPN or MDS/MPN with or without eosinophilia) or blast (≥20% blasts; extramedullary disease counts as a blast component; there is no defined accelerated phase, 10-19% blasts used by convention); 3) lineage (immunophenotype of marrow/blood and of the extramedullary site, which can differ). Ph-like ALL is the differential for JAK2 and ABL1 with an ALL phenotype"
+              }
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "NGS-панель: мутації TET2, ASXL1, EZH2, SETBP1, STAT5B N642H, RUNX1 (часто при FGFR1) допомагають відрізнити клональну еозинофілію від реактивної; оцінювати патогенність і можливий CHIP; вплив мутацій на перебіг невідомий. Критерії відповіді — міжнародної робочої групи MLN (Shomali 2023); настанова їх не відтворює",
+                "en": "NGS panel: TET2, ASXL1, EZH2, SETBP1, STAT5B N642H and RUNX1 (common in FGFR1) help separate clonal from reactive eosinophilia; judge pathogenicity and possible CHIP; the effect of the mutations on the course is unknown. Response criteria are the MLN International Working Group's (Shomali 2023); the guideline does not reproduce them"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "PDGFRA",
+                "en": "PDGFRA"
+              },
+              "target": "nccn-pdgfra"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "PDGFRB",
+                "en": "PDGFRB"
+              },
+              "target": "nccn-pdgfrb"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "FGFR1",
+                "en": "FGFR1"
+              },
+              "target": "nccn-fgfr1"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "JAK2",
+                "en": "JAK2"
+              },
+              "target": "nccn-jak2"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "ABL1 або FLT3",
+                "en": "ABL1 or FLT3"
+              },
+              "target": "nccn-abl1-flt3"
+            }
+          ]
+        },
+        {
+          "key": "nccn-pdgfra",
+          "kind": "line",
+          "title": {
+            "uk": "Перебудова PDGFRA, зокрема FIP1L1::PDGFRA (MLNE-5)",
+            "en": "PDGFRA rearrangement, FIP1L1::PDGFRA included (MLNE-5)"
+          },
+          "description": {
+            "uk": "Хронічний еозинофільний лейкоз — найчастіша форма; сильна перевага чоловіків, підвищена тріптаза, спленомегалія. Варіанти: бластна фаза МПН, ГМЛ з еозинофілією, рідко Т-ГЛЛ чи мієлоїдна саркома. Якщо діагностика не виявила перебудови, а картина відповідає цій групі, іматиніб можна розглянути.",
+            "en": "Chronic eosinophilic leukaemia is the commonest form; strong male predominance, raised tryptase, splenomegaly. Variants: blast phase MPN, AML with eosinophilia, rarely T-ALL or myeloid sarcoma. If testing does not reveal the rearrangement but the picture fits this group, imatinib may be considered."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-pdgfra-cp",
+              "kind": "line",
+              "title": {
+                "uk": "Хронічна фаза",
+                "en": "Chronic phase"
+              },
+              "description": {
+                "uk": "Моніторинг: ЗАК та еозинофілія; візуалізація відповіді органа-мішені, зокрема позакістковомозкового ураження; через 3 міс. FISH крові чи КМ; RT-PCR (за можливості) для молекулярної відповіді. Повна гематологічна відповідь (ПГВ) за 1 міс. і повна цитогенетична (FISH) за 3 міс. досягаються в переважної більшості.",
+                "en": "Monitoring: CBC and eosinophil count; imaging of the target-organ response, extramedullary disease included; blood or marrow FISH at 3 months; RT-PCR (if available) for molecular response. A complete haematologic response (CHR) by 1 month and complete cytogenetic response (FISH) by 3 months is reached in the vast majority."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "imatinib-mlne-pdgfra",
+                  "notes": {
+                    "uk": "100 мг на добу",
+                    "en": "100 mg daily"
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "supportive",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Одночасно кортикостероїди 7–10 днів при ознаках ураження серця (тропонінемія, зміни на ЕхоКГ), консультація кардіолога; доз NCCN не наводить.",
+                    "en": "Concurrent corticosteroids for 7-10 days with signs of cardiac involvement (troponinaemia, abnormal echo) and a cardiologist; NCCN gives no dose."
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Через 3 міс.: FISH (КМ чи кров), RT-PCR; далі кожні 3–6 міс. гематологічна, цитогенетична (FISH) і за можливості молекулярна відповідь",
+                    "en": "At 3 months: FISH (marrow or blood), RT-PCR; then haematologic, cytogenetic (FISH) and, if possible, molecular response every 3-6 months"
+                  }
+                },
+                {
+                  "kind": "maintenance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Повна гематологічна, цитогенетична й молекулярна відповідь → продовжувати іматиніб 100 мг на добу; у стійкій відповіді застосовували навіть 100–200 мг на тиждень. Припинення іматинібу поза дослідженнями не рекомендоване",
+                    "en": "Complete haematologic, cytogenetic and molecular response → continue imatinib 100 mg daily; in a sustained response even 100-200 mg weekly has been used. Stopping imatinib outside trials is not recommended"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Втрата відповіді → бластна фаза / резистентність",
+                    "en": "Loss of response → blast phase / resistance"
+                  },
+                  "target": "nccn-pdgfra-bp"
+                }
+              ]
+            },
+            {
+              "key": "nccn-pdgfra-bp",
+              "kind": "line",
+              "title": {
+                "uk": "Бластна фаза або втрата відповіді",
+                "en": "Blast phase or loss of response"
+              },
+              "description": {
+                "uk": "≥20% бластів у КМ і/або крові (ГМЛ, ГЛЛ, змішаний фенотип) та/або позакістковомозкове ураження (мієлоїдна саркома, Т- чи В-лімфобластна лімфома, змішані гострі лейкемії); може бути й позакістковомозкове ураження з «МПН-подібною» картиною крові. Може бути вже на діагнозі або як прогресування хронічної фази (клональна еволюція, зокрема T674I і D842V).",
+                "en": "≥20% blasts in the bone marrow and/or blood (AML, ALL, mixed phenotype) and/or extramedullary disease (myeloid sarcoma, T- or B-lymphoblastic lymphoma, mixed acute leukaemias); extramedullary disease may also present with an MPN-like blood picture. May be present at diagnosis or arise from chronic phase through clonal evolution, including T674I and D842V."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "imatinib-mlne-pdgfra",
+                  "notes": {
+                    "uk": "100–400 мг на добу; якщо FIP1L1::PDGFRA виявили після індукційної хіміотерапії — додати іматиніб до індукції типу ГМЛ чи ГЛЛ або призначити монотерапію",
+                    "en": "100-400 mg daily; if FIP1L1::PDGFRA is found after induction chemotherapy, add imatinib to AML- or ALL-type induction or give it alone"
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "supportive",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Одночасно кортикостероїди 7–10 днів при ознаках ураження серця (тропонінемія, зміни на ЕхоКГ), консультація кардіолога; доз NCCN не наводить.",
+                    "en": "Concurrent corticosteroids for 7-10 days with signs of cardiac involvement (troponinaemia, abnormal echo) and a cardiologist; NCCN gives no dose."
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Втрата ПГВ, цитогенетичної (FISH) і/або молекулярної відповіді: оцінити прихильність; клональну еволюцію, особливо мутації резистентності PDGFRA T674I і D842V",
+                    "en": "Loss of CHR, cytogenetic (FISH) and/or molecular response: assess adherence and clonal evolution, especially the PDGFRA T674I and D842V resistance mutations"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "Розглянути оцінку для алоТГСК",
+                    "en": "Consider evaluation for allo-HCT"
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "next",
+                  "label": {
+                    "uk": "Мутація резистентності: ТКІ з потенційною активністю або клінічне дослідження. Авапритиніб схвалений при мастоцитозі й GIST з мутацією PDGFRA D842V; при D842V бажане клінічне дослідження авапритинібу, а не застосування поза показаннями. Нілотиніб, понатиніб і сорафеніб мали обмежену активність",
+                    "en": "Resistance mutation: a TKI with potential activity or a clinical trial. Avapritinib is approved for mastocytosis and PDGFRA D842V GIST; with D842V a trial of avapritinib is preferred to off-label use. Nilotinib, ponatinib and sorafenib had limited activity"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-pdgfrb",
+          "kind": "line",
+          "title": {
+            "uk": "Перебудова PDGFRB (MLNE-6)",
+            "en": "PDGFRB rearrangement (MLNE-6)"
+          },
+          "description": {
+            "uk": "Прояви: ХММЛ, атиповий ХМЛ, МДС/МПН неуточнений, МПН, ювенільний ММЛ, бластна фаза або позакістковомозкове ураження; сильна перевага чоловіків; еозинофілія є не завжди. Якщо діагностика не виявила перебудови, а картина відповідає групі, іматиніб можна розглянути.",
+            "en": "Presentations: CMML, atypical CML, MDS/MPN unclassifiable, MPN, juvenile myelomonocytic leukaemia, blast phase or extramedullary disease; strong male predominance; eosinophilia is not always present. If testing does not reveal the rearrangement but the picture fits the group, imatinib may be considered."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-pdgfrb-cp",
+              "kind": "line",
+              "title": {
+                "uk": "Хронічна фаза",
+                "en": "Chronic phase"
+              },
+              "description": {
+                "uk": "Моніторинг: ЗАК та еозинофілія; візуалізація органа-мішені; через 3 міс. стандартна цитогенетика і/або FISH; RT-PCR за можливості. ПГВ за 1 міс. і повна цитогенетична відповідь за 3 міс. — у переважної більшості.",
+                "en": "Monitoring: CBC and eosinophils; target-organ imaging; standard cytogenetics and/or FISH at 3 months; RT-PCR if available. CHR by 1 month and complete cytogenetic response by 3 months in the vast majority."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "imatinib-mlne-pdgfrb",
+                  "notes": {
+                    "uk": "100–400 мг на добу, 400 мг зазвичай як індукційна доза",
+                    "en": "100-400 mg daily, 400 mg usually as the induction dose"
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "supportive",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Одночасно кортикостероїди 7–10 днів при ознаках ураження серця (тропонінемія, зміни на ЕхоКГ), консультація кардіолога; доз NCCN не наводить.",
+                    "en": "Concurrent corticosteroids for 7-10 days with signs of cardiac involvement (troponinaemia, abnormal echo) and a cardiologist; NCCN gives no dose."
+                  }
+                },
+                {
+                  "kind": "maintenance",
+                  "column": "next",
+                  "label": {
+                    "uk": "Повна гематологічна та цитогенетична/FISH-відповідь → продовжувати іматиніб (100–400 мг на добу); зниження до 100 мг на добу можна розглянути. Моніторинг кожні 3–6 міс.",
+                    "en": "Complete haematologic and cytogenetic/FISH response → continue imatinib (100-400 mg daily); a reduction to 100 mg daily can be considered. Monitor every 3-6 months"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Втрата відповіді → бластна фаза / резистентність",
+                    "en": "Loss of response → blast phase / resistance"
+                  },
+                  "target": "nccn-pdgfrb-bp"
+                }
+              ]
+            },
+            {
+              "key": "nccn-pdgfrb-bp",
+              "kind": "line",
+              "title": {
+                "uk": "Бластна фаза або втрата відповіді",
+                "en": "Blast phase or loss of response"
+              },
+              "description": {
+                "uk": "≥20% бластів у КМ і/або крові (ГМЛ, ГЛЛ, змішаний фенотип) та/або позакістковомозкове ураження (мієлоїдна саркома, Т- чи В-лімфобластна лімфома, змішані гострі лейкемії); може бути й позакістковомозкове ураження з «МПН-подібною» картиною крові.",
+                "en": "≥20% blasts in the bone marrow and/or blood (AML, ALL, mixed phenotype) and/or extramedullary disease (myeloid sarcoma, T- or B-lymphoblastic lymphoma, mixed acute leukaemias); extramedullary disease may also present with an MPN-like blood picture."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "imatinib-mlne-pdgfrb",
+                  "notes": {
+                    "uk": "100–400 мг на добу (зазвичай 400 мг індукційно); якщо перебудову знайшли лише після індукційної хіміотерапії — додати до індукції типу ГМЛ/ГЛЛ або монотерапія",
+                    "en": "100-400 mg daily (usually 400 mg for induction); if the rearrangement is found only after induction chemotherapy, add to AML-/ALL-type induction or give alone"
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "supportive",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Одночасно кортикостероїди 7–10 днів при ознаках ураження серця (тропонінемія, зміни на ЕхоКГ), консультація кардіолога; доз NCCN не наводить.",
+                    "en": "Concurrent corticosteroids for 7-10 days with signs of cardiac involvement (troponinaemia, abnormal echo) and a cardiologist; NCCN gives no dose."
+                  }
+                },
+                {
+                  "kind": "assessment",
+                  "column": "next",
+                  "label": {
+                    "uk": "Втрата відповіді: оцінити прихильність і цитогенетичну/молекулярну клональну еволюцію, зокрема мутації PDGFRB",
+                    "en": "Loss of response: assess adherence and cytogenetic/molecular clonal evolution, including PDGFRB mutations"
+                  }
+                },
+                {
+                  "kind": "other",
+                  "column": "next",
+                  "label": {
+                    "uk": "Мутація резистентності: ТКІ з потенційною активністю або клінічне дослідження",
+                    "en": "Resistance mutation: a TKI with potential activity or a clinical trial"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-fgfr1",
+          "kind": "line",
+          "title": {
+            "uk": "Перебудова FGFR1 (MLNE-7)",
+            "en": "FGFR1 rearrangement (MLNE-7)"
+          },
+          "description": {
+            "uk": "Прояви: МПН з еозинофілією, ГМЛ, В- чи Т-клітинна лімфома/ГЛЛ, змішаний фенотип, позакістковомозкове ураження; помірна перевага чоловіків; агресивний перебіг зі швидким переходом у бластну фазу. Вибір лікування залежить від того, чи є і КМ/кров, і позакістковомозкове ураження, та від лінії кожного. Відповідь: цитогенетика/FISH крові й КМ, за можливості RT-PCR на FGFR1, візуалізація осередків. Алогенна ТГСК — єдиний потенційно курабельний варіант, рання консультація трансплантолога.",
+            "en": "Presentations: MPN with eosinophilia, AML, B- or T-cell lymphoma/ALL, mixed phenotype, extramedullary disease; moderate male predominance; aggressive, with rapid progression to blast phase. Treatment depends on whether both marrow/blood and extramedullary disease are present and on the lineage of each. Response: blood and marrow cytogenetics/FISH, RT-PCR for FGFR1 if available, imaging of the foci. Allogeneic HCT is the only potentially curative option; refer early."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-fgfr1-cp",
+              "kind": "line",
+              "title": {
+                "uk": "Хронічна фаза",
+                "en": "Chronic phase"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-mlne-pemigatinib",
+                  "notes": {
+                    "uk": "Пемігатиніб (схвалений FDA при рецидивній/рефрактерній хворобі)",
+                    "en": "Pemigatinib (FDA-approved for relapsed or refractory disease)"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-mlne-fgfr1-tki",
+                  "notes": {
+                    "uk": "Мідостаурин або понатиніб",
+                    "en": "Midostaurin or ponatinib"
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "Розглянути ранню алоТГСК (якщо придатний)",
+                    "en": "Consider early allo-HCT (if eligible)"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-fgfr1-bp",
+              "kind": "line",
+              "title": {
+                "uk": "Бластна фаза",
+                "en": "Blast phase"
+              },
+              "description": {
+                "uk": "≥20% бластів у КМ і/або крові (ГМЛ, ГЛЛ, змішаний фенотип) та/або позакістковомозкове ураження (мієлоїдна саркома, Т- чи В-лімфобластна лімфома, змішані гострі лейкемії); може бути й позакістковомозкове ураження з «МПН-подібною» картиною крові.",
+                "en": "≥20% blasts in the bone marrow and/or blood (AML, ALL, mixed phenotype) and/or extramedullary disease (myeloid sarcoma, T- or B-lymphoblastic lymphoma, mixed acute leukaemias); extramedullary disease may also present with an MPN-like blood picture."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-mlne-pemigatinib",
+                  "notes": {
+                    "uk": "Пемігатиніб і розглянути ранню алоТГСК",
+                    "en": "Pemigatinib, and consider early allo-HCT"
+                  },
+                  "preference": "preferred"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження і розглянути ранню алоТГСК (якщо придатний)",
+                    "en": "Clinical trial and consider early allo-HCT (if eligible)"
+                  },
+                  "preference": "preferred"
+                }
+              ],
+              "children": [
+                {
+                  "key": "nccn-fgfr1-bp-myeloid",
+                  "kind": "line",
+                  "title": {
+                    "uk": "Мієлоїдна",
+                    "en": "Myeloid"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ref-mlne-fgfr1-tki",
+                      "notes": {
+                        "uk": "Мідостаурин або понатиніб + індукція типу ГМЛ, далі алоТГСК (якщо придатний)",
+                        "en": "Midostaurin or ponatinib + AML-type induction, then allo-HCT (if eligible)"
+                      },
+                      "preference": "other"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-fgfr1-bp-mixed",
+                  "kind": "line",
+                  "title": {
+                    "uk": "Змішаний фенотип",
+                    "en": "Mixed phenotype"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ref-mlne-pemigatinib",
+                      "notes": {
+                        "uk": "Пемігатиніб + індукція типу ГМЛ чи ГЛЛ, далі алоТГСК (якщо придатний)",
+                        "en": "Pemigatinib + AML- or ALL-type induction, then allo-HCT (if eligible)"
+                      },
+                      "preference": "other"
+                    },
+                    {
+                      "regimen_id": "ref-mlne-fgfr1-tki",
+                      "notes": {
+                        "uk": "Мідостаурин або понатиніб + індукція типу ГМЛ чи ГЛЛ, далі алоТГСК",
+                        "en": "Midostaurin or ponatinib + AML- or ALL-type induction, then allo-HCT"
+                      },
+                      "preference": "other"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-fgfr1-bp-lymphoid",
+                  "kind": "line",
+                  "title": {
+                    "uk": "Лімфоїдна",
+                    "en": "Lymphoid"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ref-mlne-pemigatinib",
+                      "notes": {
+                        "uk": "Пемігатиніб + індукція типу ГЛЛ, далі алоТГСК (якщо придатний)",
+                        "en": "Pemigatinib + ALL-type induction, then allo-HCT (if eligible)"
+                      },
+                      "preference": "other"
+                    },
+                    {
+                      "regimen_id": "ref-mlne-fgfr1-tki",
+                      "notes": {
+                        "uk": "Мідостаурин або понатиніб + індукція типу ГЛЛ, далі алоТГСК",
+                        "en": "Midostaurin or ponatinib + ALL-type induction, then allo-HCT"
+                      },
+                      "preference": "other"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "nccn-fgfr1-after",
+              "kind": "line",
+              "title": {
+                "uk": "Після алоТГСК",
+                "en": "After allo-HCT"
+              },
+              "description": {
+                "uk": "Моніторинг МЗХ після алоТГСК і підтримка ТКІ (напр., понатиніб) чи азацитидином описані лише в поодиноких випадках; роль підтримки ТКІ системно не вивчалась, але її можна розглянути при високому ризику рецидиву.",
+                "en": "MRD monitoring after allo-HCT and maintenance with a TKI (eg, ponatinib) or azacitidine are described in single case reports only; TKI maintenance has not been studied systematically but may be considered at high risk of relapse."
+              },
+              "regimens": []
+            }
+          ]
+        },
+        {
+          "key": "nccn-jak2",
+          "kind": "line",
+          "title": {
+            "uk": "Перебудова JAK2 (MLNE-8)",
+            "en": "JAK2 rearrangement (MLNE-8)"
+          },
+          "description": {
+            "uk": "Характерно: хронічне мієлоїдне новоутворення з еозинофілією (МПН або МДС/МПН), рідше ГЛЛ чи ГМЛ de novo; сильна перевага чоловіків; агресивний перебіг зі швидким переходом у бластну фазу; при BCR::JAK2 і ETV6::JAK2 еозинофілія змінна. Те, що зустрічається при Ph-подібному В-ГЛЛ (STRN3::JAK2, PAX5::JAK2), за означенням сюди не належить. Рання алоТГСК — єдиний потенційно курабельний варіант.",
+            "en": "Typical: a chronic myeloid neoplasm with eosinophilia (MPN or MDS/MPN), less often de novo ALL or AML; strong male predominance; aggressive, progressing rapidly to blast phase; eosinophilia is variable with BCR::JAK2 and ETV6::JAK2. Fusions seen in Ph-like B-ALL (STRN3::JAK2, PAX5::JAK2) are by definition not in this category. Early allo-HCT is the only potentially curative option."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-jak2-cp",
+              "kind": "line",
+              "title": {
+                "uk": "Хронічна фаза",
+                "en": "Chronic phase"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-mlne-jak2-tki",
+                  "notes": {
+                    "uk": "Руксолітиніб (найчастіше); за недоступності чи непереносимості — федратиніб, момелотиніб або пакритиніб за інструкцією",
+                    "en": "Ruxolitinib (used most); if unavailable or not tolerated — fedratinib, momelotinib or pacritinib per the label"
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "Розглянути ранню алоТГСК (якщо придатний)",
+                    "en": "Consider early allo-HCT (if eligible)"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-jak2-bp",
+              "kind": "line",
+              "title": {
+                "uk": "Бластна фаза",
+                "en": "Blast phase"
+              },
+              "description": {
+                "uk": "≥20% бластів у КМ і/або крові (ГМЛ, ГЛЛ, змішаний фенотип) та/або позакістковомозкове ураження (мієлоїдна саркома, Т- чи В-лімфобластна лімфома, змішані гострі лейкемії); може бути й позакістковомозкове ураження з «МПН-подібною» картиною крові.",
+                "en": "≥20% blasts in the bone marrow and/or blood (AML, ALL, mixed phenotype) and/or extramedullary disease (myeloid sarcoma, T- or B-lymphoblastic lymphoma, mixed acute leukaemias); extramedullary disease may also present with an MPN-like blood picture."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження і розглянути ранню алоТГСК (якщо придатний)",
+                    "en": "Clinical trial and consider early allo-HCT (if eligible)"
+                  },
+                  "preference": "preferred"
+                }
+              ],
+              "children": [
+                {
+                  "key": "nccn-jak2-bp-myeloid",
+                  "kind": "line",
+                  "title": {
+                    "uk": "Мієлоїдна",
+                    "en": "Myeloid"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ref-mlne-jak2-tki",
+                      "notes": {
+                        "uk": "Інгібітор JAK2 + індукція типу ГМЛ, далі розглянути алоТГСК",
+                        "en": "JAK2 inhibitor + AML-type induction, then consider allo-HCT"
+                      },
+                      "preference": "other"
+                    }
+                  ],
+                  "steps": [
+                    {
+                      "kind": "other",
+                      "column": "treatment",
+                      "label": {
+                        "uk": "Індукція типу ГМЛ — за настановою NCCN з ГМЛ (див. хворобу «Гострий мієлоїдний лейкоз»)",
+                        "en": "AML-type induction — NCCN AML guideline (see the AML disease)"
+                      }
+                    },
+                    {
+                      "kind": "hct",
+                      "column": "treatment",
+                      "label": {
+                        "uk": "Рання алогенна ТГСК (якщо придатний): єдиний потенційно курабельний варіант",
+                        "en": "Early allogeneic HCT (if eligible): the only potentially curative option"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-jak2-bp-mixed",
+                  "kind": "line",
+                  "title": {
+                    "uk": "Змішаний фенотип",
+                    "en": "Mixed phenotype"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ref-mlne-jak2-tki",
+                      "notes": {
+                        "uk": "Інгібітор JAK2 + індукція типу ГМЛ або ГЛЛ (індивідуально за імунофенотипом), далі алоТГСК",
+                        "en": "JAK2 inhibitor + AML- or ALL-type induction (case by case by immunophenotype), then allo-HCT"
+                      },
+                      "preference": "other"
+                    }
+                  ],
+                  "steps": [
+                    {
+                      "kind": "hct",
+                      "column": "treatment",
+                      "label": {
+                        "uk": "Рання алогенна ТГСК (якщо придатний): єдиний потенційно курабельний варіант",
+                        "en": "Early allogeneic HCT (if eligible): the only potentially curative option"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-jak2-bp-lymphoid",
+                  "kind": "line",
+                  "title": {
+                    "uk": "Лімфоїдна",
+                    "en": "Lymphoid"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ref-mlne-jak2-tki",
+                      "notes": {
+                        "uk": "Інгібітор JAK2 + індукція типу ГЛЛ, далі розглянути алоТГСК",
+                        "en": "JAK2 inhibitor + ALL-type induction, then consider allo-HCT"
+                      },
+                      "preference": "other"
+                    }
+                  ],
+                  "steps": [
+                    {
+                      "kind": "other",
+                      "column": "treatment",
+                      "label": {
+                        "uk": "Індукція типу ГЛЛ — за настановою NCCN з ГЛЛ (див. хворобу «Гострий лімфобластний лейкоз»)",
+                        "en": "ALL-type induction — NCCN ALL guideline (see the ALL disease)"
+                      }
+                    },
+                    {
+                      "kind": "hct",
+                      "column": "treatment",
+                      "label": {
+                        "uk": "Рання алогенна ТГСК (якщо придатний): єдиний потенційно курабельний варіант",
+                        "en": "Early allogeneic HCT (if eligible): the only potentially curative option"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-abl1-flt3",
+          "kind": "line",
+          "title": {
+            "uk": "Перебудова ABL1 або FLT3 (MLNE-9)",
+            "en": "ABL1 or FLT3 rearrangement (MLNE-9)"
+          },
+          "description": {
+            "uk": "FLT3: характерно ММН з еозинофілією (ХЕЛ-NOS), описані також периферична Т-клітинна лімфома чи Т-лімфобластна лімфома. ABL1: найчастіше ГЛЛ de novo, але описані й інші гострі та хронічні фенотипи. Перебіг зазвичай агресивний, з прогресуванням чи рецидивом; еозинофілія є не завжди. Випадки FLT3, що проявляються ГЛЛ без залучення мієлоїдної лінії, класифікують як BCR::ABL1-подібний В-ГЛЛ або Т-ГЛЛ de novo. Дазатиніб і нілотиніб ефективніші за іматиніб при ETV6::ABL1.",
+            "en": "FLT3: typically MLNE (CEL-NOS), with peripheral T-cell or T-lymphoblastic lymphoma also described. ABL1: most often de novo ALL, but other acute and chronic phenotypes occur. The course is usually aggressive, with progression or relapse; eosinophilia is not always present. FLT3 cases that present as ALL without myeloid-lineage involvement are classed as BCR::ABL1-like B-ALL or de novo T-ALL. Dasatinib and nilotinib work better than imatinib with ETV6::ABL1."
+          },
+          "regimens": [],
+          "children": [
+            {
+              "key": "nccn-abl1-cp",
+              "kind": "line",
+              "title": {
+                "uk": "Хронічна фаза: ABL1",
+                "en": "Chronic phase: ABL1"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-mlne-abl1-preferred",
+                  "notes": {
+                    "uk": "Дазатиніб або нілотиніб",
+                    "en": "Dasatinib or nilotinib"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-mlne-abl1-other",
+                  "notes": {
+                    "uk": "Асциміниб, босутиніб, іматиніб, понатиніб",
+                    "en": "Asciminib, bosutinib, imatinib, ponatinib"
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "Розглянути ранню алоТГСК (якщо придатний)",
+                    "en": "Consider early allo-HCT (if eligible)"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-flt3-cp",
+              "kind": "line",
+              "title": {
+                "uk": "Хронічна фаза: FLT3",
+                "en": "Chronic phase: FLT3"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-mlne-flt3-tki",
+                  "notes": {
+                    "uk": "Гілтеритиніб, мідостаурин, квізартиніб, сорафеніб, сунітиніб",
+                    "en": "Gilteritinib, midostaurin, quizartinib, sorafenib, sunitinib"
+                  },
+                  "preference": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження",
+                    "en": "Clinical trial"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "kind": "hct",
+                  "column": "next",
+                  "label": {
+                    "uk": "Розглянути ранню алоТГСК (якщо придатний)",
+                    "en": "Consider early allo-HCT (if eligible)"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "nccn-abl1-flt3-bp",
+              "kind": "line",
+              "title": {
+                "uk": "Бластна фаза (ABL1 чи FLT3)",
+                "en": "Blast phase (ABL1 or FLT3)"
+              },
+              "description": {
+                "uk": "≥20% бластів у КМ і/або крові (ГМЛ, ГЛЛ, змішаний фенотип) та/або позакістковомозкове ураження (мієлоїдна саркома, Т- чи В-лімфобластна лімфома, змішані гострі лейкемії); може бути й позакістковомозкове ураження з «МПН-подібною» картиною крові.",
+                "en": "≥20% blasts in the bone marrow and/or blood (AML, ALL, mixed phenotype) and/or extramedullary disease (myeloid sarcoma, T- or B-lymphoblastic lymphoma, mixed acute leukaemias); extramedullary disease may also present with an MPN-like blood picture."
+              },
+              "regimens": [],
+              "steps": [
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне дослідження і розглянути ранню алоТГСК (якщо придатний)",
+                    "en": "Clinical trial and consider early allo-HCT (if eligible)"
+                  },
+                  "preference": "preferred"
+                }
+              ],
+              "children": [
+                {
+                  "key": "nccn-abl1-flt3-bp-myeloid",
+                  "kind": "line",
+                  "title": {
+                    "uk": "Мієлоїдна",
+                    "en": "Myeloid"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ref-mlne-abl1-preferred",
+                      "notes": {
+                        "uk": "ТКІ проти ABL1 + індукція типу ГМЛ, далі алоТГСК",
+                        "en": "A TKI against ABL1 + AML-type induction, then allo-HCT"
+                      },
+                      "preference": "other"
+                    },
+                    {
+                      "regimen_id": "ref-mlne-flt3-tki",
+                      "notes": {
+                        "uk": "ТКІ проти FLT3 + індукція типу ГМЛ, далі алоТГСК",
+                        "en": "A TKI against FLT3 + AML-type induction, then allo-HCT"
+                      },
+                      "preference": "other"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-abl1-flt3-bp-mixed",
+                  "kind": "line",
+                  "title": {
+                    "uk": "Змішаний фенотип",
+                    "en": "Mixed phenotype"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ref-mlne-abl1-preferred",
+                      "notes": {
+                        "uk": "ТКІ проти ABL1 + індукція типу ГЛЛ, далі алоТГСК",
+                        "en": "A TKI against ABL1 + ALL-type induction, then allo-HCT"
+                      },
+                      "preference": "other"
+                    },
+                    {
+                      "regimen_id": "ref-mlne-flt3-tki",
+                      "notes": {
+                        "uk": "ТКІ проти FLT3 + індукція типу ГЛЛ, далі алоТГСК",
+                        "en": "A TKI against FLT3 + ALL-type induction, then allo-HCT"
+                      },
+                      "preference": "other"
+                    }
+                  ]
+                },
+                {
+                  "key": "nccn-abl1-flt3-bp-lymphoid",
+                  "kind": "line",
+                  "title": {
+                    "uk": "Лімфоїдна",
+                    "en": "Lymphoid"
+                  },
+                  "regimens": [
+                    {
+                      "regimen_id": "ref-mlne-abl1-preferred",
+                      "notes": {
+                        "uk": "ТКІ проти ABL1 + індукція типу ГЛЛ, далі алоТГСК",
+                        "en": "A TKI against ABL1 + ALL-type induction, then allo-HCT"
+                      },
+                      "preference": "other"
+                    },
+                    {
+                      "regimen_id": "ref-mlne-flt3-tki",
+                      "notes": {
+                        "uk": "ТКІ проти FLT3 + індукція типу ГЛЛ, далі алоТГСК",
+                        "en": "A TKI against FLT3 + ALL-type induction, then allo-HCT"
+                      },
+                      "preference": "other"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

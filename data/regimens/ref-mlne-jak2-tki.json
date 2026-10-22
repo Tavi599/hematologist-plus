@@ -1,0 +1,63 @@
+{
+  "id": "ref-mlne-jak2-tki",
+  "short_name": "ТКІ проти JAK2",
+  "name": {
+    "uk": "Інгібітор JAK2 (руксолітиніб; за його відсутності чи непереносимості — федратиніб, момелотиніб, пакритиніб)",
+    "en": "JAK2 inhibitor (ruxolitinib; if unavailable or not tolerated — fedratinib, momelotinib or pacritinib)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: Myeloid/Lymphoid Neoplasms with Eosinophilia and Tyrosine Kinase Gene Fusions",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2026 від 05.08.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "«Інші рекомендовані» при перебудові JAK2 (PCM1/ETV6/BCR::JAK2) у хронічній і бластній фазі; найчастіше вживають руксолітиніб. Бластна фаза — з індукційною хіміотерапією типу ГМЛ/ГЛЛ і подальшою алоТГСК; рання алоТГСК у всіх придатних.",
+      "en": "'Other recommended' for JAK2 rearrangement (PCM1/ETV6/BCR::JAK2) in chronic and blast phase; ruxolitinib is the one used most. Blast phase: with AML-/ALL-type induction followed by allo-HCT; early allo-HCT for every eligible patient."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Руксолітиніб",
+          "en": "Ruxolitinib"
+        },
+        "drug_id": "ruxolitinib"
+      },
+      {
+        "name": {
+          "uk": "Федратиніб",
+          "en": "Fedratinib"
+        },
+        "drug_id": "fedratinib"
+      },
+      {
+        "name": {
+          "uk": "Момелотиніб",
+          "en": "Momelotinib"
+        },
+        "drug_id": "momelotinib"
+      },
+      {
+        "name": {
+          "uk": "Пакритиніб",
+          "en": "Pacritinib"
+        },
+        "drug_id": "pacritinib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Федратиніб, момелотиніб і пакритиніб включені за екстраполяцією з мієлофіброзу.",
+        "en": "Fedratinib, momelotinib and pacritinib are included by extrapolation from myelofibrosis."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN у цій настанові доз не наводить; схема описана лише для ознайомлення. Перед призначенням — за інструкцією препарату.",
+      "en": "NCCN gives no doses in this guideline; the regimen is described for reference only. Check the prescribing information before use."
+    },
+    "availability": "unknown"
+  }
+}
