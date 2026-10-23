@@ -1,11 +1,14 @@
-import { Alert, Button, Card, Group, PasswordInput, Stack, Text, TextInput } from '@mantine/core'
+import { Alert, Button, Card, PasswordInput, Stack, Text, TextInput } from '@mantine/core'
 import { useState, type FormEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { signIn } from '../../lib/auth'
 
-/** Sign-in for the department: article text and the proposals window are behind it. */
-export function SignInPanel({ reason }: { reason?: string } = {}) {
+/**
+ * Sign-in for the department: article text and the proposals window are behind it. `bare` drops
+ * the card and the heading for a dialog that carries its own.
+ */
+export function SignInPanel({ reason, bare = false }: { reason?: string; bare?: boolean } = {}) {
   const { t } = useTranslation()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -21,41 +24,45 @@ export function SignInPanel({ reason }: { reason?: string } = {}) {
       .finally(() => setBusy(false))
   }
 
+  const form = (
+    <form onSubmit={submit}>
+      <Stack gap="sm" maw={420}>
+        {!bare && <Text fw={500}>{t('auth.title')}</Text>}
+        <Text size="sm" c="dimmed">
+          {reason ?? t('auth.hint')}
+        </Text>
+        {error !== null && (
+          <Alert color="red" variant="light">
+            {error}
+          </Alert>
+        )}
+        <TextInput
+          label={t('auth.email')}
+          type="email"
+          autoComplete="username"
+          value={email}
+          onChange={(event) => setEmail(event.currentTarget.value)}
+          required
+          data-autofocus
+        />
+        <PasswordInput
+          label={t('auth.password')}
+          autoComplete="current-password"
+          value={password}
+          onChange={(event) => setPassword(event.currentTarget.value)}
+          required
+        />
+        <Button type="submit" loading={busy} style={{ alignSelf: 'flex-start' }}>
+          {t('auth.signIn')}
+        </Button>
+      </Stack>
+    </form>
+  )
+
+  if (bare) return form
   return (
     <Card withBorder component="section">
-      <form onSubmit={submit}>
-        <Stack gap="sm">
-          <Text fw={500}>{t('auth.title')}</Text>
-          <Text size="sm" c="dimmed">
-            {reason ?? t('auth.hint')}
-          </Text>
-          {error !== null && (
-            <Alert color="red" variant="light">
-              {error}
-            </Alert>
-          )}
-          <Group align="flex-end" wrap="wrap">
-            <TextInput
-              label={t('auth.email')}
-              type="email"
-              autoComplete="username"
-              value={email}
-              onChange={(event) => setEmail(event.currentTarget.value)}
-              required
-            />
-            <PasswordInput
-              label={t('auth.password')}
-              autoComplete="current-password"
-              value={password}
-              onChange={(event) => setPassword(event.currentTarget.value)}
-              required
-            />
-            <Button type="submit" loading={busy}>
-              {t('auth.signIn')}
-            </Button>
-          </Group>
-        </Stack>
-      </form>
+      {form}
     </Card>
   )
 }
