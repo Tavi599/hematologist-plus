@@ -42,5 +42,20 @@
       "strength_amount": 100,
       "volume_ml": 10
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_bolus"],
+      "notes": {
+        "uk": "Лише внутрішньовенно або внутрішньом’язово, ніколи інтратекально. Швидкість в/в введення — не більше 160 мг/хв (через вміст кальцію). Для інфузії розводять 0,9% NaCl або 5% глюкозою — стабільно щонайменше 24 год при температурі не вище 25 °C. Не змішувати з фторурацилом, метотрексатом, дроперидолом, фоскарнетом (осад).",
+        "en": "Intravenous or intramuscular only, never intrathecal. Inject no faster than 160 mg/min (calcium content). For an infusion dilute with 0.9% NaCl or 5% glucose — stable for at least 24 h at or below 25 °C. Do not mix with fluorouracil, methotrexate, droperidol or foscarnet (precipitate)."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Кальціумфолінат «Ебеве»» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/266576/",
+        "version": "реєстраційне посвідчення UA/1638/01/01 від 05.07.2019",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

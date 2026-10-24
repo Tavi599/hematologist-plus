@@ -85,5 +85,46 @@
         }
       ]
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Строго внутрішньовенно після розведення; інтратекально — може бути смертельним. Згідно з інструкцією Вінорельбін «Ебеве» — розвести у 20–50 мл 0,9% NaCl або 5% глюкози, вводити повільно 5–10 хв, потім промити вену щонайменше 250 мл 0,9% NaCl; лужними розчинами не розводити (осад). Розведений розчин (0,43–2,68 мг/мл) стабільний 48 год при 2–8 °C у захищеному від світла місці; ПВХ-мішки й системи сумісні.",
+        "en": "Strictly intravenous after dilution; intrathecal use may be fatal. Per the Vinorelbine Ebewe label — dilute in 20–50 mL of 0.9% NaCl or 5% glucose, give slowly over 5–10 min, then flush the vein with at least 250 mL 0.9% NaCl; never dilute with alkaline solutions (precipitate). The diluted solution (0.43–2.68 mg/mL) is stable 48 h at 2–8 °C protected from light; PVC bags and sets are compatible."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Вінорельбін «Ебеве»» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/263609/",
+        "version": "реєстраційне посвідчення UA/4020/01/01 від 05.06.2020",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією Навірел — вводити 6–10 хв: довша інфузія підвищує ризик подразнення вени; розведений розчин стабільний 24 год при 2–8 °C і 25 °C.",
+        "en": "Per the Navirel label — infuse over 6–10 min: a longer infusion raises the risk of vein irritation; the diluted solution is stable 24 h at 2–8 °C and 25 °C."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Навірел» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/269489/",
+        "version": "реєстраційне посвідчення UA/4711/01/01 від 15.08.2016",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією Вінорельбін Аккорд — крім болюсу 6–10 хв у 20–50 мл, допускається коротка інфузія 20–30 хв після розведення у 125 мл 0,9% NaCl або 5% глюкози; розведений розчин стабільний 24 год при 25 °C.",
+        "en": "Per the Vinorelbine Accord label — besides the 6–10 min bolus in 20–50 mL, a short 20–30 min infusion after dilution in 125 mL of 0.9% NaCl or 5% glucose is allowed; the diluted solution is stable 24 h at 25 °C."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Вінорельбін Аккорд» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/564782/",
+        "version": "реєстраційне посвідчення UA/19768/01/01 від 05.12.2022",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

@@ -55,5 +55,20 @@
         "en": "Upper limit 0.45 mg/mL in 0.9% NaCl per the label. The bag volume comes from the regimen."
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Української інструкції для внутрішньовенної форми не знайдено; за SmPC. Порошок і доданий розчинник мають бути кімнатної температури: 10 мл розчинника вливають одразу і негайно енергійно струшують щонайменше 50 с — 5 мг/мл. Розчин готують безпосередньо перед введенням, невикористаний за 1 год знищують, не охолоджують (осад). Вводять повільно в систему зі швидко текучим розчином або розводять у мішку лише 0,9% NaCl (з глюкозою несумісний); від приготування до кінця інфузії при ~25 °C — не більше 1,5 год.",
+        "en": "No Ukrainian label for the intravenous form was found; per the SmPC. Powder and the supplied solvent must be at room temperature: add the 10 mL of solvent at once and shake vigorously for at least 50 s — 5 mg/mL. Prepare immediately before use, discard what is unused after 1 h, do not refrigerate (precipitate). Inject slowly into a fast-running infusion or dilute in a bag of 0.9% NaCl only (incompatible with glucose); at ~25 °C no more than 1.5 h from preparation to the end of the infusion."
+      },
+      "source": {
+        "name": "SmPC Melphalan 50 mg Powder and Solvent for Solution for Injection/Infusion (Aspen) (emc, Велика Британія), розділи 4.2, 6.2, 6.3, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/927/smpc",
+        "version": "редакція тексту 30.01.2025",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

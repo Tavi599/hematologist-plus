@@ -20,5 +20,20 @@
       "strength_amount": 50,
       "volume_ml": 2
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Концентрат 25 мг/мл. Дозу набирають у шприц і розводять у 100 мл 0,9% NaCl, вводять приблизно 30 хв (для струминного введення — у 10 мл 0,9% NaCl). Розведений розчин вводять одразу, інакше — не довше 24 год при 2–8 °C; хімічна стабільність 0,2–6 мг/мл у 0,9% NaCl — 7 діб при 2–8 °C і 5 діб при 20–25 °C у мішках без ПВХ і скляних флаконах.",
+        "en": "Concentrate 25 mg/mL. Draw the dose into a syringe and dilute in 100 mL 0.9% NaCl, infuse over about 30 min (for a bolus, in 10 mL 0.9% NaCl). Use the diluted solution at once, otherwise keep it no longer than 24 h at 2–8 °C; 0.2–6 mg/mL in 0.9% NaCl is chemically stable for 7 days at 2–8 °C and 5 days at 20–25 °C in non-PVC bags and glass bottles."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Флударабін Аккорд» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/576979/",
+        "version": "реєстраційне посвідчення UA/20471/01/01 від 07.05.2024",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

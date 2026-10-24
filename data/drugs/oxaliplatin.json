@@ -100,5 +100,33 @@
         "en": "The solvent is 5% glucose only: chloride-containing solutions must not be used. The label gives no concentration limit."
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Розводять лише 5% глюкозою — ніколи 0,9% NaCl чи іншими хлоридвмісними розчинами; нерозведеним не вводять. Дозу розводять у 250–500 мл 5% глюкози до 0,2–0,7 мг/мл, інфузія 2–6 год; не змішувати з лужними розчинами (5-фторурацил, трометамол), з фоліновою кислотою — лише через Y-трійник. Згідно з інструкцією Оксаліплатин Амакса — розведений розчин стабільний 24 год при 2–8 °C і 6 год при температурі не вище 25 °C.",
+        "en": "Dilute with 5% glucose only — never 0.9% NaCl or any chloride-containing solution; never give undiluted. Dilute the dose in 250–500 mL of 5% glucose to 0.2–0.7 mg/mL, infuse over 2–6 h; do not mix with alkaline solutions (5-fluorouracil, trometamol), give with folinic acid only through a Y-site. Per the Oxaliplatin Amaxa label — the diluted solution is stable 24 h at 2–8 °C and 6 h at or below 25 °C."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Оксаліплатин Амакса» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/265856/",
+        "version": "реєстраційне посвідчення UA/14965/01/01 від 11.11.2020",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією Оксаліплатин Аккорд — розведений 5% глюкозою розчин стабільний 48 год при 2–8 °C або 24 год при 25 °C; мікробіологічно — не довше 24 год при 2–8 °C. Сумісність перевірено зі стандартними ПВХ-системами.",
+        "en": "Per the Oxaliplatin Accord label — the solution diluted in 5% glucose is stable 48 h at 2–8 °C or 24 h at 25 °C; microbiologically no longer than 24 h at 2–8 °C. Compatibility was tested with standard PVC sets."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Оксаліплатин Аккорд» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/586739/",
+        "version": "реєстраційне посвідчення UA/19530/01/01 від 07.07.2022",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

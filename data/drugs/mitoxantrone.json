@@ -25,5 +25,20 @@
       "strength_amount": 20,
       "volume_ml": 10
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Концентрат 2 мг/мл розводять у 50–100 мл 0,9% NaCl або 5% глюкози, вводять короткою інфузією 15–30 хв; не підшкірно, не внутрішньом’язово, не внутрішньоартеріально і не інтратекально. Розчини 0,3–0,5 мг/мл фізико-хімічно стабільні 28 діб (з глюкозою при кімнатній температурі — 7 діб), мікробіологічно — не довше 24 год при 20–25 °C. Не змішувати з гепарином (осад) та іншими препаратами в одному флаконі.",
+        "en": "Dilute the 2 mg/mL concentrate in 50–100 mL of 0.9% NaCl or 5% glucose, give as a short 15–30 min infusion; never subcutaneous, intramuscular, intra-arterial or intrathecal. 0.3–0.5 mg/mL solutions are physically and chemically stable for 28 days (in glucose at room temperature, 7 days), microbiologically no longer than 24 h at 20–25 °C. Do not mix with heparin (precipitate) or other drugs in one bottle."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Мітоксантрон «Ебеве»» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/267789/",
+        "version": "реєстраційне посвідчення UA/3145/01/01 від 06.02.2020",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

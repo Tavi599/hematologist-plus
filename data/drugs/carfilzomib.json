@@ -95,5 +95,20 @@
         "en": "The solvent is 5% glucose, as in the regimens. The label gives no concentration limit."
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Флакон 60 мг розчиняють 29 мл стерильної води для ін’єкцій (голка 21G або тонша, повільно по внутрішній стінці флакона) — 2 мг/мл; не струшувати, обертати ~1 хв, піні дати осісти (~5 хв). Дозу вводять в/в інфузією безпосередньо або в мішку 50 чи 100 мл 5% глюкози; ніколи струминно чи болюсно, не змішувати з 0,9% NaCl. Розчин у флаконі, шприці чи мішку стабільний 24 год при 2–8 °C або 4 год при 25 °C; від розведення до введення — не більше 24 год.",
+        "en": "Reconstitute the 60 mg vial with 29 mL of sterile water for injections (21G or finer needle, slowly onto the inner vial wall) — 2 mg/mL; do not shake, swirl ~1 min and let foam settle (~5 min). Give the dose as an IV infusion directly or in a 50 or 100 mL bag of 5% glucose; never as a push or bolus, do not mix with 0.9% NaCl. The solution in vial, syringe or bag is stable 24 h at 2–8 °C or 4 h at 25 °C; no more than 24 h from dilution to administration."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Корліса» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/571270/",
+        "version": "реєстраційне посвідчення UA/20232/01/01 від 30.10.2023",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

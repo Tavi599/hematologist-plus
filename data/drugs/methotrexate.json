@@ -143,5 +143,59 @@
         "version": "ред. 08/2026"
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Концентрат розводять 0,9% NaCl або 5% глюкозою; згідно з інструкцією Метотрексат «Ебеве» — зазвичай до 1–2% (10–20 мг/мл), розчини 0,1–3 мг/мл стабільні щонайменше 24 год при 2–8 °C або 20–25 °C у захищеному від світла місці; при довшій інфузії флакон змінюють. Не змішувати з гепарином, ідарубіцином, преднізолону фосфатом, метоклопрамідом, хлорпромазином, дроперидолом, прометазином (осад або помутніння).",
+        "en": "Dilute the concentrate with 0.9% NaCl or 5% glucose; per the Methotrexate Ebewe label usually to 1–2% (10–20 mg/mL), and 0.1–3 mg/mL solutions are stable for at least 24 h at 2–8 °C or 20–25 °C protected from light; for a longer infusion change the bottle. Do not mix with heparin, idarubicin, prednisolone phosphate, metoclopramide, chlorpromazine, droperidol or promethazine (precipitate or turbidity)."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Метотрексат «Ебеве»» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/260743/",
+        "version": "реєстраційне посвідчення UA/0513/02/01 від 08.05.2019",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією Метотрексат-Тева — після розведення 0,9% NaCl або 5% глюкозою стабільний 24 год при 15–25 °C; розчин без консервантів, флакон лише на одне введення.",
+        "en": "Per the Methotrexate-Teva label — stable for 24 h at 15–25 °C after dilution with 0.9% NaCl or 5% glucose; the solution has no preservative, a vial is for one dose only."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Метотрексат-Тева» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/260961/",
+        "version": "реєстраційне посвідчення UA/0818/01/02 від 13.07.2018",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["intrathecal"],
+      "notes": {
+        "uk": "Лише препарат і розчинник без консервантів. Згідно з інструкцією Метотрексат-Тева — концентрація для інтратекального введення не вище 1 мг/мл, розводять 0,9% NaCl.",
+        "en": "Only a preservative-free product and diluent. Per the Methotrexate-Teva label — no more than 1 mg/mL for intrathecal use, diluted with 0.9% NaCl."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Метотрексат-Тева» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/260961/",
+        "version": "реєстраційне посвідчення UA/0818/01/02 від 13.07.2018",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["intrathecal"],
+      "notes": {
+        "uk": "Згідно з інструкцією Метотрексат «Ебеве» — інтратекально лише після розведення; препарати чи розчинники з консервантами інтратекально не вводять. Концентрації й розчинника для інтратекального введення ця інструкція не наводить.",
+        "en": "Per the Methotrexate Ebewe label — intrathecally only after dilution; products or diluents with preservatives must not be given intrathecally. This label gives no concentration or diluent for intrathecal use."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Метотрексат «Ебеве»» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/260743/",
+        "version": "реєстраційне посвідчення UA/0513/02/01 від 08.05.2019",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }
