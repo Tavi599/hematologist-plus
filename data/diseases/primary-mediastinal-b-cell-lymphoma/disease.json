@@ -54,8 +54,8 @@
             "en": "First line and response (PMBL-1)"
           },
           "description": {
-            "uk": "Після DA-EPOCH-R ×6 або R-CHOP-14 ×6: CR (PET−, 5-PS 1–3) — активне спостереження або ISRT; після R-CHOP-21 ×6 — те саме; після R-CHOP-14 ×4 — консолідація ICE ×3 ± ритуксимаб (категорія 2B). Залишкові маси в середостінні часті; PET/CT після лікування обов’язкова; біопсія PET-позитивної маси, якщо розглядають додаткову системну терапію. Стійка PET-позитивна маса після DA-EPOCH-R (5-PS 4 з мінімальним накопиченням над печінкою) — спостереження без біопсії. PR (5-PS 4): повторна біопсія → при негативній — ISRT і повторне рестадіювання; позитивна → терапія рецидиву. Відсутність відповіді/прогресія (5-PS 5): біопсія, терапія як при рецидивній ДВКЛ.",
-            "en": "After DA-EPOCH-R x6 or R-CHOP-14 x6: CR (PET-, 5-PS 1-3) — active surveillance or ISRT; after R-CHOP-21 x6 — the same; after R-CHOP-14 x4 — consolidation with ICE x3 ± rituximab (category 2B). Residual mediastinal masses are common; PET/CT after treatment is essential; biopsy a PET-positive mass if more systemic therapy is contemplated. A persistent PET-positive mass after DA-EPOCH-R (5-PS 4 with minimal uptake above liver) can be observed without biopsy. PR (5-PS 4): repeat biopsy → if negative, ISRT and restaging; positive → relapse therapy. No response/progression (5-PS 5): biopsy and manage as relapsed DLBCL."
+            "uk": "При CR (PET−, 5-PS 1–3): після DA-EPOCH-R ×6 або R-CHOP-14 ×6 — активне спостереження; після R-CHOP-21 ×6 — ISRT або активне спостереження; після R-CHOP-14 ×4 — консолідація ICE ×3 ± ритуксимаб (категорія 2B). Залишкові маси в середостінні часті; PET/CT після лікування обов’язкова; біопсія PET-позитивної маси, якщо розглядають додаткову системну терапію. Стійка PET-позитивна маса після DA-EPOCH-R (5-PS 4 з мінімальним накопиченням над печінкою) — спостереження без біопсії. PR (5-PS 4): повторна біопсія → при негативній — ISRT і повторне рестадіювання; позитивна → терапія рецидиву. Відсутність відповіді/прогресія (5-PS 5): біопсія, терапія як при рецидивній ДВКЛ.",
+            "en": "In CR (PET-, 5-PS 1-3): after DA-EPOCH-R x6 or R-CHOP-14 x6 — active surveillance; after R-CHOP-21 x6 — ISRT or active surveillance; after R-CHOP-14 x4 — consolidation with ICE x3 ± rituximab (category 2B). Residual mediastinal masses are common; PET/CT after treatment is essential; biopsy a PET-positive mass if more systemic therapy is contemplated. A persistent PET-positive mass after DA-EPOCH-R (5-PS 4 with minimal uptake above liver) can be observed without biopsy. PR (5-PS 4): repeat biopsy → if negative, ISRT and restaging; positive → relapse therapy. No response/progression (5-PS 5): biopsy and manage as relapsed DLBCL."
           },
           "regimens": [
             {
@@ -63,24 +63,21 @@
               "notes": {
                 "uk": "DA-EPOCH-R ×6 циклів",
                 "en": "DA-EPOCH-R x6 cycles"
-              },
-              "preference": "other"
+              }
             },
             {
               "regimen_id": "r-chop-14",
               "notes": {
                 "uk": "R-CHOP-14 ×4–6 циклів (після 4 — консолідація ICE ×3 ± ритуксимаб, категорія 2B)",
                 "en": "R-CHOP-14 x4-6 cycles (after 4 — consolidation with ICE x3 ± rituximab, category 2B)"
-              },
-              "preference": "other"
+              }
             },
             {
               "regimen_id": "r-chop-21",
               "notes": {
                 "uk": "R-CHOP-21 ×6 циклів",
                 "en": "R-CHOP-21 x6 cycles"
-              },
-              "preference": "other"
+              }
             },
             {
               "regimen_id": "ice",
@@ -88,12 +85,10 @@
                 "uk": "Консолідація ICE ×3 після R-CHOP-14 ×4",
                 "en": "ICE x3 consolidation after R-CHOP-14 x4"
               },
-              "preference": "other",
               "category": "2b"
             },
             {
               "regimen_id": "r-ice",
-              "preference": "other",
               "category": "2b"
             }
           ],
@@ -102,8 +97,8 @@
               "kind": "other",
               "column": "treatment",
               "label": {
-                "uk": "ISRT консолідативно: у CR 30–36 Гр; ISRT після PR (5-PS 4) — 36–50 Гр",
-                "en": "Consolidative ISRT: 30-36 Gy in CR; ISRT after PR (5-PS 4) — 36-50 Gy"
+                "uk": "ISRT: у CR після R-CHOP-21 ×6 — 30–36 Гр; після PR (5-PS 4) з негативною повторною біопсією — 36–50 Гр",
+                "en": "ISRT: in CR after R-CHOP-21 x6 — 30-36 Gy; after PR (5-PS 4) with a negative repeat biopsy — 36-50 Gy"
               }
             },
             {
@@ -142,8 +137,7 @@
               "notes": {
                 "uk": "Пембролізумаб",
                 "en": "Pembrolizumab"
-              },
-              "preference": "other"
+              }
             },
             {
               "regimen_id": "nivolumab",
@@ -151,13 +145,15 @@
                 "uk": "Ніволумаб ± брентуксимаб ведотин",
                 "en": "Nivolumab ± brentuximab vedotin"
               },
-              "preference": "other",
               "category": "2b"
             },
             {
               "regimen_id": "brentuximab-mono",
-              "preference": "other",
-              "category": "2b"
+              "category": "2b",
+              "notes": {
+                "uk": "Брентуксимаб ведотин — лише разом із ніволумабом (категорія 2B), не монотерапією",
+                "en": "Brentuximab vedotin — only with nivolumab (category 2B), not as monotherapy"
+              }
             }
           ]
         }

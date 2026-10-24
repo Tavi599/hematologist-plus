@@ -55,8 +55,8 @@
             "en": "Low risk (APL-2)"
           },
           "description": {
-            "uk": "Мозок на 28-й день, якщо показники відновились (тромбоцити >100, нейтрофіли >1×10⁹/л): без морфологічної хвороби — відмінити ATRA і ATO до відновлення крові, з хворобою — продовжити й повторити мозок через тиждень. Залишкові маркери після індукції значення не мають. Далі — «Після консолідації (APL-5)».",
-            "en": "Marrow on day 28 if counts have recovered (platelets above 100, neutrophils above 1×10⁹/L): no morphologic disease — stop ATRA and ATO to let counts recover; disease present — continue and repeat the marrow a week later. Residual markers after induction carry no meaning. Next: \"After consolidation (APL-5)\"."
+            "uk": "Перехід до консолідації: якщо до 28-го дня кров відновилась (тромбоцити >100, нейтрофіли >1×10⁹/л) — консолідація, мозок можна зробити для підтвердження ремісії; якщо індукцію не завершено або кров не відновилась до 28–35-го дня — мозок обов’язковий. Для ATRA + ідарубіцин і ATRA + ГО — мозок на 28–35-й день перед консолідацією. Без морфологічної хвороби (бластів <5%, немає атипових промієлоцитів) — відмінити ATRA і ATO до відновлення крові, з хворобою — продовжити й повторити мозок через тиждень. Залишкові маркери після індукції значення не мають. Консолідація ATRA + ідарубіцин — мітоксантрон 3 дні (схема «AIDA, консолідація 2 (низький ризик)»). Далі — «Після консолідації (APL-5)».",
+            "en": "Moving to consolidation: if counts have recovered by day 28 (platelets above 100, neutrophils above 1×10⁹/L) — consolidate, a marrow may be done to document remission; if induction was not completed or counts have not recovered by day 28-35 — a marrow is required. With ATRA + idarubicin and ATRA + GO, marrow on day 28-35 before consolidation. No morphologic disease (blasts under 5%, no abnormal promyelocytes) — stop ATRA and ATO to let counts recover; disease present — continue and repeat the marrow a week later. Residual markers after induction carry no meaning. ATRA + idarubicin consolidation gives mitoxantrone for 3 days (\"AIDA consolidation 2 (low risk)\"). Next: \"After consolidation (APL-5)\"."
           },
           "regimens": [
             {
@@ -107,7 +107,7 @@
               "preference": "circumstances"
             },
             {
-              "regimen_id": "aida-consolidation-2",
+              "regimen_id": "aida-lr-consolidation-2",
               "preference": "circumstances"
             },
             {
@@ -132,8 +132,8 @@
               "kind": "assessment",
               "column": "treatment",
               "label": {
-                "uk": "Кістковий мозок на 28-й день",
-                "en": "Marrow on day 28"
+                "uk": "Кров відновилась до 28-го дня → консолідація; ні, або ATRA + ідарубіцин / ATRA + ГО → мозок на 28–35-й день",
+                "en": "Counts recovered by day 28 → consolidation; otherwise, or with ATRA + idarubicin / ATRA + GO → marrow on day 28-35"
               }
             },
             {
@@ -198,8 +198,8 @@
             {
               "regimen_id": "apl17-go-induction",
               "notes": {
-                "uk": "Переривчастий миш’як + ГО",
-                "en": "Intermittent arsenic + GO"
+                "uk": "Переривчастий миш’як + ГО Категорія: згідно з NCCN APL-3 (алгоритм) — без позначки категорії (тобто 2A); згідно з APL-B 2 of 6 і 4 of 6 — категорія 1 стоїть при дозуванні миш’яку в індукції.",
+                "en": "Intermittent arsenic + GO Category: per NCCN APL-3 (algorithm) — no category mark (i.e. 2A); per APL-B 2 of 6 and 4 of 6 — category 1 is given for the arsenic dosing in induction."
               },
               "preference": "preferred",
               "category": "1"
@@ -310,8 +310,8 @@
                 {
                   "regimen_id": "apl17-go-induction",
                   "notes": {
-                    "uk": "Переривчастий миш’як + ГО",
-                    "en": "Intermittent arsenic + GO"
+                    "uk": "Переривчастий миш’як + ГО Категорія: згідно з NCCN APL-3 (алгоритм) — без позначки категорії (тобто 2A); згідно з APL-B 2 of 6 і 4 of 6 — категорія 1 стоїть при дозуванні миш’яку в індукції.",
+                    "en": "Intermittent arsenic + GO Category: per NCCN APL-3 (algorithm) — no category mark (i.e. 2A); per APL-B 2 of 6 and 4 of 6 — category 1 is given for the arsenic dosing in induction."
                   },
                   "category": "1"
                 },
@@ -446,8 +446,8 @@
             "en": "First relapse (APL-6)"
           },
           "description": {
-            "uk": "Спершу молекулярна панель (виключити терапія-залежну ГМЛ). Ранній рецидив (<6 міс.) після ATRA + ATO без антрацикліну — схема з антрацикліном (як при високому ризику) або ГО; без попереднього миш’яку чи ранній після ATRA + антрацикліну — ATO ± ATRA ± ГО; пізній (≥6 міс.) після схеми з миш’яком — ATO ± ATRA ± антрациклін чи ГО. Друга морфологічна ремісія: ПЛР-негативна (мозок) — аутоТГСК або консолідація ATO (усього 6 циклів) + ІТ-профілактика ЦНС; ПЛР-позитивна — алоТГСК чи випробування; без ремісії — випробування чи алоТГСК. Тест не раніше ніж через 2–3 тижні після ATO.",
-            "en": "First a molecular panel (rule out therapy-related AML). Early relapse (under 6 months) after ATRA + ATO without an anthracycline — an anthracycline regimen (as in high risk) or GO; no prior arsenic or early after ATRA + anthracycline — ATO with or without ATRA and GO; late (6 months or more) after an arsenic regimen — ATO with or without ATRA and an anthracycline or GO. Second morphologic remission: PCR negative (marrow) — auto-HCT or ATO consolidation (6 cycles in all) with IT CNS prophylaxis; PCR positive — allo-HCT or a trial; no remission — a trial or allo-HCT. Test no sooner than 2-3 weeks after ATO."
+            "uk": "Спершу молекулярна панель (виключити терапія-залежну ГМЛ). Ранній рецидив (<6 міс.) після ATRA + ATO без антрацикліну — схема з антрацикліном (як при високому ризику) або ГО; без попереднього миш’яку чи ранній після ATRA + антрацикліну — ATO ± ATRA ± ГО; пізній (≥6 міс.) після схеми з миш’яком — ATO ± ATRA ± антрациклін чи ГО. Друга морфологічна ремісія (розглянути ІТ-профілактику ЦНС): ПЛР-негативна (мозок) — аутоТГСК кандидатам на трансплантацію, іншим — консолідація ATO (усього 6 циклів); ПЛР-позитивна — алоТГСК від сумісного сиблінга чи альтернативного донора кандидатам, іншим — випробування; без ремісії — випробування чи алоТГСК. Тест не раніше ніж через 2–3 тижні після ATO.",
+            "en": "First a molecular panel (rule out therapy-related AML). Early relapse (under 6 months) after ATRA + ATO without an anthracycline — an anthracycline regimen (as in high risk) or GO; no prior arsenic or early after ATRA + anthracycline — ATO with or without ATRA and GO; late (6 months or more) after an arsenic regimen — ATO with or without ATRA and an anthracycline or GO. Second morphologic remission (consider IT CNS prophylaxis): PCR negative (marrow) — auto-HCT for transplant candidates, otherwise ATO consolidation (6 cycles in all); PCR positive — allo-HCT from a matched sibling or alternative donor for candidates, otherwise a trial; no remission — a trial or allo-HCT. Test no sooner than 2-3 weeks after ATO."
           },
           "regimens": [
             {
@@ -484,16 +484,16 @@
               "kind": "hct",
               "column": "next",
               "label": {
-                "uk": "Друга ремісія, ПЛР-негативна: аутоТГСК (або консолідація ATO, всього 6 циклів)",
-                "en": "Second remission, PCR negative: auto-HCT (or ATO consolidation, 6 cycles in all)"
+                "uk": "Друга ремісія, ПЛР-негативна: аутоТГСК кандидатам; не кандидатам — консолідація ATO (усього 6 циклів)",
+                "en": "Second remission, PCR negative: auto-HCT for candidates; otherwise ATO consolidation (6 cycles in all)"
               }
             },
             {
               "kind": "hct",
               "column": "next",
               "label": {
-                "uk": "ПЛР-позитивна: алоТГСК",
-                "en": "PCR positive: allo-HCT"
+                "uk": "ПЛР-позитивна: алоТГСК кандидатам; не кандидатам — клінічне випробування",
+                "en": "PCR positive: allo-HCT for candidates; otherwise a clinical trial"
               }
             },
             {

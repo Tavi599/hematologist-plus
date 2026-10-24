@@ -270,8 +270,8 @@
                 "en": "Deauville 4-5 after 2 cycles of ABVD (HODG-5B)"
               },
               "description": {
-                "uk": "Не залежить від того, сприятлива хвороба за GHSG чи за EORTC. Deauville 4: ще 2 цикли ABVD (разом 4; якщо накопичення лише вогнищеве — можна до повторного ПЕТ), потім ПЕТ/КТ: Deauville 1–3 — ISRT 30 Гр і спостереження; 4–5 — біопсія. Deauville 5 — одразу біопсія; негативна біопсія — як при Deauville 4, позитивна — первинна рефрактерність (HODG-13). Негативна біопсія при 4–5 після додаткових циклів — ISRT 30 Гр.",
-                "en": "It makes no difference whether the disease is GHSG- or EORTC-favourable. Deauville 4: 2 more cycles of ABVD (4 in all; with merely focal uptake, up to the repeat PET), then PET/CT: Deauville 1-3 — ISRT 30 Gy and follow-up; 4-5 — biopsy. Deauville 5 — biopsy at once; a negative biopsy is managed as Deauville 4, a positive one as primary refractory disease (HODG-13). A negative biopsy at 4-5 after the extra cycles — ISRT 30 Gy."
+                "uk": "Не залежить від того, сприятлива хвороба за GHSG чи за EORTC. Deauville 4: ще 2 цикли ABVD (разом 4), потім ПЕТ/КТ: Deauville 1–3 — ISRT 30 Гр і спостереження; 4–5 — біопсія (негативна — ISRT 30 Гр, позитивна — первинна рефрактерність, HODG-13). Deauville 5 — одразу біопсія: негативна — як при Deauville 4 (ще 2 цикли ABVD), позитивна — первинна рефрактерність. Бали 4 і 5 дуже різні за ступенем: якщо хвороба добре відповідає на хіміотерапію, можна продовжити ту саму схему й повторити ПЕТ/КТ ще через 2 цикли; якщо після хіміотерапії накопичення лише вогнищеве, доречна консолідуюча променева терапія, особливо коли біопсія неможлива.",
+                "en": "It makes no difference whether the disease is GHSG- or EORTC-favourable. Deauville 4: 2 more cycles of ABVD (4 in all), then PET/CT: Deauville 1-3 — ISRT 30 Gy and follow-up; 4-5 — biopsy (negative — ISRT 30 Gy, positive — primary refractory disease, HODG-13). Deauville 5 — biopsy at once: negative — as Deauville 4 (2 more cycles of ABVD), positive — primary refractory disease. Scores 4 and 5 vary widely: if the disease responds well to chemotherapy, the same regimen may continue with a repeat PET/CT after 2 more cycles; if a post-chemotherapy scan is only focally positive, consolidation RT may be appropriate, especially when biopsy is not feasible."
               },
               "regimens": [
                 {
@@ -295,8 +295,8 @@
                   "kind": "assessment",
                   "column": "treatment",
                   "label": {
-                    "uk": "Повторне ПЕТ/КТ; Deauville 4–5 — біопсія",
-                    "en": "Repeat PET/CT; Deauville 4-5 — biopsy"
+                    "uk": "Повторне ПЕТ/КТ; Deauville 4–5 — біопсія (негативна — ISRT 30 Гр)",
+                    "en": "Repeat PET/CT; Deauville 4-5 — biopsy (negative — ISRT 30 Gy)"
                   }
                 },
                 {
@@ -405,8 +405,8 @@
                 "en": "After 2 cycles of ABVD: Deauville 4-5"
               },
               "description": {
-                "uk": "Варіанти: ще 2 цикли ABVD (разом 4, за H10U) або ескалація — BrECADD + G-CSF ×2 (замість ескальованого BEACOPP, якого настанова тепер не радить). Після цього ПЕТ/КТ: Deauville 5 — повторна біопсія; позитивна чи неможлива — як при первинній рефрактерності; Deauville 1–4 — ISRT (30 Гр при 1–3, 36–40 Гр при 4). Додатково при Deauville 1–3, якщо раніше вже застосовували BrECADD, — ще 2 цикли BrECADD + G-CSF.",
-                "en": "Options: 2 more cycles of ABVD (4 in all, after H10U) or escalation to BrECADD + G-CSF x2 (instead of escalated BEACOPP, which the guideline no longer advises). Then PET/CT: Deauville 5 — repeat biopsy; positive or not feasible — as primary refractory; Deauville 1-4 — ISRT (30 Gy at 1-3, 36-40 Gy at 4). Also at Deauville 1-3, if BrECADD was used before, 2 more cycles of BrECADD + G-CSF."
+                "uk": "Варіанти: ще 2 цикли ABVD (разом 4, за H10U) або ескалація — BrECADD + G-CSF ×2 (настанова тепер радить ескалацію саме до BrECADD, а не до ескальованого BEACOPP, з огляду на HD21). Після цього ПЕТ/КТ: Deauville 1–3 — ISRT 30 Гр або, якщо вже застосовували BrECADD, ще 2 цикли BrECADD + G-CSF; Deauville 4 — ISRT 36–40 Гр або біопсія; Deauville 5 — біопсія: негативна — ISRT 36–40 Гр, позитивна — як при первинній рефрактерності (HODG-13).\n\nРозбіжність усередині настанови: згідно з блок-схемою HODG-6 — Deauville 4 веде до ISRT 36–40 Гр або до біопсії, а первинну рефрактерність визнають лише за позитивної біопсії; згідно з розділом Discussion (лікування несприятливої I–II стадії) — при Deauville 1–4 ISRT (30 Гр при 1–3, 36–40 Гр при 4), а як первинну рефрактерність ведуть і тих, кому біопсія неможлива.",
+                "en": "Options: 2 more cycles of ABVD (4 in all, after H10U) or escalation to BrECADD + G-CSF x2 (the guideline now recommends escalating to BrECADD rather than escalated BEACOPP, given HD21). Then PET/CT: Deauville 1-3 — ISRT 30 Gy or, if BrECADD was used, 2 more cycles of BrECADD + G-CSF; Deauville 4 — ISRT 36-40 Gy or biopsy; Deauville 5 — biopsy: negative — ISRT 36-40 Gy, positive — as primary refractory disease (HODG-13).\n\nA discrepancy within the guideline: according to the HODG-6 flowchart, Deauville 4 leads to ISRT 36-40 Gy or to biopsy, and only a positive biopsy counts as primary refractory; according to the Discussion (stage I-II unfavourable disease), Deauville 1-4 gets ISRT (30 Gy at 1-3, 36-40 Gy at 4), and patients in whom biopsy is not feasible are also managed as primary refractory."
               },
               "regimens": [
                 {
@@ -438,9 +438,18 @@
                   "kind": "assessment",
                   "column": "next",
                   "label": {
-                    "uk": "Deauville 5 або 4 без відповіді: біопсія; позитивна — як при первинній рефрактерності",
-                    "en": "Deauville 5 or non-responding 4: biopsy; positive — manage as primary refractory"
+                    "uk": "Deauville 4 — ISRT 36–40 Гр або біопсія; Deauville 5 — біопсія; позитивна — як при первинній рефрактерності",
+                    "en": "Deauville 4 — ISRT 36-40 Gy or biopsy; Deauville 5 — biopsy; positive — manage as primary refractory"
                   }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Первинно-рефрактерна хвороба: біопсія → HODG-13",
+                    "en": "Primary refractory disease: biopsy → HODG-13"
+                  },
+                  "target": "nccn-refractory"
                 },
                 {
                   "kind": "page",
@@ -462,8 +471,8 @@
                 "en": "Other regimens: N-AVD or BV-AVD x4 (HODG-6A)"
               },
               "description": {
-                "uk": "4 цикли ніволумаб-AVD (за NIVAHL) або BV-AVD + G-CSF (за BREACH), далі ПЕТ/КТ: Deauville 1–4 — ISRT; Deauville 5 — біопсія (негативна — ISRT, потім спостереження; позитивна чи неможлива — первинна рефрактерність).",
-                "en": "Four cycles of nivolumab-AVD (after NIVAHL) or BV-AVD + G-CSF (after BREACH), then PET/CT: Deauville 1-4 — ISRT; Deauville 5 — biopsy (negative — ISRT then follow-up; positive or not feasible — primary refractory)."
+                "uk": "4 цикли ніволумаб-AVD (комбінована терапія, за NIVAHL) або BV-AVD + G-CSF (за BREACH), далі ПЕТ/КТ: Deauville 1–4 — ISRT; Deauville 5 — біопсія (негативна — ISRT, потім спостереження; позитивна — первинна рефрактерність).\n\nРозбіжність усередині настанови: згідно з блок-схемою HODG-6A — як первинну рефрактерність ведуть лише позитивну біопсію; згідно з розділом Discussion — також тих, кому біопсія неможлива.",
+                "en": "Four cycles of nivolumab-AVD (combined modality, after NIVAHL) or BV-AVD + G-CSF (after BREACH), then PET/CT: Deauville 1-4 — ISRT; Deauville 5 — biopsy (negative — ISRT then follow-up; positive — primary refractory).\n\nA discrepancy within the guideline: according to the HODG-6A flowchart only a positive biopsy is managed as primary refractory; according to the Discussion, so are patients in whom biopsy is not feasible."
               },
               "regimens": [
                 {
@@ -496,9 +505,18 @@
                   "kind": "assessment",
                   "column": "next",
                   "label": {
-                    "uk": "Deauville 5 або 4 без відповіді: біопсія; позитивна — як при первинній рефрактерності",
-                    "en": "Deauville 5 or non-responding 4: biopsy; positive — manage as primary refractory"
+                    "uk": "Deauville 5: біопсія; негативна — ISRT, позитивна — як при первинній рефрактерності",
+                    "en": "Deauville 5: biopsy; negative — ISRT, positive — manage as primary refractory"
                   }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Первинно-рефрактерна хвороба: біопсія → HODG-13",
+                    "en": "Primary refractory disease: biopsy → HODG-13"
+                  },
+                  "target": "nccn-refractory"
                 },
                 {
                   "kind": "page",
@@ -520,8 +538,8 @@
                 "en": "Other regimens: BrECADD, IIB with a large mediastinal mass and/or extranodal disease (HODG-6A, 6B)"
               },
               "description": {
-                "uk": "За HD21: BrECADD + G-CSF ×2 → ПЕТ/КТ. Deauville 1–3: ще ×2 (разом 4) → ПЕТ/КТ; 4–5: ще ×4 (разом 6) → ПЕТ/КТ. Підсумок: Deauville 1–3 — спостереження; 4 — ISRT; 5 — біопсія (негативна — ISRT; позитивна — первинна рефрактерність).",
-                "en": "After HD21: BrECADD + G-CSF x2, then PET/CT. Deauville 1-3: x2 more (4 in all), PET/CT; 4-5: x4 more (6 in all), PET/CT. Result: Deauville 1-3 — follow-up; 4 — ISRT; 5 — biopsy (negative — ISRT; positive — primary refractory)."
+                "uk": "За HD21: BrECADD + G-CSF ×2 → ПЕТ/КТ. Deauville 1–3: ще ×2 (разом 4) → ПЕТ/КТ; 4–5: ще ×4 (разом 6) → ПЕТ/КТ. Підсумок: Deauville 1–3 — спостереження; 4 — ISRT або біопсія; 5 — біопсія (негативна — ISRT; позитивна — первинна рефрактерність).",
+                "en": "After HD21: BrECADD + G-CSF x2, then PET/CT. Deauville 1-3: x2 more (4 in all), PET/CT; 4-5: x4 more (6 in all), PET/CT. Result: Deauville 1-3 — follow-up; 4 — ISRT or biopsy; 5 — biopsy (negative — ISRT; positive — primary refractory)."
               },
               "regimens": [
                 {
@@ -546,8 +564,8 @@
                   "kind": "other",
                   "column": "treatment",
                   "label": {
-                    "uk": "ISRT при Deauville 4 (і при 5 з негативною біопсією)",
-                    "en": "ISRT at Deauville 4 (and at 5 with a negative biopsy)"
+                    "uk": "ISRT при Deauville 4 або після негативної біопсії",
+                    "en": "ISRT at Deauville 4 or after a negative biopsy"
                   }
                 },
                 {
@@ -594,8 +612,8 @@
                 "en": "Nivolumab-AVD x6 (HODG-7A)"
               },
               "description": {
-                "uk": "ПЕТ/КТ після 6 циклів: Deauville 1–3 — спостереження; 4–5 — або повтор ПЕТ/КТ через 12 тижнів (1–3 — спостереження, 4–5 — біопсія), або одразу біопсія; позитивна — первинна рефрактерність, негативна — спостереження. Залишкове накопичення після імунотерапії можливе — потрібна клінічна оцінка. У S1826 ISRT 30 Гр отримували вибірково: Deauville 4–5 в 1–2 вогнищах, зменшення <30% (див. нижче), залишкова вузлова маса ≥2,5 см або екстранодальне вогнище >1 см; ≥3 вогнищ Deauville 4–5, відсутність зменшення на ≥30% або нове ПЕТ-позитивне вогнище (Deauville 5) вважали рефрактерністю.",
-                "en": "PET/CT after 6 cycles: Deauville 1-3 — follow-up; 4-5 — either a repeat PET/CT at 12 weeks (1-3 follow-up, 4-5 biopsy) or biopsy at once; positive — primary refractory, negative — follow-up. Residual uptake after immunotherapy is possible, so judge clinically. In S1826 ISRT 30 Gy was selective: Deauville 4-5 in 1-2 lesions, a nodal mass of 2.5 cm or more, or an extranodal lesion over 1 cm; 3 or more Deauville 4-5 lesions, less than 30% shrinkage or a new PET-avid lesion (Deauville 5) counted as refractory."
+                "uk": "ПЕТ/КТ після 6 циклів: Deauville 1–3 — спостереження; 4–5 — або повтор ПЕТ/КТ через 12 тижнів (1–3 — спостереження, 4–5 — біопсія), або одразу біопсія; позитивна — первинна рефрактерність, негативна — спостереження. Залишкове накопичення після імунотерапії можливе — потрібна клінічна оцінка. У S1826 частина хворих отримала ISRT 30 Гр; критерії: Deauville 4–5 лише в 1–2 вогнищах, зменшення поперечного діаметра на ≥30%, залишкова вузлова маса ≥2,5 см по осі або залишкове екстранодальне вогнище >1 см. ≥3 вогнищ Deauville 4–5 і/або вогнище, що не зменшилось на ≥30%, а також Deauville 5 через нове ПЕТ-позитивне вогнище вважали рефрактерністю.",
+                "en": "PET/CT after 6 cycles: Deauville 1-3 — follow-up; 4-5 — either a repeat PET/CT at 12 weeks (1-3 follow-up, 4-5 biopsy) or biopsy at once; positive — primary refractory, negative — follow-up. Residual uptake after immunotherapy is possible, so judge clinically. In S1826 some patients had ISRT 30 Gy; the criteria: Deauville 4-5 in only 1-2 lesions, a 30% or greater reduction in transverse diameter, a residual nodal mass of 2.5 cm or more in axial diameter, or a residual extranodal lesion over 1 cm. Three or more Deauville 4-5 lesions and/or a lesion without a 30% reduction, and a Deauville 5 from a new PET-avid lesion, counted as refractory."
               },
               "regimens": [
                 {
@@ -646,8 +664,8 @@
                 "en": "BrECADD + G-CSF (HODG-7B)"
               },
               "description": {
-                "uk": "2 цикли → ПЕТ/КТ. Deauville 1–3: ще 2 цикли (разом 4); 4–5: ще 4 цикли (разом 6). Підсумок після 4 чи 6 циклів: Deauville 1–3 — спостереження; 4 — за клінічною оцінкою ISRT, або повтор ПЕТ/КТ через 12 тижнів, або біопсія; 5 — біопсія (негативна — ISRT; позитивна — первинна рефрактерність). Повтор ПЕТ: 1–3 — спостереження, 4–5 — ISRT.",
-                "en": "2 cycles, then PET/CT. Deauville 1-3: 2 more cycles (4 in all); 4-5: 4 more cycles (6 in all). Result after 4 or 6 cycles: Deauville 1-3 — follow-up; 4 — by clinical judgement ISRT, a repeat PET/CT at 12 weeks, or biopsy; 5 — biopsy (negative — ISRT; positive — primary refractory). On the repeat PET: 1-3 follow-up, 4-5 ISRT."
+                "uk": "2 цикли → ПЕТ/КТ. Deauville 1–3: ще 2 цикли (разом 4); 4–5: ще 4 цикли (разом 6). Підсумок після 4 чи 6 циклів: Deauville 1–3 — спостереження; 4 — ISRT, або повтор ПЕТ/КТ через 12 тижнів, або біопсія; 5 — біопсія (негативна — ISRT; позитивна — первинна рефрактерність). Повтор ПЕТ: 1–3 — спостереження, 4–5 — ISRT або біопсія (негативна — спостереження, позитивна — первинна рефрактерність).",
+                "en": "2 cycles, then PET/CT. Deauville 1-3: 2 more cycles (4 in all); 4-5: 4 more cycles (6 in all). Result after 4 or 6 cycles: Deauville 1-3 — follow-up; 4 — ISRT, a repeat PET/CT at 12 weeks, or biopsy; 5 — biopsy (negative — ISRT; positive — primary refractory). On the repeat PET: 1-3 follow-up, 4-5 ISRT or biopsy (negative — follow-up, positive — primary refractory)."
               },
               "regimens": [
                 {
@@ -706,8 +724,8 @@
                 "en": "BV-AVD + G-CSF x6 (HODG-7C)"
               },
               "description": {
-                "uk": "ПЕТ/КТ після 6 циклів: Deauville 1–3 — спостереження; 4–5 — біопсія (позитивна — первинна рефрактерність). Проміжне ПЕТ після 2 циклів може допомогти; при Deauville 5 — біопсія і зміна терапії, якщо позитивна. Розглянути ISRT на початково об’ємні чи залишкові ПЕТ-позитивні зони.",
-                "en": "PET/CT after 6 cycles: Deauville 1-3 — follow-up; 4-5 — biopsy (positive — primary refractory). An interim PET after 2 cycles may help; at Deauville 5, biopsy and change therapy if positive. Consider ISRT to originally bulky or residual PET-positive sites."
+                "uk": "ПЕТ/КТ після 6 циклів: Deauville 1–3 — спостереження; 4–5 — біопсія (негативна — спостереження, позитивна — первинна рефрактерність). Проміжне ПЕТ після 2 циклів може допомогти; при Deauville 5 — біопсія і зміна терапії, якщо позитивна. Розглянути ISRT на початково об’ємні чи залишкові ПЕТ-позитивні зони.",
+                "en": "PET/CT after 6 cycles: Deauville 1-3 — follow-up; 4-5 — biopsy (negative — follow-up, positive — primary refractory). An interim PET after 2 cycles may help; at Deauville 5, biopsy and change therapy if positive. Consider ISRT to originally bulky or residual PET-positive sites."
               },
               "regimens": [
                 {
@@ -920,7 +938,7 @@
                 "en": "Over 60, anthracycline candidate: stage I-II unfavourable"
               },
               "description": {
-                "uk": "Варіанти: A(B)VD ×2, потім AVD ×4, якщо ПЕТ після 2 циклів негативний (при позитивному — індивідуальне лікування); A(B)VD ×4 + ISRT; BV ×2 → AVD ×6 → за відповіді (ПР чи ЧР) і без нейропатії BV ×2 (з G-CSF за потреби); ніволумаб-AVD ×4 + ISRT.",
+                "uk": "Варіанти: A(B)VD ×2, потім AVD ×4, якщо ПЕТ після 2 циклів негативний (при позитивному — індивідуальне лікування); A(B)VD ×4 + ISRT; BV ×2 → AVD ×6 → за відповіді (ПР чи ЧР) і без нейропатії BV ×2; ніволумаб-AVD ×4 + ISRT.",
                 "en": "Options: A(B)VD x2, then AVD x4 if the PET after 2 cycles is negative (individualise if positive); A(B)VD x4 plus ISRT; BV x2 → AVD x6 → BV x2 in responders (CR or PR) without neuropathy; nivolumab-AVD x4 plus ISRT."
               },
               "regimens": [
@@ -1040,8 +1058,8 @@
               "kind": "other",
               "column": "treatment",
               "label": {
-                "uk": "II–III триместри без симптомів: відкласти лікування до пологів",
-                "en": "Second-third trimester, asymptomatic: delay treatment until after delivery"
+                "uk": "II–III триместри без симптомів або з мінімальними: відкласти лікування до пологів під наглядом",
+                "en": "Second-third trimester, asymptomatic or minimal: delay treatment until after delivery under observation"
               }
             }
           ],
@@ -1055,8 +1073,8 @@
             "en": "Nodular lymphocyte-predominant HL (HODG-11, B 3 of 8)"
           },
           "description": {
-            "uk": "НЛПЛХ має інший перебіг і відповідь, особливо на I–II стадіях. Об’ємне ураження, піддіафрагмальні зони чи селезінка — високий ризик первинної чи пізнішої трансформації у великоклітинну лімфому. За ВООЗ 2022 НЛПЛХ лишається в родині ЛХ; в ICC 2022 — нодулярна лімфоцитарно-домінантна В-клітинна лімфома. Варіантні типи імуноархітектури (C–F) мають гірші результати, ніж A/B. Після ПЕТ/КТ-рестадіювання вибирають лікування.",
-            "en": "NLPHL has a different course and response, especially at stages I-II. Bulk, subdiaphragmatic disease or splenic involvement carry a high risk of initial or later transformation to large-cell lymphoma. WHO 2022 keeps NLPHL in the HL family; ICC 2022 calls it nodular lymphocyte-predominant B-cell lymphoma. Variant immunoarchitectural patterns (C-F) do worse than A/B. Restage with PET/CT and choose treatment."
+            "uk": "НЛПЛХ має інший перебіг і відповідь, особливо на I–II стадіях. Об’ємне ураження, піддіафрагмальні зони чи селезінка — високий ризик первинної чи пізнішої трансформації у великоклітинну лімфому. За ВООЗ 2022 НЛПЛХ лишається в родині ЛХ; в ICC 2022 — нодулярна лімфоцитарно-домінантна В-клітинна лімфома. Варіантні типи імуноархітектури (C–F) мають гірші результати, ніж A/B. Після первинного лікування — ПЕТ/КТ: відповідь — нагляд, якщо немає симптомів, або ISRT (якщо раніше не опромінювали); стабілізація чи прогресування — біопсія (особливо піддіафрагмальних зон, щоб виключити трансформацію): негативна — нагляд, якщо немає симптомів; позитивна — HODG-16.",
+            "en": "NLPHL has a different course and response, especially at stages I-II. Bulk, subdiaphragmatic disease or splenic involvement carry a high risk of initial or later transformation to large-cell lymphoma. WHO 2022 keeps NLPHL in the HL family; ICC 2022 calls it nodular lymphocyte-predominant B-cell lymphoma. Variant immunoarchitectural patterns (C-F) do worse than A/B. After primary treatment, PET/CT: response — observation if asymptomatic, or ISRT (if not irradiated before); stable or progressive disease — biopsy (especially subdiaphragmatic sites, to exclude transformation): negative — observation if asymptomatic; positive — HODG-16."
           },
           "regimens": [],
           "children": [
@@ -1068,8 +1086,8 @@
                 "en": "IA, IIA (non-bulky)"
               },
               "description": {
-                "uk": "ISRT (бажано при IA чи суміжній IIA, якщо раніше не опромінювали) або нагляд, якщо немає симптомів; нагляд може бути варіантом при IA з повністю видаленим солітарним вузлом. Після ISRT/нагляду — спостереження (HODG-12). Підозра на рецидив чи рефрактерність — HODG-16.",
-                "en": "ISRT (preferred for IA or contiguous IIA if not irradiated before) or observation if asymptomatic; observation may be an option for IA with a completely excised solitary node. Then follow-up (HODG-12). Suspected relapse or refractory disease — HODG-16."
+                "uk": "ISRT (бажано при IA чи суміжній IIA) або нагляд (варіант для IA з повністю видаленим солітарним вузлом). Далі ПЕТ/КТ і спостереження (HODG-12). Підозра на рецидив чи рефрактерність — HODG-16.",
+                "en": "ISRT (preferred for IA or contiguous IIA) or observation (an option for IA with a completely excised solitary node). Then PET/CT and follow-up (HODG-12). Suspected relapse or refractory disease — HODG-16."
               },
               "regimens": [],
               "steps": [
@@ -1115,12 +1133,12 @@
               "key": "nccn-nlphl-bulky",
               "kind": "group",
               "title": {
-                "uk": "IB, IIB або IA–IIA з об’ємним ураженням",
-                "en": "IB, IIB or IA-IIA bulky"
+                "uk": "IB, IIB, IA–IIA з об’ємним ураженням; IIA несуміжна",
+                "en": "IB, IIB, IA-IIA bulky; IIA non-contiguous"
               },
               "description": {
-                "uk": "Хіміотерапія (зазвичай короткий курс 2–4 міс.) + ритуксимаб ± ISRT; при IB і неконтигуозній IIA — ISRT окремо може бути варіантом. Хіміотерапія: ABVD + R, R-CHOP, CVbP + R (найчастіші в центрах NCCN); можливий також ритуксимаб у монорежимі. Після відповіді — нагляд; при стабільній чи прогресуючій хворобі — біопсія (особливо піддіафрагмальних зон, щоб виключити трансформацію).",
-                "en": "Chemotherapy (usually a short course of 2-4 months) plus rituximab ± ISRT; at IB and non-contiguous IIA, ISRT alone may be an option. Chemotherapy: ABVD + R, R-CHOP, CVbP + R (the commonest at NCCN centres); rituximab alone is also possible. After response, follow-up; with stable or progressive disease, biopsy (especially subdiaphragmatic sites, to exclude transformation)."
+                "uk": "IB, IIB або IA–IIA з об’ємним ураженням: хіміотерапія (зазвичай короткий курс 2–4 міс.) + ритуксимаб + ISRT. IIA несуміжна: хіміотерапія + ритуксимаб ± ISRT або ритуксимаб окремо. В окремих хворих з IB чи несуміжною IIA варіантом може бути ISRT окремо. Хіміотерапія: ABVD + R, R-CHOP, CVbP + R (найчастіші в центрах NCCN). Після ПЕТ/КТ: відповідь — нагляд, якщо немає симптомів, або ISRT (якщо раніше не опромінювали); стабільна чи прогресуюча хвороба — біопсія (особливо піддіафрагмальних зон, щоб виключити трансформацію).",
+                "en": "IB, IIB or IA-IIA bulky: chemotherapy (usually a short course of 2-4 months) plus rituximab plus ISRT. IIA non-contiguous: chemotherapy plus rituximab ± ISRT, or rituximab alone. In selected IB or non-contiguous IIA, ISRT alone may be an option. Chemotherapy: ABVD + R, R-CHOP, CVbP + R (the commonest at NCCN centres). After PET/CT: response — observation if asymptomatic, or ISRT (if not irradiated before); stable or progressive disease — biopsy (especially subdiaphragmatic sites, to exclude transformation)."
               },
               "regimens": [
                 {
@@ -1147,8 +1165,8 @@
                 {
                   "regimen_id": "rituximab-mono",
                   "notes": {
-                    "uk": "Монотерапія — для паліації в окремих випадках",
-                    "en": "Monotherapy — for palliation in selected cases"
+                    "uk": "Монотерапія — при несуміжній IIA; для паліації в окремих випадках",
+                    "en": "Monotherapy — at non-contiguous IIA; for palliation in selected cases"
                   }
                 }
               ],
@@ -1157,8 +1175,8 @@
                   "kind": "other",
                   "column": "treatment",
                   "label": {
-                    "uk": "ISRT (окремо при IB, неконтигуозній IIA — варіант; або після хіміотерапії)",
-                    "en": "ISRT (alone at IB or non-contiguous IIA as an option; or after chemotherapy)"
+                    "uk": "ISRT: разом з хіміотерапією при IB, IIB і об’ємному ураженні; ± при несуміжній IIA; окремо — у вибраних хворих з IB чи несуміжною IIA",
+                    "en": "ISRT: with chemotherapy at IB, IIB and bulky disease; ± at non-contiguous IIA; alone in selected IB or non-contiguous IIA"
                   }
                 },
                 {
@@ -1263,8 +1281,8 @@
             "en": "Follow-up after treatment (HODG-12, 12A)"
           },
           "description": {
-            "uk": "До 5 років: огляд кожні 3–6 міс. 1–2 роки, далі кожні 6–12 міс. до 3-го року, потім щорічно; щорічна вакцинація проти грипу та інші за показаннями; ЗАК, ШОЕ (якщо була підвищена на початку), біохімія за показаннями; ТТГ щонайменше щороку, якщо щитоподібна залоза була в полі опромінення; консультування (репродукція, звички, психосоціальне, серцево-судинне, грудні залози, шкіра); ЕхоКГ через рік після антрациклінів. Візуалізація — лише при клінічній підозрі на рецидив або за протоколом: КТ кожні 3–6 міс. до 2 років за показаннями; ПЕТ/КТ лише якщо останній був Deauville 4–5 — підтвердити повну відповідь після всього лікування; рутинний ПЕТ-нагляд не роблять через хибнопозитивні результати, рішення лише за ПЕТ не ухвалюють. Повну відповідь документують, включно з негативним ПЕТ/КТ, у межах 3 місяців після завершення. Пацієнту видають підсумок лікування (доза опромінення, органи ризику, накопичена доза антрацикліну). Після 5 років: щорічно огляд, АТ і ведення серцево-судинних факторів ризику, ЗАК і біохімія щороку, ТТГ, ліпіди двічі на рік, глюкоза натще щороку; розглянути ЕхоКГ кожні 5–10 років, УЗД сонних артерій кожні 10 років після опромінення шиї; для народжених жінками з опроміненням середостіння чи пахви у 10–30 років — щорічний скринінг грудей (мамографія й МРТ, не раніше 25 років), консультація спеціаліста; інший скринінг — за настановами. Пізній рецидив чи трансформація можливі, особливо при НЛПЛХ. Підозра на рецидив — HODG-15 (КЛХ) або HODG-16 (НЛПЛХ).",
-            "en": "Up to 5 years: examination every 3-6 months for 1-2 years, then every 6-12 months to year 3, then yearly; yearly influenza and other indicated vaccines; CBC, ESR (if elevated at diagnosis), chemistry as indicated; TSH at least yearly if the thyroid was in the RT field; counselling (reproduction, habits, psychosocial, cardiovascular, breast, skin); echo one year after anthracyclines. Imaging only on clinical suspicion of relapse or per protocol: CT every 3-6 months up to 2 years as indicated; PET/CT only if the last was Deauville 4-5, to confirm complete response after all treatment; no routine surveillance PET because of false positives, and no decisions on PET alone. Complete response is documented, including a negative PET/CT, within 3 months of the end. Give the patient a treatment summary (RT dose, organs at risk, cumulative anthracycline). After 5 years: yearly examination, blood pressure and cardiovascular risk management, CBC and chemistry yearly, TSH, lipids twice a year, fasting glucose yearly; consider echo every 5-10 years and carotid ultrasound every 10 years after neck irradiation; for people assigned female at birth with mediastinal or axillary RT at 10-30 years — yearly breast screening (mammography and MRI, not before 25), specialist referral; other screening per guidelines. Late relapse or transformation is possible, especially in NLPHL. Suspected relapse — HODG-15 (CHL) or HODG-16 (NLPHL)."
+            "uk": "До 5 років: огляд кожні 3–6 міс. 1–2 роки, далі кожні 6–12 міс. до 3-го року, потім щорічно; щорічна вакцинація проти грипу та інші за показаннями; ЗАК, ШОЕ (якщо була підвищена на початку), біохімія за показаннями; ТТГ щонайменше щороку, якщо щитоподібна залоза була в полі опромінення; консультування (репродукція, звички, психосоціальне, серцево-судинне, грудні залози, шкіра); ЕхоКГ через рік після антрациклінів. Візуалізація — лише при клінічній підозрі на рецидив або за протоколом: КТ кожні 3–6 міс. до 2 років за показаннями; ПЕТ/КТ лише якщо останній був Deauville 4–5 — підтвердити повну відповідь після всього лікування; рутинний ПЕТ-нагляд не роблять через хибнопозитивні результати, рішення лише за ПЕТ не ухвалюють. Повну відповідь документують, включно з негативним ПЕТ/КТ, у межах 3 місяців після завершення. Пацієнту видають підсумок лікування (доза опромінення, органи ризику, накопичена доза антрацикліну). Після 5 років: щорічно огляд, АТ і ведення серцево-судинних факторів ризику, ЗАК і біохімія щороку, ТТГ, ліпіди — «biannual» (HODG-12A: слово неоднозначне — двічі на рік або раз на два роки; настанова не уточнює), глюкоза натще щороку; розглянути ЕхоКГ кожні 5–10 років, УЗД сонних артерій кожні 10 років після опромінення шиї; для народжених жінками з опроміненням середостіння чи пахви у 10–30 років — щорічний скринінг грудей (мамографія й МРТ, не раніше 25 років), консультація спеціаліста; інший скринінг — за настановами. Пізній рецидив чи трансформація можливі, особливо при НЛПЛХ. Підозра на рецидив — HODG-15 (КЛХ) або HODG-16 (НЛПЛХ).",
+            "en": "Up to 5 years: examination every 3-6 months for 1-2 years, then every 6-12 months to year 3, then yearly; yearly influenza and other indicated vaccines; CBC, ESR (if elevated at diagnosis), chemistry as indicated; TSH at least yearly if the thyroid was in the RT field; counselling (reproduction, habits, psychosocial, cardiovascular, breast, skin); echo one year after anthracyclines. Imaging only on clinical suspicion of relapse or per protocol: CT every 3-6 months up to 2 years as indicated; PET/CT only if the last was Deauville 4-5, to confirm complete response after all treatment; no routine surveillance PET because of false positives, and no decisions on PET alone. Complete response is documented, including a negative PET/CT, within 3 months of the end. Give the patient a treatment summary (RT dose, organs at risk, cumulative anthracycline). After 5 years: yearly examination, blood pressure and cardiovascular risk management, CBC and chemistry yearly, TSH, lipids \"biannual\" (HODG-12A: the word is ambiguous — twice a year or every two years; the guideline does not say which), fasting glucose yearly; consider echo every 5-10 years and carotid ultrasound every 10 years after neck irradiation; for people assigned female at birth with mediastinal or axillary RT at 10-30 years — yearly breast screening (mammography and MRI, not before 25), specialist referral; other screening per guidelines. Late relapse or transformation is possible, especially in NLPHL. Suspected relapse — HODG-15 (CHL) or HODG-16 (NLPHL)."
           },
           "regimens": [],
           "steps": [
@@ -1372,8 +1390,8 @@
             "en": "Biopsy-proven relapse after 3 or more months, candidate for HDT/ASCR (HODG-14)"
           },
           "description": {
-            "uk": "Друга лінія — системна терапія (бажано з інгібітором контрольних точок), ПЕТ/КТ: Deauville 1–3 — ВДТ/АТСК ± ПТ; Deauville 4 — ВДТ/АТСК ± ПТ, або ПТ, або наступна терапія ± ПТ (за відповіді — ВДТ/АТСК); Deauville 5 — ПТ або наступна терапія ± ПТ. Окремо за певних обставин: ISRT при локалізованому рецидиві з обмеженим попереднім лікуванням (стадії IA–IIA після скороченої хіміотерапії 3–4 цикли без ПТ і рецидив лише в початкових зонах). Немає даних, що якийсь підхід кращий за інший — лікування індивідуальне. Підтримка BV після ВДТ — як у HODG-13.",
-            "en": "Second line is systemic therapy (checkpoint-inhibitor-based preferred), PET/CT: Deauville 1-3 — HDT/ASCR ± RT; Deauville 4 — HDT/ASCR ± RT, RT, or subsequent therapy ± RT (HDT/ASCR if it responds); Deauville 5 — RT or subsequent therapy ± RT. In certain circumstances alone: ISRT for localised relapse with limited prior treatment (stage IA-IIA after abbreviated chemotherapy of 3-4 cycles without RT, with relapse only at the original sites). There are no data that any approach is better — individualise. BV maintenance after HDT as in HODG-13."
+            "uk": "Друга лінія — системна терапія (бажано з інгібітором контрольних точок, якщо його раніше не отримували), ПЕТ/КТ: Deauville 1–3 — ВДТ/АТСК ± ISRT, а за певних обставин — лише ISRT і нагляд (локалізований рецидив з обмеженим попереднім лікуванням: стадії IA–IIA після скороченої хіміотерапії 3–4 цикли без ПТ і рецидив лише в початкових зонах); Deauville 4 — ВДТ/АТСК ± ISRT, або ПТ, або наступна терапія ± ПТ (за відповіді — ВДТ/АТСК); Deauville 5 — ПТ або наступна терапія ± ПТ (за відповіді — ВДТ/АТСК). Немає даних, що якийсь підхід кращий за інший — лікування індивідуальне. Підтримка BV після ВДТ — як у HODG-13.",
+            "en": "Second line is systemic therapy (checkpoint-inhibitor-based preferred if none before), then PET/CT: Deauville 1-3 — HDT/ASCR ± ISRT, or in certain circumstances ISRT alone and observation (localised relapse with limited prior treatment: stage IA-IIA after abbreviated chemotherapy of 3-4 cycles without RT, with relapse only at the original sites); Deauville 4 — HDT/ASCR ± ISRT, RT, or subsequent therapy ± RT (HDT/ASCR if it responds); Deauville 5 — RT or subsequent therapy ± RT (HDT/ASCR if it responds). There are no data that any approach is better — individualise. BV maintenance after HDT as in HODG-13."
           },
           "regimens": [],
           "steps": [
@@ -1390,8 +1408,8 @@
               "kind": "other",
               "column": "treatment",
               "label": {
-                "uk": "За певних обставин: ISRT при локалізованому рецидиві з обмеженим попереднім лікуванням",
-                "en": "In certain circumstances: ISRT for localised relapse with limited prior treatment"
+                "uk": "За певних обставин (Deauville 1–3): лише ISRT при локалізованому рецидиві з обмеженим попереднім лікуванням",
+                "en": "In certain circumstances (Deauville 1-3): ISRT alone for localised relapse with limited prior treatment"
               },
               "preference": "circumstances"
             },
@@ -1614,20 +1632,11 @@
             "en": "Second-line and subsequent regimens for CHL (HODG-B 5 of 8)"
           },
           "description": {
-            "uk": "Перелік у настанові — за абеткою, без рангу й без доз. Вибір залежить від попереднього лікування, токсичності й супутніх станів; наступна терапія — варіанти 2-ї лінії, яких ще не застосовували. Для зон з локальним рецидивом сильно розглянути консолідуючу ISRT. Пацієнти, придатні до алогенної ТГСК, — направити для оцінки. Постінгібіторні ситуації: після алоТГСК можна давати ніволумаб чи пембролізумаб (даних мало, схему кондиціонування обирати ретельно). Для хвороби, рефрактерної до ≥3 ліній, — індивідуальне лікування, консультація в центрі з досвідом, паліативні монотерапії: ніволумаб, пембролізумаб, бендамустин, BV, еверолімус, ISRT, гемцитабін, леналідомід, вінбластин.",
-            "en": "The guideline list is alphabetical, with no rank and no doses. The choice depends on prior therapy, toxicity and comorbidity; subsequent therapy is a second-line option not used before. For localised relapse strongly consider consolidating ISRT. Refer patients fit for allogeneic HCT for assessment. After a checkpoint inhibitor: after allo-HCT nivolumab or pembrolizumab may be given (little data; choose the conditioning carefully). For disease refractory to 3 or more lines — individualised treatment, expert centre, palliative single agents: nivolumab, pembrolizumab, bendamustine, BV, everolimus, ISRT, gemcitabine, lenalidomide, vinblastine."
+            "uk": "Перелік у настанові — за абеткою, без рангу й без доз. Вибір залежить від попереднього лікування, токсичності й супутніх станів; наступна терапія — варіанти 2-ї лінії, яких ще не застосовували. Окремий перелік — для хвороби, рефрактерної щонайменше до 3 попередніх ліній наступної терапії; тоді розглянути направлення на алогенну ТГСК. Додатково для тих, хто не є кандидатом на ВДТ/АТСК: лікування індивідуальне; при локалізованому рецидиві сильно розглянути консолідуючу ISRT; консультація в центрі з досвідом; паліативні монотерапії — ніволумаб, пембролізумаб, бендамустин, BV, еверолімус, ISRT, гемцитабін, леналідомід, вінбластин. Інгібітори контрольних точок: після алогенної ТГСК можна давати ніволумаб чи пембролізумаб (даних мало; якщо інгібітор застосовано до ТГСК, режим трансплантації обирати ретельно); інгібітор можна продовжувати попри прогресування за візуалізацією, якщо є клінічна користь (можливий імунний «спалах»).",
+            "en": "The guideline list is alphabetical, with no rank and no doses. The choice depends on prior therapy, toxicity and comorbidity; subsequent therapy is a second-line option not used before. A separate list covers disease refractory to at least 3 prior lines of subsequent therapy; then consider referral for allogeneic HCT. For patients who are not candidates for HDT/ASCR: individualised treatment; for localised relapse strongly consider consolidating ISRT; consult an expert centre; palliative single agents — nivolumab, pembrolizumab, bendamustine, BV, everolimus, ISRT, gemcitabine, lenalidomide, vinblastine. Checkpoint inhibitors: after allogeneic HCT nivolumab or pembrolizumab may be given (little data; if an inhibitor is used before HCT, choose the transplant regimen carefully); an inhibitor may continue despite imaging progression when there is clinical benefit (an immune flare is possible)."
           },
           "regimens": [],
-          "steps": [
-            {
-              "kind": "hct",
-              "column": "treatment",
-              "label": {
-                "uk": "Розглянути направлення на алогенну ТГСК у відповідних пацієнтів",
-                "en": "Consider referral for allogeneic HCT in suitable patients"
-              }
-            }
-          ],
+          "steps": [],
           "children": [
             {
               "key": "nccn-rr-cpi",
@@ -1745,12 +1754,24 @@
                     "uk": "Іфосфамід/гемцитабін/вінорелбін",
                     "en": "Ifosfamide/gemcitabine/vinorelbine"
                   }
-                },
+                }
+              ],
+              "steps": [],
+              "children": []
+            },
+            {
+              "key": "nccn-rr-3plus",
+              "kind": "group",
+              "title": {
+                "uk": "Рефрактерність щонайменше до 3 попередніх ліній",
+                "en": "Disease refractory to at least 3 prior lines"
+              },
+              "regimens": [
                 {
                   "regimen_id": "ref-hl-single-agents",
                   "notes": {
-                    "uk": "Бендамустин, еверолімус, гемцитабін, леналідомід, вінбластин — паліативні монотерапії",
-                    "en": "Bendamustine, everolimus, gemcitabine, lenalidomide, vinblastine — palliative single agents"
+                    "uk": "Бендамустин у монорежимі",
+                    "en": "Bendamustine alone"
                   }
                 },
                 {
@@ -1808,8 +1829,65 @@
                   "kind": "other",
                   "column": "treatment",
                   "label": {
-                    "uk": "ISRT (у т. ч. для локалізованого рецидиву з обмеженим попереднім лікуванням)",
-                    "en": "ISRT (including localised relapse with limited prior treatment)"
+                    "uk": "ISRT",
+                    "en": "ISRT"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Розглянути направлення на алогенну ТГСК у відповідних пацієнтів",
+                    "en": "Consider referral for allogeneic HCT in suitable patients"
+                  }
+                }
+              ],
+              "children": []
+            },
+            {
+              "key": "nccn-rr-palliative",
+              "kind": "group",
+              "title": {
+                "uk": "Паліативні монотерапії, не кандидат на ВДТ/АТСК",
+                "en": "Palliative single agents, not a candidate for HDT/ASCR"
+              },
+              "regimens": [
+                {
+                  "regimen_id": "nivolumab",
+                  "notes": {
+                    "uk": "Ніволумаб",
+                    "en": "Nivolumab"
+                  }
+                },
+                {
+                  "regimen_id": "pembrolizumab",
+                  "notes": {
+                    "uk": "Пембролізумаб",
+                    "en": "Pembrolizumab"
+                  }
+                },
+                {
+                  "regimen_id": "brentuximab-mono",
+                  "notes": {
+                    "uk": "Брентуксимаб ведотин",
+                    "en": "Brentuximab vedotin"
+                  }
+                },
+                {
+                  "regimen_id": "ref-hl-single-agents",
+                  "notes": {
+                    "uk": "Бендамустин, еверолімус, гемцитабін, леналідомід, вінбластин",
+                    "en": "Bendamustine, everolimus, gemcitabine, lenalidomide, vinblastine"
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "ISRT; при локалізованому рецидиві — сильно розглянути консолідуючу ISRT",
+                    "en": "ISRT; for localised relapse strongly consider consolidating ISRT"
                   }
                 }
               ],
@@ -1825,8 +1903,8 @@
             "en": "NLPHL: refractory disease or suspected relapse (HODG-16, 17, B 6 of 8)"
           },
           "description": {
-            "uk": "При рецидиві розглянути повторну біопсію через ризик трансформації, особливо при піддіафрагмальному чи селезінковому ураженні; частина пацієнтів має хронічний індолентний перебіг і не потребує агресивного повторного лікування — безсимптомних можна спостерігати. Негативна біопсія — НЛПЛХ: ПЕТ/КТ чи діагностична КТ повторно; без симптомів і без об’ємного ураження — нагляд, ритуксимаб або ISRT (ритуксимаб у монорежимі можна підтримувати 2 роки); з симптомами чи об’ємним ураженням — терапія 2-ї лінії ± ISRT ± ВДТ/АТСК. Після терапії — ПЕТ/КТ: відповідь — нагляд (безсимптомно) або ВДТ/АТСК, якщо ще не було; відсутність відповіді чи прогресування (за потреби повторна біопсія) — наступна терапія. Біопсія з агресивною В-клітинною лімфомою — за настановою для ДВВКЛ (рецидив/рефрактерність). Терапія 2-ї лінії: ритуксимаб; ритуксимаб + бендамустин; R-DHAP; R-ICE; R-IGEV; якщо раніше не застосовували — R-ABVD, R-CHOP, R-CVbP; бажаних схем немає, вибір — за попереднім лікуванням і токсичністю.",
-            "en": "At relapse consider rebiopsy because of the risk of transformation, especially with subdiaphragmatic or splenic disease; some patients have a chronic indolent course that does not need aggressive retreatment — asymptomatic ones may be observed. A negative biopsy means NLPHL: repeat PET/CT or diagnostic CT; asymptomatic and non-bulky — observation, rituximab or ISRT (rituximab alone may be maintained for 2 years); symptomatic or bulky — second-line therapy ± ISRT ± HDT/ASCR. After therapy, PET/CT: response — observation (asymptomatic) or HDT/ASCR if not done before; no response or progression (rebiopsy if needed) — subsequent therapy. A biopsy showing aggressive B-cell lymphoma goes to the DLBCL relapsed/refractory guideline. Second-line therapy: rituximab; rituximab + bendamustine; R-DHAP; R-ICE; R-IGEV; if not used before — R-ABVD, R-CHOP, R-CVbP; there are no preferred regimens, so choose by prior therapy and toxicity."
+            "uk": "Повторити ПЕТ/КТ чи діагностичну КТ і біопсію: при рецидиві розглянути повторну біопсію через ризик трансформації, особливо при внутрішньочеревному чи селезінковому ураженні; частина пацієнтів має хронічний індолентний перебіг і не потребує агресивного повторного лікування — безсимптомних можна спостерігати. Результат біопсії: агресивна В-клітинна лімфома — за настановою NCCN для В-клітинних лімфом (ДВВКЛ, рецидив/рефрактерність); біопсія негативна — нагляд із коротким інтервалом контролю (HODG-12); НЛПЛХ — HODG-17. HODG-17: без симптомів і без об’ємного ураження — нагляд, ритуксимаб або ISRT (у частини хворих після ритуксимабу в монорежимі можна розглянути підтримку ритуксимабом 2 роки); з симптомами чи об’ємним ураженням — терапія 2-ї лінії ± ISRT ± ВДТ/АТСК. Після терапії ПЕТ/КТ: клінічна відповідь — нагляд (без симптомів) або ВДТ/АТСК, якщо ще не було; відсутність відповіді чи прогресування (розглянути повторну біопсію для виключення трансформації) — наступна терапія. Терапія 2-ї лінії: ритуксимаб; ритуксимаб + бендамустин; R-DHAP; R-ICE; R-IGEV; якщо раніше не застосовували — R-ABVD, R-CHOP, R-CVbP; бажаних схем немає, вибір — за попереднім лікуванням і токсичністю.",
+            "en": "Repeat PET/CT or diagnostic CT and biopsy: at relapse consider rebiopsy because of the risk of transformation, especially with intra-abdominal or splenic disease; some patients have a chronic indolent course that does not need aggressive retreatment — asymptomatic ones may be observed. Biopsy result: aggressive B-cell lymphoma — the NCCN B-cell lymphoma guideline (DLBCL, relapsed/refractory); biopsy negative — observation with short-interval follow-up (HODG-12); NLPHL — HODG-17. HODG-17: asymptomatic and non-bulky — observation, rituximab or ISRT (in some patients treated with rituximab alone, maintenance rituximab for 2 years may be considered); symptomatic or bulky — second-line therapy ± ISRT ± HDT/ASCR. After therapy, PET/CT: clinical response — observation (asymptomatic) or HDT/ASCR if not done before; no response or progression (consider rebiopsy to exclude transformation) — subsequent therapy. Second-line therapy: rituximab; rituximab + bendamustine; R-DHAP; R-ICE; R-IGEV; if not used before — R-ABVD, R-CHOP, R-CVbP; there are no preferred regimens, so choose by prior therapy and toxicity."
           },
           "regimens": [
             {
@@ -1891,8 +1969,8 @@
               "kind": "assessment",
               "column": "treatment",
               "label": {
-                "uk": "Повторна біопсія при підозрі на трансформацію",
-                "en": "Rebiopsy if transformation is suspected"
+                "uk": "Повторне ПЕТ/КТ чи діагностична КТ і біопсія (ризик трансформації)",
+                "en": "Repeat PET/CT or diagnostic CT and biopsy (risk of transformation)"
               }
             },
             {
