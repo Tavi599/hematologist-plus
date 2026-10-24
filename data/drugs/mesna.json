@@ -35,5 +35,33 @@
       "form": "vial",
       "strength_amount": 1000
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_bolus", "iv_infusion"],
+      "notes": {
+        "uk": "Розчин 100 мг/мл. Розведений 5% глюкозою чи 0,9% NaCl разом з іфосфамідом фізико-хімічно стабільний 4 доби (з глюкозою — при 2–8 °C, з NaCl — при 25 °C); мікробіологічно — не довше 24 год при 2–8 °C. Не змішувати з цисплатином, карбоплатином, азотистим іпритом і епірубіцином.",
+        "en": "Solution 100 mg/mL. Diluted with 5% glucose or 0.9% NaCl together with ifosfamide it is physically and chemically stable for 4 days (with glucose at 2–8 °C, with NaCl at 25 °C); microbiologically no longer than 24 h at 2–8 °C. Do not mix with cisplatin, carboplatin, nitrogen mustard or epirubicin."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Месна» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/348175/",
+        "version": "реєстраційне посвідчення UA/17468/01/01 від 30.05.2019",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_bolus", "iv_infusion"],
+      "notes": {
+        "uk": "Згідно з SmPC Baxter — болюсну дозу вводять внутрішньовенно за 15–30 хв; для тривалої інфузії месну можна змішувати в одному мішку з іфосфамідом. Особливих вимог до приготування немає.",
+        "en": "Per the Baxter SmPC — give the bolus dose intravenously over 15–30 min; for a continuous infusion mesna may be mixed in one bag with ifosfamide. No special preparation is required."
+      },
+      "source": {
+        "name": "SmPC Mesna Injection (Baxter) (emc, Велика Британія), розділи 4.2, 6.2, 6.3, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/1838/smpc",
+        "version": "редакція тексту 10/2014",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

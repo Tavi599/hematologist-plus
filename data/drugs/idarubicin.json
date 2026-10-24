@@ -24,5 +24,20 @@
       "form": "vial",
       "strength_amount": 10
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion", "iv_bolus"],
+      "notes": {
+        "uk": "Лише внутрішньовенно, не інтратекально. Ліофілізат розчиняють водою для ін’єкцій до 1 мг/мл (5 мг — у 5 мл); розчин гіпотонічний. Вводять повільно, 5–10 хв, у систему з вільно текучим 0,9% NaCl, а не прямою ін’єкцією (ризик екстравазації). Розчин хімічно стабільний 48 год при 2–8 °C і 24 год при 20–25 °C, зберігати не довше 24 год при 2–8 °C; не змішувати з гепарином (осад), уникати лужних розчинів.",
+        "en": "Intravenous only, never intrathecal. Reconstitute the powder with water for injections to 1 mg/mL (5 mg in 5 mL); the solution is hypotonic. Give slowly over 5–10 min into the tubing of a freely running 0.9% NaCl infusion, not as a direct injection (extravasation risk). Chemically stable 48 h at 2–8 °C and 24 h at 20–25 °C, keep no longer than 24 h at 2–8 °C; do not mix with heparin (precipitate), avoid alkaline solutions."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Заведос» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/269587/",
+        "version": "реєстраційне посвідчення UA/9322/01/01 від 26.11.2018",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

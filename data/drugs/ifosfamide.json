@@ -110,5 +110,20 @@
         "en": "Dilution to 0.6–20 mg/mL per the label. The bag volume comes from the regimen."
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Порошок розчиняють водою для ін’єкцій до 4% (40 мг/мл): 1 г — у 25 мл (500 мг — у 13 мл, 2 г — у 50 мл), енергійно струшуючи. Далі розводять 5% глюкозою, 0,9% NaCl або розчином Рінгера: до 250 мл для інфузії 30–60 хв, до 500 мл — для 1–2 год; дозу 24-годинної інфузії — у 3 л 5% глюкози або 0,9% NaCl. Стабільний 48 год при 25 °C, мікробіологічно — не довше 24 год при 2–8 °C; розчини з бензиловим спиртом знижують стабільність іфосфаміду.",
+        "en": "Reconstitute the powder with water for injections to 4% (40 mg/mL): 1 g in 25 mL (500 mg in 13 mL, 2 g in 50 mL), shaking vigorously. Then dilute with 5% glucose, 0.9% NaCl or Ringer’s: to 250 mL for a 30–60 min infusion, to 500 mL for 1–2 h; a 24-hour infusion dose in 3 L of 5% glucose or 0.9% NaCl. Stable 48 h at 25 °C, microbiologically no longer than 24 h at 2–8 °C; solutions containing benzyl alcohol reduce ifosfamide stability."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Холоксан» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/266845/",
+        "version": "реєстраційне посвідчення UA/2024/01/01 від 28.05.2019",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

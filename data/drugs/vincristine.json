@@ -107,5 +107,33 @@
         "version": "ред. 08/2026"
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Тільки внутрішньовенно: інтратекальне введення смертельне. Вводять в/в інфузією або струминно не швидше ніж за 1 хв через катетер, після введення вену промивають. Розведений 0,9% NaCl або 5% глюкозою розчин стабільний 48 год при 2–8 °C або 24 год при 15–25 °C (мікробіологічно — до 24 год при 2–8 °C); не змішувати з іншими препаратами.",
+        "en": "Intravenous only: intrathecal administration is fatal. Give as an IV infusion or as a push over no less than 1 min through a catheter, then flush the vein. Diluted with 0.9% NaCl or 5% glucose it is stable 48 h at 2–8 °C or 24 h at 15–25 °C (microbiologically up to 24 h at 2–8 °C); do not mix with other drugs."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Вінкристин-Тева» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/271264/",
+        "version": "реєстраційне посвідчення UA/6278/01/01 від 31.10.2016",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з SmPC Hospira — щоб уникнути смертельної помилки шляху введення, розводити в мінімішку 50 мл 0,9% NaCl або 5% глюкози з написом «Тільки для внутрішньовенного введення — смертельно при інших шляхах», вводити 5–10 хв і промити вену. У мішку, захищеному від світла, стабільний 24 год при 2–8 °C і 25 °C; на світлі при 25 °C — 8 год (NaCl) або 4 год (глюкоза). З фуросемідом утворює осад.",
+        "en": "Per the Hospira SmPC — to prevent a fatal wrong-route error, dilute in a 50 mL minibag of 0.9% NaCl or 5% glucose labelled \"For intravenous use only — fatal if given by other routes\", infuse over 5–10 min and flush the vein. In a bag protected from light it is stable 24 h at 2–8 °C and 25 °C; in normal light at 25 °C, 8 h (NaCl) or 4 h (glucose). Precipitates with furosemide."
+      },
+      "source": {
+        "name": "SmPC Vincristine Sulfate 1 mg/ml solution for injection (Hospira) (emc, Велика Британія), розділи 4.2, 6.2, 6.3, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/1501/smpc",
+        "version": "редакція тексту 08/2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

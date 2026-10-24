@@ -62,5 +62,20 @@
         }
       ]
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion", "iv_bolus"],
+      "notes": {
+        "uk": "Тільки внутрішньовенно: інтратекальне введення смертельне; шприц маркують «Тільки для внутрішньовенного застосування. Смертельно небезпечний у разі введення іншими шляхами». Можна розвести 0,9% NaCl або 5% глюкозою до 0,5 мг/мл і ввести приблизно за 1 хв у трубку системи з розчином, що тече, або у вену; не розводити у великих об’ємах (100–250 мл) і не вводити повільною інфузією 30–60 хв і довше (подразнення вени). Розведений розчин стабільний 6 год при 15–25 °C; не змішувати з іншими препаратами.",
+        "en": "Intravenous only: intrathecal administration is fatal; label the syringe \"For intravenous use only. Fatal if given by other routes\". It may be diluted with 0.9% NaCl or 5% glucose to 0.5 mg/mL and injected over about 1 min into the tubing of a running infusion or into a vein; do not dilute in large volumes (100–250 mL) or give as a slow 30–60 min or longer infusion (vein irritation). The diluted solution is stable 6 h at 15–25 °C; do not mix with other drugs."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Вінбластин-Тева» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/271172/",
+        "version": "реєстраційне посвідчення UA/20251/01/01 від 14.11.2023",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

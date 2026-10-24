@@ -96,5 +96,20 @@
         "en": "Lower limit 0.1 mg/mL per the label. The bag volume comes from the regimen."
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Порошок розчиняють лише 0,9% NaCl без консервантів: не менше 25 мл на флакон 1000 мг (5 мл на 200 мг) — 38 мг/мл; понад 40 мг/мл порошок розчиняється не повністю. Далі можна розвести 0,9% NaCl до потрібного об’єму. Розчин стабільний 24 год при температурі не вище 25 °C; не охолоджувати — кристалізується.",
+        "en": "Reconstitute only with preservative-free 0.9% NaCl: at least 25 mL per 1000 mg vial (5 mL per 200 mg) gives 38 mg/mL; above 40 mg/mL the powder may not dissolve fully. It may then be diluted further with 0.9% NaCl. The solution is stable for 24 h at or below 25 °C; do not refrigerate — it crystallises."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Гемцитабін Амакса» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/265939/",
+        "version": "реєстраційне посвідчення UA/15059/01/01 від 22.12.2020",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }
