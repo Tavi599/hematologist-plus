@@ -18,11 +18,11 @@ export interface PreparedDrug {
  */
 export function preparedDrugs(
   items: CourseItem[],
-  enabledIds: ReadonlySet<string>,
+  disabledIds: ReadonlySet<string>,
 ): PreparedDrug[] {
   const byDrug = new Map<string, PreparedDrug>()
   for (const entry of items) {
-    if (!enabledIds.has(entry.item.id)) continue
+    if (disabledIds.has(entry.item.id)) continue
     const known = byDrug.get(entry.drug.id)
     if (known === undefined)
       byDrug.set(entry.drug.id, { drug: entry.drug, routes: [entry.item.route] })

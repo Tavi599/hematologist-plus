@@ -1072,8 +1072,9 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           </Tabs.Panel>
 
           <Tabs.Panel value="preparation" pt="sm">
-            {course ? (
-              <PreparationTable catalog={catalog} items={items} course={course} />
+            {/* The label text needs no patient: it is there as soon as a regimen is. */}
+            {items.length > 0 ? (
+              <PreparationTable catalog={catalog} items={items} disabledIds={disabledIds} />
             ) : (
               <Text size="sm" c="dimmed">
                 {t('calculator.tabs.empty')}

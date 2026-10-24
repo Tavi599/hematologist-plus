@@ -1,7 +1,6 @@
 import { Badge, Card, Group, List, Stack, Text, Title } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
 
-import type { CourseResult } from '../../domain'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import type { CourseItem } from '../../lib/course-input'
 import { formatNumber } from '../../lib/format'
@@ -20,16 +19,17 @@ import { SourceNotes } from './SourceNotes'
 export function PreparationTable({
   catalog,
   items,
-  course,
+  disabledIds,
 }: {
   catalog: CatalogIndex
   items: CourseItem[]
-  course: CourseResult
+  /** Rows the physician switched off: they are not given, so not prepared either. */
+  disabledIds: readonly string[]
 }) {
   const { t } = useTranslation()
   const tu = t as unknown as DynamicTranslate
   const language = currentLanguage()
-  const drugs = preparedDrugs(items, new Set(course.drugs.map((drug) => drug.id)))
+  const drugs = preparedDrugs(items, new Set(disabledIds))
 
   return (
     <Card withBorder component="section">
