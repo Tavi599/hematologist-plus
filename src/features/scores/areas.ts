@@ -60,7 +60,7 @@ export const RISK_AREAS: Area[] = [
   {
     id: 't-cell',
     title: t('Т-клітинні лімфоми', 'T-cell lymphomas'),
-    scoreIds: ['pit', 'pink', 'atl-pi'],
+    scoreIds: ['pit', 'tcell-score', 'pink', 'atl-pi'],
     diseases: ['ptcl-nos', 'aitl', 'alcl', 'eatl-meitl', 'enkl', 'atll'],
   },
   {

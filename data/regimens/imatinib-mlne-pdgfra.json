@@ -3,7 +3,7 @@
   "id": "imatinib-mlne-pdgfra",
   "short_name": "Іматиніб (PDGFRA)",
   "name": {
-    "uk": "Іматиніб при ММН з еозинофілією та FIP1L1::PDGFRA",
+    "uk": "Іматиніб при мієлоїдних/лімфоїдних новоутвореннях з еозинофілією та FIP1L1::PDGFRA",
     "en": "Imatinib for MLNE with FIP1L1::PDGFRA"
   },
   "description": {
@@ -31,7 +31,7 @@
         26, 27, 28
       ],
       "notes": {
-        "uk": "Хронічна фаза — 100 мг на добу; одночасно кортикостероїди 7–10 днів при ознаках ураження серця (тропонінемія, зміни на ЕхоКГ) і консультація кардіолога (доз стероїдів NCCN не наводить). Бластна фаза — 100–400 мг на добу. У вже досягнутій повній гематологічній і цитогенетичній відповіді вистачає і 100–200 мг на тиждень (NCCN, виноска t), але такої схеми цей розрахунок не покриває. Мутації PDGFRA T674I і D842V до іматинібу стійкі.",
+        "uk": "Хронічна фаза — 100 мг на добу; одночасно кортикостероїди 7–10 днів при ознаках ураження серця (тропонінемія, зміни на ЕхоКГ) і консультація кардіолога (доз стероїдів NCCN не наводить). Бластна фаза — 100–400 мг на добу. У стійкій повній гематологічній і цитогенетичній відповіді застосовували й підтримувальні дози 100–200 мг на тиждень (NCCN, виноска t до MLNE-5); такої схеми цей розрахунок не покриває. Мутації PDGFRA T674I і D842V до іматинібу стійкі.",
         "en": "Chronic phase: 100 mg daily; with signs of cardiac involvement (troponinaemia, abnormal echo) corticosteroids for 7-10 days alongside and a cardiologist (NCCN gives no steroid dose). Blast phase: 100-400 mg daily. In an established complete haematologic and cytogenetic response even 100-200 mg weekly has been used (NCCN footnote t), which this calculation does not cover. PDGFRA T674I and D842V are resistant to imatinib."
       },
       "dose_options": [
@@ -39,8 +39,8 @@
           "dose_value": 200,
           "dose_unit": "mg_flat",
           "notes": {
-            "uk": "Підтримувальна 100–200 мг на добу при тривалій повній відповіді; бластна фаза — до 400 мг",
-            "en": "Maintenance 100-200 mg daily in a sustained complete response; blast phase up to 400 mg"
+            "uk": "100–200 мг на добу здебільшого вистачало для підтримки молекулярної ремісії (обговорення NCCN, MS-13); бластна фаза — 100–400 мг",
+            "en": "100-200 mg daily was enough to maintain molecular remission in most patients (NCCN discussion, MS-13); blast phase 100-400 mg"
           },
           "source": {
             "name": "NCCN Guidelines: Myeloid/Lymphoid Neoplasms with Eosinophilia and Tyrosine Kinase Gene Fusions",

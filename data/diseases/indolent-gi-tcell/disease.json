@@ -54,8 +54,8 @@
             "en": "Definition, workup and treatment (INTCL-1, INTCL-2)"
           },
           "description": {
-            "uk": "Обстеження: ендоскопія з біопсією будь-яких змін, ПЕТ/КТ (бажано) чи КТ ОГК/ОЧП, кістковий мозок, проточна цитометрія крові; при ураженні поза ШКТ — розглянути інші Т-лімфоми. Ураження: тонка й товста кишка, шлунок (NK-LPD — частіше шлунок і дванадцятипала кишка), нерідко множинне; можливі поліпи, виразки (частіше при NK-LPD), вузлики. Диференціація: EATL (CD103+, CD56−), MEITL (CD8+/−, CD56+, CD103+), інтестинальна Т-лімфома НБО — патерн мутацій SETD2/STAT5B/JAK3/TP53 відрізняє від індолентних форм (STAT3::JAK2, JAK3 у NK-LPD). Лікування: індолентний перебіг, відмінна виживаність, можливі ремісія після резекції й спонтанна ремісія; розглянути спостереження чи стероїди. Агресивну терапію, включно з комбінованою хіміотерапією, слід уникати. Стандарту нагляду немає — індивідуально, ендоскопія чи візуалізація при зміні симптомів. Описаний розвиток клональних Т-LPD ШКТ після CAR-T.",
-            "en": "Workup: endoscopy with biopsy of any abnormality, PET/CT (preferred) or chest/abdomen/pelvis CT, bone marrow, peripheral blood flow cytometry; if disease is outside the GI tract consider other T-cell lymphomas. Sites: small intestine and colon, stomach (NK-LPD — more often stomach and duodenum), often multifocal; polyps, ulcers (more common in NK-LPD), nodules. Differential: EATL (CD103+, CD56-), MEITL (CD8+/-, CD56+, CD103+), intestinal T-cell lymphoma NOS — the mutation pattern (SETD2/STAT5B/JAK3/TP53) separates them from indolent forms (STAT3::JAK2, JAK3 in NK-LPD). Treatment: an indolent course with excellent survival, remission after resection and spontaneous remission are possible; consider observation or steroids. Aggressive treatment, including combination chemotherapy, should be avoided. There is no standard surveillance — individualise, endoscopy or imaging when symptoms change. Clonal GI T-LPD after CAR T-cell therapy has been described."
+            "uk": "Обстеження: ендоскопія з біопсією будь-яких змін, ПЕТ/КТ (бажано) чи КТ ОГК/ОЧП, кістковий мозок, проточна цитометрія крові; при ураженні поза ШКТ — розглянути інші Т-лімфоми. Ураження: тонка й товста кишка, шлунок (NK-LPD — частіше шлунок і дванадцятипала кишка), нерідко множинне; можливі поліпи, виразки (частіше при NK-LPD), вузлики. Диференціація (INTCL-2): EATL (CD103+, CD56−; часто з рефрактерною целіакією 2 типу), MEITL (CD8+/−, CD56+, CD103+/−; мутації SETD2, STAT5B, JAK3, TP53), кишкова Т-клітинна лімфома НБО (плеоморфні середні й великі клітини, CD30+/−). Індолентні форми: Т-LPD — дрібні клітини, Ki-67 <10%, STAT3::JAK2 чи STAT5::JAK2; NK-LPD — EBV−, мутації JAK3. Лікування: індолентний перебіг, відмінна виживаність, можливі ремісія після резекції й спонтанна ремісія; розглянути спостереження чи стероїди. Агресивну терапію, включно з комбінованою хіміотерапією, слід уникати. Стандарту нагляду немає — індивідуально, ендоскопія чи візуалізація при зміні симптомів. Описаний розвиток клональних Т-LPD ШКТ після CAR-T.",
+            "en": "Workup: endoscopy with biopsy of any abnormality, PET/CT (preferred) or chest/abdomen/pelvis CT, bone marrow, peripheral blood flow cytometry; if disease is outside the GI tract consider other T-cell lymphomas. Sites: small intestine and colon, stomach (NK-LPD — more often stomach and duodenum), often multifocal; polyps, ulcers (more common in NK-LPD), nodules. Differential (INTCL-2): EATL (CD103+, CD56-; often with type II refractory coeliac disease), MEITL (CD8+/-, CD56+, CD103+/-; SETD2, STAT5B, JAK3, TP53 mutations), intestinal T-cell lymphoma NOS (pleomorphic medium to large cells, CD30+/-). Indolent forms: T-LPD — small cells, Ki-67 below 10%, STAT3::JAK2 or STAT5::JAK2; NK-LPD — EBV-negative, JAK3 mutations. Treatment: an indolent course with excellent survival, remission after resection and spontaneous remission are possible; consider observation or steroids. Aggressive treatment, including combination chemotherapy, should be avoided. There is no standard surveillance — individualise, endoscopy or imaging when symptoms change. Clonal GI T-LPD after CAR T-cell therapy has been described."
           },
           "regimens": [],
           "steps": [
@@ -65,8 +65,7 @@
               "label": {
                 "uk": "Спостереження",
                 "en": "Observation"
-              },
-              "preference": "preferred"
+              }
             },
             {
               "kind": "other",
@@ -74,23 +73,22 @@
               "label": {
                 "uk": "Кортикостероїди",
                 "en": "Corticosteroids"
-              },
-              "preference": "other"
-            },
-            {
-              "kind": "other",
-              "column": "treatment",
-              "label": {
-                "uk": "Резекція при локалізованому ураженні",
-                "en": "Resection for localised disease"
               }
             },
             {
               "kind": "other",
               "column": "treatment",
               "label": {
-                "uk": "Агресивну хіміотерапію слід уникати",
-                "en": "Avoid aggressive chemotherapy"
+                "uk": "Після резекції ремісія нерідка; описана й спонтанна ремісія",
+                "en": "Remission after resection is not uncommon; spontaneous remission is also reported"
+              }
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Агресивного лікування, зокрема комбінованої хіміотерапії, слід уникати",
+                "en": "Avoid aggressive treatment, including combination chemotherapy"
               }
             }
           ]

@@ -11,30 +11,41 @@
       "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-waldenstrom-macroglobulinemia",
       "version": "перевірено 2026-10-04",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "NCCN Guidelines: Waldenström Macroglobulinemia/Lymphoplasmacytic Lymphoma, version 1.2027 (WM/LPL-B 3 of 4, WM/AL-1, BNS-1, Discussion)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "1.2027 від 11.08.2026",
+      "checkedOn": "2026-10-23"
     }
   ],
   "reference": {
     "summary": {
-      "uk": "Нековалентний інгібітор BTK для хворих, що прогресують на ковалентному BTK-інгібіторі: відповідь 83%, медіана ВБП 36 місяців (BRUIN, 80 хворих). За UpToDate — лише в дослідженнях або позареєстраційно.",
-      "en": "A noncovalent BTK inhibitor for patients progressing on a covalent BTK inhibitor: response 83%, median PFS 36 months (BRUIN, 80 patients). Per UpToDate only in trials or off-label."
+      "uk": "Нековалентний інгібітор BTK для хворих, що прогресують на ковалентному BTK-інгібіторі: відповідь 83%, медіана ВБП 36 місяців (BRUIN, 80 хворих). За UpToDate — лише в дослідженнях або позареєстраційно. NCCN 1.2027: бажана схема після ковалентного BTKi або при протипоказаннях до BTKi; при WM-асоційованому AL-амілоїдозі — лише після непереносимості занубрутинібу чи прогресування на ньому; при симптомному синдромі Бінга–Ніла — інша рекомендована.",
+      "en": "A noncovalent BTK inhibitor for patients progressing on a covalent BTK inhibitor: response 83%, median PFS 36 months (BRUIN, 80 patients). Per UpToDate only in trials or off-label. NCCN 1.2027: preferred after a covalent BTKi or with contraindications to BTKi; in WM-related AL amyloidosis only after intolerance of or progression on zanubrutinib; other recommended in symptomatic Bing-Neel syndrome."
     },
     "drugs": [
       {
         "name": {
           "uk": "Піртобрутиніб",
           "en": "Pirtobrutinib"
-        }
+        },
+        "drug_id": "pirtobrutinib"
       }
     ],
     "key_info": [
       {
-        "uk": "Є повідомлення про відповідь при ураженні ЦНС (синдром Бінга–Ніля).",
+        "uk": "NCCN Discussion (BRUIN, фаза I/II): велика відповідь 68% серед 72 оцінюваних хворих після BTKi, хіміотерапії з анти-CD20 або обох; 6-місячна тривалість відповіді 86%.",
+        "en": "NCCN Discussion (BRUIN, phase I/II): major response 68% in 72 evaluable patients after a BTKi, chemotherapy with anti-CD20, or both; 6-month duration of response 86%."
+      },
+      {
+        "uk": "Є повідомлення про відповідь при ураженні ЦНС (синдром Бінга–Ніла).",
         "en": "Reported responses in central nervous system involvement (Bing-Neel syndrome)."
       }
     ],
     "gap": {
-      "uk": "UpToDate не наводить дози, а препарату немає в довіднику.",
-      "en": "UpToDate gives no dose, and the drug is not in the catalog."
+      "uk": "Ні UpToDate, ні NCCN не наводять дози для WM; в Україні препарат не зареєстрований.",
+      "en": "Neither UpToDate nor NCCN gives a dose for WM; the drug is not registered in Ukraine."
     },
     "availability": "unavailable"
   }

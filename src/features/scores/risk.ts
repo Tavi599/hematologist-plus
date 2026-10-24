@@ -1697,8 +1697,8 @@ const pit: Score = {
     {
       ...NCCN_TCELL,
       checked: t(
-        'PTCL-A: PIT (групи 0, 1, 2, 3–4 чинники) і модифікований PIT (0–1, 2, 3–4). IPI — на окремій картці; тут також T-cell score не рахується',
-        'PTCL-A: PIT (groups 0, 1, 2, 3–4 factors) and modified PIT (0–1, 2, 3–4). The IPI has its own card; the T-cell score is not calculated here',
+        'PTCL-A: PIT (групи 0, 1, 2, 3–4 чинники) і модифікований PIT (0–1, 2, 3–4). IPI і T-cell score — на окремих картках',
+        'PTCL-A: PIT (groups 0, 1, 2, 3–4 factors) and modified PIT (0–1, 2, 3–4). The IPI and the T-cell score have their own cards',
       ),
     },
   ],
@@ -1706,6 +1706,37 @@ const pit: Score = {
     'У модифікованому PIT групи 1, 2 і 3 — це 0–1, 2 і 3–4 чинники: четвертий чинник (Ki-67) входить лише в нього.',
     'In the modified PIT groups 1, 2 and 3 are 0–1, 2 and 3–4 factors: the fourth factor (Ki-67) belongs to it alone.',
   ),
+}
+
+const tcellScore: Score = {
+  id: 'tcell-score',
+  section: 'risk',
+  title: t('T-cell score (ПТКЛ-НБО)', 'T-cell score (PTCL-NOS)'),
+  purpose: t(
+    'Прогностична шкала International T-cell Project для неуточненої периферичної Т-клітинної лімфоми',
+    'International T-cell Project score for peripheral T-cell lymphoma, not otherwise specified',
+  ),
+  fields: [
+    check('stage', 'Стадія III–IV', 'Stage III–IV'),
+    check('ecog', 'ECOG 2–4', 'ECOG 2–4'),
+    check('albumin', 'Альбумін < 35 г/л', 'Albumin < 35 g/L'),
+    check('anc', 'Нейтрофіли > 6,5 × 10⁹/л', 'Neutrophils > 6.5 × 10⁹/L'),
+  ],
+  compute: (values) =>
+    grouped(['stage', 'ecog', 'albumin', 'anc'].filter((key) => on(values, key)).length, [
+      { upTo: 0, ...LOW() },
+      { upTo: 2, label: t('Проміжний', 'Intermediate'), tone: 'yellow' },
+      { upTo: 4, label: t('Високий', 'High'), tone: 'red' },
+    ]),
+  sources: [
+    {
+      ...NCCN_TCELL,
+      checked: t(
+        'PTCL-A: чотири чинники, групи 0 — низький, 1–2 — проміжний, 3–4 — високий ризик (Federico, Br J Haematol 2018)',
+        'PTCL-A: four factors, groups 0 low, 1–2 intermediate, 3–4 high risk (Federico, Br J Haematol 2018)',
+      ),
+    },
+  ],
 }
 
 const pink: Score = {
@@ -1809,6 +1840,7 @@ export const RISK_SCORES: Score[] = [
   dipss,
   mipss70,
   pit,
+  tcellScore,
   pink,
   atlPi,
   hctCi,

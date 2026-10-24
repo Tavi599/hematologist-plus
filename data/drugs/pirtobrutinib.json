@@ -1,0 +1,35 @@
+{
+  "$comment": "Додано 2026-10-23 за NCCN WM/LPL 1.2027 (раніше лікована WM, WM-асоційований AL-амілоїдоз, синдром Бінга–Ніла). У Державному реєстрі України не знайдено (витяг від 22.10.2026), тому «недоступний».",
+  "id": "pirtobrutinib",
+  "name": {
+    "uk": "Піртобрутиніб",
+    "en": "Pirtobrutinib"
+  },
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: JAYPIRCA (pirtobrutinib) — таблетки 50 мг і 100 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bd551845-0878-49a4-860f-839b83f6b801",
+      "version": "SPL на DailyMed",
+      "checkedOn": "2026-10-23"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv, drlz.com.ua / data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "витяг від 22.10.2026: не знайдено",
+      "checkedOn": "2026-10-23"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t50",
+      "form": "tablet",
+      "strength_amount": 50
+    },
+    {
+      "key": "t100",
+      "form": "tablet",
+      "strength_amount": 100
+    }
+  ]
+}

@@ -169,7 +169,7 @@
             "en": "Diagnosis and risk in ET (MPN-1, MPN-2, ET-B)"
           },
           "description": {
-            "uk": "Обстеження — як при підозрі на МПН (BCR::ABL1, мозок із трихромом і ретикуліном, цитогенетика, молекулярна панель JAK2/CALR/MPL, при підвищених тромбоцитах чи кровотечі — тест на набутий синдром фон Віллебранда). Діагноз ЕТ (ВООЗ/ICC): тромбоцити ≥450 ×10⁹/л; мозок із проліферацією переважно мегакаріоцитарного ряду; не виконуються критерії ХМЛ, ПВ, ПМФ чи інших мієлоїдних пухлин; мутація JAK2, CALR чи MPL; малий критерій — клональний маркер чи виключення реактивного тромбоцитозу. Ризик за IPSET-thrombosis (revised): дуже низький — вік ≤60, без JAK2, без тромбозу; низький — вік ≤60, з JAK2, без тромбозу; проміжний — вік >60, без JAK2, без тромбозу; високий — тромбоз у будь-якому віці або вік >60 з JAK2. Для виживання — MIPSS-ET (чоловік 1, лейкоцити ≥11 — 1, несприятливі мутації SRSF2/SF3B1/U2AF1/TP53 — 2, вік >60 — 4; низький 0–1, проміжний 2–5, високий ≥6).",
+            "uk": "Обстеження — як при підозрі на МПН (BCR::ABL1, біопсія кісткового мозку з трихромом і ретикуліном, цитогенетика, молекулярна панель JAK2/CALR/MPL, при підвищених тромбоцитах чи кровотечі — тест на набутий синдром фон Віллебранда). Діагноз ЕТ (ВООЗ/ICC): тромбоцити ≥450 ×10⁹/л; мозок із проліферацією переважно мегакаріоцитарного ряду; не виконуються критерії ХМЛ, ПВ, ПМФ чи інших мієлоїдних пухлин; мутація JAK2, CALR чи MPL; малий критерій — клональний маркер чи виключення реактивного тромбоцитозу. Ризик за IPSET-thrombosis (revised): дуже низький — вік ≤60, без JAK2, без тромбозу; низький — вік ≤60, з JAK2, без тромбозу; проміжний — вік >60, без JAK2, без тромбозу; високий — тромбоз у будь-якому віці або вік >60 з JAK2. Для виживання — MIPSS-ET (чоловік 1, лейкоцити ≥11 — 1, несприятливі мутації SRSF2/SF3B1/U2AF1/TP53 — 2, вік >60 — 4; низький 0–1, проміжний 2–5, високий ≥6).",
             "en": "Work-up as for a suspected MPN (BCR::ABL1, marrow with trichrome and reticulin, cytogenetics, a JAK2/CALR/MPL panel, and with a high platelet count or bleeding a test for acquired von Willebrand syndrome). ET diagnosis (WHO/ICC): platelets 450 ×10⁹/L or more; marrow with mainly megakaryocytic proliferation; criteria for CML, PV, PMF or other myeloid neoplasms not met; a JAK2, CALR or MPL mutation; the minor criterion is a clonal marker or exclusion of reactive thrombocytosis. Risk by IPSET-thrombosis (revised): very low is age 60 or under, no JAK2, no thrombosis; low is age 60 or under, with JAK2, no thrombosis; intermediate is age over 60, no JAK2, no thrombosis; high is thrombosis at any age or age over 60 with JAK2. For survival, MIPSS-ET (male 1, leukocytes 11 or more 1, adverse mutations SRSF2/SF3B1/U2AF1/TP53 2, age over 60 4; low 0-1, intermediate 2-5, high 6 or more)."
           },
           "regimens": [],
@@ -242,13 +242,12 @@
                   "target": "nccn-et-high"
                 },
                 {
-                  "kind": "page",
+                  "kind": "other",
                   "column": "next",
                   "label": {
                     "uk": "Пост-ЕТ мієлофіброз — див. МФ",
                     "en": "Post-ET myelofibrosis — see MF"
-                  },
-                  "target": "nccn-et-support"
+                  }
                 },
                 {
                   "kind": "page",
@@ -271,8 +270,8 @@
             "en": "Treatment of high-risk ET (ET-2, ET-3)"
           },
           "description": {
-            "uk": "Контроль серцево-судинних чинників, аспірин 81–100 мг на добу, циторедукція. Показання до циторедукції при інших ризиках: новий тромбоз, набутий синдром фон Віллебранда чи велика кровотеча, спленомегалія, прогресуючий тромбоцитоз чи лейкоцитоз, симптоми, вазомоторні порушення, що не реагують на аспірин (головний біль, біль у грудях, еритромелалгія). Оцінка відповіді — за симптомами; нормалізація показників не доведена як мета, окрім тяжкого тромбозу чи симптомів. Резистентність чи непереносимість гідроксисечовини при ЕТ за ELN: тромбоцити >600 після 3 місяців ≥2 г/добу (2,5 г при вазі ≥80 кг); тромбоцити >400 і лейкоцити <2,5 при будь-якій дозі; тромбоцити >400 і Hb <10 при будь-якій дозі; виразки гомілок; лихоманка. Анагрелід: старт 0,5 мг двічі на добу, збільшувати на 0,5 мг щотижня; ЕКГ на старті; тахікардія, головний біль, запаморочення; обережно при серцевій недостатності; стежити за пост-ЕТ мієлофіброзом. Плазмаферез — при невідкладних станах (тяжкий тромбоцитоз з неврологічними ускладненнями чи загрозливий тромбоз чи кровотеча).",
-            "en": "Manage cardiovascular risk factors, aspirin 81-100 mg a day, cytoreduction. Indications for cytoreduction at lower risks: new thrombosis, acquired von Willebrand syndrome or major bleeding, splenomegaly, progressive thrombocytosis or leukocytosis, symptoms, vasomotor disturbances unresponsive to aspirin (headache, chest pain, erythromelalgia). Response is judged by symptoms; normalising counts is not shown to be a goal except in severe thrombosis or symptoms. Resistance or intolerance to hydroxyurea in ET by ELN: platelets over 600 after 3 months of 2 g/d or more (2.5 g at 80 kg or more); platelets over 400 with WBC under 2.5 at any dose; platelets over 400 with Hb under 10 at any dose; leg ulcers; fever. Anagrelide: start 0.5 mg twice daily, raise by 0.5 mg weekly; baseline ECG; tachycardia, headache, dizziness; caution in heart failure; monitor for post-ET myelofibrosis. Plateletpheresis for emergencies (severe thrombocytosis with neurologic complications, life-threatening thrombosis or bleeding)."
+            "uk": "Контроль серцево-судинних чинників, аспірин 81–100 мг на добу, циторедукція. Показання до циторедукції при інших ризиках: новий тромбоз, набутий синдром фон Віллебранда чи велика кровотеча, спленомегалія, прогресуючий тромбоцитоз чи лейкоцитоз, симптоми, вазомоторні порушення, що не реагують на аспірин (головний біль, біль у грудях, еритромелалгія). Оцінка відповіді — за симптомами; нормалізація показників не доведена як мета, окрім тяжкого тромбозу чи симптомів. Резистентність чи непереносимість гідроксисечовини при ЕТ за ELN: тромбоцити >600 після 3 місяців ≥2 г/добу (2,5 г/добу при вазі >80 кг); тромбоцити >400 і лейкоцити <2,5 при будь-якій дозі; тромбоцити >400 і Hb <10 при будь-якій дозі; виразки гомілок чи інші неприйнятні шкірно-слизові прояви при будь-якій дозі; лихоманка, зумовлена гідроксисечовиною. Анагрелід: старт 0,5 мг двічі на добу, збільшувати на 0,5 мг щотижня; ЕКГ на старті; тахікардія, головний біль, запаморочення; обережно при серцевій недостатності; стежити за пост-ЕТ мієлофіброзом. Тромбоцитаферез — при невідкладних станах (тяжкий тромбоцитоз з неврологічними ускладненнями чи загрозливий тромбоз чи кровотеча).",
+            "en": "Manage cardiovascular risk factors, aspirin 81-100 mg a day, cytoreduction. Indications for cytoreduction at lower risks: new thrombosis, acquired von Willebrand syndrome or major bleeding, splenomegaly, progressive thrombocytosis or leukocytosis, symptoms, vasomotor disturbances unresponsive to aspirin (headache, chest pain, erythromelalgia). Response is judged by symptoms; normalising counts is not shown to be a goal except in severe thrombosis or symptoms. Resistance or intolerance to hydroxyurea in ET by ELN: platelets over 600 after 3 months of 2 g/d or more (2.5 g/d with body weight over 80 kg); platelets over 400 with WBC under 2.5 at any dose; platelets over 400 with Hb under 10 at any dose; leg ulcers or other unacceptable mucocutaneous manifestations at any dose; hydroxyurea-related fever. Anagrelide: start 0.5 mg twice daily, raise by 0.5 mg weekly; baseline ECG; tachycardia, headache, dizziness; caution in heart failure; monitor for post-ET myelofibrosis. Plateletpheresis for emergencies (severe thrombocytosis with neurologic complications, life-threatening thrombosis or bleeding)."
           },
           "regimens": [],
           "children": [
@@ -353,7 +352,7 @@
                 "en": "Change of cytoreduction (ET-3): intolerance or resistance to hydroxyurea, peginterferon or anagrelide; thrombosis, acquired von Willebrand syndrome, major bleeding; splenomegaly; thrombocytosis/leukocytosis; symptoms; vasomotor disturbances"
               },
               "description": {
-                "uk": "Бажано: клінічне дослідження; ропегінтерферон альфа-2b (категорія 1); гідроксисечовина, якщо не застосовувалась. Інші рекомендовані: пегінтерферон альфа-2a, якщо не застосовувався. За певних обставин: анагрелід, якщо не застосовувався; плазмаферез (невідкладно); руксолітиніб.",
+                "uk": "Бажано: клінічне дослідження; ропегінтерферон альфа-2b (категорія 1); гідроксисечовина, якщо не застосовувалась. Інші рекомендовані: пегінтерферон альфа-2a, якщо не застосовувався. За певних обставин: анагрелід, якщо не застосовувався; тромбоцитаферез (невідкладно); руксолітиніб.",
                 "en": "Preferred: a clinical trial; ropeginterferon alfa-2b (category 1); hydroxyurea if not used before. Other recommended: peginterferon alfa-2a if not used before. In certain circumstances: anagrelide if not used before; plateletpheresis (emergencies); ruxolitinib."
               },
               "regimens": [
@@ -405,19 +404,18 @@
                   "kind": "other",
                   "column": "treatment",
                   "label": {
-                    "uk": "Плазмаферез — при невідкладних станах",
+                    "uk": "Тромбоцитаферез — при невідкладних станах",
                     "en": "Plateletpheresis — for emergencies"
                   },
                   "preference": "circumstances"
                 },
                 {
-                  "kind": "page",
+                  "kind": "other",
                   "column": "next",
                   "label": {
                     "uk": "Пост-ЕТ мієлофіброз — див. МФ",
                     "en": "Post-ET myelofibrosis — see MF"
-                  },
-                  "target": "nccn-et-support"
+                  }
                 },
                 {
                   "kind": "page",
@@ -543,8 +541,8 @@
               "key": "nccn-et-apbp-no-hct",
               "kind": "line",
               "title": {
-                "uk": "Бластна фаза, не кандидат на трансплантацію",
-                "en": "Blast phase, not a transplant candidate"
+                "uk": "Прискорена чи бластна фаза, не кандидат на трансплантацію",
+                "en": "Accelerated or blast phase, not a transplant candidate"
               },
               "description": {
                 "uk": "Клінічне дослідження, ГМА, ГМА + JAK-інгібітор, ГМА + венетоклакс або менш інтенсивна хіміотерапія чи таргетна терапія (за настановою AML; IDH1/2, FLT3-інгібітори за результатами NGS).",
@@ -582,8 +580,8 @@
             "en": "Supportive care and special situations (MPN-F, MPN-G, MPN-H)"
           },
           "description": {
-            "uk": "Усім: оцінка й зменшення серцево-судинних чинників ризику (куріння, дієта, рух, АТ, цукровий діабет, ліпіди) і тромботичних та геморагічних чинників; симптоми оцінюють шкалою MPN-SAF TSS (0–100) на початку й під час лікування, відповідь — зменшення ≥50%; зміна симптомів може бути ознакою прогресування. Свербіж: шкіряні засоби, антигістамінні, місцеві стероїди, далі SSRI, вузькосмугова UVB, пегінтерферон, габапентин, апрепітант, руксолітиніб. Біль у кістках: лоратадин, НПЗЗ (напроксен), одноразове опромінення. Головний біль і шум у вухах: виключити тромбоз; аспірин 80–100 мг на добу, при резистентності — двічі на добу або клопідогрель 75 мг на добу; цитозниження чи флеботомія, якщо аспірин не допомагає. JAK-інгібітори: ризик синдрому відміни (лихоманка, дихальна недостатність, гіпотензія, поліорганна недостатність) — знижувати дозу поступово, крім тромбоцитопенії чи нейтропенії; щорічний огляд дерматолога (неменаномні раки шкіри); ліпіди кожні 6 місяців; інфекції, зокрема реактивація вірусів; вакцинація, у тому числі рекомбінантна (інактивована) проти оперізувального лишаю. Тромбоз: антикоагулянт за настановою ACCP; аспірин + антикоагулянт підвищує ризик кровотечі. Кровотеча: виключити інші причини, аспірин відкласти; розглянути набутий синдром фон Віллебранда. Операція: мультидисциплінарне планування, аспірин відмінити за тиждень і відновити через 24 год, Ht <45% при ПВ за 3 місяці до планової операції. Вагітність: гідроксисечовину скасувати; пегінтерферон альфа-2a — за потреби циторедукції; низькі дози аспірину та НМГ (при високому ризику — протягом вагітності й 6 тижнів після пологів); Ht при ПВ <41%/<38%/<39% за триместрами.",
-            "en": "For everyone: assess and reduce cardiovascular risk factors (smoking, diet, exercise, blood pressure, diabetes, lipids) and thrombotic and haemorrhagic risk factors; symptoms are scored with MPN-SAF TSS (0-100) at baseline and during treatment, response being a 50% or greater fall; a change in symptoms may signal progression. Pruritus: skin care, antihistamines, topical steroids, then SSRIs, narrow-band UVB, peginterferon, gabapentin, aprepitant, ruxolitinib. Bone pain: loratadine, NSAIDs (naproxen), single-fraction radiation. Headache and tinnitus: exclude thrombosis; aspirin 80-100 mg a day, twice daily or clopidogrel 75 mg a day when resistant; cytoreduction or phlebotomy if aspirin fails. JAK inhibitors: a withdrawal syndrome (fever, respiratory distress, hypotension, multi-organ failure) is possible, so taper rather than stop abruptly except for thrombocytopenia or neutropenia; yearly dermatology exam (non-melanoma skin cancer); lipids every 6 months; infections including viral reactivation; vaccination including recombinant (killed) zoster vaccine. Thrombosis: anticoagulation per ACCP; aspirin plus an anticoagulant raises bleeding risk. Bleeding: exclude other causes, hold aspirin, consider acquired von Willebrand syndrome. Surgery: multidisciplinary planning, stop aspirin one week before and restart after 24 hours, Hct under 45% in PV for 3 months before elective surgery. Pregnancy: stop hydroxyurea; peginterferon alfa-2a if cytoreduction is needed; low-dose aspirin and LMWH (throughout pregnancy and 6 weeks postpartum in high risk); Hct in PV under 41%/38%/39% by trimester."
+            "uk": "Усім: оцінка й зменшення серцево-судинних чинників ризику (куріння, дієта, рух, АТ, цукровий діабет, ліпіди) і тромботичних та геморагічних чинників; симптоми оцінюють шкалою MPN-SAF TSS (0–100) на початку й під час лікування, відповідь — зменшення ≥50%; зміна симптомів може бути ознакою прогресування. Свербіж: дбайливий догляд за шкірою, антигістамінні, місцеві стероїди, далі SSRI, вузькосмугова UVB, пегінтерферон, габапентин, апрепітант, руксолітиніб. Біль у кістках: лоратадин, НПЗЗ (напроксен), одноразове опромінення. Головний біль і шум у вухах: виключити тромбоз; аспірин 80–100 мг на добу, при резистентності — двічі на добу або клопідогрель 75 мг на добу; циторедукція чи флеботомія (при ПВ з підвищеним Ht), якщо аспірин не допомагає. JAK-інгібітори: ризик синдрому відміни (лихоманка, дихальна недостатність, гіпотензія, поліорганна недостатність) — знижувати дозу поступово, крім тромбоцитопенії чи нейтропенії; щорічний огляд дерматолога (немеланомні раки шкіри); ліпіди кожні 6 місяців; інфекції, зокрема реактивація вірусів; вакцинація, у тому числі рекомбінантна (інактивована) проти оперізувального лишаю. Тромбоз: антикоагулянт за настановою ACCP; аспірин + антикоагулянт підвищує ризик кровотечі. Кровотеча: виключити інші причини, аспірин відкласти; розглянути набутий синдром фон Віллебранда. Операція: мультидисциплінарне планування, аспірин відмінити за тиждень і відновити через 24 год, Ht <45% при ПВ за 3 місяці до планової операції. Вагітність: гідроксисечовину скасувати; пегінтерферон альфа-2a — за потреби циторедукції; стандартний ризик — низькі дози аспірину протягом вагітності й профілактичний НМГ 6 тижнів після пологів; високий ризик — аспірин, НМГ протягом вагітності й 6 тижнів після пологів, циторедукція інтерфероном; Ht при ПВ <41%/<38%/<39% за триместрами.",
+            "en": "For everyone: assess and reduce cardiovascular risk factors (smoking, diet, exercise, blood pressure, diabetes, lipids) and thrombotic and haemorrhagic risk factors; symptoms are scored with MPN-SAF TSS (0-100) at baseline and during treatment, response being a 50% or greater fall; a change in symptoms may signal progression. Pruritus: gentle skin care, antihistamines, topical steroids, then SSRIs, narrow-band UVB, peginterferon, gabapentin, aprepitant, ruxolitinib. Bone pain: loratadine, NSAIDs (naproxen), single-fraction radiation. Headache and tinnitus: exclude thrombosis; aspirin 80-100 mg a day, twice daily or clopidogrel 75 mg a day when resistant; cytoreduction or phlebotomy (PV with raised Hct) if aspirin fails. JAK inhibitors: a withdrawal syndrome (fever, respiratory distress, hypotension, multi-organ failure) is possible, so taper rather than stop abruptly except for thrombocytopenia or neutropenia; yearly dermatology exam (non-melanoma skin cancer); lipids every 6 months; infections including viral reactivation; vaccination including recombinant (killed) zoster vaccine. Thrombosis: anticoagulation per ACCP; aspirin plus an anticoagulant raises bleeding risk. Bleeding: exclude other causes, hold aspirin, consider acquired von Willebrand syndrome. Surgery: multidisciplinary planning, stop aspirin one week before and restart after 24 hours, Hct under 45% in PV for 3 months before elective surgery. Pregnancy: stop hydroxyurea; peginterferon alfa-2a if cytoreduction is needed; standard risk — low-dose aspirin throughout pregnancy and prophylactic LMWH for 6 weeks postpartum; high risk — aspirin, LMWH throughout pregnancy and 6 weeks postpartum, interferon cytoreduction; Hct in PV under 41%/38%/39% by trimester."
           },
           "regimens": [
             {
@@ -597,8 +595,8 @@
             {
               "regimen_id": "aspirin-mpn",
               "notes": {
-                "uk": "Низька доза 81–100 мг на добу; двічі на добу — при рефрактерних симптомах чи серцево-судинних чинниках ризику.",
-                "en": "Low dose 81-100 mg a day; twice daily for refractory symptoms or cardiovascular risk factors."
+                "uk": "Низька доза 81–100 мг на добу; двічі на добу: згідно з NCCN PV-1/PV-2 (виноска d) і MPN-F — при рефрактерних симптомах; згідно з NCCN ET-1/ET-2 (виноска d) — також при серцево-судинних чинниках ризику.",
+                "en": "Low dose 81-100 mg a day; twice daily: per NCCN PV-1/PV-2 (footnote d) and MPN-F — for refractory symptoms; per NCCN ET-1/ET-2 (footnote d) — also with cardiovascular risk factors."
               }
             }
           ]
