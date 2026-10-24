@@ -5,7 +5,7 @@
     "en": "Chronic myeloid leukemia"
   },
   "summary": {
-    "uk": "Мієлопролиферативне новоутворення з BCR::ABL1. Основа лікування — інгібітори тирозинкінази всередину тривало, з контролем молекулярної відповіді.",
+    "uk": "Мієлопроліферативне новоутворення з BCR::ABL1. Основа лікування — інгібітори тирозинкінази всередину тривало, з контролем молекулярної відповіді.",
     "en": "A myeloproliferative neoplasm with BCR::ABL1. Treatment is a long-term oral tyrosine kinase inhibitor with molecular response monitoring."
   },
   "clinical_group": "myeloproliferative",
@@ -79,7 +79,7 @@
         {
           "regimen_id": "asciminib-cml",
           "notes": {
-            "uk": "NCCN 2.2027: асциміниб — алостеричний ІТК першої лінії (категорія 1); у таблицях 1–2 (ASC4FIRST) — 80 мг раз на добу. Протипоказаний при ХМЛ без екзону 2 ABL1.",
+            "uk": "NCCN 2.2027: асцимініб — алостеричний ІТК першої лінії (категорія 1); у таблицях 1–2 (ASC4FIRST) — 80 мг раз на добу. Протипоказаний при ХМЛ без екзону 2 ABL1.",
             "en": "NCCN 2.2027: asciminib is a first-line allosteric TKI (category 1); Tables 1-2 (ASC4FIRST) give 80 mg once daily. Contraindicated when ABL1 exon 2 is lacking."
           }
         }
@@ -93,8 +93,8 @@
         "en": "Response monitoring"
       },
       "description": {
-        "uk": "Молекулярний контроль BCR::ABL1 у міжнародній шкалі: цільові рубежі — не більше 10% на 3-му місяці, не більше 1% на 6-му, не більше 0,1% на 12-му. Недосягнення рубежу — привід перевірити прихильність до лікування й взаємодії, зробити аналіз мутацій кінази й розглянути зміну препарату.",
-        "en": "Molecular monitoring of BCR::ABL1 on the international scale: the milestones are no more than 10% at 3 months, 1% at 6 months and 0.1% at 12 months. A missed milestone calls for checking adherence and interactions, kinase mutation analysis and consideration of a change of drug."
+        "uk": "Молекулярний контроль BCR::ABL1 у міжнародній шкалі: цільові рубежі — не більше 10% на 3-му місяці, не більше 1% на 6-му, не більше 0,1% на 12-му. Недосягнення рубежу — привід перевірити прихильність до лікування й взаємодії, зробити аналіз мутацій кінази й розглянути зміну препарату. Джерела розходяться щодо 6-го місяця: згідно з ELN 2020 (Hochhaus et al., Leukemia 2020) — ≤1% на 6-му місяці; згідно з NCCN 2.2027 (CML-3) — ≤10% на 3-му й 6-му місяці, а на 12-му ≤1% (мета — виживання) або ≤0,1% (мета — безлікувальна ремісія).",
+        "en": "Molecular monitoring of BCR::ABL1 on the international scale: the milestones are no more than 10% at 3 months, 1% at 6 months and 0.1% at 12 months. A missed milestone calls for checking adherence and interactions, kinase mutation analysis and consideration of a change of drug. The sources differ at 6 months: per ELN 2020 (Hochhaus et al., Leukemia 2020), 1% or lower at 6 months; per NCCN 2.2027 (CML-3), 10% or lower at 3 and 6 months, and at 12 months 1% or lower (goal: survival) or 0.1% or lower (goal: treatment-free remission)."
       }
     },
     {
@@ -105,8 +105,8 @@
         "en": "Second line and beyond"
       },
       "description": {
-        "uk": "При резистентності або непереносимості — інший інгібітор тирозинкінази з урахуванням мутації: нілотиніб 400 мг двічі на добу або дазатиніб. При мутації T315I потрібен понатиніб або асцимініб (асцимініб у довіднику є, схеми ще немає). Босутиніб також є в довіднику без схеми. Алогенна трансплантація — для бластної фази та при вичерпанні інгібіторів.",
-        "en": "On resistance or intolerance, another tyrosine kinase inhibitor chosen by the mutation: nilotinib 400 mg twice daily or dasatinib. The T315I mutation needs ponatinib or asciminib (asciminib is in the catalog, the regimen is not yet). Bosutinib is likewise in the catalog without a regimen. Allogeneic transplantation is for blast phase and for exhausted inhibitor options."
+        "uk": "При резистентності або непереносимості — інший інгібітор тирозинкінази з урахуванням мутації: нілотиніб 400 мг двічі на добу або дазатиніб. При мутації T315I — понатиніб або асцимініб 200 мг двічі на добу; без T315I після двох і більше ІТК — асцимініб або бозутиніб (схеми нижче). Алогенна трансплантація — для бластної фази та при вичерпанні інгібіторів.",
+        "en": "On resistance or intolerance, another tyrosine kinase inhibitor chosen by the mutation: nilotinib 400 mg twice daily or dasatinib. The T315I mutation calls for ponatinib or asciminib 200 mg twice daily; without T315I after two or more TKIs, asciminib or bosutinib (regimens below). Allogeneic transplantation is for blast phase and for exhausted inhibitor options."
       },
       "regimens": [
         {
@@ -209,8 +209,8 @@
             "en": "Diagnosis and workup (CML-1)"
           },
           "description": {
-            "uk": "Анамнез і огляд, розмір селезінки лише пальпаторно (см нижче реберної дуги); загальний аналіз крові з формулою; біохімія з сечовою кислотою; аспірат і біопсія кісткового мозку з цитогенетикою (мінімум 20 метафаз; якщо неможливо — FISH на крові чи кістковому мозку, мінімум 100 ядер); повна проточна цитометрія аспірату для визначення лінії будь-яких бластів (MPO, CD117, CD13, CD33, TdT, цитоплазматичний CD3, CD19, CD10, CD20); кількісна ПЛР BCR::ABL1 за міжнародною шкалою (IS) у крові; панель на гепатит B (реактивація можлива на ІТК); оцінка дистресу. Додатково: оцінка ризику (CML-A), аналіз мієлоїдних мутацій, HLA-типування при розгляді алоТГСК. Гідроксикарбамід — бажаний варіант для зниження дуже високого лейкоцитозу до початку ІТК; лейкаферез рідко (стійкий пріапізм, задишка, ТІА).",
-            "en": "History and examination with spleen size by palpation only (cm below the costal margin); CBC with differential; chemistry with uric acid; marrow aspirate and biopsy with cytogenetics (at least 20 metaphases; FISH on blood or marrow, at least 100 nuclei, if marrow is not possible); comprehensive flow cytometry of the aspirate to assign the lineage of any blasts (MPO, CD117, CD13, CD33, TdT, cytoplasmic CD3, CD19, CD10, CD20); quantitative RT-PCR for BCR::ABL1 on the International Scale (IS) in blood; hepatitis B panel (reactivation is reported on TKIs); distress screening. Additional: risk score (CML-A), myeloid mutation analysis, HLA typing if allogeneic HCT is considered. Hydroxyurea is the preferred option to lower a very high WBC before the TKI; leukapheresis is rarely indicated (persistent priapism, dyspnoea, TIA)."
+            "uk": "Анамнез і огляд, розмір селезінки лише пальпаторно (см нижче реберної дуги); загальний аналіз крові з формулою; біохімія з сечовою кислотою; аспірат і біопсія кісткового мозку з цитогенетикою (мінімум 20 метафаз; якщо неможливо — FISH на крові чи кістковому мозку, мінімум 100 ядер); повна проточна цитометрія аспірату для визначення лінії будь-яких бластів (MPO, CD117, CD13, CD33, TdT, цитоплазматичний CD3, CD19, CD10, CD20); кількісна ПЛР BCR::ABL1 за міжнародною шкалою (IS) у крові; панель на гепатит B (реактивація можлива на ІТК); оцінка дистресу. Додатково при хронічній фазі: оцінка ризику (CML-A) і аналіз мієлоїдних мутацій; при розвиненій фазі — мієлоїдні мутації та HLA-типування, якщо розглядається алоТГСК. Гідроксикарбамід — бажаний варіант для зниження дуже високого лейкоцитозу до початку ІТК; лейкаферез рідко (стійкий пріапізм, задишка, ТІА).",
+            "en": "History and examination with spleen size by palpation only (cm below the costal margin); CBC with differential; chemistry with uric acid; marrow aspirate and biopsy with cytogenetics (at least 20 metaphases; FISH on blood or marrow, at least 100 nuclei, if marrow is not possible); comprehensive flow cytometry of the aspirate to assign the lineage of any blasts (MPO, CD117, CD13, CD33, TdT, cytoplasmic CD3, CD19, CD10, CD20); quantitative RT-PCR for BCR::ABL1 on the International Scale (IS) in blood; hepatitis B panel (reactivation is reported on TKIs); distress screening. Additional in chronic phase: risk score (CML-A) and myeloid mutation analysis; in advanced phase: myeloid mutations and HLA typing if allogeneic HCT is considered. Hydroxyurea is the preferred option to lower a very high WBC before the TKI; leukapheresis is rarely indicated (persistent priapism, dyspnoea, TIA)."
           },
           "children": [
             {
@@ -221,7 +221,7 @@
                 "en": "Ph-positive or BCR::ABL1-positive by PCR: chronic phase"
               },
               "description": {
-                "uk": "Обчислити ризик за ELTS (бажано), Sokal, Hasford або EUTOS (CML-A) — див. шкали на сторінці хвороби. Ph+ за FISH, але BCR::ABL1-негативна ПЛР: шукати атипові транскрипти (D-FISH або якісна ЗТ-ПЛР), направити в центр із досвідом рідкісних гемобластозів. Асциміниб протипоказаний при ХМЛ без екзону 2 ABL1 (ізоформи b2(e13)a3, b3(e14)a3) — клінічної активності немає.",
+                "uk": "Обчислити ризик за ELTS (бажано), Sokal, Hasford або EUTOS (CML-A) — див. шкали на сторінці хвороби. Ph+ за FISH, але BCR::ABL1-негативна ПЛР: шукати атипові транскрипти (D-FISH або якісна ЗТ-ПЛР), направити в центр із досвідом рідкісних гемобластозів. Асцимініб протипоказаний при ХМЛ без екзону 2 ABL1 (ізоформи b2(e13)a3, b3(e14)a3) — клінічної активності немає.",
                 "en": "Calculate the risk with ELTS (preferred), Sokal, Hasford or EUTOS (CML-A) - see the scores on the disease page. Ph-positive by FISH but BCR::ABL1-negative by PCR: look for atypical transcripts (D-FISH or qualitative RT-PCR) and refer to a centre expert in rare haematologic malignancies. Asciminib is contraindicated when ABL1 exon 2 is lacking (b2(e13)a3, b3(e14)a3 isoforms): it has no clinical activity."
               },
               "steps": [
@@ -248,8 +248,8 @@
                   "kind": "assessment",
                   "column": "treatment",
                   "label": {
-                    "uk": "Оцінити на інші захворювання (настанова з МПН) та атипові транскрипти BCR::ABL1",
-                    "en": "Evaluate for diseases other than CML (the MPN guideline) and for atypical BCR::ABL1 transcripts"
+                    "uk": "Обстежити на інші захворювання, крім ХМЛ (настанова NCCN з МПН)",
+                    "en": "Evaluate for diseases other than CML (the NCCN MPN guideline)"
                   }
                 }
               ]
@@ -296,7 +296,7 @@
             "en": "Primary treatment of chronic phase (CML-2)"
           },
           "description": {
-            "uk": "Вибір ІТК не залежить лише від ризику: тип транскрипту BCR::ABL1, вік, супутні хвороби, профіль токсичності ІТК (CML-C), режим дозування, лікарські взаємодії, мета лікування (виживання чи безлікувальна ремісія), вартість, бажання пацієнта. Іматиніб може бути кращим для літніх із серцево-судинними хворобами. 2G ІТК та асциміниб бажані при проміжному/високому ризику та в молодих, які прагнуть припинити лікування (зокрема жінок заради планування сім'ї). Форми випуску ІТК не взаємозамінні: дивіться листок-вкладиш; генерики з доведеною біоеквівалентністю допустимі (нілотиніб і бозутиніб — вузьке терапевтичне вікно). Лікування під час вагітності — інтерферон, ІТК у I триместрі уникати (CML-E).",
+            "uk": "Вибір ІТК не залежить лише від ризику: тип транскрипту BCR::ABL1, вік, супутні хвороби, профіль токсичності ІТК (CML-C), режим дозування, лікарські взаємодії, мета лікування (виживання чи безлікувальна ремісія), вартість, бажання пацієнта. Іматиніб може бути кращим для літніх із серцево-судинними хворобами. 2G ІТК та асцимініб бажані при проміжному/високому ризику та в молодих, які прагнуть припинити лікування (зокрема жінок заради планування сім'ї). Форми випуску ІТК не взаємозамінні: дивіться листок-вкладиш; генерики з доведеною біоеквівалентністю допустимі (нілотиніб і бозутиніб — вузьке терапевтичне вікно). Лікування під час вагітності — інтерферон, ІТК у I триместрі уникати (CML-E).",
             "en": "First-line choice is not made on risk alone: BCR::ABL1 transcript type, age, comorbidity, TKI toxicity (CML-C), dosing schedule, drug interactions, goal (survival or treatment-free remission), cost and patient preference. Imatinib may suit older patients with cardiovascular disease. 2G TKIs and asciminib are preferred at intermediate or high risk and in young patients aiming to stop treatment (young women especially, for family planning). Formulations are not interchangeable: see the package insert; generics approved on pharmacokinetic equivalence are acceptable (nilotinib and bosutinib have a narrow therapeutic window). In pregnancy interferon is preferred and TKIs are avoided in the first trimester (CML-E)."
           },
           "children": [
@@ -419,8 +419,8 @@
                 "en": "Lower starting dose or dose reduction (CML-2A, footnote l)"
               },
               "description": {
-                "uk": "Малі когортні дані: старт бозутинібу, дазатинібу чи нілотинібу з нижчих доз і зниження дози при оптимальній відповіді зменшують ризик віддалених токсичностей. Мінімальну ефективну дозу в проспективних РКД не встановлено. У тексті Discussion: бозутиніб 400 мг/добу вперше діагностованій фазі (експертна група — 200–300 мг із підвищенням); дазатиніб 50 мг/добу (20 мг у віці ≥65 років), при непереносимості 100 мг — 50 мг (20 мг під наглядом); нілотиніб 300 мг двічі на добу (400 мг двічі на добу при резистентності); іматиніб не нижче 300 мг; понатиніб 45 мг, далі 15 мг при ≤1% (OPTIC).",
-                "en": "Small cohort data: starting bosutinib, dasatinib or nilotinib at lower doses and reducing the dose on an optimal response lowers long-term toxicity; the minimum effective dose has not been set in prospective randomised trials. In the Discussion: bosutinib 400 mg/day in newly diagnosed disease (expert panel: 200 to 300 mg with escalation); dasatinib 50 mg/day (20 mg from age 65), 50 mg (20 mg under close watch) for intolerance of 100 mg; nilotinib 300 mg twice daily (400 mg twice daily for resistance); imatinib not below 300 mg; ponatinib 45 mg then 15 mg at 1% or lower (OPTIC)."
+                "uk": "Малі когортні дані: старт бозутинібу, дазатинібу чи нілотинібу з нижчих доз і зниження дози при оптимальній відповіді зменшують ризик віддалених токсичностей. Мінімальну ефективну дозу в проспективних РКД не встановлено. У тексті Discussion (MS-26…MS-28): бозутиніб — рекомендована стартова доза 400 мг раз на добу при вперше діагностованій хронічній фазі й 500 мг при резистентності чи непереносимості; експертна група радить більшості починати з 200–300 мг раз на добу з підвищенням за потреби, а 400 мг — лише при високому ризику. Дазатиніб 50 мг раз на добу — подібна ефективність при низькому й проміжному ризику; 20 мг раз на добу — допустимий старт у віці ≥65 років; при клінічно значущій непереносимості 100 мг — 50 мг (20 мг під ретельним наглядом в окремих пацієнтів). Нілотиніб — 300 мг двічі на добу при вперше діагностованій фазі, 400 мг двічі на добу при резистентності чи непереносимості. Іматиніб: зниження дози нижче 300 мг погіршувало відповідь і виживаність. Понатиніб 45 мг раз на добу, при BCR::ABL1 ≤1% — 15 мг (OPTIC). DESTINY: половина дози 12 місяців (іматиніб 200 мг раз на добу, дазатиніб 50 мг раз на добу, нілотиніб 200 мг двічі на добу) при MMR або MR4, далі відміна.",
+                "en": "Small cohort data: starting bosutinib, dasatinib or nilotinib at lower doses and reducing the dose on an optimal response lowers long-term toxicity; the minimum effective dose has not been set in prospective randomised trials. In the Discussion (MS-26 to MS-28): bosutinib - the recommended starting dose is 400 mg once daily in newly diagnosed chronic phase and 500 mg for resistance or intolerance; an expert panel suggests 200 to 300 mg once daily with escalation as needed for most patients, and 400 mg only for high-risk disease. Dasatinib 50 mg once daily has similar efficacy at low or intermediate risk; 20 mg once daily is an appropriate start from age 65; for clinically significant intolerance of 100 mg, 50 mg (20 mg with careful monitoring in selected patients). Nilotinib 300 mg twice daily when newly diagnosed, 400 mg twice daily for resistance or intolerance. Imatinib: reductions below 300 mg gave inferior responses and survival. Ponatinib 45 mg once daily, 15 mg once BCR::ABL1 is 1% or lower (OPTIC). DESTINY: half the dose for 12 months (imatinib 200 mg once daily, dasatinib 50 mg once daily, nilotinib 200 mg twice daily) in MMR or MR4, then discontinuation."
               },
               "regimens": [
                 {
@@ -428,9 +428,6 @@
                 },
                 {
                   "regimen_id": "ref-cml-destiny"
-                },
-                {
-                  "regimen_id": "ref-cml-dasatinib-venetoclax"
                 }
               ]
             },
@@ -524,7 +521,7 @@
                 "en": "Orange: >1% to 10% at 12 months (possible resistance)"
               },
               "description": {
-                "uk": "Прихильність, взаємодії, мутації; цитогенетика кісткового мозку на CCyR на 12-му місяці. Розглянути зміну ІТК (2G, 3G або асциміниб) або продовжити той самий ІТК, якщо досягнуто CCyR. Зниження >50% від початкового або значення трохи вище 10% — ще 3 місяці без зміни; без подальшого спаду — змінити.",
+                "uk": "Прихильність, взаємодії, мутації; цитогенетика кісткового мозку на CCyR на 12-му місяці. Розглянути зміну ІТК (2G, 3G або асцимініб) або продовжити той самий ІТК, якщо досягнуто CCyR. Зниження >50% від початкового або значення трохи вище 10% — ще 3 місяці без зміни; без подальшого спаду — змінити.",
                 "en": "Adherence, interactions, mutations; marrow cytogenetics for CCyR at 12 months. Consider switching (2G, 3G or asciminib) or continue the same TKI if CCyR is achieved. A fall of more than 50% from baseline, or a value just above 10%, may continue 3 more months; without a continuing fall, switch."
               },
               "steps": [
@@ -547,7 +544,7 @@
                 "en": "Light green: >0.1% to 1% at 12 months (TKI-sensitive)"
               },
               "description": {
-                "uk": "Прихильність і взаємодії. Якщо мета — довготривала виживаність, ≤1% оптимально; якщо безлікувальна ремісія — оптимально ≤0,1%. Оптимально: той самий ІТК. Не оптимально: спільне рішення з пацієнтом (перехід з іматинібу на 2G ІТК чи асциміниб може покращити відповідь; профіль побічних ефектів інший).",
+                "uk": "Прихильність і взаємодії. Якщо мета — довготривала виживаність, ≤1% оптимально; якщо безлікувальна ремісія — оптимально ≤0,1%. Оптимально: той самий ІТК. Не оптимально: спільне рішення з пацієнтом (перехід з іматинібу на 2G ІТК чи асцимініб може покращити відповідь; профіль побічних ефектів інший).",
                 "en": "Adherence and interactions. If the goal is long-term survival, 1% or lower is optimal; for treatment-free remission, 0.1% or lower. Optimal: continue the same TKI. Not optimal: shared decision (switching from imatinib to a 2G TKI or asciminib may improve response; side-effect profiles differ)."
               }
             },
@@ -584,7 +581,7 @@
             "en": "Treatment by BCR::ABL1 mutation profile (CML-5)"
           },
           "description": {
-            "uk": "Резистентність до первинного іматинібу: інший ІТК з урахуванням мутацій. Резистентність до асциміниба, бозутинібу, дазатинібу чи нілотинібу: інший ІТК, крім іматинібу, з урахуванням мутацій; зміна ІТК діє лише за наявності мутацій резистентності; без виявлених мутацій бажаний понатиніб. Мутації, при яких препарат НЕ застосовують: асциміниб — A337T, P465S, M244V, F359C/I/V; бозутиніб — T315I, V299L, G250E, F317L (мінімальна активність; при F317L кращий нілотиніб); дазатиніб — T315I/A, F317C/I/L/V, V299L; нілотиніб — T315I, Y253H, E255K/V, F359C/I/V; понатиніб або алоТГСК — без обмежень за мутаціями (складні мутації ≥2 в одному алелі рідкісні після 2G ІТК). Мутації, протипоказані до іматинібу, надто численні, щоб перелічити; BCR::ABL1 35INS описано при невдачі іматинібу.",
+            "uk": "Резистентність до первинного іматинібу: інший ІТК з урахуванням мутацій. Резистентність до асцимінібу, бозутинібу, дазатинібу чи нілотинібу: інший ІТК, крім іматинібу, з урахуванням мутацій; зміна ІТК діє лише за наявності мутацій резистентності; без виявлених мутацій бажаний понатиніб. Мутації, при яких препарат НЕ застосовують: асцимініб — A337T, P465S, M244V, F359C/I/V; бозутиніб — T315I, V299L, G250E, F317L (мінімальна активність; при F317L кращий нілотиніб); дазатиніб — T315I/A, F317C/I/L/V, V299L; нілотиніб — T315I, Y253H, E255K/V, F359C/I/V; понатиніб або алоТГСК — без обмежень за мутаціями (складні мутації ≥2 в одному алелі рідкісні після 2G ІТК). Мутації, протипоказані до іматинібу, надто численні, щоб перелічити; BCR::ABL1 35INS описано при невдачі іматинібу.",
             "en": "Resistance to primary imatinib: switch to another TKI by mutation status. Resistance to primary asciminib, bosutinib, dasatinib or nilotinib: another TKI other than imatinib, by mutation status; a switch works only where an identifiable resistance mutation exists; with no mutation found ponatinib is preferred. Mutations where the drug should NOT be used: asciminib - A337T, P465S, M244V, F359C/I/V; bosutinib - T315I, V299L, G250E, F317L (minimal activity; nilotinib may be better with F317L); dasatinib - T315I/A, F317C/I/L/V, V299L; nilotinib - T315I, Y253H, E255K/V, F359C/I/V; ponatinib or allogeneic HCT - none restricted (compound mutations of 2 or more in one allele are uncommon after 2G TKIs). Imatinib-contraindicating mutations are too numerous to list; BCR::ABL1 35INS is reported with imatinib failure."
           },
           "children": [
@@ -596,8 +593,8 @@
                 "en": "T315I mutation (any phase)"
               },
               "description": {
-                "uk": "Понатиніб — варіант у будь-якій фазі (бажаний при акселерації та бластному кризі). Асциміниб — варіант для хронічної фази й акселерації з T315I (початкова доза 200 мг двічі на добу за фазою I). Понатиніб також при резистентності/непереносимості щонайменше двох ІТК або коли інших ІТК немає: старт 45 мг, 15 мг при BCR::ABL1 ≤1%.",
-                "en": "Ponatinib is an option in any phase (preferred in accelerated and blast phase). Asciminib is an option in chronic and accelerated phase with T315I (initial 200 mg twice daily from the phase I study). Ponatinib is also an option after resistance or intolerance of two or more TKIs or when no other TKI applies: start 45 mg, 15 mg at BCR::ABL1 of 1% or lower."
+                "uk": "Понатиніб — варіант у будь-якій фазі (бажаний при акселерації та бластному кризі). Асцимініб — варіант для хронічної фази й фази акселерації з T315I (початкова доза 200 мг двічі на добу за дослідженням фази I). Понатиніб також — при хронічній фазі з резистентністю чи непереносимістю щонайменше двох ІТК і при AP/BP, коли інший ІТК не показаний: старт 45 мг раз на добу, 15 мг при BCR::ABL1 ≤1%.",
+                "en": "Ponatinib is an option in any phase (preferred in accelerated and blast phase). Asciminib is an option in chronic and accelerated phase with T315I (initial 200 mg twice daily from the phase I study). Ponatinib is also an option in chronic phase after resistance or intolerance of two or more TKIs, and in AP/BP when no other TKI is indicated: start 45 mg once daily, 15 mg at BCR::ABL1 of 1% or lower."
               },
               "regimens": [
                 {
@@ -641,8 +638,8 @@
                 "en": "Chronic phase, two or more prior TKIs, no T315I"
               },
               "description": {
-                "uk": "ASCEMBL: асциміниб 40 мг двічі на добу (або 80 мг раз на добу) перевершив бозутиніб 500 мг; мутації T315I і V299L були виключені.",
-                "en": "ASCEMBL: asciminib 40 mg twice daily (or 80 mg once daily) beat bosutinib 500 mg; T315I and V299L were excluded."
+                "uk": "ASCEMBL: асцимініб 40 мг двічі на добу дав вищі частоти молекулярної відповіді, ніж бозутиніб 500 мг раз на добу; пацієнтів із мутаціями T315I і V299L не включали. Рекомендована початкова доза асцимінібу без T315I — 80 мг раз на добу або 40 мг двічі на добу.",
+                "en": "ASCEMBL: asciminib 40 mg twice daily gave higher molecular response rates than bosutinib 500 mg once daily; patients with T315I or V299L were not enrolled. The recommended initial asciminib dose without T315I is 80 mg once daily or 40 mg twice daily."
               },
               "regimens": [
                 {
@@ -681,7 +678,7 @@
                 "en": "Accelerated phase (AP-CML)"
               },
               "description": {
-                "uk": "Нова AP: ІТК за затвердженою дозою для акселерації, далі оцінка алоТГСК за відповіддю; віхи як у CML-3 на 3, 6, 12 місяцях. Відповідає віхам — той самий ІТК; відсутня відповідь чи прогресія — інший ІТК та/або алоТГСК. Курс 2G/3G ІТК, не отриманого раніше, може бути «мостом» до алоТГСК. Асциміниб — варіант (небагато даних); протипоказаний без екзону 2 ABL1.",
+                "uk": "Нова AP: ІТК за затвердженою дозою для акселерації, далі оцінка алоТГСК за відповіддю; віхи як у CML-3 на 3, 6, 12 місяцях. Відповідає віхам — той самий ІТК; відсутня відповідь чи прогресія — інший ІТК та/або алоТГСК. Курс 2G/3G ІТК, не отриманого раніше, може бути «мостом» до алоТГСК. Асцимініб — варіант (небагато даних); протипоказаний без екзону 2 ABL1.",
                 "en": "New AP: TKI at the approved accelerated-phase dose, then evaluate for allogeneic HCT by response; milestones as in CML-3 at 3, 6 and 12 months. Meeting milestones: continue the same TKI; no response or progression: alternate TKI and/or allogeneic HCT. A course of a 2G/3G TKI not used before can bridge to HCT. Asciminib is an option (limited data); contraindicated without ABL1 exon 2."
               },
               "regimens": [
@@ -750,12 +747,13 @@
                 "en": "Blast phase: lymphoid"
               },
               "description": {
-                "uk": "Бажано: індукційна хіміотерапія типу ГЛЛ (настанова NCCN з ГЛЛ) + ІТК (2G або 3G; іматиніб лише при протипоказаннях). Якщо не кандидат на індукцію: ІТК + стероїди. ІТК самі або з мінімальною хіміотерапією менш ефективні, ніж при Ph+ ГЛЛ; FISH гранулоцитів відрізняє de novo BP-CML від Ph+ ГЛЛ.",
-                "en": "Preferred: ALL-type induction chemotherapy (NCCN ALL guideline) plus a TKI (2G or 3G; imatinib only if contraindicated). If not a candidate for induction: TKI plus steroids. A TKI alone or with minimal chemotherapy is less effective than in Ph+ ALL; granulocyte FISH separates de novo BP-CML from Ph+ ALL."
+                "uk": "Бажано: індукційна хіміотерапія типу ГЛЛ (настанова NCCN з ГЛЛ) + ІТК (2G або 3G; іматиніб лише при протипоказаннях). Корисно за певних обставин, якщо не кандидат на індукцію: ІТК + стероїди. ІТК окремо або з мінімальною хіміотерапією чи стероїдами менш ефективні, ніж при Ph+ ГЛЛ; інтерфазна FISH на BCR::ABL1 у гранулоцитах крові відрізняє de novo BP-CML від de novo Ph+ ГЛЛ.",
+                "en": "Preferred: ALL-type induction chemotherapy (NCCN ALL guideline) plus a TKI (2G or 3G; imatinib only if contraindicated). Useful in certain circumstances, for non-candidates for induction: TKI plus steroids. A TKI alone or with minimal chemotherapy or steroids is less effective than in Ph+ ALL; interphase FISH for BCR::ABL1 on blood granulocytes separates de novo BP-CML from de novo Ph+ ALL."
               },
               "regimens": [
                 {
                   "regimen_id": "ref-all-dasatinib-steroids",
+                  "preference": "circumstances",
                   "notes": {
                     "uk": "ІТК + стероїди для тих, хто не кандидат на індукцію; дози — за схемою ГЛЛ.",
                     "en": "TKI plus steroids for non-candidates for induction; doses as in the ALL regimen."
@@ -825,8 +823,8 @@
                 "en": "Blast phase: myeloid"
               },
               "description": {
-                "uk": "Бажано: індукція типу ГМЛ (настанова NCCN з ГМЛ) + ІТК. Якщо не кандидат: ІТК окремо. Малі дослідження: іматиніб із децитабіном чи цитарабіном.",
-                "en": "Preferred: AML-type induction (NCCN AML guideline) plus a TKI. If not a candidate: a TKI alone. Small studies: imatinib with decitabine or cytarabine."
+                "uk": "Бажано: індукція типу ГМЛ (настанова NCCN з ГМЛ) + ІТК (2G або 3G; іматиніб — лише при протипоказаннях до них). Корисно за певних обставин, якщо не кандидат на індукцію: ІТК окремо. Малі дослідження: іматиніб із децитабіном чи цитарабіном.",
+                "en": "Preferred: AML-type induction (NCCN AML guideline) plus a TKI (2G or 3G; imatinib only if they are contraindicated). Useful in certain circumstances, for non-candidates for induction: a TKI alone. Small studies: imatinib with decitabine or cytarabine."
               },
               "regimens": [
                 {
@@ -970,7 +968,7 @@
             "en": "Definitions of advanced phase (CML-B)"
           },
           "description": {
-            "uk": "У ері ІТК використовують модифіковані критерії MDACC або IBMTR; критерії ICC і ВООЗ для AP/BP не рекомендують. AP (MDACC): бласти в крові ≥15% і <30%; бласти+промієлоцити ≥30%; базофіли ≥20%; тромбоцити ≤100×10⁹/л не через лікування; додаткові клональні цитогенетичні аномалії в Ph+ клітинах (великий маршрут: трисомія 8, i(17q), другий Ph, трисомія 19, аномалії хромосоми 3); відсутність аберантних лімфобластів у крові чи кістковому мозку. BP (IBMTR): мієлоїдний — ≥30% бластів у крові/кістковому мозку або екстрамедулярні інфільтрати; лімфоїдний — будь-які аберантні лімфобласти (мала кількість може означати повільніший перебіг і краще класифікується як AP).",
+            "uk": "У ері ІТК використовують модифіковані критерії MDACC або IBMTR; критерії ICC і ВООЗ для AP/BP не рекомендують. AP (MDACC): бласти в крові ≥15% і <30%; бласти+промієлоцити ≥30%; базофіли ≥20%; тромбоцити ≤100×10⁹/л не через лікування; додаткові клональні цитогенетичні аномалії в Ph+ клітинах (аномалії «основного шляху», major route: трисомія 8, i(17q), друга Ph-хромосома, трисомія 19, аномалії хромосоми 3); відсутність аберантних лімфобластів у крові чи кістковому мозку. BP (IBMTR): мієлоїдний — ≥30% бластів у крові/кістковому мозку або екстрамедулярні інфільтрати; лімфоїдний — будь-які аберантні лімфобласти (мала кількість може означати повільніший перебіг і краще класифікується як AP).",
             "en": "In the TKI era the modified MDACC or IBMTR criteria are used; ICC and WHO criteria for AP/BP are not recommended. AP (MDACC): blood blasts 15% or more and under 30%; blasts plus promyelocytes 30% or more; basophils 20% or more; platelets 100×10^9/L or lower unrelated to therapy; additional clonal cytogenetic abnormalities in Ph+ cells (major route: trisomy 8, i(17q), second Ph, trisomy 19, chromosome 3 abnormalities); absence of aberrant lymphoblasts in blood or marrow. BP (IBMTR): myeloid - 30% or more blasts in blood or marrow or extramedullary infiltrates; lymphoid - any aberrant lymphoblasts (a low level may mean an indolent course and may be better classed as AP)."
           },
           "steps": [
@@ -1022,7 +1020,7 @@
                 "en": "Non-haematologic adverse events of TKIs (CML-C)"
               },
               "description": {
-                "uk": "Змінити ІТК: артеріальні/судинні події (нілотиніб, понатиніб); важка гіпертензія (понатиніб, асциміниб); легенева гіпертензія (дазатиніб); рецидивні плевральні/перикардіальні випоти (дазатиніб; рідше бозутиніб); рецидивний панкреатит (нілотиніб, понатиніб, асциміниб); гіперглікемія (нілотиніб); стійка нефротоксичність; зміни печінкових проб (бозутиніб, іматиніб); ШКТ-кровотеча (дазатиніб); імуноопосередковані події; нейротоксичність. ЕКГ (QT): на початку, на 7-й день, періодично й після зміни дози; корекція K/Mg, уникати препаратів, що подовжують QT (особливо нілотиніб). Випіт — утримати ІТК, діуретики/стероїди, ехокардіографія, зниження дози, потім зміна ІТК. Панкреатит — утримати, амілаза/ліпаза, КТ/МРТ. Печінка: утримати ІТК при гр. 3, відновити при ≤1. Ліки приймати з їжею і склянкою води (крім нілотинібу в капсулах і асциміниба). Цитопенії можуть зберігатися після зміни ІТК; ростові фактори — за потреби.",
+                "uk": "Змінити ІТК: артеріальні/судинні події (нілотиніб, понатиніб); важка гіпертензія (понатиніб, асцимініб); легенева гіпертензія (дазатиніб); рецидивні плевральні/перикардіальні випоти (дазатиніб; рідше бозутиніб); рецидивний панкреатит (нілотиніб, понатиніб, асцимініб); гіперглікемія (нілотиніб); стійка нефротоксичність; зміни печінкових проб (бозутиніб, іматиніб); ШКТ-кровотеча (дазатиніб); імуноопосередковані події; нейротоксичність. ЕКГ (QT): на початку, на 7-й день, періодично й після зміни дози; корекція K/Mg, уникати препаратів, що подовжують QT (особливо нілотиніб). Випіт — утримати ІТК, діуретики/стероїди, ехокардіографія, зниження дози, потім зміна ІТК. Панкреатит — утримати, амілаза/ліпаза, КТ/МРТ. Печінка: утримати ІТК при гр. 3, відновити при ≤1. Ліки приймати з їжею і склянкою води (крім нілотинібу в капсулах і асцимінібу). Цитопенії можуть зберігатися після зміни ІТК; ростові фактори — за потреби.",
                 "en": "Switch the TKI for: arterial or vascular events (nilotinib, ponatinib); severe hypertension (ponatinib, asciminib); pulmonary hypertension (dasatinib); recurrent pleural or pericardial effusion (dasatinib; less with bosutinib); recurrent pancreatitis (nilotinib, ponatinib, asciminib); hyperglycaemia (nilotinib); persistent nephrotoxicity; liver test abnormalities (bosutinib, imatinib); GI bleeding (dasatinib); immune-mediated events; neurotoxicity. ECG (QT): baseline, day 7, periodically and after any dose change; correct K and Mg, avoid QT-prolonging drugs (nilotinib especially). Effusion - hold the TKI, diuretics or steroids, echocardiogram, dose reduction, then switch. Pancreatitis - hold, amylase and lipase, CT or MRI. Liver - hold at grade 3, resume at grade 1 or lower. Take drugs with food and a large glass of water (except nilotinib capsules and asciminib). Cytopenias may persist after a switch; growth factors if needed."
               },
               "steps": [
@@ -1044,8 +1042,8 @@
                 "en": "TKI drug interactions (CML-D)"
               },
               "description": {
-                "uk": "ІПП, H2-блокатори й антациди знижують експозицію бозутинібу, дазатинібу, нілотинібу (понатиніб — ІПП незначно); іматиніб без взаємодії; асциміниб без значущої взаємодії; доступні pH-незалежні форми. Антациди — за ≥2 години до або після. Аміодарон, дилтіазем, верапаміл, симвастатин, аторвастатин, азоли (флуконазол ≥200 мг, вориконазол, ітраконазол, позаконазол, ізавуконазол), кларитроміцин, ритонавір підвищують експозицію (нілотиніб — аміодарон уникати). Фторхінолони — контроль QTc. Антидепресанти (флуоксетин, бупропіон, циталопрам) — QTc; уникати з нілотинібом. Звіробій знижує експозицію усіх ІТК — уникати; грейпфрут, карамбола, шовковиця, дикий виноград, гранат підвищують — уникати; куркумін, гінкго, зелений чай — розглянути відміну.",
-                "en": "PPIs, H2 blockers and antacids lower exposure to bosutinib, dasatinib and nilotinib (ponatinib slightly with PPIs); imatinib no interaction; asciminib no major interaction; pH-independent formulations exist. Antacids at least 2 hours before or after. Amiodarone, diltiazem, verapamil, simvastatin, atorvastatin, azoles (fluconazole 200 mg or more, voriconazole, itraconazole, posaconazole, isavuconazole), clarithromycin and ritonavir raise exposure (avoid amiodarone with nilotinib). Fluoroquinolones - QTc monitoring. Antidepressants (fluoxetine, bupropion, citalopram) - QTc; avoid with nilotinib. St John's wort lowers exposure of all TKIs - avoid; grapefruit, star fruit, mulberry, wild grape, pomegranate raise it - avoid; curcumin, ginkgo, green tea - consider stopping."
+                "uk": "ІПП, H2-блокатори й антациди знижують експозицію бозутинібу, дазатинібу, нілотинібу (понатиніб — ІПП незначно); іматиніб без взаємодії; асцимініб без значущої взаємодії; доступні pH-незалежні форми. Антациди — за ≥2 години до або після. Аміодарон, дилтіазем, верапаміл, симвастатин, аторвастатин, азоли (флуконазол ≥200 мг, вориконазол, ітраконазол, позаконазол, ізавуконазол), кларитроміцин, ритонавір підвищують експозицію (нілотиніб — аміодарон уникати). Фторхінолони — контроль QTc. Антидепресанти (флуоксетин, бупропіон, циталопрам) — QTc; уникати з нілотинібом. Звіробій знижує експозицію усіх ІТК — уникати; грейпфрут, карамбола, чорна шовковиця чи малина, дикий виноград, гранат підвищують — уникати; куркумін, гінкго білоба, екстракт зеленого чаю підвищують — настійно розглянути відміну. Асцимініб не має значущої взаємодії із серцево-судинними препаратами та фторхінолонами.",
+                "en": "PPIs, H2 blockers and antacids lower exposure to bosutinib, dasatinib and nilotinib (ponatinib slightly with PPIs); imatinib no interaction; asciminib no major interaction; pH-independent formulations exist. Antacids at least 2 hours before or after. Amiodarone, diltiazem, verapamil, simvastatin, atorvastatin, azoles (fluconazole 200 mg or more, voriconazole, itraconazole, posaconazole, isavuconazole), clarithromycin and ritonavir raise exposure (avoid amiodarone with nilotinib). Fluoroquinolones - QTc monitoring. Antidepressants (fluoxetine, bupropion, citalopram) - QTc; avoid with nilotinib. St John's wort lowers exposure of all TKIs - avoid; grapefruit, star fruit, black mulberry or raspberry, wild grape, pomegranate raise it - avoid; curcumin, ginkgo biloba and green tea extract raise it - strongly consider stopping them. Asciminib has no major interaction with cardiovascular drugs or fluoroquinolones."
               },
               "steps": [
                 {
