@@ -79,5 +79,33 @@
         }
       ]
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Цисплатин \"Ебеве\"» дозу розводять в 1–2 л 0,9 % натрію хлориду або суміші 0,9 % натрію хлориду й 5 % глюкози 1:1; лише 5 % глюкозою чи 5 % манітом розводити не можна. Розчин 0,1 мг/мл у натрію хлориді чи суміші з глюкозою стабільний 28 діб, у суміші з манітом 1:1 — 3 доби (у захищеному від світла місці при 2–8 °C, як пише інструкція); з мікробіологічного погляду — одразу, зазвичай не довше 24 год при 2–8 °C. Без алюмінієвих голок, катетерів, шприців і систем — утворюється чорний осад.",
+        "en": "Per the Cisplatin \"Ebewe\" label dilute the dose in 1–2 L of 0.9% sodium chloride or a 1:1 mix of 0.9% sodium chloride and 5% glucose; never in 5% glucose or 5% mannitol alone. 0.1 mg/mL in sodium chloride or the glucose mix is stable 28 days, in a 1:1 mannitol mix 3 days (protected from light at 2–8 °C, as the label says); microbiologically use it at once, as a rule within 24 hours at 2–8 °C. No aluminium needles, catheters, syringes or sets: a black precipitate forms."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Цисплатин «Ебеве» (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/B83E9FE17C6B5CF042258D8E003901F2/$file/UA00320101_1DD1.mht",
+        "version": "РП UA/0032/01/01, наказ МОЗ №33 від 12.01.2026",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Цисплатина Аккорд» розводять щонайменше в 1 л 0,9 % натрію хлориду, суміші 0,9 % натрію хлориду з 5 % глюкозою 1:1 або розчинів із 1,875 % манітом; нерозведений концентрат не вводять. Розчин використовують одразу — строку стабільності ця інструкція не дає; флакон не охолоджують.",
+        "en": "Per the Cisplatina Accord label dilute in at least 1 L of 0.9% sodium chloride, a 1:1 mix of 0.9% sodium chloride and 5% glucose, or solutions with 1.875% mannitol; never give the concentrate undiluted. Use the solution at once: this label gives no stability time; do not refrigerate the vial."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Цисплатина Аккорд (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/E29DE428C6B603FC42258E050068F185/$file/UA152400101_3649.mht",
+        "version": "РП UA/15240/01/01, наказ МОЗ №655 від 21.05.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

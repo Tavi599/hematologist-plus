@@ -89,5 +89,33 @@
         "en": "Upper limit 0.4 mg/mL from the label: above it the drug may precipitate. The label's lower limit (0.2 mg/mL) is left out: it concerns the stability of the solution, not safety, and would flag the long infusions (DA-EPOCH-R, ESHAP, PACE) where etoposide is deliberately more dilute."
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Етопозид \"Ебеве\"» розводять безпосередньо перед введенням лише 5 % глюкозою або 0,9 % натрію хлоридом, зазвичай до 0,1 мг/мл і не більше 0,4 мг/мл (ризик осаду); інфузія не менше 30 хв; відкритий флакон стабільний 24 год при кімнатній температурі. Не розводити буферними розчинами з pH > 8. Нерозведений концентрат роз’їдає деталі шприців і систем з акрилу чи АБС-пластику.",
+        "en": "Per the Etoposide \"Ebewe\" label dilute just before use with 5% glucose or 0.9% sodium chloride only, usually to 0.1 mg/mL and no more than 0.4 mg/mL (risk of precipitation); infuse over at least 30 minutes; an opened vial keeps 24 hours at room temperature. Do not dilute with buffered solutions of pH above 8. The undiluted concentrate cracks syringe and set parts made of acrylic or ABS plastic."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Етопозид «Ебеве» (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/12C3F732A37C812B42258DCD00467666/$file/UA25690101_221E.mht",
+        "version": "РП UA/2569/01/01, наказ МОЗ №386 від 23.03.2026",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Етопозид-Тева» розводять до 0,2 мг/мл, інфузія 30–60 хв; розведений розчин використовують протягом 8 год (фізично й хімічно стабільний до 120 год при 25 °C); проколотий флакон стабільний 72 год при 25 °C.",
+        "en": "Per the Etoposide-Teva label dilute to 0.2 mg/mL and infuse over 30–60 minutes; use the diluted solution within 8 hours (physically and chemically stable up to 120 hours at 25 °C); a punctured vial keeps 72 hours at 25 °C."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Етопозид-Тева (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/C07DAC03CFF5A17642258E1E003A56F3/$file/UA72770101_E19B.mht",
+        "version": "РП UA/7277/01/01, наказ МОЗ №763 від 09.06.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

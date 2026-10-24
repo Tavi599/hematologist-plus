@@ -80,5 +80,20 @@
         "en": "The second set: 500 mL over 60 minutes, for BrECADD. The main one (1000 mL over 2 hours) is for BV-AVD."
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Флакон 100 мг розчиняють 10 мл, 200 мг — 20 мл води для ін’єкцій (10 мг/мл); для інфузії розводять у 200–300 мл 0,9 % натрію хлориду або 5 % глюкози і вводять за 15–30 хв. Дакарбазин чутливий до світла: усі розчини захищати від світла, і під час введення теж (світлозахисна система). Відновлений розчин стабільний 48 год при 2–8 °C у темряві; розведений — 2 год при 25 °C або 24 год при 2–8 °C у темряві; з мікробіологічного погляду — одразу.",
+        "en": "Reconstitute the 100 mg vial with 10 mL and the 200 mg vial with 20 mL water for injection (10 mg/mL); for infusion dilute in 200–300 mL of 0.9% sodium chloride or 5% glucose and give over 15–30 minutes. Dacarbazine is light-sensitive: protect every solution from light, during administration too (light-protective set). Reconstituted it keeps 48 hours at 2–8 °C in the dark; diluted, 2 hours at 25 °C or 24 hours at 2–8 °C in the dark; microbiologically use it at once."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Дакарбазин Медак (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/E5A49656D3CB729C42258DCD00459410/$file/UA69870101_C2F6.mht",
+        "version": "РП UA/6987/01/01, наказ МОЗ №1454 від 30.09.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

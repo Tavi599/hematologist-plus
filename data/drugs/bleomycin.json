@@ -77,5 +77,20 @@
         }
       ]
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Для інфузії дозу розчиняють у 200–1000 мл 0,9 % натрію хлориду і вводять коротко, близько 30 хв, або безперервно кілька днів; для в/в ін’єкції — вміст флакона в 5–10 мл 0,9 % натрію хлориду повільно за 5–10 хв. Відновлений розчин стабільний 7 діб при температурі не вище 25 °C; з мікробіологічного погляду — одразу, зазвичай не довше 24 год при 2–8 °C. Не змішувати з розчинами амінокислот, рибофлавіну, аскорбінової кислоти, дексаметазону, амінофіліну чи фуросеміду.",
+        "en": "For infusion dissolve the dose in 200–1000 mL of 0.9% sodium chloride and give it short, over about 30 minutes, or continuously over several days; for an IV injection dissolve the vial in 5–10 mL of 0.9% sodium chloride and inject slowly over 5–10 minutes. The reconstituted solution is stable 7 days at up to 25 °C; microbiologically use it at once, as a rule within 24 hours at 2–8 °C. Do not mix with amino acid, riboflavin, ascorbic acid, dexamethasone, aminophylline or furosemide solutions."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Блеоцин-С (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/9B644D0AFBB5C59642258E0500484972/$file/UA161630101_5213.mht",
+        "version": "РП UA/16163/01/01, наказ МОЗ №670 від 22.05.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

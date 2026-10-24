@@ -47,5 +47,20 @@
       "form": "vial",
       "strength_amount": 20
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Дозу менше 90 мг розводять у 250 мл, 90 мг і більше — у 500 мл лише 5 % глюкози: інший розчинник чи бактеріостатики (бензиловий спирт) спричиняють осад. Не вводити болюсно чи нерозведеним; системи з вбудованими фільтрами не використовувати. Розведений розчин зберігають у холодильнику при 2–8 °C і використовують протягом 24 год.",
+        "en": "Dilute doses below 90 mg in 250 mL and doses of 90 mg or more in 500 mL of 5% glucose only: any other diluent or a bacteriostatic agent (benzyl alcohol) causes precipitation. Never give it as a bolus or undiluted; do not use sets with in-line filters. Keep the diluted solution refrigerated at 2–8 °C and use it within 24 hours."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Дополо (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/A786F83C587E99FA42258B4E00390DD4/$file/UA172690101_C711.mht",
+        "version": "РП UA/17269/01/01, наказ МОЗ №1071 від 20.06.2024",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

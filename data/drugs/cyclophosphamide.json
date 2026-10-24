@@ -104,5 +104,33 @@
         }
       ]
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_bolus", "iv_infusion"],
+      "notes": {
+        "uk": "Для 2 % розчину до флакона 500 мг додають 25 мл, до 1 г — 50 мл 0,9 % натрію хлориду і енергійно струшують. Для болюсу розчиняють лише 0,9 % натрію хлоридом (розчин на воді гіпотонічний і болюсно не вводиться); для інфузії можна воду або натрію хлорид, далі — у розчин Рінгера, 0,9 % натрію хлорид або глюкозу до близько 500 мл, інфузія 30 хв – 2 год. Згідно з інструкцією «Ендоксан» готовий розчин використовують протягом 24 год, зберігаючи при температурі не вище 8 °C.",
+        "en": "For a 2% solution add 25 mL of 0.9% sodium chloride to the 500 mg vial or 50 mL to the 1 g vial and shake vigorously. For a bolus reconstitute only with 0.9% sodium chloride (made with water it is hypotonic and must not be injected directly); for infusion water or sodium chloride will do, then add to Ringer’s, 0.9% sodium chloride or glucose to about 500 mL and infuse over 30 minutes to 2 hours. Per the Endoxan label use the prepared solution within 24 hours, kept at up to 8 °C."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Ендоксан® 500 мг (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/F08035BAF3A6511442258E1E003AE0E7/$file/UA00270202_B5D8.mht",
+        "version": "РП UA/0027/02/02, наказ МОЗ №763 від 09.06.2026",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_bolus", "iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Циклофосфамід-Мілі» після розчинення й розведення (вода, натрію хлорид, глюкоза) розчин хімічно стабільний 48 год при 2–8 °C; з мікробіологічного погляду — одразу, зазвичай не довше 24 год при 2–8 °C. Розчини з бензиловим спиртом знижують стабільність циклофосфаміду.",
+        "en": "Per the Cyclophosphamide-Mili label the reconstituted and diluted solution (water, sodium chloride, glucose) is chemically stable 48 hours at 2–8 °C; microbiologically use it at once, as a rule within 24 hours at 2–8 °C. Solutions with benzyl alcohol reduce the stability of cyclophosphamide."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Циклофосфамід-Мілі-500 (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/41229EBE24573BAC42258CC700386E94/$file/UA209110101_47FE.mht",
+        "version": "РП UA/20911/01/01, наказ МОЗ №1078 від 08.07.2025",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

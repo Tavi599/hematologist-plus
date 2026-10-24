@@ -96,5 +96,33 @@
       ],
       "stock_concentration_mg_ml": 2.5
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Бентеро» флакон 25 мг розчиняють 10 мл, а флакон 100 мг — 20 мл води для ін’єкцій. Щойно розчин прозорий (5–10 хв), усю дозу розводять 0,9 % натрію хлоридом до близько 500 мл; іншими розчинами не розводять. Інфузія 30–60 хв.",
+        "en": "Per the Bentero label the 25 mg vial is reconstituted with 10 mL and the 100 mg vial with 20 mL water for injection. As soon as the solution is clear (5–10 minutes), dilute the whole dose with 0.9% sodium chloride to about 500 mL; no other diluent. Infuse over 30–60 minutes."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Бентеро (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/5DC95BED7D69C49142258BE7002CD37E/$file/UA157740101_FA37.mht",
+        "version": "РП UA/15774/01/01, наказ МОЗ №1967 від 25.11.2024",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Бендамустін Аксіос» флакон 100 мг розчиняють 40 мл води для ін’єкцій (25 мг — так само 10 мл). Після розчинення й розведення розчин стабільний 3,5 год при 25 °C і 2 доби при 2–8 °C у захищених від світла поліетиленових пакетах; з мікробіологічного погляду його вводять одразу, зазвичай не пізніше 24 год при 2–8 °C.",
+        "en": "Per the Bendamustin Axios label the 100 mg vial is reconstituted with 40 mL water for injection (25 mg likewise with 10 mL). Reconstituted and diluted, it is stable 3.5 hours at 25 °C and 2 days at 2–8 °C in light-protected polyethylene bags; microbiologically it should be used at once, as a rule within 24 hours at 2–8 °C."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Бендамустін Аксіос (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/5DFB0BE85FA666DF4225895200399030/$file/UA198780101_5564.mht",
+        "version": "РП UA/19878/01/01, наказ МОЗ №214 від 04.02.2023",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

@@ -20,5 +20,33 @@
       "strength_amount": 10,
       "volume_ml": 10
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Флакон 10 мг/10 мл (1 мг/мл, Leustat): добову дозу додають у пакет зі 100–500 мл 0,9 % натрію хлориду; 5 % глюкоза не рекомендована, бо прискорює розпад кладрибіну. Препарат без консервантів — готують асептично; розведений розчин вводять одразу або зберігають у холодильнику (2–8 °C) не довше 8 год до початку введення. Суміш стабільна щонайменше 24 год при кімнатній температурі й освітленні в ПВХ-контейнерах. Українська інструкція флакона 1 мг/мл у реєстрі поки відсутня.",
+        "en": "10 mg/10 mL vial (1 mg/mL, Leustat): add the daily dose to a bag with 100–500 mL of 0.9% sodium chloride; 5% glucose is not recommended because it speeds the breakdown of cladribine. It has no preservative, so prepare it aseptically; give the diluted solution at once or keep it refrigerated (2–8 °C) for no more than 8 hours before the start. The admixture is stable at least 24 hours at room temperature and light in PVC containers. The Ukrainian label of the 1 mg/mL vial is not yet in the register."
+      },
+      "source": {
+        "name": "EMC SmPC: Leustat injection (cladribine 1 mg/ml), sections 4.2, 6.3, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/13187/smpc",
+        "version": "Date of revision of the text 23/04/2026",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["subcutaneous"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Літак» (2 мг/мл) дозу набирають просто з флакона і вводять п/ш болюсно без розведення, попередньо нагрівши до кімнатної температури; не змішувати з іншими препаратами. Інструкція флакона 1 мг/мл (Leustat) передбачає лише в/в інфузію.",
+        "en": "Per the Litak label (2 mg/mL) draw the dose straight from the vial and give it as an undiluted subcutaneous bolus, warmed to room temperature first; do not mix with other drugs. The label of the 1 mg/mL vial (Leustat) provides only for IV infusion."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Літак (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/CE7B6FA34C903BE742258E4C003A9BCF/$file/UA178560101_A845.mht",
+        "version": "РП UA/17856/01/01, наказ МОЗ №1060 від 31.07.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

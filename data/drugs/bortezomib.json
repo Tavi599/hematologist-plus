@@ -105,5 +105,33 @@
       "form": "vial",
       "strength_amount": 3.5
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["subcutaneous", "iv_bolus"],
+      "notes": {
+        "uk": "Флакон 3,5 мг (інструкція «Бортеро»): для п/ш введення розчиняють 1,4 мл 0,9 % натрію хлориду (2,5 мг/мл), для в/в — 3,5 мл (1 мг/мл); розчиняється менш ніж за 2 хв, розчин прозорий і безбарвний. В/в — болюс за 3–5 с із промиванням катетера 0,9 % натрію хлоридом. Якщо після п/ш ін’єкцій виникають місцеві реакції, можна вводити п/ш розчин 1 мг/мл. Строку зберігання розчину ця інструкція не дає.",
+        "en": "3.5 mg vial (Bortero label): for subcutaneous use reconstitute with 1.4 mL of 0.9% sodium chloride (2.5 mg/mL), for IV use with 3.5 mL (1 mg/mL); it dissolves in under 2 minutes into a clear colourless solution. IV: a 3–5 second bolus, then flush the catheter with 0.9% sodium chloride. If subcutaneous injections cause local reactions, the 1 mg/mL solution may be given subcutaneously. This label gives no in-use storage time."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Бортеро (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/795678BB669452A9C2258AE7005A2034/$file/UA150890101_2A35.mht",
+        "version": "РП UA/15089/01/01, наказ МОЗ №428 від 13.03.2024",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["subcutaneous", "iv_bolus"],
+      "notes": {
+        "uk": "Флакон 2,5 мг (інструкція «БортезоВіста»): для п/ш введення — 1 мл 0,9 % натрію хлориду (2,5 мг/мл), для в/в — 2,5 мл (1 мг/мл). Розчин зберігають не довше 8 год при температурі не вище 25 °C за звичайного освітлення, у флаконі або шприці.",
+        "en": "2.5 mg vial (BortezoVista label): for subcutaneous use 1 mL of 0.9% sodium chloride (2.5 mg/mL), for IV use 2.5 mL (1 mg/mL). Keep the solution no longer than 8 hours at up to 25 °C in normal light, in the vial or the syringe."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: БортезоВіста (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/1AEDD6AFC44AFA2742258927004D548A/$file/UA166210103_18DA.mht",
+        "version": "РП UA/16621/01/03, наказ МОЗ №2268 від 15.12.2022",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

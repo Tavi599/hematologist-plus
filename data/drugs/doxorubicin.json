@@ -103,5 +103,33 @@
       ],
       "stock_concentration_mg_ml": 2
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion", "iv_bolus"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Доксорубіцин \"Ебеве\"» концентрат 2 мг/мл вводять у трубку системи з вільним потоком 0,9 % натрію хлориду або 5 % глюкози за 3–5 хв; можна також болюсом за кілька хвилин, короткою інфузією до 1 год або безперервно до 24 год; швидка струминна ін’єкція не рекомендована. Набирають з флакона безпосередньо перед введенням; з мікробіологічного погляду — одразу, зазвичай не довше 24 год при 2–8 °C. Не змішувати з гепарином, 5-фторурацилом і лужними розчинами.",
+        "en": "Per the Doxorubicin \"Ebewe\" label the 2 mg/mL concentrate is given into the tubing of a free-flowing 0.9% sodium chloride or 5% glucose infusion over 3–5 minutes; it may also be given as a bolus over a few minutes, a short infusion up to 1 hour or continuously up to 24 hours; a rapid push is not recommended. Draw it from the vial just before use; microbiologically use it at once, as a rule within 24 hours at 2–8 °C. Do not mix with heparin, 5-fluorouracil or alkaline solutions."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Доксорубіцин «Ебеве» (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/71782F8E2D13148342258DCD004659E8/$file/UA13790101_95ED.mht",
+        "version": "РП UA/1379/01/01, наказ МОЗ №386 від 23.03.2026",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion", "iv_bolus"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Доксорубіцин Аккорд» введення в систему з вільним потоком триває 3–20 хв; розведений розчин стабільний до 28 днів при 2–8 °C у 0,9 % натрію хлориді і до 7 днів при 25 °C у 5 % глюкозі (у скляних контейнерах, захищених від світла).",
+        "en": "Per the Doxorubicin Accord label giving it into a free-flowing set takes 3–20 minutes; diluted, it is stable up to 28 days at 2–8 °C in 0.9% sodium chloride and up to 7 days at 25 °C in 5% glucose (in glass containers protected from light)."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Доксорубіцин Аккорд (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/297373D5A9356F6C42258E3C0036C384/$file/UA174390101_BE82.mht",
+        "version": "РП UA/17439/01/01, наказ МОЗ №1576 від 13.10.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

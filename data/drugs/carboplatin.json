@@ -45,5 +45,46 @@
       "strength_amount": 450,
       "volume_ml": 45
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Карбоплатин Медак» розводять 5 % глюкозою або 0,9 % натрію хлоридом до концентрації 0,5 мг/мл; розведений розчин стабільний 24 год у холодильнику (4 °C), з мікробіологічного погляду його вводять одразу. Голки, шприци, катетери й системи з алюмінієм не використовувати — карбоплатин утворює з ним чорний осад.",
+        "en": "Per the Carboplatin Medac label dilute with 5% glucose or 0.9% sodium chloride to 0.5 mg/mL; the diluted solution is stable 24 hours refrigerated (4 °C), microbiologically give it at once. Do not use needles, syringes, catheters or sets with aluminium parts: carboplatin forms a black precipitate with it."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Карбоплатин Медак (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/DBE2B860C0F0FC3642258D6300433258/$file/UA108290101_C514.mht",
+        "version": "РП UA/10829/01/01, наказ МОЗ №1854 від 08.12.2025",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Карбоплатин \"Ебеве\"» розводять лише 5 % глюкозою до 0,5 мг/мл; розчин 0,4–4 мг/мл у глюкозі фізично й хімічно стабільний 28 днів у захищеному від світла місці при 2–8 °C або 20–25 °C (ПЕ, ПВХ, скло), але інфузійний розчин використовують одразу після приготування.",
+        "en": "Per the Carboplatin \"Ebewe\" label dilute only with 5% glucose to 0.5 mg/mL; 0.4–4 mg/mL in glucose is physically and chemically stable 28 days protected from light at 2–8 °C or 20–25 °C (PE, PVC, glass), but the infusion should be used right after preparation."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Карбоплатин «Ебеве» (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/D2E2980FF83E272642258D8E003A1288/$file/UA49600101_645C.mht",
+        "version": "РП UA/4960/01/01, наказ МОЗ №34 від 12.01.2026",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Карбоплатин-Тева» після розведення 5 % глюкозою чи 0,9 % натрію хлоридом до 0,5 мг/мл розчин стабільний 24 год при 2–8 °C і 3 год при 15–25 °C у захищеному від світла місці.",
+        "en": "Per the Carboplatin-Teva label, diluted with 5% glucose or 0.9% sodium chloride to 0.5 mg/mL, the solution is stable 24 hours at 2–8 °C and 3 hours at 15–25 °C protected from light."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Карбоплатин-Тева (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/8EE5CB92FBD7C1C042258E610068E83A/$file/UA145020101_C24C.mht",
+        "version": "РП UA/14502/01/01, наказ МОЗ №1164 від 21.08.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }
