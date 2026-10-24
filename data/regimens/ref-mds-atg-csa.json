@@ -12,6 +12,12 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/21149672/",
       "version": "резюме; фаза III, 88 пацієнтів",
       "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "NCCN Guidelines: Myelodysplastic Syndromes, MDS-4 (виноска cc), MDS-6 (виноски ss, uu) (текст не копіювався)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1446",
+      "version": "3.2026 від 12.01.2026",
+      "checkedOn": "2026-10-23"
     }
   ],
   "evidence": {
@@ -79,10 +85,10 @@
     "drugs": [
       {
         "name": {
-          "uk": "Антитимоцитарний глобулін",
-          "en": "Antithymocyte globulin"
+          "uk": "Антитимоцитарний глобулін (кінський)",
+          "en": "Antithymocyte globulin (equine)"
         },
-        "drug_id": "anti-thymocyte-globulin-rabbit"
+        "drug_id": "anti-thymocyte-globulin-equine"
       },
       {
         "name": {
@@ -99,8 +105,8 @@
       }
     ],
     "gap": {
-      "uk": "У дослідженні — кінський АТГ; у довіднику лише кролячий, дози яких не взаємозамінні. Доз циклоспорину резюме не наводить.",
-      "en": "The trial used horse ATG; the catalogue has only rabbit ATG, and their doses are not interchangeable. The abstract gives no ciclosporin dose."
+      "uk": "У дослідженні й за NCCN — кінський АТГ (є в довіднику); дози кролячого АТГ з ним не взаємозамінні. NCCN доз не наводить і дозволяє за клінічних показань обійтися без АТГ; доз циклоспорину резюме не наводить.",
+      "en": "The trial and NCCN use horse ATG (it is in the catalogue); rabbit ATG doses are not interchangeable with it. NCCN gives no doses and allows ATG to be omitted when clinically indicated; the abstract gives no ciclosporin dose."
     }
   }
 }

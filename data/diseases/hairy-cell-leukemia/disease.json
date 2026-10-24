@@ -49,8 +49,8 @@
         "en": "First line"
       },
       "description": {
-        "uk": "Лікування призначають за показаннями: цитопенії (гемоглобін нижче 100 г/л, тромбоцити нижче 100×10⁹/л, нейтрофіли нижче 1×10⁹/л), симптомна спленомегалія, повторні інфекції. Аналог пурину — кладрибін 0,14 мг/кг підшкірно 5 днів, зазвичай один курс. Додавання ритуксимабу поглиблює відповідь.",
-        "en": "Treatment is given for indications: cytopenias (haemoglobin below 100 g/L, platelets below 100 x 10^9/L, neutrophils below 1 x 10^9/L), symptomatic splenomegaly, recurrent infections. A purine analogue - cladribine 0.14 mg/kg subcutaneously for five days, usually a single course. Adding rituximab deepens the response."
+        "uk": "Лікування призначають за показаннями: цитопенії (гемоглобін нижче 100 г/л, тромбоцити нижче 100×10⁹/л, нейтрофіли нижче 1×10⁹/л), симптомна спленомегалія, повторні інфекції. Розбіжність: згідно з попереднім описом цієї лінії — гемоглобін нижче 100 г/л і повторні інфекції; згідно з NCCN HCL 2.2027 (HCL-2, стор. 6; консенсус Grever 2017) — гемоглобін <11 г/дл (110 г/л), а повторні інфекції з переліку показань вилучено. Аналог пурину — кладрибін 0,14 мг/кг підшкірно 5 днів, зазвичай один курс. Додавання ритуксимабу поглиблює відповідь.",
+        "en": "Treatment is given for indications: cytopenias (haemoglobin below 100 g/L, platelets below 100 x 10^9/L, neutrophils below 1 x 10^9/L), symptomatic splenomegaly, recurrent infections. Discrepancy: according to the earlier description of this line, haemoglobin below 100 g/L and recurrent infections; according to NCCN HCL 2.2027 (HCL-2, p. 6; Grever 2017 consensus), haemoglobin below 11 g/dL (110 g/L), and recurrent infections are removed from the indications. A purine analogue - cladribine 0.14 mg/kg subcutaneously for five days, usually a single course. Adding rituximab deepens the response."
       },
       "regimens": [
         {
@@ -94,8 +94,8 @@
         "en": "Relapse"
       },
       "description": {
-        "uk": "За тривалої ремісії аналог пурину повторюють, бажано з ритуксимабом. При ранньому рецидиві або рефрактерності — інгібітор BRAF (вемурафеніб) чи моксетумомаб; у довіднику їх немає.",
-        "en": "After a long remission the purine analogue is repeated, preferably with rituximab. In early relapse or refractory disease, a BRAF inhibitor (vemurafenib) or moxetumomab; neither is in the catalog."
+        "uk": "За тривалої ремісії аналог пурину повторюють, бажано з ритуксимабом. При ранньому рецидиві або рефрактерності — інгібітори BRAF (вемурафеніб, дабрафеніб + траметиніб): у довіднику це лише описи без розрахунку доз, див. «Шляхи NCCN». Моксетумомаб пасудотокс знято з виробництва (США, 2023), NCCN його більше не рекомендує.",
+        "en": "After a long remission the purine analogue is repeated, preferably with rituximab. In early relapse or refractory disease, BRAF inhibitors (vemurafenib, dabrafenib with trametinib): in the catalog these are descriptions without dose calculation, see the NCCN pathways. Moxetumomab pasudotox was discontinued (US, 2023) and NCCN no longer recommends it."
       },
       "regimens": [
         {
@@ -149,8 +149,8 @@
             "en": "Diagnosis and workup (HCL-1)"
           },
           "description": {
-            "uk": "Настанова стосується класичного ВКЛ (cHCL). Діагноз: характерні волосаті клітини в крові чи кістковому мозку й інфільтрат із підвищеним ретикуліном у трепанобіопсії (часто «суха пункція»). Проточна цитометрія чи IHC: CD19, CD20, CD5, CD10, CD11c, CD22, CD25, CD103, CD123, циклін D1, CD200; типово CD5−, CD10−, CD11c+, CD20+ яскраво, CD22+, CD25+, CD103+, CD123+, циклін D1+, аннексин A1+, CD200+ яскраво, моноцитопенія. BRAF V600E (IHC чи молекулярно) — обов'язково, коли імунофенотип нетиповий; варіант ВКЛ (HCLv за ICC / SBLPN за ВООЗ-5) CD25−, CD123−, аннексин A1−, BRAF V600E−. За певних обставин — IGHV4-34: ~10% В-клітинних новоутворень із фенотипом cHCL мають його, зазвичай без BRAF V600E, гірше відповідають на пуринові аналоги й поводяться як варіант; при негативному BRAF V600E розглянути NGS на BRAF і MAP2K1. Обстеження: анамнез і огляд (розміри печінки й селезінки, вузли), ECOG, мазок крові, загальний аналіз із формулою, біохімія з увагою до функції нирок, ЛДГ, кількісні імуноглобуліни, трепанобіопсія ± аспірат, гепатити B і C перед лікуванням. За обставин: КТ ОГК/ЧП із контрастом, тест на вагітність, обговорення збереження фертильності. Діагностика й лікування варіанту — окремий консенсус (Zent та ін., Blood 2026).",
-            "en": "The guideline covers classic HCL (cHCL). Diagnosis: characteristic hairy cells in blood or marrow and an infiltrate with increased reticulin on trephine biopsy (often a dry tap). Flow cytometry or IHC: CD19, CD20, CD5, CD10, CD11c, CD22, CD25, CD103, CD123, cyclin D1, CD200; typically CD5-, CD10-, CD11c+, CD20 bright, CD22+, CD25+, CD103+, CD123+, cyclin D1+, annexin A1+, CD200 bright, with monocytopenia. BRAF V600E (IHC or molecular) is essential when the immunophenotype is atypical; the variant (HCLv per ICC / SBLPN per WHO-5) is CD25-, CD123-, annexin A1- and BRAF V600E-negative. Under certain circumstances IGHV4-34: about 10% of B-cell neoplasms with a cHCL phenotype carry it, usually without BRAF V600E, respond worse to purine analogues and behave like the variant; if BRAF V600E is negative consider NGS for BRAF and MAP2K1. Workup: history and examination (liver and spleen size, nodes), performance status, blood smear, CBC with differential, metabolic panel with attention to renal function, LDH, quantitative immunoglobulins, marrow biopsy with or without aspirate, hepatitis B and C before treatment. Under certain circumstances: CT chest/abdomen/pelvis with contrast, pregnancy test, fertility preservation discussion. Diagnosis and treatment of the variant are in a separate consensus (Zent et al., Blood 2026)."
+            "uk": "Настанова стосується класичного ВКЛ (cHCL). Діагноз: характерні волосаті клітини в крові чи кістковому мозку й інфільтрат із підвищеним ретикуліном у трепанобіопсії (часто «суха пункція»). Проточна цитометрія чи IHC: CD19, CD20, CD5, CD10, CD11c, CD22, CD25, CD103, CD123, циклін D1, CD200; типово CD5−, CD10−, CD11c+, CD20+ яскраво, CD22+, CD25+, CD103+, CD123+, циклін D1+, аннексин A1+, CD200+ яскраво, моноцитопенія. BRAF V600E (IHC чи молекулярно) — обов'язково для всіх (з версії 1.2027 не лише при нетиповому імунофенотипі); варіант ВКЛ (HCLv за ICC / SBLPN за ВООЗ-5) CD25−, CD123−, аннексин A1−, BRAF V600E−. За певних обставин — IGHV4-34: ~10% В-клітинних новоутворень із фенотипом cHCL мають його, зазвичай без BRAF V600E, гірше відповідають на пуринові аналоги й поводяться як варіант; при негативному BRAF V600E розглянути NGS на BRAF і MAP2K1. Обстеження: анамнез і огляд (розміри печінки й селезінки, вузли), ECOG, мазок крові, загальний аналіз із формулою, біохімія з увагою до функції нирок, ЛДГ, кількісні імуноглобуліни, трепанобіопсія ± аспірат, гепатити B і C перед лікуванням. За обставин: КТ ОГК/ЧП із контрастом, тест на вагітність, обговорення збереження фертильності. Діагностика й лікування варіанту — окремий консенсус (Zent та ін., Blood 2026).",
+            "en": "The guideline covers classic HCL (cHCL). Diagnosis: characteristic hairy cells in blood or marrow and an infiltrate with increased reticulin on trephine biopsy (often a dry tap). Flow cytometry or IHC: CD19, CD20, CD5, CD10, CD11c, CD22, CD25, CD103, CD123, cyclin D1, CD200; typically CD5-, CD10-, CD11c+, CD20 bright, CD22+, CD25+, CD103+, CD123+, cyclin D1+, annexin A1+, CD200 bright, with monocytopenia. BRAF V600E (IHC or molecular) is essential for everyone (since version 1.2027, not only when the immunophenotype is atypical); the variant (HCLv per ICC / SBLPN per WHO-5) is CD25-, CD123-, annexin A1- and BRAF V600E-negative. Under certain circumstances IGHV4-34: about 10% of B-cell neoplasms with a cHCL phenotype carry it, usually without BRAF V600E, respond worse to purine analogues and behave like the variant; if BRAF V600E is negative consider NGS for BRAF and MAP2K1. Workup: history and examination (liver and spleen size, nodes), performance status, blood smear, CBC with differential, metabolic panel with attention to renal function, LDH, quantitative immunoglobulins, marrow biopsy with or without aspirate, hepatitis B and C before treatment. Under certain circumstances: CT chest/abdomen/pelvis with contrast, pregnancy test, fertility preservation discussion. Diagnosis and treatment of the variant are in a separate consensus (Zent et al., Blood 2026)."
           },
           "steps": [
             {
@@ -280,7 +280,7 @@
             "en": "Initial therapy (HCL-A 1)"
           },
           "description": {
-            "uk": "Кладрибін і пентостатин не порівнювали між собою в РКД, активність схожа. Стандартні дози пуринових аналогів не дають при активній загрозливій для життя чи хронічній інфекції: спершу лікують інфекцію, а якщо контролювати її неможливо — розглядають пентостатин у низьких дозах, а потім стандартні дози аналогів. Ритуксимаб до кладрибіну поглиблює відповідь (без залишкової хвороби 94% проти 47% [MS-6] чи 12% [MS-8] при відстроченому ритуксимабі — NCCN сама наводить обидві цифри), але підвищує токсичність — розглядати вибірково: 8 щотижневих доз з дня 1 (CDAR) або через 4 тижні після 5-денного кладрибіну. Підшкірний ритуксимаб — після щонайменше однієї повної в/в дози; біоподібні препарати прийнятні.",
+            "uk": "Кладрибін і пентостатин не порівнювали між собою в РКД, активність схожа. Стандартні дози пуринових аналогів не дають при активній загрозливій для життя чи хронічній інфекції: спершу лікують інфекцію, а якщо контролювати її неможливо — розглядають пентостатин у низьких дозах, а потім стандартні дози аналогів. Додавання ритуксимабу до кладрибіну поглиблює відповідь (без залишкової хвороби 94% проти 47% [MS-6] чи 12% [MS-8] при відстроченому ритуксимабі — NCCN сама наводить обидві цифри), але підвищує токсичність — розглядати вибірково: 8 щотижневих доз з дня 1 (CDAR) або через 4 тижні після 5-денного кладрибіну. Підшкірний ритуксимаб — після щонайменше однієї повної в/в дози; біоподібні препарати прийнятні.",
             "en": "Cladribine and pentostatin have not been compared head to head in randomised trials; activity is similar. Standard-dose purine analogues are not given in active life-threatening or chronic infection: the infection is treated first, and if it cannot be controlled low-dose pentostatin is considered before standard-dose analogues. Rituximab with cladribine deepens the response (undetectable MRD 94% against 47% [MS-6] or 12% [MS-8] with delayed rituximab - NCCN itself gives both figures) but raises toxicity, so is considered selectively: 8 weekly doses from day 1 (CDAR) or 4 weeks after the 5-day cladribine. Subcutaneous rituximab is allowed after at least one full IV dose; biosimilars are acceptable."
           },
           "children": [
@@ -366,7 +366,12 @@
                   "preference": "circumstances"
                 },
                 {
-                  "regimen_id": "ref-hcl-obinutuzumab"
+                  "regimen_id": "ref-hcl-obinutuzumab",
+                  "notes": {
+                    "uk": "Лише як анти-CD20 разом із вемурафенібом, не окремо",
+                    "en": "Only as the anti-CD20 antibody with vemurafenib, not alone"
+                  },
+                  "preference": "circumstances"
                 }
               ],
               "steps": [
@@ -391,7 +396,7 @@
             "en": "Relapsed/refractory: incomplete recovery or relapse under 2 years (HCL-A 1)"
           },
           "description": {
-            "uk": "Інгібітори BRAF ефективні лише при BRAF V600E-позитивному ВКЛ. Вемурафеніб вивчали при первинній рефрактерності й раннього рецидиву (1–2 роки) після першого курсу пуринового аналога.",
+            "uk": "Інгібітори BRAF ефективні лише при BRAF V600E-позитивному ВКЛ. Вемурафеніб вивчали при первинній рефрактерності й ранньому рецидиві (1–2 роки) після першого курсу пуринового аналога.",
             "en": "BRAF inhibitors are effective only in BRAF V600E-positive HCL. Vemurafenib was studied in primary refractory disease and early relapse (1-2 years) after a first purine analogue course."
           },
           "children": [
@@ -523,10 +528,18 @@
                 },
                 {
                   "regimen_id": "cladribine-iv-hcl",
+                  "notes": {
+                    "uk": "Лише разом із ритуксимабом: тут NCCN пише «+ ритуксимаб», а не «±»",
+                    "en": "Only together with rituximab: here NCCN says 'plus rituximab', not 'with or without'"
+                  },
                   "preference": "preferred"
                 },
                 {
                   "regimen_id": "cladribine-mono",
+                  "notes": {
+                    "uk": "Лише разом із ритуксимабом: тут NCCN пише «+ ритуксимаб», а не «±»",
+                    "en": "Only together with rituximab: here NCCN says 'plus rituximab', not 'with or without'"
+                  },
                   "preference": "preferred"
                 },
                 {
@@ -699,8 +712,8 @@
             "en": "Supportive care (HCL-C)"
           },
           "description": {
-            "uk": "Після лімфодеплеційного лікування чи при підозрі на імуносупресію стежити за CD4: ацикловір (чи аналог) не менше 3 місяців і до CD4 ≥200/мкл; ко-тримоксазол для профілактики пневмоцистної пневмонії так само; широкого спектра антибактеріальне покриття під час нейтропенії; щеплення бажано до початку імуносупресії (пуринові аналоги, анти-CD20). Вірус гепатиту B: профілактика й моніторинг при високому ризику (ентекавір ефективніший за ламівудин, ламівудину уникати). Філграстим — при фебрильній нейтропенії після терапії. Усі компоненти крові опромінювати. Синдром лізису при ВКЛ рідкісний, алопуринол протипоказаний (тяжкі висипи). Рідкісні шкірно-слизові реакції на антитіла (паранеопластична пухирчатка, синдром Стівенса—Джонсона, токсичний епідермальний некроліз): консультація дерматолога, повторно те саме антитіло не вводити; при непереносимості ритуксимабу — обінутузумаб. Швидка інфузія ритуксимабу за 90 хвилин — якщо попередній цикл без тяжких реакцій.",
-            "en": "After lymphodepleting treatment or when immunosuppression is suspected, monitor CD4: aciclovir (or equivalent) for at least 3 months and until CD4 is 200/uL or more; co-trimoxazole for pneumocystis prophylaxis likewise; broad-spectrum antibacterial cover during neutropenia; vaccination before immunosuppression (purine analogues, anti-CD20) where possible. Hepatitis B: prophylaxis and monitoring in high risk (entecavir beats lamivudine, which is avoided). Filgrastim for febrile neutropenia after therapy. Irradiate all blood products. Tumour lysis is rare in HCL and allopurinol is contraindicated (severe rash). Rare mucocutaneous reactions to antibodies (paraneoplastic pemphigus, Stevens-Johnson syndrome, toxic epidermal necrolysis): see a dermatologist and do not rechallenge with the same antibody; use obinutuzumab for rituximab intolerance. Rapid 90-minute rituximab infusion if the previous cycle had no severe reaction."
+            "uk": "Після лімфодеплеційного лікування чи при підозрі на імуносупресію стежити за CD4: ацикловір (чи аналог) не менше 3 місяців і до CD4 ≥200/мкл; ко-тримоксазол для профілактики пневмоцистної пневмонії так само; антибактеріальна профілактика широкого спектра під час нейтропенії; щеплення бажано до початку імуносупресії (пуринові аналоги, анти-CD20). Вірус гепатиту B: профілактика й моніторинг при високому ризику (ентекавір ефективніший за ламівудин, ламівудину уникати). Філграстим — при фебрильній нейтропенії після терапії. Усі компоненти крові опромінювати. Синдром лізису пухлини при ВКЛ рідкісний, алопуринол протипоказаний (тяжкі висипи). Рідкісні шкірно-слизові реакції на антитіла (паранеопластична пухирчатка, синдром Стівенса—Джонсона, токсичний епідермальний некроліз): консультація дерматолога, повторно те саме антитіло не вводити; при непереносимості ритуксимабу — обінутузумаб. Швидка інфузія ритуксимабу за 90 хвилин — якщо попередній цикл без тяжких реакцій.",
+            "en": "After lymphodepleting treatment or when immunosuppression is suspected, monitor CD4: aciclovir (or equivalent) for at least 3 months and until CD4 is 200/uL or more; co-trimoxazole for pneumocystis prophylaxis likewise; broad-spectrum antibacterial prophylaxis during neutropenia; vaccination before immunosuppression (purine analogues, anti-CD20) where possible. Hepatitis B: prophylaxis and monitoring in high risk (entecavir beats lamivudine, which is avoided). Filgrastim for febrile neutropenia after therapy. Irradiate all blood products. Tumour lysis is rare in HCL and allopurinol is contraindicated (severe rash). Rare mucocutaneous reactions to antibodies (paraneoplastic pemphigus, Stevens-Johnson syndrome, toxic epidermal necrolysis): see a dermatologist and do not rechallenge with the same antibody; use obinutuzumab for rituximab intolerance. Rapid 90-minute rituximab infusion if the previous cycle had no severe reaction."
           },
           "steps": [
             {

@@ -1,10 +1,10 @@
 {
   "$comment": "Лише опис: NCCN HL 2.2026 називає схему без доз і днів; розрахунку немає, бо джерела з дозами в довіднику ще нема.",
   "id": "ref-hl-single-agents",
-  "short_name": "Монотерапії при рефрактерній ЛХ",
+  "short_name": "Паліативні монотерапії ЛХ",
   "name": {
-    "uk": "Паліативні монотерапії при ЛХ, рефрактерній до ≥3 ліній",
-    "en": "Palliative single agents in Hodgkin lymphoma refractory to 3 or more lines"
+    "uk": "Паліативні монотерапії при рецидивній ЛХ (не кандидат на ВДТ/АТСК)",
+    "en": "Palliative single agents in relapsed Hodgkin lymphoma (not a candidate for HDT/ASCR)"
   },
   "sources": [
     {
@@ -16,8 +16,8 @@
   ],
   "reference": {
     "summary": {
-      "uk": "Для хвороби, рефрактерної до щонайменше 3 попередніх ліній наступної терапії, настанова називає паліативні монотерапії: бендамустин, еверолімус, гемцитабін, леналідомід, вінбластин (а також ніволумаб, пембролізумаб, брентуксимаб і ISRT, які в довіднику мають власні схеми).",
-      "en": "For disease refractory to at least 3 prior lines of subsequent therapy the guideline names palliative single agents: bendamustine, everolimus, gemcitabine, lenalidomide, vinblastine (and nivolumab, pembrolizumab, brentuximab and ISRT, which have their own catalogue regimens)."
+      "uk": "Для рецидивної чи рефрактерної класичної ЛХ, коли ВДТ/АТСК неможлива, настанова називає паліативні монотерапії: бендамустин, еверолімус, гемцитабін, леналідомід, вінбластин (а також ніволумаб, пембролізумаб, брентуксимаб і ISRT, які в довіднику мають власні схеми). Бендамустин у монорежимі є й у переліку для хвороби, рефрактерної щонайменше до 3 попередніх ліній.",
+      "en": "For relapsed or refractory classical HL when HDT/ASCR is not an option, the guideline names palliative single agents: bendamustine, everolimus, gemcitabine, lenalidomide, vinblastine (and nivolumab, pembrolizumab, brentuximab and ISRT, which have their own catalogue regimens). Single-agent bendamustine is also on the list for disease refractory to at least 3 prior lines."
     },
     "drugs": [
       {

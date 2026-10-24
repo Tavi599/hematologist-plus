@@ -38,8 +38,8 @@
         "en": "CMML-1 (blasts under 10%)"
       },
       "description": {
-        "uk": "За таблицею МДС/МПН NCCN: розглянути гіпометилювальні засоби або гідроксисечовину. Гідроксисечовина зменшує надмірний лейкоцитоз чи тромбоцитоз. Пероральний децитабін із цедазуридином може замінити децитабін в/в при ХММЛ IPSS проміжний-1 і вище. Проліферативний варіант (лейкоцити >12 000/мм³) гірший за диспластичний. Мутація ASXL1 — несприятлива.",
-        "en": "By the NCCN MDS/MPN table: consider hypomethylating agents or hydroxyurea. Hydroxyurea lowers excessive leukocytosis or thrombocytosis. Oral decitabine with cedazuridine can replace IV decitabine in CMML of IPSS intermediate-1 and above. The proliferative variant (WBC above 12,000/mm3) has a worse prognosis than the dysplastic one. An ASXL1 mutation is unfavourable."
+        "uk": "За таблицею МДС/МПН NCCN: розглянути гіпометилювальні засоби або гідроксисечовину. Гідроксисечовина зменшує надмірний лейкоцитоз чи тромбоцитоз. Пероральний децитабін із цедазуридином може замінити децитабін в/в при ХММЛ IPSS проміжний-1 і вище. Проліферативний варіант (лейкоцити >12 000/мм³ за текстом MDS-A 2 з 5; у таблиці MDS-A 3 з 5 межа ХММЛ-МП — >13·10⁹/л) гірший за диспластичний. Мутація ASXL1 — несприятлива.",
+        "en": "By the NCCN MDS/MPN table: consider hypomethylating agents or hydroxyurea. Hydroxyurea lowers excessive leukocytosis or thrombocytosis. Oral decitabine with cedazuridine can replace IV decitabine in CMML of IPSS intermediate-1 and above. The proliferative variant (WBC above 12,000/mm3 in the text of MDS-A 2 of 5; the table on MDS-A 3 of 5 puts the CMML-MP cut-off above 13×10⁹/L) has a worse prognosis than the dysplastic one. An ASXL1 mutation is unfavourable."
       },
       "regimens": [
         {
@@ -180,8 +180,8 @@
           "kind": "hct",
           "column": "treatment",
           "label": {
-            "uk": "Алогенна ТГСК: i(17q), ювенільний ММЛ, за показаннями — інші",
-            "en": "Allo-HCT: i(17q), juvenile CMML, others by indication"
+            "uk": "Алогенна ТГСК: i(17q), ювенільний мієломоноцитарний лейкоз, за показаннями — інші",
+            "en": "Allo-HCT: i(17q), juvenile myelomonocytic leukaemia, others by indication"
           }
         }
       ]
