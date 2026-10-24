@@ -285,8 +285,8 @@
                 {
                   "regimen_id": "cpx-351-induction-1",
                   "notes": {
-                    "uk": "бажано у віці ≥60 р.",
-                    "en": "preferred at 60 or over"
+                    "uk": "Бажано у віці ≥60 р. (категорія 1); у віці <60 р. — інша рекомендована (даних мало)",
+                    "en": "Preferred at 60 or over (category 1); under 60 another recommended option (limited data)"
                   },
                   "preference": "preferred",
                   "category": "1"
@@ -294,26 +294,25 @@
                 {
                   "regimen_id": "da-7-3",
                   "notes": {
-                    "uk": "Бажано у віці <60 р.",
-                    "en": "Preferred under 60"
+                    "uk": "Бажано у віці <60 р.; у віці ≥60 р. — інша рекомендована",
+                    "en": "Preferred under 60; at 60 or over another recommended option"
                   },
                   "preference": "preferred"
                 },
                 {
                   "regimen_id": "ida-7-3",
                   "notes": {
-                    "uk": "Бажано у віці <60 р.",
-                    "en": "Preferred under 60"
+                    "uk": "Бажано у віці <60 р.; у віці ≥60 р. — інша рекомендована",
+                    "en": "Preferred under 60; at 60 or over another recommended option"
                   },
                   "preference": "preferred"
                 },
                 {
                   "regimen_id": "cpx-351-induction-2",
                   "notes": {
-                    "uk": "Другий курс CPX-351 за потреби",
-                    "en": "A second CPX-351 course if needed"
-                  },
-                  "preference": "other"
+                    "uk": "Другий індукційний курс CPX-351 за потреби (див. AML-3)",
+                    "en": "A second CPX-351 induction course if needed (see AML-3)"
+                  }
                 },
                 {
                   "regimen_id": "dec-ven-cycle-1",
@@ -484,8 +483,8 @@
             {
               "regimen_id": "hd-ara-c",
               "notes": {
-                "uk": "ВДЦ 2–3 г/м² кожні 12 год, дні 1, 3, 5 (1–2 курси)",
-                "en": "HiDAC 2-3 g/m2 every 12 h, days 1, 3, 5 (1-2 courses)"
+                "uk": "ВДЦ 2–3 г/м² кожні 12 год, дні 1, 3, 5 або 1, 2, 3 (1–2 курси); у схемі за замовчуванням 1,5 г/м² — для реіндукції оберіть 3 г/м²",
+                "en": "HiDAC 2-3 g/m2 every 12 h, days 1, 3, 5 or 1, 2, 3 (1-2 courses); the regimen defaults to 1.5 g/m2, so choose 3 g/m2 for reinduction"
               }
             },
             {
@@ -610,6 +609,15 @@
                 "en": "Remission → consolidation (AML-6)"
               },
               "target": "nccn-consolidation"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Ремісія після реіндукції HMA + венетоклаксом → продовжити менш інтенсивну терапію (AML-5)",
+                "en": "Remission after HMA + venetoclax reinduction → continue lower intensity therapy (AML-5)"
+              },
+              "target": "nccn-unfit"
             },
             {
               "kind": "hct",
@@ -837,8 +845,24 @@
                 {
                   "regimen_id": "ldac",
                   "notes": {
-                    "uk": "Після HMA або протипоказаний венетоклакс",
-                    "en": "After HMA or venetoclax contraindicated"
+                    "uk": "Після HMA або протипоказаний венетоклакс. NCCN: 20 мг/м² раз на добу д. 1–10 (у схемі довідника — 20 мг двічі на добу)",
+                    "en": "After HMA or venetoclax contraindicated. NCCN: 20 mg/m2 once daily on days 1-10 (the catalogue regimen gives 20 mg twice daily)"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "gilteritinib-aml",
+                  "notes": {
+                    "uk": "FLT3-ITD або TKD, не підходить для бажаних схем: 120 мг д. 1–28",
+                    "en": "FLT3-ITD or TKD, not eligible for a preferred regimen: 120 mg on days 1-28"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "avoid-aml-gilt-aza",
+                  "notes": {
+                    "uk": "Гілтеритиніб + азацитидин 75 мг/м² д. 1–7 (NCCN допускає; LACEWING не показало переваги у виживаності)",
+                    "en": "Gilteritinib + azacitidine 75 mg/m2 days 1-7 (NCCN allows it; LACEWING showed no survival benefit)"
                   },
                   "preference": "circumstances"
                 },
@@ -851,10 +875,18 @@
                   "preference": "circumstances"
                 },
                 {
-                  "regimen_id": "go-mono-induction",
+                  "regimen_id": "enasidenib",
                   "notes": {
-                    "uk": "CD33-позитивна, не підходить для бажаних схем",
-                    "en": "CD33 positive, not eligible for a preferred regimen"
+                    "uk": "Мутація IDH2, монотерапія 100 мг д. 1–28",
+                    "en": "An IDH2 mutation, single agent 100 mg on days 1-28"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "go-6-3",
+                  "notes": {
+                    "uk": "CD33-позитивна, не підходить для бажаних схем: 6 мг/м² д. 1 і 3 мг/м² д. 8; при несприятливому ризику користь обмежена",
+                    "en": "CD33 positive, not eligible for a preferred regimen: 6 mg/m2 on day 1 and 3 mg/m2 on day 8; limited benefit in poor-risk disease"
                   },
                   "preference": "circumstances"
                 }
