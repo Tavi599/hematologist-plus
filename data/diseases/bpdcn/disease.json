@@ -27,6 +27,395 @@
   ],
   "treatment": [
     {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 5.2026 (BPDCN-1…BPDCN-4)",
+        "en": "NCCN 5.2026 pathways (BPDCN-1 to BPDCN-4)"
+      },
+      "description": {
+        "uk": "Алгоритм розділу BPDCN настанови NCCN AML, версія 5.2026. Усім — діагностична люмбальна пункція з ІТ-хіміотерапією при діагнозі, рецидиві й підозрі на ураження ЦНС. Придатним до інтенсивної терапії — CD123-спрямована терапія або хіміотерапія; непридатним чи тим, хто відмовляється, — менш інтенсивна. CR — гематологічно як при ГМЛ плюс зникнення позакісткових вогнищ (ЦНС, шкіра); при мікроскопічній хворобі шкіри — ще щонайменше 4 цикли, перш ніж вести як рефрактерну.",
+        "en": "The BPDCN section of the NCCN AML guideline, version 5.2026. Everyone gets a diagnostic lumbar puncture with IT chemotherapy at diagnosis, relapse and suspected CNS disease. Fit for intensive therapy — CD123-directed therapy or chemotherapy; unfit or declining — lower intensity. CR is haematologic as in AML plus clearance of extramedullary sites (CNS, skin); with microscopic skin disease give at least 4 more cycles before treating as refractory."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-cd123",
+          "kind": "line",
+          "title": {
+            "uk": "CD123-спрямована терапія (BPDCN-2)",
+            "en": "CD123-directed therapy (BPDCN-2)"
+          },
+          "description": {
+            "uk": "Без експресії CD123 користь невідома — хіміотерапія чи випробування. Тагракcофусп: альбумін ≥3,2 г/дл, ФВ ЛШ не нижче норми, креатинін і білірубін ≤1,5 мг/дл, АСТ/АЛТ ≤2,5×ВМН, без значущої серцево-судинної хвороби. Півекімаб: не при ураженні ЦНС, СОС в анамнезі, капілярному витоку 4 ст. чи некардіогенному набряку 4 ст.",
+            "en": "Without CD123 expression the benefit is unknown — chemotherapy or a trial. Tagraxofusp: albumin 3.2 g/dL or more, LVEF at least the lower limit of normal, creatinine and bilirubin 1.5 mg/dL or less, AST/ALT 2.5 × ULN or less, no significant cardiovascular disease. Pivekimab: not with CNS disease, prior SOS, grade 4 capillary leak or grade 4 non-cardiac oedema."
+          },
+          "regimens": [
+            {
+              "regimen_id": "tagraxofusp-bpdcn",
+              "notes": {
+                "uk": "Перший цикл — у стаціонарі",
+                "en": "Cycle 1 as an inpatient"
+              }
+            },
+            {
+              "regimen_id": "pivekimab-bpdcn",
+              "notes": {
+                "uk": "Не при ураженні ЦНС",
+                "en": "Not with CNS disease"
+              }
+            },
+            {
+              "regimen_id": "methotrexate-intrathecal",
+              "notes": {
+                "uk": "ІТ при ураженні ЦНС і як профілактика",
+                "en": "IT for CNS disease and as prophylaxis"
+              }
+            },
+            {
+              "regimen_id": "cytarabine-intrathecal",
+              "notes": {
+                "uk": "ІТ при ураженні ЦНС і як профілактика",
+                "en": "IT for CNS disease and as prophylaxis"
+              }
+            }
+          ],
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "next",
+              "label": {
+                "uk": "CR: алоТГСК (бажано)",
+                "en": "CR: allo-HCT (preferred)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "hct",
+              "column": "next",
+              "label": {
+                "uk": "CR: аутоТГСК",
+                "en": "CR: auto-HCT"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "maintenance",
+              "column": "next",
+              "label": {
+                "uk": "CR: продовжити CD123-терапію до прогресування чи неприйнятної токсичності",
+                "en": "CR: continue CD123-directed therapy until progression or unacceptable toxicity"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "surveillance",
+              "column": "next",
+              "label": {
+                "uk": "Нагляд (BPDCN-4)",
+                "en": "Surveillance (BPDCN-4)"
+              },
+              "target": "nccn-rr"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Без відповіді на індукцію → рецидив/рефрактерність (BPDCN-4)",
+                "en": "No response to induction → relapsed/refractory (BPDCN-4)"
+              },
+              "target": "nccn-rr"
+            }
+          ]
+        },
+        {
+          "key": "nccn-chemo",
+          "kind": "line",
+          "title": {
+            "uk": "Інтенсивна хіміотерапія (BPDCN-3)",
+            "en": "Intensive chemotherapy (BPDCN-3)"
+          },
+          "regimens": [
+            {
+              "regimen_id": "hyper-cvad-a",
+              "notes": {
+                "uk": "Тип ГЛЛ: HyperCVAD, курс A чергується з B",
+                "en": "ALL-type: HyperCVAD, course A alternating with B"
+              }
+            },
+            {
+              "regimen_id": "hyper-cvad-b"
+            },
+            {
+              "regimen_id": "ida-7-3",
+              "notes": {
+                "uk": "Тип ГМЛ: цитарабін 100 або 200 мг/м² ×7 діб + ідарубіцин 12 мг/м² ×3 дні",
+                "en": "AML-type: cytarabine 100 or 200 mg/m2 for 7 days + idarubicin 12 mg/m2 for 3 days"
+              }
+            },
+            {
+              "regimen_id": "da-7-3",
+              "notes": {
+                "uk": "Тип ГМЛ: даунорубіцин 60–90 мг/м² ×3 дні",
+                "en": "AML-type: daunorubicin 60-90 mg/m2 for 3 days"
+              }
+            },
+            {
+              "regimen_id": "chop-21",
+              "notes": {
+                "uk": "Тип лімфоми",
+                "en": "Lymphoma-type"
+              }
+            },
+            {
+              "regimen_id": "methotrexate-intrathecal",
+              "notes": {
+                "uk": "ІТ при ураженні ЦНС і як профілактика",
+                "en": "IT for CNS disease and as prophylaxis"
+              }
+            },
+            {
+              "regimen_id": "cytarabine-intrathecal",
+              "notes": {
+                "uk": "ІТ при ураженні ЦНС і як профілактика",
+                "en": "IT for CNS disease and as prophylaxis"
+              }
+            }
+          ],
+          "steps": [
+            {
+              "kind": "hct",
+              "column": "next",
+              "label": {
+                "uk": "CR: алоТГСК (бажано)",
+                "en": "CR: allo-HCT (preferred)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "hct",
+              "column": "next",
+              "label": {
+                "uk": "CR: аутоТГСК",
+                "en": "CR: auto-HCT"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "surveillance",
+              "column": "next",
+              "label": {
+                "uk": "Нагляд (BPDCN-4)",
+                "en": "Surveillance (BPDCN-4)"
+              },
+              "target": "nccn-rr"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Без відповіді на індукцію → рецидив/рефрактерність (BPDCN-4)",
+                "en": "No response to induction → relapsed/refractory (BPDCN-4)"
+              },
+              "target": "nccn-rr"
+            }
+          ]
+        },
+        {
+          "key": "nccn-lower",
+          "kind": "line",
+          "title": {
+            "uk": "Менш інтенсивна терапія (BPDCN-3)",
+            "en": "Lower intensity therapy (BPDCN-3)"
+          },
+          "description": {
+            "uk": "Непридатні до інтенсивної терапії або ті, хто від неї відмовляється.",
+            "en": "Unfit for intensive therapy or declining it."
+          },
+          "regimens": [
+            {
+              "regimen_id": "aza-ven-cycle-1",
+              "notes": {
+                "uk": "Азацитидин або децитабін + венетоклакс",
+                "en": "Azacitidine or decitabine + venetoclax"
+              }
+            },
+            {
+              "regimen_id": "aza-ven"
+            },
+            {
+              "regimen_id": "dec-ven-cycle-1"
+            },
+            {
+              "regimen_id": "dec-ven"
+            },
+            {
+              "regimen_id": "methotrexate-intrathecal",
+              "notes": {
+                "uk": "ІТ при ураженні ЦНС і як профілактика",
+                "en": "IT for CNS disease and as prophylaxis"
+              }
+            },
+            {
+              "regimen_id": "cytarabine-intrathecal",
+              "notes": {
+                "uk": "ІТ при ураженні ЦНС і як профілактика",
+                "en": "IT for CNS disease and as prophylaxis"
+              }
+            }
+          ],
+          "steps": [
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Паліативно: системні стероїди, підтримувальна терапія (BPDCN-C)",
+                "en": "Palliative: systemic steroids, supportive care (BPDCN-C)"
+              }
+            },
+            {
+              "kind": "hct",
+              "column": "next",
+              "label": {
+                "uk": "CR: алоТГСК (бажано)",
+                "en": "CR: allo-HCT (preferred)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "hct",
+              "column": "next",
+              "label": {
+                "uk": "CR: аутоТГСК",
+                "en": "CR: auto-HCT"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "maintenance",
+              "column": "next",
+              "label": {
+                "uk": "CR: продовжити HMA + венетоклакс до прогресування чи неприйнятної токсичності",
+                "en": "CR: continue HMA + venetoclax until progression or unacceptable toxicity"
+              },
+              "preference": "other"
+            },
+            {
+              "kind": "surveillance",
+              "column": "next",
+              "label": {
+                "uk": "Нагляд (BPDCN-4)",
+                "en": "Surveillance (BPDCN-4)"
+              },
+              "target": "nccn-rr"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Без відповіді чи прогресування → рецидив/рефрактерність (BPDCN-4)",
+                "en": "No response or progression → relapsed/refractory (BPDCN-4)"
+              },
+              "target": "nccn-rr"
+            }
+          ]
+        },
+        {
+          "key": "nccn-rr",
+          "kind": "line",
+          "title": {
+            "uk": "Нагляд і рецидив/рефрактерність (BPDCN-4)",
+            "en": "Surveillance and relapsed/refractory disease (BPDCN-4)"
+          },
+          "description": {
+            "uk": "Нагляд: ЗАК із тромбоцитами кожні 1–3 міс. 2 роки, далі кожні 3–6 міс. до 5 років; кістковий мозок — лише при патологічному мазку чи цитопеніях; повторна ПЕТ/КТ, якщо було позакісткове ураження; біопсія підозрілих вогнищ у шкірі. Рецидив: оцінити ЦНС; пошук донора з першого рецидиву, якщо сумісного сиблінга немає. Оптимальна послідовність CD123-засобів невідома.",
+            "en": "Surveillance: CBC with platelets every 1-3 months for 2 years, then every 3-6 months up to 5 years; marrow only for an abnormal smear or cytopenias; repeat PET/CT if there was extramedullary disease; biopsy suspicious skin lesions. Relapse: assess the CNS; start a donor search at first relapse if there is no matched sibling. The best sequence of CD123-directed agents is unknown."
+          },
+          "regimens": [
+            {
+              "regimen_id": "pivekimab-bpdcn"
+            },
+            {
+              "regimen_id": "tagraxofusp-bpdcn"
+            },
+            {
+              "regimen_id": "aza-ven-cycle-1",
+              "notes": {
+                "uk": "HMA + венетоклакс",
+                "en": "HMA + venetoclax"
+              }
+            },
+            {
+              "regimen_id": "aza-ven"
+            },
+            {
+              "regimen_id": "dec-ven-cycle-1"
+            },
+            {
+              "regimen_id": "dec-ven"
+            },
+            {
+              "regimen_id": "hyper-cvad-a",
+              "notes": {
+                "uk": "Хіміотерапія, якщо ще не застосовувалась (BPDCN-3)",
+                "en": "Chemotherapy if not used yet (BPDCN-3)"
+              }
+            },
+            {
+              "regimen_id": "ida-7-3"
+            },
+            {
+              "regimen_id": "da-7-3"
+            },
+            {
+              "regimen_id": "chop-21"
+            },
+            {
+              "regimen_id": "methotrexate-intrathecal",
+              "notes": {
+                "uk": "ІТ при ураженні ЦНС і як профілактика",
+                "en": "IT for CNS disease and as prophylaxis"
+              }
+            },
+            {
+              "regimen_id": "cytarabine-intrathecal",
+              "notes": {
+                "uk": "ІТ при ураженні ЦНС і як профілактика",
+                "en": "IT for CNS disease and as prophylaxis"
+              }
+            }
+          ],
+          "steps": [
+            {
+              "kind": "surveillance",
+              "column": "treatment",
+              "label": {
+                "uk": "Нагляд: ЗАК кожні 1–3 міс. 2 роки, далі кожні 3–6 міс. до 5 років",
+                "en": "Surveillance: CBC every 1-3 months for 2 years, then every 3-6 months up to 5 years"
+              }
+            },
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Рецидив: клінічне випробування (бажано)",
+                "en": "Relapse: clinical trial (preferred)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Місцева променева терапія ізольованих вогнищ; системні стероїди",
+                "en": "Local RT to isolated lesions; systemic steroids"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "induction",
       "kind": "line",
       "title": {

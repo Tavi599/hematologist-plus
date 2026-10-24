@@ -246,8 +246,8 @@
                 {
                   "regimen_id": "hydroxycarbamide-mf",
                   "notes": {
-                    "uk": "Якщо циторедукція принесе симптоматичну користь; NCCN доз не називає, схема — за UpToDate.",
-                    "en": "If cytoreduction would be symptomatically beneficial; NCCN gives no dose, the regimen is from UpToDate."
+                    "uk": "Якщо циторедукція принесе симптоматичну користь. NCCN (Discussion) згадує 500 мг на добу з подальшим підбором; схема довідника — за UpToDate (500 мг через день).",
+                    "en": "If cytoreduction would be symptomatically beneficial. NCCN (Discussion) mentions 500 mg a day, then adjusted; the catalog regimen is from UpToDate (500 mg every other day)."
                   },
                   "preference": "circumstances"
                 },
@@ -327,35 +327,41 @@
               "key": "nccn-mf-lower-fail",
               "kind": "line",
               "title": {
-                "uk": "Непереносимість, відсутність відповіді, втрата відповіді чи прогресування",
-                "en": "Intolerance, no response, loss of response or progression"
+                "uk": "Непереносимість, відсутність відповіді чи втрата відповіді; прогресування",
+                "en": "Intolerance, no response or loss of response; progression"
               },
               "description": {
-                "uk": "Альтернативний JAK-інгібітор, який не використовувався для початкового лікування (категорія 2B для момелотинібу) з подальшим моніторингом прогресування; при анемії — MF-3; або перехід до тактики вищого ризику (MF-2); при прогресуванні — прискорена/бластна фаза. Перед зміною повторюють аспірат/біопсію з NGS і каріотипом.",
-                "en": "An alternative JAK inhibitor not used for initial treatment (category 2B for momelotinib) with continued monitoring for progression; for anaemia see MF-3; or move to higher-risk management (MF-2); with progression, accelerated/blast phase. Marrow with NGS and karyotype is repeated before the change."
+                "uk": "Інший варіант із переліку початкового лікування, не застосований раніше (категорія 2B для момелотинібу) з подальшим моніторингом прогресування; при анемії — MF-3. При прогресуванні — тактика вищого ризику (MF-2) і прискорена/бластна фаза (MPN-AP/BP-1). Аспірат і біопсію з NGS і каріотипом повторюють за клінічними показаннями (наростання симптомів, ознаки прогресування).",
+                "en": "Another option from the initial list not used before (category 2B for momelotinib) with continued monitoring for progression; for anaemia see MF-3. With progression, higher-risk management (MF-2) and accelerated/blast phase (MPN-AP/BP-1). Marrow aspirate and biopsy with NGS and karyotype are repeated as clinically indicated (rising symptoms, signs of progression)."
               },
               "regimens": [
+                {
+                  "regimen_id": "hydroxycarbamide-mf",
+                  "notes": {
+                    "uk": "Якщо не застосовувалась раніше.",
+                    "en": "If not used before."
+                  }
+                },
+                {
+                  "regimen_id": "pacritinib-mf",
+                  "notes": {
+                    "uk": "Якщо не застосовувався раніше; тромбоцити <50 ×10⁹/л.",
+                    "en": "If not used before; platelets under 50 ×10⁹/L."
+                  }
+                },
+                {
+                  "regimen_id": "ref-mpn-peginterferon",
+                  "notes": {
+                    "uk": "Якщо не застосовувався раніше.",
+                    "en": "If not used before."
+                  }
+                },
                 {
                   "regimen_id": "ruxolitinib-mf",
                   "notes": {
                     "uk": "Якщо не застосовувався раніше.",
                     "en": "If not used before."
                   }
-                },
-                {
-                  "regimen_id": "fedratinib-mf",
-                  "notes": {
-                    "uk": "Тромбоцити >50 ×10⁹/л (UpToDate).",
-                    "en": "Platelets over 50 ×10⁹/L (UpToDate)."
-                  }
-                },
-                {
-                  "regimen_id": "pacritinib-mf",
-                  "notes": {
-                    "uk": "Якщо не застосовувався раніше.",
-                    "en": "If not used before."
-                  },
-                  "category": "2b"
                 },
                 {
                   "regimen_id": "momelotinib-mf",
@@ -649,8 +655,8 @@
                 "en": "Anaemia with ongoing symptomatic splenomegaly or constitutional symptoms"
               },
               "description": {
-                "uk": "Бажано: клінічне дослідження, момелотиніб (категорія 1). Інші рекомендовані: пакритиніб, комбінація з руксолітинібом, луспатерцепт, даназол (категорія 2B), ЕСА при ЕПО <500 мОд/мл (категорія 2B).",
-                "en": "Preferred: a clinical trial, momelotinib (category 1). Other recommended: pacritinib, a ruxolitinib combination, luspatercept, danazol (category 2B), ESAs when EPO is under 500 mU/mL (category 2B)."
+                "uk": "Бажано: клінічне дослідження, момелотиніб (категорія 1). Інші рекомендовані: пакритиніб; руксолітиніб у комбінації з луспатерцептом, даназолом (категорія 2B) або ЕСА при ЕПО <500 мОд/мл (категорія 2B).",
+                "en": "Preferred: a clinical trial, momelotinib (category 1). Other recommended: pacritinib; ruxolitinib combined with luspatercept, danazol (category 2B) or ESAs when EPO is under 500 mU/mL (category 2B)."
               },
               "regimens": [
                 {
@@ -669,8 +675,8 @@
                 {
                   "regimen_id": "ref-mf-anemia",
                   "notes": {
-                    "uk": "Даназол (2B), ЕСА при ЕПО <500 (2B), луспатерцепт — дозування в картці.",
-                    "en": "Danazol (2B), ESAs when EPO is under 500 (2B), luspatercept — dosing in the card."
+                    "uk": "Додати до руксолітинібу: луспатерцепт, даназол (2B) чи ЕСА при ЕПО <500 (2B); дозування — у картці.",
+                    "en": "Add to ruxolitinib: luspatercept, danazol (2B) or ESAs when EPO is under 500 (2B); dosing in the card."
                   },
                   "preference": "other"
                 }
@@ -789,7 +795,7 @@
             "en": "Special considerations for allogeneic HCT in MF (MF-C)"
           },
           "description": {
-            "uk": "Направлення до експерта з ТГСК для всіх із DIPSS-Plus проміжним-1 чи вище або MIPSS проміжним чи вище. Добір пацієнтів — за віком, функціональним станом, супутніми хворобами, психосоціальним станом, бажанням і наявністю опікуна. Рекомендована при DIPSS-Plus чи MYSEC проміжному-2 й високому ризику та MIPSS-70/70+ високому ризику; у відібраних випадках — залежність від трансфузій, мутації ASXL1/RAS/TP53, втрата відповіді на JAK-інгібітор. MTSS — найкращі результати при низькому й проміжному ризику. Масивна спленомегалія без відповіді на JAK-інгібітор: опромінення, емболізація селезінкової артерії чи спленектомія перед трансплантацією. Бласти >10% у крові: азацитидин ± JAK-інгібітор перед ТГСК. Бажаний донор — HLA-ідентичний родич; також прийнятні неродинний 7/8 чи гаплоідентичний. Після ТГСК — моніторинг залишкової хвороби за мутаціями-драйверами й химеризмом.",
+            "uk": "Направлення до експерта з ТГСК для всіх із DIPSS-Plus проміжним-1 чи вище або MIPSS проміжним чи вище. Добір пацієнтів — за віком, функціональним станом, супутніми хворобами, психосоціальним станом, бажанням і наявністю опікуна. Рекомендована при DIPSS-Plus чи MYSEC проміжному-2 й високому ризику та MIPSS-70/70+ високому ризику; у відібраних випадках — залежність від трансфузій, мутації ASXL1/RAS/TP53, втрата відповіді на JAK-інгібітор. MTSS — найкращі результати при низькому й проміжному ризику. Масивна спленомегалія без відповіді на JAK-інгібітор: опромінення, емболізація селезінкової артерії чи спленектомія перед трансплантацією. Бласти >10% у крові: азацитидин ± JAK-інгібітор перед ТГСК. Бажаний донор — HLA-сумісний сиблінг; також прийнятні HLA-сумісний неродинний, неродинний із несумісністю 7/8 чи гаплоідентичний. Після ТГСК — моніторинг залишкової хвороби за мутаціями-драйверами й химеризмом.",
             "en": "Refer to an HCT expert all patients with DIPSS-Plus intermediate-1 or higher, or MIPSS intermediate or higher. Selection is by age, performance status, comorbidity, psychosocial status, preference and caregiver availability. Recommended at DIPSS-Plus or MYSEC intermediate-2 and high risk and MIPSS-70/70+ high risk; in selected cases with transfusion dependence, ASXL1/RAS/TP53 mutations or loss of response to a JAK inhibitor. By the MTSS, low and intermediate risk is best. Massive splenomegaly not responding to a JAK inhibitor: radiation, splenic artery embolisation or splenectomy before transplant. Over 10% blasts in blood: azacitidine with or without a JAK inhibitor before HCT. The preferred donor is an HLA-matched sibling; matched unrelated, 7/8-mismatched unrelated and haploidentical donors are also appropriate. After HCT monitor measurable residual disease by driver mutations and chimerism."
           },
           "regimens": [
@@ -913,8 +919,8 @@
               "key": "nccn-mf-apbp-no-hct",
               "kind": "line",
               "title": {
-                "uk": "Бластна фаза, не кандидат на трансплантацію",
-                "en": "Blast phase, not a transplant candidate"
+                "uk": "Прискорена чи бластна фаза, не кандидат на трансплантацію",
+                "en": "Accelerated or blast phase, not a transplant candidate"
               },
               "description": {
                 "uk": "Клінічне дослідження, ГМА, ГМА + JAK-інгібітор, ГМА + венетоклакс або менш інтенсивна хіміотерапія чи таргетна терапія (за настановою AML; IDH1/2, FLT3-інгібітори за результатами NGS).",
@@ -952,8 +958,8 @@
             "en": "Supportive care and special situations (MPN-F, MPN-G, MPN-H)"
           },
           "description": {
-            "uk": "Усім: оцінка й зменшення серцево-судинних чинників ризику (куріння, дієта, рух, АТ, цукровий діабет, ліпіди) і тромботичних та геморагічних чинників; симптоми оцінюють шкалою MPN-SAF TSS (0–100) на початку й під час лікування, відповідь — зменшення ≥50%; зміна симптомів може бути ознакою прогресування. Свербіж: шкіряні засоби, антигістамінні, місцеві стероїди, далі SSRI, вузькосмугова UVB, пегінтерферон, габапентин, апрепітант, руксолітиніб. Біль у кістках: лоратадин, НПЗЗ (напроксен), одноразове опромінення. Головний біль і шум у вухах: виключити тромбоз; аспірин 80–100 мг на добу, при резистентності — двічі на добу або клопідогрель 75 мг на добу; цитозниження чи флеботомія, якщо аспірин не допомагає. JAK-інгібітори: ризик синдрому відміни (лихоманка, дихальна недостатність, гіпотензія, поліорганна недостатність) — знижувати дозу поступово, крім тромбоцитопенії чи нейтропенії; щорічний огляд дерматолога (неменаномні раки шкіри); ліпіди кожні 6 місяців; інфекції, зокрема реактивація вірусів; вакцинація, у тому числі рекомбінантна (інактивована) проти оперізувального лишаю. Тромбоз: антикоагулянт за настановою ACCP; аспірин + антикоагулянт підвищує ризик кровотечі. Кровотеча: виключити інші причини, аспірин відкласти; розглянути набутий синдром фон Віллебранда. Операція: мультидисциплінарне планування, аспірин відмінити за тиждень і відновити через 24 год, Ht <45% при ПВ за 3 місяці до планової операції. Вагітність: гідроксисечовину скасувати; пегінтерферон альфа-2a — за потреби циторедукції; низькі дози аспірину та НМГ (при високому ризику — протягом вагітності й 6 тижнів після пологів); Ht при ПВ <41%/<38%/<39% за триместрами.",
-            "en": "For everyone: assess and reduce cardiovascular risk factors (smoking, diet, exercise, blood pressure, diabetes, lipids) and thrombotic and haemorrhagic risk factors; symptoms are scored with MPN-SAF TSS (0-100) at baseline and during treatment, response being a 50% or greater fall; a change in symptoms may signal progression. Pruritus: skin care, antihistamines, topical steroids, then SSRIs, narrow-band UVB, peginterferon, gabapentin, aprepitant, ruxolitinib. Bone pain: loratadine, NSAIDs (naproxen), single-fraction radiation. Headache and tinnitus: exclude thrombosis; aspirin 80-100 mg a day, twice daily or clopidogrel 75 mg a day when resistant; cytoreduction or phlebotomy if aspirin fails. JAK inhibitors: a withdrawal syndrome (fever, respiratory distress, hypotension, multi-organ failure) is possible, so taper rather than stop abruptly except for thrombocytopenia or neutropenia; yearly dermatology exam (non-melanoma skin cancer); lipids every 6 months; infections including viral reactivation; vaccination including recombinant (killed) zoster vaccine. Thrombosis: anticoagulation per ACCP; aspirin plus an anticoagulant raises bleeding risk. Bleeding: exclude other causes, hold aspirin, consider acquired von Willebrand syndrome. Surgery: multidisciplinary planning, stop aspirin one week before and restart after 24 hours, Hct under 45% in PV for 3 months before elective surgery. Pregnancy: stop hydroxyurea; peginterferon alfa-2a if cytoreduction is needed; low-dose aspirin and LMWH (throughout pregnancy and 6 weeks postpartum in high risk); Hct in PV under 41%/38%/39% by trimester."
+            "uk": "Усім: оцінка й зменшення серцево-судинних чинників ризику (куріння, дієта, рух, АТ, цукровий діабет, ліпіди) і тромботичних та геморагічних чинників; симптоми оцінюють шкалою MPN-SAF TSS (0–100) на початку й під час лікування, відповідь — зменшення ≥50%; зміна симптомів може бути ознакою прогресування. Свербіж: дбайливий догляд за шкірою, антигістамінні, місцеві стероїди, далі SSRI, вузькосмугова UVB, пегінтерферон, габапентин, апрепітант, руксолітиніб. Біль у кістках: лоратадин, НПЗЗ (напроксен), одноразове опромінення. Головний біль і шум у вухах: виключити тромбоз; аспірин 80–100 мг на добу, при резистентності — двічі на добу або клопідогрель 75 мг на добу; циторедукція чи флеботомія (при ПВ з підвищеним Ht), якщо аспірин не допомагає. JAK-інгібітори: ризик синдрому відміни (лихоманка, дихальна недостатність, гіпотензія, поліорганна недостатність) — знижувати дозу поступово, крім тромбоцитопенії чи нейтропенії; щорічний огляд дерматолога (немеланомні раки шкіри); ліпіди кожні 6 місяців; інфекції, зокрема реактивація вірусів; вакцинація, у тому числі рекомбінантна (інактивована) проти оперізувального лишаю. Тромбоз: антикоагулянт за настановою ACCP; аспірин + антикоагулянт підвищує ризик кровотечі. Кровотеча: виключити інші причини, аспірин відкласти; розглянути набутий синдром фон Віллебранда. Операція: мультидисциплінарне планування, аспірин відмінити за тиждень і відновити через 24 год, Ht <45% при ПВ за 3 місяці до планової операції. Вагітність: гідроксисечовину скасувати; пегінтерферон альфа-2a — за потреби циторедукції; стандартний ризик — низькі дози аспірину протягом вагітності й профілактичний НМГ 6 тижнів після пологів; високий ризик — аспірин, НМГ протягом вагітності й 6 тижнів після пологів, циторедукція інтерфероном; Ht при ПВ <41%/<38%/<39% за триместрами.",
+            "en": "For everyone: assess and reduce cardiovascular risk factors (smoking, diet, exercise, blood pressure, diabetes, lipids) and thrombotic and haemorrhagic risk factors; symptoms are scored with MPN-SAF TSS (0-100) at baseline and during treatment, response being a 50% or greater fall; a change in symptoms may signal progression. Pruritus: gentle skin care, antihistamines, topical steroids, then SSRIs, narrow-band UVB, peginterferon, gabapentin, aprepitant, ruxolitinib. Bone pain: loratadine, NSAIDs (naproxen), single-fraction radiation. Headache and tinnitus: exclude thrombosis; aspirin 80-100 mg a day, twice daily or clopidogrel 75 mg a day when resistant; cytoreduction or phlebotomy (PV with raised Hct) if aspirin fails. JAK inhibitors: a withdrawal syndrome (fever, respiratory distress, hypotension, multi-organ failure) is possible, so taper rather than stop abruptly except for thrombocytopenia or neutropenia; yearly dermatology exam (non-melanoma skin cancer); lipids every 6 months; infections including viral reactivation; vaccination including recombinant (killed) zoster vaccine. Thrombosis: anticoagulation per ACCP; aspirin plus an anticoagulant raises bleeding risk. Bleeding: exclude other causes, hold aspirin, consider acquired von Willebrand syndrome. Surgery: multidisciplinary planning, stop aspirin one week before and restart after 24 hours, Hct under 45% in PV for 3 months before elective surgery. Pregnancy: stop hydroxyurea; peginterferon alfa-2a if cytoreduction is needed; standard risk — low-dose aspirin throughout pregnancy and prophylactic LMWH for 6 weeks postpartum; high risk — aspirin, LMWH throughout pregnancy and 6 weeks postpartum, interferon cytoreduction; Hct in PV under 41%/38%/39% by trimester."
           },
           "regimens": [
             {
@@ -967,8 +973,8 @@
             {
               "regimen_id": "aspirin-mpn",
               "notes": {
-                "uk": "Низька доза 81–100 мг на добу; двічі на добу — при рефрактерних симптомах чи серцево-судинних чинниках ризику.",
-                "en": "Low dose 81-100 mg a day; twice daily for refractory symptoms or cardiovascular risk factors."
+                "uk": "Низька доза 81–100 мг на добу; двічі на добу: згідно з NCCN PV-1/PV-2 (виноска d) і MPN-F — при рефрактерних симптомах; згідно з NCCN ET-1/ET-2 (виноска d) — також при серцево-судинних чинниках ризику.",
+                "en": "Low dose 81-100 mg a day; twice daily: per NCCN PV-1/PV-2 (footnote d) and MPN-F — for refractory symptoms; per NCCN ET-1/ET-2 (footnote d) — also with cardiovascular risk factors."
               }
             }
           ]
