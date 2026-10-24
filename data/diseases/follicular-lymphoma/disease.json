@@ -77,8 +77,8 @@
                 "en": "Stage I or contiguous stage II"
               },
               "description": {
-                "uk": "Після CR/PR — спостереження; при NR або прогресії — рядок «Відповідь і рецидив (FOLL-5)». Анти-CD20 ± хіміотерапія без променевої терапії — варіант за певних обставин, наприклад при великому внутрішньочеревному чи брижовому ураженні стадії I.",
-                "en": "After CR/PR — follow-up; with NR or progression — the row \"Response and relapse (FOLL-5)\". Anti-CD20 ± chemotherapy without radiation is an option in certain circumstances, for example bulky intra-abdominal or mesenteric stage I disease."
+                "uk": "Після CR/PR — спостереження; при NR або прогресії — рядок «Відповідь і рецидив (FOLL-5)». Анти-CD20 ± хіміотерапія без променевої терапії — варіант за певних обставин, наприклад при великому внутрішньочеревному чи брижовому ураженні стадії I. Прогресія під час подальшого спостереження — як при стадіях III–IV (FOLL-4).",
+                "en": "After CR/PR — follow-up; with NR or progression — the row \"Response and relapse (FOLL-5)\". Anti-CD20 ± chemotherapy without radiation is an option in certain circumstances, for example bulky intra-abdominal or mesenteric stage I disease. Progression during later follow-up — as for stage III-IV (FOLL-4)."
               },
               "regimens": [
                 {
@@ -127,6 +127,15 @@
                     "uk": "Відповідь (Lugano): CR/PR — спостереження; NR — далі",
                     "en": "Response (Lugano): CR/PR — follow-up; NR — next"
                   }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Прогресія після CR/PR — як стадії III–IV (FOLL-4)",
+                    "en": "Progression after CR/PR — as stage III-IV (FOLL-4)"
+                  },
+                  "target": "nccn-adv"
                 },
                 {
                   "kind": "page",
@@ -296,8 +305,8 @@
             "en": "First line (FOLL-B 1)"
           },
           "description": {
-            "uk": "Обінутузумаб кращий при рефрактерності до ритуксимабу (прогресія під час або в межах 6 міс. після ритуксимабу). Бендамустин: у дослідженні GALLIUM зросла смертність від опортуністичних інфекцій і вторинних пухлин — профілактика пневмоцистної та VZV-інфекції обов’язкова; перед CAR-T чи CD3×CD20 біспецифічними антитілами — з обережністю (відкласти до лейкафереза). Ритуксимаб при низькому пухлинному навантаженні доречний, якщо стартували зі спостереження або прогресія не відповідає GELF (негайна терапія без GELF загальну виживаність не покращила). Для літніх чи ослаблених, якщо жодна комбінація не буде переносимою, — ритуксимаб 375 мг/м² щотижня ×4.",
-            "en": "Obinutuzumab is preferred when rituximab-refractory (progression on or within 6 months of rituximab). Bendamustine: in GALLIUM mortality from opportunistic infections and second cancers rose — pneumocystis and VZV prophylaxis is mandatory; use with caution before CAR-T or CD3xCD20 bispecifics (delay until leukapheresis). Rituximab for low tumor burden is appropriate when surveillance was the start or progression does not meet GELF (immediate therapy without GELF did not improve overall survival). For older or infirm patients when no combination is expected to be tolerable — rituximab 375 mg/m2 weekly x4."
+            "uk": "Обінутузумаб кращий при рефрактерності до ритуксимабу (прогресія під час або в межах 6 міс. після ритуксимабу). Бендамустин: у дослідженні GALLIUM зросла смертність від опортуністичних інфекцій і вторинних пухлин — профілактика пневмоцистної та VZV-інфекції обов’язкова; перед CAR-T чи CD3×CD20 біспецифічними антитілами — з обережністю (відкласти до лейкафереза). Ритуксимаб при низькому пухлинному навантаженні доречний, якщо стартували зі спостереження або прогресія не відповідає GELF (негайна терапія без GELF загальну виживаність не покращила). Для літніх чи ослаблених, якщо жодна комбінація не буде переносимою, — ритуксимаб 375 мг/м² щотижня ×4. Схеми з обінутузумабом вивчали разом із підтримкою обінутузумабом; застосування без підтримки — екстраполяція даних.",
+            "en": "Obinutuzumab is preferred when rituximab-refractory (progression on or within 6 months of rituximab). Bendamustine: in GALLIUM mortality from opportunistic infections and second cancers rose — pneumocystis and VZV prophylaxis is mandatory; use with caution before CAR-T or CD3xCD20 bispecifics (delay until leukapheresis). Rituximab for low tumor burden is appropriate when surveillance was the start or progression does not meet GELF (immediate therapy without GELF did not improve overall survival). For older or infirm patients when no combination is expected to be tolerable — rituximab 375 mg/m2 weekly x4. The obinutuzumab regimens were studied with obinutuzumab maintenance; use without maintenance is an extrapolation of the data."
           },
           "regimens": [],
           "children": [
@@ -379,11 +388,11 @@
                     "uk": "Леналідомід + ритуксимаб",
                     "en": "Lenalidomide + rituximab"
                   },
-                  "preference": "other"
+                  "preference": "preferred"
                 },
                 {
                   "regimen_id": "r2-first-line",
-                  "preference": "other"
+                  "preference": "preferred"
                 }
               ]
             },
@@ -452,8 +461,8 @@
                 {
                   "regimen_id": "rituximab-maintenance",
                   "notes": {
-                    "uk": "2 роки; після монотерапії ритуксимабом — лише 4 введення",
-                    "en": "2 years; only 4 doses after single-agent rituximab"
+                    "uk": "2 роки після хіміоімунотерапії; після монотерапії ритуксимабом — інший рекомендований варіант: раз на 8 тижнів, 4 введення",
+                    "en": "2 years after chemoimmunotherapy; after single-agent rituximab — other recommended: every 8 weeks, 4 doses"
                   },
                   "preference": "preferred",
                   "category": "1"
@@ -522,6 +531,15 @@
                     "uk": "Активне спостереження",
                     "en": "Active surveillance"
                   }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "PR — також системна терапія третьої лінії й далі (FOLL-B 3)",
+                    "en": "PR — also third-line systemic therapy or later (FOLL-B 3)"
+                  },
+                  "target": "nccn-3l"
                 }
               ]
             },
@@ -553,8 +571,8 @@
               "key": "nccn-resp-nr",
               "kind": "group",
               "title": {
-                "uk": "Відсутність відповіді або прогресія після другої лінії",
-                "en": "No response or progression after second line"
+                "uk": "Відсутність відповіді або прогресія під час лікування",
+                "en": "No response or progressive disease on therapy"
               },
               "regimens": [],
               "steps": [
