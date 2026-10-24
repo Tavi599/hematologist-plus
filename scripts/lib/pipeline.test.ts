@@ -584,6 +584,42 @@ ${'текст '.repeat(400)}
     )
   })
 
+  it('reads a reference card, and asks it to link a drug the catalog has', () => {
+    // A card written before its drug was added: the drug is named as text and its gap says it is
+    // missing — pirtobrutinib on the CLL, MCL and MZL cards after the Waldenström session added it.
+    const rows = loadDemo()
+    const drug = rows.drugs[0]!
+    const name = (drug.name as Record<string, string>).uk ?? ''
+    rows.regimens.push({
+      ...rows.regimens[0]!,
+      id: 'ref',
+      reference: {
+        summary: { uk: 'Опис' },
+        drugs: [{ name: { uk: name } }],
+        key_info: [],
+        gap: { uk: `Препарату ${name} немає в довіднику.` },
+        availability: 'unknown',
+      },
+    })
+    const found = checkCatalog(rows)
+      .filter((issue) => issue.id === 'ref')
+      .map((issue) => issue.message)
+
+    expect(found).toContain(`says ${drug.id} is not in the catalog, but it is`)
+    expect(found).toContain(`names ${drug.id} without linking it (drug_id)`)
+  })
+
+  it('leaves alone a missing regimen of drugs the catalog has', () => {
+    const rows = loadDemo()
+    const drug = rows.drugs[0]!
+    const name = (drug.name as Record<string, string>).uk ?? ''
+    rows.regimens[0]!.description = { uk: `У довіднику немає схеми з ${name}.` }
+
+    expect(checkCatalog(rows).map((issue) => issue.message)).not.toContain(
+      `says ${drug.id} is not in the catalog, but it is`,
+    )
+  })
+
   it('leaves alone a note saying the drug is there but the regimen is not', () => {
     const rows = loadDemo()
     const drug = rows.drugs[0]!

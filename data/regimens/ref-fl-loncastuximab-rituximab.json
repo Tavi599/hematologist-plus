@@ -23,7 +23,8 @@
         "name": {
           "uk": "Лонкастуксимаб тесирин",
           "en": "Loncastuximab tesirine"
-        }
+        },
+        "drug_id": "loncastuximab-tesirine"
       },
       {
         "name": {
@@ -44,9 +45,9 @@
       }
     ],
     "gap": {
-      "uk": "UpToDate не наводить доз лонкастуксимабу в ФЛ, а препарата немає в довіднику.",
-      "en": "UpToDate does not give the loncastuximab doses in FL, and the drug is not in the catalog."
+      "uk": "UpToDate не наводить доз лонкастуксимабу в ФЛ; в Україні препарат не зареєстрований.",
+      "en": "UpToDate does not give the loncastuximab doses in FL; the drug is not registered in Ukraine."
     },
-    "availability": "unknown"
+    "availability": "unavailable"
   }
 }

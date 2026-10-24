@@ -30,13 +30,15 @@
         "name": {
           "uk": "Тіогуанін",
           "en": "Tioguanine"
-        }
+        },
+        "drug_id": "thioguanine"
       },
       {
         "name": {
           "uk": "Пегфілграстим",
           "en": "Pegfilgrastim"
-        }
+        },
+        "drug_id": "pegfilgrastim"
       }
     ],
     "key_info": [
@@ -50,8 +52,8 @@
       }
     ],
     "gap": {
-      "uk": "Протокол eviQ 4088 не вказує шлях введення цитарабіну (відсилає до протоколу індукції), а тіогуаніну ще немає в довіднику.",
-      "en": "The eviQ 4088 protocol does not state the route of cytarabine (it refers to the induction protocol), and tioguanine is not in the catalog yet."
+      "uk": "Протокол eviQ 4088 не вказує шлях введення цитарабіну (відсилає до протоколу індукції).",
+      "en": "The eviQ 4088 protocol does not state the route of cytarabine (it refers to the induction protocol)."
     },
     "availability": "unknown"
   }

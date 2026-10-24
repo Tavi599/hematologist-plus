@@ -396,8 +396,9 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
   )
   // Two things are said in the same breath and must not be mistaken for the claim: that the drug
   // is there but has no regimen yet, and that a form of it is missing — eye drops of a steroid the
-  // catalog carries as an injection.
-  const NOT_THE_CLAIM = /довіднику є|довідник\w* відділення є|in the catalog\w*,? but|крапл|drops/i
+  // catalog carries as an injection. Nor is a missing regimen of drugs the catalog has.
+  const NOT_THE_CLAIM =
+    /довіднику є|довідник\w* відділення є|in the catalog\w*,? but|крапл|drops|немає схем|has no [^.;]*regimen/i
   for (const { table, id, text } of localizedTexts(rows)) {
     for (const sentence of text.split(/(?<=[.;])\s+/)) {
       if (!ABSENT_CLAIM.test(sentence) || NOT_THE_CLAIM.test(sentence)) continue
@@ -455,6 +456,21 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
       for (const drug of regimen.reference.drugs) {
         if (drug.drug_id !== undefined && !drugById.has(drug.drug_id)) {
           error('regimens', regimen.id, `reference drug "${drug.drug_id}" is not in the catalog`)
+        }
+        // A card written before its drug was added names it as text only; the card then shows no
+        // link and its gap still says the drug is missing.
+        if (drug.drug_id === undefined) {
+          const names = Object.values(drug.name as Record<string, string>).map((name) =>
+            name.toLowerCase(),
+          )
+          for (const known of rows.drugs) {
+            const knownNames = Object.values(known.name as Record<string, string>).map((name) =>
+              name.toLowerCase(),
+            )
+            if (names.some((name) => knownNames.includes(name))) {
+              warning('regimens', regimen.id, `names ${known.id} without linking it (drug_id)`)
+            }
+          }
         }
       }
     }
@@ -610,6 +626,19 @@ function* localizedTexts(rows: SyncRows): Generator<{ table: string; id: string;
         for (const text of Object.values(value as Record<string, string>)) {
           if (typeof text === 'string' && text !== '') yield { table, id: row.id, text }
         }
+      }
+    }
+  }
+  // A reference card is all prose: what it says is missing is read as closely as a note.
+  for (const regimen of rows.regimens) {
+    const reference = regimen.reference
+    if (reference === null || reference === undefined) continue
+    const parts = [reference.summary, reference.gap, ...reference.key_info]
+    for (const part of parts) {
+      if (part === undefined) continue
+      for (const text of Object.values(part as Record<string, string>)) {
+        if (typeof text === 'string' && text !== '')
+          yield { table: 'regimens', id: regimen.id, text }
       }
     }
   }
