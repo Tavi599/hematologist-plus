@@ -64,8 +64,8 @@
             "en": "Stage I-II, nonbulky, contiguous (MANT-2)"
           },
           "description": {
-            "uk": "Локалізований прояв вкрай рідкісний. Варіанти: ISRT (24–36 Гр самостійно) або менш агресивна індукція (MANT-A) ± ISRT; несуміжна II стадія без об’єму — менш агресивна індукція; у вкрай відібраних випадках — активне спостереження. Після PR або прогресії на ISRT самій — менш агресивна індукція; рецидив — як поширена хвороба (MANT-3). Огляд кожні 3–6 міс. 5 років, далі щороку; КТ не частіше ніж кожні 6 міс. до 2 років, далі раз на рік.",
-            "en": "A localized presentation is extremely rare. Options: ISRT (24-36 Gy alone) or less aggressive induction (MANT-A) ± ISRT; non-contiguous nonbulky stage II — less aggressive induction; active surveillance only in highly selected cases. After PR or progression on ISRT alone — less aggressive induction; relapse — as advanced disease (MANT-3). Visits every 3-6 months for 5 years, then yearly; CT no more than every 6 months up to 2 years, then yearly."
+            "uk": "Локалізований прояв вкрай рідкісний. Варіанти: ISRT (24–36 Гр самостійно) або менш агресивна індукція (MANT-A) ± ISRT; несуміжна II стадія без об’єму — менш агресивна індукція; у вкрай відібраних випадках — активне спостереження. PR, прогресія або рецидив після самої ISRT — як поширена хвороба (MANT-3); після менш агресивної індукції ± ISRT — як рецидив/рефрактерність (MANT-6A/6B). Огляд кожні 3–6 міс. 5 років, далі щороку; КТ не частіше ніж кожні 6 міс. до 2 років, далі раз на рік.",
+            "en": "A localized presentation is extremely rare. Options: ISRT (24-36 Gy alone) or less aggressive induction (MANT-A) ± ISRT; non-contiguous nonbulky stage II — less aggressive induction; active surveillance only in highly selected cases. PR, progression or relapse after ISRT alone — as advanced disease (MANT-3); after less aggressive induction ± ISRT — as relapsed/refractory disease (MANT-6A/6B). Visits every 3-6 months for 5 years, then yearly; CT no more than every 6 months up to 2 years, then yearly."
           },
           "regimens": [
             {
@@ -110,6 +110,15 @@
                 "en": "Advanced disease (MANT-3)"
               },
               "target": "nccn-adv"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Після менш агресивної індукції — рецидив (MANT-6A/6B)",
+                "en": "After less aggressive induction — relapse (MANT-6A/6B)"
+              },
+              "target": "nccn-rel-1"
             }
           ]
         },
@@ -186,7 +195,7 @@
                 {
                   "regimen_id": "r-chop-ibrutinib-mcl",
                   "notes": {
-                    "uk": "Ібрутиніб; акалабрутиніб і занубрутиніб — згідно NCCN теж допустимі як ковалентний BTKi, але не вивчені в TRIANGLE",
+                    "uk": "Ібрутиніб; за NCCN ковалентним BTKi може бути також акалабрутиніб чи занубрутиніб, але в TRIANGLE їх не вивчали",
                     "en": "Ibrutinib; NCCN also lists acalabrutinib and zanubrutinib as the covalent BTKi, but they were not studied in TRIANGLE"
                   },
                   "preference": "preferred"
@@ -379,8 +388,8 @@
             {
               "regimen_id": "br",
               "notes": {
-                "uk": "Бендамустин + ритуксимаб, далі ритуксимаб-підтримка 2 роки",
-                "en": "Bendamustine + rituximab, then rituximab maintenance for 2 years"
+                "uk": "Бендамустин + ритуксимаб; далі можлива підтримка ритуксимабом раз на 8 тижнів 2–3 роки",
+                "en": "Bendamustine + rituximab; rituximab maintenance every 8 weeks for 2-3 years may follow"
               },
               "preference": "preferred"
             },
@@ -403,8 +412,8 @@
             {
               "regimen_id": "ibrutinib-rituximab-mcl",
               "notes": {
-                "uk": "Ібрутиніб (безперервно) + ритуксимаб",
-                "en": "Ibrutinib (continuous) + rituximab"
+                "uk": "Ібрутиніб (безперервно) + ритуксимаб, далі підтримка ритуксимабом 2 роки",
+                "en": "Ibrutinib (continuous) + rituximab, followed by rituximab maintenance for 2 years"
               },
               "preference": "other"
             },
@@ -421,14 +430,6 @@
               "notes": {
                 "uk": "VR-CAP",
                 "en": "VR-CAP"
-              },
-              "preference": "other"
-            },
-            {
-              "regimen_id": "r-bac",
-              "notes": {
-                "uk": "RBAC500",
-                "en": "RBAC500"
               },
               "preference": "other"
             }
@@ -462,25 +463,35 @@
             "en": "Classic TP53-mutated MCL (MANT-3)"
           },
           "description": {
-            "uk": "Клінічне випробування наполегливо рекомендоване. Поза ним — варіанти індукції з MANT-A; для всіх придатні комбінації венетоклакс або занубрутиніб з обінутузумабом.",
-            "en": "A clinical trial is strongly recommended. Outside one — the induction options in MANT-A; venetoclax- or zanubrutinib-based regimens with obinutuzumab suit all patients."
+            "uk": "Клінічне випробування наполегливо рекомендоване. Поза ним NCCN називає: для всіх хворих — венетоклакс/занубрутиніб + обінутузумаб; для придатних до інтенсивної індукції — схему TRIANGLE (CHOP/ковалентний BTKi + R, що чергується з DHA + платина + R, далі підтримка ритуксимабом + ковалентним BTKi); для непридатних — акалабрутиніб (безперервно) + ритуксимаб.",
+            "en": "A clinical trial is strongly recommended. Outside one NCCN names: for all patients — venetoclax/zanubrutinib + obinutuzumab; for those fit for aggressive induction — the TRIANGLE regimen (CHOP/covalent BTKi + R alternating with DHA + platinum + R, then rituximab + covalent BTKi maintenance); for those unfit — acalabrutinib (continuous) + rituximab."
           },
           "regimens": [
             {
               "regimen_id": "ref-mcl-zano-obi-ven",
               "notes": {
-                "uk": "Занубрутиніб/венетоклакс + обінутузумаб",
-                "en": "Zanubrutinib/venetoclax + obinutuzumab"
-              },
-              "preference": "preferred"
+                "uk": "Венетоклакс/занубрутиніб + обінутузумаб — для всіх хворих",
+                "en": "Venetoclax/zanubrutinib + obinutuzumab — for all patients"
+              }
             },
             {
-              "regimen_id": "br",
+              "regimen_id": "r-chop-ibrutinib-mcl",
               "notes": {
-                "uk": "Інші індукції MANT-A — як для TP53 дикого типу",
-                "en": "Other MANT-A induction regimens — as for TP53 wild type"
-              },
-              "preference": "other"
+                "uk": "TRIANGLE — для придатних до інтенсивної індукції",
+                "en": "TRIANGLE — for patients fit for aggressive induction"
+              }
+            },
+            {
+              "regimen_id": "r-dhaox"
+            },
+            {
+              "regimen_id": "r-dhaox-eviq"
+            },
+            {
+              "regimen_id": "r-dhap"
+            },
+            {
+              "regimen_id": "ibrutinib-maintenance-mcl"
             }
           ],
           "steps": [
@@ -492,6 +503,14 @@
                 "en": "Clinical trial (strongly recommended)"
               },
               "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Непридатні до інтенсивної індукції: акалабрутиніб (безперервно) + ритуксимаб; окремої схеми в довіднику немає",
+                "en": "Unfit for aggressive induction: acalabrutinib (continuous) + rituximab; no separate regimen in the catalog"
+              }
             }
           ]
         },
@@ -503,8 +522,8 @@
             "en": "First relapse / refractory disease (MANT-6A, MANT-6B, MANT-A 2)"
           },
           "description": {
-            "uk": "Вибір залежить від попереднього ковалентного BTKi: без нього — ковалентний BTKi (бажано), далі до прогресії; пізній рецидив (>24 міс.) після схеми з ковалентним BTKi — 2-га лінія без BTKi або фіксована за тривалістю схема; прогресія на ковалентному BTKi чи ранній рецидив (<24 міс.) — нековалентний BTKi (піртобрутиніб), CAR-T, біспецифічні антитіла або інша ще не застосована системна терапія. У відібраних випадках рецидив лікують як нововиявлену поширену MCL. Після відповіді — безперервно до прогресії або консолідація: алогенна ТГСК (CR/PR; невдала мобілізація, стійкий кістковий мозок) чи HDT/ASCR, якщо її не було. Ковалентні BTKi (акалабрутиніб, занубрутиніб) не доведено ефективні при BTK C481S-ібрутиніб-рефрактерній хворобі; піртобрутиніб діє. Біспецифічні антитіла при MCL частіше дають СВЦ, ніж при ДВКЛ; CD20-негативна пухлина — біспецифіки малоефективні.",
-            "en": "The choice depends on prior covalent BTKi: if none — a covalent BTKi (preferred), continued to progression; late relapse (over 24 months) after a covalent-BTKi regimen — second line without BTKi or a fixed-duration regimen; progression on a covalent BTKi or early relapse (under 24 months) — a noncovalent BTKi (pirtobrutinib), CAR-T, bispecific antibodies, or another systemic therapy not yet given. In selected cases relapse is managed as newly diagnosed advanced MCL. After response — continue to progression, or consolidate with allogeneic HCT (CR/PR; mobilization failure, persistent marrow disease) or HDT/ASCR if not previously given. Covalent BTKi (acalabrutinib, zanubrutinib) are not proven in ibrutinib-refractory disease with BTK C481S; pirtobrutinib works. Bispecifics cause CRS more often in MCL than in DLBCL; they work poorly in CD20-negative disease."
+            "uk": "Вибір залежить від попереднього ковалентного BTKi. Ще не отримував ковалентного BTKi або пізній рецидив (>24 міс.) після схеми з ним (MANT-6A): безперервні схеми (з ковалентним BTKi чи інші) до прогресії або схеми фіксованої тривалості. Прогресія на ковалентному BTKi або ранній рецидив (<24 міс.) (MANT-6B): нековалентний BTKi (піртобрутиніб) чи інша безперервна схема, CAR-T або схема фіксованої тривалості. У відібраних випадках рецидив лікують як нововиявлену поширену MCL. Після схеми фіксованої тривалості: CR — у відібраних випадках консолідація алогенною ТГСК ± ISRT або HDT/ASCR (якщо її не було), або спостереження; very good PR — спостереження, minimal PR — як рефрактерна хвороба. Без відповіді — CAR-T, нековалентний BTKi, біспецифічні антитіла, клінічне випробування або інша друга лінія з алогенною ТГСК у відібраних випадках (невдала мобілізація, стійке ураження кісткового мозку) при CR/PR. Ковалентні BTKi (акалабрутиніб, занубрутиніб) не довели ефективності при ібрутиніб-рефрактерній хворобі з BTK C481S; піртобрутиніб діє. Біспецифічні антитіла при MCL частіше дають СВЦ, ніж при ДВКЛ; CD20-негативна пухлина — біспецифіки малоефективні. Неоднозначно: згідно з MANT-6B (с. 56) ISRT є одним із варіантів другої лінії; згідно з MANT-6A (с. 55) ISRT стоїть поруч із колонкою другої лінії, але з тексту PDF не видно, чи це окремий варіант другої лінії, чи варіант після PR.",
+            "en": "The choice depends on prior covalent BTKi. Covalent-BTKi naive or late relapse (over 24 months) after a regimen with one (MANT-6A): continuous regimens (covalent-BTKi-containing or others) until progression, or fixed-duration regimens. Progression on a covalent BTKi or early relapse (under 24 months) (MANT-6B): a noncovalent BTKi (pirtobrutinib) or another continuous regimen, CAR-T, or a fixed-duration regimen. In selected cases relapse is managed as newly diagnosed advanced MCL. After a fixed-duration regimen: CR — in selected cases consolidation with allogeneic HCT ± ISRT or HDT/ASCR (if not previously given), or surveillance; very good PR — surveillance, minimal PR — treat as refractory. No response — CAR-T, a noncovalent BTKi, bispecifics, a clinical trial, or another second-line regimen followed by allogeneic HCT in selected cases (mobilization failure, persistent marrow disease) if CR/PR. Covalent BTKi (acalabrutinib, zanubrutinib) are not proven in ibrutinib-refractory disease with BTK C481S; pirtobrutinib works. Bispecifics cause CRS more often in MCL than in DLBCL; they work poorly in CD20-negative disease. Ambiguous: per MANT-6B (p. 56) ISRT is one of the second-line options; per MANT-6A (p. 55) ISRT sits next to the second-line column, but the PDF text does not show whether it is a separate second-line option or an option after PR."
           },
           "regimens": [],
           "children": [
@@ -551,22 +570,6 @@
                 {
                   "regimen_id": "ibrutinib-rituximab-mcl",
                   "preference": "other"
-                },
-                {
-                  "regimen_id": "ref-mcl-ibru-ven",
-                  "notes": {
-                    "uk": "Ібрутиніб (безперервно) / венетоклакс",
-                    "en": "Ibrutinib (continuous) / venetoclax"
-                  },
-                  "preference": "other"
-                },
-                {
-                  "regimen_id": "ref-mcl-venetoclax",
-                  "notes": {
-                    "uk": "Венетоклакс (безперервно) ± ритуксимаб",
-                    "en": "Venetoclax (continuous) ± rituximab"
-                  },
-                  "preference": "other"
                 }
               ]
             },
@@ -597,8 +600,8 @@
                 {
                   "regimen_id": "r-dhaox",
                   "notes": {
-                    "uk": "DHA + платина + ритуксимаб (якщо ритуксимаб ще не давали)",
-                    "en": "DHA + platinum + rituximab (if rituximab not given before)"
+                    "uk": "DHA + платина + ритуксимаб (якщо цю схему ще не давали)",
+                    "en": "DHA + platinum + rituximab (if not previously given)"
                   },
                   "preference": "circumstances"
                 },
@@ -625,6 +628,22 @@
                     "en": "RBAC500; not recommended after bendamustine"
                   },
                   "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mcl-ibru-ven",
+                  "notes": {
+                    "uk": "Ібрутиніб (безперервно) / венетоклакс",
+                    "en": "Ibrutinib (continuous) / venetoclax"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "regimen_id": "ref-mcl-venetoclax",
+                  "notes": {
+                    "uk": "Венетоклакс (безперервно) ± ритуксимаб",
+                    "en": "Venetoclax (continuous) ± rituximab"
+                  },
+                  "preference": "circumstances"
                 }
               ]
             },
@@ -642,19 +661,19 @@
               "regimens": [
                 {
                   "regimen_id": "ref-mcl-pirtobrutinib",
-                  "preference": "preferred"
+                  "preference": "circumstances"
                 },
                 {
                   "regimen_id": "ref-mcl-car-t",
-                  "preference": "preferred"
+                  "preference": "circumstances"
                 },
                 {
                   "regimen_id": "ref-mcl-glofitamab",
-                  "preference": "preferred"
+                  "preference": "circumstances"
                 },
                 {
                   "regimen_id": "ref-mosun-pola",
-                  "preference": "preferred"
+                  "preference": "circumstances"
                 }
               ]
             }
@@ -668,33 +687,32 @@
             "en": "Second relapse and later (MANT-6A/6B, MANT-A 2)"
           },
           "description": {
-            "uk": "Ще не застосовані схеми: CAR-T, біспецифічні антитіла, неконковалентний BTKi, альтернативна системна терапія, клінічне випробування, паліативна ISRT, найкраща підтримувальна терапія. Третя лінія й далі: сонротоклакс (після щонайменше двох ліній, включно з BTKi). Алогенна ТГСК у відібраних випадках, якщо досягнуто CR/PR.",
+            "uk": "Ще не застосовані схеми: CAR-T, біспецифічні антитіла, нековалентний BTKi, альтернативна системна терапія, клінічне випробування, паліативна ISRT, найкраща підтримувальна терапія. Третя лінія й далі: сонротоклакс (після щонайменше двох ліній, включно з BTKi). Алогенна ТГСК у відібраних випадках, якщо досягнуто CR/PR.",
             "en": "Regimens not yet given: CAR-T, bispecifics, a noncovalent BTKi, alternative systemic therapy, a clinical trial, palliative ISRT, best supportive care. Third line and later: sonrotoclax (after at least two lines including a BTKi). Allogeneic HCT in selected cases if CR/PR is reached."
           },
           "regimens": [
             {
               "regimen_id": "ref-mcl-car-t",
-              "preference": "preferred"
+              "preference": "circumstances"
             },
             {
               "regimen_id": "ref-mcl-pirtobrutinib",
-              "preference": "preferred"
+              "preference": "circumstances"
             },
             {
               "regimen_id": "ref-mcl-glofitamab",
-              "preference": "preferred"
+              "preference": "circumstances"
             },
             {
               "regimen_id": "ref-mosun-pola",
-              "preference": "preferred"
+              "preference": "circumstances"
             },
             {
               "regimen_id": "ref-mcl-sonrotoclax",
               "notes": {
                 "uk": "Після щонайменше двох ліній, включно з BTKi",
                 "en": "After at least two lines including a BTKi"
-              },
-              "preference": "other"
+              }
             }
           ],
           "steps": [
