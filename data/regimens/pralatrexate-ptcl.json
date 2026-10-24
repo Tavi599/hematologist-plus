@@ -1,14 +1,14 @@
 {
-  "$comment": "Праалатрексат при рецидивній ПТКЛ за листком FDA: 30 мг/м² в/в болюсно 3-5 хвилин раз на тиждень 6 тижнів із 7 (цикл 49 днів). Препарат у реєстрі України не знайдено. При AITL активність обмежена (NCCN PTCL-B 6, п. n). Вітамін B12 і фолієва кислота обов'язкові (NCCN TCLYM-B 3).",
+  "$comment": "Пралатрексат при рецидивній ПТКЛ за листком FDA: 30 мг/м² в/в болюсно 3-5 хвилин раз на тиждень 6 тижнів із 7 (цикл 49 днів). Препарат у реєстрі України не знайдено. При AITL активність обмежена (NCCN PTCL-B 6, п. n). Вітамін B12 і фолієва кислота обов'язкові (NCCN TCLYM-B 3).",
   "id": "pralatrexate-ptcl",
-  "short_name": "Праалатрексат",
+  "short_name": "Пралатрексат",
   "name": {
-    "uk": "Праалатрексат (рецидивна ПТКЛ)",
+    "uk": "Пралатрексат (рецидивна ПТКЛ)",
     "en": "Pralatrexate (relapsed PTCL)"
   },
   "description": {
-    "uk": "30 мг/м² внутрішньовенно за 3-5 хвилин у дні 1, 8, 15, 22, 29 і 36 циклу на 49 днів. Перед початком — фолієва кислота щодня й вітамін B12 внутрішньом'язово; перед кожною дозою — мукозит не вище 1-го ступеня, тромбоцити не менше 50×10⁹/л (перша доза — 100×10⁹/л), нейтрофіли не менше 1×10⁹/л.",
-    "en": "30 mg/m2 intravenously over 3-5 minutes on days 1, 8, 15, 22, 29 and 36 of a 49-day cycle. Daily folic acid and intramuscular vitamin B12 before the start; before each dose mucositis grade 1 or less, platelets at least 50 x 10^9/L (100 for the first dose), neutrophils at least 1 x 10^9/L."
+    "uk": "30 мг/м² внутрішньовенно за 3-5 хвилин у дні 1, 8, 15, 22, 29 і 36 циклу на 49 днів. Перед початком — фолієва кислота щодня й вітамін B12 внутрішньом'язово; перед кожною дозою — мукозит не вище 1-го ступеня, тромбоцити не менше 50×10⁹/л (перша доза — 100×10⁹/л), нейтрофіли не менше 1×10⁹/л. Розглянути лейковорин 25 мг всередину 3 рази на добу 2 дні поспіль (6 доз), починаючи через 24 години після кожної дози пралатрексату (NCCN TCLYM-B 3).",
+    "en": "30 mg/m2 intravenously over 3-5 minutes on days 1, 8, 15, 22, 29 and 36 of a 49-day cycle. Daily folic acid and intramuscular vitamin B12 before the start; before each dose mucositis grade 1 or less, platelets at least 50 x 10^9/L (100 for the first dose), neutrophils at least 1 x 10^9/L. Consider oral leucovorin 25 mg three times daily for 2 consecutive days (6 doses), starting 24 hours after each pralatrexate dose (NCCN TCLYM-B 3)."
   },
   "cycle_length_days": 49,
   "default_cycles": 2,
@@ -52,8 +52,8 @@
         49
       ],
       "notes": {
-        "uk": "1-1,25 мг щодня від 10 днів до першої дози й 30 днів після останньої (NCCN TCLYM-B).",
-        "en": "1-1.25 mg daily from 10 days before the first dose until 30 days after the last (NCCN TCLYM-B)."
+        "uk": "1-1,25 мг щодня до 30 днів після останньої дози. Початок: згідно з NCCN T-Cell Lymphomas 2.2026, TCLYM-B 3 — «в межах 10 днів від початку терапії»; згідно з листком FDA FOLOTYN — за 10 днів до першої дози.",
+        "en": "1-1.25 mg daily until 30 days after the last dose. Start: per NCCN T-Cell Lymphomas 2.2026, TCLYM-B 3 — \"within 10 days of starting therapy\"; per the FDA FOLOTYN label — 10 days before the first dose."
       }
     },
     {

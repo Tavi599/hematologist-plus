@@ -137,6 +137,9 @@ describe('risk scores', () => {
     expect(group('pit', {})).toBe('Low')
     expect(group('pit', { age: true })).toBe('Group 2')
     // PINK: one factor is intermediate, two high; EBV DNA is the extra factor of PINK-E.
+    expect(group('tcell-score', {})).toBe('Low')
+    expect(group('tcell-score', { stage: true, anc: true })).toBe('Intermediate')
+    expect(group('tcell-score', { stage: true, ecog: true, albumin: true })).toBe('High')
     expect(group('pink', { age: true })).toBe('Intermediate')
     const pinkOutcome = run('pink', { age: true, stage: true, ebv: true })!
     expect(pinkOutcome.group!.label.en).toBe('High')

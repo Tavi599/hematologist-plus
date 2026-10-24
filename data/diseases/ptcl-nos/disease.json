@@ -143,13 +143,17 @@
             {
               "regimen_id": "hyper-cvad-a",
               "preference": "other",
-              "category": "3"
+              "category": "3",
+              "notes": {
+                "uk": "Курс A; чергується з курсом B (високодозові метотрексат і цитарабін)",
+                "en": "Course A; alternates with course B (high-dose methotrexate and cytarabine)"
+              }
             },
             {
               "regimen_id": "hyper-cvad-b",
               "notes": {
-                "uk": "Чергується з HyperCVAD-A (високодозові метотрексат/цитарабін)",
-                "en": "Alternates with HyperCVAD-A (high-dose methotrexate/cytarabine)"
+                "uk": "Курс B (високодозові метотрексат і цитарабін); чергується з HyperCVAD-A",
+                "en": "Course B (high-dose methotrexate and cytarabine); alternates with HyperCVAD-A"
               },
               "preference": "other",
               "category": "3"
@@ -201,8 +205,8 @@
             "en": "End-of-treatment response and consolidation (PTCL-5, PTCL-6)"
           },
           "description": {
-            "uk": "Наприкінці лікування — ПЕТ/КТ (бажано) або КТ. CR (ПЕТ−): клінічне дослідження, або аутоТГСК, або спостереження. PR (ПЕТ+) чи прогресія — повторна біопсія (особливо при AITL, де можливий одночасний ДВКВЛ) перед додатковим лікуванням; далі лікування рецидиву. Відсутність відповіді — одразу до лікування рецидиву. Наглядання: огляд кожні 3-6 міс. 2 роки; візуалізація не частіше ніж раз на 6 міс. 2 роки, далі щороку 5 років.",
-            "en": "At the end of treatment — PET/CT (preferred) or CT. CR (PET-negative): clinical trial, or autologous HCT, or observation. PR (PET-positive) or progression: repeat biopsy (strongly consider in AITL, which may coexist with DLBCL) before more therapy; then relapse therapy. No response goes straight to relapse therapy. Follow-up: visits every 3-6 months for 2 years; imaging no more often than every 6 months for 2 years, then yearly for 5 years."
+            "uk": "Наприкінці лікування — ПЕТ/КТ (бажано) або КТ. CR (ПЕТ−): клінічне дослідження, або аутоТГСК, або спостереження. PR (ПЕТ+) чи прогресія — лікування рецидиву (PTCL-7); перед додатковим лікуванням розглянути повторну біопсію стійких чи нових ПЕТ-позитивних уражень. Відсутність відповіді чи прогресія на проміжному рестадіюванні (після 3-4 циклів) — одразу до лікування рецидиву. Наглядання: огляд кожні 3-6 міс. 2 роки; візуалізація не частіше ніж раз на 6 міс. 2 роки, далі щороку 5 років.",
+            "en": "At the end of treatment — PET/CT (preferred) or CT. CR (PET-negative): clinical trial, or autologous HCT, or observation. PR (PET-positive) or progression: relapse therapy (PTCL-7); consider repeat biopsy of persistent or new PET-positive lesions before more therapy. No response or progression at interim restaging (after 3-4 cycles) goes straight to relapse therapy. Follow-up: visits every 3-6 months for 2 years; imaging no more often than every 6 months for 2 years, then yearly for 5 years."
           },
           "regimens": [],
           "steps": [
@@ -251,8 +255,8 @@
             "en": "Relapse / refractory — intent to transplant (PTCL-7, PTCL-B 3-5)"
           },
           "description": {
-            "uk": "Бажано клінічне дослідження. Повторна біопсія розглядається при стійких чи нових ПЕТ-позитивних ураженнях (при AITL — наполегливо). CR/PR → алогенна чи аутологічна ТГСК (алогенна рекомендована) або продовження лікування чи спостереження; відсутність відповіді → альтернативна 2-га лінія. Профілактика ЦМВ/Pneumocystis при алемтузумабі й PI3K-інгібіторах. Профілактика синдрому лізису пухлини розглядається перед усіма схемами (NCCN TCLYM-B).",
-            "en": "A clinical trial is preferred. Repeat biopsy is considered for persistent or new PET-positive lesions (strongly in AITL). CR/PR → allogeneic or autologous HCT (allogeneic is recommended) or continued treatment or observation; no response → an alternative second line. CMV/Pneumocystis prophylaxis with alemtuzumab and PI3K inhibitors. Consider tumour lysis prophylaxis before all regimens (NCCN TCLYM-B)."
+            "uk": "Бажано клінічне дослідження, інакше 2-га лінія з переліку нижче. Перед додатковим лікуванням розглянути повторну біопсію стійких чи нових ПЕТ-позитивних уражень. CR/PR → клінічне дослідження або алогенна чи аутологічна ТГСК (NCCN рекомендує алогенну; локальні зони можна опромінити до чи після ТГСК). Відсутність відповіді чи прогресія → альтернативна 2-га лінія, а за CR/PR після неї — ТГСК. Профілактика ЦМВ, Pneumocystis і герпесу при алемтузумабі та інгібіторах PI3K (дувелісиб); розглянути профілактику синдрому лізису пухлини перед усіма схемами (NCCN TCLYM-B).",
+            "en": "A clinical trial is preferred, otherwise a second-line regimen from the list below. Consider repeat biopsy of persistent or new PET-positive lesions before more therapy. CR/PR → clinical trial or allogeneic or autologous HCT (NCCN recommends allogeneic; localised areas can receive RT before or after HCT). No response or progression → an alternative second line, then HCT if it brings CR/PR. CMV, Pneumocystis and herpes prophylaxis with alemtuzumab and PI3K inhibitors (duvelisib); consider tumour lysis prophylaxis before all regimens (NCCN TCLYM-B)."
           },
           "regimens": [
             {
@@ -383,8 +387,8 @@
               "kind": "hct",
               "column": "treatment",
               "label": {
-                "uk": "Алогенна чи аутологічна ТГСК за CR/PR (алогенна — коли її рекомендує NCCN; перед ТГСК пауза після могамулізумабу/ІСІ)",
-                "en": "Allogeneic or autologous HCT in CR/PR (allogeneic where NCCN recommends it)"
+                "uk": "Алогенна чи аутологічна ТГСК за CR/PR (NCCN рекомендує алогенну)",
+                "en": "Allogeneic or autologous HCT in CR/PR (NCCN recommends allogeneic)"
               },
               "preference": "other"
             },
@@ -407,8 +411,8 @@
             "en": "Relapse / refractory — no intent to transplant (PTCL-7, PTCL-B 3-5)"
           },
           "description": {
-            "uk": "Бажано клінічне дослідження. Повторна біопсія розглядається при стійких чи нових ПЕТ-позитивних ураженнях (при AITL — наполегливо). CR/PR → алогенна чи аутологічна ТГСК (алогенна рекомендована) або продовження лікування чи спостереження; відсутність відповіді → альтернативна 2-га лінія. Профілактика ЦМВ/Pneumocystis при алемтузумабі й PI3K-інгібіторах. Профілактика синдрому лізису пухлини розглядається перед усіма схемами (NCCN TCLYM-B).",
-            "en": "A clinical trial is preferred. Repeat biopsy is considered for persistent or new PET-positive lesions (strongly in AITL). CR/PR → allogeneic or autologous HCT (allogeneic is recommended) or continued treatment or observation; no response → an alternative second line. CMV/Pneumocystis prophylaxis with alemtuzumab and PI3K inhibitors. Consider tumour lysis prophylaxis before all regimens (NCCN TCLYM-B)."
+            "uk": "Бажано клінічне дослідження, інакше 2-га лінія з переліку нижче, паліативна ПТ та/або найкраща підтримуюча терапія. CR/PR чи клінічна користь → продовжити лікування або спостерігати; відсутність відповіді чи прогресія → лікування рецидиву №2 і наступних (PTCL-8). Перед додатковим лікуванням розглянути повторну біопсію стійких чи нових ПЕТ-позитивних уражень. Профілактика ЦМВ, Pneumocystis і герпесу при алемтузумабі та інгібіторах PI3K (дувелісиб); розглянути профілактику синдрому лізису пухлини перед усіма схемами (NCCN TCLYM-B).",
+            "en": "A clinical trial is preferred, otherwise a second-line regimen from the list below, palliative RT and/or best supportive care. CR/PR or clinical benefit → continue treatment or observe; no response or progression → therapy for relapse #2 or greater (PTCL-8). Consider repeat biopsy of persistent or new PET-positive lesions before more therapy. CMV, Pneumocystis and herpes prophylaxis with alemtuzumab and PI3K inhibitors (duvelisib); consider tumour lysis prophylaxis before all regimens (NCCN TCLYM-B)."
           },
           "regimens": [
             {
@@ -494,8 +498,8 @@
               "kind": "other",
               "column": "treatment",
               "label": {
-                "uk": "Променева терапія (ISRT): після хіміотерапії CR 30-36 Гр, PR 40-50 Гр; як первинне лікування при рефрактерності чи неможливості хіміотерапії 40-55 Гр; з ТГСК 20-36 Гр",
-                "en": "Radiotherapy (ISRT): after chemotherapy CR 30-36 Gy, PR 40-50 Gy; as primary treatment for refractory disease or non-candidates for chemotherapy 40-55 Gy; with HCT 20-36 Gy"
+                "uk": "Променева терапія (ISRT): після хіміотерапії CR 30-36 Гр, PR 40-50 Гр; як первинне лікування при рефрактерності чи неможливості хіміотерапії 40-55 Гр; з ТГСК 20-36 Гр; паліативна 20-36 Гр за 5-18 фракцій",
+                "en": "Radiotherapy (ISRT): after chemotherapy CR 30-36 Gy, PR 40-50 Gy; as primary treatment for refractory disease or non-candidates for chemotherapy 40-55 Gy; with HCT 20-36 Gy; palliative 20-36 Gy in 5-18 fractions"
               },
               "preference": "other"
             },
@@ -508,6 +512,14 @@
               },
               "preference": "other",
               "category": "2b"
+            },
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Найкраща підтримуюча терапія (NCCN Palliative Care)",
+                "en": "Best supportive care (NCCN Palliative Care)"
+              }
             },
             {
               "kind": "page",
@@ -546,8 +558,8 @@
               "kind": "other",
               "column": "treatment",
               "label": {
-                "uk": "Променева терапія (ISRT): після хіміотерапії CR 30-36 Гр, PR 40-50 Гр; як первинне лікування при рефрактерності чи неможливості хіміотерапії 40-55 Гр; з ТГСК 20-36 Гр",
-                "en": "Radiotherapy (ISRT): after chemotherapy CR 30-36 Gy, PR 40-50 Gy; as primary treatment for refractory disease or non-candidates for chemotherapy 40-55 Gy; with HCT 20-36 Gy"
+                "uk": "Паліативна променева терапія: 20-36 Гр за 5-18 фракцій",
+                "en": "Palliative radiotherapy: 20-36 Gy in 5-18 fractions"
               },
               "preference": "other"
             },
@@ -569,8 +581,8 @@
             "en": "Initial palliative-intent therapy (PTCL-B 2)"
           },
           "description": {
-            "uk": "Для вибраних хворих — симптоматична терапія замість радикальної: перелік схем (однаковий із другою лінією без ТГСК) наведено нижче. Зазвичай бажано клінічне дослідження.",
-            "en": "For selected patients — symptom-directed therapy instead of curative-intent treatment: the list below is the same as for second line without transplant. A clinical trial is usually preferred."
+            "uk": "Для вибраних хворих — паліативна терапія для контролю симптомів (NCCN PTCL-4, п. m). Перелік — за таблицею PTCL-B 2: він близький до 2-ї лінії без наміру до ТГСК, але без комбінованих схем. Бажано клінічне дослідження.",
+            "en": "For selected patients — palliative therapy for symptom control (NCCN PTCL-4, footnote m). The list follows table PTCL-B 2: close to second line without intent to transplant, but with no combination regimens. A clinical trial is preferred."
           },
           "regimens": [
             {
@@ -604,15 +616,6 @@
             {
               "regimen_id": "bendamustine-ptcl",
               "preference": "other"
-            },
-            {
-              "regimen_id": "bv-bendamustine",
-              "notes": {
-                "uk": "За експресії CD30 (будь-який рівень)",
-                "en": "CD30-positive (any level)"
-              },
-              "preference": "other",
-              "category": "2b"
             }
           ],
           "steps": [
@@ -656,8 +659,8 @@
               "kind": "other",
               "column": "treatment",
               "label": {
-                "uk": "Променева терапія (ISRT): після хіміотерапії CR 30-36 Гр, PR 40-50 Гр; як первинне лікування при рефрактерності чи неможливості хіміотерапії 40-55 Гр; з ТГСК 20-36 Гр",
-                "en": "Radiotherapy (ISRT): after chemotherapy CR 30-36 Gy, PR 40-50 Gy; as primary treatment for refractory disease or non-candidates for chemotherapy 40-55 Gy; with HCT 20-36 Gy"
+                "uk": "Променева терапія (ISRT): після хіміотерапії CR 30-36 Гр, PR 40-50 Гр; як первинне лікування при рефрактерності чи неможливості хіміотерапії 40-55 Гр; з ТГСК 20-36 Гр; паліативна 20-36 Гр за 5-18 фракцій",
+                "en": "Radiotherapy (ISRT): after chemotherapy CR 30-36 Gy, PR 40-50 Gy; as primary treatment for refractory disease or non-candidates for chemotherapy 40-55 Gy; with HCT 20-36 Gy; palliative 20-36 Gy in 5-18 fractions"
               },
               "preference": "other"
             },
