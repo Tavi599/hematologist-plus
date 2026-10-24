@@ -1,7 +1,6 @@
 import { screen, within } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 
-import { calculateCourse } from '../../domain'
 import { indexCatalog } from '../../lib/catalog-index'
 import { demoCatalog } from '../../lib/catalog.fixture'
 import { buildCourseItems } from '../../lib/course-input'
@@ -23,12 +22,9 @@ function render(disabledIds: string[] = []) {
   ]
   const catalog = indexCatalog(rows)
   const items = buildCourseItems(catalog, 'r-chop-21')
-  const course = calculateCourse(
-    { ageYears: 60, sex: 'male', heightCm: 180, weightKg: 80, serumCreatinine: 88.4 },
-    items.map((item) => item.courseDrug),
-    { startDateIso: '2026-09-21', dayStart: '09:00', cycleNumber: 1, disabledIds },
+  renderWithProviders(
+    <PreparationTable catalog={catalog} items={items} disabledIds={disabledIds} />,
   )
-  renderWithProviders(<PreparationTable catalog={catalog} items={items} course={course} />)
 }
 
 describe('PreparationTable', () => {
