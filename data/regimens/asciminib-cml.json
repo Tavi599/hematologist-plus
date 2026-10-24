@@ -7,8 +7,8 @@
     "en": "Asciminib monotherapy"
   },
   "description": {
-    "uk": "Хронічна мієлоїдна лейкемія з філадельфійською хромосомою, хронічна фаза, без мутації T315I, після двох і більше інгібіторів тирозинкінази. Цикл 28 днів, лікування безперервне — до прогресування або неприйнятної токсичності. Сильних індукторів CYP3A4 (карбамазепін, рифампіцин, фенобарбітал, фенітоїн, звіробій) уникають: вони знижують концентрацію препарату. З обережністю поєднують із субстратами CYP3A4 з вузьким терапевтичним діапазоном (фентаніл, альфентаніл, мідазолам) — їхня концентрація може зрости до токсичної. Ітраконазол у вигляді перорального розчину не застосовують через його допоміжну речовину.",
-    "en": "Philadelphia-positive chronic myeloid leukaemia in chronic phase, without a T315I mutation, after two or more tyrosine kinase inhibitors. A 28-day cycle, continuous until progression or unacceptable toxicity. Strong CYP3A4 inducers - carbamazepine, rifampicin, phenobarbital, phenytoin, St John's wort - are avoided, as they lower the concentration. CYP3A4 substrates with a narrow therapeutic index (fentanyl, alfentanil, midazolam) need caution: their own levels may rise into toxicity. Itraconazole oral solution is not used, because of its excipient."
+    "uk": "Хронічна мієлоїдна лейкемія з філадельфійською хромосомою, хронічна фаза, без мутації T315I, після двох і більше інгібіторів тирозинкінази; за NCCN 2.2027 (CML-2) — також перша лінія (ASC4FIRST, 80 мг раз на добу). Протипоказаний при ХМЛ без екзону 2 ABL1 (ізоформи b2a3, b3a3). Цикл 28 днів, лікування безперервне — до прогресування або неприйнятної токсичності. Сильних індукторів CYP3A4 (карбамазепін, рифампіцин, фенобарбітал, фенітоїн, звіробій) уникають: вони знижують концентрацію препарату. З обережністю поєднують із субстратами CYP3A4 з вузьким терапевтичним діапазоном (фентаніл, альфентаніл, мідазолам) — їхня концентрація може зрости до токсичної. Ітраконазол у вигляді перорального розчину не застосовують через його допоміжну речовину.",
+    "en": "Philadelphia-positive chronic myeloid leukaemia in chronic phase, without a T315I mutation, after two or more tyrosine kinase inhibitors; NCCN 2.2027 (CML-2) also lists it first line (ASC4FIRST, 80 mg once daily). Contraindicated in CML lacking ABL1 exon 2 (b2a3, b3a3 isoforms). A 28-day cycle, continuous until progression or unacceptable toxicity. Strong CYP3A4 inducers - carbamazepine, rifampicin, phenobarbital, phenytoin, St John's wort - are avoided, as they lower the concentration. CYP3A4 substrates with a narrow therapeutic index (fentanyl, alfentanil, midazolam) need caution: their own levels may rise into toxicity. Itraconazole oral solution is not used, because of its excipient."
   },
   "cycle_length_days": 28,
   "default_cycles": 6,
@@ -30,6 +30,12 @@
       "url": "https://www.uptodate.com/contents/treatment-of-chronic-phase-chronic-myeloid-leukemia-after-failure-of-the-initial-tyrosine-kinase-inhibitor",
       "version": "перевірено 2026-10-04",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "NCCN Guidelines: Chronic Myeloid Leukemia, версія 2.2027 від 10.07.2026, CML-2, CML-5, Discussion MS-20, таблиця 1",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2027",
+      "checkedOn": "2026-10-23"
     }
   ],
   "items": [

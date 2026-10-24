@@ -12,6 +12,12 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/31201085/",
       "version": "резюме; фаза II, 174 пацієнти",
       "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "NCCN Guidelines: Chronic Myeloid Leukemia, версія 2.2027 від 10.07.2026, Discussion MS-28 (De-escalation or Intermittent Dosing of TKI)",
+      "url": "https://www.nccn.org/guidelines/category_1",
+      "version": "2.2027",
+      "checkedOn": "2026-10-23"
     }
   ],
   "evidence": {
@@ -67,8 +73,8 @@
   },
   "reference": {
     "summary": {
-      "uk": "Хронічна фаза ХМЛ, ІТК від 3 років, усі ПЛР за останні 12 місяців нижче 0,1%: половина стандартної дози 12 місяців (наприклад, іматиніб 200 мг, дазатиніб 50 мг), потім повна відміна з частим моніторингом ПЛР.",
-      "en": "Chronic-phase CML on a TKI for 3 years or more, all PCR results below 0.1% for the past 12 months: half the standard dose for 12 months (for example imatinib 200 mg, dasatinib 50 mg), then complete withdrawal with frequent PCR monitoring."
+      "uk": "Хронічна фаза ХМЛ, ІТК від 3 років, усі ПЛР за останні 12 місяців нижче 0,1%: половина стандартної дози 12 місяців (іматиніб 200 мг раз на добу, дазатиніб 50 мг раз на добу, нілотиніб 200 мг двічі на добу), потім повна відміна на 24 місяці з частим моніторингом ПЛР.",
+      "en": "Chronic-phase CML on a TKI for 3 years or more, all PCR results below 0.1% for the past 12 months: half the standard dose for 12 months (imatinib 200 mg once daily, dasatinib 50 mg once daily, nilotinib 200 mg twice daily), then complete withdrawal for 24 months with frequent PCR monitoring."
     },
     "drugs": [
       {
@@ -104,8 +110,8 @@
       }
     ],
     "gap": {
-      "uk": "Половину дози для кожного ІТК стаття формулює загально; конкретні дози — арифметика від стандартних.",
-      "en": "The article states half the dose generally for each TKI; the specific doses are arithmetic from the standard ones."
+      "uk": "Конкретні дози половинного режиму наведено за NCCN (MS-28); повного розкладу моніторингу ПЛР у доступних джерелах немає.",
+      "en": "The half-dose figures follow NCCN (MS-28); the full PCR monitoring schedule is not in the available sources."
     }
   }
 }
