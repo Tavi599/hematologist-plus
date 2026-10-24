@@ -34,6 +34,7 @@ import {
   routeAlternativeSchema,
   drugCautionSchema,
   drugMonitoringSchema,
+  drugPreparationSchema,
   drugInteractionSchema,
   regimenCourseSchema,
   unitEquivalenceSchema,
@@ -96,6 +97,8 @@ export const drugRowSchema = z.object({
   monitoring: z.array(drugMonitoringSchema).nullable().catch(null).default(null),
   /** What the label says of giving the drug with others in the catalog; shown, never applied. */
   interactions: z.array(drugInteractionSchema).nullable().catch(null).default(null),
+  /** How the label says to reconstitute and dilute the drug for each route; shown, never applied. */
+  preparation: z.array(drugPreparationSchema).nullable().catch(null).default(null),
 })
 
 export const drugPresentationRowSchema = z.object({

@@ -43,6 +43,7 @@ import {
 import { InfusionTherapyControls } from '../../features/calculator/InfusionTherapyControls'
 import { PatientForm } from '../../features/calculator/PatientForm'
 import { ScheduleTable } from '../../features/calculator/ScheduleTable'
+import { PreparationTable } from '../../features/calculator/PreparationTable'
 import { SupplyTable } from '../../features/calculator/SupplyTable'
 import { WarningList } from '../../features/calculator/WarningList'
 import { MissingDataAlert, UnadjustedSupportAlert } from '../../features/calculator/MissingData'
@@ -881,6 +882,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
             <Tabs.Tab value="doses">{t('calculator.tabs.doses')}</Tabs.Tab>
             <Tabs.Tab value="schedule">{t('calculator.tabs.schedule')}</Tabs.Tab>
             <Tabs.Tab value="supply">{t('calculator.tabs.supply')}</Tabs.Tab>
+            <Tabs.Tab value="preparation">{t('calculator.tabs.preparation')}</Tabs.Tab>
             <Tabs.Tab value="print">{t('calculator.tabs.print')}</Tabs.Tab>
           </Tabs.List>
 
@@ -1062,6 +1064,16 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           <Tabs.Panel value="supply" pt="sm">
             {course ? (
               <SupplyTable catalog={catalog} course={course} />
+            ) : (
+              <Text size="sm" c="dimmed">
+                {t('calculator.tabs.empty')}
+              </Text>
+            )}
+          </Tabs.Panel>
+
+          <Tabs.Panel value="preparation" pt="sm">
+            {course ? (
+              <PreparationTable catalog={catalog} items={items} course={course} />
             ) : (
               <Text size="sm" c="dimmed">
                 {t('calculator.tabs.empty')}

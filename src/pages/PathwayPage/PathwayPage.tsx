@@ -196,11 +196,9 @@ function RowView({
           {row.isPage ? t('pathway.wholePage') : localize(node.title, language)}
         </Text>
         {!row.isPage && node.description !== null && (
-          <Spoiler maxHeight={60} showLabel="▾" hideLabel="▴">
-            <Text size="xs" c="dimmed">
-              {localize(node.description, language)}
-            </Text>
-          </Spoiler>
+          <Text size="xs" c="dimmed">
+            {localize(node.description, language)}
+          </Text>
         )}
       </Stack>
       <Text className={classes.arrow} aria-hidden>

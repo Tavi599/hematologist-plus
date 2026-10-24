@@ -35,6 +35,7 @@ function withPathway(): SyncRows {
     node('dlbcl.nccn', null, 'Шляхи', { kind: 'pathway', description: text('Алгоритм') }),
     node('dlbcl.p1', 'dlbcl.nccn', 'Перша лінія NCCN', { kind: 'line' }),
     node('dlbcl.p1-row', 'dlbcl.p1', 'Стадія III–IV', {
+      description: text('Об’ємне ураження ≥7,5 см; IPI 3–5'),
       steps: [
         {
           kind: 'trial',
@@ -121,6 +122,13 @@ describe('PathwayPage', () => {
       expect.stringContaining('/calculator?regimen='),
     )
     expect(screen.queryByText('Кандидат на ТГСК')).not.toBeInTheDocument()
+  })
+
+  it('shows the whole description of a group, not a folded one', async () => {
+    render(withPathway())
+    const row = await screen.findByRole('region', { name: 'Стадія III–IV' })
+    expect(within(row).getByText('Об’ємне ураження ≥7,5 см; IPI 3–5')).toBeVisible()
+    expect(within(row).queryByRole('button', { name: '▾' })).not.toBeInTheDocument()
   })
 
   it('follows an arrow to the page and the row it leads to', async () => {

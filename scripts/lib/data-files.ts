@@ -36,6 +36,7 @@ import {
   routeAlternativeSchema,
   drugCautionSchema,
   drugMonitoringSchema,
+  drugPreparationSchema,
   drugInteractionSchema,
   regimenCourseSchema,
   unitEquivalenceSchema,
@@ -104,6 +105,8 @@ export const drugFileSchema = z.strictObject({
   cautions: z.array(drugCautionSchema).nullable().default(null),
   /** What to watch while the drug is given: levels, kidneys, blood count, hearing. */
   monitoring: z.array(drugMonitoringSchema).nullable().default(null),
+  /** How the label says to reconstitute and dilute the drug for each route. */
+  preparation: z.array(drugPreparationSchema).nullable().default(null),
   /** What the label says of giving the drug with others in the catalog. */
   interactions: z.array(drugInteractionSchema).nullable().default(null),
   review_rules: reviewRulesSchema.nullable().default(null),

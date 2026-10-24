@@ -407,6 +407,16 @@
       "ward": "On the inpatient sheet",
       "wardNote": "The hours are set under each drug in the dose table. Drugs of the inpatient sheet have no time in the schedule."
     },
+    "preparation": {
+      "title": "Preparation and dilution",
+      "intro": "How to prepare the drugs of the course as their labels say: reconstituting a powder, diluting, how long the solution keeps. The dose and volume for this patient are on the Doses tab.",
+      "none": "No drug of the course needs preparing before it is given.",
+      "missing": "The reference has no label text on preparing it yet; see the drug's label.",
+      "bags": "solvent {{volumes}} mL",
+      "stock": "concentrate in the vial {{value}} {{unit}}/mL",
+      "range": "final concentration {{min}}–{{max}} {{unit}}/mL",
+      "duration": "infusion {{minutes}} min"
+    },
     "supply": {
       "title": "Need for the course",
       "presentation": "Presentation",
@@ -490,6 +500,7 @@
       "doses": "Doses",
       "schedule": "Schedule",
       "supply": "Vials / need",
+      "preparation": "Dilution",
       "print": "Print and header",
       "empty": "The result appears here once there is a patient and a regimen (or hand-written lines)."
     },

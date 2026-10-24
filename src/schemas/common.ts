@@ -284,6 +284,18 @@ export const drugMonitoringSchema = z.strictObject({
 export type DrugMonitoring = z.infer<typeof drugMonitoringSchema>
 
 /**
+ * How the label says to prepare the drug for a route: what to reconstitute a powder in, what
+ * and how much to dilute it in, how long the solution keeps, light, filters. Shown on the
+ * preparation tab of the calculator as the label says it; it changes no dose and no volume.
+ */
+export const drugPreparationSchema = z.strictObject({
+  routes: z.array(routeSchema).min(1),
+  notes: localizedTextSchema,
+  source: sourceSchema,
+})
+export type DrugPreparation = z.infer<typeof drugPreparationSchema>
+
+/**
  * How strongly a label speaks of giving two drugs together: contraindicated; avoid; give at the
  * lower dose it states; give with caution and monitoring.
  */

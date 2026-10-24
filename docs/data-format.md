@@ -74,6 +74,7 @@ data/
 | `availability` | `department` / `registered` / `unavailable` | як препарат можна дістати: є в переліку відділення · зареєстрований в Україні · недоступний. Типово `registered`. Схема з недоступним препаратом залишається в довіднику — її позначає `regimenAvailability()` і про неї попереджає валідація |
 | `presentations[]` | | `key`, `form` (`vial`, `ampoule`, `tablet`, `capsule`, `syringe`, `other`), `strength_amount`, `strength_unit` (типово `amount_unit` препарату), `volume_ml` (для розчинів), `label` |
 | `infusion_params[]` | | `key`, `solvent` (`sodium_chloride_0_9`, `glucose_5`, `water_for_injection`), `concentration_min_mg_ml`, `concentration_max_mg_ml`, `stock_concentration_mg_ml` (концентрат після розведення у флаконі) — лише для препаратів у мг/мкг: мг/мл нічого не кажуть про препарат у МО, `bag_volumes_ml` (наявні об'єми розчинника), `duration_min`, `is_default` (один на препарат), `rate_ramp` (швидкість сходинками: `{"first": {"start_ml_h", "step_ml_h", "every_min", "max_ml_h"}, "next": …}` — тривалість інфузії тоді рахується з об'єму, а не береться зі схеми) |
+| `preparation[]` | | як інструкція велить готувати препарат: `routes` (шляхи введення, яких стосується рядок), `notes` (локал.: розчинення порошку — чим і скільки, подальше розведення, скільки зберігається розчин, світло, фільтр), `source`. Лише текст інструкції своїми словами; нічого не рахує. Показується у вкладці «Розведення» калькулятора |
 
 ## regimens/&lt;id&gt;.json
 
