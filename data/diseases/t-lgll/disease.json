@@ -54,8 +54,8 @@
             "en": "Diagnosis and indications for treatment (LGLL-1, LGLL-2)"
           },
           "description": {
-            "uk": "Діагноз: стійке (>6 міс.) збільшення LGL (зазвичай >2000/мкл) із типовою морфологією в крові/кістковому мозку; проточна цитометрія крові (CD3, CD4, CD5, CD7, CD8, CD16, CD56, CD57, TCRαβ/γδ, TRBC1), оцінка клональності; за обставин — кістковий мозок (обов’язково при LGL <0,5×10⁹/л й підозрі на недостатність кісткового мозку), мутації STAT3/STAT5B, EBER. Виключити реактивний лімфоцитоз; при малих клональних популяціях (<0,5×10⁹/л) чи поліклональних — повтор через 6 міс. Обстеження: огляд (селезінка, печінка), аутоімунні хвороби (РА, СЧВ), ECOG, ЗАК, біохімія; за обставин — ВІЛ, гепатити B/C, ЦМВ (перед алемтузумабом), HTLV-1/2, ехо при задишці/правосерцевій недостатності. Показання до лікування: нейтрофіли <0,5×10⁹/л; Hb <10 г/дл чи потреба в трансфузіях еритроцитів; тромбоцити <50×10⁹/л; аутоімунне захворювання, що потребує лікування; симптомна спленомегалія; тяжкі B-симптоми; легенева гіпертензія внаслідок LGLL; нейтрофіли <1,5×10⁹/л з рецидивними інфекціями. Без показань — спостереження.",
-            "en": "Diagnosis: a persistent (>6 months) increase of LGLs (usually >2000/uL) with typical morphology in blood/marrow; blood flow cytometry (CD3, CD4, CD5, CD7, CD8, CD16, CD56, CD57, TCR alpha/beta and gamma/delta, TRBC1), clonality; if needed — bone marrow (essential when LGLs <0.5 x 10^9/L and a marrow failure disorder is suspected), STAT3/STAT5B mutations, EBER. Exclude reactive lymphocytosis; for small clones (<0.5 x 10^9/L) or polyclonal LGLs — repeat in 6 months. Workup: exam (spleen, liver), autoimmune disease (RA, SLE), ECOG, CBC, chemistry; if needed — HIV, hepatitis B/C, CMV (before alemtuzumab), HTLV-1/2, echo for dyspnoea/right heart failure. Indications for treatment: ANC <0.5 x 10^9/L; Hb <10 g/dL or RBC transfusion need; platelets <50 x 10^9/L; autoimmune disease requiring therapy; symptomatic splenomegaly; severe B symptoms; pulmonary hypertension due to LGLL; ANC <1.5 x 10^9/L with recurrent infections. No indication — observation."
+            "uk": "Діагноз: стійке (>6 міс.) збільшення LGL (у більшості хворих близько 2000/мкл) із типовою морфологією в крові/кістковому мозку; проточна цитометрія крові (CD3, CD4, CD5, CD7, CD8, CD16, CD56, CD57, TCRαβ/γδ, TRBC1), оцінка клональності; за обставин — кістковий мозок (зазвичай потрібен для підтвердження; обов’язковий при LGL <0,5×10⁹/л або підозрі на супутню недостатність кісткового мозку), мутації STAT3/STAT5B, EBER. Виключити реактивний лімфоцитоз; у безсимптомних хворих із малою клональною популяцією (<0,5×10⁹/л) чи поліклональними LGL — повторити проточну цитометрію й клональність через 6 міс. Обстеження: огляд (селезінка, печінка), аутоімунні хвороби (РА, СЧВ), ECOG, ЗАК, біохімія; за обставин — ВІЛ, гепатити B/C, ЦМВ (перед алемтузумабом), HTLV-1/2, ехо при задишці/правосерцевій недостатності. Показання до лікування: нейтрофіли <0,5×10⁹/л; Hb <10 г/дл чи потреба в трансфузіях еритроцитів; тромбоцити <50×10⁹/л; аутоімунне захворювання, що потребує лікування; симптомна спленомегалія; тяжкі B-симптоми; легенева гіпертензія внаслідок LGLL; нейтрофіли <1,5×10⁹/л з рецидивними інфекціями. Без показань — спостереження.",
+            "en": "Diagnosis: a persistent (>6 months) increase of LGLs (about 2000/uL in most patients) with typical morphology in blood/marrow; blood flow cytometry (CD3, CD4, CD5, CD7, CD8, CD16, CD56, CD57, TCR alpha/beta and gamma/delta, TRBC1), clonality; if needed — bone marrow (usually needed to confirm; essential when LGLs are <0.5 x 10^9/L or a concurrent marrow failure disorder is suspected), STAT3/STAT5B mutations, EBER. Exclude reactive lymphocytosis; in asymptomatic patients with small clones (<0.5 x 10^9/L) or polyclonal LGLs — repeat flow cytometry and clonality in 6 months. Workup: exam (spleen, liver), autoimmune disease (RA, SLE), ECOG, CBC, chemistry; if needed — HIV, hepatitis B/C, CMV (before alemtuzumab), HTLV-1/2, echo for dyspnoea/right heart failure. Indications for treatment: ANC <0.5 x 10^9/L; Hb <10 g/dL or RBC transfusion need; platelets <50 x 10^9/L; autoimmune disease requiring therapy; symptomatic splenomegaly; severe B symptoms; pulmonary hypertension due to LGLL; ANC <1.5 x 10^9/L with recurrent infections. No indication — observation."
           },
           "regimens": [],
           "steps": [
@@ -101,7 +101,7 @@
             {
               "regimen_id": "methotrexate-lgll",
               "notes": {
-                "uk": "10 мг/м² на тиждень (звично 20 мг)",
+                "uk": "10 мг/м² на тиждень (зазвичай 20 мг)",
                 "en": "10 mg/m2 weekly (usually 20 mg)"
               },
               "preference": "preferred"
@@ -109,8 +109,8 @@
             {
               "regimen_id": "ruxolitinib-lgll",
               "notes": {
-                "uk": "Після відсутності відповіді на першу лінію",
-                "en": "After no response to first line"
+                "uk": "Немає відповіді на першу лінію на 4-му місяці",
+                "en": "No response to first line at month 4"
               },
               "preference": "other"
             }
@@ -152,8 +152,8 @@
             "en": "Second line (LGLL-2)"
           },
           "description": {
-            "uk": "Прогресія чи рефрактерність до всіх перших ліній: бажано клінічне дослідження, циклоспорин, руксолітиніб (якщо не застосовували), пуринові аналоги (пентостатин, кладрибін, флударабін); інша рекомендована — алемтузумаб (п/ш бажано, або в/в; низькодозовий п/ш подібний за ефективністю з меншою токсичністю й реактивацією вірусів). Алемтузумаб комерційно не поставляється, але його можна отримати; потрібні ПЛР ЦМВ і профілактика Pneumocystis; обережно при тяжкій нейтропенії й рецидивних інфекціях.",
-            "en": "Progression or refractory disease to all first-line therapies: a clinical trial is preferred, cyclosporine, ruxolitinib (if not used before), purine analogues (pentostatin, cladribine, fludarabine); other recommended — alemtuzumab (SC preferred, or IV; low-dose SC has similar efficacy with lower toxicity and viral reactivation). Alemtuzumab is not commercially available but may be obtained; CMV PCR and Pneumocystis prophylaxis are needed; use caution with severe neutropenia and recurrent infections."
+            "uk": "Прогресія чи рефрактерність до всіх перших ліній: бажано клінічне дослідження, циклоспорин, руксолітиніб (якщо не застосовували), пуринові аналоги (пентостатин, кладрибін, флударабін); інша рекомендована — алемтузумаб (п/ш бажано, або в/в; низькодозовий п/ш подібний за ефективністю з меншою токсичністю й реактивацією вірусів). Алемтузумаб комерційно не поставляється, але його можна отримати; потрібні моніторинг ЦМВ і профілактика пневмоцистної пневмонії; обережно при тяжкій нейтропенії й рецидивних інфекціях.",
+            "en": "Progression or refractory disease to all first-line therapies: a clinical trial is preferred, cyclosporine, ruxolitinib (if not used before), purine analogues (pentostatin, cladribine, fludarabine); other recommended — alemtuzumab (SC preferred, or IV; low-dose SC has similar efficacy with lower toxicity and viral reactivation). Alemtuzumab is not commercially available but may be obtained; CMV monitoring and Pneumocystis prophylaxis are needed; use caution with severe neutropenia and recurrent infections."
           },
           "regimens": [
             {

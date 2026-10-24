@@ -5,8 +5,8 @@
     "en": "Extranodal NK/T-cell lymphoma (ENKL) and aggressive NK-cell leukaemia"
   },
   "summary": {
-    "uk": "EBV-асоційована лімфома з NK- чи цитотоксичних Т-клітин: назальна й екстраназальна; прогноз — за PINK/PINK-E. Основа — аспарагіназовмісна хіміотерапія й променева терапія (при локалізованій назальній хворобі — істотна); антрациклінові схеми неефективні.",
-    "en": "An EBV-associated lymphoma of NK or cytotoxic T cells: nasal and extranasal; prognosis by PINK/PINK-E. The mainstay is asparaginase-based chemotherapy and radiotherapy (essential in localised nasal disease); anthracycline regimens are ineffective."
+    "uk": "EBV-асоційована лімфома з NK- чи цитотоксичних Т-клітин: назальна й екстраназальна; прогноз — за PINK/PINK-E. Основа — аспарагіназовмісна хіміотерапія й променева терапія (при локалізованій назальній хворобі — істотна); антрациклінові схеми малоефективні.",
+    "en": "An EBV-associated lymphoma of NK or cytotoxic T cells: nasal and extranasal; prognosis by PINK/PINK-E. The mainstay is asparaginase-based chemotherapy and radiotherapy (essential in localised nasal disease); anthracycline regimens respond poorly."
   },
   "clinical_group": "lymphoma",
   "codes": [
@@ -54,8 +54,8 @@
             "en": "Diagnosis and workup (ENKL-1, ENKL-2, ENKL-A)"
           },
           "description": {
-            "uk": "Біопсія має включати краї ураження (некроз частий; кілька біопсій носоглотки навіть із неураженої зони). Імунофенотип NK: CD2+, цитоплазматичний CD3ε+ (поверхневий CD3−), CD56+, TIA1+, EBER+, TCR зародкові; Т-варіант — TCRαβ/γδ клональні. EBER-ISH обов’язковий (негативний результат — перегляд діагнозу). Обстеження: огляд (кільце Вальдеєра, яєчка, шкіра), ЛОР з оглядом носоглотки, ЛДГ, кістковий мозок (EBER+ агрегати), ПЕТ/КТ, МРТ ± КТ для планування ПТ, EBV-ДНК у крові (кількісна ПЛР; незникнення віремії — непрямий доказ хвороби), ехо/MUGA, PINK/PINK-E, термінова консультація радіотерапевта. PINK (вік >60, стадія III-IV, віддалені вузли, неназальний тип; 0/1/≥2 — низький/проміжний/високий) та PINK-E (додається EBV-ДНК; 0-1/2/≥3).",
-            "en": "The biopsy should include lesion edges (necrosis is common; multiple nasopharyngeal biopsies even of uninvolved areas). NK phenotype: CD2+, cytoplasmic CD3 epsilon+ (surface CD3-), CD56+, TIA1+, EBER+, germline TCR; T-cell variant — clonal TCR alpha/beta or gamma/delta. EBER-ISH is essential (a negative result prompts pathology review). Workup: exam (Waldeyer ring, testes, skin), ENT nasopharynx evaluation, LDH, bone marrow (EBER+ aggregates), PET/CT, MRI ± CT for RT planning, blood EBV DNA (quantitative PCR; failure to normalise is indirect evidence of persistent disease), echo/MUGA, PINK/PINK-E, concurrent radiation oncology referral. PINK (age >60, stage III-IV, distant nodes, non-nasal type; 0/1/>=2 — low/intermediate/high) and PINK-E (EBV DNA added; 0-1/2/>=3)."
+            "uk": "Біопсія має включати краї ураження (некроз частий; кілька біопсій носоглотки навіть із неураженої зони). Імунофенотип NK: CD2+, цитоплазматичний CD3ε+ (поверхневий CD3−), CD56+, TIA1+, EBER+, гени TCR у зародковій конфігурації; Т-варіант — TCRαβ чи TCRγδ, клональні перебудови TRB/TRG. EBER-ISH обов’язковий (негативний результат — перегляд діагнозу). Обстеження: огляд (кільце Вальдеєра, яєчка, шкіра), ЛОР з оглядом носоглотки, ЛДГ, кістковий мозок (EBER+ агрегати), ПЕТ/КТ, МРТ ± КТ для планування ПТ, EBV-ДНК у крові (кількісна ПЛР; відсутність нормалізації віремії — непрямий доказ персистенції хвороби), ехо/MUGA, PINK/PINK-E, одночасне скерування до радіотерапевта для оцінки до лікування. PINK (вік >60, стадія III-IV, віддалені вузли, неназальний тип; 0/1/≥2 — низький/проміжний/високий) та PINK-E (додається EBV-ДНК; 0-1/2/≥3).",
+            "en": "The biopsy should include lesion edges (necrosis is common; multiple nasopharyngeal biopsies even of uninvolved areas). NK phenotype: CD2+, cytoplasmic CD3 epsilon+ (surface CD3-), CD56+, TIA1+, EBER+, germline TCR genes; T-cell variant — TCR alpha/beta or gamma/delta with clonal TRB/TRG rearrangements. EBER-ISH is essential (a negative result prompts pathology review). Workup: exam (Waldeyer ring, testes, skin), ENT nasopharynx evaluation, LDH, bone marrow (EBER+ aggregates), PET/CT, MRI ± CT for RT planning, blood EBV DNA (quantitative PCR; failure to normalise is indirect evidence of persistent disease), echo/MUGA, PINK/PINK-E, concurrent radiation oncology referral for pretreatment evaluation. PINK (age >60, stage III-IV, distant nodes, non-nasal type; 0/1/>=2 — low/intermediate/high) and PINK-E (EBV DNA added; 0-1/2/>=3)."
           },
           "regimens": [],
           "steps": [
@@ -145,8 +145,8 @@
               "kind": "other",
               "column": "treatment",
               "label": {
-                "uk": "Променева терапія самостійно (непридатні до хіміотерапії): 50-55 Гр; ISRT охоплює всю порожнину, IMRT бажана",
-                "en": "Radiotherapy alone (unfit for chemotherapy): 50-55 Gy; the ISRT volume covers the whole cavity, IMRT is preferred"
+                "uk": "Променева терапія самостійно (непридатні до хіміотерапії): 50-55 Гр; CTV охоплює всю уражену порожнину й прилеглі структури, IMRT наполегливо рекомендована",
+                "en": "Radiotherapy alone (unfit for chemotherapy): 50-55 Gy; the CTV covers the entire involved cavity and adjacent structures, IMRT is strongly preferred"
               },
               "preference": "other"
             },
@@ -169,8 +169,8 @@
             "en": "End-of-treatment evaluation and relapse (ENKL-4)"
           },
           "description": {
-            "uk": "Повторити візуалізацію (КТ, МРТ чи ПЕТ/КТ), ендоскопію з біопсіями, EBV-ДНК. Назальна I-II: CR — спостереження; PR — біопсія (негативна → спостереження; позитивна → R/R-терапія чи ТГСК); немає відповіді — випробування, інша аспарагіназова схема чи підтримуюча терапія. Назальна III-IV й екстраназальна: CR — розглянути ТГСК (немає чітких даних алогенна чи аутологічна — індивідуально); PR/немає відповіді — випробування (бажано), R/R-терапія чи ТГСК за придатності.",
-            "en": "Repeat imaging (CT, MRI or PET/CT), endoscopy with biopsies, EBV DNA. Nasal I-II: CR — observe; PR — biopsy (negative → observe; positive → R/R therapy or HCT); no response — a trial, another asparaginase regimen or supportive care. Nasal III-IV and extranasal: CR — consider HCT (no clear data on allogeneic vs autologous — individualise); PR/no response — a trial (preferred), R/R therapy or HCT if eligible."
+            "uk": "Повторити візуалізацію (КТ, МРТ чи ПЕТ/КТ), ендоскопію з біопсіями, EBV-ДНК. Назальна I-II: CR (зокрема негативний ЛОР-огляд) — спостереження; PR — біопсія (негативна → спостереження; позитивна → як при відсутності відповіді); немає відповіді — клінічне дослідження, інша аспарагіназова схема (якщо не застосовували) чи найкраща підтримуюча терапія. Назальна III-IV й екстраназальна I-IV: CR — розглянути ТГСК за придатності (немає чітких даних, алогенна чи аутологічна краща, — індивідуально); PR — біопсія (негативна → розглянути ТГСК; позитивна → як при відсутності відповіді); немає відповіді — клінічне дослідження, інша аспарагіназова схема (якщо не застосовували) чи найкраща підтримуюча терапія. Далі за будь-якої стадії при рецидиві/рефрактерності — клінічне дослідження (бажано), схеми для рецидиву (ENKL-B 2) чи ТГСК за придатності.",
+            "en": "Repeat imaging (CT, MRI or PET/CT), endoscopy with biopsies, EBV DNA. Nasal I-II: CR (including a negative ENT evaluation) — observe; PR — biopsy (negative → observe; positive → as for no response); no response — a clinical trial, another asparaginase regimen (if not used before) or best supportive care. Nasal III-IV and extranasal I-IV: CR — consider HCT if eligible (no clear data on allogeneic vs autologous — individualise); PR — biopsy (negative → consider HCT; positive → as for no response); no response — a clinical trial, another asparaginase regimen (if not used before) or best supportive care. Then, at any stage, relapsed/refractory disease — a clinical trial (preferred), relapse regimens (ENKL-B 2) or HCT if eligible."
           },
           "regimens": [],
           "steps": [
@@ -178,8 +178,8 @@
               "kind": "hct",
               "column": "treatment",
               "label": {
-                "uk": "CR (стадії III-IV й екстраназальна): розглянути ТГСК; алогенна чи аутологічна — індивідуально",
-                "en": "CR (stage III-IV and extranasal): consider HCT; allogeneic or autologous individualised"
+                "uk": "CR чи PR з негативною біопсією (стадії III-IV й екстраназальна): розглянути ТГСК; алогенна чи аутологічна — індивідуально",
+                "en": "CR or PR with a negative biopsy (stage III-IV and extranasal): consider HCT; allogeneic or autologous individualised"
               },
               "preference": "other"
             },
@@ -210,7 +210,7 @@
             "en": "Relapse / refractory disease (ENKL-B 2)"
           },
           "description": {
-            "uk": "Бажано клінічне дослідження; поза ним — авелумаб, ніволумаб чи пембролізумаб (ІСІ до алоТГСК можуть підвищити пов’язану з трансплантацією смертність і спричинити тяжку гіпергостру РТПХ). Інші: брентуксимаб (CD30+), праалатрексат, аспарагіназова комбінація, не використана в першій лінії, DHA + платина (карбоплатин — кат. 2B), ESHA + платина, GDP, GemOx, ICE; за певних обставин — ПТ, беліностат, ромідепсин (при HDAC-інгібіторах описана реактивація EBV — моніторити).",
+            "uk": "Бажано клінічне дослідження; поза ним — авелумаб, ніволумаб чи пембролізумаб (ІСІ до алоТГСК можуть підвищити пов’язану з трансплантацією смертність і спричинити тяжку гіпергостру РТПХ). Інші: брентуксимаб (CD30+), пралатрексат, аспарагіназова комбінація, не використана в першій лінії, DHA + платина (карбоплатин — кат. 2B), ESHA + платина, GDP, GemOx, ICE; за певних обставин — ПТ, беліностат, ромідепсин (при HDAC-інгібіторах описана реактивація EBV — моніторити).",
             "en": "A clinical trial is preferred; otherwise avelumab, nivolumab or pembrolizumab (checkpoint inhibitors before allogeneic HCT may raise transplant-related mortality and cause severe hyperacute GVHD). Others: brentuximab (CD30+), pralatrexate, an asparaginase combination not used first line, DHA + platinum (carboplatin — category 2B), ESHA + platinum, GDP, GemOx, ICE; in certain circumstances — RT, belinostat, romidepsin (EBV reactivation is described with HDAC inhibitors — monitor)."
           },
           "regimens": [
@@ -221,8 +221,8 @@
             {
               "regimen_id": "brentuximab-mono",
               "notes": {
-                "uk": "За експресії CD30 (будь-який рівень)",
-                "en": "CD30-positive (any level)"
+                "uk": "CD30+",
+                "en": "CD30-positive"
               },
               "preference": "other"
             },
@@ -297,8 +297,8 @@
               "kind": "other",
               "column": "treatment",
               "label": {
-                "uk": "Променева терапія (ISRT): після хіміотерапії CR 30-36 Гр, PR 40-50 Гр; як первинне лікування при рефрактерності чи неможливості хіміотерапії 40-55 Гр; з ТГСК 20-36 Гр",
-                "en": "Radiotherapy (ISRT): after chemotherapy CR 30-36 Gy, PR 40-50 Gy; as primary treatment for refractory disease or non-candidates for chemotherapy 40-55 Gy; with HCT 20-36 Gy"
+                "uk": "Променева терапія (за певних обставин); дози NCCN для ENKL (TCLYM-D): самостійна 50-55 Гр, з хіміотерапією 45-56 Гр; паліативна 20-36 Гр за 5-18 фракцій",
+                "en": "Radiotherapy (in certain circumstances); NCCN ENKL doses (TCLYM-D): alone 50-55 Gy, with chemotherapy 45-56 Gy; palliative 20-36 Gy in 5-18 fractions"
               },
               "preference": "other"
             },
@@ -321,7 +321,7 @@
             "en": "Aggressive NK-cell leukaemia (ENKL-C)"
           },
           "description": {
-            "uk": "Рідкісний лейкемічний варіант NK-неоплазії, медіана віку 40 років, B-симптоми, HLH, гепатоспленомегалія; ураження носа/шкіри нетипове; CD16+, EBER+, мутації JAK/STAT (STAT3), JAK3 немає. Діагноз частіше за кістковим мозком. Антрациклінові схеми неефективні — аспарагіназовмісні комбіновані режими (ENKL-B 1); у першій ремісії NCCN надає перевагу алоТГСК над аутологічною.",
+            "uk": "Рідкісний лейкемічний варіант NK-неоплазії, медіана віку 40 років, B-симптоми, HLH, гепатоспленомегалія; ураження носа/шкіри нетипове; CD16+, EBER+, мутації шляху JAK/STAT (STAT3), мутацій JAK3 не виявлено. Діагноз частіше за кістковим мозком. Антрациклінові схеми зазвичай неефективні — розглянути аспарагіназовмісні комбіновані режими (ENKL-B 1); у першій ремісії NCCN надає перевагу алоТГСК над аутологічною.",
             "en": "A rare leukaemic form of NK-cell neoplasm, median age 40, B symptoms, HLH, hepatosplenomegaly; nasal/skin involvement is unusual; CD16+, EBER+, JAK/STAT (STAT3) mutations, no JAK3. Usually diagnosed on bone marrow. Anthracycline-based regimens are ineffective — asparaginase-based combination regimens (ENKL-B 1); NCCN favours allogeneic over autologous HCT in first remission."
           },
           "regimens": [
@@ -389,7 +389,7 @@
       "key": "relapsed",
       "kind": "line",
       "title": {
-        "uk": "Рецидив й рефрактерність",
+        "uk": "Рецидив і рефрактерність",
         "en": "Relapsed and refractory disease"
       },
       "description": {
