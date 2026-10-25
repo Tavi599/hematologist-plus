@@ -1,5 +1,5 @@
 {
-  "$comment": "Первинна імунна тромбоцитопенія у дорослих (ІТП / ITP). Код D69.3. Джерела: UpToDate (діагностика, початкове лікування й кровотеча, друга лінія; сторінки відкриті в Chrome користувача 25.10.2026, лише парафраз), ASH 2019 (Neunert), ASH 2026 (Cuker; прочитано лише зведення змін від 27.08.2026) і міжнародний консенсус Provan 2019. NCCN не читали. ВВІГ — спільний препарат immunoglobulin-human-iv (режим itp-ivig, варіант дози 400 мг/кг). Сусідні хвороби: синдром Еванса (ІТП + АІГА) — окрема стаття.",
+  "$comment": "Первинна імунна тромбоцитопенія у дорослих (ІТП / ITP). Код D69.3. Джерела: UpToDate (діагностика, початкове лікування й кровотеча, друга лінія; сторінки відкриті в Chrome користувача 25.10.2026, лише парафраз), ASH 2019 (Neunert), ASH 2026 (Cuker; прочитано лише зведення змін від 27.08.2026) і міжнародний консенсус Provan 2019. NCCN не читали. ВВІГ — спільний препарат immunoglobulin-human-iv, імуномодулюючі схеми ivig-immunomodulatory-1g/-5d (окрема сесія вибору дози ВВІГ). Сусідні хвороби: синдром Еванса (ІТП + АІГА) — окрема стаття.",
   "id": "immune-thrombocytopenia",
   "name": {
     "uk": "Імунна тромбоцитопенія (ІТП)",
@@ -147,7 +147,18 @@
           },
           "regimens": [
             {
-              "regimen_id": "itp-ivig"
+              "regimen_id": "ivig-immunomodulatory-1g",
+              "notes": {
+                "uk": "Звірка доз ІТП. UpToDate: 1 г/кг на добу 1–2 дні — друга доза наступного дня, якщо тромбоцити лишаються <50×10^9/л або кровотеча не зупинилась; курс можна припинити, щойно тромбоцити >30×10^9/л. Provan 2019: 1 г/кг в 1 або 2 послідовні дні. ASH 2019 (рекомендації для дорослих): дози ВВІГ не наводить. Числової розбіжності між Provan і UpToDate немає. Одноразово 0,5 г/кг слабше (відповідь на 4-й день 24% проти 67%, UpToDate). Другу дозу додайте рядком у таблиці. HBsAg та анти-HBc — до ВВІГ, якщо планується ритуксимаб.",
+                "en": "ITP dose comparison. UpToDate: 1 g/kg a day for 1-2 days - the second dose the next day if platelets stay <50 x10^9/L or bleeding persists; stop once platelets are >30 x10^9/L. Provan 2019: 1 g/kg on 1 or 2 consecutive days. ASH 2019 (adult recommendations): gives no IVIG dose. No numeric conflict between Provan and UpToDate. A single 0.5 g/kg works less well (day-4 response 24% vs 67%, UpToDate). Add the second dose as a row in the sheet. HBsAg and anti-HBc before IVIG if rituximab is planned."
+              }
+            },
+            {
+              "regimen_id": "ivig-immunomodulatory-5d",
+              "notes": {
+                "uk": "ІТП: 400 мг/кг щодня 5 днів — альтернативний режим (Provan 2019, UpToDate).",
+                "en": "ITP: 400 mg/kg daily for 5 days - the alternative schedule (Provan 2019, UpToDate)."
+              }
             },
             {
               "regimen_id": "itp-anti-d"
@@ -260,7 +271,7 @@
       },
       "regimens": [
         {
-          "regimen_id": "itp-ivig",
+          "regimen_id": "ivig-immunomodulatory-1g",
           "notes": {
             "uk": "Критична кровотеча: 1 г/кг в 1-й день, у 2-й — якщо тромбоцити <50×10^9/л; зупинити, щойно >30×10^9/л.",
             "en": "Critical bleeding: 1 g/kg on day 1, on day 2 if platelets are <50 x10^9/L; stop once >30 x10^9/L."
