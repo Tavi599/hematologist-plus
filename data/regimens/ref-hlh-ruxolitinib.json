@@ -1,0 +1,71 @@
+{
+  "$comment": "Лише опис за UpToDate (парафраз). Доза не вигадувалась.",
+  "id": "ref-hlh-ruxolitinib",
+  "short_name": "Руксолітиніб",
+  "name": {
+    "uk": "ГЛГ: руксолітиніб (рефрактерна й рання лінія — дані)",
+    "en": "HLH: ruxolitinib (refractory and early-line data)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of hemophagocytic lymphohistiocytosis",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-hemophagocytic-lymphohistiocytosis",
+      "version": "тема оновлена 11.03.2025",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv, drlz.com.ua)",
+      "url": "http://www.drlz.com.ua/ibp/zvity.nsf/all/zvit/$file/reestr.csv",
+      "version": "витяг від 25.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Інгібітор JAK1/2 має активність при рефрактерній ГЛГ; UpToDate наводить результати досліджень, але дози в цих темах не вказує.",
+      "en": "The JAK1/2 inhibitor has activity in refractory HLH; UpToDate cites study results but gives no dose in these topics."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Руксолітиніб",
+          "en": "Ruxolitinib"
+        },
+        "drug_id": "ruxolitinib"
+      },
+      {
+        "name": {
+          "uk": "Метилпреднізолон",
+          "en": "Methylprednisolone"
+        },
+        "drug_id": "methylprednisolone"
+      },
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "25 хворих (медіана віку 27,5 року) із рефрактерною ГЛГ, руксолітиніб ± глюкокортикоїди: відповідь 68%, медіана виживаності 22 тижні; медіана часу до відповіді 2 тижні, 88% стали афебрильними за 24 год. Найчастіші побічні ефекти — цитопенії та підвищення печінкових проб.",
+        "en": "25 patients (median age 27.5 years) with refractory HLH, ruxolitinib ± glucocorticoids: response 68%, median survival 22 weeks; median time to response 2 weeks, 88% afebrile within 24 hours. Most common adverse effects: cytopenias and raised liver tests."
+      },
+      {
+        "uk": "21 хворий (12 рефрактерних, 9 нелікованих): руксолітиніб і, за потреби, метилпреднізолон та етопозид — однорічна виживаність 90,5%; після ТГСК живі 88%.",
+        "en": "21 patients (12 refractory, 9 untreated): ruxolitinib and, if needed, methylprednisolone and etoposide — one-year survival 90.5%; 88% alive after transplant."
+      },
+      {
+        "uk": "В Україні руксолітиніб зареєстрований (таблетки 5, 15, 20 мг), але показання ГЛГ немає — застосування поза інструкцією.",
+        "en": "Ruxolitinib is registered in Ukraine (5, 15, 20 mg tablets), but HLH is not an indication — off-label use."
+      }
+    ],
+    "gap": {
+      "uk": "Доза й тривалість для ГЛГ у використаних темах UpToDate не наведені — без розрахунку; звірити з окремою монографією препарату чи публікацією.",
+      "en": "Dose and duration for HLH are not given in the UpToDate topics used — no calculation; check against the drug monograph or the publication."
+    },
+    "availability": "registered"
+  }
+}

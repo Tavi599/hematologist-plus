@@ -1,0 +1,57 @@
+{
+  "$comment": "Лише опис. Препарат — спільний immunoglobulin-human-iv. Режими звірені: UpToDate (HLH treatment, Infection) та NHS England 2025 Appendix A.",
+  "id": "ref-hlh-ivig",
+  "short_name": "ВВІГ при ГЛГ",
+  "name": {
+    "uk": "ГЛГ: внутрішньовенний імуноглобулін (допоміжна терапія) — розбіжні режими",
+    "en": "HLH: intravenous immunoglobulin (adjunct) — differing regimens"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of hemophagocytic lymphohistiocytosis",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-hemophagocytic-lymphohistiocytosis",
+      "version": "тема оновлена 11.03.2025",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "NHS England: Commissioning criteria policy for the use of therapeutic immunoglobulin (Ig) in England (2025), Appendix A: Haematology — haemophagocytic syndrome",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2021/12/ccp-for-the-use-of-therapeutic-immunoglobulin-england-2025.pdf",
+      "version": "2025",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "ВВІГ — допоміжний засіб, не заміна HLH-специфічній терапії. Два джерела дають різні режими для різних цілей — їх не можна підміняти одне одним.",
+      "en": "IVIG is adjunctive and does not replace HLH-specific therapy. Two sources give different regimens for different aims — they are not interchangeable."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "ВВІГ людини нормальний",
+          "en": "Human normal immunoglobulin for intravenous use"
+        },
+        "drug_id": "immunoglobulin-human-iv"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "UpToDate (підтримка при інфекціях): за наявності імунодефіциту з гіпогамаглобулінемією або гіпогамаглобулінемії від HLH-терапії — ВВІГ 500 мг/кг.",
+        "en": "UpToDate (infection support): with an underlying immunodeficiency and hypogammaglobulinaemia, or hypogammaglobulinaemia caused by HLH therapy — IVIG 500 mg/kg."
+      },
+      {
+        "uk": "NHS England 2025 (гематологія, гемофагоцитарний синдром): 2 г/кг у 2–5 розділених введень; як інші варіанти названо блокаду рецептора IL-1 (анакінра) разом із дексаметазоном за протоколом HLH; можна повторити при рецидиві і ще раз при другому, якщо альтернативи не показані чи протипоказані. Діагноз — консультант-гематолог або ревматолог за H-score.",
+        "en": "NHS England 2025 (haematology, haemophagocytic syndrome): 2 g/kg in 2-5 divided doses; other options are IL-1 receptor blockade (anakinra) with dexamethasone per the HLH protocol; may be repeated at relapse and a second relapse where alternatives are not indicated or are contraindicated. Diagnosis by a consultant haematologist or rheumatologist using the H-score."
+      },
+      {
+        "uk": "РОЗБІЖНІСТЬ: 500 мг/кг (UpToDate, підтримувальна мета) проти 2 г/кг (NHS, імуномодулююча мета). При EBV-інфекції UpToDate вважає ритуксимаб ефективнішим за ВВІГ.",
+        "en": "DISCREPANCY: 500 mg/kg (UpToDate, supportive aim) versus 2 g/kg (NHS, immunomodulatory aim). In EBV infection UpToDate considers rituximab more effective than IVIG."
+      }
+    ],
+    "gap": {
+      "uk": "Режим ВВІГ при ГЛГ потребує узгодження з лікарем; фіксованого розкладу в джерелах немає (NHS: «у 2–5 введень»).",
+      "en": "The IVIG regimen in HLH needs agreement with the physician; the sources fix no schedule (NHS: «in 2-5 doses»)."
+    },
+    "availability": "registered"
+  }
+}

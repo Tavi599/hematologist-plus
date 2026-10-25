@@ -1,0 +1,68 @@
+{
+  "$comment": "Лише опис за UpToDate (парафраз). Недоступний в Україні — довідкова картка.",
+  "id": "ref-hlh-emapalumab",
+  "short_name": "Емапалумаб + дексаметазон",
+  "name": {
+    "uk": "ГЛГ: емапалумаб + дексаметазон (рефрактерний/рецидивний перебіг)",
+    "en": "HLH: emapalumab + dexamethasone (refractory/relapsed)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of hemophagocytic lymphohistiocytosis",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-hemophagocytic-lymphohistiocytosis",
+      "version": "тема оновлена 11.03.2025",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv, drlz.com.ua)",
+      "url": "http://www.drlz.com.ua/ibp/zvity.nsf/all/zvit/$file/reestr.csv",
+      "version": "витяг від 25.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Для рефрактерної, рецидивної чи прогресуючої ГЛГ UpToDate поза клінічним дослідженням пропонує емапалумаб із дексаметазоном замість етопозиду з кортикостероїдом, алемтузумабу та інших варіантів.",
+      "en": "For refractory, relapsed or progressive HLH, UpToDate suggests outside a trial emapalumab with dexamethasone rather than etoposide plus corticosteroid, alemtuzumab or other options."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Емапалумаб",
+          "en": "Emapalumab"
+        },
+        "drug_id": "emapalumab"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Емапалумаб зазвичай починають з 1 мг/кг в/в за 1 годину кожні 3–4 дні; дозу можна підвищувати до 10 мг/кг за відповіддю (клінічною та лабораторною).",
+        "en": "Emapalumab usually starts at 1 mg/kg IV over 1 hour every 3-4 days; the dose can be raised up to 10 mg/kg according to clinical and laboratory response."
+      },
+      {
+        "uk": "Дексаметазон 5–10 мг/м² щодня на весь час терапії.",
+        "en": "Dexamethasone 5-10 mg/m² daily for the whole course."
+      },
+      {
+        "uk": "До початку — обстеження на туберкульоз (повторно за потреби); профілактика пневмоцистної інфекції та оперізувального лишаю на весь курс; моніторинг EBV, CMV, аденовірусу кожні 2 тижні; живі вакцини не вводити під час лікування і щонайменше місяць після останньої дози.",
+        "en": "Before starting — tuberculosis screening (repeat as needed); Pneumocystis and herpes zoster prophylaxis for the whole course; EBV, CMV and adenovirus monitoring every 2 weeks; no live vaccines during treatment and for at least one month after the last dose."
+      },
+      {
+        "uk": "Дані: у 27 дітей (медіана віку 1 рік) відповідь 63% (повна 26%); медіана часу до відповіді 8 днів. Ефективність і безпека у дорослих не опубліковані (за UpToDate). FDA дозволило препарат для дорослих і дітей.",
+        "en": "Data: in 27 children (median age 1 year) response 63% (complete 26%); median time to response 8 days. Efficacy and safety in adults have not been reported (UpToDate). FDA approval covers adults and children."
+      }
+    ],
+    "gap": {
+      "uk": "Тривалість курсу й схема зниження дози джерело не визначає. В Україні препарат не зареєстрований.",
+      "en": "The source sets no course length or dose-reduction scheme. The drug is not registered in Ukraine."
+    },
+    "availability": "unavailable"
+  }
+}

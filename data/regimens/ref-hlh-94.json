@@ -1,0 +1,74 @@
+{
+  "$comment": "Лише опис за UpToDate (парафраз). Етопозид і дексаметазон є в переліку відділення. Дні введення не вигадувались.",
+  "id": "ref-hlh-94",
+  "short_name": "HLH-94",
+  "name": {
+    "uk": "ГЛГ: протокол HLH-94 (етопозид + дексаметазон), 8 тижнів індукції",
+    "en": "HLH: HLH-94 protocol (etoposide + dexamethasone), 8-week induction"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of hemophagocytic lymphohistiocytosis",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-hemophagocytic-lymphohistiocytosis",
+      "version": "тема оновлена 11.03.2025",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Початкова HLH-специфічна терапія: 8 тижнів етопозиду з дексаметазоном (за UpToDate — на основі HLH-94). Для тяжкохворих і при гематологічній злоякісності; ТГСК — після індукції.",
+      "en": "Initial HLH-specific therapy: 8 weeks of etoposide with dexamethasone (UpToDate, based on HLH-94). For the acutely ill and for haematological malignancy; transplant follows induction."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Етопозид 150 мг/м² (дорослі й діти; <10 кг — 5 мг/кг): двічі на тиждень у тижні 1–2, далі раз на тиждень у тижні 3–8.",
+        "en": "Etoposide 150 mg/m² (adults and children; <10 kg: 5 mg/kg): twice weekly in weeks 1-2, then once weekly in weeks 3-8."
+      },
+      {
+        "uk": "Дексаметазон в/в або внутрішньо щодня: тижні 1–2 — 10 мг/м²; 3–4 — 5 мг/м²; 5–6 — 2,5 мг/м²; тиждень 7 — 1,25 мг/м²; тиждень 8 — зниження до нуля.",
+        "en": "Dexamethasone IV or oral daily: weeks 1-2 10 mg/m²; 3-4 5 mg/m²; 5-6 2.5 mg/m²; week 7 1.25 mg/m²; week 8 taper to zero."
+      },
+      {
+        "uk": "Корекція етопозиду: КК 10–50 мл/хв — мінус 25%; КК <10 — мінус 50%; КК <10 і прямий білірубін >3 мг/дл — мінус 75%. Ізольовану гіпербілірубінемію чи нейтропенію не коригують, крім дуже високого білірубіну (≈20 мг/дл): тоді перша доза може бути знижена (напр. 75 мг/м²) з підвищенням до повної при поліпшенні печінки.",
+        "en": "Etoposide adjustment: CrCl 10-50 mL/min minus 25%; CrCl <10 minus 50%; CrCl <10 and direct bilirubin >3 mg/dL minus 75%. Isolated hyperbilirubinaemia or neutropenia is not adjusted unless very high (about 20 mg/dL): then the first dose may be reduced (e.g. 75 mg/m²) and raised to full as the liver improves."
+      },
+      {
+        "uk": "РОЗБІЖНІСТЬ: у довіднику препарату етопозид (за FDA) знижена доза при КК 15–50 мл/хв (75% дози), UpToDate для ГЛГ дає межу 10–50 мл/хв (−25%) і додаткові ступені знижень. Порогові значення різні — звіряти з лікарем.",
+        "en": "DISCREPANCY: the etoposide drug record (FDA label) reduces the dose at CrCl 15-50 mL/min (75% of the dose); UpToDate for HLH uses 10-50 mL/min (-25%) with further steps. The thresholds differ — check with the physician."
+      },
+      {
+        "uk": "Відсутність відповіді за тиждень (клінічний стан і маркери) — привід розглянути рятувальну терапію. Хворі, що знову погіршились при зниженні доз, часто відповідають на повторне призначення тих самих препаратів.",
+        "en": "No response within a week (clinical status and markers) is a reason to consider salvage therapy. Patients who worsen on taper often respond to retreatment with the same agents."
+      },
+      {
+        "uk": "HLH-2004 додав циклоспорин із тижня 9 (6 мг/кг/добу в кілька прийомів, цільова мінімальна концентрація 200 мкг/л). UpToDate циклоспорин не використовує (ризик PRES, користь не доведена); частина гематологів призначає тяжким хворим при жорсткому контролі тиску.",
+        "en": "HLH-2004 added cyclosporine from week 9 (6 mg/kg/day in divided doses, target trough 200 mcg/L). UpToDate does not use cyclosporine (PRES risk, benefit unproven); some haematologists use it in the severely ill with strict blood-pressure control."
+      },
+      {
+        "uk": "Перед ТГСК лікування продовжують після 8 тижнів: етопозид 150 мг/м² раз на 2 тижні, що чергується з дексаметазоном 10 мг/м² 3 дні поспіль через тиждень.",
+        "en": "Before transplant, therapy continues after week 8: etoposide 150 mg/m² every 2 weeks alternating with dexamethasone 10 mg/m² for 3 consecutive days on alternate weeks."
+      }
+    ],
+    "gap": {
+      "uk": "Точні дні «двічі на тиждень» у тижнях 1–2 і календар зниження дексаметазону в межах тижня джерело не розписує, тому розрахунок за днями курсу не будується. Альтернатива етопозиду при відсутності функції печінки — алемтузумаб.",
+      "en": "The source does not name the exact days for «twice weekly» in weeks 1-2 or the within-week dexamethasone calendar, so no day-by-day calculation is built. Alemtuzumab is the alternative to etoposide when there is no hepatic function."
+    },
+    "availability": "registered"
+  }
+}

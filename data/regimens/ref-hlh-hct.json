@@ -1,0 +1,62 @@
+{
+  "$comment": "Лише опис за UpToDate (парафраз).",
+  "id": "ref-hlh-hct",
+  "short_name": "ТГСК при ГЛГ",
+  "name": {
+    "uk": "ГЛГ: алогенна ТГСК (показання, кондиціонування, контроль)",
+    "en": "HLH: allogeneic HCT (indications, conditioning, monitoring)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of hemophagocytic lymphohistiocytosis",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-hemophagocytic-lymphohistiocytosis",
+      "version": "тема оновлена 11.03.2025",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Єдине лікування, що виліковує спадкову ГЛГ; потрібна також при ураженні ЦНС, відсутності відповіді на початкову терапію та гематологічній злоякісності. HLA-типування — з моменту діагнозу.",
+      "en": "The only curative treatment for inherited HLH; also needed for CNS involvement, no response to initial therapy and haematological malignancy. HLA typing from the time of diagnosis."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Етопозид",
+          "en": "Etoposide"
+        },
+        "drug_id": "etoposide"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Показання: гомозиготні/компаунд-гетерозиготні мутації ГЛГ-генів; відсутність відповіді на початкову терапію; ураження ЦНС; гематологічна злоякісність, не виліковна звичайною хіміотерапією. Гетерозиготні мутації — за перебігом.",
+        "en": "Indications: homozygous or compound heterozygous HLH gene mutations; no response to initial therapy; CNS involvement; haematological malignancy not curable with conventional chemotherapy. Heterozygous mutations — case by case."
+      },
+      {
+        "uk": "Родичів-донорів тестують на мутації ГЛГ (щоб не обрати донора з недіагностованою ГЛГ).",
+        "en": "Related donors are tested for HLH mutations (so a donor with undiagnosed HLH is not chosen)."
+      },
+      {
+        "uk": "UpToDate радить кондиціонування зниженої інтенсивності замість мієлоабляційного (малі серії: виживаність 75–100%; в одному центрі 92% проти 43%); оптимальне джерело клітин не визначено.",
+        "en": "UpToDate suggests reduced-intensity rather than myeloablative conditioning (small series: survival 75-100%; one centre 92% vs 43%); the best cell source is not defined."
+      },
+      {
+        "uk": "Після ТГСК: щотижневий моніторинг донорського химеризму; захищає химеризм 20–30%; при падінні нижче 50–60% — зменшити профілактику РТПХ, далі лімфоцити донора. Спалах через 2–3 тижні після ТГСК лікують етопозидом із дексаметазоном. Усі вакцинації відкласти на 6 місяців після терапії.",
+        "en": "After HCT: weekly donor chimerism monitoring; 20-30% protects against late reactivation; if it falls below 50-60%, reduce GVHD prophylaxis, then donor lymphocytes. A flare 2-3 weeks after HCT is treated with etoposide and dexamethasone. Withhold all vaccinations for 6 months after therapy."
+      }
+    ],
+    "gap": {
+      "uk": "Протокол кондиціонування в джерелі не наведено — без розрахунку.",
+      "en": "The source gives no conditioning protocol — no calculation."
+    },
+    "availability": "registered"
+  }
+}

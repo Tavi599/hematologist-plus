@@ -1,0 +1,53 @@
+{
+  "$comment": "Лише опис за UpToDate (парафраз).",
+  "id": "ref-hlh-alemtuzumab",
+  "short_name": "Алемтузумаб",
+  "name": {
+    "uk": "ГЛГ: алемтузумаб (рефрактерна форма; відсутність функції печінки)",
+    "en": "HLH: alemtuzumab (refractory disease; no hepatic function)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of hemophagocytic lymphohistiocytosis",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-hemophagocytic-lymphohistiocytosis",
+      "version": "тема оновлена 11.03.2025",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv, drlz.com.ua)",
+      "url": "http://www.drlz.com.ua/ibp/zvity.nsf/all/zvit/$file/reestr.csv",
+      "version": "витяг від 25.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Альтернатива етопозиду при відсутності функції печінки та варіант при рефрактерній ГЛГ.",
+      "en": "An alternative to etoposide when there is no hepatic function and an option in refractory HLH."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Алемтузумаб",
+          "en": "Alemtuzumab"
+        },
+        "drug_id": "alemtuzumab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "22 хворих із рефрактерною ГЛГ: медіана дози 1 мг/кг, розподілена на 4 дні; часткова відповідь у 86%, 77% дійшли до ТГСК. Часті ускладнення — вірусемія CMV та аденовірусу.",
+        "en": "22 patients with refractory HLH: median dose 1 mg/kg divided over 4 days; partial response in 86%, 77% reached transplant. Frequent complications: CMV and adenovirus viraemia."
+      },
+      {
+        "uk": "Зареєстрована в Україні лише форма Лемтрада 12 мг/1,2 мл для розсіяного склерозу; при ГЛГ — поза показаннями.",
+        "en": "Only the Lemtrada 12 mg/1.2 mL form for multiple sclerosis is registered in Ukraine; HLH is off-label."
+      }
+    ],
+    "gap": {
+      "uk": "Це медіана дози з дослідження, а не схема; повний розклад джерело не дає — без розрахунку.",
+      "en": "This is the study median dose, not a schedule; the source gives no full schedule — no calculation."
+    },
+    "availability": "registered"
+  }
+}

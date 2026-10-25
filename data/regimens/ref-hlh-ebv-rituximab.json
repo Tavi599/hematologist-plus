@@ -1,0 +1,47 @@
+{
+  "$comment": "Лише опис за UpToDate (парафраз).",
+  "id": "ref-hlh-ebv-rituximab",
+  "short_name": "Ритуксимаб при EBV",
+  "name": {
+    "uk": "ГЛГ, асоційований з активною EBV-інфекцією: ритуксимаб",
+    "en": "HLH with active EBV infection: rituximab"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of hemophagocytic lymphohistiocytosis",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-hemophagocytic-lymphohistiocytosis",
+      "version": "тема оновлена 11.03.2025",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "При активній EBV-інфекції (понад 100 000 копій/мкг клітинної ДНК) UpToDate лікує ритуксимабом, який вважає значно ефективнішим за ВВІГ у цій ситуації.",
+      "en": "In active EBV infection (>100,000 copies/µg cellular DNA) UpToDate treats with rituximab, which it considers much more effective than IVIG here."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Ритуксимаб 375 мг/м² щотижня 1–4 тижні залежно від швидкості зниження EBV-ДНК.",
+        "en": "Rituximab 375 mg/m² weekly for 1-4 weeks depending on how fast EBV DNA falls."
+      },
+      {
+        "uk": "Стійко високі копії EBV можуть означати Т-клітинну злоякісність із вірусом у Т-клітинах: корисне проточне сортування B/T-клітин для пошуку носія геному.",
+        "en": "Persistently high EBV copy numbers may indicate a T-cell malignancy carrying the virus: flow-sorting B and T cells helps locate the viral genome."
+      }
+    ],
+    "gap": {
+      "uk": "Число тижнів залежить від динаміки EBV-ДНК, тому фіксованого курсу немає.",
+      "en": "The number of weeks depends on the EBV DNA trend, so there is no fixed course."
+    },
+    "availability": "registered"
+  }
+}

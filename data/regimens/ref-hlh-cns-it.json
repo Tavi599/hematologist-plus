@@ -1,0 +1,58 @@
+{
+  "$comment": "Лише опис за UpToDate (парафраз).",
+  "id": "ref-hlh-cns-it",
+  "short_name": "ІТ MTX + HC",
+  "name": {
+    "uk": "ГЛГ: інтратекальна терапія при ураженні ЦНС (метотрексат + гідрокортизон)",
+    "en": "HLH: intrathecal therapy for CNS involvement (methotrexate + hydrocortisone)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of hemophagocytic lymphohistiocytosis",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-hemophagocytic-lymphohistiocytosis",
+      "version": "тема оновлена 11.03.2025",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "При клінічному, ліквором або МРТ підтвердженому ураженні ЦНС (і при безсимптомних змінах ліквору) — щотижня інтратекально метотрексат із гідрокортизоном, лише препарати для інтратекального введення.",
+      "en": "For CNS involvement by symptoms, CSF or MRI (and for asymptomatic CSF changes) — weekly intrathecal methotrexate with hydrocortisone, using intrathecal-grade preparations only."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Гідрокортизон",
+          "en": "Hydrocortisone"
+        },
+        "drug_id": "hydrocortisone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Віком >3 років (дорослі): метотрексат 12 мг + гідрокортизон 15 мг інтратекально щотижня (менші дози — у віці до 3 років, за таблицею джерела).",
+        "en": "Over 3 years of age (adults): methotrexate 12 mg + hydrocortisone 15 mg intrathecally weekly (lower doses under 3 years, per the source table)."
+      },
+      {
+        "uk": "Починати, щойно можна безпечно виконати люмбальну пункцію (контроль коагулопатії й тромбоцитопенії; ШВЛ чи вазопресори не протипоказання). Продовжувати щонайменше тиждень після зникнення ураження за клінікою та ліквором.",
+        "en": "Start as soon as a lumbar puncture is safe (coagulopathy and thrombocytopenia controlled; ventilation or vasopressors are not contraindications). Continue at least a week after resolution by clinical picture and CSF."
+      },
+      {
+        "uk": "Ураження ЦНС погіршує прогноз; більшості хворих після індукції потрібна ТГСК.",
+        "en": "CNS involvement worsens prognosis; most patients need transplant after induction."
+      }
+    ],
+    "gap": {
+      "uk": "Розрахунок не будується: схема триває до зникнення ураження, а не фіксований курс.",
+      "en": "No calculation: the schedule runs until the involvement resolves rather than for a fixed course."
+    },
+    "availability": "registered"
+  }
+}

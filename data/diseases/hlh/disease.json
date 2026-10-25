@@ -1,0 +1,148 @@
+{
+  "$comment": "Додано 2026-10-25 за UpToDate (діагностика й лікування ГЛГ; Still's disease in adults) та NHS England 2025 (ВВІГ). Коди МКХ-10: D76.1 — ГЛГ, D76.2 — гемофагоцитарний синдром, асоційований з інфекцією, D76.3 — інші гістіоцитарні синдроми. Усі схеми — довідкові картки: розклад днів і дози для ГЛГ частково відсутні в джерелах, нічого не вигадувалось. UpToDate не вживає «первинна/вторинна ГЛГ».",
+  "id": "hlh",
+  "name": {
+    "uk": "Гемофагоцитарний лімфогістіоцитоз (ГЛГ / HLH)",
+    "en": "Haemophagocytic lymphohistiocytosis (HLH)"
+  },
+  "summary": {
+    "uk": "Загрозливий для життя синдром надмірної імунної активації: спадковий (дефекти цитотоксичності) чи тригерний (інфекції, лімфоми, ревматологічні хвороби — САМ). Діагноз за HLH-2024/HLH-2004 і HScore; лікування — етопозид з дексаметазоном, при рефрактерності емапалумаб/руксолітиніб, ТГСК при спадковій формі та гематологічній злоякісності.",
+    "en": "Life-threatening syndrome of excessive immune activation: inherited (cytotoxicity gene defects) or triggered (infection, lymphoma, rheumatological disease — MAS). Diagnosed by HLH-2024/HLH-2004 and HScore; treated with etoposide and dexamethasone, emapalumab or ruxolitinib if refractory, and transplant for inherited disease and haematological malignancy."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "D76.1",
+      "is_primary": true
+    },
+    {
+      "system_id": "icd-10",
+      "code": "D76.2",
+      "is_primary": false
+    },
+    {
+      "system_id": "icd-10",
+      "code": "D76.3",
+      "is_primary": false
+    }
+  ],
+  "references": [
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/clinical-features-and-diagnosis-of-hemophagocytic-lymphohistiocytosis",
+      "version": "17.03.2025"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-hemophagocytic-lymphohistiocytosis",
+      "version": "11.03.2025"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2021/12/ccp-for-the-use-of-therapeutic-immunoglobulin-england-2025.pdf",
+      "label": {
+        "uk": "NHS England: імуноглобулін, гематологія (2025)",
+        "en": "NHS England: immunoglobulin, haematology (2025)"
+      }
+    }
+  ],
+  "treatment": [
+    {
+      "key": "initial",
+      "kind": "line",
+      "title": {
+        "uk": "Початкова терапія",
+        "en": "Initial therapy"
+      },
+      "description": {
+        "uk": "Тяжкі хворі (погіршення функції органів): HLH-специфічна терапія негайно, не чекаючи генетики й NK-тестів. Стабільні: спершу лікування тригера (антимікробна терапія, глюкокортикоїди при ревматологічному, протипухлинне при злоякісному) з ретельним спостереженням. При гематологічній злоякісності — HLH-терапія, потім відповідна хіміотерапія.",
+        "en": "Acutely ill (organ function deteriorating): HLH-specific therapy immediately, without waiting for genetics or NK testing. Stable: treat the trigger first (antimicrobials, glucocorticoids for rheumatological disease, antineoplastic therapy for malignancy) with close observation. In haematological malignancy — HLH therapy, then appropriate chemotherapy."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-hlh-94"
+        },
+        {
+          "regimen_id": "ref-hlh-cns-it"
+        }
+      ]
+    },
+    {
+      "key": "triggers",
+      "kind": "line",
+      "title": {
+        "uk": "Лікування тригера",
+        "en": "Trigger-directed therapy"
+      },
+      "description": {
+        "uk": "EBV: ритуксимаб при високому вірусному навантаженні. Ревматологічний тригер (САМ): посилення імуносупресії, анакінра з глюкокортикоїдами. ВІЛ: лікування ВІЛ може вирішити ГЛГ. Лейшманіоз в ендемічних регіонах — діагностика й терапія.",
+        "en": "EBV: rituximab at high viral load. Rheumatological trigger (MAS): intensified immunosuppression, anakinra with glucocorticoids. HIV: treating HIV can resolve HLH. Leishmaniasis in endemic areas — diagnosis and treatment."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-hlh-ebv-rituximab"
+        },
+        {
+          "regimen_id": "ref-hlh-mas-anakinra"
+        }
+      ]
+    },
+    {
+      "key": "refractory",
+      "kind": "line",
+      "title": {
+        "uk": "Рефрактерна / рецидивна ГЛГ",
+        "en": "Refractory / relapsed HLH"
+      },
+      "description": {
+        "uk": "Відсутність відповіді за тиждень чи прогресування при зниженні доз: поза дослідженням UpToDate пропонує емапалумаб + дексаметазон; інші варіанти — руксолітиніб, алемтузумаб. Емапалумаб в Україні не зареєстрований.",
+        "en": "No response within a week or progression on taper: outside a trial UpToDate suggests emapalumab + dexamethasone; other options are ruxolitinib and alemtuzumab. Emapalumab is not registered in Ukraine."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-hlh-emapalumab"
+        },
+        {
+          "regimen_id": "ref-hlh-ruxolitinib"
+        },
+        {
+          "regimen_id": "ref-hlh-alemtuzumab"
+        }
+      ]
+    },
+    {
+      "key": "ivig",
+      "kind": "treatment",
+      "title": {
+        "uk": "ВВІГ (допоміжна терапія)",
+        "en": "IVIG (adjunct)"
+      },
+      "description": {
+        "uk": "Не замінює HLH-терапію. Режими в джерелах різні (500 мг/кг проти 2 г/кг) — дивіться розбіжність у картці.",
+        "en": "Does not replace HLH therapy. The sources give different regimens (500 mg/kg vs 2 g/kg) — see the discrepancy on the card."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-hlh-ivig"
+        }
+      ]
+    },
+    {
+      "key": "hct",
+      "kind": "line",
+      "title": {
+        "uk": "Алогенна ТГСК",
+        "en": "Allogeneic HCT"
+      },
+      "description": {
+        "uk": "Спадкова форма (біалельні мутації), ураження ЦНС, відсутність відповіді, гематологічна злоякісність. HLA-типування одразу при діагнозі.",
+        "en": "Inherited disease (biallelic mutations), CNS involvement, no response, haematological malignancy. HLA typing at diagnosis."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-hlh-hct"
+        }
+      ]
+    }
+  ]
+}
