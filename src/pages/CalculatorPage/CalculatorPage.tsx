@@ -621,6 +621,8 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
       ? t('calculator.patient.bsaNone')
       : t('calculator.patient.bsaValue', { bsa: formatNumber(result.bsa.actualM2, language, 2) })
   /** Another phase picked by hand: the cycle number moves into it when it counts cycles. */
+  // Phases that carry cycle numbers follow the cycle; the rest are alternatives to pick between.
+  const byCycle = phases.some((phase) => phase.course?.cycles != null)
   const choosePhase = (phaseId: string) => {
     const phase = phases.find((entry) => entry.id === phaseId)
     const cycles = phase?.course?.cycles ?? null
@@ -764,7 +766,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
           <Card withBorder>
             <Stack gap={6}>
               <Text fw={600}>
-                {t('calculator.course.phases', {
+                {t(byCycle ? 'calculator.course.phases' : 'calculator.course.modes', {
                   course: localize(phases[0]!.course!.title, language),
                 })}
               </Text>
@@ -784,7 +786,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
                       phase: phaseNote,
                       cycle: courseSettings.cycleNumber,
                     })
-                  : t('calculator.course.phasesHint')}
+                  : t(byCycle ? 'calculator.course.phasesHint' : 'calculator.course.modesHint')}
               </Text>
             </Stack>
           </Card>

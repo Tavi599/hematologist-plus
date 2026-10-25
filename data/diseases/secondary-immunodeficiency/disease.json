@@ -47,6 +47,26 @@
           "regimen_id": "ivig-replacement"
         }
       ]
+    },
+    {
+      "key": "immunomodulatory",
+      "kind": "treatment",
+      "title": {
+        "uk": "Імуномодулююча доза імуноглобуліну",
+        "en": "Immunomodulatory immunoglobulin dose"
+      },
+      "description": {
+        "uk": "Не замісна терапія: 1 г/кг одноразово або 0,4 г/кг × 5 днів (2 г/кг) при імунній тромбоцитопенії, аутоімунній гемолітичній анемії та синдромі Еванса, ГЛГ, набутому синдромі Віллебранда, парвовірусній аплазії. Режим обирають у калькуляторі.",
+        "en": "Not replacement: 1 g/kg once or 0.4 g/kg x 5 days (2 g/kg) for immune thrombocytopenia, autoimmune haemolytic anaemia and Evans syndrome, HLH, acquired von Willebrand disease, parvovirus aplasia. The schedule is chosen in the calculator."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ivig-immunomodulatory-1g"
+        },
+        {
+          "regimen_id": "ivig-immunomodulatory-5d"
+        }
+      ]
     }
   ]
 }

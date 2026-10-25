@@ -1,0 +1,54 @@
+{
+  "$comment": "Provan 2019: IVIg 1 g/kg on 1 or 2 consecutive days or 0.4 g/kg/day for 5 days (Initial treatment, rec. 5). NHS England 2025, Appendix A haematology: ITP adults 1 g/kg single infusion, 2nd dose at 24-48 h if life-threatening bleeding or day 5-7 if platelets inadequate; acquired VWD 0.4 g/kg x5 or 1 g/kg x2 days; post-transfusion purpura 1 g/kg. Weight dosing; a repeat course is the physician's decision.",
+  "id": "ivig-immunomodulatory-1g",
+  "short_name": "ВВІГ",
+  "name": {
+    "uk": "ВВІГ імуномодулюючий: 1 г/кг одноразово",
+    "en": "IVIG immunomodulatory: 1 g/kg single dose"
+  },
+  "description": {
+    "uk": "Імуномодулююча доза ВВІГ 1 г/кг одним введенням (ІТП: кровотеча, підготовка до втручання, рефрактерність до стероїдів). Друга доза за потреби — за приміткою.",
+    "en": "Immunomodulatory IVIG 1 g/kg as one infusion (ITP: bleeding, preparation for a procedure, refractory to steroids). A second dose when needed - see the note."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Provan D. et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia. Blood Adv 2019;3(22):3780-3817",
+      "url": "https://doi.org/10.1182/bloodadvances.2019000812",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "NHS England, Commissioning criteria policy for the use of therapeutic immunoglobulin (Ig) in England (2025), Appendix A: Haematology",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2021/12/ccp-for-the-use-of-therapeutic-immunoglobulin-england-2025.pdf",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "course": {
+    "id": "ivig",
+    "title": {
+      "uk": "Імуноглобулін в/в",
+      "en": "Intravenous immunoglobulin"
+    },
+    "phase": {
+      "uk": "Імуномодулююча: 1 г/кг",
+      "en": "Immunomodulatory: 1 g/kg"
+    },
+    "order": 2,
+    "cycles": null
+  },
+  "items": [
+    {
+      "key": "ivig",
+      "drug_id": "immunoglobulin-human-iv",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "notes": {
+        "uk": "1 г/кг одним введенням. Provan 2019 (ІТП, дорослі): 1 г/кг протягом 1 або 2 послідовних днів — при кровотечі, високому ризику кровотечі, перед втручанням чи за відсутності відповіді на преднізолон; ВВІГ — початкова терапія, коли високі дози стероїдів протипоказані. NHS England 2025 (ІТП, дорослі): 1 г/кг одним введенням; друга доза через 24–48 год при тяжкій чи життєзагрозній кровотечі (внутрішньочерепній, легеневій), інакше — на 5–7-й день, якщо гемостатично достатнього рівня тромбоцитів не досягнуто. Діти за NHS: 0,8–1,0 г/кг. Ефект швидкий, але короткий (2–4 тижні). Другу дозу додають рядком на потрібний день у таблиці. Інші показання з тим самим режимом: набутий синдром Віллебранда — 1 г/кг 2 дні (NHS, альтернатива 0,4 г/кг 5 днів); посттрансфузійна пурпура — 1 г/кг (за потреби на 2 дні) (NHS).",
+        "en": "1 g/kg as one infusion. Provan 2019 (adult ITP): 1 g/kg on 1 or 2 consecutive days - with bleeding, high bleeding risk, before a procedure or no response to prednisolone; IVIG is initial therapy where high-dose steroids are contraindicated. NHS England 2025 (adult ITP): 1 g/kg as a single infusion; a second dose after 24-48 h for severe or life-threatening bleeding (intracranial, pulmonary), otherwise on day 5-7 if a haemostatically adequate platelet count is not reached. Children per NHS: 0.8-1.0 g/kg. The effect is fast but short (2-4 weeks). A second dose is added as a row on the day needed. Other indications with the same schedule: acquired von Willebrand disease - 1 g/kg for 2 days (NHS, alternative 0.4 g/kg for 5 days); post-transfusion purpura - 1 g/kg (over 2 days if required) (NHS)."
+      }
+    }
+  ]
+}

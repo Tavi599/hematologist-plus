@@ -1,0 +1,54 @@
+{
+  "$comment": "Provan 2019: 0.4 g/kg/day for 5 days (ITP). NHS England 2025, Appendix A haematology: AIHA incl. Evans 1-2 g/kg in 2-5 divided doses; HLH 2 g/kg in 2-5 divided doses with dexamethasone; acquired VWD 0.4 g/kg x5 days or 1 g/kg x2 days; PRCA with chronic parvovirus B19 1.0-1.2 g/kg in divided doses. Total dose 2 g/kg = 0.4 g/kg x 5 days.",
+  "id": "ivig-immunomodulatory-5d",
+  "short_name": "ВВІГ",
+  "name": {
+    "uk": "ВВІГ імуномодулюючий: 0,4 г/кг × 5 днів (2 г/кг)",
+    "en": "IVIG immunomodulatory: 0.4 g/kg x 5 days (2 g/kg)"
+  },
+  "description": {
+    "uk": "Імуномодулююча доза ВВІГ 0,4 г/кг щодня 5 днів, разом 2 г/кг (ІТП; АІГА, синдром Еванса; ГЛГ; набутий синдром Віллебранда). Для АІГА, ГЛГ NHS дає діапазон 1–2 г/кг у 2–5 введень — менший обсяг та інші дні задають у таблиці.",
+    "en": "Immunomodulatory IVIG 0.4 g/kg daily for 5 days, 2 g/kg in total (ITP; AIHA and Evans syndrome; HLH; acquired von Willebrand disease). For AIHA and HLH NHS gives a range of 1-2 g/kg in 2-5 doses - a smaller total or other days are set in the table."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Provan D. et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia. Blood Adv 2019;3(22):3780-3817",
+      "url": "https://doi.org/10.1182/bloodadvances.2019000812",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "NHS England, Commissioning criteria policy for the use of therapeutic immunoglobulin (Ig) in England (2025), Appendix A: Haematology",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2021/12/ccp-for-the-use-of-therapeutic-immunoglobulin-england-2025.pdf",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "course": {
+    "id": "ivig",
+    "title": {
+      "uk": "Імуноглобулін в/в",
+      "en": "Intravenous immunoglobulin"
+    },
+    "phase": {
+      "uk": "Імуномодулююча: 0,4 г/кг × 5 днів (2 г/кг)",
+      "en": "Immunomodulatory: 0.4 g/kg x 5 days (2 g/kg)"
+    },
+    "order": 3,
+    "cycles": null
+  },
+  "items": [
+    {
+      "key": "ivig",
+      "drug_id": "immunoglobulin-human-iv",
+      "route": "iv_infusion",
+      "dose_value": 400,
+      "dose_unit": "mg_kg",
+      "days": [1, 2, 3, 4, 5],
+      "notes": {
+        "uk": "0,4 г/кг щодня 5 днів (разом 2 г/кг). Provan 2019 (ІТП): 0,4 г/кг/добу 5 днів — рівнозначна альтернатива 1 г/кг на 1–2 дні. NHS England 2025: АІГА (включно з синдромом Еванса) — 1–2 г/кг у 2–5 введень лише при тяжкій анемії, рефрактерній до стероїдів, чи за протипоказань до них, або тимчасово перед спленектомією; ГЛГ — 2 г/кг у 2–5 введень разом з дексаметазоном за протоколом ГЛГ; набутий синдром Віллебранда — 0,4 г/кг 5 днів або 1 г/кг 2 дні; парціальна червоноклітинна аплазія при хронічному парвовірусі B19 — 1,0–1,2 г/кг у розділених дозах (допоміжно до трансфузій). Швидший ритм (менше днів) — змінити дні в таблиці; NHS не радить вводити 2 г/кг швидше, ніж за 2 дні (рідина й білок).",
+        "en": "0.4 g/kg daily for 5 days (2 g/kg in total). Provan 2019 (ITP): 0.4 g/kg/day for 5 days - an equivalent alternative to 1 g/kg for 1-2 days. NHS England 2025: AIHA (including Evans syndrome) - 1-2 g/kg in 2-5 doses only for severe anaemia refractory to steroids, or when they are contraindicated, or as a bridge to splenectomy; HLH - 2 g/kg in 2-5 doses together with dexamethasone per the HLH protocol; acquired von Willebrand disease - 0.4 g/kg for 5 days or 1 g/kg for 2 days; pure red cell aplasia with chronic parvovirus B19 - 1.0-1.2 g/kg in divided doses (an adjunct to transfusion). For a faster pace (fewer days) change the days in the table; NHS advises against giving 2 g/kg faster than over 2 days (fluid and protein load)."
+      }
+    }
+  ]
+}

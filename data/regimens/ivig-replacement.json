@@ -37,5 +37,18 @@
         "en": "0.4 g/kg every 4 weeks; NHS England gives 0.4-0.6 g/kg a month, the dose or interval titrated so that the trough IgG is at least the lower limit of normal. Indication: IgG < 4 g/L (excluding paraprotein) with recurrent or severe bacterial infections despite antibiotic prophylaxis (myeloma, CLL, NHL, after HSCT, after anti-CD20 or anti-CD38); prophylactically - IgG < 4 g/L when a bispecific antibody starts (teclistamab, elranatamab, talquetamab, glofitamab, epcoritamab) or B-cell aplasia after CAR-T. Review yearly; a summer break may suit seasonal infections."
       }
     }
-  ]
+  ],
+  "course": {
+    "id": "ivig",
+    "title": {
+      "uk": "Імуноглобулін в/в",
+      "en": "Intravenous immunoglobulin"
+    },
+    "phase": {
+      "uk": "Замісна доза",
+      "en": "Replacement dose"
+    },
+    "order": 1,
+    "cycles": null
+  }
 }
