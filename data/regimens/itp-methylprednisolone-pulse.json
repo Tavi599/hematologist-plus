@@ -1,0 +1,43 @@
+{
+  "id": "itp-methylprednisolone-pulse",
+  "$comment": "ІТП, тяжка чи критична кровотеча: метилпреднізолон 1 г в/в на добу 3 дні без зниження — лише UpToDate. Provan 2019 у прочитаній частині тексту дози не наводить (повністю текст не вичитано).",
+  "short_name": "Метилпреднізолон 1 г (ІТП)",
+  "name": {
+    "uk": "Пульс метилпреднізолону 1 г × 3 дні при ІТП",
+    "en": "Methylprednisolone pulse 1 g for 3 days in ITP"
+  },
+  "description": {
+    "uk": "1 г в/в на добу 3 дні без зниження дози; альтернатива дексаметазону 40 мг при тяжкій чи критичній кровотечі.",
+    "en": "1 g IV a day for 3 days with no taper; an alternative to dexamethasone 40 mg in severe or critical bleeding."
+  },
+  "cycle_length_days": 3,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) (парафраз)",
+      "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+      "version": "оновлено 31.08.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+      "version": "PMC6880896",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "items": [
+    {
+      "key": "methylprednisolone",
+      "drug_id": "methylprednisolone",
+      "route": "iv_infusion",
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3],
+      "notes": {
+        "uk": "UpToDate: 1 г в/в 1 раз на добу 3 дні без зниження — для критичної чи тяжкої кровотечі. Інші джерела цієї сесії (ASH 2019, ASH 2026) дози метилпреднізолону не дають. У старому рандомізованому дослідженні, яке наводить UpToDate, порівнювали 15 мг/кг на добу 3 дні з ВВІГ 0,7 г/кг на добу 3 дні — ця доза у схему не внесена.",
+        "en": "UpToDate: 1 g IV once a day for 3 days with no taper - for critical or severe bleeding. The other sources of this session (ASH 2019, ASH 2026) give no methylprednisolone dose. An older randomized trial cited by UpToDate compared 15 mg/kg a day for 3 days with IVIG 0.7 g/kg a day for 3 days - that dose is not entered in the regimen."
+      }
+    }
+  ]
+}

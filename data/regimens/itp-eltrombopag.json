@@ -1,0 +1,120 @@
+{
+  "id": "itp-eltrombopag",
+  "$comment": "ІТП у дорослих: елтромбопаг. Початкова доза 50 мг/добу (25 мг — особи східноазійського походження і помірна/тяжка печінкова недостатність, UpToDate); Provan 2019: старт 25 або 50 мг, максимум 75 мг. Титрування за тромбоцитами не розраховується. Цикл — 28 днів безперервного прийому.",
+  "short_name": "Елтромбопаг (ІТП)",
+  "name": {
+    "uk": "Елтромбопаг при ІТП",
+    "en": "Eltrombopag in ITP"
+  },
+  "description": {
+    "uk": "50 мг на добу (25 мг при східноазійському походженні чи печінковій недостатності), титрувати до тромбоцитів ≥50×10^9/л, максимум 75 мг. Друга лінія; ASH 2026 — також як партнер стероїду на початку лікування.",
+    "en": "50 mg a day (25 mg for East Asian ancestry or liver insufficiency), titrated to platelets >=50 x10^9/L, at most 75 mg. Second line; ASH 2026 also as a partner of the steroid at the start."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Second-line and subsequent therapies for immune thrombocytopenia (ITP) in adults (парафраз)",
+      "url": "https://www.uptodate.com/contents/second-line-and-subsequent-therapies-for-immune-thrombocytopenia-itp-in-adults",
+      "version": "оновлено 29.07.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+      "version": "PMC6880896",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "ASH 2026 guidelines for ITP: initial and second-line therapy in adults with primary ITP (Cuker A et al.) — Summary of changes",
+      "url": "https://www.hematology.org/-/media/hematology/files/clinicians/guidelines/ash-itp-summary-of-changes_20260827.pdf",
+      "version": "зведення від 27.08.2026; DOI статті ще не присвоєно",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "items": [
+    {
+      "key": "eltrombopag",
+      "drug_id": "eltrombopag",
+      "route": "oral",
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "dose_options": [
+        {
+          "dose_value": 25,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Provan 2019: старт 25 або 50 мг/добу.",
+            "en": "Provan 2019: start with 25 or 50 mg/day."
+          },
+          "source": {
+            "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+            "version": "PMC6880896",
+            "checkedOn": "2026-10-25"
+          }
+        },
+        {
+          "dose_value": 75,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Provan 2019: максимальна доза 75 мг/добу (після титрування).",
+            "en": "Provan 2019: maximum 75 mg/day (after titration)."
+          },
+          "source": {
+            "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+            "version": "PMC6880896",
+            "checkedOn": "2026-10-25"
+          }
+        }
+      ],
+      "dose_modifiers": [
+        {
+          "key": "east-asian-ancestry",
+          "label": {
+            "uk": "Східноазійське походження (китайці, японці, корейці, тайванці)",
+            "en": "East Asian ancestry (Chinese, Japanese, Korean, Taiwanese)"
+          },
+          "dose_value": 25,
+          "notes": {
+            "uk": "Початкова доза 25 мг раз на добу.",
+            "en": "Starting dose 25 mg once a day."
+          },
+          "source": {
+            "name": "UpToDate: Second-line and subsequent therapies for immune thrombocytopenia (ITP) in adults (парафраз)",
+            "url": "https://www.uptodate.com/contents/second-line-and-subsequent-therapies-for-immune-thrombocytopenia-itp-in-adults",
+            "version": "оновлено 29.07.2026",
+            "checkedOn": "2026-10-25"
+          }
+        },
+        {
+          "key": "liver-insufficiency",
+          "label": {
+            "uk": "Помірна чи тяжка печінкова недостатність",
+            "en": "Moderate or severe liver insufficiency"
+          },
+          "dose_value": 25,
+          "notes": {
+            "uk": "Початкова доза 25 мг раз на добу; при хворобах печінки дозу знижують або препарат уникають.",
+            "en": "Starting dose 25 mg once a day; with liver disease the dose is reduced or the drug avoided."
+          },
+          "source": {
+            "name": "UpToDate: Second-line and subsequent therapies for immune thrombocytopenia (ITP) in adults (парафраз)",
+            "url": "https://www.uptodate.com/contents/second-line-and-subsequent-therapies-for-immune-thrombocytopenia-itp-in-adults",
+            "version": "оновлено 29.07.2026",
+            "checkedOn": "2026-10-25"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "Звірка джерел. UpToDate: стартова доза 50 мг раз на добу; 25 мг — східноазійське походження й помірна/тяжка печінкова недостатність. Provan 2019: старт 25 або 50 мг/добу, максимум 75 мг/добу. Значних розбіжностей немає. Приймати натще або з їжею з малим вмістом кальцію (≤50 мг), за 2 год до і через 4 год після продуктів, антацидів і добавок з кальцієм, залізом, алюмінієм, магнієм, селеном, цинком. Тромбоцити зростають за 7–14 днів. Контроль тромбоцитів: через 5–7 днів після старту, через тиждень після зміни дози, потім щомісяця; ціль ≥50×10^9/л без тромбоцитозу. Печінкові ферменти — до старту і кожні 2 тижні при підборі дози; чорна рамка щодо гепатотоксичності та декомпенсації печінки при хронічному гепатиті з рибавірином чи інтерфероном. Тромбози: ризик вищий >60 років, при тромбозі в анамнезі, коморбідності. Пригнічує OATP1B1 (напр. розувастатин); може підвищувати креатинін. Після скасування можливе падіння тромбоцитів нижче вихідних. У каталозі препарат є в переліку відділення; в Україні зареєстровані Ельпатро, Револад, Ельтромбопаг-Віста. ASH 2026 (реком. 2a): після стероїду рекомендує ТПО-агоніст; у реком. 1 — ТПО-агоніст + стероїд (± ВВІГ) замість стероїду самого.",
+        "en": "Source comparison. UpToDate: starting dose 50 mg once a day; 25 mg for East Asian ancestry and moderate/severe liver insufficiency. Provan 2019: start 25 or 50 mg/day, maximum 75 mg/day. No material conflict. Take on an empty stomach or with a meal low in calcium (<=50 mg), 2 h before and 4 h after calcium, antacids and supplements with calcium, iron, aluminium, magnesium, selenium, zinc. Platelets rise in 7-14 days. Platelet checks: 5-7 days after the start, a week after a dose change, then monthly; target >=50 x10^9/L without thrombocytosis. Liver enzymes - before the start and every 2 weeks while titrating; boxed warning on hepatotoxicity and hepatic decompensation in chronic hepatitis with ribavirin or interferon. Thrombosis: higher risk over 60, with a prior thrombosis, with comorbidity. Inhibits OATP1B1 (e.g. rosuvastatin); may raise creatinine. Platelets may fall below baseline after stopping. In the catalog it is on the department list; Elpatro, Revolade and Eltrombopag-Vista are registered in Ukraine. ASH 2026 (rec. 2a): after a steroid it recommends a TPO agonist; in rec. 1 - a TPO agonist plus a steroid (with or without IVIG) rather than the steroid alone."
+      }
+    }
+  ]
+}

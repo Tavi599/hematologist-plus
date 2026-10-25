@@ -1,0 +1,62 @@
+{
+  "id": "itp-avatrombopag",
+  "$comment": "ІТП у дорослих: аватромбопаг 20 мг раз на добу з їжею, титрування до 40 мг (UpToDate, Provan 2019 — збігаються). У реєстрі України не знайдено — «недоступний».",
+  "short_name": "Аватромбопаг (ІТП)",
+  "name": {
+    "uk": "Аватромбопаг при ІТП",
+    "en": "Avatrombopag in ITP"
+  },
+  "description": {
+    "uk": "20 мг раз на добу з їжею, титрування за тромбоцитами до 40 мг. В Україні не зареєстрований.",
+    "en": "20 mg once a day with food, titrated to platelets up to 40 mg. Not registered in Ukraine."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Second-line and subsequent therapies for immune thrombocytopenia (ITP) in adults (парафраз)",
+      "url": "https://www.uptodate.com/contents/second-line-and-subsequent-therapies-for-immune-thrombocytopenia-itp-in-adults",
+      "version": "оновлено 29.07.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+      "version": "PMC6880896",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "items": [
+    {
+      "key": "avatrombopag",
+      "drug_id": "avatrombopag",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "dose_options": [
+        {
+          "dose_value": 40,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "Верхня доза після титрування за рівнем тромбоцитів: до 40 мг раз на добу (UpToDate; Provan 2019).",
+            "en": "Highest dose after titration to the platelet count: up to 40 mg once a day (UpToDate; Provan 2019)."
+          },
+          "source": {
+            "name": "UpToDate: Second-line and subsequent therapies for immune thrombocytopenia (ITP) in adults (парафраз)",
+            "url": "https://www.uptodate.com/contents/second-line-and-subsequent-therapies-for-immune-thrombocytopenia-itp-in-adults",
+            "version": "оновлено 29.07.2026",
+            "checkedOn": "2026-10-25"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "Приймають з їжею; взаємодій з молочними продуктами чи іншими препаратами, гепатотоксичності не відомо (UpToDate). Контроль тромбоцитів — як для інших ТПО-агоністів. Дослідження: відсоток відповіді залежав від дози (20 мг — 80%). Джерела на цей препарат не розходяться. Перехід на аватромбопаг з елтромбопагу чи ромиплостиму поліпшував відповідь у спостережних дослідженнях (UpToDate). У реєстрі України препарату немає.",
+        "en": "Taken with food; no interaction with dairy or other drugs and no known hepatotoxicity (UpToDate). Platelet monitoring as for the other TPO agonists. In the trial the response rate depended on dose (20 mg - 80%). The sources agree on this drug. Switching to avatrombopag from eltrombopag or romiplostim improved the response in observational studies (UpToDate). The drug is not in the Ukrainian register."
+      }
+    }
+  ]
+}

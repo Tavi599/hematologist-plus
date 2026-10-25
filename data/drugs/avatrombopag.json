@@ -1,0 +1,33 @@
+{
+  "$comment": "Додано 2026-10-25 для ІТП (ТПО-РА, UpToDate, Provan 2019). У відкритому реєстрі України не знайдено (ресурс від 21.01.2026) — «недоступний». Таблетка 20 мг — за листком FDA (Doptelet); гранули Sprinkle 10 мг у каталог не внесено.",
+  "id": "avatrombopag",
+  "name": {
+    "uk": "Аватромбопаг",
+    "en": "Avatrombopag"
+  },
+  "atc_code": "B02BX08",
+  "availability": "unavailable",
+  "amount_unit": "mg",
+  "dose_units": ["mg_flat"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "ресурс reestr.csv, оновлений 21.01.2026: не знайдено",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "FDA label: DOPTELET (avatrombopag) — таблетки 20 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e2d5960d-6c18-46cc-86bd-089222b09852",
+      "version": "SPL на DailyMed",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t20",
+      "form": "tablet",
+      "strength_amount": 20
+    }
+  ]
+}

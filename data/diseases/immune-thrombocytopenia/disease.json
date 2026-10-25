@@ -1,0 +1,291 @@
+{
+  "$comment": "Первинна імунна тромбоцитопенія у дорослих (ІТП / ITP). Код D69.3. Джерела: UpToDate (діагностика, початкове лікування й кровотеча, друга лінія; сторінки відкриті в Chrome користувача 25.10.2026, лише парафраз), ASH 2019 (Neunert), ASH 2026 (Cuker; прочитано лише зведення змін від 27.08.2026) і міжнародний консенсус Provan 2019. NCCN не читали. ВВІГ — спільний препарат immunoglobulin-human-iv (режим itp-ivig, варіант дози 400 мг/кг). Сусідні хвороби: синдром Еванса (ІТП + АІГА) — окрема стаття.",
+  "id": "immune-thrombocytopenia",
+  "name": {
+    "uk": "Імунна тромбоцитопенія (ІТП)",
+    "en": "Immune thrombocytopenia (ITP)"
+  },
+  "summary": {
+    "uk": "Набута ізольована тромбоцитопенія <100×10^9/л через автоантитіла до тромбоцитів і порушене їх утворення; діагноз виключення. Вторинна — при ХЛЛ, лімфомах, SLE, АФС, CVID, ВІЛ, HCV, H. pylori. Лікують кровотечу, а не цифру: стероїд (тепер разом з ритуксимабом чи ТПО-агоністом), ВВІГ за терміновості, далі ТПО-агоністи, ритуксимаб, спленектомія.",
+    "en": "Acquired isolated thrombocytopenia <100 x10^9/L from platelet autoantibodies and impaired production; a diagnosis of exclusion. Secondary to CLL, lymphoma, SLE, APS, CVID, HIV, HCV, H. pylori. The bleeding is treated, not the number: a steroid (now together with rituximab or a TPO agonist), IVIG when urgent, then TPO agonists, rituximab, splenectomy."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "D69.3",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/immune-thrombocytopenia-itp-in-adults-clinical-manifestations-and-diagnosis",
+      "label": {
+        "uk": "UpToDate: ІТП у дорослих — клініка й діагностика",
+        "en": "UpToDate: ITP in adults - clinical manifestations and diagnosis"
+      },
+      "version": "оновлено 16.06.2026"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+      "label": {
+        "uk": "UpToDate: початкове лікування й лікування кровотечі в дорослих",
+        "en": "UpToDate: initial treatment and treatment of bleeding in adults"
+      },
+      "version": "оновлено 31.08.2026"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/second-line-and-subsequent-therapies-for-immune-thrombocytopenia-itp-in-adults",
+      "label": {
+        "uk": "UpToDate: друга і подальші лінії в дорослих",
+        "en": "UpToDate: second-line and subsequent therapies in adults"
+      },
+      "version": "оновлено 29.07.2026"
+    },
+    {
+      "kind": "other",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6963252/",
+      "label": {
+        "uk": "ASH 2019: настанова з імунної тромбоцитопенії (Neunert C та співавт.)",
+        "en": "ASH 2019 guidelines for immune thrombocytopenia (Neunert C et al.)"
+      },
+      "version": "Blood Adv 2019;3(23):3829-3866"
+    },
+    {
+      "kind": "other",
+      "url": "https://www.hematology.org/-/media/hematology/files/clinicians/guidelines/ash-itp-summary-of-changes_20260827.pdf",
+      "label": {
+        "uk": "ASH 2026: оновлення настанови для дорослих (Cuker A та співавт.) — зведення змін",
+        "en": "ASH 2026 focused update for adults (Cuker A et al.) - summary of changes"
+      },
+      "version": "27.08.2026",
+      "updated": "2026-08-27"
+    },
+    {
+      "kind": "other",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+      "label": {
+        "uk": "Provan 2019: оновлений міжнародний консенсус щодо ІТП",
+        "en": "Provan 2019: updated international consensus report on ITP"
+      },
+      "version": "Blood Adv 2019;3(22):3780-3817"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "description": {
+        "uk": "Показання: тромбоцити <30×10^9/л без кровотечі чи з легкою (ASH 2019, умовна); ≥30×10^9/л — спостереження (сильна рекомендація). Госпіталізація при новому діагнозі й <20×10^9/л. 2026: ASH замінив «стероїд сам» на стероїд + ритуксимаб або ТПО-агоніст (± ВВІГ) — вища частота відповіді; UpToDate приєднується до цього, додавання можна відкласти до 2 тижнів для підтвердження діагнозу відповіддю на стероїд. Якщо ритуксимаб і ТПО-агоніст недоступні — стероїд (± ВВІГ) краще, ніж з мофетилом мікофенолату. ВВІГ — не для всіх: за терміновості чи коли стероїд не годиться.",
+        "en": "Indication: platelets <30 x10^9/L with no or minor bleeding (ASH 2019, conditional); >=30 x10^9/L - observe (strong). Admit a new diagnosis at <20 x10^9/L. 2026: ASH replaced \"a steroid alone\" with a steroid plus rituximab or a TPO agonist (with or without IVIG) - a higher response rate; UpToDate follows, and the addition can wait up to 2 weeks to confirm the diagnosis by a steroid response. If rituximab and a TPO agonist are unavailable - a steroid (with or without IVIG) is better than adding mycophenolate. IVIG is not for everyone: when urgent or when a steroid will not do."
+      },
+      "children": [
+        {
+          "key": "fl-steroids",
+          "kind": "group",
+          "title": {
+            "uk": "Стероїд",
+            "en": "Steroid"
+          },
+          "description": {
+            "uk": "Дексаметазон 40 мг × 4 дні (повтор до 3 курсів) або преднізолон 1 мг/кг (0,5–2) з поступовим зниженням; усе до 6 тижнів. Стероїд >6 тижнів — типова помилка.",
+            "en": "Dexamethasone 40 mg for 4 days (up to 3 courses) or prednisolone 1 mg/kg (0.5-2) with a gradual taper; all within 6 weeks. A steroid beyond 6 weeks is a common error."
+          },
+          "regimens": [
+            {
+              "regimen_id": "itp-dexamethasone"
+            },
+            {
+              "regimen_id": "itp-prednisolone"
+            }
+          ]
+        },
+        {
+          "key": "fl-partner",
+          "kind": "group",
+          "title": {
+            "uk": "Додати до стероїду (ASH 2026)",
+            "en": "Add to the steroid (ASH 2026)"
+          },
+          "description": {
+            "uk": "Ритуксимаб 375 мг/м² щотижня ×4 (інші режими: 1000 мг у дні 1 і 15 — відповідь 62% проти 61% на 375 мг/м²; 100 мг щотижня ×4 — 60%). Або ТПО-агоніст — елтромбопаг (в Україні зареєстрований). HBsAg та анти-HBc — до ритуксимабу й до ВВІГ.",
+            "en": "Rituximab 375 mg/m2 weekly x4 (other schedules: 1000 mg on days 1 and 15 - response 62% vs 61% for 375 mg/m2; 100 mg weekly x4 - 60%). Or a TPO agonist - eltrombopag (registered in Ukraine). HBsAg and anti-HBc before rituximab and before IVIG."
+          },
+          "regimens": [
+            {
+              "regimen_id": "rituximab-mono",
+              "notes": {
+                "uk": "ІТП: 375 мг/м² раз на тиждень, 4 тижні (UpToDate, Provan 2019). Розбіжність: Provan 2019 — також 1000 мг у дні 1 і 15 або 100 мг щотижня ×4; ASH 2019 радив стероїд без ритуксимабу (реком. 5, умовна) — скасовано рекомендацією 1 (2026). Преміедикація в цій схемі — практика відділення.",
+                "en": "ITP: 375 mg/m2 once a week for 4 weeks (UpToDate, Provan 2019). Sources differ: Provan 2019 also gives 1000 mg on days 1 and 15 or 100 mg weekly x4; ASH 2019 advised a steroid without rituximab (rec. 5, conditional) - replaced by recommendation 1 (2026). Premedication in this regimen is department practice."
+              }
+            },
+            {
+              "regimen_id": "itp-eltrombopag",
+              "notes": {
+                "uk": "Як партнер стероїду на початку — ASH 2026 (реком. 1, умовна); доза та сама, що й у другій лінії.",
+                "en": "As the steroid's partner at the start - ASH 2026 (rec. 1, conditional); the dose is the same as in second line."
+              }
+            }
+          ]
+        },
+        {
+          "key": "fl-ivig",
+          "kind": "group",
+          "title": {
+            "uk": "ВВІГ за терміновості",
+            "en": "IVIG when urgent"
+          },
+          "description": {
+            "uk": "Піднімає тромбоцити за 12–24 год: кровотеча, невідкладна процедура, непереносимість чи неефективність стероїдів. Якщо не відповідає ні на стероїд, ні на ВВІГ — переглянути діагноз. Анти-D — лише RhD-позитивним.",
+            "en": "Raises platelets within 12-24 h: bleeding, an urgent procedure, steroids not tolerated or not working. No response to either a steroid or IVIG - reconsider the diagnosis. Anti-D only in RhD-positive patients."
+          },
+          "regimens": [
+            {
+              "regimen_id": "itp-ivig"
+            },
+            {
+              "regimen_id": "itp-anti-d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "second-line",
+      "kind": "line",
+      "title": {
+        "uk": "Друга лінія",
+        "en": "Second line"
+      },
+      "description": {
+        "uk": "Коли стероїд не підняв тромбоцити до безпечного рівня чи вони падають після його зниження (ASH 2019 — після 3 міс., але можна й раніше). Поріг для старту зазвичай <20×10^9/л. Спершу переглянути діагноз і вторинні причини (H. pylori, ВІЛ, HCV, ХЛЛ, LGL, запальні хвороби). ASH 2026: ТПО-агоніст (сильна рекомендація) або ритуксимаб (умовна); якщо вони не підходять — інгібітор BTK, мофетилу мікофенолат або інгібітор SYK. До ритуксимабу чи спленектомії — вакцинація. Спленектомія — не раніше 12 міс. від діагнозу.",
+        "en": "When a steroid did not raise platelets to a safe level or they fall as it is tapered (ASH 2019 - after 3 months, but earlier is possible). The threshold to start is usually <20 x10^9/L. First reconsider the diagnosis and secondary causes (H. pylori, HIV, HCV, CLL, LGL, inflammatory disease). ASH 2026: a TPO agonist (strong) or rituximab (conditional); if unsuitable - a BTK inhibitor, mycophenolate or a SYK inhibitor. Vaccinate before rituximab or splenectomy. Splenectomy not before 12 months from diagnosis."
+      },
+      "children": [
+        {
+          "key": "sl-tpo",
+          "kind": "group",
+          "title": {
+            "uk": "ТПО-агоністи",
+            "en": "TPO agonists"
+          },
+          "description": {
+            "uk": "Відповідь ≈80%, але потрібен постійний прийом; після скасування тромбоцити падають. В Україні зареєстрований лише елтромбопаг; ромиплостим і аватромбопаг — ні. Мета ≥50×10^9/л без тромбоцитозу.",
+            "en": "About 80% respond, but continuous therapy is needed; platelets fall after stopping. Only eltrombopag is registered in Ukraine; romiplostim and avatrombopag are not. Target >=50 x10^9/L without thrombocytosis."
+          },
+          "regimens": [
+            {
+              "regimen_id": "itp-eltrombopag"
+            },
+            {
+              "regimen_id": "itp-romiplostim"
+            },
+            {
+              "regimen_id": "itp-avatrombopag"
+            }
+          ]
+        },
+        {
+          "key": "sl-rituximab",
+          "kind": "group",
+          "title": {
+            "uk": "Ритуксимаб",
+            "en": "Rituximab"
+          },
+          "description": {
+            "uk": "Для тих, хто хоче уникнути операції та тривалого прийому; відповідь 40–60%, медіана тривалості ≈1 рік. Потрібні HBsAg та анти-HBc, вихідні імуноглобуліни (гіпогамаглобулінемія — див. вторинний імунодефіцит), вакцинація заздалегідь.",
+            "en": "For those who wish to avoid surgery and long-term medication; response 40-60%, median duration about 1 year. HBsAg and anti-HBc, baseline immunoglobulins (hypogammaglobulinaemia - see secondary immunodeficiency) and prior vaccination are needed."
+          },
+          "regimens": [
+            {
+              "regimen_id": "rituximab-mono"
+            }
+          ]
+        },
+        {
+          "key": "sl-syk",
+          "kind": "group",
+          "title": {
+            "uk": "Інгібітор SYK",
+            "en": "SYK inhibitor"
+          },
+          "description": {
+            "uk": "Фостаматиніб: добрий вибір при високому тромботичному ризику чи без доступу до ТПО-агоніста; відповідь ≈70%, потрібен постійний прийом. В Україні не зареєстрований.",
+            "en": "Fostamatinib: a good choice at a high thrombotic risk or without access to a TPO agonist; about 70% respond, continuous therapy is needed. Not registered in Ukraine."
+          },
+          "regimens": [
+            {
+              "regimen_id": "itp-fostamatinib"
+            }
+          ]
+        },
+        {
+          "key": "sl-cards",
+          "kind": "reference",
+          "title": {
+            "uk": "Спленектомія та інші варіанти",
+            "en": "Splenectomy and other options"
+          },
+          "description": {
+            "uk": "Операція й резерв — картки без розрахунку.",
+            "en": "Surgery and the reserve - cards without calculation."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-itp-splenectomy"
+            },
+            {
+              "regimen_id": "ref-itp-other-second-line"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "emergency",
+      "kind": "treatment",
+      "title": {
+        "uk": "Ургентні ситуації: кровотеча та процедури",
+        "en": "Emergencies: bleeding and procedures"
+      },
+      "description": {
+        "uk": "Критична кровотеча (внутрішньочерепна, внутрішньоспинномозкова, внутрішньоочна, заочеревинна, перикардіальна, гемодинамічна чи дихальна нестабільність): госпіталізація, реанімація, гематолог. Комбінація: тромбоконцентрат (1 апаратна доза або 4–6 доз пулу; ефект <1 год, не відкладати), ВВІГ, пульс стероїду, транексамова кислота, ТПО-агоніст (ритуксимаб — ні: повільний). Не варто: rFVIIa (тромбози, лише винятково), плазмаферез. Без ефекту — невідкладна спленектомія чи емболізація селезінки. Тяжка кровотеча (Hb ↓≥2 г/дл або ≥2 дози еритромаси): стероїд + ритуксимаб чи ТПО-агоніст (ASH 2026; раніше — стероїд + ВВІГ), ВВІГ додати можна. Невідкладна процедура: за 2–4 год — тромбоцити; за 1–2 доби — стероїд і/або ВВІГ; план: тромбоцити ≥50×10^9/л для спленектомії. Усі інші причини кровотечі (НПЗП, антикоагулянти, виразка) усунути.",
+        "en": "Critical bleeding (intracranial, intraspinal, intraocular, retroperitoneal, pericardial, haemodynamic or respiratory instability): admission, intensive care, a haematologist. Combination: platelet transfusion (one apheresis dose or 4-6 pooled units; effect <1 h, do not delay), IVIG, a steroid pulse, tranexamic acid, a TPO agonist (not rituximab - too slow). Avoid rFVIIa (thrombosis, only exceptionally) and plasma exchange. No effect - urgent splenectomy or splenic embolization. Severe bleeding (Hb fall >=2 g/dL or >=2 units of red cells): a steroid plus rituximab or a TPO agonist (ASH 2026; previously a steroid plus IVIG), IVIG may be added. Urgent procedure: within 2-4 h - platelets; within 1-2 days - a steroid and/or IVIG; aim for platelets >=50 x10^9/L for splenectomy. Remove other causes of bleeding (NSAIDs, anticoagulants, ulcer)."
+      },
+      "regimens": [
+        {
+          "regimen_id": "itp-ivig",
+          "notes": {
+            "uk": "Критична кровотеча: 1 г/кг в 1-й день, у 2-й — якщо тромбоцити <50×10^9/л; зупинити, щойно >30×10^9/л.",
+            "en": "Critical bleeding: 1 g/kg on day 1, on day 2 if platelets are <50 x10^9/L; stop once >30 x10^9/L."
+          }
+        },
+        {
+          "regimen_id": "itp-dexamethasone",
+          "notes": {
+            "uk": "При тяжкій чи критичній кровотечі — в/в.",
+            "en": "In severe or critical bleeding - IV."
+          }
+        },
+        {
+          "regimen_id": "itp-methylprednisolone-pulse"
+        },
+        {
+          "regimen_id": "itp-romiplostim-critical"
+        },
+        {
+          "regimen_id": "itp-tranexamic-acid"
+        },
+        {
+          "regimen_id": "itp-anti-d"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "itp-romiplostim-critical",
+  "$comment": "ІТП, критична кровотеча: ромиплостим одноразово 5–10 мкг/кг п/ш у складі комбінації (UpToDate); додаткові тижневі дози можна розглянути. Provan 2019: ТПО-агоніст, якщо немає відповіді на ВВІГ і трансфузію тромбоцитів. У реєстрі України не знайдено.",
+  "short_name": "Ромиплостим 5–10 (кровотеча)",
+  "name": {
+    "uk": "Ромиплостим одноразово при критичній кровотечі в ІТП",
+    "en": "Single-dose romiplostim in critical bleeding in ITP"
+  },
+  "description": {
+    "uk": "5–10 мкг/кг п/ш одноразово разом з тромбоконцентратом, ВВІГ, стероїдом і транексамовою кислотою.",
+    "en": "5-10 mcg/kg subcutaneously once, together with platelets, IVIG, a steroid and tranexamic acid."
+  },
+  "cycle_length_days": 7,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) (парафраз)",
+      "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+      "version": "оновлено 31.08.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+      "version": "PMC6880896",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "items": [
+    {
+      "key": "romiplostim",
+      "drug_id": "romiplostim",
+      "route": "subcutaneous",
+      "dose_value": 5,
+      "dose_unit": "mcg_kg",
+      "days": [1],
+      "dose_options": [
+        {
+          "dose_value": 10,
+          "dose_unit": "mcg_kg",
+          "notes": {
+            "uk": "Верхня межа діапазону 5–10 мкг/кг одноразово (UpToDate).",
+            "en": "Upper end of the 5-10 mcg/kg single-dose range (UpToDate)."
+          },
+          "source": {
+            "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) (парафраз)",
+            "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+            "version": "оновлено 31.08.2026",
+            "checkedOn": "2026-10-25"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "UpToDate: ромиплостим обирають, бо він підшкірний; одноразова доза 5–10 мкг/кг, далі можна розглянути щотижневі. Якщо хворий приймає таблетки — елтромбопаг чи аватромбопаг (дози — у відповідних схемах). Доказова база непряма: рандомізовані дослідження з рекомбінантним ТПО людини (лише в Китаї) разом з дексаметазоном. Недоступний в Україні — на практиці замінює елтромбопаг.",
+        "en": "UpToDate: romiplostim is chosen because it is subcutaneous; a single dose of 5-10 mcg/kg, weekly doses can be considered afterwards. If the patient can take tablets - eltrombopag or avatrombopag (doses in their own regimens). The evidence is indirect: randomized trials of recombinant human TPO (available only in China) with dexamethasone. Unavailable in Ukraine - in practice eltrombopag replaces it."
+      }
+    }
+  ]
+}

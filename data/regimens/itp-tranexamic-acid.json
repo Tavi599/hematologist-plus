@@ -1,0 +1,76 @@
+{
+  "id": "itp-tranexamic-acid",
+  "$comment": "ІТП, кровотеча: транексамова кислота в/в 10 мг/кг тричі на добу (UpToDate); Provan 2019 — перорально 15–20 мг/кг кожні 8 год. Тривалість у прочитаних джерелах не вказана — розраховано 1-й день, далі за клінікою. Розбіжність по ε-амінокапроновій кислоті: див. нотатку.",
+  "short_name": "Транексамова к-та (ІТП)",
+  "name": {
+    "uk": "Транексамова кислота при кровотечі в ІТП",
+    "en": "Tranexamic acid for bleeding in ITP"
+  },
+  "description": {
+    "uk": "10 мг/кг в/в тричі на добу; перорально 15–20 мг/кг кожні 8 год. Додається до інших методів при критичній кровотечі, особливо слизових оболонок.",
+    "en": "10 mg/kg IV three times a day; orally 15-20 mg/kg every 8 h. Added to the other measures in critical bleeding, especially of mucous membranes."
+  },
+  "cycle_length_days": 1,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) (парафраз)",
+      "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+      "version": "оновлено 31.08.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+      "version": "PMC6880896",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "items": [
+    {
+      "key": "tranexamic-acid",
+      "drug_id": "tranexamic-acid",
+      "role": "supportive",
+      "route": "iv_bolus",
+      "dose_value": 10,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "administrations_per_day": 3,
+      "interval_min": 480,
+      "dose_options": [
+        {
+          "dose_value": 15,
+          "dose_unit": "mg_kg",
+          "notes": {
+            "uk": "Перорально 15 мг/кг кожні 8 год (Provan 2019; нижня межа 15–20 мг/кг). Змініть шлях у таблиці.",
+            "en": "Orally 15 mg/kg every 8 h (Provan 2019; lower end of 15-20 mg/kg). Change the route in the sheet."
+          },
+          "source": {
+            "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+            "version": "PMC6880896",
+            "checkedOn": "2026-10-25"
+          }
+        },
+        {
+          "dose_value": 20,
+          "dose_unit": "mg_kg",
+          "notes": {
+            "uk": "Перорально 20 мг/кг кожні 8 год (Provan 2019; верхня межа 15–20 мг/кг). Змініть шлях у таблиці.",
+            "en": "Orally 20 mg/kg every 8 h (Provan 2019; upper end of 15-20 mg/kg). Change the route in the sheet."
+          },
+          "source": {
+            "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+            "version": "PMC6880896",
+            "checkedOn": "2026-10-25"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "UpToDate: в/в 10 мг/кг тричі на добу або 1 г за 10 хв, далі 1 г за наступні 8 год; перорально 1–1,5 г 3–4 рази на добу; частина експертів обмежує разову дозу 1–1,6 г; при порушенні функції нирок — зниження дози. Provan 2019: перорально 15–20 мг/кг кожні 8 год. Тривалість джерела не визначають — ставте дні за клінікою. Для критичної кровотечі UpToDate обирає транексамову кислоту; ε-амінокапронова кислота (є в каталозі) — рівноцінна заміна: UpToDate — 4–12 г/добу, і за посиланням на настанову 2026 р. максимум 5 г/добу; Provan 2019 — 1–5 г кожні 4–6 год, максимум 24 г/добу. Розбіжність між джерелами значна — доза без розрахунку, вибирає лікар. Не рекомендовано при ІТП: плазмаферез і рекомбінантний фактор VIIa (Provan; UpToDate використовує rFVIIa лише у виняткових випадках через тромбози).",
+        "en": "UpToDate: IV 10 mg/kg three times a day or 1 g over 10 min followed by 1 g over the next 8 h; orally 1-1.5 g three to four times a day; some experts cap a single dose at 1-1.6 g; reduce the dose in renal impairment. Provan 2019: orally 15-20 mg/kg every 8 h. The sources set no duration - set the days by the clinical picture. For critical bleeding UpToDate chooses tranexamic acid; aminocaproic acid (in the catalog) is an equal alternative: UpToDate - 4-12 g/day, and, citing a 2026 guideline, a maximum of 5 g/day; Provan 2019 - 1-5 g every 4-6 h, maximum 24 g/day. The sources differ widely - no calculation, the physician chooses. Not recommended in ITP: plasma exchange and recombinant factor VIIa (Provan; UpToDate uses rFVIIa only in exceptional cases because of thrombosis)."
+      }
+    }
+  ]
+}

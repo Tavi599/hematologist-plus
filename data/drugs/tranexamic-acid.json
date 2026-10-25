@@ -1,0 +1,37 @@
+{
+  "$comment": "Додано 2026-10-25 для ІТП (антифібринолітик при кровотечі). Дози — UpToDate та Provan 2019, див. itp-tranexamic-acid. Фасування — з відкритого реєстру України: ампули 500 мг/5 мл (100 мг/мл) і таблетки 500 мг.",
+  "id": "tranexamic-acid",
+  "name": {
+    "uk": "Транексамова кислота",
+    "en": "Tranexamic acid"
+  },
+  "atc_code": "B02AA02",
+  "availability": "registered",
+  "amount_unit": "mg",
+  "dose_units": ["mg_kg", "mg_flat"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "ресурс reestr.csv, оновлений 21.01.2026: розчин для ін'єкцій 100 мг/мл по 5 мл, таблетки 500 мг",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "a500",
+      "form": "ampoule",
+      "strength_amount": 500,
+      "volume_ml": 5,
+      "label": {
+        "uk": "100 мг/мл по 5 мл (500 мг)",
+        "en": "100 mg/mL 5 mL (500 mg)"
+      }
+    },
+    {
+      "key": "t500",
+      "form": "tablet",
+      "strength_amount": 500
+    }
+  ]
+}

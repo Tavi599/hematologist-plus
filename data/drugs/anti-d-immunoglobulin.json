@@ -1,0 +1,32 @@
+{
+  "$comment": "Додано 2026-10-25 для ІТП (альтернатива ВВІГ у RhD-позитивних, UpToDate і Provan 2019). У реєстрі України є препарати анти-D імуноглобуліну 300 мкг (1500 МО) в 2 мл — переважно для профілактики резус-імунізації; чи містить інструкція конкретного препарату показання «ІТП» і шлях в/в, не перевірялося — звіряти з інструкцією перед призначенням.",
+  "id": "anti-d-immunoglobulin",
+  "name": {
+    "uk": "Імуноглобулін людини анти-D (Rho)",
+    "en": "Human anti-D (Rho) immunoglobulin"
+  },
+  "atc_code": "J06BB01",
+  "availability": "registered",
+  "amount_unit": "mcg",
+  "dose_units": ["mcg_kg", "mcg_flat"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "ресурс reestr.csv, оновлений 21.01.2026: розчин для ін'єкцій 300 мкг (1500 МО)",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s300",
+      "form": "syringe",
+      "strength_amount": 300,
+      "volume_ml": 2,
+      "label": {
+        "uk": "300 мкг (1500 МО) в 2 мл",
+        "en": "300 mcg (1500 IU) in 2 mL"
+      }
+    }
+  ]
+}

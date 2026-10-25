@@ -1,0 +1,69 @@
+{
+  "id": "ref-itp-splenectomy",
+  "sources": [
+    {
+      "name": "UpToDate: Second-line and subsequent therapies for immune thrombocytopenia (ITP) in adults (парафраз)",
+      "url": "https://www.uptodate.com/contents/second-line-and-subsequent-therapies-for-immune-thrombocytopenia-itp-in-adults",
+      "version": "оновлено 29.07.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "ASH 2019 guidelines for immune thrombocytopenia (Neunert C et al., Blood Adv 2019;3(23):3829-3866)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6963252/",
+      "version": "PMC6963252",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+      "version": "PMC6880896",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "short_name": "Спленектомія (ІТП)",
+  "name": {
+    "uk": "Спленектомія при ІТП",
+    "en": "Splenectomy in ITP"
+  },
+  "reference": {
+    "summary": {
+      "uk": "Єдина друга лінія з найбільшою ймовірністю тривалої відповіді без ліків: відповідь у 60–80%, часто на роки. Не раніше ніж через 12 міс. від діагнозу (можлива ремісія), якщо немає нагальних показань.",
+      "en": "The only second line most likely to give a lasting response without medication: 60-80%, often for years. Not before 12 months from diagnosis (a remission is possible) unless urgent."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Спленектомія (операція)",
+          "en": "Splenectomy (surgery)"
+        }
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Вакцини від капсульних збудників — щонайменше за 2 тижні до операції; при невідкладній операції вакцинують після. Хворим часто видають антибіотик на випадок лихоманки.",
+        "en": "Vaccines against encapsulated organisms at least 2 weeks before surgery; after it in an urgent operation. Patients are often given an antibiotic for fever."
+      },
+      {
+        "uk": "Бажано тромбоцити ≥50×10^9/л перед операцією (піднімають ВВІГ, стероїди або ТПО-агоністи); оперують і при нижчих, якщо є тромбоцити для трансфузії.",
+        "en": "Preferably platelets >=50 x10^9/L before surgery (raised by IVIG, steroids or TPO agonists); surgery is done at lower counts if platelets are available for transfusion."
+      },
+      {
+        "uk": "Стандарт — лапароскопічна: летальність 0,2% проти 1% при відкритій (огляд UpToDate); ризики — інфекції та ВТЕ.",
+        "en": "Laparoscopic is the standard: mortality 0.2% vs 1% for open (UpToDate review); the risks are infection and VTE."
+      },
+      {
+        "uk": "Невідкладна спленектомія — при критичній кровотечі без відповіді на комбіновану терапію (ВВІГ, стероїди, ТПО-агоніст, тромбоцити); альтернатива — емболізація селезінки.",
+        "en": "Urgent splenectomy for critical bleeding unresponsive to combined therapy (IVIG, steroid, TPO agonist, platelets); the alternative is splenic embolization."
+      },
+      {
+        "uk": "Розбіжність термінів: ASH 2019 — відкласти щонайменше на 12 міс.; Provan 2019 — 12–24 міс.; UpToDate — «зазвичай щонайменше 12 міс.». ASH 2026 розглядає спленектомію в окремому положенні про належну практику, у зведенні воно не розкрите.",
+        "en": "Timing differs: ASH 2019 - delay at least 12 months; Provan 2019 - 12-24 months; UpToDate - \"usually at least 12 months\". ASH 2026 treats splenectomy in a separate good-practice statement not detailed in its summary."
+      }
+    ],
+    "gap": {
+      "uk": "Операція — доз немає, розрахунку немає.",
+      "en": "A surgical procedure - there are no doses and nothing to calculate."
+    },
+    "availability": "registered"
+  }
+}

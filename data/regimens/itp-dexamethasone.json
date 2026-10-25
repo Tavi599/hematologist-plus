@@ -1,0 +1,49 @@
+{
+  "id": "itp-dexamethasone",
+  "$comment": "ІТП у дорослих: пульс дексаметазону 40 мг на добу 4 дні (ASH 2019 реком. 4; Provan 2019; UpToDate). Цикл тут — це 4-денний курс; інтервал між повторами в прочитаних джерелах не вказано.",
+  "short_name": "Дексаметазон 40 (ІТП)",
+  "name": {
+    "uk": "Дексаметазон 40 мг × 4 дні при ІТП",
+    "en": "Dexamethasone 40 mg for 4 days in ITP"
+  },
+  "description": {
+    "uk": "40 мг на добу 4 дні без зниження дози; в/в при тяжкій чи критичній кровотечі, інакше в/в або внутрішньо. Курс можна повторити, усього до 3 разів.",
+    "en": "40 mg a day for 4 days with no taper; IV in severe or critical bleeding, otherwise IV or oral. The course may be repeated, up to 3 courses in all."
+  },
+  "cycle_length_days": 4,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "ASH 2019 guidelines for immune thrombocytopenia (Neunert C et al., Blood Adv 2019;3(23):3829-3866)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6963252/",
+      "version": "PMC6963252",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+      "version": "PMC6880896",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) (парафраз)",
+      "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+      "version": "оновлено 31.08.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "items": [
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "iv_infusion",
+      "dose_value": 40,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "Provan 2019 і UpToDate: 40 мг/добу 4 дні, повтор — до 3 курсів. ASH 2019 (реком. 4, умовна): преднізон 0,5–2 мг/кг/добу чи дексаметазон 40 мг/добу ×4 дні — на вибір; дексаметазон швидше піднімає тромбоцити (відповідь на 7-й день RR 1,31). UpToDate: через рік відповідь частіше зберігається після преднізону (81% проти 66%, дослідження 2024), у частини хворих рецидив через кілька днів після дексаметазону. Дексаметазон 40 мг ≈ преднізон 4 мг/кг. ASH 2026: стероїд ± ВВІГ окремо більше не пропонується першим вибором — додають ритуксимаб або ТПО-агоніст (відкласти додавання до 2 тижнів можна, якщо потрібно підтвердити діагноз відповіддю на стероїд).",
+        "en": "Provan 2019 and UpToDate: 40 mg a day for 4 days, repeated up to 3 courses. ASH 2019 (rec. 4, conditional): prednisone 0.5-2 mg/kg/day or dexamethasone 40 mg/day for 4 days - either; dexamethasone raises platelets faster (day-7 response RR 1.31). UpToDate: at one year the response persists more often after prednisone (81% vs 66%, 2024 trial), and some patients relapse a few days after dexamethasone. Dexamethasone 40 mg is about prednisone 4 mg/kg. ASH 2026: a steroid with or without IVIG alone is no longer the first choice - rituximab or a TPO agonist is added (the addition can wait up to 2 weeks if the diagnosis needs confirming by a steroid response)."
+      }
+    }
+  ]
+}

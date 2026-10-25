@@ -1,0 +1,59 @@
+{
+  "id": "itp-anti-d",
+  "$comment": "ІТП у RhD-позитивних дорослих: анти-D імуноглобулін 50 мкг/кг в/в одноразово (UpToDate); Provan 2019 — 50–75 мкг/кг. Показання «ІТП» в інструкції зареєстрованих в Україні препаратів не перевірялося (див. drugs/anti-d-immunoglobulin).",
+  "short_name": "Анти-D (ІТП)",
+  "name": {
+    "uk": "Анти-D імуноглобулін при ІТП",
+    "en": "Anti-D immunoglobulin in ITP"
+  },
+  "description": {
+    "uk": "50 мкг/кг в/в одноразово — альтернатива ВВІГ лише при RhD-позитивній групі; після спленектомії слабший ефект.",
+    "en": "50 mcg/kg IV once - an alternative to IVIG only in RhD-positive patients; weaker after splenectomy."
+  },
+  "cycle_length_days": 7,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) (парафраз)",
+      "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+      "version": "оновлено 31.08.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+      "version": "PMC6880896",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "items": [
+    {
+      "key": "anti-d",
+      "drug_id": "anti-d-immunoglobulin",
+      "route": "iv_bolus",
+      "dose_value": 50,
+      "dose_unit": "mcg_kg",
+      "days": [1],
+      "dose_options": [
+        {
+          "dose_value": 75,
+          "dose_unit": "mcg_kg",
+          "notes": {
+            "uk": "Верхня межа діапазону 50–75 мкг/кг одноразово (Provan 2019).",
+            "en": "Upper end of the 50-75 mcg/kg single-dose range (Provan 2019)."
+          },
+          "source": {
+            "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+            "version": "PMC6880896",
+            "checkedOn": "2026-10-25"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "Тільки RhD-позитивні; при RhD-негативній групі неефективний. UpToDate: доза 50 мкг/кг для хворих без анемії. Гемоліз прогнозовано буває від легкого до помірного; уникати при вихідному гемолізі; 4 год спостереження (лихоманка, озноб, біль у попереку, гемоглобінурія); рідко гострий внутрішньосудинний гемоліз з ДВЗ та ГНН (<1%). Якщо після введення потрібна трансфузія — використовувати RhD-негативні компоненти. Provan 2019: премедикація стероїдом. Розбіжність джерел: UpToDate — 50 мкг/кг, Provan — 50–75 мкг/кг. UpToDate: у деяких європейських країнах препарату немає на ринку.",
+        "en": "RhD-positive only; ineffective in RhD-negative patients. UpToDate: 50 mcg/kg for patients without anaemia. Mild to moderate haemolysis is expected; avoid with baseline haemolysis; observe for 4 h (fever, chills, flank pain, haemoglobinuria); rarely acute intravascular haemolysis with DIC and acute kidney injury (<1%). If a transfusion is needed after the dose, use RhD-negative products. Provan 2019: steroid premedication. Sources differ: UpToDate 50 mcg/kg, Provan 50-75 mcg/kg. UpToDate: not available in some European markets."
+      }
+    }
+  ]
+}

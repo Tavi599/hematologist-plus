@@ -1,0 +1,70 @@
+{
+  "id": "itp-fostamatinib",
+  "$comment": "ІТП у дорослих: фостаматиніб 100 мг двічі на добу, через місяць за тромбоцитів <50×10^9/л — 150 мг двічі на добу (UpToDate; Provan 2019 — збігаються). ASH 2026 (реком. 2b): інгібітор SYK — варіант для тих, кому не підходять ТПО-агоніст і ритуксимаб. У реєстрі України не знайдено — «недоступний».",
+  "short_name": "Фостаматиніб (ІТП)",
+  "name": {
+    "uk": "Фостаматиніб при ІТП",
+    "en": "Fostamatinib in ITP"
+  },
+  "description": {
+    "uk": "100 мг двічі на добу; через місяць, якщо тромбоцити <50×10^9/л, — 150 мг двічі на добу. В Україні не зареєстрований.",
+    "en": "100 mg twice a day; after a month, if platelets are <50 x10^9/L, 150 mg twice a day. Not registered in Ukraine."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Second-line and subsequent therapies for immune thrombocytopenia (ITP) in adults (парафраз)",
+      "url": "https://www.uptodate.com/contents/second-line-and-subsequent-therapies-for-immune-thrombocytopenia-itp-in-adults",
+      "version": "оновлено 29.07.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+      "version": "PMC6880896",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "ASH 2026 guidelines for ITP: initial and second-line therapy in adults with primary ITP (Cuker A et al.) — Summary of changes",
+      "url": "https://www.hematology.org/-/media/hematology/files/clinicians/guidelines/ash-itp-summary-of-changes_20260827.pdf",
+      "version": "зведення від 27.08.2026; DOI статті ще не присвоєно",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "items": [
+    {
+      "key": "fostamatinib",
+      "drug_id": "fostamatinib",
+      "route": "oral",
+      "dose_value": 100,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 28
+      ],
+      "administrations_per_day": 2,
+      "interval_min": 720,
+      "dose_options": [
+        {
+          "dose_value": 150,
+          "dose_unit": "mg_flat",
+          "notes": {
+            "uk": "150 мг двічі на добу, якщо через місяць тромбоцити не досягли 50×10^9/л (UpToDate; Provan 2019).",
+            "en": "150 mg twice a day if platelets have not reached 50 x10^9/L after a month (UpToDate; Provan 2019)."
+          },
+          "source": {
+            "name": "UpToDate: Second-line and subsequent therapies for immune thrombocytopenia (ITP) in adults (парафраз)",
+            "url": "https://www.uptodate.com/contents/second-line-and-subsequent-therapies-for-immune-thrombocytopenia-itp-in-adults",
+            "version": "оновлено 29.07.2026",
+            "checkedOn": "2026-10-25"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "Контроль: загальний аналіз крові й печінкові проби щомісяця до стабілізації; артеріальний тиск кожні 2 тижні до стабільної дози. Побічні: діарея (31% проти 15%), нудота, гіпертензія, нейтропенія, висип, підвищення АЛТ. Тромбоз не збільшує (UpToDate) — може бути вибором при високому тромботичному ризику. Підтримувальна терапія — відміна повертає тромбоцити до вихідних. Відповідь приблизно за 2 тижні; у FIT-1/FIT-2 стабільна відповідь >50×10^9/л — 18% проти 2% на плацебо.",
+        "en": "Monitoring: blood count and liver tests monthly until stable; blood pressure every 2 weeks until a stable dose. Adverse effects: diarrhoea (31% vs 15%), nausea, hypertension, neutropenia, rash, raised ALT. It does not increase thrombosis (UpToDate) - may suit a high thrombotic risk. Maintenance therapy - stopping returns platelets to baseline. Response in about 2 weeks; in FIT-1/FIT-2 a stable response >50 x10^9/L was 18% vs 2% on placebo."
+      }
+    }
+  ]
+}

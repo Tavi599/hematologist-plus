@@ -1,0 +1,80 @@
+{
+  "id": "itp-prednisolone",
+  "$comment": "ІТП у дорослих: преднізолон 1 мг/кг (діапазон 0,5–2 мг/кг, ASH 2019 реком. 4; UpToDate), максимум 80 мг/добу — лише Provan 2019. Схема зниження в жодному з прочитаних джерел не розписана, тому розраховано лише початкову фазу (2 тижні); зниження — без розрахунку. Каталог має преднізолон; джерела пишуть «преднізон» (Provan — «преднізон/преднізолон»).",
+  "short_name": "Преднізолон (ІТП)",
+  "name": {
+    "uk": "Преднізолон 1 мг/кг при ІТП (початкова фаза)",
+    "en": "Prednisolone 1 mg/kg in ITP (initial phase)"
+  },
+  "description": {
+    "uk": "1 мг/кг на добу (не більше 80 мг) 2 тижні, далі поступове зниження; весь курс не довше 6 тижнів. Розраховано лише початкову фазу.",
+    "en": "1 mg/kg a day (at most 80 mg) for 2 weeks, then a gradual taper; the whole course no longer than 6 weeks. Only the initial phase is calculated."
+  },
+  "cycle_length_days": 14,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "Provan D et al. Updated international consensus report on the investigation and management of primary immune thrombocytopenia (Blood Adv 2019;3(22):3780-3817)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6880896/",
+      "version": "PMC6880896",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "ASH 2019 guidelines for immune thrombocytopenia (Neunert C et al., Blood Adv 2019;3(23):3829-3866)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6963252/",
+      "version": "PMC6963252",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) (парафраз)",
+      "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+      "version": "оновлено 31.08.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "items": [
+    {
+      "key": "prednisolone",
+      "drug_id": "prednisolone",
+      "route": "oral",
+      "dose_value": 1,
+      "dose_unit": "mg_kg",
+      "cap_amount": 80,
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "dose_options": [
+        {
+          "dose_value": 0.5,
+          "dose_unit": "mg_kg",
+          "notes": {
+            "uk": "Нижня межа діапазону 0,5–2 мг/кг/добу (ASH 2019, реком. 4; UpToDate).",
+            "en": "Lower end of the 0.5-2 mg/kg/day range (ASH 2019, rec. 4; UpToDate)."
+          },
+          "source": {
+            "name": "ASH 2019 guidelines for immune thrombocytopenia (Neunert C et al., Blood Adv 2019;3(23):3829-3866)",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6963252/",
+            "version": "PMC6963252",
+            "checkedOn": "2026-10-25"
+          }
+        },
+        {
+          "dose_value": 2,
+          "dose_unit": "mg_kg",
+          "notes": {
+            "uk": "Верхня межа діапазону 0,5–2 мг/кг/добу (ASH 2019, реком. 4; UpToDate). Обмеження 80 мг/добу з Provan 2019 діє й тут; ASH та UpToDate максимуму не називають.",
+            "en": "Upper end of the 0.5-2 mg/kg/day range (ASH 2019, rec. 4; UpToDate). The 80 mg/day ceiling from Provan 2019 applies here too; ASH and UpToDate name no maximum."
+          },
+          "source": {
+            "name": "ASH 2019 guidelines for immune thrombocytopenia (Neunert C et al., Blood Adv 2019;3(23):3829-3866)",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6963252/",
+            "version": "PMC6963252",
+            "checkedOn": "2026-10-25"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "Звірка джерел. Доза: Provan 2019 — 1 мг/кг, не більше 80 мг/добу (навіть при масі >80 кг); ASH 2019 — 0,5–2 мг/кг/добу; UpToDate — 1 мг/кг (0,5–2). Початкова фаза: Provan — 2 тижні (до 3); UpToDate — 1–2 тижні. Тривалість усього курсу: ASH 2019 — не довше 6 тижнів разом зі зниженням (сильна рекомендація); Provan — закінчити до 6-го тижня (не пізніше 8-го); UpToDate — зниження «зазвичай менше ніж за 6–8 тижнів», але від курсу довшого за 6 тижнів відмовлятися. Немає відповіді за 2 тижні — знизити за тиждень і припинити (Provan, UpToDate); діагноз переглянути. Конкретні сходинки зниження джерела не дають — без розрахунку. ASH 2026: стероїд окремо більше не перший вибір — додають ритуксимаб чи ТПО-агоніст. Для захисту шлунка — інгібітор протонної помпи чи блокатор H2 при дозі преднізону ≥20 мг/добу (UpToDate, за потреби).",
+        "en": "Source comparison. Dose: Provan 2019 - 1 mg/kg, at most 80 mg/day (even above 80 kg); ASH 2019 - 0.5-2 mg/kg/day; UpToDate - 1 mg/kg (0.5-2). Initial phase: Provan - 2 weeks (up to 3); UpToDate - 1-2 weeks. Whole course: ASH 2019 - no longer than 6 weeks including the taper (strong); Provan - finish by week 6 (week 8 at the latest); UpToDate - taper \"typically under 6-8 weeks\", yet avoid courses over 6 weeks. No response by 2 weeks - taper over a week and stop (Provan, UpToDate); reconsider the diagnosis. None of the sources spells out the taper steps - not calculated. ASH 2026: a steroid alone is no longer the first choice - rituximab or a TPO agonist is added. For gastric protection - a proton pump inhibitor or H2 blocker at prednisone >=20 mg/day (UpToDate, if needed)."
+      }
+    }
+  ]
+}
