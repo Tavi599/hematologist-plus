@@ -1,0 +1,54 @@
+{
+  "id": "ref-aiha-ivig",
+  "short_name": "ВВІГ (АІГА)",
+  "name": {
+    "uk": "ВВІГ як допоміжна терапія при тепловій АІГА",
+    "en": "IVIG as adjunct in warm AIHA"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults (парафраз)",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+      "version": "оновлено 14.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Одноагентна ефективність мала; допомагає як ад'ювант при трансфузійній залежності, що зберігається через 2 тижні стероїдів із ритуксимабом.",
+      "en": "Limited efficacy as a single agent; helps as an adjunct when transfusion dependence persists 2 weeks after steroids plus rituximab."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Імуноглобулін людини нормальний в/в",
+          "en": "Human normal immunoglobulin IV"
+        },
+        "drug_id": "immunoglobulin-human-iv"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "UpToDate (AIHA): 500 мг/кг щодня 4 дні, якщо хворий поліпшується, але лишається трансфузійно залежним через 2 тижні стероїдів із ритуксимабом.",
+        "en": "UpToDate (AIHA): 500 mg/kg daily for 4 days if the patient is improving but still transfusion dependent 2 weeks after steroids with rituximab."
+      },
+      {
+        "uk": "Дуже тяжкі випадки (описи випадків): близько 1 г/кг щодня 5 днів; ефективність у малих серіях 30–40%.",
+        "en": "Very severe cases (case reports): about 1 g/kg daily for 5 days; efficacy 30-40% in small series."
+      },
+      {
+        "uk": "РОЗБІЖНІСТЬ: у каталозі режими імуномодулюючої дози — 0,4 г/кг ×5 днів і 1 г/кг ×1 день (джерело — консенсус з ІТП, Provan 2019). Жоден не збігається з UpToDate для АІГА (0,5 г/кг ×4 дні), тож їх не прив'язано до АІГА як готових схем.",
+        "en": "DISCREPANCY: the catalog's immunomodulatory regimens are 0.4 g/kg x5 days and 1 g/kg x1 day (source: ITP consensus, Provan 2019). Neither matches UpToDate for AIHA (0.5 g/kg x4 days), so they are not attached to AIHA as ready regimens."
+      },
+      {
+        "uk": "Консенсус Jäger 2020 (Blood Rev) у цій сесії не читали: його режим ВВІГ не звірено. Дозу перед використанням підтвердити за повним текстом.",
+        "en": "The Jäger 2020 consensus (Blood Rev) was not read in this session: its IVIG schedule is not checked. Confirm the dose against the full text before use."
+      }
+    ],
+    "gap": {
+      "uk": "Режим ВВІГ для АІГА не підтверджено другим джерелом; розрахунок препарату доступний у калькуляторі, але схему обирає лікар.",
+      "en": "The IVIG schedule for AIHA is not confirmed by a second source; the drug can be calculated in the calculator but the physician chooses the schedule."
+    },
+    "availability": "registered"
+  }
+}

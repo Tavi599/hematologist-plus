@@ -1,0 +1,61 @@
+{
+  "id": "ref-aiha-glucocorticoids",
+  "short_name": "Стероїди (АІГА)",
+  "name": {
+    "uk": "Глюкокортикоїди при тепловій АІГА",
+    "en": "Glucocorticoids in warm AIHA"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults (парафраз)",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+      "version": "оновлено 14.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Основа першої лінії разом із ритуксимабом: преднізон 1–2 мг/кг на добу (або 60–100 мг) до Hb >10 г/дл, далі повільна відміна за 2–3 місяці.",
+      "en": "Backbone of first line together with rituximab: prednisone 1-2 mg/kg a day (or 60-100 mg) until Hb >10 g/dL, then a slow taper over 2-3 months."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Преднізолон",
+          "en": "Prednisolone"
+        },
+        "drug_id": "prednisolone"
+      },
+      {
+        "name": {
+          "uk": "Метилпреднізолон",
+          "en": "Methylprednisolone"
+        },
+        "drug_id": "methylprednisolone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Початково преднізон 1–2 мг/кг перорально або 60–100 мг на добу; парентерально — метилпреднізолон 0,8–1,6 мг/кг в/в на добу. У джерелі препарат — преднізон, у каталозі преднізолон; дози в мг еквівалентні.",
+        "en": "Prednisone 1-2 mg/kg orally or 60-100 mg a day to start; parenteral methylprednisolone 0.8-1.6 mg/kg IV a day. The source names prednisone, the catalog has prednisolone; doses in mg are equivalent."
+      },
+      {
+        "uk": "Доза тримається до Hb >10 г/дл (зазвичай 2–3 тижні). Відповідь на самі стероїди — 70–90%, але до половини відповівших рецидивують упродовж року.",
+        "en": "The dose is held until Hb >10 g/dL (usually 2-3 weeks). Response to steroids alone is 70-90%, but up to half of responders relapse within a year."
+      },
+      {
+        "uk": "Відміна: якщо Hb ≥10 г/дл за 3 тижні — знижувати на 10 мг на тиждень до 20 мг, далі не швидше 5 мг на тиждень (часто 5 мг кожні 2 тижні). Немає відповіді за 3 тижні — стероїдорезистентність: швидша відміна й друга лінія. Доказів на користь конкретної схеми відміни немає.",
+        "en": "Taper: if Hb ≥10 g/dL within 3 weeks - cut 10 mg a week to 20 mg, then no faster than 5 mg a week (often 5 mg every 2 weeks). No response by 3 weeks means steroid-unresponsive disease: faster taper and second line. No evidence favours one taper."
+      },
+      {
+        "uk": "Якщо одні стероїди не дали відповіді за 2 тижні — додають ритуксимаб і нерідко MMF. При прийомі стероїдів понад 3 місяці — кальцій і вітамін D.",
+        "en": "If steroids alone give no response by 2 weeks, rituximab and often MMF are added. Calcium and vitamin D when steroids last longer than 3 months."
+      }
+    ],
+    "gap": {
+      "uk": "Доза й відміна індивідуальні, калькулятор їх не рахує.",
+      "en": "Dose and taper are individual; the calculator does not compute them."
+    },
+    "availability": "registered"
+  }
+}

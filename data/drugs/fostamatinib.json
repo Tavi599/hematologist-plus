@@ -1,0 +1,43 @@
+{
+  "$comment": "Створено 2026-10-25 для карток АІГА (пероральний інгібітор SYK). Доповнено 2026-10-25 для ІТП (друга лінія за UpToDate та Provan 2019; ASH 2026 — «SYK-інгібітор» серед варіантів, якщо ТПО-агоніст чи ритуксимаб не підходять): державний реєстр України перевірено — у відкритому ресурсі reestr.csv (оновлений 21.01.2026) не знайдено, тож «недоступний»; таблетки 100 і 150 мг — за листком FDA (Tavalisse).",
+  "id": "fostamatinib",
+  "name": {
+    "uk": "Фостаматиніб",
+    "en": "Fostamatinib"
+  },
+  "availability": "unavailable",
+  "amount_unit": "mg",
+  "dose_units": ["mg_flat"],
+  "sources": [
+    {
+      "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults; Cold agglutinin disease (парафраз)",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+      "version": "оновлено 14.10.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "ресурс reestr.csv, оновлений 21.01.2026: не знайдено",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "FDA label: TAVALISSE (fostamatinib) — таблетки 100 мг і 150 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21149cc3-049b-43e2-b141-c9499160556c",
+      "version": "SPL на DailyMed",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t100",
+      "form": "tablet",
+      "strength_amount": 100
+    },
+    {
+      "key": "t150",
+      "form": "tablet",
+      "strength_amount": 150
+    }
+  ]
+}

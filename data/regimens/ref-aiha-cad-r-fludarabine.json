@@ -1,0 +1,53 @@
+{
+  "id": "ref-aiha-cad-r-fludarabine",
+  "short_name": "R + флударабін (ХАХ)",
+  "name": {
+    "uk": "Ритуксимаб з флударабіном при холодовій аглютининовій хворобі",
+    "en": "Rituximab with fludarabine in cold agglutinin disease"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Cold agglutinin disease (парафраз)",
+      "url": "https://www.uptodate.com/contents/cold-agglutinin-disease",
+      "version": "переглянуто 25.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Лише третя лінія в окремих хворих: висока токсичність, короткострокова й довгострокова.",
+      "en": "Third line only in selected patients: high short- and long-term toxicity."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Флударабін",
+          "en": "Fludarabine"
+        },
+        "drug_id": "fludarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Ритуксимаб 375 мг/м² у дні 1, 29, 57 і 85 + флударабін перорально 40 мг/м² у дні 1–5, 29–34, 57–61 і 85–89 (UpToDate, ХАХ).",
+        "en": "Rituximab 375 mg/m2 on days 1, 29, 57 and 85 plus oral fludarabine 40 mg/m2 on days 1-5, 29-34, 57-61 and 85-89 (UpToDate, CAD)."
+      },
+      {
+        "uk": "Флударабін може провокувати або посилювати АІГА (UpToDate, тепла АІГА).",
+        "en": "Fludarabine can provoke or worsen AIHA (UpToDate, warm AIHA)."
+      }
+    ],
+    "gap": {
+      "uk": "Схема має нестандартні дні введення (1–5, 29–34, 57–61, 85–89): калькулятор її не будує; без розрахунку.",
+      "en": "The days (1-5, 29-34, 57-61, 85-89) do not fit a standard cycle: the calculator does not build it; not calculated."
+    },
+    "availability": "registered"
+  }
+}

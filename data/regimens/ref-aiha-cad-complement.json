@@ -1,0 +1,50 @@
+{
+  "id": "ref-aiha-cad-complement",
+  "short_name": "Анти-комплемент (ХАХ)",
+  "name": {
+    "uk": "Сутімліб та інші інгібітори комплементу при ХАХ",
+    "en": "Sutimlimab and other complement inhibitors in CAD"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Cold agglutinin disease (парафраз)",
+      "url": "https://www.uptodate.com/contents/cold-agglutinin-disease",
+      "version": "переглянуто 25.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Сутімліб (анти-C1s) — для симптомної анемії, поки діє ритуксимаб-вмісна терапія, або коли така терапія не підходить; доступність в Україні не підтверджена.",
+      "en": "Sutimlimab (anti-C1s) for symptomatic anaemia while rituximab-based therapy takes effect, or when it is unsuitable; availability in Ukraine not confirmed."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Сутімліб",
+          "en": "Sutimlimab"
+        },
+        "drug_id": "sutimlimab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Сутімліб схвалений FDA (2022; з 2023 без вимоги до трансфузій в анамнезі), в ЄС і Японії; зменшує гемоліз, але не знищує клон — його додають до терапії, спрямованої на клон.",
+        "en": "Sutimlimab is approved by the FDA (2022; from 2023 without a transfusion-history requirement), in the EU and Japan; it reduces haemolysis but does not remove the clone, so it supplements clone-directed therapy."
+      },
+      {
+        "uk": "Інгібітори комплементу підвищують ризик інфекцій інкапсульованими бактеріями — потрібні щеплення/профілактика. Інгібітори C5 (екулізумаб) гемоліз при ХАХ майже не зменшують.",
+        "en": "Complement inhibitors raise the risk of infection with encapsulated bacteria - vaccines or prophylaxis are needed. C5 inhibitors (eculizumab) barely reduce haemolysis in CAD."
+      },
+      {
+        "uk": "Глюкокортикоїди й спленектомія при ХАХ здебільшого неефективні (виняток — високий термальний діапазон антитіла чи змішана форма).",
+        "en": "Glucocorticoids and splenectomy are mostly ineffective in CAD (exceptions: high thermal amplitude antibody or the mixed form)."
+      }
+    ],
+    "gap": {
+      "uk": "Дозу сутімлібу в джерелі цієї сесії не фіксовано — без розрахунку.",
+      "en": "The sutimlimab dose was not recorded in this session - not calculated."
+    },
+    "availability": "unavailable"
+  }
+}

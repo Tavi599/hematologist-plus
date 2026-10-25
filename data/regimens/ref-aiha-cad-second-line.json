@@ -1,0 +1,49 @@
+{
+  "id": "ref-aiha-cad-second-line",
+  "short_name": "Друга лінія ХАХ",
+  "name": {
+    "uk": "Бортезоміб та ібрутиніб при ХАХ",
+    "en": "Bortezomib and ibrutinib in CAD"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Cold agglutinin disease (парафраз)",
+      "url": "https://www.uptodate.com/contents/cold-agglutinin-disease",
+      "version": "переглянуто 25.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Якщо ритуксимаб-вмісна терапія не діє — бортезоміб; ібрутиніб — як друга лінія B-клітинної терапії (лише ретроспективні дані).",
+      "en": "If rituximab-based therapy fails - bortezomib; ibrutinib as a second-line B-cell therapy (retrospective data only)."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Ібрутиніб",
+          "en": "Ibrutinib"
+        },
+        "drug_id": "ibrutinib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Бортезоміб — для хворих, у яких не спрацював ритуксимаб-вмісний режим; ібрутиніб розглядають також як другу лінію, ефект описано лише ретроспективно.",
+        "en": "Bortezomib for patients in whom a rituximab-containing regimen failed; ibrutinib is also considered as second line with retrospective evidence only."
+      }
+    ],
+    "gap": {
+      "uk": "Дози й схеми цих препаратів для ХАХ у джерелі цієї сесії не фіксовано — без розрахунку.",
+      "en": "Doses and schedules of these drugs in CAD were not recorded in this session - not calculated."
+    },
+    "availability": "registered"
+  }
+}

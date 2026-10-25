@@ -1,0 +1,64 @@
+{
+  "id": "ref-aiha-supportive",
+  "short_name": "Супровід (АІГА)",
+  "name": {
+    "uk": "Супровідна терапія при АІГА",
+    "en": "Supportive care in AIHA"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults (парафраз)",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+      "version": "оновлено 14.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Фолієва кислота 1 мг на добу, поки триває гемоліз; профілактика ВТЕ в стаціонарі; профілактика пневмоцистної пневмонії при тривалих стероїдах із ритуксимабом.",
+      "en": "Folic acid 1 mg a day while haemolysis lasts; VTE prophylaxis in hospital; Pneumocystis prophylaxis with prolonged steroids plus rituximab."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Фолієва кислота",
+          "en": "Folic acid"
+        },
+        "drug_id": "folic-acid"
+      },
+      {
+        "name": {
+          "uk": "Еноксапарин",
+          "en": "Enoxaparin"
+        },
+        "drug_id": "enoxaparin"
+      },
+      {
+        "name": {
+          "uk": "Ко-тримоксазол",
+          "en": "Co-trimoxazole"
+        },
+        "drug_id": "co-trimoxazole"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Фолієва кислота 1 мг перорально щодня, доки триває гемоліз (UpToDate: градація 2C).",
+        "en": "Folic acid 1 mg orally daily as long as haemolysis continues (UpToDate: grade 2C)."
+      },
+      {
+        "uk": "ВТЕ при тепловій АІГА — до 15–30% випадків: усім госпіталізованим профілактика ВТЕ; у всіх нових хворих D-димер, при підвищенні — УЗД вен нижніх кінцівок; ТЕЛА шукати при задишці, непропорційній анемії.",
+        "en": "VTE occurs in up to 15-30% of warm AIHA: VTE prophylaxis for every inpatient; D-dimer in all new patients and leg vein ultrasound if raised; look for PE when dyspnoea is out of proportion to anaemia."
+      },
+      {
+        "uk": "Препарати названо як приклад класу: конкретний препарат і дозу для профілактики ВТЕ й пневмоцистної пневмонії джерело не фіксує.",
+        "en": "The drugs are named as examples of a class: the source fixes neither a specific drug nor a dose for VTE and Pneumocystis prophylaxis."
+      }
+    ],
+    "gap": {
+      "uk": "Дози профілактики джерело не наводить — без розрахунку.",
+      "en": "The source gives no prophylaxis doses - not calculated."
+    },
+    "availability": "registered"
+  }
+}

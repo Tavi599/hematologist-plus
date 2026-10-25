@@ -1,0 +1,211 @@
+{
+  "$comment": "АІГА дорослих. МКХ-10: D59.1 — інші автоімунні гемолітичні анемії (тепла, холодова аглютинінова хвороба), D59.0 — медикаментозна. Лікування — UpToDate (Warm AIHA in adults, оновлено 14.10.2026; Cold agglutinin disease; Paroxysmal cold hemoglobinuria), лише парафраз; NCCN не читали. Консенсус Jäger 2020 у цій роботі не читали — режим ВВІГ за ним не звірено (див. ref-aiha-ivig). Сусідня хвороба: evans-syndrome (окрема сесія).",
+  "id": "autoimmune-hemolytic-anemia",
+  "name": {
+    "uk": "Автоімунна гемолітична анемія (АІГА)",
+    "en": "Autoimmune haemolytic anaemia (AIHA)"
+  },
+  "summary": {
+    "uk": "Гемоліз через автоантитіла до еритроцитів: тепла форма (IgG, ~70–80%), холодова аглютинінова хвороба (IgM), змішана, пароксизмальна холодова гемоглобінурія. Діагноз — гемоліз + позитивна пряма проба Кумбса (DAT). Перша лінія при тепловій формі — стероїди з ритуксимабом; при холодовій — ритуксимаб-вмісна терапія (BR), стероїди й спленектомія не діють. Половина випадків вторинна (ХЛЛ, лімфоми, SLE).",
+    "en": "Haemolysis caused by autoantibodies to red cells: warm (IgG, ~70-80%), cold agglutinin disease (IgM), mixed, paroxysmal cold haemoglobinuria. Diagnosis: haemolysis plus a positive direct antiglobulin (Coombs) test. First line in warm disease is steroids with rituximab; in cold disease rituximab-based therapy (BR), steroids and splenectomy do not work. Half of cases are secondary (CLL, lymphoma, SLE)."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "D59.1",
+      "is_primary": true
+    },
+    {
+      "system_id": "icd-10",
+      "code": "D59.0",
+      "is_primary": false
+    }
+  ],
+  "references": [
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/cold-agglutinin-disease"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/paroxysmal-cold-hemoglobinuria"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "warm-first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Тепла АІГА: перша лінія",
+        "en": "Warm AIHA: first line"
+      },
+      "description": {
+        "uk": "Більшість експертів одразу поєднують глюкокортикоїди з ритуксимабом (два рандомізовані дослідження — частіші й триваліші ремісії без зростання токсичності), особливо при симптомній і тяжкій хворобі, первинній чи вторинній. Лише стероїди — якщо за 2 тижні немає відповіді, додають ритуксимаб і нерідко MMF. Лікувати причину (ХЛЛ, SLE, лімфома, ALPS, ліки); при ХЛЛ іноді достатньо лікувати саму АІГА.",
+        "en": "Most experts combine glucocorticoids with rituximab from the start (two randomized trials: more and longer remissions without more toxicity), especially in symptomatic or severe disease, primary or secondary. Steroids alone: if there is no response by 2 weeks, rituximab and often MMF are added. Treat the cause (CLL, SLE, lymphoma, ALPS, drugs); in CLL treating the AIHA alone is sometimes enough."
+      },
+      "regimens": [
+        {
+          "regimen_id": "rituximab-mono",
+          "notes": {
+            "uk": "375 мг/м² щотижня 4 тижні (UpToDate) разом зі стероїдами. РОЗБІЖНІСТЬ у режимі: у рандомізованому дослідженні 2017 — 1000 мг двічі з інтервалом 2 тижні (з преднізолоном 1 мг/кг), у невеликому дослідженні — 100 мг щотижня ×4. Оптимальної дози немає.",
+            "en": "375 mg/m2 weekly for 4 weeks (UpToDate) together with steroids. DISCREPANCY in schedule: the 2017 randomized trial used 1000 mg twice two weeks apart (with prednisolone 1 mg/kg), a small study used 100 mg weekly x4. No optimal dose is known."
+          }
+        }
+      ],
+      "children": [
+        {
+          "key": "warm-cards",
+          "kind": "reference",
+          "title": {
+            "uk": "Стероїди, ВВІГ, супровід",
+            "en": "Steroids, IVIG, supportive care"
+          },
+          "description": {
+            "uk": "Картки без розрахунку: дози, відміна й режим ВВІГ підбирає лікар; розбіжності з іншими режимами ВВІГ описано на картці.",
+            "en": "Reference cards without calculation: doses, taper and IVIG schedule are the physician's call; discrepancies with other IVIG schedules are on the card."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-aiha-glucocorticoids"
+            },
+            {
+              "regimen_id": "ref-aiha-ivig"
+            },
+            {
+              "regimen_id": "ref-aiha-supportive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "warm-second-line",
+      "kind": "line",
+      "title": {
+        "uk": "Тепла АІГА: рецидив і рефрактерна хвороба",
+        "en": "Warm AIHA: relapse and refractory disease"
+      },
+      "description": {
+        "uk": "Hb <10 г/дл попри стероїди з ритуксимабом або преднізон не вдається знизити до ≤10 мг. Повторне введення ритуксимабу, імуносупресанти (циклофосфамід при тяжкому гемолізі, MMF, азатіоприн, циклоспорин, сиролімус), новітні препарати; спленектомія — після 1–2 імуносупресантів, не при ALPS. Змінювати препарат, якщо немає відповіді за 3–4 тижні.",
+        "en": "Hb <10 g/dL despite steroids plus rituximab, or prednisone cannot be tapered to ≤10 mg. Repeat rituximab, immunosuppressants (cyclophosphamide for severe haemolysis, MMF, azathioprine, ciclosporin, sirolimus), newer agents; splenectomy after one or two immunosuppressants, not in ALPS. Switch if no response by 3-4 weeks."
+      },
+      "children": [
+        {
+          "key": "warm-sl-cards",
+          "kind": "reference",
+          "title": {
+            "uk": "Картки без розрахунку",
+            "en": "Reference cards"
+          },
+          "description": {
+            "uk": "Дози з UpToDate як практика експертів; ніпокалімаб, фостаматиніб і рилзабрутиніб в Україні, імовірно, недоступні — статус реєстру ще не звірено.",
+            "en": "Doses from UpToDate as expert practice; nipocalimab, fostamatinib and rilzabrutinib are probably unavailable in Ukraine - the registry status is not yet checked."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-aiha-immunosuppressants"
+            },
+            {
+              "regimen_id": "ref-aiha-novel"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cold-agglutinin",
+      "kind": "line",
+      "title": {
+        "uk": "Холодова аглютинінова хвороба",
+        "en": "Cold agglutinin disease"
+      },
+      "description": {
+        "uk": "Лікують лише симптомну анемію, втому чи судинні прояви. Уникати холоду. Клон-спрямована терапія: ритуксимаб-вмісна, переважно ритуксимаб + бендамустин (4 цикли по 28 днів) при хронічній первинній ХАХ; монотерапія ритуксимабом — для тих, хто не переносить комбінацію. R + флударабін — лише третя лінія. Сутімліб (анти-C1s) — міст до дії ритуксимабу або коли той не підходить. Стероїди й спленектомія зазвичай неефективні. Вторинний синдром — лікувати основне захворювання (лімфому, інфекцію).",
+        "en": "Only symptomatic anaemia, fatigue or circulatory symptoms are treated. Avoid cold. Clone-directed therapy: rituximab-based, mostly rituximab plus bendamustine (4 cycles of 28 days) in chronic primary CAD; rituximab alone for those who cannot take the combination. R plus fludarabine is third line only. Sutimlimab (anti-C1s) bridges to rituximab effect or is used when it is unsuitable. Steroids and splenectomy are usually ineffective. Secondary syndrome - treat the underlying disease (lymphoma, infection)."
+      },
+      "regimens": [
+        {
+          "regimen_id": "br",
+          "notes": {
+            "uk": "Для ХАХ UpToDate дає ритуксимаб 375 мг/м² день 1 + бендамустин 90 мг/м² дні 1–2, 4 цикли по 28 днів — дози збігаються з каталогом; кількість циклів змінити з 6 на 4. Супровідні препарати схеми (ондансетрон, алопуринол, ацикловір тощо) — з дизайну відділення, джерело ХАХ їх не вимагає.",
+            "en": "For CAD UpToDate gives rituximab 375 mg/m2 on day 1 plus bendamustine 90 mg/m2 on days 1-2, 4 cycles of 28 days - the doses match the catalog; change the number of cycles from 6 to 4. The supportive drugs of the regimen (ondansetron, allopurinol, aciclovir etc.) come from the department design, the CAD source does not require them."
+          }
+        },
+        {
+          "regimen_id": "rituximab-mono",
+          "notes": {
+            "uk": "Монотерапія 375 мг/м² щотижня 4 тижні (UpToDate) — для тих, хто не переносить комбінації. Низькі дози (100 мг щотижня ×4) при ХАХ частіше неефективні, ніж при тепловій АІГА.",
+            "en": "Monotherapy 375 mg/m2 weekly for 4 weeks (UpToDate) for those who cannot tolerate combinations. Low doses (100 mg weekly x4) fail more often in CAD than in warm AIHA."
+          }
+        }
+      ],
+      "children": [
+        {
+          "key": "cold-cards",
+          "kind": "reference",
+          "title": {
+            "uk": "Картки без розрахунку",
+            "en": "Reference cards"
+          },
+          "description": {
+            "uk": "R + флударабін, сутімліб, бортезоміб і ібрутиніб. Сутімліб в Україні, імовірно, недоступний — статус реєстру ще не звірено.",
+            "en": "R plus fludarabine, sutimlimab, bortezomib and ibrutinib. Sutimlimab is probably unavailable in Ukraine - the registry status is not yet checked."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-aiha-cad-r-fludarabine"
+            },
+            {
+              "regimen_id": "ref-aiha-cad-complement"
+            },
+            {
+              "regimen_id": "ref-aiha-cad-second-line"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mixed-and-pch",
+      "kind": "line",
+      "title": {
+        "uk": "Змішана АІГА і пароксизмальна холодова гемоглобінурія",
+        "en": "Mixed AIHA and paroxysmal cold haemoglobinuria"
+      },
+      "description": {
+        "uk": "Змішана (DAT: IgG + C3 і холодовий аглютинін із титром >1:40; <10% АІГА): початкове лікування як при тепловій АІГА, але потрібні інтенсивніша терапія й трансфузії, часто 2 і більше препаратів; стероїди з ритуксимабом — ремісія в усіх 5 описаних випадків, лише стероїди — 40%. Пароксизмальна холодова гемоглобінурія (антитіло Доната–Ландштейнера, DAT лише C3): гострий напад — тепло, спокій, знеболення, за потреби трансфузії та гідратація; стероїди (як при тепловій АІГА, напр. преднізон 1 мг/кг) — необов'язково, тривалість невідома. Шукати причину (інфекції, сифіліс, лімфопроліферація).",
+        "en": "Mixed (DAT: IgG plus C3 and a cold agglutinin titre >1:40; <10% of AIHA): initial treatment as for warm AIHA, but more intensive therapy and transfusions are needed, often two or more drugs; steroids plus rituximab gave remission in all 5 reported cases, steroids alone 40%. Paroxysmal cold haemoglobinuria (Donath-Landsteiner antibody, DAT C3 only): acute attack - warmth, rest, analgesia, transfusion and hydration if needed; steroids (as in warm AIHA, e.g. prednisone 1 mg/kg) are optional, duration unknown. Look for the cause (infection, syphilis, lymphoproliferation)."
+      },
+      "regimens": [
+        {
+          "regimen_id": "rituximab-mono",
+          "notes": {
+            "uk": "Змішана форма: стероїди + ритуксимаб (375 мг/м² щотижня ×4, як при тепловій АІГА); стероїди — на картці нижче.",
+            "en": "Mixed form: steroids plus rituximab (375 mg/m2 weekly x4, as in warm AIHA); steroids are on the card in warm first line."
+          }
+        }
+      ]
+    },
+    {
+      "key": "transfusion",
+      "kind": "line",
+      "title": {
+        "uk": "Трансфузії при АІГА",
+        "en": "Transfusion in AIHA"
+      },
+      "description": {
+        "uk": "Hb <6 г/дл або гемодинамічна нестабільність — невідкладно: еритроцити за екстреним випуском, не чекаючи повного тестування банку крові; зволікання може бути фатальним. Одразу сповістити банк крові (вагітності й трансфузії в анамнезі — ризик алоантитіл). Переливають типоспецифічну кров, навіть якщо банк не знайшов сумісної (так буває в більшості); при ризику алосенсибілізації — повільно, за 3–4 год, особливо перші 30–60 хв. Якщо терміновості немає — підбір за фенотипом (Rh, Kell, Kidd, S/s). Алоантитіла відомі — уникати відповідних антигенів. Трансфузійна залежність попри терапію — додати ВВІГ.",
+        "en": "Hb <6 g/dL or haemodynamic compromise is an emergency: emergency-release red cells without waiting for full blood-bank testing; delay may be fatal. Alert the blood bank at once (prior pregnancy or transfusion means alloantibody risk). Give type-specific blood even when the bank cannot find a compatible unit (the usual case); with a risk of alloimmunisation transfuse slowly over 3-4 h, especially the first 30-60 min. If not urgent, phenotype-match (Rh, Kell, Kidd, S/s). Known alloantibodies - avoid those antigens. Transfusion dependence despite therapy - add IVIG."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-aiha-ivig"
+        }
+      ]
+    }
+  ]
+}

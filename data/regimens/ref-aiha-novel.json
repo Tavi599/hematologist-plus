@@ -1,0 +1,71 @@
+{
+  "id": "ref-aiha-novel",
+  "short_name": "Новітні (АІГА)",
+  "name": {
+    "uk": "Препарати з іншим механізмом при рефрактерній тепловій АІГА",
+    "en": "Newer mechanism-based agents in refractory warm AIHA"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults (парафраз)",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+      "version": "оновлено 14.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Для рецидивної чи рефрактерної хвороби поза імуносупресантами: блокатор FcRn, інгібітори SYK і BTK. Ефективність скромна, дані нові; доступність в Україні не підтверджена.",
+      "en": "For relapsed or refractory disease beyond immunosuppressants: an FcRn blocker, SYK and BTK inhibitors. Modest efficacy, new data; availability in Ukraine not confirmed."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Ніпокалімаб",
+          "en": "Nipocalimab"
+        },
+        "drug_id": "nipocalimab"
+      },
+      {
+        "name": {
+          "uk": "Фостаматиніб",
+          "en": "Fostamatinib"
+        },
+        "drug_id": "fostamatinib"
+      },
+      {
+        "name": {
+          "uk": "Рилзабрутиніб",
+          "en": "Rilzabrutinib"
+        },
+        "drug_id": "rilzabrutinib"
+      },
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Ніпокалімаб (анти-FcRn): рандомізоване дослідження, 118 дорослих — 30 мг/кг кожні 4 тижні або 15 мг/кг кожні 2 тижні проти плацебо; відповідь Hb 22% проти 8%; схвалений FDA для теплої АІГА в серпні 2026.",
+        "en": "Nipocalimab (anti-FcRn): randomized trial in 118 adults - 30 mg/kg every 4 weeks or 15 mg/kg every 2 weeks vs placebo; Hb response 22% vs 8%; FDA-approved for warm AIHA in August 2026."
+      },
+      {
+        "uk": "Фостаматиніб (SYK): рандомізоване дослідження, 90 хворих — відповідь 36% проти 27% плацебо; рилзабрутиніб (BTK) 400 мг двічі на добу 24 тижні: відповідь Hb у 14 із 22 (64%), одногрупове дослідження.",
+        "en": "Fostamatinib (SYK): randomized trial in 90 patients - response 36% vs 27% placebo; rilzabrutinib (BTK) 400 mg twice daily for 24 weeks: Hb response in 14 of 22 (64%), single-arm study."
+      },
+      {
+        "uk": "Бортезоміб — лише серії випадків (окремо чи з дексаметазоном); доза в джерелі тут не фіксується.",
+        "en": "Bortezomib - case series only (alone or with dexamethasone); no dose is recorded here."
+      }
+    ],
+    "gap": {
+      "uk": "Схем із днями введення джерело не дає; препарати, крім бортезомібу, поза каталогом схем.",
+      "en": "The source gives no schedules with administration days; apart from bortezomib the drugs have no catalog regimens."
+    },
+    "availability": "unknown"
+  }
+}
