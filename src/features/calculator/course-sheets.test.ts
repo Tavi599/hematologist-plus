@@ -377,6 +377,13 @@ describe('buildCourseSheets', () => {
     expect(dates).toEqual(['21.09', '22.09', '23.09', '24.09', '25.09', '26.09', '27.09', '28.09'])
   })
 
+  it('prints the day of the week under every date', () => {
+    const ward = sheets().at(-1)!
+    const weekdays = ward.rows[5]!.slice(2, 2 + 8).map((cell) => String(text(cell)))
+    expect(weekdays).toEqual(['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Нд', 'Пн'])
+    expect(ward.merges).toContain('A5:B6')
+  })
+
   it('prints the control line of the department at the foot of a day sheet only', () => {
     const built = sheets()
     const day = built[0]!
