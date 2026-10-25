@@ -1,5 +1,5 @@
 {
-  "$comment": "АІГА дорослих. МКХ-10: D59.1 — інші автоімунні гемолітичні анемії (тепла, холодова аглютинінова хвороба), D59.0 — медикаментозна. Лікування — UpToDate (Warm AIHA in adults, оновлено 14.10.2026; Cold agglutinin disease; Paroxysmal cold hemoglobinuria), лише парафраз; NCCN не читали. Консенсус Jäger 2020 у цій роботі не читали — режим ВВІГ за ним не звірено (див. ref-aiha-ivig). Сусідня хвороба: evans-syndrome (окрема сесія).",
+  "$comment": "АІГА дорослих. МКХ-10: D59.1 — інші автоімунні гемолітичні анемії (тепла, холодова аглютинінова хвороба), D59.0 — медикаментозна. Лікування — UpToDate (Warm AIHA in adults, оновлено 14.10.2026; Cold agglutinin disease; Paroxysmal cold hemoglobinuria), лише парафраз; NCCN не читали. Консенсус Jäger 2020 у цій роботі не читали — режим ВВІГ за ним не звірено (див. ivig-aiha-4d). Сусідня хвороба: evans-syndrome (окрема сесія).",
   "id": "autoimmune-hemolytic-anemia",
   "name": {
     "uk": "Автоімунна гемолітична анемія (АІГА)",
@@ -73,7 +73,7 @@
               "regimen_id": "ref-aiha-glucocorticoids"
             },
             {
-              "regimen_id": "ref-aiha-ivig"
+              "regimen_id": "ivig-aiha-4d"
             },
             {
               "regimen_id": "ref-aiha-supportive"
@@ -203,7 +203,7 @@
       },
       "regimens": [
         {
-          "regimen_id": "ref-aiha-ivig"
+          "regimen_id": "ivig-aiha-4d"
         }
       ]
     }

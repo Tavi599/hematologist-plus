@@ -1,0 +1,56 @@
+{
+  "$comment": "UpToDate HLH treatment (updated 11.03.2025), paraphrase only; NHS England 2025 for the discrepancy.",
+  "id": "ivig-hlh-500",
+  "short_name": "ВВІГ",
+  "name": {
+    "uk": "ВВІГ при ГЛГ: 0,5 г/кг (підтримка при гіпогамаглобулінемії)",
+    "en": "IVIG in HLH: 0.5 g/kg (support in hypogammaglobulinaemia)"
+  },
+  "description": {
+    "uk": "Підтримка при інфекціях у хворого на ГЛГ з імунодефіцитом, гіпогамаглобулінемією чи гіпогамаглобулінемією від терапії ГЛГ: ВВІГ 500 мг/кг. Імуномодулюючий режим 2 г/кг — окремий вибір.",
+    "en": "Infection support in HLH with an immunodeficiency and hypogammaglobulinaemia or hypogammaglobulinaemia from HLH therapy: IVIG 500 mg/kg. The immunomodulatory 2 g/kg schedule is a separate choice."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Treatment and prognosis of hemophagocytic lymphohistiocytosis",
+      "url": "https://www.uptodate.com/contents/treatment-and-prognosis-of-hemophagocytic-lymphohistiocytosis",
+      "version": "тема оновлена 11.03.2025",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "NHS England: Commissioning criteria policy for the use of therapeutic immunoglobulin (Ig) in England (2025), Appendix A: Haematology — haemophagocytic syndrome",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2021/12/ccp-for-the-use-of-therapeutic-immunoglobulin-england-2025.pdf",
+      "version": "2025",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "course": {
+    "id": "ivig",
+    "title": {
+      "uk": "Імуноглобулін в/в",
+      "en": "Intravenous immunoglobulin"
+    },
+    "phase": {
+      "uk": "ГЛГ: 0,5 г/кг (підтримка)",
+      "en": "HLH: 0.5 g/kg (support)"
+    },
+    "order": 5,
+    "cycles": null
+  },
+  "items": [
+    {
+      "key": "ivig",
+      "drug_id": "immunoglobulin-human-iv",
+      "route": "iv_infusion",
+      "dose_value": 500,
+      "dose_unit": "mg_kg",
+      "days": [1],
+      "notes": {
+        "uk": "UpToDate (лікування ГЛГ, тема оновлена 11.03.2025, парафраз): 500 мг/кг при імунодефіциті з гіпогамаглобулінемією чи гіпогамаглобулінемії від терапії ГЛГ; розклад не наведено — повторення визначають за рівнем IgG. РОЗБІЖНІСТЬ: NHS England 2025 для ГЛГ — імуномодулююча мета, 2 г/кг у 2–5 розділених введень разом із дексаметазоном за протоколом ГЛГ (режим «0,4 г/кг × 5 днів»); при EBV-інфекції UpToDate вважає ритуксимаб ефективнішим за ВВІГ.",
+        "en": "UpToDate (treatment of HLH, topic updated 11.03.2025, paraphrased): 500 mg/kg for an immunodeficiency with hypogammaglobulinaemia or hypogammaglobulinaemia from HLH therapy; no schedule is given - repeats follow the IgG level. DISCREPANCY: NHS England 2025 for HLH has an immunomodulatory aim, 2 g/kg in 2-5 divided doses together with dexamethasone per the HLH protocol (the '0.4 g/kg x 5 days' schedule); in EBV infection UpToDate considers rituximab more effective than IVIG."
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "$comment": "UpToDate warm AIHA in adults (updated 14.10.2026), paraphrase only; NHS England 2025 Appendix A haematology for the discrepancy.",
+  "id": "ivig-aiha-4d",
+  "short_name": "ВВІГ",
+  "name": {
+    "uk": "ВВІГ при тепловій АІГА: 0,5 г/кг × 4 дні",
+    "en": "IVIG in warm AIHA: 0.5 g/kg x 4 days"
+  },
+  "description": {
+    "uk": "Допоміжна терапія при тепловій АІГА: ВВІГ 500 мг/кг щодня 4 дні, якщо хворий поліпшується, але лишається трансфузійно залежним через 2 тижні стероїдів із ритуксимабом.",
+    "en": "Adjunct in warm AIHA: IVIG 500 mg/kg daily for 4 days when the patient is improving but still transfusion dependent 2 weeks after steroids with rituximab."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults (парафраз)",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+      "version": "оновлено 14.10.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "NHS England, Commissioning criteria policy for the use of therapeutic immunoglobulin (Ig) in England (2025), Appendix A: Haematology",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2021/12/ccp-for-the-use-of-therapeutic-immunoglobulin-england-2025.pdf",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "course": {
+    "id": "ivig",
+    "title": {
+      "uk": "Імуноглобулін в/в",
+      "en": "Intravenous immunoglobulin"
+    },
+    "phase": {
+      "uk": "АІГА: 0,5 г/кг × 4 дні",
+      "en": "AIHA: 0.5 g/kg x 4 days"
+    },
+    "order": 4,
+    "cycles": null
+  },
+  "items": [
+    {
+      "key": "ivig",
+      "drug_id": "immunoglobulin-human-iv",
+      "route": "iv_infusion",
+      "dose_value": 500,
+      "dose_unit": "mg_kg",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "UpToDate (теплова АІГА у дорослих, оновлено 14.10.2026, парафраз): 500 мг/кг щодня 4 дні. Одноагентна ефективність мала. Дуже тяжкі випадки (описи випадків, малі серії, ефективність 30–40%): близько 1 г/кг щодня 5 днів — оберіть у списку доз і додайте 5-й день. РОЗБІЖНІСТЬ: NHS England 2025 для АІГА (включно з Евансом) дає 1–2 г/кг у 2–5 введень лише при тяжкій анемії, рефрактерній до стероїдів, чи за протипоказань до них — це режим «0,4 г/кг × 5 днів (2 г/кг)». Консенсус Jäger 2020 не читано.",
+        "en": "UpToDate (warm AIHA in adults, updated 14.10.2026, paraphrased): 500 mg/kg daily for 4 days. Single-agent efficacy is limited. Very severe cases (case reports, small series, efficacy 30-40%): about 1 g/kg daily for 5 days - pick it in the dose list and add day 5. DISCREPANCY: NHS England 2025 for AIHA (including Evans) gives 1-2 g/kg in 2-5 doses only for severe anaemia refractory to steroids or when they are contraindicated - that is the '0.4 g/kg x 5 days (2 g/kg)' schedule. The Jäger 2020 consensus was not read."
+      },
+      "dose_options": [
+        {
+          "dose_value": 1000,
+          "dose_unit": "mg_kg",
+          "notes": {
+            "uk": "Дуже тяжкі випадки (описи випадків): близько 1 г/кг щодня 5 днів; додайте 5-й день у таблиці.",
+            "en": "Very severe cases (case reports): about 1 g/kg daily for 5 days; add day 5 in the sheet."
+          },
+          "source": {
+            "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults (парафраз)",
+            "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+            "version": "оновлено 14.10.2026",
+            "checkedOn": "2026-10-25"
+          }
+        }
+      ]
+    }
+  ]
+}
