@@ -19,5 +19,20 @@
       "form": "syringe",
       "strength_amount": 6
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["subcutaneous"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Пегфілграстим-Віста» попередньо наповнений шприц 6 мг/0,6 мл — одноразовий, без консервантів; вводять підшкірно в стегно, живіт або плече лише прозорий безбарвний розчин. Перед ін'єкцією шприц залишають приблизно на 30 хв при кімнатній температурі, не підігрівають (гаряча вода, мікрохвильова піч), не тримають на сонці, не струшують — це спричиняє агрегацію. Не змішують з іншими препаратами, особливо з розчинами натрію хлориду.",
+        "en": "Per the Pegfilgrastim-Vista label the 6 mg/0.6 mL pre-filled syringe is single use, preservative-free; inject only a clear colourless solution subcutaneously into the thigh, abdomen or upper arm. Leave the syringe about 30 minutes at room temperature before injection, do not warm it (hot water, microwave), keep it out of the sun, do not shake: shaking causes aggregation. Do not mix with other drugs, above all sodium chloride solutions."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Пегфілграстим-Віста» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/568032/882482/",
+        "version": "реєстраційне посвідчення UA/19748/01/01 від 23.05.2023",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

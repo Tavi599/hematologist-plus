@@ -114,5 +114,20 @@
         }
       ]
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Адцетрис» вміст флакона розчиняють у 10,5 мл води для ін'єкцій (струмінь на стінку флакона) до 5 мг/мл, обережно перемішують, не струшують. Потрібну дозу вводять у пакет 0,9 % натрію хлориду до 0,4–1,2 мг/мл, рекомендовано 150 мл (допускаються також 5 % декстроза й розчин Рінгера лактатний), перевертають, не струшують. Вводять одразу через окрему систему; розведений розчин стабільний не більше 24 год при 2–8 °C.",
+        "en": "Per the Adcetris label reconstitute each vial with 10.5 mL water for injections (stream at the vial wall) to 5 mg/mL, swirl gently, do not shake. Add the dose to a 0.9% sodium chloride bag to 0.4–1.2 mg/mL, 150 mL recommended (5% dextrose or lactated Ringer's also allowed), invert, do not shake. Give at once through a separate line; the diluted solution is stable no more than 24 hours at 2–8 °C."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Адцетрис» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/264208/",
+        "version": "реєстраційне посвідчення UA/13286/01/01 від 14.11.2023",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

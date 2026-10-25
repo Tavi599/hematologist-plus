@@ -80,5 +80,20 @@
       "concentration_max_mg_ml": 10,
       "stock_concentration_mg_ml": 25
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Кітруда» концентрат розводять 0,9 % натрію хлоридом або 5 % глюкозою до 1–10 мг/мл, перемішують обережним обертанням, не струшують. Розведений розчин — не більше 6 год при кімнатній температурі (разом з інфузією) або 96 год при 2–8 °C, перед введенням доводять до кімнатної температури; не заморожувати. Вводять 30 хв окремою системою через стерильний фільтр 0,2–5 мкм з низьким зв'язуванням білків.",
+        "en": "Per the Keytruda label dilute with 0.9% sodium chloride or 5% glucose to 1–10 mg/mL, mix by gentle inversion, do not shake. The diluted solution keeps no more than 6 hours at room temperature (including the infusion) or 96 hours at 2–8 °C; bring it to room temperature before use, do not freeze. Infuse over 30 minutes through a separate line with a sterile 0.2–5 micron low protein binding filter."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Кітруда» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/328568/",
+        "version": "реєстраційне посвідчення UA/16209/01/01 від 02.07.2022",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

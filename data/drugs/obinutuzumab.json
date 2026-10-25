@@ -123,5 +123,20 @@
       ],
       "stock_concentration_mg_ml": 25
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Газіва» флакон не струшують; концентрат розводять лише 0,9 % натрію хлоридом у пакеті ПВХ або поліолефіну (40 мл — у 250 мл; у 1-му циклі ХЛЛ 4 мл — у 100 мл і 36 мл — у 250 мл, пакети підписують), глюкозу 5 % не використовують. Пакет обережно перевертають, уникаючи піни, не струшують і не заморожують. Розчин 0,4–20 мг/мл стабільний 24 год при 2–8 °C і ще 48 год (разом з інфузією) при ≤ 30 °C, але мікробіологічно — використати одразу.",
+        "en": "Per the Gazyva label do not shake the vial; dilute only with 0.9% sodium chloride in a PVC or polyolefin bag (40 mL into 250 mL; in CLL cycle 1, 4 mL into 100 mL and 36 mL into 250 mL, labelled), never 5% glucose. Invert the bag gently avoiding foam, do not shake or freeze. 0.4–20 mg/mL is stable 24 hours at 2–8 °C plus 48 hours (including the infusion) at ≤ 30 °C, but microbiologically use at once."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Газіва» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/265138/",
+        "version": "реєстраційне посвідчення UA/14232/01/01 від 01.05.2024",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

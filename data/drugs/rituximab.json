@@ -95,5 +95,20 @@
       "concentration_max_mg_ml": 4,
       "stock_concentration_mg_ml": 10
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Мабтера» (концентрат 10 мг/мл) дозу набирають стерильними голкою і шприцом і розводять 0,9 % натрію хлоридом або 5 % глюкозою до 1–4 мг/мл; перемішують обережним перевертанням, уникаючи піни. Розчин стабільний 24 год при 2–8 °C і 12 год при кімнатній температурі, але мікробіологічно — використати одразу (не більше 24 год при 2–8 °C, якщо готували в асептичних умовах).",
+        "en": "Per the MabThera label (10 mg/mL concentrate) draw the dose with a sterile needle and syringe and dilute with 0.9% sodium chloride or 5% glucose to 1–4 mg/mL; mix by gentle inversion, avoiding foam. The solution is stable 24 hours at 2–8 °C and 12 hours at room temperature, but microbiologically use at once (no more than 24 hours at 2–8 °C if prepared aseptically)."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Мабтера, концентрат для приготування інфузійного розчину» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/265136/58619/",
+        "version": "реєстраційне посвідчення UA/14231/02/01 від 14.05.2021",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

@@ -51,5 +51,20 @@
         "en": "Dilution to 0.075–0.234 mg/mL per the label. The label has doses below 3.9 mg prepared in a syringe, so a low-concentration warning is expected for them."
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Майлотарг» флакон 5 хв витримують при кімнатній температурі, розчиняють 5 мл води для ін'єкцій до 1 мг/мл, обережно крутять, не струшують; відновлений розчин — до 16 год при 2–8 °C або 3 год до 30 °C. Розводять 0,9 % натрію хлоридом до 0,075–0,234 мг/мл: дозу < 3,9 мг — у шприці, ≥ 3,9 мг — у шприці або пакеті; розведений — до 18 год при 2–8 °C і до 6 год до 30 °C (разом з 2-годинною інфузією). Захищати від світла (пакет під час інфузії накривають), вводити через PES-фільтр 0,2 мкм, не змішувати з іншими препаратами.",
+        "en": "Per the Mylotarg label let vials stand 5 minutes at room temperature, reconstitute with 5 mL water for injections to 1 mg/mL, swirl gently, do not shake; reconstituted solution keeps up to 16 hours at 2–8 °C or 3 hours up to 30 °C. Dilute with 0.9% sodium chloride to 0.075–0.234 mg/mL: doses < 3.9 mg in a syringe, ≥ 3.9 mg in a syringe or bag; diluted solution keeps up to 18 hours at 2–8 °C and up to 6 hours up to 30 °C (including the 2-hour infusion). Protect from light (cover the bag during the infusion), use a 0.2 micron PES in-line filter, do not mix with other drugs."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Майлотарг» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/525116/",
+        "version": "реєстраційне посвідчення UA/18298/01/01 від 27.10.2025",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

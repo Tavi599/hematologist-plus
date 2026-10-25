@@ -40,5 +40,33 @@
       "volume_ml": 0.5,
       "label": { "uk": "480 мкг (48 млн МО) / 0,5 мл", "en": "480 mcg (48 million IU) / 0.5 mL" }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["subcutaneous"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Зарсіо» попередньо заповнений шприц — одноразовий, без консервантів; вводять лише прозорий розчин без часточок. За потреби розводять тільки 5 % глюкозою, не натрію хлоридом, і не до концентрації < 0,2 млн ОД/мл (2 мкг/мл); при 1,5 млн ОД/мл (15 мкг/мл) додають альбумін людини до 2 мг/мл (на 20 мл і 30 млн ОД — 0,2 мл 20 % альбуміну). Розведений розчин — 24 год при 2–8 °C, мікробіологічно — одразу.",
+        "en": "Per the Zarzio label the pre-filled syringe is single use, preservative-free; inject only a clear solution without particles. If needed, dilute only with 5% glucose, never sodium chloride, and not below 0.2 MU/mL (2 mcg/mL); at 1.5 MU/mL (15 mcg/mL) add human albumin to 2 mg/mL (for 20 mL and 30 MU: 0.2 mL of 20% albumin). The diluted solution keeps 24 hours at 2–8 °C, microbiologically use at once."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Зарсіо» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/263428/",
+        "version": "реєстраційне посвідчення UA/12447/01/02 від 09.08.2017",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["subcutaneous"],
+      "notes": {
+        "uk": "Розбіжність щодо альбуміну: українська інструкція «Зарсіо» пише «при концентрації 1,5 млн ОД/мл» і приклад для дози 30 млн ОД; згідно з SmPC Zarzio (EMA) — альбумін до 2 мг/мл додають, якщо розведено до концентрації нижче 1,5 млн ОД/мл (15 мкг/мл), приклад — дози менше 30 млн ОД у 20 мл. Розведення нижче 0,2 млн ОД/мл не рекомендоване за обома.",
+        "en": "Discrepancy on albumin: the Ukrainian Zarzio label says «at a concentration of 1.5 MU/mL» with an example for a 30 MU dose; per the Zarzio SmPC (EMA) albumin to 2 mg/mL is added when diluted below 1.5 MU/mL (15 mcg/mL), example: doses below 30 MU in 20 mL. Dilution below 0.2 MU/mL is not recommended by either."
+      },
+      "source": {
+        "name": "EMA: Zarzio, Summary of Product Characteristics, section 6.6",
+        "url": "https://www.ema.europa.eu/en/documents/product-information/zarzio-epar-product-information_en.pdf",
+        "version": "EPAR product information, first authorisation 06.02.2009, latest renewal 13.11.2013",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }
