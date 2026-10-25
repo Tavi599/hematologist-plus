@@ -94,5 +94,33 @@
         "checkedOn": "2026-10-11"
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Позинег» флакон 1 г розчиняють у 10 мл (≈ 11,4 мл, близько 90 мг/мл), флакон 2 г — у 10 мл (≈ 12,8 мл, близько 160 мг/мл) води для ін’єкцій чи іншого сумісного розчинника й додають до інфузійного розчину: 0,9 % натрію хлорид (з 5 % глюкозою чи без), 5 або 10 % глюкоза, 1/6 М натрію лактат, Рінгер-лактат (з 5 % глюкозою чи без); інфузія 30 хв. Розчин придатний 24 год при ≤ 30 °C або 7 діб при 2–8 °C; в одній ємності з іншими препаратами не змішувати.",
+        "en": "Per the Pozineg label reconstitute a 1 g vial with 10 mL (≈ 11.4 mL, about 90 mg/mL) and a 2 g vial with 10 mL (≈ 12.8 mL, about 160 mg/mL) of water for injections or another compatible diluent, then add to an infusion fluid: 0.9% sodium chloride (with or without 5% glucose), 5 or 10% glucose, 1/6 M sodium lactate, lactated Ringer’s (with or without 5% glucose); infuse over 30 minutes. The solution keeps 24 hours at ≤ 30 °C or 7 days at 2–8 °C; do not mix with other drugs in one container."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Позинег (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/F471AD242DD5394042258C76004D0BFA/$file/UA128200102_31F1.mht",
+        "version": "РП UA/12820/01/02, наказ МОЗ №632 від 11.04.2025",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["intramuscular"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Позинег» в/м вводять глибоко лише дози 0,5 і 1 г: флакон 1 г розчиняють у 3 мл (≈ 4,4 мл, близько 230 мг/мл) води для ін’єкцій, 0,9 % натрію хлориду, 5 % глюкози, бактеріостатичної води з парабеном чи бензиловим спиртом або 0,5–1 % лідокаїну; перед лідокаїном — шкірна проба на переносимість.",
+        "en": "Per the Pozineg label only 0.5 and 1 g doses are given by deep IM injection: reconstitute a 1 g vial with 3 mL (≈ 4.4 mL, about 230 mg/mL) of water for injections, 0.9% sodium chloride, 5% glucose, bacteriostatic water with parabens or benzyl alcohol, or 0.5–1% lidocaine; skin-test lidocaine tolerance first."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Позинег (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/F471AD242DD5394042258C76004D0BFA/$file/UA128200102_31F1.mht",
+        "version": "РП UA/12820/01/02, наказ МОЗ №632 від 11.04.2025",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

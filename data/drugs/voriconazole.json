@@ -129,5 +129,20 @@
         "checkedOn": "2026-10-13"
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Вориконазол Зентіва» відновлений і розведений розчин хімічно стабільний 72 год при кімнатній температурі та 2–8 °C, але з мікробіологічного погляду його вводять одразу або зберігають ≤ 24 год при 2–8 °C. Крім 0,9 % натрію хлориду розводять натрію лактатом складним, 5 % глюкозою (також з Рінгер-лактатом, 0,45 чи 0,9 % NaCl, 20 мЕкв калію хлориду) або 0,45 % NaCl; 4,2 % натрію гідрокарбонатом — ні. Не болюсно; не одночасно з іншими препаратами в одній системі, парентеральне харчування — через окремий порт.",
+        "en": "Per the Voriconazole Zentiva label the reconstituted and diluted solution is chemically stable 72 hours at room temperature and at 2–8 °C, but microbiologically it is given at once or kept ≤ 24 hours at 2–8 °C. Besides 0.9% sodium chloride it may be diluted with compound sodium lactate, 5% glucose (also with lactated Ringer’s, 0.45 or 0.9% NaCl, 20 mEq potassium chloride) or 0.45% NaCl; not with 4.2% sodium bicarbonate. Not as a bolus; not at the same time as other drugs in one line, parenteral nutrition through a separate port."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Вориконазол Зентіва (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/BC37F49FFD91385942258DE600513A12/$file/UA155240101_D9B2.mht",
+        "version": "РП UA/15524/01/01, наказ МОЗ №523 від 21.04.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

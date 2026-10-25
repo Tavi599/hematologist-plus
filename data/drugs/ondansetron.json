@@ -26,5 +26,33 @@
       "strength_amount": 8,
       "volume_ml": 4
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_bolus", "intramuscular", "iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Осетрон» дозу до 8 мг не розводять: в/в повільно (не менше 30 с) або в/м; понад 8 мг (до 16 мг) — лише інфузією в 50–100 мл 0,9 % натрію хлориду чи іншого сумісного розчину, не менше 15 хв. Розчин без консервантів — використати одразу після відкриття ампули; у 0,9 % NaCl, 5 % глюкозі, 10 % манітолі чи розчині Рінгера стабільний 7 діб при ≤ 25 °C. В одному шприці чи флаконі з іншими препаратами не змішувати; дексаметазон 20 мг можна ввести повільно через Y-подібний катетер на тлі інфузії ондансетрону (інструкція «Дексаметазону фосфат» (Фармак) натомість пише, що з ондансетроном утворюється осад).",
+        "en": "Per the Osetron label doses up to 8 mg are not diluted: slow IV (at least 30 seconds) or IM; above 8 mg (up to 16 mg) only as an infusion in 50–100 mL 0.9% sodium chloride or another compatible fluid over at least 15 minutes. The solution has no preservative — use at once after opening; in 0.9% NaCl, 5% glucose, 10% mannitol or Ringer’s it is stable 7 days at ≤ 25 °C. Do not mix with other drugs in one syringe or bag; dexamethasone 20 mg may be given slowly through a Y-site during the ondansetron infusion (the Dexamethasone phosphate label (Farmak), by contrast, says it precipitates with ondansetron)."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Осетрон (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/A8FA3C63C8EA4DFBC2258D31005846A2/$file/UA48860101_F48C.mht",
+        "version": "РП UA/4886/01/01, наказ МОЗ №1576 від 15.10.2025",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Ондансетрон» (Борщагівський ХФЗ) розчин для інфузії (0,9 % натрію хлорид, 5 % глюкоза, розчин Рінгера) готують безпосередньо перед введенням, за потреби зберігають не більше 24 год при 2–8 °C; під час інфузії захисту від світла не потребує.",
+        "en": "Per the Ondansetron label (Borshchahivskyi CPP) the infusion (0.9% sodium chloride, 5% glucose, Ringer’s) is made right before use and, if needed, kept no more than 24 hours at 2–8 °C; it needs no light protection during infusion."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Ондансетрон (Борщагівський ХФЗ) (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/FEDDD4B249D8A89542258CF80050D63E/$file/UA38030201_AA58.mht",
+        "version": "РП UA/3803/02/01, наказ МОЗ №1347 від 28.08.2025",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

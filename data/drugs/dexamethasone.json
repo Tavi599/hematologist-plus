@@ -79,5 +79,33 @@
       ],
       "stock_concentration_mg_ml": 4
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_bolus", "iv_infusion", "intramuscular"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Дексаметазону фосфат» (Фармак) розчин 4 мг/мл вводять в/в струминно чи інфузією або в/м; для інфузії розводять лише 0,9 % натрію хлоридом або 5 % глюкозою, суміш використати протягом 24 год. З іншими препаратами не змішувати: з дифенгідраміном, ондансетроном, ванкоміцином, доксорубіцином, даунорубіцином, ідарубіцином, хлорпромазином та ін. утворюється осад. Ампули тримати в пачці (захист від світла).",
+        "en": "Per the Dexamethasone phosphate label (Farmak) the 4 mg/mL solution is given IV as a push or infusion, or IM; for infusion dilute only with 0.9% sodium chloride or 5% glucose and use the mixture within 24 hours. Do not mix with other drugs: diphenhydramine, ondansetron, vancomycin, doxorubicin, daunorubicin, idarubicin, chlorpromazine and others form a precipitate. Keep ampoules in the carton (light protection)."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Дексаметазону фосфат (Фармак) (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/BA27E26D6E33B862C2258DBF0032B7BD/$file/UA77150101_707E.mht",
+        "version": "РП UA/7715/01/01, наказ МОЗ №322 від 16.03.2026",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_bolus", "iv_infusion", "intramuscular"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Дексаметазон-Дарниця» вводять в/в (ін’єкцією чи інфузією) або в/м; розчинник для інфузії — 0,9 % натрію хлорид або 5 % глюкоза, суміш використати протягом 24 год; зберігати ≤ 15 °C, не заморожувати. В/м введення протипоказане при тяжких порушеннях згортання крові та при ідіопатичній тромбоцитопенічній пурпурі.",
+        "en": "Per the Dexamethasone-Darnitsa label give IV (injection or infusion) or IM; infusion diluent is 0.9% sodium chloride or 5% glucose, use the mixture within 24 hours; store at ≤ 15 °C, do not freeze. IM injection is contraindicated in severe coagulation disorders and in immune thrombocytopenic purpura."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Дексаметазон-Дарниця (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/B2254B3B8C7B468E42258DB1006B1350/$file/UA09920201_F1DC.mht",
+        "version": "РП UA/0992/02/01, наказ МОЗ №217 від 19.02.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

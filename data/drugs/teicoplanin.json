@@ -79,5 +79,33 @@
         "checkedOn": "2026-10-13"
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_bolus", "iv_infusion", "intramuscular"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Тейкопланін-Фармекс» увесь розчинник із комплекту (вода для ін’єкцій, вилучають 3,14 мл) повільно вводять у флакон і обертають між долонями до розчинення, не струшуючи; піні дають осісти близько 15 хв. Виходить 200 або 400 мг у 3,0 мл: його вводять як є — в/в за 3–5 хв або в/м — чи для 30-хвилинної інфузії додають до 0,9 % натрію хлориду, розчину Рінгера, Рінгер-лактату, 5 або 10 % глюкози, 0,18 % NaCl з 4 % глюкозою чи 0,45 % NaCl з 5 % глюкозою.",
+        "en": "Per the Teicoplanin-Pharmex label inject all the supplied diluent (water for injections, 3.14 mL withdrawn) slowly into the vial and roll it between the palms until dissolved, without shaking; let any foam settle for about 15 minutes. This gives 200 or 400 mg in 3.0 mL, given as is — IV over 3–5 minutes or IM — or added for a 30-minute infusion to 0.9% sodium chloride, Ringer’s, lactated Ringer’s, 5 or 10% glucose, 0.18% NaCl with 4% glucose, or 0.45% NaCl with 5% glucose."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Тейкопланін-Фармекс (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/C8DF93813ADD6BE842258B3F004239FC/$file/UA137650101_D787.mht",
+        "version": "РП UA/13765/01/01, наказ МОЗ №979 від 06.06.2024",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_bolus", "iv_infusion", "intramuscular"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Глітейк» відновлений розчин зберігається не більше 48 год при кімнатній температурі та 7 діб при 4 °C; розведений 0,9 % натрію хлоридом чи Рінгер-лактатом — 24 год при ≤ 25 °C або 7 діб при 4 °C, 0,18 % NaCl з 4 % глюкозою — 24 год при ≤ 25 °C. З аміноглікозидами несумісний при змішуванні — вводити окремо.",
+        "en": "Per the Gliteik label the reconstituted solution keeps no more than 48 hours at room temperature and 7 days at 4 °C; diluted in 0.9% sodium chloride or lactated Ringer’s, 24 hours at ≤ 25 °C or 7 days at 4 °C; in 0.18% NaCl with 4% glucose, 24 hours at ≤ 25 °C. Incompatible with aminoglycosides when mixed — give separately."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Глітейк (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/1317B5E3E53D3D4C42258C7B003B6666/$file/UA121770101_FA24.mht",
+        "version": "РП UA/12177/01/01, наказ МОЗ №699 від 22.04.2025",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

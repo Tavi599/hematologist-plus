@@ -68,5 +68,20 @@
       ],
       "stock_concentration_mg_ml": 0.8
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Золацид» концентрат 4 мг/5 мл розводять у 100 мл 0,9 % натрію хлориду або 5 % глюкози; з розчинами, що містять кальцій чи інші двовалентні катіони (лактатний розчин Рінгера), не змішувати, вводити окремою системою. Після асептичного розведення використати негайно; розведений розчин стабільний 24 год при 2–8 °C.",
+        "en": "Per the Zolacid label dilute the 4 mg/5 mL concentrate in 100 mL 0.9% sodium chloride or 5% glucose; do not mix with solutions containing calcium or other divalent cations (lactated Ringer’s) and give through a separate line. Use at once after aseptic dilution; the diluted solution is stable 24 hours at 2–8 °C."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Золацид (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/02C361BE053802DD42258CAB0044D48A/$file/UA134080101_1EE3.mht",
+        "version": "РП UA/13408/01/01, наказ МОЗ №918 від 03.06.2025",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

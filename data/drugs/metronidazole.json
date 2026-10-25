@@ -96,5 +96,33 @@
         "checkedOn": "2026-10-11"
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Метронідазол-Дарниця» розчин 5 мг/мл готовий до введення, за потреби його можна розвести 0,9 % натрію хлоридом або 5 % глюкозою. Зберігати ≤ 25 °C, не заморожувати.",
+        "en": "Per the Metronidazole-Darnitsa label the 5 mg/mL solution is ready to use and may be diluted with 0.9% sodium chloride or 5% glucose if needed. Store at ≤ 25 °C, do not freeze."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Метронідазол-Дарниця (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/80C721F2E8735171C2258D220029DFB4/$file/UA40790201_86B9.mht",
+        "version": "РП UA/4079/02/01, наказ МОЗ №1516 від 03.10.2025",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Метрогіл» контейнер не виймають із зовнішньої обгортки (захищає від вологи) до застосування і перевіряють на витік; невикористаний залишок не зберігають. Змішувати можна лише з 0,9 % натрію хлоридом або 5 % глюкозою.",
+        "en": "Per the Metrogyl label keep the container in its overwrap (moisture protection) until use and check it for leaks; discard any unused remainder. It may be mixed only with 0.9% sodium chloride or 5% glucose."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Метрогіл (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/7096785F6B40B2C742258DE6004FBF51/$file/UA28710501_1C22.mht",
+        "version": "РП UA/2871/05/01, наказ МОЗ №523 від 21.04.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

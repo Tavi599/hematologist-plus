@@ -47,5 +47,20 @@
       ],
       "stock_concentration_mg_ml": 10
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion", "iv_bolus", "intramuscular"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Димедрол-Дарниця» в/в вводять лише краплинно: 20–50 мг (2–5 мл) у 100 мл 0,9 % натрію хлориду; струминного в/в введення інструкція не передбачає. В/м — без розведення, 1–5 мл; підшкірно не вводити (подразнює). З іншими препаратами в одній ємності не змішувати, лише з рекомендованим розчинником.",
+        "en": "Per the Dimedrol-Darnitsa label IV use is by drip only: 20–50 mg (2–5 mL) in 100 mL 0.9% sodium chloride; the label does not provide for an IV push. IM undiluted, 1–5 mL; never subcutaneously (irritant). Do not mix with other drugs in one container, only with the recommended diluent."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Димедрол-Дарниця (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/5D79267BBA4AE407422589BE004A8851/$file/UA48510101_E096.mht",
+        "version": "РП UA/4851/01/01, наказ МОЗ №937 від 23.05.2023",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

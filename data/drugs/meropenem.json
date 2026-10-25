@@ -97,5 +97,20 @@
         "checkedOn": "2026-10-11"
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Меронем» для інфузії порошок розчиняють безпосередньо в 0,9 % натрію хлориді або 5 % глюкозі до 1–20 мг/мл. Розчин у натрію хлориді стабільний 3 год при 25 °C або 24 год при 2–8 °C, у глюкозі — вводять одразу; приготовані розчини не заморожують, з іншими препаратами не змішують.",
+        "en": "Per the Meronem label, for infusion dissolve the powder directly in 0.9% sodium chloride or 5% glucose to 1–20 mg/mL. In sodium chloride it is stable 3 hours at 25 °C or 24 hours at 2–8 °C; in glucose give at once; do not freeze prepared solutions or mix them with other drugs."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Меронем (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/5FC31BEF526168C442258CC2002B9CC9/$file/UA01860101_38A1.mht",
+        "version": "РП UA/0186/01/01, наказ МОЗ №1028 від 27.06.2025",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

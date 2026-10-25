@@ -187,5 +187,33 @@
         "version": "ред. 03/2024"
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Амікацин-Віста» розчин 250 мг/мл розводять 0,9 % натрію хлоридом, 5 % глюкозою або лактатним розчином Рінгера з 5 % глюкозою до не більше 5 мг/мл, в об’ємі на 60–90 хв інфузії. Розчин готують безпосередньо перед введенням і вводять одразу; з пеніцилінами, цефалоспоринами, гепарином, амфотерицином B, вітамінами групи B і C, калію хлоридом та іншими аміноглікозидами не змішують — лише окремо, послідовно.",
+        "en": "Per the Amikacin-Vista label dilute the 250 mg/mL solution with 0.9% sodium chloride, 5% glucose or lactated Ringer’s with 5% glucose to no more than 5 mg/mL, in a volume for a 60–90 minute infusion. Prepare right before use and give at once; do not mix with penicillins, cephalosporins, heparin, amphotericin B, B and C vitamins, potassium chloride or other aminoglycosides — give separately, one after another."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Амікацин-Віста (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/FE3726DFEE657D4842258A7B004000DB/$file/UA194690101_034E.mht",
+        "version": "РП UA/19469/01/01, наказ МОЗ №2022 від 28.11.2023",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Амікацину сульфат» (Лекхім-Харків) інфузійний розчин готують на ізотонічному розчині натрію хлориду, 5 % глюкозі або розчині Рінгера, концентрація — не більше 5 мг/мл, інфузія 30–90 хв.",
+        "en": "Per the Amikacin sulfate label (Lekhim-Kharkiv) the infusion is made with isotonic sodium chloride, 5% glucose or Ringer’s solution, at no more than 5 mg/mL, over 30–90 minutes."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Амікацину сульфат (Лекхім-Харків) (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/0BE01FD7EDD30B9442258E2C0035518A/$file/UA123560102_5977.mht",
+        "version": "РП UA/12356/01/02, наказ МОЗ №885 від 29.06.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

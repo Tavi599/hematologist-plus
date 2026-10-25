@@ -142,5 +142,20 @@
         "checkedOn": "2026-10-13"
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Лінезолід КРКА» розчин готовий до введення; до використання його тримають в обох упаковках для захисту від світла при ≤ 30 °C, після відкриття — 24 год при кімнатній температурі (з мікробіологічного погляду — одразу). Спільну систему промивають 0,9 % натрію хлоридом, 5 % глюкозою чи Рінгер-лактатом; через Y-з’єднувач несумісний з амфотерицином B, хлорпромазином, діазепамом, пентамідином, еритроміцину лактобіонатом, фенітоїном, ко-тримоксазолом, хімічно — з цефтріаксоном.",
+        "en": "Per the Linezolid KRKA label the solution is ready to use; keep it in both packs to protect from light at ≤ 30 °C, and once opened 24 hours at room temperature (microbiologically, use at once). Flush a shared line with 0.9% sodium chloride, 5% glucose or lactated Ringer’s; at a Y-site it is incompatible with amphotericin B, chlorpromazine, diazepam, pentamidine, erythromycin lactobionate, phenytoin and co-trimoxazole, and chemically with ceftriaxone."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Лінезолід КРКА (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/C927D289B8107AC342258DF6004ED620/$file/UA161300201_FA27.mht",
+        "version": "РП UA/16130/02/01, наказ МОЗ №576 від 01.05.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

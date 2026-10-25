@@ -19,5 +19,20 @@
       "form": "tablet",
       "strength_amount": 40
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_bolus"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Фуросемід-Дарниця» в/в вводять повільно, не швидше 4 мг/хв (при креатиніні сироватки > 5 мг/дл — не швидше 2,5 мг/хв). Розчин лужний (pH 8,8–9,8) без буферної ємності й випадає в осад при pH < 7: з іншими препаратами не змішувати; розводити можна 0,9 % натрію хлоридом, розведений розчин використати якомога швидше.",
+        "en": "Per the Furosemide-Darnitsa label give IV slowly, no faster than 4 mg/min (2.5 mg/min if serum creatinine > 5 mg/dL). The solution is alkaline (pH 8.8–9.8) without buffer capacity and precipitates below pH 7: do not mix with other drugs; it may be diluted with 0.9% sodium chloride, and the diluted solution is used as soon as possible."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Фуросемід-Дарниця (Державний реєстр лікарських засобів України)",
+        "url": "http://www.drlz.com.ua/ibp/lz_www.nsf/id/7FEF8B540EB3216942258E5E00455278/$file/UA23530201_D445.mht",
+        "version": "РП UA/2353/02/01, наказ МОЗ №1122 від 13.08.2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }
