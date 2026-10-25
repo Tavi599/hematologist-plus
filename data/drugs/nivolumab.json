@@ -66,5 +66,20 @@
       "concentration_max_mg_ml": 10,
       "stock_concentration_mg_ml": 10
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Українська інструкція «Опдіво» не знайдена; згідно з SmPC Opdivo концентрат 10 мг/мл вводять нерозведеним або розводять 0,9 % натрію хлоридом чи 5 % глюкозою до 1–10 мг/мл, загальний об'єм не більше 160 мл; флакон не струшують, інфузію перемішують обертанням. Вводять 30 або 60 хв окремою системою через вбудований фільтр 0,2–1,2 мкм з низьким зв'язуванням білків, потім промивають тим самим розчинником. Стабільність: з натрію хлоридом — 30 діб при 2–8 °C у захищеному від світла місці (з них до 24 год при ≤ 25 °C), з глюкозою — 7 діб (з них до 8 год при ≤ 25 °C); мікробіологічно — використати одразу.",
+        "en": "No Ukrainian Opdivo label was found; per the Opdivo SmPC the 10 mg/mL concentrate is given undiluted or diluted with 0.9% sodium chloride or 5% glucose to 1–10 mg/mL, total volume no more than 160 mL; do not shake the vial, mix the infusion by rotation. Infuse over 30 or 60 minutes through a separate line with a 0.2–1.2 micron low protein binding in-line filter, then flush with the same diluent. Stability: with sodium chloride 30 days at 2–8 °C protected from light (of which up to 24 hours at ≤ 25 °C), with glucose 7 days (of which up to 8 hours at ≤ 25 °C); microbiologically use at once."
+      },
+      "source": {
+        "name": "EMC SmPC: OPDIVO 10 mg/mL concentrate for solution for infusion, sections 4.2, 6.3, 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/6888/smpc",
+        "version": "Date of revision of the text 18/08/2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

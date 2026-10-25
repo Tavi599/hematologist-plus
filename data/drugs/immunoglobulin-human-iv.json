@@ -58,5 +58,33 @@
         }
       ]
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Біовен» (10 %) вводять внутрішньовенно лише в умовах стаціонару; перед введенням флакон витримують не менше 2 год при (20 ± 2) °C. Каламутний розчин або з осадом не використовують; не змішують з іншими препаратами та іншими імуноглобулінами для в/в введення.",
+        "en": "Per the Bioven (10%) label give it intravenously in hospital only; keep the bottle at (20 ± 2) °C for at least 2 hours before use. Do not use a cloudy solution or one with sediment; do not mix with other drugs or other intravenous immunoglobulins."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Біовен» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/265419/406473/",
+        "version": "реєстраційне посвідчення UA/14526/01/02 від 25.11.2025",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Октагам 10%» перед введенням препарат має бути кімнатної температури або температури тіла; непрозорий, мутний розчин чи з осадом не використовують. Не змішують з іншими препаратами та іншими імуноглобулінами для в/в введення.",
+        "en": "Per the Octagam 10% label the product must be at room or body temperature before use; do not use an opaque or cloudy solution or one with sediment. Do not mix with other drugs or other intravenous immunoglobulins."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Октагам 10%» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/328640/189171/",
+        "version": "реєстраційне посвідчення UA/15583/01/01 від 18.08.2021",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

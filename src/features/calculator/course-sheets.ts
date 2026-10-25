@@ -150,6 +150,9 @@ const BLANK = {
   control: 'Контроль ваги, діурезу, АТ, ЧСС, температури тіла!',
 } as const
 
+/** Days of the week from Sunday, the order `Date.getUTCDay` counts them in. */
+const WEEKDAYS = ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'] as const
+
 const MARK = '+'
 /** A day inside the course on which the drug is not given, as the department writes it. */
 const OFF_MARK = '-'
@@ -513,8 +516,19 @@ function wardSheet(
       format: RULER_FORMAT,
     })),
   ])
-  merges.push('A5:B5')
   heights.push(19.5)
+
+  // Under each date its day of the week: the ward plans a sheet around the weekend.
+  rows.push([
+    { value: null, format: ORDER_HEAD_FORMAT },
+    { value: null, format: ORDER_HEAD_FORMAT },
+    ...Array.from({ length: WARD_DAY_COLUMNS }, (_unused, index) => ({
+      value: days[index] ? weekday(days[index]!.date) : '',
+      format: RULER_FORMAT,
+    })),
+  ])
+  merges.push('A5:B6')
+  heights.push(15)
 
   const resultById = new Map((input.course?.drugs ?? []).map((drug) => [drug.id, drug]))
   const allDays = new Map(sheetDays(input).map((day) => [day.day, day]))
@@ -812,6 +826,12 @@ function given(value: number | null, language: Language, decimals = 0): string {
 /** A date column of the inpatient sheet: day and month, the way the ward writes it by hand. */
 function dayAndMonth(iso: string, language: Language): string {
   return formatDate(iso, language).slice(0, 5)
+}
+
+/** Day of the week of a date column, as the ward writes it: Пн, Вт, … Нд. */
+function weekday(iso: string): string {
+  const [year, month, day] = iso.split('-').map(Number)
+  return WEEKDAYS[new Date(Date.UTC(year!, month! - 1, day!)).getUTCDay()]!
 }
 
 function dayTabName(input: CourseSheetsInput, day: SheetDay): string {

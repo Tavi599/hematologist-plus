@@ -61,5 +61,20 @@
         "en": "For a dose of 0.5 mg or more: 0.01–0.1 mg/mL in a total of 50 mL per the label. For a smaller dose the label allows 0.025–0.1 mg/mL in 2–50 mL."
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Беспонза» флакон розчиняють 4 мл води для ін'єкцій до 0,25 мг/мл (3,6 мл = 0,9 мг), обережно обертають, не струшують; відновлений — до 4 год при 2–8 °C. Дозу додають до 0,9 % натрію хлориду до загального об'єму 50 мл, перевертають, не струшують; розведений — до 4 год при 20–25 °C або 3 год при 2–8 °C, від відновлення до кінця введення не більше 8 год. Захищати від світла, не заморожувати; фільтр не обов'язковий (якщо є — PES, PVDF або гідрофільний полісульфон, не нейлон і не MCE); вводять 1 год зі швидкістю 50 мл/год.",
+        "en": "Per the Besponsa label reconstitute each vial with 4 mL water for injections to 0.25 mg/mL (3.6 mL = 0.9 mg), swirl gently, do not shake; reconstituted solution keeps up to 4 hours at 2–8 °C. Add the dose to 0.9% sodium chloride to a total of 50 mL, invert, do not shake; diluted solution keeps up to 4 hours at 20–25 °C or 3 hours at 2–8 °C, and no more than 8 hours may pass from reconstitution to end of infusion. Protect from light, do not freeze; a filter is not required (if used: PES, PVDF or hydrophilic polysulfone, not nylon or MCE); infuse over 1 hour at 50 mL/h."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Беспонза» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/565073/",
+        "version": "реєстраційне посвідчення UA/19782/01/01 від 15.12.2022",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }

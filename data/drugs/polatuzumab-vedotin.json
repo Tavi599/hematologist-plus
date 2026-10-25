@@ -84,5 +84,33 @@
         "en": "Dilution to 0.72–2.7 mg/mL in a bag of at least 50 mL per the label; 0.9% NaCl, 0.45% NaCl and 5% glucose are allowed. The solvent and volume come from the regimen."
       }
     }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Полайві» відновлений розчин розводять у пакеті для інфузій з 0,9 % або 0,45 % натрію хлоридом або 5 % глюкозою, повільно перевертають, не струшують; не заморожувати, берегти від прямого сонця, перевозити не довше 30 хв при кімнатній температурі. Вводять окремою системою через вбудований фільтр 0,2 або 0,22 мкм з низьким зв'язуванням білків. Розчин для інфузій у 0,9 % NaCl стабільний до 72 год при 2–8 °C або 4 год при 9–25 °C, у 0,45 % NaCl — 72 год або 8 год; мікробіологічно — не більше 24 год при 2–8 °C.",
+        "en": "Per the Polivy label dilute the reconstituted solution in an infusion bag of 0.9% or 0.45% sodium chloride or 5% glucose, invert slowly, do not shake; do not freeze, keep out of direct sunlight, transport no longer than 30 minutes at room temperature. Infuse through a separate line with a 0.2 or 0.22 micron low protein binding in-line filter. The infusion in 0.9% NaCl is stable up to 72 hours at 2–8 °C or 4 hours at 9–25 °C, in 0.45% NaCl 72 or 8 hours; microbiologically no more than 24 hours at 2–8 °C."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування «Полайві» (Державний реєстр лікарських засобів України; текст на compendium.com.ua)",
+        "url": "https://compendium.com.ua/dec/565286/",
+        "version": "реєстраційне посвідчення UA/19838/01/02 від 29.12.2022",
+        "checkedOn": "2026-10-25"
+      }
+    },
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Текст відновлення в українській інструкції на compendium.com.ua пропущений; згідно з SmPC Polivy флакон 140 мг розчиняють 7,2 мл води для ін'єкцій (30 мг — 1,8 мл), струмінь на стінку флакона, до 20 мг/мл; обережно крутять до розчинення, не струшують. Розводять до 0,72–2,7 мг/мл у пакеті не менше 50 мл.",
+        "en": "The reconstitution text is missing from the Ukrainian label on compendium.com.ua; per the Polivy SmPC reconstitute the 140 mg vial with 7.2 mL water for injections (30 mg: 1.8 mL), stream at the vial wall, to 20 mg/mL; swirl gently until dissolved, do not shake. Dilute to 0.72–2.7 mg/mL in a bag of at least 50 mL."
+      },
+      "source": {
+        "name": "EMC SmPC: Polivy 30 mg and 140 mg powder for concentrate for solution for infusion, section 6.6",
+        "url": "https://www.medicines.org.uk/emc/product/11028/smpc",
+        "version": "Date of revision of the text 03 August 2026",
+        "checkedOn": "2026-10-25"
+      }
+    }
   ]
 }
