@@ -1,0 +1,126 @@
+{
+  "$comment": "Синдром Еванса = ІТП + АІГА (іноді автоімунна нейтропенія). МКХ-10: D69.3 включає Evans syndrome; D59.1 — інші автоімунні гемолітичні анемії. Лікування за UpToDate (AIHA у дорослих, ІТП у дорослих), парафраз; специфічного протоколу NCCN не читали. Сусідні статті: ІТП та АІГА (окремі сесії).",
+  "id": "evans-syndrome",
+  "name": {
+    "uk": "Синдром Еванса",
+    "en": "Evans syndrome"
+  },
+  "summary": {
+    "uk": "Поєднання автоімунної гемолітичної анемії (тест Кумбса +) та імунної тромбоцитопенії, іноді й автоімунної нейтропенії; складніше за ізольовану АІГА, частіші рецидиви. Обов'язково шукати вторинні причини: ХЛЛ, лімфоми, SLE, ALPS, CVID.",
+    "en": "Co-occurrence of Coombs-positive autoimmune haemolytic anaemia and immune thrombocytopenia, sometimes autoimmune neutropenia; harder to treat than isolated AIHA, with frequent relapses. Always look for secondary causes: CLL, lymphoma, SLE, ALPS, CVID."
+  },
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "D69.3",
+      "is_primary": true
+    },
+    {
+      "system_id": "icd-10",
+      "code": "D59.1",
+      "is_primary": false
+    }
+  ],
+  "references": [
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=Evans%20syndrome"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "description": {
+        "uk": "Стероїди + ритуксимаб (UpToDate: звична практика для вторинної та первинної форм); додають ВВІГ при тромбоцитах <20×10^9/л або трансфузійній залежності; MMF — у складі комбінації. Лікувати основну причину (ХЛЛ, SLE, лімфома, ALPS).",
+        "en": "Steroids plus rituximab (UpToDate: usual practice for primary and secondary forms); IVIG added at platelets <20 x10^9/L or transfusion dependence; MMF is part of the combination. Treat the underlying cause (CLL, SLE, lymphoma, ALPS)."
+      },
+      "regimens": [
+        {
+          "regimen_id": "rituximab-mono",
+          "notes": {
+            "uk": "375 мг/м² щотижня, 4 тижні — доза UpToDate для AIHA разом зі стероїдами. Альтернативи в рандомізованих дослідженнях: 1000 мг двічі з інтервалом 2 тижні; невеликі серії — 100 мг щотижня ×4. Єдиного оптимального режиму немає.",
+            "en": "375 mg/m2 weekly for 4 weeks - the UpToDate AIHA dose, given with steroids. Alternatives in trials: 1000 mg twice 2 weeks apart; small series - 100 mg weekly x4. No single optimal schedule."
+          }
+        },
+        {
+          "regimen_id": "evans-ivig"
+        }
+      ],
+      "children": [
+        {
+          "key": "fl-cards",
+          "kind": "reference",
+          "title": {
+            "uk": "Препарати без розрахунку",
+            "en": "Reference cards"
+          },
+          "description": {
+            "uk": "Стероїди та MMF — картки без розрахунку: дози й відміна індивідуальні.",
+            "en": "Steroids and MMF as reference cards: doses and taper are individual."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-evans-glucocorticoids"
+            },
+            {
+              "regimen_id": "ref-evans-mmf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "second-line",
+      "kind": "line",
+      "title": {
+        "uk": "Друга лінія і рефрактерна хвороба",
+        "en": "Second line and refractory disease"
+      },
+      "description": {
+        "uk": "Рецидив або Hb <10 г/дл попри лікування — ще одна лінія: MMF, циклоспорин, сиролімус, азатіоприн, при тяжкому гемолізі циклофосфамід; ТПО-РА при стійкій тромбоцитопенії. Спленектомія — після 1–2 імуносупресантів, але не при ALPS; ризик ВТЕ.",
+        "en": "Relapse or Hb <10 g/dL despite treatment calls for another line: MMF, ciclosporin, sirolimus, azathioprine, cyclophosphamide for severe haemolysis; a TPO-RA for persistent thrombocytopenia. Splenectomy after one or two immunosuppressants, but not in ALPS; VTE risk."
+      },
+      "children": [
+        {
+          "key": "sl-cards",
+          "kind": "reference",
+          "title": {
+            "uk": "Картки без розрахунку",
+            "en": "Reference cards"
+          },
+          "description": {
+            "uk": "Дози взято з UpToDate; частина препаратів відсутня в каталозі.",
+            "en": "Doses from UpToDate; some drugs are missing from the catalog."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-evans-ciclosporin"
+            },
+            {
+              "regimen_id": "ref-evans-cyclophosphamide"
+            },
+            {
+              "regimen_id": "ref-evans-tpo-ra"
+            },
+            {
+              "regimen_id": "ref-evans-other-second-line"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

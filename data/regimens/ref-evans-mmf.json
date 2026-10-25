@@ -1,0 +1,46 @@
+{
+  "id": "ref-evans-mmf",
+  "short_name": "MMF (Еванс)",
+  "name": {
+    "uk": "Мікофенолату мофетил при синдромі Еванса",
+    "en": "Mycophenolate mofetil in Evans syndrome"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults — розділи Evans syndrome, Glucocorticoids, Rituximab, IVIG as adjunctive therapy, Treatment for persistent disease (парафраз)",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+      "version": "оновлено 14.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Додають до стероїдів і ритуксимабу (UpToDate: звична комбінація); початок 500 мг двічі на добу, ескалація до 1000 мг двічі на добу.",
+      "en": "Added to steroids and rituximab (UpToDate: usual combination); start 500 mg twice a day, escalate to 1000 mg twice a day."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Мікофенолату мофетил",
+          "en": "Mycophenolate mofetil"
+        },
+        "drug_id": "mycophenolate-mofetil"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "UpToDate: початок 500 мг кожні 12 год, підвищення кожні 2 тижні до 1000 мг кожні 12 год за потреби. Інший фрагмент того ж джерела: 500–1000 мг на добу у 2 прийоми, далі 1000–2000 мг на добу — розбіжність у межах однієї статті. Вибір ґрунтується на досвіді авторів, а не на якісних дослідженнях.",
+        "en": "UpToDate: 500 mg every 12 h, raised every 2 weeks to 1000 mg every 12 h if needed. Another passage of the same source: 500-1000 mg a day in two doses, then 1000-2000 mg a day - a discrepancy within one article. The choice rests on the authors' experience, not high-quality studies."
+      },
+      {
+        "uk": "Ефект настає за тижні–місяці, тому MMF обирають при стабільнішому гемолізі в амбулаторних хворих. Змінити препарат розумно, якщо немає відповіді за 3–4 тижні (або при непереносимості); терапію припиняють після стійкої ремісії.",
+        "en": "Effect takes weeks to months, so MMF suits stable haemolysis in outpatients. Reasonable to switch if no response within 3-4 weeks (or intolerance); stop after a documented stable remission."
+      }
+    ],
+    "gap": {
+      "uk": "Тривалість і умови відміни джерело не фіксує; без розрахунку.",
+      "en": "The source fixes neither duration nor stopping rules; not calculated."
+    },
+    "availability": "registered"
+  }
+}

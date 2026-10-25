@@ -1,0 +1,73 @@
+{
+  "$comment": "Синдром Еванса: ВВІГ як допоміжна терапія. Базова доза — UpToDate (AIHA у дорослих): 500 мг/кг щодня 4 дні, коли хворий уже покращується, але через 2 тижні від преднізону й ритуксимабу лишається трансфузійно залежним. UpToDate (ІТП у дорослих): 1 г/кг один раз на добу 1–2 дні (повтор, якщо тромбоцити <50×10^9/л), альтернатива 400 мг/кг щодня 5 днів; зупинити, коли тромбоцити >30×10^9/л. UpToDate (Evans): додають, якщо тромбоцити <20×10^9/л, доказів немає. Розбіжність показана в нотатках; дні вибирає лікар у таблиці.",
+  "id": "evans-ivig",
+  "short_name": "ВВІГ (Еванс)",
+  "name": {
+    "uk": "ВВІГ при синдромі Еванса",
+    "en": "IVIG in Evans syndrome"
+  },
+  "description": {
+    "uk": "Допоміжна терапія до стероїдів і ритуксимабу: 500 мг/кг щодня 4 дні (гемоліз, трансфузійна залежність) або 1 г/кг на добу 1–2 дні (тромбоцитопенія, кровотеча); при синдромі Еванса додають за тромбоцитів <20×10^9/л.",
+    "en": "Adjunct to steroids and rituximab: 500 mg/kg daily for 4 days (haemolysis, transfusion dependence) or 1 g/kg a day for 1-2 days (thrombocytopenia, bleeding); in Evans syndrome it is added when platelets are <20 x10^9/L."
+  },
+  "cycle_length_days": 28,
+  "default_cycles": 1,
+  "sources": [
+    {
+      "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults — розділи Evans syndrome, Glucocorticoids, Rituximab, IVIG as adjunctive therapy, Treatment for persistent disease (парафраз)",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+      "version": "оновлено 14.10.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) — IVIG dosing, High dose glucocorticoid (парафраз)",
+      "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+      "version": "переглянуто 25.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "items": [
+    {
+      "key": "ivig",
+      "drug_id": "immunoglobulin-human-iv",
+      "route": "iv_infusion",
+      "dose_value": 500,
+      "dose_unit": "mg_kg",
+      "days": [1, 2, 3, 4],
+      "dose_options": [
+        {
+          "dose_value": 1000,
+          "dose_unit": "mg_kg",
+          "notes": {
+            "uk": "ІТП-компонент: 1 г/кг один раз на добу, 1 або 2 дні (2-й день, якщо тромбоцити лишаються <50×10^9/л); зупинити, коли тромбоцити >30×10^9/л — залиште в таблиці лише потрібні дні.",
+            "en": "ITP component: 1 g/kg once a day for 1 or 2 days (second day if platelets stay <50 x10^9/L); stop once platelets >30 x10^9/L - keep only the days needed in the sheet."
+          },
+          "source": {
+            "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) — IVIG dosing, High dose glucocorticoid (парафраз)",
+            "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+            "version": "переглянуто 25.10.2026",
+            "checkedOn": "2026-10-25"
+          }
+        },
+        {
+          "dose_value": 400,
+          "dose_unit": "mg_kg",
+          "notes": {
+            "uk": "ІТП-компонент, альтернативний режим: 400 мг/кг щодня 5 днів (додайте 5-й день у таблиці).",
+            "en": "ITP component, alternative schedule: 400 mg/kg daily for 5 days (add day 5 in the sheet)."
+          },
+          "source": {
+            "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) — IVIG dosing, High dose glucocorticoid (парафраз)",
+            "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+            "version": "переглянуто 25.10.2026",
+            "checkedOn": "2026-10-25"
+          }
+        }
+      ],
+      "notes": {
+        "uk": "500 мг/кг щодня 4 дні (UpToDate, AIHA): для хворих, що вже покращуються, але через 2 тижні від початку преднізону й ритуксимабу лишаються трансфузійно залежними; в особливо тяжких випадках описані 1 г/кг щодня 5 днів (звіти випадків, ефект 30–40%). Розбіжність джерел: для ІТП UpToDate дає 1 г/кг 1–2 дні або 400 мг/кг 5 днів — доза обирається за провідним проявом. При синдромі Еванса UpToDate додає ВВІГ при тромбоцитах <20×10^9/л, але підтверджувальних даних немає. Препарат той самий, що й для замісної терапії (ivig-replacement), режим інший.",
+        "en": "500 mg/kg daily for 4 days (UpToDate, AIHA): for patients who are improving but still transfusion dependent 2 weeks after starting prednisone and rituximab; 1 g/kg daily for 5 days is described in very severe disease (case reports, response 30-40%). Sources differ: for ITP UpToDate gives 1 g/kg for 1-2 days or 400 mg/kg for 5 days - choose by the leading manifestation. In Evans syndrome UpToDate adds IVIG at platelets <20 x10^9/L, without supporting data. The same product as replacement therapy (ivig-replacement), a different schedule."
+      }
+    }
+  ]
+}

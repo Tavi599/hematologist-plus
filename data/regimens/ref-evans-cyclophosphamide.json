@@ -1,0 +1,46 @@
+{
+  "id": "ref-evans-cyclophosphamide",
+  "short_name": "Циклофосфамід (Еванс)",
+  "name": {
+    "uk": "Циклофосфамід при рефрактерному гемолізі",
+    "en": "Cyclophosphamide for refractory haemolysis"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults — розділи Evans syndrome, Glucocorticoids, Rituximab, IVIG as adjunctive therapy, Treatment for persistent disease (парафраз)",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+      "version": "оновлено 14.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Найшвидший із класичних імуносупресантів; для тяжкої анемії при рефрактерній AIHA.",
+      "en": "The fastest classical immunosuppressant; for severe anaemia in refractory AIHA."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "UpToDate: разова доза 600–750 мг/м² в/в стаціонарним хворим, яким попри стероїди чи ритуксимаб потрібно понад дві дози еритроцитів на тиждень; доза — особистий досвід авторів, якісних досліджень немає.",
+        "en": "UpToDate: a single dose of 600-750 mg/m2 IV for inpatients needing more than two units of RBC a week despite steroids or rituximab; the dose is the authors' experience, no high-quality studies."
+      },
+      {
+        "uk": "Висока доза (50 мг/кг щодня 4 дні за ідеальною масою) — лише якщо 600–750 мг/м² двічі не допомогли. Токсичність: алопеція, гонадна, мієлосупресія, геморагічний цистит, лейкемогенез.",
+        "en": "High dose (50 mg/kg daily for 4 days by ideal weight) only after 600-750 mg/m2 failed twice. Toxicity: alopecia, gonadal, myelosuppression, haemorrhagic cystitis, leukaemogenesis."
+      }
+    ],
+    "gap": {
+      "uk": "Джерело дає разову дозу за особистим досвідом, тому курсом для калькулятора не заведено; лікар розраховує сам.",
+      "en": "The source gives a single dose from personal experience, so it is not a calculator course; the physician calculates it."
+    },
+    "availability": "registered"
+  }
+}

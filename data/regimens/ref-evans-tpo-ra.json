@@ -1,0 +1,53 @@
+{
+  "id": "ref-evans-tpo-ra",
+  "short_name": "ТПО-РА (Еванс)",
+  "name": {
+    "uk": "Агоністи рецептора тромбопоетину (ІТП-компонент)",
+    "en": "TPO receptor agonists (ITP component)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) — IVIG dosing, High dose glucocorticoid (парафраз)",
+      "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+      "version": "переглянуто 25.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Для стійкої тромбоцитопенії; UpToDate (ІТП) згадує ромиплостим 5–10 мкг/кг одноразово при критичній кровотечі та елтромбопаг як пероральну альтернативу.",
+      "en": "For persistent thrombocytopenia; UpToDate (ITP) mentions romiplostim 5-10 mcg/kg once for critical bleeding and eltrombopag as the oral alternative."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Елтромбопаг",
+          "en": "Eltrombopag"
+        },
+        "drug_id": "eltrombopag"
+      },
+      {
+        "name": {
+          "uk": "Ромиплостим",
+          "en": "Romiplostim"
+        },
+        "drug_id": "romiplostim"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Ромиплостим у каталозі недоступний; елтромбопаг — у переліку відділення.",
+        "en": "Romiplostim is unavailable in the catalog; eltrombopag is in the department list."
+      },
+      {
+        "uk": "Дозування ТПО-РА при хронічній ІТП (окрема стаття UpToDate про другу лінію ІТП) у цій сесії не читалося.",
+        "en": "TPO-RA dosing for chronic ITP (the separate UpToDate topic on second-line ITP therapy) was not read in this session."
+      }
+    ],
+    "gap": {
+      "uk": "Дози елтромбопагу для ІТП не звірялись; дивіться статтю про ІТП. Без розрахунку.",
+      "en": "Eltrombopag doses for ITP were not checked; see the ITP article. Not calculated."
+    },
+    "availability": "registered"
+  }
+}

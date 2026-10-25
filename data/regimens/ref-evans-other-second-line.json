@@ -1,0 +1,87 @@
+{
+  "id": "ref-evans-other-second-line",
+  "short_name": "Інші (Еванс)",
+  "name": {
+    "uk": "Інші варіанти другої лінії при синдромі Еванса",
+    "en": "Other second-line options in Evans syndrome"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults — розділи Evans syndrome, Glucocorticoids, Rituximab, IVIG as adjunctive therapy, Treatment for persistent disease (парафраз)",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+      "version": "оновлено 14.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Азатіоприн, сиролімус (особливо при ALPS), новіші препарати (нипокалімаб, фостаматиніб, рилзабрутиніб, бортезоміб) та даназол; доступність в Україні не перевірена.",
+      "en": "Azathioprine, sirolimus (especially with ALPS), newer agents (nipocalimab, fostamatinib, rilzabrutinib, bortezomib) and danazol; availability in Ukraine not checked."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Азатіоприн",
+          "en": "Azathioprine"
+        }
+      },
+      {
+        "name": {
+          "uk": "Сиролімус",
+          "en": "Sirolimus"
+        }
+      },
+      {
+        "name": {
+          "uk": "Нипокалімаб",
+          "en": "Nipocalimab"
+        }
+      },
+      {
+        "name": {
+          "uk": "Фостаматиніб",
+          "en": "Fostamatinib"
+        }
+      },
+      {
+        "name": {
+          "uk": "Рилзабрутиніб",
+          "en": "Rilzabrutinib"
+        }
+      },
+      {
+        "name": {
+          "uk": "Бортезоміб",
+          "en": "Bortezomib"
+        },
+        "drug_id": "bortezomib"
+      },
+      {
+        "name": {
+          "uk": "Даназол",
+          "en": "Danazol"
+        },
+        "drug_id": "danazol"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "Азатіоприн: початок 100–150 мг перорально на добу (у серії з 54 хворих з тяжкою рефрактерною AIHA відповідь 79%). Сиролімус: 1–3 мг на добу — відповідь 81% у проспективному дослідженні з 78 дорослих з AIHA/Evans; особливо при ALPS.",
+        "en": "Azathioprine: start 100-150 mg orally a day (79% response in a series of 54 severe refractory AIHA). Sirolimus: 1-3 mg a day - 81% response in a prospective study of 78 adults with AIHA/Evans; especially with ALPS."
+      },
+      {
+        "uk": "Даназол: 200 мг на добу, до 600–800 мг, після відповіді знову 200 мг; у серії з 16 (3 з синдромом Еванса) відповідь 100%. Рилзабрутиніб 400 мг двічі на добу 24 тижні — відповідь Hb у 64% (22 хворі). Фостаматиніб: у рандомізованому дослідженні 36% проти 27% на плацебо. Нипокалімаб (схвалений FDA 08.2026): відповідь 22% проти 8%. Бортезоміб ± дексаметазон — малі серії; з ритуксимабом повна відповідь у 63% (30 хворих).",
+        "en": "Danazol: 200 mg a day, up to 600-800 mg, back to 200 mg after response; 100% in a series of 16 (3 with Evans). Rilzabrutinib 400 mg twice a day for 24 weeks - Hb response 64% (22 patients). Fostamatinib: 36% vs 27% on placebo in a randomised trial. Nipocalimab (FDA-approved 08.2026): response 22% vs 8%. Bortezomib +/- dexamethasone - small series; with rituximab complete response 63% (30 patients)."
+      },
+      {
+        "uk": "Спленектомія — після 1–2 неефективних імуносупресантів (відповідь близько 75% у когорті GIMEMA): вакцинація проти пневмокока, менінгокока й гемофільної палички за 2–3 тижні до операції, тромбопрофілактика після; протипоказана при ALPS; високий ризик ВТЕ (тромбоз ворітної вени, ТЕЛА).",
+        "en": "Splenectomy - after one or two failed immunosuppressants (about 75% response in the GIMEMA cohort): pneumococcal, meningococcal and Haemophilus vaccines 2-3 weeks before, postoperative thromboprophylaxis; contraindicated in ALPS; high VTE risk (portal vein thrombosis, PE)."
+      }
+    ],
+    "gap": {
+      "uk": "Азатіоприн, сиролімус, нипокалімаб, фостаматиніб і рилзабрутиніб відсутні в каталозі препаратів, реєстрацію в Україні не звіряли; даназол у каталозі недоступний. Без розрахунку.",
+      "en": "Azathioprine, sirolimus, nipocalimab, fostamatinib and rilzabrutinib are not in the drug catalog and their registration in Ukraine was not checked; danazol is unavailable in the catalog. Not calculated."
+    },
+    "availability": "unknown"
+  }
+}

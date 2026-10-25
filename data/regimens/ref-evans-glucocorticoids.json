@@ -1,0 +1,74 @@
+{
+  "id": "ref-evans-glucocorticoids",
+  "short_name": "Стероїди (Еванс)",
+  "name": {
+    "uk": "Глюкокортикоїди при синдромі Еванса (перша лінія)",
+    "en": "Glucocorticoids in Evans syndrome (first line)"
+  },
+  "sources": [
+    {
+      "name": "UpToDate: Warm autoimmune hemolytic anemia (AIHA) in adults — розділи Evans syndrome, Glucocorticoids, Rituximab, IVIG as adjunctive therapy, Treatment for persistent disease (парафраз)",
+      "url": "https://www.uptodate.com/contents/warm-autoimmune-hemolytic-anemia-aiha-in-adults",
+      "version": "оновлено 14.10.2026",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "UpToDate: Initial treatment and treatment of bleeding in adults with immune thrombocytopenia (ITP) — IVIG dosing, High dose glucocorticoid (парафраз)",
+      "url": "https://www.uptodate.com/contents/initial-treatment-and-treatment-of-bleeding-in-adults-with-immune-thrombocytopenia-itp",
+      "version": "переглянуто 25.10.2026",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Основа першої лінії: преднізон 1–2 мг/кг на добу (або 60–100 мг) разом із ритуксимабом; повільна відміна за 2–3 місяці.",
+      "en": "Backbone of first line: prednisone 1-2 mg/kg a day (or 60-100 mg) together with rituximab; slow taper over 2-3 months."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Преднізолон",
+          "en": "Prednisolone"
+        },
+        "drug_id": "prednisolone"
+      },
+      {
+        "name": {
+          "uk": "Метилпреднізолон",
+          "en": "Methylprednisolone"
+        },
+        "drug_id": "methylprednisolone"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "UpToDate (AIHA): початково преднізон 1–2 мг/кг перорально або 60–100 мг на добу; парентерально — метилпреднізолон 0,8–1,6 мг/кг в/в на добу. Тримають до Hb >10 г/дл (зазвичай 2–3 тижні). У джерелі препарат — преднізон; у каталозі преднізолон, дози в мг еквівалентні.",
+        "en": "UpToDate (AIHA): prednisone 1-2 mg/kg orally or 60-100 mg a day to start; parenteral methylprednisolone 0.8-1.6 mg/kg IV a day. Continued until Hb >10 g/dL (usually 2-3 weeks). The source names prednisone; the catalog has prednisolone, same dose in mg."
+      },
+      {
+        "uk": "Відміна: якщо Hb ≥10 г/дл за 3 тижні — знижувати на 10 мг на тиждень до 20 мг, далі не швидше 5 мг на тиждень (часто 5 мг кожні 2 тижні); відсутність відповіді за 3 тижні — стероїдорезистентність: швидша відміна й друга лінія. Доказів на користь конкретної схеми відміни немає.",
+        "en": "Taper: if Hb ≥10 g/dL within 3 weeks - cut 10 mg a week to 20 mg, then no faster than 5 mg a week (often 5 mg every 2 weeks); no response by 3 weeks means steroid-unresponsive disease: faster taper plus second line. No evidence favours one taper."
+      },
+      {
+        "uk": "ІТП-компонент при критичній кровотечі (UpToDate, ІТП): дексаметазон 40 мг в/в щодня 4 дні або метилпреднізолон 1 г в/в щодня 3 дні — разом із ВВІГ, транексамовою кислотою, ТПО-РА.",
+        "en": "ITP component with critical bleeding (UpToDate, ITP): dexamethasone 40 mg IV daily for 4 days or methylprednisolone 1 g IV daily for 3 days - together with IVIG, tranexamic acid and a TPO-RA."
+      },
+      {
+        "uk": "Понад 3 місяці стероїдів — кальцій 1000–1200 мг і вітамін D 600–800 МО на добу; профілактика пневмоцистної пневмонії при стероїдах з ритуксимабом чи імуносупресантами; фолієва кислота 1 мг/добу, поки триває гемоліз; профілактика ВТЕ у госпіталізованих.",
+        "en": "Steroids beyond 3 months - calcium 1000-1200 mg and vitamin D 600-800 IU a day; pneumocystis prophylaxis with steroids plus rituximab or immunosuppressants; folic acid 1 mg a day while haemolysis lasts; VTE prophylaxis in inpatients."
+      }
+    ],
+    "gap": {
+      "uk": "Схема відміни індивідуальна, тривалість залежить від відповіді, тому курсом для розрахунку не заведена.",
+      "en": "The taper is individual and its length depends on response, so it is not entered as a calculable course."
+    },
+    "availability": "registered"
+  }
+}
