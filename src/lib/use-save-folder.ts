@@ -9,6 +9,7 @@ import {
   loadFolder,
   pickFolder,
   saveCourseFile,
+  showFolder,
   type FolderHandle,
   type SaveOutcome,
 } from './save-folder'
@@ -105,12 +106,17 @@ export function useSaveFolder() {
     [],
   )
 
+  const open = useCallback(async () => {
+    if (state.handle !== null) await showFolder(state.handle)
+  }, [])
+
   return {
     status: current.status,
     folderName: current.handle?.name ?? null,
     choose,
     allow,
     forget,
+    open,
     save,
   }
 }

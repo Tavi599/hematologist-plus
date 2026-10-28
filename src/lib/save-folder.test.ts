@@ -3,7 +3,13 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { fakeFolder } from '../test/folder-handle'
 import { courseFileTarget } from './course-file-name'
 import { saveFile } from './save-file'
-import { allowFolder, folderSupported, folderWritable, saveCourseFile } from './save-folder'
+import {
+  allowFolder,
+  folderSupported,
+  folderWritable,
+  saveCourseFile,
+  showFolder,
+} from './save-folder'
 
 vi.mock('./save-file', () => ({ saveFile: vi.fn() }))
 
@@ -14,15 +20,38 @@ const bytes = new Uint8Array([1, 2, 3])
 
 beforeEach(() => vi.mocked(saveFile).mockClear())
 
+describe('showFolder', () => {
+  afterEach(() => vi.unstubAllGlobals())
+
+  it("opens the browser's file dialog inside the folder", async () => {
+    const open = vi.fn().mockResolvedValue([])
+    vi.stubGlobal('showOpenFilePicker', open)
+    const root = fakeFolder('Схеми')
+    await showFolder(root)
+    expect(open).toHaveBeenCalledWith(expect.objectContaining({ startIn: root }))
+  })
+
+  it('takes a closed dialog and a browser without one quietly', async () => {
+    vi.stubGlobal(
+      'showOpenFilePicker',
+      vi.fn().mockRejectedValue(new DOMException('', 'AbortError')),
+    )
+    await expect(showFolder(fakeFolder('Схеми'))).resolves.toBeUndefined()
+    vi.stubGlobal('showOpenFilePicker', undefined)
+    await expect(showFolder(fakeFolder('Схеми'))).resolves.toBeUndefined()
+  })
+})
+
 describe('saveCourseFile', () => {
   it("writes into the patient's subfolder, creating it", async () => {
     const root = fakeFolder('Схеми')
     const outcome = await saveCourseFile(root, named, 'xlsx', bytes, 'x')
+    const sub = root.folders.get('Іваненко Іван Іванович')
     expect(outcome).toEqual({
       kind: 'folder',
       path: ['Схеми', 'Іваненко Іван Іванович', 'Іваненко Іван Іванович 17.10.2026.xlsx'],
+      directory: sub,
     })
-    const sub = root.folders.get('Іваненко Іван Іванович')
     expect(sub?.files.get('Іваненко Іван Іванович 17.10.2026.xlsx')).toEqual(bytes)
     expect(saveFile).not.toHaveBeenCalled()
   })
@@ -30,7 +59,11 @@ describe('saveCourseFile', () => {
   it('writes into the folder itself when the patient is not named', async () => {
     const root = fakeFolder('Схеми')
     const outcome = await saveCourseFile(root, unnamed, 'json', bytes, 'x')
-    expect(outcome).toEqual({ kind: 'folder', path: ['Схеми', 'Курс 17.10.2026.json'] })
+    expect(outcome).toEqual({
+      kind: 'folder',
+      path: ['Схеми', 'Курс 17.10.2026.json'],
+      directory: root,
+    })
     expect(root.files.has('Курс 17.10.2026.json')).toBe(true)
     expect(root.folders.size).toBe(0)
   })

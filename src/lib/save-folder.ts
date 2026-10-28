@@ -41,12 +41,29 @@ export interface FolderHandle {
   keys(): AsyncIterable<string>
 }
 
+type FilePicker = (options: { startIn?: FolderHandle; id?: string }) => Promise<unknown>
+
 type DirectoryPicker = (options: { id?: string; mode: 'readwrite' }) => Promise<FolderHandle>
 
 function picker(): DirectoryPicker | null {
   const candidate = (window as unknown as { showDirectoryPicker?: DirectoryPicker })
     .showDirectoryPicker
   return typeof candidate === 'function' ? candidate.bind(window) : null
+}
+
+/**
+ * Shows a folder to the physician. A web page cannot launch the system's file manager, so this
+ * opens the browser's own file dialog inside the folder — the files are listed there, and the
+ * dialog's address bar names the path. Closing the dialog changes nothing.
+ */
+export async function showFolder(folder: FolderHandle): Promise<void> {
+  const open = (window as unknown as { showOpenFilePicker?: FilePicker }).showOpenFilePicker
+  if (typeof open !== 'function') return
+  try {
+    await open.call(window, { startIn: folder, id: 'hplus-save-folder' })
+  } catch {
+    // Closing the dialog is an AbortError; nothing to report either way.
+  }
 }
 
 /** Whether this browser can write into a folder at all. */
@@ -120,14 +137,15 @@ async function namesIn(folder: FolderHandle): Promise<string[]> {
 
 /**
  * Writes the file into the folder — into the patient's subfolder, created if needed — under a
- * name no file there has yet. Returns the path written, relative to the folder's parent.
+ * name no file there has yet. Returns the folder written into and the path written, relative to
+ * the chosen folder's parent.
  */
 export async function writeIntoFolder(
   root: FolderHandle,
   target: CourseFileTarget,
   extension: string,
   data: Uint8Array,
-): Promise<string[]> {
+): Promise<{ directory: FolderHandle; path: string[] }> {
   const folder =
     target.folder === null ? root : await root.getDirectoryHandle(target.folder, { create: true })
   const name = uniqueFileName(target.base, extension, await namesIn(folder))
@@ -137,12 +155,15 @@ export async function writeIntoFolder(
   } finally {
     await writable.close()
   }
-  return target.folder === null ? [root.name, name] : [root.name, target.folder, name]
+  return {
+    directory: folder,
+    path: target.folder === null ? [root.name, name] : [root.name, target.folder, name],
+  }
 }
 
 export type SaveOutcome =
   /** Written into the chosen folder; the path from the folder's own name down to the file. */
-  | { kind: 'folder'; path: string[] }
+  | { kind: 'folder'; path: string[]; directory: FolderHandle }
   /** Handed to the browser's download, under this name. */
   | { kind: 'download'; name: string; reason: 'no-folder' | 'denied' | 'failed' }
 
@@ -166,7 +187,7 @@ export async function saveCourseFile(
   if (folder === null) return download('no-folder')
   if (!(await allowFolder(folder))) return download('denied')
   try {
-    return { kind: 'folder', path: await writeIntoFolder(folder, target, extension, data) }
+    return { kind: 'folder', ...(await writeIntoFolder(folder, target, extension, data)) }
   } catch {
     // The folder was moved or deleted, the disk is full: the course still reaches the physician.
     return download('failed')

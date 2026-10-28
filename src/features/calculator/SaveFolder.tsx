@@ -1,7 +1,7 @@
 import { Button, Card, Group, Stack, Text, Title } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
 
-import type { SaveOutcome } from '../../lib/save-folder'
+import { showFolder, type SaveOutcome } from '../../lib/save-folder'
 import { useSaveFolder } from '../../lib/use-save-folder'
 
 /**
@@ -10,7 +10,7 @@ import { useSaveFolder } from '../../lib/use-save-folder'
  */
 export function SaveFolderCard() {
   const { t } = useTranslation()
-  const { status, folderName, choose, allow, forget } = useSaveFolder()
+  const { status, folderName, choose, allow, forget, open } = useSaveFolder()
   const name = folderName ?? ''
 
   return (
@@ -30,6 +30,11 @@ export function SaveFolderCard() {
             {status === 'prompt' && (
               <Button size="xs" onClick={() => void allow()}>
                 {t('calculator.saveFolder.allow')}
+              </Button>
+            )}
+            {status !== 'none' && (
+              <Button size="xs" variant="light" onClick={() => void open()}>
+                {t('calculator.saveFolder.open')}
               </Button>
             )}
             <Button size="xs" variant="default" onClick={() => void choose()}>
@@ -55,9 +60,19 @@ export function SaveOutcomeNote({ outcome }: { outcome: SaveOutcome | null }) {
   if (outcome === null) return null
   if (outcome.kind === 'folder') {
     return (
-      <Text size="xs" c="green.8">
-        {t('calculator.saveFolder.savedFolder', { path: outcome.path.join(' / ') })}
-      </Text>
+      <Group gap="xs" wrap="wrap">
+        <Text size="xs" c="green.8">
+          {t('calculator.saveFolder.savedFolder', { path: outcome.path.join(' / ') })}
+        </Text>
+        <Button
+          size="compact-xs"
+          variant="subtle"
+          title={t('calculator.saveFolder.openHint')}
+          onClick={() => void showFolder(outcome.directory)}
+        >
+          {t('calculator.saveFolder.showFile')}
+        </Button>
+      </Group>
     )
   }
   const key = (
