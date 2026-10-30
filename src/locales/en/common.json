@@ -12,7 +12,8 @@
     "sources": "Sources",
     "proposals": "Proposals",
     "need": "Drug need",
-    "scores": "Scores"
+    "scores": "Scores",
+    "handbook": "EBMT Handbook"
   },
   "language": {
     "label": "Language",
@@ -1104,5 +1105,51 @@
     "noOptions": "No preferred options",
     "sourceNote": "Structure and facts follow the guideline; the wording is ours, no text was copied. Unmarked means category 2A.",
     "wholePage": "For the whole page"
+  },
+  "handbook": {
+    "title": "EBMT Handbook",
+    "intro": "The full text of the EBMT Handbook on haematopoietic cell transplantation and cellular therapies: 94 chapters in nine parts. The book is Open Access under CC BY 4.0, so its text is carried over here word for word and translated paragraph by paragraph, with the original kept beside the translation.",
+    "changesTitle": "What was changed from the original:",
+    "searchLabel": "Search the handbook",
+    "searchHint": "A chapter title, a section title or an abbreviation — in Ukrainian or English.",
+    "searchPlaceholder": "for example: GVHD, conditioning, VOD, myeloma",
+    "searchEmpty": "Nothing found.",
+    "searchFound": "Found: {{count}}",
+    "tabParts": "Parts and chapters",
+    "tabAbbreviations": "Abbreviations",
+    "chapterCount": "chapters: {{count}}",
+    "progress": "Chapter titles translated: {{done}} of {{total}}; the chapters themselves are translated one at a time.",
+    "untranslated": "not translated",
+    "abbrSearch": "Search abbreviations",
+    "abbr": "Abbreviation",
+    "abbrMeaning": "Meaning",
+    "chapterNumber": "Chapter {{number}}",
+    "printedPage": "printed page {{page}}",
+    "contents": "Chapter contents",
+    "showAll": "Show all",
+    "hide": "Collapse",
+    "references": "References ({{count}})",
+    "inChapterSearch": "Search in this chapter",
+    "inChapterFound": "Paragraphs highlighted: {{count}}",
+    "translatedShare": "translated: {{percent}}%",
+    "table": "Table",
+    "tableUntranslated": "This table is not translated yet; the original is shown.",
+    "tableNotRead": "The grid of this table could not be rebuilt from the PDF — see the original on the page given.",
+    "viewLabel": "Text language",
+    "viewHint": "“Side by side” shows the Ukrainian paragraph with the original right under it, so switching language never means hunting for the passage again.",
+    "loadFailedTitle": "The handbook could not be loaded",
+    "loadFailed": "The handbook text is served as separate files. Check the connection; chapters already read are available offline.",
+    "noSuchChapterTitle": "No such chapter",
+    "noSuchChapter": "The handbook has 94 chapters, numbered 1 to 94.",
+    "view": {
+      "uk": "Ukrainian",
+      "en": "Original",
+      "both": "Side by side"
+    },
+    "hit": {
+      "chapter": "chapter",
+      "section": "section",
+      "abbreviation": "abbreviation"
+    }
   }
 }

@@ -19,7 +19,9 @@
     "data:validate:demo": "tsx scripts/validate-data.ts --dir data-demo",
     "data:validate:content": "tsx scripts/validate-data.ts --content ../Hematologist_plus_content",
     "data:sync": "tsx scripts/sync-supabase.ts",
-    "db:check-rls": "tsx scripts/check-rls.ts"
+    "db:check-rls": "tsx scripts/check-rls.ts",
+    "ebmt:extract": "tsx scripts/import-sources/ebmt/extract.ts",
+    "ebmt:validate": "tsx scripts/validate-ebmt.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

@@ -1,0 +1,127 @@
+{
+ "number": 61,
+ "part": "VII",
+ "page_pdf": [
+  550,
+  553
+ ],
+ "page_printed": 551,
+ "title_en": "Mechanisms of Immune Resistance",
+ "authors": "Luca Vago and Francesco Dazzi",
+ "affiliations": "L. Vago Unit of Immunogenetics, Leukemia Genomics and Immunobiology, Hematology and Bone Marrow Transplantation Unit, IRCCS San Raffaele Scientific Institute, Milan, Italy e-mail: vago.luca@hsr.it F. Dazzi (*) School of Cancer and Pharmacological Sciences, King’s College London, London, UK e-mail: francesco.dazzi@kcl.ac.uk",
+ "doi": "10.1007/978-3-031-44080-9_61",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "394ae89be4",
+   "type": "h2",
+   "num": "61.1",
+   "en": "Introduction"
+  },
+  {
+   "id": "df518dfb5f",
+   "type": "p",
+   "en": "It is widely accepted that the curative potential of allo-HCT for malignant diseases relies on the transfer of healthy donor immune cells capable of recognizing transplantation antigens on residual tumor cells (graft versus tumor (GvT)) and eliminating them. However, as extensively documented in solid cancers, if tumor eradication is incomplete, the prolonged immune pressure selectively allows immune-resistant subclones to survive (Schreiber et al. 2011). There is growing evidence that such an “immunoediting” also accounts for relapse after HCT. Malignant cells evade GvL either by reducing their immunogenicity and conveying inhibitory signals to the donor immune system (intrinsic evasion) or through the microenvironment (extrinsic evasion)."
+  },
+  {
+   "id": "d90edeee19",
+   "type": "h2",
+   "num": "61.2",
+   "en": "Mechanisms of Immune Evasion"
+  },
+  {
+   "id": "3c6ea78108",
+   "type": "h3",
+   "num": "61.2.1",
+   "en": "Mechanisms Intrinsic to the Malignant Clone"
+  },
+  {
+   "id": "f196b359f2",
+   "type": "p",
+   "en": "A remarkable example of tumor-intrinsic mechanism of immune evasion is the genomic loss of the mismatched HLA haplotype frequently documented in leukemia relapses after HCT from HLA haploidentical family donors (Vago et al. 2009). In this setting, donor T cells mount a vigorous alloreactive response against the incompatible HLA molecules, and this reaction is not only responsible for a significant risk of severe GvHD but also a major contributor to the GvT effect. Yet, this strong and selective immune pressure is easily overturned by tumor cells which, by losing the allogeneic HLA haplotype, find a mean to avoid recognition and re-emerge. “HLA loss” variants account for up to one third of relapses after HLA-haplo-HCT (Crucitti et al. 2015) and have been described also in the setting of HCT from partially HLA-incompatible URD (Waterhouse et al. 2011). The documentation of HLA loss at relapse has an important clinical impact, because IS withdrawal or administration of DLI would be much less effective against these disease variants (Tsirigotis et al. 2016)."
+  },
+  {
+   "id": "2ea9a038d6",
+   "type": "p",
+   "en": "More recent studies have documented alternative modalities through which leukemic cells can evade the GvT effect, including the epigenetic silencing of HLA class II molecules (Christopher"
+  },
+  {
+   "id": "a40c34a6df",
+   "type": "p",
+   "en": "et al. 2018; Toffalori et al. 2019), and the overexpression of molecules capable of dampening immune responses such as programmed death ligand (PD-L)1 (Toffalori et al. 2019). This observation provides a rationale for the use of “checkpoint blockade” to restore immune control at relapse. Initial experience in patients with relapsed lymphoma or extramedullary leukemia with anti-PD1 and anti-cytotoxic T-lymphocyte-associated antigen (CTLA)-4 MOAb is very promising (Davids et al. 2016; Herbaux et al. 2017). However, the risks of triggering life-threatening GvHD represent a concern."
+  },
+  {
+   "id": "128e29ae1b",
+   "type": "p",
+   "en": "Another evidence that supports “leukemia immunoediting” is the occurrence of isolated extramedullary relapses after allo-HCT or even more frequently after DLI. These relapses may occur, but not necessarily, in immunological sanctuaries, including the CNS. Although to date the biological drivers of extramedullary relapses remain unknown, some studies have suggested a link with immune-related factors such as chronic GvHD (Solh et al. 2012; Harris et al. 2013)."
+  },
+  {
+   "id": "93b09db7ef",
+   "type": "h3",
+   "num": "61.2.2",
+   "en": "Mechanisms Extrinsic to the Leukemic Cells"
+  },
+  {
+   "id": "0140e1af03",
+   "type": "p",
+   "en": "The alternative, but not mutually exclusive, strategy by which malignant cells enact evasion from immune cell recognition relies on hijacking the stem cell niches in which normal HSC self-renew and differentiate. By doing this, malignant cells create a tumor microenvironment (TME) that has profound consequences on disease progression and relapse. The initial studies conducted on solid tumors have shown that the TME consists of two major cellular populations that alone or in combination drive resistance to conventional therapies and suppress antitumor immune responses. The first group comprises a diverse and heterogeneous group of myeloid-derived cells which, according to a yet unresolved debate on their nomenclature, can be generally classified as tumor-associated monocytes/macrophages (TAM) and myeloid-derived suppressor cells (MDSC) (Bronte et al. 2016). The IS activity of these cells is mediated by factors that include nitric oxide synthase-2 (NOS-2), arginase-1, heme oxygenase-1 (HO-1), interleukin (IL)-10, transforming growth factor (TGF)-β, and prostaglandin E2 (PGE2). All these molecules also favor the recruitment of regulatory T cell (Tregs) that eventually contributes to the inhibition of antitumor CD8⁺ T-cell and natural killer cell effector function (Ostuni et al. 2015). Although most of these mechanisms have been initially demonstrated in solid tumors, there is consistent evidence that they are also involved in hematological malignancies. High-risk AML can actually behave as MDSC by upregulating NOS and suppressing T-cell responses (Mussai et al. 2013). The presence of MDSC in AML has later been confirmed and also identified in multiple myeloma whereby they protect malignant cells through MUC1 oncoprotein (Bar-Natan et al. 2017; Pyzer et al. 2017)."
+  },
+  {
+   "id": "cea00230fc",
+   "type": "p",
+   "en": "The second cellular group consists of an equally heterogeneous population of mesenchymal origin, variously referred to as mesenchymal stromal cells (MSC) or cancer-associated fibroblasts (CAF) (Raffaghello and Dazzi 2015). Regardless of their developmental heterogeneity, they all play a similar role by protecting the malignant cells from cytotoxic agents and immune responses. In the bone marrow, MSC protect CML and AML cells from imatinib and Ara-C via the CXCR4-CXCL12 axis (Vianello et al. 2010). However, recent evidence suggests that arming chimeric antigen receptor (CAR) T cells with CXCR4, which results in significant improvement of chemotaxis toward recombinant the bone marrow niche, may enhance their therapeutic efficacy in acute myeloid leukemia (Biondi et al. 2023)."
+  },
+  {
+   "id": "91bb96a6e6",
+   "type": "p",
+   "en": "Much information has been provided about the IS activity of MSC that is exerted in a nonantigen- specific fashion (Jones et al. 2007). One of the primary direct mechanisms responsible for this involves the expression of indoleamine 2,3-dioxygenase-1 (IDO-1), which consumes the essential amino acid tryptophan. Additional IS mechanisms include the release of suppressive factors such as TGF-β1, hepatocyte growth factor, PGE2, soluble human leukocyte antigen G, and TNF-α-stimulated gene 6 protein"
+  },
+  {
+   "id": "2df89b4f7c",
+   "type": "p",
+   "en": "(TSG-6). However, more recent data have demonstrated the susceptibility of MSC to undergo apoptosis and as a consequence to recruit tissue-resident monocytes/macrophages in delivering a more sustainable IS effect (Cheung and Dazzi 2018)."
+  },
+  {
+   "id": "4ec793aea7",
+   "type": "p",
+   "en": "Finally, the role of Tregs in generating immune resistance has been much discussed. While there is plenty of data indicating how these cells exert a very negative impact on the outcome of solid tumors, data in preclinical models of allogeneic HCT have suggested that Tregs may selectively inhibit GvHD without compromising GvL (Edinger et al. 2003). In contrast, clinical data suggest to consider Treg levels posttransplant with caution (Nadal et al. 2007). Most recent information from the analysis of Treg repertoire and transcriptome has shed light on their activity on GvHD (Lohmeyer et al. 2023)."
+  },
+  {
+   "id": "5362341ca5",
+   "type": "li",
+   "en": "• Leukemia can counteract the beneficial graft-versus-leukemia effects posttransplant."
+  },
+  {
+   "id": "ce8ddc43e5",
+   "type": "li",
+   "en": "• This is effected either by changes in the tumor cells which make them evade immune recognition or by instructing different components of the microenvironment to deliver in situ immunosuppression."
+  }
+ ],
+ "references": [
+  "Bar-Natan M, Stroopinsky D, Luptakova K, et al. Bone marrow stroma protects myeloma cells from cytotoxic damage via induction of the oncoprotein MUC1. Br J Haematol. 2017;176:929–38.",
+  "Biondi M, Tettamanti S, Galimberti S, Cerina B, Tomasoni C, Piazza R, Donsante S, Bido S, Perriello VM, Broccoli V, Doni A, Dazzi F, Mantovani A, Dotti G, Biondi A, Pievani A, Serafini M. Selective homing of CAR-CIK cells to the bone marrow niche enhances control of the acute myeloid leukemia burden. Blood. 2023;141:2587–98.",
+  "Bronte V, Brandau S, Chen S-H, et al. Recommendations for myeloid-derived suppressor cell nomenclature and characterization standards. Nat Commun. 2016;7:12150.",
+  "Cheung TS, Dazzi F. Mesenchymal-myeloid interaction in the regulation of immunity. Semin Immunol. 2018;35:59–68.",
+  "Christopher MJ, Petti AA, Rettig MP, et al. Immune escape of relapsed AML cells after allogeneic transplantation. N Engl J Med. 2018;379(24):2330–41.",
+  "Crucitti L, Crocchiolo R, Toffalori C, et al. Incidence, risk factors and clinical outcome of leukemia relapses with loss of the mismatched HLA after partially incompatible hematopoietic stem cell transplantation. Leukemia. 2015;29:1143–52.",
+  "Davids MS, Kim HT, Bachireddy P, et al. Ipilimumab for patients with relapse after allogeneic transplantation. N Engl J Med. 2016;375:143–53.",
+  "Edinger M, Hoffmann P, Ermann J, et al. CD4+CD25+ regulatory T cells preserve graft-versus-tumor activity while inhibiting graft-versus-host disease after bone marrow transplantation. Nat Med. 2003;9:1144–50.",
+  "Harris AC, Kitko CL, Couriel DR, et al. Extramedullary relapse of acute myeloid leukemia following allogeneic hematopoietic stem cell transplantation: incidence, risk factors and outcomes. Haematologica. 2013;98:179–84.",
+  "Herbaux C, Gauthier J, Brice P, et al. Efficacy and tolerability of nivolumab after allogeneic transplantation for relapsed Hodgkin lymphoma. Blood. 2017;129:2471–8.",
+  "Jones S, Horwood N, Cope A, Dazzi F. The antiproliferative effect of mesenchymal stem cells is a fundamental property shared by all stromal cells. J Immunol. 2007;179:2824–31.",
+  "Lohmeyer JK, Hirai T, Turkoz M, Buhler S, Lopes Ramos T, Köhler N, Baker J, Melotti A, Wagner I, Pradier A, Wang S, Ji X, Becattini S, Villard J, Merkler D, Chalandon Y, Negrin RS, Simonetta F. Analysis of the T-cell repertoire and transcriptome identifies mechanisms of regulatory T-cell suppression of GVHD. Blood. 2023;141:1755–67.",
+  "Mussai F, De Santo C, Abu-Dayyeh I, et al. Acute myeloid leukemia creates an arginase-dependent immunosuppressive microenvironment. Blood. 2013;122:749–58.",
+  "Nadal E, Garin M, Kaeda J, et al. Increased frequencies of CD4(+) CD25(high) T(regs) correlate with disease relapse after allogeneic stem cell transplantation for chronic myeloid leukemia. Leukemia. 2007;21:472–9.",
+  "Ostuni R, Kratochvill F, Murray PJ, Natoli G. Macrophages and cancer: from mechanisms to therapeutic implications. Trends Immunol. 2015;36:229–39.",
+  "Pyzer AR, Stroopinsky D, Rajabi H, et al. MUC1-mediated induction of myeloid-derived suppressor cells in patients with acute myeloid leukemia. Blood. 2017;129:1791–801.",
+  "Raffaghello L, Dazzi F. Classification and biology of tumour associated stromal cells. Immunol Lett. 2015;168:175–82.",
+  "Schreiber RD, Old LJ, Smyth MJ. Cancer immunoediting: integrating immunity’s roles in cancer suppression and promotion. Science. 2011;331:1565–70.",
+  "Solh M, DeFor TE, Weisdorf DJ, Kaufman DS. Extramedullary relapse of acute myelogenous leu kemia after allogeneic hematopoietic stem cell transplantation: better prognosis than systemic relapse. Biol Blood Marrow Transplant. 2012;18:106–12.",
+  "Toffalori C, Zito L, Gambacorta V, et al. Immune signature drives leukemia escape and relapse after hematopoietic cell transplantation. Nat Med. 2019;25(4):603–11.",
+  "Tsirigotis P, Byrne M, Schmid C, et al. Relapse of AML after hematopoietic stem cell transplantation: methods of monitoring and preventive strategies. A review from the ALWP of the EBMT. Bone Marrow Transplant. 2016;51:1431–8.",
+  "Vago L, Perna SK, Zanussi M, et al. Loss of mismatched HLA in leukemia after stem-cell transplantation. N Engl J Med. 2009;361:478–88.",
+  "Vianello F, Villanova F, Tisato V, et al. Bone marrow mesenchymal stromal cells non-selectively protect chronic myeloid leukemia cells from imatinib-induced apoptosis via the CXCR4/CXCL12 axis. Haematologica. 2010;95:1081–9.",
+  "Waterhouse M, Pfeifer D, Pantic M, et al. Genome-wide profiling in AML patients relapsing after allogeneic hematopoietic cell transplantation. Biol Blood Marrow Transplant. 2011;17:1450–9."
+ ]
+}

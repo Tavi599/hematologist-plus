@@ -1,0 +1,542 @@
+{
+ "number": 31,
+ "part": "IV",
+ "page_pdf": [
+  293,
+  300
+ ],
+ "page_printed": 273,
+ "title_en": "Clinically Relevant Drug Interactions in HCT",
+ "authors": "Tiene Bauters and Adrin Dadkhah",
+ "affiliations": "T. Bauters (*) Pharmacy, Pediatric Hemato-Oncology and Stem Cell Transplantation, Ghent University Hospital, Ghent, Belgium e-mail: Tiene.bauters@uzgent.be A. Dadkhah Hospital Pharmacy, Department of Stem Cell Transplantation Hamburg, University Medical Center Hamburg-Eppendorf, Hamburg, Germany e-mail: a.dadkhah@uke.de",
+ "doi": "10.1007/978-3-031-44080-9_31",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "394ae89be4",
+   "type": "h2",
+   "num": "31.1",
+   "en": "Introduction"
+  },
+  {
+   "id": "5a99783368",
+   "type": "p",
+   "en": "Patients undergoing HCT receive polymedication which carries the potential to result in drug interactions. To avoid unexpected outcomes, attention to drug interactions is crucial, especially when drugs with a narrow therapeutic index or inherent toxicity profile are involved (Leather 2004; Glotzbecker et al. 2012; Gholaminezhad et al. 2014)."
+  },
+  {
+   "id": "c1ab60c62c",
+   "type": "p",
+   "en": "Drug interactions can be defined as changes in a drug’s effect due to recent or concurrent use of another drug, food, or environmental agent. The net effect of the combination can result in enhanced activity of the affected drug, possibly leading to toxicity, or reduced activity leading to therapeutic failure (Thanacoody 2012)."
+  },
+  {
+   "id": "18d3897782",
+   "type": "p",
+   "en": "In general, drug interactions can be categorized as being pharmacodynamic, pharmacokinetic, or pharmaceutical in nature."
+  },
+  {
+   "id": "7abe86c9f4",
+   "type": "h3",
+   "num": "31.1.1",
+   "en": "Pharmacodynamic Interactions"
+  },
+  {
+   "id": "7558a4229b",
+   "type": "p",
+   "en": "Pharmacodynamic interactions occur when the effect of one drug is changed by the presence of another drug at its site of action. They compete for specific receptor sites or interfere indirectly with physiological systems."
+  },
+  {
+   "id": "b37e37e87d",
+   "type": "p",
+   "en": "The effect can be additive/synergistic or antagonistic. An example of an additive interaction is the concurrent use of QT-prolongating drugs (e.g., ciprofloxacin and fluconazole) which substantially increases the risk of torsades de pointes or other ventricular tachyarrhythmias."
+  },
+  {
+   "id": "61590831ae",
+   "type": "p",
+   "en": "Specific antagonists can be used to reverse the effect of another drug at the receptor site (e.g., naloxone, an opioid receptor antagonist which reverses signs of opioid intoxication) (Lexicomp drug interactions 2023)."
+  },
+  {
+   "id": "25e51a0220",
+   "type": "h3",
+   "num": "31.1.2",
+   "en": "Pharmacokinetic Interactions"
+  },
+  {
+   "id": "0e712d469d",
+   "type": "p",
+   "en": "Pharmacokinetic (PK) interactions occur when one drug alters the rate or extent of absorption, distribution, metabolism, or elimination of another drug resulting in diminished effects or drug potentiation (Palleria et al. 2013). An example of decreased absorption is observed for quinolones in combination with polyvalent cations or several tyrosine kinase inhibitors (e.g., acalabrutinib and dasatinib) with proton pump inhibitors. However, the most frequent and significant"
+  },
+  {
+   "id": "f7c3e14bc4",
+   "type": "p",
+   "en": "drug interactions relate to drug metabolism. These will be further discussed here."
+  },
+  {
+   "id": "8c53b32e31",
+   "type": "p",
+   "en": "31.1.2.1 Cytochrome P450 Enzyme System Several enzyme families are involved in drug metabolism, cytochrome P450 (CYP450) being the most important one. CYP450 consists of an unique group of isoenzymes grouped into families (1–3) and divided into subfamilies (A–E). They are primarily found in the liver and are genetically encoded (Ingelman-Sundberg and Rodriguez-Antona 2005; Lynch and Price 2007)."
+  },
+  {
+   "id": "b6b3233ddb",
+   "type": "p",
+   "en": "The effect of a CYP450 isoenzyme on a particular substrate can be altered by interaction with other drugs. Drugs can be substrates for a CYP450 isoenzyme and/or may inhibit or induce the isoenzyme (Larson 2018; Glotzbecker et al. 2012; Leather 2004):"
+  },
+  {
+   "id": "f9696de2bb",
+   "type": "p",
+   "en": "Inhibition: Leads to reduced metabolism of the"
+  },
+  {
+   "id": "604d7234f9",
+   "type": "p",
+   "en": "substrate with an increase in the steady-state"
+  },
+  {
+   "id": "bb502cafa1",
+   "type": "p",
+   "en": "concentration. It potentiates the effect and"
+  },
+  {
+   "id": "9d3135df31",
+   "type": "p",
+   "en": "might lead to enhanced or toxic effects, espe"
+  },
+  {
+   "id": "cc03147e03",
+   "type": "p",
+   "en": "cially in drugs with a narrow therapeutic index"
+  },
+  {
+   "id": "2847f9b4e0",
+   "type": "p",
+   "en": "like cyclosporine and tacrolimus. Its onset"
+  },
+  {
+   "id": "3cb296bb3c",
+   "type": "p",
+   "en": "occurs within 1–3 days for drugs with a short"
+  },
+  {
+   "id": "33f0d1291e",
+   "type": "p",
+   "en": "half-life, while the maximal effect may be"
+  },
+  {
+   "id": "2c6f0f9070",
+   "type": "p",
+   "en": "delayed for drugs with a long half-life. Induction: Increases the activity of CYP450"
+  },
+  {
+   "id": "9edbc45ed0",
+   "type": "p",
+   "en": "enzymes and usually results in decreased con"
+  },
+  {
+   "id": "f7d31863fb",
+   "type": "p",
+   "en": "centration/effect of the affected drug with the"
+  },
+  {
+   "id": "4f29aa5bc5",
+   "type": "p",
+   "en": "risk of therapeutic failure. Since the process of"
+  },
+  {
+   "id": "05f7c23f67",
+   "type": "p",
+   "en": "enzyme induction requires new protein syn"
+  },
+  {
+   "id": "db4008a8d9",
+   "type": "p",
+   "en": "thesis, the effect usually occurs over days to"
+  },
+  {
+   "id": "1f3bee14ce",
+   "type": "p",
+   "en": "weeks after starting an inducer."
+  },
+  {
+   "id": "1a5277f185",
+   "type": "p",
+   "en": "Prodrugs rely on enzymes for conversion to their active form(s). The combination of a prodrug (e.g., thiotepa or cyclophosphamide) with a CYP450 inhibitor may result in therapeutic failure because of little or no production of the active drug. Conversely, an exaggerated therapeutic effect or adverse effect can be expected when a CYP450 inducer is added (Lynch and Price 2007)."
+  },
+  {
+   "id": "67631fbdeb",
+   "type": "p",
+   "en": "In general, any drug metabolized by one of the CYP450 enzymes has the potential for PK-interaction, and concurrent use should be done with caution. For instance, the inhibition of CYP1A2 by ciprofloxacin may result in a ten-fold increase of tizanidine exposition and therefore leads to sudden hypotension. As CYP3A4 is responsible for the metabolism of more than 50% of clinically administered drugs (Ingelman-Sundberg and Rodriguez-Antona 2005; Larson 2018), examples of CYP3A4 substrates, inhibitors, and inducers used in HCT are presented in Table 31.1."
+  },
+  {
+   "id": "34c7c3058d",
+   "type": "p",
+   "en": "Mutations in CYP genes give rise to four major phenotypes: poor metabolizers, intermediate metabolizers, extensive metabolizers, and ultrarapid metabolizers (Ingelman-Sundberg and Rodriguez-Antona 2005; Ahmed et al. 2016). Polymorphisms in CYP450 are of concern in the study of interindividual altered drug metabolisms and/or adverse drug reactions."
+  },
+  {
+   "id": "e8902edad6",
+   "type": "p",
+   "en": "31.1.2.2 Drug Transportation P-glycoprotein (PgP) is a plasma membrane transporter involved in the excretion of drugs. Its activity is inhibited or induced by most drugs that inhibit/induce CYP3A4, resulting in increased or decreased bioavailability/clearance of PgP substrates (Ingelman-Sundberg and Rodriguez-Antona 2005; Glaeser 2011; Thanacoody 2012)."
+  },
+  {
+   "id": "ad5c7a5467",
+   "type": "p",
+   "en": "Monoclonal Antibodies Metabolism of monoclonal antibodies (MABs) does not involve CYP450 enzymes or drug transporters; therefore, PK interactions between MABs and conventional drugs are very limited. However, current information in this area is not abundant, and more research is needed (Ferri et al. 2016)."
+  },
+  {
+   "id": "4f91a3bb1b",
+   "type": "h3",
+   "num": "31.1.3",
+   "en": "Pharmaceutical Interactions"
+  },
+  {
+   "id": "bcf758f948",
+   "type": "p",
+   "en": "Pharmaceutical interactions manifest when two or more drugs and their diluents are mixed in the same infusion bag/syringe or when infusion lines (including parenteral nutrition) meet at a Y-site junction. They are the result of incompatibilities and can cause visible changes including color, turbidimetry, and precipitation or non-visible"
+  },
+  {
+   "id": "f786c3064b",
+   "type": "p",
+   "en": "changes that may also lead to a significant drug degradation. To assess the compatibility and stability of intravenous drug mixtures, multiple factors need to be taken into consideration. Therefore, establishing compatibility charts or consulting the hospital pharmacy is advisable."
+  },
+  {
+   "id": "52d1b108eb",
+   "type": "h2",
+   "num": "31.2",
+   "en": "Drug Interactions in HCT Practice"
+  },
+  {
+   "id": "b4d6ba3e01",
+   "type": "p",
+   "en": "Drug interactions can occur as early as during the conditioning regimen. Drugs as etoposide and thiotepa rely on CYP450 enzymes for metabolism, while cyclophosphamide needs to be converted to become functional. Also, there are several clinically relevant drug interactions for busulfan, which is known to have a high interindividual variability considering the ratio of dose and drug exposure. Therefore, to maintain the narrow therapeutic range, it is recommended to conduct therapeutic drug monitoring for busulfan in myeloablative conditioning regimens (McCune and Holmberg 2009). A non-limitative list of PK interactions with busulfan and recommendations for management are summarized in Table 31.2."
+  },
+  {
+   "id": "edb2f80577",
+   "type": "p",
+   "en": "Many clinically relevant interactions have been reported with calcineurin inhibitors (cyclosporine and tacrolimus) and sirolimus. A non-limitative overview of PK interactions with these drugs is presented in Table 31.3."
+  },
+  {
+   "id": "2d8edc1e2c",
+   "type": "table",
+   "num": "31.1",
+   "en": "Table 31.1 CYP3A4 substrates, inhibitors, and inducers commonly used in HCT (non-limitative list) (Lexicomp drug",
+   "columns": 5,
+   "rows_en": [
+    [
+     "interactions",
+     "2023",
+     ", MedicinesComplete",
+     "2023",
+     ", Stockley’s Interactions Checker)"
+    ],
+    [
+     "Substrates",
+     "",
+     "",
+     "Inhibitors",
+     "Inducers"
+    ],
+    [
+     "Acalabrutinib Apixaban Benzodiazepines Budesonide Calcium Channel Blockers Carbamazepine Corticosteroids Cyclosporine Etoposide Gilteritinib Macrolide antibiotics Rivaroxaban Sirolimus Statinsd Steroidse Tacrolimus Thiotepa Quetiapine Venetoclax Miscellaneous",
+     "f",
+     "a b c",
+     "Amiodarone Aprepitant Cimetidine Ciprofloxacin Clarithromycin Diltiazem Erythromycin Fedratinib Fluconazole Grapefruit juice Itraconazole Ketoconazole Letermovir Nirmatrelvir- Posaconazole Voriconazole Verapamil",
+     "Barbiturates (phenobarbital) Carbamazepine Corticosteroids Phenytoin Rifabutin Rifampicin St John’s wort Ritonavir"
+    ],
+    [
+     "Bold font indicates strong inhibitors/inducers a Alprazolam, diazepam, midazolam b Amlodipine, diltiazem, verapamil c Clarithromycin, erythromycin, NOT azithromycin d Atorvastatin, simvastatin NOT pravastatin, fluvastatin e Estradiol, progesterone, testosterone f Aprepitant, fentanyl, ondansetron, zolpidem",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "73662cb333",
+   "type": "aside",
+   "en": "a Table 31.2 Drug interactions with busulfan (BU) (non-limitative list) Interacting drugProposed mechanismEffectRecommended action BlinatumomabUnclear (probably cytokine- ▲ BU mediated CYP3A4-inhibition)levels DeferasiroxUnclear (probably inhibition of – Concurrent administration possible, CYP2C8 and CYP1A2)however TDM necessary ParacetamolCompetition for glutathione – Avoid paracetamol within 72 h prior to or concurrently with BU – Monitor for increased BU concentrations/ toxicity when used concurrently MetronidazoleCYP3A4 inhibition – Monitor for increased BU concentrations/ Competition for glutathionetoxicity when used concurrently ItraconazoleUnclear (probably CYP3A4 Posaconazoleinhibition) Voriconazole PhenytoinCYP3A4/glutathione-S-transferase ▼ BU – Use alternative antiepileptic (levetiracetam) inductionlevels a Lexicomp drug interactions (2023), Glotzbecker et al. (2012), Myers et al. (2017), Sweiss et al. (2019) and Essmann et al. (2021)"
+  },
+  {
+   "id": "d8ef6bedc3",
+   "type": "aside",
+   "en": "a Table 31.3 Pharmacokinetic interactions with cyclosporine (C), tacrolimus (T) and sirolimus (S) (non-limitative list) Interacting drugProposed mechanismEffectRecommended action Anticoagulants DabigatranP-gP/ABCB1 – ▲ dabigatran/edoxaban • Monitor closely for excessive Edoxabaninhibitionlevelclinical response to dabigatran/ edoxaban Antivirals LetermovirCYP3A4 inhibition – ▲ C/T/S levels • Monitor C/S/T levels (decrease letermovir dose when combined with C) Antiepileptics CarbamazepineCYP3A4 induction – ▼ C/T/S level • Monitor C/T/S levels Phenobarbital • Increased C/T/S doses will Phenytoinlikely be needed • Consider therapy modification (levetiracetam) Antifungals CaspofunginUnknown – C: ▲ adverse/toxic effect • Monitor liver function/ of caspofunginhepatotoxicity in combination with – ▼ T/S levelsC • Monitor T/S levels and adjust as necessary FluconazoleCYP3A4 and/or PgP – ▲ C/T/S levels • Monitor clinical response of ItraconazoleinhibitionC/T/S closely Posaconazole • Monitor C/T/S levels closely Voriconazole • Decreased C/T/S doses will likely be needed • Itraconazole: consider therapy modification (C/T/S) • Posaconazole/voriconazole: consider therapy modification (C/T), avoid combination (S)"
+  },
+  {
+   "id": "772277ad8f",
+   "type": "table",
+   "num": "31.3",
+   "en": "Table 31.3 (continued)",
+   "columns": 4,
+   "rows_en": [
+    [
+     "Interacting drug",
+     "Proposed mechanism",
+     "Effect",
+     "Recommended action"
+    ],
+    [
+     "Calcium channel blockers",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Diltiazem Verapamil",
+     "CYP3A4 inhibition",
+     "–▲ C/T/S levels",
+     "•Monitor C/T/S levels •Decreased doses of C/T/S might be needed •Monitor for decreases in blood pressure (C/T) •Consider therapy modification (C/S)"
+    ],
+    [
+     "Calcineurin inhibitors",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Cyclosporine",
+     "CYP3A4 competition",
+     ": –T▲ levels/nephrotoxicity",
+     "•Discontinue C/T therapy at"
+    ],
+    [
+     "",
+     "",
+     "of C/T –S: ▲levels of S (of specific concern with modified C)",
+     "least 24 h prior to initiating therapy with the other agent: avoid combination•C/T •Monitor for toxic effects of S •S: ▲ risk of C-induced HUS/ TTP/TMA •Administer oral doses of S 4 h after doses of C consider therapy •C/S: modification"
+    ],
+    [
+     "Tacrolimus",
+     "",
+     "–C: ▲ levels/",
+     "void combination with C/S •A"
+    ],
+    [
+     "",
+     "",
+     "nephrotoxicity of C/T –S: ▲ adverse/toxic effect of T/S, ▼ level of T",
+     "(enhanced toxicity of C/T/S)"
+    ],
+    [
+     "Corticosteroids",
+     "CYP3A4/PgP induction CYP3A4 substrate",
+     "–▼ C/S/T levels –▲ effect of corticosteroid",
+     "•Monitor for changes in C/T levels and toxic effects of T/C when tapering corticosteroïds"
+    ],
+    [
+     "Macrolide antibiotics (not azithromycin)",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Clarithromycin Erythromycin",
+     "CYP3A4/PgP inhibition",
+     "–▲ C/T/S levels –S: ▲ level of",
+     "•Monitor C/T/S levels and adjust dose accordingly"
+    ],
+    [
+     "",
+     "",
+     "erythromycin",
+     ": consider therapy •S/T modification"
+    ],
+    [
+     "Proton pump inhibitors (PPI, not pantoprazole)",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Omeprazole Lansoprazole",
+     "C: Unclear T: CYP3A4/ CYP2C19 inhibition",
+     "–▲ C/T level",
+     "•Monitor C/T levels closely when starting or stopping therapy with PPI and adjust dosage if necessary •Inconsistent data (omeprazole), pantoprazole may be less likely to significantly interact"
+    ],
+    [
+     "Statins",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Atorvastatin Simvastatin",
+     "CYP3A4 inhibition and inhibition of OATP1B1-mediated hepatic uptake",
+     "–C: ▲ level of atorvastatin/ simvastatin: Limited effect–T",
+     "•Monitor for increased risk for statin-related toxicities (myopathy and rhabdomyolysis) Avoid concurrent use •C: atorvastatin/simvastatin: No action needed•T"
+    ],
+    [
+     "Miscellaneous",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Grapefruit juice",
+     "CYP3A4 inhibition (intestinal)",
+     "–▲ C/T/S levels (C/T: Primarily limited to orally",
+     "•Monitor C/T/S levels void combination with orally •A"
+    ],
+    [
+     "",
+     "",
+     "administered C/T)",
+     "administered C/S/T"
+    ],
+    [
+     "Metronidazole",
+     "CYP3A4 inhibition",
+     "–▲ C/T levels",
+     "•Monitor C/T/S levels (standard measures)"
+    ],
+    [
+     "",
+     "",
+     "",
+     "(continued)"
+    ]
+   ]
+  },
+  {
+   "id": "3359b51756",
+   "type": "h2",
+   "num": "31.3",
+   "en": "Interactions with Herbal Drugs and Food"
+  },
+  {
+   "id": "bd504c3649",
+   "type": "h3",
+   "num": "31.3.1",
+   "en": "Herbal Drugs"
+  },
+  {
+   "id": "070dfb24a9",
+   "type": "p",
+   "en": "The use of herbal drugs is growing worldwide, and a number of serious interactions with conventional drugs have been reported (Enioutina et al. 2017). Patients often do not perceive herbal supplements as drugs and prescribers are not always aware that patients are taking these products. A thorough drug history anamnesis is important and should be performed by asking very specific questions about herbal drug use."
+  },
+  {
+   "id": "9965b810bf",
+   "type": "p",
+   "en": "An example of an herbal drug frequently involved in major drug interactions is St John’s wort (SJW) (Hypericum perforatum). SJW is an over-the-counter product commonly used in HCT patients for the treatment of mild depression. SJW can reduce the serum concentration of CYP3A4 substrates as cyclosporine and tacrolimus by induction of CYP3A4 or by increasing PgP expression, resulting in lack of response. Concomitant use of SJW with drugs metabolized by CYP3A4 should be avoided or monitored if no alternative for SJW is available (Enioutina et al. 2017; Lexicomp drug interactions 2023)."
+  },
+  {
+   "id": "cf323a53ca",
+   "type": "h3",
+   "num": "31.3.2",
+   "en": "Food"
+  },
+  {
+   "id": "4aa8235359",
+   "type": "p",
+   "en": "Drug interactions with food and drinks are known to occur. Grapefruit juice is a potent inhibitor of intestinal CYP3A4, and many clinically relevant interactions have been reported (e.g., with simvastatin and calcineurin inhibitors). Cruciferous vegetables (Brussels sprouts, cabbage, and broccoli) contain substances that are inducers of CYP1A2 but do not appear to cause clinically important drug interactions (Thanacoody 2012)."
+  },
+  {
+   "id": "3448dea169",
+   "type": "h2",
+   "num": "31.4",
+   "en": "Resources for Drug Interactions"
+  },
+  {
+   "id": "a4ae8bd9e8",
+   "type": "p",
+   "en": "Drug interactions in HCT can be numerous. Whenever a potential clinically relevant drug interaction is recognized, a management plan should be recommended (modification in drug therapy or closer monitoring of efficacy and adverse reactions) (Tannenbaum and Sheehan 2014). A number of resources are available to help identifying and managing drug interactions (e.g., Lexicomp drug interactions 2023; ClinicalKey 2023; MedicinesComplete 2023. Interpretation of interactions must be performed"
+  },
+  {
+   "id": "158b9e646e",
+   "type": "table",
+   "num": "31.3",
+   "en": "Table 31.3 (continued)",
+   "columns": 4,
+   "rows_en": [
+    [
+     "Interacting drug",
+     "Proposed mechanism",
+     "Effect",
+     "Recommended action"
+    ],
+    [
+     "Mycophenolate mofetil (MMF)",
+     "Decreased enterohepatic recirculation",
+     "–C: ▼ active metabolite mycophenolic acid ▲ glucuronide metabolite",
+     "•Monitor MMF dosing and response to therapy particularly closely when adjusting concurrent"
+    ],
+    [
+     "",
+     "",
+     "concentrations (associated with mycophenolate adverse effects) –MMF: ▼ C exposure in children: does not affect PK of –T mycophenolic acid (one study suggests ▲ T exposure)",
+     "C (starting, stopping, or changing dose)"
+    ],
+    [
+     "Rifampicin",
+     "CYP3A4/PgP induction",
+     "–▼ C/T/S levels",
+     "•Monitor levels, increase dose C/T/S accordingly •Consider therapy modification"
+    ],
+    [
+     "St John’s wort (SJW)",
+     "CYP3A4/PgP induction",
+     "–▼ C/T/S levels",
+     "•Consider alternatives to SJW •If it cannot be avoided, monitor C/T/S levels"
+    ],
+    [
+     "▼ = decreased; ▲ a Lexicomp drug interactions (",
+     "= increased 2023) and Glotzbecker et al. (",
+     "2012)",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "6c683c4fee",
+   "type": "p",
+   "en": "carefully to avoid the risk of over-alerting. The patient’s clinical status, comorbidities, and severity of the drug interactions presented should always be taken into account."
+  },
+  {
+   "id": "b05de4bf54",
+   "type": "h2",
+   "num": "31.5",
+   "en": "Conclusion"
+  },
+  {
+   "id": "78e0a388c5",
+   "type": "p",
+   "en": "Drug interactions can occur at all levels during HCT. Attention to and management of interactions are crucial to prevent severe clinical consequences. Due to the complexity of the therapy and the risk of drug interactions, an active collaboration in a HCT multidisciplinary team, including physicians, pharmacists, and nurses, is of paramount importance."
+  },
+  {
+   "id": "4b237de9a0",
+   "type": "li",
+   "en": "• Drug interactions in HCT are common and can occur at all levels."
+  },
+  {
+   "id": "d3536186e8",
+   "type": "li",
+   "en": "• Knowledge of mechanisms involved in drug metabolism might help in anticipating interactions."
+  },
+  {
+   "id": "f4c2206b75",
+   "type": "li",
+   "en": "• A multidisciplinary approach is important to reduce the risk of drug interactions."
+  }
+ ],
+ "references": [
+  "Ahmed S, Zhou Z, Zhou J, Chen SQ. Pharmacogenomics of drug metabolizing enzymes and transporters: relevance to precision medicine. Genomics Proteomics Bioinformatics. 2016;14:298–313.",
+  "Clinical pharmacology powered by ClinicalKey. Tampa: Elsevier. http://www.clinicalkey.com. Accessed 28 March 2023.",
+  "Enioutina EY, Salis ER, Job KM, Gubarev MI, Krepkova LV, Sherwin CM. Herbal medicines: challenges in the modern world. Part 5. Status and current directions of complementary and alternative herbal medicine worldwide. Expert Rev Clin Pharmacol. 2017;10:327–38.",
+  "Essmann S, Dadkhah A, Janson D, Wolschke C, Ayuk F, Kroger NM. Iron Chelation with Deferasirox increases Busulfan AUC during conditioning chemotherapy prior to allogeneic stem cell transplantation. Transplant Cell Ther. 2021:S2666636721013646.",
+  "Ferri N, Bellosta S, Baldessin L, Boccia D, Racagni G, Corsini A. Pharmacokinetics interactions of monoclonal antibodies. Pharmacol Res. 2016;111:592–9.",
+  "Flockhart table P450 drug interactions. Indiana University. http://medicine.iupui.edu/clinpharm/ddis/main- table/. Accessed 28 March 2023.",
+  "Gholaminezhad S, Hadjibabaie M, Gholami K, et al. Pattern and associated factors of potential drug-drug interactions in both pre- and early post-hematopoietic stem cell transplantation stages at a referral center in the Middle East. Ann Hematol. 2014;93:1913–22.",
+  "Glaeser H. Importance of P-glycoprotein for drug–drug interactions. In: Fromm M, Kim R, editors. Drug transporters. Handbook of experimental pharmacology, vol. 201. Berlin, Heidelberg: Springer; 2011.",
+  "Glotzbecker B, Duncan C, Alyea E, Campbell B, Soiffer R. Important drug interactions in hematopoietic stem cell transplantation: what every physician should know. Biol Blood Marrow Transplant. 2012;18:989–1006.",
+  "Ingelman-Sundberg M, Rodriguez-Antona C. Pharmacogenetics of drug-metabolizing enzymes: implications for a safer and more effective drug therapy. Philos Trans R Soc Lond Ser B Biol Sci. 2005;360:1563–70.",
+  "Larson AM. Drugs and the liver: metabolism and mechanisms of injury. In: Post TW, editor. UpToDate. Waltham, MA: UpToDate; 2018. Accessed 16 Jan 2018.",
+  "Leather HL. Drug interactions in the hematopoietic stem cell transplant (HSCT) recipient: what every transplanter needs to know. Bone Marrow Transplant. 2004;33:137–52.",
+  "Lexicomp drug interactions. UpToDate, Post TW (ed), UpToDate, Waltham, MA. Accessed 28 March 2023.",
+  "Lynch T, Price A. The effect of cytochrome P450 metabolism on drug response, interactions, and adverse effects. Am Fam Physician. 2007;76:391–6.",
+  "McCune JS, Holmberg LA. Busulfan in hematopoietic stem cell transplant setting. Expert Opin Drug Metab Toxicol. 2009;5(8):957–69.",
+  "MedicinesComplete. London: Pharmaceutical Press. http://www.medicinescomplete.com/. Accessed 28 March 2023.",
+  "Myers AL, Kawedia JD, Champlin RE, Kramer MA, Nieto Y, Ghose R, u. a. Clarifying busulfan metabolism and drug interactions to support new therapeutic drug monitoring strategies: a comprehensive review. Expert Opin Drug Metab Toxicol. 2017;13(9):901–23.",
+  "Palleria C, Di Paolo A, Giofrè C, et al. Pharmacokinetic drug-drug interaction and their implication in clinical management. J Res Med Sci. 2013;18:601–10.",
+  "Sweiss K, Quigley JG, Oh A, Lee J, Ye R, Rondelli D. A novel drug interaction between busulfan and blinatumomab. J Oncol Pharm Pract. 2019;25(1):226–8.",
+  "Tannenbaum C, Sheehan NL. Understanding and preventing drug-drug and drug-gene interactions. Expert Rev Clin Pharmacol. 2014;7:533–44.",
+  "Thanacoody HKR. Drug interactions. In: Walker R, Whittlesea C, editors. Clinical pharmacy and therapeutics. 5th ed. London: Elsevier; 2012."
+ ]
+}

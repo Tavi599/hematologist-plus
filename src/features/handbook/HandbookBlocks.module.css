@@ -1,0 +1,28 @@
+/* The original English kept beside the translation: present enough to read and
+   compare, quiet enough not to compete with the Ukrainian above it. */
+.original {
+  border-inline-start: 2px solid
+    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  padding-inline-start: var(--mantine-spacing-sm);
+  margin-block-start: 4px;
+}
+
+.block {
+  scroll-margin-block-start: 96px;
+}
+
+.hit {
+  background-color: light-dark(var(--mantine-color-yellow-0), var(--mantine-color-yellow-9));
+  border-radius: var(--mantine-radius-sm);
+  box-shadow: 0 0 0 4px light-dark(var(--mantine-color-yellow-0), var(--mantine-color-yellow-9));
+}
+
+/* A handbook table can be wider than a phone; it scrolls on its own rather
+   than stretching the page. */
+.tableWrap {
+  overflow-x: auto;
+}
+
+.cell {
+  vertical-align: top;
+}

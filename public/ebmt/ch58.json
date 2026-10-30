@@ -1,0 +1,347 @@
+{
+ "number": 58,
+ "part": "VII",
+ "page_pdf": [
+  525,
+  531
+ ],
+ "page_printed": 523,
+ "title_en": "Prevention and Treatment of Relapse by Drugs",
+ "authors": "Nicolaus Kröger and Nico Gagelmann",
+ "affiliations": "N. Kröger (*) · N. Gagelmann Department of Stem Cell Transplantation, University Medical Center Hamburg-Eppendorf, Hamburg, Germany e-mail: nkroeger@uke.de",
+ "doi": "10.1007/978-3-031-44080-9_58",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "394ae89be4",
+   "type": "h2",
+   "num": "58.1",
+   "en": "Introduction"
+  },
+  {
+   "id": "00789711de",
+   "type": "p",
+   "en": "Relapse has become the most frequent cause of treatment failure after HCT (Horowitz et al. 2018). Because outcome after relapse remains poor, major efforts are focused on prevention of relapse. Beside adoptive cell-based options, such as DLI and CAR T cells, the availability of novel effective pharmacological compounds has opened new avenues in clinical research to use those drugs early after HCT in order to prevent and treat relapse (Kroger et al. 2014). The optimal pharmacological compound should have a safe toxicity profile, an antitumor effect to the underlying disease, and an immune profile which can be used to booster the graft-versus-leukemia (GVL) effect and to reduce the risk of GVHD."
+  },
+  {
+   "id": "d43e29a1a0",
+   "type": "h2",
+   "num": "58.2",
+   "en": "Tyrosine Kinase Inhibitors (TKI) Targeting BCR/ABL"
+  },
+  {
+   "id": "1b4eafd82e",
+   "type": "p",
+   "en": "Beside a direct antitumor effect, TKIs targeting BCR/ABL in BCR/ABL-positive acute lymphoblastic leukemia or chronic myeloid leukemia are considered to induce also immunomodulating effects by inducing effect on T-cell cytolytic function, reducing T-cell PD-1 expression, and reducing myeloid-derived suppressor cells. TKIs targeting BCR/ABL such as imatinib induce more than 60% molecular remission in CML patients who relapsed after allograft. Smaller studies have investigated second-generation TKI successfully as maintenance therapy after allo-HCT for CML (Olavarria et al. 2007) and maintenance with TKIs after transplantation for blastic phase in CML seems to improve outcome (Niederwieser et al. 2021)."
+  },
+  {
+   "id": "95b9b036fa",
+   "type": "p",
+   "en": "TKIs as maintenance therapy for Ph + ALL led to nonconclusive results. The CIBMTR did not find a difference in Ph + ALL patients who received posttransplant TKIs regarding relapse at 3 years, while in an EBMT study Ph + ALL patients who received TKIs posttransplant had lower relapse incidence and an improved LFS. In a small randomized study comparing TKI prophylactically or preemptive in Ph + ALL, no difference in survival was observed (Pfeifer et al. 2013). In a position statement, EBMT recommended in MRD-negative patients after allo-HCT either prophylactic or preemptive treatment (Giebel et al. 2016)."
+  },
+  {
+   "id": "91b8cd5e06",
+   "type": "h2",
+   "num": "58.3",
+   "en": "TKI Targeting FLT3-ITD"
+  },
+  {
+   "id": "9faea2e74f",
+   "type": "p",
+   "en": "TKIs in the setting of FLT3-ITD-positive AML are of clinical relevance because a higher risk of relapse has been described for FLT3-ITD-positive patients who received allo-HCT CR1 (30% vs. 16%). Animal experiences had shown that"
+  },
+  {
+   "id": "b7549fb8ff",
+   "type": "p",
+   "en": "sorafenib stimulated immunogenicity by induction of IL-15 which enhanced T-cell activation and GVL effect (Mathew et al. 2018a)."
+  },
+  {
+   "id": "63ba3efc7e",
+   "type": "p",
+   "en": "Midostaurin which is approved in the treatment of FLT3-positive AML has been tested in a phase II study as maintenance therapy in FLT-3-ITD-positive patients with a low relapse rate at 12 months of only 9.2%, but a randomized trial could not find a survival benefit (Maziarz et al. 2018). In contrast, two prospective randomized trials compared sorafenib to placebo as maintenance therapy after allogeneic HCT and both studies showed significant benefit for sorafenib regarding event-free and overall survival (Burchert et al. 2020; Xuan et al. 2020). A meta-analysis suggested clear benefit of TKI post-allograft in FLT3-positive AML patients, favoring sorafenib (Gagelmann et al. 2021). Currently under investigation are randomized trials with other TKIs in FLT3-positive AML such as quizartinib, gilteritinib, and crenolanib."
+  },
+  {
+   "id": "339e6b76da",
+   "type": "p",
+   "en": "For relapsed FLT3-ITD-positive patients, sorafenib can induce long-lasting CR, and retrospective data show better outcome of sorafenib plus DLI in comparison to DLI alone (Mathew et al. 2018a; Metzelder et al. 2012)."
+  },
+  {
+   "id": "74106625aa",
+   "type": "h2",
+   "num": "58.4",
+   "en": "Checkpoint Inhibitors"
+  },
+  {
+   "id": "75d0c79a85",
+   "type": "p",
+   "en": "Checkpoint inhibitors blocking CTLA-4 and PD-1 are now widely used in solid tumors and also in hematological malignancies such as Hodgkin’s disease (Ansell et al. 2015). Because of reversal of T-cell exhaustion by checkpoint inhibitors which may enhance a graft-versus-malignancy effect, this compound has also raised interest to be investigated after HCT. After auto-HCT PD-1 antibody, pidilizumab as maintenance therapy in DLBCL was well tolerated in a phase II study, and nivolumab has shown high response rate in patients with HL who relapsed after auto- HCT (Younes et al. 2016), while the combination of brentuximab vedotin plus nivolumab as consolidation strategy after auto-HCT was highly active for patients with high-risk relapsed or refractory classic HL (Herrera et al. 2023)."
+  },
+  {
+   "id": "a98503b9a1",
+   "type": "p",
+   "en": "There is a concern about a higher risk of GVHD after checkpoint inhibition post-allograft, but ipilimumab did not induce high incidence of GVHD in phase I and phase II trials although the efficacy was limited with an overall response rate of less than 30% (Davids et al. 2016). PD-1 blockade investigated in a European trial was reported for 20 patients with HL who relapsed after allograft. The remission rate was high with 95% and 30% developed GVHD which was fatal in one patient. In a similar trial including 31 lymphoma patients who relapsed after allograft, the response rate was 77%, but 54% developed acute GVHD, and 8 patients died from GVHD-related complications (Haverkos et al. 2017)."
+  },
+  {
+   "id": "b6c44c0425",
+   "type": "h2",
+   "num": "58.5",
+   "en": "Hypomethylating Agents"
+  },
+  {
+   "id": "ae46b9c189",
+   "type": "p",
+   "en": "Methylation has a crucial role in epigenetic regulation of gene expression and malignant cells using hypermethylation to switch off a variety of genes which are responsible for growth inhibition and apoptosis. DNA methyltransferase inhibitors such as azacytidine or decitabine are active in MDS and AML, and according to their toxicity profile, they can be used after allo-HCT. Beside their effect on gene modification for differentiation and cell growth, hypomethylating agents (HMA) lead also to an upregulation of HLA and tumor-associated antigen which may be targeted by donor T cells (Hambach et al. 2009; Goodyear et al. 2010). Furthermore, CD4 and CD8 T cells were strongly suppressed by HMA, while an increase of regulatory T cells has been described."
+  },
+  {
+   "id": "a4a3c168e6",
+   "type": "p",
+   "en": "Azacytidine and decitabine either as single agent or in combination with DLI for relapsed patients have been reported, and up to 28% CR could be achieved including long-lasting remission (Schroeder et al. 2013). In a large EBMT study, an ORR of 25% with 15% CR and a 2-year OS of 12% have been reported for azacytidine after allo-HCT relapse in AML/MDS patients. Overall, the incidence of acute GVHD was low, and the addition of DLI did not improve response or OS. Smaller studies also reported efficacy of azacytidine to convert decreasing donor cell"
+  },
+  {
+   "id": "7314f82d17",
+   "type": "p",
+   "en": "chimerism into full donor cell chimerism (Platzbecker et al. 2012)."
+  },
+  {
+   "id": "e862e662cf",
+   "type": "p",
+   "en": "Treating patients with HMA prophylactically to prevent relapse has been tested in a randomized trial, but no benefit for EFS and OS could be observed (Oran et al. 2020), and currently oral azacytidine (CC-486) is investigated in prospective randomized clinical trials."
+  },
+  {
+   "id": "e22047f699",
+   "type": "p",
+   "en": "In contrast, G-CSF in combination with decitabine has significantly reduced relapse after allogeneic HCT in a randomized trial (Gao et al. 2020)."
+  },
+  {
+   "id": "e959e87745",
+   "type": "h2",
+   "num": "58.6",
+   "en": "Immunomodulating Drugs (IMiDs)"
+  },
+  {
+   "id": "d48a2537ff",
+   "type": "p",
+   "en": "After auto-HCT, thalidomide has been tested alone and with glucocorticoids as maintenance to prevent relapse/progression. Most of these phase III trials demonstrated an improved PFS or EFS with variable improvement in OS, but due to toxicity, the drug has not become a standard care of treatment (Barlogie et al. 2008; Spencer et al. 2009). Lenalidomide is approved as maintenance therapy since a significant improvement in PFS has been shown in two randomized trials and improved OS on one randomized trial (McCarthy et al. 2012; Attal et al. 2012). A meta-analysis with data from three large studies (CALGB 100104, IFM-05-02, and GIMEMA RV-MM-PI-209) demonstrated an OS and a PFS benefit for lenalidomide maintenance. However, an increased risk of secondary primary malignancies was observed after lenalidomide maintenance therapy."
+  },
+  {
+   "id": "af19050b7d",
+   "type": "p",
+   "en": "After allo-HCT, a stimulation of T cells has been shown for thalidomide, but second-generation IMiDs such as lenalidomide and pomalidomide induce an even more potent stimulation of T-cell-mediated immunity. IMiDs also stimulate the innate immune system including γ/δ-T cells and NK T cells. Of note, it has been shown that thalidomide even when combined with DLI was not associated with increased risk for GVHD risk (Kroger et al. 2004). Because of the stronger T-cell stimulation, lenalidomide given early post-allo-HCT can cause severe GVHD (Sockel et al. 2012), but starting with a low dose of only 5 mg and given the drug after discontinuation of IS reduces the risk of GVHD markedly (Wolschke et al. 2013)."
+  },
+  {
+   "id": "e00fba1e40",
+   "type": "p",
+   "en": "Overall, IMiDs are potent agents for preventing relapse after auto-HCT, but their use post-allo- HCT remains to be defined primarily due to the increased risk of GvHD."
+  },
+  {
+   "id": "52ae2b5603",
+   "type": "h2",
+   "num": "58.7",
+   "en": "Proteasome Inhibitors"
+  },
+  {
+   "id": "d40454665b",
+   "type": "p",
+   "en": "Proteasome inhibitors are mainly used as induction therapy prior auto-HCT. Some studies investigated proteasome inhibitors as maintenance therapy after auto-HCT to reduce the risk of relapse. In a prospective study, bortezomib as maintenance therapy was superior to thalidomide particularly in patients with renal insufficiency and high-risk cytogenetics t(4;14) or del(17q) (Goldschmidt et al. 2018)."
+  },
+  {
+   "id": "473d1bf6e1",
+   "type": "p",
+   "en": "Bortezomib after allo-HCT was tested so far only in smaller studies with acceptable rates of GVHD (Caballero-Velazquez et al. 2013), and novel proteasome inhibitors such as ixazomib have been investigated as maintenance therapy after allografting in MM without significant benefits (Bashir et al. 2023)."
+  },
+  {
+   "id": "cadf4a13dc",
+   "type": "h2",
+   "num": "58.8",
+   "en": "Monoclonal Antibodies"
+  },
+  {
+   "id": "3edce10492",
+   "type": "p",
+   "en": "Most studies of maintenance therapy with MoAb have been conducted after auto-HCT. While maintenance therapy after autograft with anti-CD20 antibody rituximab failed to demonstrate an advantage for DLBCL with respect to RFS and OS (Gisselbrecht et al. 2012) for follicular lymphoma, an improved PFS but not an improvement in OS has been reported in a randomized study (Pettengell et al. 2013). An improved PFS and OS with rituximab as maintenance therapy have recently been shown for mantle cell lymphoma after auto-HCT (Le Gouill et al. 2017)."
+  },
+  {
+   "id": "35d24edb55",
+   "type": "p",
+   "en": "After allo-HCT for DLCBL, rituximab maintenance therapy did not improve overall survival (Glass et al. 2014). Anti-CD30 antibody drugs conjugate brentuximab vedotin as maintenance"
+  },
+  {
+   "id": "e91cf3d382",
+   "type": "p",
+   "en": "therapy after auto-HCT for HL did improve PFS but not OS (Moskowitz et al. 2015)."
+  },
+  {
+   "id": "4405296d19",
+   "type": "p",
+   "en": "Anti-CD22-conjugated antibody inotuzumab ozogamicin has been approved for relapsed ALL and has shown also activity in patients with ALL who relapsed after HCT (Kantarjian et al. 2016), but the risk of SOS/VOD is about 11% and up to 22% for those who underwent allo-HCT after inotuzumab ozogamicin."
+  },
+  {
+   "id": "8d3a8cdfcc",
+   "type": "p",
+   "en": "Bispecific antibodies such as CD19-directed CD3 T-cell-engaged blinatumomab are active in relapsed and refractory ALL and also in MRD-positive ALL and have been investigated successfully in combination with DLI after relapse post-allo-HCT (Ueda et al. 2016). Using blinatumomab as maintenance post-allogeneic HCT was found to be feasible, while its benefit may be dependent on the immune milieu at the time of treatment (Gaballa et al. 2022)."
+  },
+  {
+   "id": "104b8d6fd9",
+   "type": "h2",
+   "num": "58.9",
+   "en": "Histone Deacetylase Inhibition (HDACI)"
+  },
+  {
+   "id": "eded61a5ba",
+   "type": "p",
+   "en": "Histone deacetylation is a crucial mechanism of epigenetic modulation, and HDACI promotes gene expression by unwinding of histone-bound DNA. Since HDACI reduces inflammatory cytokines and increases T-regulatory cells, the drug was also used for GVHD prevention in a phase I/II study (Choi et al. 2014). Panobinostat was tested in two trials as maintenance therapy after allo-HCT in AML/MDS with or without (Bug et al. 2017) DLI resulting in an encouraging 1-year RFS of 66% in combination with DLI and 2-year RFS of 74% if used as single agent."
+  },
+  {
+   "id": "a053b08332",
+   "type": "h2",
+   "num": "58.10",
+   "en": "BCL-2 Inhibitors"
+  },
+  {
+   "id": "29980cc065",
+   "type": "p",
+   "en": "BCL-2 inhibitor (venetoclax) has shown promising results in treatment of acute myeloid leukemia. Small phase II studies using venetoclax plus decitabine to prevent relapse have been reported, but until results from randomized phase III are available the drugs should be used only in clinical trials."
+  },
+  {
+   "id": "6adf0d2dc2",
+   "type": "h2",
+   "num": "58.11",
+   "en": "IDH1/IDH2 Inhibitors"
+  },
+  {
+   "id": "0e57cb3ee8",
+   "type": "p",
+   "en": "IDH1 and IDH2 inhibitors ivosidenib and enasidenib have shown efficacy and favorable safety profile in the treatment of IDH1- or IDH2-positive acute leukemia and also in early phase I studies as maintenance post-allograft (Fathi et al. 2023)."
+  },
+  {
+   "id": "57fdcdbeb3",
+   "type": "aside",
+   "en": "DrugDiseaseSettingImpact ImatinibCMLProphylacticBeneficial Ph + ALLNo benefit NilotinibPh + ALLProphylactic/preemptiveUnclear DasatinibPh + ALLProphylacticUnclear SorafenibFLT3-ITD AMLMaintenanceBeneficial MidostaurinFLT3-ITD AMLMaintenanceMay be beneficial GilteritinibFLT3-ITD AMLMaintenanceNo benefit PidilizumabDLBCLProphylacticUnclear NivolumabHLConsolidationBeneficial PembrolizumabHLConsolidationBeneficial IpilimumabMyeloid+lymphoidTreatmentUnclear Azacytidine (+DLI)AML/MDSTreatmentMay be beneficial ProphylacticNo benefit Decitabine (+DLI)AML/MDSTreatmentMay be beneficial Decitabine + GCSFAMLProphylacticBeneficial IvosidenibIDH1-mutated AMLMaintenanceUnclear EnasidenibIDH2-mutated AMLMaintenanceUnclear"
+  },
+  {
+   "id": "7924322a52",
+   "type": "li",
+   "en": "• Outcome after relapse to allogeneic stem cells remains poor, and major efforts should focus on prevention of relapse."
+  },
+  {
+   "id": "565f4b377f",
+   "type": "li",
+   "en": "• Beside adoptive cell-based options such as DLI, the availability of novel effective pharmacological compounds has opened new avenues in clinical research, mainly:"
+  },
+  {
+   "id": "3feea619bb",
+   "type": "li",
+   "en": "– Tyrosine kinase inhibitors (TKI) targeting BCR/ABL"
+  },
+  {
+   "id": "679ebd06a8",
+   "type": "li",
+   "en": "– TKI targeting FLT3-ITD (sorafenib, midostaurin, quizartinib, gilteritinib, crenolanib)"
+  },
+  {
+   "id": "d5ab63290f",
+   "type": "li",
+   "en": "– Checkpoint inhibitors (pidilizumab, nivolumab, ipilimumab, pembrolizumab)"
+  },
+  {
+   "id": "e3bf8e4c87",
+   "type": "li",
+   "en": "– Hypomethylating agents (azacytidine, decitabine)"
+  },
+  {
+   "id": "e76f30c7cb",
+   "type": "li",
+   "en": "– Immunomodulating drugs (thalidomide, lenalidomide, pomalidomide)"
+  },
+  {
+   "id": "1f97601afb",
+   "type": "li",
+   "en": "– Proteasome inhibitors (bortezomib, ixazomib)"
+  },
+  {
+   "id": "f28c3ecf6e",
+   "type": "li",
+   "en": "– Antibodies (rituximab, brentuximab vedotin, inotuzumab ozogamicin, blinatumomab)"
+  },
+  {
+   "id": "42ccde1d1e",
+   "type": "li",
+   "en": "– Histone deacetylase inhibition (panobinostat)"
+  },
+  {
+   "id": "5db95bb434",
+   "type": "li",
+   "en": "– BCL-2 inhibitor (venetoclax)"
+  },
+  {
+   "id": "8dd2420271",
+   "type": "li",
+   "en": "– IDH1/IDH2 inhibitors (ivosidenib and enasidenib)"
+  },
+  {
+   "id": "51cdc29a4e",
+   "type": "li",
+   "en": "• The optimal pharmacological compound should have a safe toxicity profile, an antitumor effect to the underlying disease, and an immune profile which can be used to booster the GVL effect and to reduce the risk of GVHD."
+  }
+ ],
+ "references": [
+  "DrugDiseaseSetting",
+  "IMiDs (Len, Thal, Pom)MyelomaMaintenance post-auto Post-allo",
+  "PI (Bor, Car, Ixa)MyelomaMaintenance post-auto Post-allo",
+  "Brentuximab vedotinHLMaintenance post-auto Post-allo",
+  "RituximabDLBCLMaintenance post-auto Post-allo MCLMaintenance post-auto Post-allo",
+  "Inotuzumab ozogamicinALLTreatment",
+  "Blinatumomab (+DLI)ALLTreatment Maintenance",
+  "Venetoclax (+DLI/AZA)AMLProphylactic",
+  "AML acute myeloid leukemia, MDS myelodysplastic syndromes,",
+  "chromosome-positive, HL Hodgkin lymphoma, DLBCL diffuse large B-cell lymphoma,",
+  "DLI donor lymphocyte infusion, Len lenalidomide, Thal thalidomide,",
+  "zomib, Ixa ixazomib, AZA azacytidine, HR high risk Key Points Impact Standard Unclear May be beneficial in HR Unclear Beneficial Unclear No benefit Beneficial Unclear Unclear Beneficial May be beneficial Unclear ALL acute lymphoblastic leukemia, Ph+ Philadelphia MCL mantle cell lymphoma, Pom pomalidomide, Bor bortezomib, Car carfil",
+  "Ansell SM, Lesokhin AM, Borrello I, et al. PD-1 blockade with nivolumab in relapsed or refractory Hodgkin’s lymphoma. N Engl J Med. 2015;372:311–9.",
+  "Attal M, Lauwers-Cances V, Marit G, et al. Lenalidomide maintenance after stem-cell transplantation for multiple myeloma. N Engl J Med. 2012;366:1782–91.",
+  "Barlogie B, Pineda-Roman M, van Rhee F, et al. Thalidomide arm of Total therapy 2 improves complete remission duration and survival in myeloma patients with metaphase cytogenetic abnormalities. Blood. 2008;112:3115–21.",
+  "Bashir Q, Nishihori T, Pasquini MC, et al. A multicenter phase II, double-blind, placebo-controlled trial of maintenance ixazomib after allogeneic transplantation for high-risk multiple myeloma: results of the blood and marrow transplant clinical trials network 1302 trial. Transplant Cell Ther. 2023;29(6):358.e1–7.",
+  "Bug G, Burchert A, Wagner EM, et al. Phase I/II study of the deacetylase inhibitor panobinostat after allogeneic stem cell transplantation in patients with high-risk MDS or AML (PANOBEST trial). Leukemia. 2017;31:2523–5.",
+  "Burchert A, Bug G, Fritz LV, Finke J, Stelljes M, Röllig C, et al. Sorafenib maintenance after allogeneic hematopoietic stem cell transplantation for acute myeloid leukemia with FLT3-internal tandem duplication mutation (SORMAIN). J Clin Oncol. 2020;38:2993– 3002. https://doi.org/10.1200/JCO.19.03345.",
+  "Caballero-Velazquez T, Lopez-Corral L, Encinas C, et al. Phase II clinical trial for the evaluation of bortezomib within the reduced intensity conditioning regimen (RIC) and post-allogeneic transplantation for high-risk myeloma patients. Br J Haematol. 2013;162:474–82.",
+  "Choi SW, Braun T, Chang L, et al. Vorinostat plus tacrolimus and mycophenolate to prevent graft-versus-host disease after related-donor reduced-intensity conditioning allogeneic haemopoietic stem-cell transplantation: a phase 1/2 trial. Lancet Oncol. 2014;15:87–95.",
+  "Davids MS, Kim HT, Bachireddy P, et al. Ipilimumab for patients with relapse after allogeneic transplantation. N Engl J Med. 2016;375:143–53.",
+  "Fathi AT, Kim HT, Soiffer RJ, et al. Multicenter phase I trial of ivosidenib as maintenance treatment following allogeneic hematopoietic cell transplantation for IDH1-mutated acute myeloid leukemia. Clin Cancer Res. 2023;29(11):2034–42.",
+  "Gaballa MR, Banerjee P, Milton DR, et al. Blinatumomab maintenance after allogeneic hematopoietic cell transplantation for B-lineage acute lymphoblastic leukemia. Blood. 2022;139(12):1908–19.",
+  "Gagelmann N, Wolschke C, Klyuchnikov E, et al. TKI maintenance after stem-cell transplantation for FLT3-ITD positive acute myeloid leukemia: a systematic review and meta-analysis. Front Immunol. 2021;12:630429.",
+  "Gao L, Zhang Y, Wang S, et al. Effect of rhG-CSF combined with decitabine prophylaxis on relapse of patients with high-risk MRD-negative AML after HSCT: an open-label, multicenter, randomized controlled trial. J Clin Oncol. 2020;38(36):4249–59.",
+  "Giebel S, Czyz A, Ottmann O, et al. Use of tyrosine kinase inhibitors to prevent relapse after allogeneic hematopoietic stem cell transplantation for patients with Philadelphia chromosome-positive acute lymphoblastic leukemia: a position statement of the Acute Leukemia Working Party of the European Society for Blood and Marrow Transplantation. Cancer. 2016;122:2941–51.",
+  "Gisselbrecht C, Schmitz N, Mounier N, et al. Rituximab maintenance therapy after autologous stem-cell transplantation in patients with relapsed CD20(+) diffuse large B-cell lymphoma: final analysis of the collaborative trial in relapsed aggressive lymphoma. J Clin Oncol. 2012;30:4462–9.",
+  "Glass B, Hasenkamp J, Wulf G, et al. Rituximab after lymphoma-directed conditioning and allogeneic stem-cell transplantation for relapsed and refractory aggressive non-Hodgkin lymphoma (DSHNHL R3): an open-label, randomised, phase 2 trial. Lancet Oncol. 2014;15:757–66.",
+  "Goldschmidt H, Lokhorst HM, Mai EK, et al. Bortezomib before and after high-dose therapy in myeloma: long-term results from the phase III HOVON-65/GMMG-HD4 trial. Leukemia. 2018;32:383–90.",
+  "Goodyear O, Agathanggelou A, Novitzky-Basso I, et al. Induction of a CD8+ T-cell response to the MAGE cancer testis antigen by combined treatment with azacitidine and sodium valproate in patients with acute myeloid leukemia and myelodysplasia. Blood. 2010;116:1908–18.",
+  "Hambach L, Ling KW, Pool J, et al. Hypomethylating drugs convert HA-1-negative solid tumors into targets for stem cell-based immunotherapy. Blood. 2009;113:2715–22.",
+  "Haverkos BM, Abbott D, Hamadani M, et al. PD-1 blockade for relapsed lymphoma post-allogeneic hematopoietic cell transplant: high response rate but frequent GVHD. Blood. 2017;130:221–8.",
+  "Herrera AF, Chen L, Nieto Y, et al. Brentuximab vedotin plus nivolumab after autologous haematopoietic stem-cell transplantation for adult patients with high-risk classic Hodgkin lymphoma: a multicentre, phase 2 trial. Lancet Haematol. 2023;10(1):e14–23.",
+  "Horowitz M, Schreiber H, Elder A, et al. Epidemiology and biology of relapse after stem cell transplantation. Bone Marrow Transplant. 2018;53:1379. https://doi. org/10.1038/s41409- 018- 0171- z.",
+  "Kantarjian HM, DeAngelo DJ, Stelljes M, et al. Inotuzumab ozogamicin versus standard therapy for acute lymphoblastic leukemia. N Engl J Med. 2016;375:740–53.",
+  "Kroger N, Shimoni A, Zagrivnaja M, et al. Low-dose thalidomide and donor lymphocyte infusion as adoptive immunotherapy after allogeneic stem cell transplantation in patients with multiple myeloma. Blood. 2004;104:3361–3.",
+  "Kroger N, Stubig T, Atanackovic D. Immune-modulating drugs and hypomethylating agents to prevent or treat relapse after allogeneic stem cell transplantation. Biol Blood Marrow Transplant. 2014;20:168–72.",
+  "Le Gouill S, Thieblemont C, Oberic L, et al. Rituximab after autologous stem-cell transplantation in mantle-cell lymphoma. N Engl J Med. 2017;377:1250–60.",
+  "Mathew NR, Baumgartner F, Braun L, et al. Sorafenib promotes graft-versus-leukemia activity in mice and humans through IL-15 production in FLT3-ITD- mutant leukemia cells. Nat Med. 2018a;24: 282–91.",
+  "Mathew NR, Baumgartner F, Braun L, et al. Sorafenib promotes graft-versus-leukemia activity in mice and humans through IL-15 production in FLT3-ITD-mutant leukemia cells. Nat Med. 2018b;24:282–91.",
+  "Maziarz RT, Patnaik MM, Scott BL, Deol A, Rowley SD. Radius: a phase 2 randomized trial investigating standard of care ± midostaurin after allogeneic stem cell transplant in FLT3-ITD-mutated AML. Blood. 2018;132:662.",
+  "McCarthy PL, Owzar K, Hofmeister CC, et al. Lenalidomide after stem-cell transplantation for multiple myeloma. N Engl J Med. 2012;366:1770–81.",
+  "Metzelder SK, Schroeder T, Finck A, et al. High activity of sorafenib in FLT3-ITD-positive acute myeloid leukemia synergizes with allo-immune effects to induce sustained responses. Leukemia. 2012;26:2353–9.",
+  "Moskowitz CH, Nademanee A, Masszi T, et al. Brentuximab vedotin as consolidation therapy after autologous stem-cell transplantation in patients with Hodgkin’s lymphoma at risk of relapse or progression (AETHERA): a randomised, double-blind, placebo-controlled, phase 3 trial. Lancet. 2015;385:1853–62.",
+  "Niederwieser C, Morozova E, Zubarovskaya L, et al. Risk factors for outcome after allogeneic stem cell transplantation in patients with advanced phase CML. Bone Marrow Transplant. 2021;56(11):2834–41.",
+  "Olavarria E, Siddique S, Griffiths MJ, et al. Post transplantation imatinib as a strategy to postpone the requirement for immunotherapy in patients undergoing reduced-intensity allografts for chronic myeloid leukemia. Blood. 2007;110:4614–7.",
+  "Oran B, de Lima M, Garcia-Manero G, et al. A phase 3 randomized study of 5-azacitidine maintenance vs observation after transplant in high-risk AML and MDS patients. Blood Adv. 2020;4(21):5580–8.",
+  "Pettengell R, Schmitz N, Gisselbrecht C, et al. Rituximab purging and/or maintenance in patients undergoing autologous transplantation for relapsed follicular lymphoma: a prospective randomized trial from the lymphoma working party of the European Group for Blood and Marrow Transplantation. J Clin Oncol. 2013;31:1624–30.",
+  "Pfeifer H, Wassmann B, Bethge W, et al. Randomized comparison of prophylactic and minimal residual disease-triggered imatinib after allogeneic stem cell transplantation for BCR-ABL1-positive acute lymphoblastic leukemia. Leukemia. 2013;27:1254–62.",
+  "Platzbecker U, Wermke M, Radke J, et al. Azacitidine for treatment of imminent relapse in MDS or AML patients after allogeneic HSCT: results of the RELAZA trial. Leukemia. 2012;26:381–9.",
+  "Schroeder T, Frobel J, Cadeddu RP, et al. Salvage therapy with azacitidine increases regulatory T cells in peripheral blood of patients with AML or MDS and early relapse after allogeneic blood stem cell transplantation. Leukemia. 2013;27:1910–3.",
+  "Sockel K, Bornhaeuser M, Mischak-Weissinger E, et al. Lenalidomide maintenance after allogeneic HSCT seems to trigger acute graft-versus-host disease in patients with high-risk myelodysplastic syndromes or acute myeloid leukemia and del(5q): results of the LENAMAINT trial. Haematologica. 2012;97:e34–5.",
+  "Spencer A, Prince HM, Roberts AW, et al. Consolidation therapy with low-dose thalidomide and prednisolone prolongs the survival of multiple myeloma patients undergoing a single autologous stem-cell transplantation procedure. J Clin Oncol. 2009;27:1788–93.",
+  "Ueda M, de Lima M, Caimi P, et al. Concurrent blinatumomab and donor lymphocyte infusions for treatment of relapsed pre-B-cell ALL after allogeneic hematopoietic cell transplant. Bone Marrow Transplant. 2016;51:1253–5.",
+  "Wolschke C, Stubig T, Hegenbart U, et al. Postallograft lenalidomide induces strong NK cell-mediated antimyeloma activity and risk for T cell-mediated GvHD: results from a phase I/II dose-finding study. Exp Hematol. 2013;41:134–142.e3.",
+  "Xuan L, Wang Y, Huang F, et al. Sorafenib maintenance in patients with FLT3-ITD acute myeloid leukaemia undergoing allogeneic haematopoietic stem-cell transplantation: an open-label, multicentre, randomised phase 3 trial. Lancet Oncol. 2020;21:1201. https://doi. org/10.1016/S1470- 2045(20)30455- 1.",
+  "Younes A, Santoro A, Shipp M, et al. Nivolumab for classical Hodgkin’s lymphoma after failure of both autologous stem-cell transplantation and brentuximab vedotin: a multicentre, multicohort, single-arm phase 2 trial. Lancet Oncol. 2016;17:1283–94."
+ ]
+}

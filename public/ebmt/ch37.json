@@ -1,0 +1,1966 @@
+{
+ "number": 37,
+ "part": "V",
+ "page_pdf": [
+  337,
+  345
+ ],
+ "page_printed": 321,
+ "title_en": "Invasive Fungal Diseases",
+ "authors": "Johan A. Maertens",
+ "affiliations": "J. A. Maertens (*) Department of Haematology, University Hospital Gasthuisberg, Leuven, Belgium e-mail: johan.maertens@uzleuven.be",
+ "doi": "10.1007/978-3-031-44080-9_37",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "1695f1a811",
+   "type": "h2",
+   "num": "37.1",
+   "en": "Epidemiology"
+  },
+  {
+   "id": "8ff417611f",
+   "type": "p",
+   "en": "Invasive fungal diseases (IFDs) are frequent infectious complications of HCT and (to a lesser extent) following chimeric antigen receptor-modified T-cell (CAR-T) treatment. The 12 month cumulative incidence approaches 8–10% in unrelated or mismatched allogeneic HCT, 6% in matched related allogeneic HCT, and less than 2% following autologous HCT (Kontoyiannis et al. 2010). However, higher incidences (up to 17%) have been reported in haploidentical HCT and cord blood transplantation. Classical risk periods for IFD include: (a) the pre-engraftment period when neutropenia and mucosal damage is most profound, (b) the early post-engraftment period (days +40 to +100) when patients are at highest risk for acute GvHD and viral reactivations due to defective T-cell immunity, and (c) the late post-engraftment period (beyond day +100) complicated by chronic GvHD, delayed immune reconstitution, and occasionally secondary neutropenia. The Gruppo Italiano Trapianto Midollo Osseo (GITMO) has identified period-specific risk factors for proven and probable IFD (Girmenia et al. 2014). The presence of a proven or probable IFD is an independent and strong negative predictor of overall mortality at 1 year after allogeneic HCT. Following CAR-T treatment, mechanical ventilation, high-grade cytokine release syndrome (CRS) and prolonged lymphocyte deficiency within 60 days after CAR-T infusion have been identified as major risk factors. However, invasive fungal infection was not a risk factor for death within 1 year of CAR-T therapy (Yang et al. 2022)."
+  },
+  {
+   "id": "2553776e16",
+   "type": "p",
+   "en": "Before the introduction of antifungal prophylaxis, Candida infections were prevalent in as many as 18% to 20% of HCT recipients. However, the widespread use of fluconazole prophylaxis since the late 1990s has significantly reduced the incidence of systemic Candida infections and has decreased the transplant-related mortality secondary to Candida infections and to gut GvHD. However, this successful approach has also resulted in an epidemiological shift from fluconazole-susceptible Candida albicans infections to predominantly fluconazole-resistant non-albicans Candida infections (including Nakaseomyces glabrata [formerly en-USCandida glaen-US-en-USbrataen-US] and Candida krusei). Based on a recent EBMT study, the incidence of candidemia by day +100 has now dropped to 1.2% but remains associated with increased NRM and lower short-and long-term OS (with candidemia being an independent risk factor for NRM and OS) (Cesaro et al. 2018). Regional patterns suggest that N. glabrata is a major problem in northern Europe, the United States, and Canada, while C. parapsilosis is more predominant in southern Europe,"
+  },
+  {
+   "id": "35a0ca68c9",
+   "type": "p",
+   "en": "Asia, and South America. Recently, Candida auris has been found to be an emerging fungal pathogen which is related to high mortality rates, persistent candidemia, inconsistencies in susceptibility testing results, and misidentification by available commercial identification systems. Multidrug-resistant, even pandrug-resistant strains are detected. With changes in the epidemiology of invasive Candida infections and the emerging resistance to azoles and echinocandins, antifungal resistance testing has become vital."
+  },
+  {
+   "id": "fcfcd68b03",
+   "type": "p",
+   "en": "Over the past two decades, respiratory mould infections caused by Aspergillus species (and to a much lesser extent non-Aspergillus moulds such as Mucorales, Fusarium species, and some rare other pathogens) have become much more prevalent. Unlike yeasts, which are acquired through indwelling lines or via intestinal translocation, mould infections are usually acquired by inhalation of air-borne spores. In HCT recipients, the primary lines of defence, including phagocytosing alveolar macrophages and neutrophils, are often nonfunctional in the presence of immunosuppressive drugs and/or corticosteroids. Hence, Aspergillus spores may germinate and produce hyphae, which then invade blood vessels, followed by vascular occlusion and infarction and dissemination to distant organs. The crude mortality rate of invasive mould disease in HCT recipients can be as high as 60%."
+  },
+  {
+   "id": "e62831c7ea",
+   "type": "h2",
+   "num": "37.2",
+   "en": "Diagnosis of Fungal Disease"
+  },
+  {
+   "id": "049b610f4d",
+   "type": "li",
+   "en": "• Mould infections Despite a high index of clinical suspicion,"
+  },
+  {
+   "id": "3fdf1eb718",
+   "type": "p",
+   "en": "diagnosing invasive mould disease remains"
+  },
+  {
+   "id": "0b946ab4e5",
+   "type": "p",
+   "en": "challenging. The clinical presentation in HCT"
+  },
+  {
+   "id": "e4a41a58df",
+   "type": "p",
+   "en": "and CAR-T patients is often nonspecific and"
+  },
+  {
+   "id": "6676d43691",
+   "type": "p",
+   "en": "difficult to distinguish from nonfungal infec"
+  },
+  {
+   "id": "953f4f4a41",
+   "type": "p",
+   "en": "tions and even non-infectious complications."
+  },
+  {
+   "id": "994767ff26",
+   "type": "p",
+   "en": "A diagnosis of mould disease is based on his"
+  },
+  {
+   "id": "08cc69e001",
+   "type": "p",
+   "en": "topathological examination of infected tissue,"
+  },
+  {
+   "id": "f47cd6764d",
+   "type": "p",
+   "en": "imaging (in particular chest CT-scan) and"
+  },
+  {
+   "id": "e34bd73c25",
+   "type": "p",
+   "en": "microbiological tests, both culture-based and"
+  },
+  {
+   "id": "f72e202313",
+   "type": "p",
+   "en": "non-culture-based. Although histopathology remains the gold"
+  },
+  {
+   "id": "2295d3c4ec",
+   "type": "p",
+   "en": "standard for making a definite diagnosis,"
+  },
+  {
+   "id": "27e10ceeb6",
+   "type": "p",
+   "en": "many clinicians are reluctant to ask for inva"
+  },
+  {
+   "id": "7a0dffa885",
+   "type": "p",
+   "en": "sive procedures with biopsy in these vulnera"
+  },
+  {
+   "id": "f620fea608",
+   "type": "p",
+   "en": "ble patients with underlying coagulation"
+  },
+  {
+   "id": "9deee0f86e",
+   "type": "p",
+   "en": "problems. As a result, the majority of invasive"
+  },
+  {
+   "id": "0e83222d0b",
+   "type": "p",
+   "en": "mould diseases are categorized as probable or"
+  },
+  {
+   "id": "f61bf511c8",
+   "type": "p",
+   "en": "even possible. Culture and direct microscopic examina"
+  },
+  {
+   "id": "fda88fb10f",
+   "type": "p",
+   "en": "tion of sputum, BAL and other body fluids,"
+  },
+  {
+   "id": "663d0e7624",
+   "type": "p",
+   "en": "and skin samples, using staining techniques"
+  },
+  {
+   "id": "09923b6aab",
+   "type": "p",
+   "en": "that allow diagnosis on the same day (e.g."
+  },
+  {
+   "id": "e90d1c6476",
+   "type": "p",
+   "en": "optical brighteners such as Calcofluor White),"
+  },
+  {
+   "id": "25ff2340bc",
+   "type": "p",
+   "en": "have been the cornerstones for making a"
+  },
+  {
+   "id": "d1907564b8",
+   "type": "p",
+   "en": "microbiological diagnosis of invasive mould"
+  },
+  {
+   "id": "50014f5afb",
+   "type": "p",
+   "en": "disease. Culture has the additional advantage"
+  },
+  {
+   "id": "c08808506b",
+   "type": "p",
+   "en": "of allowing fungal species identification and"
+  },
+  {
+   "id": "39abce27af",
+   "type": "p",
+   "en": "determining antifungal susceptibility."
+  },
+  {
+   "id": "c28151bf44",
+   "type": "p",
+   "en": "Unfortunately, culture is time-consuming and"
+  },
+  {
+   "id": "11b934b044",
+   "type": "p",
+   "en": "requires considerable expertise. In addition,"
+  },
+  {
+   "id": "bf0745a1cc",
+   "type": "p",
+   "en": "blood cultures are notoriously negative for"
+  },
+  {
+   "id": "5b7f0375bd",
+   "type": "p",
+   "en": "moulds, even in disseminated disease, and"
+  },
+  {
+   "id": "2838373470",
+   "type": "p",
+   "en": "culture from any respiratory specimen has"
+  },
+  {
+   "id": "d1b2ca4b3a",
+   "type": "p",
+   "en": "only low to moderate sensitivity and predic"
+  },
+  {
+   "id": "88d469338e",
+   "type": "p",
+   "en": "tive value. The (ongoing) development of serological"
+  },
+  {
+   "id": "f0d2512a6d",
+   "type": "p",
+   "en": "tests has been a major advance in the field"
+  },
+  {
+   "id": "b161a05db1",
+   "type": "p",
+   "en": "(Maertens et al. 2016a, b, c). Galactomannan"
+  },
+  {
+   "id": "66a55dabe4",
+   "type": "p",
+   "en": "(GM), a fungal cell wall molecule that is"
+  },
+  {
+   "id": "c54413b5d5",
+   "type": "p",
+   "en": "released during fungal growth, can be detected"
+  },
+  {
+   "id": "f99a13d464",
+   "type": "p",
+   "en": "by a commercial enzyme immunoassay"
+  },
+  {
+   "id": "d2446cdd68",
+   "type": "p",
+   "en": "(BioRad Platelia™ Aspergillus EIA). Earlier"
+  },
+  {
+   "id": "2cb07c1934",
+   "type": "p",
+   "en": "studies used an index of ≥1.5 to define positiv"
+  },
+  {
+   "id": "0b586ba93a",
+   "type": "p",
+   "en": "ity. The European Conference on Infections in"
+  },
+  {
+   "id": "6c522527e3",
+   "type": "p",
+   "en": "Leukemia (ECIL) guidelines now support the"
+  },
+  {
+   "id": "d4f119ffc1",
+   "type": "p",
+   "en": "use of a single serum or plasma value of ≥0.7"
+  },
+  {
+   "id": "4e94846d5e",
+   "type": "p",
+   "en": "or multiple (consecutive) values of ≥0.5 to"
+  },
+  {
+   "id": "123094dff5",
+   "type": "p",
+   "en": "define positivity. These lower cut-offs permit"
+  },
+  {
+   "id": "8343c4407f",
+   "type": "p",
+   "en": "detection of fungal infection before the clinico-"
+  },
+  {
+   "id": "8f888611a4",
+   "type": "p",
+   "en": "radiological manifestations appear. However,"
+  },
+  {
+   "id": "de3ce26ef3",
+   "type": "p",
+   "en": "improved sensitivity with the use of lower cut-"
+  },
+  {
+   "id": "d099646b90",
+   "type": "p",
+   "en": "offs comes with a loss of specificity. In addi"
+  },
+  {
+   "id": "ead0f4b2e4",
+   "type": "p",
+   "en": "tion, false positive results as well as false"
+  },
+  {
+   "id": "900ba64990",
+   "type": "p",
+   "en": "negative results are not uncommon (Table 37.1)"
+  },
+  {
+   "id": "33f19cc9c9",
+   "type": "p",
+   "en": "and cross-reactivity with non- Aspergillus"
+  },
+  {
+   "id": "beb11ad3f3",
+   "type": "p",
+   "en": "moulds (including but not limited to Fusarium"
+  },
+  {
+   "id": "bd1c1ada67",
+   "type": "p",
+   "en": "spp., Penicillium spp., Acremonium spp.,"
+  },
+  {
+   "id": "a2af1fc120",
+   "type": "p",
+   "en": "Alternaria app, and Histoplasma capsulatum)"
+  },
+  {
+   "id": "29b6889ee1",
+   "type": "p",
+   "en": "may occur, although the assay does not detect"
+  },
+  {
+   "id": "c84e070307",
+   "type": "p",
+   "en": "Mucorales. GM testing can also be applied to"
+  },
+  {
+   "id": "d2272c756a",
+   "type": "p",
+   "en": "other types of specimens, including BAL fluid."
+  },
+  {
+   "id": "8790f92c2d",
+   "type": "p",
+   "en": "A cut-off value of 1.0 has been recommended,"
+  },
+  {
+   "id": "1cc5762074",
+   "type": "p",
+   "en": "although it is likely that higher thresholds are"
+  },
+  {
+   "id": "3c143f54c8",
+   "type": "p",
+   "en": "needed. Recently, an index cut-off of 1.0 has"
+  },
+  {
+   "id": "846cd967cb",
+   "type": "p",
+   "en": "also been suggested for analysing cerebrospi"
+  },
+  {
+   "id": "ad77f775e1",
+   "type": "p",
+   "en": "nal fluid samples from patients with (sus"
+  },
+  {
+   "id": "edcafd4894",
+   "type": "p",
+   "en": "pected) cerebral aspergillosis. Since a few years, lateral flow assays"
+  },
+  {
+   "id": "1ae9a95d60",
+   "type": "p",
+   "en": "(LFAs) have been introduced, providing the"
+  },
+  {
+   "id": "56951fc3d9",
+   "type": "p",
+   "en": "possibility for rapid single sample (blood and/"
+  },
+  {
+   "id": "3487e040f9",
+   "type": "p",
+   "en": "or BAL fluid) testing. More and more LFAs"
+  },
+  {
+   "id": "91eae031d0",
+   "type": "p",
+   "en": "are entering the market, but, although often"
+  },
+  {
+   "id": "daddbdb115",
+   "type": "p",
+   "en": "being equated, all use their own antibodies,"
+  },
+  {
+   "id": "86c1a672ea",
+   "type": "p",
+   "en": "procedures, and interpretation criteria. For"
+  },
+  {
+   "id": "001b2874d0",
+   "type": "p",
+   "en": "some of these assays, very little (if any) vali"
+  },
+  {
+   "id": "0d9bd8a477",
+   "type": "p",
+   "en": "dation data is available; hence, each labora"
+  },
+  {
+   "id": "ded1529d6e",
+   "type": "p",
+   "en": "tory must check the available performance"
+  },
+  {
+   "id": "86cd31a096",
+   "type": "p",
+   "en": "information of the specific test and should,"
+  },
+  {
+   "id": "753bd723cc",
+   "type": "p",
+   "en": "whenever needed, perform an implementation"
+  },
+  {
+   "id": "5108225c8d",
+   "type": "p",
+   "en": "verification study. Unlike GM, β-D-glucan (BDG) is a com"
+  },
+  {
+   "id": "432b06a730",
+   "type": "p",
+   "en": "ponent of the cell wall of many pathogenic"
+  },
+  {
+   "id": "9c300b05d8",
+   "type": "p",
+   "en": "fungi including Candida spp., Fusarium spp.,"
+  },
+  {
+   "id": "af102cc769",
+   "type": "p",
+   "en": "and Pneumocystis (Maertens et al. 2016a, b,"
+  },
+  {
+   "id": "14cb5f22a3",
+   "type": "p",
+   "en": "c). The main exceptions are Mucorales and"
+  },
+  {
+   "id": "f349f9c318",
+   "type": "p",
+   "en": "some Cryptococcus species. The Fungitell®"
+  },
+  {
+   "id": "6537f8ab77",
+   "type": "p",
+   "en": "assay (Associates of Cape Cod) has been"
+  },
+  {
+   "id": "243c38b7da",
+   "type": "p",
+   "en": "approved by the US FDA and carries the"
+  },
+  {
+   "id": "f77b127801",
+   "type": "p",
+   "en": "European CE label for the presumptive diag"
+  },
+  {
+   "id": "4a7b1b13ee",
+   "type": "p",
+   "en": "nosis of invasive fungal infection. Most stud"
+  },
+  {
+   "id": "d1533b3bcc",
+   "type": "p",
+   "en": "ies report good sensitivity, but the specificity"
+  },
+  {
+   "id": "8e16f7f7e8",
+   "type": "p",
+   "en": "and positive predictive values are poor due to"
+  },
+  {
+   "id": "ff240caa30",
+   "type": "p",
+   "en": "a high rate of false positive results (Table 37.1),"
+  },
+  {
+   "id": "53564e2060",
+   "type": "p",
+   "en": "regardless of the specimen. However, the neg"
+  },
+  {
+   "id": "4b253fd48a",
+   "type": "p",
+   "en": "ative predictive value is around 80–90%."
+  },
+  {
+   "id": "c135196be7",
+   "type": "p",
+   "en": "Similar to the GM assay, single sample devices"
+  },
+  {
+   "id": "20b85a058d",
+   "type": "p",
+   "en": "(e.g. WAKO assay) have recently become"
+  },
+  {
+   "id": "89dd98a662",
+   "type": "p",
+   "en": "available for centres with lower volumes of"
+  },
+  {
+   "id": "a347ef87d8",
+   "type": "p",
+   "en": "high-risk patients. Polymerase chain reaction (PCR)-based"
+  },
+  {
+   "id": "e49f0a1ac5",
+   "type": "p",
+   "en": "methods have also been developed. Lack of"
+  },
+  {
+   "id": "ed3f76b01c",
+   "type": "p",
+   "en": "standardisation has for a long time hampered"
+  },
+  {
+   "id": "ea9601f586",
+   "type": "p",
+   "en": "the acceptance of these diagnostic assays."
+  },
+  {
+   "id": "55bcc34b9a",
+   "type": "p",
+   "en": "Fortunately, over the past decade, the European"
+  },
+  {
+   "id": "c389691cd6",
+   "type": "p",
+   "en": "Aspergillus PCR Initiative (EAPCRI) has"
+  },
+  {
+   "id": "f3b618e724",
+   "type": "p",
+   "en": "made tremendous progress in standardising"
+  },
+  {
+   "id": "0cb5d9987d",
+   "type": "table",
+   "num": "37.1",
+   "en": "Table 37.1 Limitations of antigen assays in the diagnosis of invasive fungal disease",
+   "columns": 4,
+   "rows_en": [
+    [
+     "",
+     "Galactomannan",
+     "Β",
+     "-D-glucan"
+    ],
+    [
+     "Reactivity with fungal species",
+     "Aspergillus spp., Fusarium spp., Paecilomycesspp., Acremonium spp., Penicillium spp., Alternaria spp., Histoplasma capsulatum, Blastomyces dermatitidis, Cryptococcus neoformans, Emmonsia spp., Wangiella dermatitidis, Prototheca, Myceliophthora, Geotrichum capitatum, Chaetomium globosum",
+     "Pneumocystis jirovecii Fusarium Candida Trichosporon Saccharomyces cerevisiae Prototheca",
+     ", Aspergillus spp., spp., Histoplasmacapsulatum, spp., Acremonium spp., sp., Sporothrix schenkii,, Coccidioides immitis,"
+    ],
+    [
+     "False-positive test results",
+     "Semi-synthetic β-lactam antibioticsa Multiple myeloma",
+     "Semi-synthetic Human blood products, including IVIg, albumin,",
+     "β-lactam antibiotics"
+    ],
+    [
+     "",
+     "Blood products collected using Fresenius Kabi bags Gluconate-containing plasma expanders Flavoured ice-pops/frozen desserts containing sodium gluconate Bifidobacterium spp. (gut) Severe mucositis or gastrointestinal GvHD Enteral nutritional supplements",
+     "plasma, coagulation factor infusions, filtered through cellulose membranes Cellulose haemodialysis/haemofiltration membranes Exposure to (surgical) gauze Bacterial bloodstream infections (e.g. aeruginosa)",
+     "Pseudomonas"
+    ],
+    [
+     "False-negative test results",
+     "Concomitant use of mould-active antifungal agents Mucolytic agents",
+     "Concomitant use of antifungal agents",
+     ""
+    ],
+    [
+     "a Including ampicillin, amoxicillin-clavulanate and piperacillin/tazobactam (although this problem seems largely abated compared with previous experience)",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "142d7b8882",
+   "type": "p",
+   "en": "protocols for efficient DNA extraction and"
+  },
+  {
+   "id": "005a50fa83",
+   "type": "p",
+   "en": "amplification (White et al. 2015). The sensitivity and specificity of conven"
+  },
+  {
+   "id": "cf8770de90",
+   "type": "p",
+   "en": "tional radiology are too low to diagnose or to"
+  },
+  {
+   "id": "da3d2afe2d",
+   "type": "p",
+   "en": "exclude a fungal infection. Thin-section mul"
+  },
+  {
+   "id": "ba59f5cb44",
+   "type": "p",
+   "en": "tislice CT- scan nowadays is the preferred"
+  },
+  {
+   "id": "073c98731e",
+   "type": "p",
+   "en": "imaging technique; more recently, computed"
+  },
+  {
+   "id": "73ca914ef1",
+   "type": "p",
+   "en": "tomography pulmonary angiography is rap"
+  },
+  {
+   "id": "a7375937f3",
+   "type": "p",
+   "en": "idly gaining popularity as an alternative diag"
+  },
+  {
+   "id": "9ce82fa287",
+   "type": "p",
+   "en": "nostic technique (Stanzani et al. 2015)."
+  },
+  {
+   "id": "22ca800ffa",
+   "type": "p",
+   "en": "Nodules, with or without a halo-sign, are sug"
+  },
+  {
+   "id": "9c5fc05e90",
+   "type": "p",
+   "en": "gestive of invasive mould disease; this ‘halo-"
+  },
+  {
+   "id": "9290b54b11",
+   "type": "p",
+   "en": "sign’ appears early in the course of the"
+  },
+  {
+   "id": "5332a8b360",
+   "type": "p",
+   "en": "infection; thereafter, the lesions become more"
+  },
+  {
+   "id": "886910d71f",
+   "type": "p",
+   "en": "nonspecific. Following neutrophil recovery,"
+  },
+  {
+   "id": "6f3a802c90",
+   "type": "p",
+   "en": "an air crescent sign may develop, usually"
+  },
+  {
+   "id": "cd95eab9d5",
+   "type": "p",
+   "en": "associated with a good outcome. An inversed"
+  },
+  {
+   "id": "385f2996d0",
+   "type": "p",
+   "en": "halo-sign has been described as more sugges"
+  },
+  {
+   "id": "230a477213",
+   "type": "p",
+   "en": "tive of invasive mucormycosis. FDG PET/CT"
+  },
+  {
+   "id": "99a82e6e08",
+   "type": "p",
+   "en": "has an emerging role in the diagnostic and"
+  },
+  {
+   "id": "f075d03596",
+   "type": "p",
+   "en": "monitoring pathway for complex infections"
+  },
+  {
+   "id": "0f478183a1",
+   "type": "p",
+   "en": "(including fungal) in these high-risk immuno"
+  },
+  {
+   "id": "6d8d6658b7",
+   "type": "p",
+   "en": "compromised patients."
+  },
+  {
+   "id": "458490cd32",
+   "type": "li",
+   "en": "• Yeast infections Cryptococcal Ag assays have become very"
+  },
+  {
+   "id": "62ff9f3268",
+   "type": "p",
+   "en": "sensitive and should be used where cryptococ"
+  },
+  {
+   "id": "1dd2fd92d6",
+   "type": "p",
+   "en": "cal meningitis is suspected. Microbiologic cultures, the gold standard"
+  },
+  {
+   "id": "e159462a0e",
+   "type": "p",
+   "en": "diagnostic method for invasive Candida infec"
+  },
+  {
+   "id": "0feb6ebe4b",
+   "type": "p",
+   "en": "tions and candidemia, have low sensitivity"
+  },
+  {
+   "id": "4c305e57e7",
+   "type": "p",
+   "en": "(especially for chronic disseminated candidia"
+  },
+  {
+   "id": "867939d515",
+   "type": "p",
+   "en": "sis) and take up to 2–5 days to grow (from"
+  },
+  {
+   "id": "183de537f7",
+   "type": "p",
+   "en": "blood samples). The T2Candida panel is a"
+  },
+  {
+   "id": "be8ec0e0c7",
+   "type": "p",
+   "en": "novel, fully automated qualitative diagnostic"
+  },
+  {
+   "id": "d10bca3b2d",
+   "type": "p",
+   "en": "platform for the diagnosis of candidemia in"
+  },
+  {
+   "id": "f614692969",
+   "type": "p",
+   "en": "whole blood specimens with a mean time to"
+  },
+  {
+   "id": "2ee62b59fc",
+   "type": "p",
+   "en": "species identification of less than 5 h. The"
+  },
+  {
+   "id": "7dfec0cf70",
+   "type": "p",
+   "en": "negative predictive value is almost 100% in a"
+  },
+  {
+   "id": "ee7c27e6ed",
+   "type": "p",
+   "en": "population with 5–10% prevalence of candi"
+  },
+  {
+   "id": "65e8eb5273",
+   "type": "p",
+   "en": "demia (Mylonakis et al. 2015). Unfortunately,"
+  },
+  {
+   "id": "e6fe4e9918",
+   "type": "p",
+   "en": "the assay detects only five different Candida"
+  },
+  {
+   "id": "1f466fbc6a",
+   "type": "p",
+   "en": "species."
+  },
+  {
+   "id": "64fa2a4278",
+   "type": "li",
+   "en": "• Pneumocystis jirovecii pneumonia Immunofluorescence assays remain recom"
+  },
+  {
+   "id": "3ae54e42eb",
+   "type": "p",
+   "en": "mended as the most sensitive microscopic"
+  },
+  {
+   "id": "89f3061ac2",
+   "type": "p",
+   "en": "method. Real-time PCR on BAL fluid can be"
+  },
+  {
+   "id": "5baf807063",
+   "type": "p",
+   "en": "used to rule out the diagnosis of PCP. However,"
+  },
+  {
+   "id": "82170fd637",
+   "type": "p",
+   "en": "a positive PCR test does not necessarily mean"
+  },
+  {
+   "id": "790b9d2dd7",
+   "type": "p",
+   "en": "that the patient has PCP, since low fungal"
+  },
+  {
+   "id": "57ece60cee",
+   "type": "p",
+   "en": "loads will be picked up in colonised patients."
+  },
+  {
+   "id": "c963285d37",
+   "type": "p",
+   "en": "BDG positivity in serum can further contrib"
+  },
+  {
+   "id": "d956b92f39",
+   "type": "p",
+   "en": "ute to the diagnosis, although false- negative"
+  },
+  {
+   "id": "c06ee94c05",
+   "type": "p",
+   "en": "results have been seen and a positive test result"
+  },
+  {
+   "id": "ef17eaa467",
+   "type": "p",
+   "en": "may also indicate other fungal infections"
+  },
+  {
+   "id": "783a131983",
+   "type": "p",
+   "en": "(Alanio et al. 2016)."
+  },
+  {
+   "id": "8a300d84ad",
+   "type": "h2",
+   "num": "37.3",
+   "en": "Prevention and Prophylaxis"
+  },
+  {
+   "id": "94e81f3b0d",
+   "type": "p",
+   "en": "Protective environment measures (such as the use of HEPA-filtered isolation rooms or the use of portable HEPA filters) are useful to prevent in hospital acquisition of air-borne fungal pathogens. However, many patients develop IFD during the out-patient follow-up period, when these isolation measures are not applicable."
+  },
+  {
+   "id": "b576b7efa1",
+   "type": "p",
+   "en": "Updated ECIL recommendations regarding pharmacological antifungal prophylaxis are phase-specific (10):"
+  },
+  {
+   "id": "ad2f82d7db",
+   "type": "li",
+   "en": "• During the (neutropenic) pre-engraftment"
+  },
+  {
+   "id": "9cb47f5172",
+   "type": "p",
+   "en": "phase Fluconazole (400 mg/day) is still recom"
+  },
+  {
+   "id": "4b796b1321",
+   "type": "p",
+   "en": "mended for centres with a low incidence of"
+  },
+  {
+   "id": "cd4bf0f5e4",
+   "type": "p",
+   "en": "mould infections (i.e. below 5%) but only"
+  },
+  {
+   "id": "f9b04dd07a",
+   "type": "p",
+   "en": "when combined with a mould-directed diag"
+  },
+  {
+   "id": "41f1f4991e",
+   "type": "p",
+   "en": "nostic approach (biomarker and/or CT-scan"
+  },
+  {
+   "id": "9ae75f3409",
+   "type": "p",
+   "en": "based) or a mould-directed therapeutic"
+  },
+  {
+   "id": "28190faca9",
+   "type": "p",
+   "en": "approach (empirical antifungal therapy)."
+  },
+  {
+   "id": "83aa7ba735",
+   "type": "p",
+   "en": "Centres with a higher incidence of mould"
+  },
+  {
+   "id": "bc15de169f",
+   "type": "p",
+   "en": "infections are advised to adopt an alternative"
+  },
+  {
+   "id": "2733dc1c27",
+   "type": "p",
+   "en": "approach. Voriconazole (400 mg/day follow"
+  },
+  {
+   "id": "37c30e0656",
+   "type": "p",
+   "en": "ing loading) failed to show a difference in fun"
+  },
+  {
+   "id": "189c5c2983",
+   "type": "p",
+   "en": "gal-free survival, overall survival, incidence of"
+  },
+  {
+   "id": "4b45739e8b",
+   "type": "p",
+   "en": "IFD, invasive aspergillosis, empirical use of"
+  },
+  {
+   "id": "226f1af267",
+   "type": "p",
+   "en": "antifungals, and toxicity compared with fluco"
+  },
+  {
+   "id": "e6bb95ad55",
+   "type": "p",
+   "en": "nazole. When tested against itraconazole oral"
+  },
+  {
+   "id": "9e8aee88ab",
+   "type": "p",
+   "en": "solution, voriconazole was superior for the"
+  },
+  {
+   "id": "d14c374774",
+   "type": "p",
+   "en": "composite end point, but the difference was"
+  },
+  {
+   "id": "c947ad9481",
+   "type": "p",
+   "en": "driven by a lower use of systemic antifungals"
+  },
+  {
+   "id": "be69701c9e",
+   "type": "p",
+   "en": "with voriconazole, which could be given for a"
+  },
+  {
+   "id": "023fa091c3",
+   "type": "p",
+   "en": "longer duration than itraconazole, not by better"
+  },
+  {
+   "id": "46923e86f8",
+   "type": "p",
+   "en": "efficacy. Itraconazole (200 mg IV q24h, fol"
+  },
+  {
+   "id": "b40956418c",
+   "type": "p",
+   "en": "lowed by oral solution 200 mg q12) provided"
+  },
+  {
+   "id": "096f37862e",
+   "type": "p",
+   "en": "better protection against invasive mould infec"
+  },
+  {
+   "id": "398b79d9e3",
+   "type": "p",
+   "en": "tions than fluconazole. However, drug toxici"
+  },
+  {
+   "id": "cfc1ea3858",
+   "type": "p",
+   "en": "ties and tolerability limited its usefulness as a"
+  },
+  {
+   "id": "3968be367b",
+   "type": "p",
+   "en": "prophylactic agent. Therefore, voriconazole"
+  },
+  {
+   "id": "c0fcd3d73c",
+   "type": "p",
+   "en": "and itraconazole were both given a B-I recom"
+  },
+  {
+   "id": "b2e804e2cc",
+   "type": "p",
+   "en": "mendation. Data for the echinocandins are lim"
+  },
+  {
+   "id": "9865123738",
+   "type": "p",
+   "en": "ited to micafungin (50 mg IV q24h). The study"
+  },
+  {
+   "id": "a851e40737",
+   "type": "p",
+   "en": "comparing micafungin versus fluconazole had"
+  },
+  {
+   "id": "744736bcc2",
+   "type": "p",
+   "en": "significant shortcomings, including the over"
+  },
+  {
+   "id": "76c78fa6c9",
+   "type": "p",
+   "en": "representation of a low-risk population and the"
+  },
+  {
+   "id": "5f7d13edb1",
+   "type": "p",
+   "en": "lack of a pre-defined work- up for diagnosing"
+  },
+  {
+   "id": "2eee487025",
+   "type": "p",
+   "en": "IFD. Hence, prophylaxis with micafungin"
+  },
+  {
+   "id": "0ee42305c8",
+   "type": "p",
+   "en": "received a B-I recommendation for centres"
+  },
+  {
+   "id": "bacc8109d6",
+   "type": "p",
+   "en": "with a low incidence of mould infections and"
+  },
+  {
+   "id": "b2f3ae4551",
+   "type": "p",
+   "en": "C-I for those with a high incidence. The addi"
+  },
+  {
+   "id": "c3714f6aaf",
+   "type": "p",
+   "en": "tion of aerosolised liposomal amphotericin B"
+  },
+  {
+   "id": "a53c18567f",
+   "type": "p",
+   "en": "to fluconazole is not recommended for centres"
+  },
+  {
+   "id": "4f01445532",
+   "type": "p",
+   "en": "with a low incidence of mould infections,"
+  },
+  {
+   "id": "410b68b19e",
+   "type": "p",
+   "en": "although there is some evidence to do so in"
+  },
+  {
+   "id": "18fb6241a3",
+   "type": "p",
+   "en": "higher risk centres (B-II). Intravenous liposo"
+  },
+  {
+   "id": "8cbb2a89bc",
+   "type": "p",
+   "en": "mal amphotericin B for prophylaxis was given"
+  },
+  {
+   "id": "94e5cfebd3",
+   "type": "p",
+   "en": "a C-II recommendation. Although there are no"
+  },
+  {
+   "id": "6fe783648a",
+   "type": "p",
+   "en": "specific studies of posaconazole prophylaxis"
+  },
+  {
+   "id": "9d205c03cc",
+   "type": "p",
+   "en": "during the pre- engraftment phase, the drug"
+  },
+  {
+   "id": "f484a8ef4f",
+   "type": "p",
+   "en": "(oral solution 200 mg q8h or gastro-resistant"
+  },
+  {
+   "id": "fa51c7b26b",
+   "type": "p",
+   "en": "tablet/intravenous formulation 300 mg q24h"
+  },
+  {
+   "id": "9c2d0564aa",
+   "type": "p",
+   "en": "following a loading dose of 300 mg q12h on"
+  },
+  {
+   "id": "fdb0641d42",
+   "type": "p",
+   "en": "the first day) was given a B-II recommendation"
+  },
+  {
+   "id": "0f9c6e57a9",
+   "type": "p",
+   "en": "based on results inferred from data during the"
+  },
+  {
+   "id": "b6632d1437",
+   "type": "p",
+   "en": "neutropenic phase in AML/MDS patients."
+  },
+  {
+   "id": "56d449ee79",
+   "type": "li",
+   "en": "• During the (GvHD) post-engraftment phase Given the significantly increased risk of"
+  },
+  {
+   "id": "0a61278992",
+   "type": "p",
+   "en": "invasive mould infection during GvHD (and"
+  },
+  {
+   "id": "76526fcc47",
+   "type": "p",
+   "en": "its associated high mortality), ECIL strongly"
+  },
+  {
+   "id": "a2bbc6c1c7",
+   "type": "p",
+   "en": "recommends against the use of fluconazole for"
+  },
+  {
+   "id": "28c5b8ec3e",
+   "type": "p",
+   "en": "prophylaxis in patients with high-risk"
+  },
+  {
+   "id": "85aa51d8e0",
+   "type": "p",
+   "en": "GvHD. Based on the results of a large, double-"
+  },
+  {
+   "id": "c0e1aad598",
+   "type": "p",
+   "en": "blind study, posaconazole (oral solution or"
+  },
+  {
+   "id": "c866ef1e9a",
+   "type": "p",
+   "en": "gastro-resistant tablet/intravenous formula"
+  },
+  {
+   "id": "7c733ba446",
+   "type": "p",
+   "en": "tion) is the drug of choice for antifungal pro"
+  },
+  {
+   "id": "09687bfe61",
+   "type": "p",
+   "en": "phylaxis (A-I), although no difference was"
+  },
+  {
+   "id": "800a91080f",
+   "type": "p",
+   "en": "observed in patients with chronic GvHD."
+  },
+  {
+   "id": "d6c5fdd5ec",
+   "type": "li",
+   "en": "• PCP prophylaxis Oral trimethoprim/sulfamethoxazole given"
+  },
+  {
+   "id": "c078895188",
+   "type": "p",
+   "en": "two to three times weekly is the drug of choice"
+  },
+  {
+   "id": "6dea54c20c",
+   "type": "p",
+   "en": "for the primary prophylaxis of PCP and should"
+  },
+  {
+   "id": "6653c774ab",
+   "type": "p",
+   "en": "be given during the entire period at risk (from"
+  },
+  {
+   "id": "509724859e",
+   "type": "p",
+   "en": "engraftment to ≥6 months and as long as"
+  },
+  {
+   "id": "a7c7b22eab",
+   "type": "p",
+   "en": "immunosuppression is ongoing). All other"
+  },
+  {
+   "id": "c7f4017663",
+   "type": "p",
+   "en": "drugs, including aerosolised or intravenous"
+  },
+  {
+   "id": "b873a5014f",
+   "type": "p",
+   "en": "pentamidine, atovaquone, and dapsone, are"
+  },
+  {
+   "id": "2831e68de8",
+   "type": "p",
+   "en": "considered second-line alternatives when tri"
+  },
+  {
+   "id": "d11ead6150",
+   "type": "p",
+   "en": "methoprim/sulfamethoxazole is poorly toler"
+  },
+  {
+   "id": "a48a4fa7db",
+   "type": "p",
+   "en": "ated or contra-indicated (Maertens et al."
+  },
+  {
+   "id": "1dda129a99",
+   "type": "p",
+   "en": "2016a, b, c)."
+  },
+  {
+   "id": "da3fcb2a0a",
+   "type": "h2",
+   "num": "37.4",
+   "en": "Treatment of Fungal Disease"
+  },
+  {
+   "id": "c1e0eac5bd",
+   "type": "p",
+   "en": "Over the last few decades, three basic strategies (apart from prophylaxis) have been developed and investigated in clinical studies to deal with IFD (Mercier and Maertens 2017). For a long time, profound and prolonged neutropenia accompanied by persistent or relapsing fever after 5–7 days of adequate antibacterial coverage has been regarded as a sufficient trigger for starting broad-spectrum antifungals; a strategy referred to as empirical antifungal therapy. This practice has never been supported by robust scientific evidence and has important drawbacks, including drug-related toxicity and increased cost due to overtreatment. In spite of this, the empirical use of antifungals became standard of care in many centres. It was also endorsed by consensus guidelines and is relied on by centres that have limited or no access to radiological and mycological diagnostic tools. If relying on this approach, ECIL guidelines recommend the use of caspofungin (50 mg/day following 70 mg on day 1) or liposomal amphotericin B at 3 mg/kg (both have an AI recommendation)."
+  },
+  {
+   "id": "17e401aedc",
+   "type": "p",
+   "en": "A diagnostic-driven approach (also called ‘pre-emptive’) has been advocated by some centres and guidelines following recent improvements in diagnostic techniques. The aim is to start antifungal therapy in at-risk patients only when they present with an early marker of fungal infections, such as a positive GM, BDG, or PCR screening assay, or a suggestive lesion on imaging. A recently completed randomized EORTC study comparing the empirical and pre-emptive approach found no difference in day 42 all-cause mortality or rates of fungal diseases but a significant reduction in antifungal usage favouring the pre-emptive approach (Maertens et al. 2023). Unfortunately, such strategy is restricted to centres that perform non-culture-based testing twice weekly and readily have access to imaging modalities."
+  },
+  {
+   "id": "dccf1a4f03",
+   "type": "p",
+   "en": "Directed antifungal treatment is used for patients with documented fungal disease, either proven or probable (Table 37.2)."
+  },
+  {
+   "id": "07d1e80263",
+   "type": "li",
+   "en": "• Voriconazole and isavuconazole are recom"
+  },
+  {
+   "id": "5d70cda375",
+   "type": "p",
+   "en": "mended as first line treatment for invasive"
+  },
+  {
+   "id": "b89024ee5c",
+   "type": "p",
+   "en": "aspergillosis (IA), including cerebral aspergil"
+  },
+  {
+   "id": "57559f35f7",
+   "type": "p",
+   "en": "losis (Tissot et al. 2017). In a randomised clin"
+  },
+  {
+   "id": "172d7114f2",
+   "type": "p",
+   "en": "ical trial, voriconazole and isavuconazole had"
+  },
+  {
+   "id": "e75784be9d",
+   "type": "p",
+   "en": "the same efficacy (all-cause mortality at day"
+  },
+  {
+   "id": "24a16ebf4e",
+   "type": "p",
+   "en": "42 around 20%), although isavuconazole has a"
+  },
+  {
+   "id": "15d4b62c2b",
+   "type": "p",
+   "en": "better toxicity profile (including hepatotoxic"
+  },
+  {
+   "id": "5a4f0677dc",
+   "type": "p",
+   "en": "ity) and somewhat fewer drug–drug interac"
+  },
+  {
+   "id": "d3d78d2b58",
+   "type": "p",
+   "en": "tions compared to voriconazole (Maertens"
+  },
+  {
+   "id": "3495ded939",
+   "type": "p",
+   "en": "et al. 2016a, b, c). Following the 2017 ECIL"
+  },
+  {
+   "id": "65ef8077bb",
+   "type": "p",
+   "en": "recommendations, a study comparing vori"
+  },
+  {
+   "id": "3ddb3175f2",
+   "type": "p",
+   "en": "conazole and posaconazole demonstrated sim"
+  },
+  {
+   "id": "01ee57e47c",
+   "type": "p",
+   "en": "ilar efficacy but better safety profile with"
+  },
+  {
+   "id": "916bd8a7cd",
+   "type": "p",
+   "en": "posaconazole; the latter drug is now also con"
+  },
+  {
+   "id": "ce4381e3e3",
+   "type": "p",
+   "en": "sidered a ‘drug of choice’ option for the pri"
+  },
+  {
+   "id": "4472f3fdb6",
+   "type": "p",
+   "en": "mary treatment of IA (CNS penetration is"
+  },
+  {
+   "id": "7ace10192b",
+   "type": "p",
+   "en": "limited) (Maertens et al. 2021). The upfront"
+  },
+  {
+   "id": "c86723d900",
+   "type": "p",
+   "en": "combination of antifungals with different"
+  },
+  {
+   "id": "b99431c091",
+   "type": "p",
+   "en": "mechanisms of action (e.g. an azole plus an"
+  },
+  {
+   "id": "92bc59973f",
+   "type": "p",
+   "en": "echinocandin) is not recommended because"
+  },
+  {
+   "id": "0c69d04c18",
+   "type": "p",
+   "en": "superiority over monotherapy could not be"
+  },
+  {
+   "id": "d9b6382c4a",
+   "type": "p",
+   "en": "demonstrated (Marr et al. 2015). Liposomal"
+  },
+  {
+   "id": "2ce66360f6",
+   "type": "p",
+   "en": "amphotericin B at 3 mg/kg is the recom"
+  },
+  {
+   "id": "8233de07b2",
+   "type": "p",
+   "en": "mended alternative for primary therapy if"
+  },
+  {
+   "id": "9b216f07ee",
+   "type": "p",
+   "en": "these azoles cannot be used due to intolerance,"
+  },
+  {
+   "id": "461f71e4ba",
+   "type": "p",
+   "en": "drug interactions, prior exposure to broad-"
+  },
+  {
+   "id": "79822c16ec",
+   "type": "p",
+   "en": "spectrum azoles (e.g. prophylaxis), or due to"
+  },
+  {
+   "id": "68fb4c26e0",
+   "type": "p",
+   "en": "documented azole-resistance (Resendiz"
+  },
+  {
+   "id": "7eb8646225",
+   "type": "p",
+   "en": "Sharpe et al. 2018), an emerging problem in"
+  },
+  {
+   "id": "dcda591f66",
+   "type": "p",
+   "en": "some European centres. For salvage therapy,"
+  },
+  {
+   "id": "466853cb8f",
+   "type": "p",
+   "en": "the global response is around 40%, irrespec"
+  },
+  {
+   "id": "1e5ee036a4",
+   "type": "p",
+   "en": "tive of the antifungal used. Treatment duration"
+  },
+  {
+   "id": "ab9d08bf9d",
+   "type": "p",
+   "en": "is typically between 6 and 12 weeks, followed"
+  },
+  {
+   "id": "df0090f383",
+   "type": "p",
+   "en": "by secondary prophylaxis in patients with"
+  },
+  {
+   "id": "102b1b9fe8",
+   "type": "p",
+   "en": "ongoing immunosuppressive therapy. During"
+  },
+  {
+   "id": "8f70082855",
+   "type": "p",
+   "en": "the first week of treatment, pulmonary lesions"
+  },
+  {
+   "id": "361cc4384f",
+   "type": "p",
+   "en": "can grow on imaging; this is in line with the"
+  },
+  {
+   "id": "ed1c727155",
+   "type": "p",
+   "en": "normal kinetics of the disease and does not"
+  },
+  {
+   "id": "d20826121d",
+   "type": "p",
+   "en": "correlate with a poor outcome. When elevated"
+  },
+  {
+   "id": "629314aa25",
+   "type": "p",
+   "en": "at baseline, reduction in serum GM correlates"
+  },
+  {
+   "id": "1017258dc5",
+   "type": "p",
+   "en": "with treatment response. Expert-panel-based"
+  },
+  {
+   "id": "bc3a5f4eb9",
+   "type": "p",
+   "en": "recommendation on when to change therapy"
+  },
+  {
+   "id": "0640d70de5",
+   "type": "p",
+   "en": "in acute invasive aspergillosis is available"
+  },
+  {
+   "id": "e069120f81",
+   "type": "p",
+   "en": "(Slavin et al. 2021)."
+  },
+  {
+   "id": "28ce020a0d",
+   "type": "li",
+   "en": "• Treatment of mucormycosis includes control"
+  },
+  {
+   "id": "5f1e957f1c",
+   "type": "p",
+   "en": "of the underlying condition, surgical debride"
+  },
+  {
+   "id": "8a18267229",
+   "type": "p",
+   "en": "ment (often destructive), and antifungal ther"
+  },
+  {
+   "id": "c7f4573e46",
+   "type": "table",
+   "num": "37.2",
+   "en": "Table 37.2 ECIL-6 guidelines for the first-line antifun-",
+   "columns": 2,
+   "rows_en": [
+    [
+     "gal treatment in HCT patients",
+     "of invasive aspergillosis and mucormycosis"
+    ],
+    [
+     "",
+     "GradeComments"
+    ],
+    [
+     "Invasive aspergillosis",
+     ""
+    ],
+    [
+     "Voriconazole",
+     "AIDaily adult dose 2 × 6 mg/kg on day 1 followed by 2 × 4 mg/ kg (initiation oral therapy: CIII) Need for therapeutic drug monitoring Check for drug-drug interactions"
+    ],
+    [
+     "Isavuconazole",
+     "AIAdult dose 200 mg t.i.d for 2 days, thereafter 200 mg daily As effective as voriconazole but better tolerated"
+    ],
+    [
+     "Liposomal amphotericin B",
+     "BIDaily adult dose: 3 mg/ kg"
+    ],
+    [
+     "Amphotericin B lipid complex",
+     "BIIDaily adult dose: 5 mg/ kg"
+    ],
+    [
+     "Amphotericin B colloidal dispersion",
+     "CINot more effective than amphotericin B deoxycholate but less nephrotoxic"
+    ],
+    [
+     "Caspofungin",
+     "CII"
+    ],
+    [
+     "Itraconazole",
+     "CIII"
+    ],
+    [
+     "Combination anidulafungin + voriconazole",
+     "CI"
+    ],
+    [
+     "Other combinations",
+     "CIII"
+    ],
+    [
+     "Recommendation against the use of amphotericin B deoxycholate Invasive mucormycosis",
+     "AILess effective and more toxic a"
+    ],
+    [
+     "Amphotericin B deoxycholate",
+     "CII"
+    ],
+    [
+     "Liposomal amphotericin B",
+     "BIIDaily adult dose: 5 mg/ kg. Liposomal amphotericin B should be preferred in CNS infection and/or renal failure"
+    ],
+    [
+     "Amphotericin B lipid complex",
+     "BII"
+    ],
+    [
+     "Amphotericin B colloidal dispersion",
+     "CII"
+    ],
+    [
+     "Posaconazole",
+     "CIIINo data to support its use as first-line treatment."
+    ],
+    [
+     "Combination therapy",
+     "CIII"
+    ],
+    [
+     "a Management of mucormycosis includes antifungal ther apy, surgery and control of the underlying condition",
+     "-"
+    ]
+   ]
+  },
+  {
+   "id": "f55e968f8e",
+   "type": "p",
+   "en": "apy. At present, lipid-based formulations of"
+  },
+  {
+   "id": "0d40e58479",
+   "type": "p",
+   "en": "amphotericin B (at doses of 5–10 mg/kg) are"
+  },
+  {
+   "id": "889c1d2af8",
+   "type": "p",
+   "en": "the first line therapy of choice (Tissot et al."
+  },
+  {
+   "id": "e28b2c78e2",
+   "type": "p",
+   "en": "2017; Cornely et al. 2014). Both posaconazole"
+  },
+  {
+   "id": "175598975b",
+   "type": "p",
+   "en": "and isavuconazole can be used for oral outpa"
+  },
+  {
+   "id": "701d254bce",
+   "type": "p",
+   "en": "tient therapy following initial stabilisation of"
+  },
+  {
+   "id": "26f6e60728",
+   "type": "p",
+   "en": "the disease (preferably guided by susceptibil"
+  },
+  {
+   "id": "89d3453afd",
+   "type": "p",
+   "en": "ity testing results)."
+  },
+  {
+   "id": "ff1d6449b3",
+   "type": "li",
+   "en": "• Hyalohyphomycosis constitutes a heteroge"
+  },
+  {
+   "id": "5075e3bd13",
+   "type": "p",
+   "en": "neous group of fungi, including (but not lim"
+  },
+  {
+   "id": "8c903a006e",
+   "type": "p",
+   "en": "ited to) Fusarium, Scedosporium,"
+  },
+  {
+   "id": "3ca8646d3c",
+   "type": "p",
+   "en": "Acremonium, and Scopulariopsis species."
+  },
+  {
+   "id": "f7fce79f8e",
+   "type": "p",
+   "en": "Clinical manifestations range from colonisa"
+  },
+  {
+   "id": "7638d14d78",
+   "type": "p",
+   "en": "tion to localised infections to acute invasive"
+  },
+  {
+   "id": "4e6a6b79c1",
+   "type": "p",
+   "en": "and/or disseminated disease. First-line therapy"
+  },
+  {
+   "id": "20fefdad25",
+   "type": "p",
+   "en": "of fusariosis should include voriconazole and"
+  },
+  {
+   "id": "b9e3aad9eb",
+   "type": "p",
+   "en": "surgical debridement where possible;"
+  },
+  {
+   "id": "01a81a6d5b",
+   "type": "p",
+   "en": "posaconazole can be used as salvage treat"
+  },
+  {
+   "id": "f9bd9930b1",
+   "type": "p",
+   "en": "ment. Voriconazole is also the recommended"
+  },
+  {
+   "id": "1baf23572c",
+   "type": "p",
+   "en": "first-line treatment of scedosporium infections"
+  },
+  {
+   "id": "3a18693ef4",
+   "type": "p",
+   "en": "(except for Lomentospora prolificans, previ"
+  },
+  {
+   "id": "3b2c544f6e",
+   "type": "p",
+   "en": "ously named S. prolificans, for which there is"
+  },
+  {
+   "id": "b9e51780b4",
+   "type": "p",
+   "en": "currently no standard treatment available)."
+  },
+  {
+   "id": "1295470311",
+   "type": "p",
+   "en": "The optimal antifungal treatment has not been"
+  },
+  {
+   "id": "2dfbae4707",
+   "type": "p",
+   "en": "established for Acremonium spp.,"
+  },
+  {
+   "id": "6483feea51",
+   "type": "p",
+   "en": "Scopulariopsis spp, and other hyalohyphomy"
+  },
+  {
+   "id": "e3df1b2b81",
+   "type": "p",
+   "en": "cosis (Tortorano et al. 2014). Olorofim, a first-"
+  },
+  {
+   "id": "59656af84c",
+   "type": "p",
+   "en": "in-class orotomide antifungal, displays"
+  },
+  {
+   "id": "d4594b71e9",
+   "type": "p",
+   "en": "excellent activity against some of these diffi"
+  },
+  {
+   "id": "256808d50a",
+   "type": "p",
+   "en": "cult-to-treat fungal pathogens (including"
+  },
+  {
+   "id": "ef1007d41f",
+   "type": "p",
+   "en": "Lomentospora prolificans) and is currently in"
+  },
+  {
+   "id": "65d046439b",
+   "type": "p",
+   "en": "late-stage clinical development."
+  },
+  {
+   "id": "f68bdc651b",
+   "type": "li",
+   "en": "• Echinocandins are the drugs of choice for the"
+  },
+  {
+   "id": "558648e361",
+   "type": "p",
+   "en": "first line therapy of invasive candidiasis/candi"
+  },
+  {
+   "id": "cc85568d35",
+   "type": "p",
+   "en": "demia, followed by a step-down approach in"
+  },
+  {
+   "id": "2c77f0fb38",
+   "type": "p",
+   "en": "clinically stable patients upon receipt of the"
+  },
+  {
+   "id": "3faa4d9d24",
+   "type": "p",
+   "en": "species identification and antifungal suscepti"
+  },
+  {
+   "id": "16515f1b34",
+   "type": "p",
+   "en": "bility testing results (Andes et al. 2012)."
+  },
+  {
+   "id": "125d2c4d05",
+   "type": "p",
+   "en": "Catheter removal is strongly recommended in"
+  },
+  {
+   "id": "ca00b07edf",
+   "type": "p",
+   "en": "patients with candidemia or with C. parapsi"
+  },
+  {
+   "id": "ff1bc04058",
+   "type": "p",
+   "en": "losis bloodstream infection. Treatment dura"
+  },
+  {
+   "id": "a4476da10b",
+   "type": "p",
+   "en": "tion typically is 14 days after the last positive"
+  },
+  {
+   "id": "9a33a84bc0",
+   "type": "p",
+   "en": "blood culture."
+  },
+  {
+   "id": "051aba4b84",
+   "type": "li",
+   "en": "• High-dose trimethoprim/sulfamethoxazole is"
+  },
+  {
+   "id": "93001a7645",
+   "type": "p",
+   "en": "the treatment of choice for patients with docu"
+  },
+  {
+   "id": "1ac512a5c5",
+   "type": "p",
+   "en": "mented PCP; the combination of primaquine"
+  },
+  {
+   "id": "965607fbaa",
+   "type": "p",
+   "en": "plus clindamycin is the preferred alternative."
+  },
+  {
+   "id": "2808b78660",
+   "type": "p",
+   "en": "Treatment duration is typically 3 weeks, and"
+  },
+  {
+   "id": "9171f73c42",
+   "type": "p",
+   "en": "secondary anti-PCP prophylaxis is indicated"
+  },
+  {
+   "id": "f79e691664",
+   "type": "p",
+   "en": "thereafter. The administration of glucocorti"
+  },
+  {
+   "id": "1405db460d",
+   "type": "p",
+   "en": "coids must be decided on a case-by-case basis"
+  },
+  {
+   "id": "1a4588b9eb",
+   "type": "p",
+   "en": "(Maschmeyer et al. 2016)."
+  },
+  {
+   "id": "2b203fb478",
+   "type": "li",
+   "en": "• Of note, uncertainty about exposure and drug"
+  },
+  {
+   "id": "f92296edb9",
+   "type": "p",
+   "en": "interactions are common when using azole"
+  },
+  {
+   "id": "347599092c",
+   "type": "p",
+   "en": "antifungals. Therapeutic drug monitoring for"
+  },
+  {
+   "id": "64a0afbeeb",
+   "type": "p",
+   "en": "voriconazole (plasma target 1–6 mg/L for pro"
+  },
+  {
+   "id": "0580d84b8a",
+   "type": "p",
+   "en": "phylaxis and treatment), isavuconazole (target"
+  },
+  {
+   "id": "16941f6da9",
+   "type": "p",
+   "en": "2–4 mg/L), and posaconazole (plasma target"
+  },
+  {
+   "id": "92facc3c7d",
+   "type": "p",
+   "en": ">0.7 mg/L for prophylaxis; >1 mg/L for treat"
+  },
+  {
+   "id": "ee0171154a",
+   "type": "p",
+   "en": "ment) is therefore recommended (ECIL-6"
+  },
+  {
+   "id": "90372f830f",
+   "type": "p",
+   "en": "guidelines)."
+  },
+  {
+   "id": "d6bbf6e7ef",
+   "type": "li",
+   "en": "• Aspergillus, Candida, and Pneumocystis jirovecii are the cause of almost 90% of the invasive fungal diseases following HCT. Most infections are diagnosed post-engraftment during episodes of acute and/or chronic GvHD."
+  },
+  {
+   "id": "596e3d2b27",
+   "type": "li",
+   "en": "• Chest and sinus CT scan and noninvasive mycological tools (serology, PCR) are crucial for making an early diagnosis."
+  },
+  {
+   "id": "50a3419e54",
+   "type": "li",
+   "en": "• Antifungal prophylaxis, targeting yeast and/or mould infections depending on the post-transplant risk period, is highly recommended. Trimethoprim-sulfamethoxazole remains the drug of choice for preventing PJP."
+  },
+  {
+   "id": "9ff0a53305",
+   "type": "li",
+   "en": "• Echinocandins are the preferred first line therapy for invasive Candida infections and candidemia. Voriconazole, isavuconazole, and posaconazole are the recommended first-line options for invasive aspergillosis, whereas lipid-based formulations of amphotericin B are the recommended first-line option for mucormycosis."
+  },
+  {
+   "id": "aab43586de",
+   "type": "li",
+   "en": "• Novel antifungal agents with extended spectrum of activity and fewer drug-drug interactions are undergoing clinical evaluation in HCT and CAR-T patients, including the long-acting echinocandin rezafungin (in prophylaxis),"
+  },
+  {
+   "id": "42c4f51568",
+   "type": "aside",
+   "en": "Key Points"
+  },
+  {
+   "id": "2b01e30841",
+   "type": "p",
+   "en": "olorofim (mould infections with limited or no treatment options, excluding mucormycosis), and opelconazole, an azole developed for inhalation (as an adjunct to salvage therapy)."
+  }
+ ],
+ "references": [
+  "Kontoyiannis DP, Marr KA, Park BJ, et al. Prospective surveillance for invasive fungal infections in hematopoietic stem cell transplant recipients, 2001-2006: overview of the Transplant-Associated Infection Surveillance Network (TRANSNET) database. Clin Infect Dis. 2010;50:1091–100.",
+  "Girmenia C, Raiola AM, Piciocchi A, et al. Incidence and outcome of invasive fungal diseases after allogeneic stem cell transplantation: a prospective study of the Gruppo Italiano Trapianto Midollo Osseo (GITMO). Biol Blood Marrow Transplant. 2014;20:872–80.",
+  "Yang J, Zhang J, Wei J, et al. Prolonged duration of lymphocyte deficiency, high-grade CRS, and ventilation are linked to fungal breakthrough in patients with hematologic malignancies 60 days after CAR-T infusion: a single center case-control study. J Infect Public Health. 2022;12:1521–30.",
+  "Cesaro S, Tridello G, Blijlevens NS, et al. Incidence, risk factors and long-term outcome of acute Leukemia patients with early candidemia after allogeneic stem cell transplantation. a study by the acute Leukemia and infectious diseases working parties of EBMT. Clin Infect Dis 2018. https://doi.org/10.1093/cid/ciy150. [Epub ahead of print].",
+  "Maertens JA, Blennow O, Duarte RFS, et al. The current management landscape: aspergillosis. J Antimicrob Chemother. 2016a;71(Suppl 2):ii23-ii29:ii23.",
+  "White PL, Barnes RA, Springer JS, et al. Clinical performance of aspergillus PCR for testing serum and plasma: a study by the European aspergillus PCR initiative. J Clin Microbiol. 2015;53:2832–7.",
+  "Hoenigl M, Eigl S, Heldt SS, et al. Clinical evaluation of the newly formatted lateral-flow device for invasive pulmonary aspergillosis. Mycoses. 2018;61:40–3.",
+  "Stanzani M, Sassi C, Lewis RE, et al. High resolution computed tomography angiography improves the radiographic diagnosis of invasive mold disease in patients with hematological malignancies. Clin Infect Dis. 2015;60:1603–10.",
+  "Mylonakis E, Clancy CJ, Ostrosky-Zeichner L, et al. T2 magnetic resonance assay for the rapid diagnosis of candidemia in whole blood: a clinical trial. Clin Infect Dis. 2015;60:892–9.",
+  "Alanio A, Hauser PM, Lagrou K, et al. ECIL guidelines for the diagnosis of pneumocystis jirovecii pneumonia in patients with haematological malignancies and stem cell transplant recipients. J Antimicrob Chemother. 2016;71:2386–96. http://www.ecil- leukaemia.com.",
+  "Maertens J, Cesaro S, Maschmeyer G, et al. ECIL guidelines for preventing pneumocystis jirovecii pneumonia in patients with haematological malignancies and stem cell transplant recipients. J Antimicrob Chemother. 2016b;71:2397–404.",
+  "Mercier T, Maertens J. Clinical considerations in the early treatment of invasive mould infections and disease. J Antimicrob Chemother. 2017;72(suppl_1):i29–38.",
+  "Tissot F, Agrawal S, Pagano L, et al. ECIL-6 guidelines for the treatment of invasive candidiasis, aspergillosis and mucormycosis in leukemia and hematopoietic stem cell transplant patients. Haematologica. 2017;102:433–44.",
+  "Maertens J, Lodewyck T, Donnelly JP, et al. Empiric vs preemptive antifungal strategy in high-risk neutropenic patients on fluconazole prophylaxis: a randomized trial of the European Organization for Research and Treatment of Cancer. Clin Infect Dis. 2023;76(4):674–82.",
+  "Maertens JA, Raad II, Marr KA, et al. Isavuconazole versus voriconazole for primary treatment of invasive mould disease caused by aspergillus and other filamentous fungi (SECURE): a phase 3, randomised-controlled, non-inferiority trial. Lancet. 2016c;387:760–9.",
+  "Maertens JA, Rahav G, Lee DG, et al. Posaconazole versus voriconazole for primary treatment of invasive aspergillosis: a phase 3, randomised, controlled, non-inferiority trial. Lancet. 2021;397(10273):499–509.",
+  "Marr KA, Schlamm HT, Herbrecht R, et al. Combination antifungal therapy for invasive aspergillosis: a randomized trial. Ann Intern Med. 2015;162:81–9.",
+  "Resendiz Sharpe A, Lagrou K, Meis JF, et al. Triazole resistance surveillance in Aspergillus fumigatus. Med Mycol. 2018;56(suppl_1):83–92.",
+  "Slavin MA, Chen YC, Cordonnier C, et al. When to change treatment of acute invasive aspergillosis: an expert viewpoint. J Antimicrob Chemother. 2021;77(1):16–23.",
+  "Cornely OA, Arikan-Akdagli S, Dannaoui E, et al. ESCMID and ECMM joint clinical guidelines for the diagnosis and management of mucormycosis 2013. Clin Microbiol Infect. 2014;20(Suppl 3):5–26.",
+  "Tortorano AM, Richardson M, Roilides E, et al. ESCMID and ECMM joint guidelines on diagnosis and management of hyalohyphomycosis. Clin Microbiol Infect. 2014;20(Suppl 3):27–46.",
+  "Andes DR, Safdar N, Baddley JW, et al. Impact of treatment strategy on outcomes in patients with candidemia and other forms of invasive candidiasis: a patient-level quantitative review of randomized trials. Clin Infect Dis. 2012;54:1110–22.",
+  "Lamoth F, Kontoyiannis DP. The Candida auris alert: facts and perspectives. J Infect Dis. 2018;217:516–20.",
+  "Maschmeyer G, Helweg-Larsen J, Pagano L, et al. ECIL guidelines for treatment of pneumocystis jirovecii pneumonia in non-HIV-infected haematology patients. J Antimicrob Chemother. 2016;71:2405–13."
+ ]
+}

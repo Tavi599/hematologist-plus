@@ -1,0 +1,367 @@
+{
+ "number": 13,
+ "part": "III",
+ "page_pdf": [
+  156,
+  165
+ ],
+ "page_printed": 125,
+ "title_en": "Conditioning",
+ "authors": "Avichai Shimoni, Vera Radici, and Arnon Nagler",
+ "affiliations": "A. Shimoni (*) · A. Nagler Division of Hematology and Bone Marrow Transplantation, Tel Aviv University, Tel-Hashomer, Israel e-mail: Avichai.shimoni@sheba.health.gov.il; arnon.nagler@sheba.health.gov.il V. Radici Unit of Blood Diseases and Stem Cell Transplantation, ASST-Spedali Civili, Brescia, Italy",
+ "doi": "10.1007/978-3-031-44080-9_13",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "d11a19f133",
+   "type": "h2",
+   "num": "13.1",
+   "en": "An Overview"
+  },
+  {
+   "id": "5d3d58bb22",
+   "type": "p",
+   "en": "Hematopoietic cell transplantation (HCT) is a potentially curative therapeutic procedure in a broad range of malignant and nonmalignant hematological disorders. Conditioning is the preparative regimen that is administered to patients undergoing HCT before the infusion of stem cell (SC) grafts. Historically, pre-HCT conditioning was aimed at eradicating the hematological malignancy in case of malignant indication for HCT. It was also used for providing sufficient immune suppression (IS), to ensure engraftment and to prevent both rejection and graft-versus-host disease (GVHD), and for providing stem cell niches in the host bone marrow (BM) for the incoming stem cells. The third purpose is now controversial as it was demonstrated in animal models that with mega doses of hematopoietic stem cells (HSCs) and repeated administrations, engraftment can be achieved without conditioning. In addition, the donor immune system can pave the way for engraftment."
+  },
+  {
+   "id": "3c1b862dd9",
+   "type": "p",
+   "en": "A conditioning regimen consists of two components: myelodepletion, which targets the host stem cells, and lymphodepletion, which targets the host lymphoid system. The relative intensities of myelosuppression and immune suppression differ between the different regimens. Some of the compounds used in the conditioning are more myeloablative (MA) in nature, for example, melphalan (MEL) or busulfan (BU), whereas some are more lymphodepleting like fludarabine (FLU) or cyclophosphamide (CY). The pretransplant conditioning may include total body irradiation (TBI) (that provides both myelosuppression and immune suppression) or, in rare and specific instances, other types of irradiation like total lymphoid irradiation (TLI). Alternatively, the pre-HCT conditioning can be radiation-free, including only chemotherapy. In recent years, serotherapy, specific targeted novel compounds, and monoclonal antibody (MoAb) and radiolabeled Ab have started getting incorporated into specific disease- oriented conditioning regimens."
+  },
+  {
+   "id": "018503c513",
+   "type": "p",
+   "en": "Conditioning regimens can be grouped by dose intensity. Historically, the conditioning protocols were myeloablative conditioning (MAC) in nature, and the two most popular ones were the CY/TBI (intravenous (IV) CY 60 mg/kg × 2 days followed by TBI 12 Gy) and the BU/CY protocol (oral BU 4 mg/kg × 4 days and CY 60 mg/kg × 2 days). However, MAC is associated with significant organ- and transplant-related toxicity (TRT), limiting allo-HCT to younger patients in good medical conditioning, typically up to the"
+  },
+  {
+   "id": "1a80b076f2",
+   "type": "p",
+   "en": "age of 55 years. During the past two decades, non-MA (NMA), RIC, and reduced toxicity conditioning (RTC) regimens have been developed, aiming at reducing organ toxicity and transplant related mortality (TRM) while keeping the anti-malignant effect and allowing allo-HCT in elderly and medically infirm patients. These are relatively nontoxic and more tolerable regimens designed not to maximally eradicate the malignancy but rather to provide sufficient IS to achieve engraftment and to allow induction of graft versus leukemia (GVL) as the primary treatment. A group of experts attempted to define and dissect the intensity of the conditioning regimen based on the expected duration and reversibility of cytopenia after HCT and the theoretical need for stem cell support (Bacigalupo et al. 2009). MAC was defined as a conditioning regimen that results in irreversible cytopenia in most patients, and stem cell support after HCT is required. Truly NMA regimens cause minimal cytopenia and can theoretically be administered without stem cell support. RIC regimens cause profound cytopenia and should be administered with stem cells, but cytopenia may not be irreversible. Mixed chimerism may occur more often following the less intensive regimens. RTC regimens were later defined as new versions of MAC that cause less toxicity such as with the substitution of CY with FLU."
+  },
+  {
+   "id": "a63ed19330",
+   "type": "p",
+   "en": "Several new regimens and approaches have been introduced over the last few years. These comprise newly included chemotherapy agents such as treosulfan and thiotepa and new immunosuppressive agents like clofarabine. In addition, there are new doses and schedules, such as different doses of BU, or new schedules, such as sequentially administrating novel chemotherapy combination (FLAMSA (fludarabine, Ara-C, and amsacrine)), to be followed by RIC conditioning. The old RIC/MAC classification may not accurately classify these regimens and there may be significant overlapping. The European Society for Blood and Marrow Transplantation (EBMT) started an effort to redefine and measure transplant conditioning intensity (TCI) (Spyridonidis et al. 2020). They assigned intensity weight scores for the most often used components of conditioning regimens. The sum of these scores results in grouping TCI into low, intermediate, or high TCI. This score better predicted non-relapse martality (NRM) than did the original RIC/MAC classification. An intermediate TCI score overlaps with what was previously defined as RTC. Further validation and refinement of these scores is underway."
+  },
+  {
+   "id": "a2d8e9f2b5",
+   "type": "table",
+   "num": "13.1",
+   "en": "Table 13.1 Summary of randomized studies comparing various conditioning regimens with different dose intensities",
+   "columns": 5,
+   "rows_en": [
+    [
+     "",
+     "Author",
+     "Disease/age",
+     "Conditioning regimens",
+     "Outcome"
+    ],
+    [
+     "MAC vs. RTC",
+     "Lee et al. (2013)",
+     "AML Age 17–59 years",
+     "BuCy 64 FluBu4 62",
+     "BuCy better RI and OS, similar NRM"
+    ],
+    [
+     "",
+     "Rambaldi et al. (2015)",
+     "AML Age 40–65 years",
+     "BuCy 124 FluBu4 127",
+     "FluBu4 less NRM, similar RI and OS"
+    ],
+    [
+     "",
+     "Bornhäuser et al. (2012)",
+     "AML Age 18–60 years",
+     "Cy/TBI 99 Flu/TBI8 99",
+     "Similar outcomes"
+    ],
+    [
+     "",
+     "Peters et al. (2021)",
+     "ALL Age 4–21 years",
+     "TBI/VP16 212 Flu/TT/Bu 201 Or flu//TT/Treo",
+     "TBI less RI and better OS"
+    ],
+    [
+     "MAC vs. RIC",
+     "Kröger et al. (2017)",
+     "MDS Age 18–60 years",
+     "BuCy 64 FluBu4 65",
+     "Similar outcomes"
+    ],
+    [
+     "",
+     "Scott et al. (2017)",
+     "AML/MDS",
+     "MAC 135 RIC 137",
+     "MAC lower RI, higher NRM, better OS"
+    ],
+    [
+     "Various RIC",
+     "Blaise et al. (2013)",
+     "Hematological malignancies MAC-ineligible",
+     "Flu/Bu2 69 Flu/TBI2 70",
+     "FluBu2 lower RI, higher NRM, similar NRM"
+    ],
+    [
+     "",
+     "Beelen et al. (2020)",
+     "AML/MDS MAC-ineligible",
+     "Flu/Treo10 221 Flu/Bu2 240",
+     "Flu/Treo lower NRM, better OS"
+    ],
+    [
+     "",
+     "Craddock et al. (2021)",
+     "AML/MDS MAC-ineligible",
+     "RIC 122 FLAMSA 122",
+     "Similar outcomes"
+    ]
+   ]
+  },
+  {
+   "id": "6489e7bba1",
+   "type": "p",
+   "en": "Table 13.1 summarizes the major randomized studies that have been published in recent years, which compare various regimens with different dose intensities. The optimal condition regimen can be selected based on patient age and comorbidity scoring (including organ-specific toxicity risk), disease status at the time of transplantation, and donor type (sibling, matched unrelated or alternative donors such as umbilical cord blood, or haploidentical donors). Disease type may also direct conditioning components by adding, for example, disease-targeted agents. Different regimens are used in pediatrics considering the aspects of growth and puberty, and different regimens may be needed for nonmalignant disorders where more emphasis is placed on engraftment and prevention of GVHD rather than GVL. The overall dose intensity as well as the relative myeloablative and immunosuppressive components of the regimen can be selected. The selection of the regimen for the prevention of GVHD has also been undergoing significant change in recent years and will be discussed in another chapter. This selection may have an impact on conditioning components such as when selecting posttransplant CY."
+  },
+  {
+   "id": "53f993917e",
+   "type": "h2",
+   "num": "13.2",
+   "en": "Total Body Irradiation"
+  },
+  {
+   "id": "632df59a97",
+   "type": "p",
+   "en": "TBI is one of the major constituents of MAC regimens. In HCT, TBI serves a dual purpose. It allows cell killing, which contributes to the eradication of malignant cells, potentially complemented by additional high-dose systemic chemotherapy. It provides homogeneous dose distribution in the whole body, including sanctuaries not easily reached by systemic chemotherapy such as the central nervous system (CNS) and testicles. It provides a different mechanism of tumor cell killing against chemotherapy-resistant cell clones. TBI also provides immunosuppression to facilitate engraftment. Most studies have shown the equivalence of chemotherapy- based MAC, mostly BU/CY and CY/TBI conditioning for AML (Nagler et al. 2013). In contrast, despite the absence of consensus, TBI remains the first choice in many centers for adult ALL (Giebel et al. 2023a, 2023b)."
+  },
+  {
+   "id": "a2048b3656",
+   "type": "p",
+   "en": "There is high variability in TBI scheduling among transplantation centers in terms of dose, fractionation, dose rate, and administration of additional chemotherapy (Giebel et al. 2014). Historically, TBI was included in MAC platforms, but, in recent years, to reduce associated toxicities, there have been efforts to reduce the dose and fractionation by including TBI in RIC and RTC regimens. TBI ≥5 Gy in a single dose or ≥8 Gy in fractionated doses is considered MAC (Bacigalupo et al. 2009)."
+  },
+  {
+   "id": "9fe80019c8",
+   "type": "p",
+   "en": "Historically, TBI combined with CY has been the standard regimen used for conditioning in acute leukemia. TBI is typically administered at a dose of 12 Gy in six fractions delivered twice a day over 3 days (Thomas et al. 1982). Higher doses of TBI up to 14.25 Gy resulted in improved anti-leukemic effects, but this was counterbalanced by increased toxicity and TRM (Clift et al. 1990). A randomized study comparing standard CY/TBI with fludarabine and a lower dose of TBI (total 8 Gy) in patients with AML in CR1 showed similar survival rates (Bornhäuser et al. 2012). Recently, a registry-based study of the Acute Leukemia Working Party (ALWP) has defined that 8-Gray TBI is sufficient for adult patients with acute lymphoblastic leukemia (ALL) transplanted in CR1 with no additional benefit of augmenting the conditioning intensity to 12-Gray (Spyridonidis et al. 2023)."
+  },
+  {
+   "id": "2967734ef3",
+   "type": "p",
+   "en": "TBI has evolved since its introduction in the late 50s, but acute toxicities and long-term morbidity remain, especially in younger pediatric patients. The acute toxicities include nausea, vomiting, diarrhea, stomatitis, temporary loss of taste, hemorrhagic cystitis, parotitis, and rash. The late toxicities include interstitial pneumonitis, sinusoidal obstruction syndrome/veno-occlusive disease (SOS/VOD), cataracts, infertility, hormone-related disorders, osteoporosis, growth retardation, and secondary malignancies (Gruen et al. 2022). These long-term known side effects of TBI can significantly impair the quality of life of patients still during childhood and/or when they reach adulthood."
+  },
+  {
+   "id": "a3632593b8",
+   "type": "p",
+   "en": "Although the benefit of a TBI-based conditioning regimen has been shown in children in a large randomized study (Peters et al. 2021), concerns remain about whether TBI should remain"
+  },
+  {
+   "id": "8a0644dfa5",
+   "type": "p",
+   "en": "the standard conditioning regimen for all children with ALL. The introduction of sensitive methods for the detection of measurable residual disease (MRD) and new immunotherapies using bispecific antibodies or chimeric antigen receptor (CAR) T-cells in combination with non-TBI-based conditioning regimens have already shown promising results comparable with the outcome after TBI-based standard transplants or even better (Handgretinger and Lang 2022). Additional efforts should be made besides optimization of conditioning regimens to prevent relapses posttransplant and reduce toxicities."
+  },
+  {
+   "id": "0e222eea8f",
+   "type": "p",
+   "en": "New strategies of radiotherapy, such as helical tomotherapy, are being explored, which is widely used for some solid tumors and is a path for the improvement of outcomes and toxicities in TBI. It has a sparing capacity to reduce the dose to critical organs such as the eyes, thyroid, liver, and lungs (Paix et al. 2018). Several research groups are evaluating the clinical outcomes of this novel hypo-fractionation strategy for patients receiving total marrow irradiation (TMI) and total marrow and involved lymphoid irradiation (TMLI) as part of the conditioning regimen before HCT with interesting results (Shi et al. 2020; Paix et al. 2018). Recently, preclinical models have shown that antibody drug conjugates (ADCs) targeting hematopoietic cells can specifically deplete host stem and immune cells and enable engraftment, using an anti-mouse CD45-targeted ADC combined with TBI (Saha et al. 2022)."
+  },
+  {
+   "id": "d0b4aeff3d",
+   "type": "h2",
+   "num": "13.3",
+   "en": "Myeloablative Non-TBI- Containing Conditioning"
+  },
+  {
+   "id": "ce3a024480",
+   "type": "p",
+   "en": "MAC consists of high-dose chemotherapy, mostly alkylating agent-based regimens used in HCT. These preparative regimens may or may not include a radiation component (see the previous section). MAC causes, by definition, profound and prolonged cytopenia that may last more than 21 days and necessitates stem cell graft in order to recover (Bacigalupo et al. 2009). This high-intensity conditioning can be administered only to fit patients with low comorbidities as they are associated with unacceptable toxicity in patients with a low performance status and high co-morbidity scores (Shouval et al. 2022). Historically, BU/CY has been the prototype of chemotherapy-based MAC. It was developed by the Johns Hopkins group in the early 80s as an alternative to TBI in an effort to reduce the incidence of long-term radiation-induced toxicities and improve the planning of HCT in institutions lacking easy availability of linear accelerators (Tutschka et al. 1987). The original studies used oral BU that has an erratic and unpredictable absorption with wide inter- and also intra-patient variability with the risk of increased toxicity, mainly SOS/VOD in patients with a high area under the curve of BU plasma concentration versus time, whereas low BU concentrations may be associated with a higher risk of graft rejection and relapse (Hassan 1999). The common solution was monitoring BU levels and dose adjustments that allowed for better control of the dose administered and reduction of the abovementioned risks (Deeg et al. 2002). The development of IV BU with more predictable pharmacokinetics, achieving tight control of plasma levels, and less need for plasma level testing and dose adjustments significantly reduced BU-mediated SOS/VOD and TRM (Nagler et al. 2014)."
+  },
+  {
+   "id": "ede1a2a51d",
+   "type": "p",
+   "en": "Subsequently, in an attempt to further reduce regimen-related toxicity, CY was replaced with FLU, a nucleoside analogue with considerable IS properties that also has a synergizing effect with alkylators by inhibiting DNA repair as well as a highly favorable toxicity profile. A well-designed two-arm study compared BU/CY to BU/FLU, demonstrating a significant reduction of TRM in the FLU/BU arm with no difference in relapse incidence (Rambaldi et al. 2015). FLU is replacing CY in many of the current conditioning protocols, including in combination with TBI (Bug et al. 2023; Giebel et al. 2023b). Other alkylators like thiotepa (Eder et al. 2017) and other nucleoside analogues like clofarabine (Chevallier et al. 2012) have been incorporated into MAC protocols for both acute myeloid leukemia (AML) and ALL in an attempt to reduce the risk of relapse"
+  },
+  {
+   "id": "1e7fbe7a9e",
+   "type": "p",
+   "en": "with equivalent results to TBI-containing conditioning protocols. Other MAC regimens include MEL in combination with BU or replacing BU (Vey et al. 1996; Duque-Afonso et al. 2022)."
+  },
+  {
+   "id": "390c34246f",
+   "type": "h2",
+   "num": "13.4",
+   "en": "Non-Myeloablative, Reduced Intensity and Reduced Toxicity Conditioning"
+  },
+  {
+   "id": "43034e04fd",
+   "type": "p",
+   "en": "NMA and RIC have been widely introduced over the past 20 years in an attempt to reduce organ toxicity and TRM, allowing HCT in elderly and medically infirm patients who are not eligible for standard MAC. In addition, RTC, based on FLU and MA doses of an alkylating agent, was designed to allow safer administration of dose-intensive therapy. Multiple such protocols have been reported over the years with somewhat overlapping dose intensities and, to a certain extent, unclear categorization."
+  },
+  {
+   "id": "26cf0112bb",
+   "type": "p",
+   "en": "NMA regimens cause minimal myelosuppression and can theoretically be administered with no stem cell support. They usually result, at least initially, in mixed chimerism. The original NMA conditioning protocols consisted of FLU with a low-dose TBI of only 2 Gy (the Seattle protocol). Oher examples include the FLU/CY and the fludarabine, cytarabine, and granulocyte colony-stimulating factor (G-CSF) with idarubicin (FLAG-IDA) conditioning protocol pioneered at the MD Anderson Cancer Center."
+  },
+  {
+   "id": "2881e35a1a",
+   "type": "p",
+   "en": "RIC regimens are more dose-intensive. They cause profound myelosuppression that may be reversible after a prolonged period of time if there is no stem cell support. They usually associate with earlier achievement of complete chimerism. The most popular regimen in this subgroup is the FLU/BU2 combination (including half of the myeloablative BU dose). The other most popular regimen is the combination of FLU and MEL."
+  },
+  {
+   "id": "b727f6bbb0",
+   "type": "p",
+   "en": "RTC regimens such as the FLU/BU4 regimen are now more often categorized with MAC regimens as discussed in the previous section."
+  },
+  {
+   "id": "bba983b93e",
+   "type": "p",
+   "en": "There are several relatively new novel conditioning protocols with a dose intensity that is not easily categorized. Treosulfan (TREO) is a prodrug of a bifunctional alkylating agent with strong myeloablative and immunosuppressive characteristics and is associated with a low pro-inflammatory cytokine release and a favorable toxicity profile (Danylesko et al. 2012). FLU/TREO, with a total treosulfan dose of 36–42 g/m², can be categorized as an RTC regimen (Shimoni et al. 2018). It allows safer administration of dose-intensive conditioning in less fit or older patients. A lower dose of TREO of 30 g/m² can be grouped with RIC (Beelen et al. 2020). FLU/TREO may have a specific advantage in patients transplanted for myelodysplastic syndrome (MDS) (Shimoni et al. 2021). The thiotepa–busulfan–fludarabine (TBF) regimen consisting of TT, BU, and FLU has RIC and MAC versions and has gained a lot of popularity in alternative donor transplants (Saraceni et al. 2017). A sequential approach was initially developed to treat high-risk leukemia with encouraging results. This approach includes an AML salvage chemotherapy followed in a few days by RIC. The most known type is the FLAMSA conditioning, which comprised of sequential chemotherapy, including FLU, Ara-C, and amsacrine, followed by RIC (Schmid et al. 2005). These regimens had a promising outcome in refractory leukemia."
+  },
+  {
+   "id": "f77ffd5610",
+   "type": "p",
+   "en": "Multiple retrospective studies compared the various regimens. As a general role, more intensive regimens are associated with a lower relapse rate, a higher TRM rate, and similar overall survival (Aoudjhane et al. 2005; Luger et al. 2012). The less intensive regimens may have a disadvantage in patients with active disease at transplantation (Shimoni et al. 2006). In particular, a truly NMA approach may be less effective in acute leukemia (Luger et al. 2012)."
+  },
+  {
+   "id": "81b80ea093",
+   "type": "p",
+   "en": "However, these comparisons are biased by the selection of better-fit patients to MAC, whereas older patients or those with comorbidities were most often administered RIC. Several randomized studies compared MAC and RIC but produced in conflicting results. The Blood and Marrow Transplantation Clinical Trial Network (BMT CTN) conducted a phase III randomized trial comparing MAC (BU/CY, FLU/BU4, or"
+  },
+  {
+   "id": "697deb1a0c",
+   "type": "p",
+   "en": "CY/TBI) with RIC (FLU/BU or FLU/MEL) in patients with AML and MDS who were MAC-eligible (Scott et al. 2017). RIC resulted in lower TRM but much higher relapse incidence compared with MAC, resulting in improved leukemia-free survival (LFS) and a trend for an advantage in overall survival compared with MAC. However, the advantage was limited to patients with a positive MRD at the time of transplantation. A randomized study comparing RIC and MAC in patients with MDS demonstrated similar 2-year RFS and OS with no difference between the two conditioning regimens (Kröger et al. 2017). Randomized studies comparing MAC and RTC did not show a survival difference as discussed in the previous subchapters (Bornhäuser et al. 2012; Rambaldi et al. 2015)."
+  },
+  {
+   "id": "89bf7c7a4f",
+   "type": "p",
+   "en": "Despite being included in the same dose-intensity category, not all RIC regimens are similar in terms of toxicity profile and expected transplantation outcomes. Several randomized and retrospective studies compared various types of RIC. A randomized French study, which compared FLU/BU to FLU/low-dose TBI, demonstrated less relapse with the FLU/BU regimen but higher TRM, resulting in similar LFS and OS (Blaise et al. 2013). FLU/BU and FLU/MEL were retrospectively compared. FLU/MEL is usually associated with better anti-leukemic effects and a lower relapse rate but with higher NRM, in particular due to GVHD (Shimoni et al. 2007; Eapen et al. 2018). Augmenting a RIC regimen (FLU/BU) by FLAMSA pre- conditioning sequential therapy did not improve survival compared to standard RIC in a randomized UK study in patients with AML and MDS (Craddock et al. 2021). Finally, a randomized study comparing FLU/TREO (with a low dose of treosulfan) and FLU/BU2 showed better survival with the FLU/TREO regimen due to lower rates of NRM (Beelen et al. 2020)."
+  },
+  {
+   "id": "9ecc01be80",
+   "type": "p",
+   "en": "Patients with MDS and myeloproliferative disease (MPD) are often older and are administered RIC or RTC regimens rather than MAC. There is no evidence for an advantage of any regimen over the others in this setting. A large European study used FLU/BU/ATG RIC for myelofibrosis with promising outcome. More recently, a TBF double alkylator regimen has gained more popularity (Battipaglia et al. 2021). Regimens that are similar to AML are used in MDS. The numbers of allogeneic transplantations for lymphomas is reducing. Most patients are administered RIC such as fludarabine with a combination of an alkylator agent such as melphalan, busulfan, thiotepa or cyclophosphamide."
+  },
+  {
+   "id": "50b9a84cdb",
+   "type": "h2",
+   "num": "13.5",
+   "en": "Conditioning Regimens for Allo-HCT from Alternative Donors: Mismatched Unrelated Donor (MMUD), CB, and Haploidentical"
+  },
+  {
+   "id": "4fbf2ea59e",
+   "type": "p",
+   "en": "Historically, these types of allo-HCT were the most challenging ones with a relatively high incidence of non-engraftment and high TRM, on one hand, and increased GVHD rate, on the other. Recent development in the field of transplantation, including novel conditioning regimens and better supportive care, has resulted in major improvement in the results of HCT from alternative donors and marked increase, in particular with the haplo-HCT (Nagler and Mohty 2022). The increase in haplo-HCT is mostly related to the switch from extensive T-cell depletion to non-T- cell depletion techniques (Lee et al. 2017; Kanakry et al. 2016). There are two major approaches for non-T-cell-depleted transplantation: one is posttransplant CY (PTCY)-based (the Baltimore approach) and the other is ATG-based (the Chinese approach). PTCY allows the elimination of alloreactive T cells and enhancement of regulatory T cell (Treg) activity. The original protocol was non-myeloablative using fludarabine and low-dose CY with low-dose TBI pretransplant and PTCY with tacrolimus and MMF posttransplant with BM as an haplo donor stem cell source. This regimen allows haploidentical donor HCT in elderly and medically infirm patients with promising results. Other approaches followed using more intensive and even MAC regimes, with the TBF regimen used most often, and also using peripheral blood stem cells (PBSCs) rather than BM. The ATG approach is"
+  },
+  {
+   "id": "ef8e717268",
+   "type": "p",
+   "en": "based on intensive pretransplant conditioning and intensive posttransplant immune suppression and the use of G-CSF-mobilized BM and PBSCs as SC sources. This regimen has promising results in younger patients, mostly in China."
+  },
+  {
+   "id": "c08aa7e8b8",
+   "type": "p",
+   "en": "Following the improvement of haplo-HCT, umbilical cord blood HCT is currently used less often in adults. There are MAC and RIC regimens. The most popular MAC regimens are based on TBI or, more recently, on the TBF regimen. The RIC regimen is often based on low-dose TBI with FLU and CY. A more detailed discussion of alternative donor transplants will be provided in other chapters."
+  },
+  {
+   "id": "54158b98e4",
+   "type": "h2",
+   "num": "13.6",
+   "en": "Preparative Conditioning for Autologous HCT"
+  },
+  {
+   "id": "f3539e764f",
+   "type": "p",
+   "en": "Auto-HCT is mainly performed for malignant lymphoma and multiple myeloma (MM). The most popular conditioning protocol for auto- HCT in lymphoma is BEAM (BCNU (bis-chloroethylnitrosourea, carmustine), VP16, Ara-C, and MEL), but other BCNU-based regimens have also been used such as BEAC (BCNU, VP16, Ara-C and CY instead of MEL) or CBV (cyclophosphamide, BCNU, VP16 (etoposide)). Some centers use thiotepa- based regimens, substituting thiotepa for BCNU (such as TEAM (thiotepa, etoposide, cytarabine, and melphalan) or TECAM (thiotepa, etoposide, cyclophosphamide, cytarabine, and melphalan) protocols). Others tried to replace BCNU with bendamustine (the so-called BeEAM (bendamustine, etoposide, cytarabine, and melphalan) protocol). Thiotepa, BCNU, and etoposide pass the blood–brain barrier and are included in the treatment of lymphoma that involves the CNS."
+  },
+  {
+   "id": "b2fec49fe9",
+   "type": "p",
+   "en": "High-dose MEL remains the most used regimen in multiple myeloma with some centers adding bortezomib or BU to the conditioning. The numbers of auto-HCT in acute leukemia went down in the last two decades in parallel to the increase in the numbers of allo-HCT with RIC and from alternative donors with BuCY or BU/MEL been the most popular preparative regimen (Gorin et al. 2017). Some disease-specific regimens are used in solid tumors and are discussed in other chapters."
+  },
+  {
+   "id": "ebec068814",
+   "type": "li",
+   "en": "• Conditioning regimens are an integral part of HCT, enabling engraftment and providing an antitumor effect."
+  },
+  {
+   "id": "044e556268",
+   "type": "li",
+   "en": "• The conditioning regimen pretransplantation should take into consideration patient and disease characteristics, including age, comorbidities, and disease status, including measurable residual disease."
+  },
+  {
+   "id": "934c04814b",
+   "type": "li",
+   "en": "• Conditioning regimens may include TBI, chemotherapy, serotherapy, monoclonal antibodies, and targeted therapy, which vary in terms of different malignancies and types of donors."
+  },
+  {
+   "id": "40b3d7c564",
+   "type": "li",
+   "en": "• The dose intensity of the pre-HCT conditioning ranges between MAC, RTC, RIC, and NMA in decreasing order of dose intensity."
+  },
+  {
+   "id": "1aa6ea7ba8",
+   "type": "li",
+   "en": "• Both NMA and RIC significantly reduce transplant-related organ toxicity and mortality, enabling transplants in elderly and medically infirm patients. More intensive regimens may have an advantage in acute leukemia, particularly with positive MRD at the time of transplant."
+  },
+  {
+   "id": "1a0adc0c8d",
+   "type": "li",
+   "en": "• Specific conditioning regimens are used for allo-HCT from cord blood and haploidentical donors."
+  }
+ ],
+ "references": [
+  "Aoudjhane M, Labopin M, Gorin NC, et al. Comparative outcome of reduced intensity and myeloablative conditioning regimen in HLA identical sibling allogeneic haematopoietic stem cell transplantation for patients older than 50 years of age with acute myeloblastic leukaemia: a retrospective survey from the acute leukemia working party (ALWP) of the European Group for Blood and Marrow Transplantation (EBMT). Leukemia. 2005;19:2304–12.",
+  "Bacigalupo A, Ballen K, Rizzo D, et al. Defining the intensity of conditioning regimens: working definitions. Biol Blood Marrow Transplant. 2009;15:1628–33.",
+  "Battipaglia G, Mauff K, Wendel L, et al. Thiotepa-busulfan- fludarabine (TBF) conditioning regimen in patients undergoing allogeneic hematopoietic cell transplantation for myelofibrosis: an outcome analysis from the chronic malignancies work ing party of the EBMT. Bone Marrow Transplant. 2021;56:1593–602.",
+  "Beelen DW, Trenschel R, Stelljes M, et al. Treosulfan or busulfan plus fludarabine as conditioning treatment before allogeneic haemopoietic stem cell transplantation for older patients with acute myeloid leukaemia or myelodysplastic syndrome (MC-FludT.14/L): a randomised, non-inferiority, phase 3 trial. Lancet Haematol. 2020;7:e28–39.",
+  "Blaise D, Tabrizi R, Boher JM, et al. Randomized study of 2 reduced-intensity conditioning strategies for human leukocyte antigen-matched, related allogeneic peripheral blood stem cell transplantation: prospective clinical and socioeconomic evaluation. Cancer. 2013;119:602–11.",
+  "Bornhäuser M, Kienast J, Trenschel R, et al. Reduced-intensity conditioning versus standard conditioning before allogeneic haemopoietic cell transplantation in patients with acute myeloid leukaemia in first complete remission: a prospective, open-label randomised phase 3 trial. Lancet Oncol. 2012;13:1035–44.",
+  "Bug G, Labopin M, Niittyvuopio R, et al. Fludarabine/TBI 8 Gy versus fludarabine/treosulfan conditioning in patients with AML in first complete remission: a study from the acute leukemia working party of the EBMT. Bone Marrow Transplant. 2023;58:710. https://doi.org/10.1038/s41409- 023- 01965- x.",
+  "Chevallier P, Labopin M, Buchholz S, et al. Clofarabine-containing conditioning regimen for Allo-SCT in AML/ALL patients: a survey from the acute leukemia working party of EBMT. Eur J Haematol. 2012;89:214–9.",
+  "Clift RA, Buckner CD, Appelbaum FR, et al. Allogeneic marrow transplantation in patients with acute myeloid leukemia in first remission: a randomized trial of two irradiation regimens. Blood. 1990;76:1867–71.",
+  "Craddock C, Jackson A, Loke J, et al. Augmented reduced-intensity regimen does not improve postallogeneic transplant outcomes in acute myeloid leukemia. J Clin Oncol. 2021;39:768–78.",
+  "Danylesko I, Shimoni A, Nagler A. Treosulfan-based conditioning before hematopoietic SCT: more than a BU look-alike. Bone Marrow Transplant. 2012;47:5–14.",
+  "Duque-Afonso J, Finke J, Labopin M, et al. Comparison of fludarabine-melphalan and fludarabine-treosulfan as conditioning prior to allogeneic hematopoietic cell transplantation-a registry study on behalf of the EBMT acute leukemia working party. Bone Marrow Transplant. 2022;57:1269–76.",
+  "Deeg HJ, Storer B, Slattery JT, et al. Conditioning with targeted busulfan and cyclophosphamide for hemopoietic stem cell transplantation from related and unrelated donors in patients with myelodysplastic syndrome. Blood. 2002;100:1201–7.",
+  "Eder S, Canaani J, Beohou E, et al. Thiotepa-based conditioning versus total body irradiation as myeloablative conditioning prior to allogeneic stem cell transplantation for acute lymphoblastic leukemia: a matched-pair analysis from the acute leukemia working Party of the European Society for blood and marrow transplantation. Am J Hematol. 2017;92:997–1003.",
+  "Eapen M, Brazauskas R, Hemmer M, et al. Hematopoietic cell transplant for acute myeloid leukemia and myelodysplastic syndrome: conditioning regimen intensity. Blood Adv. 2018;2:2095–103.",
+  "Giebel S, Miszczyk L, Slosarek K, et al. Extreme heterogeneity of myeloablative total body irradiation techniques in clinical practice: a survey of the acute leukemia working Party of the European Group for blood and marrow transplantation. Cancer. 2014;120:2760–5.",
+  "Giebel S, Labopin M, Socié G, et al. Fludarabine or cyclophosphamide in combination with total body irradiation as myeloablative conditioning prior to allogeneic hematopoietic cell transplantation for acute lymphoblastic leukemia: an analysis by the acute leukemia working party of the EBMT. Bone Marrow Transplant. 2023a;58:506–13.",
+  "Giebel S, Labopin M, Schroeder T, et al. Fludarabine versus cyclophospamide in combination with myeloablative total body irradiation as conditioning for patients with acute myeloid leukemia treated with allogeneic hematopoietic cell transplantation. A study from the acute leukemia working Party of the European Society for blood and marrow transplantation. Am J Hematol. 2023b;98:580–7.",
+  "Gruen A, Exner S, Kühl JS, Boehmer D, et al. Total body irradiation as part of conditioning regimens in childhood leukemia-long-term outcome, toxicity, and secondary malignancies. Strahlenther Onkol. 2022;198(1):33–8.",
+  "Gorin NC, Labopin M, Czerw T, et al. Autologous stem cell transplantation for adult acute myelocytic leukemia in first remission-better outcomes after busulfan and melphalan compared with busulfan and cyclophosphamide: a retrospective study from the acute leukemia working Party of the European Society for blood and marrow transplantation (EBMT). Cancer. 2017;123:824–31.",
+  "Handgretinger R, Lang P. Could (should) we abandon total body irradiation for conditioning in children with leukemia. Blood Rev. 2022;56:100966.",
+  "Hassan M. The role of busulfan in bone marrow transplantation. Med Oncol. 1999;16:166–76.",
+  "Kanakry CG, Fuchs EJ, Luznik L. Modern approaches to HLA-haploidentical blood or marrow transplantation. Nat Rev Clin Oncol. 2016;13:132.",
+  "Kröger N, Iacobelli S, Franke GN, et al. Dose-reduced versus standard conditioning followed by allogeneic stem-cell transplantation for patients with myelodysplastic syndrome: a prospective randomized phase III study of the EBMT (RICMAC trial). J Clin Oncol. 2017;35:2157–64.",
+  "Lee CJ, Savani BN, Mohty M, et al. Haploidentical hematopoietic cell transplantation for adult acute myeloid leukemia: a position statement from the acute leukemia working Party of the European Society for blood and marrow transplantation. Haematologica. 2017;102:1810–22.",
+  "Lee JH, Joo YD, Kim H, et al. Randomized trial of myeloablative conditioning regimens: busulfan plus cyclophosphamide versus busulfan plus fludarabine. J Clin Oncol. 2013;31:701–9.",
+  "Luger SM, Ringdén O, Zhang MJ, et al. Similar outcomes using myeloablative vs reduced-intensity allogeneic transplant preparative regimens for AML or MDS. Bone Marrow Transplant. 2012;47:203–11.",
+  "Nagler A, Rocha V, Labopin M, et al. Allogeneic hematopoietic stem-cell transplantation for acute myeloid leukemia in remission: comparison of intravenous busulfan plus cyclophosphamide (cy) versus total-body irradiation plus cy as conditioning regimen—a report from the acute leukemia working party of the European group for blood and marrow transplantation. J Clin Oncol. 2013;31:3549–56.",
+  "Nagler A, Labopin M, Berger R, et al. Allogeneic hematopoietic SCT for adults AML using i.v. BU in the conditioning regimen: outcomes and risk factors for the occurrence of hepatic sinusoidal obstructive syndrome. Bone Marrow Transplant. 2014;49:628–33.",
+  "Nagler A, Mohty M. Which is preferred: haploidentical or cord transplant? Hematology Am Soc Hematol Educ Program. 2022;2022:64–73.",
+  "Paix A, Antoni D, Noel G, et al. Total body irradiation in allogeneic bone marrow transplantation conditioning regimens: a review. Crit Rev Oncol Hematol. 2018;123:138–48.",
+  "Peters C, Dalle JH, Locatelli F, et al. Total body irradiation or chemotherapy conditioning in childhood ALL: a multinational, randomized, noninferiority phase III study. J Clin Oncol. 2021;39:295–307.",
+  "Rambaldi A, Grassi A, Masciulli A, et al. Busulfan plus cyclophosphamide versus busulfan plus fludarabine as a preparative regimen for allogeneic haemopoietic stem-cell transplantation in patients with acute myeloid leukaemia: an open-label, multicentre, randomised, phase 3 trial. Lancet Oncol. 2015;16:1525–36.",
+  "Saha A, Hyzy S, Blazar BR, et al. A CD45-targeted antibody-drug conjugate successfully conditions for allogeneic hematopoietic stem cell transplantation in mice. Blood. 2022;139:1743–59.",
+  "Saraceni F, Labopin M, Hamladji RM, et al. Thiotepa-busulfan- fludarabine compared to busulfan- fludarabine for sibling and unrelated donor transplant in acute myeloid leukemia in first remission. Oncotarget. 2017;9:3379–93.",
+  "Schmid C, Schleuning M, Ledderose G, Tischer J, Kolb HJ. Sequential regimen of chemotherapy, reduced-intensity conditioning for allogeneic stem-cell transplantation, and prophylactic donor lymphocyte transfusion in high-risk acute myeloid leukemia and myelodysplastic syndrome. J Clin Oncol. 2005;23:5675–87.",
+  "Scott BL, Pasquini MC, Logan BR, et al. Myeloablative versus reduced-intensity hematopoietic cell transplantation for acute myeloid leukemia and myelodysplastic syndromes. J Clin Oncol. 2017;35:1154–61.",
+  "Shi L, Lu X, Xiong Y, et al. The safety and efficacy of a novel hypo-fractionated total marrow and lymphoid irradiation before allogeneic stem cell transplantation for lymphoma and acute leukemia. Clin Transl Radiat Oncol. 2020;26:42–6.",
+  "Shimoni A, Hardan I, Shem-Tov N, et al. Allogeneic hematopoietic stem-cell transplantation in AML and MDS using myeloablative versus reduced-intensity conditioning: the role of dose intensity. Leukemia. 2006;20:322–8.",
+  "Shimoni A, Hardan I, Shem-Tov N, et al. Comparison between two fludarabine-based reduced-intensity conditioning regimens before allogeneic hematopoietic stem-cell transplantation: fludarabine/melphalan is associated with higher incidence of acute graft-versus-host disease and non-relapse mortality and lower incidence of relapse than fludarabine/busulfan. Leukemia. 2007;21:2109–16.",
+  "Shimoni A, Labopin M, Savani B, et al. Intravenous busulfan compared with treosulfan-based conditioning for allogeneic stem cell transplantation in acute myeloid leukemia: a study on behalf of the acute leukemia working Party of European Society for blood and marrow transplantation. Biol Blood Marrow Transplant. 2018;24:751–7.",
+  "Shimoni A, Robin M, Iacobelli S, et al. Allogeneic hematopoietic cell transplantation in patients with myelodysplastic syndrome using treosulfan based compared to other reduced-intensity or myeloablative conditioning regimens. A report of the chronic malignancies working party of the EBMT. Br J Haematol. 2021;195:417–28.",
+  "Shouval R, Fein JA, Cho C, et al. The simplified comorbidity index: a new tool for prediction of nonrelapse mortality in Allo-HCT. Blood Adv. 2022;6:1525–35.",
+  "Spyridonidis A, Labopin M, Savani BN, et al. Redefining and measuring transplant conditioning intensity in current era: a study in acute myeloid leukemia patients. Bone Marrow Transplant. 2020;55:1114–25.",
+  "Spyridonidis A, Labopin M, Savani B, et al. Reduced 8-gray compared to standard 12-gray Total body irradiation for allogeneic transplantation in first remission acute lymphoblastic leukemia: a study of the acute leukemia working party of the EBMT. Hemasphere. 2023;7:e812.",
+  "Thomas ED, Clift RA, Hersman J, et al. Marrow transplantation for acute nonlymphoblastic leukemic in first remission using fractionated or single-dose irradiation. Int J Radiat Oncol Biol Phys. 1982;8:817–21.",
+  "Tutschka PJ, Copelan EA, Klein JP. Bone marrow transplantation for leukemia following a new busulfan and cyclophosphamide regimen. Blood. 1987;70:1382–8.",
+  "Vey N, De Prijck B, Faucher C, et al. A pilot study of busulfan and melphalan as preparatory regimen prior to allogeneic bone marrow transplantation in refractory or relapsed hematological malignancies. Bone Marrow Transplant. 1996;18:495–9."
+ ]
+}

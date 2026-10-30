@@ -1,0 +1,329 @@
+{
+ "number": 19,
+ "part": "III",
+ "page_pdf": [
+  199,
+  205
+ ],
+ "page_printed": 171,
+ "title_en": "Graft Manipulation",
+ "authors": "Peter Lang, Michael Schumm, Antonio Pierini, and Rupert Handgretinger",
+ "affiliations": "P. Lang (*) · M. Schumm · R. Handgretinger Department of Hematology/Oncology and General Pediatrics, Children’s University Hospital, University of Tuebingen, Tuebingen, Germany e-mail: Peter.Lang@med.uni-tuebingen.de; andrea.schumm@med.uni-tuebingen.de; rupert.handgretinger@med.uni-tuebingen.de A. Pierini Division of Hematology, Department of Medicine and Surgery, University of Perugia, Perugia, Italy e-mail: antonio.pierini@unipg.it",
+ "doi": "10.1007/978-3-031-44080-9_19",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "394ae89be4",
+   "type": "h2",
+   "num": "19.1",
+   "en": "Introduction"
+  },
+  {
+   "id": "4f6af7b320",
+   "type": "p",
+   "en": "Graft manipulation is performed to define and to optimize the volume and cellular composition of stem cell sources like apheresis products, bone marrow, or umbilical cord blood."
+  },
+  {
+   "id": "0e046cf129",
+   "type": "p",
+   "en": "Basic manipulations comprise centrifugation procedures for depletion of erythrocytes and volume reduction and are required to cryopreserve grafts in the presence of cryoprotectants like DMSO (dimethyl sulfoxide) (Rowley 1992). These are standard procedures for BM and CB, while apheresis products can usually be cryopreserved without further manipulation."
+  },
+  {
+   "id": "ae77cc2f03",
+   "type": "p",
+   "en": "More complex manipulations are used to optimize the cellular composition and to meet requirements of the individual transplant regimen. Selection of CD34⁺ or AC133⁺ progenitors from apheresis or BM has been used to produce concentrated stem cell grafts. In recent years, the selective depletion of unwanted cells like CD3⁺, TcRαβ⁺, or CD45RA⁺ T-cells and others provides a custom-tailored graft. For both, positive selection and depletion, immunomagnetic cell sorting using monoclonal antibodies and paramagnetic microbeads in combination with semi- or fully automated devices has become the standard technique in most laboratories and increasing the activity of graft engineering has been observed in a recent EBMT surveil across Europe (Witte et al. 2023)."
+  },
+  {
+   "id": "a8df59c890",
+   "type": "h2",
+   "num": "19.2",
+   "en": "Graft Manipulation"
+  },
+  {
+   "id": "3d8781ca1f",
+   "type": "h3",
+   "num": "19.2.1",
+   "en": "Physical Manipulations"
+  },
+  {
+   "id": "a3f7243d40",
+   "type": "p",
+   "en": "19.2.1.1 Volume Reduction Volume reduction might be necessary in small children and is done by a simple centrifugation process and removal of the supernatant."
+  },
+  {
+   "id": "db975c3de3",
+   "type": "p",
+   "en": "19.2.1.2 Washing to Reduce Plasma Antibodies or Anticoagulants Washing might be necessary in case of unwanted isoagglutinins or to lower the heparin concentration and is also done by centrifugation in a bag or dedicated devices and by exchange of plasma with a suitable solution like 0.9% NaCl. Addition of anticoagulant is not necessary as coagulating agents are washed out by the treatment."
+  },
+  {
+   "id": "30180e7b6c",
+   "type": "p",
+   "en": "19.2.1.3 Depletion of Erythrocytes Depletion of erythrocytes is necessary in case of blood group incompatibilities and usually confined to bone marrow. Several procedures are"
+  },
+  {
+   "id": "aa2de6fcb3",
+   "type": "p",
+   "en": "employed including centrifugation with an apheresis device (Kim-Wanner et al. 2017) or centrifugation in bags or tubes and subsequent harvest of the buffy coat. Especially in small grafts (<125 mL), a separation using density gradient centrifugation (e.g., Ficoll) can be useful with an even stronger depletion of erythrocytes."
+  },
+  {
+   "id": "675f2509ae",
+   "type": "h3",
+   "num": "19.2.2",
+   "en": "Immunomagnetic Procedures"
+  },
+  {
+   "id": "247a940bd7",
+   "type": "p",
+   "en": "19.2.2.1 CD34 Enrichment Enrichment of CD34⁺ stem cells was the first method which provided grafts with a very low number of T-cells and therefore allowed to avoid GvHD highly effective even in haploidentical HCT (Ringhoffer et al. 2004; Handgretinger et al. 2001)."
+  },
+  {
+   "id": "dcce976abb",
+   "type": "p",
+   "en": "The method has also been successfully used in MSD and MUD HCT to minimize the rate of GvHD (Pasquini et al. 2012; Lang et al. 2003a) and showed a clear advantage regarding combined cGVHD-free and relapse-free survival compared to unmanipulated grafts in myeloid diseases (Tamari et al. 2018)."
+  },
+  {
+   "id": "b31b16c7b7",
+   "type": "p",
+   "en": "Moreover, CD34⁺ selection is used as a graft backbone to which other cell types (unmanipulated DLI, CD45RA depleted DLI, regulatory and conventional T-cells, and others) can be added."
+  },
+  {
+   "id": "8d1d467d8b",
+   "type": "p",
+   "en": "Enrichment can be performed with the Miltenyi Biotec CD34 reagent system which uses a mAb for the CD34 class 2 epitope and therefore has to be detected by an Ab to a different epitope (normally class 3). Stem cells after separation normally show high purity with extremely low amounts of other contaminating cell types. In some cases, various amounts of monocytes are found without detrimental effect on the graft. Due to the small size of the graft, absolute numbers of contaminating T-cells remain low even if a significant percentage might persist. B-cells are passively depleted as well, whereas CD34⁺CD19⁺ B-cell precursors are retained: 1–3% in PB, up to 30% in BM preparations."
+  },
+  {
+   "id": "927db2a9c8",
+   "type": "p",
+   "en": "Recovery of CD34⁺ cells is in the range of 50–90% (Schumm et al. 1999). 19.2.2.2 CD133 Enrichment CD133 detects a slightly smaller subpopulation of CD34⁺ cells and can also be used for enrichment of stem cells with similar results (Koehl et al. 2002; Lang et al. 2004). This method is currently only rarely used."
+  },
+  {
+   "id": "55f80f9b67",
+   "type": "p",
+   "en": "19.2.2.3 T-Cell Depletion Immunomagnetic TCD is technically more demanding than CD34⁺ enrichment as the processed grafts contain a much higher overall number of cells and even extremely low percentages of contaminating T-cells can endanger the success of the manipulation. Moreover, the correct enumeration of T-cells in a depleted graft is challenging and needs special protocols."
+  },
+  {
+   "id": "d274e32852",
+   "type": "p",
+   "en": "CD3 Depletion Depletion of CD3⁺ T-cells provides almost untouched grafts with potential antileukemic effectors (e.g., NK cells) enabling fast engraftment and reliable prevention of GvHD. Prospective phase I/II trials showed low TRM rates after haplo-HCT in combination with toxicity- and intensity-reduced conditioning regimens in children and adults with various diagnoses (Federmann et al. 2012; Lang et al. 2014; Flaadt et al. 2023)."
+  },
+  {
+   "id": "8f1c8df8a7",
+   "type": "p",
+   "en": "The depletion efficacy can be 0.5 log lower than in CD34⁺ selection. Since in haplo-HCT residual T-cells should not exceed 50 × 10³/kg, it might be occasionally necessary to perform a CD34⁺ selection with parts of the apheresis to remain below the requested thresholds and to guarantee a sufficient number of progenitor cells (Lang et al. 2014; Federmann et al. 2012; Huenecke et al. 2016)."
+  },
+  {
+   "id": "4bc2316722",
+   "type": "p",
+   "en": "It should be ensured that during the incubation process, all cells come into contact with the CD3 reagent to avoid unstained T-cells which can impair the result of the depletion significantly. This may happen when transferring stained cells into a second bag system leaving unstained cells in the tubing ends and crinkles of the bag behind. Even smallest amounts of 20–50 μL can contain more T-cells than the whole graft should have."
+  },
+  {
+   "id": "8e14fe742e",
+   "type": "p",
+   "en": "Analysis of CD3 depleted grafts needs special protocols and has to take into account the rare"
+  },
+  {
+   "id": "5496d33a15",
+   "type": "p",
+   "en": "number of T-cells among the huge overall number of cells. Therefore, a multigating strategy should be implemented and validated, and T-cells should be determined using several parameters. Exclusion of myeloid cells by CD33 could be helpful as well as the use of CD3 in a bright fluorochrome like APC. Gating can be facilitated by using a “spiked” probe with cells of the negative fraction, and a small percentage of cells from the positive fraction was added to set the gate for subsequent analysis of the negative fraction. For statistical reasons, a minimum of 1 × 10⁶ events should be acquired. To prevent takeover of cells from a previous tube, special care should be taken like flushing the cannula with water before the actual acquisition or to clean the cannula on the outside (Schumm et al. 2013)."
+  },
+  {
+   "id": "647c164615",
+   "type": "p",
+   "en": "TcRαβ Depletion This procedure removes αβ + T lymphocytes via a biotinylated anti-TcRαβ Ab followed by an anti-biotin Ab conjugated to magnetic microbeads while retaining both γδ + T lymphocytes and natural killer cells in the graft."
+  },
+  {
+   "id": "2b2ba0e7b5",
+   "type": "p",
+   "en": "Depletion with the TcRab reagent has been shown to be associated with a high depletion efficacy (4.7 log), better than after CD3 depletion (4.0 log) and similar to CD34⁺ enrichment (4.6 log). Moreover, the results differ less than those after CD3 depletion, resulting in <50 × 10³/kg infused residual TCRαβ+ T-cells, even in small children (Schumm et al. 2013)."
+  },
+  {
+   "id": "89a2bfd794",
+   "type": "p",
+   "en": "Compared to CD34 selected grafts, a faster expansion was seen for CD3⁺ and for CD56⁺ in the early phase after haplo-HCT, probably caused by expansion of co-transfused γδ T-cells and NK cells (Lang et al. 2015). Moreover, clinical trials in children and adults demonstrated a very low incidence of acute and chronic GvHD as well as favorable engraftment and TRM rates in malignant and nonmalignant diseases (Locatelli et al. 2017; Kaynar et al. 2017; Bethge et al. 2022). Therefore, this method is currently the most widely used. Moreover, the approach was successfully used to avoid GvHD also in MSD/MUD HCT (Maschan et al. 2016; Sperl et al. 2022)."
+  },
+  {
+   "id": "125476a36e",
+   "type": "p",
+   "en": "Detection of TcRαβ+ T-cells should be done with the same precaution used for CD3 depleted cells, with a minimum of 1 × 10⁶ events and several parameters for the identification of the TcRαβ+ cells. Pregating on CD3-PE vs 7-AAD has been shown to be very helpful as well as gating on TcRαβ and TcRγδ cells in the consecutive dot plot (Schumm et al. 2013)."
+  },
+  {
+   "id": "e67ed382fc",
+   "type": "p",
+   "en": "Graft engineering is a time-consuming process, and a recent retrospective analyses showed that 48 hours is an acceptable time frame. Also freezing and thawing of engineered graft are an option in particular in the time of a pandemic (Nijssen et al. 2023)."
+  },
+  {
+   "id": "436217af6d",
+   "type": "p",
+   "en": "CD19 Depletion Depletion of CD19⁺ B-cells can be done together with CD3 or TcRαβ depletion and prevents effectively the occurrence of EBV-associated PTLD. Although the threshold dose of contaminating B-cells is still not defined, no cases of PTLD were observed in two multicenter trials with 104 children and adults after infusion of median numbers of 28 and 7 × 10³ CD20⁺ cells/kg BW, respectively (Lang et al. 2014; Federmann et al. 2012)."
+  },
+  {
+   "id": "b516c58813",
+   "type": "p",
+   "en": "Alternatively, B-cell depletion can be done in vivo by infusion of therapeutic anti-CD20 mAbs (Locatelli et al. 2017)."
+  },
+  {
+   "id": "c5f8c91911",
+   "type": "p",
+   "en": "Detection of CD19⁺ B-cells needs special attention as the binding of fluorescence-labeled antibody is impaired when cells were preincubated with the CD19 reagent. Therefore, the detection has to be done with an antibody for CD20 which is co-expressed on B cells (Schumm et al. 2006)."
+  },
+  {
+   "id": "8e80e68983",
+   "type": "p",
+   "en": "Stem Cell Boosts Poor graft function after HCT is a relevant complication and is defined as at least bilinear severe cytopenia and/or transfusion requirement, which occurs in a situation of full donor chimerism."
+  },
+  {
+   "id": "87d64022cd",
+   "type": "p",
+   "en": "Administration of stem cell boosts from the original donor offers a therapeutic option (Remberger et al. 1998)."
+  },
+  {
+   "id": "edeece9e95",
+   "type": "p",
+   "en": "To reduce the risk of GvHD, ex vivo TCD procedures as mentioned above are recommended (Olsson et al. 2013). Most experience exists with CD34 selected boosts. Response rates of 80% and a low risk of de novo GvHD between 6% and"
+  },
+  {
+   "id": "3153ef73dd",
+   "type": "p",
+   "en": "22% were observed, even in the case of mismatched donors. Moreover, not only hematological recovery but also recovery of lymphocyte subsets could be improved (Askaa et al. 2014; Mainardi et al. 2018). Add back of donor T-cells can be considered to avoid non-engraftment and enhance immune reconstitution (see Sect. 19.2.3)."
+  },
+  {
+   "id": "87e48c7a72",
+   "type": "h3",
+   "num": "19.2.3",
+   "en": "Add Back of Donor T-Cells"
+  },
+  {
+   "id": "e9f2c14ab7",
+   "type": "p",
+   "en": "19.2.3.1 Unmanipulated T-Cells Unmanipulated T-cells can be added to a backbone of CD34⁺ selected or T-cell depleted grafts to provide T-cell immunity in various situations. For example, engraftment and immune recovery could be significantly improved without increasing the rate of GvHD by adding a defined number of T-cells to positive selected grafts (Seitz et al., 2018). In the post-transplant phase, unmanipulated T-cells can be used to exert alloreactive effects. The tolerable dose of T-cells varies strongly depending on the HLA disparity, the T-cell chimerism in the patient, and the time after transplantation. In MUD HCT or in haploidentical HCT, it can be helpful to cryopreserve a number of vials with a defined number of T-cells (i.e., 100 × 10³ CD3⁺/kg and 25 × 10³ CD3⁺/kg, respectively). Dosage can vary for MUD and family donors between 1 × 10e5 to 1 × 10e6 cells/kg depending on the time from transplant (3–6 months). For haploidentical donors, lower dosages are recommended (1–2, 5 × 10e⁴/kg)."
+  },
+  {
+   "id": "a5c8b02378",
+   "type": "p",
+   "en": "19.2.3.2 CD45RA Depletion DLI with CD45RA⁺-depleted T-cells takes advantage of the CD45R0⁺ T-cells which obviously exert little graft-versus-host reaction but can provide antileukemic and antiviral activity. Depletion can be done using the same equipment and reagents for depletion. Depletion is highly effective, and contaminating CD45RA⁺ cells cannot be found at all (Teschner et al. 2014)."
+  },
+  {
+   "id": "7ba8a219be",
+   "type": "p",
+   "en": "19.2.3.3 Regulatory and Conventional T-Cells Adoptive transfer of regulatory T-cells has been employed by several groups to reduce GvHD incidence. CD4⁺CD25⁺ regulatory T-cells can be selected from a donor leukapheresis product by a 2-step magnetic selection process: a negative selection of CD19⁺ and CD8⁺ cells followed by a positive selection of CD25⁺ cells. In this case, the final product is highly enriched in regulatory T-cells (Di Ianni et al. 2011). Donor regulatory T-cells can also be obtained with FACS sorting and ex vivo expanded through different approaches. Purity of the regulatory T-cell product and the modalities of its infusion vary depending on the different strategies used (Edinger and Hoffmann 2011; Mancusi et al. 2019). Overall, regulatory T-cell adoptive transfer for GvHD prevention showed promising efficacy in key studies (Brunstein et al. 2011; Brunstein et al. 2016; Meyer et al. 2019). Also, CD4⁺CD25⁺ donor regulatory T-cells can be infused 2–3 days before conventional T-cells and at the time of transplant together with CD34⁺ cells. The adoptive transfer of donor regulatory T-cells allows for the infusion of a large number of donor conventional T-cells with no or limited use of post-transplant pharmacologic immune suppression. This strategy helped to reduce leukemia relapse and chronic GvHD rates with an acceptable incidence of acute GvHD in pilot trials (Martelli et al. 2014; Pierini et al. 2021). Larger studies are needed to validate such promising approach."
+  },
+  {
+   "id": "478def4ebc",
+   "type": "p",
+   "en": "19.2.3.4 Virus-Specific T-Cells Virus-specific T-cells can be enriched from peripheral blood or an unstimulated apheresis of the original (seropositive) stem cell donor or—if not possible—alternatively from a partially matched third-party donor."
+  },
+  {
+   "id": "917a18cf1a",
+   "type": "p",
+   "en": "Donor-derived-specific T-cells against ADV-, CMV-, or EBV-associated antigens have been already used in many patients suffering from life-threatening infections post-transplant, and clinical or virological response rates between 70% and 86% in clinical trials and in real world data were observed (Icheva et al. 2013; Feucht et al. 2015; Feuchtinger et al. 2010; Heinz et al. 2023). Thus, antigen-specific T-cells have become a widely used therapeutic option for refractory viral diseases. A large phase III trial is currently ongoing."
+  },
+  {
+   "id": "d136ebe2e4",
+   "type": "p",
+   "en": "The most common technique in the field of graft manipulation is the cytokine capture system which employs the secretion of IFNg after stimulation with appropriate Ag or peptide mixtures for immunomagnetic selection of specific T cells. Simultaneous stimulation with several Ag is possible and generates multispecific T-cells."
+  },
+  {
+   "id": "1e51cfb354",
+   "type": "p",
+   "en": "The selection procedure can be done with a CliniMACS Prodigy® from a maximum of 1 × 10⁹ cells from a nonmobilized or a mobilized apheresis and yields 0.1–2 × 10⁶ CD3 ⁺ IFNg⁺ target cells."
+  },
+  {
+   "id": "47d72a4fbe",
+   "type": "p",
+   "en": "Accompanying debris and dead cells require an accurate analysis. Moreover, the small amount of target cells limits the sample size available for analysis, and therefore a single platform procedure including cell count and viability in one measurement is recommended. The first step should be done without washing and includes a cell gate to exclude debris. CD45 and 7-AAD can be used for proper determination of cell viability. A second sample can be analyzed after washing for CD3⁺, CD4⁺, and CD8⁺ numbers and the percentage of IFNg⁺ cells in these subsets. Bystander cells like B cells, monocytes, and granulocytes can be found in low numbers (Feuchtinger et al. 2006)."
+  },
+  {
+   "id": "cc279c7837",
+   "type": "h2",
+   "num": "19.3",
+   "en": "Regulatory Requirements"
+  },
+  {
+   "id": "d4c040a737",
+   "type": "p",
+   "en": "Graft manipulation is regarded as drug manufacturing in most countries and has to follow the requirements of the EU GMP guidelines, the European Pharmacopoeia, and several EU directives. Therefore, clean room areas are required for the manufacturing and a manufacturing license, and a marketing authorization is mandatory for the distribution of the product. A quality assurance system has to be implemented, and specifications have to be in place for both raw material and drug product. In most cases, volume, cell number, cell dose, viability, and composition are minimum parameters. Sterility in the form of microbiological examination of cell- based preparations according to Pharm. Eu. 2.6.27 has to be shown either before release of the product or, in the case of limited stability, after release. A supply chain must be established to ensure that all agents are available in a timely manner. The equipment used must be qualified regularly and comply with the current state of the art in order to meet all regulatory requirements."
+  },
+  {
+   "id": "3e2e5ca22b",
+   "type": "p",
+   "en": "Peripheral blood stem cells from both blood and bone marrow for hematopoietic reconstitution are regarded as non-ATMP."
+  },
+  {
+   "id": "70be260001",
+   "type": "li",
+   "en": "• CD34 enrichment yields stem cell preparations with low contaminating T- and B-cells."
+  },
+  {
+   "id": "56d22bfe78",
+   "type": "li",
+   "en": "• CD3/CD19 depletion preserves large numbers of NK cells in the grafts."
+  },
+  {
+   "id": "ea9975d833",
+   "type": "li",
+   "en": "• TcR αβ/CD19 depletion provides large numbers of NK cells and γδ T cells with very low amounts of TcRαβ T-cells."
+  },
+  {
+   "id": "5e05fe6ae5",
+   "type": "li",
+   "en": "• DLI with CD45RA-depleted T-cells might reduce the risk of GvHD."
+  },
+  {
+   "id": "645179a27a",
+   "type": "li",
+   "en": "• Donor regulatory and conventional T-cell adoptive immunotherapy with no post- transplant immune suppression provide low incidence of leukemia relapse and chronic GvHD when employed together with a CD34⁺ selected graft."
+  },
+  {
+   "id": "d596689a82",
+   "type": "li",
+   "en": "• Virus antigen-specific donor- or third-party- derived T-cells can be utilized post-transplant in patients with therapy-refractory viral infections."
+  }
+ ],
+ "references": [
+  "Askaa B, Fischer-Nielsen A, et al. Treatment of poor graft function after allogeneic hematopoietic cell transplantation with a booster of CD34-selected cells infused without conditioning. Bone Marrow Transplant. 2014;49:720–1.",
+  "Bethge WA, Eyrich M, Mielke S, Meisel R, Niederwieser D, Schlegel PG, Schulz A, Greil J, Bunjes D, Brecht A, Kuball J, Schumm M, Vucinic V, Wiesneth M, Bonig H, Westinga K, Biedermann S, Holtkamp S, Karitzky S, Malchow M, Siewert C, Handgretinger R, Lang P. Results of a multicenter phase I/II trial of TCRalphabeta and CD19-depleted haploidenti cal hematopoietic stem cell transplantation for adult and pediatric patients. Bone Marrow Transplant. 2022;57:423–30.",
+  "Brunstein CG, Miller JS, Cao Q, et al. Infusion of ex vivo expanded T regulatory cells in adults transplanted with umbilical cord blood: safety profile and detection kinetics. Blood. 2011;117(3):1061–70.",
+  "Brunstein CG, Miller JS, McKenna DH, et al. Umbilical cord blood-derived T regulatory cells to prevent GVHD: kinetics, toxicity profile, and clinical effect. Blood. 2016;127(8):1044–51.",
+  "Di Ianni M, Falzetti F, Carotti A, et al. Tregs prevent GVHD and promote immune reconstitution in HLA-haploidentical transplantation. Blood. 2011;117(14):3921–8.",
+  "Edinger M, Hoffmann P. Regulatory T cells in stem cell transplantation: strategies and first clinical experiences. Curr Opin Immunol. 2011;23(5):679–84.",
+  "Federmann B, Bornhauser M, Meisner C, et al. Haploidentical allogeneic hematopoietic cell transplantation in adults using CD3/CD19 depletion and reduced intensity conditioning: a phase II study. Haematologica. 2012;97:1523–31.",
+  "Feucht J, Opherk K, Lang P, et al. Adoptive T-cell therapy with hexon-specific Th1 cells as a treatment of refractory adenovirus infection after HCT. Blood. 2015;125:1986–94.",
+  "Feuchtinger T, Matthes-Martin S, Richard C, et al. Safe adoptive transfer of virus-specific T-cell immunity for the treatment of systemic adenovirus infection after allogeneic stem cell transplantation. Br J Haematol. 2006;134:64–76.",
+  "Feuchtinger T, Opherk K, Bethge WA, et al. Adoptive transfer of pp65-specific T cells for the treatment of chemorefractory cytomegalovirus disease or reactivation after haploidentical and matched unrelated stem cell transplantation. Blood. 2010;116:4360–7.",
+  "Flaadt T, Ladenstein RL, Ebinger M, Lode HN, Arnardottir HB, Poetschger U, Schwinger W, Meisel R, Schuster FR, Doring M, Ambros PF, Queudeville M, Fuchs J, Warmann SW, Schafer J, Seitz C, Schlegel P, Brecht IB, Holzer U, Feuchtinger T, Simon T, Schulte JH, Eggert A, Teltschik HM, Illhardt T, Handgretinger R, Lang P. Anti-GD2 antibody dinutuximab beta and low-dose interleukin 2 after haploidentical stem-cell transplantation in patients with relapsed neuroblastoma: a multicenter, phase I/II trial. J Clin Oncol. 2023:JCO2201630.",
+  "Handgretinger R, Klingebiel T, Lang P, et al. Megadose transplantation of purified peripheral blood CD34(+) progenitor cells from HLA-mismatched parental donors in children. Bone Marrow Transplant. 2001;27:777–83.",
+  "Heinz AT, Calkoen FGJ, Derbich A, Miltner L, Seitz C, Doering M, Braun C, Atar D, Schumm M, Heubach F, Arendt AM, Schulz A, Schuster FR, Meisel R, Strahm B, Finke J, Heineking B, Stetter S, Silling G, Stachel D, Gruhn B, Debatin KM, Foell J, Schulte JH, Woessmann W, Mauz-Korholz C, Tischer J, Feuchtinger T, Handgretinger R, Lang P. Automated production of specific T cells for treatment of refractory viral infections after allogeneic stem cell transplantation. Haematologica. 2023;108:2080–90.",
+  "Huenecke S, Bremm M, Cappel C, et al. Optimization of individualized graft composition: CD3/CD19 depletion combined with CD34 selection for haploidentical transplantation. Transfusion. 2016;56:2336–45.",
+  "Icheva V, Kayser S, Wolff D, et al. Adoptive transfer of Epstein-Barr virus (EBV) nuclear antigen 1-specific t cells as treatment for EBV reactivation and lymphoproliferative disorders after allogeneic stem-cell transplantation. J Clin Oncol. 2013;31:39–48.",
+  "Kaynar L, Demir K, Turak EE, et al. TcRalphabeta-depleted haploidentical transplantation results in adult acute leukemia patients. Hematology. 2017;22:136–44.",
+  "Kim-Wanner SZ, Bug G, Steinmann J, et al. Erythrocyte depletion from bone marrow: performance evaluation after 50 clinical-scale depletions with Spectra Optia BMC. J Transl Med. 2017;15(1):174.",
+  "Koehl U, Zimmermann S, Esser R, et al. Autologous transplantation of CD133 selected hematopoietic progenitor cells in a pediatric patient with relapsed leukemia. Bone Marrow Transplant. 2002;29:927–30.",
+  "Lang P, Handgretinger R, Niethammer D, et al. Transplantation of highly purified CD34+ progenitor cells from unrelated donors in pediatric leukemia. Blood. 2003a;101:1630–6.",
+  "Lang P, Handgretinger R, Niethammer D, et al. Transplantation of highly purified CD34+ progenitor cells from unrelated donors in pediatric leukemia. Blood. 2003b;101:1630–6.",
+  "Lang P, Bader P, Schumm M, et al. Transplantation of a combination of CD133+ and CD34+ selected progenitor cells from alternative donors. Br J Haematol. 2004;124:72–9.",
+  "Lang P, Teltschik HM, Feuchtinger T, et al. Transplantation of CD3/CD19 depleted allografts from haploidentical family donors in paediatric leukaemia. Br J Haematol. 2014;165:688–98.",
+  "Lang P, Feuchtinger T, Teltschik HM, et al. Improved immune recovery after transplantation of TCRalphabeta/CD19-depleted allografts from haploidentical donors in pediatric patients. Bone Marrow Transplant. 2015;50(Suppl 2):S6–10.",
+  "Locatelli F, Merli P, Pagliara D, et al. Outcome of children with acute leukemia given HLA-haploidentical HCT after alphabeta T-cell and B-cell depletion. Blood. 2017;130:677–85.",
+  "Mainardi C, Ebinger M, Enkel S, et al. CD34(+) selected stem cell boosts can improve poor graft function after paediatric allogeneic stem cell transplantation. Br J Haematol. 2018;180:90–9.",
+  "Mancusi A, Piccinelli S, Velardi A, Pierini A. CD4⁺FOXP3⁺ regulatory T cell therapies in HLA haploidentical hematopoietic transplantation. Front Immunol. 2019;10:2901.",
+  "Martelli MF, Di Ianni M, Ruggeri L, et al. HLA-haploidentical transplantation with regulatory and conventional T cell adoptive immunotherapy prevents acute leukemia relapse. Blood. 2014;124(4):638–44.",
+  "Maschan M, Shelikhova L, Ilushina M, et al. TCR-alpha/beta and CD19 depletion and treosulfan-based conditioning regimen in unrelated and haploidentical transplantation in children with acute myeloid leukemia. Bone Marrow Transplant. 2016;51:668–74.",
+  "Meyer EH, Laport G, Xie BJ, et al. Transplantation of donor grafts with defined ratio of conventional and regulatory T cells in HLA-matched recipients. JCI Insight. 2019;4(10):e127244.",
+  "Nijssen K, Westinga K, Stuut A, et al. Bone Marrow Transplant. 2023;58(7):820–2. Graft engineering: how long can you wait, how low can you go, and pandemic readiness",
+  "Olsson R, Remberger M, Schaffer M, et al. Graft failure in the modern era of allogeneic hematopoietic SCT. Bone Marrow Transplant. 2013;48:537–43.",
+  "Pasquini MC, Devine S, Mendizabal A, et al. Comparative outcomes of donor graft CD34+ selection and immune suppressive therapy as graft-versus-host disease prophylaxis for patients with acute myeloid leukemia in complete remission undergoing HLA-matched sibling allogeneic hematopoietic cell transplantation. J Clin Oncol. 2012;30:3194–201.",
+  "Pierini A, Ruggeri L, Carotti A, et al. Haploidentical age-adapted myeloablative transplant and regulatory and effector T cells for acute myeloid leukemia. Blood Adv. 2021;5(5):1199–1208.",
+  "Remberger M, Ringden O, Ljungman P, et al. Booster marrow or blood cells for graft failure after allogeneic bone marrow transplantation. Bone Marrow Transplant. 1998;22:73–8.",
+  "Ringhoffer M, Wiesneth M, Harsdorf S, et al. CD34 cell selection of peripheral blood progenitor cells using the CliniMACS device for allogeneic transplantation: clinical results in 102 patients. Br J Haematol. 2004;126:527–35.",
+  "Rowley SD. Hematopoietic stem cell cryopreservation: a review of current techniques. J Hematother. 1992;1:233–50.",
+  "Schumm M, Lang P, Taylor G, et al. Isolation of highly purified autologous and allogeneic peripheral CD34+ cells using the CliniMACS device. J Hematother. 1999;8:209–18.",
+  "Schumm M, Handgretinger R, Pfeiffer M, et al. Determination of residual T- and B-cell content after immunomagnetic depletion: proposal for flow cytometric analysis and results from 103 separations. Cytotherapy. 2006;8:465–72.",
+  "Schumm M, Lang P, Bethge W, et al. Depletion of T-cell receptor alpha/beta and CD19 positive cells from apheresis products with the CliniMACS device. Cytotherapy. 2013;15:1253–8.",
+  "Seitz CM, Eyrich M, Greil J, Schlegel P, Feuchtinger T, Bader P, Ebinger M, Schwarze CP, Schlegel PG, Schumm M, Handgretinger R, Lang P. Favorable immune recovery and low rate of GvHD in children transplanted with partially T cell-depleted PBSC grafts. Bone Marrow Transplant. 2018;54:53–62.",
+  "Sperl D, Lang P, Benesch M, Bainschab A, Urban C, Wilfing R, Feuchtinger T, Doring M, Seitz C, Strenger V, Lackner H, Seidel MG, Perwein T, Handgretinger R, Sipurzynski S, Rosskopf K, Schwinger W. Immunological recovery following HLA-matched CD3+ TCR alphass+/CD19+ depleted hematopoietic stem cell transplantation in children. Pediatr Transplant. 2022;26:e14285.",
+  "Tamari R, Oran B, Hilden P, et al. Allogeneic stem cell transplantation for advanced myelodysplastic syndrome: comparison of outcomes between CD34(+) selected and unmodified hematopoietic stem cell transplantation. Biol Blood Marrow Transplant. 2018;24:1079–87.",
+  "Teschner D, Distler E, Wehler D, et al. Depletion of naive T cells using clinical grade magnetic CD45RA beads: a new approach for GVHD prophylaxis. Bone Marrow Transplant. 2014;49:138–44.",
+  "Witte MA, Mooyaart JE, Hoogenboom JD, et al. Activity of ex vivo graft and DLI engineering within the last decade increases, a survey from the EBMT Cellular Therapy & Immunobiology Working Party. Bone Marrow Transplant. 2023;58(6):719–22."
+ ]
+}

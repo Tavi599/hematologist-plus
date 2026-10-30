@@ -1,0 +1,494 @@
+{
+ "number": 53,
+ "part": "VI",
+ "page_pdf": [
+  488,
+  494
+ ],
+ "page_printed": 481,
+ "title_en": "Neurological Complications",
+ "authors": "Rémy Duléry, Martin Schmidt-Hieber, and Basil Sharrack",
+ "affiliations": "",
+ "doi": "10.1007/978-3-031-44080-9_53",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "74040ae5c9",
+   "type": "h2",
+   "num": "53.1",
+   "en": "Definitions and Epidemiology"
+  },
+  {
+   "id": "a08d3266de",
+   "type": "p",
+   "en": "Neurological complications of hematopoietic cell transplantation (HCT) are frequent and can be highly challenging to manage. Their reported incidence ranges from 8 to 65%, depending on types of manifestations included, transplant setting, and patient population (Maffini et al. 2017). The severity varies widely, ranging from mild transient disorders to life-threatening illnesses. Main factors and causative agents include neurotoxic drugs, infectious pathogens, cerebrovascular illness, metabolic encephalopathy, and immune-mediated diseases. CNS relapse of the underlying disease, thrombotic microangiopathy (TAM), and posttransplant lymphoproliferative disorder (PTLD) should also be ruled out (Table 53.1)."
+  },
+  {
+   "id": "46c68a65a3",
+   "type": "p",
+   "en": "Neurological complications can also be classified based on their onset after HCT. Early events"
+  },
+  {
+   "id": "1ae95b1fa1",
+   "type": "table",
+   "num": "53.1",
+   "en": "Table 53.1 Main causes of neurological complications",
+   "columns": 2,
+   "rows_en": [
+    [
+     "",
+     "of HCT"
+    ],
+    [
+     "",
+     "Neurological"
+    ],
+    [
+     "",
+     "complicationCause"
+    ],
+    [
+     "",
+     "Drug-relatedCalcineurin inhibitors (PRES)"
+    ],
+    [
+     "",
+     "Methotrexate/cytotoxic agents"
+    ],
+    [
+     "",
+     "(busulfan, fludarabine)"
+    ],
+    [
+     "",
+     "Anti-infective agents"
+    ],
+    [
+     "",
+     "Opioids, benzodiazepines"
+    ],
+    [
+     "",
+     "Infectious Viruses (EBV, HHV-6, CMV, VZV,"
+    ],
+    [
+     "",
+     "pathogensHSV, JCV, West Nile virus,"
+    ],
+    [
+     "",
+     "adenovirus)"
+    ],
+    [
+     "",
+     "Fungi and parasites (Toxoplasma"
+    ],
+    [
+     "",
+     "gondii, Aspergillus spp., Candida"
+    ],
+    [
+     "",
+     "spp., Mucorales, Cryptococcus"
+    ],
+    [
+     "",
+     "neoformans, Histoplasma"
+    ],
+    [
+     "",
+     "capsulatum)"
+    ],
+    [
+     "",
+     "Bacteria (Gram-negative rods,"
+    ],
+    [
+     "R. Duléry (*) Department of Clinical Hematology and Cellular Therapy, Sorbonne University, Saint-Antoine Hospital, Assistance Publique—Hôpitaux de Paris, INSERM, UMRs 938, Centre de recherche Saint Antoine (CRSA), Paris, France e-mail: remy.dulery@aphp.fr",
+     "Gram-positive cocci, Mycobacterium tuberculosis, Nocardia) MetabolicUremic encephalopathy Hepatic encephalopathy Diabetic ketoacidosis CerebrovascularHemorrhage Ischemic stroke"
+    ],
+    [
+     "M. Schmidt-Hieber",
+     "Immune-mediatedDemyelinating diseases"
+    ],
+    [
+     "Hematology and Oncology, Carl-Thiem-Hospital,",
+     "Myositis"
+    ],
+    [
+     "Cottbus, Germany",
+     "Myasthenia gravis"
+    ],
+    [
+     "e-mail: m.schmidt_hieber@ctk.de",
+     "CNS chronic GVHD"
+    ],
+    [
+     "B. Sharrack Department of Neuroscience and Sheffield NIHR Translational Neuroscience BRC, Sheffield Teaching Hospitals NHS Foundation Trust, Sheffield, UK e-mail: Basil.Sharrack@sth.nhs.uk",
+     "CRS Thrombotic Calcineurin inhibitors microangiopathyInfectious pathogens MalignanciesPTLD Hematological disease relapse"
+    ]
+   ]
+  },
+  {
+   "id": "f101b98017",
+   "type": "p",
+   "en": "are primarily due to drugs administered in the conditioning regimen and IS therapy, while later complications typically arise from the consequences of immunodeficiency, particularly infections (Schmidt-Hieber et al. 2011, 2020). Because clinical manifestations are often misleading and nonspecific, finding the right etiology may be long and difficult. Yet, early diagnosis and treatment are of paramount importance to reduce the risks of irreversible complications, impairment of quality of life, and transplantation-related death."
+  },
+  {
+   "id": "3b667609cb",
+   "type": "h2",
+   "num": "53.2",
+   "en": "Causes and Types of Neurological Complications"
+  },
+  {
+   "id": "c072b7e901",
+   "type": "h3",
+   "num": "53.2.1",
+   "en": "Neurotoxic Drugs"
+  },
+  {
+   "id": "8a414b49ca",
+   "type": "p",
+   "en": "Calcineurin inhibitors (CNIs), antibiotics, antiviral drugs, and cytotoxic agents used in conditioning regimen are the most frequent causes of drug toxicity (Table 53.2). In addition, drug-drug interactions are a common cause of neurotoxicity and must be carefully checked. For example, combining imipenem/cilastatin and ganciclovir can trigger generalized seizures. Similarly, introducing voriconazole can increase the serum concentration of cyclosporin A (CSA)/tacrolimus (TAC), potentially leading to neurological complications, such as posterior reversible encephalopathy syndrome (PRES)."
+  },
+  {
+   "id": "d96e6987a8",
+   "type": "p",
+   "en": "53.2.1.1 Calcineurin Inhibitors The use of CSA and TAC is associated with neurological complications in 25–59% of patients treated with HCT (Reece et al. 1991). The clinical picture of CNI-induced neurotoxicity ranges from transient isolated symptoms to severe manifestations such as TAM (see Chap. 42) or PRES (Table 53.2)."
+  },
+  {
+   "id": "b391fd4aec",
+   "type": "p",
+   "en": "PRES refers to a disorder of reversible subcortical vasogenic brain edema and is caused by endothelial injury related to abrupt blood pressure changes or direct effects of cytokines on the endothelium. It may occur in 1.6–7.2% of HCT recipients and, if diagnosed early, is reversible after CNI withdrawal. Symptoms such as headache, visual disturbance, seizures, encephalopathy, or focal neurologic deficit, when associated with renal failure or blood pressure fluctuations, are highly suggestive of PRES (Schmidt et al. 2016)."
+  },
+  {
+   "id": "2a0ef4267e",
+   "type": "p",
+   "en": "Although vasogenic edema can be visualized on computed tomography (CT) in some patients, brain magnetic resonance imaging (MRI) is much more sensitive. MRI shows bilateral multifocal areas of hyperintensity in T2-weighted sequences, especially in the white matter of"
+  },
+  {
+   "id": "232add95a8",
+   "type": "table",
+   "num": "53.2",
+   "en": "Table 53.2 Main neurological side effects of the major",
+   "raw_en": "Table 53.2 Main neurological side effects of the major drugs used in HCT DrugMost common symptoms AcyclovirHeadache, tremor, dysarthria, hallucinations, encephalopathy Amphotericin BHeadache, encephalopathy, numbness, vision changes BusulfanSeizures, headache, dizziness BlinatumomabEncephalopathy, headache, aphasia, ataxia, tremor, seizures CefepimeHeadache, paresthesia, encephalopathy CSA/TACPRES, confusion, tremor, ataxia, seizures, cortical blindness FludarabineAcute toxic leukoencephalopathy FoscarnetHeadache, vertigo, paresthesia, seizures, tremor, encephalopathy GanciclovirHeadache, numbness, tremor, seizures Imipenem/Seizures, tremor, vertigo, paresthesia, cilastatinsomnolence, encephalopathy IsavuconazoleHeadache, somnolence, encephalopathy, seizures, paresthesia, peripheral neuropathy MethotrexateHeadache, lethargy, dysarthria, diffuse necrotizing leukoencephalopathy PosaconazoleParesthesia, dizziness, somnolence, headache, seizures, tremor RituximabPML SorafenibPRES, peripheral sensory neuropathy ThiotepaHeadache, encephalopathy, seizures, paresthesia TreosulfanHeadache, dizziness, intracranial hemorrhage, peripheral sensory neuropathy VoriconazoleHeadache, seizures, vision changes, hallucinations, numbness, encephalopathy"
+  },
+  {
+   "id": "15aece40bd",
+   "type": "p",
+   "en": "parieto- occipital regions. Other variations, such as superior frontal sulcus pattern or holohemispheric watershed pattern, can be observed. Persistent neurological sequelae have been reported, especially if PRES is not rapidly diagnosed and treated."
+  },
+  {
+   "id": "93379e74b9",
+   "type": "p",
+   "en": "53.2.1.2 MTX and Cytotoxic Agents GVHD prophylaxis with short course of methotrexate (MTX) may cause minor neurological symptoms, such as lethargy, dysarthria, and headache, and, very rarely, diffuse necrotizing leukoencephalopathy (Paudyal et al. 2010)."
+  },
+  {
+   "id": "b48eaf6d4f",
+   "type": "p",
+   "en": "Busulfan (BU) is associated with seizure and requires preventive prophylaxis with benzodiazepines (Eberly et al. 2008)."
+  },
+  {
+   "id": "29534d9e3c",
+   "type": "p",
+   "en": "For fludarabine (FLU), the main neurological complication is acute toxic leukoencephalopathy. The clinical syndrome is characterized by visual disturbance, sensitive defects, and cognitive impairment. Brain MRI shows bilateral white matter areas of T2-weighted hyperintensity, which differ significantly from the MRI findings seen in PRES. Classical PRES arises from subcortical white matter, whereas acute toxic leukoencephalopathy arises from periventricular white matter. Risk factors include poor renal function, older age, higher FLU dose, previously treated CNS disease, or previous FLU-based conditioning regimen. Outcomes are very poor with irreversible neurological sequelae and median OS of 2 months (Beitinjaneh et al. 2011)."
+  },
+  {
+   "id": "2ad7c4b06b",
+   "type": "p",
+   "en": "53.2.1.3 Immunotherapy and Tyrosine Kinase Inhibitors (TKI) Rituximab, TKI, and bispecific T-cell-engaging antibodies, such as blinatumomab, are increasingly used after HCT. Their most notable neurological side effects are described in Table 53.2."
+  },
+  {
+   "id": "5570e680ed",
+   "type": "p",
+   "en": "53.2.1.4 Anti-infective Drugs Anti-infective drugs are among the major causes of neurological complications. Dose adaptation is warranted in case of drug-drug interaction or impaired renal function. Their main neurological side effects are described in Table 53.2."
+  },
+  {
+   "id": "bd8a0ac57d",
+   "type": "h3",
+   "num": "53.2.2",
+   "en": "Infectious Pathogens"
+  },
+  {
+   "id": "eefb713adc",
+   "type": "p",
+   "en": "A wide array of pathogens can potentially lead to CNS infections after HCT (Schmidt-Hieber et al. 2011, 2020). Among them, fungi (e.g., Aspergillus spp.) and viruses (mainly EBV and HHV-6) are the most prevalent agents (Schmidt-Hieber et al. 2020; Liu et al. 2021). To identify a potential agent that may be causing unclear neurological disorders, thorough diagnosis investigation should be conducted. This should include MRI-based neuroimaging and cerebrospinal fluid (CSF) analysis. Considering the clinical symptoms and their timing in relation to HCT may be helpful to decipher the accurate diagnosis (Schmidt-Hieber et al. 2011, 2016, 2020). Early preemptive or target treatment of CNS infection is crucial to improve the prognosis. Notably, while isavuconazole or voriconazole may be used to treat CNS-involving infections caused by Aspergillus spp. and zygomycosis (Tissot et al. 2017; Schwartz et al. 2020), HHV-6 encephalitis should be treated by foscarnet or ganciclovir (Schmidt-Hieber et al. 2016; Ward et al. 2019)."
+  },
+  {
+   "id": "2bbc245856",
+   "type": "h3",
+   "num": "53.2.3",
+   "en": "Metabolic Complications"
+  },
+  {
+   "id": "268e4049f5",
+   "type": "p",
+   "en": "Metabolic complications may include uremic encephalopathy associated with CNI nephrotoxicity or TAM, hepatic encephalopathy associated with SOS/VOD or severe hepatic GVHD, and diabetic ketoacidosis. Pharmacologic sedation with opioids, CNS infections, cytokine release syndrome (CRS), systemic inflammatory response, and hemophagocytic lymphohistiocytosis should be considered in the differential diagnosis of metabolic causes of neurological dysfunction (Maffini et al. 2017)."
+  },
+  {
+   "id": "463f79c722",
+   "type": "h3",
+   "num": "53.2.4",
+   "en": "Cerebrovascular Diseases"
+  },
+  {
+   "id": "6aa80f780f",
+   "type": "p",
+   "en": "Cerebrovascular hemorrhagic or thrombotic CNS events represent potentially lethal complications."
+  },
+  {
+   "id": "e9b8091bd8",
+   "type": "p",
+   "en": "Among these, subdural hematoma is one of the most common, occurring in 2.6% of HCT recipients. Risk factors for CNS hemorrhagic"
+  },
+  {
+   "id": "f08ef299d6",
+   "type": "p",
+   "en": "complications include posttransplant falls, prolonged severe thrombocytopenia or platelet transfusion refractoriness, acute grades III–IV GHVD, and arterial hypertension. CT scans usually confirm the diagnosis but can be negative in 20–25% of the patients with CNS hemorrhagic events. Risk factors for CNS thrombotic complications include active infections, atrial fibrillation, hypercoagulative state, previous venous thromboembolism, high-risk malignant disease, TMA, and GVHD (Zhang et al. 2016; Cai et al. 2020)."
+  },
+  {
+   "id": "43a72a4ccf",
+   "type": "h3",
+   "num": "53.2.5",
+   "en": "Immune-Mediated Causes"
+  },
+  {
+   "id": "de2bc9f8c6",
+   "type": "p",
+   "en": "Immune-mediated neurological diseases are rare but potentially severe complications of HCT, which encompasses demyelinating polyneuropathy, myositis, myasthenia gravis, CNS manifestations of chronic GVHD, and CRS."
+  },
+  {
+   "id": "e9ca851c0b",
+   "type": "p",
+   "en": "53.2.5.1 Demyelinating Polyneuropathies Immune-mediated demyelinating polyneuropathies, which includes Guillain-Barré syndrome, may occur in 1–4% of the patients, especially within the first 3 months after HCT (Yoshida et al. 2016). Progressive symmetrical ascending motor deficiency, numbness, hyporeflexia, and respiratory insufficiency are the most common symptoms. MRI, lumbar puncture, and nerve conduction studies should be performed promptly. Symptoms may resolve with the use of intravenous immunoglobulins. Plasma exchange or rituximab may be used in unresponsive patients."
+  },
+  {
+   "id": "3c4dd8e96b",
+   "type": "p",
+   "en": "53.2.5.2 Myositis Myositis is characterized by proximal muscle weakness and is often associated with chronic GVHD. It can occur in 2–3% of HCT recipients (Limaye and Limaye 2021). Previous exposure to immune checkpoint inhibitor may increase the risk of developing myositis. Levels of creatine phosphokinase are elevated, electromyography shows a myopathic pattern, and MRI is valuable in diagnosing and monitoring the treatment response. Diagnosis can be confirmed by muscle biopsy. Patients often respond to corticosteroid therapy within 1–6 weeks."
+  },
+  {
+   "id": "2eaecc36c8",
+   "type": "p",
+   "en": "53.2.5.3 Myasthenia Gravis Myasthenia gravis usually occurs after the onset of GVHD in less than 1% of HCT recipients (Ahmed et al. 2018). The main symptoms include ptosis, facial weakness, diplopia, dysarthria, and dysphagia. The diagnosis is confirmed with electromyography showing a progressive decrease in the muscle action potential or increased jitter. Cholinesterase inhibitors and corticosteroid therapy are the treatments of choice."
+  },
+  {
+   "id": "ef6551dc73",
+   "type": "p",
+   "en": "53.2.5.4 Central Nervous System GVHD CNS manifestations of GVHD are considered rare, although their true incidence may be underestimated. Notably, three types of chronic CNS GVHD are recognized by the NIH Consensus Conference on criteria for clinical trials in chronic GVHD: demyelinating diseases, cerebrovascular disease, and immune-mediated encephalitis (Vinnakota and Zeiser 2021)."
+  },
+  {
+   "id": "8c76403b5a",
+   "type": "p",
+   "en": "Demyelinating diseases have been reported in the cerebral white matter, optic nerve, and spinal cord. Symptoms typically follow a relapsing-remitting course, as observed in multiple sclerosis. The treatment consists in corticosteroid pulses. Refractory/relapsing patients may benefit from sphingosine-1-phosphate receptor agonists, such as fingolimod (Gauthier et al. 2018)."
+  },
+  {
+   "id": "f9d64e315f",
+   "type": "p",
+   "en": "Vasculitis, the most common cerebrovascular manifestation of GVHD, affects small- to large-sized arterial vessels of cerebral parenchyma and meninges. Ischemic lesions, microhemorrhages, and multifocal signal changes in the white matter can be observed on MRI. Diagnosis can be confirmed by brain biopsy, and treatment involves corticosteroids in combination with cyclophosphamide."
+  },
+  {
+   "id": "fd52bbd0d9",
+   "type": "p",
+   "en": "Finally, cases of immune-mediated encephalitis have been reported, requiring repeated CSF examination to confirm the diagnosis and rule out infectious encephalitis."
+  },
+  {
+   "id": "d2492ab522",
+   "type": "p",
+   "en": "53.2.5.5 Cytokine Release Syndrome CRS is a frequent complication of haploidentical HCT, particularly when PBSC are used, and it may occur in up to 90% of patients within the first days following graft infusion. The clinical manifestations of CRS are similar to those observed in patients after chimeric antigen receptor T-cell or bispecific antibody therapies, ranging from isolated fever to potentially life-threatening complications. Headache associated with fever is common in mild forms of CRS. However, severe CRS-related neurological symptoms, such as encephalopathy, occur in less than 10% of patients (Abboud et al. 2021). Patients can be effectively treated with cytokine blockade using monoclonal antibodies targeting the IL-6 receptor, such as tocilizumab, or interleukin- 1 receptor antagonist, such as anakinra (Hayden et al. 2022; Gazeau et al. 2023)."
+  },
+  {
+   "id": "1105c2b2b6",
+   "type": "h2",
+   "num": "53.3",
+   "en": "Diagnostic Algorithm"
+  },
+  {
+   "id": "08f4fee149",
+   "type": "p",
+   "en": "When faced with neurological complications of HCT, the following ten steps can be helpful to research the correct diagnosis and start the right treatment promptly:"
+  },
+  {
+   "id": "170299f8a2",
+   "type": "p",
+   "en": "1. Carefully review the medication history and"
+  },
+  {
+   "id": "437c9a373c",
+   "type": "p",
+   "en": "search for potential metabolic disorders. 2. Determine whether the clinical signs and"
+  },
+  {
+   "id": "d3b2ffaa5b",
+   "type": "p",
+   "en": "symptoms are generalized (e.g., altered con"
+  },
+  {
+   "id": "ee74e78aac",
+   "type": "p",
+   "en": "sciousness, seizures) or focal (e.g., stroke,"
+  },
+  {
+   "id": "5e07c0c6a1",
+   "type": "p",
+   "en": "mass lesion). the timing of neurological signs and 3. Assess"
+  },
+  {
+   "id": "9ec9f2e160",
+   "type": "p",
+   "en": "symptoms in relation to HCT..4 Perform CT scan or MRI to rule out PRES,"
+  },
+  {
+   "id": "290cfb66bc",
+   "type": "p",
+   "en": "encephalitis (infectious or immune- mediated),"
+  },
+  {
+   "id": "00119065c9",
+   "type": "p",
+   "en": "parenchymal infiltrates, cerebrovascular"
+  },
+  {
+   "id": "39f737e744",
+   "type": "p",
+   "en": "events, and hematological disease relapse. 5. Analyze CSF to diagnose infectious compli"
+  },
+  {
+   "id": "221446efe6",
+   "type": "p",
+   "en": "cations, demyelinating neuropathy, and"
+  },
+  {
+   "id": "64daeff91f",
+   "type": "p",
+   "en": "underlying disease relapse. 6. Perform electroencephalography in patients"
+  },
+  {
+   "id": "27f79062a3",
+   "type": "p",
+   "en": "exhibiting altered consciousness, hallucina"
+  },
+  {
+   "id": "aed7420b64",
+   "type": "p",
+   "en": "tions, or seizures. 7. Perform electromyography in patients exhib"
+  },
+  {
+   "id": "05b15e073f",
+   "type": "p",
+   "en": "iting neuropathy, myopathy, or neuromuscu"
+  },
+  {
+   "id": "2458469705",
+   "type": "p",
+   "en": "lar pattern of weakness. each of the previous steps as investi8. Repeat"
+  },
+  {
+   "id": "6ce3e388ee",
+   "type": "p",
+   "en": "gations may be negative if performed early"
+  },
+  {
+   "id": "9af451b661",
+   "type": "p",
+   "en": "and symptoms may evolve or fluctuate after"
+  },
+  {
+   "id": "3aaf2faa49",
+   "type": "p",
+   "en": "the disease onset. 9. Consider brain or neuromuscular biopsy to"
+  },
+  {
+   "id": "e1a67ae954",
+   "type": "p",
+   "en": "confirm or rule out opportunistic infections,"
+  },
+  {
+   "id": "050a359919",
+   "type": "p",
+   "en": "PML, vasculitis, PTLD, or other"
+  },
+  {
+   "id": "f65b026ea1",
+   "type": "p",
+   "en": "malignancies. 10. neurology review is crucial at every step A"
+  },
+  {
+   "id": "5ca93655b7",
+   "type": "p",
+   "en": "and highly recommended, particularly in"
+  },
+  {
+   "id": "0580823564",
+   "type": "p",
+   "en": "complex clinical cases."
+  },
+  {
+   "id": "e76fd92149",
+   "type": "h2",
+   "num": "53.4",
+   "en": "Conclusions"
+  },
+  {
+   "id": "e299590d10",
+   "type": "p",
+   "en": "Neurological complications of HCT, particularly allo-HCT, are frequent and can be fatal. The main causes of these complications include drug-related toxicities, infections, metabolic disorders, cerebrovascular events, immune-mediated disorders, and disease recurrence. Although their management can be highly challenging, early diagnosis and treatment, guided by the expertise of a neurologist, are extremely important to reduce mortality and improve quality of life."
+  },
+  {
+   "id": "6faa79b07f",
+   "type": "li",
+   "en": "• Neurological complications of HCT require prompt diagnosis and timely treatment to reduce posttransplant mortality and enhance quality of life."
+  },
+  {
+   "id": "a2690adf4a",
+   "type": "li",
+   "en": "• Their etiology is often multifactorial, involving neurotoxic drugs, infectious pathogens, metabolic encephalopathy, cerebrovascular disorders, and immune-mediated diseases."
+  },
+  {
+   "id": "2c68de1219",
+   "type": "li",
+   "en": "• TAM, PTLD with CNS involvement, CRS, and CNS relapse of the underlying hematological disease should be included in the differential diagnosis."
+  },
+  {
+   "id": "cfaff8eabd",
+   "type": "li",
+   "en": "• CNS manifestations of GVHD are considered rare and often pose considerable challenges to manage."
+  },
+  {
+   "id": "3188d7d8ca",
+   "type": "li",
+   "en": "• Consulting with a neurologist is recommended, especially in complex clinical cases."
+  },
+  {
+   "id": "42c4f51568",
+   "type": "aside",
+   "en": "Key Points"
+  }
+ ],
+ "references": [
+  "Abboud R, Wan F, Mariotti J, et al. Cytokine release syndrome after haploidentical hematopoietic cell transplantation: an international multicenter analysis. Bone Marrow Transplant. 2021;56:2763–70.",
+  "Ahmed Z, Schoen M, Rajeh N. Myasthenia gravis presenting as graft versus host disease after allogeneic blood stem cell transplant. Case Rep Hematol. 2018;2018:7296930.",
+  "Beitinjaneh A, McKinney AM, Cao Q, Weisdorf DJ. Toxic leukoencephalopathy following fludarabine-associated hematopoietic cell transplantation. Biol Blood Marrow Transplant. 2011;17:300–8.",
+  "Cai X, Fu HX, Mo XD, Wang Y, et al. Comparison of hemorrhagic and ischemic stroke after allogeneic hematopoietic stem cell transplantation. Bone Marrow Transplant. 2020;55:2087–97.",
+  "Eberly AL, Anderson GD, Bubalo JS, McCune JS. Optimal prevention of seizures induced by high-dose busulfan. Pharmacotherapy. 2008;28:1502–10.",
+  "Gauthier J, Vermersch P, Chauvet P, et al. Successful treatment with fingolimod of graft-versus-host disease of the central nervous system. Blood Adv. 2018;2:10–3.",
+  "Gazeau N, Liang EC, Wu QV, et al. Anakinra for refractory cytokine release syndrome or immune effector cell-associated neurotoxicity syndrome after chimeric antigen receptor T cell therapy. Transplant Cell Ther. 2023;29:430–7.",
+  "Hayden PJ, Roddie C, Bader P, et al. Management of adults and children receiving CAR T-cell therapy: 2021 best practice recommendations of the European Society for Blood and Marrow Transplantation (EBMT) and the Joint Accreditation Committee of ISCT and EBMT (JACIE) and the European Haematology Association (EHA). Ann Oncol. 2022;33:259–75.",
+  "Limaye S, Limaye V. Clinical characteristics of myositis associated with graft-versus-host disease. Curr Rheumatol Rep. 2021;23:30.",
+  "Liu W, Fan Z, Zhang Y, et al. Metagenomic next-generation sequencing for identifying pathogens in central nervous system complications after allogeneic hematopoietic stem cell transplantation. Bone Marrow Transplant. 2021;56:1978–83.",
+  "Maffini E, Festuccia M, Brunello L, et al. Neurologic complications after allogeneic hematopoietic stem cell transplantation. Biol Blood Marrow Transplant. 2017;23:388–97.",
+  "Paudyal B, Viets R, Skliut M. A case of low-dose oral methotrexate–induced reversible neurotoxicity. Am J Neuroradiol. 2010;31:E77.",
+  "Reece DE, Frei-Lahr DA, Shepherd JD, et al. Neurologic complications in allogeneic bone marrow transplant patients receiving cyclosporin. Bone Marrow Transplant. 1991;8:393–401.",
+  "Schmidt V, Prell T, Treschl A, et al. Clinical management of posterior reversible encephalopathy syndrome after allogeneic hematopoietic stem cell transplantation: a case series and review of the literature. Acta Haematol. 2016;135:1–10.",
+  "Schmidt-Hieber M, Schwender J, Heinz WJ, et al. Viral encephalitis after allogeneic stem cell transplantation: a rare complication with distinct characteristics of different causative agents. Haematologica. 2011;96:142–9.",
+  "Schmidt-Hieber M, Silling G, Schalk E, et al. CNS infections in patients with hematological disorders (including allogeneic stem-cell transplantation)-guidelines of the infectious diseases working party (AGIHO) of the German Society of Hematology and Medical Oncology (DGHO). Ann Oncol. 2016;27:1207–25.",
+  "Schmidt-Hieber M, Engelhard D, Ullmann A, et al. Central nervous system disorders after hematopoietic stem cell transplantation: a prospective study of the infectious diseases working party of EBMT. J Neurol. 2020;267:430–9.",
+  "Schwartz S, Cornely OA, Hamed K, et al. Isavuconazole for the treatment of patients with invasive fungal diseases involving the central nervous system. Med Mycol. 2020;58:417–24.",
+  "Tissot F, Agrawal S, Pagano L, et al. ECIL-6 guidelines for the treatment of invasive candidiasis, aspergillosis and mucormycosis in leukemia and hematopoietic stem cell transplant patients. Haematologica. 2017;102:433–44.",
+  "Vinnakota JM, Zeiser R. Acute graft-versus-host disease, infections, vascular events and drug toxicities affecting the central nervous system. Front Immunol. 2021;12:748019.",
+  "Ward KN, Hill JA, Hubacek P, et al. Guidelines from the 2017 European conference on infections in leukaemia for management of HHV-6 infection in patients with hematologic malignancies and after hematopoietic stem cell transplantation. Haematologica. 2019;104:2155–63.",
+  "Yoshida T, Ueki Y, Suzuki T, et al. Guillain-Barré syndrome after allogeneic bone marrow transplantation: case report and literature review. eNeurologicalSci. 2016;4:52–5.",
+  "Zhang X-H, Wang Q-M, Chen H, et al. Clinical characteristics and risk factors of intracranial hemorrhage in patients following allogeneic hematopoietic stem cell transplantation. Ann Hematol. 2016;95:1637–43."
+ ]
+}

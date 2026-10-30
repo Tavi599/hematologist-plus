@@ -1,0 +1,317 @@
+{
+ "number": 60,
+ "part": "VII",
+ "page_pdf": [
+  541,
+  549
+ ],
+ "page_printed": 541,
+ "title_en": "Cellular Therapy with Engineered T Cells, Efficacy, and Side Effects: Gene Editing/Gene Therapy",
+ "authors": "Chiara Bonini, Marina Cavazzana, Fabio Ciceri, Boris Fehse, and Michael Hudecek",
+ "affiliations": "Imagine Institute, Université Paris Cité, Paris, France e-mail: m.cavazzana@aphp.fr C. Bonini (*) Experimental Hematology Unit, Division of F. Ciceri Immunology, Transplantation and Infectious Department of Hematology, University Vita-Salute Diseases, University Vita-Salute San Raffaele and San Raffaele and IRCCS Ospedale San Raffaele IRCCS Ospedale San Raffaele Scientific Institute, Scientific Institute, Milan, Italy Milan, Italye-mail: ciceri.fabio@hsr.it e-mail: bonini.chiara@hsr.it B. Fehse M. Cavazzana Research Department Cell and Gene Therapy, Biotherapy Department Necker -Enfants Malades Department of Stem Cell Transplantation, University AP-HP, Groupe Hospitalier Universitaire Paris Medical Centre Hamburg-Eppendorf, Centre, Université Paris Cité, Clinical Investigational Hamburg, Germany Center 1419, INSERM Paris, Imagine Institute Paris, e-mail: fehse@uke.de AP-HP, Paris, France M. Hudecek Biotherapy Clinical Investigation Center, Groupe Chair of Cellular Immunotherapie, Department of Hospitalier Universitaire Paris Cité, Assistance Internal Medicine II, University Hospital Würzburg, Publique-Hopitaux de Paris, INSERM CIC 1416, Würzburg, Germany Paris, France e-mail: Hudecek_M@ukw.de",
+ "doi": "10.1007/978-3-031-44080-9_60",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 8,
+ "blocks": [
+  {
+   "id": "394ae89be4",
+   "type": "h2",
+   "num": "60.1",
+   "en": "Introduction"
+  },
+  {
+   "id": "6b87cba3e7",
+   "type": "p",
+   "en": "The cellular basis of cancer immune surveillance, already hypothesized in ancient times, was only proven with the advent of HCT. Indeed, the discovery of the nature of GVHD and its antileukemic effects (Weiden et al. 1979) was followed by the first successful attempts of adoptive immunotherapy using donor leukocytes (Kolb et al. 1990). To address the significant GVHD risk associated with allogeneic T cells, several approaches of T-cell manipulation were developed and tested (Table 60.1). Some of these strategies rely on the genetic manipulation of T cells. First, suicide gene therapy approaches were established to promote GVL and immune reconstitution while controlling GVHD. More recently, strategies based on the genetic transfer of tumor-specific T-cell receptors (TCRs) or chimeric antigen receptors (CARs) were developed to improve antitumor efficiency of T cells. This chapter provides an overview of this vastly evolving area."
+  },
+  {
+   "id": "fa78307ec8",
+   "type": "aside",
+   "en": "Chiara Bonini, Marina Cavazzana, Fabio Ciceri, Boris Fehse and Michael Hudecek contributed equally with all other contributors."
+  },
+  {
+   "id": "1222cc55f7",
+   "type": "h2",
+   "num": "60.2",
+   "en": "Suicide Gene Therapy"
+  },
+  {
+   "id": "8c7600744c",
+   "type": "p",
+   "en": "The transfer of a suicide gene into donor lymphocytes was designed and tested at preclinical and clinical level in the 1990s, with the aim of transferring the entire donor T-cell repertoire, inclusive of cancer and infectious specificities, to transplanted patients while enabling the selective elimination of the transferred lymphocytes in case of GVHD (Bonini et al. 1997). The first suicide gene, and to date the most extensively tested in clinical trials, is thymidine kinase of herpes simplex virus (HSV-TK). In dividing cells, HSV-TK expression confers selective sensitivity to the antiviral drug ganciclovir. Upon retroviral gene transfer, HSV-TK is stably expressed by donor T lymphocytes not interfering with their functionality. However, when exposed to ganciclovir, highly proliferating HSV-TK-expressing T cells (TK cells) will die in a dose-dependent manner. Thus, if ganciclovir is administered during GVHD to patients treated with TK cells, activated and thus proliferating alloreactive TK cells will be eliminated. The HSV-TK/ganciclovir suicide system proved highly effective in controlling GVHD in several transplant settings, including haploidentical HCT (haplo-HCT). After T-cell-depleted haplo-"
+  },
+  {
+   "id": "bfa1eb91fb",
+   "type": "table",
+   "num": "60.1",
+   "en": "Table 60.1 -cell-based cellular therapy approaches to increase GVL/GVI while taming GVHDT",
+   "columns": 3,
+   "rows_en": [
+    [
+     "Strategy",
+     "Mechanism of action",
+     "References"
+    ],
+    [
+     "Infusions of pathogen (i.e., CMV, EBV)- specific T cells",
+     "Isolation and infusion of T cells specific for opportunistic pathogens to control posttransplant infectious morbidity and mortality",
+     "Riddell et al. (1992), Rooney et al. (1995), Koehne et al. (2003)"
+    ],
+    [
+     "Infusions of T cells depleted of alloreactive specificities",
+     "In vitro activation of host-reactive T cells followed by their depletion, infusion of remaining cells with the aim of promoting immune reconstitution with a reduced GVHD risk",
+     "André-Schmutz et al. (2002), Hartwig et al. (2008), Mielke et al. (2008)"
+    ],
+    [
+     "Infusions of regulatory T cells",
+     "Isolation and/or expansion T-cell subsets with regulatory properties to promote immune reconstitution with a reduced GVHD risk",
+     "Groux et al. (1997), Chen et al. (2003), Trenado et al. (2004), Brunstein et al. (2011), Di Ianni et al. (2011), Bacchetta et al. (2014)"
+    ],
+    [
+     "Infusion of T cells depleted of regulatory T cells",
+     "Infusion of T cells depleted of regulatory T cells to increase the antileukemic activity of DLI",
+     "Maury et al. (2010)"
+    ],
+    [
+     "Infusions of leukemia- specific T cells",
+     "Isolation and infusion of T cells specific for leukemia-associated antigens to boost the GVL potency of DLI",
+     "Warren et al. (2010), Bornhäuser et al. (2011), Chapuis et al. (2013), Comoli et al. (2017)"
+    ],
+    [
+     "Infusion of alpha-/ beta-depleted T cells",
+     "Infusion of a graft in vitro depleted of conventional alpha/beta T cells, thus enriched of gamma-delta T cells, endowed with antitumor activity and a low GVHD potential",
+     "Lang et al. (2015), Airoldi et al. (2015), Maschan et al. (2016)"
+    ],
+    [
+     "Infusion naïve- depleted T cells",
+     "Infusion of donor T-cell subsets in vitro depleted of naïve cells, with the aim of promoting immune reconstitution with a reduced GVHD risk",
+     "Bleakley (2015)"
+    ],
+    [
+     "Infusions of CIK",
+     "Infusions of in vitro activated donor CIK cells to promote GVL and reduce the risk of GVHD",
+     "Introna (2007), Introna et al. (2010)"
+    ],
+    [
+     "Suicide gene therapy",
+     "Donor lymphocytes are genetically engineered to express a suicide gene and then infused after HCT to promote GVT and immune reconstitution while selectively controlling GVHD with the prodrug- mediated activation of the suicide gene",
+     "Bonini et al. (1997), Ciceri et al. (2009), Fehse et al. (2004), Di Stasi et al. (2011), Zhan et al. (2013), Oliveira et al. (2015)"
+    ],
+    [
+     "CAR/TCR T cells",
+     "Lymphocytes are genetically engineered to express a chimeric antigen receptor (CAR) or a T-cell receptor (TCR) that confers to T cells specificity for an antigen expressed by cancer cells",
+     "Kochenderfer et al. (2010), Porter et al. (2011), Brentjens et al. (2013), Morgan et al. (2006), Robbins et al. (2011)"
+    ],
+    [
+     "CIK cytokine-induced killer",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "24fac0440d",
+   "type": "p",
+   "en": "HCT, the infusion of TK cells promoted broad and rapid immune reconstitution, which, being associated with GVHD control, led to abrogation of late transplant-related mortality (Ciceri et al. 2009). Overall, clinical results obtained with TK cells led to their conditional approval by EMA in 2016, thus representing the first genetically engineered medicinal product approved for cancer patients in Europe. Although when infused after haplo-HCT TK cells could be detected for more than 14 years (Oliveira et al. 2015), their persistence might be limited when cells are infused to immunocompetent patients, due to the viral origin of HSV-TK and to its subsequent immunogenicity in humans. Alternative suicide genes were designed and tested in clinical trials. iCasp9, in particular, is an innovative suicide gene based on human components and thus with a reduced risk of immunogenicity, which was recently proposed and successfully tested in clinical trials (Di Stasi et al. 2011; Zhou et al. 2014). Overall, more than half of the patients who had received suicide gene-expressing donor T cells experienced a clinical benefit in terms of immune reconstitution and GVL. Of notice, all cases of GVHD were completely controlled by the suicide gene/prodrug systems."
+  },
+  {
+   "id": "825c25d8a3",
+   "type": "h2",
+   "num": "60.3",
+   "en": "CAR-T Cells"
+  },
+  {
+   "id": "ae0f899e51",
+   "type": "h3",
+   "num": "60.3.1",
+   "en": "CAR-T-Cell Clinical Efficacy"
+  },
+  {
+   "id": "021cd91508",
+   "type": "p",
+   "en": "CARs are designer molecules comprised of several components: an extracellular antigen- binding domain, usually the variable light and heavy chains of a monoclonal antibody (scFv), a spacer and transmembrane region that anchors the receptor on the T-cell surface and provides the reach and flexibility necessary to bind to the target epitope, and an intracellular signaling module, most commonly CD3 zeta and one or more costimulatory domains that mediate T-cell activation after antigen binding, resulting in their profound proliferation and eventually selective tumor cell killing."
+  },
+  {
+   "id": "33c9a28383",
+   "type": "p",
+   "en": "The first clinical development was the use of CARs specific for the B-lineage marker CD19. Several groups demonstrated that CD19 CAR-T cells are able to induce durable complete remissions in patients with chemotherapy- and radiotherapy-refractory B-cell ALL, NHL, and CLL (Maude et al. 2014; Park et al. 2018; Turtle et al. 2017)."
+  },
+  {
+   "id": "da4cbaea03",
+   "type": "p",
+   "en": "However, in a fraction of patients, resistance mechanisms to CD19 CAR-T-cell therapy have become apparent, including the development of leukemia cell variants that lost their CD19 antigen expression, particularly in ALL. Several mechanisms may contribute to the development of this phenotype including lymphoid-to-myeloid transdifferentiation, selection of preexisting CD19-low/CD19-negative leukemia clones, and emergence of clones that lost the specific epitope targeted by the CD19 CAR due to alternative splicing (Gardner et al. 2016; Sotillo et al. 2015; Ruella and June 2016). In ALL, CD19-low/CD19-negative leukemia cells may still express CD20, CD22, and/or CD123 that are being pursued as rescue antigens. A recent study highlighted the potential to re-induce remissions in patients that had relapsed with CD19-low/CD19-negative leukemia and subsequently received CD22 CAR-T cells (Fry et al. 2018). Unfortunately, CD22 itself is prone to internalization and downregulation, and indeed a significant proportion of patients experienced successive CD22-low/CD22-negative leukemia relapse. At present, combinatorial targeting of CD19 with either CD20, CD22, or CD123 is being explored, either through bi-specific CAR constructs with two scFvs in cis or through co-expression of two CAR constructs in the same T cells (Zah et al. 2016)."
+  },
+  {
+   "id": "5b3be218ad",
+   "type": "p",
+   "en": "Since 2017, outcomes of CAR-T-cell clinical trials (Table 60.2) led to the approval by FDA and EMA of six CAR-T-cell therapeutic products, including four specific for CD19, approved for B-cell lymphoma and acute lymphoblastic leukemia (https://doi.org/10.1056/NEJMoa1707447, https://doi.org/10.1056/NEJMoa1804980, https://doi.org/10.1016/S0140- 6736(20)31366- 0, https://doi.org/10.1056/NEJMoa1914347), and two directed to BCMA and used for multiple myeloma (https://doi.org/10.1016/s0140- 6736(21)00933- 8, https://doi.org/10.1056/NEJMoa2024850). All"
+  },
+  {
+   "id": "7da500c182",
+   "type": "aside",
+   "en": "B-cell maturation antigen, kilogram, Safety technologyNoneNoneEGFRt depletion markerNoneEGFRt depletion markerEGFRt depletion markerNoneNone kg BCMA"
+  },
+  {
+   "id": "5903e4754d",
+   "type": "aside",
+   "en": "-Retrovirus-Retrovirus-Retrovirus Gene transfer vectorLentivirusγLentivirusγLentivirusLentivirusLentivirusγ, epidermal growth factor receptor"
+  },
+  {
+   "id": "9d4e84cd5e",
+   "type": "aside",
+   "en": "immunoglobulin G, ToxicityB-cell aplasiaCRSNeurotoxicityB-cell aplasiaCRSNeurotoxicityB-cell aplasiaCRSNeurotoxicityB-cell aplasiaCRSNeurotoxicityB-cell aplasiaCRSNeurotoxicityB-cell aplasiaCRSNeurotoxicityB-cell aplasiaCRS (mild)Hematologic (cytopenia)CRSNeurotoxicity IgG"
+  },
+  {
+   "id": "7fccaa44ec",
+   "type": "aside",
+   "en": "minimal residual disease, AntigenCD19CD19CD19CD19CD19CD19CD19BCMA First clinical trials with CAR-T cells MRD"
+  },
+  {
+   "id": "48b314c509",
+   "type": "aside",
+   "en": "acute lymphoblastic leukemia, Clinical applicationALLALLALLNHL/CLLNHL/CLLCLLMMMM Table 60.2ALLremission, chain variable fragment,"
+  },
+  {
+   "id": "4393daeb7b",
+   "type": "p",
+   "en": "approved products are manufactured by retroviral (γ-retroviral or lentiviral) gene transfer and made headlines due to their considerable market price and the complex logistics behind this treatment. This involves harvesting the patient’s T cells at a leukapheresis center, shipping to a centralized manufacturing facility to perform CAR gene transfer and T-cell expansion, and return shipment of the cryopreserved cell product. There is a recent increase in the use of exportable, GMP-certified manufacturing devices that are anticipated to provide on-site, point-of-care CAR-T-cell manufacture to reduce costs and wait time. Currently, approved cellular products are tested as earlier lines of treatment, and an intense effort is ongoing toward the identification of new CAR targets for further hematological malignancies, e.g., SLAMF7 (Gogishvili et al. 2017), CD44v6 (Casucci et al. 2013), CD38 (Mihara et al. 2009), CD33, CD70, CD123, CLL- 1, and FLT3 (https://doi.org/10.1111/ejh.14047). Clinical progress of CAR-T cells for solid tumors has been lacking behind, since it meets—besides identification of suitable target antigens—several additional challenges, including but not limited to difficult accessibility, immunosuppressive tumor microenvironment, and high degrees of heterogeneity. Novel CAR constructs and treatment concepts are underway to address these difficulties (https://doi.org/10.1038/s41586- 023- 05707- 3)."
+  },
+  {
+   "id": "89218e85e6",
+   "type": "h3",
+   "num": "60.3.2",
+   "en": "Side Effects and Their Management"
+  },
+  {
+   "id": "87552573d9",
+   "type": "p",
+   "en": "Results from pioneering clinical studies investigating CAR-T cells in patients with hematological cancers highlight the frequent occurrence of severe adverse reactions, which in some cases were fatal. The most obvious toxicity by CAR-T cells is the elimination of lineage cells expressing the target antigen of choice. For example, profound and, in some cases, long-lasting B-cell aplasia was observed after the infusion of CD19 CAR-T cells in patients with ALL, NHL, and CLL (Maude et al. 2014; Park et al. 2018; Turtle et al. 2017). By analogy, BCMA CAR-T cells are expected to induce plasma cell ablation in MM patients. The depletion of antibody-producing cells, or their precursors, in turn causes hypogammaglobulinemia, requiring constant supplementation with immunoglobulins. Besides these expected on-target/off-tumor effects, a new class of on-target/on-tumor adverse reactions is represented by the cytokine release syndrome (CRS) and by neurotoxicity. CRS is initiated by CAR-T- cell recognition of tumor cells, igniting the release of massive amounts of inflammatory cytokines, possibly by recruiting cells of the innate immunity. A master cytokine of the CRS is IL-6, as demonstrated by prompt and often complete response to the anti-IL-6 receptor monoclonal antibody tocilizumab. CRS symptoms range from high fever, headache, and myalgia to life- threatening cardiocirculatory and renal insufficiency. Clinical data reported so far utilize three slightly different systems for severity grading, which makes it difficult to draw meaningful comparisons in CRS liability between CAR-T-cell trials (Table 60.3). Nonetheless, there is a generalized consensus on the fact that severe CRS is more frequent in ALL compared to NHL and that high tumor burden is an important risk factor. Different from CRS, the pathophysiology of neurotoxicity by CAR-T cells remains an uncharted territory and decisively worthy of further research, given its highly dismal prognosis, as demonstrated by several cases of lethal cerebral edema (Berger et al. 2023). Initially thought to be caused by tumor recognition by CAR-T cells within the brain, neurotoxicity is now recognized to be independent from leukemic localization to the CNS. Moreover, unresponsiveness to tocilizumab suggests that excessive IL-6 signaling may not be sufficient to explain neurotoxicity and that additional pharmacological measures should be investigated. Finally, in a substantial proportion of patient, profound and in some cases very long- lasting leukopenia associated with high rates of infectious complications was reported after CD19 CAR-T therapy and referred to as CAR-HEMATOTOX (Rejeski et al. 2021)."
+  },
+  {
+   "id": "68b6108fd5",
+   "type": "h2",
+   "num": "60.4",
+   "en": "TCR Gene Transfer, TCR Gene Editing, and Future Perspectives"
+  },
+  {
+   "id": "241aed0308",
+   "type": "p",
+   "en": "In contrast to CARs that only bind surface molecules, TCRs recognize small pieces (peptides) derived from any cellular protein and presented by MHC molecules. Since the vast majority of tumor-specific/tumor-associated antigens are expressed intracellularly, they will only be addressable by TCRs, but not CARs. Moreover, therapeutically relevant cancer driver mutations in most cases happen in intracellular proteins (e.g., signal transducers)."
+  },
+  {
+   "id": "d37d46b1c9",
+   "type": "p",
+   "en": "At the same time, the advantage of TCRs represents a major hurdle for broad clinical application: Any transgenic TCR only functions in the context of one specific HLA complex. Thus, in order to offer TCR-T-cell therapy to virtually all candidate patients, for each antigen, a whole set of active TCRs will have to be established for different HLA molecules."
+  },
+  {
+   "id": "00ceb462fb",
+   "type": "p",
+   "en": "The first TCR gene therapies were applied to melanoma patients (MART-1 antigen), but meanwhile many cancers have been addressed. Based on their almost complete absence in adult tissues, cancer/testis antigens (e.g., NY-ESO1) represent particularly promising targets. Many studies showed significant antitumor activity, but on-target and off-target activities were associated with severe side effects, including mortality (Morris and Stauss 2016)."
+  },
+  {
+   "id": "fc1f75905a",
+   "type": "p",
+   "en": "Genome editing has been proposed to improve efficacy and decrease side effects of TCR gene therapy. Editing might be used to knock out the endogenous TCR to increasing expression of the transgenic one and decreasing the mispairing risk between endogenous and transgenic TCR chains (potentially leading to autoreactive T cells) (Provasi et al. 2012), and is required for the development of allogeneic T-cell products (https://doi.org/10.1126/scitranslmed.aaj2013). The recent development of CRISPR/Cas9 and its application to T cells have significantly increased the efficiency of gene disruption and of homology- directed repair (HDR) while also permitting simultaneous multiple gene editing (https://doi.org/10.1126/scitranslmed.abg8027). TCR-edited T cells were proven safe in a pilot study on cancer patients (https://doi.org/10.1126/science.aba7365). Moreover, targeted integration in the TCR locus can improve long-term expression of transgenic TCRs (https://doi.org/10.1038/s41551- 019- 0409- 0) or CARs (Eyquem et al. 2017). Finally, replacing nuclease activity with alternative enzymes, such as deaminases for nucleotide conversion, is further improving our toolbox for T-cell engineering (https://doi. org/10.1056/NEJMoa2300709)."
+  },
+  {
+   "id": "ea5fd79d11",
+   "type": "p",
+   "en": "In conclusion, T-cell therapies have become a promising novel anticancer weapon. Their broad application will require (1) identification of additional targets, (2) availability of TCRs against established targets for many HLA molecules, (3) implementation of innovative gene transfer and genome-editing biotechnological tools, and (4) improved methods for large-scale GMP production."
+  },
+  {
+   "id": "550d011cf1",
+   "type": "table",
+   "num": "60.3",
+   "en": "Table 60.3 CRS severity scoring systems",
+   "columns": 4,
+   "rows_en": [
+    [
+     "",
+     "Penn scale",
+     "CTCAE",
+     "Lee et al. (2014)"
+    ],
+    [
+     "Grade 1",
+     "Mild reaction treated with antipyretics and/or antiemetics",
+     "Mild reaction, no treatment needed",
+     "Non-life-threatening reaction responsive to symptomatic treatment"
+    ],
+    [
+     "Grade 2",
+     "Moderate reaction requiring hospitalization and i.v. therapy (no fluid resuscitation)",
+     "Moderate reaction responsive to symptomatic treatment within 24 h",
+     "Moderate reaction requiring oxygen <40%, fluid resuscitation or low-dose pressors. Any G2 organ toxicity"
+    ],
+    [
+     "Grade 3",
+     "Severe reaction requiring high-flow oxygen or noninvasive lung ventilation, fluid resuscitation, or low-dose pressors",
+     "Prolonged reaction nonresponsive to symptomatic treatment",
+     "Severe reaction requiring oxygen >40%, high-dose pressors. Any G3 organ toxicity"
+    ],
+    [
+     "Grade 4",
+     "Life-threatening reaction requiring high-dose pressors and/or mechanical ventilation",
+     "Life-threatening reaction, pressor, or ventilator requirement",
+     "Life-threatening reaction requiring mechanical ventilation. Any G4 organ toxicity"
+    ]
+   ]
+  }
+ ],
+ "references": [
+  "Airoldi I, Bertaina A, Prigione I, Zorzoli A, Pagliara D, Cocco C, Meazza R, Loiacono F, Lucarelli B, Bernardo ME, Barbarito G, Pende D, Moretta A, Pistoia V, Moretta L, Locatelli F. γδ T-cell reconstitution after HLA-haploidentical hematopoietic transplantation depleted of TCR-αβ+/CD19+ lymphocytes. Blood. 2015;125(15):2349–58. https://doi.org/10.1182/blood-2014-09-599423. Epub 2015 Jan 22",
+  "Ali SA, et al. T cells expressing an anti-B-cell maturation antigen chimeric antigen receptor cause remissions of multiple myeloma. Blood. 2016;128:1688–700.",
+  "André-Schmutz I, Le Deist F, Hacein-Bey-Abina S, Vitetta E, Schindler J, Chedeville G, Vilmer E, Fischer A, Cavazzana-Calvo M. Immune reconstitution without graft-versus-host disease after haemopoietic stem-cell transplantation: a phase 1/2 study. Lancet. 2002;360(9327):130–7. https://doi.org/10.1016/S0140-6736(02)09413-8.",
+  "Bacchetta R, Lucarelli B, Sartirana C, Gregori S, Lupo Stanghellini MT, Miqueu P, Tomiuk S, Hernandez-Fuentes M, Gianolini ME, Greco R, Bernardi M, Zappone E, Rossini S, Janssen U, Ambrosi A, Salomoni M, Peccatori J, Ciceri F, Roncarolo MG. Immunological Outcome in Haploidentical-HSC Transplanted Patients Treated with IL-10-Anergized Donor T Cells. Front Immunol. 2014;5:16. https://doi. org/10.3389/fimmu.2014.00016. eCollection 2014",
+  "Berger et al. Molecular monitoring of T-cell kinetics and migration in severe neurotoxicity after real-world CD19-specific chimeric antigen receptor-T cell therapy. Haematologica 2023;108:444−56.",
+  "Bleakley M, Heimfeld S, Loeb KR, Jones LA, Chaney C, Seropian S, Gooley TA, Sommermeyer F, Riddell SR, Shlomchik WD. Outcomes of acute leukemia patients transplanted with naive T cell-depleted stem cell grafts. Clin Invest. 2015;125(7):2677–89. https://doi.org/10.1172/JCI81229. 2015 Jun 8",
+  "Bonini C, et al. HSV-TK gene transfer into donor lymphocytes for control of allogeneic graft-versus-leukemia. Science. 1997;276:1719–24.",
+  "Bornhäuser M, Thiede C, Platzbecker U, Kiani A, Oelschlaegel U, Babatz J, Lehmann D, Hölig K, Radke J, Tuve S, Wermke M, Wehner R, Jähnisch H, Bachmann MP, Rieber EP, Schetelig J, Ehninger G, Schmitz M. Prophylactic transfer of BCR-ABL-, PR1-, and WT1-reactive donor T cells after T cell-depleted allogeneic hematopoietic cell transplantation in patients with chronic myeloid leukemia. Blood. 2011;117(26):7174–84. https://doi.org/10.1182/blood-2010-09-308569. Epub 2011 May 3",
+  "Brentjens RJ, Davila ML, Riviere I, Park J, Wang X, Cowell LG, Bartido S, Stefanski J, Taylor C, Olszewska M, Borquez-Ojeda O, Qu J, Wasielewska T, He Q, Bernal Y, Rijo IV, Hedvat C, Kobos R, Curran K, Steinherz P, Jurcic J, Rosenblat T, Maslak P, Frattini M, Sadelain M. CD19-targeted T cells rapidly induce molecular remissions in adults with chemotherapy-refractory acute lymphoblastic leukemia. Sci Transl Med. 2013;5(177):177ra38. https://doi.org/10.1126/scitranslmed.3005930.",
+  "Brunstein CG, Miller JS, Cao Q, McKenna DH, Hippen KL, Curtsinger J, Defor T, Levine BL, June CH, Rubinstein P, McGlave PB, Blazar BR, Wagner JE. Infusion of ex vivo expanded T regulatory cells in adults transplanted with umbilical cord blood: safety profile and detection kinetics. Blood. 2011;117(3):1061–70. https://doi.org/10.1182/blood-2010-07-293795. Epub 2010 Oct 15",
+  "Casucci M, et al. CD44v6-targeted T cells mediate potent antitumor effects against acute myeloid leukemia and multiple myeloma. Blood. 2013;122:3461–72.",
+  "Chapuis AG, Ragnarsson GB, Nguyen HN, Chaney CN, Pufnock JS, Schmitt TM, Duerkopp N, Roberts IM, Pogosov GL, Ho WY, Ochsenreither S, Wölfl M, Bar M, Radich JP, Yee C, Greenberg PD. Transferred WT1-reactive CD8+ T cells can mediate antileukemic activity and persist in post-transplant patients. Sci Transl Med. 2013;5(174):174ra27. https://doi.org/10.1126/scitranslmed.3004916.",
+  "Chen ZM, O’Shaughnessy MJ, Gramaglia I, Panoskaltsis-Mortari A, Murphy WJ, Narula S, Roncarolo MG, Blazar BR. IL-10 and TGF-beta induce alloreactive CD4+CD25- T cells to acquire regulatory cell function. Blood. 2003;101(12):5076–83. https://doi. org/10.1182/blood-2002-09-2798. Epub 2003 Feb 27.PMID: 12609834",
+  "Ciceri F, et al. Infusion of suicide-gene-engineered donor lymphocytes after family haploidentical haemopoietic stem-cell transplantation for leukaemia (the TK007 trial): a non-randomised phase I–II study. Lancet Oncol. 2009;10:489–500.",
+  "Comoli P, Basso S, Riva G, Barozzi P, Guido I, Gurrado A, Quartuccio G, Rubert L, Lagreca I, Vallerini D, Forghieri F, Morselli M, Bresciani P, Cuoghi A, Paolini A, Colaci E, Marasca R, Cuneo A, Iughetti L, Trenti T, Narni F, Foà R, Zecca M, Luppi M, Potenza L. BCR-ABL-specific T-cell therapy in Ph+ ALL patients on tyrosine-kinase inhibitors. Blood. 2017;129(5):582–6. https://doi.org/10.1182/blood-2016-07-731091. Epub 2016 Dec 7",
+  "Di Ianni M, Falzetti F, Carotti A, Terenzi A, Castellino F, Bonifacio E, Del Papa B, Zei T, Ostini RI, Cecchini D, Aloisi T, Perruccio K, Ruggeri L, Balucani C, Pierini A, Sportoletti P, Aristei C, Falini B, Reisner Y, Velardi A, Aversa F, Martelli MF. Tregs prevent GVHD and promote immune reconstitution in HLA-haploidentical transplantation. Blood. 2011;117(14):3921–8. https://doi.org/10.1182/blood-2010-10-311894. Epub 2011 Feb 3",
+  "Di Stasi A, et al. Inducible apoptosis as a safety switch for adoptive cell therapy. N Engl J Med. 2011;365:1673–83.",
+  "Eyquem J, et al. Targeting a CAR to the TRAC locus with CRISPR/Cas9 enhances tumour rejection. Nature. 2017;543:113. https://doi.org/10.1038/nature21405.",
+  "Fehse B, Ayuk FA, Kröger N, Fang L, Kühlcke K, Heinzelmann M, Zabelina T, Fauser AA, Zander AR. Evidence for increased risk of secondary graft fail ure after in vivo depletion of suicide gene-modified T lymphocytes transplanted in conjunction with CD34+-enriched blood stem cells. Blood. 2004;104(10):3408– 9. https://doi.org/10.1182/blood-2004-07-2813.",
+  "Fry TJ, et al. CD22-targeted CAR T cells induce remission in B-ALL that is naive or resistant to CD19-targeted CAR immunotherapy. Nat Med. 2018;24:20–8.",
+  "Gardner R, et al. Acquisition of a CD19-negative myeloid phenotype allows immune escape of MLL-rearranged B-ALL from CD19 CAR-T-cell therapy. Blood. 2016;127:2406–10.",
+  "Gogishvili T, et al. SLAMF7-CAR T cells eliminate myeloma and confer selective fratricide of SLAMF7+normal lymphocytes. Blood. 2017;130:2838–47.",
+  "Groux H, O’Garra A, Bigler M, Rouleau M, Antonenko S, de Vries JE, Roncarolo MG. A CD4+ T-cell subset inhibits antigen-specific T-cell responses and prevents colitis. Nature. 1997;389(6652):737–42. https://doi. org/10.1038/39614.",
+  "Introna M, Borleri G, Conti E, Franceschetti M, Barbui AM, Broady R, Dander E, Gaipa G, D’Amico G, Biagi E, Parma M, Pogliani EM, Spinelli O, Baronciani D, Grassi A, Golay J, Barbui T, Biondi A, Rambaldi A. Repeated infusions of donor-derived cytokine-induced killer cells in patients relapsing after allogeneic stem cell transplantation: a phase I study. Haematologica. 2007;92(7):952–9. https://doi. org/10.3324/haematol.11132.",
+  "Introna M, Pievani A, Borleri G, Capelli C, Algarotti A, Micò C, Grassi A, Oldani E, Golay J, Rambaldi A. Feasibility and safety of adoptive immunotherapy with CIK cells after cord blood transplantation. Biol Blood Marrow Transplant. 2010;16(11):1603–7. https://doi.org/10.1016/j.bbmt.2010.05.015. Epub 2010 Jun 1",
+  "Kochenderfer JN, Yu Z, Frasheri D, Restifo NP, Rosenberg SA. Adoptive transfer of syngeneic T cells transduced with a chimeric antigen receptor that recognizes murine CD19 can eradicate lymphoma and normal B cells. Blood. 2010;116(19):3875–86. https://doi. org/10.1182/blood-2010-01-265041. Epub 2010 Jul 14",
+  "Koehne G, Doubrovin M, Doubrovina E, Zanzonico P, Gallardo HF, Ivanova A, Balatoni J, Teruya-Feldstein J, Heller G, May C, Ponomarev V, Ruan S, Finn R, Blasberg RG, Bornmann W, Riviere I, Sadelain M, O’Reilly RJ, Larson SM, Tjuvajev JG. Serial in vivo imaging of the targeted migration of human HSV-TK-transduced antigen-specific lymphocytes. Nat Biotechnol. 2003;21(4):405–13. https://doi. org/10.1038/nbt805. Epub 2003 Mar 24",
+  "Kolb HJ, et al. Donor leukocyte transfusions for treatment of recurrent chronic myelogenous leukemia in marrow transplant patients. Blood. 1990;76:2462–5.",
+  "Lang P, Feuchtinger T, Teltschik HM, Schwinger W, Schlegel P, Pfeiffer M, Schumm M, Lang AM, Lang B, Schwarze CP, Ebinger M, Urban C, Handgretinger R. Improved immune recovery after transplantation of TCRαβ/CD19-depleted allografts from haploidentical donors in pediatric patients. Bone Marrow Transplant. 2015;50(Suppl 2):S6–10. https://doi.org/10.1038/bmt.2015.87.",
+  "Maschan M, Shelikhova L, Ilushina M, Kurnikova E, Boyakova E, Balashov D, Persiantseva M, Skvortsova Y, Laberko A, Muzalevskii Y, Kazachenok A, Glushkova S, Bobrynina V, Kalinina V, Olshanskaya Y, Baidildina D, Novichkova G, Maschan A. TCR-alpha/beta and CD19 depletion and treosulfan-based conditioning regimen in unrelated and haploidentical transplantation in children with acute myeloid leukemia. Bone Marrow Transplant. 2016;51(5):668–74. https://doi.org/10.1038/bmt.2015.343. Epub 2016 Jan 25.PMID: 26808573",
+  "Maude SL, et al. Chimeric antigen receptor T cells for sustained remissions in leukemia. N Engl J Med. 2014;371:1507–17.",
+  "Maury S, Lemoine FM, Hicheri Y, Rosenzwajg M, Badoual C, Cheraï M, Beaumont J-L, Azar N, Dhedin N, Sirvent A, Buzyn A, Rubio M-T, Vigouroux S, Montagne O, Bories D, Roudot-Thoraval F, Vernant J-P, Cordonnier C, Klatzmann D, Cohen JL. CD4+CD25+ regulatory T cell depletion improves the graft-versus-tumor effect of donor lymphocytes after allogeneic hematopoietic stem cell transplantation. Sci Transl Med. 2010;2(41):41ra52. https://doi. org/10.1126/scitranslmed.3001302.",
+  "Mielke S, Nunes R, Rezvani K, Fellowes VS, Venne A, Solomon SR, Fan Y, Gostick E, Price DA, Scotto C, Read EJ, Barrett AJ. A clinical-scale selective allodepletion approach for the treatment of HLA-mismatched and matched donor-recipient pairs using expanded T lymphocytes as antigen-presenting cells and a TH9402-based photodepletion technique. Blood. 2008;111(8):4392–402. https://doi.org/10.1182/blood-2007-08-104471. Epub 2007 Sep 18.PMID: 17878399",
+  "Mihara K, et al. Activated T-cell-mediated immunotherapy with a chimeric receptor against CD38 in B-cell non-Hodgkin lymphoma. J Immunother. 2009;32:737–43.",
+  "Morgan RA, Dudley ME, Wunderlich JR, Hughes MS, Yang JC, Sherry RM, Royal RE, Topalian SL, Kammula US, Restifo NP, Zheng Z, Nahvi A, de Vries CR, Rogers-Freezer LJ, Mavroukakis SA, Rosenberg SA. Cancer regression in patients after transfer of genetically engineered lymphocytes. Science. 2006;314(5796):126–9. https://doi.org/10.1126/science.1129003. Epub 2006 Aug 31",
+  "Morris EC, Stauss HJ. Optimizing T-cell receptor gene therapy for hematologic malignancies. Blood. 2016;127:3305–11.",
+  "Oliveira G, et al. Tracking genetically engineered lymphocytes long-term reveals the dynamics of T cell immunological memory. Sci Transl Med. 2015;7:317ra198.",
+  "Park JH, et al. Long-term follow-up of CD19 CAR therapy in acute lymphoblastic leukemia. N Engl J Med. 2018;378:449–59.",
+  "Porter DL, Levine BL, Kalos M, Bagg A, June CH. Chimeric antigen receptor-modified T cells in chronic lymphoid leukemia. N Engl J Med. 2011;365(8):725–33. https://doi.org/10.1056/NEJMoa1103849. Epub 2011 Aug 10",
+  "Provasi E, et al. Editing T cell specificity towards leukemia by zinc finger nucleases and lentiviral gene transfer. Nat Med. 2012;18:807–15.",
+  "Rejeski K, et al. CAR-HEMATOTOX: a model for CAR T-cell related hematological toxicity in relapsed/refractory large B-cell lymphoma. Blood. 2021;138:2499–513.",
+  "Riddell SR, Watanabe KS, Goodrich JM, Li CR, Agha ME, Greenberg PD. Restoration of viral immunity in immunodeficient humans by the adoptive transfer of T cell clones. Science. 1992;257(5067):238–41. https://doi.org/10.1126/science.1352912.",
+  "Rooney CM, Smith CA, Ng CY, Loftin S, Li C, Krance RA, Brenner MK, Heslop HE. Use of gene-modified virus-specific T lymphocytes to control Epstein-Barr-virus-related lymphoproliferation. Lancet. 1995;345(8941):9–13. https://doi.org/10.1016/s0140-6736(95)91150-2.",
+  "Ruella M, June CH. Chimeric antigen receptor T cells for B cell neoplasms: choose the right CAR for you. Curr Hematol Malig Rep. 2016;11:368–84.",
+  "Sotillo E, et al. Convergence of acquired mutations and alternative splicing of CD19 enables resistance to CART-19 immunotherapy. Cancer Discov. 2015;5:1282–95.",
+  "Tran E, Longo DL, Urba WJ. A milestone for CAR T cells. N Engl J Med. 2017;377:2593–6.",
+  "Trenado A, Fisson S, Braunberger E, Klatzmann D, Salomon BL, Cohen JL. Ex vivo selection of recipient-type alloantigen-specific CD4(+)CD25(+) immunoregulatory T cells for the control of graft-versus-host disease after allogeneic hematopoietic stem-cell transplantation. Transplantation. 2004;77(1 Suppl):S32–4. https://doi.org/10.1097/01.TP.0000106470.07410.CA.",
+  "Turtle CJ, et al. Durable molecular remissions in chronic lymphocytic leukemia treated with CD19-specific chimeric antigen receptor-modified T cells after failure of ibrutinib. J Clin Oncol. 2017;35:3010–20.",
+  "Hartwig UF, Nonn M, Khan S, Link I, Huber C, Herr W. Depletion of alloreactive donor T lymphocytes by CD95-mediated activation-induced cell death retains antileukemic, antiviral, and immunoregulatory T cell immunity. Biol Blood Marrow Transplant. 2008;14(1):99–109. https://doi.org/10.1016/j. bbmt.2007.10.002.",
+  "Warren EH, Fujii N, Akatsuka Y, Chaney CN, Mito JK, Loeb KR, Gooley TA, Brown ML, Koo KK, Rosinski KV, Ogawa S, Matsubara A, Appelbaum FR, Riddell SR. Therapy of relapsed leukemia after allogeneic hematopoietic cell transplantation with T cells specific for minor histocompatibility antigens. Blood. 2010;115(19):3869–78. https://doi.org/10.1182/blood-2009-10-248997. Epub 2010 Jan 13",
+  "Weiden PL, et al. Antileukemic effect of graft-versus-host disease in human recipients of allogeneic-marrow grafts. N Engl J Med. 1979;300:1068–73.",
+  "Zah E, Lin M-Y, Silva-Benedict A, Jensen MC, Chen YY. T cells expressing CD19/CD20 bispecific chimeric antigen receptors prevent antigen escape by malignant B cells. Cancer Immunol Res. 2016;4:498–508.",
+  "Zhan H, Gilmour K, Chan L, Farzaneh F, McNicol AM, Xu JH, Adams S, Fehse B, Veys P, Thrasher A, Gaspar H, Qasim W. Production and first-in-man use of T cells engineered to express a HSVTK-CD34 sort-suicide gene. PLoS One. 2013;8(10):e77106. https://doi. org/10.1371/journal.pone.0077106. eCollection 2013",
+  "Zhou X, et al. Long-term outcome after haploidentical stem cell transplant and infusion of T cells expressing the inducible caspase 9 safety transgene. Blood. 2014;123:3895–905."
+ ]
+}

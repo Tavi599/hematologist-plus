@@ -1,0 +1,431 @@
+{
+ "number": 86,
+ "part": "IX",
+ "page_pdf": [
+  758,
+  766
+ ],
+ "page_printed": 777,
+ "title_en": "Large B-Cell Lymphoma",
+ "authors": "Leyre Bento, Bertram Glass, and Norbert Schmitz",
+ "affiliations": "L. Bento (*) Department of Hematology, Son Espases University Hospital, IdISBa, University of Balearic Islands, Palma, Spain e-mail: leyre.bento@ssib.es B. Glass Department of Hematology and Stem Cell Therapy, Helios Hospital Berlin-Buch, Berlin, Germany N. Schmitz Department of Medicine A, Hematology, Oncology, Pneumonology and Hemostaseology, University Hospital Münster, Münster, Germany",
+ "doi": "10.1007/978-3-031-44080-9_86",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 4,
+ "blocks": [
+  {
+   "id": "d1d3f1b158",
+   "type": "h2",
+   "num": "86.1",
+   "en": "Definition and Epidemiology"
+  },
+  {
+   "id": "001b23797b",
+   "type": "p",
+   "en": "The most recent WHO classification of tumors of hematopoietic and lymphoid tissues (Alaggio et al. 2022) classifies large B cell lymphomas (LBCL) into diffuse large B cell lymphoma (DLBCL) NOS with distinct morphological and molecular (germinal center B-cell, activated B-cell) subtypes, high-grade B-cell lymphomas (with MYC and BCL2 rearrangements or NOS subtype), and other less frequent subtypes."
+  },
+  {
+   "id": "6e29480f16",
+   "type": "p",
+   "en": "With some important exceptions, diagnostic work-up and treatment are identical in all LBCL subtypes. It is beyond the scope of this article to fully describe the exceptions; we mention the most important differences but otherwise focus on transplantation and cell therapy for patients with relapsed/refractory (R/R) LBCL."
+  },
+  {
+   "id": "43d5f7e99f",
+   "type": "p",
+   "en": "DLBCL is the most frequent lymphoma subtype and accounts for approximately one third of newly diagnosed lymphoma cases worldwide. In Europe, the 10-year prevalence of DLBCL is estimated at 43.3 per 100,000 per year (Smith et al. 2015). The disease is slightly more frequent in men than in women; it mostly is a disease of the elderly (median patient age beyond 60 years) but can occur also in children and adolescents."
+  },
+  {
+   "id": "5641e785af",
+   "type": "h2",
+   "num": "86.2",
+   "en": "Diagnosis"
+  },
+  {
+   "id": "249bd1981a",
+   "type": "p",
+   "en": "The diagnosis is made according to the WHO classification from a sufficiently large surgical specimen or excisional lymph node biopsy; needle biopsies are not recommended. Beyond morphological evaluation by an experienced pathologist, determination of the immunophenotype of the malignant cells (positivity of malignant cells for CD19 and CD20 must be documented because of its therapeutic consequences) and determination of the cell of origin by adequate molecular methods are required (Alaggio et al. 2022)."
+  },
+  {
+   "id": "4b6ddba03c",
+   "type": "h2",
+   "num": "86.3",
+   "en": "Classification"
+  },
+  {
+   "id": "cae73d1743",
+   "type": "p",
+   "en": "The LBCL comprise the morphological and molecular subtypes of DLBCL NOS, high-grade B-cell lymphomas, and other LBCL (see Paragraph 1)."
+  },
+  {
+   "id": "49e154733b",
+   "type": "p",
+   "en": "The WHO classification describes 14 other lymphomas of large B cells. Among these, primary large B-cell lymphoma of immune"
+  },
+  {
+   "id": "c952c4db25",
+   "type": "p",
+   "en": "privileged sites (CNS, testicle, and vitreoretina), lymphomatoid granulomatosis, primary mediastinal large B-cell lymphoma (PMBCL), and plasmablastic lymphoma not only show significant differences in pathogenesis and clinical manifestation but in most centers are treated different from classical DLBCL. In order to fulfill all WHO requirements, the cell of origin (GCB or ABC-subtype by IHC or gene expression profiling) and the presence/absence of distinct chromosomal translocations (BCL2 and MYC by FISH testing or IHC) must be determined."
+  },
+  {
+   "id": "f4b7a9dac4",
+   "type": "h2",
+   "num": "86.4",
+   "en": "Risk Factors"
+  },
+  {
+   "id": "5f8c9cc17b",
+   "type": "p",
+   "en": "The International Prognostic Index (IPI) remains the most important tool in order to estimate the prognosis of patients with LBCL (Ziepert et al. 2010). The IPI takes into account five factors (age, stage, LDH, performance status, and number of extranodal sites involved). Patients within the low (IPI 0, 1), low-intermediate (IPI 2), high-intermediate (IPI 3), and high-risk group (IPI 4, 5) can expect 3-year overall survival of 91.4%, 80.9%, 65.1%, and 59.0%, respectively, if treated with R-CHOP or one of its variants. Other clinical risk factor models (R-IPI; NCCN-IPI) (Sehn et al. 2007; Zhou et al. 2014) have been proposed, but advantages over the original IPI seem limited."
+  },
+  {
+   "id": "a68601e9c0",
+   "type": "h2",
+   "num": "86.5",
+   "en": "First-Line Treatment"
+  },
+  {
+   "id": "be0f2df787",
+   "type": "p",
+   "en": "First-line treatment of patients with LBCL generally consists of RTX at standard dose (375 mg/sqm) in combination with CHOP (CY, DOXO, VCR, and PRD). Six cycles of R-CHOP are generally used. Patients with early disease (IPI 0 and 1) have been treated with abbreviated chemotherapy and involved-field radiotherapy (RT). Some studies do not support a role for RT in such patients (Lamy et al. 2018). In patients with IPI 2–5, radiotherapy to bulky and extranodal disease is regularly recommended after R-CHOP in some but not in the majority of countries. Recently, prospective randomized trial has confirmed the benefit of adding polatuzumab to R-CHP in patients with IPI ≥2 in terms of progression-free survival (Tilly et al. 2022)."
+  },
+  {
+   "id": "f61cc60ec1",
+   "type": "p",
+   "en": "Several studies failed to demonstrate an advantage of consolidation with auto-HCT over conventional chemotherapy; therefore, it is generally not recommended as part of first-line therapy in LBCL."
+  },
+  {
+   "id": "85d59e2279",
+   "type": "p",
+   "en": "Patients with primary large B-cell lymphoma of immuned privileged sites must receive chemotherapy penetrating into the CNS. More aggressive chemotherapies (CHOEP, DA-EPOCH, or ACVBP) in combination with RTX with or without RT are recommended in patients with PMBCL or plasmablastic lymphoma. Also, more intensive therapy has been recommended for patients with MYC and BCL2 rearrangements based mainly on retrospective studies (Oki et al. 2014)."
+  },
+  {
+   "id": "fc546caac8",
+   "type": "h2",
+   "num": "86.6",
+   "en": "Second-Line Treatment"
+  },
+  {
+   "id": "0dbefd058e",
+   "type": "p",
+   "en": "The principles of management of relapsed and refractory (R/R) LBCL are shown in Table 86.1. CAR T cells have become the standard of care for patients with refractory disease or early relapse (within 12 months from the end of first-line therapy). Auto-HCT is currently considered an option for patients with R/R LBCL especially in late relapse. All chemotherapy-based salvage regimens cause hematologic toxicity in many cases necessitating RBC and platelet transfusions. Mucositis, gastrointestinal toxicities, neutropenic fever, and infections are reported in a significant proportion of patients. Nephrotoxicity, hepatotoxicity, and other nonhematologic toxicities are also observed. Failure to mobilize hematopoietic stem cells in 10–20% of cases occurs with all salvage regimens. Efficacy of different salvage options is shown in Table 86.2."
+  },
+  {
+   "id": "8d51141d36",
+   "type": "h2",
+   "num": "86.7",
+   "en": "Autologous HCT"
+  },
+  {
+   "id": "5f1ad80f1d",
+   "type": "p",
+   "en": "Auto-HCT is still considered the standard of care for patients with late relapse (>12 months from the end of first-line therapy) in PR or CR after salvage therapy and could be an option treatment for patients with early relapse or primary refractory disease when CAR T cells are not available. EBMT indications (Snowden et al. 2022) for auto-HCT in LBCL are shown in Table 86.3. Auto-HCT is generally not recommended as part of first-line therapy in DLBCL; however, it could be considered in those patients with high-grade B cell lymphomas treated with R-CHOP like regimens and in LBCL with CNS involvement at diagnosis with chemosensitive disease. We discourage auto-HCT for patients with refractory disease not responding to salvage therapy."
+  },
+  {
+   "id": "9bc3931b49",
+   "type": "h3",
+   "num": "86.7.1",
+   "en": "HSC Source"
+  },
+  {
+   "id": "8c4691e874",
+   "type": "p",
+   "en": "PBSC is used in >90% of auto-HCT."
+  },
+  {
+   "id": "72751dd4e8",
+   "type": "h3",
+   "num": "86.7.2",
+   "en": "Consolidation (High-Dose Therapy)"
+  },
+  {
+   "id": "b512304e47",
+   "type": "p",
+   "en": "Consolidation (high-dose therapy) should eliminate malignant cells with minimal impact on organ systems other than hematopoiesis. The choice of the preparative regimen varies and is based on institutional experience rather than evi"
+  },
+  {
+   "id": "2c89cf5185",
+   "type": "table",
+   "num": "86.1",
+   "en": "Table 86.1 Management of relapsed or refractory LBCL",
+   "columns": 4,
+   "rows_en": [
+    [
+     "– –",
+     "New biopsy with R/R LBCL. Core biopsies acceptable Radiological evaluation for evaluation of treatment outcome",
+     ": Highly recommended in all patients",
+     ": PET/CT recommended"
+    ],
+    [
+     "– – –",
+     "Salvage therapy followed by auto-HCT currently considered the standard of care for patients with R/R DLBCL with late relapse (>12 months from the end of first-line therapy) CAR T cells patients with refractory disease or early relapse (within 12 months from the end of first-line therapy) Allo-HCT could be considered a potential treatment option in younger patients without comorbidities especially in patients with R/R after CAR T cells and with chemosensitive disease",
+     "is considered standard of care for",
+     "is"
+    ],
+    [
+     "– –",
+     "Selection of salvage therapy failed to show significant differences in terms of efficacy or toxicity with different salvage regimens. Therefore, salvage strategies should take into account individual patient characteristics (age and comorbidities) considering potential cumulative hematologic and nonhematologic toxicity and the possibility of harvesting stem cells. Cardiac, pulmonary, renal, and liver function should be evaluated prior to treatment The objecti induce a complete or partial response indicating that the tumor remains chemosensitive, this having a major impact on outcome after transplantation. PET negativity after salvage therapy is a surrogate marker of chemosensitivity and predicts patient outcome after auto-HCT",
+     "ve of salvage chemotherapy is to",
+     ": Randomized studies"
+    ]
+   ]
+  },
+  {
+   "id": "6d430fcb3e",
+   "type": "table",
+   "num": "86.2",
+   "en": "Table 86.2 Response to salvage regimens",
+   "raw_en": "Table 86.2 Response to salvage regimens Regimens compared in prospective randomized trials R-DHAP Dexamethasone, cytarabine, (Gisselbrecht et al. cisplatin 2010)ORR 62.8% (44.1%)a, CR 28% (14.3%)a R-GDP (Crump Gemcitabine, dexamethasone, Table 86.3 Indications for auto-HCT in LBCL et al. 2014)cisplatin Disease statusRecommendations ORR 45.1%, CR 13.5% after 2 cyclesFirst complete remissionClinical option Level of evidence I R-ICE (Gisselbrecht Ifosfamide, carboplatin, et al. 2010)etoposideChemosensitive early Clinical option ORR 63.5%, CR 24%relapse, ≥CR2Level of evidence I Addition of new drugs (lenalidomide, ibrutinib, Chemosensitive late relapse, Standard of care brentuximab vedotin, polatuzumab, other) to RTX- ≥CR2Level of evidence II chemo in order to improve response rates of salvage Refractory diseaseGenerally not regimens is not recommended outside clinical trialsrecommended aLevel of evidence I Percentages in brackets from Crump et al. (2014)"
+  },
+  {
+   "id": "b96abaf3fd",
+   "type": "p",
+   "en": "dence. The BEAM regimen typically consisting of BCNU (300 mg/m² × 1, day-6), VP (200 mg/m², days −5 to −2), Ara-C (200 mg/m² bid, days −5 to −2), and MEL (140 mg/kg/day ×1, days −1) is the preferred regimen in EBMT centers."
+  },
+  {
+   "id": "58467c5f22",
+   "type": "p",
+   "en": "Acute toxicities of BEAM include severe mucositis, nausea and vomiting, diarrhea, hepatotoxicity, nephrotoxicity, and noninfective pulmonary complications. Late toxicities include pulmonary complications such as chronic interstitial fibrosis and decrease in lung diffusion capacity (21%), infection (30%), metabolic syndrome (17%), cardiovascular complications (12%), secondary tumors (20%), and other toxicities (20%). The most frequent cause of NRM is subsequent malignancy (12-fold increased risk compared with the general population). Late death is also attributed to cardiac toxicity (2%), pulmonary complications (2%), and other treatment- related toxicities (15%)."
+  },
+  {
+   "id": "0c3b003ca2",
+   "type": "p",
+   "en": "Other high-dose regimens have been used sometimes because of shortage of MEL or BCNU. Some publications suggest that the BEAC (CY) and TEAM (TT) regimens show efficacy and toxicity similar to BEAM in most if not all lymphoma subtypes (Robinson et al. 2018)."
+  },
+  {
+   "id": "5f422aa04b",
+   "type": "h3",
+   "num": "86.7.3",
+   "en": "Prognostic Factors"
+  },
+  {
+   "id": "2dec60bf5e",
+   "type": "p",
+   "en": "Adverse prognostic factors for auto-HCT identified in prospective studies include early relapse within 12 months of induction therapy (Crump et al. 2017), secondary age-adjusted IPI, poor performance status, and involvement of two or more extranodal sites at relapse."
+  },
+  {
+   "id": "50f50aabca",
+   "type": "h3",
+   "num": "86.7.4",
+   "en": "Results of Auto-HCT"
+  },
+  {
+   "id": "4d884139e4",
+   "type": "h3",
+   "num": "86.7.5",
+   "en": "Consolidation Treatment After Auto-HCT"
+  },
+  {
+   "id": "7cdd429c37",
+   "type": "p",
+   "en": "There are no data and no recommendation for consolidative therapy after auto-HCT for LBCL. In the CORAL study (Gisselbrecht et al. 2012), RTX maintenance did not improve outcome."
+  },
+  {
+   "id": "494e7f1a76",
+   "type": "h3",
+   "num": "86.7.6",
+   "en": "Tandem Transplantation"
+  },
+  {
+   "id": "c5dac2c117",
+   "type": "p",
+   "en": "No data from the RTX era are available."
+  },
+  {
+   "id": "f872d6c7ed",
+   "type": "h3",
+   "num": "86.7.7",
+   "en": "Relapse After Auto-HCT"
+  },
+  {
+   "id": "7bdc19bc53",
+   "type": "p",
+   "en": "CAR T cells therapy is considered the standard treatment for these patients. Results of CAR T cells after failure of auto-HCT are reported below. Data on the use of new drugs such as bispecific antibodies are promising but currently in clinical trials (Thieblemont et al. 2023; Dickinson et al. 2022)."
+  },
+  {
+   "id": "d9c80e9f5b",
+   "type": "h2",
+   "num": "86.8",
+   "en": "CAR T Cells"
+  },
+  {
+   "id": "82b9489006",
+   "type": "p",
+   "en": "Recently, anti-CD19 CAR T cells, axicabtagene ciloleucel and lisocaptagene maraleucel, show significant improvement in PFS and a strong trend in OS in two phase III clinical studies in high-risk R/R LBCL compared with salvage therapy followed by auto-HCT (Locke et al. 2022; Kamdar et al. 2021). For this reason, CAR T cells have been recently considered the best option for patients with refractory disease or early relapse."
+  },
+  {
+   "id": "1312dcb951",
+   "type": "p",
+   "en": "CAR T cells have been considered the standard of care for patients failing an autograft (grade of evidence I) (Schuster et al. 2019; Neelapu et al. 2017). Real-world evidence in third line use has been recently published confirming the efficacy and safety of these approach. These studies support higher efficacy and also a higher toxicity of axi-cel compared to tisa-cel (Bachy et al. 2022; Bethge et al. 2022)."
+  },
+  {
+   "id": "a0de4c7d3b",
+   "type": "p",
+   "en": "There are some advantages of CAR T cells comparing with HCT; chemosensitivity is not needed and patients that are not candidates for HCT because of age or comorbidities could be rescued with this strategy (Sehgal et al. 2022)."
+  },
+  {
+   "id": "fb33bf16a3",
+   "type": "h2",
+   "num": "86.9",
+   "en": "Allogeneic HCT"
+  },
+  {
+   "id": "87abf6f942",
+   "type": "p",
+   "en": "Allo-HCT is still considered a curative treatment option for patients with LBCL who relapse or progress after CAR T cells (Mussetti et al. 2023). Survival and NRM for allo-HCT in LBCL are summarized in Table 85.9.6."
+  },
+  {
+   "id": "5c5142e64c",
+   "type": "p",
+   "en": "The only prospective randomized clinical trial reported so far including patients with R/R T and B aggressive lymphomas who underwent allo-HCT with MAC conditioning confirmed 3 year-PFS and OS 25% and 26%, respectively (Glass et al. 2014). Haploidentical allo-HCT with post-transplant cyclophosphamide (PT-CY) as GVHD prophylaxis has been associated with a lower chronic GVHD compared with matched sibling receiving calcineurin inhibitor-based prophylaxis and unrelated donor (URD) with or without T-cell depletion (Dreger et al. 2019). These data show that allo-HCT should be still considered a curative option for patients relapsing after CAR T cells."
+  },
+  {
+   "id": "27aef2f2f8",
+   "type": "h3",
+   "num": "86.9.1",
+   "en": "Stem Cell Source"
+  },
+  {
+   "id": "bc620e8c5d",
+   "type": "p",
+   "en": "PBSC is the preferred stem cell source for allo-HCT. The use of haploidentical donors has somewhat increased the use of BM in some of the series."
+  },
+  {
+   "id": "d0849cbae2",
+   "type": "h3",
+   "num": "86.9.2",
+   "en": "Donor Selection"
+  },
+  {
+   "id": "975a7cd69b",
+   "type": "p",
+   "en": "In recent years, there has been a significant increase in the use of haploidentical donors for allo-HCT after the introduction of PT-CY. Retrospective analyses from EBMT and CIBMTR (Kanate et al. 2016) suggest that allo-HCT from HLA-identical family and URD or from haploidentical donors give comparable results. However, no prospective clinical trials comparing haploidentical donors versus HLA-identical siblings and MUD have been published so far."
+  },
+  {
+   "id": "fa705dc209",
+   "type": "h3",
+   "num": "86.9.3",
+   "en": "Conditioning"
+  },
+  {
+   "id": "8a5e07da2d",
+   "type": "p",
+   "en": "RIC regimens reduce NRM after transplantation in many indications but also tend to increase RI after transplantation. Because no prospective clinical trials demonstrating the superiority of one conditioning regimen over another have been reported, the question if RIC or MAC should be preferred cannot generally be answered. Aggressive disease not completely responding to salvage therapy and high tumor are situations where MAC should be considered."
+  },
+  {
+   "id": "5f422aa04b-2",
+   "type": "h3",
+   "num": "86.9.4",
+   "en": "Prognostic Factors"
+  },
+  {
+   "id": "29adf8fac2",
+   "type": "p",
+   "en": "The most important adverse prognostic factor that impacts long-term outcome of patients being treated with allo-HCT is disease status before the treatment. However, unlike the situation with auto-HCT, also patients not perfectly responding to salvage therapy, e.g., patients with minor response or stable disease, may benefit from allo-HCT."
+  },
+  {
+   "id": "a0781beac5",
+   "type": "h3",
+   "num": "86.9.5",
+   "en": "The Use of Allo-HCT in the Era of New Drugs and CAR T Cells"
+  },
+  {
+   "id": "f46994d462",
+   "type": "p",
+   "en": "Allo-HCT is still a curative therapeutic strategy for fit patients with chemosensitive disease, especially relapsing after CAR T cells or whenever CAR T cells are not available."
+  },
+  {
+   "id": "40df061ffa",
+   "type": "h3",
+   "num": "86.9.6",
+   "en": "Results of Allo-HCT"
+  },
+  {
+   "id": "db087f9e18",
+   "type": "h3",
+   "num": "86.9.7",
+   "en": "Disease Relapse After Allo-HCT"
+  },
+  {
+   "id": "3117c298cd",
+   "type": "p",
+   "en": "Patients relapsing after allo-HCT generally have a poor prognosis. Clinical trials should be actively considered including bispecific antibodies or other targeted therapies such as polatuzumab or lenalidomide. Unfortunately, palliative care is a reality in many cases."
+  },
+  {
+   "id": "9dac741501",
+   "type": "h3",
+   "num": "86.9.8",
+   "en": "Therapeutic Algorithm Recommended by the Authors (See Fig. 86.1)"
+  },
+  {
+   "id": "ac474edc4a",
+   "type": "p",
+   "en": "See Fig. 86.1."
+  },
+  {
+   "id": "d40858a372",
+   "type": "li",
+   "en": "• Auto-HCT is generally not recommended as part of first-line therapy in LBCL. It is still the standard of care for those LBCL patients with chemosensitive first late relapse."
+  },
+  {
+   "id": "3c06f8f145",
+   "type": "li",
+   "en": "• CAR T cells are considered standard of care for patients with refractory disease, early relapse (within 12 months from the end of first-line therapy) or patients relapsing after auto-HCT."
+  },
+  {
+   "id": "c32cc8826a",
+   "type": "li",
+   "en": "• Allo-HCT is the only curative treatment option for fit patients with relapse disease after CART cells. Conditioning should be guided by the individual clinical situation."
+  },
+  {
+   "id": "42c4f51568",
+   "type": "aside",
+   "en": "Key Points"
+  },
+  {
+   "id": "67d0055663",
+   "type": "aside",
+   "en": "Salvage chemotherapy YesPrimary refractory orNo CAR T cells(R-ICE, R-DHAP, R- relapse <12 months from the end (axicel, lisocel)GDP) of first-line therapy SD/RRCR/PR"
+  },
+  {
+   "id": "435449bb7e",
+   "type": "aside",
+   "en": "Yes Fit for allo-HSCT and at least SD Relapse/ for last therapy progression YesNo Allo-HSCT Clinical trials Targered therapies Supportive care Relapse/progression"
+  },
+  {
+   "id": "a2017f4bef",
+   "type": "figure",
+   "en": "Fig. 86.1 HCT and CAR T cells in R/R LBCL: treatment decision"
+  }
+ ],
+ "references": [
+  "Alaggio R, Amador C, Anagnostopoulos I, Attygalle AD, de Araujo IBO, Berti E, Bhagat G, Borges AM, Boyer D, Calaminici M, Chadburn A, Chan JKC, Cheuk W, Chng W-J, Choi JK, Chuang S-S, Coupland SE, Czader M, Dave SS, de Jong D, et al. The 5th edition of the World Health Organization classification of haematolymphoid tumours: lymphoid neoplasms. Leukemia. 2022;36:1720–48.",
+  "Bachy E, Le Gouill S, Di Blasi R, Sesques P, Manson G, Cartron G, Beauvais D, Roulin L, Gros FX, Rubio MT, Bories P, Bay JO, Llorente CC, Choquet S, Casasnovas R-O, Mohty M, Guidez S, Joris M, Loschi M, Carras S, et al. A real-world comparison of tisagenlecleucel and axicabtagene ciloleucel CAR T cells in relapsed or refractory diffuse large B cell lymphoma. Nat Med. 2022;28:2145–54.",
+  "Bento L, Gutiérrez A, Novelli S, Montoro J, Piñana JL, López-Corral L, Cabrero M, Martín-Sancho A, Gutiérrez-García G, Ortiz-Moscovich M, Bastos-Oreiro M, Dorado N, Pérez A, Hernani R, Ferrà C, Parody R, García-Cadenas I, Herrera P, Rodríguez G, Rodríguez N, et al. Allogeneic stem cell transplantation as a curative option in relapse/refractory diffuse large B cell lymphoma: Spanish multicenter GETH/GELTAMO study. Bone Marrow Transplant. 2021;56:1919–28.",
+  "Bethge WA, Martus P, Schmitt M, Holtick U, Subklewe M, von Tresckow B, Ayuk F, Wagner-Drouet EM, Wulf GG, Marks R, Penack O, Schnetzke U, Koenecke C, von Bonin M, Stelljes M, Glass B, Baldus CD, Vucinic V, Mougiakakos D, Topp M, et al. GLA/DRST real-world outcome analysis of CAR T-cell therapies for large B-cell lymphoma in Germany. Blood. 2022;140:349–58.",
+  "Crump M, Kuruvilla J, Couban S, MacDonald DA, Kukreti V, Kouroukis CT, Rubinger M, Buckstein R, Imrie KR, Federico M, Di Renzo N, Howson-Jan K, Baetz T, Kaizer L, Voralia M, Olney HJ, Turner AR, Sussman J, Hay AE, Djurfeldt MS, et al. Randomized comparison of gemcitabine, dexamethasone, and cisplatin versus dexamethasone, cytarabine, and cisplatin chemotherapy before autologous stem-cell transplantation for relapsed and refractory aggressive lymphomas: NCIC-CTG LY.12. J Clin Oncol. 2014;32:3490–6.",
+  "Crump M, Neelapu SS, Farooq U, Van Den Neste E, Kuruvilla J, Westin J, Link BK, Hay A, Cerhan JR, Zhu L, Boussetta S, Feng L, Maurer MJ, Navale L, Wiezorek J, Go WY, Gisselbrecht C. Outcomes in refractory diffuse large B-cell lymphoma: results from the international SCHOLAR-1 study. Blood. 2017;130:1800–8.",
+  "Dickinson MJ, Carlo-Stella C, Morschhauser F, Bachy E, Corradini P, Iacoboni G, Khan C, Wróbel T, Offner F, Trněný M, Wu S-J, Cartron G, Hertzberg M, Sureda A, Perez-Callejo D, Lundberg L, Relf J, Dixon M, Clark E, Humphrey K, et al. Glofitamab for relapsed or refractory diffuse large B-cell lymphoma. N Engl J Med. 2022;387:2220–31.",
+  "Dreger P, Sureda A, Ahn KW, Eapen M, Litovich C, Finel H, Boumendil A, Gopal A, Herrera AF, Schmid C, Diez-Martin JL, Fuchs E, Bolaños-Meade J, Gooptu M, Al Malki MM, Castagna L, Ciurea SO, Dominietto A, Blaise D, Ciceri F, et al. PTCy-based haploidentical vs matched related or unrelated donor reduced-intensity conditioning transplant for DLBCL. Blood Adv. 2019;3:360–9.",
+  "Fenske TS, Ahn KW, Graff TM, DiGilio A, Bashir Q, Kamble RT, Ayala E, Bacher U, Brammer JE, Cairo M, Chen A, Chen Y-B, Chhabra S, D’Souza A, Farooq U, Freytes C, Ganguly S, Hertzberg M, Inwards D, Jaglowski S, et al. Allogeneic transplantation provides durable remission in a subset of DLBCL patients relapsing after autologous transplantation. Br J Haematol. 2016;174:235–48.",
+  "Gisselbrecht C, Glass B, Mounier N, Singh Gill D, Linch DC, Trneny M, Bosly A, Ketterer N, Shpilberg O, Hagberg H, Ma D, Brière J, Moskowitz CH, Schmitz N. Salvage regimens with autologous transplantation for relapsed large B-cell lymphoma in the rituximab era. J Clin Oncol. 2010;28:4184–90.",
+  "Gisselbrecht C, Schmitz N, Mounier N, Singh Gill D, Linch DC, Trneny M, Bosly A, Milpied NJ, Radford J, Ketterer N, Shpilberg O, Dührsen U, Hagberg H, Ma DD, Viardot A, Lowenthal R, Brière J, Salles G, Moskowitz CH, Glass B. Rituximab maintenance therapy after autologous stem-cell transplantation in patients with relapsed CD20(+) diffuse large B-cell lymphoma: final analysis of the collaborative trial in relapsed aggressive lymphoma. J Clin Oncol. 2012;30:4462–9.",
+  "Glass B, Hasenkamp J, Wulf G, Dreger P, Pfreundschuh M, Gramatzki M, Silling G, Wilhelm C, Zeis M, Görlitz A, Pfeiffer S, Hilgers R, Truemper L, Schmitz N, German High-Grade Lymphoma Study Group. Rituximab after lymphoma-directed conditioning and allogeneic stem-cell transplantation for relapsed and refractory aggressive non-Hodgkin lymphoma (DSHNHL R3): an open-label, randomised, phase 2 trial. Lancet Oncol. 2014;15:757–66.",
+  "Kamdar M, Solomon SR, Arnason JE, Johnston PB, Glass B, Bachanova V, Ibrahimi S, Mielke S, Mutsaers PGNJ, Hernandez-Ilizaliturri FJ, Izutsu K, Morschhauser F, Lunning MA, Maloney DG, Crotta A, Montheard S, Previtali A, Stepan L, Ogasawara K, Mack T, et al. Lisocabtagene maraleucel (liso-cel), a CD19-directed chimeric antigen receptor (CAR) T cell therapy, versus standard of care (SOC) with salvage chemotherapy (CT) followed by autologous stem cell transplantation (ASCT) as second-line (2L) treatment in patients (Pts) with relapsed or refractory (R/R) large B-cell lymphoma (LBCL): results from the randomized phase 3 transform study. Blood. 2021;138:91. https://ashpublications.org/blood/article/138/Supplement/1/91/477568/Lisocabtagene- Maraleucel- liso- cel- a- CD19- Directed",
+  "Kanate AS, Mussetti A, Kharfan-Dabaja MA, Ahn KW, DiGilio A, Beitinjaneh A, Chhabra S, Fenske TS, Freytes C, Gale RP, Ganguly S, Hertzberg M, Klyuchnikov E, Lazarus HM, Olsson R, Perales M-A, Rezvani A, Riches M, Saad A, Slavin S, et al. Reduced-intensity transplantation for lymphomas using haploidentical related donors vs HLA-matched unrelated donors. Blood. 2016;127:938–47.",
+  "Lamy T, Damaj G, Soubeyran P, Gyan E, Cartron G, Bouabdallah K, Gressin R, Cornillon J, Banos A, Le Du K, Benchalal M, Moles M-P, Le Gouill S, Fleury J, Godmer P, Maisonneuve H, Deconinck E, Houot R, Laribi K, Marolleau JP, et al. R-CHOP 14 with or without radiotherapy in nonbulky limited-stage diffuse large B-cell lymphoma. Blood. 2018;131:174–81.",
+  "Locke FL, Miklos DB, Jacobson CA, Perales M-A, Kersten M-J, Oluwole OO, Ghobadi A, Rapoport AP, McGuirk J, Pagel JM, Muñoz J, Farooq U, van Meerten T, Reagan PM, Sureda A, Flinn IW, Vandenberghe P, Song KW, Dickinson M, Minnema MC, et al. Axicabtagene ciloleucel as second-line therapy for large B-cell lymphoma. N Engl J Med. 2022;386:640–54.",
+  "Mussetti A, Bento L, Bastos-Oreiro M, Rius-Sansalvador B, Albo C, Bailen R, Barba P, Benzaquén A, Briones J, Caballero AC, Campos A, Español I, Ferra C, López SG, González Sierra PA, Guerra LM, Hernani R, Iacoboni G, Jiménez-Ubieto A, Kwon M, et al. Role of allogeneic hematopoietic cell transplant for relapsed/refractory aggressive B-cell lymphomas in the CART era. Bone Marrow Transplant. 2023;58:738.",
+  "Neelapu SS, Locke FL, Bartlett NL, Lekakis LJ, Miklos DB, Jacobson CA, Braunschweig I, Oluwole OO, Siddiqi T, Lin Y, Timmerman JM, Stiff PJ, Friedberg JW, Flinn IW, Goy A, Hill BT, Smith MR, Deol A, Farooq U, McSweeney P, et al. Axicabtagene ciloleucel CAR T-cell therapy in refractory large B-cell lymphoma. N Engl J Med. 2017;377:2531–44.",
+  "Oki Y, Noorani M, Lin P, Davis RE, Neelapu SS, Ma L, Ahmed M, Rodriguez MA, Hagemeister FB, Fowler N, Wang M, Fanale MA, Nastoupil L, Samaniego F, Lee HJ, Dabaja BS, Pinnix CC, Medeiros LJ, Nieto Y, Khouri I, et al. Double hit lymphoma: the MD Anderson Cancer Center clinical experience. Br J Haematol. 2014;166:891–901.",
+  "Robinson SP, Boumendil A, Finel H, Dreger P, Sureda A, Hermine O, Montoto S. High-dose therapy with BEAC conditioning compared to BEAM conditioning prior to autologous stem cell transplantation for non-Hodgkin lymphoma: no differences in toxicity or outcome. A matched-control study of the EBMT-lymphoma working party. Bone Marrow Transplant. 2018;53:1553–9.",
+  "Schuster SJ, Bishop MR, Tam CS, Waller EK, Borchmann P, McGuirk JP, Jäger U, Jaglowski S, Andreadis C, Westin JR, Fleury I, Bachanova V, Foley SR, Ho PJ, Mielke S, Magenau JM, Holte H, Pantano S, Pacaud LB, Awasthi R, et al. Tisagenlecleucel in adult relapsed or refractory diffuse large B-cell lymphoma. N Engl J Med. 2019;380:45–56.",
+  "Sehgal A, Hoda D, Riedell PA, Ghosh N, Hamadani M, Hildebrandt GC, Godwin JE, Reagan PM, Wagner-Johnston N, Essell J, Nath R, Solomon SR, Champion R, Licitra E, Fanning S, Gupta N, Dubowy R, D’Andrea A, Wang L, Ogasawara K, et al. Lisocabtagene maraleucel as second-line therapy in adults with relapsed or refractory large B-cell lymphoma who were not intended for haematopoietic stem cell transplantation (PILOT): an open-label, phase 2 study. Lancet Oncol. 2022;23:1066–77.",
+  "Sehn LH, Berry B, Chhanabhai M, Fitzgerald C, Gill K, Hoskins P, Klasa R, Savage KJ, Shenkier T, Sutherland J, Gascoyne RD, Connors JM. The revised International Prognostic Index (R-IPI) is a better predictor of outcome than the standard IPI for patients with diffuse large B-cell lymphoma treated with R-CHOP. Blood. 2007;109:1857–61.",
+  "Smith A, Crouch S, Lax S, Li J, Painter D, Howell D, Patmore R, Jack A, Roman E. Lymphoma incidence, survival and prevalence 2004–2014: sub-type analyses from the UK’s Haematological Malignancy Research Network. Br J Cancer. 2015;112:1575–84.",
+  "Snowden JA, Sánchez-Ortega I, Corbacioglu S, Basak GW, Chabannon C, de la Camara R, Dolstra H, Duarte RF, Glass B, Greco R, Lankester AC, Mohty M, Neven B, de Latour RP, Pedrazzoli P, Peric Z, Yakoub-Agha I, Sureda A, Kröger N, European Society for Blood and Marrow Transplantation (EBMT). Indications for haematopoietic cell transplantation for haematological diseases, solid tumours and immune disorders: current practice in Europe, 2022. Bone Marrow Transplant. 2022;57:1217–39.",
+  "Thieblemont C, Phillips T, Ghesquieres H, Cheah CY, Clausen MR, Cunningham D, Do YR, Feldman T, Gasiorowski R, Jurczak W, Kim TM, Lewis DJ, van der Poel M, Poon ML, Cota Stirner M, Kilavuz N, Chiu C, Chen M, Sacchi M, Elliott B, et al. Epcoritamab, a novel, subcutaneous CD3xCD20 bispecific T-cell-engaging antibody, in relapsed or refractory large B-cell lymphoma: dose expansion in a phase I/II trial. J Clin Oncol. 2023;41:2238–47.",
+  "Tilly H, Morschhauser F, Sehn LH, Friedberg JW, Trněný M, Sharman JP, Herbaux C, Burke JM, Matasar M, Rai S, Izutsu K, Mehta-Shah N, Oberic L, Chauchet A, Jurczak W, Song Y, Greil R, Mykhalska L, Bergua-Burgués JM, Cheung MC, et al. Polatuzumab vedotin in previously untreated diffuse large B-cell lymphoma. N Engl J Med. 2022;386:351–63.",
+  "Zhou Z, Sehn LH, Rademaker AW, Gordon LI, Lacasce AS, Crosby-Thompson A, Vanderplas A, Zelenetz AD, Abel GA, Rodriguez MA, Nademanee A, Kaminski MS, Czuczman MS, Millenson M, Niland J, Gascoyne RD, Connors JM, Friedberg JW, Winter JN. An enhanced international prognostic index (NCCN-IPI) for patients with diffuse large B-cell lymphoma treated in the rituximab era. Blood. 2014;123:837–42.",
+  "Ziepert M, Hasenclever D, Kuhnt E, Glass B, Schmitz N, Pfreundschuh M, Loeffler M. Standard international prognostic index remains a valid predictor of outcome for patients with aggressive CD20+ B-cell lymphoma in the rituximab era. J Clin Oncol. 2010;28:2373–80."
+ ]
+}

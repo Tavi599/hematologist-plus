@@ -1,0 +1,401 @@
+{
+ "number": 57,
+ "part": "VII",
+ "page_pdf": [
+  516,
+  524
+ ],
+ "page_printed": 513,
+ "title_en": "Monitoring Measurable Residual Disease in ALL and AML",
+ "authors": "Peter Bader, Hermann Kreyenberg, and Gert Ossenkoppele",
+ "affiliations": "P. Bader (*) Division for Stem Cell Transplantation and Immunology, University Hospital for Children and Adolescents, Goethe University Frankfurt am Main, Frankfurt, Germany e-mail: p.bader@em.uni-frankfurt.de H. Kreyenberg Division of Stem Cell Transplantation and Immunology, Center for Children and Adolescents, University Hospital Frankfurt, Frankfurt, Germany e-mail: Kreyenberg@med.uni-frankfurt.de G. Ossenkoppele Department of Hematology, Amsterdam Universitaire Medische Centra, Location VUMC, Amsterdam, The Netherlands e-mail: g.ossenkoppele@amsterdamumc.nl",
+ "doi": "10.1007/978-3-031-44080-9_57",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "4ae2583784",
+   "type": "h2",
+   "num": "57.1",
+   "en": "Monitoring MRD in ALL"
+  },
+  {
+   "id": "87f22dc472",
+   "type": "p",
+   "en": "Peter Bader and Hermann Kreyenberg"
+  },
+  {
+   "id": "195611c52d",
+   "type": "h3",
+   "num": "57.1.1",
+   "en": "Introduction"
+  },
+  {
+   "id": "e25b321ba9",
+   "type": "p",
+   "en": "In ALL evaluation of molecular treatment response, assessment of minimal residual disease, nowadays named measurable residual disease (MRD), is a substantial independent predictor of outcome, as proven by randomized studies (Conter et al. 2010; Gökbuget et al. 2012; Bassan and Spinelli 2015). Consequently, MRD is implemented in virtually all clinical protocols in order to supplement or to redefine multifactorial risk stratification with optional customized treatment intensity. The detection of leukemic cells below the limit of classical cytomorphology is feasible by either disease-specific alterations of the immune phenotype or unique genetic features. Several competing and complementing MRD methods have been developed with preference application according to clinical protocols (Van der Velden et al. 2007; van Dongen et al. 2015)."
+  },
+  {
+   "id": "9c2b1e9bf3",
+   "type": "h3",
+   "num": "57.1.2",
+   "en": "MRD Assessment by IG/TCR Real-Time PCR"
+  },
+  {
+   "id": "539ab09c65",
+   "type": "p",
+   "en": "The discontinuous immune receptor genes provide the immune repertoire by somatic recombination of variable (V), diversification (D), and junction (J) elements, thus forming hypervariable CDR3 (complementarity-determining region 3) regions during lymphocyte maturation. Such rearrangements can serve as clonal index of leukemia blasts originating from lymphoid precursor stages. Additionally, due to a relaxed regulatory control, leukemia blasts can harbor incomplete rearrangements and cross-lineage rearrangements and tend to accumulate simultaneously multiple rearrangements. Quantitative real-time PCR using junction complementary allele-specific oligonucleotides (ASO) frequently reaches a detection limit of 1E-05 with a quantitative range of 1E-04, is applicable to vast majority of cases, and has a high degree of standardization (Van der Velden et al. 2007)."
+  },
+  {
+   "id": "388feddafc",
+   "type": "h3",
+   "num": "57.1.3",
+   "en": "MRD Assessment by IG/TCR Digital PCR"
+  },
+  {
+   "id": "71c64a2342",
+   "type": "p",
+   "en": "One significant drawback of qPCR is its relatively high level of inaccuracy, susceptibility to inhibiting substances, and reliance on reference samples for MRD quantification. A novel technique, known as digital PCR and considered the third generation of PCR (Vogelstein and Kinzler 1999; Starza et al. 2022), has been developed. Although the digital PCR approach shares similarities with qPCR in terms of targets and primers, it can overcome these limitations. However, achieving precision in digital PCR relies on maintaining a well-balanced sample load in the reaction compartments (Huggett et al. 2013). The clinical usefulness of this method is still being verified (Della Starza et al. 2021)."
+  },
+  {
+   "id": "fe09c5463a",
+   "type": "h3",
+   "num": "57.1.4",
+   "en": "MRD Assessment by Fusion Gene Transcript"
+  },
+  {
+   "id": "8603a27022",
+   "type": "p",
+   "en": "Most frequent recurrent reciprocal translocations are in ALL t(9;22)(q34;q11) (BCR-ABL1), t(12;21)(p13;q23) (ETV6-RUNX1), and t(4;11) (q21;q22) (MLL-AFF1) with age stage- associated preponderance in adults, childhood, and infant ALL, respectively. Derived chimeric fusion transcripts are validated marker for MRD detection by real-time PCR with an achievable detection limit of 1E-06. The methodology has been standardized by the European Against Cancer (EAC) program (Gabert et al. 2003)."
+  },
+  {
+   "id": "92fddf511a",
+   "type": "h3",
+   "num": "57.1.5",
+   "en": "NGS (Next-Generation Sequencing)"
+  },
+  {
+   "id": "4194a334a5",
+   "type": "p",
+   "en": "High-throughput sequencing (HTS) of immune receptor genes by next-generation sequencing (NGS) is a novel option for MRD. This methodology provides comprehensive qualitative and quantitative information regarding clonal consistence of the diagnostic sample and shares one protocol for index determination and MRD assessment without the need of individual reagents. Potential subleukemic and new emerging leukemic clones also are covered. PCR steps during library construction can introduce bias effecting results internal controls and normalization calculations are necessary the generated data volume is high and data interpretation demand biostatistics expertise. Due to high sample capacity, NGS favors a centralized concept, and service is available to commercial providers by academic centers (Kotrova et al. 2015)."
+  },
+  {
+   "id": "35bee5ca22",
+   "type": "h3",
+   "num": "57.1.6",
+   "en": "Flow Cytometry"
+  },
+  {
+   "id": "edef378728",
+   "type": "p",
+   "en": "MRD by multicomponent flow cytometry (MFC) distinguishes leukemia-associated immune phenotypes (LAIP) and regular cells. LAIP consists of cell lineage maturation stage-specific (backbone) markers in combination with illegitimate markers. The standard four- to six-color approaches have been developed simultaneously by several centers. Therefore, the applied marker panels depend on study protocol. The consistently achieved detection limit is 1E-04. Recently, increase of specificity and sensitivity was enabled by high-throughput procedures demanding eight-or ten-color equipment. Here, the options for targeted and visualized antigens allow simultaneous visualization of all developmental lymphocyte stages serving as background to distinguish leukemic cells. The EuroFlow Consortium validated available antibody panels and controls which can be applied in a standardized way, including automated gating with supportive software, data storage and comparison, accurate quantitative result, and option for IVD development. Similar to the NGS approach, the generated data volume is high, and data interpretation demands biostatistics expertise; nevertheless, the concept allows decentralized data acquisition (Pedreira et al. 2013)."
+  },
+  {
+   "id": "ab0fb05e56",
+   "type": "h3",
+   "num": "57.1.7",
+   "en": "Limitations of MRD Assessment"
+  },
+  {
+   "id": "38ee96ed83",
+   "type": "p",
+   "en": "The determined level of MRD always is a result of complex interrelation of baseline characteristics of tumor and patient, time point of MRD"
+  },
+  {
+   "id": "11f5db078e",
+   "type": "p",
+   "en": "evaluation, therapeutic agents, course of clearance, and degree of therapy resistance. Several measurements therefore are mandatory. Adverse circumstances for MRD assessment are clonal selection and clonal evolution, since the associated index might be missed. Potentially impacted are leukemia with initial oligoclonality as observed in approximately 15% of B-ALL, and up to 1000 subclones have been reported (Wu et al. 2016). Phenotypic plasticity under treatment and massive lymphocyte regeneration can cause false negativity or positivity, a solvable problem by applying mentioned high-throughput methodologies. Achievable detection limit is correlated with cell count of sample, and aplastic samples are challenging. Finally, all methodologies use different sample preparations, and analyses refer to different units, a circumstance which interferes result comparison."
+  },
+  {
+   "id": "d6e7606e3b",
+   "type": "h3",
+   "num": "57.1.8",
+   "en": "MRD in the Setting of HCT"
+  },
+  {
+   "id": "6ecdfcee7f",
+   "type": "p",
+   "en": "As all adult patients with ALL who relapse after initial chemotherapy have an absolute indication for allo-HCT, pediatric patients are stratified into different treatment groups. Main prognostic determinants in these patients are the blast immune phenotype, time to relapse, and site of relapse. High-risk patients who experienced early isolated BM relapse, early relapse involving BM, and any BM relapse of T-lineage ALL have clear indications for HCT. Intermediate-risk patients experienced early or late combined BM relapse and a late isolated BM relapse of a B-cell precursor (BCP)."
+  },
+  {
+   "id": "43c0df9860",
+   "type": "p",
+   "en": "ALL and very early and early isolated extramedullary relapse of either BCP-ALL or T-ALL have indication for HCT if post-induction MRD exceeds a threshold of 1E-03 (Eckert et al. 2013)."
+  },
+  {
+   "id": "a200a8f900",
+   "type": "p",
+   "en": "During the past decades, it could be clearly shown by several studies that the level of MRD immediately prior to transplant does have a clear prognostic impact on post-HCT outcome (Knechtli et al. 1998). Retrospective studies in children with relapsed ALL revealed an important cutoff for post-HCT outcome. Patients who received transplantation with an MRD load of ≥10 to 4 leukemic cells had a by far inferior prognosis than patients with lower MRD loads before transplant (Bader et al. 2009). Based on these findings, several studies are now underway investigating strategies to improve outcome in these ultrahigh-risk patients. Adaption of transplant approaches might allow successful transplantation (Leung et al. 2012)."
+  },
+  {
+   "id": "a1df97d647",
+   "type": "p",
+   "en": "Spinelli et al. showed that almost half of the patients with high levels of MRD before transplantation achieved molecular remission by day +100 (Spinelli et al. 2007). This finding indicates that MRD detection posttransplant provides additional value to the MRD assessment prior to transplantation. It could be demonstrated in prospective clinical studies that the close monitoring of MRD by different approaches allows the prediction of relapse and may therefore form the basis of different intervention strategies making use of leukemia-specific targeted therapy (Bader et al. 2015; Balduzzi et al. 2014). Future perspectives will focus on MRD-guided intervention to prevent overt relapse (Rettinger et al. 2017)."
+  },
+  {
+   "id": "957e0ed1f1",
+   "type": "h2",
+   "num": "57.2",
+   "en": "MRD in AML"
+  },
+  {
+   "id": "c5e19739a8",
+   "type": "p",
+   "en": "Gert Ossenkoppele"
+  },
+  {
+   "id": "195611c52d-2",
+   "type": "h3",
+   "num": "57.2.1",
+   "en": "Introduction"
+  },
+  {
+   "id": "7b31d0833a",
+   "type": "p",
+   "en": "Defining residual disease below the level of 5% leukemic cells has changed the landscape of risk classification (Ossenkoppele 2013). The measurable residual disease (MRD) approach establishes the presence of leukemia cells down to levels of 1:10³ to 1:10⁶ white blood cells, compared to 1:20 for morphology. The ELN 2022 recommendation response criteria includes apart from CR without measurable residual disease (CRMRD−) now also CRiMRD− and CRhMRD− and is defined as CR,Cri/CRh with negativity for a genetic marker by RT-qPCR or CR with negativity by multicolor flow cytometry (MFC) (Döhner et al. 2022)."
+  },
+  {
+   "id": "3956975fb7",
+   "type": "p",
+   "en": "The reasons to apply MRD assessment in AML are (1) to provide a quantitative methodology to establish a deeper remission status; (2) to"
+  },
+  {
+   "id": "d07ba3244e",
+   "type": "p",
+   "en": "better predict outcome and guide post-remission treatment; (3) to identify early relapse as a robust posttransplant surveillance, in order to enable early intervention; and (4) in the future to serve as a surrogate endpoint for survival to accelerate drug testing and approval (Ossenkoppele and Schuurhuis 2016)."
+  },
+  {
+   "id": "b63614d988",
+   "type": "p",
+   "en": "The recent ELN MRD consensus document includes leads for standardized multiparameter flow cytometry-based MRD (MFC-MRD) and molecular MRD, MRD thresholds, and guidelines for clinical implications (Heuser et al. 2021)."
+  },
+  {
+   "id": "339db495be",
+   "type": "h3",
+   "num": "57.2.2",
+   "en": "ethods for MRD Detection M"
+  },
+  {
+   "id": "70c53e351d",
+   "type": "p",
+   "en": "57.2.2.1 MRD Detection by PCR Real-time quantitative PCR (RT-qPCR) allows MRD detection in cases with chimeric fusion genes generated by balanced chromosomal rearrangements (Grimwade and Freeman 2014). Other genetic alterations can also be used for MRD detection including mutated NPM1, RUNX1-RUNX1T1, CBFBMYH11, PML-RARA, KMT2A-MLLT3, DEK-NUP214, BCR-ABL, and WT1. Apart from t(15;17) and RUNX1–RUNX1T1 and CBFB–MYH11, currently, NPM1 is the best-validated molecular marker for MRD assessment. PCR assessment of MRD is in about 40–60% of patients in principle possible. The methodology has been standardized for several molecular markers for clinical implementation in the Europe Against Cancer (EAC) program (Gabert et al. 2003)."
+  },
+  {
+   "id": "c9638b9f09",
+   "type": "p",
+   "en": "57.2.2.2 mmune MRD by Multicolor I Flow Cytometry The basic principle is to integrate diagnostic leukemia- associated immune phenotypes (LAIP). and different-from-normal (DfN) aberrant immunophenotype approaches to enable tracking of diagnostic and emergent leukemic clones (Heuser et al. 2021). These LAIPs consist of normally occurring markers, present in aberrant combinations in AML but in very low frequencies in normal and regenerating BM. The background levels of LAIP in normal and regenerating BM levels, in particular, although low, prevent specific detection of aberrancies with sensitivities higher than 1:10,000."
+  },
+  {
+   "id": "92fd2db108",
+   "type": "p",
+   "en": "If no diagnosis sample is present, one can make use of “different-from-normal” approach which uses a standard fixed antibody panel to recognize leukemic cells based on their difference with normal hematopoietic cells (Loken et al. 2012)."
+  },
+  {
+   "id": "5f589022c7",
+   "type": "p",
+   "en": "Currently, immune MRD aberrancies can be detected in over 90% of AML cases at diagnosis."
+  },
+  {
+   "id": "46ab0f8478",
+   "type": "p",
+   "en": "57.2.2.3 MRD Detection by NGS NGS-based molecular MRD assessment targeted NGS-based MRD testing using specific mutations identified at diagnosis vs agnostic panel approaches are now mostly exploratively applied. Diagnostic AML samples are generally screened for mutations using a multigene panel (Jongen-Lavrencic et al. 2018)."
+  },
+  {
+   "id": "9bd0c3affb",
+   "type": "p",
+   "en": "Prognostic impact has been shown for selected mutations present at diagnosis and/or in complete remission (CR) samples (Ghannam et al. 2020; Dillon et al. 2023). Germline mutations (ANKRD26, CEBPA, DDX41, ETV6, GATA2, RUNX1, andTP53) are noninformative as NGS-MRD markers (Godley 2021)."
+  },
+  {
+   "id": "d2ee9521f9",
+   "type": "p",
+   "en": "DMT3A, TET2, and ASXL1 (DTA) mutations can be found in age-related clonal hematopoiesis and like germline mutations should not be used for MRD analysis as these mutations often persist during remission and do usually not represent the leukemic clone (Shlush 2018; Hasserjian et al. 2020)."
+  },
+  {
+   "id": "bb696e5872",
+   "type": "p",
+   "en": "Recently, three studies showed that FLT3-ITD is a highly prognostic biomarker in AML patient when measured after induction chemotherapy (Grob et al. 2023; Loo et al. 2022; Dillon et al. 2020). By a bioinformatic approach, FLT3-ITDs can be reliably detected with NGS (Blätte et al. 2019). These studies uniformly show that FLT3-ITD MRD ≥ 0.01% is clearly associated with outcome."
+  },
+  {
+   "id": "b1b7533cae",
+   "type": "h3",
+   "num": "57.2.3",
+   "en": "MRD in Clinical Studies"
+  },
+  {
+   "id": "4f6373cf32",
+   "type": "p",
+   "en": "Despite a multitude of prognostic factors at diagnosis, the outcome of patients is still highly"
+  },
+  {
+   "id": "3b05d4bd27",
+   "type": "p",
+   "en": "variable and not individually predictable. On-treatment parameters in combination with prognostic factors present at diagnosis may be more useful."
+  },
+  {
+   "id": "22253f4d2b",
+   "type": "p",
+   "en": "The prognostic value of MRD in remission has been shown in patients treated with both intensive and more recently less-intensive treatment modalities (Terwijn et al. 2013a; Maiti et al. 2021; Freeman et al. 2013; Pratz et al. 2021). A recent systematic meta-analysis of 81 publications has convincingly shown the prognostic value of MRD for relapse and overall survival (Short et al. 2020). However, MRD is far from perfect, since relapses still occur in MRD-negative patients. Thus, a negative MRD test result may not indicate complete disease eradication but refers to disease below the MRD test threshold in the tested sample. Conversely, not all patients who are MRD- positive will relapse. Of note, Mol-MRD may remain detectable at low levels (CRMRD-LL) without prognostic significance and, therefore, are called negative operationally if the MRD values are below the threshold linked to prognosis (Dillon et al. 2020; Heuser et al. 2021). For instance, in CBF-AML and NPM1 mutant AML, the transcripts may show persistent low-level expression after treatment, but this is not prognostic of relapse (Freeman et al. 2018)."
+  },
+  {
+   "id": "6e32418a4d",
+   "type": "p",
+   "en": "Unfortunately, surrogacy for survival has not been proven yet (Hourigan et al. 2017; Ossenkoppele and Schuurhuis 2016; Walter et al. 2021)."
+  },
+  {
+   "id": "42f22f657d",
+   "type": "h3",
+   "num": "57.2.4",
+   "en": "MRD in Relation to Transplant"
+  },
+  {
+   "id": "74c2e61b9c",
+   "type": "p",
+   "en": "Evidence is accumulating that the presence of MRD assessed by multicolor flow cytometry immediately prior to allogeneic HCT is a strong independent predictor of posttransplant outcomes in AML (Buckley et al. 2017; Walter et al. 2015). Araki et al. showed that in 359 adults, the 3-year relapse rate was 67% in MRD-positive patients, compared to 22% in MRD-negative patients, resulting in OS of 26% vs. 73%, respectively (Araki et al. 2016). This applies for the myeloablative as well as for the non-myeloablative transplant setting. The same was found in a large EBMT study (Gilleece et al. 2018)."
+  },
+  {
+   "id": "07e09fb65c",
+   "type": "p",
+   "en": "Also, molecular MRD as measured by RT-PCR in NPM1-mutated AML has a significant impact on outcome after allo-HCT (Balsat et al. 2017)."
+  },
+  {
+   "id": "35acd45a58",
+   "type": "p",
+   "en": "Pretransplant MRD is prognostically also useful in CR2 (Gilleece et al. 2020). Importantly, it was demonstrated that the intensity of the conditioning regimen is dependent on MRD status. Myeloablative conditioning was only advantageous in the MRD+ setting (MRD+, RIC 34% vs MAC 59% 3 years OS; MRD−, RIC 61% vs MAC 60% 3 years OS) (Hourigan et al. 2020). We recently showed that MRD-guided therapy in intermediate-risk AML patients is a valuable strategy in reducing the number of allogeneic transplants without negatively affecting survival (Tettero et al. 2023)."
+  },
+  {
+   "id": "10fbbaf38f",
+   "type": "p",
+   "en": "Only sparse data is available for the posttransplant situation. Most available studies showed that the presence of posttransplant MRD had an adverse prognostic impact (Klyuchnikov et al. 2022; Zhou et al. 2016). In one study, this was irrespective of pretransplant MRD in patients with AML (Loke et al. 2023). Many trial groups certainly in Europe decide which post-remission treatment should be given based on MRD. Allo- HCT in the favorable group is usually not applied in the MRD-negative setting. For the intermediate group MRD− AML patients do not get an alloHCT in many centers and is only applied in CR2. The adverse-risk patient receives an allo- HCT independent of MRD status. The value should still be prospectively proven."
+  },
+  {
+   "id": "d5012517de",
+   "type": "h3",
+   "num": "57.2.5",
+   "en": "linical Intervention Studies C Posttransplant"
+  },
+  {
+   "id": "f2d9838119",
+   "type": "p",
+   "en": "There is a current much interest on intervention studies in the posttransplant setting based on MRD assessment. Preemptive therapy with azacitidine can prevent or substantially delay hematological relapse in MRD-positive patients with MDS or AML who are at high risk of relapse (Platzbecker et al. 2018). A number of groups summarized by Biederstadt et al. have explored administering DLI preemptively on detection of measurable residual disease (MRD) or mixed chimerism. Evidence for the effectiveness of this"
+  },
+  {
+   "id": "6265e5a1d2",
+   "type": "p",
+   "en": "strategy, although encouraging, comes from only a few, mostly single-center (Biederstädt and Rezvani 2023). Also, application of targeted therapy after transplant (e.g., FLT3 inhibitors) is currently under investigation."
+  },
+  {
+   "id": "d5312b2d86",
+   "type": "p",
+   "en": "It is clear that novel treatment strategies before, during, and after transplant are urgently needed to improve outcomes in AML. Thereby, depth of response prior to transplant, as measured by level of MRD, has emerged as one of the most important predictors of transplant outcome. Randomized trials are warranted to determine if MRD-guided preemptive therapy is associated with improved outcome."
+  },
+  {
+   "id": "2fd884019c",
+   "type": "p",
+   "en": "Most importantly no clinical trial including transplantation trials should be performed without including MRD assessment."
+  },
+  {
+   "id": "ad0e6379c6",
+   "type": "h3",
+   "num": "57.2.6",
+   "en": "Future Developments"
+  },
+  {
+   "id": "f70b2221c8",
+   "type": "p",
+   "en": "New technologies are emerging to assess MRD. Standardization and harmonization are important and are currently further explored by the ELN MRD WP (Tettero et al. 2021). Quantifying leukemic stem cells seems a promising approach (Ngai et al. 2023; Terwijn et al. 2014; Zeijlemaker et al. 2016). MRD-guided studies like post-remission decisions, MRD conversion pretransplant, MRD-directed intensification of conditioning regimens, and posttransplant intervention should be encouraged."
+  },
+  {
+   "id": "38f1403eb4",
+   "type": "li",
+   "en": "• MRD is now included in the definition of CR."
+  },
+  {
+   "id": "593663d1bd",
+   "type": "li",
+   "en": "• MRD positivity is an independent predictor of relapse after chemotherapy in AML patients and a negative predictor for ALL patients."
+  },
+  {
+   "id": "c1d5874511",
+   "type": "li",
+   "en": "• Pretransplant MRD positivity is highly indicative for relapse."
+  },
+  {
+   "id": "2d872726c4",
+   "type": "li",
+   "en": "• MRD assessment should be implemented in every clinical trial."
+  },
+  {
+   "id": "f949043d55",
+   "type": "li",
+   "en": "• Prospective intervention studies guided by MRD are being performed."
+  }
+ ],
+ "references": [
+  "Araki D, Wood BL, Othus M, et al. Allogeneic hematopoietic cell transplantation for acute myeloid leukemia: time to move toward a minimal residual disease-based definition of complete remission? J Clin Oncol. 2016;34:329–36.",
+  "Bader P, Kreyenberg H, Henze G, et al. Prognostic value of minimal residual disease quantification before allogeneic stem-cell transplantation in relapsed childhood acute lymphoblastic leukemia: the ALL-REZ BFM study group. J Clin Oncol. 2009;27:377–84.",
+  "Bader P, Kreyenberg H, Stackelberg A, et al. Monitoring of minimal residual disease after allogeneic stem-cell transplantation in relapsed childhood acute lymphoblastic leukemia allows for the identification of impending relapse: results of the ALL-BFM-SCT 2003 trial. J Clin Oncol. 2015;33:1275–84.",
+  "Balduzzi A, Di Maio L, Silvestri D, et al. Minimal residual disease before and after transplantation for childhood acute lymphoblastic leukaemia: is there any room for intervention? Br J Haematol. 2014;164:396–408.",
+  "Balsat M, Renneville A, Thomas X, et al. Postinduction minimal residual disease predicts outcome and benefit from allogeneic stem cell transplantation in acute myeloid leukemia with NPM1 mutation: a study by the Acute Leukemia French Association Group. J Clin Oncol. 2017;35:185–93.",
+  "Bassan R, Spinelli O. Minimal residual disease monitoring in adult ALL to determine therapy. Curr Hematol Malig Rep. 2015;10:86–95.",
+  "Biederstädt A, Rezvani K. How I treat high-risk acute myeloid leukemia using preemptive adoptive cellular immunotherapy. Blood. 2023;141:22–38.",
+  "Blätte TJ, Schmalbrock LK, Skambraks S, et al. getITD for FLT3-ITD-based MRD monitoring in AML. Leukemia. 2019;33:2535–9.",
+  "Buckley SA, Wood BL, Othus M, et al. Minimal residual disease prior to allogeneic hematopoietic cell transplantation in acute myeloid leukemia: a meta-analysis. Haematologica. 2017;102:865–73.",
+  "Conter V, Bartram C, Valsecchi M, et al. Molecular response to treatment redefines all prognostic factors in children and adolescents with B-cell precursor acute lymphoblastic leukemia: results in 3184 patients of the AIEOP-BFM ALL 2000 study. Blood. 2010;115:3206.",
+  "Della Starza I, Nunes V, Lovisa F, Silvestri D, Cavalli M, Garofalo A, et al. Droplet digital PCR improves IG-/TR-based MRD risk definition in childhood B-cell precursor acute lymphoblastic leukemia. Hemasphere. 2021;5(3):e543.",
+  "Dillon R, Hills R, Freeman S, et al. Molecular MRD status and outcome after transplantation in NPM1-mutated AML. Blood. 2020;135:680–8.",
+  "Dillon LW, Gui G, Page KM, et al. DNA sequencing to detect residual disease in adults with acute myeloid leukemia prior to hematopoietic cell transplant. JAMA. 2023;329:745–55.",
+  "Döhner H, Wei AH, Appelbaum FR, et al. Diagnosis and management of AML in adults: 2022 recommendations from an international expert panel on behalf of the ELN. Blood. 2022;140:1345–77.",
+  "Eckert C, von Stackelberg A, Seeger K, et al. Minimal residual disease after induction is the strongest predictor of prognosis in intermediate risk relapsed acute lymphoblastic leukaemia—long-term results of trial ALL-REZ BFM P95/96. Eur J Cancer. 2013;49:1346–55.",
+  "Freeman SD, Virgo P, Couzens S, et al. Prognostic relevance of treatment response measured by flow cytometric residual disease detection in older patients with acute myeloid leukemia. J Clin Oncol. 2013;31:4123–31.",
+  "Freeman SD, Hills RK, Virgo P, et al. Measurable residual disease at induction redefines partial response in acute myeloid leukemia and stratifies outcomes in patients at standard risk without NPM1 mutations. J Clin Oncol. 2018;36:1486.",
+  "Gabert J, Beillard E, van der Velden V, et al. Standardization and quality control studies of ‘real-time’ quantitative reverse transcriptase polymerase chain reaction of fusion gene transcripts for residual disease detection in leukemia—a Europe against cancer program. Leukemia. 2003;17:2318–57.",
+  "Ghannam J, Dillon LW, Hourigan CS. Next-generation sequencing for measurable residual disease detection in acute myeloid leukaemia. Br J Haematol. 2020;188:77–85.",
+  "Gilleece MH, Labopin M, Yakoub-Agha I, et al. Measurable residual disease, conditioning regimen intensity, and age predict outcome of allogeneic hematopoietic cell transplantation for acute myeloid leukemia in first remission: a registry analysis of 2292 patients by the acute leukemia working party European Society of Blood and Marrow Transplantation. Am J Hematol. 2018;93:1142–52.",
+  "Gilleece MH, Labopin M, Savani BN, et al. Allogeneic haemopoietic transplantation for acute myeloid leukaemia in second complete remission: a registry report by the acute leukaemia working party of the EBMT. Leukemia. 2020;34:87–99.",
+  "Godley LA. Germline mutations in MDS/AML predisposition disorders. Curr Opin Hematol. 2021;28:86–93.",
+  "Gökbuget N, Kneba M, Raff T, et al. Adult patients with acute lymphoblastic leukemia and molecular failure display a poor prognosis and are candidates for stem cell transplantation and targeted therapies. Blood. 2012;120:1868.",
+  "Grimwade D, Freeman SD. Defining minimal residual disease in acute myeloid leukemia: which platforms are ready for prime time? Blood. 2014;124:3345–55.",
+  "Grob T, Sanders MA, Vonk CM, et al. Prognostic value of FLT3-internal tandem duplication residual disease in acute myeloid leukemia. J Clin Oncol. 2023;41:756–65.",
+  "Hasserjian RP, Steensma DP, Graubert TA, Ebert BL. Clonal hematopoiesis and measurable residual disease assessment in acute myeloid leukemia. Blood. 2020;135:1729–38.",
+  "Heuser M, Freeman SD, Ossenkoppele GJ, et al. 2021 update on MRD in acute myeloid leukemia: a consensus document from the European LeukemiaNet MRD working party. Blood. 2021;138:2753–67.",
+  "Hourigan CS, Gale RP, Gormley NJ, et al. Measurable residual disease testing in acute myeloid leukaemia. Leukemia. 2017;31:1482–90.",
+  "Hourigan CS, Dillon LW, Gui G, et al. Impact of conditioning intensity of allogeneic transplantation for acute myeloid leukemia with genomic evidence of residual disease. J Clin Oncol. 2020;38:1273–83.",
+  "Huggett JF, Foy CA, Benes V, Emslie K, Garson JA, Haynes R, et al. The digital MIQE guidelines: minimum information for publication of quantitative digital PCR experiments. Clin Chem. 2013;59(6):892–902.",
+  "Jongen-Lavrencic M, Grob T, Kavelaars F, et al. Comprehensive molecular residual disease detection of clinical value in acute myeloid leukemia. N Engl J Med. 2018;378:1189–99.",
+  "Klyuchnikov E, Badbaran A, Massoud R, et al. Post-transplantation multicolored flow cytometry-minimal residual disease status on day 100Predicts outcomes for patients with refractory acute myeloid leukemia. Transplant Cell Ther. 2022;28(5):267.e1–7. https://doi.org/10.1016/j.jtct.2022.01.014/.",
+  "Knechtli C, Goulden N, Hancock J, et al. Minimal residual disease status before allogeneic bone marrow transplantation is an important determinant of successful outcome for children and adolescents with acute lymphoblastic leukemia. Blood. 1998;92: 4072–9.",
+  "Kotrova M, Muzikova K, Mejstrikova E, et al. The predictive strength of next-generation sequencing MRD detection for relapse compared with current methods in childhood ALL. Blood. 2015;126:1045–7.",
+  "Leung W, Pui C-H, Coustan-Smith E, et al. Detectable minimal residual disease before hematopoietic cell transplantation is prognostic but does not preclude cure for children with very-high-risk leukemia. Blood. 2012;120:468–72.",
+  "Loke J, McCarthy N, Jackson AE, et al. Posttransplant MRD and T-cell chimerism status predict outcomes in patients allografted with AML/MDS. Blood Adv. 2023;7:3666.",
+  "Loken MR, Alonzo TA, Pardo L, et al. Residual disease detected by multidimensional flow cytometry signifies high relapse risk in patients with de novo acute myeloid leukemia: a report from Children’s Oncology Group. Blood. 2012;120:1581–8.",
+  "Loo S, Dillon R, Ivey A, et al. Pretransplant FLT3-ITD MRD assessed by high-sensitivity PCR-NGS determines posttransplant clinical outcome. Blood. 2022;140:2407–11.",
+  "Maiti A, DiNardo CD, Wang SA, et al. Prognostic value of measurable residual disease after venetoclax and decitabine in acute myeloid leukemia. Blood Adv. 2021;5:1876–18819.",
+  "Ngai LL, Hanekamp D, Janssen F, et al. Prospective validation of the prognostic relevance of CD34+CD38− AML stem cell frequency in the HOVON-SAKK132 trial. Blood. 2023;141:2657–61.",
+  "Ossenkoppele G, Schuurhuis GJ. MRD in AML: time for redefinition of CR? Blood. 2013;121:2166–8.",
+  "Ossenkoppele G, Schuurhuis GJ. MRD in AML: does it already guide therapy decision-making? Hematology Am Soc Hematol Educ Program. 2016;2016:356–65.",
+  "Pedreira C, Costa E, Lecrevisse Q. Overview of clinical flow cytometry data analysis: recent advances and future challenges. Trends Biotechnol. 2013;31:415–25.",
+  "Platzbecker U, Middeke JM, Sockel K, et al. Measurable residual disease-guided treatment with azacitidine to prevent haematological relapse in patients with myelodysplastic syndrome and acute myeloid leukaemia (RELAZA2): an open-label, multicentre, phase 2 trial. Lancet Oncol. 2018;19(12):1668–79.",
+  "Pratz KW, Jonas BA, Pullarkat V, et al. Measurable residual disease response and prognosis in treatment-naïve acute myeloid leukemia with venetoclax and azacitidine. J Clin Oncol. 2021;40:855–65.",
+  "Rettinger E, Merker M, Salzmann-Manrique E, et al. Pre-emptive immunotherapy for clearance of molecular disease in childhood acute lymphoblastic leukemia after transplantation. Biol Blood Marrow Transplant. 2017;23:87–95.",
+  "Shlush LI. Age-related clonal hematopoiesis. Blood. 2018;131:496–504.",
+  "Short NJ, Zhou S, Fu C, et al. Association of measurable residual disease with survival outcomes in patients with acute myeloid leukemia: a systematic review and meta-analysis. JAMA Oncol. 2020;6:1890–9.",
+  "Spinelli O, Peruta B, Tosi M, et al. Clearance of minimal residual disease after allogeneic stem cell transplantation and the prediction of the clinical outcome of adult patients with high-risk acute lymphoblastic leukemia. Haematologica. 2007;92:612–8.",
+  "Starza ID, Eckert C, Drandi D, Cazzaniga G, EuroMRD Consortium. Minimal residual disease analysis by monitoring immunoglobulin and T-cell receptor gene rearrangements by quantitative PCR and droplet digital PCR. Methods Mol Biol. 2022;2453:79–89.",
+  "Terwijn M, van Putten WL, Kelder A, et al. High prognostic impact of flow cytometric minimal residual disease detection in acute myeloid leukemia: data from the HOVON/SAKK AML 42A study. J Clin Oncol. 2013a;31:3889.",
+  "Tettero JM, Ngai LL, Bachas C, et al. Measurable residual disease-guided therapy in intermediate-risk acute myeloid leukemia patients is a valuable strategy in reducing allogeneic transplantation without negatively affecting survival. Haematologica. 2023;108:2794–8. https://doi.org/10.3324/haematol.2022.282639.",
+  "Tettero JM, Freeman S, Buecklein V, et al. Technical aspects of flow cytometry-based measurable residual disease quantification in acute myeloid leukemia: experience of the European LeukemiaNet MRD working party. Hemasphere. 2021;6(1):e676. https://doi. org/10.1097/HS9.000000000000067.",
+  "Terwijn M, van Putten WL, Kelder A, et al. High prognostic impact of flow cytometric minimal residual disease detection in acute myeloid leukemia: data from the HOVON/SAKK AML 42A study. J Clin Oncol. 2013b;31:3889.",
+  "Terwijn M, Zeijlemaker W, Kelder A, et al. Leukemic stem cell frequency: a strong biomarker for clinical outcome in acute myeloid leukemia. PLoS One. 2014;9(9):e107587.",
+  "van der Velden V, Cazzaniga G, Schrauder A, et al. Analysis of minimal residual disease by Ig/TCR gene rearrangements: guidelines for interpretation of real-time quantitative PCR data. Leukemia. 2007;21:604–11.",
+  "van Dongen J, van der Velden V, Brüggemann M, Orfao A. Minimal residual disease diagnostics in acute lymphoblastic leukemia: need for sensitive, fast, and standardized technologies. Blood. 2015;125:3996–4009.",
+  "Vogelstein B, Kinzler KW. Digital PCR. Proc Natl Acad Sci U S A. 1999;96(25):9236–41. https://doi. org/10.1073/pnas.96.25.9236.",
+  "Walter RB, et al. Comparison of minimal residual disease as outcome predictor for AML patients in first complete remission undergoing myeloablative or nonmyeloablative allogeneic hematopoietic cell transplantation. Leukemia. 2015;29:137–44.",
+  "Walter RB, Ofran Y, Wierzbowska A, et al. Measurable residual disease as a biomarker in acute myeloid leukemia: theoretical and practical considerations. Leukemia. 2021;35:1529–38.",
+  "Wu J, Jia S, Wang C, et al. Minimal residual disease detection and evolved IGH clones analysis in acute B lymphoblastic leukemia using IGH deep sequencing. Front Immunol. 2016;7:403.",
+  "Zeijlemaker W, Kelder A, Oussoren-Brockhoff YJ, et al. A simple one-tube assay for immunophenotypical quantification of leukemic stem cells in acute myeloid leukemia. Leukemia. 2016;30:439–46.",
+  "Zhou Y, Othus M, Araki D, et al. Pre- and post-transplant quantification of measurable (‘minimal’) residual disease via multiparameter flow cytometry in adult acute myeloid leukemia. Leukemia. 2016;30:1456–64.",
+  "Ivey A, Hills RK, Simpson MA, et al. Assessment of minimal residual disease in standard-risk AML. N Engl J Med. 2016;374:422–33.",
+  "Short NJ, Kantarjian H, Ravandi F, Konopleva M, Jain N, Kanagal-Shamanna R, et al. High-sensitivity next-generation sequencing MRD assessment in ALL identifies patients at very low risk of relapse. Blood Adv. 2022;6(13):4006–14.",
+  "Svaton M, Skotnicova A, Reznickova L, Rennerova A, Valova T, Kotrova M, et al. NGS better discriminates true MRD positivity for the risk stratification of childhood ALL treated on an MRD-based protocol. Blood. 2023;141(5):529–33."
+ ]
+}

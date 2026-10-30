@@ -1,0 +1,375 @@
+{
+ "number": 10,
+ "part": "II",
+ "page_pdf": [
+  118,
+  129
+ ],
+ "page_printed": 85,
+ "title_en": "Clinical and Biological Concepts for Mastering Immune Reconstitution After Hematopoietic Cell Transplantation: Toward Practical Guidelines and Greater Harmonization",
+ "authors": "",
+ "affiliations": "J. Kuball (*) Department of Hematology, UMC Utrecht, Utrecht, The Netherlands e-mail: J.H.E.Kuball@umcutrecht.nl R. Greco Unit of Hematology and Bone Marrow Transplantation, IRCCS San Raffaele Hospital, Vita-Salute San Raffaele University, Milan, Italy e-mail: greco.raffaella@hsr.it S. Nierkens Laboratory of Translational Immunology, UMC Utrecht, Utrecht, The Netherlands Princess Máxima Center for Pediatric Oncology, Utrecht, The Netherlands e-mail: snierken@umcutrecht.nl J. J. Boelens Transplantation and Cellular Therapies, Memorial Sloan Kettering Cancer Center, New York, NY, USA e-mail: boelensj@mskcc.org",
+ "doi": "10.1007/978-3-031-44080-9_10",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "46e1280360",
+   "type": "h2",
+   "num": "10.1",
+   "en": "Introduction/Background"
+  },
+  {
+   "id": "ccd9b33ef5",
+   "type": "p",
+   "en": "Not only the underlying mechanisms driving a long-term cure but also life-threatening side effects after hematopoietic cell transplantation (HCT) are primarily mediated by reconstitution of the immune repertoire. The composition and dynamics of reconstitution are influenced by the conditioning regimen, cell dose, graft composition, and age and type of immune suppression. However, our understanding of these mechanisms is limited due to many variations in clinical programs, including the specific type of transplantation procedure, and the absence of standardized immune monitoring after HCT. While the process of donor selection has seen significant advancements based on new biological insights, little attention has been given to optimizing cell product design in terms of numbers and composition to minimize inter-patient variability. In addition, the high inter-patient disparities in the clearance of agents used during the conditioning are rarely investigated. The lack of prospective clinical studies addressing these concepts, coupled with limited pharmaceutical company interest, fosters a consensus discussion. Our goal is to harmonize HCT interventions by exploring how individual patient differences and overall transplantation strategies impact the final effector mechanisms of HCT, specifically aiming for timely and well-balanced immune reconstitution."
+  },
+  {
+   "id": "450220580d",
+   "type": "h3",
+   "num": "10.1.1",
+   "en": "Impact of Conditioning Regimens on Immune Reconstitution and Outcomes: Pharmacokinetics– Pharmacodynamics (PK–PD) and Individualized Dosing"
+  },
+  {
+   "id": "95c86e2066",
+   "type": "p",
+   "en": "Over the last decade, it has become evident that various agents, such as busulfan, fludarabine, anti-thymocyte globulin (ATG), and anti-T-lymphocyte globulin (ATLG), administered as part of the conditioning regimen and post-HCT, have a substantial impact on both relapse and non- relapse mortality due to graft-versus-host disease (GvHD) and viral reactivation. Consequently, these agents significantly influence survival chances (Soiffer et al. 2017; Lakkaraja et al. 2022; van Roessel et al. 2020; Admiraal et al. 2017). Comprehensive pharmacokinetic (PK) and pharmacodynamic (PD) modeling has provided evidence that exposure to most of these agents can affect both short- and long-term immune reconstitution."
+  },
+  {
+   "id": "1b2ae337db",
+   "type": "p",
+   "en": "An important example is the development and validation of a population pharmacokinetics model for ATG (Thymoglobuline). It was found that clearance of ATG mainly depends on weight (when patients weigh <40 kg) and the receptor load (represented by absolute lymphocyte count; ALC) before the first dosing (Haanen et al. 2020). Using population PK modeling, a new dosing nomogram was developed, which has been recently validated in a prospective trial (Admiraal et al. 2022). Patients who received individualized dosing were more likely to attain CD4⁺ immune reconstitution, defined as CD4⁺ >50/μl at two consecutive time points before day 100. Importantly, it was confirmed that this definition of CD4⁺ immune reconstitution is a reliable predictor of outcomes in multiple transplantation settings (adults, pediatrics, T-replete, T-deplete, cord blood (CB), bone marrow (BM), and peripheral blood stem cells (PBSCs)) (Admiraal et al. 2022) and is easy to use at all transplant centers. In Table 10.1, optimal exposures of ATG after transplant associated with optimal outcomes are presented (Soiffer et al. 2017; Lakkaraja et al. 2022; Admiraal et al. 2017; Haanen et al. 2020; Admiraal et al. 2022) (Table 10.1). Although no validated population PK model for ATLG has yet been published, data from a post hoc analysis of a randomized controlled trial allowing three different types of regimens showed that ATLG had opposite effects on the outcome parameters of chronic GvHD and leukemia-free survival, resulting in overlapping curves for these primary end points (Soiffer et al. 2017). This study showed that agents used for conditioning had a significant impact on the ALC prior to dosing of ATLG and thus influence immune reconstitution and clinical outcomes, i.e., a similar impact as shown for ATG."
+  },
+  {
+   "id": "d1276fea7f",
+   "type": "p",
+   "en": "More recently, when using body surface area (BSA)-based dosing, it has been found that fludarabine exposure is highly variable (range 10–66 mg*h/L, median exposure 26 mg*h/L)"
+  },
+  {
+   "id": "9c1ef4e5a9",
+   "type": "table",
+   "num": "10.1",
+   "en": "Table 10.1 Suggested novel ATG (Thymoglobuline) dosing nomograms based on PK–PD modeling for (non-)mye-",
+   "raw_en": "Table 10.1 Suggested novel ATG (Thymoglobuline) dosing nomograms based on PK–PD modeling for (non-)mye- loablative settings in pediatrics and adults Dosing Target AUC after HCT (AUad/mL) and Starting Settingondonor sourcedayReferences Pediatrics; myeloablativeWeight<20 for cord blood−9bAdmiraal et al. ALC<50 for bone marrow(2015) Cell source Pediatrics/adults ex vivo <20−12bLakkaradja et al. T cell depletion (TCD)(2022) Adults:ALC60–90 for peripherally mobilized stem −9Admiraal et al. Non-myeloablativecells(2017) Level C evidence (retrospective studies). ALC, absolute lymphocyte count; AUC, area under the curve a Prospective validation trial (PRAISE IR) almost closed to accrual b Confirmed in a prospective validation trial (PARACHUTE) (Admiraal et al. 2022)"
+  },
+  {
+   "id": "f3e1384e2b",
+   "type": "p",
+   "en": "(Langenhorst et al. 2019). Immune reconstitution was found delayed in patients with an exposure >25 mg*h/L, which was associated with more viral reactivations and higher probability of non relapse mortality (NRM). Using a validated population PK model, both glomerular filtration rate (GFR) and weight were identified as predictors of clearance of fludarabine. An association between fludarabine exposure and outcomes was also shown in CD19 chimeric antigen receptor T-cell (CAR T) recipients (Fabrizio et al. 2022; Dekker et al. 2022), suggesting that individualized fludarabine dosing to improve outcomes is a viable option beyond the HCT setting. Prospective validation trials in bone marrow transplantation and in immune effector cell transplant strategies (e.g., CAR T) are underway."
+  },
+  {
+   "id": "3dd2653168",
+   "type": "p",
+   "en": "Posttransplant cyclophosphamide (PT-Cy) has emerged as an elegant and effective pharmacological strategy to overcome human leukocyte antigen (HLA) barriers in the setting of allogeneic HCT from haploidentical donors and more recently in matched donor transplants (Battipaglia et al. 2021). Several biological mechanisms are responsible for PT-Cy effectiveness in terms of GvHD reduction (Radojcic and Luznik 2019), and new understandings are currently emerging (i.e., reduction in the proliferation of alloreactive CD4⁺ effector T cells and the preferential recovery of CD4⁺ regulatory T cells (Tregs); functional impairment of surviving alloreactive CD4⁺ and CD8⁺ effector T cells) (Nunes and Kanakry 2019). Moreover, PT-Cy has an indirect effect on Tregs (Fletcher et al. 2023) due to the expansion of functional myeloid-derived suppressor cells. A retrospective study has recently compared immune reconstitution across ATG and PT-Cy strategies (Massoud et al. 2022). ATG resulted in faster reconstitution of CD8⁺ T, natural killer (NK), natural killer T (NKT), and γδT cells, whereas CD4⁺ T cells and B cells reconstituted faster after PT-Cy. Similar reconstitution was observed for Tregs and B cells. Even though differences in immune reconstitution (IR) were associated with a decreased incidence of infections and moderate/severe chronic GvHD in the ATG group, they had no impact on any of the other long-term outcomes."
+  },
+  {
+   "id": "edefb29e35",
+   "type": "p",
+   "en": "Collectively, these studies present compelling evidence that achieving “predictable” immune reconstitution is paramount when investigating the efficacy of maintenance therapies involving novel drugs, donor lymphocyte infusions, and advanced cell therapy interventions. Such predictability serves as a standardized predictor, enabling meaningful comparisons across studies and accounting for the numerous variables inherent to the HCT setting."
+  },
+  {
+   "id": "b56c4b8464",
+   "type": "h2",
+   "num": "10.2",
+   "en": "Graft Composition as an Additional Predictor of Immune Reconstitution and Clinical Outcomes"
+  },
+  {
+   "id": "cbc123668a",
+   "type": "p",
+   "en": "Although transplant physicians carefully monitor the levels of many drugs, such as cyclosporine or antibiotics, an additional opportunity to further harmonize the transplantation procedure arises from the surprising clinical observation that substantial cell dose variations are currently accepted across patients. The hesitation to monitor cell numbers in the graft or after HCT, and to act on them, is, of course, partially driven by the confusing magnitude of immunological subsets, the narrow nature of many immunological programs with a lack of consensus on immune monitoring, and also the rather limited immunological education across the majority of transplant physicians. However, currently available retrospective and prospective studies can provide guidance. A retrospective EBMT study indicated that graft T-cell numbers in matched unrelated donors frequently vary between 50 and 885 x 10e6/kg and that the highest quartile in CD34⁺ cells as well as T cells associate with an inferior clinical outcome (Czerw et al. 2016). As we cannot expect randomized trials to address in the future the impact of different graft compositions in T cell-replete transplantations on clinical outcomes, avoiding higher numbers of CD34 and T cells within the highest quartile might be reasonable, as high T-cell numbers have been associated with the risk of developing chronic GvHD (Czerw et al. 2016). For"
+  },
+  {
+   "id": "e86765e43f",
+   "type": "p",
+   "en": "haploidentical donors, even lower T-cell numbers might be advised (Mussetti et al. 2018), as, in this context also, higher numbers of T cells are associated with increased incidences of chronic GvHD. However, different cohort analyses are desirable to confirm these intriguing studies. Higher numbers of NKT cells (Malard et al. 2016) and γδT cells (Perko et al. 2015) in the graft have been reported to associate with favorable immune reconstitution, and a positive clinical outcome, most likely due to their impact in controlling GvHD (Du et al. 2017) and acting on cytomegalovirus (CMV) as well as on leukemia (Scheper et al. 2013; de Witte et al. 2018). However, these variables are more difficult to control in daily clinical practice. Direct ex vivo graft engineering provides an elegant solution to further control immune subsets in the graft and the consecutive immune reconstitution. It also allows for the standardization of cell numbers, as well as subsets per patient, e.g., selecting CD34- positive cells alone has been reported to associate with less chronic GvHD, whereas the graft- versus- leukemia effect is maintained (Pasquini et al. 2012). Increased activity of the next generation of graft engineering through depletion of αβT cells has been reported over the last decade (de Witte et al. 2023), emphasizing the better awareness of an opportunity to define graft compositions more precisely before transplantation. Depletion of αβT cells is associated with not only lower frequencies of infection and extremely low GvHD rates but also a different immune repertoire (de Witte et al. 2021a) and with a good efficacy/safety profile used during the pandemic (Nijssen et al. 2023). Thus, each transplantation platform needs to be carefully evaluated for immune reconstitution as it might substantially differ and, consequently, differently impact later interventions (de Witte et al. 2021b; Schmid et al. 2021)."
+  },
+  {
+   "id": "4195f70f70",
+   "type": "h3",
+   "num": "10.2.1",
+   "en": "Monitoring: Immune Cell Phenotyping"
+  },
+  {
+   "id": "7bc97bc71c",
+   "type": "p",
+   "en": "Variables that may impact immune reconstitution are (A) the immune status before the immune intervention, (B) the immune composition of the graft, (C) the dynamics of the reconstituting immune subsets and their function, and (D) the exposure to drugs administered in the conditioning regimen prior to intervention (as discussed above; Table 10.1). The most important questions that arise when monitoring the immune cells after transplant using clinical flow cytometry are what markers should be followed and how to use these markers in a meaningful way? These questions are particularly important in an era when post-HCT pharmaceutical maintenance interventions and donor lymphocyte infusion (DLI) or the administration of other Advanced therapy medicinal products (ATMPs) have become more common over the last decade (Soiffer and Chen 2017)."
+  },
+  {
+   "id": "4657496dd0",
+   "type": "p",
+   "en": "Flow cytometry is broadly available to monitor immune cell reconstitution in accredited laboratories within transplant centers. Markers identifying the most common leukocyte subsets are broadly used and can therefore be considered as a “standard” panel: CD45 (lymphocytes), CD3 (T cells), CD19 (B cells), αβ T-cell receptor (TCR), γδTCR, and CD16/CD56 (NK) cells. For γδT cells, it is important to note that δ2-positive and δ2-negative γδT cells always need to be distinguished as they are biologically two completely different populations (Sebestyen et al. 2020). In some laboratories, this panel is extended to identify the differentiation and activation state of subsets of T (T-helper, cytotoxic, regulatory T cells, naive, effector/memory or recent thymic emigrants), B (switched and non-switched) and NK(T) cells, and cells from the myeloid lineage (monocytes, dendritic cell subsets). This knowledge is important because the success of cell-based immunotherapies, as well as agents modulating the immune system after transplantation, will significantly depend on the presence or absence of different immune subsets. As described above, from all markers, CD4⁺ T cells >50/uL (at two consecutive time points < 100 days) have shown to be the best early immune cell markers to predict outcomes in many different transplant settings. More recently, in a large (>500 pt) pediatric and young adult cohort with B cells >25 cells/uL <100 days, the combination of CD4⁺ T cells (>50 cells/uL) and B cells (>25 cells/uL) in particular has been"
+  },
+  {
+   "id": "49bcb1b896",
+   "type": "p",
+   "en": "found to be a predictor of outcomes (e.g., NRM, GvHD, and Overall Survival (OS)) (van Roessel et al. 2020). This new combination of B and CD4⁺ T cells as potential biomarkers of outcomes needs confirmation in separate cohorts. Interestingly, the relationship between CD4⁺ T-cell immune reconstitution and exposure to ATG and fludarabine was not found between the conditioning drugs and B-cell immune reconstitution. In the near future, mastering the diversity might allow for the definition of patient subpopulations who would benefit from certain adjuvant therapies as maintenance after HCT (e.g., checkpoint inhibitor treatment and tyrosine kinase inhibitors (TKIs)) (Davids et al. 2016; Mathew et al. 2018). Moreover, certain myeloid subsets are suggested to have an impact on outcomes (Mussetti et al. 2018), but more studies are needed to confirm this. Therefore, on top of clinical flow panels, discovery panels (in a research setting) can potentially provide more insight into what the optimal immune milieu is for disease and toxicity control. To be able to compare results from different trials and individual centers, it is important to develop standardized operational protocols for sample handling and staining protocols for both fresh and biobanked samples."
+  },
+  {
+   "id": "06de167ab5",
+   "type": "h3",
+   "num": "10.2.2",
+   "en": "Immune Monitoring: Secretome Analyses"
+  },
+  {
+   "id": "0c50d2e0b9",
+   "type": "p",
+   "en": "Measuring the production of cytokines, chemokines, and growth factors in the serum or plasma represents an integral part of immunomonitoring during immunotherapeutic treatments. Proteomic biomarkers may distinguish diverse diseases/response patterns, identify surrogate markers of efficacy, and provide additional insights into the therapeutic mode of action. Over the last decade, advances in highly multiplexed technologies have allowed for the discovery and validation of several blood biomarkers of acute and chronic GvHD and graft-versus-tumor reactivity."
+  },
+  {
+   "id": "e1f77e6501",
+   "type": "p",
+   "en": "As examples, proteins, such as interleukin (IL)-6, granulocyte-macrophage colony-stimulating factor (GM-CSF), hepatocyte growth factor (HGF), ST2 (suppressor of tumorgenicity 2), and soluble IL-2a, have shown to be biomarkers of GvHD, whereas increased levels of tumor necrosis factor-alpha (TNF-α) and IL-6 are associated with robust immune responses to viral reactivations (de Koning et al. 2016). It is noteworthy that these biomarkers show diagnostic and prognostic potential (Milosevic et al. 2022), can be informative in predicting more severe GvHD and NRM (McDonald et al. 2015; Srinagesh et al. 2019), and may be informative to categorize patients based on their likelihood to respond to therapy (Hess et al. 2021). The main challenge, however, remains to identify predictors very early after or even before cell infusion."
+  },
+  {
+   "id": "94cf039aca",
+   "type": "p",
+   "en": "Peripheral blood is often the only source for protein analysis, which may lack the sensitivity to reflect local responses in affected tissues. The most common methods to identify these markers include antibody-based enzyme-linked immunosorbent assays (ELISAs) or multiplex platforms, such as protein microarrays, liquid chromatography–mass spectrometry (LC-MS), electrochemiluminescence, and bead-based or proximity extension multiplex immunoassays (MIAs). Again, different technologies and reagents (e.g., antibodies and recombinants for standard curves) may lead to different concentrations, and dramatic variability in results, depending on how the pre-analytical samples are handled (e.g., differences in processing and storage, including duration of storage). Cytokine levels may differ considerably between serum and plasma samples obtained from the same donor, due to release of platelet-associated molecules into the serum. Moreover, the type of anticoagulant used in plasma isolation and time- and/or temperature-sensitive changes need to be considered (Keustermans et al. 2013). These phenomena underscore the need for extensive documentation with respect to all biomarker analyses before any conclusions can be made when comparing patient cohorts treated at multiple sites."
+  },
+  {
+   "id": "b1881f3c1d",
+   "type": "p",
+   "en": "While the detection of specific cell subsets and proteins offers valuable insights, functional assays can provide additional information to enhance our understanding of the biological mechanisms and assess the effectiveness of a patient’s immune system. For example, the func"
+  },
+  {
+   "id": "072ce74cbb",
+   "type": "p",
+   "en": "tionality of natural killer (NK) cells and regulatory T cells (Tregs) can be evaluated through assays that measure their ability to induce target cell killing by degranulation as well as by their capacity for proliferation and suppression, respectively. Moreover, recent advancements in single-cell proteomic technologies have enabled the combination of both approaches, wherein the analysis of secreted proteins at the single-cell level generates an immune fitness score. This score has demonstrated its potential in predicting the responsiveness to checkpoint inhibitor therapy (Haanen et al. 2020), but its value in assessing immune fitness post-HCT has still to be assessed."
+  },
+  {
+   "id": "408e523200",
+   "type": "h3",
+   "num": "10.2.3",
+   "en": "mmune Monitoring of Virus- I Specific T-Cell Responses"
+  },
+  {
+   "id": "235749b5a8",
+   "type": "p",
+   "en": "Virus-specific immune responses are mainly assessed for cytomegalovirus (CMV) (Tassi et al. 2023; Krawczyk et al. 2018; Wagner-Drouet et al. 2021), human herpesvirus 6 (HHV6) (Noviello et al. 2023), adenovirus (AdV) (Cesaro and Porta 2022), Epstein–Barr virus (EBV), BK virus (Annaloro et al. 2020), and severe acute respiratory syndrome coronavirus 2 (SARS- CoV- 2) (Anon 2022). Different assays have been adopted to assess virus-specific T cells (Table 10.2): flow cytometry-based tests (e.g., intracellular cytokines, MHC multimer binding), interferon-γ (IFN-γ) enzyme-linked immunospot (ELISpot), QuantiFERON-CMV, other home-made tests (e.g., proliferation assays or different CMV-specific T-cell subsets). In a recent EBMT survey, only 13.8% centers have reported to perform at least one type of virus-specific immune monitoring, whereas 31% additional centers are planning to start to do so in the future (Greco et al. 2023; Cordonnier et al. 2021). The quantitative and functional assessment of virus-specific T-cell responses may be more relevant to patient’s risk stratification and clinical decision-making, thereby encouraging immune monitoring of patients. While still experimental and often limited to research studies, adoptive immunotherapy with virus-specific lymphocytes could benefit from more data on virus-specific IR to extend its applicability on a broader scale."
+  },
+  {
+   "id": "240d13dd63",
+   "type": "table",
+   "num": "10.2",
+   "en": "Table 10.2 Example of platforms for virus-specific immunological monitoring (i.e., CMV)",
+   "columns": 15,
+   "rows_en": [
+    [
+     "Characteristics Sample Turnaround time Functional analysis Phenotypic characterization Differentiation CD8 HLA restriction Cost Advantages Limitations",
+     "⁺/CD4",
+     "⁺",
+     "IFN- Whole blood 24 h Yes No No (only CD8 Yes + Simple to perform and highly standardized (routine) ve to lymphopenia",
+     "• Only measures CD8 cells • Sensiti • HLA-restricted",
+     "𝛾 QuantiFERON",
+     "⁺)",
+     "⁺",
+     "IFN- PBMCs 24–48 h Yes No Yes No ++ Highly sensitive",
+     "• Lack of standardization • Operator-dependent • Requires PBMC isolation (hardworking)",
+     "𝛾 ELISpot",
+     "Dextramer Whole blood 24 h No Yes No (only CD8 Yes ++ Increased detectable fluorescence intensity and improved avidity",
+     "• Only measures CD8 • HLA-restricted • Standardized kit",
+     "⁺)",
+     "⁺ cells"
+    ],
+    [
+     "PMBC",
+     "peripheral blood mononuclear cell",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "0f63f1e9b9",
+   "type": "h2",
+   "num": "10.3",
+   "en": "From Transplantation to Immune Monitoring of CAR T Cells, Harmonization Is Needed"
+  },
+  {
+   "id": "ec4b56be68",
+   "type": "p",
+   "en": "Adoptive transfer of CAR T cells has revolutionized the treatment of several hematological malignancies by overcoming chemotherapy refractory and/or relapsed disease. CAR T therapy shares many similarities with hematopoietic cell transplantation. First detailed immunological analyses of long-term responders become available (Cappell and Kochenderfer 2023; Melenhorst et al. 2022). In addition to clinical trial data, a large body of real-world evidence (RWE) has been compiled in different registries, with the EBMT CAR T registry being the largest European registry to be successfully used for post-authorization safety studies (PASSs) for most approved CAR T products (McGrath et al. 2020). Notably, only a minimal core set of accepted clinical end points are identical across trials and registries, leaving important additional clinical parameters not comparable between trials and RWE. The ongoing GoCART Coalition initiative (https://thegocartcoalition.com) aims to harmonize not only clinical data collection as needed for PASSs but also exploratory clinical data for earlier clinical trials and biomarker analyses. Optimal time points and, e.g., flow cytometry panels for associated exploratory biomarker programs are not harmonized across centers, trials, or products. This lack of harmonization in clinical and biomarker programs hampers scientific advances, quality control efforts, and/or benchmarking and urgently calls for a coordinated effort to harmonize parameter sets, data structures, and time points for the assessment of clinical and biomarker data enabling health-care professionals, health-care providers and payers, and, of course, patients, to optimize their decision- making. Therefore, under the umbrella of the GoCART Coalition, EBMT, European Hematology Association (EHA), and T2Evolve started a new initiative in 2023 (CART-CD) to generate a harmonized European parameter set via the Delphi process (Webbe et al. 2023), a structured process, to involve the broader stakeholder community. This will allow to harmonize, over the next years, the data structure with common time points for clinical end points and a set of biological parameters. This harmonization, including harmonization of collecting samples for immune monitoring, will improve and facilitate cross-study comparability and generate real-world data for CAR T cell therapies and beyond."
+  },
+  {
+   "id": "e967583a61",
+   "type": "h2",
+   "num": "10.4",
+   "en": "In Summary"
+  },
+  {
+   "id": "5640cb5095",
+   "type": "p",
+   "en": "The failure or success of HCT is significantly impacted by the patient’s immune status. However, only a minority of HCT programs systematically consider individualized drug monitoring during conditioning, graft design, and immune monitoring as key for patient surveillance, in order to maximally control and capture essential details of the intervention HCT. Therefore, guidelines are needed to further harmonize the HCT procedure and standardized immune monitoring to allow for distillation of the key features for success and failure. First, careful recommendations for individualized drug dosing and graft compositions can be made based on available data sets. However, within the new cellular therapy registry of EBMT, it will be key to register additional details of drug dosages, graft compositions, and immune reconstitution, to capture clinical variations in programs, as well as defined immune reconstitutions. This will enable a retrospective increase in insight into daily clinical practice, and its impact on immune reconstitution, as well as clinical outcome. Moreover, clinical trials should adopt such consensus measurements. Nevertheless, the markers and phenotypes studied in one setting may not be considered relevant in another, supporting the definition of a set of general recommended protocols and a set of add-on"
+  },
+  {
+   "id": "6dd9331f23",
+   "type": "p",
+   "en": "trial-specific parameters (Table 10.3). A new survey is currently being prepared by the Cellular Therapy and Immunobiology Working Party (CTIWP) of EBMT and GoCART Coalition for both hematopoietic cell transplantation and CAR T therapies. A harmonization procedure to achieve a more balanced immune reconstitution might have a more profound impact on patient survival than any other novel maintenance therapy (Admiraal et al. 2017; Boelens et al. 2018) and allow for a better success rate for novel drugs tested as maintenance therapy."
+  },
+  {
+   "id": "d9c99ca577",
+   "type": "table",
+   "num": "10.3",
+   "en": "Table 10.3 anels under consideration in the panel discussion of the CTIWP (Greco et al. P2018). General parameters",
+   "columns": 2,
+   "rows_en": [
+    [
+     "that could be included in harmonized immune monitoring protocols across most studies/centers and advanced param eters that may be of great value in specific studies and that can only be performed in specialized immunology laborato ries or analyzed in a central laboratory",
+     "- -"
+    ],
+    [
+     "GeneralAdvanced",
+     ""
+    ],
+    [
+     "Graft compositionαβTαβTCR, CD45RO/RA, CD3, Intracellular cytokines after phorbol CD4, CD8, CD27myristate acetate (PMA)/ionomycin stimulation",
+     ""
+    ],
+    [
+     "γδTγδTCR, CD45RO/RA, CD3, Specific TCR by multimer approach CD27",
+     ""
+    ],
+    [
+     "TregCD45, CD4, CD25, CD127, FoxP3",
+     ""
+    ],
+    [
+     "BCD45, CD19, CD38, CD27, IgM/G/D, CD21",
+     ""
+    ],
+    [
+     "NK/NKTCD45, CD3, CD56, TCR24/11)",
+     ""
+    ],
+    [
+     "Cell phenotyping pre- and αβTαβTCR, CD45RO/RA, CD3, Intracellular cytokines after PMA/ posttransplantationCD4, CD8, CD27ionomycin stimulation",
+     ""
+    ],
+    [
+     "γδTγδTCR, δ2TCR, δ1TCRSpecific TCR by multimer approach",
+     ""
+    ],
+    [
+     "TregCD45RO/RA, CD3, CD27",
+     ""
+    ],
+    [
+     "BCD45, CD4, CD25, CD127, αβTCR and γδTCR repertoire FoxP3",
+     ""
+    ],
+    [
+     "NK/NKTCD45, CD19, CD38, CD27, IgM/G/D, CD21",
+     ""
+    ],
+    [
+     "DC/monoCD45, CD3, CD56, TCR24/11) CD11c, HLA-DR, CD14, CD16, CD1c, CD141, CD303",
+     ""
+    ],
+    [
+     "Secretome–Multiplex panel (e.g., IL-7, ST2, TNF-α, IL-6, HGF, IL-2R, IL-8, GM-CSF, etc.)",
+     ""
+    ],
+    [
+     "Cell function–NK cell lyses T-cell proliferation upon antigens and mitogens B-cell maturation",
+     ""
+    ],
+    [
+     "PKBusulfan, fludarabine, ATG, Campath (if part Trial drug of conditioning)",
+     ""
+    ],
+    [
+     "Minimal Residual Disease qPCR (targets expressed, flow cytometry)Next-generation sequencing (MRD)",
+     ""
+    ],
+    [
+     "Viral loadCMV, EBV, HV6, adenovirus–",
+     ""
+    ],
+    [
+     "qPCR quantitative PCR",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "65ea55c3d1",
+   "type": "li",
+   "en": "• The failure or success of HCT is significantly impacted by the patient’s immune status."
+  },
+  {
+   "id": "b4feb7d419",
+   "type": "li",
+   "en": "• Harmonizing individualized drug monitoring during conditioning, graft design, and immune monitoring is key for patient surveillance."
+  },
+  {
+   "id": "dac8c1adcd",
+   "type": "li",
+   "en": "• A harmonization procedure to achieve a more balanced immune reconstitution might have a more profound impact on patient survival (and quality of life) than any other novel maintenance therapy and allow for a better success rate for novel drugs tested as maintenance therapy."
+  }
+ ],
+ "references": [
+  "Admiraal R, van Kesteren C, Jol-van der Zijde CM, Lankester AC, Bierings MB, Egberts TC, van Tol MJ, Knibbe CA, Bredius RG, Boelens JJ. Association between anti-thymocyte globulin exposure and CD4+ immune reconstitution in paediatric haemopoietic cell transplantation: a multicentre, retrospective pharmacodynamic cohort analysis. Lancet Haematol. 2015;2:e194–203.",
+  "Admiraal R, Nierkens S, de Witte MA, Petersen EJ, Fleurke GJ, Verrest L, Belitser SV, Bredius RGM, Raymakers RAP, Knibbe CAJ, Minnema MC, van Kesteren C, Kuball J, Boelens JJ. Association between anti-thymocyte globulin exposure and survival outcomes in adult unrelated haemopoietic cell transplantation: a multicentre, retrospective, pharmacodynamic cohort analysis. Lancet Haematol. 2017;4:e183–e91.",
+  "Admiraal R, Nierkens S, Bierings MB, Bredius RGM, van Vliet I, Jiang Y, Lopez-Yurda M, Versluijs AB, Zwaan CM, Lindemans CA, Boelens JJ. Individualised dosing of anti-thymocyte globulin in paediatric unrelated allogeneic haematopoietic stem-cell transplantation (PARACHUTE): a single-arm, phase 2 clinical trial. Lancet Haematol. 2022;9:e111–e20.",
+  "Annaloro C, Serpenti F, Saporiti G, Galassi G, Cavallaro F, Grifoni F, Goldaniga M, Baldini L, Onida F. Viral infections in HSCT: detection, monitoring, clinical management, and immunologic implications. Front Immunol. 2020;11:569381.",
+  "Anon. Measuring SARS-CoV-2 T cell immunity with a scalable qPCR-based assay. Nat Biotechnol. 2022;40:1584–5.",
+  "Battipaglia G, Labopin M, Hamladji RM, Blaise D, Chevallier P, Brissot E, Gerbitz A, Socie G, Afanasyev B, Ciceri F, Meijer E, Koc Y, Cornelissen JJ, Huynh A, Ozdogu H, Maertens J, Paul F, Labussiere-Wallet H, Ruggeri A, Aljurf M, Bazarbachi A, Savani B, Nagler A, Mohty M. Post-transplantation cyclophosphamide versus antithymocyte globulin in patients with acute myeloid leukemia undergoing allogeneic stem cell transplantation from HLA-identical sibling donors: a retrospective analysis from the acute leukemia Working Party of the European Society for blood and marrow transplantation. Cancer. 2021;127:209–18.",
+  "Boelens JJ, Admiraal R, Kuball J, Nierkens S. Fine-tuning antithymocyte globulin dosing and harmonizing clinical trial design. J Clin Oncol. 2018;36:1175–6.",
+  "Cappell KM, Kochenderfer JN. Long-term outcomes following CAR T cell therapy: what we know so far. Nat Rev Clin Oncol. 2023;20:359–71.",
+  "Cesaro S, Porta F. Adenovirus infection in pediatric hematopoietic cell transplantation: a challenge still open for survival. J Clin Med. 2022;11:4827.",
+  "Cordonnier C, Ljungman P, Cesaro S, Hirsch HH, Maschmeyer G, von Lilienfeld-Toal M, Vehreschild M, Mikulska M, Emonts M, Gennery AR, Neofytos D, Bochud PY, Einsele H, Maertens J. The EHA research roadmap: infections in hematology. Hema. 2021;5:e662.",
+  "Czerw T, Labopin M, Schmid C, Cornelissen JJ, Chevallier P, Blaise D, Kuball J, Vigouroux S, Garban F, Lioure B, Fegueux N, Clement L, Sandstedt A, Maertens J, Guillerm G, Bordessoule D, Mohty M, Nagler A. High CD3+ and CD34+ peripheral blood stem cell grafts content is associated with increased risk of graft-versus-host disease without beneficial effect on disease control after reduced-intensity conditioning allogeneic transplantation from matched unrelated donors for acute myeloid leukemia - an analysis from the acute leukemia Working Party of the European Society for blood and marrow transplantation. Oncotarget. 2016;7(19):27255–66.",
+  "Davids MS, Kim HT, Bachireddy P, Costello C, Liguori R, Savell A, Lukez AP, Avigan D, Chen YB, McSweeney P, NR LB, Rooney MS, Bowden M, Zhou CW, Granter SR, Hornick JL, Rodig SJ, Hirakawa M, Severgnini M, Hodi FS, Wu CJ, Ho VT, Cutler C, Koreth J, Alyea EP, Antin JH, Armand P, Streicher H, Ball ED, Ritz J, Bashey A, Soiffer RJ, Leukemia, Lymphoma Society Blood Cancer Research P. Ipilimumab for patients with relapse after allogeneic transplantation. N Engl J Med. 2016;375:143–53.",
+  "de Koning C, Plantinga M, Besseling P, Boelens JJ, Nierkens S. Immune reconstitution after allogeneic hematopoietic cell transplantation in children. Biol Blood Marrow Transplant. 2016;22:195–206.",
+  "de Witte MA, Sarhan D, Davis Z, Felices M, Vallera DA, Hinderlie P, Curtsinger J, Cooley S, Wagner J, Kuball J, Miller JS. Early reconstitution of NK and gammadelta T cells and its implication for the Design of Post-Transplant Immunotherapy. Biol Blood Marrow Transplant. 2018;24:1152.",
+  "de Witte MA, Janssen A, Nijssen K, Karaiskaki F, Swanenberg L, van Rhenen A, Admiraal R, van der Wagen L, Minnema MC, Petersen E, Raymakers RAP, Westinga K, Straetemans T, Halkes CJM, Boelens JJ, Kuball J. Alphabeta T-cell graft depletion for allogeneic HSCT in adults with hematological malignancies. Blood Adv. 2021a;5:240–9.",
+  "de Witte M, Daenen LGM, van der Wagen L, van Rhenen A, Raymakers R, Westinga K, Kuball J. Allogeneic stem cell transplantation platforms with ex vivo and in vivo immune manipulations: count and adjust. Hemasphere. 2021b;5:e580.",
+  "de Witte MA, Mooyaart JE, Hoogenboom JD, Chabannon C, Malard F, Ruggeri A, Kuball J. Activity of ex vivo graft and DLI engineering within the last decade increases, a survey from the EBMT Cellular Therapy & Immunobiology Working Party. Bone Marrow Transplant. 2023;58:719.",
+  "Dekker L, Calkoen FG, Jiang Y, Blok H, Veldkamp SR, De Koning C, Spoon M, Admiraal R, Hoogerbrugge P, Vormoor B, Vormoor HJ, Visscher H, Bierings M, Van Der Vlugt M, Van Tinteren H, Nijstad AL, Huitema ADR, Van Der Elst KCM, Pieters R, Lindemans CA, Nierkens S. Fludarabine exposure predicts outcome after CD19 CAR T-cell therapy in children and young adults with acute leukemia. Blood Adv. 2022;6:1969–76.",
+  "Du J, Paz K, Thangavelu G, Schneidawind D, Baker J, Flynn R, Duramad O, Feser C, Panoskaltsis-Mortari A, Negrin RS, Blazar BR. Invariant natural killer T cells ameliorate murine chronic GVHD by expanding donor regulatory T cells. Blood. 2017;129:3121–5.",
+  "Fabrizio VA, Boelens JJ, Mauguen A, Baggott C, Prabhu S, Egeler E, Mavroukakis S, Pacenta H, Phillips CL, Rossoff J, Stefanski HE, Talano JA, Moskop A, Margossian SP, Verneris MR, Myers GD, Karras NA, Brown PA, Qayed M, Hermiston M, Satwani P, Krupski C, Keating AK, Wilcox R, Rabik CA, Chinnabhandar V, Kunicki M, Goksenin AY, Mackall CL, Laetsch TW, Schultz LM, Curran KJ. Optimal fludarabine lymphodepletion is associated with improved outcomes after CAR T-cell therapy. Blood Adv. 2022;6:1961–8.",
+  "Fletcher RE, Nunes NS, Patterson MT, Vinod N, Khan SM, Mendu SK, Li X, de Paula PA, Wachsmuth LP, Choo-Wosoba H, Eckhaus MA, Venzon DJ, Kanakry CG. Posttransplantation cyclophosphamide expands functional myeloid-derived suppressor cells and indirectly influences Tregs. Blood Adv. 2023;7:1117–29.",
+  "Greco R, Ciceri F, Noviello M, Bondanza A, Vago L, Oliveira G, Peccatori J, Cieri N, Ruggeri A, Koehl U, Fleischhauer K, Rocha V, Dazzi F, van der Werf SM, Eikema DJ, Terwel SR, Kuball J, Toubert A, Chabannon C, Bonini for the EBMT-Cellular Therapy and Immunobiology Working Party. Immune monitoring in allogeneic hematopoietic stem cell transplant recipients: a survey from the EBMT-CTIWP. Bone Marrow Transplant. 2018;53:1201–5.",
+  "Greco R, Hoogenboom JD, Bonneville EF, Anagnostopoulos A, Cuoghi A, Dalle JH, Weissinger EM, Lang P, Galaverna F, Martino M, Maschan A, Mauz-Korholz C, Noviello M, Passweg J, Peccatori J, Rovira M, Solano C, Veelken H, Velardi A, Wagner-Drouet EM, Zhang X, Ciceri F, Bonini C, Vago L, Ruggeri A, Chabannon C. Monitoring for virus-specific T-cell responses and viremia in allogeneic HSCT recipients: a survey from the EBMT Cellular Therapy & Immunobiology Working Party. Bone Marrow Transplant. 2023;58:603–6.",
+  "Haanen J, Ernstoff M, Wang Y, Menzies A, Puzanov I, Grivas P, Larkin J, Peters S, Thompson J, Obeid M. Rechallenge patients with immune checkpoint inhibitors following severe immune-related adverse events: review of the literature and suggested prophylactic strategy. J Immunother Cancer. 2020;8:e000604.",
+  "Hess NJ, Brown ME, Capitini CM. GVHD pathogenesis, prevention and treatment: lessons from humanized mouse transplant models. Front Immunol. 2021;12:723544.",
+  "Keustermans GC, Hoeks SB, Meerding JM, Prakken BJ, de Jager W. Cytokine assays: an assessment of the preparation and treatment of blood and tissue samples. Methods. 2013;61:10–7.",
+  "Krawczyk A, Ackermann J, Goitowski B, Trenschel R, Ditschkowski M, Timm J, Ottinger H, Beelen DW, Gruner N, Fiedler M. Assessing the risk of CMV reactivation and reconstitution of antiviral immune response post bone marrow transplantation by the QuantiFERON-CMV-assay and real time PCR. J Clin Virol. 2018;99-100:61–6.",
+  "Lakkaraja M, Scordo M, Mauguen A, Cho C, Devlin S, Ruiz JD, Klein E, Avecilla ST, Boulad F, Cancio MI, Curran KJ, Jakubowski AA, Kernan NA, Kung AL, O'Reilly RJ, Papadopoulos EB, Prockop S, van Roessel I, Scaradavou A, Shaffer BC, Shah G, Spitzer B, Tamari R, Giralt SA, Perales MA, Boelens JJ. Antithymocyte globulin exposure in CD34+ T-cell-depleted allogeneic hematopoietic cell transplantation. Blood Adv. 2022;6:1054–63.",
+  "Langenhorst JB, van Kesteren C, van Maarseveen EM, Dorlo TPC, Nierkens S, Lindemans CA, de Witte MA, van Rhenen A, Raijmakers R, Bierings M, Kuball J, Huitema ADR, Boelens JJ. Fludarabine exposure in the conditioning prior to allogeneic hematopoietic cell transplantation predicts outcomes. Blood Adv. 2019;3:2179–87.",
+  "Malard F, Labopin M, Chevallier P, Guillaume T, Duquesne A, Rialland F, Derenne S, Peterlin P, Leaute AG, Brissot E, Gregoire M, Moreau P, Saas P, Gaugler B, Mohty M. Larger number of invariant natural killer T cells in PBSC allografts correlates with improved GVHD-free and progression-free survival. Blood. 2016;127:1828–35.",
+  "Massoud R, Gagelmann N, Fritzsche-Friedland U, Zeck G, Heidenreich S, Wolschke C, Ayuk F, Christopeit M, Kroger N. Comparison of immune reconstitution between anti-T-lymphocyte globulin and posttransplant cyclophosphamide as acute graft-versus- host disease prophylaxis in allogeneic myeloablative peripheral blood stem cell transplantation. Haematologica. 2022;107:857–67.",
+  "Mathew NR, Baumgartner F, Braun L, O'Sullivan D, Thomas S, et al. Sorafenib promotes graft-versus-leukemia activity in mice and humans through IL-15 production in FLT3-ITD-mutant leukemia cells. Nat Med. 2018;24:282–91.",
+  "McDonald GB, Tabellini L, Storer BE, Lawler RL, Martin PJ, Hansen JA. Plasma biomarkers of acute GVHD and nonrelapse mortality: predictive value of measurements before GVHD onset and treatment. Blood. 2015;126:113–20.",
+  "McGrath E, Chabannon C, Terwel S, Bonini C, Kuball J. Opportunities and challenges associated with the evaluation of chimeric antigen receptor T cells in real-life. Curr Opin Oncol. 2020;32:427–33.",
+  "Melenhorst JJ, Chen GM, Wang M, Porter DL, Chen C, Collins MA, Gao P, Bandyopadhyay S, Sun H, Zhao Z, Lundh S, Pruteanu-Malinici I, Nobles CL, Maji S, Frey NV, Gill SI, Tian L, Kulikovskaya I, Gupta M, Ambrose DE, Davis MM, Fraietta JA, Brogdon JL, Young RM, Chew A, Levine BL, Siegel DL, Alanio C, Wherry EJ, Bushman FD, Lacey SF, Tan K, June CH. Decade-long leukaemia remissions with persistence of CD4(+) CAR T cells. Nature. 2022;602:503–9.",
+  "Milosevic E, Babic A, Iovino L, Markovic M, Grce M, Greinix H. Use of the NIH consensus criteria in cellular and soluble biomarker research in chronic graft-versus-host disease: a systematic review. Front Immunol. 2022;13:1033263.",
+  "Mussetti A, De Philippis C, Carniti C, Bastos-Oreiro M, Gayoso J, Cieri N, Pennisi M, Ciceri F, Greco R, Peccatori J, Patriarca F, Mariotti J, Castagna L, Corradini P. CD3+ graft cell count influence on chronic GVHD in haploidentical allogeneic transplantation using post-transplant cyclophosphamide. Bone Marrow Transplant. 2018;53:1522–31.",
+  "Nijssen K, Westinga K, Stuut A, Janssen A, van Rhenen A, van der Wagen L, Daenen LGM, Oostvogels R, de Witte MA, Kuball J. Graft engineering: how long can you wait, how low can you go, and pandemic readiness. Bone Marrow Transplant. 2023;58(7):820–2.",
+  "Noviello M, Lorentino F, Xue E, Racca S, Furnari G, Valtolina V, Campodonico E, Dvir R, Lupo-Stanghellini MT, Giglio F, Piemontese S, Clerici D, Oltolini C, Tassi E, Beretta V, Farina F, Mannina D, Ardemagni A, Vago L, Bernardi M, Corti C, Peccatori J, Clementi M, Ciceri F, Bonini C, Greco R. Human herpesvirus 6-specific T-cell immunity in allogeneic hematopoietic stem cell transplant recipients. Blood Adv. 2023;7:5446.",
+  "Nunes NS, Kanakry CG. Mechanisms of graft-versus-host disease prevention by post-transplantation cyclophosphamide: an evolving understanding. Front Immunol. 2019;10:2668.",
+  "Pasquini MC, Devine S, Mendizabal A, Baden LR, Wingard JR, Lazarus HM, Appelbaum FR, Keever-Taylor CA, Horowitz MM, Carter S, O'Reilly RJ, Soiffer RJ. Comparative outcomes of donor graft CD34+ selection and immune suppressive therapy as graft-versus-host disease prophylaxis for patients with acute myeloid leukemia in complete remission undergoing HLA-matched sibling allogeneic hematopoietic cell transplantation. J Clin Oncol. 2012;30:3194–201.",
+  "Perko R, Kang G, Sunkara A, Leung W, Thomas PG, Dallas MH. Gamma delta T cell reconstitution is associated with fewer infections and improved event-free survival after hematopoietic stem cell transplantation for pediatric leukemia. Biol Blood Marrow Transplant. 2015;21:130–6.",
+  "Radojcic V, Luznik L. Mechanism of action of posttransplantation cyclophosphamide: more than meets the eye. J Clin Invest. 2019;129:2189–91.",
+  "Scheper W, van Dorp S, Kersting S, Pietersma F, Lindemans C, Hol S, Heijhuurs S, Sebestyen Z, Grunder C, Marcu-Malina V, Marchant A, Donner C, Plachter B, Vermijlen D, van Baarle D, Kuball J. gammadeltaT cells elicited by CMV reactivation after Allo-SCT cross-recognize CMV and leukemia. Leukemia. 2013;27:1328–38.",
+  "Schmid C, Kuball J, Bug G. Defining the Role of Donor Lymphocyte Infusion in High-Risk Hematologic Malignancies. J Clin Oncol. 2021;39(5):397–418.",
+  "Sebestyen Z, Prinz I, Dechanet-Merville J, Silva-Santos B, Kuball J. Translating gammadelta (gammadelta) T cells and their receptors into cancer cell therapies. Nat Rev Drug Discov. 2020;19:169–84.",
+  "Soiffer RJ, Chen YB. Pharmacologic agents to prevent and treat relapse after allogeneic hematopoietic cell transplantation. Blood Adv. 2017;1:2473–82.",
+  "Soiffer RJ, Kim HT, McGuirk J, Horwitz ME, Johnston L, Patnaik MM, Rybka W, Artz A, Porter DL, Shea TC, Boyer MW, Maziarz RT, Shaughnessy PJ, Gergis U, Safah H, Reshef R, DiPersio JF, Stiff PJ, Vusirikala M, Szer J, Holter J, Levine JD, Martin PJ, Pidala JA, Lewis ID, Ho VT, Alyea EP, Ritz J, Glavin F, Westervelt P, Jagasia MH, Chen YB. Prospective, randomized, double- blind, phase III clinical trial of anti-T- lymphocyte globulin to assess impact on chronic graft-versus-host disease-free survival in patients undergoing HLA-matched unrelated Myeloablative hematopoietic cell transplantation. J Clin Oncol. 2017;35:4003–11.",
+  "Srinagesh HK, Levine JE, Ferrara JLM. Biomarkers in acute graft-versus-host disease: new insights. Ther Adv Hematol. 2019;10:2040620719891358.",
+  "Tassi E, Noviello M, De Simone P, Lupo-Stanghellini MT, Doglio M, Serio F, Abbati D, Beretta V, Valtolina V, Oliveira G, Racca S, Campodonico E, Ruggiero E, Clerici D, Giglio F, Lorentino F, Dvir R, Xue E, Farina F, Oltolini C, Manfredi F, Vago L, Corti C, Bernardi M, Clementi M, Brix L, Ciceri F, Peccatori J, Greco R, Bonini C. Cytomegalovirus-specific T cells restricted for shared and donor human leukocyte antigens differentially impact on cytomegalovirus reactivation risk after allogeneic hematopoietic stem cell transplantation. Haematologica. 2023;108:1530–43.",
+  "van Roessel I, Prockop S, Klein E, Boulad F, Scaradavou A, Spitzer B, Kung A, Curran K, O'Reilly RJ, Kernan NA, Cancio M, Boelens JJ. Early CD4+ T cell reconstitution as predictor of outcomes after allogeneic hematopoietic cell transplantation. Cytotherapy. 2020;22:503–10.",
+  "Wagner-Drouet E, Teschner D, Wolschke C, Janson D, Schafer-Eckart K, Gartner J, Mielke S, Schreder M, Kobbe G, Kondakci M, Hilgendorf I, von Lilienfeld-Toal M, Klein S, Heidenreich D, Kreil S, Verbeek M, Grass S, Ditschkowski M, Gromke T, Koch M, Lindemann M, Hunig T, Schmidt T, Rascle A, Guldan H, Barabas S, Deml L, Wagner R, Wolff D. Standardized monitoring of cytomegalovirus-specific immunity can improve risk stratification of recurrent cytomegalovirus reactivation after hematopoietic stem cell transplantation. Haematologica. 2021;106:363–74.",
+  "Webbe J, Allin B, Knight M, Modi N, Gale C. How to reach agreement: the impact of different analytical approaches to Delphi process results in core outcomes set development. Trials. 2023;24:345."
+ ]
+}

@@ -1,0 +1,319 @@
+{
+ "number": 67,
+ "part": "VIII",
+ "page_pdf": [
+  590,
+  595
+ ],
+ "page_printed": 595,
+ "title_en": "Overweight and Obese Patients",
+ "authors": "Claudia Langebrake",
+ "affiliations": "C. Langebrake (*) Department of Stem Cell Transplantation and Hospital Pharmacy, University Medical Centre Hamburg-Eppendorf, Hamburg, Germany e-mail: c.langebrake@uke.de",
+ "doi": "10.1007/978-3-031-44080-9_67",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "394ae89be4",
+   "type": "h2",
+   "num": "67.1",
+   "en": "Introduction"
+  },
+  {
+   "id": "fc498b6c7b",
+   "type": "p",
+   "en": "“More obese people in the world than underweight” was the headline on BBC News on 1 April 2016. This statement is based on a study comparing the prevalence of body mass index (BMI) categories of more than 19.2 million adult participants in 186 of 200 countries. Comparing the age-standardized mean BMI by country in 1975 and 2014, there is a significant increase in both men (21.7 vs. 24.2 kg/m²) and women (22.1 vs. 24.4 kg/m²). According to the World Obesity Atlas, one billion people globally are estimated to be living with obesity by 2030."
+  },
+  {
+   "id": "0b03abd536",
+   "type": "p",
+   "en": "Compared with people of healthy weight, those who are overweight or obese are at greater risk for many diseases, including diabetes, high blood pressure, cardiovascular disease, stroke, and at least 13 types of cancer, as well as having an elevated risk of death from all causes. Furthermore, obesity seems to be associated with a worse outcome after hematopoietic cell transplantation (HCT)."
+  },
+  {
+   "id": "e0737e14f3",
+   "type": "h3",
+   "num": "67.1.1",
+   "en": "Definitions and Size Describers of Obesity"
+  },
+  {
+   "id": "bcc1704bd7",
+   "type": "p",
+   "en": "Classification of excess weight and obesity is usually based on BMI which is calculated using height and weight of an individual. According to the World Health Organization (WHO), adults are defined to be normal weight with a BMI of 18.5–24.9 kg/m², overweight with 25–29.9 kg/m², and obese with ≥30 kg/m². However, one has to keep in mind that although BMI has been shown to correlate with subcutaneous fat (but not with percentage body fat), in individuals with greater muscle mass, women or the elderly, BMI might not be the best describer, as muscle mass is more dense than fat mass. In those people, percent body fat would better describe body composition, but the direct measurement is usually not readily available as it requires advanced technical equipment (e.g. hydrodensitometry, skin-fold measurement, bioelectrical impedance analysis, or dual-energy X-ray absorptiometry) (Hanley et al. 2010). As a consequence, indirect measures of body composition, such as BMI or ideal body weight (IBW), remain the standard, as they are easy to calculate."
+  },
+  {
+   "id": "a88a613bf5",
+   "type": "h2",
+   "num": "67.2",
+   "en": "Influence of Excess Weight and Obesity on the Pharmacokinetics of Drugs"
+  },
+  {
+   "id": "fa163d323c",
+   "type": "p",
+   "en": "Obesity is associated with physiological changes that can alter the pharmacokinetic (PK) parameters of many drugs. Observed physiological changes in obese patients influencing the pharmacokinetic behavior of drugs and resulting consequences for drug dosing are summarized in Table 67.1."
+  },
+  {
+   "id": "57ee7db0d6",
+   "type": "p",
+   "en": "Nevertheless, it has to be kept in mind that the effects of physiologic changes are usually drug-specific and that for the majority of drugs, both pharmacokinetic and clinical data in obese patients are sparse. Due to unusual distribution processes, the kinetics of drugs is difficult to predict in obese patients."
+  },
+  {
+   "id": "9ff534345f",
+   "type": "p",
+   "en": "The impact of obesity on glomerular filtration rate (GFR) as well as on tubular secretion is not completely understood. Discrepant results regarding GFR in obese as compared with normal-weight individuals might be explained by estimating GFR using serum creatinine, as no instrument has been validated for obesity. Especially, if using weight-based formulas like the widespread Cockroft– Gault formula, estimated GFR (eGFR) will be overestimated if total body weight (TBW) is used but underestimated if ideal body weight is used. Therefore, it is reasonable to use adjusted ideal body weight (AIBW) for estimation in overweight or obese patients. However, the use of weight-independent formulas, such as MDRD (Modification of Diet in Renal Disease) or CKD-EPI (Chronic Kidney Disease Epidemiology Collaboration), that has been shown to result in more reliable estimates (Bouquegneau et al. 2015), has limitations: as the eGFR is provided in mL/min/1.73 m², the possibly incorrect calculation of body surface area (BSA) in the obese might negatively influence the results."
+  },
+  {
+   "id": "b8e2768fe1",
+   "type": "table",
+   "num": "67.1",
+   "en": "Table 67.1 erview of physiologic changes in obese individuals influencing pharmacokinetics of drugsOv",
+   "columns": 3,
+   "rows_en": [
+    [
+     "",
+     "Changes in obese patients",
+     "Consequences of drug dosing"
+    ],
+    [
+     "Absorption",
+     "• Increased gastrointestinal blood flow • Accelerated gastric emptying • Changes in the composition and thickness of the subcutaneous fat tissue",
+     "• Only little data on oral bioavailability or a couple of drugs including cyclosporine A, • F midazolam, or propranolol, no differences in oral bioavailability have been observed • Unsuccessful intramuscular injections • Accidental intramuscular administration intended for subcutaneous injection aucity of information on the rate of absorption and • P bioavilability administered subcutanously"
+    ],
+    [
+     "Distribution",
+     "• Hydrophilic drugs: Vd is similar in normal-weight and obese patients • Moderate or high lipophilic drugs: significant differences in Vd Tissue blood flow may be reduced• • Obesity does not appear to have an impact on plasma protein binding",
+     "• Vd is important for the determination of a loading dose in order to achieve a rapid and adequate exposition • Vd changes are drug-specific (attributable to the physicochemical properties of the drug)"
+    ],
+    [
+     "Clearance (renal and hepatic)",
+     "Altered hepatic blood flow• -• TBWproportional increase in phase II metabolism • GFR and renal perfusion are similar, but imprecision in GFR estimation (see text below) • Obese individuals exhibit higher absolute drug clearance • Clearance does not increase linearly with TBW • Clearance and lean body weight are linearly correlated",
+     "• Elimination of hydrophilic and extensively renally cleared drugs mainly depends on renal function • No apparent relationship between lipophilicity and clearance mechanism • Essential parameter to determine maintenance dose ysicochemical attributes of drugs have little • Ph impact on clearance"
+    ],
+    [
+     "Abbreviations:",
+     "GFR glomerular filtration rate, TBW total body weight,",
+     "Vd volume of distribution"
+    ]
+   ]
+  },
+  {
+   "id": "b5d75aa7fe",
+   "type": "p",
+   "en": "Taken together, there is only limited evidence-based information about drug clearance in obese patients due to restrictions of clinical trials and the lack of pharmacokinetic (PK) analyses. It is important to remember that there is no single-size descriptor for all drugs."
+  },
+  {
+   "id": "ce1ae3cef8",
+   "type": "h2",
+   "num": "67.3",
+   "en": "Recommendations for Drug Dosing"
+  },
+  {
+   "id": "3bd434c34b",
+   "type": "p",
+   "en": "Besides the above-described physicochemical attributes and PK properties, recommendations from the literature and plasma concentration monitoring are important to determine drug dosing in morbidly obese patients (Green and Duffull 2004; Han et al. 2007; Hanley et al. 2010)."
+  },
+  {
+   "id": "0a09d50168",
+   "type": "h3",
+   "num": "67.3.1",
+   "en": "Which Weight to Use for Calculation?"
+  },
+  {
+   "id": "7956836702",
+   "type": "p",
+   "en": "For some drugs, the use of adjusted ideal body weight (AIBW) resulted in similar drug exposure in obese as compared to normal-weight patients: This is, for example, true for aminoglycosides, acyclovir (Turner et al. 2016), or liposomal Amphotericin B. AIBW is calculated by adding 25–40% of the difference between total body weight (TBW) and IBW to the IBW. This method is also well examined using population PK models for busulfan (Nguyen et al. 2006). On the other hand, initial vancomycin dosing should be based on TBW with subsequent therapeutic drug monitoring. However, for many drugs, the optimal basis for dose calculation has still to be determined."
+  },
+  {
+   "id": "9d456b765e",
+   "type": "h3",
+   "num": "67.3.2",
+   "en": "Antibiotics, Chemotherapy, and Other Drugs"
+  },
+  {
+   "id": "45a82b622c",
+   "type": "p",
+   "en": "The majority of dosing recommendations in obese patients exist for antimicrobial drugs. A comprehensive overview of current literature of antibiotic dosing was first published in 2017 and updated in 2022 (Meng et al. 2023)."
+  },
+  {
+   "id": "31b8869e5c",
+   "type": "p",
+   "en": "For the dosing of chemotherapy—except high-dose regimens—the American Society of Clinical Oncology (ASCO) published the following main statements in 2012 that were updated in 2021 (Griggs et al. 2021):"
+  },
+  {
+   "id": "0a57d31c15",
+   "type": "li",
+   "en": "• Dose should be selected according to body"
+  },
+  {
+   "id": "ccf9dc752f",
+   "type": "p",
+   "en": "surface area (BSA) using actual body weight."
+  },
+  {
+   "id": "6d6d6fddc6",
+   "type": "li",
+   "en": "• Dose reductions of systemic antineoplastic"
+  },
+  {
+   "id": "718891c46b",
+   "type": "p",
+   "en": "therapies should be based on toxicity and"
+  },
+  {
+   "id": "4ccf0d41da",
+   "type": "p",
+   "en": "comorbidities independent of the obesity sta"
+  },
+  {
+   "id": "efe090f64b",
+   "type": "p",
+   "en": "tus—there is no evidence that obese patients"
+  },
+  {
+   "id": "d4770c3d43",
+   "type": "p",
+   "en": "experience increased toxicity when actual"
+  },
+  {
+   "id": "dc5a8e9923",
+   "type": "p",
+   "en": "weight is used for the calculation of"
+  },
+  {
+   "id": "4da1fd8069",
+   "type": "p",
+   "en": "chemotherapy."
+  },
+  {
+   "id": "d4c8eabe64",
+   "type": "li",
+   "en": "• Full, approved doses of immunotherapy and"
+  },
+  {
+   "id": "9f3d2e8ac4",
+   "type": "p",
+   "en": "targeted therapies should be offered to obese"
+  },
+  {
+   "id": "ed17249a71",
+   "type": "p",
+   "en": "adults with cancer."
+  },
+  {
+   "id": "11f93f0994",
+   "type": "p",
+   "en": "However, some limitations have to be kept in mind, as (1) there are no RCTs comparing actual body weight with other adjusted dosing approaches in obese patients, (2) recommendations are based on subgroup analyses of obese patients from RCTs or observational studies using actual versus adjusted weight calculation, and (3) there are no recommendations for HCT conditioning."
+  },
+  {
+   "id": "af2a3e64ef",
+   "type": "p",
+   "en": "Some recommendations have also been published for the dosage of low-molecular-weight heparins. In the context of prophylaxis, for example, fixed-dose enoxaparin shows an inverse linear correlation between the AUC or anti-Xa activity and body weight between 50 and 150 kg, with the lowest levels in moderate-to-severe obese patients (Rocca et al. 2018). Therefore, an increased dose has been suggested for venous thromboembolism prophylaxis and weight-based dosing (without dose capping, but with anti-Xa monitoring in severe obesity) for antithrombotic therapy."
+  },
+  {
+   "id": "d09ebff471",
+   "type": "p",
+   "en": "One case report described experiences of drug dosing in a morbidly obese patient undergoing allogeneic HCT (Langebrake et al. 2011). Here, it was observed that for hydrophilic and extensively renally cleared drugs, standard dosages for adult patients or dosing based on ideal body"
+  },
+  {
+   "id": "f8d2d24867",
+   "type": "p",
+   "en": "weight can be used. For more lipophilic drugs like cyclosporine A or digitoxin, it could be shown that after achieving sufficient plasma levels using high initial doses, maintenance doses similar to those used in normal-weight patients are sufficient. Monitoring of plasma concentrations is highly recommended for drugs with a narrow therapeutic index."
+  },
+  {
+   "id": "9fbea8860a",
+   "type": "h3",
+   "num": "67.3.3",
+   "en": "Preparative Regimens Prior to HCT"
+  },
+  {
+   "id": "e850baeb77",
+   "type": "p",
+   "en": "In patients undergoing autologous or allogeneic HCT, specific features and purposes have to be taken into account. In autologous HCT, high-dose chemotherapy aims to reduce tumor burden, while in allogeneic HCT therapeutic effect is based on donor immune cells and myeloablation."
+  },
+  {
+   "id": "bf4ffb7a95",
+   "type": "p",
+   "en": "There is uncertainty as to appropriate practice in relation to dose adjustments of both conditioning chemotherapy and graft-versus-host disease (GvHD) prophylaxis in obese patients undergoing HCT, as there are insufficient data to determine optimal drug dosing in obese patients undergoing HCT. In Europe, the vast majority of transplant centers consider dose adjustments in conditioning chemotherapy, although with significant variation in the methods used to categorize obesity and the degree of modification (Smith et al. 2023). Most centers refer to the ASBMT recommendations published in 2014, although it had been concluded that “dose adjustments for obesity have been based empirically or extrapolated from published data in the nontransplantation patient population” and that “clear standards or dosing guidelines are unable to be made for the obese population because Level I and II evidence are unavailable at this time.” (Bubalo et al. 2014)."
+  },
+  {
+   "id": "ddfcb0fc2d",
+   "type": "p",
+   "en": "For conditioning agents with intermediate (e.g. busulfan, cyclophosphamide, etoposide, melphalan, thiotepa, and treosulfan) or high volume of distribution (e.g. carmustine, clofarabine, cytarabine, and fludarabine), pharmacokinetic considerations suggest that exposure is increased in overweight or obese patients compared to normal- weight patients when the TBW is used for dose calculation."
+  },
+  {
+   "id": "5bebe2c603",
+   "type": "p",
+   "en": "In particular, for busulfan, there is good evidence from pharmacokinetic and clinical studies supporting the use of AIBW for dosing busulfan. Especially for children and myeloablative regimens, the implementation of therapeutic drug monitoring is recommended (Palmer et al. 2016)."
+  },
+  {
+   "id": "6c19058eed",
+   "type": "p",
+   "en": "For high-dose cyclophosphamide, data from both pharmacokinetic (Takahashi et al. 2022) and clinical studies (Bachanova et al. 2016) are available that support dosing based on AIBW."
+  },
+  {
+   "id": "a4873bce49",
+   "type": "p",
+   "en": "The approach to use AIBW-based BSA for dose calculation of melphalan prior to autologous HCT in multiple myeloma patients has been shown to be non-inferior as compared to the nonobese population in terms of 3-year event-free survival (Shultes et al. 2017). On the other hand, for lymphoma patients receiving high-dose BEAM prior to autologous HCT, no requirement for weight-based dose adjustment has been proposed based on tolerability and outcome (Fair et al. 2017)."
+  },
+  {
+   "id": "44323cf0e2",
+   "type": "p",
+   "en": "Even for antithymocyte globulin (ATG) that is characterized by a very low volume of distribution, TBW for dose calculation is recommended by ASBMT. However, from a pharmacokinetic point of view, it would be more reasonable to use ideal body weight, as ATG (like other protein-based drugs) has a volume distribution that is almost equal to the whole blood volume. Furthermore, it has been proposed, to rather base ATG dosing on absolute lymphocyte count, as this is the target of ATG (Kennedy et al. 2018)."
+  },
+  {
+   "id": "8bbd5a6f18",
+   "type": "p",
+   "en": "Reports of obese patients undergoing HCT are challenging to interpret because of the heterogeneity of obesity definitions, underlying diseases, graft sources, and chemotherapy regimens employed. Compared with normal-weight patients, it appears that obese patients undergoing allogeneic HCT have a higher risk of non-relapse mortality and inferior survival, whereas those receiving autologous HCT appear to have equivalent outcomes. Another important limitation for the interpretation of published data is that there is no consistent standard for calculating chemotherapy dose in this group. Therefore, it is recommended that future studies utilize more"
+  },
+  {
+   "id": "c8b40b93f8",
+   "type": "p",
+   "en": "consistent and biologically relevant definitions of obesity and that the pharmacokinetics and pharmacodynamics of specific conditioning regimens should be studied (Weiss et al. 2013)."
+  },
+  {
+   "id": "3f527b9b4b",
+   "type": "li",
+   "en": "• Obesity is associated with a significant increase in morbidity (including metabolic diseases and cancer) and mortality."
+  },
+  {
+   "id": "e93f4be915",
+   "type": "li",
+   "en": "• Indirect measures of body composition, like BMI or ideal body weight, remain the standard as they are easy to calculate."
+  },
+  {
+   "id": "0148305723",
+   "type": "li",
+   "en": "• There is only limited evidence-based information about drug clearance in obese patients due to restrictions of clinical trials and the lack of pharmacokinetic analyses."
+  },
+  {
+   "id": "6f0dadd094",
+   "type": "li",
+   "en": "• Evidence for clear standards or dosing guidelines is currently not available as there are insufficient data to determine optimal drug dosing in obese patients undergoing HCT."
+  },
+  {
+   "id": "4ebf271f2b",
+   "type": "li",
+   "en": "• Despite that, in clinical practice, about 80% of HCT centers routinely perform dose adjustment for obesity. However, the methods used for determining the weight for chemotherapy calculation are different among the transplant centers."
+  }
+ ],
+ "references": [
+  "Bachanova V, Rogosheske J, Shanley R, Burns LJ, Smith SM, Weisdorf DJ, Brunstein CG. Adjusting cyclophosphamide dose in obese patients with lymphoma is safe and yields favorable outcomes after autologous hematopoietic cell transplantation. Biol Blood Marrow Transplant. 2016;22(3):571–4.",
+  "Bouquegneau A, Vidal-Petiot E, Moranne O, Mariat C, Boffa JJ, Vrtovsnik F, Scheen AJ, Krzesinski JM, Flamant M, Delanaye P. Creatinine-based equations for the adjustment of drug dosage in an obese population. Br J Clin Pharmacol. 2015;81(2):349–61.",
+  "Bubalo J, Carpenter PA, Majhail N, Perales MA, Marks DI, Shaughnessy P, Pidala J, Leather HL, Wingard J, Savani BN, American Society for Blood and Marrow Transplantation practice guideline. Conditioning chemotherapy dose adjustment in obese patients: a review and position statement by the American Society for Blood and Marrow Transplantation practice guideline committee. Biol Blood Marrow Transplant. 2014;20(5):600–16.",
+  "Fair C, Shanley R, Rogosheske J, Lazaryan A, McClune B, Brunstein CG, Bachanova V. BEAM conditioning is well-tolerated and yields similar survival in obese and non-obese patients with lymphoma: no requirement for weight-based dose modifications. Bone Marrow Transplant. 2017;52(3):491–3.",
+  "Green B, Duffull SB. What is the best size descriptor to use for pharmacokinetic studies in the obese? Br J Clin Pharmacol. 2004;58(2):119–33.",
+  "Griggs JJ, Bohlke K, Balaban EP, Dignam JJ, Hall ET, Harvey RD, Hecht DP, Klute KA, Morrison VA, Pini TM, Rosner GL, Runowicz CD, Shayne M, Sparreboom A, Turner S, Zarwan C, Lyman GH. Appropriate systemic therapy dosing for obese adult patients with cancer: ASCO guideline update. J Clin Oncol. 2021;39(18):2037–48.",
+  "Han PY, Duffull SB, Kirkpatrick CM, Green B. Dosing in obesity: a simple solution to a big problem. Clin Pharmacol Ther. 2007;82(5):505–8.",
+  "Hanley MJ, Abernethy DR, Greenblatt DJ. Effect of obesity on the pharmacokinetics of drugs in humans. Clin Pharmacokinet. 2010;49(2):71–87.",
+  "Kennedy VE, Chen H, Savani BN, Greer J, Kassim AA, Engelhardt BG, Goodman S, Sengsayadeth S, Chinratanalab W, Jagasia M. Optimizing antithymocyte globulin dosing for unrelated donor allogeneic hematopoietic cell transplantation based on recipient absolute lymphocyte count. Biol Blood Marrow Transplant. 2018;24(1):150–5.",
+  "Langebrake C, Bernhardt F, Baehr M, Kroger N, Zander AR. Drug dosing and monitoring in obese patients undergoing allogenic stem cell transplantation. Int J Clin Pharm. 2011;33(6):918–24.",
+  "Meng L, Mui E, Ha DR, Stave C, Deresinski SC, Holubar M. Comprehensive guidance for antibiotic dosing in obese adults: 2022 update. Pharmacotherapy. 2023;43(3):226–46.",
+  "Nguyen L, Leger F, Lennon S, Puozzo C. Intravenous busulfan in adults prior to haematopoietic stem cell transplantation: a population pharmacokinetic study. Cancer Chemother Pharmacol. 2006;57(2):191–8.",
+  "Palmer J, McCune JS, Perales MA, Marks D, Bubalo J, Mohty M, Wingard J, Paci A, Hassan M, Bredeson C, Pidales J, Shah N, Shaughnessy P, Majhail N, Schriber J, Savani BN, Carpenter PA. Personalizing Busulfan-based conditioning: considerations from the American Society for Blood and Marrow Transplantation Practice Guidelines Committee. Biol Blood Marrow Transplant. 2016;22:1915.",
+  "Rocca B, Fox KAA, Ajjan RA, Andreotti F, Baigent C, Collet JP, Grove EL, Halvorsen S, Huber K, Morais J, Patrono C, Rubboli A, Seljeflot I, Sibbing D, Siegbahn A, Ten Berg J, Vilahur G, Verheugt FWA, Wallentin L, Weiss TW, Wojta J, Storey RF. Antithrombotic therapy and body mass: an expert position paper of the ESC working group on thrombosis. Eur Heart J. 2018;39(19):1672–1686f.",
+  "Shultes KC, Arp C, Stockerl-Goldstein K, Trinkaus K, DeFrates S. Impact of dose-adjusted Melphalan in obese patients undergoing autologous stem cell transplantation. Biol Blood Marrow Transplant. 2017;23:S165.",
+  "Smith S, H Scarfe, N Duncan, R Shah, E Davies and N Maouche. Dosing of conditioning chemotherapy and GvHD prophylaxis in obesity – a survey of practice. 2023.",
+  "Takahashi T, Jaber MM, Al-Kofahi M, Weisdorf D, Brunstein C, Bachanova V, Brundage RC, Jacobson PA, Kirstein MN. Comparison of dose adjustment strategies for obesity in high-dose cyclophosphamide among adult hematopoietic cell transplantation recipients: pharmacokinetic analysis. Transplant Cell Ther. 2022;28(12):845 e841–8.",
+  "Turner RB, Cumpston A, Sweet M, Briggs F, Slain D, Wen S, Craig M, Hamadani M, Petros W. Prospective, controlled study of acyclovir pharmacokinetics in obese patients. Antimicrob Agents Chemother. 2016;60(3):1830–3.",
+  "Weiss BM, Vogl DT, Berger NA, Stadtmauer EA, Lazarus HM. Trimming the fat: obesity and hematopoietic cell transplantation. Bone Marrow Transplant. 2013;48(9):1152–60."
+ ]
+}

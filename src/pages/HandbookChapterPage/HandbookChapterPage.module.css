@@ -1,0 +1,13 @@
+/*
+ * The language switch has to be reachable from anywhere in the chapter.
+ * Keeping the reader's place across a switch is pointless if reaching the
+ * switch means scrolling back to the chapter heading first — that is what
+ * loses the place.
+ */
+.tools {
+  position: sticky;
+  /* Just under the app header (AppShell header height is 48 px). */
+  top: calc(48px + var(--mantine-spacing-xs));
+  z-index: 2;
+  background-color: var(--mantine-color-body);
+}

@@ -1,0 +1,850 @@
+{
+ "number": 52,
+ "part": "VI",
+ "page_pdf": [
+  478,
+  487
+ ],
+ "page_printed": 471,
+ "title_en": "Noninfectious Pulmonary Complications",
+ "authors": "Anne Bergeron and Kenneth R. Cooke",
+ "affiliations": "",
+ "doi": "10.1007/978-3-031-44080-9_52",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 1,
+ "blocks": [
+  {
+   "id": "394ae89be4",
+   "type": "h2",
+   "num": "52.1",
+   "en": "Introduction"
+  },
+  {
+   "id": "2c85c7d32f",
+   "type": "p",
+   "en": "Lung injury occurs frequently following HCT and significantly contributes to morbidity and mortality in the immediate posttransplant period and in the months and years that follow. In aggregate, pulmonary dysfunction can be observed in 25–55% of recipients (Cooke and Yanik 2016; Haider et al. 2020). In this context, an NIH workshop was recently convened to specifically identify clinical challenges and scientific knowledge gaps regarding pulmonary dysfunction in pediatric HCT recipient (Tamburro et al. 2021)."
+  },
+  {
+   "id": "d260eeeef2",
+   "type": "p",
+   "en": "Historically, approximately half of all pulmonary complications seen after HCT were secondary to infection, but the judicious use of broad-spectrum antimicrobial agents has tipped the balance toward noninfectious causes."
+  },
+  {
+   "id": "26bf4f9394",
+   "type": "p",
+   "en": "Noninfectious lung injury following HCT may be mediated by immune or nonimmune mechanisms and accounts for up to 50% of noninfectious mortality after allo-HCT."
+  },
+  {
+   "id": "2ca522a280",
+   "type": "p",
+   "en": "These complications have been classified by the American Thoracic Society according to the tissue primarily injured and its etiology (Panoskaltsis-Mortari et al. 2011) (Table 52.1)."
+  },
+  {
+   "id": "fdf01b6f9e",
+   "type": "table",
+   "num": "52.1",
+   "en": "Table 52.1 Noninfectious pulmonary complications",
+   "columns": 3,
+   "rows_en": [
+    [
+     "",
+     "after HCT",
+     "a"
+    ],
+    [
+     "",
+     "Localization",
+     "Entity"
+    ],
+    [
+     "",
+     "Pulmonary",
+     "b –Acute interstitial pneumonitis"
+    ],
+    [
+     "",
+     "parenchyma",
+     "–Acute respiratory distress"
+    ],
+    [
+     "",
+     "",
+     "b syndrome (ARDS)"
+    ],
+    [
+     "",
+     "",
+     "–BCNU pneumonitis"
+    ],
+    [
+     "",
+     "",
+     "–Radiation pneumonitis"
+    ],
+    [
+     "",
+     "",
+     "–Delayed pulmonary toxicity"
+    ],
+    [
+     "",
+     "",
+     "syndromeb"
+    ],
+    [
+     "",
+     "",
+     "–Post-HCT lymphoproliferative"
+    ],
+    [
+     "",
+     "",
+     "disease (see Chap. 45)"
+    ],
+    [
+     "",
+     "",
+     "–Eosinophilic pneumonia"
+    ],
+    [
+     "",
+     "",
+     "–Pulmonary alveolar proteinosis"
+    ],
+    [
+     "A. Bergeron University Hospitals of Geneva, Geneva University, Geneva, Switzerland",
+     "Vascular endothelium",
+     "–Peri-engraftment respiratory b distress syndrome (PERDS) –Capillary leak syndrome (CLS)b (see Chap. 42)"
+    ],
+    [
+     "Université Paris Cité, UMR 1153 CRESS, ECSTRRA",
+     "",
+     "–Diffuse alveolar hemorrhage"
+    ],
+    [
+     "Team, Paris, France",
+     "",
+     "(DAH)b"
+    ],
+    [
+     "e-mail: anne.bergeron@hcuge.ch",
+     "",
+     "–Pulmonary VOD"
+    ],
+    [
+     "K. R. Cooke (*) Department of Oncology, Pediatric Blood and Marrow Transplantation Program, Sidney Kimmel Comprehensive Cancer Center, Johns Hopkins University School of Medicine, Baltimore, MD, USA",
+     "",
+     "–Transfusion-associated acute lung injury –Pulmonary cytolytic syndrome –Pulmonary arterial hypertension –Pulmonary thromboembolism"
+    ],
+    [
+     "e-mail: kcooke5@jhmi.edu",
+     "",
+     "(continued)"
+    ]
+   ]
+  },
+  {
+   "id": "6af964f46c",
+   "type": "h2",
+   "num": "52.2",
+   "en": "Approach to Diagnostic Workup for Pulmonary Complications After HCT"
+  },
+  {
+   "id": "ea00088368",
+   "type": "p",
+   "en": "Ideally, any respiratory/pulmonary complication observed after HCT whether early or late onset should be evaluated following predetermined, institutional, standard of practice guidelines (Lucena et al. 2014). Workup requires attention to pulmonary and non-pulmonary causes. Respiratory distress may progress rapidly once identified; hence, a timely workup including assessment of pulmonary and cardiac function, imaging, and procurement of samples to rule out infection is critical for optimizing outcomes (Tamburro et al. 2021; Cooke and Yanik 2016):"
+  },
+  {
+   "id": "792f522826",
+   "type": "p",
+   "en": "1. Assessment of oxygen saturation/oxygen"
+  },
+  {
+   "id": "caf1c07688",
+   "type": "p",
+   "en": "requirement: Pulse oximetry or arterial blood"
+  },
+  {
+   "id": "c4fb524d2d",
+   "type": "p",
+   "en": "gas analysis if indicated. For late-onset nonin"
+  },
+  {
+   "id": "9ee05915e9",
+   "type": "p",
+   "en": "fectious pulmonary complications (LONIPC),"
+  },
+  {
+   "id": "ff8fd2d10c",
+   "type": "p",
+   "en": "pulse oximetry following a hall walk is"
+  },
+  {
+   "id": "2284e0abca",
+   "type": "p",
+   "en": "suggested. 2. Imaging: Chest radiographs (particularly in"
+  },
+  {
+   "id": "d4d672763d",
+   "type": "p",
+   "en": "children) or CT scanning to assess for the"
+  },
+  {
+   "id": "38b5df56f4",
+   "type": "p",
+   "en": "presence of lobar, multi-lobar, or diffuse pul"
+  },
+  {
+   "id": "f5a462e0be",
+   "type": "p",
+   "en": "monary infiltrates. For early-onset lung injury,"
+  },
+  {
+   "id": "5c0b73b043",
+   "type": "p",
+   "en": "a low-dose CT can suffice. For LONIPC, a CT"
+  },
+  {
+   "id": "a223c732c8",
+   "type": "p",
+   "en": "with inspiratory cuts is mandatory, and expi"
+  },
+  {
+   "id": "39cdf8bfda",
+   "type": "p",
+   "en": "ratory views to assess for air trapping should"
+  },
+  {
+   "id": "06c26bdf67",
+   "type": "p",
+   "en": "be discussed. Echocardiography can be con"
+  },
+  {
+   "id": "2514c63376",
+   "type": "p",
+   "en": "sidered to identify left-heart dysfunction or"
+  },
+  {
+   "id": "ee7da8eb8b",
+   "type": "p",
+   "en": "pulmonary hypertension. 3. Pulmonary function testing (PFTs): PFTs are"
+  },
+  {
+   "id": "82967e1a53",
+   "type": "p",
+   "en": "rarely indicated in the context of acute lung"
+  },
+  {
+   "id": "cf87c89675",
+   "type": "p",
+   "en": "complications but can be considered. For"
+  },
+  {
+   "id": "2893c8e407",
+   "type": "p",
+   "en": "LONIPC, PFTs including spirometry (with"
+  },
+  {
+   "id": "58cff7f9da",
+   "type": "p",
+   "en": "out and with albuterol), lung volumes, and"
+  },
+  {
+   "id": "05ab8cfb09",
+   "type": "p",
+   "en": "DLCO are recommended to assess for signs"
+  },
+  {
+   "id": "50b2ebeac6",
+   "type": "p",
+   "en": "for either restrictive or obstructive pulmonary"
+  },
+  {
+   "id": "7db5436073",
+   "type": "p",
+   "en": "dysfunction and to assess severity (Jagasia"
+  },
+  {
+   "id": "e8d69aed64",
+   "type": "p",
+   "en": "et al. 2015; Wolff et al. 2021). Assessing PFTs"
+  },
+  {
+   "id": "c2ce13d99d",
+   "type": "p",
+   "en": "in pediatric patients remains a challenge par"
+  },
+  {
+   "id": "f286292713",
+   "type": "p",
+   "en": "ticularly in young children (Tamburro et al."
+  },
+  {
+   "id": "a31605eacd",
+   "type": "p",
+   "en": "2021). 4. Infectious disease testing: Blood samples for"
+  },
+  {
+   "id": "09df16a743",
+   "type": "p",
+   "en": "bacterial culture and detection of viral replica"
+  },
+  {
+   "id": "beb1631026",
+   "type": "p",
+   "en": "tion; sputum culture; nasopharyngeal swabs"
+  },
+  {
+   "id": "ab7f697026",
+   "type": "p",
+   "en": "for rapid viral panels including SARS-CoV-2,"
+  },
+  {
+   "id": "727baad61e",
+   "type": "p",
+   "en": "respiratory syncytial virus (RSV), parainflu"
+  },
+  {
+   "id": "a4250d2680",
+   "type": "p",
+   "en": "enza virus (PIV), adenovirus (ADV), rhino-"
+  },
+  {
+   "id": "0617125706",
+   "type": "p",
+   "en": "enteroviruses, influenza A and B (in season),"
+  },
+  {
+   "id": "dd19abed7e",
+   "type": "p",
+   "en": "metapneumovirus, and others; urinary antigen"
+  },
+  {
+   "id": "ca16b0ca5b",
+   "type": "p",
+   "en": "tests; blood samples for galactomannan and"
+  },
+  {
+   "id": "570f9065f9",
+   "type": "p",
+   "en": "beta-D-glucan assays. 5. Fiber-optic bronchoscopy (FOB) with bron"
+  },
+  {
+   "id": "c029f659d7",
+   "type": "p",
+   "en": "choalveolar lavage (BAL) (strongly encour"
+  },
+  {
+   "id": "534789c661",
+   "type": "p",
+   "en": "aged): Complete in collaboration with"
+  },
+  {
+   "id": "893d4d5b2a",
+   "type": "p",
+   "en": "specialists in pulmonary medicine and infec"
+  },
+  {
+   "id": "e3b7a9849f",
+   "type": "p",
+   "en": "tious diseases. PCR for Pneumocystis jirove"
+  },
+  {
+   "id": "f3803d39cb",
+   "type": "p",
+   "en": "cii (PJ), Legionella, and Mycoplasma."
+  },
+  {
+   "id": "18ab2e1745",
+   "type": "p",
+   "en": "Cultures and stains for bacteria, fungi, and"
+  },
+  {
+   "id": "c222562b3a",
+   "type": "p",
+   "en": "AFB along with galactomannan assay. If BAL"
+  },
+  {
+   "id": "117f383a63",
+   "type": "p",
+   "en": "cannot be completed, consider approaches to"
+  },
+  {
+   "id": "ef69551e15",
+   "type": "p",
+   "en": "induce and collect sputum for the assays noted"
+  },
+  {
+   "id": "0888734fb2",
+   "type": "p",
+   "en": "above:"
+  },
+  {
+   "id": "7e52e08df8",
+   "type": "li",
+   "en": "• If positive, treat accordingly."
+  },
+  {
+   "id": "3450942e77",
+   "type": "li",
+   "en": "• If negative, consider empiric treatment and consideration for idiopathic pneumonia syndrome (IPS) and other etiologies (see below). 6. Tissue biopsy: While not encouraged, in some"
+  },
+  {
+   "id": "fedc3be4a6",
+   "type": "p",
+   "en": "selected cases, e.g., later-onset cases where"
+  },
+  {
+   "id": "dbe0a57748",
+   "type": "p",
+   "en": "the diagnosis is not established by noninva"
+  },
+  {
+   "id": "3ec08b2943",
+   "type": "p",
+   "en": "sive tests or those poorly responsive to antimi"
+  },
+  {
+   "id": "cccc3be07a",
+   "type": "p",
+   "en": "crobial or anti-inflammatory therapy (see"
+  },
+  {
+   "id": "d30120433e",
+   "type": "p",
+   "en": "below), a tissue biopsy could be considered"
+  },
+  {
+   "id": "238494d26c",
+   "type": "p",
+   "en": "using either transbronchial (less favored) or"
+  },
+  {
+   "id": "a88ab2a23d",
+   "type": "p",
+   "en": "minimally invasive, video-assisted thoraco"
+  },
+  {
+   "id": "30f30b1d4a",
+   "type": "p",
+   "en": "scopic surgery (VATS) (Dieffenbach et al."
+  },
+  {
+   "id": "9847f62ee1",
+   "type": "p",
+   "en": "2019)."
+  },
+  {
+   "id": "77ffe8c1c5",
+   "type": "table",
+   "num": "52.1",
+   "en": "Table 52.1 (continued)",
+   "columns": 2,
+   "rows_en": [
+    [
+     "Localization",
+     "Entity"
+    ],
+    [
+     "Airway epithelium",
+     "–Interstitial lung disease including cryptogenic organizing pneumonia (COP)b, c –Bronchiolitis obliterans syndrome (BOS)"
+    ],
+    [
+     "a Importantly, this classification does not include the most frequent lung complication after HCT, i.e., pulmonary edema secondary to fluid overload b All these complications could be categorized as IPS if occurring early after HCT c Formerly called bronchiolitis obliterans organizing pneumonia (BOOP)",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "1ab867694d",
+   "type": "h3",
+   "num": "52.2.1",
+   "en": "Results Reported Using This Methodology (Seo et al. 2015; Lucena et al. 2014; Shannon et al. 2010; Yanik et al. 2008a, b)"
+  },
+  {
+   "id": "6386fe1459",
+   "type": "p",
+   "en": "FOB/BAL permits an etiological diagnosis in up to 78% of cases."
+  },
+  {
+   "id": "848b71ac9f",
+   "type": "p",
+   "en": "In suspected IPS, a BAL study may detect a pathogen in ~50% of cases."
+  },
+  {
+   "id": "a646f33db7",
+   "type": "p",
+   "en": "For pathogen detection, early FOB (<5 days) offers better yield than late FOB; hence, completing FOB as soon as possible is preferred."
+  },
+  {
+   "id": "3853b59cb5",
+   "type": "p",
+   "en": "The risk of complications with FOB is <5%."
+  },
+  {
+   "id": "33a60cfc5f",
+   "type": "p",
+   "en": "Note: Identifying an organism in pulmonary secretions does not always imply causality, and infectious and immune-mediated inflammation can occur concurrently."
+  },
+  {
+   "id": "fa05f715dc",
+   "type": "h2",
+   "num": "52.3",
+   "en": "Acute Noninfectious Pulmonary Complications After HCT"
+  },
+  {
+   "id": "41a658a5e0",
+   "type": "h3",
+   "num": "52.3.1",
+   "en": "Pulmonary Edema due to Fluid Overload"
+  },
+  {
+   "id": "06c4de7bed",
+   "type": "p",
+   "en": "Despite not being included in most classifications of pulmonary complications after HCT, pulmonary edema (PE) as a consequence of a fluid overload (FO) is extremely frequent (Rondón et al. 2017):"
+  },
+  {
+   "id": "86884da8e5",
+   "type": "h3",
+   "num": "52.3.2",
+   "en": "Idiopathic Pneumonia Syndrome"
+  },
+  {
+   "id": "ac22852815",
+   "type": "p",
+   "en": "52.3.2.1 Definition It is a widespread alveolar injury in the absence of active lower respiratory tract infection, cardiac or renal dysfunction, and iatrogenic fluid overload (Clark et al. 1993; Panoskaltsis-Mortari et al. 2011)."
+  },
+  {
+   "id": "89159a7d1e",
+   "type": "p",
+   "en": "52.3.2.2 Clinical Manifestations Signs and symptoms of IPS classically occur within 120 days (but as early as 3 weeks and as late as 180 days) after HCT and include fever, nonproductive cough, dyspnea, tachypnea, hypoxemia, rales, and diffuse alveolar or interstitial infiltrates on X-rays or CT scans."
+  },
+  {
+   "id": "3bfbfdceb4",
+   "type": "p",
+   "en": "52.3.2.3 Diagnosis All of the following must be present for the diagnosis of IPS:"
+  },
+  {
+   "id": "94219694f6",
+   "type": "aside",
+   "en": "DiagnosisPE should be suspected in the context of weight gain, an increased cardiothoracic index on imaging, and crackles/rales. Though rarely necessary, the diagnosis can be confirmed by pulmonary pressure measurements. Differential – Heart failure (prior anthracycline diagnosistoxicity or conditioning with CY). – Endothelial syndromes: SOS, CLS, ES (see Chaps. 42 and 49). – Respiratory tract infections: • Idiopathic pneumonia syndrome (IPS) – Posttransfusion reactions (TRALI). TreatmentGoal: Re-establish fluid homeostasis/ euvolemia via fluid restriction and diuretics."
+  },
+  {
+   "id": "9ec715914e",
+   "type": "aside",
+   "en": "IncidenceFO may be observed in up to 60% of patients early after HCT. The exact incidence of PE is not established although it could be higher than 20%. Symptoms – Weight gain, shortness of breath, and signsnonproductive cough, moderate hypoxemia. – Crackles and rales in both lung bases. – Chest radiology with diffuse alveolar/interstitial infiltrates."
+  },
+  {
+   "id": "08ca3ec1b2",
+   "type": "p",
+   "en": "52.3.2.4 Pathogenesis, Incidence, Presentation, and Risk Factors 52.3.2.5 Treatment and Prognosis"
+  },
+  {
+   "id": "d4b8f1bd47",
+   "type": "aside",
+   "en": "1. Evidence of widespread alveolar injury:Biomarker – sTNFR1, IL-6, MCP-1, Ang2, (a) Multi-lobar infiltrates on chest radiographs or incidencesCD14, and IL-8 are elevated in CTpatients with IPS (Yanik et al. (b) Symptoms and signs of pneumonia (cough, 2008a, b, 2015). dyspnea, tachypnea, crackles/rales)– sTNRF1, IL-6, and ST-2 were most (c) Evidence of abnormal pulmonary physiologypredictive in diagnosing IPS even Increased alveolar to arterial oxygen difference; before clinical signs and symptoms need for supplemental O₂ therapywere present (Seo et al. 2017). New or increased restrictive PFT abnormality– In addition, a biomarker panel including ST2, IL-6, and sTNFR1 2. Absence of active lower respiratory tract infection could, as early as day 7, predict based upon: respiratory failure and associated (a) BAL negative for significant bacterial mortality after HCT (Rowan et al. pathogens including acid-fast bacilli, Nocardia, 2022). and Legionella species – The strict definition required to (b) BAL negative for pathogenic nonbacterial establish a diagnosis and the microorganisms increased use of RIC have Routine culture for bacteria, fungi, and AFB significantly reduced the incidence and shell vial culture for CMV of IPS from that observed in the PCR for respiratory viruses and CMV past (~25%). Cytology for CMV inclusions, fungi, and – This reduction runs in parallel of Pneumocystis jirovecii the improvement in the diagnostic (c) Other organisms/tests to also consider: methodologies to detect infectious PCR for human metapneumovirus, rhinovirus, pathogens (Seo et al. 2015; Zinter coronavirus, and HHV6 et al. 2019). PCR for Chlamydia, Mycoplasma, and – Currently, the incidence of IPS is Aspergillus spp. <10% of allo-HCT (7% after MAC Serum and BAL fluid GM for Aspergillus with ≥12 Gy TBI; 2% after RIC in species, serum beta-D-glucan adults) (Wenger et al. 2020; Sano 3. Absence of cardiac dysfunction, acute renal failure, et al. 2014). or iatrogenic fluid overload as etiology for Timing– Generally, within first 120 days pulmonary dysfunction after BMT but can be observed between days 21 and 180. – Late IPS (up to180 days post-HCT) can be observed but is rare (Thompson et al. 2017). Risk factors – Older age/Karnofsky index <90/ (from Cooke higher interval diagnosis HCT. and Yanik MAC or TBI (≥12 Gy)/HLA disparity/ Pathogenesis– The pathophysiology of IPS is 2016)GVHD prophylaxis with MTX. complex. Data generated using Acute GVHD/previous viral infection/ experimental models support IPS other malignancies than leukemia. as a process in which the lung is susceptible to cellular and soluble inflammatory effectors. These distinct but related pathways of inflammation culminate in the recruitment of immune cells to the Supportive Supplemental O₂ therapy lung leading to tissue damage and measuresNoninvasive [high-flow nasal Oen-US2en-US, CPAP] dysfunction (Cooke and Yanik or, when needed, invasive (mechanical) 2016). ventilatory support: – Recent work has also underscored – Empiric broad-spectrum antimicrobials a role for the pulmonary – Strict control of fluid balance/ microbiome and metatranscriptome hemofiltration to the development of lung inflammation after HCT (Zinter et al. 2021)."
+  },
+  {
+   "id": "16d965ecef",
+   "type": "h3",
+   "num": "52.3.3",
+   "en": "Diffuse Alveolar Hemorrhage (DAH)"
+  },
+  {
+   "id": "3b32e40092",
+   "type": "p",
+   "en": "Diffuse alveolar hemorrhage (DAH) is a relevant cause of acute respiratory failure that occurs in 2021). DAH is likely a consequence of damage to the alveolar capillary basement membrane (see Chap. 42). DAH can be noninfectious or infectious in etiology (Majhail et al. 2006)."
+  },
+  {
+   "id": "62326d8529",
+   "type": "p",
+   "en": "52.3.3.1 Clinical Aspects of DAH"
+  },
+  {
+   "id": "a459bf336c",
+   "type": "p",
+   "en": "52.3.3.2 Treatment and Prognosis of DAH"
+  },
+  {
+   "id": "12c342e680",
+   "type": "aside",
+   "en": "Specific Lung injury in IPS can occur through two treatmentpathways, the TNF-alfa/LPS-dependent and IL6/IL17-dependent (Tamburro et al. 2021; Cooke and Yanik 2016; Varelias et al. 2015) informing current treatment options: • Methyl-PDN ≤ 2 mg/kg/day; if not clear response, consider as soon as possible. Clinical Usually observed within the first • Anti-TNFα: etanercept 0.4 mg/kg manifestationsmonth after HCT (a median of twice weekly (maximum of 8 23 days), often during the pre- doses) + systemic steroids (2 mg/kg/ engraftment phase; however, later day). In a phase II trial in children, the onset is encountered in up to 42% of CR rate was 71%, and 1 year survival cases was 63% (Yanik et al. 2015). This The clinical manifestations are those combination has also been shown to be of all IPS. Frank hemoptysis is rare. effective in exceptional cases of late DiagnosisBased on BAL: the progressive IPS with a 42% of CR and a 2-y bloodier return of BAL fluid aliquots, survival of 62% among responders in at least three segmental bronchi, (Thompson et al. 2017). The indicating the presence of blood in the randomized study of alveoli (or 20% hemosiderin-laden etanercept + steroids vs. macrophage, although their absence steroids + placebo was terminated does not exclude the diagnosis as it prematurely due to slow accrual. In the can take 72 h to appear). limited number of patients examined, Risk factors– Higher incidence after TBI and there were no differences in response high-dose CY. rates (≈60%) at day +28. These results Differential – Classic IPS: very difficult, only do not necessarily imply that this agent diagnosis withby means of BAL. IPS usually is not effective; lack of evidence in this appears after engraftment, under-accrued trial does not equate to predominates in allo-HCT, and is lack of effectiveness (Yanik et al. less responsive to steroids, Note: 2014). Noninfectious DAH falls under • Other investigational agents such as: the “diagnostic umbrella” of IPS – MoAb anti-IL6: tocilizumab (Panoskaltsis-Mortari et al. (experimental IPS; Varelias et al. 2011). 2015). Note, IL-6 levels were – PERDS: almost impossible except found to be highest in patients not for LBA progressively bloodier. responsive to TNF blockade – DAH associated with infection: (Varelias et al. 2015) suggesting impossible without detection of that strategies of combinatorial the pathogen (Majhail et al. cytokine blockade may warrant 2006). future study (Tamburro et al. 2021). – MoAb anti-IL17: brodalumab (experimental IPS; (Varelias et al. 2015). – Strategies that protect/improve pulmonary vascular endothelial Treatment– Traditionally with high doses of integrity (Klein et al. 2023).methyl-PDN (250–500 mg q6h × 5 days EvolutionDespite the diagnosis and therapeutic followed by taper), but the overall advances, the mortality from IPS in adults response to this treatment is remains high (Wenger et al. 2020).disappointing even when combined with aminocaproic acid (ACA) (Rathi et al. 2015). Of note, two-thirds of cases were noninfectious in origin and could be classified as IPS, but TNFa inhibition was not used in this study. – When combined with high-dose PDN, inhaled, recombinant, factor VIIa has shown benefit in some (Park and Kim"
+  },
+  {
+   "id": "1f08f3bb79",
+   "type": "h2",
+   "num": "52.4",
+   "en": "Late-Onset Noninfectious Pulmonary Complications (LONIPC)"
+  },
+  {
+   "id": "b976e89005",
+   "type": "p",
+   "en": "LONIPCs, when defined as occurring beyond 100 days posttransplant, occur in up to 20% of allo-HCT recipients, including a variety of clinical entities, with bronchiolitis obliterans syndrome (BOS) and diffuse interstitial lung diseases (ILD) being the most frequent (Bergeron et al. 2018). Before making the diagnosis of LONIPC, a respiratory infection must be ruled out. However, a respiratory infection (i.e., particularly viral) is often the trigger for LONIPC. Although BOS is currently recognized as the only manifestation of chronic GVHD based on epidemiological data, the question arises whether ILD may be another lung manifestation of cGVHD (Archer et al. 2023)."
+  },
+  {
+   "id": "7d9480427f",
+   "type": "h3",
+   "num": "52.4.1",
+   "en": "Bronchiolitis Obliterans Syndrome (BOS)"
+  },
+  {
+   "id": "d028bb3dbc",
+   "type": "p",
+   "en": "Pathogenesis, timing, incidence, clinical manifestations, diagnosis, and radiology of BOS are shown in Table 52.2."
+  },
+  {
+   "id": "9836d394a0",
+   "type": "table",
+   "num": "52.2",
+   "en": "Table 52.2 Main clinical characteristics of BOS",
+   "columns": 11,
+   "rows_en": [
+    [
+     "Pathogenesis Risk factors",
+     "The same as cGVHD but specifically involving the lung (Cooke et al. Extrathoracic cGVHD, respiratory viral infections, lung function decline (Bergeron et al. 2018",
+     "; Sheshadri et al.",
+     "2019",
+     "; Jamani et al.",
+     "2020",
+     "; Abedin et al.",
+     "2015",
+     ").",
+     "2017",
+     ")."
+    ],
+    [
+     "Timing and incidence",
+     "Onset after transplant: 6–24 months. Incidence: 3–11%.",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Clinical manifestations",
+     "–Breathlessness, nonproducti –May be asymptomatic requiring routine PFT follo (pretransplant baseline, then every 3 months in the first year after HCT and in patients who develop extrathoracic GVHD; close spirometry monitoring after a respiratory viral infection (Kitko et al. In >90% of the BOS, there is more or less severe chronic GVHD in other locations.",
+     "",
+     "2021",
+     "ve cough, and wheezing.)).",
+     "",
+     "w-up for an early detection",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Diagnosis",
+     "Chronic GVHD in other locations 2015 – w-onset obstructive ventilatory defect with air trapping (FEV1/VC ratio < 0.7 or Ne the fifth percentile of predicted; FEV1 < 75% of predicted with baseline; residual volume > 120% of predicted) with no response to bronchodilators. •",
+     "; Wolff et al. 2021 Definitive (not required): histologic confirmation by VATS (BO).",
+     ").",
+     "a + PFT impairment (NIH consensus) (Jagasia et al.",
+     "",
+     "",
+     "≥10% decline from",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Lung CT scan prognosis",
+     "Required at BOS diagnosis to rule out other diagnoses (lung parenchymal abnormalities should suggest either an alternative or an additional diagnosis). Pattern of constrictive bronchiolitis with attenuation in mosaic, bronchiectasis, and bronchial wall thickening and air trapping by expiratory CT Bronchial abnormalities at 3 months posttransplant were found to predict BOS (Bergeron et al. Overall survival: 65–79% at 2 years and 74% at 5 years in the most recent studies (Arora et al. et al.",
+     "2018). 2016; Archer et al. 2013). Morbidity: respiratory disability, respiratory exacerbations.",
+     "2023",
+     "). Worse prognosis if early onset after HCT (Bergeron",
+     "",
+     "b",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "DLCO transfer capacity of CO, video-assisted thoracoscopic surgery, a If the lung is the only organ with cGVHD, a biopsy is needed to confirm the diagnosis b More than 30% of patients have air trapping on pretransplant lung CT scan limiting the value of expiratory chest CT in the diagnosis of posttransplant BOS (Bergeron et al.",
+     "",
+     "FEV1 forced expiratory volume in the first second, CT computed tomography",
+     "",
+     "2018). BOS diagnosis mainly relies on PFTs",
+     "",
+     "FVC",
+     "forced vital capacity,",
+     "",
+     "",
+     "VATS"
+    ]
+   ]
+  },
+  {
+   "id": "bfe4c11bc6",
+   "type": "p",
+   "en": "The latest NIH consensus does not require lung biopsy; the diagnosis of chronic pulmonary GVHD is made on the basis of lung function data alone. Thus, we speak of BOS rather than BO (i.e., constrictive bronchiolitis), which requires histological analysis (Jagasia et al. 2015). BOS phenotypes not included in the current NIH diagnostic criteria do exist. On the one hand, BOS reflects various pathologies of the small airways (Meignin et al. 2018; Holbro et al. 2013), and on the other, PFTs of BOS may show a preserved FEV1/VC ratio (Bergeron et al. 2013; Wolff et al. 2021; Uhlving et al. 2015)."
+  },
+  {
+   "id": "673059eee8",
+   "type": "p",
+   "en": "52.4.1.1 Treatment of BOS Few treatments have been prospectively and specifically evaluated for BOS, including those for chronic GVHD. Low levels of evidence prevent recommendation of any specific treatment algorithm. It is essential to weigh the benefit-risk balance before introducing any treatment, particularly corticosteroids, which are known to be of low efficacy for BOS."
+  },
+  {
+   "id": "6f87cde457",
+   "type": "p",
+   "en": "The natural history of BOS is poorly understood (Cooke et al. 2017). FEV1 most often declines abruptly before stabilizing at a more or less severe value (Cheng et al. 2016; Bergeron et al. 2013, 2018). Secondary decline in lung function over time is often associated with infectious exacerbations. In this context, the endpoint for assessing the efficacy of any treatment on BOS is debated: stabilization or improvement of pulmonary function."
+  },
+  {
+   "id": "6c667eb13e",
+   "type": "p",
+   "en": "Only inhaled budesonide/formoterol has shown improvement of FEV1 for new-onset moderate to severe BOS in a double-blind placebo- controlled randomized trial (Bergeron et al. 2015). The FAM strategy (fluticasone, azithromycin, montelukast) that is commonly used for the treatment of BOS was evaluated in an open-label single-arm trial. In this study, FAM was associated with a stabilization of FEV1 (Williams et al. 2016). Azithromycin administration in allo-HCT recipients should be cautioned against a potential increased risk of cancer, particularly when given early after transplantation (Bergeron et al. 2017; Cheng et al. 2020; Vallet et al. 2022)."
+  },
+  {
+   "id": "5ee337b623",
+   "type": "p",
+   "en": "Current diagnostic criteria for BOS probably only allow detection of a late stage of the disease. Numerous studies are looking for early biomarkers of BOS (respiratory function, and/or radiology, and/or biology) in the hope of greater treatment efficacy at an earlier stage."
+  },
+  {
+   "id": "8f87d6bd2b",
+   "type": "p",
+   "en": "In patients with uncontrolled end-stage BOS, who have no or non-active extrathoracic GVHD and very low risk of hematological relapse, lung transplantation should be considered (Greer et al. 2018)."
+  },
+  {
+   "id": "01436dde26",
+   "type": "p",
+   "en": "Respiratory rehabilitation should be offered to dyspneic patients to improve their quality of life. Other support measures include treatment of gastroesophageal reflux, anti-infectious prophylaxis, vaccination against respiratory viral infections, and IVIg in case of both infections and hypogammaglobulinemia."
+  },
+  {
+   "id": "0937fdd110",
+   "type": "h3",
+   "num": "52.4.2",
+   "en": "Interstitial Lung Diseases (ILD)"
+  },
+  {
+   "id": "0be9915a85",
+   "type": "p",
+   "en": "Three-year cumulative incidence of ILD was found to be 5% (Bergeron et al. 2018). Unlike BOS, the diagnosis of ILD relies on imaging showing the presence of lung parenchymal opacities in the absence of infection. Based on lung CT scan, ILD could be classified into three patterns: organizing pneumonia (OP, 37%), pleuro- parenchymal fibroelastosis (PPFE, 13%), and undetermined (50%) (Archer et al. 2023; Bondeelle et al. 2020). The “undetermined” CT scan pattern corresponds to different clinico- histological diagnoses, including nonspecific interstitial pneumonia (Meignin et al. 2018). The clinical presentation may be acute, subacute, or chronic; in a quarter of cases, the diagnosis is made in intensive care (Archer et al. 2023)."
+  },
+  {
+   "id": "104b652307",
+   "type": "p",
+   "en": "Unlike BOS, which is exceptionally diagnosed more than 2 years after transplantation, ILD can occur anytime. Of note, PPFE occurs several years after transplantation (Bondeelle et al. 2020). Most patients present with dyspnea."
+  },
+  {
+   "id": "5772d43911",
+   "type": "p",
+   "en": "Specific risk factors for ILD are prior thoracic irradiation and the absence of immunosuppressive treatment at the time of ILD occurrence (Archer et al. 2023)."
+  },
+  {
+   "id": "72579fcbcd",
+   "type": "p",
+   "en": "In the context of ILD, complete PFTs (including lung volumes and DLCO) are useful for assessing the severity of lung dysfunction and monitoring treatment efficacy. PFTs also allow to diagnose combined ILD and BOS which occurs in 25% of cases of ILD (Archer et al. 2023)."
+  },
+  {
+   "id": "de4a7c4288",
+   "type": "p",
+   "en": "A distinction should be made between inflammatory ILD (OP and undetermined), which are usually sensitive to corticosteroid therapy, and PPFE, which have low inflammation and do not respond to immunosuppressive treatments, including steroids (Table 52.3)."
+  },
+  {
+   "id": "5e3eb10bda",
+   "type": "li",
+   "en": "• Noninfectious lung injury occurs frequently following HCT and significantly contributes to morbidity and mortality in the immediate posttransplant period and in the months and years that follow. It can be observed in 25–55% of recipients."
+  },
+  {
+   "id": "148a9ae619",
+   "type": "li",
+   "en": "• Noninfectious lung injury following HCT may be mediated by either immune or nonimmune mechanisms and could represent up to the 50% of noninfectious mortality after allo-HCT."
+  },
+  {
+   "id": "7a18d9ba69",
+   "type": "li",
+   "en": "• Most relevant noninfectious early pulmonary complications are pulmonary edema by fluid overflow, IPS, and DAH, a vascular endothelial syndrome."
+  },
+  {
+   "id": "f797701c07",
+   "type": "li",
+   "en": "• The most relevant LONIPCs are BOS and ILD including OP."
+  },
+  {
+   "id": "b34438d906",
+   "type": "li",
+   "en": "• All of them have specific diagnostic criteria, management, treatment, and prognosis."
+  }
+ ],
+ "references": [
+  "Table 52.3 ve characteristics between BOS Comparati",
+  "Median onset BOS: 13 months a",
+  "after HCTILD: 15 months",
+  "Extrathoracic BOS: >90%",
+  "cGVHDILD: >75%b",
+  "Thoracic CT BOS: bronchial abnormalities, air",
+  "scanctrapping, no alveolar and/or interstitial abnormalities ILD: alveolar and/or interstitial abnormalities",
+  "PFT patterncBOS: obstructive pattern – FEV1/FVC < 0.7 and TLC > 80% ILD: normal/restrictive pattern, TLC <80% and FEV1/FVC > 0.7; mixed ventilatory defectd, TLC < 80% and FEV1/FVC < 0.7; DLCO reduced",
+  "TreatmentBOS: limited ILD: usual response to steroidse, risk of relapse when steroids are tapered off",
+  "PrognosisfBOS: 3-year OS 79%; 5-year OS 74% ILD: 3-year OS 81%; 5-year OS 71%",
+  "PFT pulmonary function testing, PPFE pleuro-",
+  "parenchymal fibroelastosis, FEV1 forced expiratory vol",
+  "ume in 1 s, FVC forced vital capacity, TLC total lung",
+  "volume, DLCO diffusion capacity of the lungs for carbon",
+  "monoxide, OS overall survival",
+  "PPFE occurs several years after HCT",
+  "Less than 50% in PPFE",
+  "The diagnosis of BOS is based on PFT, whereas those of",
+  "ILD relies on chest imaging",
+  "When combined with BOS",
+  "Except for PPFE where the treatment is limited",
+  "f Morbidity is significant including respiratory disabling",
+  "and infections Key Points",
+  "Abedin S, Yanik GA, Braun T, et al. Predictive value of bronchiolitis obliterans syndrome stage 0p in chronic graft-versus-host disease of the lung. Biol Blood Marrow Transplant. 2015;21:1127–31.",
+  "Archer G, Berger I, Bondeelle L, et al. Interstitial lung diseases after hematopoietic stem cell transplantation: new pattern of lung chronic graft-versus-host disease? Bone Marrow Transplant. 2023;58:87–93.",
+  "Arora M, Cutler CS, Jagasia MH, et al. Late acute and chronic graft-versus-host disease after allogeneic hematopoietic cell transplantation. Biol Blood Marrow Transplant. 2016;22:449–55.",
+  "Bergeron A, Godet C, Chevret S, et al. Bronchiolitis obliterans syndrome after allogeneic hematopoietic SCT: phenotypes and prognosis. Bone Marrow Transplant. 2013;48:819–24.",
+  "Bergeron A, Chevret S, Chagnon K, et al. Budesonide/formoterol for bronchiolitis obliterans after hematopoietic stem cell transplantation. Am J Respir Crit Care Med. 2015;191:1242–9.",
+  "Bergeron A, Chevret S, Granata A, et al. Effect of azithromycin on airflow decline-free survival after allogeneic hematopoietic stem cell transplant: the ALLOZITHRO randomized clinical trial. JAMA. 2017;318:557–66.",
+  "Bergeron A, Chevret S, de Latour RP, et al. Non-infectious lung complications after allogeneic haematopoietic stem cell transplantation. Eur Respir J. 2018;51:1702617.",
+  "Bondeelle L, Gras J, Michonneau D, et al. Pleuroparenchymal fibroelastosis after allogeneic hematopoietic stem cell transplantation. Bone Marrow Transplant. 2020;55:982–6.",
+  "Cheng GS, Storer B, Chien JW, et al. Lung function trajectory in bronchiolitis obliterans syndrome after allogeneic hematopoietic cell transplant. Ann Am Thorac Soc. 2016;13:1932–9.",
+  "Cheng GS, Bondeelle L, Gooley T, et al. Azithromycin use and increased cancer risk among patients with bronchiolitis obliterans after hematopoietic cell transplantation. Biol Blood Marrow Transplant. 2020;26:392–400.",
+  "Clark JG, Hansen JA, Hertz MI, et al. NHLBI workshop summary. Idiopathic pneumonia syndrome after bone marrow transplantation. Am Rev Respir Dis. 1993;147:1601-6.",
+  "Cooke KR, Yanik GA. Lung injury following hematopoietic cell transplantation. In: Forman SJ, Negrin RS, Antin JH, Appelbaum FR, editors. Thomas’ hematopoietic cell transplantation. 5th ed. Hoboken: Wiley; 2016. p. 1157–70.",
+  "Cooke KR, Luznik L, Sarantopoulos S, et al. The biology of chronic graft-versus-host disease: a task force report from the National Institutes of Health consensus development project on criteria for clinical trials in chronic graft-versus-host disease. Biol Blood Marrow Transplant. 2017;23:211–34.",
+  "Dieffenbach BV, Madenci AL, Murphy AJ, et al. Therapeutic impact and complications associated with surgical lung biopsy after allogeneic hematopoietic stem cell transplantation in children. Biol Blood Marrow Transplant. 2019;25:2181–5.",
+  "Elinoff JM, Bagci U, Moriyama B, et al. Recombinant human factor VIIa for alveolar hemorrhage following allogeneic stem cell transplantation. Biol Blood Marrow Transplant. 2014;20:969–78.",
+  "Fan K, McArthur J, Morrison RR, Ghafoor S. Diffuse alveolar hemorrhage after pediatric hematopoietic stem cell transplantation. Front Oncol. 2020;10:1757. https://doi.org/10.3389/fonc.2020.01757.",
+  "Greer M, Berastegui C, Jaksch P, et al. Lung transplantation after allogeneic stem cell transplantation: a pan-European experience. Eur Respir J. 2018;51:1701330.",
+  "Haider S, Durairajan N, Soubani AO. Noninfectious pulmonary complications of haematopoietic stem cell transplantation. Eur Respir Rev. 2020;29:90119.",
+  "Holbro A, Lehmann T, Girsberger S, et al. Lung histology predicts outcome of bronchiolitis obliterans syndrome after hematopoietic stem cell transplantation. Biol Blood Marrow Transplant. 2013;19:973–80.",
+  "Jagasia MH, Greinix HT, Arora M, et al. National Institutes of Health consensus development project on criteria for clinical trials in chronic graft-versus-host disease: I. The 2014 diagnosis and staging working group report. Biol Blood Marrow Transplant. 2015;21:389–401.",
+  "Jamani K, He Q, Liu Y, et al. Early post-transplantation spirometry is associated with the development of bronchiolitis obliterans syndrome after allogeneic hematopoietic cell transplantation. Biol Blood Marrow Transplant. 2020;26:943–8.",
+  "Kitko CL, Pidala J, Schoemans HM, et al. National Institutes of Health consensus development project on criteria for clinical trials in chronic graft-versus-host disease: IIa. The 2020 clinical implementation and early diagnosis working group report. Transplant Cell Ther. 2021;27:545–57.",
+  "Klein OR, Ktena YP, Pierce E, et al. Defibrotide modulates pulmonary endothelial cell activation and protects against lung inflammation in pre-clinical models of LPS-induced lung injury and idiopathic pneumonia syndrome. Front Immunol. 2023;14:1186422. https://doi.org/10.3389/fimmu.2023.1186422.",
+  "Lucena CM, Torres A, Rovira M, et al. Pulmonary complications in hematopoietic SCT: a prospective study. Bone Marrow Transplant. 2014;49:1293–9.",
+  "Majhail NS, Parks K, Defor TE, Weisdorf DJ. Diffuse alveolar hemorrhage and infection-associated alveolar hemorrhage following hematopoietic stem cell transplantation: related and high-risk clinical syndromes. Biol Blood Marrow Transplant. 2006;12:1038–46.",
+  "Meignin V, Thivolet-Bejui F, Kambouchner M, et al. Lung histopathology of non-infectious pulmonary complications after allogeneic haematopoietic stem cell transplantation. Histopathology. 2018;73:832–42.",
+  "Panoskaltsis-Mortari A, Griese M, Madtes DK, et al. An official American Thoracic Society research statement: non-infectious lung injury after hematopoietic stem cell transplantation: idiopathic pneumonia syndrome. Am J Respir Crit Care Med. 2011;183:1262–79.",
+  "Park JA, Kim BJ. Intrapulmonary recombinant factor VIIa for diffuse alveolar hemorrhage in children. Pediatrics. 2015;135:e216–20.",
+  "Rathi NK, Tanner AR, Dinh A, et al. Low-, medium-and high-dose steroids with or without aminocaproic acid in adult hematopoietic SCT patients with diffuse alveolar hemorrhage. Bone Marrow Transplant. 2015;50:420–6.",
+  "Rondón G, Saliba RM, Chen J, et al. Impact of fluid overload as new toxicity category on hematopoietic stem cell transplantation outcomes. Biol Blood Marrow Transplant. 2017;23:2166–71.",
+  "Rowan CM, Smith L, Sharron MP, et al. A biomarker panel for risk of early respiratory failure following hematopoietic cell transplantation. Blood Adv. 2022;6:1866–78.",
+  "Sano H, Kobayaski R, Iguchi A, Suzuki D, Kishimoto K, et al. Risk factor analysis of idiopathic pneumonia syndrome after allogeneic hematopoietic SCT in children. Bone Marrow Transplant. 2014;49:38–41.",
+  "Seo S, Renaud C, Kuypers JM, et al. Idiopathic pneumonia syndrome after hematopoietic cell transplanta tion: evidence of occult infectious etiologies. Blood. 2015;125:3789–97.",
+  "Seo S, Yu J, Jenkins IC, et al. Diagnostic and prognostic plasma biomarkers for idiopathic pneumonia syndrome after hematopoietic cell transplantation. Biol Blood Marrow Transplant. 2017;24:678–86.",
+  "Shannon VR, Andersson BS, Lei X, et al. Utility of early versus late fiberoptic bronchoscopy in the evaluation of new pulmonary infiltrates following hematopoietic stem cell transplantation. Bone Marrow Transplant. 2010;45:647–55.",
+  "Sheshadri A, Chemaly RF, Alousi AM, et al. Pulmonary impairment after respiratory viral infections is associated with high mortality in allogeneic hematopoietic cell Transplant recipients. Biol Blood Marrow Transplant. 2019;25:800–9.",
+  "Tamburro RF, Cooke KR, Davies SM, et al.; Pulmonary Complications of Pediatric Hematopoietic Stem Cell Transplantation Workshop Participants. Pulmonary complications of pediatric hematopoietic cell transplantation. A National Institutes of Health workshop summary. Ann Am Thorac Soc. 2021;18:381–394.",
+  "Thompson J, Yin Z, D’Souza A, et al. Etanercept and corticosteroid therapy for the treatment of late-onset idiopathic pneumonia syndrome. Biol Blood Marrow Transplant. 2017;23:1955–60.",
+  "Uhlving HH, Andersen CB, Christensen IJ, et al. Biopsy-verified bronchiolitis obliterans and other noninfectious lung pathologies after allogeneic hematopoietic stem cell transplantation. Biol Blood Marrow Transplant. 2015;21:531–8.",
+  "Vallet N, Le Grand S, Bondeelle L, et al. Azithromycin promotes relapse by disrupting immune and metabolic networks after allogeneic stem cell transplantation. Blood. 2022;140:2500–13.",
+  "Varelias A, Gartlan KH, Kreijveld E, et al. Lung parenchyma- derived IL-6 promotes IL-17A-dependent acute lung injury after allogeneic stem cell transplantation. Blood. 2015;125:2435–44.",
+  "Wenger DS, Triplette M, Crothers K, et al. Incidence, risk factors, and outcomes of idiopathic pneumonia syndrome after allogeneic hematopoietic cell transplantation. Biol Blood Marrow Transplant. 2020;26:413–20.",
+  "Williams KM, Cheng GS, Pusic I, et al. Fluticasone, Azithromycin, and Montelukast treatment for new-onset bronchiolitis obliterans syndrome after hematopoietic cell transplantation. Biol Blood Marrow Transplant. 2016;22:710–6.",
+  "Wolff D, Radojcic V, Lafyatis R, et al. National Institutes of Health consensus development project on criteria for clinical trials in chronic graft-versus-host disease: IV. The 2020 highly morbid forms report. Transplant Cell Ther. 2021;27:817–35.",
+  "Yanik G, Maslak J, Connelly J, et al. Impact of broncho-alveolar lavage on the diagnosis and management of pulmonary complications post-transplant. Biol Blood Marrow Transplant. 2008a;14(2):suppl 33.",
+  "Yanik GA, Ho V, Levine JL, et al. The impact of soluble tumor necrosis factor receptor: etanercept on the treatment of idiopathic pneumonia syndrome following allogeneic stem cell transplantation. Blood. 2008b;112:3073–81.",
+  "Yanik GA, Horowitz MM, Weisdorf DJ, et al. Randomized, double-blind, placebo-controlled trial of soluble tumor necrosis factor receptor: Enbrel (etanercept) for the treatment of idiopathic pneumonia syndrome after allogeneic stem cell transplantation: blood and marrow. Biol Blood Marrow Transplant. 2014;20:858–64.",
+  "Yanik GA, Grupp SA, Pulsipher MA, et al. TNF-receptor inhibitor therapy for the treatment of children with idiopathic pneumonia syndrome. A joint pediatric consortium and Children’s Oncology Group study (ASCT0521). Biol Blood Marrow Transplant. 2015;21:67–73.",
+  "Zhang Z, Wang C, Peters SG, et al. Epidemiology, risk factors, and outcomes of diffuse alveolar hemorrhage after hematopoietic stem cell transplantation. Chest. 2021;159:2325–33.",
+  "Zinter MS, Dvorak CC, Mayday MY, et al. Pulmonary metagenomic sequencing suggests missed infections in immunocompromised children. Clin Infect Dis. 2019;68:1847–55.",
+  "Zinter MS, Lindemans C, Versluys B, et al. The pulmonary metatranscriptome prior to pediatric hematopoietic cell transplantation identifies post-HCT lung injury. Blood. 2021;137:1679–89."
+ ]
+}

@@ -1,0 +1,224 @@
+{
+ "number": 21,
+ "part": "III",
+ "page_pdf": [
+  210,
+  215
+ ],
+ "page_printed": 183,
+ "title_en": "Documentation of Engraftment and Chimerism After HCT",
+ "authors": "Peter Bader, Hermann Kreyenberg, and Andrea Bacigalupo",
+ "affiliations": "P. Bader (*) · H. Kreyenberg Division for Stem Cell Transplantation and Immunology, University Hospital for Children and Adolescents, Goethe University Frankfurt am Main, Frankfurt, Germany e-mail: p.bader@em.uni-frankfurt.de; Kreyenberg@med.uni-frankfurt.de A. Bacigalupo Fondazione Policlinico Universitario A.Gemelli irccs, Universita’ Carttolica del Sacro Cuore, Rome, Italy e-mail: andrea.bacigalupo@unicatt.it",
+ "doi": "10.1007/978-3-031-44080-9_21",
+ "licence": "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License (http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.",
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "aff4abbdb0",
+   "type": "h2",
+   "num": "21.1",
+   "en": "Definition"
+  },
+  {
+   "id": "e372caa57f",
+   "type": "p",
+   "en": "Chimerism defines the proportion of donor and recipient cells after allogeneic stem cell transplantation. Complete or full donor chimerism is defined as the presence of >95% donor cells in the myeloid and in the lymphoid compartment. Mixed donor chimerism is defined as a proportion of 5–95% donor cells in the myeloid and in the lymphoid compartment. Absent donor chimerism is defined as <5% donor cells. Split donor chimerism defines patients with different degrees of donor chimerism in the myeloid or lymphoid compartment."
+  },
+  {
+   "id": "394ae89be4",
+   "type": "h2",
+   "num": "21.2",
+   "en": "Introduction"
+  },
+  {
+   "id": "46a6bb4be4",
+   "type": "p",
+   "en": "For a long time, it was believed that complete donor hematopoiesis is necessary to maintain engraftment after allo-HCT. A few decades ago, it became apparent that donor and recipient hematopoiesis may coexist. This state of coexistence of hematopoietic cells is called mixed chimerism (MC). If all cells are of donor origin, the patient is referred to as “complete chimera” and he shows a “complete chimerism.”"
+  },
+  {
+   "id": "5576a52bac",
+   "type": "p",
+   "en": "It is important to note that the state of hematopoietic chimerism may underlay a certain dynamic. Patients with a complete chimerism may develop a “mixed chimerism” at a later time point or vice versa. In a later period after transplant, the amount of autologous cells may “increase” or “decrease.” The patients then develop an “increasing mixed chimerism” or a decreasing mixed chimerism. To avoid misunderstandings as to whether donor or recipient hematopoiesis changes, it is recommended to report “increasing mixed donor chimerism” or “increasing mixed recipient chimerism.”"
+  },
+  {
+   "id": "115479703a",
+   "type": "p",
+   "en": "Nowadays, it has become possible to analyze hematopoietic chimerism also in single cell subpopulations. If a patient’s hematopoiesis is mixed only in different cell lines, these patients are referred to have a “split chimerism.” Finally, the applied method for chimerism analysis has also an impact on the degree of chimerism. A patient could be completely chimera with a method detecting about 1% autologous cells, whereas recipient cells could have been detected with a more sensitive technique (Bader et al. 2005)."
+  },
+  {
+   "id": "ce8edd36b2",
+   "type": "h2",
+   "num": "21.3",
+   "en": "Methods for Chimerism Analysis"
+  },
+  {
+   "id": "1950770fdf",
+   "type": "p",
+   "en": "Different methods have been developed for the assessment of hematopoietic chimerism. All these methods followed the same principle using differences in polymorphic genetic markers and their products. Historically, restriction fragment length polymorphism (RFLP), cytogenetics, red cell phenotyping, and fluorescence in situ hybridization techniques were used for the assessment of hematopoietic chimerism. All of these techniques have been very time-consuming and did not always offer the possibility to be used in every patient–donor constellation."
+  },
+  {
+   "id": "80edf96828",
+   "type": "p",
+   "en": "Widespread and timely clinical applicability has become possible after polymerase chain reaction (PCR) techniques were developed. During the 1990s, these analyses were mainly performed by amplification of variable number of tandem repeats (VNTRs). Later in the decade, short tandem repeats (STRs) were used. Fluorescent labeling of the primers and resolution of PCR products with capillary electrophoresis allowed immediate and accurate quantification of the degree of chimerism. Semiautomated PCR analysis using the appropriate hardware allowed moreover high sample throughput. This made it possible to study chimerism in all patients and in short time intervals already early after transplantation. Accurate monitoring of engraftment as well as surveillance of impending graft rejection in patients transplanted for nonmalignant disease has become possible (McCann and Lawler 1993; Thiede et al. 2001)."
+  },
+  {
+   "id": "cdf98767b3",
+   "type": "p",
+   "en": "To increase the sensitivity of chimerism analysis below the detection limit of STR-PCR, various techniques such as quantitative real-time PCR (qPCR) (Alizadeh et al. 2002), digital PCR (dPCR) (Stahl et al. 2015), and next-generation sequencing (NGS) (Aloisio et al. 2016) have become available and can be employed to identify low degree of chimerism termed microchimerism. These approaches commonly employ the targeting of biallelic markers, such as single nucleotide polymorphisms (SNPs) or deletion insertion polymorphisms (DIPs), to achieve discrimination. While the achievable sensitivity is comparable for all approaches, the accuracy of dPCR and NGS is superior to qPCR. The drawback arises when utilizing these highly sensitive methods, as most samples tend to exhibit detectable recipient portions (Willasch et al. 2014). Therefore, it becomes crucial to establish the biological background within the individual’s clinical context (Vynck et al. 2021). Continuous observation combined with mathematical description of chimerism dynamic could improve outcome prediction (Sellmann et al. 2018)."
+  },
+  {
+   "id": "9eda0e4b39",
+   "type": "p",
+   "en": "Based on these issues, the STR-PCR with fluorescent- labeled primers and resolution of the fragments with capillary electrophoresis is currently still considered to be the gold standard for the assessment of post-transplant chimerism (Blouin and Askar 2022). It is important to stress that whatever method is employed to study chimerism, it is important that the procedure is standardized and the chimerism laboratory is accredited and is participating in quality control rounds (Lion et al. 2012)."
+  },
+  {
+   "id": "96c1e5d149",
+   "type": "h2",
+   "num": "21.4",
+   "en": "Chimerism Investigation in the Clinical Setting"
+  },
+  {
+   "id": "595ecae638",
+   "type": "h3",
+   "num": "21.4.1",
+   "en": "Chimerism in Nonmalignant Diseases"
+  },
+  {
+   "id": "f7c224357b",
+   "type": "p",
+   "en": "Allo-HCT is the only curative treatment option for many patients with inherited or acquired nonmalignant diseases such as immunodeficiency, storage diseases, osteopetrosis, thalassemia, sickle cell disease, severe aplastic anemia, bone marrow failure syndromes, and many others."
+  },
+  {
+   "id": "d0d53b3a39",
+   "type": "p",
+   "en": "The aim of the transplant procedure in these diseases is to achieve stable and durable engraftment to (1) improve the hematopoietic function, (2) correct the immune competence, and/or (3) increase or normalize the respective enzyme shortage. As a consequence, it is not always necessary to replace the recipient hematopoiesis completely. For many diseases, it is sufficient to implement a state of mixed hematopoietic chimerism to improve the patients’ well-being. To minimize toxic side effects intensity of conditioning regimens in these diseases is often reduced and"
+  },
+  {
+   "id": "4b583b9bb7",
+   "type": "p",
+   "en": "therefore less myeloablative. MC is more likely, and graft rejection or non-engraftment remained the major causes of treatment failures in these patients (Bader et al. 2005; Thiede et al. 2001)."
+  },
+  {
+   "id": "fe8ec19bf6",
+   "type": "p",
+   "en": "It could be shown that rapid donor cell presence and maintenance of early complete donor chimerism in NK and T-cells may play an important role in achieving sustained engraftment especially in patients who were treated with reduced intensity conditioning regimens. Analysis of chimerism in disease characterizing cell subpopulations in patients with nonmalignant disease, e.g., in patients with severe combined immune deficiencies (SCIDs) or in patients with storages disease, enables the documentation of success of the transplant procedures (Preuner et al. 2016)."
+  },
+  {
+   "id": "5288ac1c9c",
+   "type": "p",
+   "en": "21.4.1.1 Intervention to Influence the Evolution of Chimerism: Transfusion of DLI In patients with nonmalignant diseases, MC occurs frequently. The question whether individual patients with MC are at risk to reject their graft depends on the diagnosis and on the conditioning regimens. Studies have clearly shown that MC can be influenced by DLI. MC can be stabilized or even converted to complete donor chimerism by DLI. However, in treating patients with MC and DLI, physicians have to bear in mind the potential risk to induce GVHD which should be avoided in patients with nonmalignant disease with all efforts."
+  },
+  {
+   "id": "458c24968f",
+   "type": "p",
+   "en": "Hemoglobinopathies In thalassemia patients, large studies have been published already from the Pesaro group of Guido Lucarelli, evaluating the influence of MC and disease recurrence. In general, it was found that patients whose recipient MC increased to >30% autologous cells were by far more likely to ultimately reject and be transfusion-dependent. However, there are patients with persisting high-level MC who remained transfusion independent. Retrospective studies have been performed evaluating the possibility of influencing MC by DLI. It could be shown that a state of MC may be sufficient to remain transfusion independent. It was also shown that DLI is capable to convert MC to CC. However, no general recommendation could be given at the time being (Fitzhugh et al. 2014; Karasu et al. 2012; Abraham et al. 2017)."
+  },
+  {
+   "id": "f24fc3a795",
+   "type": "p",
+   "en": "In sickle cell disease (SCD), the impact of MC has been studied intensively as more and more patients with SCD were transplanted from matched but also from mismatched donors. In the late 1990s, first studies concluded that 10% of donor cell engraftment and persistence were needed for the effective treatment of SCD in patients who were treated with a homozygous healthy donor; however, if the patient was grafted with the stem cells of a heterozygous HbAS donor, 30–40% donor cells are required. The presence of MC in patients transplanted for sickle cell disease does not warrant DLI per se. In patients with less than 30% of donor chimerism, DLI might be considered. In a most recent study, Fitzhugh and colleagues developed a mathematical model by which they could show that a donor chimerism in the myeloid compartment of 20% is necessary to reverse the sickle cell phenotype and to prevent patients from disease recurrence (Fitzhugh et al. 2017)."
+  },
+  {
+   "id": "b5fc0100f7",
+   "type": "h3",
+   "num": "21.4.2",
+   "en": "Chimerism in Malignant Diseases"
+  },
+  {
+   "id": "ee6a5e167b",
+   "type": "p",
+   "en": "Chimerism detected by molecular methods allows the assessment of persisting or reappearing recipient cells after allo-HCT. These cells might be a reflection of either survival of malignant cells or of survival or recurrence of recipient hematopoietic cells or a combination of both. It could be shown by prospective studies already in the early 1990s that a MC frequently occurs in the mononuclear cell fraction, weakens thereby the GvL effect, and facilitates recurrence of the underlying leukemia."
+  },
+  {
+   "id": "bfbc47cfd1",
+   "type": "p",
+   "en": "Chimerism analysis does provide information about the alloreactivity and/tolerance induction of the graft and thereby serves more likely a “prognostic factor” than as an indirect marker for MRD. It has become evident that the development of post-transplant chimerism is a dynamic"
+  },
+  {
+   "id": "9f7954fddd",
+   "type": "p",
+   "en": "process. Hence, if chimerism analyses are performed in the intention to detect impending relapse, investigations need to be performed in short time intervals (Bader et al. 2004b; Thiede et al. 2001; Kröger et al. 2010a, b)."
+  },
+  {
+   "id": "db5ffcbef8",
+   "type": "p",
+   "en": "Initially, many pediatric studies using serial analysis of chimerism could clearly demonstrate that patients who develop a MC post-transplant have an increased risk for future relapse of their leukemia. This could later also be confirmed by studies in adult patients. Moreover, these and subsequent studies undoubtedly showed that by immunotherapeutic interventions, e.g., withdrawal of IS or transfusion of DLI, MC could be converted to complete chimerism, GvL effect restored, and many patients prevented from developing overt hematological relapse (Platzbecker et al. 2012; Bader et al. 2004a)."
+  },
+  {
+   "id": "1309ab4d47",
+   "type": "p",
+   "en": "Based on its limited sensitivity to detect minor cell population of about 1%, chimerism analysis by STR-PCR in the whole blood is not suitable to serve as a MRD marker. For the assessment of MRD, other techniques should be used, if possible. In patients and diseases lacking a disease-specific marker, for example, regularly in patients with MDS and often in patients with AML, chimerism analysis could be performed in cell subpopulations. Thiede et al. could clearly demonstrate that by the characterization of chimerism in the CD34-positive cell fraction, leukemia relapse could be anticipated in advance in many patients with AML and MDS. In ALL patients, several studies have been performed investigating the impact of MC after enrichment of entity specific subpopulation, e.g., CD 10, CD19, and CD 34 for precursor B ALL and CD3, CD4, CD5, and CD8 for T-lineages. Remarkable correlation between MRD and chimerism in different subsets could be proven (Platzbecker et al. 2012; Bornhäuser et al. 2009; Rettinger et al. 2011; Gambacorta et al. 2020)."
+  },
+  {
+   "id": "74ab0b4528",
+   "type": "p",
+   "en": "Advances in testing methods and increased sensitivity have shown that MC occurs more frequently than previously thought. The occurrence of increasing MC that is not associated with impending relapse highlights the dynamic nature of chimerism state. It further emphasizes that serial and quantitative analysis of chimerism is necessary to allow for the identification of patients at highest risk for relapse (Sellmann et al. 2018)."
+  },
+  {
+   "id": "46794b9012",
+   "type": "p",
+   "en": "Not all patients can be identified, and time interval between the onset of MS and relapse is often short. It is essential to perform the analysis frequently and ideally: chimerism should be combined with MRD analysis to optimize the predictive value. These investigations can form the basis for individual preemptive immunotherapy strategies to prevent recurrence of the underlying disease."
+  },
+  {
+   "id": "0c27607d8e",
+   "type": "li",
+   "en": "• Documentation of engraftment is the important step on the way to successful HCT."
+  },
+  {
+   "id": "489c4b134c",
+   "type": "li",
+   "en": "• Post-transplant patients are carrying two different genetic profiles and are called chimera."
+  },
+  {
+   "id": "df3f8888e9",
+   "type": "li",
+   "en": "• Analysis of hematopoietic chimerism offers the possibility to realize impending graft rejection and may also serve as an indicator for the recurrence of the underlying disease."
+  },
+  {
+   "id": "af9dfc1afc",
+   "type": "li",
+   "en": "• Since several years, these investigations have become the basis for intervention strategies to:"
+  },
+  {
+   "id": "d8ee3737d8",
+   "type": "li",
+   "en": "– Avoid graft rejection."
+  },
+  {
+   "id": "11d5f86416",
+   "type": "li",
+   "en": "– Maintain engraftment."
+  },
+  {
+   "id": "e24feb3030",
+   "type": "li",
+   "en": "– To treat imminent relapse by preemptive immunotherapy."
+  }
+ ],
+ "references": [
+  "Abraham A, Hsieh M, Eapen M, et al. Relationship between mixed donor-recipient chimerism and disease recurrence after hematopoietic cell transplantation for sickle cell disease. Biol Blood Marrow Transplant. 2017;23:2178–83.",
+  "Alizadeh M, Bernard M, Danic B, et al. Quantitative assessment of hematopoietic chimerism after bone marrow transplantation by real-time quantitative polymerase chain reaction. Blood. 2002;99:4618–25.",
+  "Aloisio M, Licastro D, Caenazzo L, Torboli V, D’Eustacchio A, Severini GM, et al. A technical application of quantitative next generation sequenc ing for chimerism evaluation. Mol Med Rep. 2016;14(4):2967–74.",
+  "Bader P, Kreyenberg H, Hoelle W, et al. Increasing mixed chimerism is an important prognostic factor for unfavorable outcome in children with acute lymphoblastic leukemia after allogeneic stem-cell transplantation: possible role for immuno-therapy. J Clin Oncol. 2004a;22:1696–705.",
+  "Bader P, Kreyenberg H, Hoelle W, et al. Increasing mixed chimerism defines a high-risk group of childhood acute myelogenous leukemia patients after allogeneic stem cell transplantation where pre-emptive immunotherapy may be effective. Bone Marrow Transplant. 2004b;33:815–21.",
+  "Bader P, Niethammer D, Willasch A, et al. How and when should we monitor chimerism after allogeneic stem cell transplantation? Bone Marrow Transplant. 2005;35:107–19.",
+  "Blouin AG, Askar M. Chimerism analysis for clinicians: a review of the literature and worldwide practices. Bone Marrow Transplant. 2022;57(3):347–59.",
+  "Bornhäuser M, Oelschlaegel U, Platzbecker U, et al. Monitoring of donor chimerism in sorted CD34+ peripheral blood cells allows the sensitive detection of imminent relapse after allogeneic stem cell transplantation. Haematologica. 2009;94:1613–7.",
+  "Fitzhugh CD, Abraham A, Hsieh MM. Alternative donor/unrelated donor transplants for the β-thalassemia and sickle cell disease. Adv Exp Med Biol. 2017;1013:123–53.",
+  "Fitzhugh CD, Abraham AA, Tisdale JF, et al. Hematopoietic stem cell transplantation for patients with sickle cell disease. Hematol Oncol Clin North Am. 2014;28:1171–85.",
+  "Gambacorta V, Parolini R, Xue E, et al. Quantitative PCR-based chimerism in bone marrow or peripheral blood to predict acute myeloid leukemia relapse in high-risk patients: results from the KIM-PB prospective study. Haematologica. 2020;106(5):1480–3.",
+  "Karasu GT, Yesilipek MA, Karauzum SB, et al. The value of donor lymphocyte infusions in thalassemia patients at imminent risk of graft rejection following stem cell transplantation. Pediatr Blood Cancer. 2012;58:453–8.",
+  "Kröger N, Bacher U, Bader P, et al. NCI first international workshop on the biology, prevention, and treatment of relapse after allogeneic hematopoietic stem cell transplantation. Biol Blood Marrow Transplant. 2010a;16:1325–46.",
+  "Kröger N, Bacher U, Bader P, et al. NCI first international workshop on the biology, prevention, and treatment of relapse after allogeneic hematopoietic stem cell transplantation. Biol Blood Marrow Transplant. 2010b;16:1187–211.",
+  "Lion T, Watzinger F, Preuner S, et al. The EuroChimerism concept for a standardized approach to chimerism analysis after allogeneic stem cell transplantation. Leukemia. 2012;26:1821–8.",
+  "McCann SR, Lawler M. Mixed chimaerism; detection and significance following BMT. Bone Marrow Transplant. 1993;11:91–4.",
+  "Platzbecker U, Wermke M, Radke J, et al. Azacitidine for treatment of imminent relapse in MDS or AML patients after allogeneic HSCT. Leukemia. 2012;26:381–9.",
+  "Preuner S, Peters C, Pötschger U, et al. Risk assessment of relapse by lineage-specific monitoring of chimerism in children undergoing allogeneic stem cell transplantation for acute lymphoblastic leukemia. Haematologica. 2016;101:741–6.",
+  "Rettinger E, Willasch AM, Kreyenberg H, et al. Preemptive immunotherapy in childhood acute myeloid leukemia for patients showing evidence of mixed chimerism after allogeneic stem cell transplantation. Blood. 2011;118:5681–8.",
+  "Sellmann L, Rabe K, Bünting I, Dammann E, Göhring G, Ganser A, et al. Diagnostic value of highly-sensitive chimerism analysis after allogeneic stem cell transplantation. Bone Marrow Transplant. 2018;53(11):1457–65.",
+  "Thiede C, Bornhäuser M, Oelschlägel U, et al. Sequential monitoring of chimerism and detection of minimal residual disease after allogeneic blood stem cell transplantation (BSCT) using multiplex PCR amplification of short tandem repeat-markers. Leukemia. 2001;15:293–302.",
+  "Stahl T, Böhme MU, Kröger N, Fehse B. Digital PCR to assess hematopoietic chimerism after allogeneic stem cell transplantation. Exp Hematol. 2015;43(6):462– 468.e1.",
+  "Willasch AM, Kreyenberg H, Shayegi N, Rettinger E, Meyer V, Zabel M, et al. Monitoring of hematopoietic chimerism after transplantation for pediatric myelodysplastic syndrome: real-time or conventional short tandem repeat PCR in peripheral blood or bone marrow? Biol Blood Marrow Transplant J Am Soc Blood Marrow Transplant. 2014;20(12):1918–25.",
+  "Vynck M, Nollet F, Sibbens L, Lievens B, Denys A, Cauwelier B, et al. Performance assessment of the Devyser high-throughput sequencing-based assay for chimerism monitoring in patients after allogeneic hematopoietic stem cell transplantation. J Mol Diagn JMD. 2021;23(9):1116–26."
+ ]
+}

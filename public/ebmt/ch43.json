@@ -1,0 +1,460 @@
+{
+ "number": 43,
+ "part": "V",
+ "page_pdf": [
+  397,
+  405
+ ],
+ "page_printed": 385,
+ "title_en": "Acute Graft-Versus-Host Disease",
+ "authors": "Ernst Holler, Hildegard Greinix, and Robert Zeiser",
+ "affiliations": "",
+ "doi": "10.1007/978-3-031-44080-9_43",
+ "licence": null,
+ "dropped_fragments": 0,
+ "blocks": [
+  {
+   "id": "394ae89be4",
+   "type": "h2",
+   "num": "43.1",
+   "en": "Introduction"
+  },
+  {
+   "id": "e71ecd5df2",
+   "type": "p",
+   "en": "Graft-versus-host disease (GvHD) was first recognized in murine models of HCT, and in the absence of knowledge of the HLA system, it was termed “secondary” (secondary to recovery from irradiation damage) or “runt” disease. Billingham established the criteria for the occurrence of secondary disease in the 1960s, i.e.:"
+  },
+  {
+   "id": "cabf3ae7dd",
+   "type": "li",
+   "en": "– The administration of a graft containing"
+  },
+  {
+   "id": "173fbea5eb",
+   "type": "p",
+   "en": "immunocompetent cells"
+  },
+  {
+   "id": "fc5893558d",
+   "type": "li",
+   "en": "– Immunological disparity between host and"
+  },
+  {
+   "id": "d9cb588a77",
+   "type": "p",
+   "en": "donor"
+  },
+  {
+   "id": "a4e0e4e362",
+   "type": "li",
+   "en": "– The administration of the graft to an immu"
+  },
+  {
+   "id": "97385f90bc",
+   "type": "p",
+   "en": "nosuppressed host unable to reject the graft"
+  },
+  {
+   "id": "36ec49af4c",
+   "type": "p",
+   "en": "cells"
+  },
+  {
+   "id": "6bae7f3474",
+   "type": "p",
+   "en": "In the human setting, we traditionally recognize two forms of GvHD, acute (aGvHD) and chronic (cGvHD). The original distinction of acute from chronic GvHD, namely, the occurrence before or after day 100 post stem cell infusion, has become blurred due to occurrence of aGvHD symptoms beyond day 100 after RIC regimens and/or after DLI (usually given after day 100). Nevertheless, the underlying combination of symptoms and signs affecting the skin, liver, and gastrointestinal tract forms a classical clinical syndrome enabling the diagnosis, and a helpful guide to the appropriate terminology is provided in Table 43.1 (Filipovich et al. 2005)."
+  },
+  {
+   "id": "c57fced96c",
+   "type": "table",
+   "num": "43.1",
+   "en": "Table 43.1 Current classification of acute and chronic",
+   "columns": 2,
+   "rows_en": [
+    [
+     "",
+     "GvHD"
+    ],
+    [
+     "",
+     "Features Features Day after of acute of chronic ClassificationHCTGvHDGvHD"
+    ],
+    [
+     "E. Holler (*) Department of Internal Medicine 3 (Haematology/ Oncology), University of Regensburg, Regensburg, Germany e-mail: ernst.holler@ukr.de",
+     "Acute GvHD –Classic acute<100 daysYesNo –Persistent, >100 daysYesNo recurrent, or late onset"
+    ],
+    [
+     "H. Greinix Division of Hematology, Medical University of Graz, Graz, Austria e-mail: hildegard.greinix@medunigraz.at R. Zeiser Division of Tumor Immunology and Immunoregulation, University Hospital Freiburg, University of Freiburg, Freiburg, Germany e-mail: robert.zeiser@uniklinik-freiburg.de",
+     "Chronic GvHD –Classic chronicNo time NoYes limit –Overlap No time YesYes syndromelimit"
+    ]
+   ]
+  },
+  {
+   "id": "aff4abbdb0",
+   "type": "h2",
+   "num": "43.2",
+   "en": "Definition"
+  },
+  {
+   "id": "e4d60e4b19",
+   "type": "p",
+   "en": "aGvHD remains, directly or indirectly, the major cause of short-term (day 100 and 1 year) mortality after allo-HCT. The pathophysiology of aGvHD has been attributed to a three-phase process comprising initial tissue damage from the conditioning regimen which in turn leads to activation of host antigen-presenting cells by pathogen- associated molecular patterns (PAMPs) and damage-associated molecular patterns (DAMPs) and activation and proliferation of donor T cells (afferent phase) and finally to the effector phase characterized by cytotoxic cell damage and release of inflammatory cytokines such as interleukin-1 (IL-1) and tissue necrosis factor-alpha (TNFα) that eventually produce tissue necrosis (efferent phase). The action of this pathogenetic process in the induction of aGvHD is modulated in part by the presence of cells capable of inhibiting immune response, such as T-regulatory cells (Tregs), type 1 regulatory T cells (Tr1 cells), invariant NKT cells, and myeloid-derived suppressor cells (MDSCs) (Ferrara et al. 2009; Teshima et al. 2016)."
+  },
+  {
+   "id": "f4b7a9dac4",
+   "type": "h2",
+   "num": "43.3",
+   "en": "Risk Factors"
+  },
+  {
+   "id": "e1a66a55fd",
+   "type": "p",
+   "en": "As aGvHD is a result of an alloimmune effect, the major risk for occurrence is the presence of HLA disparity and increasing degrees of HLA mismatching increase the probability of more severe disease. Other important and consistent risk factors include older patient age, the use of female donors for male recipients, prior alloimmunization of the donor, and the nature of GvHD prophylaxis. A number of publications have variously reported risk factors such as increasing donor age, increasing intensity of the preparative regimen, the use of PBSC as opposed to BM, and recipient seropositivity for CMV."
+  },
+  {
+   "id": "dba4e79bca",
+   "type": "p",
+   "en": "A recent study of 2941 recipients of allo-HCT in Seattle confirmed the importance of the degree of HLA mismatching, the use of URD, and the administration of high-dose TBI in predicting the occurrence of moderate to severe aGvHD. In contrast they found that increasing donor age, cytokine-mobilized stem cells, and the use of female donors for male recipients did not impact on the likelihood of aGvHD but were associated with the occurrence of cGvHD (Flowers et al. 2011)."
+  },
+  {
+   "id": "e932aacc1f",
+   "type": "p",
+   "en": "More recently, we have begun to appreciate the importance of non-HLA genetic factors in the development of GvHD. Examples include polymorphisms in the genes encoding cytokines such as the tumor necrosis factors, the interleukins (IL-1, IL-6, and IL-10), interferon gamma (IFN-γ), and transforming growth factor-β3 (TGF-β3) and the expression of the killer cell immunoglobulin- like receptors (KIR). Interestingly, one of the common features of the organs involved in aGvHD is that they are all exposed to microbial pathogens through the intestinal mucosa, epidermis, and portal circulation, and early murine studies confirmed a reduction in the severity and incidence of GvHD in animals that received antibiotic prophylaxis to “decontaminate” the GI tract or those kept in germ-free environments. This has led to the speculation that potential differences within individuals in the interactions of antigens derived from infective organisms and pathogen recognition receptors (PRR) might protect or predispose to the occurrence of GvHD. This concept was further supported by studies on SNPs within NOD2/CARD15, a pathogen receptor detecting bacterial muramyl peptide, as a risk factor of GvHD; however, extensive studies were conflicting (reviewed in Penack et al. 2010)."
+  },
+  {
+   "id": "1963a563ea",
+   "type": "p",
+   "en": "More recently, the availability of noncultural methods to analyze the whole set of bacteria (called microbiota) has broadened our view as the presence of commensal microbiota and a high diversity of the patients’ microbiota associated with substantial protection not only from GvHD but also from systemic and pulmonary infectious complications (Peled J et al, 2016). The exact mechanisms of this protection need still to be defined before translation into new preventive approaches, but beneficial effects of microbial metabolites (such as short-chain fatty acids and indoles) both on epithelial integrity and on immunoregulation have been shown (Swimm et al. 2018; Shono and van den Brink 2018)."
+  },
+  {
+   "id": "6bef10f8f5",
+   "type": "h2",
+   "num": "43.4",
+   "en": "Diagnosis and Scoring"
+  },
+  {
+   "id": "2841447719",
+   "type": "p",
+   "en": "aGvHD is manifested by one or more of the following features: an erythematous skin reaction, cholestatic liver disease, and gastrointestinal dysfunction. The variety of presentations in each organ is provided in more detail in Table 43.2; the syndrome ranges from a mild self-limiting condition to a serious and potentially fatal disorder. Because of the complexity of care of an allo-HCT recipient, it is often very difficult to distinguish the characteristic features of aGvHD from those of other complications such as VOD/SOS, conditioning, and general drug toxicity and infection and consequently to determine the appropriate choice of treatment."
+  },
+  {
+   "id": "c2edda57fe",
+   "type": "p",
+   "en": "For this reason, it is essential to establish the diagnosis by biopsy of one or more affected organs and confirmation of the characteristic histopathological features (Table 43.3). The targets of the immune response in aGvHD are the epithelial cells including basal and suprabasal cells of the epidermis, the intestinal epithelium, and the biliary duct epithelium, and the characteristic feature is identical, i.e., the presence of infiltrating immune cells close to apoptotic cells known as “satellite cell necrosis.”"
+  },
+  {
+   "id": "12cbef10c9",
+   "type": "p",
+   "en": "The first classification of aGvHD was developed by Glucksberg et al. (1974). Each organ was staged from 0 to 4 (Table 43.4), and the resultant stages were combined to provide an overall grade (Glucksberg et al. 1974). In 1994 Przepiorka et al. described the outcome of a consensus workshop to develop an improved scoring system that retained most of the characteristics of Glucksberg but dropped the use of the clinical performance score and included upper intestinal symptoms within the definition of aGvHD (Przepiorka et al. 1995). Subsequently, the IBMTR prospectively evaluated a “severity index” against the"
+  },
+  {
+   "id": "3bcedb95e5",
+   "type": "table",
+   "num": "43.3",
+   "en": "Table 43.3 Histopathological findings in acute GvHD",
+   "columns": 3,
+   "rows_en": [
+    [
+     "",
+     "Organ",
+     "Histopathological features"
+    ],
+    [
+     "",
+     "Skin",
+     "The diagnostic feature is a lichenoid infiltration of the upper dermis and lower epidermis with vacuolation, degeneration, and individual cell necrosis of the cells of the basal layer of the epidermis Grade I: vacuolation of epidermal basal cells Grade II: presence of individually necrotic keratinocytes Grade III: confluent areas of keratinocyte necrosis forming bullae Grade IV: sloughing of the epidermis"
+    ],
+    [
+     "Table 43.2Clinical manifestations of acute GvHD OrganClinical manifestation SkinErythematous maculopapular rash, often initially involving the palms and soles May progress to involve the entire body surface and may be pruritic and/or painful In severe cases, bullae may form leading to desquamation",
+     "Liver",
+     "The most consistent histological feature is small bile duct damage, which is usually seen in association with cholestasis and is rare in other complications of HCT The biliary epithelial cells have enlarged hyperchromatic nuclei or small pyknotic nuclei and vacuolated cytoplasm Periportal and midzone hepatocellular necrosis and minimal lymphocytic infiltrates in the portal tract"
+    ],
+    [
+     "LiverCholestasis with or without frank jaundice Cholestatic enzymes comparatively more deranged than transaminases",
+     "Gastrointestinal",
+     "Although there is a histological grading for liver histology, it has no proven prognostic value “Exploding crypts” within which are necrosis of individual epithelial cells"
+    ],
+    [
+     "Gastrointestinal Upper: anorexia, nausea, and (GI) tractvomiting Lower: diarrhea, typically green and watery; in severe case diarrhea contains fresh blood and mucosa and is accompanied by abdominal cramps and, on occasion, paralytic ileus",
+     "",
+     "at the periphery of the crypts leaving fragments of nuclear and cytoplasmatic debris Grade I: individual cell necrosis Grade II: loss of individual crypts Grade III: loss of two or more adjacent crypts with ulceration Grade IV: denudation of epithelium"
+    ]
+   ]
+  },
+  {
+   "id": "58be84ef52",
+   "type": "p",
+   "en": "Glucksberg criteria but were unable to identify any particular advantage for the new system (Rowlings et al. 1997). In fact, the Glucksberg score was a better predictor of survival and remains in regular use (Cahn et al. 2005). Currently, electronic applications are developed supporting the accuracy of staging and grading of acute GvHD (Schoemans et al. 2018)."
+  },
+  {
+   "id": "7108f3b2b6",
+   "type": "p",
+   "en": "Overall clinical grade (based upon most severe target organ involvement):"
+  },
+  {
+   "id": "ad6d21c2e1",
+   "type": "li",
+   "en": "• Grade 0: No stage 1–4 of any organ"
+  },
+  {
+   "id": "30bbd74cfc",
+   "type": "li",
+   "en": "• Grade I: Stage 1–2 skin without liver, upper"
+  },
+  {
+   "id": "2f91e8676a",
+   "type": "p",
+   "en": "GI or lower GI involvement"
+  },
+  {
+   "id": "b7f9dacd0a",
+   "type": "li",
+   "en": "• Grade II: Stage 3 rash and/or stage 1 liver and/"
+  },
+  {
+   "id": "e7d6bb3899",
+   "type": "p",
+   "en": "or stage 1 upper GI and/or stage 1 lower GI"
+  },
+  {
+   "id": "7cc0069905",
+   "type": "li",
+   "en": "• Grade III: Stage 2–3 liver and/or stage 2–3"
+  },
+  {
+   "id": "2be0dd3df9",
+   "type": "p",
+   "en": "lower GI, with stage 0–3 skin and/or stage 0–1"
+  },
+  {
+   "id": "f67d87a92d",
+   "type": "p",
+   "en": "upper GI"
+  },
+  {
+   "id": "59fd6aebab",
+   "type": "li",
+   "en": "• Grade IV: Stage 4 skin, liver or lower GI"
+  },
+  {
+   "id": "e490570514",
+   "type": "p",
+   "en": "involvement, with stage 0–1 upper GI"
+  },
+  {
+   "id": "1695f1a811",
+   "type": "h2",
+   "num": "43.5",
+   "en": "Epidemiology"
+  },
+  {
+   "id": "1c1f82da25",
+   "type": "p",
+   "en": "Moderate to severe aGvHD occurs in approximately 40% of all recipients of allo-HCT, but the precise incidence varies considerably depending predominantly on the nature of the donor and the method of GvHD prophylaxis. Without effective prophylaxis, it is an almost inevitable and frequently deleterious complication at least in unrelated matched donor and mismatched family grafts."
+  },
+  {
+   "id": "bef7169481",
+   "type": "h2",
+   "num": "43.6",
+   "en": "Prevention (also See Chap. 26)"
+  },
+  {
+   "id": "e6810d0639",
+   "type": "p",
+   "en": "Grade III–IV aGvHD, especially if it turns out to be resistant to first-line treatment, has an extremely poor prognosis despite therapeutic intervention, and consequently, considerable efforts are made to try and prevent its occurrence. The rationale of prophylaxis was originally directed toward prolonged IS of donor T-cell function through the peri- and posttransplant administration of IS agents. Early studies identified the superiority of a combination of the CNI and CSA, with MTX over MTX alone. In practice this combination remains the most frequently used method of prophylaxis although some investigators have replaced CSA with tacrolimus (TAC) since large two phase III randomized studies reported a reduction in the incidence of grade II–IV aGvHD at 32% in recipients of sibling"
+  },
+  {
+   "id": "d9d11fce0f",
+   "type": "table",
+   "num": "43.4",
+   "en": "Table 43.4 Staging of acute graft-versus-host disease (according to Harris et al. 2016)",
+   "raw_en": "Table 43.4 Staging of acute graft-versus-host disease (according to Harris et al. 2016) GVHD target organ staging StageSkin (active erythema only)Liver (bilirubin)Upper GILower GI (stool output/day) 0No active (erythematous) <2 mg/dLNo or Adult: <500 mL/day or <3 episodes/day GVHD rashintermittent Child: <10 mL/kg/day or <4 episodes/day nausea, vomiting, or anorexia 1Maculopapular rash2–3 mg/dLPersistent Adult: 500–999 mL/day or 3–4 episodes/ <25% BSAnausea, day vomiting, or Child: 10–19.9 mL/kg/day or 4–6 episodes/ anorexiaday 2Maculopapular rash3.1–6 mg/dL–Adult: 1000–1500 mL/day or 5–7 episodes/ 25–50% BSAday Child: 20–30 mL/kg/day or 7–10 episodes/ day 3Maculopapular rash6.1–15 mg/dL–Adult: >1500 mL/day or >7 episodes/day >50% BSAChild: >30 mL/kg/day or >10 episodes/day 4Generalized erythroderma >15 mg/dL–Severe abdominal pain with or without (>50% BSA) plus bullous ileus, or grossly bloody stool (regardless of formation and stool volume) desquamation >5% BSA"
+  },
+  {
+   "id": "d9fa63870b",
+   "type": "p",
+   "en": "transplants and 56% in those who received unrelated donor grafts in patients who received TAC plus MTX compared to 44% (sibling) and 74% (unrelated) in those who were randomized to CSA and MTX. However, there was no difference in survival that could be attributed to the nature of the GvHD prevention (Ratanatharathorn et al. 1998; Nash et al. 2000). Recently, investigators have also reported the efficacy of newer agents such as mycophenolate mofetil (MMF) and sirolimus (SIR). Whereas MMF has not been tested in large randomized trials, the combination of TAC and SIR was compared with that of TAC and MTX in a phase III randomized study showing equivalent efficacy but differences in toxicity (Törlén et al. 2016)."
+  },
+  {
+   "id": "d596b0a1ba",
+   "type": "p",
+   "en": "An alternative approach to GvHD prophylaxis is to consider removal of donor T cells either ex vivo prior to infusion or in vivo before and/or after infusion using polyclonal (anti-thymocyte globulin [ATG]) or MoAb. A similar effect can also be achieved by positive selection of CD34+ stem cells. These techniques, collectively known as TCD, are extremely efficient in preventing acute and chronic GvHD and were in widespread use in the 1980s and 1990s. Unfortunately, they were rapidly identified as contributing to an increased risk of infection and disease relapse and subsequently became confined to situations in which the risk of GvHD is increased, e.g., recipients of mismatched and haploidentical transplants where the risk of death from GvHD outweighs the risk of later disease recurrence. In unrelated donor HCT, polyclonal ATG has become a major player as two randomized trials showed positive effects mainly on chronic GvHD (Finke et al. 2009; Walker et al. 2016)."
+  },
+  {
+   "id": "7d02222411",
+   "type": "p",
+   "en": "Recently, a prospective, double-blind phase III trial to investigate the effect of ATG in the setting of MUD HCT showed that grade II–IV acute GvHD and moderate–severe cGvHD was lower in ATG recipients but the overall survival was lower in ATG recipients (Soiffer et al. 2017). This could be related to higher ATG levels in patients with low lymphocyte counts following TBI which might translate in subsequent infectious complications and EBV-related posttransplant lymphoproliferative disease. Thus, balancing suppression of long-term GvHD versus suppressing anti-infectious defense is an ongoing challenge in GvHD (Gagelmann et al. 2017)."
+  },
+  {
+   "id": "35badb6672",
+   "type": "p",
+   "en": "Other studies have explored alternative methods of aGvHD prophylaxis including the infusion of an expanded population of T-regulatory cells at the time of stem cell infusion and partial TCD such as depletion of α/β T cells or elimination of alloreactive T cells after in vitro or in vivo activation. In this context, the administration of PT-CY in order to eliminate early activated donor T cells has gained substantial interest particularly in the context of haploidentical transplantation, and further studies comparing the more complex T-cell depletion approach with the simple approach of PT-CY are currently performed (Kanakry et al. 2016). In a prospective, randomized study on 431 adults given reduced-intensity conditioning and 6/6 related or 7–8/8 unrelated donor grafts, GvHD prophylaxis consisted of either PT-CY, tacrolimus and MMF, or tacrolimus and MTX (Holtan SG Blood 2022; LBA). One-year GvHD relapse-free survival (GRFS) was significantly better in the PT-CY study arm (52.7% vs. 34.9%, p < 0.001) due to significantly lower incidences of acute and chronic GvHD."
+  },
+  {
+   "id": "10d04cf925",
+   "type": "p",
+   "en": "Recent trials showed the activity of abatacept for aGvHD prevention (Watkins et al. 2021) leading to the FDA approval of abatacept in combination with a CNI and MTX for allo-HCT with a matched or 1-allele mismatched unrelated donor."
+  },
+  {
+   "id": "bee97255d9",
+   "type": "p",
+   "en": "Also vedolizumab, an antibody directed against α4/β7 integrin which is selectively expressed in the GI tract, was tested in a prospective phase III trial and showed a significant reduction of GI aGvHD (ChenYB et al, 2019, Floisand Y et al, 2021)."
+  },
+  {
+   "id": "a76a804c93",
+   "type": "h2",
+   "num": "43.7",
+   "en": "Treatment"
+  },
+  {
+   "id": "10d4eaa5b9",
+   "type": "p",
+   "en": "Grade I aGvHD, by definition affecting only the skin, can often be effectively treated with topical steroids alone. Early systemic treatment of grade I GvHD has been tested but showed no long-term advantage. More advanced grades require systemic therapy, and the mainstay of treatment"
+  },
+  {
+   "id": "088f135591",
+   "type": "p",
+   "en": "remains high-dose methylprednisolone (or equivalent), usually at a dose of 2 mg/kg/day, continued for 7–14 days and followed by a gradual reduction in dose (Penack et al. 2020). Patients with mild upper GI GvHD may start on lower doses with concomitant topical treatment; higher doses of steroids resulted in more infectious complications without superior long-term response. The chance of response decreases with increasing grade of GvHD, but in general approximately 40–50% of patients will demonstrate a response. Reductions in steroid doses may be followed by an exacerbation of symptoms that can sometimes be settled by simply increasing the dose and reducing more slowly on the second occasion. Achieving a balance between the levels of IS required to control aGvHD and retaining a degree of immunocompetence against microbial infection is challenging, and viral and fungal infections are frequent complications of prolonged steroid therapy. Anti-infective prophylaxis should be considered for all such patients. Among several candidates for first-line combination treatments, the most promising combination of steroids and MMF has been taken forward to a phase III study against steroids alone but failed to show superiority for the combination again due to an increased rate of infectious complications. Thus, so far no single agent has shown superiority of results when combined with corticosteroids for first-line treatment (Martin et al. 2012; Rashidi et al. 2016)."
+  },
+  {
+   "id": "21e73a6410",
+   "type": "p",
+   "en": "Failure to respond to standard steroid doses (defined as progression within 3–5 days of starting treatment or an incomplete response by 7–14 days) or recurrence after initial dose reduction (steroid dependence) will necessitate second-line treatment. In this context many agents have been tried alone or in combination with corticosteroid."
+  },
+  {
+   "id": "8d4834d1af",
+   "type": "p",
+   "en": "A multicenter phase 3 trial reported that ruxolitinib was superior to standard care for grade 2–4 SR-aGVHD (Zeiser et al. 2020). In this trial, 309 patients ≥12 years old were randomly assigned (1:1) to ruxolitinib (10 mg by mouth, twice daily) versus the investigator’s choice of therapy; control therapy was chosen by the investigator at the time of randomization from the following: anti-thymocyte globulin, extracorporeal dose methotrexate, mycophenolate mofetil, everolimus, sirolimus, etanercept, or infliximab. At day 28, compared with the control group, ruxolitinib achieved superior overall response rate (ORR; 62 versus 39%; odds ratio 2.64 [95% CI en-US1.65–4.22]) and complete response (CR; 34 ver -sus 19%) (Zeiser et al. 2020). Superiority of ruxolitinib was maintained at day 56 (40 versus 22%) with all grades of disease and affected organs. There is no consensus treatment for SR-aGVHD beyond ruxolitinib. The preferred treatment varies among institutions and is influenced by availability, cost, and patient preference."
+  },
+  {
+   "id": "7682f6717c",
+   "type": "p",
+   "en": "Most agents often result in short-term control, but durable effects are relatively infrequent, and the outcome of refractory aGvHD is dismal with approximately 80% mortality, especially if the lower GI tract is involved."
+  },
+  {
+   "id": "0b81ec3717",
+   "type": "p",
+   "en": "Responses have been reported with extracorporeal photopheresis administered at least twice a week on a weekly basis, and outcome seems to be superior with less toxicities occurring (Jagasia et al. 2013) (see Chap. 66)."
+  },
+  {
+   "id": "3f167c0b52",
+   "type": "p",
+   "en": "In 2006, Ringden et al. reported the successful use of mesenchymal stromal cells (MSC) in a small group of patients with refractory severe aGvHD, and later this group described a response rate of >50% in a larger group of patients (Munneke et al. 2016). MSC exert immunosuppressive effects in a non-HLA-restricted manner and like Tregs offer interesting and novel strategies for the management of this potentially fatal complication although long-term results need to be established in future trials (Le Blanc et al. 2008). Currently, a prospective phase III trial evaluates the efficacy of MSC versus ruxolitinib in patients with SR-aGvHD (IDUNN trial)."
+  },
+  {
+   "id": "d2a951360c",
+   "type": "p",
+   "en": "The administration of pooled fecal allogeneic microbiotatherapy (FMT) in 81 patients with SR-aGvHD of the GI tract reportedly resulted in an ORR of 56% including 37% CR after a median of three doses and translated to increased OS in responding patients (Malard F et al, 2023). Currently, a phase III prospective study in SR-aGvHD patients is ongoing to evaluate the efficacy of FMT."
+  },
+  {
+   "id": "dc3d77e683",
+   "type": "p",
+   "en": "While classical IS regimens inhibit a signal pathway or cytokine receptor, novel strategies target CD28 (e.g., Aurora kinase), cell migration"
+  },
+  {
+   "id": "6725c690da",
+   "type": "p",
+   "en": "(Zeiser et al. 2017). These inhibitors were tested in preclinical studies and showed promising activity (Zeiser R, Blazar B 2017, Hill et al. 2018)."
+  },
+  {
+   "id": "d5f5a012d9",
+   "type": "p",
+   "en": "Another novel approach is infusion of alpha-1 anti-trypsin which exerts anti-inflammatory effects and stimulates regulatory T cells. Two recent phase II trials showed CR rates of 35% and OR rates of 60% of the patients on day 28 after treatment starts (Marcondes et al. 2016; Magenau et al. 2018)."
+  },
+  {
+   "id": "b1bca39e44",
+   "type": "h2",
+   "num": "43.8",
+   "en": "Future Perspectives: Biomarkers, Risk-Adapted Treatment, and Tissue Regeneration"
+  },
+  {
+   "id": "c47eed20a1",
+   "type": "p",
+   "en": "The difficulties to improve results in SR-aGvHD underline that steroid resistance might not just represent resistance of alloreactive T cells but loss of immunoregulation and tissue tolerance (Wu and Reddy 2017) which is difficult to overcome by classical immunosuppressants. Besides new approaches of modulation, potential solutions might be earlier risk adapted or even preemptive treatment strategies which require, however, reliable and reproducible identification of these patients. Recently, clinical risk scores (MacMillan et al. 2015) and novel biomarkers have been reported. The strength of these biomarkers for early identification of high-risk patients at day 7 after HCT or at onset of GvHD has been proven in large multicenter consortia and needs now confirmation by trials on biomarker- guided treatment strategies (Vander Lugt et al. 2013; Hartwell et al. 2017; Levine et al. 2015). The strength of the current biomarkers and scores are partially explained by the fact that they identify GI GvHD as the most severe and deleterious manifestation in an early phase of the disease. Besides the immunosuppressive approaches for aGVHD novel treatment that aim at regenerating the intestinal tract including IL-22 and glucagon-like peptide 2 (GLP-2) have been tested in mouse models of GVHD (Norona et al. 2020; Hanash et al. 2012) and in early clinical trials (Ponce et al. 2023). The data show acceptable toxicity and signs of efficacy that need to be validated in prospective phase III"
+  },
+  {
+   "id": "a0be3ddc36",
+   "type": "li",
+   "en": "• Acute GvHD occurs until day 100 as classical acute GvHD and beyond day 100 as delayed acute GvHD."
+  },
+  {
+   "id": "9fbd8613a9",
+   "type": "li",
+   "en": "• As treatment options are limited beyond the use of corticosteroids, careful selection of GvHD prevention is essential."
+  },
+  {
+   "id": "2c61725c25",
+   "type": "li",
+   "en": "• In the USA abatacept has been approved for GvHD prevention in allo-HCT with unrelated donors."
+  },
+  {
+   "id": "75988914a8",
+   "type": "li",
+   "en": "• Besides classical IS agents like CNI, MTX or MMF, and m-ToR inhibitors, partial TCD (IV serotherapy, depletion of T-cell subpopulations, elimination of alloreactive T cells, or PT-CY) are possible options for prophylaxis."
+  },
+  {
+   "id": "6a87081dce",
+   "type": "li",
+   "en": "• Ruxolitinib has received EMA/FDA approval for treatment of SR-aGvHD."
+  },
+  {
+   "id": "c2ef62adce",
+   "type": "li",
+   "en": "• Institutional standards of treatment and supportive care are essential."
+  }
+ ],
+ "references": [
+  "Cahn JY, Klein JP, Lee SJ, et al. Prospective evaluation of 2 acute graft-versus-host (GVHD) grading systems: a joint Société Française de Greffe de Moëlle et Thérapie Cellulaire (SFGM-TC), Dana Farber Cancer Institute (DFCI), and International Bone Marrow Transplant Registry (IBMTR) prospective study. Blood. 2005;106:1495–500.",
+  "Chen YB, Shah NN, Renteria AS, Cutler C, Jansson J, Akbari M, Chen C, Quadri S, Parfionovas A, Devine SM. Vedolizumab for prevention of graft-versus-host disease after allogeneic hematopoietic stem cell transplantation. Blood Adv. 2019;3(23):4136–46. doi: 10.1182/bloodadvances.2019000893. PMID: 31821456; PMCID: PMC6963235.",
+  "Ferrara JL, Levine JE, Reddy P, Holler E. Graft-versus-host disease. Lancet. 2009;373:1550–61.",
+  "Filipovich AH, Weisdorf D, Pavletic S, et al. National Institutes of Health consensus development project on criteria for clinical trials in chronic graft-versus-host disease: I. Diagnosis and staging working group report. Biol Blood Marrow Transplant. 2005;11:945–56.",
+  "Finke J, Bethge WA, Schmoor C, et al. Standard graft-versus- host disease prophylaxis with or without anti-T-cell globulin in haematopoietic cell transplantation from matched unrelated donors: a randomised,",
+  "Flowers ME, Inamoto Y, Carpenter PA, et al. Comparative analysis of risk factors for acute graft-versus-host disease and for chronic graft-versus-host disease according to National Institutes of Health consensus criteria. Blood. 2011;117:3214–9.",
+  "Fløisand Y, Schroeder MA, Chevallier P, Selleslag D, Devine S, Renteria AS, Mohty M, Yakoub-Agha I, Chen C, Parfionovas A, Quadri S, Jansson J, Akbari M, Chen YB. A phase 2a randomized clinical trial of intravenous vedolizumab for the treatment of steroid-refractory intestinal acute graft-versus-host disease. Bone Marrow Transplant. 2021;56(10):2477–2488. https://doi.org/10.1038/s41409-021-01356-0. Epub 2021 Jun 9. PMID: 34108672; PMCID: PMC8486663.",
+  "Gagelmann N, Ayuk F, Wolschke C, Kröger N. Comparison of different rabbit anti-thymocyte globulin formulations in allogeneic stem cell transplantation: systematic literature review and network meta-analysis. Biol Blood Marrow Transplant. 2017;23:2184–91.",
+  "Glucksberg H, Storb R, Fefer A, et al. Clinical manifestations of graft-versus-host disease in human recipients of marrow from HL-A-matched sibling donors. Transplantation. 1974;18:295–304.",
+  "Hanash AM, Dudakov JA, Hua G, O’Connor MH, Young LF, Singer NV, West ML, Jenq RR, Holland AM, Kappel LW, Ghosh A, Tsai JJ, Rao UK, Yim NL, Smith OM, Velardi E, Hawryluk EB, Murphy GF, Liu C, Fouser LA, Kolesnick R, Blazar BR, van den Brink MR. Interleukin-22 protects intestinal stem cells from immune-mediated tissue damage and regulates sensitivity to graft versus host disease. Immunity. 2012;37(2):339–50.",
+  "Harris AC, Young R, Devine S, Hogan WJ, Ayuk F, Bunworasate U, Chanswangphuwana C, Efebera YA, Holler E, Litzow M, Ordemann R, Qayed M, Renteria AS, Reshef R, Wölfl M, Chen YB, Goldstein S, Jagasia M, Locatelli F, Mielke S, Porter D, Schechter T, Shekhovtsova Z, Ferrara JL, Levine JE. International, multicenter standardization of acute graft-versus-host disease clinical data collection: a report from the Mount Sinai Acute GVHD International Consortium. Biol Blood Marrow Transplant. 2016;22(1):4–10.",
+  "Hartwell MJ, Özbek U, Holler E, et al. An early-biomarker algorithm predicts lethal graft-versus-host disease and survival. JCI Insight. 2017;2:e89798.",
+  "Hill L, Alousi A, Kebriaei P, et al. New and emerging therapies for acute and chronic graft versus host disease. Ther Adv Hematol. 2018;9:21–46.",
+  "Jagasia M, Greinix H, Robin M, et al. Extracorporeal photopheresis versus anticytokine therapy as a second-line treatment for steroid-refractory acute GVHD: a multicenter comparative analysis. Biol Blood Marrow Transplant. 2013;19:1129–33.",
+  "Kanakry CG, Fuchs EJ, Luznik L. Modern approaches to HLA-haploidentical blood or marrow transplantation. Nat Rev Clin Oncol. 2016;13:132.",
+  "Le Blanc K, Frassoni F, Ball L, Locatelli F, Developmental Committee of the European Group for Blood and Marrow Transplantation, et al. Mesenchymal stem cells for treatment of steroid-resistant, severe, acute graft-versus-host disease: a phase II study. Lancet.",
+  "Levine JE, Braun TM, Harris AC, Blood and Marrow Transplant Clinical Trials Network, et al. A prognostic score for acute graft-versus-host disease based on biomarkers: a multicentre study. Lancet Haematol. 2015;2:e21–9.",
+  "MacMillan ML, Robin M, Harris AC. A refined risk score for acute graft-versus-host disease that predicts response to initial therapy, survival, and transplant-related mortality. Biol Blood Marrow Transplant. 2015;21:761–7.",
+  "Magenau JM, Goldstein SC, Peltier D, et al. α(1)-antitrypsin infusion for treatment of steroid-resistant acute graft-versus-host disease. Blood. 2018;131:1372–9.",
+  "Malard F, Loschi M, Huynh A, Cluzeau T, Guenounou S, Legrand F, Magro L, Orvain C, Charbonnier A, Panz-Klapuch M, Desmier D, Mear JB, Cornillon J, Robin C, Daguindau E, Bilger K, Vehreschild MJGT, Chevallier P, Labussière-Wallet H, Mediavilla C, Couturier MA, Bulabois CE, Camus V, Chantepie S, Ceballos P, Gaugler B, Holler E, Doré J, Prestat E, Gasc C, Plantamura E, Mohty M. Pooled allogeneic faecal microbiota MaaT013 for steroid-resistant gastrointestinal acute graft-versus-host disease: a single-arm, multicentre phase 2 trial. EClinicalMedicine. 2023;62:102111. https://doi.org/10.1016/j. eclinm.2023.102111. PMID: 37654670; PMCID: PMC10466244.",
+  "Marcondes AM, Hockenbery D, Lesnikova M, et al. Response of steroid-refractory acute GVHD to α1-antitrypsin. Biol Blood Marrow Transplant. 2016;22:1596–601.",
+  "Martin PJ, Rizzo JD, Wingard JR, et al. First-and second-line systemic treatment of acute graft-versus-host disease: recommendations of the American Society of Blood and Marrow Transplantation. Biol Blood Marrow Transplant. 2012;18:1150–63.",
+  "Munneke JM, Spruit MJ, Cornelissen AS, et al. The potential of mesenchymal stromal cells as treatment for severe steroid-refractory acute graft-versus-host disease: a critical review of the literature. Transplantation. 2016;100:2309–14.",
+  "Nash RA, Antin JH, Karanes C, et al. Phase 3 study comparing methotrexate and tacrolimus with methotrexate and cyclosporine for prophylaxis of acute graft- versus-host disease after marrow transplantation from unrelated donors. Blood. 2000;96:2062–8.",
+  "Norona J, Apostolova P, Schmidt D, Ihlemann R, Reischmann N, Taylor G, Köhler N, de Heer J, Heeg S, Andrieux G, Siranosian BA, Schmitt-Graeff A, Pfeifer D, Catalano A, Frew IJ, Proietti M, Grimbacher B, Bulashevska A, Bhatt AS, Brummer T, Clauditz T, Zabelina T, Kroeger N, Blazar BR, Boerries M, Ayuk F, Zeiser R. Glucagon-like peptide 2 for intestinal stem cell and Paneth cell repair during graft-versus-host disease in mice and humans. Blood. 2020;136(12):1442–55.",
+  "Peled JU, Jenq RR, Holler E, van den Brink MR. Role of gut flora after bone marrow transplantation. Nat Microbiol. 2016;1:16036. https://doi.org/10.1038/",
+  "Penack O, Holler E, van den Brink MR. Graft-versus-host disease: regulation by microbe-associated molecules and innate immune receptors. Blood. 2010;115:1865–72.",
+  "Penack O, Marchetti M, Ruutu T, Aljurf M, Bacigalupo A, Bonifazi F, Ciceri F, Cornelissen J, Malladi R, Duarte RF, Giebel S, Greinix H, Holler E, Lawitschka A, Mielke S, Mohty M, Arat M, Nagler A, Passweg J, Schoemans H, Socié G, Solano C, Vrhovac R, Zeiser R, Kröger N, Basak GW. Prophylaxis and management of graft versus host disease after stem-cell transplantation for haematological malignancies: updated consensus recommendations of the European Society for Blood and Marrow Transplantation. Lancet Haematol. 2020;7(2):e157–67.",
+  "Ponce DM, Alousi AM, Nakamura R, Slingerland J, Calafiore M, Sandhu KS, Barker JN, Devlin S, Shia J, Giralt S, Perales MA, Moore G, Fatmi S, Soto C, Gomes A, Giardina P, Marcello L, Yan X, Tang T, Dreyer K, Chen J, Daley WL, Peled JU, van den Brink MRM, Hanash AM. A phase 2 study of interleukin- 22 and systemic corticosteroids as initial treatment for acute GVHD of the lower GI tract. Blood. 2023;141(12):1389–401. https://doi.org/10.1182/blood.2021015111. PMID: 36399701.",
+  "Przepiorka D, Weisdorf D, Martin P, Klingemann HG, Beatty P, Hows J, Thomas ED. 1994 Consensus Conference on Acute GVHD Grading. Bone Marrow Transplant. 1995;15(6):825–8. PMID: 7581076.",
+  "Rashidi A, DiPersio JF, Sandmaier BM, et al. Steroids versus steroids plus additional agent in frontline treatment of acute graft-versus-host disease: a systematic review and meta-analysis of randomized trials. Biol Blood Marrow Transplant. 2016;22:1133–7.",
+  "Ratanatharathorn V, Nash RA, Przepiorka D, et al. Phase III study comparing methotrexate and tacrolimus (prograf, FK506) with methotrexate and cyclosporine for graft-versus-host disease prophylaxis after HLA-identical sibling bone marrow transplantation. Blood. 1998;92:2303–14.",
+  "Rowlings PA, Przepiorka D, Klein JP, Gale RP, Passweg JR, Henslee-Downey PJ, Cahn JY, Calderwood S, Gratwohl A, Socié G, Abecasis MM, Sobocinski KA, Zhang MJ, Horowitz MM. IBMTR Severity Index for grading acute graft-versus-host disease: retrospective comparison with Glucksberg grade. Br J Haematol. 1997;97(4):855–64. https://doi.org/10.1046/j.1365-2141.1997.1112925.x. PMID: 9217189..",
+  "Schoemans HM, Goris K, Van Durm R, et al. Complications and quality of life working party of the EBMT. Accuracy and usability of the eGVHD app in assessing the severity of graft-versus-host disease",
+  "Open Access This chapter is licensed under the terms of the Creative Commons Attribution 4.0 International License",
+  "(http://creativecommons.org/licenses/by/4.0/), which permits use, sharing, adaptation, distribution and reproduction in",
+  "any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to",
+  "the Creative Commons license and indicate if changes were made. The images or other third party material in this chapter are included in the chapter's Creative Commons license,",
+  "unless indicated otherwise in a credit line to the material. If material is not included in the chapter's Creative Commons",
+  "license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to",
+  "obtain permission directly from the copyright holder. at the 2017 EBMT annual congress. Bone Marrow Transplant. 2018;53:490–4.",
+  "Shono Y, van den Brink MRM. Gut microbiota injury in allogeneic haematopoietic stem cell transplantation. Nat Rev Cancer. 2018;18:283–95.",
+  "Soiffer RJ, Kim HT, McGuirk J, et al. Prospective, randomized, double-blind, phase III clinical trial of anti-T- lymphocyte globulin to assess impact on chronic graft-versus-host disease-free survival in patients undergoing HLA-matched unrelated myeloablative hematopoietic cell transplantation. J Clin Oncol. 2017;35:4003–11.",
+  "Swimm A, Giver CR, DeFilipp Z, et al. Indoles derived from intestinal microbiota act via type I interferon signaling to limit graft-versus-host disease. Blood. 2018;132:2506–19.",
+  "Teshima T, Reddy P, Zeiser R. Acute graft-versus-host disease: novel biological insights. Biol Blood Marrow Transplant. 2016;22:11–6.",
+  "Törlén J, Ringdén O, Garming-Legert K, et al. A prospective randomized trial comparing cyclosporine/methotrexate and tacrolimus/sirolimus as graft- versus-host disease prophylaxis after allogeneic hematopoietic stem cell transplantation. Haematologica. 2016;101:1417–25.",
+  "Vander Lugt MT, Braun TM, Hanash S, et al. ST2 as a marker for risk of therapy-resistant graft-versus-host disease and death. N Engl J Med. 2013;369: 529–39.",
+  "Walker I, Panzarella T, Couban S, et al. Pretreatment with anti-thymocyte globulin versus no anti-thymocyte globulin in patients with haematological malignancies undergoing haemopoietic cell transplantation from unrelated donors: a randomised, controlled, open-label, phase 3, multicentre trial. Lancet Oncol. 2016;17:164–73.",
+  "Watkins B, Qayed M, McCracken C, et al. Phase II Trial of Costimulation Blockade With Abatacept for Prevention of Acute GVHD. J Clin Oncol. 2021;39:1865–77",
+  "Wu SR, Reddy P. Tissue tolerance: a distinct concept to control acute GVHD severity. Blood. 2017;129:1747–52.",
+  "Zeiser R, Blazar BR. Acute graft-versus-host disease— biologic process, prevention, and therapy. N Engl J Med. 2017;377(22):2167–79.",
+  "Zeiser R, von Bubnoff N, Butler J, Mohty M, Niederwieser D, Or R, Szer J, Wagner EM, Zuckerman T, Mahuzier B, Xu J, Wilke C, Gandhi KK, Socié G, REACH2 Trial Group. Ruxolitinib for glucocorticoid- refractory acute graft-versus-host disease. N Engl J Med. 2020;382(19):1800–10."
+ ]
+}
