@@ -5,6 +5,8 @@ import { Link, useSearchParams } from 'react-router'
 
 import { routes } from '../../app/routes'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
+import { CnsProphylaxisSection } from '../../features/cns-prophylaxis/CnsProphylaxisSection'
+import { TAB as CNS_PROPHYLAXIS_TAB } from '../../features/cns-prophylaxis/content'
 import { FEBRILE_NEUTROPENIA_DISEASE } from '../../features/febrile-neutropenia/algorithm'
 import { FebrileNeutropeniaSection } from '../../features/febrile-neutropenia/FebrileNeutropeniaSection'
 import { IrradiatedSection } from '../../features/irradiated/IrradiatedSection'
@@ -14,7 +16,7 @@ import { localize } from '../../lib/localized'
 import { CLINICAL_GROUPS, type ClinicalGroup } from '../../schemas/common'
 
 /** Tabs beside the list, each opened by `?section=` so a link can land on it. */
-const SECTIONS = ['irradiated', 'febrile-neutropenia']
+const SECTIONS = ['irradiated', 'febrile-neutropenia', 'cns-prophylaxis']
 
 export function DiseasesPage() {
   const { t } = useTranslation()
@@ -42,6 +44,9 @@ export function DiseasesPage() {
           <Tabs.Tab value="diseases">{t('diseases.tabList')}</Tabs.Tab>
           <Tabs.Tab value="irradiated">{t('irradiated.tab')}</Tabs.Tab>
           <Tabs.Tab value="febrile-neutropenia">{t('febrileNeutropenia.tab')}</Tabs.Tab>
+          <Tabs.Tab value="cns-prophylaxis">
+            {localize(CNS_PROPHYLAXIS_TAB, currentLanguage())}
+          </Tabs.Tab>
         </Tabs.List>
         <Tabs.Panel value="diseases" pt="md">
           <CatalogGate>{(catalog) => <DiseaseList catalog={catalog} />}</CatalogGate>
@@ -52,6 +57,9 @@ export function DiseasesPage() {
         </Tabs.Panel>
         <Tabs.Panel value="febrile-neutropenia" pt="md">
           <FebrileNeutropeniaSection />
+        </Tabs.Panel>
+        <Tabs.Panel value="cns-prophylaxis" pt="md">
+          <CnsProphylaxisSection />
         </Tabs.Panel>
       </Tabs>
     </Stack>
