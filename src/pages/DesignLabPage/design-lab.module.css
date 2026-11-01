@@ -1,0 +1,179 @@
+/*
+ * One file for the three directions, so they can be compared token by token. Every colour goes
+ * through `light-dark()`: the application has a theme toggle, and a direction that only works in
+ * one theme is not a direction worth choosing.
+ */
+
+.lab {
+  --line: light-dark(#d8d7d0, #3a3c3f);
+  --ink: light-dark(#17191b, #e8e6e1);
+  --quiet: light-dark(#5f6267, #a3a7ad);
+}
+
+/* ------------------------------------------------------------------ A: dense */
+
+.dense {
+  font-size: 13px;
+}
+
+.dense table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dense th,
+.dense td {
+  border-bottom: 1px solid var(--line);
+  padding: 0 8px;
+  height: 30px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.dense th {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--quiet);
+}
+
+.dense .groupRow td {
+  height: 26px;
+  background: light-dark(#f1f0ec, #26282b);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--quiet);
+  position: sticky;
+  top: 0;
+}
+
+.dense .code {
+  font-family: ui-monospace, 'Cascadia Mono', 'Segoe UI Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--quiet);
+}
+
+.dense .rowLink {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.dense .rowLink:hover {
+  text-decoration: underline;
+}
+
+.dense tbody tr:hover td {
+  background: light-dark(#f7f6f3, #2b2d30);
+}
+
+.dense .summary {
+  color: var(--quiet);
+  font-size: 12px;
+}
+
+/* ------------------------------------------------------------------ B: paper */
+
+.paper {
+  font-family: Georgia, 'Times New Roman', 'PT Serif', serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.paper .groupTitle {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 4px;
+  margin: 0 0 6px;
+}
+
+.paper .entry {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 0 16px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.paper .entryCode {
+  font-variant-numeric: tabular-nums;
+  color: var(--quiet);
+  font-size: 13px;
+  padding-top: 2px;
+}
+
+.paper .entryLink {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.paper .entryLink:hover {
+  border-bottom-color: var(--ink);
+}
+
+.paper .entrySummary {
+  color: var(--quiet);
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------ C: roomy */
+
+.roomy {
+  font-size: 15px;
+}
+
+.roomy .tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 12px;
+}
+
+.roomy .tile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 72px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--ink);
+  background: light-dark(#ffffff, #1f2124);
+}
+
+.roomy .tile:hover {
+  border-color: light-dark(#17191b, #6d7177);
+}
+
+.roomy .tileCode {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--quiet);
+}
+
+.roomy .tileName {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.roomy .tileSummary {
+  font-size: 13px;
+  color: var(--quiet);
+}
+
+.roomy .groupTitle {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--quiet);
+  margin: 0;
+}
