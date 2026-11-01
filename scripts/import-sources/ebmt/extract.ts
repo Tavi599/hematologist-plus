@@ -166,7 +166,15 @@ function run(file: string, out: string): void {
     let inRefs = false
 
     let buf: DraftBlock | null = null
-    /** Offset of the wrapped lines of the open list item, once one is seen. */
+    /**
+     * Offset of the wrapped lines of the open list item, once one is seen: the
+     * smallest indent its continuation lines use. The smallest and not the
+     * first, because an item can hold several paragraphs of its own — chapter 37
+     * sets the whole "Diagnosis of Fungal Disease" section as three such items —
+     * and those inner paragraphs are indented deeper (24 pt) than the item's own
+     * text (12 pt). Latching onto the first line seen took the deeper indent and
+     * then failed to recognise the item's own lines at the next column break.
+     */
     let hang: number | null = null
     let prev: {
       col: 0 | 1
@@ -314,7 +322,7 @@ function run(file: string, out: string): void {
         } else {
           const join = prev && (prev.soft || /[-/]$/.test(prev.text)) ? '' : ' '
           buf.text += join + line.text.trim()
-          if (buf.type === 'li' && hang === null && offset > 2) hang = offset
+          if (buf.type === 'li' && offset > 2 && (hang === null || offset < hang)) hang = offset
         }
         prev = { ...line, page: p }
       }
