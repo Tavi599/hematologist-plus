@@ -31,22 +31,27 @@
   gap: 6px;
 }
 
+/* Filters read as words on the page, not as buttons: no frame, a tint only where pointed or chosen. */
 .chip {
   font: inherit;
   cursor: pointer;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--ink);
+  border: 0;
+  background: transparent;
+  color: var(--quiet);
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
 }
 
 .chip:hover {
-  border-color: var(--accent-fill);
+  background: var(--accent-soft);
+  color: var(--ink);
 }
 
 .chip[aria-pressed='true'] {
-  background: var(--accent-fill);
-  border-color: var(--accent-fill);
-  color: var(--accent-ink);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .chipCount {
@@ -94,6 +99,10 @@
   font-size: 11px;
 }
 
+/*
+ * A star that is not set stays out of the way: faint, and full only under the pointer or when the
+ * keyboard reaches it. A set one carries the accent.
+ */
 .star {
   font: inherit;
   cursor: pointer;
@@ -102,11 +111,20 @@
   padding: 0 2px;
   line-height: 1;
   color: var(--quiet);
+  opacity: 0.35;
+  transition:
+    opacity 120ms ease,
+    color 120ms ease;
 }
 
-.star[aria-pressed='true'],
-.star:hover {
+.star:hover,
+.star:focus-visible {
+  opacity: 1;
+}
+
+.star[aria-pressed='true'] {
   color: var(--accent);
+  opacity: 1;
 }
 
 .badges {
@@ -189,7 +207,11 @@
 }
 
 .tableLayout .star {
-  font-size: 15px;
+  font-size: 13px;
+}
+
+.tableLayout tbody tr:hover .star {
+  opacity: 0.8;
 }
 
 .tableLayout .groupRow td {
@@ -213,7 +235,7 @@
 .tableLayout .chip {
   font-size: 12px;
   padding: 2px 8px;
-  border-radius: 0;
+  border-radius: 4px;
 }
 
 .tableLayout .code {
@@ -264,7 +286,7 @@
 .tilesLayout .chip {
   font-size: 14px;
   min-height: 36px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   border-radius: 999px;
 }
 
@@ -313,8 +335,12 @@
   z-index: 1;
 }
 
+.tilesLayout .tile:hover .star {
+  opacity: 0.8;
+}
+
 .tilesLayout .star {
-  font-size: 22px;
+  font-size: 18px;
   margin: -6px -6px -6px 0;
   padding: 6px;
 }
