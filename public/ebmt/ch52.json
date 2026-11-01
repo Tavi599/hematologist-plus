@@ -35,11 +35,6 @@
    "en": "Noninfectious lung injury following HCT may be mediated by immune or nonimmune mechanisms and accounts for up to 50% of noninfectious mortality after allo-HCT."
   },
   {
-   "id": "2ca522a280",
-   "type": "p",
-   "en": "These complications have been classified by the American Thoracic Society according to the tissue primarily injured and its etiology (Panoskaltsis-Mortari et al. 2011) (Table 52.1)."
-  },
-  {
    "id": "fdf01b6f9e",
    "type": "table",
    "num": "52.1",
@@ -144,6 +139,11 @@
    ]
   },
   {
+   "id": "2ca522a280",
+   "type": "p",
+   "en": "These complications have been classified by the American Thoracic Society according to the tissue primarily injured and its etiology (Panoskaltsis-Mortari et al. 2011) (Table 52.1)."
+  },
+  {
    "id": "6af964f46c",
    "type": "h2",
    "num": "52.2",
@@ -155,229 +155,29 @@
    "en": "Ideally, any respiratory/pulmonary complication observed after HCT whether early or late onset should be evaluated following predetermined, institutional, standard of practice guidelines (Lucena et al. 2014). Workup requires attention to pulmonary and non-pulmonary causes. Respiratory distress may progress rapidly once identified; hence, a timely workup including assessment of pulmonary and cardiac function, imaging, and procurement of samples to rule out infection is critical for optimizing outcomes (Tamburro et al. 2021; Cooke and Yanik 2016):"
   },
   {
-   "id": "792f522826",
-   "type": "p",
-   "en": "1. Assessment of oxygen saturation/oxygen"
+   "id": "9007458cb1",
+   "type": "li",
+   "en": "1. Assessment of oxygen saturation/oxygen requirement: Pulse oximetry or arterial blood gas analysis if indicated. For late-onset noninfectious pulmonary complications (LONIPC), pulse oximetry following a hall walk is suggested."
   },
   {
-   "id": "caf1c07688",
-   "type": "p",
-   "en": "requirement: Pulse oximetry or arterial blood"
+   "id": "2134f36f24",
+   "type": "li",
+   "en": "2. Imaging: Chest radiographs (particularly in children) or CT scanning to assess for the presence of lobar, multi-lobar, or diffuse pulmonary infiltrates. For early-onset lung injury, a low-dose CT can suffice. For LONIPC, a CT with inspiratory cuts is mandatory, and expiratory views to assess for air trapping should be discussed. Echocardiography can be considered to identify left-heart dysfunction or pulmonary hypertension."
   },
   {
-   "id": "c4fb524d2d",
-   "type": "p",
-   "en": "gas analysis if indicated. For late-onset nonin"
+   "id": "a0d8c541d2",
+   "type": "li",
+   "en": "3. Pulmonary function testing (PFTs): PFTs are rarely indicated in the context of acute lung complications but can be considered. For LONIPC, PFTs including spirometry (without and with albuterol), lung volumes, and DLCO are recommended to assess for signs for either restrictive or obstructive pulmonary dysfunction and to assess severity (Jagasia et al. 2015; Wolff et al. 2021). Assessing PFTs in pediatric patients remains a challenge particularly in young children (Tamburro et al. 2021)."
   },
   {
-   "id": "9ee05915e9",
-   "type": "p",
-   "en": "fectious pulmonary complications (LONIPC),"
+   "id": "6158e1b958",
+   "type": "li",
+   "en": "4. Infectious disease testing: Blood samples for bacterial culture and detection of viral replication; sputum culture; nasopharyngeal swabs for rapid viral panels including SARS-CoV-2, respiratory syncytial virus (RSV), parainfluenza virus (PIV), adenovirus (ADV), rhino-enteroviruses, influenza A and B (in season), metapneumovirus, and others; urinary antigen tests; blood samples for galactomannan and beta-D-glucan assays."
   },
   {
-   "id": "ff8fd2d10c",
-   "type": "p",
-   "en": "pulse oximetry following a hall walk is"
-  },
-  {
-   "id": "2284e0abca",
-   "type": "p",
-   "en": "suggested. 2. Imaging: Chest radiographs (particularly in"
-  },
-  {
-   "id": "d4d672763d",
-   "type": "p",
-   "en": "children) or CT scanning to assess for the"
-  },
-  {
-   "id": "38b5df56f4",
-   "type": "p",
-   "en": "presence of lobar, multi-lobar, or diffuse pul"
-  },
-  {
-   "id": "f5a462e0be",
-   "type": "p",
-   "en": "monary infiltrates. For early-onset lung injury,"
-  },
-  {
-   "id": "5c0b73b043",
-   "type": "p",
-   "en": "a low-dose CT can suffice. For LONIPC, a CT"
-  },
-  {
-   "id": "a223c732c8",
-   "type": "p",
-   "en": "with inspiratory cuts is mandatory, and expi"
-  },
-  {
-   "id": "39cdf8bfda",
-   "type": "p",
-   "en": "ratory views to assess for air trapping should"
-  },
-  {
-   "id": "06c26bdf67",
-   "type": "p",
-   "en": "be discussed. Echocardiography can be con"
-  },
-  {
-   "id": "2514c63376",
-   "type": "p",
-   "en": "sidered to identify left-heart dysfunction or"
-  },
-  {
-   "id": "ee7da8eb8b",
-   "type": "p",
-   "en": "pulmonary hypertension. 3. Pulmonary function testing (PFTs): PFTs are"
-  },
-  {
-   "id": "82967e1a53",
-   "type": "p",
-   "en": "rarely indicated in the context of acute lung"
-  },
-  {
-   "id": "cf87c89675",
-   "type": "p",
-   "en": "complications but can be considered. For"
-  },
-  {
-   "id": "2893c8e407",
-   "type": "p",
-   "en": "LONIPC, PFTs including spirometry (with"
-  },
-  {
-   "id": "58cff7f9da",
-   "type": "p",
-   "en": "out and with albuterol), lung volumes, and"
-  },
-  {
-   "id": "05ab8cfb09",
-   "type": "p",
-   "en": "DLCO are recommended to assess for signs"
-  },
-  {
-   "id": "50b2ebeac6",
-   "type": "p",
-   "en": "for either restrictive or obstructive pulmonary"
-  },
-  {
-   "id": "7db5436073",
-   "type": "p",
-   "en": "dysfunction and to assess severity (Jagasia"
-  },
-  {
-   "id": "e8d69aed64",
-   "type": "p",
-   "en": "et al. 2015; Wolff et al. 2021). Assessing PFTs"
-  },
-  {
-   "id": "c2ce13d99d",
-   "type": "p",
-   "en": "in pediatric patients remains a challenge par"
-  },
-  {
-   "id": "f286292713",
-   "type": "p",
-   "en": "ticularly in young children (Tamburro et al."
-  },
-  {
-   "id": "a31605eacd",
-   "type": "p",
-   "en": "2021). 4. Infectious disease testing: Blood samples for"
-  },
-  {
-   "id": "09df16a743",
-   "type": "p",
-   "en": "bacterial culture and detection of viral replica"
-  },
-  {
-   "id": "beb1631026",
-   "type": "p",
-   "en": "tion; sputum culture; nasopharyngeal swabs"
-  },
-  {
-   "id": "ab7f697026",
-   "type": "p",
-   "en": "for rapid viral panels including SARS-CoV-2,"
-  },
-  {
-   "id": "727baad61e",
-   "type": "p",
-   "en": "respiratory syncytial virus (RSV), parainflu"
-  },
-  {
-   "id": "a4250d2680",
-   "type": "p",
-   "en": "enza virus (PIV), adenovirus (ADV), rhino-"
-  },
-  {
-   "id": "0617125706",
-   "type": "p",
-   "en": "enteroviruses, influenza A and B (in season),"
-  },
-  {
-   "id": "dd19abed7e",
-   "type": "p",
-   "en": "metapneumovirus, and others; urinary antigen"
-  },
-  {
-   "id": "ca16b0ca5b",
-   "type": "p",
-   "en": "tests; blood samples for galactomannan and"
-  },
-  {
-   "id": "570f9065f9",
-   "type": "p",
-   "en": "beta-D-glucan assays. 5. Fiber-optic bronchoscopy (FOB) with bron"
-  },
-  {
-   "id": "c029f659d7",
-   "type": "p",
-   "en": "choalveolar lavage (BAL) (strongly encour"
-  },
-  {
-   "id": "534789c661",
-   "type": "p",
-   "en": "aged): Complete in collaboration with"
-  },
-  {
-   "id": "893d4d5b2a",
-   "type": "p",
-   "en": "specialists in pulmonary medicine and infec"
-  },
-  {
-   "id": "e3b7a9849f",
-   "type": "p",
-   "en": "tious diseases. PCR for Pneumocystis jirove"
-  },
-  {
-   "id": "f3803d39cb",
-   "type": "p",
-   "en": "cii (PJ), Legionella, and Mycoplasma."
-  },
-  {
-   "id": "18ab2e1745",
-   "type": "p",
-   "en": "Cultures and stains for bacteria, fungi, and"
-  },
-  {
-   "id": "c222562b3a",
-   "type": "p",
-   "en": "AFB along with galactomannan assay. If BAL"
-  },
-  {
-   "id": "117f383a63",
-   "type": "p",
-   "en": "cannot be completed, consider approaches to"
-  },
-  {
-   "id": "ef69551e15",
-   "type": "p",
-   "en": "induce and collect sputum for the assays noted"
-  },
-  {
-   "id": "0888734fb2",
-   "type": "p",
-   "en": "above:"
+   "id": "7bfcf4aaef",
+   "type": "li",
+   "en": "5. Fiber-optic bronchoscopy (FOB) with bronchoalveolar lavage (BAL) (strongly encouraged): Complete in collaboration with specialists in pulmonary medicine and infectious diseases. PCR for Pneumocystis jirovecii (PJ), Legionella, and Mycoplasma. Cultures and stains for bacteria, fungi, and AFB along with galactomannan assay. If BAL cannot be completed, consider approaches to induce and collect sputum for the assays noted above:"
   },
   {
    "id": "7e52e08df8",
@@ -385,54 +185,9 @@
    "en": "• If positive, treat accordingly."
   },
   {
-   "id": "3450942e77",
+   "id": "4cd3bbb8b5",
    "type": "li",
-   "en": "• If negative, consider empiric treatment and consideration for idiopathic pneumonia syndrome (IPS) and other etiologies (see below). 6. Tissue biopsy: While not encouraged, in some"
-  },
-  {
-   "id": "fedc3be4a6",
-   "type": "p",
-   "en": "selected cases, e.g., later-onset cases where"
-  },
-  {
-   "id": "dbe0a57748",
-   "type": "p",
-   "en": "the diagnosis is not established by noninva"
-  },
-  {
-   "id": "3ec08b2943",
-   "type": "p",
-   "en": "sive tests or those poorly responsive to antimi"
-  },
-  {
-   "id": "cccc3be07a",
-   "type": "p",
-   "en": "crobial or anti-inflammatory therapy (see"
-  },
-  {
-   "id": "d30120433e",
-   "type": "p",
-   "en": "below), a tissue biopsy could be considered"
-  },
-  {
-   "id": "238494d26c",
-   "type": "p",
-   "en": "using either transbronchial (less favored) or"
-  },
-  {
-   "id": "a88ab2a23d",
-   "type": "p",
-   "en": "minimally invasive, video-assisted thoraco"
-  },
-  {
-   "id": "30f30b1d4a",
-   "type": "p",
-   "en": "scopic surgery (VATS) (Dieffenbach et al."
-  },
-  {
-   "id": "9847f62ee1",
-   "type": "p",
-   "en": "2019)."
+   "en": "• If negative, consider empiric treatment and consideration for idiopathic pneumonia syndrome (IPS) and other etiologies (see below)."
   },
   {
    "id": "77ffe8c1c5",
@@ -454,6 +209,11 @@
      ""
     ]
    ]
+  },
+  {
+   "id": "8bce23befd",
+   "type": "li",
+   "en": "6. Tissue biopsy: While not encouraged, in some selected cases, e.g., later-onset cases where the diagnosis is not established by noninvasive tests or those poorly responsive to antimicrobial or anti-inflammatory therapy (see below), a tissue biopsy could be considered using either transbronchial (less favored) or minimally invasive, video-assisted thoracoscopic surgery (VATS) (Dieffenbach et al. 2019)."
   },
   {
    "id": "1ab867694d",
@@ -520,11 +280,6 @@
    "en": "52.3.2.2 Clinical Manifestations Signs and symptoms of IPS classically occur within 120 days (but as early as 3 weeks and as late as 180 days) after HCT and include fever, nonproductive cough, dyspnea, tachypnea, hypoxemia, rales, and diffuse alveolar or interstitial infiltrates on X-rays or CT scans."
   },
   {
-   "id": "3bfbfdceb4",
-   "type": "p",
-   "en": "52.3.2.3 Diagnosis All of the following must be present for the diagnosis of IPS:"
-  },
-  {
    "id": "94219694f6",
    "type": "aside",
    "en": "DiagnosisPE should be suspected in the context of weight gain, an increased cardiothoracic index on imaging, and crackles/rales. Though rarely necessary, the diagnosis can be confirmed by pulmonary pressure measurements. Differential – Heart failure (prior anthracycline diagnosistoxicity or conditioning with CY). – Endothelial syndromes: SOS, CLS, ES (see Chaps. 42 and 49). – Respiratory tract infections: • Idiopathic pneumonia syndrome (IPS) – Posttransfusion reactions (TRALI). TreatmentGoal: Re-establish fluid homeostasis/ euvolemia via fluid restriction and diuretics."
@@ -535,14 +290,14 @@
    "en": "IncidenceFO may be observed in up to 60% of patients early after HCT. The exact incidence of PE is not established although it could be higher than 20%. Symptoms – Weight gain, shortness of breath, and signsnonproductive cough, moderate hypoxemia. – Crackles and rales in both lung bases. – Chest radiology with diffuse alveolar/interstitial infiltrates."
   },
   {
-   "id": "08ca3ec1b2",
-   "type": "p",
-   "en": "52.3.2.4 Pathogenesis, Incidence, Presentation, and Risk Factors 52.3.2.5 Treatment and Prognosis"
-  },
-  {
    "id": "d4b8f1bd47",
    "type": "aside",
    "en": "1. Evidence of widespread alveolar injury:Biomarker – sTNFR1, IL-6, MCP-1, Ang2, (a) Multi-lobar infiltrates on chest radiographs or incidencesCD14, and IL-8 are elevated in CTpatients with IPS (Yanik et al. (b) Symptoms and signs of pneumonia (cough, 2008a, b, 2015). dyspnea, tachypnea, crackles/rales)– sTNRF1, IL-6, and ST-2 were most (c) Evidence of abnormal pulmonary physiologypredictive in diagnosing IPS even Increased alveolar to arterial oxygen difference; before clinical signs and symptoms need for supplemental O₂ therapywere present (Seo et al. 2017). New or increased restrictive PFT abnormality– In addition, a biomarker panel including ST2, IL-6, and sTNFR1 2. Absence of active lower respiratory tract infection could, as early as day 7, predict based upon: respiratory failure and associated (a) BAL negative for significant bacterial mortality after HCT (Rowan et al. pathogens including acid-fast bacilli, Nocardia, 2022). and Legionella species – The strict definition required to (b) BAL negative for pathogenic nonbacterial establish a diagnosis and the microorganisms increased use of RIC have Routine culture for bacteria, fungi, and AFB significantly reduced the incidence and shell vial culture for CMV of IPS from that observed in the PCR for respiratory viruses and CMV past (~25%). Cytology for CMV inclusions, fungi, and – This reduction runs in parallel of Pneumocystis jirovecii the improvement in the diagnostic (c) Other organisms/tests to also consider: methodologies to detect infectious PCR for human metapneumovirus, rhinovirus, pathogens (Seo et al. 2015; Zinter coronavirus, and HHV6 et al. 2019). PCR for Chlamydia, Mycoplasma, and – Currently, the incidence of IPS is Aspergillus spp. <10% of allo-HCT (7% after MAC Serum and BAL fluid GM for Aspergillus with ≥12 Gy TBI; 2% after RIC in species, serum beta-D-glucan adults) (Wenger et al. 2020; Sano 3. Absence of cardiac dysfunction, acute renal failure, et al. 2014). or iatrogenic fluid overload as etiology for Timing– Generally, within first 120 days pulmonary dysfunction after BMT but can be observed between days 21 and 180. – Late IPS (up to180 days post-HCT) can be observed but is rare (Thompson et al. 2017). Risk factors – Older age/Karnofsky index <90/ (from Cooke higher interval diagnosis HCT. and Yanik MAC or TBI (≥12 Gy)/HLA disparity/ Pathogenesis– The pathophysiology of IPS is 2016)GVHD prophylaxis with MTX. complex. Data generated using Acute GVHD/previous viral infection/ experimental models support IPS other malignancies than leukemia. as a process in which the lung is susceptible to cellular and soluble inflammatory effectors. These distinct but related pathways of inflammation culminate in the recruitment of immune cells to the Supportive Supplemental O₂ therapy lung leading to tissue damage and measuresNoninvasive [high-flow nasal Oen-US2en-US, CPAP] dysfunction (Cooke and Yanik or, when needed, invasive (mechanical) 2016). ventilatory support: – Recent work has also underscored – Empiric broad-spectrum antimicrobials a role for the pulmonary – Strict control of fluid balance/ microbiome and metatranscriptome hemofiltration to the development of lung inflammation after HCT (Zinter et al. 2021)."
+  },
+  {
+   "id": "301cc19601",
+   "type": "p",
+   "en": "52.3.2.3 Diagnosis All of the following must be present for the diagnosis of IPS: 52.3.2.4 Pathogenesis, Incidence, Presentation, and Risk Factors 52.3.2.5 Treatment and Prognosis"
   },
   {
    "id": "16d965ecef",
@@ -561,14 +316,14 @@
    "en": "52.3.3.1 Clinical Aspects of DAH"
   },
   {
-   "id": "a459bf336c",
-   "type": "p",
-   "en": "52.3.3.2 Treatment and Prognosis of DAH"
-  },
-  {
    "id": "12c342e680",
    "type": "aside",
    "en": "Specific Lung injury in IPS can occur through two treatmentpathways, the TNF-alfa/LPS-dependent and IL6/IL17-dependent (Tamburro et al. 2021; Cooke and Yanik 2016; Varelias et al. 2015) informing current treatment options: • Methyl-PDN ≤ 2 mg/kg/day; if not clear response, consider as soon as possible. Clinical Usually observed within the first • Anti-TNFα: etanercept 0.4 mg/kg manifestationsmonth after HCT (a median of twice weekly (maximum of 8 23 days), often during the pre- doses) + systemic steroids (2 mg/kg/ engraftment phase; however, later day). In a phase II trial in children, the onset is encountered in up to 42% of CR rate was 71%, and 1 year survival cases was 63% (Yanik et al. 2015). This The clinical manifestations are those combination has also been shown to be of all IPS. Frank hemoptysis is rare. effective in exceptional cases of late DiagnosisBased on BAL: the progressive IPS with a 42% of CR and a 2-y bloodier return of BAL fluid aliquots, survival of 62% among responders in at least three segmental bronchi, (Thompson et al. 2017). The indicating the presence of blood in the randomized study of alveoli (or 20% hemosiderin-laden etanercept + steroids vs. macrophage, although their absence steroids + placebo was terminated does not exclude the diagnosis as it prematurely due to slow accrual. In the can take 72 h to appear). limited number of patients examined, Risk factors– Higher incidence after TBI and there were no differences in response high-dose CY. rates (≈60%) at day +28. These results Differential – Classic IPS: very difficult, only do not necessarily imply that this agent diagnosis withby means of BAL. IPS usually is not effective; lack of evidence in this appears after engraftment, under-accrued trial does not equate to predominates in allo-HCT, and is lack of effectiveness (Yanik et al. less responsive to steroids, Note: 2014). Noninfectious DAH falls under • Other investigational agents such as: the “diagnostic umbrella” of IPS – MoAb anti-IL6: tocilizumab (Panoskaltsis-Mortari et al. (experimental IPS; Varelias et al. 2011). 2015). Note, IL-6 levels were – PERDS: almost impossible except found to be highest in patients not for LBA progressively bloodier. responsive to TNF blockade – DAH associated with infection: (Varelias et al. 2015) suggesting impossible without detection of that strategies of combinatorial the pathogen (Majhail et al. cytokine blockade may warrant 2006). future study (Tamburro et al. 2021). – MoAb anti-IL17: brodalumab (experimental IPS; (Varelias et al. 2015). – Strategies that protect/improve pulmonary vascular endothelial Treatment– Traditionally with high doses of integrity (Klein et al. 2023).methyl-PDN (250–500 mg q6h × 5 days EvolutionDespite the diagnosis and therapeutic followed by taper), but the overall advances, the mortality from IPS in adults response to this treatment is remains high (Wenger et al. 2020).disappointing even when combined with aminocaproic acid (ACA) (Rathi et al. 2015). Of note, two-thirds of cases were noninfectious in origin and could be classified as IPS, but TNFa inhibition was not used in this study. – When combined with high-dose PDN, inhaled, recombinant, factor VIIa has shown benefit in some (Park and Kim"
+  },
+  {
+   "id": "a459bf336c",
+   "type": "p",
+   "en": "52.3.3.2 Treatment and Prognosis of DAH"
   },
   {
    "id": "1f08f3bb79",
@@ -586,11 +341,6 @@
    "type": "h3",
    "num": "52.4.1",
    "en": "Bronchiolitis Obliterans Syndrome (BOS)"
-  },
-  {
-   "id": "d028bb3dbc",
-   "type": "p",
-   "en": "Pathogenesis, timing, incidence, clinical manifestations, diagnosis, and radiology of BOS are shown in Table 52.2."
   },
   {
    "id": "9836d394a0",
@@ -678,6 +428,11 @@
      "VATS"
     ]
    ]
+  },
+  {
+   "id": "d028bb3dbc",
+   "type": "p",
+   "en": "Pathogenesis, timing, incidence, clinical manifestations, diagnosis, and radiology of BOS are shown in Table 52.2."
   },
   {
    "id": "bfe4c11bc6",

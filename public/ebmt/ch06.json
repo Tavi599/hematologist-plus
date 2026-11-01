@@ -46,14 +46,9 @@
    "en": "Standard survival endpoints: In addition to death, other examples of events of the first type are the combinations of (negative) events of interest, which in total have 100% probability of occurrence, for example, PFS which considers as failure the event ‘either relapse/progression or death, whatever occurs first’. The components of PFS are the two competing events mentioned above, relapse/progression and NRM."
   },
   {
-   "id": "50ea2a0ef4",
+   "id": "422c990a21",
    "type": "p",
-   "en": "Competing risks endpoints: In addition to relapse/progression and NRM, other examples"
-  },
-  {
-   "id": "2cef502bbf",
-   "type": "p",
-   "en": "are death of a specific cause and all intermediate events during an HCT history (engraftment, GVHD, achievement of CR, CMV infection) including the long term (diagnosis of secondary malignancy). Notice that the definition of an endpoint requires specifying which are the competing events. Usually, this will be death without prior event of interest, but depending on the disease and the aims of the analysis, other competing events might be included in the analysis, e.g. a second transplantation or other treatment can be considered as competing event for achievement of response."
+   "en": "Competing risks endpoints: In addition to relapse/progression and NRM, other examples are death of a specific cause and all intermediate events during an HCT history (engraftment, GVHD, achievement of CR, CMV infection) including the long term (diagnosis of secondary malignancy). Notice that the definition of an endpoint requires specifying which are the competing events. Usually, this will be death without prior event of interest, but depending on the disease and the aims of the analysis, other competing events might be included in the analysis, e.g. a second transplantation or other treatment can be considered as competing event for achievement of response."
   },
   {
    "id": "12f66004f7",
@@ -95,14 +90,9 @@
    "en": "Comparison of Groups"
   },
   {
-   "id": "102d9446e2",
+   "id": "c10b490785",
    "type": "p",
-   "en": "The main method to compare survival curves for two or more independent groups is the log-rank test. This test is based on the comparison of the underlying hazard functions, which express the instantaneous probability of the event at a time t among patients currently at risk. It has good properties in the situation of proportional hazards (PH, described in the next section), but it should be avoided (or considered carefully) when the survival curves cross; with converging curve"
-  },
-  {
-   "id": "67743ea4a7",
-   "type": "p",
-   "en": "alternatives like the Wilcoxon signed-rank test should be preferred."
+   "en": "The main method to compare survival curves for two or more independent groups is the log-rank test. This test is based on the comparison of the underlying hazard functions, which express the instantaneous probability of the event at a time t among patients currently at risk. It has good properties in the situation of proportional hazards (PH, described in the next section), but it should be avoided (or considered carefully) when the survival curves cross; with converging curve alternatives like the Wilcoxon signed-rank test should be preferred."
   },
   {
    "id": "b7b91712d9",
@@ -131,14 +121,14 @@
    "en": "For endpoints with competing risks, two methods can be used, which have a different focus: the Cox model can be used to analyse cause-specific hazards, whereas a regression model for cumulative incidence curves was proposed by Fine and Gray (1999)."
   },
   {
-   "id": "db1e98e5d0",
-   "type": "p",
-   "en": "The use of these regression models requires a sound statistical knowledge, as there are many potential difficulties with the methods both in application and interpretation of results."
-  },
-  {
    "id": "9623f0e583",
    "type": "figure",
    "en": "Fig. 6.1 Probability curves of the four main outcomes ber of patients in follow-up who have not yet experienced after HCT. CIR cumulative incidence of relapse. CIR and an event. The grey zones indicate 95% confidence NRM add up to 1-RFS. Number at risk indicates the num-intervals"
+  },
+  {
+   "id": "db1e98e5d0",
+   "type": "p",
+   "en": "The use of these regression models requires a sound statistical knowledge, as there are many potential difficulties with the methods both in application and interpretation of results."
   },
   {
    "id": "2d81d6d427",
@@ -180,19 +170,14 @@
    "en": "Long-Term Outcomes: Relative Survival/Cure Models"
   },
   {
-   "id": "b8da1ee08b",
-   "type": "p",
-   "en": "With improved long-term outcomes and increasing numbers of older patients, a substantial num"
-  },
-  {
    "id": "fd4a264ac9",
    "type": "figure",
    "en": "Fig. 6.2 Example of a multi-state model. All patients start in state 1 (event-free after HCT). They can then proceed through the states by different routes. Each arrow indicates a possible transition"
   },
   {
-   "id": "09a68d3192",
+   "id": "7d05e2838e",
    "type": "p",
-   "en": "ber of patients will die from other causes than the disease for which they have been transplanted and the direct and indirect consequences of its treatment. This so-called population mortality can be quantified by methods from relative survival, using population tables describing mortality of the general population (Pohar Perme et al. 2016)."
+   "en": "With improved long-term outcomes and increasing numbers of older patients, a substantial number of patients will die from other causes than the disease for which they have been transplanted and the direct and indirect consequences of its treatment. This so-called population mortality can be quantified by methods from relative survival, using population tables describing mortality of the general population (Pohar Perme et al. 2016)."
   },
   {
    "id": "d5fee97385",

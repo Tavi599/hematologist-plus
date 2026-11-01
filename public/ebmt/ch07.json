@@ -41,14 +41,9 @@
    "en": "Self-Renewal"
   },
   {
-   "id": "1124d4c1ea",
+   "id": "7c854186b4",
    "type": "p",
-   "en": "A general property of stem cells is self-renewal, assuming that when these cells divide, at least one of the “daughter cells” fully recapitulates the"
-  },
-  {
-   "id": "06af2695d6",
-   "type": "p",
-   "en": "biological properties of the “mother stem cell.” Self-renewal of the HSC population prevents exhaustion while the hematopoietic tissue proliferates and differentiates extensively under steady-state conditions to repair various damages. Demonstration of self-renewal at the clonal level remains an arduous task, even though high-throughput analytical tools have been developed. There is a growing body of evidence suggesting aging of the HSC population and decline of stem cell function with age (de Haan and Lazare 2018; Goodell and Rando 2015; Hammond et al. 2023). Appearance of “passenger mutations” in clonal hematopoiesis is one hallmark of aging (Cooper and Young 2017; Xie et al. 2014). Recent lines of evidence have suggested links between lifestyle and aging through direct or indirect mechanisms as well as opportunities for therapeutic interventions in order to slow the aging process (Kaastrup and Gronbaek 2021). The significance of such observations remains to be fully elucidated but obviously raises questions when it comes to soliciting elderly individuals to donate HSCs for the benefit of a related patient. Since increasing pieces of evidence suggest that younger age of the donors is associated with better overall survival, donor age has become an important variable in the selection of matched unrelated and haploidentical donors for allogeneic transplantation. However, it remains difficult to dissect the role of donor age in HSC functionality (i.e., hematopoietic and lymphoid reconstitution) vs. other graft components and variables influenced by age, which may impact engraftment, non-relapse mortality, and disease relapse (DeZern et al. 2021; Ciurea et al. 2020; Pruitt et al. 2023)."
+   "en": "A general property of stem cells is self-renewal, assuming that when these cells divide, at least one of the “daughter cells” fully recapitulates the biological properties of the “mother stem cell.” Self-renewal of the HSC population prevents exhaustion while the hematopoietic tissue proliferates and differentiates extensively under steady-state conditions to repair various damages. Demonstration of self-renewal at the clonal level remains an arduous task, even though high-throughput analytical tools have been developed. There is a growing body of evidence suggesting aging of the HSC population and decline of stem cell function with age (de Haan and Lazare 2018; Goodell and Rando 2015; Hammond et al. 2023). Appearance of “passenger mutations” in clonal hematopoiesis is one hallmark of aging (Cooper and Young 2017; Xie et al. 2014). Recent lines of evidence have suggested links between lifestyle and aging through direct or indirect mechanisms as well as opportunities for therapeutic interventions in order to slow the aging process (Kaastrup and Gronbaek 2021). The significance of such observations remains to be fully elucidated but obviously raises questions when it comes to soliciting elderly individuals to donate HSCs for the benefit of a related patient. Since increasing pieces of evidence suggest that younger age of the donors is associated with better overall survival, donor age has become an important variable in the selection of matched unrelated and haploidentical donors for allogeneic transplantation. However, it remains difficult to dissect the role of donor age in HSC functionality (i.e., hematopoietic and lymphoid reconstitution) vs. other graft components and variables influenced by age, which may impact engraftment, non-relapse mortality, and disease relapse (DeZern et al. 2021; Ciurea et al. 2020; Pruitt et al. 2023)."
   },
   {
    "id": "4f6595c063",
@@ -73,14 +68,14 @@
    "en": "The Bone Marrow Niches and Maintenance of Stemness"
   },
   {
-   "id": "54aa55af34",
-   "type": "p",
-   "en": "Recent years have witnessed considerable progress in our understanding of the organization and function of the bone marrow microenvironment (Fig. 7.1). HSCs establish interactions in the context of microanatomical organizations termed “niches.” Progress has been made both in understanding the heterogeneity of niches within successive hematopoietic sites and in identifying various categories of cells—either of non-hematopoietic or of hematopoietic origin—that interact with HSCs (Christodoulou et al. 2020). The various types of bone marrow niches closely associate with the neurovascular network that infiltrates the central bone marrow and the endosteal region. The nature of the signaling between these different cell populations is also increasingly deciphered and involves many pathways, with some of them unexpected at first (Calvi and Link 2015; Crane et al. 2017). Replicating some of these interactions in vitro is key to successful expansion or genetic engineering of isolated HSCs. Among the many molecular actors that govern interactions between HSCs and the various cells present in niches, the C-X-C motif chemokine 12 (CXCL12) and its most important receptor CXCR4 are of particular interest: direct or indirect modulation of this axis is clinically used to amplify the compartment of circulating stem cells that exist in low numbers under steady-state conditions (Crees et al. 2023)."
-  },
-  {
    "id": "54ecc52da5",
    "type": "figure",
    "en": "Fig. 7.1 HSC properties and BM niche components"
+  },
+  {
+   "id": "54aa55af34",
+   "type": "p",
+   "en": "Recent years have witnessed considerable progress in our understanding of the organization and function of the bone marrow microenvironment (Fig. 7.1). HSCs establish interactions in the context of microanatomical organizations termed “niches.” Progress has been made both in understanding the heterogeneity of niches within successive hematopoietic sites and in identifying various categories of cells—either of non-hematopoietic or of hematopoietic origin—that interact with HSCs (Christodoulou et al. 2020). The various types of bone marrow niches closely associate with the neurovascular network that infiltrates the central bone marrow and the endosteal region. The nature of the signaling between these different cell populations is also increasingly deciphered and involves many pathways, with some of them unexpected at first (Calvi and Link 2015; Crane et al. 2017). Replicating some of these interactions in vitro is key to successful expansion or genetic engineering of isolated HSCs. Among the many molecular actors that govern interactions between HSCs and the various cells present in niches, the C-X-C motif chemokine 12 (CXCL12) and its most important receptor CXCR4 are of particular interest: direct or indirect modulation of this axis is clinically used to amplify the compartment of circulating stem cells that exist in low numbers under steady-state conditions (Crees et al. 2023)."
   },
   {
    "id": "b91ebbcc1d",
@@ -105,14 +100,9 @@
    "en": "Gene Transfer/Gene Editing/ Gene Therapy (GT) Targeting HSCs"
   },
   {
-   "id": "5be7d5e6e4",
+   "id": "0df0e8729f",
    "type": "p",
-   "en": "Ex vivo HSC gene therapy (GT) is based on the genetic modification of autologous HSCs to correct monogenic disorders or to provide novel features to hematopoietic cells for treating infectious diseases or cancers (Naldini 2011) (Fig. 7.2). It is now well-established that HSCs can be efficiently gene modified to continuously produce a cell progeny expressing the therapeutic gene while maintaining the ability to engraft in the long term, for at least 15 years (Cicalese et al. 2016). According to a recent meta-analysis, more than 400 patients have received hematopoietic stem and progenitor cell (HSPC) GT for the treatment of 14 genetic diseases, in the context of 55 clinical trials (Tucci et al. 2022). The potential advantages of this approach over allogeneic HCT include the lack of graft-versus-host disease (GVHD) or rejection and the possibility of engineering HSCs in order to achieve a supraphysiological level of the corrected protein (Naldini 2011; Cicalese et al. 2016; Tucci et al. 2022; Aiuti and Naldini 2016). Despite robust and consistent results in terms of long-term durability, efficacy, and safety of the treatment, there are differences in terms of gene correction in the"
-  },
-  {
-   "id": "5554f218b1",
-   "type": "p",
-   "en": "intended populations and BM-transduced cell chimerism. The gene engineering platform, the stem cell source, the disease background, and the conditioning regimen might account for some of these distinctions."
+   "en": "Ex vivo HSC gene therapy (GT) is based on the genetic modification of autologous HSCs to correct monogenic disorders or to provide novel features to hematopoietic cells for treating infectious diseases or cancers (Naldini 2011) (Fig. 7.2). It is now well-established that HSCs can be efficiently gene modified to continuously produce a cell progeny expressing the therapeutic gene while maintaining the ability to engraft in the long term, for at least 15 years (Cicalese et al. 2016). According to a recent meta-analysis, more than 400 patients have received hematopoietic stem and progenitor cell (HSPC) GT for the treatment of 14 genetic diseases, in the context of 55 clinical trials (Tucci et al. 2022). The potential advantages of this approach over allogeneic HCT include the lack of graft-versus-host disease (GVHD) or rejection and the possibility of engineering HSCs in order to achieve a supraphysiological level of the corrected protein (Naldini 2011; Cicalese et al. 2016; Tucci et al. 2022; Aiuti and Naldini 2016). Despite robust and consistent results in terms of long-term durability, efficacy, and safety of the treatment, there are differences in terms of gene correction in the intended populations and BM-transduced cell chimerism. The gene engineering platform, the stem cell source, the disease background, and the conditioning regimen might account for some of these distinctions."
   },
   {
    "id": "8401bd7a97",
@@ -120,19 +110,14 @@
    "en": "Currently, integrating vectors derived from retroviruses represent the most efficient platform for engineering HSCs and providing permanent and heritable gene correction. γ-Retroviral vectors (RVs) have been used in many clinical applications, including GT of inherited immunodeficiencies and cancer therapy, but the use of γ-RVs is associated with risks of insertional mutagenesis due to activation of proto-oncogenes, also depending on the disease type (Cicalese et al. 2016; Tucci et al. 2022). Self-inactivating (SIN) lentiviral vectors (LVs) are currently the tools of choice for most of the HSC GT applications, given their ability to transduce nondividing cells at higher efficiency, to carry larger and more complex gene cassettes, and to display a safer insertion site (IS) pattern in human HSCs (Naldini 2011; Locatelli et al. 2022; Scala et al. 2023). The recent development of designer endonucleases has led to the advent of gene targeting approaches. In contrast to viral vectors, which can mediate only one type of gene modification (gene addition), genome editing technologies can mediate gene addition, gene disruption, gene correction, and other targeted genome modifications (Dunbar et al. 2018; Ferrari et al. 2023). These strategies have the potential to overcome vector IS genotoxicity and to handle diseases due to dominant negative mutations and have started to enter clinical trials and practices (Frangoul et al. 2021). Despite the great promises, several challenges need to be addressed, including long-term clinical safety. Primitive, slow-cycling, human BM-derived HSCs are highly resistant to ex vivo manipulations required for gene targeting, and the current efficiency of gene editing by homology-directed repair into repopulating HSCs may not be suitable for clinical applications requiring high levels of correction (Dunbar et al. 2018; Kohn 2017)."
   },
   {
-   "id": "5d490a1a20",
-   "type": "p",
-   "en": "In most cases, mobilized peripheral blood (MPB) has become the preferred HSC source for patients undergoing HCT and HSPC GT, also owing to the higher numbers of stem cells collected. Recent findings have shown that the"
-  },
-  {
    "id": "978df19aef",
    "type": "figure",
    "en": "Fig. 7.2 Gene correction of HSCs for cell-based therapies"
   },
   {
-   "id": "5a5ed61221",
+   "id": "3fde2c6363",
    "type": "p",
-   "en": "use of MPB HSCs is associated not only with faster neutrophil and platelet reconstitution but also with an overall increased clonality of the engrafted HSCs (Scala et al. 2023) and that a better characterization of the HSPC compartments has been more informative than the total CD34⁺ cell dose."
+   "en": "In most cases, mobilized peripheral blood (MPB) has become the preferred HSC source for patients undergoing HCT and HSPC GT, also owing to the higher numbers of stem cells collected. Recent findings have shown that the use of MPB HSCs is associated not only with faster neutrophil and platelet reconstitution but also with an overall increased clonality of the engrafted HSCs (Scala et al. 2023) and that a better characterization of the HSPC compartments has been more informative than the total CD34⁺ cell dose."
   },
   {
    "id": "4ab8e0ac22",
@@ -156,19 +141,14 @@
    "en": "In the murine setting, the finding that the vast majority of the ISs after transplantation were present in either lymphoid or myeloid cells with few ISs shared by both lineages led to the concept that murine HSCs are heterogeneous and already biased for their fate. The possibility of directly translating these models in human beings is currently under investigation (Lu et al. 2011; Yamamoto et al. 2013)."
   },
   {
-   "id": "dff656b7b3",
-   "type": "p",
-   "en": "Clonal tracking studies in nonhuman primates have been pivotal in studying HCT dynamics in an experimental setting close to humans. The"
-  },
-  {
    "id": "c2d7d5f2d0",
    "type": "figure",
    "en": "Fig. 7.3 Clonal tracking for studying the hematopoietic reconstitution dynamics upon HCT"
   },
   {
-   "id": "5304645201",
+   "id": "0a423810b5",
    "type": "p",
-   "en": "results of these works showed a common pattern of hematopoietic reconstitution upon transplantation: clonal fluctuation in the early phases post-HCT, potentially due to the initial contribution to the hematopoiesis of short-term unilineage progenitors, followed by a recovery of a stable hematopoietic output, likely related to the takeover of long-term multipotent HSC contribution. Thus, differently from murine studies, long-term HSCs are able to provide multilineage engraftment and there is no evidence of a predetermined lineage choice at the stem cell level in primates (Koelle et al. 2017; Kim et al. 2014). Additionally, NHPs have been useful in interrogating the effect of older HSCs in HCT, showing reduced multilineage output and clonality of the graft in aged vs. young animals (Yu et al. 2018)."
+   "en": "Clonal tracking studies in nonhuman primates have been pivotal in studying HCT dynamics in an experimental setting close to humans. The results of these works showed a common pattern of hematopoietic reconstitution upon transplantation: clonal fluctuation in the early phases post-HCT, potentially due to the initial contribution to the hematopoiesis of short-term unilineage progenitors, followed by a recovery of a stable hematopoietic output, likely related to the takeover of long-term multipotent HSC contribution. Thus, differently from murine studies, long-term HSCs are able to provide multilineage engraftment and there is no evidence of a predetermined lineage choice at the stem cell level in primates (Koelle et al. 2017; Kim et al. 2014). Additionally, NHPs have been useful in interrogating the effect of older HSCs in HCT, showing reduced multilineage output and clonality of the graft in aged vs. young animals (Yu et al. 2018)."
   },
   {
    "id": "2948d9ad85",

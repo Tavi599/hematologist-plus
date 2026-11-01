@@ -57,11 +57,6 @@
    "en": "Nevertheless, it has to be kept in mind that the effects of physiologic changes are usually drug-specific and that for the majority of drugs, both pharmacokinetic and clinical data in obese patients are sparse. Due to unusual distribution processes, the kinetics of drugs is difficult to predict in obese patients."
   },
   {
-   "id": "9ff534345f",
-   "type": "p",
-   "en": "The impact of obesity on glomerular filtration rate (GFR) as well as on tubular secretion is not completely understood. Discrepant results regarding GFR in obese as compared with normal-weight individuals might be explained by estimating GFR using serum creatinine, as no instrument has been validated for obesity. Especially, if using weight-based formulas like the widespread Cockroft– Gault formula, estimated GFR (eGFR) will be overestimated if total body weight (TBW) is used but underestimated if ideal body weight is used. Therefore, it is reasonable to use adjusted ideal body weight (AIBW) for estimation in overweight or obese patients. However, the use of weight-independent formulas, such as MDRD (Modification of Diet in Renal Disease) or CKD-EPI (Chronic Kidney Disease Epidemiology Collaboration), that has been shown to result in more reliable estimates (Bouquegneau et al. 2015), has limitations: as the eGFR is provided in mL/min/1.73 m², the possibly incorrect calculation of body surface area (BSA) in the obese might negatively influence the results."
-  },
-  {
    "id": "b8e2768fe1",
    "type": "table",
    "num": "67.1",
@@ -94,6 +89,11 @@
      "Vd volume of distribution"
     ]
    ]
+  },
+  {
+   "id": "9ff534345f",
+   "type": "p",
+   "en": "The impact of obesity on glomerular filtration rate (GFR) as well as on tubular secretion is not completely understood. Discrepant results regarding GFR in obese as compared with normal-weight individuals might be explained by estimating GFR using serum creatinine, as no instrument has been validated for obesity. Especially, if using weight-based formulas like the widespread Cockroft– Gault formula, estimated GFR (eGFR) will be overestimated if total body weight (TBW) is used but underestimated if ideal body weight is used. Therefore, it is reasonable to use adjusted ideal body weight (AIBW) for estimation in overweight or obese patients. However, the use of weight-independent formulas, such as MDRD (Modification of Diet in Renal Disease) or CKD-EPI (Chronic Kidney Disease Epidemiology Collaboration), that has been shown to result in more reliable estimates (Bouquegneau et al. 2015), has limitations: as the eGFR is provided in mL/min/1.73 m², the possibly incorrect calculation of body surface area (BSA) in the obese might negatively influence the results."
   },
   {
    "id": "b5d75aa7fe",
@@ -139,84 +139,24 @@
    "en": "For the dosing of chemotherapy—except high-dose regimens—the American Society of Clinical Oncology (ASCO) published the following main statements in 2012 that were updated in 2021 (Griggs et al. 2021):"
   },
   {
-   "id": "0a57d31c15",
+   "id": "7230f62e7f",
    "type": "li",
-   "en": "• Dose should be selected according to body"
+   "en": "• Dose should be selected according to body surface area (BSA) using actual body weight."
   },
   {
-   "id": "ccf9dc752f",
-   "type": "p",
-   "en": "surface area (BSA) using actual body weight."
-  },
-  {
-   "id": "6d6d6fddc6",
+   "id": "989e5cfced",
    "type": "li",
-   "en": "• Dose reductions of systemic antineoplastic"
+   "en": "• Dose reductions of systemic antineoplastic therapies should be based on toxicity and comorbidities independent of the obesity status—there is no evidence that obese patients experience increased toxicity when actual weight is used for the calculation of chemotherapy."
   },
   {
-   "id": "718891c46b",
-   "type": "p",
-   "en": "therapies should be based on toxicity and"
-  },
-  {
-   "id": "4ccf0d41da",
-   "type": "p",
-   "en": "comorbidities independent of the obesity sta"
-  },
-  {
-   "id": "efe090f64b",
-   "type": "p",
-   "en": "tus—there is no evidence that obese patients"
-  },
-  {
-   "id": "d4770c3d43",
-   "type": "p",
-   "en": "experience increased toxicity when actual"
-  },
-  {
-   "id": "dc5a8e9923",
-   "type": "p",
-   "en": "weight is used for the calculation of"
-  },
-  {
-   "id": "4da1fd8069",
-   "type": "p",
-   "en": "chemotherapy."
-  },
-  {
-   "id": "d4c8eabe64",
+   "id": "3be086fc14",
    "type": "li",
-   "en": "• Full, approved doses of immunotherapy and"
+   "en": "• Full, approved doses of immunotherapy and targeted therapies should be offered to obese adults with cancer."
   },
   {
-   "id": "9f3d2e8ac4",
-   "type": "p",
-   "en": "targeted therapies should be offered to obese"
-  },
-  {
-   "id": "ed17249a71",
-   "type": "p",
-   "en": "adults with cancer."
-  },
-  {
-   "id": "11f93f0994",
-   "type": "p",
-   "en": "However, some limitations have to be kept in mind, as (1) there are no RCTs comparing actual body weight with other adjusted dosing approaches in obese patients, (2) recommendations are based on subgroup analyses of obese patients from RCTs or observational studies using actual versus adjusted weight calculation, and (3) there are no recommendations for HCT conditioning."
-  },
-  {
-   "id": "af2a3e64ef",
-   "type": "p",
-   "en": "Some recommendations have also been published for the dosage of low-molecular-weight heparins. In the context of prophylaxis, for example, fixed-dose enoxaparin shows an inverse linear correlation between the AUC or anti-Xa activity and body weight between 50 and 150 kg, with the lowest levels in moderate-to-severe obese patients (Rocca et al. 2018). Therefore, an increased dose has been suggested for venous thromboembolism prophylaxis and weight-based dosing (without dose capping, but with anti-Xa monitoring in severe obesity) for antithrombotic therapy."
-  },
-  {
-   "id": "d09ebff471",
-   "type": "p",
-   "en": "One case report described experiences of drug dosing in a morbidly obese patient undergoing allogeneic HCT (Langebrake et al. 2011). Here, it was observed that for hydrophilic and extensively renally cleared drugs, standard dosages for adult patients or dosing based on ideal body"
-  },
-  {
-   "id": "f8d2d24867",
-   "type": "p",
-   "en": "weight can be used. For more lipophilic drugs like cyclosporine A or digitoxin, it could be shown that after achieving sufficient plasma levels using high initial doses, maintenance doses similar to those used in normal-weight patients are sufficient. Monitoring of plasma concentrations is highly recommended for drugs with a narrow therapeutic index."
+   "id": "9d1f5443eb",
+   "type": "li",
+   "en": "However, some limitations have to be kept in mind, as (1) there are no RCTs comparing actual body weight with other adjusted dosing approaches in obese patients, (2) recommendations are based on subgroup analyses of obese patients from RCTs or observational studies using actual versus adjusted weight calculation, and (3) there are no recommendations for HCT conditioning. Some recommendations have also been published for the dosage of low-molecular-weight heparins. In the context of prophylaxis, for example, fixed-dose enoxaparin shows an inverse linear correlation between the AUC or anti-Xa activity and body weight between 50 and 150 kg, with the lowest levels in moderate-to-severe obese patients (Rocca et al. 2018). Therefore, an increased dose has been suggested for venous thromboembolism prophylaxis and weight-based dosing (without dose capping, but with anti-Xa monitoring in severe obesity) for antithrombotic therapy. One case report described experiences of drug dosing in a morbidly obese patient undergoing allogeneic HCT (Langebrake et al. 2011). Here, it was observed that for hydrophilic and extensively renally cleared drugs, standard dosages for adult patients or dosing based on ideal body weight can be used. For more lipophilic drugs like cyclosporine A or digitoxin, it could be shown that after achieving sufficient plasma levels using high initial doses, maintenance doses similar to those used in normal-weight patients are sufficient. Monitoring of plasma concentrations is highly recommended for drugs with a narrow therapeutic index."
   },
   {
    "id": "9fbea8860a",
@@ -260,14 +200,9 @@
    "en": "Even for antithymocyte globulin (ATG) that is characterized by a very low volume of distribution, TBW for dose calculation is recommended by ASBMT. However, from a pharmacokinetic point of view, it would be more reasonable to use ideal body weight, as ATG (like other protein-based drugs) has a volume distribution that is almost equal to the whole blood volume. Furthermore, it has been proposed, to rather base ATG dosing on absolute lymphocyte count, as this is the target of ATG (Kennedy et al. 2018)."
   },
   {
-   "id": "8bbd5a6f18",
+   "id": "49a457a851",
    "type": "p",
-   "en": "Reports of obese patients undergoing HCT are challenging to interpret because of the heterogeneity of obesity definitions, underlying diseases, graft sources, and chemotherapy regimens employed. Compared with normal-weight patients, it appears that obese patients undergoing allogeneic HCT have a higher risk of non-relapse mortality and inferior survival, whereas those receiving autologous HCT appear to have equivalent outcomes. Another important limitation for the interpretation of published data is that there is no consistent standard for calculating chemotherapy dose in this group. Therefore, it is recommended that future studies utilize more"
-  },
-  {
-   "id": "c8b40b93f8",
-   "type": "p",
-   "en": "consistent and biologically relevant definitions of obesity and that the pharmacokinetics and pharmacodynamics of specific conditioning regimens should be studied (Weiss et al. 2013)."
+   "en": "Reports of obese patients undergoing HCT are challenging to interpret because of the heterogeneity of obesity definitions, underlying diseases, graft sources, and chemotherapy regimens employed. Compared with normal-weight patients, it appears that obese patients undergoing allogeneic HCT have a higher risk of non-relapse mortality and inferior survival, whereas those receiving autologous HCT appear to have equivalent outcomes. Another important limitation for the interpretation of published data is that there is no consistent standard for calculating chemotherapy dose in this group. Therefore, it is recommended that future studies utilize more consistent and biologically relevant definitions of obesity and that the pharmacokinetics and pharmacodynamics of specific conditioning regimens should be studied (Weiss et al. 2013)."
   },
   {
    "id": "3f527b9b4b",

@@ -25,44 +25,19 @@
    "en": "Graft-versus-host disease (GvHD) was first recognized in murine models of HCT, and in the absence of knowledge of the HLA system, it was termed “secondary” (secondary to recovery from irradiation damage) or “runt” disease. Billingham established the criteria for the occurrence of secondary disease in the 1960s, i.e.:"
   },
   {
-   "id": "cabf3ae7dd",
+   "id": "f303d4eec8",
    "type": "li",
-   "en": "– The administration of a graft containing"
+   "en": "– The administration of a graft containing immunocompetent cells"
   },
   {
-   "id": "173fbea5eb",
-   "type": "p",
-   "en": "immunocompetent cells"
-  },
-  {
-   "id": "fc5893558d",
+   "id": "6b0b18c34b",
    "type": "li",
-   "en": "– Immunological disparity between host and"
+   "en": "– Immunological disparity between host and donor"
   },
   {
-   "id": "d9cb588a77",
-   "type": "p",
-   "en": "donor"
-  },
-  {
-   "id": "a4e0e4e362",
+   "id": "22340e022f",
    "type": "li",
-   "en": "– The administration of the graft to an immu"
-  },
-  {
-   "id": "97385f90bc",
-   "type": "p",
-   "en": "nosuppressed host unable to reject the graft"
-  },
-  {
-   "id": "36ec49af4c",
-   "type": "p",
-   "en": "cells"
-  },
-  {
-   "id": "6bae7f3474",
-   "type": "p",
-   "en": "In the human setting, we traditionally recognize two forms of GvHD, acute (aGvHD) and chronic (cGvHD). The original distinction of acute from chronic GvHD, namely, the occurrence before or after day 100 post stem cell infusion, has become blurred due to occurrence of aGvHD symptoms beyond day 100 after RIC regimens and/or after DLI (usually given after day 100). Nevertheless, the underlying combination of symptoms and signs affecting the skin, liver, and gastrointestinal tract forms a classical clinical syndrome enabling the diagnosis, and a helpful guide to the appropriate terminology is provided in Table 43.1 (Filipovich et al. 2005)."
+   "en": "– The administration of the graft to an immunosuppressed host unable to reject the graft cells"
   },
   {
    "id": "c57fced96c",
@@ -88,6 +63,11 @@
      "Chronic GvHD –Classic chronicNo time NoYes limit –Overlap No time YesYes syndromelimit"
     ]
    ]
+  },
+  {
+   "id": "6bae7f3474",
+   "type": "p",
+   "en": "In the human setting, we traditionally recognize two forms of GvHD, acute (aGvHD) and chronic (cGvHD). The original distinction of acute from chronic GvHD, namely, the occurrence before or after day 100 post stem cell infusion, has become blurred due to occurrence of aGvHD symptoms beyond day 100 after RIC regimens and/or after DLI (usually given after day 100). Nevertheless, the underlying combination of symptoms and signs affecting the skin, liver, and gastrointestinal tract forms a classical clinical syndrome enabling the diagnosis, and a helpful guide to the appropriate terminology is provided in Table 43.1 (Filipovich et al. 2005)."
   },
   {
    "id": "aff4abbdb0",
@@ -143,11 +123,6 @@
    "en": "For this reason, it is essential to establish the diagnosis by biopsy of one or more affected organs and confirmation of the characteristic histopathological features (Table 43.3). The targets of the immune response in aGvHD are the epithelial cells including basal and suprabasal cells of the epidermis, the intestinal epithelium, and the biliary duct epithelium, and the characteristic feature is identical, i.e., the presence of infiltrating immune cells close to apoptotic cells known as “satellite cell necrosis.”"
   },
   {
-   "id": "12cbef10c9",
-   "type": "p",
-   "en": "The first classification of aGvHD was developed by Glucksberg et al. (1974). Each organ was staged from 0 to 4 (Table 43.4), and the resultant stages were combined to provide an overall grade (Glucksberg et al. 1974). In 1994 Przepiorka et al. described the outcome of a consensus workshop to develop an improved scoring system that retained most of the characteristics of Glucksberg but dropped the use of the clinical performance score and included upper intestinal symptoms within the definition of aGvHD (Przepiorka et al. 1995). Subsequently, the IBMTR prospectively evaluated a “severity index” against the"
-  },
-  {
    "id": "3bcedb95e5",
    "type": "table",
    "num": "43.3",
@@ -182,9 +157,9 @@
    ]
   },
   {
-   "id": "58be84ef52",
+   "id": "ead7552a14",
    "type": "p",
-   "en": "Glucksberg criteria but were unable to identify any particular advantage for the new system (Rowlings et al. 1997). In fact, the Glucksberg score was a better predictor of survival and remains in regular use (Cahn et al. 2005). Currently, electronic applications are developed supporting the accuracy of staging and grading of acute GvHD (Schoemans et al. 2018)."
+   "en": "The first classification of aGvHD was developed by Glucksberg et al. (1974). Each organ was staged from 0 to 4 (Table 43.4), and the resultant stages were combined to provide an overall grade (Glucksberg et al. 1974). In 1994 Przepiorka et al. described the outcome of a consensus workshop to develop an improved scoring system that retained most of the characteristics of Glucksberg but dropped the use of the clinical performance score and included upper intestinal symptoms within the definition of aGvHD (Przepiorka et al. 1995). Subsequently, the IBMTR prospectively evaluated a “severity index” against the Glucksberg criteria but were unable to identify any particular advantage for the new system (Rowlings et al. 1997). In fact, the Glucksberg score was a better predictor of survival and remains in regular use (Cahn et al. 2005). Currently, electronic applications are developed supporting the accuracy of staging and grading of acute GvHD (Schoemans et al. 2018)."
   },
   {
    "id": "7108f3b2b6",
@@ -197,49 +172,24 @@
    "en": "• Grade 0: No stage 1–4 of any organ"
   },
   {
-   "id": "30bbd74cfc",
+   "id": "0aadc42d3c",
    "type": "li",
-   "en": "• Grade I: Stage 1–2 skin without liver, upper"
+   "en": "• Grade I: Stage 1–2 skin without liver, upper GI or lower GI involvement"
   },
   {
-   "id": "2f91e8676a",
-   "type": "p",
-   "en": "GI or lower GI involvement"
-  },
-  {
-   "id": "b7f9dacd0a",
+   "id": "09d66ffc9c",
    "type": "li",
-   "en": "• Grade II: Stage 3 rash and/or stage 1 liver and/"
+   "en": "• Grade II: Stage 3 rash and/or stage 1 liver and/or stage 1 upper GI and/or stage 1 lower GI"
   },
   {
-   "id": "e7d6bb3899",
-   "type": "p",
-   "en": "or stage 1 upper GI and/or stage 1 lower GI"
-  },
-  {
-   "id": "7cc0069905",
+   "id": "dd82f7a608",
    "type": "li",
-   "en": "• Grade III: Stage 2–3 liver and/or stage 2–3"
+   "en": "• Grade III: Stage 2–3 liver and/or stage 2–3 lower GI, with stage 0–3 skin and/or stage 0–1 upper GI"
   },
   {
-   "id": "2be0dd3df9",
-   "type": "p",
-   "en": "lower GI, with stage 0–3 skin and/or stage 0–1"
-  },
-  {
-   "id": "f67d87a92d",
-   "type": "p",
-   "en": "upper GI"
-  },
-  {
-   "id": "59fd6aebab",
+   "id": "fc8e8345d2",
    "type": "li",
-   "en": "• Grade IV: Stage 4 skin, liver or lower GI"
-  },
-  {
-   "id": "e490570514",
-   "type": "p",
-   "en": "involvement, with stage 0–1 upper GI"
+   "en": "• Grade IV: Stage 4 skin, liver or lower GI involvement, with stage 0–1 upper GI"
   },
   {
    "id": "1695f1a811",
@@ -259,11 +209,6 @@
    "en": "Prevention (also See Chap. 26)"
   },
   {
-   "id": "e6810d0639",
-   "type": "p",
-   "en": "Grade III–IV aGvHD, especially if it turns out to be resistant to first-line treatment, has an extremely poor prognosis despite therapeutic intervention, and consequently, considerable efforts are made to try and prevent its occurrence. The rationale of prophylaxis was originally directed toward prolonged IS of donor T-cell function through the peri- and posttransplant administration of IS agents. Early studies identified the superiority of a combination of the CNI and CSA, with MTX over MTX alone. In practice this combination remains the most frequently used method of prophylaxis although some investigators have replaced CSA with tacrolimus (TAC) since large two phase III randomized studies reported a reduction in the incidence of grade II–IV aGvHD at 32% in recipients of sibling"
-  },
-  {
    "id": "d9d11fce0f",
    "type": "table",
    "num": "43.4",
@@ -271,9 +216,9 @@
    "raw_en": "Table 43.4 Staging of acute graft-versus-host disease (according to Harris et al. 2016) GVHD target organ staging StageSkin (active erythema only)Liver (bilirubin)Upper GILower GI (stool output/day) 0No active (erythematous) <2 mg/dLNo or Adult: <500 mL/day or <3 episodes/day GVHD rashintermittent Child: <10 mL/kg/day or <4 episodes/day nausea, vomiting, or anorexia 1Maculopapular rash2–3 mg/dLPersistent Adult: 500–999 mL/day or 3–4 episodes/ <25% BSAnausea, day vomiting, or Child: 10–19.9 mL/kg/day or 4–6 episodes/ anorexiaday 2Maculopapular rash3.1–6 mg/dL–Adult: 1000–1500 mL/day or 5–7 episodes/ 25–50% BSAday Child: 20–30 mL/kg/day or 7–10 episodes/ day 3Maculopapular rash6.1–15 mg/dL–Adult: >1500 mL/day or >7 episodes/day >50% BSAChild: >30 mL/kg/day or >10 episodes/day 4Generalized erythroderma >15 mg/dL–Severe abdominal pain with or without (>50% BSA) plus bullous ileus, or grossly bloody stool (regardless of formation and stool volume) desquamation >5% BSA"
   },
   {
-   "id": "d9fa63870b",
+   "id": "50d5419684",
    "type": "p",
-   "en": "transplants and 56% in those who received unrelated donor grafts in patients who received TAC plus MTX compared to 44% (sibling) and 74% (unrelated) in those who were randomized to CSA and MTX. However, there was no difference in survival that could be attributed to the nature of the GvHD prevention (Ratanatharathorn et al. 1998; Nash et al. 2000). Recently, investigators have also reported the efficacy of newer agents such as mycophenolate mofetil (MMF) and sirolimus (SIR). Whereas MMF has not been tested in large randomized trials, the combination of TAC and SIR was compared with that of TAC and MTX in a phase III randomized study showing equivalent efficacy but differences in toxicity (Törlén et al. 2016)."
+   "en": "Grade III–IV aGvHD, especially if it turns out to be resistant to first-line treatment, has an extremely poor prognosis despite therapeutic intervention, and consequently, considerable efforts are made to try and prevent its occurrence. The rationale of prophylaxis was originally directed toward prolonged IS of donor T-cell function through the peri- and posttransplant administration of IS agents. Early studies identified the superiority of a combination of the CNI and CSA, with MTX over MTX alone. In practice this combination remains the most frequently used method of prophylaxis although some investigators have replaced CSA with tacrolimus (TAC) since large two phase III randomized studies reported a reduction in the incidence of grade II–IV aGvHD at 32% in recipients of sibling transplants and 56% in those who received unrelated donor grafts in patients who received TAC plus MTX compared to 44% (sibling) and 74% (unrelated) in those who were randomized to CSA and MTX. However, there was no difference in survival that could be attributed to the nature of the GvHD prevention (Ratanatharathorn et al. 1998; Nash et al. 2000). Recently, investigators have also reported the efficacy of newer agents such as mycophenolate mofetil (MMF) and sirolimus (SIR). Whereas MMF has not been tested in large randomized trials, the combination of TAC and SIR was compared with that of TAC and MTX in a phase III randomized study showing equivalent efficacy but differences in toxicity (Törlén et al. 2016)."
   },
   {
    "id": "d596b0a1ba",
@@ -307,14 +252,9 @@
    "en": "Treatment"
   },
   {
-   "id": "10d4eaa5b9",
+   "id": "935acc50c3",
    "type": "p",
-   "en": "Grade I aGvHD, by definition affecting only the skin, can often be effectively treated with topical steroids alone. Early systemic treatment of grade I GvHD has been tested but showed no long-term advantage. More advanced grades require systemic therapy, and the mainstay of treatment"
-  },
-  {
-   "id": "088f135591",
-   "type": "p",
-   "en": "remains high-dose methylprednisolone (or equivalent), usually at a dose of 2 mg/kg/day, continued for 7–14 days and followed by a gradual reduction in dose (Penack et al. 2020). Patients with mild upper GI GvHD may start on lower doses with concomitant topical treatment; higher doses of steroids resulted in more infectious complications without superior long-term response. The chance of response decreases with increasing grade of GvHD, but in general approximately 40–50% of patients will demonstrate a response. Reductions in steroid doses may be followed by an exacerbation of symptoms that can sometimes be settled by simply increasing the dose and reducing more slowly on the second occasion. Achieving a balance between the levels of IS required to control aGvHD and retaining a degree of immunocompetence against microbial infection is challenging, and viral and fungal infections are frequent complications of prolonged steroid therapy. Anti-infective prophylaxis should be considered for all such patients. Among several candidates for first-line combination treatments, the most promising combination of steroids and MMF has been taken forward to a phase III study against steroids alone but failed to show superiority for the combination again due to an increased rate of infectious complications. Thus, so far no single agent has shown superiority of results when combined with corticosteroids for first-line treatment (Martin et al. 2012; Rashidi et al. 2016)."
+   "en": "Grade I aGvHD, by definition affecting only the skin, can often be effectively treated with topical steroids alone. Early systemic treatment of grade I GvHD has been tested but showed no long-term advantage. More advanced grades require systemic therapy, and the mainstay of treatment remains high-dose methylprednisolone (or equivalent), usually at a dose of 2 mg/kg/day, continued for 7–14 days and followed by a gradual reduction in dose (Penack et al. 2020). Patients with mild upper GI GvHD may start on lower doses with concomitant topical treatment; higher doses of steroids resulted in more infectious complications without superior long-term response. The chance of response decreases with increasing grade of GvHD, but in general approximately 40–50% of patients will demonstrate a response. Reductions in steroid doses may be followed by an exacerbation of symptoms that can sometimes be settled by simply increasing the dose and reducing more slowly on the second occasion. Achieving a balance between the levels of IS required to control aGvHD and retaining a degree of immunocompetence against microbial infection is challenging, and viral and fungal infections are frequent complications of prolonged steroid therapy. Anti-infective prophylaxis should be considered for all such patients. Among several candidates for first-line combination treatments, the most promising combination of steroids and MMF has been taken forward to a phase III study against steroids alone but failed to show superiority for the combination again due to an increased rate of infectious complications. Thus, so far no single agent has shown superiority of results when combined with corticosteroids for first-line treatment (Martin et al. 2012; Rashidi et al. 2016)."
   },
   {
    "id": "21e73a6410",
@@ -347,14 +287,9 @@
    "en": "The administration of pooled fecal allogeneic microbiotatherapy (FMT) in 81 patients with SR-aGvHD of the GI tract reportedly resulted in an ORR of 56% including 37% CR after a median of three doses and translated to increased OS in responding patients (Malard F et al, 2023). Currently, a phase III prospective study in SR-aGvHD patients is ongoing to evaluate the efficacy of FMT."
   },
   {
-   "id": "dc3d77e683",
+   "id": "22858bf3e1",
    "type": "p",
-   "en": "While classical IS regimens inhibit a signal pathway or cytokine receptor, novel strategies target CD28 (e.g., Aurora kinase), cell migration"
-  },
-  {
-   "id": "6725c690da",
-   "type": "p",
-   "en": "(Zeiser et al. 2017). These inhibitors were tested in preclinical studies and showed promising activity (Zeiser R, Blazar B 2017, Hill et al. 2018)."
+   "en": "While classical IS regimens inhibit a signal pathway or cytokine receptor, novel strategies target CD28 (e.g., Aurora kinase), cell migration (Zeiser et al. 2017). These inhibitors were tested in preclinical studies and showed promising activity (Zeiser R, Blazar B 2017, Hill et al. 2018)."
   },
   {
    "id": "d5f5a012d9",

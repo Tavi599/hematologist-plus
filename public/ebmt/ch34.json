@@ -69,11 +69,6 @@
    "en": "Pediatrics"
   },
   {
-   "id": "6a0e14074c",
-   "type": "p",
-   "en": "There is less research on QoL on pediatric patients than adult patients. Initial pediatric studies focused on a single aspect of functioning, such as psychosocial and physical limitations. It was not until the early 1990s that pediatric QoL began to be addressed as a multidimensional construct. Most of the measures used in pediatric studies were originally developed to be used in the general population or in children with specific illnesses. Table 34.2 lists alphabetically the most common measures used to assess QoL in pediatric population."
-  },
-  {
    "id": "09ed915af2",
    "type": "table",
    "num": "34.1",
@@ -95,6 +90,11 @@
    "raw_en": "Table 34.2 Questionnaires assessing QoL in pediatric HCT survivors (a) General Child Health Questionnaire (CHQ) (Landgraf et al. 1996) AimQoL VersionsParent-reported versions feature 50 items (CHQ-PF50) or 28 items (CHQ-PF28) and are intended for parents of children aged 5–18 years. The child-report version (CHQ-87) has 87 items and is appropriate for children aged 10–18 years Domains/subscalesGlobal health, physical functioning, role/social-physical functioning, bodily pain/ discomfort, role/social-emotional functioning, role/social behavior, parental impact time, parental impact emotional, self-esteem, mental health, global behavior, family activities, family cohesion, and changes in health ResultsHigher scores indicate higher physical and psychosocial well-being TranslationsThe CHQ-PF50 and CHQ-PF28 are available in more than 80 languages, and the CHQ-87 in 34 Patient-Reported Outcomes Measurement Information System (PROMIS) (Hinds et al. 2013) AimHealth and QoL in healthy populations as well as those with chronic conditions VersionsMulti-item measures varying in length and complexity: PROMIS-25 has 25 items, PROMIS-37 37 items, and PROMIS-49 49 items. PROMIS measures are child- and parent-reported. Child report measures are intended for children aged 8–17 years, and parent report for children 5–17 years Domains/subscalesPhysical, mental and social health, and a global QoL score ResultsHigher scores indicate more of the concept being measured. PROMIS use standardized T-score metric against normative data for the US population TranslationsChildren and proxy measures are available in Spanish and in several other languages Pediatric Quality of Life Inventory (PedsQL™) 4.0 Generic Score Scales (Varni et al. 2001) AimQoL in healthy children or those diagnosed with an acute or chronic disease VersionsParent-report form for children aged 2–4 has 21 items, and child and parent reports for children aged 5–18 have 23 items Domains/subscalesPhysical, emotional, social, and school functioning ResultsPhysical health summary score; psychosocial health summary score; total score. Higher scores indicate better QoL TranslationsAvailable in more than 70 languages"
   },
   {
+   "id": "6a0e14074c",
+   "type": "p",
+   "en": "There is less research on QoL on pediatric patients than adult patients. Initial pediatric studies focused on a single aspect of functioning, such as psychosocial and physical limitations. It was not until the early 1990s that pediatric QoL began to be addressed as a multidimensional construct. Most of the measures used in pediatric studies were originally developed to be used in the general population or in children with specific illnesses. Table 34.2 lists alphabetically the most common measures used to assess QoL in pediatric population."
+  },
+  {
    "id": "b6ee016821",
    "type": "h2",
    "num": "34.4",
@@ -106,16 +106,16 @@
    "en": "Improvement in patients’ QoL is included among the strategic goals of major cancer organizations such as the American Society of Clinical Oncology and regulatory agencies such as the FDA and the European Medicines Agency. Recognition of the importance of the patient experience is reflected in the increasing incorporation of patient-reported QoL measures in observational research and clinical trials. However, some aspects should be considered when implementing patient-reported QoL measures."
   },
   {
-   "id": "6ff522c32c",
-   "type": "p",
-   "en": "Historically, studies and clinical trials have used diverse patient-reported QoL measures which make results difficult to compare (Shaw et al. 2016), although there are available tools to map common PRO QoL measures to one another, such as the PROMIS with the SF-36 (Choi et al. 2012). Second, the mode of administration should also be considered. PRO measures have traditionally been administered by paper and pencil, but new technologies offer the potential to use electronic measures. Electronic measures administered before or during a clinic visit allow results to be available at the time of consultation and may facilitate symptom monitoring to guide supportive treatment. One example is the PROMIS instrument, which is available using computer adaptive testing or through REDCap software. Computer adaptive testing selects questions based on the previous responses that patients have provided to approximate the construct being measured in the fewest number of questions. The implementation of routine assessment of patients’ QoL on clinical care and clinical trials has the potential to improve patients’ well-being."
-  },
-  {
    "id": "c0ddfb3bb6",
    "type": "table",
    "num": "34.2",
    "en": "Table 34.2 (continued)",
    "raw_en": "Table 34.2 (continued) (b) Cancer and HCT-specific Child Health Rating Inventories (CHRIs)- and Disease-Specific Impairment Inventory-Hematopoietic Stem Cell Transplantation (DSII-HCT) (Parsons et al. 2005) AimThe disease-specific (DSII-HCT) module assesses QoL of childhood HCT survivors Versions10-item module intended to child report (aged 5–12), adolescent report (13–18), and parents report (5–18) Domains/subscalesItems are grouped in three domains reported by parents and patients to be most salient to the HCT experience: worry, hassles, and body image ResultsHigher scores indicate better QoL TranslationsThe questionnaire is available in English Peds Quality of Life Cancer Module 3.0 (PedsQL CM™) (Varni et al. 2002) AimQoL in children with cancer VersionsParent report form for children aged 2–4 has 25 items, child and parent reports for children aged 5–7 has 26 items, and child and parents reports for children more than 8 years has 27 items Domains/subscalesPain and hurt, nausea, procedural anxiety, treatment anxiety, worry, cognitive problems, perceived physical appearance, and communication ResultsHigher scores indicate better QoL TranslationsAvailable in more than 100 languages The Behavioral, Affective and Somatic Experiences Scales (BASES) (Phipps et al. 1994) AimQoL during the acute phase of HCT VersionsThere are separate versions to be completed by nurses (BASES-N), parents (BASES-P), and children (BASES-C). The BASES-N and BASES-P have 38 items, and the BASES-C has 14 items. The questionnaire is intended to be used in child aged 5–17 Domains/subscalesSomatic distress, mood disturbance, compliance, quality of interactions, and activities ResultsHigher scores indicate more distress/impairment TranslationsAvailable in English"
+  },
+  {
+   "id": "6ff522c32c",
+   "type": "p",
+   "en": "Historically, studies and clinical trials have used diverse patient-reported QoL measures which make results difficult to compare (Shaw et al. 2016), although there are available tools to map common PRO QoL measures to one another, such as the PROMIS with the SF-36 (Choi et al. 2012). Second, the mode of administration should also be considered. PRO measures have traditionally been administered by paper and pencil, but new technologies offer the potential to use electronic measures. Electronic measures administered before or during a clinic visit allow results to be available at the time of consultation and may facilitate symptom monitoring to guide supportive treatment. One example is the PROMIS instrument, which is available using computer adaptive testing or through REDCap software. Computer adaptive testing selects questions based on the previous responses that patients have provided to approximate the construct being measured in the fewest number of questions. The implementation of routine assessment of patients’ QoL on clinical care and clinical trials has the potential to improve patients’ well-being."
   },
   {
    "id": "331d933e34",

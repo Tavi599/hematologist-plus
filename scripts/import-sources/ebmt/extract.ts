@@ -33,6 +33,21 @@ import {
   type Zone,
 } from './layout'
 
+/**
+ * The start of a list item. The handbook marks items with a bullet, with an
+ * en dash, or with a letter or number in parentheses — "(a)", "(1)" — and the
+ * lettered form is what the donor-matching criteria use.
+ */
+/**
+ * The one-em indent that opens a paragraph, measured over 400 pages: 12 pt,
+ * with a 13 pt tail. It is deliberately narrow, because the lines of a list
+ * item that wrap hang at 17 pt and the text of a box sits at 24 pt — read as
+ * paragraph indents, those would cut both into one block per line.
+ */
+const PARA_INDENT = [11, 14] as const
+
+const LIST_MARKER = /^[•▪]\s*|^[–-]\s|^\(?[a-z0-9]{1,2}[).]\s/
+
 const args = process.argv.slice(2)
 const pdfPath = args.find((a) => !a.startsWith('--'))
 const outDir = (() => {
@@ -232,18 +247,40 @@ function run(file: string, out: string): void {
           continue
         }
 
-        const bullet = /^[••]\s*|^[–-]\s/.test(line.text.trim())
+        // A list item opens with a bullet, a dash or a letter/number in
+        // parentheses; the book uses all three.
+        // A letter or number in parentheses opens an item only where a new
+        // sentence could open: a paragraph broken after "(IPI 4," carries on
+        // with "5) can expect ...", which is no list at all.
+        const marked = LIST_MARKER.exec(line.text.trim())
+        const inItem: boolean = buf !== null && buf.type === 'li'
+        const bullet: boolean =
+          marked !== null &&
+          (/^[•▪–-]/.test(marked[0]) ||
+            inItem ||
+            prev === null ||
+            /[.:;!?]$/.test(prev.text.trim()))
         let kind: BlockType = bullet ? 'li' : 'p'
-        // The book starts a paragraph with a one-em indent (12 pt). A larger
-        // step is a box set inside the column — a "Key Points" summary, say —
+        // The book starts a paragraph with a one-em indent; anything set
+        // deeper is a box inside the column — a "Key Points" summary, say —
         // whose every line would otherwise be read as a paragraph of its own.
         const offset = line.x - colLeft
-        const indented = offset > 5 && offset < 20 && !bullet
-        if (buf && buf.type === 'li' && !bullet && !indented) kind = 'li'
+        let indented = offset >= PARA_INDENT[0] && offset <= PARA_INDENT[1] && !bullet
         // A paragraph runs on across a column or a page break: only an indent
         // or a heading starts a new one, never the end of a column.
         const sameFlow = prev?.col === line.col && prev?.page === p
         const gap = sameFlow && prev ? prev.y - line.y : 0
+        // The lines of a list item that wrap hang under the item's own text,
+        // sometimes past the paragraph indent, sometimes at exactly it. Within
+        // the column a line that carries no marker therefore continues the open
+        // item, however it is set; the prose that follows a list starts in the
+        // next column or on the next page, and there an indent is what tells
+        // the two apart. Read the other way round, every item that ran to two
+        // lines became one block per line.
+        if (inItem && !bullet && (sameFlow || !indented)) {
+          kind = 'li'
+          indented = false
+        }
         // A bullet always starts a new item, even when the one before it was
         // also a bullet — otherwise a whole box of key points becomes one line.
         if (!buf || buf.type !== kind || indented || bullet || gap > line.size * 2.1) {
@@ -255,7 +292,12 @@ function run(file: string, out: string): void {
         }
         prev = { ...line, page: p }
       }
-      flush()
+      // The paragraph is deliberately left open at the page break. The book
+      // sets a new paragraph with a one-em indent, so a line that starts flush
+      // at the top of the next page continues this one; closing the buffer here
+      // would cut almost every second paragraph in half mid-sentence. The cost
+      // is that a table of this page is emitted before the paragraph that runs
+      // past it, which is a far smaller price than a broken sentence.
 
       // Tables and figure captions keep their own shape even on the page where
       // the reference list starts; whatever small type is left over there is

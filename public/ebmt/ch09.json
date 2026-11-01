@@ -30,14 +30,9 @@
    "en": "The first indications for a major histocompatibility complex (MHC) were provided by the work of Peter Gorer in 1936, as a result of his studies in mice (reviewed by Thorsby (2009)). Subsequently, immune-mediated rejection of tissue allografts was described in 1945 by the British immunologist Peter Medawar, followed by the discovery of the MHC carrying the histocompatibility genes by George Snell in 1948 and of the human leukocyte antigen (HLA) molecules by Jean Dausset, Jon van Rood, and Rose Payne a decade later (reviewed by Thorsby (2009)). The importance of these discoveries was recognized by the Nobel Prize awarded in physiology and medicine to Medawar in 1960 and Benacerrat, Snell, and Dausset in 1980, respectively. Since then, the MHC has emerged as the single most polymorphic gene locus in eukaryotes, with 36,263 HLA alleles reported to date in the international ImMunoGeneTics information system/HLA (IMGT/HLA) database (release 3.52, (https://www.ebi.ac.uk/ipd/imgt/hla/about/statistics/. Accessed 9 May 2023; Barker et al. (2023))."
   },
   {
-   "id": "5aa772ae1b",
+   "id": "fcb0dd8748",
    "type": "p",
-   "en": "The concept of HLA matching in transplantation was first proposed in the 1960s, when it became apparent that HLA antigens played a critical role in the recognition and rejection of foreign tissues. The early attempts at HLA matching were based on serological methods, which relied on the detection of antibodies that bind to HLA molecules. However, this approach was"
-  },
-  {
-   "id": "678c7def2e",
-   "type": "p",
-   "en": "limited by the low resolution of serological typing and the high frequency of HLA alleles in the human population."
+   "en": "The concept of HLA matching in transplantation was first proposed in the 1960s, when it became apparent that HLA antigens played a critical role in the recognition and rejection of foreign tissues. The early attempts at HLA matching were based on serological methods, which relied on the detection of antibodies that bind to HLA molecules. However, this approach was limited by the low resolution of serological typing and the high frequency of HLA alleles in the human population."
   },
   {
    "id": "6d85c13752",
@@ -78,14 +73,9 @@
    "en": "Structure and Function of HLA Class I and II Molecules"
   },
   {
-   "id": "d802540924",
+   "id": "185c7d5e4c",
    "type": "p",
-   "en": "HLA class I and II molecules are immunoglobulins (Igs) found on the surface of cells that present peptides in their highly polymorphic antigen-binding groove (Madden 1995). HLA class I proteins, encoded in the classical HLA-A, HLA-B, and HLA-C loci, consist of heterodimers of a polymorphic α-chain and a monomorphic β2 microglobulin, with molecular weights of 45 kDa and 12 kDa, respectively. The α-chain has three hypervariable Ig-like domains, with the α1 and α2 domains forming the antigen-binding"
-  },
-  {
-   "id": "3ca3ea407a",
-   "type": "p",
-   "en": "groove, the α3 domain contacting the CD8 coreceptor on T cells, and a transmembrane region anchoring the molecule to the cell membrane. HLA class I is expressed on all healthy nucleated cells and presents peptides, which are protein fragments of mostly intracellular origin generated through proteasomal cleavage and transported to the endoplasmic reticulum via the transporter associated with antigen processing (TAP; Vyas et al. (2008)). Cell surface HLA class I peptide complexes can be recognized by the T-cell receptor (TCR) of CD8⁺ T cells, leading to the activation of cytotoxic and/or cytokine effector functions, or by KIRs on natural killer (NK) cells, leading to the inhibition or activation of effector functions (Heidenreich and Kröger 2017). HLA class II proteins, encoded by the classical HLA-DR, HLA-DQ, and HLA-DP loci, consist of heterodimers of an α- and a β-chain of approximately 30 kDa each. Despite the different composition, the overall structure of the heterodimeric HLA class II proteins is highly similar to that of the HLA class I proteins. While the peptide- binding groove involves the membrane-distant α1 and β1 domains, the region contacting the CD4 coreceptor on T cells is located in the membrane-close domains. Both chains anchor to the cell membrane with their respective transmembrane parts. For HLA-DR, the polymorphisms are mostly clustered in the β-chain Ig-like domain forming the antigen-binding groove, i.e., the β1 domain. For HLA-DQ and HLA-DP, both the α- and β-chains are polymorphic, with an increased level of polymorphism in the α1 and β1 domains. HLA class II proteins are constitutively expressed on professional antigen-presenting cells, such as B cells, macrophages, and dendritic cells, and can be upregulated on various cell types by pro-inflammatory cytokines, such as interferon (IFN)-γ and tumor necrosis factor (TNF)-α. HLA class II molecules present peptides generally of extracellular origin generated through protein degradation in the phagolysosome (Vyas et al. 2008). Peptide loading onto HLA class II molecules occurs in the dedicated MIIC (MHC class II) compartment and is catalyzed by two nonclassical HLA molecules that are also encoded in the MHC, i.e., HLA-DM and HLA-DO. HLA class II peptide complexes on the cell surface can be recognized by CD4⁺ T cells, leading to the activation of cytokine-mediated helper or regulatory functions. To date, only a single receptor on NK cells with binding activity to HLA class II, the activating NKp44 engaged by a subset of HLA-DP allotypes, has been described (Niehrs et al. 2019)."
+   "en": "HLA class I and II molecules are immunoglobulins (Igs) found on the surface of cells that present peptides in their highly polymorphic antigen-binding groove (Madden 1995). HLA class I proteins, encoded in the classical HLA-A, HLA-B, and HLA-C loci, consist of heterodimers of a polymorphic α-chain and a monomorphic β2 microglobulin, with molecular weights of 45 kDa and 12 kDa, respectively. The α-chain has three hypervariable Ig-like domains, with the α1 and α2 domains forming the antigen-binding groove, the α3 domain contacting the CD8 coreceptor on T cells, and a transmembrane region anchoring the molecule to the cell membrane. HLA class I is expressed on all healthy nucleated cells and presents peptides, which are protein fragments of mostly intracellular origin generated through proteasomal cleavage and transported to the endoplasmic reticulum via the transporter associated with antigen processing (TAP; Vyas et al. (2008)). Cell surface HLA class I peptide complexes can be recognized by the T-cell receptor (TCR) of CD8⁺ T cells, leading to the activation of cytotoxic and/or cytokine effector functions, or by KIRs on natural killer (NK) cells, leading to the inhibition or activation of effector functions (Heidenreich and Kröger 2017). HLA class II proteins, encoded by the classical HLA-DR, HLA-DQ, and HLA-DP loci, consist of heterodimers of an α- and a β-chain of approximately 30 kDa each. Despite the different composition, the overall structure of the heterodimeric HLA class II proteins is highly similar to that of the HLA class I proteins. While the peptide- binding groove involves the membrane-distant α1 and β1 domains, the region contacting the CD4 coreceptor on T cells is located in the membrane-close domains. Both chains anchor to the cell membrane with their respective transmembrane parts. For HLA-DR, the polymorphisms are mostly clustered in the β-chain Ig-like domain forming the antigen-binding groove, i.e., the β1 domain. For HLA-DQ and HLA-DP, both the α- and β-chains are polymorphic, with an increased level of polymorphism in the α1 and β1 domains. HLA class II proteins are constitutively expressed on professional antigen-presenting cells, such as B cells, macrophages, and dendritic cells, and can be upregulated on various cell types by pro-inflammatory cytokines, such as interferon (IFN)-γ and tumor necrosis factor (TNF)-α. HLA class II molecules present peptides generally of extracellular origin generated through protein degradation in the phagolysosome (Vyas et al. 2008). Peptide loading onto HLA class II molecules occurs in the dedicated MIIC (MHC class II) compartment and is catalyzed by two nonclassical HLA molecules that are also encoded in the MHC, i.e., HLA-DM and HLA-DO. HLA class II peptide complexes on the cell surface can be recognized by CD4⁺ T cells, leading to the activation of cytokine-mediated helper or regulatory functions. To date, only a single receptor on NK cells with binding activity to HLA class II, the activating NKp44 engaged by a subset of HLA-DP allotypes, has been described (Niehrs et al. 2019)."
   },
   {
    "id": "f063ae94b8",
@@ -94,14 +84,9 @@
    "en": "HLA Polymorphism and Tissue Typing"
   },
   {
-   "id": "a50a993790",
+   "id": "709a4a3afb",
    "type": "p",
-   "en": "HLA molecules were first detected by serological methods, through the ability of the sera from sensitized individuals to agglutinate some but not all leukocytes (hence the term “human leukocyte antigen”) (Thorsby 2009). Until the mid-1990s, serological typing was the main method of tissue typing. With the advent of polymerase chain reaction (PCR) techniques, molecular tissue typing took over and unraveled a far greater degree of HLA allelic polymorphism than previously appreciated (Erlich 2012). HLA nucleotide polymorphism is clustered in the so-called hypervariable regions (HVRs) mainly in exons 2, 3, and 4 of HLA class I and exons 2 and 3 of HLA class II, encoding the functional antigen-binding groove and CD4/CD8 coreceptor-binding regions. Therefore, PCR-based molecular typing focused on these exons, leading to different levels of typing resolution (Table 9.1). With the advent of next-generation sequencing (NGS) for tissue typing purposes (Gabriel et al. 2014, Cornaby et al. 2021), allelic or at least high-resolution typing can be achieved in most cases. Moreover, NGS enables high-throughput sequencing of the entire HLA coding and noncoding regions, unraveling an additional layer of polymorphism, with more than 50% of all submissions resulting from NGS-based typing techniques (Barker et al. 2023). Due to the ability to sequence large numbers of samples in a single run and multiple loci per individual, the NGS technology allows for highly"
-  },
-  {
-   "id": "68eb06b75f",
-   "type": "p",
-   "en": "accurate and reliable HLA typing, which is essential for selecting the best possible donor and minimizing the risk of GVHD. As a result, NGS has become an indispensable tool in the field of transplantation and has greatly improved the success rates of allo-HCT (Penack et al. 2020)."
+   "en": "HLA molecules were first detected by serological methods, through the ability of the sera from sensitized individuals to agglutinate some but not all leukocytes (hence the term “human leukocyte antigen”) (Thorsby 2009). Until the mid-1990s, serological typing was the main method of tissue typing. With the advent of polymerase chain reaction (PCR) techniques, molecular tissue typing took over and unraveled a far greater degree of HLA allelic polymorphism than previously appreciated (Erlich 2012). HLA nucleotide polymorphism is clustered in the so-called hypervariable regions (HVRs) mainly in exons 2, 3, and 4 of HLA class I and exons 2 and 3 of HLA class II, encoding the functional antigen-binding groove and CD4/CD8 coreceptor-binding regions. Therefore, PCR-based molecular typing focused on these exons, leading to different levels of typing resolution (Table 9.1). With the advent of next-generation sequencing (NGS) for tissue typing purposes (Gabriel et al. 2014, Cornaby et al. 2021), allelic or at least high-resolution typing can be achieved in most cases. Moreover, NGS enables high-throughput sequencing of the entire HLA coding and noncoding regions, unraveling an additional layer of polymorphism, with more than 50% of all submissions resulting from NGS-based typing techniques (Barker et al. 2023). Due to the ability to sequence large numbers of samples in a single run and multiple loci per individual, the NGS technology allows for highly accurate and reliable HLA typing, which is essential for selecting the best possible donor and minimizing the risk of GVHD. As a result, NGS has become an indispensable tool in the field of transplantation and has greatly improved the success rates of allo-HCT (Penack et al. 2020)."
   },
   {
    "id": "08f12cce86",
@@ -115,11 +100,6 @@
    "en": "T-Cell Alloreactivity"
   },
   {
-   "id": "46727dfcaf",
-   "type": "p",
-   "en": "The ability of T cells to specifically recognize non-self, allogeneic tissues is called T-cell alloreactivity. T-cell alloreactivity is the main mediator of both the major benefit and the major toxicity of allogeneic HCT i.e. GVL and GVHD, respectively. T-cell allorecognition can be either direct or indirect. Direct T-cell alloreactivity is targeted to intact mismatched HLA–peptide complexes expressed on the cell surface of allogeneic cells and can be mediated by both naïve and memory T cells (Archbold et al. 2008). Alloreactive T-cell receptors (TCRs) cross-recognize foreign HLA molecules associated with the so-called allopeptides, i.e., different peptides of a largely unknown sequence and origin within the global array of peptides displayed in the antigen-binding groove, the immunopeptidome (Meurer et al. 2021; van Balen et al. 2020; Crivello et al. 2023). Instead, indirect T-cell alloreactivity refers to the recognition of peptides derived from the mismatched HLA proteins and presented in the antigen-binding groove of self-HLA molecules (Gokmen et al. 2008). These peptides are also referred to as Predicted Indirectly ReCognizable HLA Epitopes (PIRCHE, see Sect. 3.5) (Geneugelijk and Spierings 2018; Geneugelijk et al. 2019). A special form of indirect T-cell alloreactivity is the recognition of foreign peptides not deriving from"
-  },
-  {
    "id": "9171c333e5",
    "type": "table",
    "num": "9.1",
@@ -127,9 +107,9 @@
    "raw_en": "Table 9.1 HLA typing resolution and appropriate typing methods ab HLA typing resolutionAppropriate typing methods Low (first field)Serology, SSP, SSOP, others High (second field)NGS, SBT Allelic (all fields)NGS, SBT IntermediateSSP, SSOP, SBT a As defined in Nunes et al. (2011). Low: A serological typing result or DNA-based typing at the first field in the DNA-based nomenclature. High: A set of alleles that encode the same protein sequence in the antigen-binding groove and that exclude alleles not expressed on the cell surface. High resolution thus includes alleles reported with the suffix P (a set of alleles encoding the same amino acid sequence at the antigen-binding groove). Allelic: Unique nucleotide sequence for a gene as defined using all the digits in a current allele name. Intermediate: A level of resolution that falls between high and low resolu- tion, as agreed with the entity requesting the testing. Examples are restriction to common and well-documented (CWD) alleles (Sanchez-Mazas et al. 2017), common intermediate and well-documented (CIWD) alleles (Hurley et al. 2020), or reporting by the National Marrow Donor Program (NMDP) codes (https://bioinformatics. bethematchclinical.org/hla- resources/allele- codes/ allele- code- lists/) b Serology complement-dependent cytotoxicity of specific antisera, SSP sequence-specific priming, SSOP sequence- specific oligonucleotide probing, Others additional molecular typing approaches, including quantitative PCR and restriction fragment length polymorphism (RFLP), SBT sequencing-based typing (Sanger sequencing), NGS next-generation sequencing"
   },
   {
-   "id": "4af5d07ddf",
+   "id": "ae14c1c3d1",
    "type": "p",
-   "en": "mismatched HLA but from any other expressed polymorphic gene and presented by self-HLA molecules. These peptides are referred to as minor histocompatibility antigens (mHAgs) (Spierings 2014); mHAgs are the only targets of T-cell alloreactivity in HLA-matched allo-HCT and are mainly recognized by naïve T cells."
+   "en": "The ability of T cells to specifically recognize non-self, allogeneic tissues is called T-cell alloreactivity. T-cell alloreactivity is the main mediator of both the major benefit and the major toxicity of allogeneic HCT i.e. GVL and GVHD, respectively. T-cell allorecognition can be either direct or indirect. Direct T-cell alloreactivity is targeted to intact mismatched HLA–peptide complexes expressed on the cell surface of allogeneic cells and can be mediated by both naïve and memory T cells (Archbold et al. 2008). Alloreactive T-cell receptors (TCRs) cross-recognize foreign HLA molecules associated with the so-called allopeptides, i.e., different peptides of a largely unknown sequence and origin within the global array of peptides displayed in the antigen-binding groove, the immunopeptidome (Meurer et al. 2021; van Balen et al. 2020; Crivello et al. 2023). Instead, indirect T-cell alloreactivity refers to the recognition of peptides derived from the mismatched HLA proteins and presented in the antigen-binding groove of self-HLA molecules (Gokmen et al. 2008). These peptides are also referred to as Predicted Indirectly ReCognizable HLA Epitopes (PIRCHE, see Sect. 3.5) (Geneugelijk and Spierings 2018; Geneugelijk et al. 2019). A special form of indirect T-cell alloreactivity is the recognition of foreign peptides not deriving from mismatched HLA but from any other expressed polymorphic gene and presented by self-HLA molecules. These peptides are referred to as minor histocompatibility antigens (mHAgs) (Spierings 2014); mHAgs are the only targets of T-cell alloreactivity in HLA-matched allo-HCT and are mainly recognized by naïve T cells."
   },
   {
    "id": "e8bcb3ece2",
@@ -159,19 +139,14 @@
    "en": "Donor Types"
   },
   {
-   "id": "18ef59d923",
-   "type": "p",
-   "en": "By inheritance, HLA-identical sibling donors share with the patient the same parental HLA haplotypes, i.e., the HLA-A, HLA-B, HLA-C, HLA-DR, HLA-DQ, and HLA-DP alleles, in the MHC located on the short arms of each of the two parental chromosomes 6. Siblings have a 25% probability of being HLA- identical according to Mendelian rules. Genotypic HLA identity should be confirmed by family studies for the HLA-A, HLA-B, HLA-C, HLA- DRB1, HLA-DQB1, and HLA-DPB1 loci, to exclude recombination. If this is confirmed, then HLA-identical sibling donors are matched for both HLA alleles at each of the 6 loci, meaning that they are 12 out of 12 allele-identical. In contrast, fully matched UDs are HLA-compatible, meaning that they carry the same HLA alleles at least at the 4 loci, namely, HLA-A, HLA-B, HLA-C, HLA-DRB1, and are therefore 8 out of 8 allele-identical. In most cases, 8 out of 8 matched UDs are also 10 out of 10 matched i.e. they are also matched for the 2 HLA-DQB1 alleles, due to the strong LD between HLA-DR and HLA-DQ. In contrast, the LD is much weaker for HLA-DP, and, therefore, most UDs are mismatched for one or both HLA-DP alleles. This should be taken into consideration by discriminating between related donors and UDs in HLA-matched allo-HCT. International registries collectively contain the HLA typing information of more than 41 million potential UDs (https://wmda.info/. Accessed 6 June 2023). The probability of finding a volunteer UD matched for 8/8 HLA-A, HLA-B, HLA-C, and HLA-DRB1 alleles varies between 30% and more than 90%, according to the ethnic group of the patient (Gragert et al. 2014, Gragert et al. 2023). If a fully matched UD cannot be found, then a mismatched UD can be used with increasing success, due to new platforms of GVHD prophylaxis based on post-transplant cyclophosphamide (PTCy) (Kanakry et al. 2016; Shaw et al. 2021). For UD HCT, HLA identity should be confirmed at the highest resolution level possible (allelic, high, or intermediate resolution, Table 9.1), to be agreed between the transplant center and the tissue typing laboratory. Another increasingly used donor type is represented by haploidentical relatives, who share one but not the other HLA haplotype with the recipient (Luznik 2008). These donors are available for more than 90% of patients and can be found in parents or offspring (100% likelihood), siblings (50% likelihood), and the extended family. Moreover, HLA haploidentity should be confirmed by family studies wherever possible. As an alternative, unrelated UCB units are used by many centers as a stem cell source (Ballen et al. 2013). Several hundred thousand UCB units, collected from the umbilical cord and placenta after childbirth, are stored in cord blood banks around the world and are readily available. Given the immature immune system transplanted with"
-  },
-  {
    "id": "42c4f51568",
    "type": "aside",
    "en": "Key Points"
   },
   {
-   "id": "dba75b5672",
+   "id": "07cb78c9a3",
    "type": "p",
-   "en": "these grafts, HLA mismatches are better tolerated, and fully matched UCB allo-HCT is the exception. On the downside, protective immunity is slower to develop post-transplant."
+   "en": "By inheritance, HLA-identical sibling donors share with the patient the same parental HLA haplotypes, i.e., the HLA-A, HLA-B, HLA-C, HLA-DR, HLA-DQ, and HLA-DP alleles, in the MHC located on the short arms of each of the two parental chromosomes 6. Siblings have a 25% probability of being HLA- identical according to Mendelian rules. Genotypic HLA identity should be confirmed by family studies for the HLA-A, HLA-B, HLA-C, HLA- DRB1, HLA-DQB1, and HLA-DPB1 loci, to exclude recombination. If this is confirmed, then HLA-identical sibling donors are matched for both HLA alleles at each of the 6 loci, meaning that they are 12 out of 12 allele-identical. In contrast, fully matched UDs are HLA-compatible, meaning that they carry the same HLA alleles at least at the 4 loci, namely, HLA-A, HLA-B, HLA-C, HLA-DRB1, and are therefore 8 out of 8 allele-identical. In most cases, 8 out of 8 matched UDs are also 10 out of 10 matched i.e. they are also matched for the 2 HLA-DQB1 alleles, due to the strong LD between HLA-DR and HLA-DQ. In contrast, the LD is much weaker for HLA-DP, and, therefore, most UDs are mismatched for one or both HLA-DP alleles. This should be taken into consideration by discriminating between related donors and UDs in HLA-matched allo-HCT. International registries collectively contain the HLA typing information of more than 41 million potential UDs (https://wmda.info/. Accessed 6 June 2023). The probability of finding a volunteer UD matched for 8/8 HLA-A, HLA-B, HLA-C, and HLA-DRB1 alleles varies between 30% and more than 90%, according to the ethnic group of the patient (Gragert et al. 2014, Gragert et al. 2023). If a fully matched UD cannot be found, then a mismatched UD can be used with increasing success, due to new platforms of GVHD prophylaxis based on post-transplant cyclophosphamide (PTCy) (Kanakry et al. 2016; Shaw et al. 2021). For UD HCT, HLA identity should be confirmed at the highest resolution level possible (allelic, high, or intermediate resolution, Table 9.1), to be agreed between the transplant center and the tissue typing laboratory. Another increasingly used donor type is represented by haploidentical relatives, who share one but not the other HLA haplotype with the recipient (Luznik 2008). These donors are available for more than 90% of patients and can be found in parents or offspring (100% likelihood), siblings (50% likelihood), and the extended family. Moreover, HLA haploidentity should be confirmed by family studies wherever possible. As an alternative, unrelated UCB units are used by many centers as a stem cell source (Ballen et al. 2013). Several hundred thousand UCB units, collected from the umbilical cord and placenta after childbirth, are stored in cord blood banks around the world and are readily available. Given the immature immune system transplanted with these grafts, HLA mismatches are better tolerated, and fully matched UCB allo-HCT is the exception. On the downside, protective immunity is slower to develop post-transplant."
   },
   {
    "id": "072b717ac6",
@@ -196,14 +171,9 @@
    "en": "HLA Matching in Haploidentical HCT"
   },
   {
-   "id": "8a99cf6a83",
+   "id": "994c378a5d",
    "type": "p",
-   "en": "Biological parents of the recipients and the recipient’s biological children are by definition haploidentical for their genomic content, including their HLA. Therefore, guidelines by the European Federation for Immunogenetics require to confirm the presence of a shared haplotype by descent or, if not proven by descent, via high-resolution HLA typing, possibly for all six HLA loci to exclude recombination (European Federation for Immunogenetics, Standards for histocompatibility & immunogenetics testing, Version 8.0. https://efi- web.org/committees/standards- committee – accessed 19 May 2023). The introduction of PTCy as GVHD prophylaxis has allowed for successful transplantation across an entire mismatched HLA haplotype, even with the so-called T-cell-replete grafts i.e. grafts that are not depleted from donor T cells. Haploidentical family donors are generally mismatched for 6 out of 12 HLA alleles; however, accidentally, 1 or more alleles can also be identical on the unshared haplotype. No advantage of these “less-than- haploidentical” donors could be found so far (Lorentino et al. 2017). In contrast, certain types of mismatches, including those involving a B-leader match, an HLA-DPB1 nonpermissive mismatch (see Sect. 3.5), and an HLA-DRB1 mismatch in the graft-versus-host direction, were associated with better outcomes compared to others and might be taken into consideration when selecting a haploidentical family donor (Fuchs et al. 2022). Moreover, in 25% of cases, leukemia relapse after haploidentical allo-HCT displays a specific form of immune evasion, termed “HLA loss,” by which the unshared haplotype is selectively lost and replaced by a duplicated shared haplotype (Vago et al. 2012; Crucitti et al. 2015). This aspect must be taken into consideration, especially in the case of post-transplant relapse, where"
-  },
-  {
-   "id": "68a96dcc22",
-   "type": "p",
-   "en": "diagnosis of HLA loss by HLA typing of the recurrent leukemia is recommended."
+   "en": "Biological parents of the recipients and the recipient’s biological children are by definition haploidentical for their genomic content, including their HLA. Therefore, guidelines by the European Federation for Immunogenetics require to confirm the presence of a shared haplotype by descent or, if not proven by descent, via high-resolution HLA typing, possibly for all six HLA loci to exclude recombination (European Federation for Immunogenetics, Standards for histocompatibility & immunogenetics testing, Version 8.0. https://efi- web.org/committees/standards- committee – accessed 19 May 2023). The introduction of PTCy as GVHD prophylaxis has allowed for successful transplantation across an entire mismatched HLA haplotype, even with the so-called T-cell-replete grafts i.e. grafts that are not depleted from donor T cells. Haploidentical family donors are generally mismatched for 6 out of 12 HLA alleles; however, accidentally, 1 or more alleles can also be identical on the unshared haplotype. No advantage of these “less-than- haploidentical” donors could be found so far (Lorentino et al. 2017). In contrast, certain types of mismatches, including those involving a B-leader match, an HLA-DPB1 nonpermissive mismatch (see Sect. 3.5), and an HLA-DRB1 mismatch in the graft-versus-host direction, were associated with better outcomes compared to others and might be taken into consideration when selecting a haploidentical family donor (Fuchs et al. 2022). Moreover, in 25% of cases, leukemia relapse after haploidentical allo-HCT displays a specific form of immune evasion, termed “HLA loss,” by which the unshared haplotype is selectively lost and replaced by a duplicated shared haplotype (Vago et al. 2012; Crucitti et al. 2015). This aspect must be taken into consideration, especially in the case of post-transplant relapse, where diagnosis of HLA loss by HLA typing of the recurrent leukemia is recommended."
   },
   {
    "id": "92c8fa25f1",
@@ -217,59 +187,29 @@
    "en": "Cord blood serves as a valuable and readily available source for allo-HCT. The advantage of cord blood is that it can be stored in cord blood banks, allowing for quicker access compared to searching for a matched adult donor. HLA matching in umbilical cord blood transplantation (UCBT) follows a similar process as in other transplantation methods. However, due to the unique properties of cord blood stem cells, a less stringent HLA match can still be considered acceptable in certain circumstances. The flexibility of cord blood stem cells allows for a greater degree of HLA mismatch, making it possible to identify suitable cord blood units even when a perfect match is not available. As such, minimal matching procedures address HLA matching at a serological split antigen level for HLA-A and HLA-B and at a high-resolution level for HLA-DRB1 (Politikos et al. 2020). Various studies have, however, shown that inclusion of HLA-C (Eapen et al. 2011) and matching at a high-resolution (Eapen et al. 2017) improve the outcome. As such, the following criteria involving HLA matching are being advised for cord blood units that meet the minimal cell number requirements (Fatobene et al. 2020):"
   },
   {
-   "id": "3e75fd5e9d",
-   "type": "p",
-   "en": "(a) Execute high-resolution typing for HLA-A,"
+   "id": "0031a45e24",
+   "type": "li",
+   "en": "(a) Execute high-resolution typing for HLA-A, HLA-B, HLA-C, and HLA-DRB1 of patients and UCB units."
   },
   {
-   "id": "094e3acc0c",
-   "type": "p",
-   "en": "HLA-B, HLA-C, and HLA-DRB1 of patients"
+   "id": "d7a25f4c9d",
+   "type": "li",
+   "en": "(b) The first choice is ≥5/6 HLA-matched units considering HLA-A, HLA-B, and DRB1 and preferably also considering allele-level typing."
   },
   {
-   "id": "ddf9ee03f9",
-   "type": "p",
-   "en": "and UCB units. (b) The first choice is ≥5/6 HLA-matched units"
+   "id": "62cd303943",
+   "type": "li",
+   "en": "(c) Potentially include HLA-C and steer toward ≥6/8 HLA-matched units."
   },
   {
-   "id": "6cc3085035",
-   "type": "p",
-   "en": "considering HLA-A, HLA-B, and DRB1 and"
+   "id": "3267a01668",
+   "type": "li",
+   "en": "(d) If no ≥5/6 is available, then 4/6 HLA-matched units are acceptable (HLA-A and HLA-B at the antigenic split level and HLA-DRB1 at the allelic level)."
   },
   {
-   "id": "fb05fd442c",
-   "type": "p",
-   "en": "preferably also considering allele-level"
-  },
-  {
-   "id": "ec6f1ce73d",
-   "type": "p",
-   "en": "typing. (c) Potentially include HLA-C and steer toward"
-  },
-  {
-   "id": "20768f5468",
-   "type": "p",
-   "en": "≥6/8 HLA-matched units. (d) If no ≥5/6 is available, then 4/6 HLA-"
-  },
-  {
-   "id": "a81f19042c",
-   "type": "p",
-   "en": "matched units are acceptable (HLA-A and"
-  },
-  {
-   "id": "cad5d82025",
-   "type": "p",
-   "en": "HLA-B at the antigenic split level and HLA-"
-  },
-  {
-   "id": "6648dd9787",
-   "type": "p",
-   "en": "DRB1 at the allelic level). (e) In double UCBT, a unit-to-unit HLA match"
-  },
-  {
-   "id": "991f61dde6",
-   "type": "p",
-   "en": "is not required."
+   "id": "8cb7f9a26d",
+   "type": "li",
+   "en": "(e) In double UCBT, a unit-to-unit HLA match is not required."
   },
   {
    "id": "ef35d65c4c",
@@ -278,14 +218,9 @@
    "en": "Models of High-Risk/ Nonpermissive HLA Mismatches"
   },
   {
-   "id": "e4d66457b5",
+   "id": "efdce60967",
    "type": "p",
-   "en": "HLA mismatches that are clinically less well-tolerated than others are referred to as high-risk or nonpermissive. This classification is based on the observation that limited T-cell alloreactivity is generally sufficient for the beneficial effect of GVL without inducing clinically uncontrollable GVHD, whereas intolerable toxicity can be induced by excessive T-cell alloreactivity, leading to severe treatment refractory GVHD. Therefore, high-risk or nonpermissive HLA mismatches are those associated with excessive T-cell alloreactivity compared to their low-risk or permissive counterparts. The number and TCR diversity of alloreactive T-cell responses have been shown to be dependent on the degree of immunopeptidome overlaps between the mismatched HLA alleles, which, in turn, is reflective of the genetic polymorphism in the antigen-binding groove (Meurer et al. 2021, van Balen et al. 2020, Crivello et al. 2023). As a result, families of related HLA-DP molecules, classified into the so-called T-cell epitope (TCE) groups, also based on alloreactive T-cell cross-reactivity, define core-permissive, non-core-permissive, and nonpermissive mismatches at this locus (Fleischhauer and Shaw 2017, Arrieta-Bolanos et al. 2022). TCE groups are in LD with genetically controlled expression levels of mismatched HLA-DPB1, which are associated with GVHD risks after UD-HCT, a concept that has also been explored for HLA-C mismatches (Petersdorf et al. 2014, 2015). Structural similarity and hence immunopeptidome overlaps are also at the basis of the specific high-risk HLA-C and HLA-DPB1 allele mismatch combinations proposed in the past (Fernandez-Vina et al. 2014; Kawase et al. 2009). Finally, the total number of PIRCHE-I (presented by HLA class I) and PIRCHE-II (presented by HLA class II), as a measure of the potential level of indirect alloreactivity after transplantation, has also been proposed to be predictive of outcome (Geneugelijk and Spierings 2018; Geneugelijk et al. 2019). The PIRCHE model is attractive since it is potentially applicable"
-  },
-  {
-   "id": "bdfa937b39",
-   "type": "p",
-   "en": "to any HLA-mismatched donor transplantation, including <8/8 matched UD and haploidentical HCT. Comparative evaluation of three models for high-risk/nonpermissive HLA-DP mismatches (i.e., TCE expression and PIRCHE-II) has recently shown similar associations with clinical outcome (Buhler et al. 2021), suggesting that they might be at least partly surrogates of each other, possibly reflecting LD in the HLA-DP region. An overview of different models for high-risk/nonpermissive HLA mismatches can be found in Table 9.2."
+   "en": "HLA mismatches that are clinically less well-tolerated than others are referred to as high-risk or nonpermissive. This classification is based on the observation that limited T-cell alloreactivity is generally sufficient for the beneficial effect of GVL without inducing clinically uncontrollable GVHD, whereas intolerable toxicity can be induced by excessive T-cell alloreactivity, leading to severe treatment refractory GVHD. Therefore, high-risk or nonpermissive HLA mismatches are those associated with excessive T-cell alloreactivity compared to their low-risk or permissive counterparts. The number and TCR diversity of alloreactive T-cell responses have been shown to be dependent on the degree of immunopeptidome overlaps between the mismatched HLA alleles, which, in turn, is reflective of the genetic polymorphism in the antigen-binding groove (Meurer et al. 2021, van Balen et al. 2020, Crivello et al. 2023). As a result, families of related HLA-DP molecules, classified into the so-called T-cell epitope (TCE) groups, also based on alloreactive T-cell cross-reactivity, define core-permissive, non-core-permissive, and nonpermissive mismatches at this locus (Fleischhauer and Shaw 2017, Arrieta-Bolanos et al. 2022). TCE groups are in LD with genetically controlled expression levels of mismatched HLA-DPB1, which are associated with GVHD risks after UD-HCT, a concept that has also been explored for HLA-C mismatches (Petersdorf et al. 2014, 2015). Structural similarity and hence immunopeptidome overlaps are also at the basis of the specific high-risk HLA-C and HLA-DPB1 allele mismatch combinations proposed in the past (Fernandez-Vina et al. 2014; Kawase et al. 2009). Finally, the total number of PIRCHE-I (presented by HLA class I) and PIRCHE-II (presented by HLA class II), as a measure of the potential level of indirect alloreactivity after transplantation, has also been proposed to be predictive of outcome (Geneugelijk and Spierings 2018; Geneugelijk et al. 2019). The PIRCHE model is attractive since it is potentially applicable to any HLA-mismatched donor transplantation, including <8/8 matched UD and haploidentical HCT. Comparative evaluation of three models for high-risk/nonpermissive HLA-DP mismatches (i.e., TCE expression and PIRCHE-II) has recently shown similar associations with clinical outcome (Buhler et al. 2021), suggesting that they might be at least partly surrogates of each other, possibly reflecting LD in the HLA-DP region. An overview of different models for high-risk/nonpermissive HLA mismatches can be found in Table 9.2."
   },
   {
    "id": "6b8ac66d03",
@@ -315,11 +250,6 @@
    "en": "• Allo-HCT donor types (in parenthesis the percentage probability of their identification for a given patient) include genotypically HLA-identical siblings (25%), HLA-haploidentical family donors (>90%), UDs (30–90%), and UCB units (>80%)."
   },
   {
-   "id": "51ffe5392d",
-   "type": "li",
-   "en": "• When considering allo-HCT from HLA-identical donors, related and unrelated donors should be regarded separately"
-  },
-  {
    "id": "986ba21f23",
    "type": "table",
    "num": "9.2",
@@ -327,9 +257,9 @@
    "raw_en": "Table 9.2 Models of high-risk/nonpermissive HLA mismatches HLA locus, donor type, and Modelclinical association T-cell epitope HLA-DPB1; 8/8 UD; mortality (TCE) groupsaand acute GVHD Expression levelsbHLA C and DPB1; 7–8/8 UD; acute GVHD Mismatch HLA C and DPB1; 7–8/8 UD; combinationscmortality, acute GVHD and relapse PIRCHEdHLA C and DPB1; 8/8 UD; 9/10 UD, CBU, acute GVHD a TCE groups: HLA-DPB1 mismatches involving alleles Key Points from the same (permissive) or different (nonpermissive) TCE groups (Fleischhauer and Shaw 2017, Meurer et al. 2021) b Expression levels: HLA-C or HLA-DPB1 mismatches involving a high-expression allele in the patient, as pre- dicted by noncoding, single nucleotide expression poly- morphisms (Petersdorf et al. 2014, 2015) c Mismatch combinations: High-risk allele mismatches defined by statistical associations (Fernandez-Vina et al. 2014; Kawase et al. 2009) d PIRCHE: Predicted, indirectly recognizable HLA epit- ope numbers as predicted by online tools (Thus et al. 2014a; Thus et al. 2014b; Thus et al. 2016; Geneugelijk and Spierings 2018; Geneugelijk et al. 2019)"
   },
   {
-   "id": "6013ebadf5",
-   "type": "p",
-   "en": "because most of the latter carry HLA- DP mismatches, which impact T-cell alloreactivity and GVHD as well as relapse risks."
+   "id": "788f3d26f8",
+   "type": "li",
+   "en": "• When considering allo-HCT from HLA-identical donors, related and unrelated donors should be regarded separately because most of the latter carry HLA- DP mismatches, which impact T-cell alloreactivity and GVHD as well as relapse risks."
   },
   {
    "id": "03f798f0ea",
@@ -397,9 +327,9 @@
    "raw_en": "Table 9.3 Non-HLA immunogenetic factors and HCT outcome Non-HLA factorClinical outcome association mHAgaGVHD and relapse KIRbRelapse and mortality MICcGVHD, relapse, and transplant-related mortality OthersdGVHD and transplant-related mortality a Minor histocompatibility antigens (Spierings 2014) b Killer Ig-like receptors (Heidenreich and Kröger 2017; Shaffer and Hsu 2016) c MHC class I-related chain (Isernhagen et al. 2016) Cytokine, chemokine, and immune response gene poly- morphisms, including tumor necrosis factor, interleukin (IL)-10, the IL-1 gene family, IL-2, IL-6, interferon-γ, tumor growth factor β and their receptors, NOD-like receptors (NOD2/CARD15), toll-like receptors, and micro-RNAs (Dickinson and Holler 2008; Gam et al. 2017; Chen and Zeiser 2018)"
   },
   {
-   "id": "37f5e7bbfb",
+   "id": "a811caf78b",
    "type": "p",
-   "en": "GVL (Spierings 2014). This dual function is related to their different modes of tissue and cell expression, i.e. hematopoietic system-restricted or broad. Broadly expressed mHAgs can cause both GVHD and GVL, and donor–recipient matching for these mHAgs is therefore desirable yet virtually impossible due to their large number, with many of them probably currently undefined. In contrast, mHAgs restricted to hematopoietic cells are more prone to induce selective GVL. The latter is being explored as a target for HCT-based immunotherapy of hematological malignancies, in which mHAg-specific responses are specifically enhanced to promote GVL."
+   "en": "d GVL (Spierings 2014). This dual function is related to their different modes of tissue and cell expression, i.e. hematopoietic system-restricted or broad. Broadly expressed mHAgs can cause both GVHD and GVL, and donor–recipient matching for these mHAgs is therefore desirable yet virtually impossible due to their large number, with many of them probably currently undefined. In contrast, mHAgs restricted to hematopoietic cells are more prone to induce selective GVL. The latter is being explored as a target for HCT-based immunotherapy of hematological malignancies, in which mHAg-specific responses are specifically enhanced to promote GVL."
   },
   {
    "id": "72be9f2777",

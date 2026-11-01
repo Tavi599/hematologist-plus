@@ -20,25 +20,20 @@
    "en": "Introduction"
   },
   {
-   "id": "6b87cba3e7",
-   "type": "p",
-   "en": "The cellular basis of cancer immune surveillance, already hypothesized in ancient times, was only proven with the advent of HCT. Indeed, the discovery of the nature of GVHD and its antileukemic effects (Weiden et al. 1979) was followed by the first successful attempts of adoptive immunotherapy using donor leukocytes (Kolb et al. 1990). To address the significant GVHD risk associated with allogeneic T cells, several approaches of T-cell manipulation were developed and tested (Table 60.1). Some of these strategies rely on the genetic manipulation of T cells. First, suicide gene therapy approaches were established to promote GVL and immune reconstitution while controlling GVHD. More recently, strategies based on the genetic transfer of tumor-specific T-cell receptors (TCRs) or chimeric antigen receptors (CARs) were developed to improve antitumor efficiency of T cells. This chapter provides an overview of this vastly evolving area."
-  },
-  {
    "id": "fa78307ec8",
    "type": "aside",
    "en": "Chiara Bonini, Marina Cavazzana, Fabio Ciceri, Boris Fehse and Michael Hudecek contributed equally with all other contributors."
+  },
+  {
+   "id": "6b87cba3e7",
+   "type": "p",
+   "en": "The cellular basis of cancer immune surveillance, already hypothesized in ancient times, was only proven with the advent of HCT. Indeed, the discovery of the nature of GVHD and its antileukemic effects (Weiden et al. 1979) was followed by the first successful attempts of adoptive immunotherapy using donor leukocytes (Kolb et al. 1990). To address the significant GVHD risk associated with allogeneic T cells, several approaches of T-cell manipulation were developed and tested (Table 60.1). Some of these strategies rely on the genetic manipulation of T cells. First, suicide gene therapy approaches were established to promote GVL and immune reconstitution while controlling GVHD. More recently, strategies based on the genetic transfer of tumor-specific T-cell receptors (TCRs) or chimeric antigen receptors (CARs) were developed to improve antitumor efficiency of T cells. This chapter provides an overview of this vastly evolving area."
   },
   {
    "id": "1222cc55f7",
    "type": "h2",
    "num": "60.2",
    "en": "Suicide Gene Therapy"
-  },
-  {
-   "id": "8c7600744c",
-   "type": "p",
-   "en": "The transfer of a suicide gene into donor lymphocytes was designed and tested at preclinical and clinical level in the 1990s, with the aim of transferring the entire donor T-cell repertoire, inclusive of cancer and infectious specificities, to transplanted patients while enabling the selective elimination of the transferred lymphocytes in case of GVHD (Bonini et al. 1997). The first suicide gene, and to date the most extensively tested in clinical trials, is thymidine kinase of herpes simplex virus (HSV-TK). In dividing cells, HSV-TK expression confers selective sensitivity to the antiviral drug ganciclovir. Upon retroviral gene transfer, HSV-TK is stably expressed by donor T lymphocytes not interfering with their functionality. However, when exposed to ganciclovir, highly proliferating HSV-TK-expressing T cells (TK cells) will die in a dose-dependent manner. Thus, if ganciclovir is administered during GVHD to patients treated with TK cells, activated and thus proliferating alloreactive TK cells will be eliminated. The HSV-TK/ganciclovir suicide system proved highly effective in controlling GVHD in several transplant settings, including haploidentical HCT (haplo-HCT). After T-cell-depleted haplo-"
   },
   {
    "id": "bfa1eb91fb",
@@ -110,9 +105,9 @@
    ]
   },
   {
-   "id": "24fac0440d",
+   "id": "6f3e3854ce",
    "type": "p",
-   "en": "HCT, the infusion of TK cells promoted broad and rapid immune reconstitution, which, being associated with GVHD control, led to abrogation of late transplant-related mortality (Ciceri et al. 2009). Overall, clinical results obtained with TK cells led to their conditional approval by EMA in 2016, thus representing the first genetically engineered medicinal product approved for cancer patients in Europe. Although when infused after haplo-HCT TK cells could be detected for more than 14 years (Oliveira et al. 2015), their persistence might be limited when cells are infused to immunocompetent patients, due to the viral origin of HSV-TK and to its subsequent immunogenicity in humans. Alternative suicide genes were designed and tested in clinical trials. iCasp9, in particular, is an innovative suicide gene based on human components and thus with a reduced risk of immunogenicity, which was recently proposed and successfully tested in clinical trials (Di Stasi et al. 2011; Zhou et al. 2014). Overall, more than half of the patients who had received suicide gene-expressing donor T cells experienced a clinical benefit in terms of immune reconstitution and GVL. Of notice, all cases of GVHD were completely controlled by the suicide gene/prodrug systems."
+   "en": "The transfer of a suicide gene into donor lymphocytes was designed and tested at preclinical and clinical level in the 1990s, with the aim of transferring the entire donor T-cell repertoire, inclusive of cancer and infectious specificities, to transplanted patients while enabling the selective elimination of the transferred lymphocytes in case of GVHD (Bonini et al. 1997). The first suicide gene, and to date the most extensively tested in clinical trials, is thymidine kinase of herpes simplex virus (HSV-TK). In dividing cells, HSV-TK expression confers selective sensitivity to the antiviral drug ganciclovir. Upon retroviral gene transfer, HSV-TK is stably expressed by donor T lymphocytes not interfering with their functionality. However, when exposed to ganciclovir, highly proliferating HSV-TK-expressing T cells (TK cells) will die in a dose-dependent manner. Thus, if ganciclovir is administered during GVHD to patients treated with TK cells, activated and thus proliferating alloreactive TK cells will be eliminated. The HSV-TK/ganciclovir suicide system proved highly effective in controlling GVHD in several transplant settings, including haploidentical HCT (haplo-HCT). After T-cell-depleted haplo-HCT, the infusion of TK cells promoted broad and rapid immune reconstitution, which, being associated with GVHD control, led to abrogation of late transplant-related mortality (Ciceri et al. 2009). Overall, clinical results obtained with TK cells led to their conditional approval by EMA in 2016, thus representing the first genetically engineered medicinal product approved for cancer patients in Europe. Although when infused after haplo-HCT TK cells could be detected for more than 14 years (Oliveira et al. 2015), their persistence might be limited when cells are infused to immunocompetent patients, due to the viral origin of HSV-TK and to its subsequent immunogenicity in humans. Alternative suicide genes were designed and tested in clinical trials. iCasp9, in particular, is an innovative suicide gene based on human components and thus with a reduced risk of immunogenicity, which was recently proposed and successfully tested in clinical trials (Di Stasi et al. 2011; Zhou et al. 2014). Overall, more than half of the patients who had received suicide gene-expressing donor T cells experienced a clinical benefit in terms of immune reconstitution and GVL. Of notice, all cases of GVHD were completely controlled by the suicide gene/prodrug systems."
   },
   {
    "id": "825c25d8a3",
@@ -142,11 +137,6 @@
    "en": "However, in a fraction of patients, resistance mechanisms to CD19 CAR-T-cell therapy have become apparent, including the development of leukemia cell variants that lost their CD19 antigen expression, particularly in ALL. Several mechanisms may contribute to the development of this phenotype including lymphoid-to-myeloid transdifferentiation, selection of preexisting CD19-low/CD19-negative leukemia clones, and emergence of clones that lost the specific epitope targeted by the CD19 CAR due to alternative splicing (Gardner et al. 2016; Sotillo et al. 2015; Ruella and June 2016). In ALL, CD19-low/CD19-negative leukemia cells may still express CD20, CD22, and/or CD123 that are being pursued as rescue antigens. A recent study highlighted the potential to re-induce remissions in patients that had relapsed with CD19-low/CD19-negative leukemia and subsequently received CD22 CAR-T cells (Fry et al. 2018). Unfortunately, CD22 itself is prone to internalization and downregulation, and indeed a significant proportion of patients experienced successive CD22-low/CD22-negative leukemia relapse. At present, combinatorial targeting of CD19 with either CD20, CD22, or CD123 is being explored, either through bi-specific CAR constructs with two scFvs in cis or through co-expression of two CAR constructs in the same T cells (Zah et al. 2016)."
   },
   {
-   "id": "5b3be218ad",
-   "type": "p",
-   "en": "Since 2017, outcomes of CAR-T-cell clinical trials (Table 60.2) led to the approval by FDA and EMA of six CAR-T-cell therapeutic products, including four specific for CD19, approved for B-cell lymphoma and acute lymphoblastic leukemia (https://doi.org/10.1056/NEJMoa1707447, https://doi.org/10.1056/NEJMoa1804980, https://doi.org/10.1016/S0140- 6736(20)31366- 0, https://doi.org/10.1056/NEJMoa1914347), and two directed to BCMA and used for multiple myeloma (https://doi.org/10.1016/s0140- 6736(21)00933- 8, https://doi.org/10.1056/NEJMoa2024850). All"
-  },
-  {
    "id": "7da500c182",
    "type": "aside",
    "en": "B-cell maturation antigen, kilogram, Safety technologyNoneNoneEGFRt depletion markerNoneEGFRt depletion markerEGFRt depletion markerNoneNone kg BCMA"
@@ -172,9 +162,9 @@
    "en": "acute lymphoblastic leukemia, Clinical applicationALLALLALLNHL/CLLNHL/CLLCLLMMMM Table 60.2ALLremission, chain variable fragment,"
   },
   {
-   "id": "4393daeb7b",
+   "id": "f5bea19324",
    "type": "p",
-   "en": "approved products are manufactured by retroviral (γ-retroviral or lentiviral) gene transfer and made headlines due to their considerable market price and the complex logistics behind this treatment. This involves harvesting the patient’s T cells at a leukapheresis center, shipping to a centralized manufacturing facility to perform CAR gene transfer and T-cell expansion, and return shipment of the cryopreserved cell product. There is a recent increase in the use of exportable, GMP-certified manufacturing devices that are anticipated to provide on-site, point-of-care CAR-T-cell manufacture to reduce costs and wait time. Currently, approved cellular products are tested as earlier lines of treatment, and an intense effort is ongoing toward the identification of new CAR targets for further hematological malignancies, e.g., SLAMF7 (Gogishvili et al. 2017), CD44v6 (Casucci et al. 2013), CD38 (Mihara et al. 2009), CD33, CD70, CD123, CLL- 1, and FLT3 (https://doi.org/10.1111/ejh.14047). Clinical progress of CAR-T cells for solid tumors has been lacking behind, since it meets—besides identification of suitable target antigens—several additional challenges, including but not limited to difficult accessibility, immunosuppressive tumor microenvironment, and high degrees of heterogeneity. Novel CAR constructs and treatment concepts are underway to address these difficulties (https://doi.org/10.1038/s41586- 023- 05707- 3)."
+   "en": "Since 2017, outcomes of CAR-T-cell clinical trials (Table 60.2) led to the approval by FDA and EMA of six CAR-T-cell therapeutic products, including four specific for CD19, approved for B-cell lymphoma and acute lymphoblastic leukemia (https://doi.org/10.1056/NEJMoa1707447, https://doi.org/10.1056/NEJMoa1804980, https://doi.org/10.1016/S0140- 6736(20)31366- 0, https://doi.org/10.1056/NEJMoa1914347), and two directed to BCMA and used for multiple myeloma (https://doi.org/10.1016/s0140- 6736(21)00933- 8, https://doi.org/10.1056/NEJMoa2024850). All approved products are manufactured by retroviral (γ-retroviral or lentiviral) gene transfer and made headlines due to their considerable market price and the complex logistics behind this treatment. This involves harvesting the patient’s T cells at a leukapheresis center, shipping to a centralized manufacturing facility to perform CAR gene transfer and T-cell expansion, and return shipment of the cryopreserved cell product. There is a recent increase in the use of exportable, GMP-certified manufacturing devices that are anticipated to provide on-site, point-of-care CAR-T-cell manufacture to reduce costs and wait time. Currently, approved cellular products are tested as earlier lines of treatment, and an intense effort is ongoing toward the identification of new CAR targets for further hematological malignancies, e.g., SLAMF7 (Gogishvili et al. 2017), CD44v6 (Casucci et al. 2013), CD38 (Mihara et al. 2009), CD33, CD70, CD123, CLL- 1, and FLT3 (https://doi.org/10.1111/ejh.14047). Clinical progress of CAR-T cells for solid tumors has been lacking behind, since it meets—besides identification of suitable target antigens—several additional challenges, including but not limited to difficult accessibility, immunosuppressive tumor microenvironment, and high degrees of heterogeneity. Novel CAR constructs and treatment concepts are underway to address these difficulties (https://doi.org/10.1038/s41586- 023- 05707- 3)."
   },
   {
    "id": "89218e85e6",
@@ -214,11 +204,6 @@
    "en": "Genome editing has been proposed to improve efficacy and decrease side effects of TCR gene therapy. Editing might be used to knock out the endogenous TCR to increasing expression of the transgenic one and decreasing the mispairing risk between endogenous and transgenic TCR chains (potentially leading to autoreactive T cells) (Provasi et al. 2012), and is required for the development of allogeneic T-cell products (https://doi.org/10.1126/scitranslmed.aaj2013). The recent development of CRISPR/Cas9 and its application to T cells have significantly increased the efficiency of gene disruption and of homology- directed repair (HDR) while also permitting simultaneous multiple gene editing (https://doi.org/10.1126/scitranslmed.abg8027). TCR-edited T cells were proven safe in a pilot study on cancer patients (https://doi.org/10.1126/science.aba7365). Moreover, targeted integration in the TCR locus can improve long-term expression of transgenic TCRs (https://doi.org/10.1038/s41551- 019- 0409- 0) or CARs (Eyquem et al. 2017). Finally, replacing nuclease activity with alternative enzymes, such as deaminases for nucleotide conversion, is further improving our toolbox for T-cell engineering (https://doi. org/10.1056/NEJMoa2300709)."
   },
   {
-   "id": "ea5fd79d11",
-   "type": "p",
-   "en": "In conclusion, T-cell therapies have become a promising novel anticancer weapon. Their broad application will require (1) identification of additional targets, (2) availability of TCRs against established targets for many HLA molecules, (3) implementation of innovative gene transfer and genome-editing biotechnological tools, and (4) improved methods for large-scale GMP production."
-  },
-  {
    "id": "550d011cf1",
    "type": "table",
    "num": "60.3",
@@ -256,6 +241,11 @@
      "Life-threatening reaction requiring mechanical ventilation. Any G4 organ toxicity"
     ]
    ]
+  },
+  {
+   "id": "ea5fd79d11",
+   "type": "p",
+   "en": "In conclusion, T-cell therapies have become a promising novel anticancer weapon. Their broad application will require (1) identification of additional targets, (2) availability of TCRs against established targets for many HLA molecules, (3) implementation of innovative gene transfer and genome-editing biotechnological tools, and (4) improved methods for large-scale GMP production."
   }
  ],
  "references": [

@@ -79,11 +79,6 @@
    "en": "Graft Source and Cellular Content"
   },
   {
-   "id": "919991c00d",
-   "type": "p",
-   "en": "BM is consistently associated with delayed neutrophil and platelet engraftment across all types of transplants; the impact on GF depends on the"
-  },
-  {
    "id": "9c6d2fd1e5",
    "type": "table",
    "num": "41.1",
@@ -111,9 +106,9 @@
    ]
   },
   {
-   "id": "52177fc168",
+   "id": "c202d82166",
    "type": "p",
-   "en": "donor type. GF incidence is not different for HLA MRD (Bensinger, 2012), but it is higher in the setting of URD (9% vs 3%, for BM and PB, respectively, p < 0.001) (Anasetti et al. 2012). There are no prospective randomized data either looking at MAC or RIC, but retrospective results from EBMT and CIBMTR suggested there were no differences in GF between BM and PB (less than 5% in all cases). In contrast, in a study evaluating donor characteristics, the use of BM was the only factor associated with GF after RIC (HR 2.3; p = 0.02) (Passweg et al. 2011)."
+   "en": "BM is consistently associated with delayed neutrophil and platelet engraftment across all types of transplants; the impact on GF depends on the donor type. GF incidence is not different for HLA MRD (Bensinger, 2012), but it is higher in the setting of URD (9% vs 3%, for BM and PB, respectively, p < 0.001) (Anasetti et al. 2012). There are no prospective randomized data either looking at MAC or RIC, but retrospective results from EBMT and CIBMTR suggested there were no differences in GF between BM and PB (less than 5% in all cases). In contrast, in a study evaluating donor characteristics, the use of BM was the only factor associated with GF after RIC (HR 2.3; p = 0.02) (Passweg et al. 2011)."
   },
   {
    "id": "28fdf027a9",
@@ -125,11 +120,6 @@
    "type": "h3",
    "num": "41.3.3",
    "en": "Anti-HLA Antibodies"
-  },
-  {
-   "id": "abe59447ee",
-   "type": "p",
-   "en": "The presence of donor-specific anti-HLA antibodies (DSAs) is associated with a higher risk of GF in the context of haploidentical CBT and URD transplants, and it may in fact translate into a reduced OS (Spellman et al. 2010; Ciurea et al. 2009; Ciurea et al. 2015). The high prevalence of anti-HLA antibodies (10–40%) (Morin-Zorman et al. 2016) and the increasing use of mismatched donors prompted the EBMT to write a set of advice and recommendations on this issue (Table 41.3) (Ciurea et al. 2018)."
   },
   {
    "id": "6087edd19e",
@@ -196,6 +186,11 @@
      "MFI mean fluorescence IVIg intravenous"
     ]
    ]
+  },
+  {
+   "id": "abe59447ee",
+   "type": "p",
+   "en": "The presence of donor-specific anti-HLA antibodies (DSAs) is associated with a higher risk of GF in the context of haploidentical CBT and URD transplants, and it may in fact translate into a reduced OS (Spellman et al. 2010; Ciurea et al. 2009; Ciurea et al. 2015). The high prevalence of anti-HLA antibodies (10–40%) (Morin-Zorman et al. 2016) and the increasing use of mismatched donors prompted the EBMT to write a set of advice and recommendations on this issue (Table 41.3) (Ciurea et al. 2018)."
   },
   {
    "id": "de5f353cdd",
@@ -298,159 +293,19 @@
    "en": "It is important to apply them as soon as GF is suspected."
   },
   {
-   "id": "29e61ed9a7",
+   "id": "2244c17491",
    "type": "li",
-   "en": "• Stop as many toxic drugs as possible; treat"
+   "en": "• Stop as many toxic drugs as possible; treat infections; although of limited utility, it would be reasonable to trial use of G-CSF."
   },
   {
-   "id": "330b3eeebc",
-   "type": "p",
-   "en": "infections; although of limited utility, it would"
-  },
-  {
-   "id": "a32807665b",
-   "type": "p",
-   "en": "be reasonable to trial use of G-CSF."
-  },
-  {
-   "id": "66ff2f4d6d",
+   "id": "9dd7d38ebd",
    "type": "li",
-   "en": "• Adjust posttransplant IS. Maintain correct"
+   "en": "• Adjust posttransplant IS. Maintain correct IS levels in the early posttransplant period. Later on, after the third/sixth month and if mixed chimerism is present, especially after a RIC transplant, a faster tapering of IST could overcome mixed chimera (in patients with SAA, it is commonly recommended to increase IST). As the best approach is influenced by multiple variables (chimerism dynamics, cell lineage affected by the mixed chimerism, disease type and status, presence of GVHD, etc) it is important to underline the absence of consensus regarding the best management in this situation, as it is highlighted in a recent report on behalf of the ASTCT (Kharfan-Dabaja et al. 2021)."
   },
   {
-   "id": "161c9a3900",
-   "type": "p",
-   "en": "IS levels in the early posttransplant period."
-  },
-  {
-   "id": "0d8892df7a",
-   "type": "p",
-   "en": "Later on, after the third/sixth month and if"
-  },
-  {
-   "id": "5a0b3fdb97",
-   "type": "p",
-   "en": "mixed chimerism is present, especially"
-  },
-  {
-   "id": "f11dbad1cd",
-   "type": "p",
-   "en": "after a RIC transplant, a faster tapering of"
-  },
-  {
-   "id": "f579f67027",
-   "type": "p",
-   "en": "IST could overcome mixed chimera (in"
-  },
-  {
-   "id": "29e4d104d3",
-   "type": "p",
-   "en": "patients with SAA, it is commonly recom"
-  },
-  {
-   "id": "8c01854a41",
-   "type": "p",
-   "en": "mended to increase IST). As the best"
-  },
-  {
-   "id": "fb65c6ea14",
-   "type": "p",
-   "en": "approach is influenced by multiple vari"
-  },
-  {
-   "id": "53757b7b25",
-   "type": "p",
-   "en": "ables (chimerism dynamics, cell lineage"
-  },
-  {
-   "id": "a6d39dfb12",
-   "type": "p",
-   "en": "affected by the mixed chimerism, disease"
-  },
-  {
-   "id": "caedaa5428",
-   "type": "p",
-   "en": "type and status, presence of GVHD, etc) it"
-  },
-  {
-   "id": "c4717c0333",
-   "type": "p",
-   "en": "is important to underline the absence of"
-  },
-  {
-   "id": "14b477cc58",
-   "type": "p",
-   "en": "consensus regarding the best management"
-  },
-  {
-   "id": "14144c9657",
-   "type": "p",
-   "en": "in this situation, as it is highlighted in a"
-  },
-  {
-   "id": "aaca98f7d0",
-   "type": "p",
-   "en": "recent report on behalf of the ASTCT"
-  },
-  {
-   "id": "ee552a2f58",
-   "type": "p",
-   "en": "(Kharfan-Dabaja et al. 2021)."
-  },
-  {
-   "id": "aab3606bd8",
+   "id": "586ec5edff",
    "type": "li",
-   "en": "• Data regarding the use of TPO analogs after"
-  },
-  {
-   "id": "318b59f4f3",
-   "type": "p",
-   "en": "transplant are scarce, but the results of eltrom"
-  },
-  {
-   "id": "a2e28cb1d6",
-   "type": "p",
-   "en": "bopag in aplastic anemia and its favorable tox"
-  },
-  {
-   "id": "e995685348",
-   "type": "p",
-   "en": "icity profile would support, in our view, a trial"
-  },
-  {
-   "id": "837f383581",
-   "type": "p",
-   "en": "with this drug before considering more com"
-  },
-  {
-   "id": "2194cf946f",
-   "type": "p",
-   "en": "plex and risky options such as DLI or a second"
-  },
-  {
-   "id": "71fc82b054",
-   "type": "p",
-   "en": "transplant. Recent studies in the transplant set"
-  },
-  {
-   "id": "6bbb0d3a4f",
-   "type": "p",
-   "en": "ting suggest that TPO receptor agonists are"
-  },
-  {
-   "id": "d44539adb0",
-   "type": "p",
-   "en": "safe and may be useful to revert cytopenias,"
-  },
-  {
-   "id": "2e73a2af52",
-   "type": "p",
-   "en": "especially thrombocytopenia (Bento et al."
-  },
-  {
-   "id": "9847f62ee1",
-   "type": "p",
-   "en": "2019)."
+   "en": "• Data regarding the use of TPO analogs after transplant are scarce, but the results of eltrombopag in aplastic anemia and its favorable toxicity profile would support, in our view, a trial with this drug before considering more complex and risky options such as DLI or a second transplant. Recent studies in the transplant setting suggest that TPO receptor agonists are safe and may be useful to revert cytopenias, especially thrombocytopenia (Bento et al. 2019)."
   },
   {
    "id": "aa2ce352ba",

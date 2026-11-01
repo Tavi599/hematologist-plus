@@ -36,14 +36,9 @@
    "en": "Conventional or Alpha Beta T Cells"
   },
   {
-   "id": "76168c58c7",
+   "id": "98fd0fca20",
    "type": "p",
-   "en": "The majority of mature T cells is characterized by the expression of the αβ T-cell receptor (TCR), which endows major histocompatibility class (MHC)-restricted recognition of peptides derived from non-self-proteins. The mutually exclusive co-expression of CD8 or CD4 further conveys specificity toward MHC class I/MHC class II/peptide complexes, respectively. CD8⁺ T cells recognize intracellular peptides, mainly derived from viruses or mutated genes, mediating the cytotoxicity of infected or transformed cells, and"
-  },
-  {
-   "id": "dc9620e1e5",
-   "type": "p",
-   "en": "thence the name cytotoxic T lymphocytes (CTLs). Conversely, CD4⁺ T cells recognize extracellular pathogen-derived peptides, providing antigen-specific “help” to bystander immune cells, such as B cells in antibody production and phagocytes in the killing of engulfed pathogens. Alloreactivity occurs because of αβ TCR-mediated recognition of mismatched HLAs or of non-HLA polymorphic peptides presented in the context of matched HLAs, e.g., those derived from H-Y (male-specific histocompatibility antigen). The latter are known as minor histocompatibility antigens (mHags) and play a major role in GVHD and the GVL effect after HLA-matched transplantation."
+   "en": "The majority of mature T cells is characterized by the expression of the αβ T-cell receptor (TCR), which endows major histocompatibility class (MHC)-restricted recognition of peptides derived from non-self-proteins. The mutually exclusive co-expression of CD8 or CD4 further conveys specificity toward MHC class I/MHC class II/peptide complexes, respectively. CD8⁺ T cells recognize intracellular peptides, mainly derived from viruses or mutated genes, mediating the cytotoxicity of infected or transformed cells, and thence the name cytotoxic T lymphocytes (CTLs). Conversely, CD4⁺ T cells recognize extracellular pathogen-derived peptides, providing antigen-specific “help” to bystander immune cells, such as B cells in antibody production and phagocytes in the killing of engulfed pathogens. Alloreactivity occurs because of αβ TCR-mediated recognition of mismatched HLAs or of non-HLA polymorphic peptides presented in the context of matched HLAs, e.g., those derived from H-Y (male-specific histocompatibility antigen). The latter are known as minor histocompatibility antigens (mHags) and play a major role in GVHD and the GVL effect after HLA-matched transplantation."
   },
   {
    "id": "2e1a8f1007",
@@ -62,129 +57,19 @@
    "en": "Unconventional T cells are subsets of T cells, which often reside at mucosal sites and sense a wide range of non-polymorphic ligands, especially of bacterial origin. They include (but are not limited to) TCRγδ T cells, invariant natural killer T cells (iNKT) cells, and mucosal-associated invariant T (MAIT) cells. They have a limited TCR repertoire diversity and get activated quickly, bridging innate to adaptive immunity."
   },
   {
-   "id": "42022904ea",
-   "type": "p",
-   "en": "1. High γδ T cells after HCT are associated with"
+   "id": "611b6754bb",
+   "type": "li",
+   "en": "1. High γδ T cells after HCT are associated with a favorable outcome (Arruda et al. 2019). In TCRαβ/CD19-cell depleted haplo-HCT, γδ T cells are a dominant subset, accounting in part for a GVL effect (Airoldi et al. 2015). A subset of γδ T cells (Vγ2Vδ9) is activated by phosphoantigens and can be safely expanded in vivo by the bisphosphonate zoledronate (Merli et al. 2020). In addition, while the Vγ9Vγ2 subset usually predominates, patients reactivating CMV showed an expansion of the Vγ1 subset (Ravens et al. 2017)."
   },
   {
-   "id": "12850c1e9d",
-   "type": "p",
-   "en": "a favorable outcome (Arruda et al. 2019). In"
+   "id": "1d0e3f7b92",
+   "type": "li",
+   "en": "2. Type I invariant NKT is a distinct population of semi-invariant αβ T cells that recognize lipids presented in the context of broadly distributed CD1d. An early iNKT reconstitution has been linked to a reduced GVHD incidence (Rubio et al. 2012; Chaidos et al. 2012). A GVL potential has been reported in pediatric leukemia patients given haplo-HCT (de Lalla et al. 2011)."
   },
   {
-   "id": "df0848b12c",
-   "type": "p",
-   "en": "TCRαβ/CD19-cell depleted haplo-HCT, γδ T"
-  },
-  {
-   "id": "a556577e98",
-   "type": "p",
-   "en": "cells are a dominant subset, accounting in part"
-  },
-  {
-   "id": "eb1a57820d",
-   "type": "p",
-   "en": "for a GVL effect (Airoldi et al. 2015). A sub"
-  },
-  {
-   "id": "00643a5b7c",
-   "type": "p",
-   "en": "set of γδ T cells (Vγ2Vδ9) is activated by"
-  },
-  {
-   "id": "226be9046e",
-   "type": "p",
-   "en": "phosphoantigens and can be safely expanded"
-  },
-  {
-   "id": "1c505da15b",
-   "type": "p",
-   "en": "in vivo by the bisphosphonate zoledronate"
-  },
-  {
-   "id": "f9f0c8fd7b",
-   "type": "p",
-   "en": "(Merli et al. 2020). In addition, while the"
-  },
-  {
-   "id": "1248916a13",
-   "type": "p",
-   "en": "Vγ9Vγ2 subset usually predominates, patients"
-  },
-  {
-   "id": "291701d695",
-   "type": "p",
-   "en": "reactivating CMV showed an expansion of the"
-  },
-  {
-   "id": "1694f58e59",
-   "type": "p",
-   "en": "Vγ1 subset (Ravens et al. 2017). 2. Type I invariant NKT is a distinct population"
-  },
-  {
-   "id": "d8da287c41",
-   "type": "p",
-   "en": "of semi-invariant αβ T cells that recognize lip"
-  },
-  {
-   "id": "3060020ad5",
-   "type": "p",
-   "en": "ids presented in the context of broadly distrib"
-  },
-  {
-   "id": "7e1bc43ee1",
-   "type": "p",
-   "en": "uted CD1d. An early iNKT reconstitution has"
-  },
-  {
-   "id": "6f8aa328e4",
-   "type": "p",
-   "en": "been linked to a reduced GVHD incidence"
-  },
-  {
-   "id": "753b4730e8",
-   "type": "p",
-   "en": "(Rubio et al. 2012; Chaidos et al. 2012). A"
-  },
-  {
-   "id": "b87d63d3fc",
-   "type": "p",
-   "en": "GVL potential has been reported in pediatric"
-  },
-  {
-   "id": "36c8d4aab6",
-   "type": "p",
-   "en": "leukemia patients given haplo-HCT (de Lalla"
-  },
-  {
-   "id": "5505687130",
-   "type": "p",
-   "en": "et al. 2011). 3. MAIT cells (CD3⁺CD4−CD161high) are"
-  },
-  {
-   "id": "6647ac33aa",
-   "type": "p",
-   "en": "abundant in mucosal tissues, display a rep"
-  },
-  {
-   "id": "b3a8a711af",
-   "type": "p",
-   "en": "ertoire of limited diversity, and recognize"
-  },
-  {
-   "id": "30f7f849e7",
-   "type": "p",
-   "en": "bacterial metabolites. Their reconstitution"
-  },
-  {
-   "id": "5fbc34c6d0",
-   "type": "p",
-   "en": "positively correlated with the diversity of"
-  },
-  {
-   "id": "56c8ec4c14",
-   "type": "p",
-   "en": "the gut microbiota. Several studies have"
+   "id": "877dd54cd3",
+   "type": "li",
+   "en": "3. MAIT cells (CD3⁺CD4−CD161high) are abundant in mucosal tissues, display a repertoire of limited diversity, and recognize bacterial metabolites. Their reconstitution positively correlated with the diversity of the gut microbiota. Several studies have"
   },
   {
    "id": "3f7d7a7df0",
@@ -218,28 +103,23 @@
    "en": "Natural killer (NK) cells belong to the innate immune system and provide immediate reactivity against virally infected tumor targets. NK cytotoxicity is controlled by a balance between several germ line-encoded inhibitory and activating receptors, such as killer immunoglobulin-like receptors (KIRs) and natural cytotoxicity receptors (Vivier et al. 2011). The importance of NK cells in allo-HCT has surfaced after the demonstration of their pivotal role in preventing leukemia relapse and decreasing GVHD risk after grafting from HLA-haploidentical donors (Ruggeri et al. 2002). Since then, there has been a growing interest in using both autologous and allogeneic NK cells in patients with leukemia or other high-risk hematological tumors also in the non-transplant setting (Koehl et al. 2016). These trials have uniformly shown the safety and potential efficacy of infused NK cells. Nevertheless, they have also documented the emergence of powerful immune escape mechanisms, raising the question on how to improve NK cell-based therapies (Koehl et al. 2018). Various trials are under way in order to investigate ways to achieve better NK cell cytotoxicity and overcome the immunosuppressive tumor microenvironment, including:"
   },
   {
-   "id": "ce312daa61",
-   "type": "p",
-   "en": "1. Combination of novel checkpoint inhibitors"
+   "id": "0cb3f992cb",
+   "type": "li",
+   "en": "1. Combination of novel checkpoint inhibitors with activated NK cells"
   },
   {
-   "id": "6416f3b597",
-   "type": "p",
-   "en": "with activated NK cells 2. Bi- or tri-specific antibodies for directly bind"
+   "id": "0ab938659d",
+   "type": "li",
+   "en": "2. Bi- or tri-specific antibodies for directly binding NK cells to cancer cells"
   },
   {
-   "id": "ebd5186065",
-   "type": "p",
-   "en": "ing NK cells to cancer cells 3. Chimeric antigen receptor (CAR)-modified"
+   "id": "e2e3c241ee",
+   "type": "li",
+   "en": "3. Chimeric antigen receptor (CAR)-modified NK cells for direct targeting of cancer cells"
   },
   {
-   "id": "d9686155e5",
-   "type": "p",
-   "en": "NK cells for direct targeting of cancer cells"
-  },
-  {
-   "id": "621b9e6433",
-   "type": "p",
+   "id": "8121b3a34b",
+   "type": "li",
    "en": "The latter strategy is particularly interesting since CAR-modified NK cells are expected to retain their natural antitumor reactivity, thus exerting potentially synergistic effects. The first clinical CAR-modified NK cell studies targeting CD19 and NKG2D ligands have been initiated (ClinGov Nos NCT03056339, NCT01974479, NCT00995137, NCT03415100) with promising initial results (Liu et al. 2020) and will likely be instrumental in demonstrating proof of concept."
   },
   {
@@ -254,14 +134,9 @@
    "en": "Mesenchymal stromal cells (MSCs) are multipotent cells. In the musculoskeletal system, MSCs are responsible for generating bone cells, cartilage cells, and other cell types. Since many of these cells are derived from the embryonic mesenchyme, the name “mesenchymal stromal cells” was coined. Additional investigations revealed complex modes of action beyond the formation of individual cell types: secretory, anti-inflammatory, hematopoietic stem cell niche-supporting and immunomodulatory properties of MSCs and their ability to migrate to sites of damage and inflammation (Wilson et al. 2019). Based on these activities, graft-versus-host and autoimmune diseases, neurological conditions, cancers, or other diseases are addressed by MSC-based therapies. Many organ systems are targeted, and the potential clinical use of MSCs seems enormous. Therefore, subsequent to hematopoietic stem cells, MSCs are the second-most frequently used cell source for cell therapeutic applications. Notwithstanding their widespread use, MSCs are currently the stem cell population with the least defined identity and properties (Hoffmann et al. 2017). Despite the many promising reports, a multitude of clinical trials with MSCs have failed and there is a rising perception that MSCs might present “doubtful drugs” (Sipp et al. 2018)."
   },
   {
-   "id": "fc06d71cbe",
+   "id": "e33ade301b",
    "type": "p",
-   "en": "In the majority of studies, mononuclear cells, including the rare MSCs, are isolated from bone marrow by a density gradient or from solid tissues by enzymatic digestion and explant cultures. A small fraction of the isolated cells is able to adhere to cell culture polystyrene: a retrospective and nonspecific isolation resulting in heterogeneous cell populations. The adherent cells are expanded in two-dimensional static cultures and characterized by their morphology, proliferation (interpreted as self-renewal), a pattern of cell sur"
-  },
-  {
-   "id": "7ea9cd4ce1",
-   "type": "p",
-   "en": "face antigens, and the forced differentiation in vitro into mesenchymal cell types (taken as evidence for multipotent differentiation). These features do not withstand rigorous assessments of stem cell features."
+   "en": "In the majority of studies, mononuclear cells, including the rare MSCs, are isolated from bone marrow by a density gradient or from solid tissues by enzymatic digestion and explant cultures. A small fraction of the isolated cells is able to adhere to cell culture polystyrene: a retrospective and nonspecific isolation resulting in heterogeneous cell populations. The adherent cells are expanded in two-dimensional static cultures and characterized by their morphology, proliferation (interpreted as self-renewal), a pattern of cell surface antigens, and the forced differentiation in vitro into mesenchymal cell types (taken as evidence for multipotent differentiation). These features do not withstand rigorous assessments of stem cell features."
   },
   {
    "id": "40f4ad2569",
