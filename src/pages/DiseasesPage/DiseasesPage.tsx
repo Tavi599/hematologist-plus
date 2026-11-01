@@ -1,19 +1,17 @@
-import { Anchor, Badge, Card, Group, Stack, Tabs, Text, TextInput, Title } from '@mantine/core'
-import { useMemo, useState } from 'react'
+import { Stack, Tabs, Text, Title } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
-import { Link, useSearchParams } from 'react-router'
+import { useSearchParams } from 'react-router'
 
-import { routes } from '../../app/routes'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
 import { CnsProphylaxisSection } from '../../features/cns-prophylaxis/CnsProphylaxisSection'
 import { TAB as CNS_PROPHYLAXIS_TAB } from '../../features/cns-prophylaxis/content'
 import { FEBRILE_NEUTROPENIA_DISEASE } from '../../features/febrile-neutropenia/algorithm'
 import { FebrileNeutropeniaSection } from '../../features/febrile-neutropenia/FebrileNeutropeniaSection'
 import { IrradiatedSection } from '../../features/irradiated/IrradiatedSection'
-import { ICD10_SYSTEM_ID, primaryCode, type CatalogIndex } from '../../lib/catalog-index'
+import { ReferenceDiseases } from '../../features/reference-list/ReferenceLists'
+import type { CatalogIndex } from '../../lib/catalog-index'
 import { currentLanguage } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
-import { CLINICAL_GROUPS, type ClinicalGroup } from '../../schemas/common'
 
 /** Tabs beside the list, each opened by `?section=` so a link can land on it. */
 const SECTIONS = ['irradiated', 'febrile-neutropenia', 'cns-prophylaxis']
@@ -66,95 +64,9 @@ export function DiseasesPage() {
   )
 }
 
-/**
- * Groups of the list, in the order they are shown. A disease whose group this copy of the app
- * does not know — or which nobody has placed yet — goes under `other`, never out of the list.
- */
-const GROUP_ORDER = [...CLINICAL_GROUPS, 'other'] as const
-type GroupKey = ClinicalGroup | 'other'
-
 function DiseaseList({ catalog }: { catalog: CatalogIndex }) {
   const { t } = useTranslation()
-  const language = currentLanguage()
-  const [search, setSearch] = useState('')
-
-  const entries = useMemo(
-    () =>
-      [...catalog.diseases.values()]
-        // Febrile neutropenia has a tab of its own, which shows its courses.
-        .filter((disease) => disease.id !== FEBRILE_NEUTROPENIA_DISEASE)
-        .map((disease) => {
-          const code = primaryCode(catalog, disease.id, ICD10_SYSTEM_ID)
-          return {
-            disease,
-            name: localize(disease.name, language),
-            summary: disease.summary === null ? '' : localize(disease.summary, language),
-            code: code?.code ?? null,
-          }
-        })
-        .sort(
-          (a, b) => a.disease.sort_order - b.disease.sort_order || a.name.localeCompare(b.name),
-        ),
-    [catalog, language],
-  )
-
-  const query = search.trim().toLowerCase()
-  const found = query
-    ? entries.filter(
-        (entry) =>
-          entry.name.toLowerCase().includes(query) ||
-          (entry.code ?? '').toLowerCase().includes(query) ||
-          entry.summary.toLowerCase().includes(query),
-      )
-    : entries
-
-  if (entries.length === 0) return <Text c="dimmed">{t('diseases.empty')}</Text>
-
-  const groups = new Map<GroupKey, typeof found>()
-  for (const key of GROUP_ORDER) {
-    const list = found.filter((entry) => (entry.disease.clinical_group ?? 'other') === key)
-    if (list.length > 0) groups.set(key, list)
-  }
-
-  return (
-    <Stack>
-      <TextInput
-        label={t('diseases.search')}
-        placeholder={t('diseases.searchPlaceholder')}
-        value={search}
-        onChange={(event) => setSearch(event.currentTarget.value)}
-      />
-      {found.length === 0 && <Text c="dimmed">{t('diseases.notFound')}</Text>}
-      {[...groups.entries()].map(([key, list]) => (
-        <Card key={key} withBorder component="section">
-          <Stack gap="xs">
-            <Text fw={600} size="sm" c="dimmed">
-              {t(`diseases.group.${key}`)}
-            </Text>
-            <Stack gap="xs" component="ul" p={0} m={0} style={{ listStyle: 'none' }}>
-              {list.map((entry) => (
-                <Group key={entry.disease.id} component="li" gap="sm" wrap="nowrap" align="start">
-                  {entry.code !== null && (
-                    <Badge variant="light" miw={64}>
-                      {entry.code}
-                    </Badge>
-                  )}
-                  <div>
-                    <Anchor component={Link} to={routes.disease(entry.disease.id)}>
-                      {entry.name}
-                    </Anchor>
-                    {entry.summary !== '' && (
-                      <Text size="xs" c="dimmed">
-                        {entry.summary}
-                      </Text>
-                    )}
-                  </div>
-                </Group>
-              ))}
-            </Stack>
-          </Stack>
-        </Card>
-      ))}
-    </Stack>
-  )
+  const any = [...catalog.diseases.keys()].some((id) => id !== FEBRILE_NEUTROPENIA_DISEASE)
+  if (!any) return <Text c="dimmed">{t('diseases.empty')}</Text>
+  return <ReferenceDiseases catalog={catalog} />
 }

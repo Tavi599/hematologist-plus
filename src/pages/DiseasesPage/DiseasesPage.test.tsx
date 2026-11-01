@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { demoCatalog } from '../../lib/catalog.fixture'
 import i18n from '../../lib/i18n'
+import { resetPicks } from '../../features/reference-list/picks'
 import { renderWithProviders } from '../../test/render'
 import { DiseasesPage } from './DiseasesPage'
 
@@ -55,12 +56,41 @@ describe('DiseasesPage search', () => {
     await act(async () => {
       fireEvent.change(search, { target: { value: 'c83' } })
     })
-    expect(screen.getByText('C83.3')).toBeInTheDocument()
+    // The match is marked inside the code: «C83» highlighted, «.3» after it.
+    expect(screen.getByText('C83', { selector: 'mark' })).toBeInTheDocument()
+    expect(
+      screen.getByRole('link', { name: 'ДЕМО Дифузна В-великоклітинна лімфома' }),
+    ).toBeInTheDocument()
 
     await act(async () => {
       fireEvent.change(search, { target: { value: 'лейкоз' } })
     })
     expect(screen.getByText('Нічого не знайдено.')).toBeInTheDocument()
+  })
+
+  it('folds a group away and keeps it folded', async () => {
+    const { fireEvent } = await import('@testing-library/react')
+    window.localStorage.removeItem('hp.reference.diseases')
+    resetPicks()
+    renderWithProviders(<DiseasesPage />)
+    const heading = await screen.findByRole('button', { name: /^Лімфоми · / })
+    expect(heading).toHaveAttribute('aria-expanded', 'true')
+
+    await act(async () => {
+      fireEvent.click(heading)
+    })
+    expect(heading).toHaveAttribute('aria-expanded', 'false')
+    expect(
+      screen.queryByRole('link', { name: 'ДЕМО Дифузна В-великоклітинна лімфома' }),
+    ).not.toBeInTheDocument()
+    expect(window.localStorage.getItem('hp.reference.diseases')).toContain('lymphoma')
+
+    await act(async () => {
+      fireEvent.click(heading)
+    })
+    expect(
+      screen.getByRole('link', { name: 'ДЕМО Дифузна В-великоклітинна лімфома' }),
+    ).toBeInTheDocument()
   })
 
   it('groups by clinical group, not by the letter of the ICD-10 code', async () => {

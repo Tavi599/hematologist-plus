@@ -762,6 +762,27 @@
     "nssg": "NSSG Oxford",
     "other": "Source"
   },
+  "referenceList": {
+    "code": "ICD-10 code",
+    "name": "Name",
+    "summary": "Summary",
+    "purpose": "What for",
+    "treatment": "Treatment",
+    "all": "All",
+    "favorites": "Favourites",
+    "recent": "Recent",
+    "pin": "Add to favourites",
+    "unpin": "Remove from favourites",
+    "pathway": "Algorithm",
+    "regimens_one": "{{count}} regimen",
+    "regimens_few": "{{count}} regimens",
+    "regimens_many": "{{count}} regimens",
+    "regimens_other": "{{count}} regimens",
+    "collapse": "Collapse “{{group}}”",
+    "expand": "Expand “{{group}}”",
+    "collapseAll": "Collapse all",
+    "expandAll": "Expand all"
+  },
   "referenceName": {
     "nccn": "NCCN",
     "uptodate": "UpToDate",
@@ -1150,6 +1171,20 @@
       "chapter": "chapter",
       "section": "section",
       "abbreviation": "abbreviation"
+    }
+  },
+  "appearance": {
+    "palette": "Palette: {{current}}",
+    "paletteName": {
+      "neutral": "grey and white",
+      "blue": "clinical blue",
+      "sage": "sage",
+      "red": "red mark"
+    },
+    "layout": "List: {{current}}. Click for {{next}}",
+    "layoutName": {
+      "table": "table",
+      "tiles": "tiles"
     }
   }
 }

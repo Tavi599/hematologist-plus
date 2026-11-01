@@ -5,6 +5,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router'
 
 import { GlobalSearch } from '../../features/search/GlobalSearch'
 import { routes } from '../routes'
+import { LayoutToggle, PaletteMenu } from './AppearanceControls'
 import classes from './AppLayout.module.css'
 import { HistoryButtons } from './HistoryButtons'
 import { LanguageSwitcher } from './LanguageSwitcher'
@@ -41,9 +42,16 @@ export function AppLayout() {
                   the current one named beside it, instead of a bar cut off at the edge. */}
               <Menu opened={menuOpened} onChange={menu.toggle} position="bottom-start">
                 <Menu.Target>
-                  <Group gap={6} wrap="nowrap" hiddenFrom="sm" style={{ cursor: 'pointer' }}>
+                  <Group
+                    gap={6}
+                    wrap="nowrap"
+                    hiddenFrom="sm"
+                    miw={0}
+                    style={{ cursor: 'pointer' }}
+                  >
                     <Burger size="sm" opened={menuOpened} aria-label={t('nav.menu')} />
-                    <Text fw={600} size="sm">
+                    {/* Shortened rather than run under the buttons on the right. */}
+                    <Text fw={600} size="sm" truncate="end">
                       {navItems.find((item) => pathname.startsWith(item.to))?.label ??
                         t('app.name')}
                     </Text>
@@ -70,6 +78,8 @@ export function AppLayout() {
             <Group gap="xs" wrap="nowrap">
               <GlobalSearch />
               <SessionBadge />
+              <LayoutToggle />
+              <PaletteMenu />
               <ThemeToggle />
               <LanguageSwitcher />
             </Group>

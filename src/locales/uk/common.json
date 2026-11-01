@@ -762,6 +762,27 @@
     "nssg": "NSSG Oxford",
     "other": "Джерело"
   },
+  "referenceList": {
+    "code": "Код МКХ-10",
+    "name": "Назва",
+    "summary": "Опис",
+    "purpose": "Для чого",
+    "treatment": "Лікування",
+    "all": "Усі",
+    "favorites": "Обране",
+    "recent": "Нещодавні",
+    "pin": "Додати в обране",
+    "unpin": "Прибрати з обраного",
+    "pathway": "Алгоритм",
+    "regimens_one": "{{count}} схема",
+    "regimens_few": "{{count}} схеми",
+    "regimens_many": "{{count}} схем",
+    "regimens_other": "{{count}} схеми",
+    "collapse": "Згорнути «{{group}}»",
+    "expand": "Розгорнути «{{group}}»",
+    "collapseAll": "Згорнути все",
+    "expandAll": "Розгорнути все"
+  },
   "referenceName": {
     "nccn": "NCCN",
     "uptodate": "UpToDate",
@@ -1150,6 +1171,20 @@
       "chapter": "розділ",
       "section": "підрозділ",
       "abbreviation": "скорочення"
+    }
+  },
+  "appearance": {
+    "palette": "Палітра: {{current}}",
+    "paletteName": {
+      "neutral": "сіро-біла",
+      "blue": "клінічна синя",
+      "sage": "шавлія",
+      "red": "червона марка"
+    },
+    "layout": "Список: {{current}}. Натисніть — {{next}}",
+    "layoutName": {
+      "table": "таблиця",
+      "tiles": "плитки"
     }
   }
 }

@@ -1,5 +1,6 @@
+/* A colour palette (src/app/palettes.css) may give the brand and the current section its accent. */
 .brand {
-  color: light-dark(var(--mantine-color-red-8), var(--mantine-color-red-5));
+  color: var(--hp-brand, light-dark(var(--mantine-color-red-8), var(--mantine-color-red-5)));
 }
 
 .link {
@@ -16,8 +17,11 @@
   }
 
   &:global(.active) {
-    background-color: light-dark(var(--mantine-color-red-0), var(--mantine-color-red-light));
-    color: light-dark(var(--mantine-color-red-8), var(--mantine-color-red-4));
+    background-color: var(
+      --hp-nav-active-bg,
+      light-dark(var(--mantine-color-red-0), var(--mantine-color-red-light))
+    );
+    color: var(--hp-nav-active, light-dark(var(--mantine-color-red-8), var(--mantine-color-red-4)));
   }
 }
 

@@ -1,0 +1,394 @@
+/*
+ * One file for both layouts, so they can be compared token by token. Every colour is a Mantine
+ * variable, so the lists follow the light/dark theme and the palette chosen in the header
+ * (src/app/palettes.css) without a colour of their own.
+ */
+
+.tableLayout,
+.tilesLayout {
+  --line: var(--mantine-color-default-border);
+  --ink: var(--mantine-color-text);
+  --quiet: var(--mantine-color-dimmed);
+  --surface: var(--mantine-color-default);
+  --accent: var(--mantine-color-anchor);
+  --accent-fill: var(--mantine-primary-color-filled);
+  --accent-ink: var(--mantine-primary-color-contrast);
+  --accent-soft: var(--mantine-primary-color-light);
+}
+
+/* ------------------------------------------------------------------ shared pieces */
+
+.tableLayout mark,
+.tilesLayout mark {
+  background: var(--mantine-primary-color-light-hover);
+  color: inherit;
+  border-radius: 2px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Filters read as words on the page, not as buttons: no frame, a tint only where pointed or chosen. */
+.chip {
+  font: inherit;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  color: var(--quiet);
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.chip:hover {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.chipCount {
+  opacity: 0.75;
+  font-variant-numeric: tabular-nums;
+}
+
+.foldAll {
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: 4px 0;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.foldAll:hover {
+  text-decoration: underline;
+}
+
+.sectionToggle {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-align: left;
+}
+
+.sectionToggle:hover {
+  color: var(--accent);
+}
+
+.chevron {
+  display: inline-block;
+  width: 10px;
+  font-size: 11px;
+}
+
+/*
+ * A star that is not set stays out of the way: faint, and full only under the pointer or when the
+ * keyboard reaches it. A set one carries the accent.
+ */
+.star {
+  font: inherit;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: 0 2px;
+  line-height: 1;
+  color: var(--quiet);
+  opacity: 0.35;
+  transition:
+    opacity 120ms ease,
+    color 120ms ease;
+}
+
+.star:hover,
+.star:focus-visible {
+  opacity: 1;
+}
+
+.star[aria-pressed='true'] {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: var(--quiet);
+  white-space: nowrap;
+}
+
+.badgeLink {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 4px;
+  padding: 1px 6px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.badgeLink:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------------ table */
+
+.tableLayout {
+  font-size: 13px;
+}
+
+/* On a narrow screen the table scrolls sideways instead of squeezing the names. */
+.tableWrap {
+  overflow-x: auto;
+}
+
+.tableLayout table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+
+/* A phone keeps code, name and treatment; the summary would make every row a paragraph. */
+@media (max-width: 48em) {
+  .tableLayout table {
+    min-width: 0;
+  }
+
+  .tableLayout .summary {
+    display: none;
+  }
+}
+
+.tableLayout th,
+.tableLayout td {
+  border-bottom: 1px solid var(--line);
+  padding: 0 8px;
+  height: 30px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tableLayout th {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--quiet);
+}
+
+.tableLayout .starCol {
+  width: 28px;
+  padding: 0 0 0 4px;
+}
+
+.tableLayout .star {
+  font-size: 13px;
+}
+
+.tableLayout tbody tr:hover .star {
+  opacity: 0.8;
+}
+
+.tableLayout .groupRow td {
+  height: 26px;
+  /* The tint over the page ground, opaque, so rows do not show through the sticky heading. */
+  background: linear-gradient(var(--accent-soft), var(--accent-soft)) var(--mantine-color-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--quiet);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tableLayout .pinned td {
+  color: var(--accent);
+}
+
+.tableLayout .chip {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.tableLayout .code {
+  font-family: ui-monospace, 'Cascadia Mono', 'Segoe UI Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--quiet);
+}
+
+.tableLayout .rowLink {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.tableLayout .rowLink:hover {
+  text-decoration: underline;
+}
+
+.tableLayout .rowButton {
+  font: inherit;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: 0;
+  text-align: left;
+}
+
+.tableLayout .openRow td {
+  height: auto;
+  padding: 8px 8px 12px 36px;
+}
+
+.tableLayout tbody tr:not(.groupRow, .openRow):hover td {
+  background: var(--accent-soft);
+}
+
+.tableLayout .summary {
+  color: var(--quiet);
+  font-size: 12px;
+}
+
+/* ------------------------------------------------------------------ tiles */
+
+.tilesLayout {
+  font-size: 15px;
+}
+
+.tilesLayout .chip {
+  font-size: 14px;
+  min-height: 36px;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.tilesLayout .tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 12px;
+}
+
+.tilesLayout .tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 72px;
+  padding: 10px 14px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink);
+  background: var(--surface);
+  scroll-margin-top: 60px;
+}
+
+.tilesLayout .tile:hover {
+  border-color: var(--accent-fill);
+}
+
+/* The tile's own link covers the whole tile; the star and badges sit above it. */
+.tilesLayout .stretched::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.tilesLayout .tileTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20px;
+}
+
+.tilesLayout .star,
+.tilesLayout .badges {
+  position: relative;
+  z-index: 1;
+}
+
+.tilesLayout .tile:hover .star {
+  opacity: 0.8;
+}
+
+.tilesLayout .star {
+  font-size: 18px;
+  margin: -6px -6px -6px 0;
+  padding: 6px;
+}
+
+.tilesLayout .tileCode {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--quiet);
+}
+
+.tilesLayout .tileName {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.tilesLayout .tileButton {
+  font-family: inherit;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: 0;
+  text-align: left;
+}
+
+.tilesLayout .tileSummary {
+  font-size: 13px;
+  color: var(--quiet);
+}
+
+.tilesLayout .groupTitle {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--quiet);
+  margin: 0;
+}
+
+.tilesLayout .pinned {
+  color: var(--accent);
+}
+
+.tilesLayout .openCard {
+  border-color: var(--accent-fill);
+}
+
+.tableLayout tr[id] {
+  scroll-margin-top: 60px;
+}
