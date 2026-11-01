@@ -25,8 +25,10 @@ import {
   FOOT_Y,
   HEAD_Y,
   inFrame,
+  looksLikeAffiliation,
   runText,
   smallZones,
+  splitZoneColumns,
   splitBySize,
   tableRows,
   tidy,
@@ -306,7 +308,10 @@ function run(file: string, out: string): void {
       const take = (zone: Zone): void => {
         for (const g of zone.groups) for (const r of g.runs) consumed.add(r)
       }
-      for (const zone of smallZones(small)) {
+      const zones = smallZones(small).flatMap((zone) =>
+        isOpen && zone.bottom < 200 ? splitZoneColumns(zone) : [zone],
+      )
+      for (const zone of zones) {
         const block = zoneBlock(zone)
         if (/^Open Access\s+This chapter is licensed/.test(block.text)) {
           licence = block.text
@@ -325,7 +330,13 @@ function run(file: string, out: string): void {
         }
         if (inRefs) continue // left for the reference parser below
         take(zone)
-        if (isOpen && block.type === 'aside' && zone.bottom < 200) affiliations.push(block.text)
+        if (
+          isOpen &&
+          block.type === 'aside' &&
+          zone.bottom < 200 &&
+          looksLikeAffiliation(block.text)
+        )
+          affiliations.push(block.text)
         else if (block.type === 'aside' && !asideIsProse(block.text)) dropped++
         else if (block.text.length > 2) blocks.push(block)
       }

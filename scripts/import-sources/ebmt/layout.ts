@@ -254,6 +254,40 @@ export function smallZones(runs: TextRun[]): Zone[] {
   return zones
 }
 
+/**
+ * The bottom of a chapter's opening page carries the author affiliations in the
+ * left column, and whatever the right column holds there belongs to the text.
+ * Their lines interleave, so a zone that spans both columns has to be cut down
+ * the column split before either side can be read.
+ */
+export function splitZoneColumns(zone: Zone): Zone[] {
+  const parts: Zone[] = []
+  for (const side of [0, 1] as const) {
+    const groups: Baseline[] = []
+    for (const g of zone.groups) {
+      const runs = g.runs.filter((r) => (r.x < COL_SPLIT ? side === 0 : side === 1))
+      if (runs.length) groups.push({ y: g.y, runs })
+    }
+    const first = groups[0]
+    const last = groups[groups.length - 1]
+    if (first && last) parts.push({ top: first.y, bottom: last.y, groups })
+  }
+  return parts.length === 2 ? parts : [zone]
+}
+
+/**
+ * Which side of such a split is the affiliation note. An affiliation either
+ * carries the corresponding author's e-mail or opens with the author's
+ * initials; a boxed note opens with its own text.
+ */
+export function looksLikeAffiliation(text: string): boolean {
+  if (/e-mail:/.test(text)) return true
+  // "M. Mikulska (*)", "R. de la Cámara (*)", "N. C. Gorin".
+  return /^\p{Lu}\.(?:\s*\p{Lu}\.)*\s+(?:\p{Lu}|de\s|van\s|von\s|di\s|del\s|la\s|le\s)/u.test(
+    text.trim(),
+  )
+}
+
 const clusterX = (xs: number[]): number[] => {
   const out: number[] = []
   for (const x of [...xs].sort((a, b) => a - b)) {
