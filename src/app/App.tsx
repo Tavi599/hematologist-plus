@@ -1,7 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router'
 
 import { CalculatorPage } from '../pages/CalculatorPage/CalculatorPage'
-import { DesignLabPage } from '../pages/DesignLabPage/DesignLabPage'
 import { DiseaseDetailPage } from '../pages/DiseaseDetailPage/DiseaseDetailPage'
 import { PathwayPage } from '../pages/PathwayPage/PathwayPage'
 import { DiseasesPage } from '../pages/DiseasesPage/DiseasesPage'
@@ -30,7 +29,6 @@ export function App() {
         <Route path={`${routes.handbook}/:number`} element={<HandbookChapterPage />} />
         <Route path={routes.sources} element={<SourcesPage />} />
         <Route path={routes.proposals} element={<ProposalsPage />} />
-        <Route path={routes.designLab} element={<DesignLabPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

@@ -23,6 +23,10 @@
               ? 'dark'
               : 'light'
         document.documentElement.setAttribute('data-mantine-color-scheme', scheme)
+        // The colour palette (src/lib/appearance.ts); grey and white is the absence of one.
+        var palette = localStorage.getItem('hp.palette')
+        if (palette === 'blue' || palette === 'sage' || palette === 'red')
+          document.documentElement.setAttribute('data-palette', palette)
       } catch (e) {}
     </script>
   </head>

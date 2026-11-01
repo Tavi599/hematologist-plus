@@ -762,6 +762,27 @@
     "nssg": "NSSG Oxford",
     "other": "Source"
   },
+  "referenceList": {
+    "code": "ICD-10 code",
+    "name": "Name",
+    "summary": "Summary",
+    "purpose": "What for",
+    "treatment": "Treatment",
+    "all": "All",
+    "favorites": "Favourites",
+    "recent": "Recent",
+    "pin": "Add to favourites",
+    "unpin": "Remove from favourites",
+    "pathway": "Algorithm",
+    "regimens_one": "{{count}} regimen",
+    "regimens_few": "{{count}} regimens",
+    "regimens_many": "{{count}} regimens",
+    "regimens_other": "{{count}} regimens",
+    "collapse": "Collapse “{{group}}”",
+    "expand": "Expand “{{group}}”",
+    "collapseAll": "Collapse all",
+    "expandAll": "Expand all"
+  },
   "referenceName": {
     "nccn": "NCCN",
     "uptodate": "UpToDate",
@@ -1152,33 +1173,18 @@
       "abbreviation": "abbreviation"
     }
   },
-  "designLab": {
-    "title": "Design directions",
-    "scratchTitle": "A scratch page, not part of the app",
-    "scratch": "This page exists to choose a design direction for the reference sections before any of it is applied for real. The data is live and the links go to the ordinary pages. It is in no menu and opens by its address only: #/design.",
-    "direction": "Direction",
-    "section": "Section",
-    "code": "ICD-10 code",
-    "name": "Name",
-    "summary": "Summary",
-    "purpose": "Purpose",
-    "open": "open",
-    "close": "close",
-    "sectionName": {
-      "diseases": "Diseases",
-      "scores": "Scores"
+  "appearance": {
+    "palette": "Palette: {{current}}",
+    "paletteName": {
+      "neutral": "grey and white",
+      "blue": "clinical blue",
+      "sage": "sage",
+      "red": "red mark"
     },
-    "dense": {
-      "name": "A · Dense",
-      "idea": "A table instead of cards: 30 px rows, the ICD code in its own monospaced column, sticky group headings. More rows per screen, at the price of looking like a spreadsheet."
-    },
-    "paper": {
-      "name": "B · Paper",
-      "idea": "A serif face, rules instead of borders, codes in the margin, no badges and no cards. Reads like a reference book, at the price of having no colour left to carry state."
-    },
-    "roomy": {
-      "name": "C · Tiles",
-      "idea": "Phone first: the whole tile is the touch target, the search box is large, a score opens as a card. Good in the ward, at the price of a third of the rows per screen."
+    "layout": "List: {{current}}. Click for {{next}}",
+    "layoutName": {
+      "table": "table",
+      "tiles": "tiles"
     }
   }
 }

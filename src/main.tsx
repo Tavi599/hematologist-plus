@@ -1,4 +1,5 @@
 import '@mantine/core/styles.css'
+import './app/palettes.css'
 import './lib/i18n'
 
 import { StrictMode } from 'react'

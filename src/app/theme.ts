@@ -8,7 +8,51 @@ import {
   Table,
   Textarea,
   TextInput,
+  type MantineColorsTuple,
 } from '@mantine/core'
+
+import type { Palette } from '../lib/appearance'
+
+/**
+ * Accent scales of the colour palettes (src/app/palettes.css). Shade 8 is the one filled
+ * controls use, and carries white text at more than 4.5:1.
+ */
+const hpBlue: MantineColorsTuple = [
+  '#e8f1fb',
+  '#d0e1f4',
+  '#a4c4e9',
+  '#76a6dd',
+  '#4f8cd2',
+  '#3a7cc9',
+  '#1f5fa8',
+  '#1b5a9c',
+  '#164b85',
+  '#123f70',
+]
+
+const hpSage: MantineColorsTuple = [
+  '#e9f3ef',
+  '#d3e6de',
+  '#a8cfbf',
+  '#7ab59e',
+  '#559f84',
+  '#3f9074',
+  '#2b6a5c',
+  '#285f53',
+  '#245a4e',
+  '#1b453b',
+]
+
+/**
+ * The accent of each palette. Only what takes the default colour follows it: a control given
+ * `color="red"` explicitly — a warning — stays red in every palette.
+ */
+export const PALETTE_PRIMARY: Record<Palette, string> = {
+  neutral: 'red',
+  blue: 'hpBlue',
+  sage: 'hpSage',
+  red: 'red',
+}
 
 /**
  * A compact scale: a physician works with many fields on one screen, so the controls, tables and
@@ -17,6 +61,7 @@ import {
  */
 export const theme = createTheme({
   primaryColor: 'red',
+  colors: { hpBlue, hpSage },
   primaryShade: 8,
   defaultRadius: 'md',
   fontFamily:

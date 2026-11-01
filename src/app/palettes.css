@@ -1,0 +1,106 @@
+/*
+ * Colour palettes over Mantine's own colours, chosen in the header (src/lib/appearance.ts) and
+ * set as `data-palette` on the root element. Grey and white is no attribute at all: the
+ * application as it always was.
+ *
+ * A palette replaces the page ground, text and borders here, and in the dark theme the whole dark
+ * scale, so cards and inputs take the tint too. Its accent is the theme's primary colour
+ * (`PALETTE_PRIMARY` in theme.ts); the brand and the current section in the header follow it
+ * through `--hp-*`, read by AppLayout.module.css. Explicit `red` stays red in every palette: a
+ * warning is never recoloured. Text keeps a contrast of at least 4.5:1.
+ *
+ * `html:root` outweighs the variables Mantine injects at runtime on `:root`; only the screen is
+ * coloured, so printing a page from the browser stays black on white.
+ */
+
+@media screen {
+  /* ---------------------------------------------------------------- clinical blue */
+
+  html:root[data-palette='blue'] {
+    --hp-brand: var(--mantine-primary-color-light-color);
+    --hp-nav-active-bg: var(--mantine-primary-color-light);
+    --hp-nav-active: var(--mantine-primary-color-light-color);
+    --mantine-color-body: #e9f0f7;
+    --mantine-color-text: #12202e;
+    --mantine-color-dimmed: #44566a;
+    --mantine-color-default-border: #c3d2e3;
+  }
+
+  html:root[data-palette='blue'][data-mantine-color-scheme='dark'] {
+    /* Mantine would take the palest shade for accent text in the dark; a mid shade keeps the hue. */
+    --mantine-color-hpBlue-light-color: #76a6dd;
+    --mantine-primary-color-light-color: #76a6dd;
+    --mantine-color-dark-0: #c8d3df;
+    --mantine-color-dark-1: #b3c0ce;
+    --mantine-color-dark-2: #8496aa;
+    --mantine-color-dark-3: #66788c;
+    --mantine-color-dark-4: #33465b;
+    --mantine-color-dark-5: #2a3b4e;
+    --mantine-color-dark-6: #1b2838;
+    --mantine-color-dark-7: #111a25;
+    --mantine-color-dark-8: #0d151e;
+    --mantine-color-dark-9: #080e15;
+    --mantine-color-body: var(--mantine-color-dark-7);
+    --mantine-color-text: var(--mantine-color-dark-0);
+    --mantine-color-dimmed: var(--mantine-color-dark-2);
+    --mantine-color-default-border: var(--mantine-color-dark-4);
+  }
+
+  /* ---------------------------------------------------------------- sage */
+
+  html:root[data-palette='sage'] {
+    --hp-brand: var(--mantine-primary-color-light-color);
+    --hp-nav-active-bg: var(--mantine-primary-color-light);
+    --hp-nav-active: var(--mantine-primary-color-light-color);
+    --mantine-color-body: #ecece2;
+    --mantine-color-text: #1a221e;
+    --mantine-color-dimmed: #4d5a52;
+    --mantine-color-default-border: #cbd0bd;
+  }
+
+  html:root[data-palette='sage'][data-mantine-color-scheme='dark'] {
+    /* Mantine would take the palest shade for accent text in the dark; a mid shade keeps the hue. */
+    --mantine-color-hpSage-light-color: #7ab59e;
+    --mantine-primary-color-light-color: #7ab59e;
+    --mantine-color-dark-0: #cdd6d0;
+    --mantine-color-dark-1: #b8c3bc;
+    --mantine-color-dark-2: #899790;
+    --mantine-color-dark-3: #6b796f;
+    --mantine-color-dark-4: #3a4840;
+    --mantine-color-dark-5: #313e37;
+    --mantine-color-dark-6: #1f2924;
+    --mantine-color-dark-7: #151c18;
+    --mantine-color-dark-8: #111713;
+    --mantine-color-dark-9: #0a0e0c;
+    --mantine-color-body: var(--mantine-color-dark-7);
+    --mantine-color-text: var(--mantine-color-dark-0);
+    --mantine-color-dimmed: var(--mantine-color-dark-2);
+    --mantine-color-default-border: var(--mantine-color-dark-4);
+  }
+
+  /* ---------------------------------------------------------------- red mark: the ground warms */
+
+  html:root[data-palette='red'] {
+    --mantine-color-body: #f7eceb;
+    --mantine-color-text: #231a1a;
+    --mantine-color-dimmed: #664f4e;
+    --mantine-color-default-border: #e3c8c5;
+  }
+
+  html:root[data-palette='red'][data-mantine-color-scheme='dark'] {
+    --mantine-color-dark-0: #dccfce;
+    --mantine-color-dark-1: #c9b9b8;
+    --mantine-color-dark-2: #9e8988;
+    --mantine-color-dark-3: #7d6968;
+    --mantine-color-dark-4: #4d3a39;
+    --mantine-color-dark-5: #433231;
+    --mantine-color-dark-6: #2d1f20;
+    --mantine-color-dark-7: #1f1516;
+    --mantine-color-dark-8: #191112;
+    --mantine-color-dark-9: #100a0b;
+    --mantine-color-body: var(--mantine-color-dark-7);
+    --mantine-color-text: var(--mantine-color-dark-0);
+    --mantine-color-dimmed: var(--mantine-color-dark-2);
+    --mantine-color-default-border: var(--mantine-color-dark-4);
+  }
+}
