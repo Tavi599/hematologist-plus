@@ -48,6 +48,13 @@ import {
  */
 const PARA_INDENT = [11, 14] as const
 
+/**
+ * The paragraph indent itself, to the point: an indent of exactly this much is
+ * no evidence of anything, because a paragraph and a wrapped list line can both
+ * sit here, while 13, 17 and 24 pt belong to a list or a box alone.
+ */
+const PARA_EXACT = 12
+
 const LIST_MARKER = /^[•▪]\s*|^[–-]\s|^\(?[a-z0-9]{1,2}[).]\s/
 
 const args = process.argv.slice(2)
@@ -159,6 +166,8 @@ function run(file: string, out: string): void {
     let inRefs = false
 
     let buf: DraftBlock | null = null
+    /** Offset of the wrapped lines of the open list item, once one is seen. */
+    let hang: number | null = null
     let prev: {
       col: 0 | 1
       page: number
@@ -169,6 +178,7 @@ function run(file: string, out: string): void {
     } | null = null
     let pendingHeading: DraftBlock | null = null
     const flush = (): void => {
+      hang = null
       if (!buf) return
       const text = tidy(buf.text)
       if (text.length > 1) blocks.push({ ...buf, text })
@@ -261,6 +271,7 @@ function run(file: string, out: string): void {
           (/^[•▪–-]/.test(marked[0]) ||
             inItem ||
             prev === null ||
+            prev.bold ||
             /[.:;!?]$/.test(prev.text.trim()))
         let kind: BlockType = bullet ? 'li' : 'p'
         // The book starts a paragraph with a one-em indent; anything set
@@ -279,7 +290,19 @@ function run(file: string, out: string): void {
         // next column or on the next page, and there an indent is what tells
         // the two apart. Read the other way round, every item that ran to two
         // lines became one block per line.
-        if (inItem && !bullet && (sameFlow || !indented)) {
+        // Across a column or a page break `sameFlow` is false, and the item's
+        // own hanging indent is read as a paragraph indent: that cascaded, and
+        // the rest of the item came out as one block per line. The indent the
+        // item's wrapped lines already use settles it.
+        // An indent of exactly the paragraph indent proves nothing either way,
+        // so there the line itself has to say it: a paragraph opens with a
+        // capital, a line that wraps carries on mid-sentence.
+        const runsOn = !/^\p{Lu}/u.test(line.text.trim())
+        const hangs =
+          hang !== null &&
+          Math.abs(offset - hang) < 0.6 &&
+          (Math.abs(hang - PARA_EXACT) > 0.6 || runsOn)
+        if (inItem && !bullet && (sameFlow || !indented || hangs)) {
           kind = 'li'
           indented = false
         }
@@ -291,6 +314,7 @@ function run(file: string, out: string): void {
         } else {
           const join = prev && (prev.soft || /[-/]$/.test(prev.text)) ? '' : ' '
           buf.text += join + line.text.trim()
+          if (buf.type === 'li' && hang === null && offset > 2) hang = offset
         }
         prev = { ...line, page: p }
       }
