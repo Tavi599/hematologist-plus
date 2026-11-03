@@ -14,6 +14,7 @@ const index = (): HandbookIndex => ({
     chapters: { 13: 'Кондиціонування' },
     abbreviations: { GVHD: 'Реакція «трансплантат проти господаря»' },
   },
+  progress: {},
 })
 
 describe('searchHandbook', () => {

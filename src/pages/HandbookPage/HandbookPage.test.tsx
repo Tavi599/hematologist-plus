@@ -11,7 +11,7 @@ import { renderWithProviders } from '../../test/render'
 
 import { HandbookPage } from './HandbookPage'
 
-function serveIndex() {
+function serveIndex(progress?: unknown) {
   const bodies: Record<string, unknown> = {
     'book.json': demoBook(),
     'parts.json': demoParts(),
@@ -22,6 +22,7 @@ function serveIndex() {
       chapters: { 13: 'Кондиціонування' },
       abbreviations: { GVHD: 'Реакція «трансплантат проти господаря»' },
     },
+    ...(progress ? { 'progress.json': progress } : {}),
   }
   vi.stubGlobal(
     'fetch',
@@ -48,6 +49,30 @@ describe('HandbookPage', () => {
     // Chapter 1 is not translated: its English title stands, with a mark.
     expect(screen.getByText('HCT: Historical Perspective')).toBeInTheDocument()
     expect(screen.getAllByText('без перекладу').length).toBe(1)
+  })
+
+  it('marks a chapter as ready, partly done or untouched', async () => {
+    serveIndex({
+      '1': { blocks: 47, translated: 12 },
+      '13': { blocks: 4, translated: 4 },
+    })
+    renderWithProviders(<HandbookPage />)
+
+    expect(await screen.findByText('переклад готовий')).toBeInTheDocument()
+    expect(screen.getByText('переклад 26%')).toBeInTheDocument()
+    expect(screen.queryByText('без перекладу')).not.toBeInTheDocument()
+    // One of two chapters finished, four of fifty-one blocks.
+    expect(screen.getByText(/повністю у 1 розділах з 2/)).toBeInTheDocument()
+    expect(screen.getByText('перекладено 1 з 1')).toBeInTheDocument()
+  })
+
+  it('marks a chapter whose translation has not been started', async () => {
+    serveIndex({ '1': { blocks: 47, translated: 0 }, '13': { blocks: 4, translated: 0 } })
+    renderWithProviders(<HandbookPage />)
+
+    expect(await screen.findByText('Вступ')).toBeInTheDocument()
+    expect(screen.getAllByText('без перекладу').length).toBe(2)
+    expect(screen.queryByText('переклад готовий')).not.toBeInTheDocument()
   })
 
   it('names the book, its licence and what the import changed', async () => {

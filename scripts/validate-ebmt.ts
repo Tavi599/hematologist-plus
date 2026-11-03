@@ -11,8 +11,14 @@
  * This is what finds those: an orphaned translation means a paragraph was
  * re-extracted differently and its Ukrainian has to be moved to the new id,
  * never silently dropped.
+ *
+ * It also writes the one derived file the site itself needs: `progress.json`,
+ * how many blocks of each chapter are translated. The chapter list would
+ * otherwise have to fetch all 94 translation files to put a mark next to a
+ * chapter. It is written here, not by the import, because it depends on the
+ * hand-written files and this is what every translation session runs last.
  */
-import { existsSync, readdirSync, readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 
 const dir = process.argv.includes('--dir')
   ? (process.argv[process.argv.indexOf('--dir') + 1] ?? 'public/ebmt')
@@ -52,6 +58,7 @@ function main(): void {
   let orphans = 0
   let tablesWithoutGrid = 0
   const chaptersStarted: number[] = []
+  const progress: Record<string, { blocks: number; translated: number }> = {}
 
   for (const file of chapterFiles) {
     const chapter = read(file) as {
@@ -69,6 +76,9 @@ function main(): void {
     blocks += chapter.blocks.length
     tablesWithoutGrid += chapter.blocks.filter((b) => b.type === 'table' && !b.rows_en).length
 
+    const counts = { blocks: chapter.blocks.length, translated: 0 }
+    progress[String(chapter.number)] = counts
+
     const ukName = file.replace('.json', '.uk.json')
     if (!files.includes(ukName)) continue
     chaptersStarted.push(chapter.number)
@@ -76,9 +86,13 @@ function main(): void {
       blocks?: Record<string, string>
       rows?: Record<string, string[][]>
     }
-    for (const id of Object.keys(uk.blocks ?? {})) {
-      if (ids.has(id)) translated++
-      else {
+    for (const [id, text] of Object.entries(uk.blocks ?? {})) {
+      if (ids.has(id)) {
+        translated++
+        // The app counts a block as translated when its text is not blank; the
+        // mark in the chapter list has to agree with the bar inside a chapter.
+        if (text.trim()) counts.translated++
+      } else {
         orphans++
         problems.push({
           file: ukName,
@@ -112,6 +126,8 @@ function main(): void {
         notes.push(`front.uk.json: abbreviation "${key}" is not in the book's own list`)
   }
 
+  writeProgress(progress)
+
   console.log(
     `${chapterFiles.length} chapters, ${blocks} blocks, ${translated} translated ` +
       `(${blocks ? Math.round((translated / blocks) * 100) : 0}%), ` +
@@ -131,4 +147,18 @@ function main(): void {
     console.log('\nno problems')
   }
   if (orphans) console.error(`${orphans} orphaned translation(s) — move them to the new block ids`)
+}
+
+/**
+ * Writes `progress.json` — chapter number → how many of its blocks are
+ * translated — but only when it would change, so a validation run does not
+ * touch the file on every invocation.
+ */
+function writeProgress(progress: Record<string, { blocks: number; translated: number }>): void {
+  const path = `${dir}/progress.json`
+  const body = JSON.stringify(progress, null, 2) + '\n'
+  const current = existsSync(path) ? readFileSync(path, 'utf8') : ''
+  if (body === current) return
+  writeFileSync(path, body)
+  console.log(`wrote ${path}`)
 }

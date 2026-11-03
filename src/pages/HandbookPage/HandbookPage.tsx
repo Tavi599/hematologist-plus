@@ -19,7 +19,7 @@ import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router'
 
 import { routes } from '../../app/routes'
-import type { HandbookIndex } from '../../features/handbook/handbook'
+import { chapterProgress, type HandbookIndex } from '../../features/handbook/handbook'
 import { searchHandbook } from '../../features/handbook/handbook-search'
 import { useHandbookIndex } from '../../features/handbook/use-handbook'
 import { currentLanguage } from '../../lib/i18n'
@@ -61,6 +61,20 @@ function HandbookIndexView({ index }: { index: HandbookIndex }) {
   const translatedChapters = index.chapters.filter(
     (c) => index.front.chapters[String(c.number)],
   ).length
+  // The body of the book is translated chapter by chapter, so the list says
+  // both how many chapters are finished and how much of the whole book that is.
+  const body = index.chapters.reduce(
+    (acc, c) => {
+      const progress = chapterProgress(index, c.number)
+      if (!progress) return acc
+      return {
+        blocks: acc.blocks + progress.blocks,
+        translated: acc.translated + progress.translated,
+        done: acc.done + (progress.translated >= progress.blocks ? 1 : 0),
+      }
+    },
+    { blocks: 0, translated: 0, done: 0 },
+  )
 
   return (
     <Stack>
@@ -153,15 +167,28 @@ function HandbookIndexView({ index }: { index: HandbookIndex }) {
         </Tabs.List>
 
         <Tabs.Panel value="parts" pt="sm">
-          <Text size="xs" c="dimmed" mb="xs">
+          <Text size="xs" c="dimmed" mb={2}>
             {t('handbook.progress', {
               done: translatedChapters,
               total: index.chapters.length,
             })}
           </Text>
+          {body.blocks ? (
+            <Text size="xs" c="dimmed" mb="xs">
+              {t('handbook.bodyProgress', {
+                chapters: body.done,
+                total: index.chapters.length,
+                percent: Math.round((body.translated / body.blocks) * 100),
+              })}
+            </Text>
+          ) : null}
           <Accordion variant="separated" multiple defaultValue={index.parts.map((p) => p.roman)}>
             {index.parts.map((part) => {
               const chapters = index.chapters.filter((c) => c.part === part.roman)
+              const partDone = chapters.filter((c) => {
+                const progress = chapterProgress(index, c.number)
+                return progress && progress.translated >= progress.blocks
+              }).length
               return (
                 <Accordion.Item key={part.roman} value={part.roman}>
                   <Accordion.Control>
@@ -173,6 +200,14 @@ function HandbookIndexView({ index }: { index: HandbookIndex }) {
                       <Text size="xs" c="dimmed">
                         {t('handbook.chapterCount', { count: chapters.length })}
                       </Text>
+                      {partDone ? (
+                        <Badge size="xs" variant="light" color="teal" tt="none">
+                          {t('handbook.partTranslated', {
+                            done: partDone,
+                            total: chapters.length,
+                          })}
+                        </Badge>
+                      ) : null}
                     </Group>
                   </Accordion.Control>
                   <Accordion.Panel>
@@ -189,11 +224,7 @@ function HandbookIndexView({ index }: { index: HandbookIndex }) {
                           >
                             {titleOf(chapter.number, chapter.title_en)}
                           </Anchor>
-                          {index.front.chapters[String(chapter.number)] ? null : (
-                            <Badge size="xs" variant="light" color="gray" tt="none">
-                              {t('handbook.untranslated')}
-                            </Badge>
-                          )}
+                          <ChapterMark index={index} number={chapter.number} />
                         </Group>
                       ))}
                     </Stack>
@@ -209,6 +240,48 @@ function HandbookIndexView({ index }: { index: HandbookIndex }) {
         </Tabs.Panel>
       </Tabs>
     </Stack>
+  )
+}
+
+/**
+ * The small mark next to a chapter: finished, partly translated, or untouched.
+ * Without `progress.json` — an installed copy older than it — the mark falls
+ * back to whether the chapter's title is translated, which is all the older
+ * code knew, instead of claiming a finished chapter is untranslated.
+ */
+function ChapterMark({ index, number }: { index: HandbookIndex; number: number }) {
+  const { t } = useTranslation()
+  const progress = chapterProgress(index, number)
+
+  if (!progress) {
+    if (index.front.chapters[String(number)]) return null
+    return (
+      <Badge size="xs" variant="light" color="gray" tt="none">
+        {t('handbook.untranslated')}
+      </Badge>
+    )
+  }
+  if (progress.translated === 0) {
+    return (
+      <Badge size="xs" variant="light" color="gray" tt="none">
+        {t('handbook.untranslated')}
+      </Badge>
+    )
+  }
+  if (progress.translated >= progress.blocks) {
+    return (
+      <Badge size="xs" variant="light" color="teal" tt="none">
+        {t('handbook.translationReady')}
+      </Badge>
+    )
+  }
+  return (
+    <Badge size="xs" variant="light" color="yellow" tt="none">
+      {t('handbook.translationPartly', {
+        // A chapter one block short must not read as finished.
+        percent: Math.min(99, Math.round((progress.translated / progress.blocks) * 100)),
+      })}
+    </Badge>
   )
 }
 

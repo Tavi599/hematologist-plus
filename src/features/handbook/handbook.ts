@@ -97,6 +97,16 @@ export const handbookBookSchema = z.object({
 })
 export type HandbookBook = z.infer<typeof handbookBookSchema>
 
+/**
+ * How much of each chapter is translated, by chapter number. Written by
+ * `npm run ebmt:validate`; without it the chapter list would have to fetch all
+ * 94 translation files to tell a finished chapter from an untouched one.
+ */
+export const handbookProgressSchema = z
+  .record(z.string(), z.object({ blocks: z.number(), translated: z.number() }))
+  .default({})
+export type HandbookProgress = z.infer<typeof handbookProgressSchema>
+
 export const handbookAbbreviationSchema = z.object({ abbr: z.string(), en: z.string() })
 export type HandbookAbbreviation = z.infer<typeof handbookAbbreviationSchema>
 
@@ -114,6 +124,21 @@ export interface HandbookIndex {
   chapters: HandbookIndexEntry[]
   abbreviations: HandbookAbbreviation[]
   front: HandbookFrontTranslation
+  progress: HandbookProgress
+}
+
+/**
+ * The share of a chapter that is translated, or `null` when nothing is known
+ * about it — an older copy of the app has no `progress.json`, and then the
+ * chapter list says nothing rather than claiming a chapter is untranslated.
+ */
+export function chapterProgress(
+  index: HandbookIndex,
+  number: number,
+): { blocks: number; translated: number; share: number } | null {
+  const entry = index.progress[String(number)]
+  if (!entry || entry.blocks <= 0) return null
+  return { ...entry, share: entry.translated / entry.blocks }
 }
 
 /** Where the generated files are served from; the site may sit under a sub-path. */
@@ -138,12 +163,13 @@ async function fetchJson(name: string, optional = false): Promise<unknown> {
 }
 
 export async function fetchHandbookIndex(): Promise<HandbookIndex> {
-  const [book, parts, chapters, abbreviations, front] = await Promise.all([
+  const [book, parts, chapters, abbreviations, front, progress] = await Promise.all([
     fetchJson('book.json'),
     fetchJson('parts.json'),
     fetchJson('index.json'),
     fetchJson('abbreviations.json'),
     fetchJson('front.uk.json', true),
+    fetchJson('progress.json', true),
   ])
   return {
     book: handbookBookSchema.parse(book),
@@ -151,6 +177,7 @@ export async function fetchHandbookIndex(): Promise<HandbookIndex> {
     chapters: z.array(handbookIndexEntrySchema).parse(chapters),
     abbreviations: z.array(handbookAbbreviationSchema).parse(abbreviations),
     front: handbookFrontTranslationSchema.parse(front ?? {}),
+    progress: handbookProgressSchema.parse(progress ?? {}),
   }
 }
 
