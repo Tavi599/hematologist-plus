@@ -1,0 +1,35 @@
+{
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "id": "daptomycin",
+  "name": {
+    "uk": "Даптоміцин",
+    "en": "Daptomycin"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "MSD Manual Professional (українська версія): антибактеріальні препарати",
+      "url": "https://www.msdmanuals.com/uk/professional/infectious-diseases/bacteria-and-antibacterial-medications/daptomycin",
+      "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (API drlz.com.ua): ліофілізований порошок для розчину для ін’єкцій або інфузій 350 мг і 500 мг (UA/18452/01/01–02 Даптоміцин-Віста, UA/21477/01/01)",
+      "url": "https://www.drlz.com.ua/dani/api",
+      "version": "чинні реєстрації, запит від 14.11.2026",
+      "checkedOn": "2026-11-14"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s350",
+      "form": "vial",
+      "strength_amount": 350
+    },
+    {
+      "key": "s500",
+      "form": "vial",
+      "strength_amount": 500
+    }
+  ],
+  "atc_code": "J01XX09"
+}

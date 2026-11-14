@@ -1,0 +1,30 @@
+{
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "id": "tigecycline",
+  "name": {
+    "uk": "Тайгециклін",
+    "en": "Tigecycline"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "MSD Manual Professional (українська версія): антибактеріальні препарати",
+      "url": "https://www.msdmanuals.com/uk/professional/infectious-diseases/bacteria-and-antibacterial-medications/tigecycline",
+      "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (API drlz.com.ua): порошок/ліофілізат для розчину для інфузій 50 мг (напр. UA/12347/01/01 Тигацил, UA/19642/01/01)",
+      "url": "https://www.drlz.com.ua/dani/api",
+      "version": "чинні реєстрації, запит від 14.11.2026",
+      "checkedOn": "2026-11-14"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s50",
+      "form": "vial",
+      "strength_amount": 50
+    }
+  ],
+  "atc_code": "J01AA12"
+}

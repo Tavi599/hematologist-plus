@@ -1,0 +1,60 @@
+{
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "id": "azithromycin",
+  "name": {
+    "uk": "Азитроміцин",
+    "en": "Azithromycin"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "MSD Manual Professional (українська версія): антибактеріальні препарати",
+      "url": "https://www.msdmanuals.com/uk/professional/infectious-diseases/bacteria-and-antibacterial-medications/macrolides",
+      "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (API drlz.com.ua): таблетки 125, 250, 500, 1000 мг; капсули 250, 500 мг; порошок/ліофілізат для розчину для інфузій 500 мг (напр. UA/2396/02/01 Сумамед, UA/14380/01/01 Азипол, UA/5811/01/01 Азакс, UA/12158/01/01, UA/9068/01/01–02, UA/19468/01/01)",
+      "url": "https://www.drlz.com.ua/dani/api",
+      "version": "чинні реєстрації, запит від 14.11.2026",
+      "checkedOn": "2026-11-14"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t125",
+      "form": "tablet",
+      "strength_amount": 125
+    },
+    {
+      "key": "t250",
+      "form": "tablet",
+      "strength_amount": 250
+    },
+    {
+      "key": "t500",
+      "form": "tablet",
+      "strength_amount": 500
+    },
+    {
+      "key": "t1000",
+      "form": "tablet",
+      "strength_amount": 1000
+    },
+    {
+      "key": "c250",
+      "form": "capsule",
+      "strength_amount": 250
+    },
+    {
+      "key": "c500",
+      "form": "capsule",
+      "strength_amount": 500
+    },
+    {
+      "key": "s500",
+      "form": "vial",
+      "strength_amount": 500
+    }
+  ],
+  "atc_code": "J01FA10"
+}

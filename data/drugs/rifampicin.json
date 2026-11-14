@@ -1,0 +1,40 @@
+{
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "id": "rifampicin",
+  "name": {
+    "uk": "Рифампіцин",
+    "en": "Rifampicin"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "MSD Manual Professional (українська версія): антибактеріальні препарати",
+      "url": "https://www.msdmanuals.com/uk/professional/infectious-diseases/bacteria-and-antibacterial-medications/rifamycins",
+      "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (API drlz.com.ua): капсули 150 і 300 мг (UA/6796/01/01, UA/6797/01/02 Макокс); порошок ліофілізований для розчину для інфузій 600 мг (UA/11548/01/01 Рифампін)",
+      "url": "https://www.drlz.com.ua/dani/api",
+      "version": "чинні реєстрації, запит від 14.11.2026",
+      "checkedOn": "2026-11-14"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "c150",
+      "form": "capsule",
+      "strength_amount": 150
+    },
+    {
+      "key": "c300",
+      "form": "capsule",
+      "strength_amount": 300
+    },
+    {
+      "key": "s600",
+      "form": "vial",
+      "strength_amount": 600
+    }
+  ],
+  "atc_code": "J04AB02"
+}

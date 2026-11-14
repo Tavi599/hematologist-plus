@@ -1,0 +1,30 @@
+{
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "id": "aztreonam",
+  "name": {
+    "uk": "Азтреонам",
+    "en": "Aztreonam"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "MSD Manual Professional (українська версія): антибактеріальні препарати",
+      "url": "https://www.msdmanuals.com/uk/professional/infectious-diseases/bacteria-and-antibacterial-medications/monobactams",
+      "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (API drlz.com.ua): порошок для розчину для ін’єкцій або інфузій 1 г (UA/18134/01/01 Азеонам)",
+      "url": "https://www.drlz.com.ua/dani/api",
+      "version": "чинні реєстрації, запит від 14.11.2026",
+      "checkedOn": "2026-11-14"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s1000",
+      "form": "vial",
+      "strength_amount": 1000
+    }
+  ],
+  "atc_code": "J01DF01"
+}
