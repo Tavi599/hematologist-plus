@@ -5,6 +5,7 @@ export const routes = {
   sources: '/sources',
   proposals: '/proposals',
   scores: '/scores',
+  antibacterials: '/antibacterials',
   handbook: '/handbook',
   disease: (slug: string) => `/diseases/${encodeURIComponent(slug)}`,
   pathways: (slug: string) => `/diseases/${encodeURIComponent(slug)}/pathways`,

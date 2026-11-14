@@ -82,6 +82,9 @@ export function FebrileNeutropeniaSection() {
             {t('febrileNeutropenia.lead')}{' '}
             <Anchor component={Link} to={`${routes.scores}?score=mascc`} size="sm">
               {t('febrileNeutropenia.mascc')} →
+            </Anchor>{' '}
+            <Anchor component={Link} to={routes.antibacterials} size="sm">
+              {t('antibacterials.fnLink')}
             </Anchor>
           </Text>
         </Stack>

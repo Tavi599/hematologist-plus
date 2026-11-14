@@ -13,6 +13,7 @@
     "proposals": "Proposals",
     "need": "Drug need",
     "scores": "Scores",
+    "antibacterials": "Antibacterial therapy",
     "handbook": "EBMT Handbook"
   },
   "language": {
@@ -1031,6 +1032,41 @@
     "contraindicated": "contraindicated",
     "dose_reduction": "reduce the dose",
     "caution": "caution"
+  },
+  "antibacterials": {
+    "title": "Antibacterial therapy",
+    "lead": "A reference by drug class: spectrum, gaps, indications, adverse effects, interactions, resistance, kidney and liver. These are single facts cut out of the MSD Manual Professional (Ukrainian edition), not a retelling; each class links the source pages and the date checked. Doses appear only where the source gives a number, otherwise «без розрахунку». The fact text itself is in Ukrainian. To calculate a course use the calculator.",
+    "search": "Search by drug or fact",
+    "searchNone": "Nothing found.",
+    "fnLink": "Antibacterial therapy by class (MSD) →",
+    "hemeTitle": "For a haematology patient: what to look at first",
+    "hemeHint": "Every fact flagged as relevant to neutropenia, kidney toxicity, marrow toxicity and interactions with immunosuppressants; the details are on the class card.",
+    "discrepanciesTitle": "Where MSD differs from the catalog",
+    "discrepanciesHint": "Nothing was overwritten: both values are shown with their sources. Which one applies to a clinical decision is the physician's call.",
+    "catalogSide": "In the catalog",
+    "msdSide": "MSD",
+    "inCatalog": "in the catalog",
+    "notInCatalog": "not in the catalog",
+    "sourcePages": "Source:",
+    "checkedOn": "checked",
+    "classFacts": "The class as a whole",
+    "topic": {
+      "choice": "Choice and principles",
+      "mechanism": "Mechanism",
+      "spectrum": "Spectrum",
+      "gaps": "Gaps in spectrum",
+      "indication": "Indications",
+      "route": "Route and pharmacokinetics",
+      "dose": "Doses and duration",
+      "renal": "Kidney",
+      "hepatic": "Liver",
+      "monitoring": "Monitoring",
+      "adverse": "Adverse effects",
+      "interaction": "Interactions",
+      "contraindication": "Contraindications",
+      "special": "Special groups",
+      "resistance": "Resistance"
+    }
   },
   "scores": {
     "title": "Scores and formulas",
