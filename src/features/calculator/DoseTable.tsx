@@ -723,13 +723,21 @@ function DoseRow({
               </Stack>
             </details>
           )}
-          {/* A drug the department cannot simply take off the shelf. The badge in the regimen
-              list says only that something in the course is missing; here it is clear which
-              drug, and the drug's own note says why — most often that it is not registered. */}
-          {item.drug.availability !== 'department' && (
-            <Text size="xs" c={item.drug.availability === 'unavailable' ? 'red' : 'yellow.8'}>
-              {t(`availability.${item.drug.availability}`)}
+          {/* A drug that cannot be obtained at all. The badge in the regimen list says only
+              that something in the course is missing; here it is clear which drug, and the
+              drug's own note says why — most often that it is not registered. A registered drug
+              the department does not stock gets no badge, only its note: the note is what the
+              physician needs (forms that are not interchangeable, off-label use), and a badge
+              under every such row would bury the one drug that cannot be had at all. */}
+          {item.drug.availability === 'unavailable' && (
+            <Text size="xs" c="red">
+              {t('availability.unavailable')}
               {item.drug.notes !== null && `. ${localize(item.drug.notes, language)}`}
+            </Text>
+          )}
+          {item.drug.availability === 'registered' && item.drug.notes !== null && (
+            <Text size="xs" c="dimmed">
+              {localize(item.drug.notes, language)}
             </Text>
           )}
         </Table.Td>

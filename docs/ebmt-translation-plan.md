@@ -169,7 +169,7 @@ A1, A2 за потреби діляться навпіл по підрозділ
 | N1 | Прибрати 6 застарілих рядків `treatment_node_regimens`: `hodgkin-lymphoma.relapsed.r-dhaox`, `.r-gdp`, `.r-gem-ox`, `.r-ice`, `ptcl-nos.relapsed.r-gdp`, `ptcl-nos.relapsed.r-vp` | |
 | N2 | Рішення щодо омепразолу й філграстиму в `r-gdp`/`gdp` за NSSG L.62 | |
 | N3 | Додати режими BEGEV, GVD і класичний DHAP | |
-| N4 | Звузити `DoseTable.tsx` до `unavailable` | |
+| N4 | Звузити `DoseTable.tsx` до `unavailable` | так: позначка під препаратом лише для `unavailable` (червона, з приміткою препарату); `registered` без позначки, але з власною приміткою препарату |
 | N5 | Ревізія вмісту: ГМЛ за ELN 2022 | |
 | N6 | Ревізія вмісту: фолікулярна лімфома і FLIPI | |
 | N7 | Ревізія вмісту: мантійноклітинна лімфома і MIPI | |
