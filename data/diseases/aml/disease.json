@@ -30,6 +30,16 @@
     {
       "kind": "eviq",
       "url": "https://www.eviq.org.au/search#/?query=Acute%20myeloid%20leukaemia"
+    },
+    {
+      "kind": "other",
+      "url": "https://ashpublications.org/blood/article/140/12/1345/485817/Diagnosis-and-management-of-AML-in-adults-2022",
+      "label": {
+        "uk": "ELN 2022 (Döhner та ін., Blood 2022)",
+        "en": "ELN 2022 (Döhner et al., Blood 2022)"
+      },
+      "version": "2022",
+      "updated": "2022-09-22"
     }
   ],
   "treatment": [
@@ -1843,8 +1853,8 @@
         "en": "Induction"
       },
       "description": {
-        "uk": "Інтенсивна індукція для пацієнтів, придатних до неї. Другий курс дають за відновленням показників, а не за календарем; кістковомозкову пункцію роблять після відновлення, перед другим курсом.",
-        "en": "Intensive induction for patients fit for it. The second course follows count recovery rather than the calendar; the marrow is sampled after recovery, before that course."
+        "uk": "Інтенсивна індукція для пацієнтів, придатних до неї. Другий курс дають за відновленням показників, а не за календарем; кістковомозкову пункцію роблять після відновлення, перед другим курсом. Орієнтир оцінки за ELN 2022 — CR, CRh або CRi після двох курсів інтенсивної індукції; якщо їх немає, хворобу вважають рефрактерною (ELN 2022, таблиця 8). Після першого курсу «7+3» без відповіді ELN радить розглянути схему з вищими дозами цитарабіну.",
+        "en": "Intensive induction for patients fit for it. The second course follows count recovery rather than the calendar; the marrow is sampled after recovery, before that course. The ELN 2022 response landmark is CR, CRh or CRi after two courses of intensive induction; without one the disease counts as refractory (ELN 2022, Table 8). After a first 7+3 course without a response, ELN advises considering a higher-dose cytarabine regimen."
       },
       "regimens": [
         {
@@ -1989,8 +1999,8 @@
         "en": "Consolidation"
       },
       "description": {
-        "uk": "Після досягнення ремісії; вибір залежить від групи ризику й придатності до трансплантації.",
-        "en": "After remission is achieved; the choice depends on the risk group and transplant eligibility."
+        "uk": "Після досягнення ремісії; вибір залежить від групи ризику й придатності до трансплантації. За ELN 2022 алогенну ТГСК розглядають, коли ймовірність рецидиву без неї очікується понад 35-40%: при сприятливому ризику в першій ремісії її зазвичай не рекомендують, окрім недостатнього очищення від МЗХ, а при несприятливому ризику й у більшості хворих проміжної групи вона рекомендована (ELN 2022, розділ про алогенну ТГСК).",
+        "en": "After remission is achieved; the choice depends on the risk group and transplant eligibility. Per ELN 2022, allogeneic HCT is considered when the relapse risk without it is expected to exceed 35-40%: in favourable risk it is generally not recommended in first remission unless MRD clearance is inadequate, while it is recommended in adverse risk and for most patients of the intermediate group (ELN 2022, allogeneic HCT section)."
       },
       "regimens": [
         {
@@ -2135,8 +2145,8 @@
         "en": "Refractory disease and relapse"
       },
       "description": {
-        "uk": "Максимум два курси. Ідарубіцин у другому курсі зважують окремо через кумулятивну дозу антрацикліну.",
-        "en": "Two courses at most. The idarubicin of the second course is weighed separately because of the cumulative anthracycline dose."
+        "uk": "Максимум два курси. Ідарубіцин у другому курсі зважують окремо через кумулятивну дозу антрацикліну. Рецидив за ELN 2022 — бластів у кістковому мозку ≥5%, або поява бластів у крові щонайменше у двох пробах з інтервалом не менше тижня, або позакісткове ураження (ELN 2022, таблиця 8).",
+        "en": "Two courses at most. Idarubicin in the second course is weighed separately because of the cumulative anthracycline dose. Relapse per ELN 2022 means 5% or more marrow blasts, or blasts reappearing in the blood in at least two samples at least a week apart, or extramedullary disease (ELN 2022, Table 8)."
       },
       "regimens": [
         {
