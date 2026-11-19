@@ -95,12 +95,29 @@
         "en": "Relapsed or refractory"
       },
       "description": {
-        "uk": "Схеми додаються окремо, з дозами й джерелом.",
-        "en": "Regimens are added separately, with doses and a source."
+        "uk": "Стандарту немає: схему обирають за попередньою терапією, тривалістю ремісії, токсичністю та побажанням пацієнта. NCCN 1.2027 (AMYL-B 4 з 6) радить розглянути повтор початкової терапії, особливо після кількох років без рецидиву, а тим, хто не отримував даратумумаб, — схему з ним; розглянути збір стовбурових клітин. UpToDate спершу радить аутотрансплантацію при першому рецидиві, якщо її відкладали, та інший клас препаратів, ніж у першій лінії. Спершу йдуть схеми з дозами, далі — картки без розрахунку (NCCN дози для них не наводить). Повний алгоритм — на сторінці шляхів NCCN.",
+        "en": "There is no standard: the regimen follows prior therapy, the length of remission, toxicity and the patient's wishes. NCCN 1.2027 (AMYL-B 4 of 6) advises considering a repeat of the initial therapy, especially after several relapse-free years, and a daratumumab-based regimen for those who have not had it; consider stem cell collection. UpToDate first advises autologous transplant at first relapse if it was deferred, and a drug class other than the first line. Regimens with doses come first, then cards without a calculation (NCCN gives no doses for them). The full algorithm is on the NCCN pathways page."
       },
       "regimens": [
         {
           "regimen_id": "ref-al-relapse"
+        },
+        {
+          "regimen_id": "dara-cybord-cycle-1-2",
+          "notes": {
+            "uk": "NCCN 1.2027: бортезоміб + циклофосфамід + дексаметазон ± даратумумаб — у списку «повторити початкову терапію» (без рангу); якщо даратумумаб у першій лінії не давали, NCCN радить схему з ним. Розклад — eviQ 4205",
+            "en": "NCCN 1.2027: bortezomib, cyclophosphamide and dexamethasone with or without daratumumab — in the \"repeat initial therapy\" list (no rank); if daratumumab was not part of the first line, NCCN advises a regimen with it. The schedule is eviQ 4205"
+          }
+        },
+        {
+          "regimen_id": "dara-cybord-cycle-3-6"
+        },
+        {
+          "regimen_id": "cybord-amyloidosis",
+          "notes": {
+            "uk": "NCCN 1.2027: той самий пункт без даратумумабу; також якщо даратумумаб недоступний",
+            "en": "NCCN 1.2027: the same item without daratumumab; also if daratumumab is not available"
+          }
         },
         {
           "regimen_id": "ixa-dex-al",
@@ -110,11 +127,27 @@
           }
         },
         {
+          "regimen_id": "pom-dex-al",
+          "notes": {
+            "uk": "NCCN 1.2027: помалідомід + дексаметазон ± даратумумаб — у списку «повторити початкову терапію» (без рангу). Дози — лише для схеми без даратумумабу; розклад помалідоміду в дослідженнях різний (дні 1–21 у Sanchorawala 2016, безперервно в Palladini 2017)",
+            "en": "NCCN 1.2027: pomalidomide plus dexamethasone with or without daratumumab — in the \"repeat initial therapy\" list (no rank). Doses only for the regimen without daratumumab; the pomalidomide schedule differs between studies (days 1 to 21 in Sanchorawala 2016, continuous in Palladini 2017)"
+          }
+        },
+        {
           "regimen_id": "benda-dex-al",
           "notes": {
             "uk": "NCCN 1.2027: бендамустин + дексаметазон — за певних обставин",
             "en": "NCCN 1.2027: bendamustine plus dexamethasone, useful in certain circumstances"
-          }
+          },
+          "preference": "circumstances"
+        },
+        {
+          "regimen_id": "melphalan-dex-al",
+          "notes": {
+            "uk": "NCCN 1.2027: мелфалан + дексаметазон — за певних обставин; протокол eviQ 1466 позначено як замінений",
+            "en": "NCCN 1.2027: melphalan plus dexamethasone, useful in certain circumstances; eviQ 1466 is marked superseded"
+          },
+          "preference": "circumstances"
         },
         {
           "regimen_id": "ref-al-daratumumab-relapse",
@@ -122,6 +155,96 @@
             "uk": "NCCN 1.2027: даратумумаб окремо — у списку «повторити початкову терапію» (без рангу)",
             "en": "NCCN 1.2027: daratumumab alone is in the \"repeat initial therapy\" list (no rank)"
           }
+        },
+        {
+          "regimen_id": "ref-al-bortezomib",
+          "notes": {
+            "uk": "NCCN 1.2027: бортезоміб; бортезоміб + дексаметазон ± даратумумаб (без рангу)",
+            "en": "NCCN 1.2027: bortezomib; bortezomib plus dexamethasone with or without daratumumab (no rank)"
+          }
+        },
+        {
+          "regimen_id": "ref-al-ixa-cyd",
+          "notes": {
+            "uk": "NCCN 1.2027: без рангу",
+            "en": "NCCN 1.2027: no rank"
+          }
+        },
+        {
+          "regimen_id": "ref-al-cyd-len",
+          "notes": {
+            "uk": "NCCN 1.2027: без рангу; старт леналідоміду 10–15 мг",
+            "en": "NCCN 1.2027: no rank; lenalidomide starts at 10 to 15 mg"
+          }
+        },
+        {
+          "regimen_id": "ref-al-isatuximab",
+          "notes": {
+            "uk": "NCCN 1.2027: без рангу",
+            "en": "NCCN 1.2027: no rank"
+          }
+        },
+        {
+          "regimen_id": "ref-al-ixa-len-dex",
+          "notes": {
+            "uk": "NCCN 1.2027: без рангу; старт леналідоміду 10–15 мг",
+            "en": "NCCN 1.2027: no rank; lenalidomide starts at 10 to 15 mg"
+          }
+        },
+        {
+          "regimen_id": "ref-al-len-dex",
+          "notes": {
+            "uk": "NCCN 1.2027: леналідомід + дексаметазон ± даратумумаб; старт леналідоміду 10–15 мг. Розбіжність: згідно з AMYL-B 4 з 6 — в основному списку; згідно з Discussion (MS-17) — DRd «корисна за певних обставин»",
+            "en": "NCCN 1.2027: lenalidomide plus dexamethasone with or without daratumumab; lenalidomide starts at 10 to 15 mg. A discrepancy: per AMYL-B 4 of 6 — in the main list; per the Discussion (MS-17) — DRd is useful in certain circumstances"
+          }
+        },
+        {
+          "regimen_id": "ref-al-venetoclax",
+          "notes": {
+            "uk": "NCCN 1.2027: окремо, з дексаметазоном чи з даратумумабом — лише при t(11;14), за певних обставин",
+            "en": "NCCN 1.2027: alone, with dexamethasone or with daratumumab — only with t(11;14), useful in certain circumstances"
+          },
+          "preference": "circumstances"
+        },
+        {
+          "regimen_id": "ref-al-bmdex",
+          "preference": "circumstances"
+        },
+        {
+          "regimen_id": "ref-al-hdm-asct",
+          "preference": "circumstances"
+        },
+        {
+          "regimen_id": "ref-al-belantamab",
+          "notes": {
+            "uk": "NCCN 1.2027: за певних обставин; регулярні огляди окуліста",
+            "en": "NCCN 1.2027: useful in certain circumstances; regular eye examinations"
+          },
+          "preference": "circumstances"
+        },
+        {
+          "regimen_id": "ref-al-elranatamab",
+          "notes": {
+            "uk": "NCCN 1.2027: за певних обставин; розглянути профілактичний тоцилізумаб перед першою дозою",
+            "en": "NCCN 1.2027: useful in certain circumstances; consider prophylactic tocilizumab before the first dose"
+          },
+          "preference": "circumstances"
+        },
+        {
+          "regimen_id": "ref-al-teclistamab",
+          "notes": {
+            "uk": "NCCN 1.2027: за певних обставин; розглянути профілактичний тоцилізумаб перед першою дозою",
+            "en": "NCCN 1.2027: useful in certain circumstances; consider prophylactic tocilizumab before the first dose"
+          },
+          "preference": "circumstances"
+        },
+        {
+          "regimen_id": "ref-al-cfz-dex",
+          "notes": {
+            "uk": "NCCN 1.2027: карфілзоміб ± дексаметазон — лише при некардіальному амілоїдозі",
+            "en": "NCCN 1.2027: carfilzomib with or without dexamethasone — only in non-cardiac amyloidosis"
+          },
+          "preference": "circumstances"
         }
       ],
       "children": []
