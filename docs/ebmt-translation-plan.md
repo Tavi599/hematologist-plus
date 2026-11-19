@@ -168,7 +168,7 @@ A1, A2 за потреби діляться навпіл по підрозділ
 |---|---|---|
 | N1 | Прибрати 6 застарілих рядків `treatment_node_regimens`: `hodgkin-lymphoma.relapsed.r-dhaox`, `.r-gdp`, `.r-gem-ox`, `.r-ice`, `ptcl-nos.relapsed.r-gdp`, `ptcl-nos.relapsed.r-vp` | |
 | N2 | Рішення щодо омепразолу й філграстиму в `r-gdp`/`gdp` за NSSG L.62 | |
-| N3 | Додати режими BEGEV, GVD і класичний DHAP | |
+| N3 | Додати режими BEGEV, GVD і класичний DHAP | 2026-11-19: усі три вже були в каталозі (`begev`, `gvd`, `dhap`) і прив'язані до рецидиву ЛХ; дози звірено з Santoro 2020, Bartlett 2007, Velasquez 1988 і eviQ 833. DHAP доповнено первинним джерелом і розбіжністю кількості циклів, прив'язано до рецидиву ДВКЛ (NCCN B-cell 4.2026: DHA + платина ± ритуксимаб). SQL: `supabase/data-sync/2026-11-19-n3-dhap-begev-gvd.sql` (не застосовано) |
 | N4 | Звузити `DoseTable.tsx` до `unavailable` | |
 | N5 | Ревізія вмісту: ГМЛ за ELN 2022 | |
 | N6 | Ревізія вмісту: фолікулярна лімфома і FLIPI | |

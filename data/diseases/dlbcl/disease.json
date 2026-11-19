@@ -541,6 +541,14 @@
                   "preference": "other"
                 },
                 {
+                  "regimen_id": "dhap",
+                  "notes": {
+                    "uk": "NCCN B-cell 4.2026: DHA + платина ± ритуксимаб (варіант без ритуксимабу)",
+                    "en": "NCCN B-cell 4.2026: DHA + platinum ± rituximab (the variant without rituximab)"
+                  },
+                  "preference": "other"
+                },
+                {
                   "regimen_id": "r-gdp",
                   "notes": {
                     "uk": "Утримувальна/мостова: GDP ± R",
@@ -686,6 +694,14 @@
                   "preference": "other"
                 },
                 {
+                  "regimen_id": "dhap",
+                  "notes": {
+                    "uk": "NCCN B-cell 4.2026: DHA + платина ± ритуксимаб (варіант без ритуксимабу)",
+                    "en": "NCCN B-cell 4.2026: DHA + platinum ± rituximab (the variant without rituximab)"
+                  },
+                  "preference": "other"
+                },
+                {
                   "regimen_id": "r-eshap",
                   "preference": "other"
                 },
@@ -770,6 +786,14 @@
                 },
                 {
                   "regimen_id": "r-dhap",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "dhap",
+                  "notes": {
+                    "uk": "NCCN B-cell 4.2026: DHA + платина ± ритуксимаб (варіант без ритуксимабу)",
+                    "en": "NCCN B-cell 4.2026: DHA + platinum ± rituximab (the variant without rituximab)"
+                  },
                   "preference": "preferred"
                 },
                 {
@@ -2400,6 +2424,13 @@
           }
         },
         {
+          "regimen_id": "dhap",
+          "notes": {
+            "uk": "Без ритуксимабу: NCCN B-cell 4.2026 допускає це при первинно рефрактерній хворобі; дози — Velasquez 1988 / eviQ 833",
+            "en": "Without rituximab: NCCN B-cell 4.2026 allows it in primary refractory disease; doses per Velasquez 1988 / eviQ 833"
+          }
+        },
+        {
           "regimen_id": "r-eshap"
         },
         {
@@ -2567,6 +2598,13 @@
             },
             {
               "regimen_id": "r-dhap-eviq"
+            },
+            {
+              "regimen_id": "dhap",
+              "notes": {
+                "uk": "Без ритуксимабу: NCCN B-cell 4.2026 допускає це при первинно рефрактерній хворобі; дози — Velasquez 1988 / eviQ 833",
+                "en": "Without rituximab: NCCN B-cell 4.2026 allows it in primary refractory disease; doses per Velasquez 1988 / eviQ 833"
+              }
             },
             {
               "regimen_id": "r-eshap"
