@@ -43,6 +43,7 @@ import { formatNumber } from '../../lib/format'
 import { currentLanguage, type DynamicTranslate } from '../../lib/i18n'
 import { localize } from '../../lib/localized'
 import { isFreeRow, isVariant, type RowPlan } from '../../lib/row-plan'
+import { RegimenItemNote } from './RegimenItemNote'
 import { RowPlanControls } from './RowPlanControls'
 import {
   DEFAULT_DOSE_CHOICE,
@@ -633,6 +634,7 @@ function DoseRow({
               {t('calculator.doses.routeChanged')}
             </Badge>
           )}
+          <RegimenItemNote notes={item.item.notes} />
           {/* The label asks for premedication before this drug: always in sight, and loud when
               the course has none on one of its days. */}
           {item.item.role === 'main' && PREMEDICATION_ADVISED.has(item.item.drug_id) && (
