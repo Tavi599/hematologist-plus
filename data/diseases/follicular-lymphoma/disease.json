@@ -40,6 +40,16 @@
       },
       "version": "v1.1",
       "updated": "2026-02-01"
+    },
+    {
+      "kind": "other",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13680546/",
+      "label": {
+        "uk": "EHA Clinical Practice Guidelines: фолікулярна лімфома (HemaSphere 2026)",
+        "en": "EHA Clinical Practice Guidelines: follicular lymphoma (HemaSphere 2026)"
+      },
+      "version": "2026",
+      "updated": "2026-10-19"
     }
   ],
   "treatment": [
@@ -56,6 +66,18 @@
       },
       "regimens": [],
       "children": [
+        {
+          "key": "nccn-foll-a",
+          "kind": "group",
+          "title": {
+            "uk": "FOLL-A: критерії GELF і FLIPI-1",
+            "en": "FOLL-A: GELF criteria and FLIPI-1"
+          },
+          "description": {
+            "uk": "Сторінка критеріїв настанови NCCN B-Cell Lymphomas 4.2026. Критерії GELF: ураження 3 і більше вузлових ділянок, кожна 3 см і більше в діаметрі; будь-яке вузлове чи позавузлове утворення 7 см і більше; В-симптоми; спленомегалія; плевральний випіт або асцит; цитопенії (лейкоцити < 1,0 ×10⁹/л і/або тромбоцити < 100 ×10⁹/л); лейкемія (понад 5,0 ×10⁹/л злоякісних клітин). FLIPI-1, по одному балу за чинник: вік ≥60 років; стадія Ann Arbor III–IV; гемоглобін < 12 г/дл; ЛДГ сироватки вище верхньої межі норми; 5 і більше вузлових ділянок за мапою цієї самої сторінки, відмінною від звичайної мапи Ann Arbor. Групи: низький ризик 0–1 чинник, проміжний 2, високий 3 і більше. Примітка настанови: ці критерії можуть бути клінічно корисні, щоб вирішити, коли починати лікування. У цій версії примітку про FLIPI-2 зі сторінки прибрали — його склад і групи ризику див. у розділі «Прогностичні індекси й показання до лікування».",
+            "en": "The criteria page of NCCN B-Cell Lymphomas 4.2026. GELF criteria: involvement of 3 or more nodal sites, each 3 cm or more in diameter; any nodal or extranodal mass of 7 cm or more; B symptoms; splenomegaly; pleural effusion or peritoneal ascites; cytopenias (leukocytes below 1.0 x10^9/L and/or platelets below 100 x10^9/L); leukemia (more than 5.0 x10^9/L malignant cells). FLIPI-1, one point per factor: age 60 years or older; Ann Arbor stage III-IV; haemoglobin below 12 g/dL; serum LDH above the upper limit of normal; 5 or more nodal sites counted on the map of that same page, which differs from the conventional Ann Arbor map. Groups: low risk 0-1 factors, intermediate 2, high 3 or more. A footnote of the guideline: these criteria may be clinically useful to guide the initiation of treatment. In this version the FLIPI-2 footnote was removed from the page - for its factors and risk groups see the section \"Prognostic indices and indications for treatment\"."
+          }
+        },
         {
           "key": "nccn-early",
           "kind": "line",
@@ -892,6 +914,80 @@
               "target": "nccn-resp"
             }
           ]
+        }
+      ]
+    },
+    {
+      "key": "prognosis",
+      "kind": "group",
+      "title": {
+        "uk": "Прогностичні індекси й показання до лікування",
+        "en": "Prognostic indices and indications for treatment"
+      },
+      "description": {
+        "uk": "Шкали FLIPI, FLIPI-2 і PRIMA-PI оцінюють прогноз, а не вибирають лікування: так їх подають і NCCN B-Cell Lymphomas 4.2026, і настанова EHA 2026 (Ladetto M та співавт., HemaSphere 2026;10(10):e70507 — наступниця настанови ESMO, Dreyling M та співавт., Ann Oncol 2021;32:298–308). Початок лікування вирішують критерії великого об'єму пухлини й симптоми. Стадіювання — за оновленням Lugano системи Ann Arbor, із зазначенням пухлинної маси понад 10 см; за EHA 2026 PET-КТ чутливіший за КТ (рівень II, A), біопсія кісткового мозку потрібна, щоб підтвердити стадію I/II (II, A), і її можна пропустити при стадії III–IV, якщо немає незрозумілих цитопеній (II, D). У дослідженні GALLIUM перевага обінутузумабу обмежилася хворими проміжного й високого ризику за FLIPI (EHA 2026, рівень I, B).",
+        "en": "FLIPI, FLIPI-2 and PRIMA-PI assess prognosis rather than choose treatment, which is how both NCCN B-Cell Lymphomas 4.2026 and the EHA 2026 guideline present them (Ladetto M, et al. HemaSphere 2026;10(10):e70507 - the successor to the ESMO guideline, Dreyling M, et al. Ann Oncol 2021;32:298-308). When treatment starts is decided by tumour-burden criteria and symptoms. Staging follows the Lugano update of the Ann Arbor system, noting bulky disease above 10 cm; per EHA 2026 PET-CT is more sensitive than CT (level II, A), bone marrow biopsy is recommended to confirm stage I/II disease (II, A) and may be omitted in stage III-IV without equivocal cytopenias (II, D). In the GALLIUM trial the benefit of obinutuzumab was limited to patients at intermediate and high FLIPI risk (EHA 2026, level I, B)."
+      },
+      "children": [
+        {
+          "key": "prognosis-flipi",
+          "kind": "group",
+          "title": {
+            "uk": "FLIPI (FLIPI-1)",
+            "en": "FLIPI (FLIPI-1)"
+          },
+          "description": {
+            "uk": "Джерело: Solal-Céligny P, Roy P, Colombat P та співавт., Blood 2004;104:1258–1265 (4167 хворих 1985–1992 рр., перевірка на 919); та сама шкала на сторінці FOLL-A настанови NCCN B-Cell Lymphomas 4.2026. П'ять несприятливих чинників, по одному балу: вік понад 60 років; стадія Ann Arbor III–IV; гемоглобін < 120 г/л (12 г/дл); понад 4 уражені вузлові ділянки (тобто 5 і більше); ЛДГ сироватки вище верхньої межі норми. Групи ризику: низький — 0–1 чинник (36 % хворих), проміжний — 2 (37 %, відносний ризик 2,3), високий — 3 і більше (27 %, відносний ризик 4,3). Розбіжність: первинна публікація задає вік «понад 60 років», NCCN на FOLL-A — «≥60 років». Кількість вузлових ділянок NCCN рахує за власною мапою на тій самій сторінці, і вона відрізняється від звичайної мапи ділянок Ann Arbor. Шкалу створено до ери ритуксимабу, але, за розбором NCCN, вона зберегла прогностичну силу й за сучасної імунохіміотерапії (National LymphoCare Study: Nooka AK та співавт., Ann Oncol 2013;24:441–448). Межі застосування: примітка NCCN на FOLL-A називає FLIPI-1 і критерії GELF клінічно корисними, щоб вирішити, коли починати лікування, а розбір тієї самої настанови додає, що способом вибору терапії ці шкали поки не стали.",
+            "en": "Source: Solal-Celigny P, Roy P, Colombat P, et al. Blood 2004;104:1258-1265 (4167 patients diagnosed 1985-1992, confirmed on 919); the same score is on page FOLL-A of NCCN B-Cell Lymphomas 4.2026. Five adverse factors, one point each: age over 60 years; Ann Arbor stage III-IV; haemoglobin below 120 g/L (12 g/dL); more than 4 involved nodal areas (that is 5 or more); serum LDH above the upper limit of normal. Risk groups: low with 0-1 factors (36% of patients), intermediate with 2 (37%, hazard ratio 2.3), high with 3 or more (27%, hazard ratio 4.3). A discrepancy: the primary publication sets the age factor at over 60 years, NCCN on FOLL-A at 60 years or older. NCCN counts nodal areas on its own map on that page, which differs from the conventional Ann Arbor site map. The score was built before the rituximab era but, per the NCCN discussion, has kept its prognostic value under modern chemoimmunotherapy (National LymphoCare Study: Nooka AK, et al. Ann Oncol 2013;24:441-448). Limits: the NCCN footnote on FOLL-A calls FLIPI-1 and the GELF criteria clinically useful to guide when treatment is started, while the discussion of the same guideline adds that these scores have not been established as a way of selecting treatment."
+          }
+        },
+        {
+          "key": "prognosis-flipi2",
+          "kind": "group",
+          "title": {
+            "uk": "FLIPI-2",
+            "en": "FLIPI-2"
+          },
+          "description": {
+            "uk": "Джерело: Federico M, Bellei M, Marcheselli L та співавт., J Clin Oncol 2009;27:4555–4562 (проспективне дослідження F2: 1093 зареєстровані, 942 у вибірці, 832 з повними даними; головна кінцева точка — виживаність без прогресування, медіана спостереження 38 місяців). П'ять чинників, по одному балу: β2-мікроглобулін вище верхньої межі норми; найбільший уражений вузол понад 6 см у найдовшому вимірі; ураження кісткового мозку; гемоглобін < 120 г/л (12 г/дл); вік понад 60 років. Межі груп ризику первинна публікація в анотації не дає; настанова EHA 2026 (таблиця 2) подає їх так: низький — 0–1 чинник, проміжний — 2, високий — 3 і більше. Результати первинної публікації: 3-річна виживаність без прогресування 91 %, 69 % і 51 %, 3-річна загальна виживаність 99 %, 96 % і 84 % для низького, проміжного й високого ризику. Розбір NCCN 4.2026 наводить інші, 5-річні числа: виживаність без прогресування 79 %, 51 % і 20 %, а в підгрупі, що отримувала схеми з ритуксимабом, — 98 %, 88 % і 77 %. Для розрахунку потрібні β2-мікроглобулін (NCCN вносить його до аналізів, корисних в окремих випадках, саме з цієї причини) і дані кісткового мозку. У версії NCCN 4.2026 примітку про FLIPI-2 зі сторінки FOLL-A прибрали — там лишився тільки FLIPI-1, а FLIPI-2 згадано лише в тексті розбору.",
+            "en": "Source: Federico M, Bellei M, Marcheselli L, et al. J Clin Oncol 2009;27:4555-4562 (the prospective F2 study: 1093 registered, 942 in the study population, 832 with complete data; the primary endpoint was progression-free survival, median follow-up 38 months). Five factors, one point each: beta-2 microglobulin above the upper limit of normal; longest diameter of the largest involved node over 6 cm; bone marrow involvement; haemoglobin below 120 g/L (12 g/dL); age over 60 years. The primary publication's abstract does not give the risk-group thresholds; the EHA 2026 guideline (table 2) gives them as low with 0-1 factors, intermediate with 2, high with 3 or more. Results in the primary publication: 3-year progression-free survival 91%, 69% and 51%, 3-year overall survival 99%, 96% and 84% for low, intermediate and high risk. The NCCN 4.2026 discussion gives different, 5-year figures: progression-free survival 79%, 51% and 20%, and in the subgroup treated with rituximab-containing regimens 98%, 88% and 77%. The score needs beta-2 microglobulin (which is why NCCN lists it among the tests useful in selected cases) and bone marrow data. In NCCN 4.2026 the FLIPI-2 footnote was removed from page FOLL-A, which now carries FLIPI-1 only; FLIPI-2 is mentioned in the discussion text alone."
+          }
+        },
+        {
+          "key": "prognosis-prima-pi",
+          "kind": "group",
+          "title": {
+            "uk": "PRIMA-PI",
+            "en": "PRIMA-PI"
+          },
+          "description": {
+            "uk": "Джерело: Bachy E та співавт., Blood 2018 («A simplified scoring system in de novo follicular lymphoma treated initially with immunochemotherapy»); навчальна когорта — 1135 хворих дослідження PRIMA, які отримували першу лінію ритуксимаб + хіміотерапія ± підтримка ритуксимабом. Два параметри: β2-мікроглобулін і ураження кісткового мозку. Групи за первинною публікацією: високий ризик — β2-мікроглобулін понад 3 мг/л; низький — β2-мікроглобулін ≤ 3 мг/л без ураження кісткового мозку; проміжний — β2-мікроглобулін ≤ 3 мг/л з ураженням кісткового мозку. 5-річна виживаність без прогресування — 69 %, 55 % і 37 % для низького, проміжного й високого ризику; у перевірочній когорті 479 хворих (FL2000 LYSA та Iowa/Mayo MER) 5-річна виживаність без подій — 77 %, 57 % і 44 %. Розбіжність: настанова EHA 2026 (таблиця 2) подає PRIMA-PI як просту суму двох чинників — 0 балів низький ризик, 1 проміжний, 2 високий. За таким підрахунком хворий із β2-мікроглобуліном понад 3 мг/л без ураження кісткового мозку потрапляє до проміжної групи, а за первинною публікацією він високого ризику. Обидва правила наведені так, як їх подає кожне джерело; ми між ними не обираємо. NCCN 4.2026 PRIMA-PI не називає: у розборі згадано іншу просту модель — лише β2-мікроглобулін і ЛДГ (Press OW та співавт., Clin Cancer Res 2013;19:6624–6632), яка, за NCCN, прогнозує не гірше за FLIPI-1 і FLIPI-2.",
+            "en": "Source: Bachy E, et al. Blood 2018 (\"A simplified scoring system in de novo follicular lymphoma treated initially with immunochemotherapy\"); the training cohort was 1135 patients of the PRIMA trial treated first line with rituximab plus chemotherapy with or without rituximab maintenance. Two parameters: beta-2 microglobulin and bone marrow involvement. Groups as the primary publication defines them: high risk with beta-2 microglobulin above 3 mg/L; low risk with beta-2 microglobulin of 3 mg/L or less and no bone marrow involvement; intermediate risk with beta-2 microglobulin of 3 mg/L or less and bone marrow involvement. Five-year progression-free survival was 69%, 55% and 37% for low, intermediate and high risk; in the validation cohort of 479 patients (FL2000 LYSA and Iowa/Mayo MER) 5-year event-free survival was 77%, 57% and 44%. A discrepancy: the EHA 2026 guideline (table 2) presents PRIMA-PI as a plain count of the two factors - 0 points low risk, 1 intermediate, 2 high. By that count a patient with beta-2 microglobulin above 3 mg/L and no bone marrow involvement falls into the intermediate group, whereas the primary publication makes them high risk. Both rules are given as each source states them; we do not choose between them. NCCN 4.2026 does not name PRIMA-PI: its discussion mentions a different simple model built on beta-2 microglobulin and LDH alone (Press OW, et al. Clin Cancer Res 2013;19:6624-6632), which per NCCN predicts outcomes as well as FLIPI-1 and FLIPI-2."
+          }
+        },
+        {
+          "key": "prognosis-m7-flipi",
+          "kind": "group",
+          "title": {
+            "uk": "m7-FLIPI і POD24",
+            "en": "m7-FLIPI and POD24"
+          },
+          "description": {
+            "uk": "Джерело: Pastore A, Jurinovic V, Kridel R та співавт., Lancet Oncol 2015;16:1111–1122. m7-FLIPI поєднує мутаційний статус семи генів (EZH2, ARID1A, MEF2B, EP300, FOXO1, CREBBP, CARD11), FLIPI і загальний стан за ECOG. Навчальна когорта — 151 біопсія з дослідження GLSG2000 (перша лінія R-CHOP), перевірочна — 107 хворих на R-CVP. Дає дві групи. Високий ризик: 28 % (43 зі 151) у навчальній когорті, 5-річна виживаність без невдачі лікування 38,3 % проти 77,2 % у низькому ризику (відносний ризик 4,14); у перевірочній когорті — 22 % (24 зі 107), 25,0 % проти 68,2 % (відносний ризик 3,58). Порогових балів самої моделі джерела не наводять — її рахують калькулятором. У рутинну практику шкала не входить: NCCN 4.2026 зазначає, що прогностичне значення m7-FLIPI і мутації EZH2 не втрималося в хворих на схемах із бендамустином (аналіз дослідження GALLIUM: Jurinovic V та співавт., Blood 2019) і потребує більших перевірочних досліджень, а настанова EHA 2026 пише, що мутаційне профілювання нині не має місця в рутинній практиці. Окремо від шкал: за EHA 2026 раннє прогресування — найчастіше його міряють як POD24, прогресування впродовж 24 місяців — найважливіший прогностичний чинник, коли вирішують про повторне лікування, і раннє прогресування після імунохіміотерапії ведуть як агресивну хворобу.",
+            "en": "Source: Pastore A, Jurinovic V, Kridel R, et al. Lancet Oncol 2015;16:1111-1122. m7-FLIPI combines the mutation status of seven genes (EZH2, ARID1A, MEF2B, EP300, FOXO1, CREBBP, CARD11) with FLIPI and ECOG performance status. The training cohort was 151 biopsies from the GLSG2000 trial (first-line R-CHOP), the validation cohort 107 patients on R-CVP. It gives two groups. High risk: 28% (43 of 151) in the training cohort, with 5-year failure-free survival of 38.3% versus 77.2% in the low-risk group (hazard ratio 4.14); in the validation cohort 22% (24 of 107), 25.0% versus 68.2% (hazard ratio 3.58). The sources do not give the model's own score thresholds - it is computed with a calculator. The score is not part of routine practice: NCCN 4.2026 notes that the prognostic value of m7-FLIPI and of the EZH2 mutation was not retained in patients on bendamustine-based regimens (an analysis of the GALLIUM trial: Jurinovic V, et al. Blood 2019) and needs larger validation studies, and the EHA 2026 guideline states that mutational profiling currently has no role in routine practice. Apart from the scores: per EHA 2026 early progression - most often measured as POD24, progression within 24 months - is the most important prognostic factor when retreatment is decided, and early progression after chemoimmunotherapy is managed as aggressive disease."
+          }
+        },
+        {
+          "key": "prognosis-indications",
+          "kind": "group",
+          "title": {
+            "uk": "Показання до початку лікування: великий об'єм пухлини",
+            "en": "Indications to start treatment: high tumour burden"
+          },
+          "description": {
+            "uk": "Прогностичні індекси самі початку лікування не вирішують — його вирішують критерії об'єму пухлини й симптоми. NCCN B-Cell Lymphomas 4.2026, сторінка FOLL-4 (стадія III–IV), перелічує показання: кандидат у клінічне випробування; симптоми; загроза функції органа; клінічно значуща чи прогресивна цитопенія внаслідок лімфоми; клінічно значуща пухлинна маса; стійке або швидке прогресування. Критерії GELF (NCCN, FOLL-A): ураження 3 і більше вузлових ділянок, кожна 3 см і більше в діаметрі; будь-яке вузлове чи позавузлове утворення 7 см і більше; В-симптоми; спленомегалія; плевральний випіт або асцит; цитопенії (лейкоцити < 1,0 ×10⁹/л і/або тромбоцити < 100 ×10⁹/л); лейкемія (понад 5,0 ×10⁹/л злоякісних клітин). За приміткою NCCN, негайна перша лінія ритуксимабом у хворих, які критеріям GELF не відповідають, загальної виживаності не покращила (Ardeshna K та співавт., Lancet Oncol 2014;15:424–435). Настанова EHA 2026 (таблиця 4) подає свій перелік, «модифікований з критеріїв GELF і British National Lymphoma Investigation»: будь-який вузол чи вузлове утворення 7 см і більше (з приміткою, що розглядали також межі 6 і 10 см); ураження 3 і більше вузлових ділянок, кожна 3 см і більше; симптомна спленомегалія (біль, раннє насичення, цитопенії); компресійні симптоми (обструкція сечоводу, стиснення органа) або болісні вогнища; плевральний випіт чи асцит, пов'язані з лімфомою; цитопенії через інфільтрацію кісткового мозку чи селезінки (гемоглобін < 10 г/дл, тромбоцити < 100 ×10⁹/л); В-симптоми (гарячка понад 38 °C, нічні поти, втрата понад 10 % маси тіла за 6 місяців); швидко прогресивна хвороба (впродовж 3 місяців). Два переліки розходяться, тому наведені обидва: цитопенії NCCN задає через лейкоцити й тромбоцити, EHA — через гемоглобін і тромбоцити й межі лейкоцитів не дає; лейкемічна фаза (понад 5,0 ×10⁹/л злоякісних клітин) є тільки в NCCN; спленомегалія в NCCN будь-яка, в EHA — лише симптомна; компресійні симптоми й болісні вогнища є тільки в EHA; строк швидкого прогресування EHA задає (3 місяці), NCCN пише «стійке або швидке» без строку. Без показань обидві настанови радять активне спостереження: NCCN — категорія 1, з оглядом і аналізами кожні 3–6 місяців; EHA — рівень I, A, з медіаною часу до початку лікування близько 3 років, а ритуксимаб як монотерапію називає альтернативою спостереженню (I, B), яка довшає виживаність без прогресування, але не змінює загальної.",
+            "en": "Prognostic indices do not by themselves decide when treatment starts - tumour-burden criteria and symptoms do. NCCN B-Cell Lymphomas 4.2026, page FOLL-4 (stage III-IV), lists the indications: candidate for a clinical trial; symptoms; threatened end-organ function; clinically significant or progressive cytopenia secondary to lymphoma; clinically significant bulky disease; steady or rapid progression. The GELF criteria (NCCN, FOLL-A): involvement of 3 or more nodal sites, each 3 cm or more in diameter; any nodal or extranodal mass of 7 cm or more; B symptoms; splenomegaly; pleural effusion or peritoneal ascites; cytopenias (leukocytes below 1.0 x10^9/L and/or platelets below 100 x10^9/L); leukemia (more than 5.0 x10^9/L malignant cells). Per an NCCN footnote, immediate first-line rituximab in patients not meeting the GELF criteria did not improve overall survival (Ardeshna K, et al. Lancet Oncol 2014;15:424-435). The EHA 2026 guideline (table 4) gives its own list, \"modified from GELF and British National Lymphoma Investigation guidelines\": any node or nodal mass of 7 cm or more (with a note that cut-offs of 6 and 10 cm have also been considered); involvement of 3 or more nodal sites, each 3 cm or more; symptomatic splenomegaly (pain, early satiety, cytopenias); compressive symptoms (ureteral obstruction, organ compression) or painful lesions; pleural effusion or ascites attributable to lymphoma; cytopenias from marrow or splenic infiltration (haemoglobin below 10 g/dL, platelets below 100 x10^9/L); B symptoms (fever above 38 C, night sweats, loss of more than 10% of body weight over 6 months); rapidly progressive disease (within 3 months). The two lists differ, so both are given: NCCN defines the cytopenias by leukocytes and platelets, EHA by haemoglobin and platelets with no leukocyte threshold; the leukemic phase (more than 5.0 x10^9/L malignant cells) appears in NCCN only; splenomegaly is any in NCCN and only symptomatic in EHA; compressive symptoms and painful lesions appear in EHA only; EHA puts a time on rapid progression (3 months) while NCCN says \"steady or rapid\" with none. With no indication both guidelines advise active surveillance: NCCN as category 1 with examination and labs every 3-6 months; EHA at level I, A, with a median time to needing treatment of about 3 years, and it names rituximab monotherapy an alternative to surveillance (I, B) that lengthens progression-free survival without changing overall survival."
+          }
         }
       ]
     },

@@ -623,7 +623,159 @@ const flipi: Score = {
         'Abstract: the five factors and three groups',
       ),
     },
+    {
+      name: 'NCCN B-Cell Lymphomas 4.2026, FOLL-A',
+      url: 'https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480',
+      checked: t(
+        'Сторінка критеріїв: та сама шкала, але вік «≥60 років», і власна мапа вузлових ділянок',
+        'The criteria page: the same score, but age "≥60 years" and its own nodal-site map',
+      ),
+    },
   ],
+  caveat: t(
+    'Первинна публікація задає вік «понад 60 років», NCCN на FOLL-A — «≥60 років»; вузлові ділянки NCCN рахує за власною мапою, відмінною від мапи Ann Arbor. Індекс прогнозує, а не обирає лікування: початок терапії вирішують критерії об’єму пухлини.',
+    'The primary publication sets the age factor at over 60 years, NCCN on FOLL-A at 60 years or older; NCCN counts nodal sites on its own map, which differs from the Ann Arbor map. The index predicts outcome and does not choose treatment: tumour-burden criteria decide when therapy starts.',
+  ),
+}
+
+const flipi2: Score = {
+  id: 'flipi2',
+  section: 'risk',
+  title: t('FLIPI-2 (фолікулярна лімфома)', 'FLIPI-2 (follicular lymphoma)'),
+  purpose: t(
+    'Прогностичний індекс фолікулярної лімфоми, побудований в еру ритуксимабу',
+    'Prognostic index for follicular lymphoma built in the rituximab era',
+  ),
+  fields: [
+    check('b2m', 'β2-мікроглобулін вище норми', 'Beta-2 microglobulin above normal'),
+    check('node', 'Найбільший уражений вузол > 6 см', 'Largest involved node > 6 cm'),
+    check('marrow', 'Ураження кісткового мозку', 'Bone marrow involvement'),
+    check('haemoglobin', 'Гемоглобін < 120 г/л', 'Haemoglobin < 120 g/L'),
+    check('age', 'Вік > 60 років', 'Age > 60 years'),
+  ],
+  compute: (values) =>
+    grouped(
+      ['b2m', 'node', 'marrow', 'haemoglobin', 'age'].filter((key) => on(values, key)).length,
+      [
+        {
+          upTo: 1,
+          ...LOW(
+            t(
+              '3-річна виживаність без прогресування 91 %, загальна 99 %.',
+              '3-year progression-free survival 91%, overall survival 99%.',
+            ),
+          ),
+        },
+        {
+          upTo: 2,
+          label: t('Проміжний', 'Intermediate'),
+          tone: 'orange',
+          meaning: t(
+            '3-річна виживаність без прогресування 69 %, загальна 96 %.',
+            '3-year progression-free survival 69%, overall survival 96%.',
+          ),
+        },
+        {
+          upTo: 5,
+          label: t('Високий', 'High'),
+          tone: 'red',
+          meaning: t(
+            '3-річна виживаність без прогресування 51 %, загальна 84 %.',
+            '3-year progression-free survival 51%, overall survival 84%.',
+          ),
+        },
+      ],
+    ),
+  sources: [
+    {
+      name: 'Federico M et al. Follicular lymphoma international prognostic index 2. J Clin Oncol 2009;27:4555–62',
+      url: 'https://pubmed.ncbi.nlm.nih.gov/19652063/',
+      checked: t(
+        'Резюме: п’ять чинників і 3-річні показники трьох груп',
+        'Abstract: the five factors and the 3-year outcomes of the three groups',
+      ),
+    },
+    {
+      name: 'Ladetto M et al. Newly diagnosed and relapsed follicular lymphoma: EHA Clinical Practice Guidelines. HemaSphere 2026;10(10):e70507',
+      url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13680546/',
+      checked: t('Таблиця 2: межі груп 0–1, 2, ≥3', 'Table 2: group thresholds 0–1, 2, ≥3'),
+    },
+  ],
+  caveat: t(
+    'Межі груп узяті з настанови EHA 2026: у резюме первинної публікації їх немає. Розбір NCCN 4.2026 наводить інші, 5-річні числа — виживаність без прогресування 79 %, 51 % і 20 %, а в підгрупі зі схемами з ритуксимабом 98 %, 88 % і 77 %. Потрібні β2-мікроглобулін і дані кісткового мозку.',
+    'The group thresholds are taken from the EHA 2026 guideline: the primary publication’s abstract does not give them. The NCCN 4.2026 discussion gives different, 5-year figures — progression-free survival 79%, 51% and 20%, and 98%, 88% and 77% in the subgroup on rituximab-containing regimens. Beta-2 microglobulin and bone marrow data are required.',
+  ),
+}
+
+const primaPi: Score = {
+  id: 'prima-pi',
+  section: 'risk',
+  title: t('PRIMA-PI (фолікулярна лімфома)', 'PRIMA-PI (follicular lymphoma)'),
+  purpose: t(
+    'Спрощений індекс для першої лінії імунохіміотерапії: два параметри',
+    'Simplified index for first-line chemoimmunotherapy: two parameters',
+  ),
+  fields: [
+    number('b2m', 'β2-мікроглобулін', 'Beta-2 microglobulin', t('мг/л', 'mg/L'), 0.1),
+    check('marrow', 'Ураження кісткового мозку', 'Bone marrow involvement'),
+  ],
+  compute: (values) => {
+    const b2m = num(values, 'b2m')
+    if (b2m === undefined) return null
+    if (b2m > 3) {
+      return {
+        group: { label: t('Високий', 'High'), tone: 'red' },
+        notes: [
+          t(
+            'β2-мікроглобулін понад 3 мг/л — високий ризик незалежно від кісткового мозку. 5-річна виживаність без прогресування 37 %.',
+            'Beta-2 microglobulin above 3 mg/L is high risk whatever the bone marrow shows. Five-year progression-free survival 37%.',
+          ),
+        ],
+      }
+    }
+    if (on(values, 'marrow')) {
+      return {
+        group: { label: t('Проміжний', 'Intermediate'), tone: 'orange' },
+        notes: [
+          t(
+            'β2-мікроглобулін ≤ 3 мг/л з ураженням кісткового мозку. 5-річна виживаність без прогресування 55 %.',
+            'Beta-2 microglobulin of 3 mg/L or less with bone marrow involvement. Five-year progression-free survival 55%.',
+          ),
+        ],
+      }
+    }
+    return {
+      group: { label: t('Низький', 'Low'), tone: 'green' },
+      notes: [
+        t(
+          'β2-мікроглобулін ≤ 3 мг/л без ураження кісткового мозку. 5-річна виживаність без прогресування 69 %.',
+          'Beta-2 microglobulin of 3 mg/L or less without bone marrow involvement. Five-year progression-free survival 69%.',
+        ),
+      ],
+    }
+  },
+  sources: [
+    {
+      name: 'Bachy E et al. A simplified scoring system in de novo follicular lymphoma treated initially with immunochemotherapy. Blood 2018',
+      url: 'https://pubmed.ncbi.nlm.nih.gov/29666118/',
+      checked: t(
+        'Резюме: три групи й 5-річні показники навчальної та перевірочної когорт',
+        'Abstract: the three groups and the 5-year outcomes of the training and validation cohorts',
+      ),
+    },
+    {
+      name: 'Ladetto M et al. Newly diagnosed and relapsed follicular lymphoma: EHA Clinical Practice Guidelines. HemaSphere 2026;10(10):e70507',
+      url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13680546/',
+      checked: t(
+        'Таблиця 2: той самий індекс як сума двох чинників (0, 1, 2)',
+        'Table 2: the same index as a count of the two factors (0, 1, 2)',
+      ),
+    },
+  ],
+  caveat: t(
+    'Тут індекс обчислено за правилом первинної публікації. Настанова EHA 2026 подає його як просту суму двох чинників (0 — низький, 1 — проміжний, 2 — високий); за таким підрахунком хворий із β2-мікроглобуліном понад 3 мг/л без ураження кісткового мозку був би проміжного ризику, а не високого. Шкалу побудовано на хворих, які отримували першу лінію імунохіміотерапії.',
+    'Here the index follows the rule of the primary publication. The EHA 2026 guideline presents it as a plain count of the two factors (0 low, 1 intermediate, 2 high); by that count a patient with beta-2 microglobulin above 3 mg/L and no bone marrow involvement would be intermediate rather than high risk. The score was built on patients given first-line chemoimmunotherapy.',
+  ),
 }
 
 const mipi: Score = {
@@ -1825,6 +1977,8 @@ export const RISK_SCORES: Score[] = [
   nccnIpi,
   cnsIpi,
   flipi,
+  flipi2,
+  primaPi,
   mipi,
   ips,
   cllIpi,
