@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { CHECKED_ON, CLASSES, DISCREPANCIES, TOPIC_ORDER } from './classes'
+import { CHECKED_ON, CLASSES, DISCREPANCIES, REGISTER_CHECKED_ON, TOPIC_ORDER } from './classes'
 
 /** The drug cards of `data/drugs`, by file name: only their existence is checked here. */
 const drugFiles = Object.keys(import.meta.glob('../../../data/drugs/*.json'))
@@ -14,6 +14,16 @@ describe('antibacterial reference', () => {
     ]
     expect(ids.length).toBeGreaterThan(10)
     for (const id of ids) expect(hasDrug(id), id).toBe(true)
+  })
+
+  it('marks every drug without a catalog card as not registered in Ukraine', () => {
+    const loose = CLASSES.flatMap((cls) => cls.drugs).filter((drug) => drug.drugId === undefined)
+    expect(loose.length).toBeGreaterThan(0)
+    for (const drug of loose) {
+      expect(drug.unregistered, drug.name).toBe(true)
+      expect(drug.name).not.toMatch(/каталоз/)
+    }
+    expect(REGISTER_CHECKED_ON).toMatch(/^\d{4}-\d{2}-\d{2}$/)
   })
 
   it('names the source pages of every class and the day they were read', () => {

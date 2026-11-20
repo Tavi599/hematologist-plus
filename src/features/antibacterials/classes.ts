@@ -4,7 +4,7 @@
  * written as our own terse points; nothing here is a retelling of the source text, and nothing is
  * added from outside it. A dose appears only where the page itself gives a number; where it does
  * not, the card says «без розрахунку». A drug that has a card in `data/drugs` carries its `drugId`;
- * the others are named as the source names them and are not in the catalog.
+ * the others are named as the source names them, are not registered in Ukraine, and say so.
  *
  * Where a value differs from what the catalog already holds (a label dose, a monitoring target),
  * the difference is listed in `DISCREPANCIES`; neither side is rewritten.
@@ -62,8 +62,17 @@ export interface AbxDrug {
   name: string
   /** Id of the drug card in `data/drugs`, when there is one. */
   drugId?: string
+  /** Not registered in Ukraine: none of the drugs the card names is in the State Register. */
+  unregistered?: boolean
   facts: Fact[]
 }
+
+/**
+ * The day the drugs without a catalog card were looked up in the State Register (the full
+ * reestr.csv extract): every one MSD names that is registered got a card, the rest are marked.
+ */
+export const REGISTER_CHECKED_ON = '2026-11-20'
+export const REGISTER_URL = 'http://www.drlz.com.ua/ibp/zvity.nsf/all/zvit/$file/reestr.csv'
 
 export interface AbxClass {
   id: string
@@ -315,7 +324,8 @@ export const CLASSES: AbxClass[] = [
         ],
       },
       {
-        name: 'Оксацилін та інші протистафілококові (немає в каталозі)',
+        name: 'Оксацилін та інші протистафілококові',
+        unregistered: true,
         facts: [
           f(
             'spectrum',
@@ -443,7 +453,8 @@ export const CLASSES: AbxClass[] = [
         facts: [f('indication', 'Цефазолін: MSSA-ендокардит, хірургічна профілактика')],
       },
       {
-        name: 'Цефтаролін, цефідерокол, цефтолозан/тазобактам (немає в каталозі)',
+        name: 'Цефтаролін, цефідерокол, цефтолозан/тазобактам',
+        unregistered: true,
         facts: [
           f(
             'spectrum',
@@ -558,7 +569,8 @@ export const CLASSES: AbxClass[] = [
         ],
       },
       {
-        name: 'Тебіпенем (немає в каталозі)',
+        name: 'Тебіпенем',
+        unregistered: true,
         facts: [],
       },
     ],
@@ -679,13 +691,14 @@ export const CLASSES: AbxClass[] = [
         facts: [f('dose', 'Тобраміцин — як гентаміцин')],
       },
       {
-        name: 'Стрептоміцин, канаміцин (немає в каталозі)',
-        facts: [
-          f(
-            'indication',
-            'Стрептоміцин: туляремія, чума, туберкульоз у комбінації; канаміцин: мультирезистентний туберкульоз у комбінації',
-          ),
-        ],
+        name: 'Стрептоміцин',
+        drugId: 'streptomycin',
+        facts: [f('indication', 'Туляремія, чума, туберкульоз у комбінації')],
+      },
+      {
+        name: 'Канаміцин',
+        drugId: 'kanamycin',
+        facts: [f('indication', 'Мультирезистентний туберкульоз у комбінації')],
       },
     ],
   },
@@ -862,7 +875,8 @@ export const CLASSES: AbxClass[] = [
         ],
       },
       {
-        name: 'Далбаванцин, оритаванцин, телаванцин (немає в каталозі)',
+        name: 'Далбаванцин, оритаванцин, телаванцин',
+        unregistered: true,
         facts: [
           f(
             'spectrum',
@@ -1024,7 +1038,8 @@ export const CLASSES: AbxClass[] = [
         ],
       },
       {
-        name: 'Фідаксоміцин (немає в каталозі)',
+        name: 'Фідаксоміцин',
+        unregistered: true,
         facts: [
           f(
             'interaction',

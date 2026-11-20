@@ -1,12 +1,13 @@
-import { Anchor, Group, Popover, Stack, Table, Text, UnstyledButton } from '@mantine/core'
+import { Anchor, Badge, Group, Popover, Stack, Table, Text, UnstyledButton } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
 
-import { MSD_BASE } from './classes'
+import { MSD_BASE, REGISTER_CHECKED_ON, REGISTER_URL } from './classes'
 import {
   COVERAGES,
   PATHOGENS,
   SPECTRUM,
   type Coverage,
+  type Pathogen,
   type SpectrumCell,
   type SpectrumRow,
 } from './spectrum'
@@ -62,6 +63,68 @@ function Cell({ row, cell, header }: { row: SpectrumRow; cell: SpectrumCell; hea
   )
 }
 
+/** A drug MSD names that has no registration in Ukraine; a tap says where that was checked. */
+export function UnregisteredBadge() {
+  const { t } = useTranslation()
+  return (
+    <Popover width={260} position="bottom" withArrow shadow="md">
+      <Popover.Target>
+        <Badge
+          component="button"
+          type="button"
+          size="xs"
+          variant="light"
+          color="orange"
+          tt="none"
+          // The class column is narrow: the words wrap instead of being cut off.
+          styles={{
+            root: { cursor: 'pointer', height: 'auto', maxWidth: '100%' },
+            label: { whiteSpace: 'normal', overflow: 'visible', textOverflow: 'clip' },
+          }}
+        >
+          {t('antibacterials.unregistered')}
+        </Badge>
+      </Popover.Target>
+      <Popover.Dropdown>
+        <Stack gap={4}>
+          <Text size="sm">{t('antibacterials.unregisteredHint')}</Text>
+          <Anchor href={REGISTER_URL} target="_blank" rel="noreferrer" size="xs">
+            {t('antibacterials.register')}
+          </Anchor>
+          <Text size="xs" c="dimmed">
+            {t('antibacterials.checkedOn')} {REGISTER_CHECKED_ON}
+          </Text>
+        </Stack>
+      </Popover.Dropdown>
+    </Popover>
+  )
+}
+
+/** A column header: the pathogen's short name, and a tap explains what it stands for. */
+function PathogenHeader({ pathogen }: { pathogen: Pathogen }) {
+  const { t } = useTranslation()
+  const name = t(`antibacterials.spectrum.pathogen.${pathogen}`)
+  return (
+    <Popover width={280} position="bottom" withArrow shadow="md">
+      <Popover.Target>
+        <UnstyledButton aria-label={t('antibacterials.spectrum.explain', { name })}>
+          <Text size="xs" fw={700} td="underline" style={{ textDecorationStyle: 'dotted' }}>
+            {name}
+          </Text>
+        </UnstyledButton>
+      </Popover.Target>
+      <Popover.Dropdown>
+        <Stack gap={4}>
+          <Text size="xs" fw={700}>
+            {name}
+          </Text>
+          <Text size="sm">{t(`antibacterials.spectrum.pathogenHint.${pathogen}`)}</Text>
+        </Stack>
+      </Popover.Dropdown>
+    </Popover>
+  )
+}
+
 /**
  * Which class reaches which hard pathogen, as one compact grid: a mark per cell, and a tap on
  * the mark opens what the source says and where. The grid scrolls sideways on a phone while the
@@ -101,9 +164,7 @@ export function SpectrumTable() {
               </Table.Th>
               {PATHOGENS.map((pathogen) => (
                 <Table.Th key={pathogen} ta="center">
-                  <Text size="xs" fw={700}>
-                    {t(`antibacterials.spectrum.pathogen.${pathogen}`)}
-                  </Text>
+                  <PathogenHeader pathogen={pathogen} />
                 </Table.Th>
               ))}
             </Table.Tr>
@@ -115,6 +176,7 @@ export function SpectrumTable() {
                   <Text size="xs" fw={600}>
                     {row.label}
                   </Text>
+                  {row.unregistered && <UnregisteredBadge />}
                 </Table.Td>
                 {PATHOGENS.map((pathogen) => (
                   <Table.Td key={pathogen}>

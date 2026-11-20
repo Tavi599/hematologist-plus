@@ -1047,6 +1047,9 @@
     "catalogSide": "In the catalog",
     "msdSide": "MSD",
     "inCatalog": "in the catalog",
+    "unregistered": "not registered in Ukraine",
+    "unregisteredHint": "MSD names this drug, but the State Register of Medicinal Products of Ukraine holds no current registration, so the catalog has no card for it.",
+    "register": "State Register of Medicinal Products (extract)",
     "notInCatalog": "not in the catalog",
     "sourcePages": "Source:",
     "checkedOn": "checked",
@@ -1064,6 +1067,16 @@
       "hint": "Tap a mark to see what the MSD Manual Professional (Ukrainian edition) says, with a link to the page and the date checked. «Not stated» means the page does not say it outright — it is neither yes nor no.",
       "legend": "MRSA — methicillin-resistant S. aureus; VRE — vancomycin-resistant enterococci; ESBL — extended-spectrum beta-lactamase producers; CRE — carbapenem-resistant Enterobacterales; atypicals — Mycoplasma, Chlamydia/Chlamydophila, Legionella. In vitro data and the local antibiogram may differ.",
       "rowHeader": "Class / drug",
+      "explain": "What {{name}} means",
+      "pathogenHint": {
+        "mrsa": "Methicillin-resistant Staphylococcus aureus: resistant to every beta-lactam except the cephalosporins with anti-MRSA activity (ceftaroline, ceftobiprole). The usual choice is vancomycin, linezolid, daptomycin (not for pneumonia).",
+        "vre": "Vancomycin-resistant enterococci, mostly Enterococcus faecium. Risks are long hospital stay, prior vancomycin and cephalosporins, neutropenia. Linezolid, daptomycin and tigecycline are active.",
+        "pseudomonas": "Pseudomonas aeruginosa, a non-fermenting gram-negative rod with intrinsic resistance to many antibiotics. It causes severe bacteraemia in neutropenia, so empiric therapy of febrile neutropenia always covers it.",
+        "esbl": "Enterobacterales (E. coli, Klebsiella and others) producing extended-spectrum beta-lactamases: they break down penicillins, cephalosporins including the 3rd-4th generations, and aztreonam. Carbapenems are reliable against them.",
+        "cre": "Carbapenem-resistant Enterobacterales, notably carbapenemase producers (KPC, OXA-48, NDM). Choices are narrow: newer inhibitor combinations, colistin, tigecycline, by the antibiogram.",
+        "anaerobes": "Obligate anaerobes (Bacteroides fragilis, Prevotella, Fusobacterium, clostridia). They matter in abdominal and perianal infections, neutropenic enterocolitis and severe mucositis.",
+        "atypical": "Intracellular pneumonia pathogens: Mycoplasma pneumoniae, Chlamydia (Chlamydophila) pneumoniae, Legionella. Beta-lactams do not act on them; macrolides, fluoroquinolones and tetracyclines do."
+      },
       "pathogen": {
         "mrsa": "MRSA",
         "vre": "VRE",

@@ -27,7 +27,7 @@ import {
   type AbxClass,
   type Fact,
 } from './classes'
-import { SpectrumTable } from './SpectrumTable'
+import { SpectrumTable, UnregisteredBadge } from './SpectrumTable'
 
 function Fold({
   title,
@@ -157,6 +157,8 @@ function ClassCard({
                 <Badge size="xs" variant="light" tt="none">
                   {t('antibacterials.inCatalog')}: {t(`availability.${row.availability}`)}
                 </Badge>
+              ) : drug.unregistered ? (
+                <UnregisteredBadge />
               ) : drug.drugId === undefined ? null : (
                 <Badge size="xs" variant="light" color="gray" tt="none">
                   {t('antibacterials.notInCatalog')}

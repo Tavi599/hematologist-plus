@@ -40,6 +40,8 @@ export interface SpectrumRow {
   /** Id of the class in `CLASSES`. */
   classId: string
   label: string
+  /** Not registered in Ukraine (State Register, see REGISTER_CHECKED_ON in classes.ts). */
+  unregistered?: boolean
   cells: Record<Pathogen, SpectrumCell>
 }
 
@@ -165,7 +167,8 @@ export const SPECTRUM: SpectrumRow[] = [
   },
   {
     classId: 'cephalosporins',
-    label: 'Цефтаролін, цефтобіпрол (немає в каталозі)',
+    label: 'Цефтаролін, цефтобіпрол',
+    unregistered: true,
     cells: {
       mrsa: c('yes', CEPH, 'Активні проти MRSA'),
       vre: c('no', CEPH, 'Цефалоспорини не діють на ентерококи'),
@@ -182,7 +185,8 @@ export const SPECTRUM: SpectrumRow[] = [
   },
   {
     classId: 'cephalosporins',
-    label: 'Цефідерокол (немає в каталозі)',
+    label: 'Цефідерокол',
+    unregistered: true,
     cells: {
       mrsa: c('no', CEPH, 'Не активний проти грампозитивних'),
       vre: c('no', CEPH, 'Не активний проти грампозитивних'),
@@ -195,7 +199,8 @@ export const SPECTRUM: SpectrumRow[] = [
   },
   {
     classId: 'cephalosporins',
-    label: 'Цефтолозан/тазобактам (немає в каталозі)',
+    label: 'Цефтолозан/тазобактам',
+    unregistered: true,
     cells: {
       mrsa: silent(CEPH),
       vre: c('no', CEPH, 'Цефалоспорини не діють на ентерококи'),
@@ -326,7 +331,8 @@ export const SPECTRUM: SpectrumRow[] = [
   },
   {
     classId: 'lipoglycopeptides',
-    label: 'Далбаванцин, оритаванцин, телаванцин (немає в каталозі)',
+    label: 'Далбаванцин, оритаванцин, телаванцин',
+    unregistered: true,
     cells: {
       mrsa: c('yes', 'lipoglycopeptides', 'S. aureus незалежно від чутливості до метициліну'),
       vre: c('partial', 'lipoglycopeptides', 'vanB VRE — усі три; vanA VRE — лише оритаванцин'),
