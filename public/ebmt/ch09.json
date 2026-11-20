@@ -100,11 +100,49 @@
    "en": "T-Cell Alloreactivity"
   },
   {
-   "id": "9171c333e5",
+   "id": "dd07a2c5f1",
    "type": "table",
    "num": "9.1",
-   "en": "Table 9.1 HLA typing resolution and appropriate typing",
-   "raw_en": "Table 9.1 HLA typing resolution and appropriate typing methods ab HLA typing resolutionAppropriate typing methods Low (first field)Serology, SSP, SSOP, others High (second field)NGS, SBT Allelic (all fields)NGS, SBT IntermediateSSP, SSOP, SBT a As defined in Nunes et al. (2011). Low: A serological typing result or DNA-based typing at the first field in the DNA-based nomenclature. High: A set of alleles that encode the same protein sequence in the antigen-binding groove and that exclude alleles not expressed on the cell surface. High resolution thus includes alleles reported with the suffix P (a set of alleles encoding the same amino acid sequence at the antigen-binding groove). Allelic: Unique nucleotide sequence for a gene as defined using all the digits in a current allele name. Intermediate: A level of resolution that falls between high and low resolu- tion, as agreed with the entity requesting the testing. Examples are restriction to common and well-documented (CWD) alleles (Sanchez-Mazas et al. 2017), common intermediate and well-documented (CIWD) alleles (Hurley et al. 2020), or reporting by the National Marrow Donor Program (NMDP) codes (https://bioinformatics. bethematchclinical.org/hla- resources/allele- codes/ allele- code- lists/) b Serology complement-dependent cytotoxicity of specific antisera, SSP sequence-specific priming, SSOP sequence- specific oligonucleotide probing, Others additional molecular typing approaches, including quantitative PCR and restriction fragment length polymorphism (RFLP), SBT sequencing-based typing (Sanger sequencing), NGS next-generation sequencing"
+   "en": "Table 9.1 HLA typing resolution and appropriate typing methods",
+   "columns": 4,
+   "rows_en": [
+    [
+     "HLA typing resolution",
+     "a",
+     "Appropriate typing methods",
+     "b"
+    ],
+    [
+     "Low (first field)",
+     "",
+     "Serology, SSP, SSOP, others",
+     ""
+    ],
+    [
+     "High (second field)",
+     "",
+     "NGS, SBT",
+     ""
+    ],
+    [
+     "Allelic (all fields)",
+     "",
+     "NGS, SBT",
+     ""
+    ],
+    [
+     "Intermediate",
+     "",
+     "SSP, SSOP, SBT",
+     ""
+    ],
+    [
+     "a As defined in Nunes et al. (typing result or DNA-based typing at the first field in the DNA-based nomenclature. encode the same protein sequence in the antigen-binding groove and that exclude alleles not expressed on the cell surface. High resolution thus includes alleles reported with the suffix P (a set of alleles encoding the same amino acid sequence at the antigen-binding groove). Unique nucleotide sequence for a gene as defined using all the digits in a current allele name. level of resolution that falls between high and low resolu tion, as agreed with the entity requesting the testing. Examples are restriction to common and well-documented (CWD) alleles (Sanchez-Mazas et al. intermediate and well-documented (CIWD) alleles (Hurley et al. 2020), or reporting by the National Marrow Donor Program (NMDP) codes (bethematchclinical.org/hla- allele-code-lists/) b Serology complement-dependent cytotoxicity of specific antisera, SSP sequence-specific priming, specific oligonucleotide probing, molecular typing approaches, including quantitative PCR and restriction fragment length polymorphism (RFLP), SBT sequencing-based typing (Sanger sequencing), next-generation sequencing",
+     "",
+     "2011). Low: A serological High: A set of alleles that Allelic Intermediate: A 2017), common https://bioinformatics. resources/allele-codes/ SSOP sequence- Others additional NGS",
+     ": -"
+    ]
+   ]
   },
   {
    "id": "ae14c1c3d1",
@@ -250,11 +288,37 @@
    "en": "• Allo-HCT donor types (in parenthesis the percentage probability of their identification for a given patient) include genotypically HLA-identical siblings (25%), HLA-haploidentical family donors (>90%), UDs (30–90%), and UCB units (>80%)."
   },
   {
-   "id": "986ba21f23",
+   "id": "0ca481bf68",
    "type": "table",
    "num": "9.2",
-   "en": "Table 9.2 Models of high-risk/nonpermissive HLA",
-   "raw_en": "Table 9.2 Models of high-risk/nonpermissive HLA mismatches HLA locus, donor type, and Modelclinical association T-cell epitope HLA-DPB1; 8/8 UD; mortality (TCE) groupsaand acute GVHD Expression levelsbHLA C and DPB1; 7–8/8 UD; acute GVHD Mismatch HLA C and DPB1; 7–8/8 UD; combinationscmortality, acute GVHD and relapse PIRCHEdHLA C and DPB1; 8/8 UD; 9/10 UD, CBU, acute GVHD a TCE groups: HLA-DPB1 mismatches involving alleles Key Points from the same (permissive) or different (nonpermissive) TCE groups (Fleischhauer and Shaw 2017, Meurer et al. 2021) b Expression levels: HLA-C or HLA-DPB1 mismatches involving a high-expression allele in the patient, as pre- dicted by noncoding, single nucleotide expression poly- morphisms (Petersdorf et al. 2014, 2015) c Mismatch combinations: High-risk allele mismatches defined by statistical associations (Fernandez-Vina et al. 2014; Kawase et al. 2009) d PIRCHE: Predicted, indirectly recognizable HLA epit- ope numbers as predicted by online tools (Thus et al. 2014a; Thus et al. 2014b; Thus et al. 2016; Geneugelijk and Spierings 2018; Geneugelijk et al. 2019)"
+   "en": "Table 9.2 Models of high-risk/nonpermissive HLA mismatches",
+   "columns": 2,
+   "rows_en": [
+    [
+     "Model",
+     "HLA locus, donor type, and clinical association"
+    ],
+    [
+     "T-cell epitope (TCE) groupsa",
+     "HLA-DPB1; 8/8 UD; mortality and acute GVHD"
+    ],
+    [
+     "Expression levelsb",
+     "HLA C and DPB1; 7–8/8 UD; acute GVHD"
+    ],
+    [
+     "Mismatch combinationsc",
+     "HLA C and DPB1; 7–8/8 UD; mortality, acute GVHD and relapse"
+    ],
+    [
+     "PIRCHEd",
+     "HLA C and DPB1; 8/8 UD; 9/10 UD, CBU, acute GVHD"
+    ],
+    [
+     "a TCE groups: HLA-DPB1 mismatches involving alleles from the same (permissive) or different (nonpermissive) TCE groups (Fleischhauer and Shaw 2021) b Expression levels: HLA-C or HLA-DPB1 mismatches involving a high-expression allele in the patient, as pre dicted by noncoding, single nucleotide expression poly morphisms (Petersdorf et al. c Mismatch combinations defined by statistical associations (Fernandez-Vina et al. 2014; Kawase et al. 2009 d PIRCHE: Predicted, indirectly recognizable HLA epit ope numbers as predicted by online tools (Thus et al. 2014a; Thus et al. 2014b and Spierings 2018; Geneugelijk et al.",
+     "Key Points 2017, Meurer et al. - - 2014, 2015): High-risk allele mismatches) -; Thus et al. 2016; Geneugelijk 2019)"
+    ]
+   ]
   },
   {
    "id": "788f3d26f8",
@@ -320,11 +384,37 @@
    "en": "mHAgs are the only targets of T-cell alloreactivity in HLA-identical HCT (see Sect. 2.2) and, as such, play an important role in both GVHD and"
   },
   {
-   "id": "9cabbaf404",
+   "id": "168f7849d7",
    "type": "table",
    "num": "9.3",
-   "en": "Table 9.3 Non-HLA immunogenetic factors and HCT",
-   "raw_en": "Table 9.3 Non-HLA immunogenetic factors and HCT outcome Non-HLA factorClinical outcome association mHAgaGVHD and relapse KIRbRelapse and mortality MICcGVHD, relapse, and transplant-related mortality OthersdGVHD and transplant-related mortality a Minor histocompatibility antigens (Spierings 2014) b Killer Ig-like receptors (Heidenreich and Kröger 2017; Shaffer and Hsu 2016) c MHC class I-related chain (Isernhagen et al. 2016) Cytokine, chemokine, and immune response gene poly- morphisms, including tumor necrosis factor, interleukin (IL)-10, the IL-1 gene family, IL-2, IL-6, interferon-γ, tumor growth factor β and their receptors, NOD-like receptors (NOD2/CARD15), toll-like receptors, and micro-RNAs (Dickinson and Holler 2008; Gam et al. 2017; Chen and Zeiser 2018)"
+   "en": "Table 9.3 Non-HLA immunogenetic factors and HCT outcome",
+   "columns": 2,
+   "rows_en": [
+    [
+     "Non-HLA factor",
+     "Clinical outcome association"
+    ],
+    [
+     "mHAga",
+     "GVHD and relapse"
+    ],
+    [
+     "KIRb",
+     "Relapse and mortality"
+    ],
+    [
+     "MICc",
+     "GVHD, relapse, and transplant-related mortality"
+    ],
+    [
+     "Othersd",
+     "GVHD and transplant-related mortality"
+    ],
+    [
+     "a Minor histocompatibility antigens (Spierings b Killer Ig-like receptors (Heidenreich and Kröger Shaffer and Hsu c MHC class I-related chain (Isernhagen et al. Cytokine, chemokine, and immune response gene poly morphisms, including tumor necrosis factor, interleukin (IL)-10, the IL-1 gene family, IL-2, IL-6, interferon- tumor growth factor receptors (NOD2/CARD15), toll-like receptors, and micro-RNAs (Dickinson and Holler 2017; Chen and Zeiser",
+     "2014) 2017; 2016) 2016) - γ, β and their receptors, NOD-like 2008; Gam et al. 2018)"
+    ]
+   ]
   },
   {
    "id": "a811caf78b",

@@ -199,37 +199,24 @@
    "en": "Drug interactions can occur as early as during the conditioning regimen. Drugs as etoposide and thiotepa rely on CYP450 enzymes for metabolism, while cyclophosphamide needs to be converted to become functional. Also, there are several clinically relevant drug interactions for busulfan, which is known to have a high interindividual variability considering the ratio of dose and drug exposure. Therefore, to maintain the narrow therapeutic range, it is recommended to conduct therapeutic drug monitoring for busulfan in myeloablative conditioning regimens (McCune and Holmberg 2009). A non-limitative list of PK interactions with busulfan and recommendations for management are summarized in Table 31.2."
   },
   {
-   "id": "2d8edc1e2c",
+   "id": "7f27185ea3",
    "type": "table",
    "num": "31.1",
-   "en": "Table 31.1 CYP3A4 substrates, inhibitors, and inducers commonly used in HCT (non-limitative list) (Lexicomp drug",
-   "columns": 5,
+   "en": "Table 31.1 CYP3A4 substrates, inhibitors, and inducers commonly used in HCT (non-limitative list) (Lexicomp drug interactions 2023, MedicinesComplete 2023, Stockley’s Interactions Checker)",
+   "columns": 3,
    "rows_en": [
     [
-     "interactions",
-     "2023",
-     ", MedicinesComplete",
-     "2023",
-     ", Stockley’s Interactions Checker)"
-    ],
-    [
      "Substrates",
-     "",
-     "",
      "Inhibitors",
      "Inducers"
     ],
     [
-     "Acalabrutinib Apixaban Benzodiazepines Budesonide Calcium Channel Blockers Carbamazepine Corticosteroids Cyclosporine Etoposide Gilteritinib Macrolide antibiotics Rivaroxaban Sirolimus Statinsd Steroidse Tacrolimus Thiotepa Quetiapine Venetoclax Miscellaneous",
-     "f",
-     "a b c",
-     "Amiodarone Aprepitant Cimetidine Ciprofloxacin Clarithromycin Diltiazem Erythromycin Fedratinib Fluconazole Grapefruit juice Itraconazole Ketoconazole Letermovir Nirmatrelvir- Posaconazole Voriconazole Verapamil",
-     "Barbiturates (phenobarbital) Carbamazepine Corticosteroids Phenytoin Rifabutin Rifampicin St John’s wort Ritonavir"
+     "Acalabrutinib Apixaban Benzodiazepinesa Budesonide Calcium Channel Blockersb Carbamazepine Corticosteroids Cyclosporine Etoposide Gilteritinib Macrolide antibioticsc Rivaroxaban Sirolimus Statinsd Steroidse Tacrolimus Thiotepa Quetiapine Venetoclax f Miscellaneous",
+     "Amiodarone Aprepitant Cimetidine Ciprofloxacin Clarithromycin Diltiazem Erythromycin Fedratinib Fluconazole Grapefruit juice Itraconazole Ketoconazole Letermovir Nirmatrelvir-Ritonavir Posaconazole Voriconazole Verapamil",
+     "Barbiturates (phenobarbital) Carbamazepine Corticosteroids Phenytoin Rifabutin Rifampicin St John’s wort"
     ],
     [
      "Bold font indicates strong inhibitors/inducers a Alprazolam, diazepam, midazolam b Amlodipine, diltiazem, verapamil c Clarithromycin, erythromycin, NOT azithromycin d Atorvastatin, simvastatin NOT pravastatin, fluvastatin e Estradiol, progesterone, testosterone f Aprepitant, fentanyl, ondansetron, zolpidem",
-     "",
-     "",
      "",
      ""
     ]

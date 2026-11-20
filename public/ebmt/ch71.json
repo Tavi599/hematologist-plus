@@ -247,11 +247,43 @@
    "en": "In the UK, serotherapy is only given to patients transplanted from unrelated donors, 9/10 mismatched family donors, or 5/8 matched cord blood units, but not to patients receiving grafts from matched family donors or 6–8/8 unrelated cord blood units (Table 71.1)."
   },
   {
-   "id": "ae6bc9f3a7",
+   "id": "d8387264ad",
    "type": "table",
    "num": "71.1",
-   "en": "Table 71.1 Donor and source for HCT: the hierarchy of",
-   "raw_en": "Table 71.1 Donor and source for HCT: the hierarchy of the UK Family Unrelated ChoicedonordonorUnrelated cord 1stMFD (BM, PBSC and CB) 2nd10/10 MUD; 8/8 MUCB (total 9/10 1DQ nucleated cell MMUD(TNC >3 × 10⁷/ kg) 3rd9/10 9/10 (other) 5–7/8 MMUCB MMFDMMUD(TNC >3 × 10⁷/ kg)a a For unrelated cord blood, a single cord is used if the cryopreserved TNC dose is >3 × 10⁷/kg. If <3 × 10⁷/kg, a double-cord transplant is preferred MFD matched family donor, MUD matched unrelated donor, MMUD mismatched unrelated donor, MUCB matched unrelated cord blood, MMFD mismatched fam- ily donor, MMUCB mismatched unrelated cord blood"
+   "en": "Table 71.1 Donor and source for HCT: the hierarchy of the UK",
+   "columns": 4,
+   "rows_en": [
+    [
+     "Choice",
+     "Family donor",
+     "Unrelated donor",
+     "Unrelated cord"
+    ],
+    [
+     "1st",
+     "MFD (BM, PBSC and CB)",
+     "",
+     ""
+    ],
+    [
+     "2nd",
+     "",
+     "10/10 MUD; 9/10 1DQ MMUD",
+     "8/8 MUCB (total nucleated cell (TNC >3 × 10⁷/ kg)"
+    ],
+    [
+     "3rd",
+     "9/10 MMFD",
+     "9/10 (other) MMUD",
+     "5–7/8 MMUCB (TNC >3 × 10⁷/ kg)a"
+    ],
+    [
+     "a For unrelated cord blood, a single cord is used if the cryopreserved TNC dose is >3 × 10 double-cord transplant is preferred MFD matched family donor, donor, MMUD matched unrelated cord blood, ily donor,",
+     "mismatched unrelated donor, MMUCB mismatched unrelated cord blood",
+     "⁷/kg. If <3 × 10 MUD matched unrelated MMFD",
+     "⁷/kg, a MUCB mismatched fam-"
+    ]
+   ]
   },
   {
    "id": "0df1ecc364",

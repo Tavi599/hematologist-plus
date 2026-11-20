@@ -25,11 +25,45 @@
    "en": "Neurological complications of hematopoietic cell transplantation (HCT) are frequent and can be highly challenging to manage. Their reported incidence ranges from 8 to 65%, depending on types of manifestations included, transplant setting, and patient population (Maffini et al. 2017). The severity varies widely, ranging from mild transient disorders to life-threatening illnesses. Main factors and causative agents include neurotoxic drugs, infectious pathogens, cerebrovascular illness, metabolic encephalopathy, and immune-mediated diseases. CNS relapse of the underlying disease, thrombotic microangiopathy (TAM), and posttransplant lymphoproliferative disorder (PTLD) should also be ruled out (Table 53.1)."
   },
   {
-   "id": "865fa96c49",
+   "id": "9c4159eef4",
    "type": "table",
    "num": "53.1",
-   "en": "Table 53.1 Main causes of neurological complications",
-   "raw_en": "Table 53.1 Main causes of neurological complications of HCT Neurological complicationCause Drug-relatedCalcineurin inhibitors (PRES) Methotrexate/cytotoxic agents (busulfan, fludarabine) Anti-infective agents Opioids, benzodiazepines Infectious Viruses (EBV, HHV-6, CMV, VZV, pathogensHSV, JCV, West Nile virus, adenovirus) Fungi and parasites (Toxoplasma gondii, Aspergillus spp., Candida spp., Mucorales, Cryptococcus neoformans, Histoplasma capsulatum) Bacteria (Gram-negative rods, Gram-positive cocci, Mycobacterium tuberculosis, Nocardia) MetabolicUremic encephalopathy Hepatic encephalopathy Diabetic ketoacidosis CerebrovascularHemorrhage Ischemic stroke Immune-mediatedDemyelinating diseases Myositis Myasthenia gravis CNS chronic GVHD CRS Thrombotic Calcineurin inhibitors microangiopathyInfectious pathogens MalignanciesPTLD Hematological disease relapse"
+   "en": "Table 53.1 Main causes of neurological complications of HCT",
+   "columns": 2,
+   "rows_en": [
+    [
+     "Neurological complication",
+     "Cause"
+    ],
+    [
+     "Drug-related",
+     "Calcineurin inhibitors (PRES) Methotrexate/cytotoxic agents (busulfan, fludarabine) Anti-infective agents Opioids, benzodiazepines"
+    ],
+    [
+     "Infectious pathogens",
+     "Viruses (EBV, HHV-6, CMV, VZV, HSV, JCV, West Nile virus, adenovirus) Fungi and parasites (Toxoplasma gondii, Aspergillus spp., Candida spp., Mucorales, Cryptococcus neoformans, Histoplasma capsulatum) Bacteria (Gram-negative rods, Gram-positive cocci, Mycobacterium tuberculosis, Nocardia)"
+    ],
+    [
+     "Metabolic",
+     "Uremic encephalopathy Hepatic encephalopathy Diabetic ketoacidosis"
+    ],
+    [
+     "Cerebrovascular",
+     "Hemorrhage Ischemic stroke"
+    ],
+    [
+     "Immune-mediated",
+     "Demyelinating diseases Myositis Myasthenia gravis CNS chronic GVHD CRS"
+    ],
+    [
+     "Thrombotic microangiopathy",
+     "Calcineurin inhibitors Infectious pathogens"
+    ],
+    [
+     "Malignancies",
+     "PTLD Hematological disease relapse"
+    ]
+   ]
   },
   {
    "id": "f2074227ec",
@@ -64,11 +98,21 @@
    "en": "PRES refers to a disorder of reversible subcortical vasogenic brain edema and is caused by endothelial injury related to abrupt blood pressure changes or direct effects of cytokines on the endothelium. It may occur in 1.6–7.2% of HCT recipients and, if diagnosed early, is reversible after CNI withdrawal. Symptoms such as headache, visual disturbance, seizures, encephalopathy, or focal neurologic deficit, when associated with renal failure or blood pressure fluctuations, are highly suggestive of PRES (Schmidt et al. 2016)."
   },
   {
-   "id": "232add95a8",
+   "id": "de0f91c4fc",
    "type": "table",
    "num": "53.2",
-   "en": "Table 53.2 Main neurological side effects of the major",
-   "raw_en": "Table 53.2 Main neurological side effects of the major drugs used in HCT DrugMost common symptoms AcyclovirHeadache, tremor, dysarthria, hallucinations, encephalopathy Amphotericin BHeadache, encephalopathy, numbness, vision changes BusulfanSeizures, headache, dizziness BlinatumomabEncephalopathy, headache, aphasia, ataxia, tremor, seizures CefepimeHeadache, paresthesia, encephalopathy CSA/TACPRES, confusion, tremor, ataxia, seizures, cortical blindness FludarabineAcute toxic leukoencephalopathy FoscarnetHeadache, vertigo, paresthesia, seizures, tremor, encephalopathy GanciclovirHeadache, numbness, tremor, seizures Imipenem/Seizures, tremor, vertigo, paresthesia, cilastatinsomnolence, encephalopathy IsavuconazoleHeadache, somnolence, encephalopathy, seizures, paresthesia, peripheral neuropathy MethotrexateHeadache, lethargy, dysarthria, diffuse necrotizing leukoencephalopathy PosaconazoleParesthesia, dizziness, somnolence, headache, seizures, tremor RituximabPML SorafenibPRES, peripheral sensory neuropathy ThiotepaHeadache, encephalopathy, seizures, paresthesia TreosulfanHeadache, dizziness, intracranial hemorrhage, peripheral sensory neuropathy VoriconazoleHeadache, seizures, vision changes, hallucinations, numbness, encephalopathy"
+   "en": "Table 53.2 Main neurological side effects of the major drugs used in HCT",
+   "columns": 2,
+   "rows_en": [
+    [
+     "Drug",
+     "Most common symptoms"
+    ],
+    [
+     "Acyclovir Amphotericin B Busulfan Blinatumomab Cefepime CSA/TAC Fludarabine Foscarnet Ganciclovir Imipenem/ cilastatin Isavuconazole Methotrexate Posaconazole Rituximab Sorafenib Thiotepa Treosulfan Voriconazole",
+     "Headache, tremor, dysarthria, hallucinations, encephalopathy Headache, encephalopathy, numbness, vision changes Seizures, headache, dizziness Encephalopathy, headache, aphasia, ataxia, tremor, seizures Headache, paresthesia, encephalopathy PRES, confusion, tremor, ataxia, seizures, cortical blindness Acute toxic leukoencephalopathy Headache, vertigo, paresthesia, seizures, tremor, encephalopathy Headache, numbness, tremor, seizures Seizures, tremor, vertigo, paresthesia, somnolence, encephalopathy Headache, somnolence, encephalopathy, seizures, paresthesia, peripheral neuropathy Headache, lethargy, dysarthria, diffuse necrotizing leukoencephalopathy Paresthesia, dizziness, somnolence, headache, seizures, tremor PML PRES, peripheral sensory neuropathy Headache, encephalopathy, seizures, paresthesia Headache, dizziness, intracranial hemorrhage, peripheral sensory neuropathy Headache, seizures, vision changes, hallucinations, numbness, encephalopathy"
+    ]
+   ]
   },
   {
    "id": "f803eefb7f",

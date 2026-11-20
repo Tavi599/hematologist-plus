@@ -79,11 +79,33 @@
    "en": "Risk-adapted treatment is strongly preferred and many patients are fragile and do not tolerate standard used dosing regimens (see Table 82.1). Three categories are defined with low-risk patients, transplant eligible, being a minority (≤20%). High-risk patients are defined by Stage IIIb and/or having NYHA class III or IV heart disease. Other factors to consider are age, performance status, eGFR, neuropathy and systolic blood pressure. Frequent assessments of hematological response during treatment are needed, and the goal is to achieve a CR or VGPR as a deep hematologic response is closely related to survival. Patients having a hematologic response may gradually achieve an organ response."
   },
   {
-   "id": "a129af2c99",
+   "id": "1a502d8d40",
    "type": "table",
    "num": "82.1",
-   "en": "Table 82.1 First-line treatment options according to risk",
-   "raw_en": "Table 82.1 First-line treatment options according to risk status Risk statusTreatment Low risk • (± induction treatment) Mel Stage I(200 mg/m²) + autoHCT • Daratumumab CyBorD or CyBorD Intermediate • Daratumumab CyBorD or riskCyBorD Stages II–IIIa • Bortezomib-Mel-dex Signficant neuropathy: Mel-dex or Lenalidomide-dex High risk • Dose reduced therapies like Stage IIIbDaratumumab monotherapy or • modified CyBorD CyBorD cyclophosphamide, bortezomib, dexamatha- soone. Mel melphalan"
+   "en": "Table 82.1 First-line treatment options according to risk status",
+   "columns": 2,
+   "rows_en": [
+    [
+     "Risk status",
+     "Treatment"
+    ],
+    [
+     "Low risk Stage I",
+     "•(± induction treatment) Mel (200 mg/m²) + autoHCT •Daratumumab CyBorD or CyBorD"
+    ],
+    [
+     "Intermediate risk Stages II–IIIa",
+     "•Daratumumab CyBorD or CyBorD •Bortezomib-Mel-dex Signficant neuropathy: Mel-dex or Lenalidomide-dex"
+    ],
+    [
+     "High risk Stage IIIb",
+     "•Dose reduced therapies like Daratumumab monotherapy or •modified CyBorD"
+    ],
+    [
+     "CyBorD cyclophosphamide, bortezomib, dexamatha soone. Mel melphalan",
+     "-"
+    ]
+   ]
   },
   {
    "id": "d77ce4c5cf",
@@ -135,11 +157,53 @@
    "en": "Stem cell mobilization and leucapheresis can be associated with unusual morbidity, and a syndrome of hypoxia and hypotension has been described both during mobilization with G-CSF and during the leucapheresis procedure itself, probably as a result of a capillary leak syndrome triggered by G-CSF. Therefore, use of reduced doses of G-CSF (such as 10 μg/kg per day for 4–5 days) is recommended. In low-burden disease (i.e., plasma cells <10%), the use of CY mobilization chemotherapy does not seem to be necessary."
   },
   {
-   "id": "b7be45b956",
+   "id": "3bffa9af40",
    "type": "table",
    "num": "82.2",
-   "en": "Table 82.2 Summary of the outcome of patients with systemic AL amyloidosis undergoing autologous stem cell trans-",
-   "raw_en": "Table 82.2 Summary of the outcome of patients with systemic AL amyloidosis undergoing autologous stem cell trans- plantation, according to the more recent publications No. of Overall response rate SourceTypepatients(CR) (%)TRM (%)Overall survival (%) Landau et al. Retrospective143CR 43% at 12 months 5%Median 10.4 years (2017)(83 pts. only) D’Souza et al. Retrospective1536ORR 71%5% (2007–5 years 77% (2007–2012 (2015)CR 37% (2007–2012 2012 cohort)cohort) cohort) Minnema et al. Prospective50ORR 86%0%5 years 86% (2019)CR 46% Abdallah et al. Retrospective65113 vs. 11.4 years, early vs. (2020)deferred ASCT"
+   "en": "Table 82.2 Summary of the outcome of patients with systemic AL amyloidosis undergoing autologous stem cell transplantation, according to the more recent publications",
+   "columns": 6,
+   "rows_en": [
+    [
+     "Source",
+     "Type",
+     "No. of patients",
+     "Overall response rate (CR) (%)",
+     "TRM (%)",
+     "Overall survival (%)"
+    ],
+    [
+     "Landau et al. (2017)",
+     "Retrospective",
+     "143",
+     "CR 43% at 12 months (83 pts. only)",
+     "5%",
+     "Median 10.4 years"
+    ],
+    [
+     "D’Souza et al. (2015)",
+     "Retrospective",
+     "1536",
+     "ORR 71% CR 37% (2007–2012 cohort)",
+     "5% (2007– 2012 cohort)",
+     "5 years 77% (2007–2012 cohort)"
+    ],
+    [
+     "Minnema et al. (2019)",
+     "Prospective",
+     "50",
+     "ORR 86% CR 46%",
+     "0%",
+     "5 years 86%"
+    ],
+    [
+     "Abdallah et al. (2020)",
+     "Retrospective",
+     "651",
+     "",
+     "",
+     "13 vs. 11.4 years, early vs. deferred ASCT"
+    ]
+   ]
   },
   {
    "id": "276caddaa9",
