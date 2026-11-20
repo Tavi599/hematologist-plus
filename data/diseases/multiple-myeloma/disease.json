@@ -159,6 +159,24 @@
           }
         },
         {
+          "regimen_id": "isa-vrd-cycle-1"
+        },
+        {
+          "regimen_id": "isa-vrd-cycle-2-4"
+        },
+        {
+          "regimen_id": "isa-vrd-cycle-5-17"
+        },
+        {
+          "regimen_id": "isa-vrd"
+        },
+        {
+          "regimen_id": "isa-vrd-induction-cycle-1"
+        },
+        {
+          "regimen_id": "isa-vrd-induction"
+        },
+        {
           "regimen_id": "d-rd-cycle-1-2",
           "notes": {
             "uk": "Цикли 1-2. Якщо трансплантація не планується; перевага за наявної нейропатії, бо без бортезомібу.",
@@ -369,6 +387,16 @@
               "regimen_id": "dvrd-cycle-3-8"
             },
             {
+              "regimen_id": "isa-vrd-induction-cycle-1",
+              "notes": {
+                "uk": "Бажана: ізатуксимаб + VRd як індукція перед ТГСК — 3 цикли по 42 дні за GMMG-HD7.",
+                "en": "Preferred: isatuximab + VRd as induction before transplantation — three 42-day cycles per GMMG-HD7."
+              }
+            },
+            {
+              "regimen_id": "isa-vrd-induction"
+            },
+            {
               "regimen_id": "krd-cycle-1"
             },
             {
@@ -421,6 +449,22 @@
             },
             {
               "regimen_id": "dvrd"
+            },
+            {
+              "regimen_id": "isa-vrd-cycle-1",
+              "notes": {
+                "uk": "Бажана (<80 років, не крихкі): ізатуксимаб + VRd. Дози й дні — за короткою характеристикою ізатуксимабу (дослідження IMROZ).",
+                "en": "Preferred (under 80, not frail): isatuximab + VRd. Doses and days from the isatuximab SmPC (the IMROZ trial)."
+              }
+            },
+            {
+              "regimen_id": "isa-vrd-cycle-2-4"
+            },
+            {
+              "regimen_id": "isa-vrd-cycle-5-17"
+            },
+            {
+              "regimen_id": "isa-vrd"
             },
             {
               "regimen_id": "d-rd-cycle-1-2"
@@ -2016,6 +2060,13 @@
       },
       "regimens": [
         {
+          "regimen_id": "ref-mm-isa-vrd",
+          "notes": {
+            "uk": "Картка для читання: що NCCN каже про Isa-VRd. Самі дози й дні порахує курс «Isa-VRd → Isa-Rd» (без ТГСК) або «Isa-VRd, індукція перед ТГСК».",
+            "en": "A reading card: what NCCN says about Isa-VRd. The doses and days themselves are calculated by the Isa-VRd to Isa-Rd course (no transplant) or by the induction course before transplantation."
+          }
+        },
+        {
           "regimen_id": "ref-mm-teclistamab"
         },
         {
@@ -2434,11 +2485,16 @@
                   "category": "1"
                 },
                 {
-                  "regimen_id": "ref-mm-isa-vrd",
+                  "regimen_id": "isa-vrd-induction-cycle-1",
                   "notes": {
-                    "uk": "Бажана: ізатуксимаб + VRd",
-                    "en": "Preferred: isatuximab + VRd"
+                    "uk": "Бажана: ізатуксимаб + VRd як індукція перед ТГСК — 3 цикли по 42 дні за GMMG-HD7.",
+                    "en": "Preferred: isatuximab + VRd as induction before transplantation — three 42-day cycles per GMMG-HD7."
                   },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-vrd-induction",
                   "preference": "preferred",
                   "category": "1"
                 },
@@ -2566,11 +2622,26 @@
                   "category": "1"
                 },
                 {
-                  "regimen_id": "ref-mm-isa-vrd",
+                  "regimen_id": "isa-vrd-cycle-1",
                   "notes": {
-                    "uk": "Бажана (<80 років, не крихкі): ізатуксимаб + VRd",
-                    "en": "Preferred (under 80, not frail): isatuximab + VRd"
+                    "uk": "Бажана (<80 років, не крихкі): ізатуксимаб + VRd. Дози й дні — за короткою характеристикою ізатуксимабу (дослідження IMROZ).",
+                    "en": "Preferred (under 80, not frail): isatuximab + VRd. Doses and days from the isatuximab SmPC (the IMROZ trial)."
                   },
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-vrd-cycle-2-4",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-vrd-cycle-5-17",
+                  "preference": "preferred",
+                  "category": "1"
+                },
+                {
+                  "regimen_id": "isa-vrd",
                   "preference": "preferred",
                   "category": "1"
                 },
