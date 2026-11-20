@@ -25,6 +25,7 @@ import {
   type AbxClass,
   type Fact,
 } from './classes'
+import { SpectrumTable } from './SpectrumTable'
 
 function Fold({
   title,
@@ -280,6 +281,11 @@ export function AntibacterialsReference({
         onChange={(event) => setQuery(event.currentTarget.value)}
       />
       {needle === '' && <HemeSummary />}
+      {needle === '' && (
+        <Fold title={t('antibacterials.spectrum.title')}>
+          <SpectrumTable />
+        </Fold>
+      )}
       {shown.map((cls) => (
         <ClassCard
           key={`${cls.id}-${needle}`}

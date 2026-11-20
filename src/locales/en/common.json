@@ -1051,6 +1051,27 @@
     "sourcePages": "Source:",
     "checkedOn": "checked",
     "classFacts": "The class as a whole",
+    "spectrum": {
+      "title": "Spectrum: MRSA, VRE, Pseudomonas, ESBL, CRE, anaerobes, atypicals",
+      "hint": "Tap a mark to see what the MSD Manual Professional (Ukrainian edition) says, with a link to the page and the date checked. «Not stated» means the page does not say it outright — it is neither yes nor no.",
+      "legend": "MRSA — methicillin-resistant S. aureus; VRE — vancomycin-resistant enterococci; ESBL — extended-spectrum beta-lactamase producers; CRE — carbapenem-resistant Enterobacterales; atypicals — Mycoplasma, Chlamydia/Chlamydophila, Legionella. In vitro data and the local antibiogram may differ.",
+      "rowHeader": "Class / drug",
+      "pathogen": {
+        "mrsa": "MRSA",
+        "vre": "VRE",
+        "pseudomonas": "P. aeruginosa",
+        "esbl": "ESBL",
+        "cre": "CRE",
+        "anaerobes": "Anaerobes",
+        "atypical": "Atypicals"
+      },
+      "value": {
+        "yes": "yes",
+        "partial": "partly / some drugs",
+        "no": "no",
+        "unstated": "not stated"
+      }
+    },
     "topic": {
       "choice": "Choice and principles",
       "mechanism": "Mechanism",
