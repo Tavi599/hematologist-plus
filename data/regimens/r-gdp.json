@@ -277,6 +277,48 @@
           }
         }
       ]
+    },
+    {
+      "key": "omeprazole",
+      "drug_id": "omeprazole",
+      "role": "supportive",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "Захист шлунка в дні дексаметазону (NSSG L.62). eviQ 3788 дози не дає: лише «розглянути H2-блокатор або інгібітор протонної помпи».",
+        "en": "Gastric protection on the dexamethasone days (NSSG L.62). eviQ 3788 gives no dose, only 'consider an H2 antagonist or a proton pump inhibitor'."
+      }
+    },
+    {
+      "key": "filgrastim",
+      "drug_id": "filgrastim",
+      "role": "supportive",
+      "route": "subcutaneous",
+      "dose_value": 0.5,
+      "dose_unit": "miu_kg",
+      "days": [9, 10, 11, 12, 13, 14, 15],
+      "notes": {
+        "uk": "З дня 9, 7 днів, у циклах без мобілізації стовбурових клітин (NSSG L.62; шлях протокол не називає — п/ш за інструкцією). Пегфілграстим за NSSG не застосовувати. Розбіжність: eviQ 3788 дози й днів не дає і допускає Г-КСФ короткої або тривалої дії.",
+        "en": "From day 9 for 7 days in cycles that are not priming for a stem cell harvest (NSSG L.62; the protocol names no route, subcutaneous per the label). NSSG: pegfilgrastim must not be used. Discrepancy: eviQ 3788 gives no dose or days and allows short- or long-acting G-CSF."
+      },
+      "dose_options": [
+        {
+          "dose_value": 1,
+          "dose_unit": "miu_kg",
+          "notes": {
+            "uk": "Цикл мобілізації стовбурових клітин: з дня 9 до збору (запас на 8 днів)",
+            "en": "A stem cell priming cycle: from day 9 until the harvest (an 8-day supply)"
+          },
+          "source": {
+            "name": "NSSG Oxford Haematology, L.62 R-GDP",
+            "url": "https://nssg.oxford-haematology.org.uk/lymphoma/documents/lymphoma-chemo-protocols/L-62-r-gdp.pdf",
+            "version": "2.1 (11.2025)",
+            "checkedOn": "2026-11-19"
+          }
+        }
+      ]
     }
   ]
 }
