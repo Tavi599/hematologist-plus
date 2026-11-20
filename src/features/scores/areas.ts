@@ -66,7 +66,7 @@ export const RISK_AREAS: Area[] = [
   {
     id: 'follicular',
     title: t('Фолікулярна лімфома', 'Follicular lymphoma'),
-    scoreIds: ['flipi'],
+    scoreIds: ['flipi', 'flipi2', 'prima-pi'],
     diseases: ['follicular-lymphoma'],
   },
   {
