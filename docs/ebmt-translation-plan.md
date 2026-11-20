@@ -166,7 +166,7 @@ A1, A2 за потреби діляться навпіл по підрозділ
 
 | Блок | Що зробити | Зроблено |
 |---|---|---|
-| N1 | Прибрати 6 застарілих рядків `treatment_node_regimens`: `hodgkin-lymphoma.relapsed.r-dhaox`, `.r-gdp`, `.r-gem-ox`, `.r-ice`, `ptcl-nos.relapsed.r-gdp`, `ptcl-nos.relapsed.r-vp` | |
+| N1 | Прибрати 6 застарілих рядків `treatment_node_regimens`: `hodgkin-lymphoma.relapsed.r-dhaox`, `.r-gdp`, `.r-gem-ox`, `.r-ice`, `ptcl-nos.relapsed.r-gdp`, `ptcl-nos.relapsed.r-vp` | ✅ 2026-11-19: у `data/` їх прибрав коміт 052f489 (CD20-негативні хвороби — без ритуксимабу: `dhaox`, `gdp`, `gem-ox`, `ice`, `vp`); у Supabase жодного з шести id уже немає, сухий прогін `data:sync` — «Database is up to date», тож SQL не потрібен. Вузли не порожні: `hodgkin-lymphoma.relapsed` — 24 режими, `ptcl-nos.relapsed` — 15 |
 | N2 | Рішення щодо омепразолу й філграстиму в `r-gdp`/`gdp` за NSSG L.62 | |
 | N3 | Додати режими BEGEV, GVD і класичний DHAP | |
 | N4 | Звузити `DoseTable.tsx` до `unavailable` | |
