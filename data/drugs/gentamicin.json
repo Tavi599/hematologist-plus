@@ -52,7 +52,7 @@
       "solvent": "sodium_chloride_0_9",
       "concentration_max_mg_ml": 1,
       "stock_concentration_mg_ml": 40,
-      "bag_volumes_ml": [50, 100, 200, 250],
+      "bag_volumes_ml": [50, 100, 200, 250, 400, 500],
       "duration_min": 60,
       "is_default": true,
       "sources": [
@@ -64,8 +64,8 @@
         }
       ],
       "notes": {
-        "uk": "Розчин 40 мг/мл; разову дозу розводять 50–300 мл 0,9% NaCl або 5% глюкози до не більше 1 мг/мл (0,1%); інфузія 1–2 год (60–80 крапель/хв). Швидке пряме в/в введення не рекомендоване; в/в 2–3 дні, далі в/м. Об’єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
-        "en": "Solution 40 mg/mL; the single dose is diluted in 50-300 mL of 0.9% NaCl or 5% glucose to no more than 1 mg/mL (0.1%); infused over 1-2 h (60-80 drops/min). Rapid direct IV injection is not recommended; IV for 2-3 days, then IM. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
+        "uk": "Розчин 40 мг/мл; разову дозу розводять 50–300 мл 0,9% NaCl або 5% глюкози до не більше 1 мг/мл (0,1%); інфузія 1–2 год (60–80 крапель/хв). Більша доза потребує понад 300 мл, щоб не перевищити 1 мг/мл. Швидке пряме в/в введення не рекомендоване; в/в 2–3 дні, далі в/м. Об’єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
+        "en": "Solution 40 mg/mL; the single dose is diluted in 50-300 mL of 0.9% NaCl or 5% glucose to no more than 1 mg/mL (0.1%); infused over 1-2 h (60-80 drops/min). A larger dose needs more than 300 mL to stay within 1 mg/mL. Rapid direct IV injection is not recommended; IV for 2-3 days, then IM. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
       },
       "duration_options": [
         {
