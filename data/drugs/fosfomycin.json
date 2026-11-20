@@ -1,0 +1,44 @@
+{
+  "$comment": "Додано 2026-11-20 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено. Пероральна форма — фосфоміцину трометамол, 3 г фосфоміцину в саше.",
+  "id": "fosfomycin",
+  "name": {
+    "uk": "Фосфоміцин",
+    "en": "Fosfomycin"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "MSD Manual Professional (українська версія): антибактеріальні препарати",
+      "url": "https://www.msdmanuals.com/uk/professional/infectious-diseases/bacteria-and-antibacterial-medications/fosfomycin",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (API drlz.com.ua): гранули/порошок для орального розчину 3 г у саше (напр. UA/9833/01/01 Монурал, UA/14782/01/01); порошок для розчину для ін’єкцій/інфузій 1 г і 2 г (UA/5664/01/01–02 Фосміцин, UA/21487/01/01 Фосмівен, UA/18305/01/01)",
+      "url": "https://www.drlz.com.ua/dani/api",
+      "version": "чинні реєстрації, запит від 20.11.2026",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "o3000",
+      "form": "other",
+      "strength_amount": 3000,
+      "label": {
+        "uk": "саше 3 г (гранули для орального розчину)",
+        "en": "3 g sachet (granules for oral solution)"
+      }
+    },
+    {
+      "key": "s1000",
+      "form": "vial",
+      "strength_amount": 1000
+    },
+    {
+      "key": "s2000",
+      "form": "vial",
+      "strength_amount": 2000
+    }
+  ],
+  "atc_code": "J01XX01"
+}

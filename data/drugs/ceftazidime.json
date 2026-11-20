@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Дози, розведення й застереження внесено 2026-11-20 з українських інструкцій (див. sources).",
   "id": "ceftazidime",
   "name": {
     "uk": "Цефтазидим",
@@ -17,6 +17,12 @@
       "url": "https://www.drlz.com.ua/dani/api",
       "version": "чинні реєстрації, запит від 14.11.2026",
       "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Фортум (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1658A35EF83158D8C2258D220029E3C0/$file/UA16360103_1171.mht",
+      "version": "РП UA/1636/01/03, наказ МОЗ №1503 від 30.09.2025",
+      "checkedOn": "2026-11-20"
     }
   ],
   "presentations": [
@@ -36,5 +42,106 @@
       "strength_amount": 2000
     }
   ],
-  "atc_code": "J01DD02"
+  "atc_code": "J01DD02",
+  "dose_units": ["mg_flat"],
+  "notes": {
+    "uk": "Дорослим (≥ 40 кг) 1–2 г кожні 8 год; фебрильна нейтропенія, госпітальна пневмонія, менінгіт, бактеріємія — 2 г кожні 8 год; муковісцидоз — 100–150 мг/кг на добу, до 9 г. Або навантаження 2 г і постійна інфузія 4–6 г за 24 год. Літнім гостро хворим зазвичай не більше 3 г на добу, особливо від 80 років.",
+    "en": "Adults (≥ 40 kg): 1-2 g every 8 h; febrile neutropenia, hospital-acquired pneumonia, meningitis, bacteraemia, 2 g every 8 h; cystic fibrosis, 100-150 mg/kg a day, up to 9 g. Or a 2 g loading dose and a continuous infusion of 4-6 g over 24 h. The acutely ill elderly usually no more than 3 g a day, especially from age 80."
+  },
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_min_mg_ml": 1,
+      "concentration_max_mg_ml": 40,
+      "stock_concentration_mg_ml": 170,
+      "bag_volumes_ml": [50, 100, 200, 250],
+      "duration_min": 30,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "Інструкція для медичного застосування: Фортум (Державний реєстр лікарських засобів України)",
+          "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1658A35EF83158D8C2258D220029E3C0/$file/UA16360103_1171.mht",
+          "version": "РП UA/1636/01/03, наказ МОЗ №1503 від 30.09.2025",
+          "checkedOn": "2026-11-20"
+        }
+      ],
+      "notes": {
+        "uk": "Флакон 2 г розчиняють 10 мл (≈ 170 мг/мл), далі до загального об’єму щонайменше 50 мл (1–40 мг/мл) 0,9% NaCl, 5 або 10% глюкози, Рінгер-лактату тощо; інфузія 15–30 хв. Бікарбонат натрію як розчинник не застосовують. Об’єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
+        "en": "The 2 g vial is dissolved in 10 mL (≈ 170 mg/mL), then made up to at least 50 mL (1-40 mg/mL) with 0.9% NaCl, 5 or 10% glucose, lactated Ringer’s and others; infused over 15-30 min. Sodium bicarbonate is not used as a diluent. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
+      },
+      "duration_options": [
+        {
+          "duration_min": 15,
+          "extended": false
+        },
+        {
+          "duration_min": 30,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 15
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Початкова доза 1 г, далі: КК 50–31 мл/хв — 1 г кожні 12 год; 30–16 — 1 г кожні 24 год; 15–6 — 0,5 г кожні 24 год; < 5 — 0,5 г кожні 48 год. При тяжкій інфекції разову дозу можна збільшити на 50%, контролюючи рівень. Постійна інфузія: КК 50–31 — 2 г, далі 1–3 г за 24 год; 30–16 — 2 г, далі 1 г за 24 год; ≤ 15 — не досліджено. Гемодіаліз — підтримуюча доза після кожного сеансу. Без корекції — енцефалопатія, міоклонія, судоми, кома.",
+        "en": "A starting dose of 1 g, then: CrCl 50-31 mL/min, 1 g every 12 h; 30-16, 1 g every 24 h; 15-6, 0.5 g every 24 h; < 5, 0.5 g every 48 h. In severe infection the single dose may be raised by 50% with level monitoring. Continuous infusion: CrCl 50-31, 2 g then 1-3 g over 24 h; 30-16, 2 g then 1 g over 24 h; ≤ 15, not studied. Haemodialysis: a maintenance dose after each session. Unadjusted doses cause encephalopathy, myoclonus, seizures, coma."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Фортум (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1658A35EF83158D8C2258D220029E3C0/$file/UA16360103_1171.mht",
+        "version": "РП UA/1636/01/03, наказ МОЗ №1503 від 30.09.2025",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Легка й помірна недостатність — без корекції; при тяжкій досліджень не було, ретельний клінічний нагляд.",
+        "en": "Mild and moderate impairment: no adjustment; not studied in severe impairment, close clinical monitoring."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Фортум (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1658A35EF83158D8C2258D220029E3C0/$file/UA16360103_1171.mht",
+        "version": "РП UA/1636/01/03, наказ МОЗ №1503 від 30.09.2025",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "with": ["amikacin", "gentamicin", "tobramycin", "furosemide"],
+      "level": "caution",
+      "notes": {
+        "uk": "Високі дози з нефротоксичними препаратами (аміноглікозиди, сильні діуретики) можуть погіршити функцію нирок. З аміноглікозидами не змішувати в одній системі чи шприці.",
+        "en": "High doses with nephrotoxic drugs (aminoglycosides, potent diuretics) may impair renal function. Do not mix with aminoglycosides in one line or syringe."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Фортум (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1658A35EF83158D8C2258D220029E3C0/$file/UA16360103_1171.mht",
+        "version": "РП UA/1636/01/03, наказ МОЗ №1503 від 30.09.2025",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion", "iv_bolus", "intramuscular"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Фортум» флакон 2 г: в/в струминно — 10 мл (≈ 170 мг/мл); інфузія — у два етапи: 10 мл розчинника, після повного розчинення (виділяється CO₂; голку для повітря вставляють лише тоді) довести до щонайменше 50 мл і ввести за 15–30 хв. Флакон 1 г в/м — 3 мл води або 0,5–1% лідокаїну (≈ 260 мг/мл). Після відновлення й розведення стабільний 9 год при 25 °C або 6 діб при 4 °C. З ванкоміцином утворює осад — промивати систему між ними.",
+        "en": "Per the Fortum label, the 2 g vial: IV push, 10 mL (≈ 170 mg/mL); infusion in two steps: 10 mL of diluent, and only after full dissolution (CO₂ is released; insert the vent needle only then) make up to at least 50 mL and give over 15-30 min. A 1 g vial IM: 3 mL of water or 0.5-1% lidocaine (≈ 260 mg/mL). After reconstitution and dilution stable 9 h at 25 °C or 6 days at 4 °C. Precipitates with vancomycin: flush the line between them."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Фортум (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1658A35EF83158D8C2258D220029E3C0/$file/UA16360103_1171.mht",
+        "version": "РП UA/1636/01/03, наказ МОЗ №1503 від 30.09.2025",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ]
 }

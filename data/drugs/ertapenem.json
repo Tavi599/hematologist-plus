@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Дози, розведення й застереження внесено 2026-11-20 з українських інструкцій (див. sources).",
   "id": "ertapenem",
   "name": {
     "uk": "Ертапенем",
@@ -17,6 +17,12 @@
       "url": "https://www.drlz.com.ua/dani/api",
       "version": "чинні реєстрації, запит від 14.11.2026",
       "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Інванз (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/AC8C371601A8CC93C2258EB500480F87/$file/UA91790101_AA1B.mht",
+      "version": "РП UA/9179/01/01, наказ МОЗ №1811 від 16.11.2026",
+      "checkedOn": "2026-11-20"
     }
   ],
   "presentations": [
@@ -26,5 +32,85 @@
       "strength_amount": 1000
     }
   ],
-  "atc_code": "J01DH03"
+  "atc_code": "J01DH03",
+  "dose_units": ["mg_flat"],
+  "max_single_dose_amount": 1000,
+  "notes": {
+    "uk": "Дорослим і дітям від 13 років 1 г 1 раз на добу, 3–14 днів; профілактика при колоректальній операції — 1 г за 1 год до неї. Не застосовують з вальпроєвою кислотою.",
+    "en": "Adults and children from 13 years: 1 g once daily for 3-14 days; colorectal surgery prophylaxis, 1 g 1 h before it. Not given with valproic acid."
+  },
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_max_mg_ml": 20,
+      "stock_concentration_mg_ml": 100,
+      "bag_volumes_ml": [50],
+      "duration_min": 30,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "Інструкція для медичного застосування: Інванз (Державний реєстр лікарських засобів України)",
+          "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/AC8C371601A8CC93C2258EB500480F87/$file/UA91790101_AA1B.mht",
+          "version": "РП UA/9179/01/01, наказ МОЗ №1811 від 16.11.2026",
+          "checkedOn": "2026-11-20"
+        }
+      ],
+      "notes": {
+        "uk": "Флакон 1 г ресуспендують у 10 мл води для ін’єкцій або 0,9% NaCl і одразу переносять у 50 мл 0,9% NaCl; інфузія 30 хв. Розчинники з глюкозою не застосовують. Дітям — до 20 мг/мл і менше.",
+        "en": "The 1 g vial is resuspended in 10 mL of water for injections or 0.9% NaCl and at once transferred to 50 mL of 0.9% NaCl; infused over 30 min. No glucose-containing diluents. In children up to 20 mg/mL or less."
+      },
+      "duration_options": [
+        {
+          "duration_min": 30,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 30
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "contraindicated",
+      "notes": {
+        "uk": "КК > 30 мл/хв/1,73 м² — без корекції. При тяжкій нирковій недостатності (КК ≤ 30) і на гемодіалізі даних для рекомендацій немає — не застосовувати. Судоми частіше в літніх і при нирковій недостатності.",
+        "en": "CrCl > 30 mL/min/1.73 m²: no adjustment. In severe renal impairment (CrCl ≤ 30) and on haemodialysis there are no data to recommend a dose: not to be used. Seizures are more frequent in the elderly and with renal impairment."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Інванз (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/AC8C371601A8CC93C2258EB500480F87/$file/UA91790101_AA1B.mht",
+        "version": "РП UA/9179/01/01, наказ МОЗ №1811 від 16.11.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Інванз» флакон 1 г ресуспендують у 10 мл води для ін’єкцій, 0,9% NaCl або бактеріостатичної води, добре струшують і одразу переносять у 50 мл 0,9% NaCl; використати протягом 6 год при 25 °C або зберігати 24 год у холодильнику й використати за 4 год після виймання. Не заморожувати. Не змішувати з іншими препаратами, не використовувати розчинники з глюкозою; сумісний з розчинами, що містять гепарин і калію хлорид.",
+        "en": "Per the Invanz label, the 1 g vial is resuspended in 10 mL of water for injections, 0.9% NaCl or bacteriostatic water, shaken well and at once transferred to 50 mL of 0.9% NaCl; use within 6 h at 25 °C, or keep 24 h refrigerated and use within 4 h of taking it out. Do not freeze. Do not mix with other drugs or use glucose-containing diluents; compatible with solutions containing heparin and potassium chloride."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Інванз (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/AC8C371601A8CC93C2258EB500480F87/$file/UA91790101_AA1B.mht",
+        "version": "РП UA/9179/01/01, наказ МОЗ №1811 від 16.11.2026",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "routes": ["intramuscular"],
+      "notes": {
+        "uk": "Інванз: флакон 1 г ресуспендують у 3,2 мл 1 або 2% лідокаїну без епінефрину, глибоко в/м у великий м’яз; використати протягом 1 год. Цей розчин не можна вводити внутрішньовенно.",
+        "en": "Invanz: the 1 g vial is resuspended in 3.2 mL of 1 or 2% lidocaine without epinephrine, deep IM into a large muscle; use within 1 h. This solution must not be given IV."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Інванз (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/AC8C371601A8CC93C2258EB500480F87/$file/UA91790101_AA1B.mht",
+        "version": "РП UA/9179/01/01, наказ МОЗ №1811 від 16.11.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ]
 }

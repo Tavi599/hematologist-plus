@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Дози, розведення й застереження внесено 2026-11-20 з українських інструкцій (див. sources).",
   "id": "aztreonam",
   "name": {
     "uk": "Азтреонам",
@@ -17,6 +17,12 @@
       "url": "https://www.drlz.com.ua/dani/api",
       "version": "чинні реєстрації, запит від 14.11.2026",
       "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Азеонам (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/9033C5F0C0D33E2F42258BE7002CDA4C/$file/UA181340101_4739.mht",
+      "version": "РП UA/18134/01/01, наказ МОЗ №1967 від 25.11.2024",
+      "checkedOn": "2026-11-20"
     }
   ],
   "presentations": [
@@ -26,5 +32,92 @@
       "strength_amount": 1000
     }
   ],
-  "atc_code": "J01DF01"
+  "atc_code": "J01DF01",
+  "dose_units": ["mg_flat"],
+  "notes": {
+    "uk": "Дорослим 1–8 г на добу рівними дозами, звичайно 3–4 г; помірні системні інфекції — 1–2 г кожні 8–12 год; тяжкі й P. aeruginosa — 2 г кожні 6–8 год. Максимум 8 г на добу. Разові дози понад 1 г — в/в.",
+    "en": "Adults: 1-8 g a day in equal doses, usually 3-4 g; moderate systemic infections, 1-2 g every 8-12 h; severe infections and P. aeruginosa, 2 g every 6-8 h. Maximum 8 g a day. Single doses above 1 g IV."
+  },
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_max_mg_ml": 20,
+      "bag_volumes_ml": [50, 100, 200, 250],
+      "duration_min": 30,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "Інструкція для медичного застосування: Азеонам (Державний реєстр лікарських засобів України)",
+          "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/9033C5F0C0D33E2F42258BE7002CDA4C/$file/UA181340101_4739.mht",
+          "version": "РП UA/18134/01/01, наказ МОЗ №1967 від 25.11.2024",
+          "checkedOn": "2026-11-20"
+        }
+      ],
+      "notes": {
+        "uk": "На кожен грам — щонайменше 3 мл води для ін’єкцій, далі розводять до концентрації менше 2% (щонайменше 50 мл на 1 г) 0,9% NaCl, 5% глюкозою, Рінгером тощо; інфузія 20–60 хв. В/в струминно — 6–10 мл води, за 3–5 хв. Об’єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
+        "en": "At least 3 mL of water for injections per gram, then diluted to below 2% (at least 50 mL per 1 g) with 0.9% NaCl, 5% glucose, Ringer’s and others; infused over 20-60 min. IV push: 6-10 mL of water, over 3-5 min. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
+      },
+      "duration_options": [
+        {
+          "duration_min": 20,
+          "extended": false
+        },
+        {
+          "duration_min": 30,
+          "extended": false
+        },
+        {
+          "duration_min": 60,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 20
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Після звичайної початкової дози: КК 10–30 мл/хв/1,73 м² — дозу зменшують удвічі; КК < 10 і гемодіаліз — звичайна початкова доза, далі ¼ її з тим самим інтервалом 6, 8 або 12 год, при тяжких інфекціях ще ⅛ після кожного сеансу.",
+        "en": "After the usual starting dose: CrCl 10-30 mL/min/1.73 m², halve the dose; CrCl < 10 and haemodialysis, the usual starting dose, then ¼ of it at the same 6, 8 or 12 h interval, in severe infections plus ⅛ after each session."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Азеонам (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/9033C5F0C0D33E2F42258BE7002CDA4C/$file/UA181340101_4739.mht",
+        "version": "РП UA/18134/01/01, наказ МОЗ №1967 від 25.11.2024",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Тривале лікування при хронічних ураженнях печінки з цирозом — дозу зменшують на 20–25%, особливо при алкогольному цирозі та супутньому порушенні функції нирок.",
+        "en": "Long treatment in chronic liver disease with cirrhosis: reduce the dose by 20-25%, especially in alcoholic cirrhosis and when the kidneys are impaired too."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Азеонам (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/9033C5F0C0D33E2F42258BE7002CDA4C/$file/UA181340101_4739.mht",
+        "version": "РП UA/18134/01/01, наказ МОЗ №1967 від 25.11.2024",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion", "iv_bolus", "intramuscular"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Азеонам» після додавання розчинника флакон одразу сильно струшують. В/м: 3 мл води для ін’єкцій або 0,9% NaCl на 1 г. В/в струминно: 6–10 мл води, за 3–5 хв. Інфузія: щонайменше 3 мл води на 1 г, далі до < 2% (≥ 50 мл на 1 г) 0,9% NaCl, 5% глюкозою, 5 чи 10% манітолом, лактатом натрію, NaCl з 5% глюкозою, Рінгером чи Гартманом, за 20–60 хв. Відновлений розчин зберігається 18 год при 2–8 °C. З іншими препаратами не змішувати (з метронідазолом — окремо); при спільній трубці промивати до й після.",
+        "en": "Per the Azeonam label shake the vial hard at once after adding the diluent. IM: 3 mL of water for injections or 0.9% NaCl per 1 g. IV push: 6-10 mL of water, over 3-5 min. Infusion: at least 3 mL of water per 1 g, then to < 2% (≥ 50 mL per 1 g) with 0.9% NaCl, 5% glucose, 5 or 10% mannitol, sodium lactate, NaCl with 5% glucose, Ringer’s or Hartmann’s, over 20-60 min. The reconstituted solution keeps 18 h at 2-8 °C. Do not mix with other drugs (metronidazole separately); flush a shared line before and after."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Азеонам (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/9033C5F0C0D33E2F42258BE7002CDA4C/$file/UA181340101_4739.mht",
+        "version": "РП UA/18134/01/01, наказ МОЗ №1967 від 25.11.2024",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ]
 }
