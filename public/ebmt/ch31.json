@@ -233,7 +233,7 @@
    "en": "a Table 31.3 Pharmacokinetic interactions with cyclosporine (C), tacrolimus (T) and sirolimus (S) (non-limitative list) Interacting drugProposed mechanismEffectRecommended action Anticoagulants DabigatranP-gP/ABCB1 – ▲ dabigatran/edoxaban • Monitor closely for excessive Edoxabaninhibitionlevelclinical response to dabigatran/ edoxaban Antivirals LetermovirCYP3A4 inhibition – ▲ C/T/S levels • Monitor C/S/T levels (decrease letermovir dose when combined with C) Antiepileptics CarbamazepineCYP3A4 induction – ▼ C/T/S level • Monitor C/T/S levels Phenobarbital • Increased C/T/S doses will Phenytoinlikely be needed • Consider therapy modification (levetiracetam) Antifungals CaspofunginUnknown – C: ▲ adverse/toxic effect • Monitor liver function/ of caspofunginhepatotoxicity in combination with – ▼ T/S levelsC • Monitor T/S levels and adjust as necessary FluconazoleCYP3A4 and/or PgP – ▲ C/T/S levels • Monitor clinical response of ItraconazoleinhibitionC/T/S closely Posaconazole • Monitor C/T/S levels closely Voriconazole • Decreased C/T/S doses will likely be needed • Itraconazole: consider therapy modification (C/T/S) • Posaconazole/voriconazole: consider therapy modification (C/T), avoid combination (S)"
   },
   {
-   "id": "772277ad8f",
+   "id": "176dccac28",
    "type": "table",
    "num": "31.3",
    "en": "Table 31.3 (continued)",
@@ -266,20 +266,20 @@
     [
      "Cyclosporine",
      "CYP3A4 competition",
-     ": –T▲ levels/nephrotoxicity",
+     "–T: ▲ levels/nephrotoxicity",
      "•Discontinue C/T therapy at"
     ],
     [
      "",
      "",
      "of C/T –S: ▲levels of S (of specific concern with modified C)",
-     "least 24 h prior to initiating therapy with the other agent: avoid combination•C/T •Monitor for toxic effects of S •S: ▲ risk of C-induced HUS/ TTP/TMA •Administer oral doses of S 4 h after doses of C consider therapy •C/S: modification"
+     "least 24 h prior to initiating therapy with the other agent •C/T: avoid combination •Monitor for toxic effects of S •S: ▲ risk of C-induced HUS/ TTP/TMA •Administer oral doses of S 4 h after doses of C •C/S: consider therapy modification"
     ],
     [
      "Tacrolimus",
      "",
      "–C: ▲ levels/",
-     "void combination with C/S •A"
+     "•Avoid combination with C/S"
     ],
     [
      "",
@@ -309,7 +309,7 @@
      "",
      "",
      "erythromycin",
-     ": consider therapy •S/T modification"
+     "•S/T: consider therapy modification"
     ],
     [
      "Proton pump inhibitors (PPI, not pantoprazole)",
@@ -332,8 +332,8 @@
     [
      "Atorvastatin Simvastatin",
      "CYP3A4 inhibition and inhibition of OATP1B1-mediated hepatic uptake",
-     "–C: ▲ level of atorvastatin/ simvastatin: Limited effect–T",
-     "•Monitor for increased risk for statin-related toxicities (myopathy and rhabdomyolysis) Avoid concurrent use •C: atorvastatin/simvastatin: No action needed•T"
+     "–C: ▲ level of atorvastatin/ simvastatin –T: Limited effect",
+     "•Monitor for increased risk for statin-related toxicities (myopathy and rhabdomyolysis) •C: Avoid concurrent use atorvastatin/simvastatin •T: No action needed"
     ],
     [
      "Miscellaneous",
@@ -345,7 +345,7 @@
      "Grapefruit juice",
      "CYP3A4 inhibition (intestinal)",
      "–▲ C/T/S levels (C/T: Primarily limited to orally",
-     "•Monitor C/T/S levels void combination with orally •A"
+     "•Monitor C/T/S levels •Avoid combination with orally"
     ],
     [
      "",
@@ -412,7 +412,7 @@
    "en": "Resources for Drug Interactions"
   },
   {
-   "id": "158b9e646e",
+   "id": "6dabe6991b",
    "type": "table",
    "num": "31.3",
    "en": "Table 31.3 (continued)",
@@ -433,7 +433,7 @@
     [
      "",
      "",
-     "concentrations (associated with mycophenolate adverse effects) –MMF: ▼ C exposure in children: does not affect PK of –T mycophenolic acid (one study suggests ▲ T exposure)",
+     "concentrations (associated with mycophenolate adverse effects) –MMF: ▼ C exposure in children –T: does not affect PK of mycophenolic acid (one study suggests ▲ T exposure)",
      "C (starting, stopping, or changing dose)"
     ],
     [

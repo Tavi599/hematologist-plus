@@ -158,25 +158,26 @@
    "en": "While the detection of specific cell subsets and proteins offers valuable insights, functional assays can provide additional information to enhance our understanding of the biological mechanisms and assess the effectiveness of a patient’s immune system. For example, the functionality of natural killer (NK) cells and regulatory T cells (Tregs) can be evaluated through assays that measure their ability to induce target cell killing by degranulation as well as by their capacity for proliferation and suppression, respectively. Moreover, recent advancements in single-cell proteomic technologies have enabled the combination of both approaches, wherein the analysis of secreted proteins at the single-cell level generates an immune fitness score. This score has demonstrated its potential in predicting the responsiveness to checkpoint inhibitor therapy (Haanen et al. 2020), but its value in assessing immune fitness post-HCT has still to be assessed."
   },
   {
-   "id": "408e523200",
+   "id": "8936112eae",
    "type": "h3",
    "num": "10.2.3",
-   "en": "mmune Monitoring of Virus- I Specific T-Cell Responses"
+   "en": "Immune Monitoring of Virus- Specific T-Cell Responses"
   },
   {
-   "id": "240d13dd63",
+   "id": "2a7a513fac",
    "type": "table",
    "num": "10.2",
    "en": "Table 10.2 Example of platforms for virus-specific immunological monitoring (i.e., CMV)",
-   "columns": 15,
+   "columns": 16,
    "rows_en": [
     [
      "Characteristics Sample Turnaround time Functional analysis Phenotypic characterization Differentiation CD8 HLA restriction Cost Advantages Limitations",
      "⁺/CD4",
      "⁺",
-     "IFN- Whole blood 24 h Yes No No (only CD8 Yes + Simple to perform and highly standardized (routine) ve to lymphopenia",
+     "IFN- Whole blood 24 h Yes No No (only CD8 Yes + Simple to perform and highly standardized (routine)",
      "• Only measures CD8 cells • Sensiti • HLA-restricted",
      "𝛾 QuantiFERON",
+     "ve to lymphopenia",
      "⁺)",
      "⁺",
      "IFN- PBMCs 24–48 h Yes No Yes No ++ Highly sensitive",
@@ -190,6 +191,7 @@
     [
      "PMBC",
      "peripheral blood mononuclear cell",
+     "",
      "",
      "",
      "",
@@ -232,7 +234,7 @@
    "id": "82b237fdd5",
    "type": "table",
    "num": "10.3",
-   "en": "Table 10.3 anels under consideration in the panel discussion of the CTIWP (Greco et al. P2018). General parameters that could be included in harmonized immune monitoring protocols across most studies/centers and advanced parameters that may be of great value in specific studies and that can only be performed in specialized immunology laboratories or analyzed in a central laboratory",
+   "en": "Table 10.3 Panels under consideration in the panel discussion of the CTIWP (Greco et al. 2018). General parameters that could be included in harmonized immune monitoring protocols across most studies/centers and advanced parameters that may be of great value in specific studies and that can only be performed in specialized immunology laboratories or analyzed in a central laboratory",
    "columns": 3,
    "rows_en": [
     [
