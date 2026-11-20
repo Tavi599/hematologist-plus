@@ -59,11 +59,7 @@
       "phase": "II",
       "randomized": false
     },
-    "settings": [
-      "relapse",
-      "refractory",
-      "pre-transplant"
-    ],
+    "settings": ["relapse", "refractory", "pre-transplant"],
     "verdict": "option",
     "appraisal": [
       {
@@ -77,10 +73,7 @@
             "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
           }
         },
-        "publication_types": [
-          "Journal Article",
-          "Clinical Trial, Phase II"
-        ],
+        "publication_types": ["Journal Article", "Clinical Trial, Phase II"],
         "journal": {
           "name": "Cancer",
           "issn": "0008-543X",
@@ -116,13 +109,7 @@
       "route": "iv_infusion",
       "dose_value": 5,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [1, 2, 3, 4, 5],
       "duration_min": 120,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
@@ -137,13 +124,7 @@
       "route": "iv_infusion",
       "dose_value": 1000,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [1, 2, 3, 4, 5],
       "notes": {
         "uk": "1000 мг/м² в/в за 2 години, через 3–6 годин після початку кладрибіну.",
         "en": "1000 mg/m² IV over 2 hours, 3 to 6 hours after the start of cladribine."
@@ -157,11 +138,7 @@
       "route": "iv_infusion",
       "dose_value": 10,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3
-      ],
+      "days": [1, 2, 3],
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 100,
       "notes": {

@@ -75,9 +75,7 @@
       "comparator": "DA",
       "primary_met": true
     },
-    "settings": [
-      "first-line"
-    ],
+    "settings": ["first-line"],
     "verdict": "option",
     "appraisal": [
       {
@@ -220,11 +218,7 @@
       "route": "iv_infusion",
       "dose_value": 60,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3
-      ],
+      "days": [1, 2, 3],
       "duration_min": 60,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 250,
@@ -239,13 +233,7 @@
       "route": "iv_infusion",
       "dose_value": 5,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [1, 2, 3, 4, 5],
       "duration_min": 120,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
@@ -260,15 +248,7 @@
       "route": "iv_infusion",
       "dose_value": 200,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7],
       "notes": {
         "uk": "200 мг/м² на добу 22-годинною в/в інфузією (NCT03257241).",
         "en": "200 mg/m² a day as a 22-hour IV infusion (NCT03257241)."

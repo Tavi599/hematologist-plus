@@ -60,11 +60,7 @@
       "randomized": false,
       "n": 118
     },
-    "settings": [
-      "relapse",
-      "refractory",
-      "pre-transplant"
-    ],
+    "settings": ["relapse", "refractory", "pre-transplant"],
     "verdict": "option",
     "appraisal": [
       {
@@ -78,10 +74,7 @@
             "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
           }
         },
-        "publication_types": [
-          "Journal Article",
-          "Research Support, Non-U.S. Gov't"
-        ],
+        "publication_types": ["Journal Article", "Research Support, Non-U.S. Gov't"],
         "journal": {
           "name": "European Journal of Haematology",
           "issn": "0902-4441",
@@ -161,14 +154,7 @@
       "route": "subcutaneous",
       "dose_value": 30,
       "dose_unit": "miu_flat",
-      "days": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [0, 1, 2, 3, 4, 5],
       "notes": {
         "uk": "30 млн ОД (300 мкг) п/ш раз на добу з дня 0 до дня 5, 6 доз (NCT03257241).",
         "en": "30 MU (300 mcg) SC once a day from day 0 to day 5, 6 doses (NCT03257241)."
@@ -180,13 +166,7 @@
       "route": "iv_infusion",
       "dose_value": 5,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [1, 2, 3, 4, 5],
       "duration_min": 120,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
@@ -201,13 +181,7 @@
       "route": "iv_infusion",
       "dose_value": 2000,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [1, 2, 3, 4, 5],
       "notes": {
         "uk": "2 г/м² в/в за 4 години, через 2 години після кладрибіну (NCT03257241).",
         "en": "2 g/m² IV over 4 hours, 2 hours after cladribine (NCT03257241)."
@@ -221,11 +195,7 @@
       "route": "iv_infusion",
       "dose_value": 10,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3
-      ],
+      "days": [1, 2, 3],
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 100,
       "notes": {

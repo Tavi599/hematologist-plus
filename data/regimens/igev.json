@@ -61,10 +61,7 @@
             "en": "Every patient had the same regimen and there was no comparison group. That is level 4 on the Oxford scale."
           }
         },
-        "publication_types": [
-          "Clinical Trial",
-          "Journal Article"
-        ],
+        "publication_types": ["Clinical Trial", "Journal Article"],
         "journal": {
           "name": "Haematologica",
           "issn": "1592-8721",
@@ -92,11 +89,7 @@
         ]
       }
     ],
-    "settings": [
-      "relapse",
-      "refractory",
-      "pre-transplant"
-    ],
+    "settings": ["relapse", "refractory", "pre-transplant"],
     "verdict": "option"
   },
   "items": [
@@ -106,12 +99,7 @@
       "route": "oral",
       "dose_value": 100,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4
-      ]
+      "days": [1, 2, 3, 4]
     },
     {
       "key": "vinorelbine",
@@ -119,9 +107,7 @@
       "route": "iv_infusion",
       "dose_value": 20,
       "dose_unit": "mg_m2",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "20 мг/м² у день 1. Вводиться за стандартом відділення: у 100 мл 0,9% NaCl за 30 хв, як і в інших схемах.",
         "en": "20 mg/m² on day 1. Given by the department standard: in 100 mL of 0.9% NaCl over 30 minutes, as in the other regimens."
@@ -133,10 +119,7 @@
       "route": "iv_infusion",
       "dose_value": 800,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        4
-      ],
+      "days": [1, 4],
       "duration_min": 30,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 250
@@ -147,12 +130,7 @@
       "route": "iv_infusion",
       "dose_value": 2000,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4
-      ],
+      "days": [1, 2, 3, 4],
       "duration_min": 120,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 1000,
@@ -184,12 +162,7 @@
           }
         }
       ],
-      "days": [
-        1,
-        2,
-        3,
-        4
-      ],
+      "days": [1, 2, 3, 4],
       "duration_min": 120,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 1000,
@@ -205,9 +178,7 @@
       "route": "subcutaneous",
       "dose_value": 6,
       "dose_unit": "mg_flat",
-      "days": [
-        5
-      ],
+      "days": [5],
       "notes": {
         "uk": "6 мг підшкірно на день 5 (eviQ 4253); при мобілізації стовбурових клітин — філграстим 10 мкг/кг щодня.",
         "en": "6 mg subcutaneously on day 5 (eviQ 4253); for stem-cell mobilisation filgrastim 10 mcg/kg daily."

@@ -49,11 +49,7 @@
       "route": "iv_infusion",
       "dose_value": 5,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3
-      ],
+      "days": [1, 2, 3],
       "duration_min": 120,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
@@ -68,18 +64,7 @@
       "route": "subcutaneous",
       "dose_value": 20,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       "administrations_per_day": 2,
       "interval_min": 720,
       "notes": {
@@ -93,29 +78,7 @@
       "route": "oral",
       "dose_value": 400,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
       "notes": {
         "uk": "400 мг, дні 1–21.",
         "en": "400 mg on days 1 to 21."

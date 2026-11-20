@@ -49,10 +49,7 @@
       "randomized": false,
       "n": 118
     },
-    "settings": [
-      "first-line",
-      "elderly"
-    ],
+    "settings": ["first-line", "elderly"],
     "verdict": "option",
     "appraisal": [
       {
@@ -66,10 +63,7 @@
             "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
           }
         },
-        "publication_types": [
-          "Clinical Trial, Phase II",
-          "Journal Article"
-        ],
+        "publication_types": ["Clinical Trial, Phase II", "Journal Article"],
         "journal": {
           "name": "The Lancet Haematology",
           "issn": "2352-3026",
@@ -118,13 +112,7 @@
       "route": "iv_infusion",
       "dose_value": 5,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [1, 2, 3, 4, 5],
       "duration_min": 120,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
@@ -139,18 +127,7 @@
       "route": "subcutaneous",
       "dose_value": 20,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       "administrations_per_day": 2,
       "interval_min": 720,
       "notes": {

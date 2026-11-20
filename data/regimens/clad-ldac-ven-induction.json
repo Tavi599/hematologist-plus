@@ -48,13 +48,7 @@
       "route": "iv_infusion",
       "dose_value": 5,
       "dose_unit": "mg_m2",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "days": [1, 2, 3, 4, 5],
       "duration_min": 120,
       "fallback_solvent": "sodium_chloride_0_9",
       "fallback_volume_ml": 500,
@@ -69,18 +63,7 @@
       "route": "subcutaneous",
       "dose_value": 20,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       "administrations_per_day": 2,
       "interval_min": 720,
       "notes": {
@@ -94,9 +77,7 @@
       "route": "oral",
       "dose_value": 100,
       "dose_unit": "mg_flat",
-      "days": [
-        1
-      ],
+      "days": [1],
       "notes": {
         "uk": "День 1 титрування. Під час їди.",
         "en": "Ramp-up day 1. With food."
@@ -148,9 +129,7 @@
       "route": "oral",
       "dose_value": 200,
       "dose_unit": "mg_flat",
-      "days": [
-        2
-      ],
+      "days": [2],
       "notes": {
         "uk": "День 2 титрування.",
         "en": "Ramp-up day 2."
@@ -202,27 +181,7 @@
       "route": "oral",
       "dose_value": 400,
       "dose_unit": "mg_flat",
-      "days": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21
-      ],
+      "days": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
       "notes": {
         "uk": "Дні 3–21 — 400 мг (NCCN AML-E 4 of 14).",
         "en": "Days 3 to 21: 400 mg (NCCN AML-E 4 of 14)."
@@ -275,22 +234,7 @@
       "route": "oral",
       "dose_value": 300,
       "dose_unit": "mg_flat",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
+      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
       "notes": {
         "uk": "Профілактика синдрому лізису пухлини разом із гідратацією. У пацієнтів високого ризику може знадобитися расбуриказа — за протоколом СЛП.",
         "en": "Tumour lysis prophylaxis together with hydration. High-risk patients may need rasburicase, per the TLS protocol."
