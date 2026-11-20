@@ -1,0 +1,142 @@
+{
+  "$comment": "Цикли 2-4 Isa-VRd за IMROZ: ізатуксимаб раз на два тижні (дні 1, 15, 29) у 42-денному циклі.",
+  "id": "isa-vrd-cycle-2-4",
+  "short_name": "Isa-VRd (2-4)",
+  "name": {
+    "uk": "Isa-VRd (ізатуксимаб, бортезоміб, леналідомід, дексаметазон), цикли 2-4",
+    "en": "Isa-VRd (isatuximab, bortezomib, lenalidomide, dexamethasone), cycles 2-4"
+  },
+  "description": {
+    "uk": "Уперше діагностована множинна мієлома в пацієнтів, яким не показана автологічна трансплантація гемопоетичних стовбурових клітин (у дослідженні IMROZ — вік до 80 років). Індукція: 4 цикли по 42 дні; далі безперервне лікування Isa-Rd 28-денними циклами до прогресування або неприйнятної токсичності. З циклу 2 ізатуксимаб вводять раз на два тижні — у дні 1, 15 і 29. Ізатуксимаб в Україні не зареєстрований — схема наведена для повноти. Коротка характеристика радить розглянути колонієстимулюючий фактор, щоб зменшити ризик нейтропенії, та антибактеріальну й противірусну (зокрема проти герпес-зостер) профілактику за настановами — препаратів і доз для них вона не називає, тому в розрахунку їх немає.",
+    "en": "Newly diagnosed multiple myeloma in patients for whom autologous stem cell transplantation is not indicated (IMROZ enrolled patients under 80). Induction: four 42-day cycles; then continuous Isa-Rd in 28-day cycles until progression or unacceptable toxicity. From cycle 2 the isatuximab is every two weeks: days 1, 15 and 29. Isatuximab is not registered in Ukraine; the regimen is listed for completeness. The SmPC advises considering a colony-stimulating factor to lower the risk of neutropenia and antibacterial and antiviral (herpes zoster) prophylaxis per guidelines — it names neither drugs nor doses for them, so they are not in the calculation."
+  },
+  "cycle_length_days": 42,
+  "default_cycles": 3,
+  "sources": [
+    {
+      "name": "EMA, Sarclisa (ізатуксимаб), коротка характеристика препарату, розділ 4.2, таблиця 2 (NDMM без ТГСК)",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/sarclisa-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "EMA, Sarclisa (ізатуксимаб), коротка характеристика препарату, розділ 5.1 — дослідження IMROZ (EFC12522)",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/sarclisa-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "EMA, Sarclisa (ізатуксимаб), коротка характеристика препарату, розділ 4.2, «Премедикація»",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/sarclisa-epar-product-information_en.pdf",
+      "version": "чинна редакція на дату звірки",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "NCCN Guidelines: Multiple Myeloma, version 1.2027 (MYEL-H)",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1445",
+      "version": "1.2027 від 09.09.2026",
+      "checkedOn": "2026-10-22"
+    }
+  ],
+  "course": {
+    "id": "isa-vrd",
+    "title": {
+      "uk": "Isa-VRd → Isa-Rd",
+      "en": "Isa-VRd → Isa-Rd"
+    },
+    "phase": {
+      "uk": "цикли 2-4",
+      "en": "cycles 2-4"
+    },
+    "order": 2,
+    "cycles": {
+      "from": 2,
+      "to": 4
+    }
+  },
+  "items": [
+    {
+      "key": "paracetamol",
+      "drug_id": "paracetamol",
+      "role": "premedication",
+      "route": "oral",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 1000,
+      "dose_unit": "mg_flat",
+      "days": [1, 15, 29],
+      "notes": {
+        "uk": "За 15-60 хвилин до ізатуксимабу. Коротка характеристика допускає 650-1000 мг; у довіднику взято верхній край.",
+        "en": "15 to 60 minutes before the isatuximab. The SmPC allows 650 to 1000 mg; the catalogue takes the upper end."
+      }
+    },
+    {
+      "key": "diphenhydramine",
+      "drug_id": "diphenhydramine",
+      "role": "premedication",
+      "route": "iv_infusion",
+      "block": "day_support",
+      "anchor_offset_min": -60,
+      "dose_value": 50,
+      "dose_unit": "mg_flat",
+      "days": [1, 15, 29],
+      "notes": {
+        "uk": "За 15-60 хвилин до ізатуксимабу. Коротка характеристика допускає 25-50 мг; у довіднику взято верхній край. Внутрішньовенне введення бажане щонайменше для перших чотирьох інфузій. Якщо за перші чотири введення реакцій не було, потребу в премедикації переглядають.",
+        "en": "15 to 60 minutes before the isatuximab. The SmPC allows 25 to 50 mg; the catalogue takes the upper end. The intravenous route is preferred for at least the first four infusions. Where the first four administrations caused no reaction, the need for premedication is reconsidered."
+      }
+    },
+    {
+      "key": "dexamethasone",
+      "drug_id": "dexamethasone",
+      "route": "oral",
+      "dose_value": 20,
+      "dose_unit": "mg_flat",
+      "days": [1, 2, 4, 5, 8, 9, 11, 12, 15, 22, 23, 25, 26, 29, 30, 32, 33],
+      "notes": {
+        "uk": "20 мг на день. Доза водночас є премедикацією перед ізатуксимабом і частиною схеми — двічі її не дають; у дні ізатуксимабу вводять внутрішньовенно, в інші дні — усередину. Пацієнтам від 75 років IMROZ давав ті самі 20 мг, але рідше: у дні 1, 4, 8, 11, 15, 22, 25, 29 і 32 — у калькуляторі такий графік отримують, знявши решту днів.",
+        "en": "20 mg a day. The dose is both the premedication before isatuximab and part of the regimen, and is not given twice; on isatuximab days it goes intravenously, on the other days by mouth. For patients 75 and over IMROZ gave the same 20 mg on fewer days: 1, 4, 8, 11, 15, 22, 25, 29 and 32 — in the calculator that schedule is reached by removing the other days."
+      }
+    },
+    {
+      "key": "isatuximab",
+      "drug_id": "isatuximab",
+      "route": "iv_infusion",
+      "dose_value": 10,
+      "dose_unit": "mg_kg",
+      "days": [1, 15, 29],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
+      "notes": {
+        "uk": "10 мг/кг у 250 мл 0,9% NaCl через вбудований фільтр 0,22 мкм, окремою системою. Зниження дози не передбачене: при токсичності введення відкладають або пропускають. Пропущену дозу дають якнайшвидше, зберігаючи інтервал. Коротка характеристика дозволяє замість внутрішньовенної форми підшкірну — фіксовано 1400 мг за тим самим графіком (перейти можна будь-коли після завершення циклу 1); у довіднику розрахована внутрішньовенна форма. Крім премедикації нижче, коротка характеристика вимагає блокатор H2-рецепторів (ранітидин 50 мг внутрішньовенно або рівноцінний) чи пероральний інгібітор протонної помпи — дози для фамотидину чи омепразолу вона не дає, тож призначайте окремо, без розрахунку.",
+        "en": "10 mg/kg in 250 mL of 0.9% sodium chloride through a 0.22 micron in-line filter, in a line of its own. No dose reduction is foreseen: for toxicity the dose is delayed or omitted. A missed dose is given as soon as possible, keeping the interval. The SmPC allows the subcutaneous form instead of the intravenous one — a fixed 1400 mg on the same schedule, switchable at any time once cycle 1 is complete; the catalogue calculates the intravenous form. Besides the premedication below, the SmPC requires an H2 blocker (ranitidine 50 mg intravenously or equivalent) or an oral proton pump inhibitor; it gives no dose for famotidine or omeprazole, so prescribe it separately, without calculation."
+      }
+    },
+    {
+      "key": "bortezomib",
+      "drug_id": "bortezomib",
+      "route": "subcutaneous",
+      "dose_value": 1.3,
+      "dose_unit": "mg_m2",
+      "days": [1, 4, 8, 11, 22, 25, 29, 32],
+      "notes": {
+        "uk": "Підшкірно, 1,3 мг/м² у дні 1, 4, 8, 11, 22, 25, 29 і 32 кожного 42-денного циклу — лише в циклах індукції.",
+        "en": "Subcutaneously, 1.3 mg/m2 on days 1, 4, 8, 11, 22, 25, 29 and 32 of each 42-day cycle — induction cycles only."
+      }
+    },
+    {
+      "key": "lenalidomide",
+      "drug_id": "lenalidomide",
+      "route": "oral",
+      "dose_value": 25,
+      "dose_unit": "mg_flat",
+      "days": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
+        33, 34, 35
+      ],
+      "notes": {
+        "uk": "25 мг на день, дні 1-14 і 22-35 кожного 42-денного циклу. Призначають і видають лише в межах програми запобігання вагітності; потрібна тромбопрофілактика — коротка характеристика ізатуксимабу препарату й дози для неї не називає, тож її призначають окремо, без розрахунку. При ШКФ 30-59 мл/хв/1,73 м² дозу знижують за інструкцією леналідоміду.",
+        "en": "25 mg a day on days 1-14 and 22-35 of each 42-day cycle. Prescribed and dispensed only within the pregnancy prevention programme; thromboprophylaxis is required, and the isatuximab SmPC names neither drug nor dose for it, so it is prescribed separately, without calculation. For a GFR of 30-59 mL/min/1.73 m2 the dose is reduced per the lenalidomide label."
+      }
+    }
+  ]
+}
