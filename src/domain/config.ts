@@ -65,6 +65,16 @@ export const DOMAIN_DEFAULTS = {
   /** Standard giving-set drop factor, drops per mL. */
   dropFactorGttPerMl: 20,
 
+  /**
+   * How the infusion rate is written on the sheet. CALIBRATION (2026-11-20, department sheet
+   * «HD ARA-C (Цитозар 1,5 г/м2)»): cytarabine in 500 mL over 3 hours is 166.7 mL/h exactly and
+   * the sheet says `V= 170 мл/год`, so the rate goes to whole tens. One sheet cannot tell
+   * rounding to the nearest ten from rounding up — the nearest is used.
+   * `keepWholeBelowMlH` is not a department rule but a guard: a slow pump rate (100 mL over 24
+   * hours is 4.2 mL/h) must not be moved by ten, so below it the rate keeps whole millilitres.
+   */
+  infusionRateRounding: { stepMlH: 10, keepWholeBelowMlH: 20 },
+
   /** Plausible adult input ranges; values outside produce warnings, not errors. */
   patientLimits: {
     ageYears: { min: 18, max: 110 },
