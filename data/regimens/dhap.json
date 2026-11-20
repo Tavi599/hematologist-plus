@@ -1,5 +1,5 @@
 {
-  "$comment": "DHAP за eviQ 833 (вер. 4): без ритуксимабу, для рецидиву лімфоми Ходжкіна (протокол охоплює також неходжкінські лімфоми). Цисплатин 100 мг/м² у 1000 мл 0,9% NaCl за 24 години день 1; цитарабін 2000 мг/м² у 500 мл 0,9% NaCl за 3 години двічі на добу (через 12 годин) день 2; дексаметазон 40 мг дні 1–4. При мобілізації стовбурових клітин потрібен Г-КСФ. Для пацієнтів старших за 70 років — цитарабін 1 г/м². Для рецидиву ЛХ з наміром автотрансплантації eviQ допускає скорочення циклу з 21 до 14 днів.",
+  "$comment": "Класичний DHAP (Velasquez 1988) у викладі eviQ 833 (вер. 4): без ритуксимабу; показання eviQ — рецидив або рефрактерність лімфоми Ходжкіна і неходжкінських лімфом. Цисплатин 100 мг/м² за 24 години день 1 (eviQ: у 1000 мл 0,9% NaCl); цитарабін 2000 мг/м² двічі з інтервалом 12 годин день 2 (eviQ: у 500 мл 0,9% NaCl за 3 години; резюме Velasquez тривалості не дає); дексаметазон 40 мг дні 1–4 (Velasquez і eviQ: перорально або в/в). Кількість циклів джерела дають різну: eviQ — 2–6 циклів кожні 21 день (при рецидиві ЛХ перед аутотрансплантацією допускає 14 днів); Velasquez — 6–10 курсів кожні 3–4 тижні. Супровід: eviQ — висока еметогенність, протиблювотні замінні за практикою закладу (у схему не внесено), прегідратація з магнію сульфатом 10 ммоль і постгідратація 0,9% NaCl, кортикостероїдні очні краплі без назви препарату, Г-КСФ при мобілізації без дози; Velasquez — посилена гідратація з манітом (дози резюме не наводить). Маніт у каталог не додано: 19.11.2026 відкриті дані Держреєстру (data.gov.ua) були недоступні, реєстрацію не перевірено, а дози джерело не дає. Понад 70 років — цитарабін 1 г/м² (eviQ з посиланням на Velasquez).",
   "id": "dhap",
   "short_name": "DHAP",
   "name": {
@@ -7,8 +7,8 @@
     "en": "DHAP (dexamethasone, cytarabine, cisplatin)"
   },
   "description": {
-    "uk": "Дексаметазон дні 1–4, цисплатин 100 мг/м² за 24 години день 1, цитарабін 2000 мг/м² двічі (через 12 годин) день 2. Цикл 21 день.",
-    "en": "Dexamethasone on days 1-4, cisplatin 100 mg/m2 over 24 hours on day 1, cytarabine 2000 mg/m2 twice (12 hours apart) on day 2. 21-day cycle."
+    "uk": "Дексаметазон дні 1–4, цисплатин 100 мг/м² за 24 години день 1, цитарабін 2000 мг/м² двічі (через 12 годин) день 2. Цикл 21 день, 2–6 циклів (eviQ); у первинній публікації — 6–10 курсів кожні 3–4 тижні (Velasquez 1988).",
+    "en": "Dexamethasone on days 1-4, cisplatin 100 mg/m2 over 24 hours on day 1, cytarabine 2000 mg/m2 twice (12 hours apart) on day 2. A 21-day cycle, 2 to 6 cycles (eviQ); the original publication gave 6 to 10 courses every 3 to 4 weeks (Velasquez 1988)."
   },
   "cycle_length_days": 21,
   "default_cycles": 2,
@@ -17,7 +17,13 @@
       "name": "eviQ: DHAP (дексаметазон, цитарабін, цисплатин), протокол 833, вер. 4 від 20.03.2024",
       "url": "https://www.eviq.org.au/haematology/lymphoma/833-dhap-dexamethasone-cytarabine-cisplatin",
       "version": "вер. 4 від 20.03.2024",
-      "checkedOn": "2026-10-10"
+      "checkedOn": "2026-11-19"
+    },
+    {
+      "name": "Velasquez W.S. та ін. Effective salvage therapy for lymphoma with cisplatin in combination with high-dose Ara-C and dexamethasone (DHAP). Blood. 1988;71:117-122",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3334893/",
+      "version": "резюме; 90 пацієнтів з рецидивом лімфоми",
+      "checkedOn": "2026-11-19"
     }
   ],
   "items": [
@@ -27,7 +33,11 @@
       "route": "oral",
       "dose_value": 40,
       "dose_unit": "mg_flat",
-      "days": [1, 2, 3, 4]
+      "days": [1, 2, 3, 4],
+      "notes": {
+        "uk": "40 мг на добу у дні 1–4, перорально або в/в (Velasquez 1988; eviQ 833).",
+        "en": "40 mg a day on days 1 to 4, orally or IV (Velasquez 1988; eviQ 833)."
+      }
     },
     {
       "key": "cisplatin",
@@ -38,7 +48,11 @@
       "days": [1],
       "duration_min": 1440,
       "fallback_solvent": "sodium_chloride_0_9",
-      "fallback_volume_ml": 1000
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "100 мг/м² безперервною інфузією за 24 години в день 1 (Velasquez 1988); у 1000 мл 0,9% NaCl (eviQ 833). eviQ: до цисплатину — 1000 мл 0,9% NaCl з магнію сульфатом 10 ммоль за 60 хв, після — 1000 мл 0,9% NaCl за 60 хв. При нейропатії 2 ступеня й вище цисплатин не вводять (eviQ).",
+        "en": "100 mg/m² as a continuous 24-hour infusion on day 1 (Velasquez 1988); in 1000 mL 0.9% sodium chloride (eviQ 833). eviQ: before cisplatin 1000 mL 0.9% sodium chloride with 10 mmol magnesium sulphate over 60 minutes, after it 1000 mL 0.9% sodium chloride over 60 minutes. Omit cisplatin with grade 2 or higher neuropathy (eviQ)."
+      }
     },
     {
       "key": "cytarabine",
@@ -67,7 +81,11 @@
             "checkedOn": "2026-10-10"
           }
         }
-      ]
+      ],
+      "notes": {
+        "uk": "2000 мг/м² двічі з інтервалом 12 годин у день 2 (Velasquez 1988); кожна доза в 500 мл 0,9% NaCl за 3 години (eviQ 833). Понад 70 років — 1000 мг/м² (eviQ). Кортикостероїдні очні краплі від першої дози цитарабіну до 72 годин після останньої; препарат і дозу eviQ не називає. Перед кожною дозою — оцінка мозочкових функцій.",
+        "en": "2000 mg/m² twice, 12 hours apart, on day 2 (Velasquez 1988); each dose in 500 mL 0.9% sodium chloride over 3 hours (eviQ 833). Over 70 years 1000 mg/m² (eviQ). Corticosteroid eye drops from the first cytarabine dose until 72 hours after the last; eviQ names no drug or dose. Assess cerebellar function before each dose."
+      }
     }
   ]
 }
