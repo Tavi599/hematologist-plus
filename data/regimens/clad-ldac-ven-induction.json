@@ -17,6 +17,12 @@
       "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1411",
       "version": "5.2026 від 15.07.2026",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "EMC SmPC: Leustat injection (cladribine 1 mg/ml), розділи 4.2, 6.6 — розведення в 100–500 мл 0,9 % NaCl",
+      "url": "https://www.medicines.org.uk/emc/product/13187/smpc",
+      "version": "Date of revision of the text 23/04/2026",
+      "checkedOn": "2026-11-20"
     }
   ],
   "course": {
@@ -42,12 +48,20 @@
       "route": "iv_infusion",
       "dose_value": 5,
       "dose_unit": "mg_m2",
-      "days": [1, 2, 3, 4, 5],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
       "notes": {
-        "uk": "5 мг/м², дні 1–5 (NCCN AML-E 4 of 14).",
-        "en": "5 mg/m2 on days 1-5 (NCCN AML-E 4 of 14)."
-      },
-      "duration_min": 120
+        "uk": "5 мг/м², дні 1–5 (NCCN AML-E 4 of 14). Обʼєму розведення джерело не наводить. Інструкція флакона 1 мг/мл (Leustat, розділи 4.2 і 6.6) велить додавати добову дозу в 100–500 мл 0,9 % натрію хлориду; у довіднику взято 500 мл — стандарт відділення для кладрибіну, той самий, що в clag-m-nccn, clag-nccn і cdar-hcl.",
+        "en": "5 mg/m2 on days 1-5 (NCCN AML-E 4 of 14). The source gives no diluent volume. The label of the 1 mg/mL vial (Leustat, sections 4.2 and 6.6) says to add the daily dose to 100 to 500 mL of 0.9% sodium chloride; the catalog takes 500 mL, the department's standard for cladribine, the same as in clag-m-nccn, clag-nccn and cdar-hcl."
+      }
     },
     {
       "key": "cytarabine",
@@ -55,7 +69,18 @@
       "route": "subcutaneous",
       "dose_value": 20,
       "dose_unit": "mg_flat",
-      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
       "administrations_per_day": 2,
       "interval_min": 720,
       "notes": {
@@ -69,7 +94,9 @@
       "route": "oral",
       "dose_value": 100,
       "dose_unit": "mg_flat",
-      "days": [1],
+      "days": [
+        1
+      ],
       "notes": {
         "uk": "День 1 титрування. Під час їди.",
         "en": "Ramp-up day 1. With food."
@@ -121,7 +148,9 @@
       "route": "oral",
       "dose_value": 200,
       "dose_unit": "mg_flat",
-      "days": [2],
+      "days": [
+        2
+      ],
       "notes": {
         "uk": "День 2 титрування.",
         "en": "Ramp-up day 2."
@@ -173,7 +202,27 @@
       "route": "oral",
       "dose_value": 400,
       "dose_unit": "mg_flat",
-      "days": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "days": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
       "notes": {
         "uk": "Дні 3–21 — 400 мг (NCCN AML-E 4 of 14).",
         "en": "Days 3 to 21: 400 mg (NCCN AML-E 4 of 14)."
@@ -226,7 +275,22 @@
       "route": "oral",
       "dose_value": 300,
       "dose_unit": "mg_flat",
-      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
       "notes": {
         "uk": "Профілактика синдрому лізису пухлини разом із гідратацією. У пацієнтів високого ризику може знадобитися расбуриказа — за протоколом СЛП.",
         "en": "Tumour lysis prophylaxis together with hydration. High-risk patients may need rasburicase, per the TLS protocol."

@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN T-Cell Lymphomas 2.2026. Анти-CCR4 антитіло (ATLL, MF/SS). У реєстрі України не знайдено. Дози NCCN не наводить; фасування не внесено.",
+  "$comment": "Додано 2026-10-22 за NCCN T-Cell Lymphomas 2.2026. Анти-CCR4 антитіло (ATLL, MF/SS). У реєстрі України не знайдено. Дози NCCN не наводить; фасування не внесено. Фасування внесено 2026-11-20 за інструкцією FDA (Poteligeo, розділ 3): флакон 20 мг/5 мл (4 мг/мл). У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "mogamulizumab",
   "name": {
     "uk": "Могамулізумаб",
@@ -19,6 +19,19 @@
       "url": "https://www.nccn.org/guidelines/category_1",
       "version": "2.2026 (13.02.2026)",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: POTELIGEO (mogamulizumab-kpkc), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e53960ab-42a1-40d1-9c7d-eb013fe7f18f",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s20",
+      "form": "vial",
+      "strength_amount": 20,
+      "volume_ml": 5
     }
   ]
 }

@@ -24,6 +24,17 @@
       "url": "https://clinicaltrials.gov/study/NCT03257241",
       "version": "запис на дату звірки",
       "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "EMC SmPC: Leustat injection (cladribine 1 mg/ml), розділи 4.2, 6.6 — розведення в 100–500 мл 0,9 % NaCl",
+      "url": "https://www.medicines.org.uk/emc/product/13187/smpc",
+      "version": "Date of revision of the text 23/04/2026",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "FDA label: Mitoxantrone Injection USP (concentrate), Dosage and Administration — розводити щонайменше до 50 мл",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=accf9569-4b57-4e83-a7db-4e890a75d1ba",
+      "checkedOn": "2026-11-20"
     }
   ],
   "evidence": {
@@ -49,7 +60,11 @@
       "randomized": false,
       "n": 118
     },
-    "settings": ["relapse", "refractory", "pre-transplant"],
+    "settings": [
+      "relapse",
+      "refractory",
+      "pre-transplant"
+    ],
     "verdict": "option",
     "appraisal": [
       {
@@ -63,7 +78,10 @@
             "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
           }
         },
-        "publication_types": ["Journal Article", "Research Support, Non-U.S. Gov't"],
+        "publication_types": [
+          "Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
         "journal": {
           "name": "European Journal of Haematology",
           "issn": "0902-4441",
@@ -143,7 +161,14 @@
       "route": "subcutaneous",
       "dose_value": 30,
       "dose_unit": "miu_flat",
-      "days": [0, 1, 2, 3, 4, 5],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
       "notes": {
         "uk": "30 млн ОД (300 мкг) п/ш раз на добу з дня 0 до дня 5, 6 доз (NCT03257241).",
         "en": "30 MU (300 mcg) SC once a day from day 0 to day 5, 6 doses (NCT03257241)."
@@ -155,12 +180,20 @@
       "route": "iv_infusion",
       "dose_value": 5,
       "dose_unit": "mg_m2",
-      "days": [1, 2, 3, 4, 5],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
       "notes": {
-        "uk": "5 мг/м² в/в за 2 години (NCT03257241). Об'єму розведення джерело не вказує.",
-        "en": "5 mg/m² IV over 2 hours (NCT03257241). The source gives no diluent volume."
-      },
-      "duration_min": 120
+        "uk": "5 мг/м² в/в за 2 години (NCT03257241). Обʼєму розведення джерело не наводить. Інструкція флакона 1 мг/мл (Leustat, розділи 4.2 і 6.6) велить додавати добову дозу в 100–500 мл 0,9 % натрію хлориду; у довіднику взято 500 мл — стандарт відділення для кладрибіну, той самий, що в clag-m-nccn, clag-nccn і cdar-hcl.",
+        "en": "5 mg/m² IV over 2 hours (NCT03257241). The source gives no diluent volume. The label of the 1 mg/mL vial (Leustat, sections 4.2 and 6.6) says to add the daily dose to 100 to 500 mL of 0.9% sodium chloride; the catalog takes 500 mL, the department's standard for cladribine, the same as in clag-m-nccn, clag-nccn and cdar-hcl."
+      }
     },
     {
       "key": "cytarabine",
@@ -168,7 +201,13 @@
       "route": "iv_infusion",
       "dose_value": 2000,
       "dose_unit": "mg_m2",
-      "days": [1, 2, 3, 4, 5],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
       "notes": {
         "uk": "2 г/м² в/в за 4 години, через 2 години після кладрибіну (NCT03257241).",
         "en": "2 g/m² IV over 4 hours, 2 hours after cladribine (NCT03257241)."
@@ -182,10 +221,16 @@
       "route": "iv_infusion",
       "dose_value": 10,
       "dose_unit": "mg_m2",
-      "days": [1, 2, 3],
+      "days": [
+        1,
+        2,
+        3
+      ],
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 100,
       "notes": {
-        "uk": "10 мг/м² в/в раз на добу (NCT03257241). Об'єму розведення джерело не вказує.",
-        "en": "10 mg/m² IV once a day (NCT03257241). The source gives no diluent volume."
+        "uk": "10 мг/м² в/в раз на добу (NCT03257241). Обʼєму розведення джерело не наводить. Інструкція FDA велить розводити дозу щонайменше до 50 мл 0,9 % натрію хлориду або 5 % глюкози; у довіднику взято 100 мл 0,9 % NaCl — стандарт відділення для мітоксантрону, той самий, що в clag-m-nccn, mitox-5-2 і lpa-hr-consolidation-2.",
+        "en": "10 mg/m² IV once a day (NCT03257241). The source gives no diluent volume. The FDA label says to dilute the dose to at least 50 mL of 0.9% sodium chloride or 5% dextrose; the catalog takes 100 mL of 0.9% sodium chloride, the department's standard for mitoxantrone, the same as in clag-m-nccn, mitox-5-2 and lpa-hr-consolidation-2."
       }
     }
   ]

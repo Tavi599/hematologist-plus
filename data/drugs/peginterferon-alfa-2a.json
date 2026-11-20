@@ -1,20 +1,62 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN Hairy Cell Leukemia 2.2027 та NCCN MPN 3.2026 (MPN-G 2/2: старт 45 мкг на тиждень; одиниця — мкг). У реєстрі України (reestr-lz.csv, 22.10.2026) є лише пегінтерферон альфа-2b, альфа-2a немає — «недоступний»; NCCN допускає інший пегільований інтерферон, якщо альфа-2a недоступний.",
+  "$comment": "Додано 2026-10-22 за NCCN Hairy Cell Leukemia 2.2027 та NCCN MPN 3.2026 (MPN-G 2/2: старт 45 мкг на тиждень; одиниця — мкг). У реєстрі України (reestr-lz.csv, 22.10.2026) є лише пегінтерферон альфа-2b, альфа-2a немає — «недоступний»; NCCN допускає інший пегільований інтерферон, якщо альфа-2a недоступний. Фасування внесено 2026-11-20: за SmPC (emc) — попередньо наповнені шприци 90, 135 і 180 мкг по 0,5 мл; за інструкцією FDA — ще флакон 180 мкг/1 мл. Стартову дозу 45 мкг на тиждень (NCCN MPN) жодне фасування не покриває цілою упаковкою: її набирають із градуйованого шприца. У Державному реєстрі України (витяг від 20.11.2026) є лише пегінтерферон альфа-2b, тому «unavailable» лишається.",
   "id": "peginterferon-alfa-2a",
   "name": {
     "uk": "Пегінтерферон альфа-2a",
     "en": "Peginterferon alfa-2a"
   },
   "atc_code": "L03AB11",
-  "availability": "unavailable",
   "amount_unit": "mcg",
-  "dose_units": ["mcg_flat"],
+  "dose_units": [
+    "mcg_flat"
+  ],
+  "availability": "unavailable",
   "sources": [
     {
       "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
       "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
       "version": "витяг від 22.10.2026",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "SmPC Pegasys 90/135/180 micrograms solution for injection in pre-filled syringe (emc), розділ 2",
+      "url": "https://www.medicines.org.uk/emc/product/15748/smpc",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "FDA label: PEGASYS (peginterferon alfa-2a), How Supplied",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9290e5b-6d40-2318-e053-2995a90a9916",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s90",
+      "form": "syringe",
+      "strength_amount": 90,
+      "volume_ml": 0.5
+    },
+    {
+      "key": "s135",
+      "form": "syringe",
+      "strength_amount": 135,
+      "volume_ml": 0.5
+    },
+    {
+      "key": "s180",
+      "form": "syringe",
+      "strength_amount": 180,
+      "volume_ml": 0.5
+    },
+    {
+      "key": "s180v",
+      "form": "vial",
+      "strength_amount": 180,
+      "volume_ml": 1,
+      "label": {
+        "uk": "Флакон 180 мкг/1 мл (США)",
+        "en": "180 mcg/1 mL vial (US)"
+      }
     }
   ]
 }

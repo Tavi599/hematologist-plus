@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN Hodgkin Lymphoma 2.2026 (HODG-B 5 з 8). Дози й фасування не внесено: джерела, яке їх дає, немає. Реєстрацію в Україні не підтверджено — «недоступний».",
+  "$comment": "Додано 2026-10-22 за NCCN Hodgkin Lymphoma 2.2026 (HODG-B 5 з 8). Дози й фасування не внесено: джерела, яке їх дає, немає. Реєстрацію в Україні не підтверджено — «недоступний». Фасування внесено 2026-11-20 за інструкцією FDA (Zolinza, розділ 3): капсули 100 мг. У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "vorinostat",
   "name": {
     "uk": "Вориностат",
@@ -18,6 +18,18 @@
       "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
       "version": "витяг від 22.10.2026: не знайдено",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: ZOLINZA (vorinostat), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd86ee78-2781-468b-930c-3c4677bcc092",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s100",
+      "form": "capsule",
+      "strength_amount": 100
     }
   ]
 }

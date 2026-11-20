@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN ALL 3.2026 (синдром синусоїдальної обструкції печінки (SOS/VOD) після інотузумабу, ALL-C 2 з 6). Доз NCCN не наводить. У відкритому реєстрі України не знайдено — «недоступний».",
+  "$comment": "Додано 2026-10-22 за NCCN ALL 3.2026 (синдром синусоїдальної обструкції печінки (SOS/VOD) після інотузумабу, ALL-C 2 з 6). Доз NCCN не наводить. У відкритому реєстрі України не знайдено — «недоступний». Фасування внесено 2026-11-20 за інструкцією FDA (Defitelio, розділ 3): флакон 200 мг/2,5 мл (80 мг/мл). У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "defibrotide",
   "name": {
     "uk": "Дефібротид",
@@ -18,6 +18,19 @@
       "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
       "version": "витяг від 22.10.2026: не знайдено",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: DEFITELIO (defibrotide sodium), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2c3db989-d7ad-41ed-9ebf-698dcf6c24ec",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s200",
+      "form": "vial",
+      "strength_amount": 200,
+      "volume_ml": 2.5
     }
   ]
 }

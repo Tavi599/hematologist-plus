@@ -18,6 +18,12 @@
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6775639/",
       "version": "рукопис автора в PMC, розділ Procedures",
       "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "EMC SmPC: Leustat injection (cladribine 1 mg/ml), розділи 4.2, 6.6 — розведення в 100–500 мл 0,9 % NaCl",
+      "url": "https://www.medicines.org.uk/emc/product/13187/smpc",
+      "version": "Date of revision of the text 23/04/2026",
+      "checkedOn": "2026-11-20"
     }
   ],
   "evidence": {
@@ -43,7 +49,10 @@
       "randomized": false,
       "n": 118
     },
-    "settings": ["first-line", "elderly"],
+    "settings": [
+      "first-line",
+      "elderly"
+    ],
     "verdict": "option",
     "appraisal": [
       {
@@ -57,7 +66,10 @@
             "en": "A study without a randomised comparison group: every patient had the same regimen. That is level 4 on the Oxford scale."
           }
         },
-        "publication_types": ["Clinical Trial, Phase II", "Journal Article"],
+        "publication_types": [
+          "Clinical Trial, Phase II",
+          "Journal Article"
+        ],
         "journal": {
           "name": "The Lancet Haematology",
           "issn": "2352-3026",
@@ -106,12 +118,20 @@
       "route": "iv_infusion",
       "dose_value": 5,
       "dose_unit": "mg_m2",
-      "days": [1, 2, 3, 4, 5],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
       "notes": {
-        "uk": "5 мг/м² в/в за 1–2 години (Kadia 2018). Об'єму розведення джерело не вказує.",
-        "en": "5 mg/m² IV over 1 to 2 hours (Kadia 2018). The source gives no diluent volume."
-      },
-      "duration_min": 120
+        "uk": "5 мг/м² в/в за 1–2 години (Kadia 2018). Обʼєму розведення джерело не наводить. Інструкція флакона 1 мг/мл (Leustat, розділи 4.2 і 6.6) велить додавати добову дозу в 100–500 мл 0,9 % натрію хлориду; у довіднику взято 500 мл — стандарт відділення для кладрибіну, той самий, що в clag-m-nccn, clag-nccn і cdar-hcl.",
+        "en": "5 mg/m² IV over 1 to 2 hours (Kadia 2018). The source gives no diluent volume. The label of the 1 mg/mL vial (Leustat, sections 4.2 and 6.6) says to add the daily dose to 100 to 500 mL of 0.9% sodium chloride; the catalog takes 500 mL, the department's standard for cladribine, the same as in clag-m-nccn, clag-nccn and cdar-hcl."
+      }
     },
     {
       "key": "cytarabine",
@@ -119,7 +139,18 @@
       "route": "subcutaneous",
       "dose_value": 20,
       "dose_unit": "mg_flat",
-      "days": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
       "administrations_per_day": 2,
       "interval_min": 720,
       "notes": {

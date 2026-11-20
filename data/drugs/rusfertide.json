@@ -1,19 +1,53 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN MPN 3.2026 (PV-1, PV-2: п/ш, титрувати до Ht <45%, категорія 1). У реєстрі України не знайдено — «недоступний». Дози NCCN не наводить.",
+  "$comment": "Додано 2026-10-22 за NCCN MPN 3.2026 (PV-1, PV-2: п/ш, титрувати до Ht <45%, категорія 1). У реєстрі України не знайдено — «недоступний». Дози NCCN не наводить. Фасування внесено 2026-11-20 за інструкцією FDA (Mimrylo, розділи 3 і 11): однодозові флакони ліофілізату 9,5, 19, 28, 41 і 54 мг у наборі з готовим шприцом розчинника. У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "rusfertide",
   "name": {
     "uk": "Русфертид",
     "en": "Rusfertide"
   },
-  "availability": "unavailable",
   "amount_unit": "mg",
-  "dose_units": ["mg_flat"],
+  "dose_units": [
+    "mg_flat"
+  ],
+  "availability": "unavailable",
   "sources": [
     {
       "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
       "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
       "version": "витяг від 22.10.2026",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: MIMRYLO (rusfertide), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=101aff01-31ed-4841-a8b6-0a5a8503189b",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s9-5",
+      "form": "vial",
+      "strength_amount": 9.5
+    },
+    {
+      "key": "s19",
+      "form": "vial",
+      "strength_amount": 19
+    },
+    {
+      "key": "s28",
+      "form": "vial",
+      "strength_amount": 28
+    },
+    {
+      "key": "s41",
+      "form": "vial",
+      "strength_amount": 41
+    },
+    {
+      "key": "s54",
+      "form": "vial",
+      "strength_amount": 54
     }
   ]
 }

@@ -1,10 +1,11 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN ALL 3.2026 (затримка виведення метотрексату (ALL-C 1 з 6)). Доз NCCN не наводить. У відкритому реєстрі України не знайдено — «недоступний».",
+  "$comment": "Додано 2026-10-22 за NCCN ALL 3.2026 (затримка виведення метотрексату (ALL-C 1 з 6)). Доз NCCN не наводить. У відкритому реєстрі України не знайдено — «недоступний». Фасування внесено 2026-11-20 за інструкцією FDA (Voraxaze, розділ 3): флакон 1000 одиниць ліофілізату. Препарат маркується і дозується в одиницях активності, тому amount_unit змінено з «mg» на «iu»: міліграми й одиниці не перераховуються. У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "glucarpidase",
   "name": {
     "uk": "Глюкарпідаза",
     "en": "Glucarpidase"
   },
+  "amount_unit": "iu",
   "availability": "unavailable",
   "sources": [
     {
@@ -18,6 +19,18 @@
       "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
       "version": "витяг від 22.10.2026: не знайдено",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: VORAXAZE (glucarpidase), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=acaef5a6-b740-40e3-8ffe-74a75c74745c",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s1000",
+      "form": "vial",
+      "strength_amount": 1000
     }
   ]
 }

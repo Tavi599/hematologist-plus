@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN T-Cell Lymphomas 2.2026. Інгібітор PD-L1 при рецидивній ENKL. У реєстрі України не знайдено. Дози NCCN не наводить.",
+  "$comment": "Додано 2026-10-22 за NCCN T-Cell Lymphomas 2.2026. Інгібітор PD-L1 при рецидивній ENKL. У реєстрі України не знайдено. Дози NCCN не наводить. Фасування внесено 2026-11-20 за інструкцією FDA (Bavencio, розділ 3): флакон 200 мг/10 мл (20 мг/мл). У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "avelumab",
   "name": {
     "uk": "Авелумаб",
@@ -19,6 +19,19 @@
       "url": "https://www.nccn.org/guidelines/category_1",
       "version": "2.2026 (13.02.2026)",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: BAVENCIO (avelumab), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5cd725a1-2fa4-408a-a651-57a7b84b2118",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s200",
+      "form": "vial",
+      "strength_amount": 200,
+      "volume_ml": 10
     }
   ]
 }

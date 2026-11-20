@@ -1,12 +1,14 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN BPDCN (AML 5.2026). Реєстрацію в Україні не підтверджено — «недоступний». Доза записана в мкг.",
+  "$comment": "Додано 2026-10-22 за NCCN BPDCN (AML 5.2026). Реєстрацію в Україні не підтверджено — «недоступний». Доза записана в мкг. Параметри розведення внесено 2026-11-20 за інструкцією FDA (Elzonris, розділ 2.4): 1 мл флакона в 9 мл 0,9 % натрію хлориду до 100 мкг/мл, введення шприцевим насосом за 15 хв.",
   "id": "tagraxofusp",
   "name": {
     "uk": "Тагракcофусп",
     "en": "Tagraxofusp"
   },
   "amount_unit": "mcg",
-  "dose_units": ["mcg_kg"],
+  "dose_units": [
+    "mcg_kg"
+  ],
   "availability": "unavailable",
   "sources": [
     {
@@ -28,6 +30,27 @@
       "form": "vial",
       "strength_amount": 1000,
       "volume_ml": 1
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "stock_concentration_mg_ml": 0.1,
+      "duration_min": 15,
+      "notes": {
+        "uk": "Інструкція велить перенести 9 мл 0,9 % натрію хлориду в порожній стерильний флакон на 10 мл і додати туди 1 мл (1000 мкг) препарату — виходить 100 мкг/мл. Мішка немає: потрібний обʼєм набирають у шприц і вводять шприцевим насосом за 15 хв, після чого систему промивають щонайменше 3 мл 0,9 % NaCl (промивання входить у ці 15 хв). Обʼєм введення = доза / 100 мкг/мл.",
+        "en": "The label says to transfer 9 mL of 0.9% sodium chloride into an empty sterile 10 mL vial and add 1 mL (1000 mcg) of the drug to it, giving 100 mcg/mL. There is no bag: the required volume is drawn into a syringe and given by syringe pump over 15 minutes, after which the line is flushed with at least 3 mL of 0.9% sodium chloride (the flush counts inside those 15 minutes). The infused volume is the dose divided by 100 mcg/mL."
+      },
+      "sources": [
+        {
+          "name": "FDA label: ELZONRIS (tagraxofusp-erzs), розділ 2.4 Preparation and Administration — 1 мл флакона в 9 мл 0,9 % NaCl до 100 мкг/мл",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=80eb1080-fe20-4af0-b2a5-a67999923fa8",
+          "checkedOn": "2026-11-20"
+        }
+      ]
     }
   ]
 }

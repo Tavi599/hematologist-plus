@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN T-Cell Lymphomas 2.2026. Інгібітор PI3K-γ/δ при рецидивній ПТКЛ. У реєстрі України не знайдено. Доза за NCCN: 75 мг двічі на добу 2 цикли, далі 25 мг двічі на добу; тривалість циклу NCCN не вказує, тому схема лише картка.",
+  "$comment": "Додано 2026-10-22 за NCCN T-Cell Lymphomas 2.2026. Інгібітор PI3K-γ/δ при рецидивній ПТКЛ. У реєстрі України не знайдено. Доза за NCCN: 75 мг двічі на добу 2 цикли, далі 25 мг двічі на добу; тривалість циклу NCCN не вказує, тому схема лише картка. Фасування внесено 2026-11-20 за інструкцією FDA (Copiktra, розділ 3): капсули 15 і 25 мг. У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "duvelisib",
   "name": {
     "uk": "Дувелісиб",
@@ -19,6 +19,23 @@
       "url": "https://www.nccn.org/guidelines/category_1",
       "version": "2.2026 (13.02.2026)",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: COPIKTRA (duvelisib), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e3c5ac56-e1f6-473a-bc73-687836534780",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s15",
+      "form": "capsule",
+      "strength_amount": 15
+    },
+    {
+      "key": "s25",
+      "form": "capsule",
+      "strength_amount": 25
     }
   ]
 }
