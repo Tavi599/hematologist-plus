@@ -1,0 +1,50 @@
+{
+  "$comment": "Додано 2026-11-20 за блоком N7: препарат названо в картці ref-mcl-sonrotoclax і в конспекті NCCN (третя лінія мантійноклітинної лімфоми). Коду АТС ще немає (індекс ATC/DDD 2026 — збігів немає). У Державному реєстрі України не знайдено (пошук на drlz.com.ua 20.11.2026), тому «недоступний».",
+  "id": "sonrotoclax",
+  "name": {
+    "uk": "Сонротоклакс",
+    "en": "Sonrotoclax"
+  },
+  "trade_names": ["Beqalzi"],
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: BEQALZI (sonrotoclax) — таблетки 1, 5, 20 і 80 мг; 4-тижневе нарощування дози, цільова доза 320 мг раз на добу при рецидивній/рефрактерній мантійноклітинній лімфомі після ≥2 ліній, включно з інгібітором BTK",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff684558-e9cb-46de-a8bf-f4d79093df7a",
+      "version": "SPL на DailyMed",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (пошук на drlz.com.ua)",
+      "url": "https://www.drlz.com.ua/poshuk?q=%D1%81%D0%BE%D0%BD%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BB%D0%B0%D0%BA%D1%81",
+      "version": "пошук 20.11.2026: збігів немає",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "notes": {
+    "uk": "Інгібітор BCL-2. Нарощування дози за інструкцією: 1-й тиждень 1 мг (дні 1–3) і 2 мг (дні 4–7), 2-й — 5 і 10 мг, 3-й — 20 і 40 мг, 4-й — 80 і 160 мг; з 5-го тижня 320 мг раз на добу до прогресування чи непереносимості. Ризик синдрому лізису пухлини найбільший під час нарощування і при поновленні після перерви понад 7 днів. Сильні інгібітори CYP3A протипоказані на початку й під час нарощування.",
+    "en": "A BCL-2 inhibitor. The label's ramp-up: week 1, 1 mg (days 1-3) and 2 mg (days 4-7); week 2, 5 and 10 mg; week 3, 20 and 40 mg; week 4, 80 and 160 mg; from week 5, 320 mg once daily until progression or intolerance. The risk of tumour lysis syndrome is highest during the ramp-up and on restarting after a break of more than seven days. Strong CYP3A inhibitors are contraindicated at initiation and during the ramp-up."
+  },
+  "presentations": [
+    {
+      "key": "t1",
+      "form": "tablet",
+      "strength_amount": 1
+    },
+    {
+      "key": "t5",
+      "form": "tablet",
+      "strength_amount": 5
+    },
+    {
+      "key": "t20",
+      "form": "tablet",
+      "strength_amount": 20
+    },
+    {
+      "key": "t80",
+      "form": "tablet",
+      "strength_amount": 80
+    }
+  ]
+}

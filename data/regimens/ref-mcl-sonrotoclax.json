@@ -11,6 +11,12 @@
       "url": "https://www.uptodate.com/contents/treatment-of-relapsed-or-refractory-mantle-cell-lymphoma",
       "version": "перевірено 2026-10-04",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "FDA label: BEQALZI (sonrotoclax) — показання, нарощування дози й цільова доза 320 мг",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff684558-e9cb-46de-a8bf-f4d79093df7a",
+      "version": "SPL на DailyMed",
+      "checkedOn": "2026-11-20"
     }
   ],
   "reference": {
@@ -23,18 +29,23 @@
         "name": {
           "uk": "Сонротоклакс",
           "en": "Sonrotoclax"
-        }
+        },
+        "drug_id": "sonrotoclax"
       }
     ],
     "key_info": [
+      {
+        "uk": "Інструкція FDA: нарощування дози 4 тижні (1 і 2 мг, 5 і 10 мг, 20 і 40 мг, 80 і 160 мг — по 3 і 4 дні), з 5-го тижня 320 мг раз на добу до прогресування чи непереносимості.",
+        "en": "The FDA label: a four-week ramp-up (1 and 2 mg, 5 and 10 mg, 20 and 40 mg, 80 and 160 mg, three days then four), and from week 5, 320 mg once daily until progression or intolerance."
+      },
       {
         "uk": "Цитопенії, пневмонія (10%), синдром лізису пухлини (2%).",
         "en": "Cytopenias, pneumonia (10%), tumor lysis syndrome (2%)."
       }
     ],
     "gap": {
-      "uk": "UpToDate не наводить дози, а препарату немає в довіднику.",
-      "en": "UpToDate gives no dose, and the drug is not in the catalog."
+      "uk": "UpToDate дози не наводить. Нарощування й цільову дозу взято з інструкції FDA — вони в картці препарату; курс тут не розраховується, бо препарат приймають усередину щодня до прогресування.",
+      "en": "UpToDate gives no dose. The ramp-up and the target dose come from the FDA label and are in the drug card; no course is calculated here, because the drug is taken by mouth daily until progression."
     },
     "availability": "unavailable"
   }

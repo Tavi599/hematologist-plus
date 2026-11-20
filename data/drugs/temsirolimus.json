@@ -1,0 +1,74 @@
+{
+  "$comment": "Додано 2026-11-20 за блоком N7: препарат названо в картці ref-mcl-temsirolimus (рецидив мантійноклітинної лімфоми). У Державному реєстрі України не знайдено (пошук на drlz.com.ua 20.11.2026 за МНН і за назвою «Торісел»), тому «недоступний».",
+  "id": "temsirolimus",
+  "name": {
+    "uk": "Темсиролімус",
+    "en": "Temsirolimus"
+  },
+  "trade_names": ["Torisel"],
+  "atc_code": "L01EG01",
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: TORISEL (temsirolimus) — набір: флакон 25 мг/мл і флакон розчинника 1,8 мл; двоетапне розведення, 250 мл 0,9% NaCl, інфузія 30–60 хв щотижня",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95b7dc92-2180-42f1-8699-3c28f609e674",
+      "version": "SPL на DailyMed",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (пошук на drlz.com.ua)",
+      "url": "https://www.drlz.com.ua/poshuk?q=%D1%82%D0%B5%D0%BC%D1%81%D0%B8%D1%80%D0%BE%D0%BB%D1%96%D0%BC%D1%83%D1%81",
+      "version": "пошук 20.11.2026: точних збігів немає",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v25",
+      "form": "vial",
+      "strength_amount": 25,
+      "volume_ml": 1,
+      "label": {
+        "uk": "Флакон 25 мг/мл у наборі з флаконом розчинника 1,8 мл",
+        "en": "A 25 mg/mL vial in a kit with a 1.8 mL diluent vial"
+      }
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [250],
+      "is_default": true,
+      "duration_min": null,
+      "stock_concentration_mg_ml": 10,
+      "sources": [
+        {
+          "name": "FDA label: TORISEL (temsirolimus), Dosage and Administration 2.5–2.6",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95b7dc92-2180-42f1-8699-3c28f609e674",
+          "version": "SPL на DailyMed",
+          "checkedOn": "2026-11-20"
+        }
+      ],
+      "notes": {
+        "uk": "Після змішування з доданим розчинником у флаконі виходить 30 мг/3 мл, тобто 10 мг/мл; далі потрібний об'єм вносять у 250 мл 0,9% NaCl. Меж концентрації в готовому розчині інструкція не дає, тому об'єм мішка фіксований — 250 мл. Тривалість інфузії — 30–60 хв (у схемі).",
+        "en": "Mixing with the supplied diluent gives 30 mg/3 mL in the vial, that is 10 mg/mL; the required volume then goes into 250 mL of 0.9% NaCl. The label gives no concentration limits for the final solution, so the bag volume is fixed at 250 mL. The infusion lasts 30-60 minutes (set by the regimen)."
+      }
+    }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Розведення двоетапне: 1) у флакон вносять 1,8 мл доданого розчинника — виходить 10 мг/мл; 2) потрібний об'єм (2,5 мл на дозу 25 мг) вносять у 250 мл 0,9% натрію хлориду. Перемішують перевертанням, без струшування: утворюється піна. Готовий розчин берегти від яскравого світла й увести протягом 6 годин від моменту додавання в натрію хлорид. Через вимивання DEHP готовий розчин зберігають у скляних чи поліпропіленових пляшках або поліпропіленових/поліолефінових пакетах і вводять системою без ПВХ і DEHP; рекомендований вбудований поліетерсульфоновий фільтр із порами не більш як 5 мкм (одночасно вбудований і кінцевий фільтр не застосовують). За 30 хв до введення — H1-антигістамінний препарат (дифенгідрамін 25–50 мг в/в або подібний).",
+        "en": "A two-step dilution: 1) add the 1.8 mL of supplied diluent to the vial, giving 10 mg/mL; 2) add the required volume (2.5 mL for a 25 mg dose) to 250 mL of 0.9% sodium chloride. Mix by inversion, without shaking, which causes foam. Protect the prepared solution from bright light and give it within six hours of adding it to the sodium chloride. Because of DEHP leaching, keep the final solution in glass or polypropylene bottles or polypropylene/polyolefin bags and give it through a non-PVC, non-DEHP set; an in-line polyethersulfone filter of no more than 5 microns is recommended (not together with an end filter). An H1 antihistamine (diphenhydramine 25-50 mg IV or similar) is given 30 minutes beforehand."
+      },
+      "source": {
+        "name": "FDA label: TORISEL (temsirolimus), Dosage and Administration 2.2, 2.5, 2.6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95b7dc92-2180-42f1-8699-3c28f609e674",
+        "version": "SPL на DailyMed",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ]
+}

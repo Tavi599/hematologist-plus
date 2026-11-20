@@ -1,0 +1,110 @@
+{
+  "$comment": "Додано 2026-11-20 за блоком N7: препарат названо в примітках шляхів NCCN (мантійноклітинна лімфома, фолікулярна лімфома, ДВКЛ). У Державному реєстрі України не знайдено (пошук на drlz.com.ua 20.11.2026), тому «недоступний».",
+  "id": "mosunetuzumab",
+  "name": {
+    "uk": "Мозунетузумаб",
+    "en": "Mosunetuzumab"
+  },
+  "trade_names": ["Lunsumio", "Lunsumio Velo"],
+  "atc_code": "L01FX25",
+  "availability": "unavailable",
+  "sources": [
+    {
+      "name": "FDA label: LUNSUMIO (mosunetuzumab-axgb) concentrate — флакони 1 мг/мл і 30 мг/30 мл, розведення в 0,9% або 0,45% NaCl",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2ef0cf38-101c-4681-98fe-c05dc9ead443",
+      "version": "SPL на DailyMed",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "FDA label: LUNSUMIO VELO (mosunetuzumab-axgb) injection — підшкірні флакони 5 мг/0,5 мл і 45 мг/мл",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6a2b6dc2-48bd-4da7-a611-bc6bae2893c8",
+      "version": "SPL на DailyMed",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (пошук на drlz.com.ua)",
+      "url": "https://www.drlz.com.ua/poshuk?q=%D0%BC%D0%BE%D0%B7%D1%83%D0%BD%D0%B5%D1%82%D1%83%D0%B7%D1%83%D0%BC%D0%B0%D0%B1",
+      "version": "пошук 20.11.2026: збігів немає",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v1",
+      "form": "vial",
+      "strength_amount": 1,
+      "volume_ml": 1,
+      "label": {
+        "uk": "Флакон 1 мг/мл — концентрат для внутрішньовенної інфузії",
+        "en": "A 1 mg/mL vial - concentrate for intravenous infusion"
+      }
+    },
+    {
+      "key": "v30",
+      "form": "vial",
+      "strength_amount": 30,
+      "volume_ml": 30,
+      "label": {
+        "uk": "Флакон 30 мг/30 мл — концентрат для внутрішньовенної інфузії",
+        "en": "A 30 mg/30 mL vial - concentrate for intravenous infusion"
+      }
+    },
+    {
+      "key": "sc5",
+      "form": "vial",
+      "strength_amount": 5,
+      "volume_ml": 0.5,
+      "label": {
+        "uk": "Флакон 5 мг/0,5 мл — підшкірна форма (Lunsumio Velo)",
+        "en": "A 5 mg/0.5 mL vial - the subcutaneous form (Lunsumio Velo)"
+      }
+    },
+    {
+      "key": "sc45",
+      "form": "vial",
+      "strength_amount": 45,
+      "volume_ml": 1,
+      "label": {
+        "uk": "Флакон 45 мг/мл — підшкірна форма (Lunsumio Velo)",
+        "en": "A 45 mg/mL vial - the subcutaneous form (Lunsumio Velo)"
+      }
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "bag_volumes_ml": [50, 100, 250],
+      "is_default": true,
+      "duration_min": null,
+      "stock_concentration_mg_ml": 1,
+      "sources": [
+        {
+          "name": "FDA label: LUNSUMIO (mosunetuzumab-axgb), Dosage and Administration 2.5, табл. 7",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2ef0cf38-101c-4681-98fe-c05dc9ead443",
+          "version": "SPL на DailyMed",
+          "checkedOn": "2026-11-20"
+        }
+      ],
+      "notes": {
+        "uk": "Концентрат 1 мг/мл. Інструкція задає не межі концентрації, а розмір мішка за дозою: 1 і 2 мг — 50 або 100 мл; 30 мг — 50, 100 або 250 мл; 60 мг — 100 або 250 мл. Розчинник — 0,9% або 0,45% натрію хлорид. Тривалість інфузії задає схема: у 1-му циклі не менш як 4 год, далі 2 год, якщо 1-й цикл перенесено добре.",
+        "en": "The concentrate is 1 mg/mL. The label sets the bag size by the dose rather than concentration limits: 1 and 2 mg into 50 or 100 mL; 30 mg into 50, 100 or 250 mL; 60 mg into 100 or 250 mL. The diluent is 0.9% or 0.45% sodium chloride. The regimen sets the duration: at least 4 hours in cycle 1, then 2 hours if cycle 1 was well tolerated."
+      }
+    }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "З мішка 0,9% або 0,45% натрію хлориду відбирають об'єм, що дорівнює потрібному об'єму препарату, і виливають; потім уводять препарат. Пакети — лише з ПВХ або поліолефіну (поліетилен, поліпропілен). Перемішують повільним перевертанням, не струшують. Залишок у флаконі викидають. Готовий розчин уводять одразу; за потреби зберігають до 24 год при 2–8 °C і до 16 год при 9–30 °C, перед уведенням дають зігрітися до кімнатної температури.",
+        "en": "Withdraw from a 0.9% or 0.45% sodium chloride bag a volume equal to the volume of the drug needed and discard it, then add the drug. Use only PVC or polyolefin (polyethylene, polypropylene) bags. Mix by slow inversion, do not shake. Discard what is left in the vial. Give the prepared solution at once; if needed it keeps for up to 24 hours at 2-8 °C and up to 16 hours at 9-30 °C, and is allowed to reach room temperature before administration."
+      },
+      "source": {
+        "name": "FDA label: LUNSUMIO (mosunetuzumab-axgb), Dosage and Administration 2.5",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2ef0cf38-101c-4681-98fe-c05dc9ead443",
+        "version": "SPL на DailyMed",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ]
+}
