@@ -281,16 +281,27 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
     const rituximab = catalog.drugs.find((drug) => drug.id === 'rituximab')!
     rituximab.availability = 'unavailable'
     rituximab.notes = { uk: 'Не зареєстрований в Україні.', en: 'Not registered in Ukraine.' }
+    // Every other demo drug is registered; one of them carries a note of its own.
+    catalog.drugs.find((drug) => drug.id === 'doxorubicin')!.notes = {
+      uk: 'ДЕМО примітка до препарату.',
+      en: 'DEMO drug note.',
+    }
     fetch.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
     renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
     expect(await screen.findByRole('combobox', { name: 'Схема' })).toBeInTheDocument()
 
     // The badge in the regimen list names no drug; the row has to, or the physician cannot tell
     // which of the four drugs in the course is the one that has to be found elsewhere.
-    const row = within(await screen.findByRole('table', { name: 'Дози' }))
-      .getByText('ДЕМО Ритуксимаб')
-      .closest('tr')!
+    const table = within(await screen.findByRole('table', { name: 'Дози' }))
+    const row = table.getByText('ДЕМО Ритуксимаб').closest('tr')!
     expect(within(row).getByText(/недоступний\. Не зареєстрований в Україні\./)).toBeInTheDocument()
+
+    // Only that drug is marked: a registered drug the department does not stock is not news,
+    // but its own note still is, so the note stays without the badge.
+    expect(table.getAllByText(/недоступний/)).toHaveLength(1)
+    expect(table.queryByText(/зареєстрований в Україні$/)).not.toBeInTheDocument()
+    const doxorubicin = table.getByText('ДЕМО Доксорубіцин').closest('tr')!
+    expect(within(doxorubicin).getByText('ДЕМО примітка до препарату.')).toBeInTheDocument()
   })
 
   it('makes a printable sheet out of lines written by hand, with no regimen at all', async () => {
