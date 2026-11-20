@@ -1,0 +1,44 @@
+{
+  "$comment": "Додано 2026-11-20 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено. Кількість — в одиницях дії (ОД).",
+  "id": "benzylpenicillin",
+  "name": {
+    "uk": "Бензилпеніцилін (пеніцилін G)",
+    "en": "Benzylpenicillin (penicillin G)"
+  },
+  "amount_unit": "iu",
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "MSD Manual Professional (українська версія): антибактеріальні препарати",
+      "url": "https://www.msdmanuals.com/uk/professional/infectious-diseases/bacteria-and-antibacterial-medications/penicillins",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (API drlz.com.ua): порошок для розчину для ін’єкцій 500 000 ОД і 1 000 000 ОД (UA/3791/01/01–02)",
+      "url": "https://www.drlz.com.ua/dani/api",
+      "version": "чинні реєстрації, запит від 20.11.2026",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s500000",
+      "form": "vial",
+      "strength_amount": 500000,
+      "label": {
+        "uk": "500 000 ОД",
+        "en": "500,000 IU"
+      }
+    },
+    {
+      "key": "s1000000",
+      "form": "vial",
+      "strength_amount": 1000000,
+      "label": {
+        "uk": "1 000 000 ОД",
+        "en": "1,000,000 IU"
+      }
+    }
+  ],
+  "atc_code": "J01CE01"
+}

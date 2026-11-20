@@ -1,0 +1,35 @@
+{
+  "$comment": "Додано 2026-11-20 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "id": "cefazolin",
+  "name": {
+    "uk": "Цефазолін",
+    "en": "Cefazolin"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "MSD Manual Professional (українська версія): антибактеріальні препарати",
+      "url": "https://www.msdmanuals.com/uk/professional/infectious-diseases/bacteria-and-antibacterial-medications/cephalosporins",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (API drlz.com.ua): порошок для розчину для ін’єкцій 0,5 г і 1 г (напр. UA/6216/01/01–02 Цефазолін-Дарниця, UA/4616/01/01–02, UA/18375/01/01–02, UA/21499/01/01)",
+      "url": "https://www.drlz.com.ua/dani/api",
+      "version": "чинні реєстрації, запит від 20.11.2026",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s500",
+      "form": "vial",
+      "strength_amount": 500
+    },
+    {
+      "key": "s1000",
+      "form": "vial",
+      "strength_amount": 1000
+    }
+  ],
+  "atc_code": "J01DB04"
+}
