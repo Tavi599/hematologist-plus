@@ -179,6 +179,28 @@ describe('risk scores', () => {
     expect(group('mipi', { ageYears: 75, ecog: true, ldh: 400, uln: 250, wbc: 12 })).toBe('High')
   })
 
+  it('simplified MIPI by the ESMO point table', () => {
+    // Age 62 (2) + ECOG 2-4 (2) + LDH 1.2x ULN (2) + white cells 11 (2) = 8 points.
+    const outcome = run('s-mipi', { ageYears: 62, ecog: true, ldhRatio: 1.2, wbc: 11 })!
+    expect(outcome.value!.amount).toBe(8)
+    expect(outcome.group!.label.en).toBe('High')
+    // Every factor below its first limit: no points at all.
+    expect(group('s-mipi', { ageYears: 49, ldhRatio: 0.66, wbc: 6.6 })).toBe('Low')
+    // Age 70 (3) + LDH 0.7x ULN (1) + white cells 15 (3) = 7, still high risk.
+    expect(group('s-mipi', { ageYears: 70, ldhRatio: 0.7, wbc: 15 })).toBe('High')
+    // Age 55 (1) + LDH 1.0x ULN (2) + white cells 6.7 (1) = 4 points.
+    expect(group('s-mipi', { ageYears: 55, ldhRatio: 1, wbc: 6.7 })).toBe('Intermediate')
+  })
+
+  it('MIPI-c adds the Ki-67 index to the MIPI group', () => {
+    expect(group('mipi-c', { mipiGroup: '0', ki67: '0' })).toBe('Low')
+    expect(group('mipi-c', { mipiGroup: '0', ki67: '1' })).toBe('Low-intermediate')
+    expect(group('mipi-c', { mipiGroup: '1', ki67: '0' })).toBe('Low-intermediate')
+    expect(group('mipi-c', { mipiGroup: '2', ki67: '0' })).toBe('High-intermediate')
+    expect(group('mipi-c', { mipiGroup: '2', ki67: '1' })).toBe('High')
+    expect(run('mipi-c', { mipiGroup: '2' })).toBeNull()
+  })
+
   it('R-ISS and R2-ISS from β2-microglobulin and albumin', () => {
     expect(group('r-iss', { b2m: 3, albumin: 40 })).toBe('R-ISS I')
     expect(group('r-iss', { b2m: 6, albumin: 30, ldh: true })).toBe('R-ISS III')

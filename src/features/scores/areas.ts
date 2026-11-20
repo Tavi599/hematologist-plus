@@ -72,7 +72,7 @@ export const RISK_AREAS: Area[] = [
   {
     id: 'mantle',
     title: t('Лімфома з клітин мантії', 'Mantle cell lymphoma'),
-    scoreIds: ['mipi'],
+    scoreIds: ['mipi', 's-mipi', 'mipi-c'],
     diseases: ['mantle-cell-lymphoma'],
   },
   {

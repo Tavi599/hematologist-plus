@@ -33,6 +33,26 @@
     },
     {
       "kind": "other",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12541557/",
+      "label": {
+        "uk": "EHA-EU MCL network: настанова з діагностики й лікування мантійноклітинної лімфоми",
+        "en": "EHA-EU MCL network guidelines for diagnosis and treatment of mantle cell lymphoma"
+      },
+      "version": "HemaSphere 2025;9(10):e70233",
+      "updated": "2025-10-22"
+    },
+    {
+      "kind": "other",
+      "url": "https://doi.org/10.1093/annonc/mdx223",
+      "label": {
+        "uk": "ESMO: мантійноклітинна лімфома, клінічна настанова (MIPI і MIPI-c, табл. 3)",
+        "en": "ESMO Clinical Practice Guidelines: mantle cell lymphoma (MIPI and MIPI-c, Table 3)"
+      },
+      "version": "Ann Oncol 2017;28(Suppl 4):iv62-71",
+      "updated": "2017-08-01"
+    },
+    {
+      "kind": "other",
       "url": "https://www.esmo.org/guidelines/living-guidelines/esmo-living-guideline-lymphomas",
       "label": {
         "uk": "ESMO Living Guideline: лімфоми",
@@ -745,8 +765,8 @@
         "en": "First line, younger and fit patients"
       },
       "description": {
-        "uk": "До 65 років (за рішенням лікаря — до 70) перевагу має індукція, що містить ковалентний інгібітор BTK: R-CHOP з ібрутинібом у чергуванні з R-DHAP або R-DHAOx, далі 2 роки ібрутинібу і 3 роки підтримки ритуксимабом. Альтернатива — індукція з високими дозами цитарабіну (R-DHAP, R-CHOP/R-DHAP, R-maxi-CHOP/R-HD-цитарабін) з аутологічною трансплантацією і 3 роками підтримки ритуксимабом. Цих схем у довіднику ще немає.",
-        "en": "Under 65 (up to 70 at the physician's discretion) induction containing a covalent BTK inhibitor is preferred: R-CHOP with ibrutinib alternating with R-DHAP or R-DHAOx, then two years of ibrutinib and three years of rituximab maintenance. The alternative is high-dose cytarabine induction (R-DHAP, R-CHOP/R-DHAP, R-maxi-CHOP/R-HD-cytarabine) with autologous transplantation and three years of rituximab maintenance. These regimens are not in the catalog yet."
+        "uk": "Більшість досліджень включала хворих до 65 років, але придатним пацієнтам і старшого віку (до 70 — за рішенням лікаря) радять ту саму тактику. Стандарт — індукція з ковалентним інгібітором BTK: R-CHOP з ібрутинібом у чергуванні з R-DHAP або R-DHAOx, далі 2 роки ібрутинібу і 3 роки підтримки ритуксимабом [I, A]. Якщо інгібітора BTK у першій лінії дістати не можна — індукція з ритуксимабом і високими дозами цитарабіну з консолідацією аутотрансплантацією і 3 роками підтримки ритуксимабом [I, B]: у довіднику це чергування Nordic MCL2 (R-maxi-CHOP / R-Ara-C). Аутотрансплантацію обговорюють окремо, якщо є чинники високого ризику [II, C]; при повній відповіді з невизначальною МЗХ за NGS-методом її можна не робити [II, A]. Хворого, не придатного до інтенсивних схем, лікують за рекомендаціями для літніх [II, A]. Джерело: EHA-EU MCL network guidelines, HemaSphere 2025;9(10):e70233, розділ «Younger patients»; NCCN B-Cell Lymphomas 4.2026 (MANT-4).",
+        "en": "Most trials enrolled patients up to 65 years, but fit older patients (up to 70 at the physician's discretion) are advised the same approach. The standard is induction containing a covalent BTK inhibitor: R-CHOP with ibrutinib alternating with R-DHAP or R-DHAOx, then two years of ibrutinib and three years of rituximab maintenance [I, A]. Where a covalent BTK inhibitor cannot be obtained first line: rituximab and high-dose cytarabine induction with autologous transplant consolidation and three years of rituximab maintenance [I, B] — in the catalog that is the Nordic MCL2 alternation (R-maxi-CHOP / R-Ara-C). Transplant is discussed separately when high-risk features are present [II, C]; in complete response with undetectable MRD by the NGS assay it can be omitted [II, A]. A patient unsuitable for dose-intense regimens is treated by the recommendations for older patients [II, A]. Source: EHA-EU MCL network guidelines, HemaSphere 2025;9(10):e70233, the Younger patients section; NCCN B-Cell Lymphomas 4.2026 (MANT-4)."
       },
       "regimens": [
         {
@@ -860,8 +880,8 @@
         "en": "First line, elderly patients"
       },
       "description": {
-        "uk": "Коли високі дози цитарабіну й трансплантація не підходять: BR (перевага) з підтримкою ритуксимабом 2 роки; VR-CAP із підтримкою; R-BAC без підтримки; BR з акалабрутинібом. У довіднику поки що BR і R-CHOP.",
-        "en": "Where high-dose cytarabine and transplantation are unsuitable: BR (preferred) with two years of rituximab maintenance; VR-CAP with maintenance; R-BAC without maintenance; BR with acalabrutinib. The catalog currently holds BR and R-CHOP."
+        "uk": "Хворим від 65–70 років, не придатним до інтенсивної терапії, і молодшим із супутніми хворобами пропонують на вибір: імунохіміотерапію з ритуксимабом — BR, VR-CAP або R-CHOP [I, B], R-BAC [III, B]; BR з акалабрутинібом [I, B]; безперервний ковалентний інгібітор BTK з ритуксимабом і 2 роками підтримки ритуксимабом (не схвалено ні EMA, ні FDA) [I, B]. Підтримку ритуксимабом дають не менш як 2 роки після BR [II, B], VR-CAP [IV, B] і R-CHOP [I, C]. VR-CAP не пригнічує Т-клітини, тому його обирають, коли далі можлива CAR-T або біспецифічні антитіла. Джерело: EHA-EU MCL network guidelines, HemaSphere 2025;9(10):e70233, розділ «Older and frail patients»; NCCN B-Cell Lymphomas 4.2026 (MANT-5).",
+        "en": "Patients of 65-70 years and over who are unsuitable for intensive therapy, and younger patients with comorbidities, are offered a choice: rituximab immunochemotherapy - BR, VR-CAP or R-CHOP [I, B], R-BAC [III, B]; BR with acalabrutinib [I, B]; a continuous covalent BTK inhibitor with rituximab and two years of rituximab maintenance (approved by neither the EMA nor the FDA) [I, B]. Rituximab maintenance is given for at least two years after BR [II, B], VR-CAP [IV, B] and R-CHOP [I, C]. VR-CAP spares T cells, so it is chosen when CAR-T or bispecific antibodies may follow. Source: EHA-EU MCL network guidelines, HemaSphere 2025;9(10):e70233, the Older and frail patients section; NCCN B-Cell Lymphomas 4.2026 (MANT-5)."
       },
       "regimens": [
         {
@@ -993,8 +1013,8 @@
         "en": "Relapsed and refractory disease"
       },
       "description": {
-        "uk": "Після імунохіміотерапії стандарт другої лінії — ковалентний інгібітор BTK у монорежимі (ібрутиніб, акалабрутиніб, занубрутиніб), сам або з венетоклаксом. Препарати в довіднику є, схем як таких немає: дозування постійне, усередину, до прогресування або непереносимості.",
-        "en": "After immunochemotherapy the second-line standard is a covalent BTK inhibitor alone (ibrutinib, acalabrutinib, zanubrutinib) or with venetoclax. The drugs are in the catalog but not as regimens: they are taken orally and continuously until progression or toxicity."
+        "uk": "Вибір залежить від того, чи був ковалентний інгібітор BTK і коли настав рецидив. Після імунохіміотерапії без нього, а також при пізньому рецидиві (понад 24 місяці після схеми з ковалентним BTKi), стандарт другої лінії — ковалентний інгібітор BTK (ібрутиніб, акалабрутиніб, занубрутиніб), сам або з венетоклаксом; при прогресії на ньому чи ранньому рецидиві (менш як 24 місяці) — нековалентний піртобрутиніб, CAR-T або біспецифічні антитіла. Враховують також ранню прогресію, бластоїдну морфологію, високий Ki-67 і стан TP53. Препарати в довіднику є, схем як таких немає: дозування постійне, усередину, до прогресування або непереносимості. Джерела: NCCN B-Cell Lymphomas 4.2026 (MANT-6A, MANT-6B); EHA-EU MCL network guidelines, HemaSphere 2025;9(10):e70233.",
+        "en": "The choice depends on whether a covalent BTK inhibitor was given and when the relapse came. After immunochemotherapy without one, and in late relapse (more than 24 months after a covalent-BTKi regimen), the second-line standard is a covalent BTK inhibitor (ibrutinib, acalabrutinib, zanubrutinib) alone or with venetoclax; on progression during one, or in early relapse (under 24 months), it is non-covalent pirtobrutinib, CAR-T or bispecific antibodies. Early progression, blastoid morphology, a high Ki-67 and TP53 status are weighed as well. The drugs are in the catalog but not as regimens: they are taken orally and continuously until progression or toxicity. Sources: NCCN B-Cell Lymphomas 4.2026 (MANT-6A, MANT-6B); EHA-EU MCL network guidelines, HemaSphere 2025;9(10):e70233."
       },
       "regimens": [
         {
