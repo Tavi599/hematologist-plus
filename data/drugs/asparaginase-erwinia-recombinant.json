@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN ALL 3.2026 (при алергії на аспарагіназу з E. coli, ALL-C 3 з 6). Єдина доза в NCCN — в/м 25 мг/м² пн і ср та 50 мг/м² пт упродовж 2 тижнів (фаза 2/3); розрахункової схеми немає. У відкритому реєстрі України не знайдено — «недоступний».",
+  "$comment": "Додано 2026-10-22 за NCCN ALL 3.2026 (при алергії на аспарагіназу з E. coli, ALL-C 3 з 6). Єдина доза в NCCN — в/м 25 мг/м² пн і ср та 50 мг/м² пт упродовж 2 тижнів (фаза 2/3); розрахункової схеми немає. У відкритому реєстрі України не знайдено — «недоступний». Фасування внесено 2026-11-20 за інструкцією FDA (Rylaze, розділ 3): флакон 10 мг/0,5 мл (20 мг/мл). У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "asparaginase-erwinia-recombinant",
   "name": {
     "uk": "Аспарагіназа Erwinia chrysanthemi (рекомбінантна), ERW-rywn",
@@ -18,6 +18,19 @@
       "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
       "version": "витяг від 22.10.2026: не знайдено",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: RYLAZE (asparaginase erwinia chrysanthemi recombinant-rywn), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=857e53aa-1098-4dad-b654-0276cdd43e03",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s10",
+      "form": "vial",
+      "strength_amount": 10,
+      "volume_ml": 0.5
     }
   ]
 }

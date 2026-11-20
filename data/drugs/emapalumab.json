@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-10-25 за UpToDate (HLH, рефрактерна/рецидивна форма). У Державному реєстрі України не знайдено (витяг від 25.10.2026), тому «недоступний». Фасування не внесено: у використаних джерелах їх немає.",
+  "$comment": "Додано 2026-10-25 за UpToDate (HLH, рефрактерна/рецидивна форма). У Державному реєстрі України не знайдено (витяг від 25.10.2026), тому «недоступний». Фасування не внесено: у використаних джерелах їх немає. Фасування внесено 2026-11-20 за інструкцією FDA (Gamifant, розділ 3): флакони 10 мг/2 мл, 50 мг/10 мл і 100 мг/20 мл (5 мг/мл) та 50 мг/2 мл, 100 мг/4 мл, 250 мг/10 мл і 500 мг/20 мл (25 мг/мл). У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "emapalumab",
   "name": {
     "uk": "Емапалумаб",
@@ -22,6 +22,55 @@
       "url": "http://www.drlz.com.ua/ibp/zvity.nsf/all/zvit/$file/reestr.csv",
       "version": "витяг від 25.10.2026",
       "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "FDA label: GAMIFANT (emapalumab-lzsg), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a865e0ef-8685-4f69-8838-648c4f3bab47",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s10",
+      "form": "vial",
+      "strength_amount": 10,
+      "volume_ml": 2
+    },
+    {
+      "key": "s50v10",
+      "form": "vial",
+      "strength_amount": 50,
+      "volume_ml": 10
+    },
+    {
+      "key": "s100v20",
+      "form": "vial",
+      "strength_amount": 100,
+      "volume_ml": 20
+    },
+    {
+      "key": "s50v2",
+      "form": "vial",
+      "strength_amount": 50,
+      "volume_ml": 2
+    },
+    {
+      "key": "s100v4",
+      "form": "vial",
+      "strength_amount": 100,
+      "volume_ml": 4
+    },
+    {
+      "key": "s250",
+      "form": "vial",
+      "strength_amount": 250,
+      "volume_ml": 10
+    },
+    {
+      "key": "s500",
+      "form": "vial",
+      "strength_amount": 500,
+      "volume_ml": 20
     }
   ]
 }

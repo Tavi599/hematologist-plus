@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN BPDCN (AML 5.2026). Фасування не внесено: джерела, яке його дає, немає. Реєстрацію в Україні не підтверджено — «недоступний».",
+  "$comment": "Додано 2026-10-22 за NCCN BPDCN (AML 5.2026). Фасування не внесено: джерела, яке його дає, немає. Реєстрацію в Україні не підтверджено — «недоступний». Фасування внесено 2026-11-20 за інструкцією FDA (Decnupaz, розділи 2.5 і 11; препарат зареєстровано FDA 2026 року): флакон 2 мг ліофілізату, який відновлюють 1,1 мл води для інʼєкцій до 2 мг/мл (1 мл для набору). У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "pivekimab-sunirine",
   "name": {
     "uk": "Півекімаб суніріне",
@@ -18,6 +18,38 @@
       "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
       "version": "витяг від 22.10.2026: не знайдено",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: DECNUPAZ (pivekimab sunirine-pvzy), розділи 2.5, 11",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=508b6ff8-601d-4901-a7a5-816141134054",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s2",
+      "form": "vial",
+      "strength_amount": 2
+    }
+  ],
+  "infusion_params": [
+    {
+      "key": "glucose",
+      "solvent": "glucose_5",
+      "bag_volumes_ml": [],
+      "is_default": true,
+      "stock_concentration_mg_ml": 0.2,
+      "notes": {
+        "uk": "Інструкція велить два розведення 5 % глюкозою: у флакон додають 4,8 мл (0,4 мг/мл), потім відібраний обʼєм змішують у шприці з рівним обʼємом 5 % глюкози — остаточно 0,2 мг/мл. Мішка немає: обʼєм введення = доза / 0,2 мг/мл, вводиться шприцевим насосом.",
+        "en": "The label prescribes two dilutions in 5% dextrose: 4.8 mL into the vial (0.4 mg/mL), then the withdrawn volume is mixed in a syringe with an equal volume of 5% dextrose, giving 0.2 mg/mL. There is no bag: the infused volume is the dose divided by 0.2 mg/mL, given by syringe pump."
+      },
+      "sources": [
+        {
+          "name": "FDA label: DECNUPAZ (pivekimab sunirine-pvzy), розділ 2.5 Instructions for Preparation",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=508b6ff8-601d-4901-a7a5-816141134054",
+          "checkedOn": "2026-11-20"
+        }
+      ]
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
-  "$comment": "Додано 2026-10-25 за UpToDate (синдром активації макрофагів при хворобі Стілла) і NHS England (ГЛГ). У Державному реєстрі України не знайдено (витяг від 25.10.2026; зареєстрований лише канакінумаб — інший препарат), тому «недоступний». Фасування не внесено: у використаних джерелах їх немає.",
+  "$comment": "Додано 2026-10-25 за UpToDate (синдром активації макрофагів при хворобі Стілла) і NHS England (ГЛГ). У Державному реєстрі України не знайдено (витяг від 25.10.2026; зареєстрований лише канакінумаб — інший препарат), тому «недоступний». Фасування не внесено: у використаних джерелах їх немає. Фасування внесено 2026-11-20 за інструкцією FDA (Kineret, розділ 3) і Державним реєстром України: КІНЕРЕТ, розчин для ін'єкцій 100 мг/0,67 мл, 7 градуйованих шприців (АТС L04AC03) — препарат зареєстрований, тому «unavailable» замінено на «registered».",
   "id": "anakinra",
   "name": {
     "uk": "Анакінра",
     "en": "Anakinra"
   },
   "atc_code": "L04AC03",
-  "availability": "unavailable",
+  "availability": "registered",
   "notes": {
     "uk": "Антагоніст рецептора IL-1; застосування при ГЛГ/САМ — поза зареєстрованими показаннями навіть там, де препарат зареєстровано.",
     "en": "IL-1 receptor antagonist; use in HLH/MAS is off-label even where the drug is registered."
@@ -29,6 +29,23 @@
       "url": "http://www.drlz.com.ua/ibp/zvity.nsf/all/zvit/$file/reestr.csv",
       "version": "витяг від 25.10.2026",
       "checkedOn": "2026-10-25"
+    },
+    {
+      "name": "FDA label: KINERET (anakinra), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9d74915-6606-4570-9c52-c4001d3177de",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s100",
+      "form": "syringe",
+      "strength_amount": 100,
+      "volume_ml": 0.67,
+      "label": {
+        "uk": "Градуйований шприц 100 мг/0,67 мл (дози 20–100 мг)",
+        "en": "Graduated 100 mg/0.67 mL syringe (doses 20 to 100 mg)"
+      }
     }
   ]
 }

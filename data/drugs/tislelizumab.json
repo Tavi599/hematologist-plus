@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN Hodgkin Lymphoma 2.2026 (HODG-B 5 з 8). Дози й фасування не внесено: джерела, яке їх дає, немає. Реєстрацію в Україні не підтверджено — «недоступний».",
+  "$comment": "Додано 2026-10-22 за NCCN Hodgkin Lymphoma 2.2026 (HODG-B 5 з 8). Дози й фасування не внесено: джерела, яке їх дає, немає. Реєстрацію в Україні не підтверджено — «недоступний». Фасування внесено 2026-11-20 за інструкцією FDA (Tevimbra, розділ 3): флакони 100 мг/10 мл і 150 мг/15 мл (10 мг/мл). У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "tislelizumab",
   "name": {
     "uk": "Тислелізумаб",
@@ -18,6 +18,25 @@
       "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
       "version": "витяг від 22.10.2026: не знайдено",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: TEVIMBRA (tislelizumab-jsgr), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08ef1e3e-496f-4b0b-94ee-fbba3cc1985a",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s100",
+      "form": "vial",
+      "strength_amount": 100,
+      "volume_ml": 10
+    },
+    {
+      "key": "s150",
+      "form": "vial",
+      "strength_amount": 150,
+      "volume_ml": 15
     }
   ]
 }

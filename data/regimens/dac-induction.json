@@ -36,6 +36,18 @@
       "url": "https://clinicaltrials.gov/study/NCT03257241",
       "version": "запис на дату звірки",
       "checkedOn": "2026-10-09"
+    },
+    {
+      "name": "NSSG Oxford Haematology, ML.6 DA (daunorubicin + cytarabine) — даунорубіцин у 250 мл 0,9 % NaCl за 1 год",
+      "url": "https://nssg.oxford-haematology.org.uk/myeloid/protocols/ML-6-da.pdf",
+      "version": "червень 2025",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "EMC SmPC: Leustat injection (cladribine 1 mg/ml), розділи 4.2, 6.6 — розведення в 100–500 мл 0,9 % NaCl",
+      "url": "https://www.medicines.org.uk/emc/product/13187/smpc",
+      "version": "Date of revision of the text 23/04/2026",
+      "checkedOn": "2026-11-20"
     }
   ],
   "evidence": {
@@ -207,11 +219,13 @@
       "dose_value": 60,
       "dose_unit": "mg_m2",
       "days": [1, 2, 3],
+      "duration_min": 60,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 250,
       "notes": {
-        "uk": "60 мг/м² в/в за 30–60 хвилин (NCT03257241). Об'єму розведення джерело не вказує.",
-        "en": "60 mg/m² IV over 30 to 60 minutes (NCT03257241). The source gives no diluent volume."
-      },
-      "duration_min": 60
+        "uk": "60 мг/м² в/в за 30–60 хвилин (NCT03257241). Обʼєму розведення публікація не наводить. Протокол NSSG Oxford ML.6 DA дає даунорубіцин 60 мг/м² в 250 мл 0,9 % натрію хлориду за 1 годину — той самий обʼєм, що в da-7-3 і c9710-induction.",
+        "en": "60 mg/m² IV over 30 to 60 minutes (NCT03257241). The publication gives no diluent volume. The NSSG Oxford ML.6 DA protocol gives daunorubicin 60 mg/m2 in 250 mL of 0.9% sodium chloride over 1 hour, the same volume as in da-7-3 and c9710-induction."
+      }
     },
     {
       "key": "cladribine",
@@ -220,11 +234,13 @@
       "dose_value": 5,
       "dose_unit": "mg_m2",
       "days": [1, 2, 3, 4, 5],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 500,
       "notes": {
-        "uk": "5 мг/м² в/в за 2 години, перед цитарабіном (NCT03257241). Об'єму розведення джерело не вказує.",
-        "en": "5 mg/m² IV over 2 hours, before cytarabine (NCT03257241). The source gives no diluent volume."
-      },
-      "duration_min": 120
+        "uk": "5 мг/м² в/в за 2 години, перед цитарабіном (NCT03257241). Обʼєму розведення джерело не наводить. Інструкція флакона 1 мг/мл (Leustat, розділи 4.2 і 6.6) велить додавати добову дозу в 100–500 мл 0,9 % натрію хлориду; у довіднику взято 500 мл — стандарт відділення для кладрибіну, той самий, що в clag-m-nccn, clag-nccn і cdar-hcl.",
+        "en": "5 mg/m² IV over 2 hours, before cytarabine (NCT03257241). The source gives no diluent volume. The label of the 1 mg/mL vial (Leustat, sections 4.2 and 6.6) says to add the daily dose to 100 to 500 mL of 0.9% sodium chloride; the catalog takes 500 mL, the department's standard for cladribine, the same as in clag-m-nccn, clag-nccn and cdar-hcl."
+      }
     },
     {
       "key": "cytarabine",

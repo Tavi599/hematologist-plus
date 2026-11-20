@@ -1,10 +1,11 @@
 {
-  "$comment": "Додано 2026-10-22 за NCCN ALL 3.2026 (заміна пегаспаргази у віці 15–21 рік (ALL-C 3 з 6, ALL-D)). Доз NCCN не наводить. У відкритому реєстрі України не знайдено — «недоступний».",
+  "$comment": "Додано 2026-10-22 за NCCN ALL 3.2026 (заміна пегаспаргази у віці 15–21 рік (ALL-C 3 з 6, ALL-D)). Доз NCCN не наводить. У відкритому реєстрі України не знайдено — «недоступний». Фасування внесено 2026-11-20 за інструкцією FDA (Asparlas, розділ 3): флакон 3750 МО/5 мл (750 МО/мл). Препарат маркується в одиницях активності, тому amount_unit змінено з «mg» на «iu»: міліграми й МО не перераховуються. У Державному реєстрі України (витяг від 20.11.2026) препарату немає.",
   "id": "calaspargase-pegol",
   "name": {
     "uk": "Каласпаргаза пегол",
     "en": "Calaspargase pegol"
   },
+  "amount_unit": "iu",
   "availability": "unavailable",
   "sources": [
     {
@@ -18,6 +19,19 @@
       "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
       "version": "витяг від 22.10.2026: не знайдено",
       "checkedOn": "2026-10-22"
+    },
+    {
+      "name": "FDA label: ASPARLAS (calaspargase pegol-mknl), 3 Dosage Forms and Strengths",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6585bd0d-bd78-4341-9e87-0f7664821f05",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s3750",
+      "form": "vial",
+      "strength_amount": 3750,
+      "volume_ml": 5
     }
   ]
 }

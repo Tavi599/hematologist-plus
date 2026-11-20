@@ -24,6 +24,12 @@
       "url": "https://www.eviq.org.au/haematology/lymphoma/hodgkin-lymphoma/4253-hodgkin-lymphoma-igev-ifosfamide-gemcitabine",
       "version": "перевірено 2026-10-04",
       "checkedOn": "2026-10-04"
+    },
+    {
+      "name": "eviQ: IGEV (протокол 4253) — месна 2000 мг/м² у 1000 мл 0,9 % NaCl за 2 год разом з іфосфамідом",
+      "url": "https://www.eviq.org.au/haematology/lymphoma/hodgkin-lymphoma/4253-hodgkin-lymphoma-igev-ifosfamide-gemcitabine",
+      "version": "перевірено 2026-11-20",
+      "checkedOn": "2026-11-20"
     }
   ],
   "evidence": {
@@ -140,11 +146,6 @@
       "route": "iv_infusion",
       "dose_value": 2600,
       "dose_unit": "mg_m2",
-      "days": [1, 2, 3, 4],
-      "notes": {
-        "uk": "Разом з іфосфамідом, захист сечового міхура. Публікація не наводить розчинника, об'єму й тривалості введення месни — їх беруть за практикою відділення, тому калькулятор об'єм розчинника тут не рахує.",
-        "en": "With the ifosfamide, to protect the bladder. The publication gives no diluent, volume or infusion time for the mesna — these follow local practice, so the calculator does not work out a solvent volume here."
-      },
       "dose_options": [
         {
           "dose_value": 2000,
@@ -160,7 +161,15 @@
             "checkedOn": "2026-10-04"
           }
         }
-      ]
+      ],
+      "days": [1, 2, 3, 4],
+      "duration_min": 120,
+      "fallback_solvent": "sodium_chloride_0_9",
+      "fallback_volume_ml": 1000,
+      "notes": {
+        "uk": "Разом з іфосфамідом, захист сечового міхура. Santoro 2007 розчинника, обʼєму й тривалості месни не наводить; eviQ 4253 дає месну в 1000 мл 0,9 % натрію хлориду за 2 години в одному часі з іфосфамідом — цей обʼєм і взято.",
+        "en": "With the ifosfamide, to protect the bladder. Santoro 2007 gives no diluent, volume or infusion time for the mesna; eviQ 4253 gives it in 1000 mL of 0.9% sodium chloride over 2 hours alongside the ifosfamide, and that is the volume taken here."
+      }
     },
     {
       "key": "pegfilgrastim",
