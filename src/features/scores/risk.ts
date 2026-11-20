@@ -1,7 +1,7 @@
 import { AGE, num } from './general'
 import { mascc } from './mascc'
 import { hctCi } from './transplant'
-import type { Field, Outcome, Score, Text2, Tone, Values } from './types'
+import type { Field, Outcome, Score, Source, Text2, Tone, Values } from './types'
 
 const t = (uk: string, en: string): Text2 => ({ uk, en })
 const check = (key: string, uk: string, en: string, hint?: Text2): Field => ({
@@ -778,6 +778,15 @@ const primaPi: Score = {
   ),
 }
 
+const HOSTER_2014: Source = {
+  name: 'Hoster E et al. Confirmation of the mantle-cell lymphoma International Prognostic Index in randomized trials of the European Mantle-Cell Lymphoma Network. J Clin Oncol 2014;32:1338–46',
+  url: 'https://pubmed.ncbi.nlm.nih.gov/24687837/',
+  checked: t(
+    'Резюме: 5-річна загальна виживаність у групах 83%, 63% і 34%; усі чотири чинники підтверджені',
+    'Abstract: 5-year overall survival of 83%, 63% and 34% in the groups; all four factors confirmed',
+  ),
+}
+
 const mipi: Score = {
   id: 'mipi',
   section: 'risk',
@@ -844,7 +853,141 @@ const mipi: Score = {
         'The formula and cut-offs 5.70 / 6.20 (Hoster 2008 has no open full text)',
       ),
     },
+    HOSTER_2014,
   ],
+  caveat: t(
+    'Лейкоцити входять у формулу як кількість у 10⁶/л, тобто в мікролітрі: 6,7×10⁹/л — це 6700. Одиниця в первинній публікації не була вказана, на що є виправлення (Blood 2008;111:5761). Індекс побудований на хворих із поширеною хворобою на імунохіміотерапії, без інгібіторів BTK.',
+    'The white count enters the formula per 10⁶/L, that is per microlitre: 6.7×10⁹/L is 6700. The unit was not stated in the original publication, which an erratum corrects (Blood 2008;111:5761). The index was built on advanced-stage patients on immunochemotherapy, without BTK inhibitors.',
+  ),
+}
+
+/** Simplified MIPI: the point table of the same four factors, as ESMO prints it. */
+const sMipi: Score = {
+  id: 's-mipi',
+  section: 'risk',
+  title: t('Спрощений MIPI (s-MIPI)', 'Simplified MIPI (s-MIPI)'),
+  purpose: t(
+    'Той самий індекс у балах, без логарифмів',
+    'The same index in points, without logarithms',
+  ),
+  fields: [
+    AGE_ANY,
+    check('ecog', 'ECOG 2–4', 'ECOG 2–4'),
+    number('ldhRatio', 'ЛДГ', 'LDH', ULN_TIMES, 0.01),
+    number('wbc', 'Лейкоцити', 'White cells', G9, 0.1),
+  ],
+  compute: (values) => {
+    const age = num(values, 'ageYears')
+    const ldh = num(values, 'ldhRatio')
+    const wbc = num(values, 'wbc')
+    if (age === undefined || ldh === undefined || wbc === undefined) return null
+    const points =
+      (age >= 70 ? 3 : age >= 60 ? 2 : age >= 50 ? 1 : 0) +
+      (on(values, 'ecog') ? 2 : 0) +
+      (ldh >= 1.5 ? 3 : ldh >= 1 ? 2 : ldh >= 0.67 ? 1 : 0) +
+      (wbc >= 15 ? 3 : wbc >= 10 ? 2 : wbc >= 6.7 ? 1 : 0)
+    return grouped(points, [
+      { upTo: 3, ...LOW() },
+      { upTo: 5, label: t('Проміжний', 'Intermediate'), tone: 'orange' },
+      { upTo: 11, label: t('Високий', 'High'), tone: 'red' },
+    ])
+  },
+  sources: [
+    {
+      name: 'Dreyling M et al. Newly diagnosed and relapsed mantle cell lymphoma: ESMO Clinical Practice Guidelines. Ann Oncol 2017;28(Suppl 4):iv62–71',
+      url: 'https://doi.org/10.1093/annonc/mdx223',
+      checked: t(
+        'Таблиця 3: бали за віком, ECOG, ЛДГ/ВМН і лейкоцитами та групи 0–3, 4–5, 6–11',
+        'Table 3: the points for age, ECOG, LDH/ULN and white count, and the groups 0–3, 4–5, 6–11',
+      ),
+    },
+  ],
+  caveat: t(
+    'Межі за лейкоцитами ESMO подає як 6700, 10 000 і 15 000 у стовпці, підписаному ×10⁹/л: це кількість у мікролітрі, тобто 6,7, 10 і 15×10⁹/л. ECOG дає 2 бали, якщо хворий не здатний працювати або лежить (ECOG 2–4); ЛДГ — за відношенням до верхньої межі норми (при ВМН 240 Од/л межі груп — 180, 240 і 360 Од/л).',
+    'ESMO prints the white-count limits as 6700, 10 000 and 15 000 in a column headed ×10⁹/L: these are counts per microlitre, that is 6.7, 10 and 15×10⁹/L. ECOG scores 2 points if the patient is unable to work or bedridden (ECOG 2–4); LDH goes by the ratio to the upper limit of normal (with a ULN of 240 U/L the limits are 180, 240 and 360 U/L).',
+  ),
+}
+
+/** MIPI-c: the MIPI risk group and the Ki-67 index, equally weighted. */
+const mipiC: Score = {
+  id: 'mipi-c',
+  section: 'risk',
+  title: t('MIPI-c (MIPI з Ki-67)', 'MIPI-c (MIPI with Ki-67)'),
+  purpose: t(
+    'Комбінований індекс: група MIPI плюс індекс проліферації Ki-67',
+    'The combined index: the MIPI risk group plus the Ki-67 proliferation index',
+  ),
+  fields: [
+    {
+      kind: 'select',
+      key: 'mipiGroup',
+      label: t('Група за MIPI', 'MIPI risk group'),
+      options: [
+        { value: '0', label: t('Низький ризик', 'Low risk') },
+        { value: '1', label: t('Проміжний ризик', 'Intermediate risk') },
+        { value: '2', label: t('Високий ризик', 'High risk') },
+      ],
+    },
+    {
+      kind: 'select',
+      key: 'ki67',
+      label: t('Ki-67', 'Ki-67'),
+      options: [
+        { value: '0', label: t('< 30%', '< 30%') },
+        { value: '1', label: t('≥ 30%', '≥ 30%') },
+      ],
+    },
+  ],
+  compute: (values) => {
+    if (values.mipiGroup === undefined || values.ki67 === undefined) return null
+    const points = Number(values.mipiGroup) + Number(values.ki67)
+    return grouped(points, [
+      {
+        upTo: 0,
+        ...LOW(t('5-річна загальна виживаність 85%.', '5-year overall survival 85%.')),
+      },
+      {
+        upTo: 1,
+        label: t('Низький проміжний', 'Low-intermediate'),
+        tone: 'yellow',
+        meaning: t('5-річна загальна виживаність 72%.', '5-year overall survival 72%.'),
+      },
+      {
+        upTo: 2,
+        label: t('Високий проміжний', 'High-intermediate'),
+        tone: 'orange',
+        meaning: t('5-річна загальна виживаність 43%.', '5-year overall survival 43%.'),
+      },
+      {
+        upTo: 3,
+        label: t('Високий', 'High'),
+        tone: 'red',
+        meaning: t('5-річна загальна виживаність 17%.', '5-year overall survival 17%.'),
+      },
+    ])
+  },
+  sources: [
+    {
+      name: 'Hoster E et al. Prognostic value of Ki-67 index, cytology, and growth pattern in mantle-cell lymphoma: results from randomized trials of the European Mantle Cell Lymphoma Network. J Clin Oncol 2016;34:1386–94',
+      url: 'https://pubmed.ncbi.nlm.nih.gov/26926679/',
+      checked: t(
+        'Резюме: межа Ki-67 30%, чотири групи з 5-річною виживаністю 85%, 72%, 43% і 17%',
+        'Abstract: the 30% Ki-67 cutoff and four groups with 5-year survival of 85%, 72%, 43% and 17%',
+      ),
+    },
+    {
+      name: 'Dreyling M et al. Newly diagnosed and relapsed mantle cell lymphoma: ESMO Clinical Practice Guidelines. Ann Oncol 2017;28(Suppl 4):iv62–71',
+      url: 'https://doi.org/10.1093/annonc/mdx223',
+      checked: t(
+        'Таблиця 3: ваги груп MIPI (0, 1, 2) і Ki-67 (0 або 1) та чотири групи MIPI-c',
+        'Table 3: the weights of the MIPI groups (0, 1, 2) and of Ki-67 (0 or 1), and the four MIPI-c groups',
+      ),
+    },
+  ],
+  caveat: t(
+    'Ki-67 рахують у лімфатичному вузлі стандартизованим методом; межа 30%. Біологічний MIPI (MIPI-b), у якому Ki-67 входить у формулу коефіцієнтом, тут не рахується: у самій публікації MIPI-c сказано, що MIPI-b розділяє лише дві групи й гірше розрізняє хворих, а доступні огляди подають його межі суперечливо.',
+    'Ki-67 is counted in a lymph node by the standardised method; the cutoff is 30%. The biologic MIPI (MIPI-b), where Ki-67 enters the formula as a coefficient, is not calculated here: the MIPI-c publication itself states that MIPI-b separates only two groups and discriminates worse, and the available reviews report its cut-offs inconsistently.',
+  ),
 }
 
 const ips: Score = {
@@ -1980,6 +2123,8 @@ export const RISK_SCORES: Score[] = [
   flipi2,
   primaPi,
   mipi,
+  sMipi,
+  mipiC,
   ips,
   cllIpi,
   rIss,
