@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Дози, розведення й застереження внесено 2026-11-20 з українських інструкцій (див. sources).",
   "id": "gentamicin",
   "name": {
     "uk": "Гентаміцин",
@@ -17,6 +17,12 @@
       "url": "https://www.drlz.com.ua/dani/api",
       "version": "чинні реєстрації, запит від 14.11.2026",
       "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Гентаміцин-Здоров’я (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2922B53BDD83936042258DA1004BD557/$file/UA72730101_1526.mht",
+      "version": "РП UA/7273/01/01, наказ МОЗ №155 від 09.02.2026",
+      "checkedOn": "2026-11-20"
     }
   ],
   "presentations": [
@@ -33,5 +39,154 @@
       "volume_ml": 2
     }
   ],
-  "atc_code": "J01GB03"
+  "atc_code": "J01GB03",
+  "dose_units": ["mg_kg"],
+  "dosing_weight": "aminoglycoside",
+  "notes": {
+    "uk": "Дорослим 3 мг/кг на добу за 2–3 введення, максимум 5 мг/кг на добу за 3–4 введення; 7–10 днів. Доза на фактичну масу; якщо вона більша за ідеальну понад 20% — на скориговану (ідеальна + 0,4 × надлишок). Калькулятор між ідеальною масою і 120% від неї бере ідеальну, а інструкція — фактичну. Потрібні зріст і стать.",
+    "en": "Adults: 3 mg/kg a day in 2-3 doses, at most 5 mg/kg a day in 3-4 doses; 7-10 days. The dose goes on the actual weight; when it exceeds the ideal by more than 20%, on the adjusted one (ideal + 0.4 × excess). Between the ideal weight and 120% of it the calculator takes the ideal weight while the label takes the actual one. Needs height and sex."
+  },
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_max_mg_ml": 1,
+      "stock_concentration_mg_ml": 40,
+      "bag_volumes_ml": [50, 100, 200, 250, 400, 500],
+      "duration_min": 60,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "Інструкція для медичного застосування: Гентаміцин-Здоров’я (Державний реєстр лікарських засобів України)",
+          "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2922B53BDD83936042258DA1004BD557/$file/UA72730101_1526.mht",
+          "version": "РП UA/7273/01/01, наказ МОЗ №155 від 09.02.2026",
+          "checkedOn": "2026-11-20"
+        }
+      ],
+      "notes": {
+        "uk": "Розчин 40 мг/мл; разову дозу розводять 50–300 мл 0,9% NaCl або 5% глюкози до не більше 1 мг/мл (0,1%); інфузія 1–2 год (60–80 крапель/хв). Більша доза потребує понад 300 мл, щоб не перевищити 1 мг/мл. Швидке пряме в/в введення не рекомендоване; в/в 2–3 дні, далі в/м. Об’єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
+        "en": "Solution 40 mg/mL; the single dose is diluted in 50-300 mL of 0.9% NaCl or 5% glucose to no more than 1 mg/mL (0.1%); infused over 1-2 h (60-80 drops/min). A larger dose needs more than 300 mL to stay within 1 mg/mL. Rapid direct IV injection is not recommended; IV for 2-3 days, then IM. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
+      },
+      "duration_options": [
+        {
+          "duration_min": 60,
+          "extended": false
+        },
+        {
+          "duration_min": 120,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 60
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Визначити КК перед призначенням. Початкова разова доза при стабільній ХНН 1–1,5 мг/кг, далі від початкової: КК ≥ 70 мл/хв — 100% кожні 8 год; 40–69 — 100% кожні 12 год; 30–39 — 50% кожні 8 год; 20–29 — 50% кожні 12 год; 15–19 — 50% кожні 16 год; 10–14 — 50% кожні 24 год; 5–9 — 50% кожні 36 год. Діаліз — 1–1,5 мг/кг після кожного сеансу. Не вводити всю добову дозу одноразово при ХНН на гемодіалізі, сепсисі, ендокардиті, асциті, опіках > 20%.",
+        "en": "Measure CrCl before prescribing. A starting single dose of 1-1.5 mg/kg in stable chronic renal failure, then of that dose: CrCl ≥ 70 mL/min, 100% every 8 h; 40-69, 100% every 12 h; 30-39, 50% every 8 h; 20-29, 50% every 12 h; 15-19, 50% every 16 h; 10-14, 50% every 24 h; 5-9, 50% every 36 h. Dialysis: 1-1.5 mg/kg after each session. Do not give the whole daily dose at once in haemodialysis-dependent renal failure, sepsis, endocarditis, ascites, burns > 20%."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Гентаміцин-Здоров’я (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2922B53BDD83936042258DA1004BD557/$file/UA72730101_1526.mht",
+        "version": "РП UA/7273/01/01, наказ МОЗ №155 від 09.02.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "monitoring": [
+    {
+      "notes": {
+        "uk": "Клубочкова фільтрація кожні 3 дні — при зниженні на 50% відміна; функція нирок 1–2 рази на тиждень, щодня при великих дозах чи лікуванні понад 10 днів. Аналіз крові регулярно.",
+        "en": "Glomerular filtration every 3 days, stop if it falls by 50%; renal function 1-2 times a week, daily on large doses or treatment beyond 10 days. Blood count regularly."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Гентаміцин-Здоров’я (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2922B53BDD83936042258DA1004BD557/$file/UA72730101_1526.mht",
+        "version": "РП UA/7273/01/01, наказ МОЗ №155 від 09.02.2026",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "notes": {
+        "uk": "Рівень у сироватці через 30–60 хв після в/м введення — 5–10 мкг/мл. Слух на високих частотах або вестибулярна функція 1–2 рази на тиждень; порушення — відміна.",
+        "en": "Serum level 30-60 min after an IM dose: 5-10 mcg/mL. High-frequency hearing or vestibular function 1-2 times a week; impairment means stopping."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Гентаміцин-Здоров’я (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2922B53BDD83936042258DA1004BD557/$file/UA72730101_1526.mht",
+        "version": "РП UA/7273/01/01, наказ МОЗ №155 від 09.02.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "with": ["cisplatin", "amikacin", "tobramycin", "colistimethate", "vancomycin"],
+      "level": "avoid",
+      "notes": {
+        "uk": "Уникати одночасного та/або послідовного застосування інших нейро- й нефротоксичних засобів (цисплатин, аміноглікозиди, поліміксин В, колістин, ванкоміцин).",
+        "en": "Avoid concurrent and/or sequential use of other neuro- and nephrotoxic drugs (cisplatin, aminoglycosides, polymyxin B, colistin, vancomycin)."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Гентаміцин-Здоров’я (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2922B53BDD83936042258DA1004BD557/$file/UA72730101_1526.mht",
+        "version": "РП UA/7273/01/01, наказ МОЗ №155 від 09.02.2026",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "with": [
+        "furosemide",
+        "cyclophosphamide",
+        "cefazolin",
+        "cefotaxime",
+        "ceftriaxone",
+        "ceftazidime",
+        "cefepime"
+      ],
+      "level": "caution",
+      "notes": {
+        "uk": "Петльові діуретики посилюють ото- й нефротоксичність; з циклофосфаном і цефалоспоринами росте ризик порушення функції нирок — контроль функції нирок.",
+        "en": "Loop diuretics add oto- and nephrotoxicity; with cyclophosphamide and cephalosporins the risk to renal function rises: monitor renal function."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Гентаміцин-Здоров’я (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2922B53BDD83936042258DA1004BD557/$file/UA72730101_1526.mht",
+        "version": "РП UA/7273/01/01, наказ МОЗ №155 від 09.02.2026",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "with": ["zoledronic-acid", "ibandronic-acid"],
+      "level": "caution",
+      "notes": {
+        "uk": "З бісфосфонатами зростає ризик гіпокальціємії.",
+        "en": "With bisphosphonates the risk of hypocalcaemia rises."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Гентаміцин-Здоров’я (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2922B53BDD83936042258DA1004BD557/$file/UA72730101_1526.mht",
+        "version": "РП UA/7273/01/01, наказ МОЗ №155 від 09.02.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Гентаміцин-Здоров’я» разову дозу розводять 50–300 мл 0,9% NaCl або 5% глюкози (дітям менше) до ≤ 1 мг/мл, інфузія 1–2 год. Фармацевтично несумісний в одному шприці чи системі з іншими препаратами, особливо з бета-лактамами, гепарином, амфотерицином. В/м вводять нерозведеним.",
+        "en": "Per the Gentamicin-Zdorovye label the single dose is diluted in 50-300 mL of 0.9% NaCl or 5% glucose (less in children) to ≤ 1 mg/mL and infused over 1-2 h. Incompatible in one syringe or line with other drugs, especially beta-lactams, heparin and amphotericin. IM undiluted."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Гентаміцин-Здоров’я (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2922B53BDD83936042258DA1004BD557/$file/UA72730101_1526.mht",
+        "version": "РП UA/7273/01/01, наказ МОЗ №155 від 09.02.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ]
 }

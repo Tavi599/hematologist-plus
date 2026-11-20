@@ -1,0 +1,30 @@
+{
+  "$comment": "Додано 2026-11-20 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "id": "erythromycin",
+  "name": {
+    "uk": "Еритроміцин",
+    "en": "Erythromycin"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "MSD Manual Professional (українська версія): антибактеріальні препарати",
+      "url": "https://www.msdmanuals.com/uk/professional/infectious-diseases/bacteria-and-antibacterial-medications/macrolides",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (API drlz.com.ua): таблетки 100 мг (UA/3701/01/01, UA/8709/01/01)",
+      "url": "https://www.drlz.com.ua/dani/api",
+      "version": "чинні реєстрації, запит від 20.11.2026",
+      "checkedOn": "2026-11-20"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t100",
+      "form": "tablet",
+      "strength_amount": 100
+    }
+  ],
+  "atc_code": "J01FA01"
+}

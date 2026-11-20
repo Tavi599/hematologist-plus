@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Дози, розведення й застереження внесено 2026-11-20 з українських інструкцій (див. sources).",
   "id": "clindamycin",
   "name": {
     "uk": "Кліндаміцин",
@@ -17,6 +17,18 @@
       "url": "https://www.drlz.com.ua/dani/api",
       "version": "чинні реєстрації, запит від 14.11.2026",
       "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Далацин Ц Фосфат (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1063724482BD9C7142258B9B003D604D/$file/UA103720101_C4D0.mht",
+      "version": "РП UA/10372/01/01, наказ МОЗ №1557 від 09.09.2024",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Далацин Ц (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/9731302BDEB0527A42258E9C00361DE5/$file/UA19030201_DCC3.mht",
+      "version": "РП UA/1903/02/01, наказ МОЗ №1454 від 30.09.2026",
+      "checkedOn": "2026-11-20"
     }
   ],
   "presentations": [
@@ -43,5 +55,121 @@
       "volume_ml": 4
     }
   ],
-  "atc_code": "J01FF01"
+  "atc_code": "J01FF01",
+  "dose_units": ["mg_flat"],
+  "notes": {
+    "uk": "В/в або в/м дорослим: тяжкі інфекції 2400–2700 мг на добу за 2–4 введення, легші — 1200–1800 мг за 3–4; до 4800 мг на добу. В/м разово не більше 600 мг. Всередину: 600–1800 мг на добу за 2–4 прийоми. Нирки й печінка — без корекції.",
+    "en": "IV or IM in adults: severe infections, 2400-2700 mg a day in 2-4 doses; milder ones, 1200-1800 mg in 3-4; up to 4800 mg a day. IM no more than 600 mg per dose. By mouth: 600-1800 mg a day in 2-4 doses. No adjustment for kidneys or liver."
+  },
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_max_mg_ml": 18,
+      "stock_concentration_mg_ml": 150,
+      "max_rate_mg_min": 30,
+      "bag_volumes_ml": [50, 100],
+      "duration_min": 10,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "Інструкція для медичного застосування: Далацин Ц Фосфат (Державний реєстр лікарських засобів України)",
+          "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1063724482BD9C7142258B9B003D604D/$file/UA103720101_C4D0.mht",
+          "version": "РП UA/10372/01/01, наказ МОЗ №1557 від 09.09.2024",
+          "checkedOn": "2026-11-20"
+        }
+      ],
+      "notes": {
+        "uk": "Розчин 150 мг/мл; перед в/в введенням розводять до ≤ 18 мг/мл, не швидше 30 мг/хв: 300 мг — 50 мл за 10 хв, 600 мг — 50 мл за 20 хв, 900 мг — 100 мл за 30 хв, 1200 мг — 100 мл за 40 хв. Не більше 1200 мг за одну годинну інфузію. Об’єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
+        "en": "Solution 150 mg/mL; diluted before IV use to ≤ 18 mg/mL and given no faster than 30 mg/min: 300 mg in 50 mL over 10 min, 600 mg in 50 mL over 20 min, 900 mg in 100 mL over 30 min, 1200 mg in 100 mL over 40 min. No more than 1200 mg in one 1 h infusion. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
+      },
+      "min_duration_min": 10
+    }
+  ],
+  "interactions": [
+    {
+      "with": ["voriconazole", "posaconazole", "clarithromycin"],
+      "level": "caution",
+      "notes": {
+        "uk": "Інгібітори CYP3A4/5 можуть знижувати кліренс кліндаміцину.",
+        "en": "CYP3A4/5 inhibitors may lower clindamycin clearance."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Далацин Ц Фосфат (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1063724482BD9C7142258B9B003D604D/$file/UA103720101_C4D0.mht",
+        "version": "РП UA/10372/01/01, наказ МОЗ №1557 від 09.09.2024",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "with": ["rifampicin"],
+      "level": "caution",
+      "notes": {
+        "uk": "Сильні індуктори CYP3A4 (рифампіцин) прискорюють виведення кліндаміцину — стежити за втратою ефективності.",
+        "en": "Strong CYP3A4 inducers (rifampicin) speed clindamycin clearance: watch for loss of effect."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Далацин Ц Фосфат (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1063724482BD9C7142258B9B003D604D/$file/UA103720101_C4D0.mht",
+        "version": "РП UA/10372/01/01, наказ МОЗ №1557 від 09.09.2024",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "with": ["erythromycin"],
+      "level": "caution",
+      "notes": {
+        "uk": "Антагонізм між кліндаміцином, еритроміцином і близькими макролідами.",
+        "en": "Antagonism between clindamycin, erythromycin and related macrolides."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Далацин Ц Фосфат (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1063724482BD9C7142258B9B003D604D/$file/UA103720101_C4D0.mht",
+        "version": "РП UA/10372/01/01, наказ МОЗ №1557 від 09.09.2024",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "with": ["gentamicin"],
+      "level": "caution",
+      "notes": {
+        "uk": "Кліндаміцин має властивості нервово-м’язового блокатора й може посилювати блокаду з гентаміцином і міорелаксантами.",
+        "en": "Clindamycin has neuromuscular blocking properties and may deepen the block with gentamicin and muscle relaxants."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Далацин Ц Фосфат (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1063724482BD9C7142258B9B003D604D/$file/UA103720101_C4D0.mht",
+        "version": "РП UA/10372/01/01, наказ МОЗ №1557 від 09.09.2024",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion", "intramuscular"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Далацин Ц Фосфат» в/м вводять нерозведеним, в/в — лише розведеним до ≤ 18 мг/мл зі швидкістю ≤ 30 мг/хв. Фізично несумісний з ампіциліном, фенітоїном, барбітуратами, амінофіліном, глюконатом кальцію, магнію сульфатом, цефтріаксоном і ципрофлоксацином. У 5% глюкозі чи NaCl стабільний щонайменше 24 год разом з амікацином, азтреонамом, цефазоліном, цефотаксимом, цефтазидимом, гентаміцином, тобраміцином. Містить бензиловий спирт — не застосовувати недоношеним і новонародженим.",
+        "en": "Per the Dalacin C Phosphate label IM undiluted, IV only diluted to ≤ 18 mg/mL at ≤ 30 mg/min. Physically incompatible with ampicillin, phenytoin, barbiturates, aminophylline, calcium gluconate, magnesium sulfate, ceftriaxone and ciprofloxacin. In 5% glucose or NaCl stable for at least 24 h with amikacin, aztreonam, cefazolin, cefotaxime, ceftazidime, gentamicin, tobramycin. Contains benzyl alcohol: not for premature infants and neonates."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Далацин Ц Фосфат (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/1063724482BD9C7142258B9B003D604D/$file/UA103720101_C4D0.mht",
+        "version": "РП UA/10372/01/01, наказ МОЗ №1557 від 09.09.2024",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "routes": ["oral"],
+      "notes": {
+        "uk": "Далацин Ц: капсули цілими, запиваючи щонайменше великою склянкою води, не пізніше ніж за 30 хв до того, як лягти (подразнення стравоходу).",
+        "en": "Dalacin C: capsules whole with at least a large glass of water, no later than 30 min before lying down (oesophageal irritation)."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Далацин Ц (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/9731302BDEB0527A42258E9C00361DE5/$file/UA19030201_DCC3.mht",
+        "version": "РП UA/1903/02/01, наказ МОЗ №1454 від 30.09.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ]
 }

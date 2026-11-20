@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Дози, розведення й застереження внесено 2026-11-20 з українських інструкцій (див. sources).",
   "id": "azithromycin",
   "name": {
     "uk": "Азитроміцин",
@@ -17,6 +17,18 @@
       "url": "https://www.drlz.com.ua/dani/api",
       "version": "чинні реєстрації, запит від 14.11.2026",
       "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Азитроміцин-Віста (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/BD303476BCB9379142258E5E00443C6F/$file/UA194680101_A53E.mht",
+      "version": "РП UA/19468/01/01, наказ МОЗ №1164 від 21.08.2026",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Азибіот (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/952C6FA883B5802442258BB00053AFE7/$file/UA134520101_C2ED.mht",
+      "version": "РП UA/13452/01/01, наказ МОЗ №1684 від 03.10.2024",
+      "checkedOn": "2026-11-20"
     }
   ],
   "presentations": [
@@ -56,5 +68,146 @@
       "strength_amount": 500
     }
   ],
-  "atc_code": "J01FA10"
+  "atc_code": "J01FA10",
+  "dose_units": ["mg_flat"],
+  "notes": {
+    "uk": "В/в: негоспітальна пневмонія — 500 мг 1 раз на добу щонайменше 2 дні, далі всередину 500 мг на добу до 7–10 днів. Всередину (дорослі й діти > 45 кг): 500 мг 1 раз на добу 3 дні. Обережно при подовженому QT і з препаратами, що його подовжують.",
+    "en": "IV: community-acquired pneumonia, 500 mg once daily for at least 2 days, then 500 mg a day by mouth for 7-10 days in all. By mouth (adults and children > 45 kg): 500 mg once daily for 3 days. Caution with a long QT and with drugs that prolong it."
+  },
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_max_mg_ml": 2,
+      "stock_concentration_mg_ml": 100,
+      "bag_volumes_ml": [250, 500],
+      "duration_min": 60,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "Інструкція для медичного застосування: Азитроміцин-Віста (Державний реєстр лікарських засобів України)",
+          "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/BD303476BCB9379142258E5E00443C6F/$file/UA194680101_A53E.mht",
+          "version": "РП UA/19468/01/01, наказ МОЗ №1164 від 21.08.2026",
+          "checkedOn": "2026-11-20"
+        }
+      ],
+      "notes": {
+        "uk": "Флакон 500 мг відновлюють 4,8 мл води для ін’єкцій (100 мг/мл), 5 мл розводять 250 мл (2 мг/мл, інфузія 1 год) або 500 мл (1 мг/мл, 3 год) 0,9% NaCl, 5% глюкози, Рінгера тощо. Не менше 60 хв; концентрації понад 2 мг/мл спричиняють місцеві реакції. Не болюсно й не в/м. Об’єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
+        "en": "The 500 mg vial is reconstituted with 4.8 mL of water for injections (100 mg/mL); 5 mL are diluted in 250 mL (2 mg/mL, a 1 h infusion) or 500 mL (1 mg/mL, 3 h) of 0.9% NaCl, 5% glucose, Ringer’s and others. At least 60 min; concentrations above 2 mg/mL cause site reactions. Not as a bolus or IM. The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
+      },
+      "duration_options": [
+        {
+          "duration_min": 60,
+          "extended": false
+        },
+        {
+          "duration_min": 180,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 60
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "ШКФ ≥ 10 мл/хв — без корекції; < 10 — з обережністю.",
+        "en": "GFR ≥ 10 mL/min: no adjustment; < 10, with caution."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Азитроміцин-Віста (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/BD303476BCB9379142258E5E00443C6F/$file/UA194680101_A53E.mht",
+        "version": "РП UA/19468/01/01, наказ МОЗ №1164 від 21.08.2026",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "contraindicated",
+      "notes": {
+        "uk": "Азибіот (таблетки): метаболізується в печінці й виводиться з жовчю — при тяжкому порушенні функції печінки не застосовувати.",
+        "en": "Azibiot (tablets): metabolised in the liver and excreted in bile, not to be used in severe hepatic impairment."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Азибіот (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/952C6FA883B5802442258BB00053AFE7/$file/UA134520101_C2ED.mht",
+        "version": "РП UA/13452/01/01, наказ МОЗ №1684 від 03.10.2024",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Азитроміцин-Віста (інфузії): Child-Pugh A–B — без корекції; Child-Pugh C — даних немає, з обережністю. Інструкції таблеток і інфузій тут розходяться.",
+        "en": "Azithromycin-Vista (infusion): Child-Pugh A-B, no adjustment; Child-Pugh C, no data, use with caution. The tablet and infusion labels differ here."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Азитроміцин-Віста (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/BD303476BCB9379142258E5E00443C6F/$file/UA194680101_A53E.mht",
+        "version": "РП UA/19468/01/01, наказ МОЗ №1164 від 21.08.2026",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "condition": "cardiac",
+      "level": "caution",
+      "notes": {
+        "uk": "Подовження QT і torsade de pointes: обережно при вродженому чи набутому подовженні QT, з антиаритміками IA та III класу, антипсихотиками, при гіпокаліємії, гіпомагніємії, брадикардії; у літніх.",
+        "en": "QT prolongation and torsade de pointes: caution with a congenital or acquired long QT, with class IA and III antiarrhythmics, antipsychotics, hypokalaemia, hypomagnesaemia, bradycardia; in the elderly."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Азитроміцин-Віста (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/BD303476BCB9379142258E5E00443C6F/$file/UA194680101_A53E.mht",
+        "version": "РП UA/19468/01/01, наказ МОЗ №1164 від 21.08.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "with": ["ciclosporin"],
+      "level": "caution",
+      "notes": {
+        "uk": "Cmax циклоспорину зростає на 24%: клінічний і терапевтичний моніторинг рівня під час і після азитроміцину, за потреби корекція дози циклоспорину.",
+        "en": "Ciclosporin Cmax rises by 24%: clinical and therapeutic level monitoring during and after azithromycin, adjusting the ciclosporin dose if needed."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Азитроміцин-Віста (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/BD303476BCB9379142258E5E00443C6F/$file/UA194680101_A53E.mht",
+        "version": "РП UA/19468/01/01, наказ МОЗ №1164 від 21.08.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Азитроміцин-Віста» у флакон 500 мг вводять 4,8 мл стерильної води для ін’єкцій і струшують до прозорого розчину (100 мг/мл); 5 мл концентрату розводять 250 мл (2 мг/мл) або 500 мл (1 мг/мл) 0,9% чи 0,45% NaCl, 5% глюкози, Рінгера, 5% глюкози в 0,3% чи 0,45% NaCl. Відновлений розчин зберігається 24 год при ≤ 30 °C або 72 год при 2–8 °C.",
+        "en": "Per the Azithromycin-Vista label, 4.8 mL of sterile water for injections are added to the 500 mg vial and shaken until clear (100 mg/mL); 5 mL of the concentrate are diluted in 250 mL (2 mg/mL) or 500 mL (1 mg/mL) of 0.9% or 0.45% NaCl, 5% glucose, Ringer’s, 5% glucose in 0.3% or 0.45% NaCl. The reconstituted solution keeps 24 h at ≤ 30 °C or 72 h at 2-8 °C."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Азитроміцин-Віста (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/BD303476BCB9379142258E5E00443C6F/$file/UA194680101_A53E.mht",
+        "version": "РП UA/19468/01/01, наказ МОЗ №1164 від 21.08.2026",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "routes": ["oral"],
+      "notes": {
+        "uk": "Азибіот: таблетки 1 раз на добу, незалежно від їжі, ковтати не розжовуючи.",
+        "en": "Azibiot: tablets once daily, with or without food, swallowed whole."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Азибіот (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/952C6FA883B5802442258BB00053AFE7/$file/UA134520101_C2ED.mht",
+        "version": "РП UA/13452/01/01, наказ МОЗ №1684 від 03.10.2024",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ]
 }
