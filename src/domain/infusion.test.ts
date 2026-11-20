@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { calculateInfusion, rampSchedule } from './infusion'
+import { calculateInfusion, rampSchedule, sheetRate } from './infusion'
 import { DomainInputError } from './types'
 
 describe('calculateInfusion', () => {
@@ -26,14 +26,14 @@ describe('calculateInfusion', () => {
     // drug volume 682 / 10 = 68.2 mL
     // 100 mL bag: 682 / 168.2 = 4.05 mg/mL > 4 → too concentrated
     // 250 mL bag: 682 / 318.2 = 2.143 mg/mL ✓
-    // rate over 4 h: 318.2 / 4 = 79.55 mL/h; × 20 / 60 = 26.52 gtt/min
+    // rate over 4 h: 318.2 / 4 = 79.55 mL/h, written as whole tens: 80 mL/h; × 20 / 60 = 26.67 gtt/min
     const result = calculateInfusion({ doseAmount: 682, params: rituximab, durationMin: 240 })
     expect(result.bagVolumeMl).toBe(250)
     expect(result.drugVolumeMl).toBeCloseTo(68.2, 10)
     expect(result.totalVolumeMl).toBeCloseTo(318.2, 10)
     expect(result.concentrationPerMl).toBeCloseTo(2.1433, 4)
-    expect(result.rateMlH).toBeCloseTo(79.55, 2)
-    expect(result.rateGttMin).toBeCloseTo(26.52, 2)
+    expect(result.rateMlH).toBe(80)
+    expect(result.rateGttMin).toBeCloseTo(26.67, 2)
     expect(result.issue).toBeNull()
     expect(result.steps.map((s) => s.key)).toEqual([
       'infusion.volume',
@@ -197,5 +197,20 @@ describe('rate raised in steps', () => {
     expect(() => rampSchedule(500, { startMlH: 1, stepMlH: 0.5, everyMin: 1, maxMlH: 2 })).toThrow(
       DomainInputError,
     )
+  })
+})
+
+describe('sheetRate', () => {
+  it('writes the rate in whole tens, as the department sheet does', () => {
+    // «HD ARA-C (Цитозар 1,5 г_м2).xlsx»: 500 mL over 3 hours is 166.7 mL/h, the sheet says 170.
+    expect(sheetRate(500 / 3)).toBe(170)
+    expect(sheetRate(150)).toBe(150)
+    expect(sheetRate(83.3)).toBe(80)
+  })
+
+  it('keeps whole millilitres for a slow rate, so a long infusion is not sped up', () => {
+    // 100 mL over 24 hours: whole tens would make 4.2 mL/h into 0, or raise it by half.
+    expect(sheetRate(100 / 24)).toBe(4)
+    expect(sheetRate(19.4)).toBe(19)
   })
 })

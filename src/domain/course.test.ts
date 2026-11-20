@@ -222,7 +222,8 @@ describe('calculateCourse', () => {
     // 750 mg of a 10 mg/mL concentrate = 75 mL; the 100 mL bag would exceed 4 mg/mL.
     expect(rtx?.infusion).toMatchObject({ bagVolumeMl: 250, drugVolumeMl: 75, totalVolumeMl: 325 })
     expect(rtx?.infusion?.concentrationPerMl).toBeCloseTo(2.308, 3)
-    expect(rtx?.infusion?.rateMlH).toBeCloseTo(81.25, 2)
+    // 325 mL over 4 h = 81.25 mL/h, written on the sheet as whole tens.
+    expect(rtx?.infusion?.rateMlH).toBe(80)
     expect(rtx?.administrationsInCourse).toBe(1)
 
     expect(pred?.doseAmount).toBe(100)

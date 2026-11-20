@@ -1,5 +1,5 @@
 import { DOMAIN_DEFAULTS } from './config'
-import { assertPositive } from './math'
+import { assertPositive, roundToStep } from './math'
 import { convertAmount, isMassUnit } from './units'
 import { DomainInputError, type AmountUnit, type CalculationStep } from './types'
 
@@ -82,6 +82,16 @@ export function rampSchedule(totalVolumeMl: number, ramp: RateSteps): RampResult
   return { durationMin: Math.ceil(minute), steps }
 }
 
+/**
+ * The rate as it is written on the sheet: whole tens of millilitres per hour, the way the
+ * department sets a drip (see `DOMAIN_DEFAULTS.infusionRateRounding`). A slow rate keeps whole
+ * millilitres, so a 24-hour infusion is not sped up to the nearest ten.
+ */
+export function sheetRate(rateMlH: number): number {
+  const { stepMlH, keepWholeBelowMlH } = DOMAIN_DEFAULTS.infusionRateRounding
+  return roundToStep(rateMlH, rateMlH < keepWholeBelowMlH ? 1 : stepMlH)
+}
+
 /** Dilution parameters of a drug, from the drug catalog. Concentration limits are mg/mL. */
 export interface InfusionParams {
   /** Lowest allowed final concentration, mg/mL. */
@@ -124,7 +134,10 @@ export interface InfusionResult {
   concentrationPerMl: number
   /** Unit of `concentrationPerMl`, e.g. 'mg' → mg/mL. */
   concentrationUnit: AmountUnit
-  /** Rate for the whole infusion; null for a bolus, or when the rate is raised in steps. */
+  /**
+   * Rate for the whole infusion, as it is written on the sheet (`sheetRate`); null for a bolus,
+   * or when the rate is raised in steps.
+   */
   rateMlH: number | null
   rateGttMin: number | null
   issue: InfusionIssue | null
@@ -248,7 +261,7 @@ export function calculateInfusion(input: InfusionInput): InfusionResult {
         durationMin = needed
       }
     }
-    rateMlH = totalVolumeMl / (durationMin / 60)
+    rateMlH = sheetRate(totalVolumeMl / (durationMin / 60))
     rateGttMin = (rateMlH * dropFactor) / 60
   }
 
