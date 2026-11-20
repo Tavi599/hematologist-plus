@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Дози, розведення й застереження внесено 2026-11-20 з українських інструкцій (див. sources).",
   "id": "rifampicin",
   "name": {
     "uk": "Рифампіцин",
@@ -17,6 +17,18 @@
       "url": "https://www.drlz.com.ua/dani/api",
       "version": "чинні реєстрації, запит від 14.11.2026",
       "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Рифампін (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/07515C155BBE0B02422588E7003FDEB3/$file/UA115480101_A508.mht",
+      "version": "РП UA/11548/01/01, наказ МОЗ №1886 від 19.10.2022",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Макокс 150 (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/B8B9FFF555130B8242258DDB007A5596/$file/UA67960101_DD26.mht",
+      "version": "РП UA/6796/01/01, наказ МОЗ №498 від 13.04.2026",
+      "checkedOn": "2026-11-20"
     }
   ],
   "presentations": [
@@ -36,5 +48,178 @@
       "strength_amount": 600
     }
   ],
-  "atc_code": "J04AB02"
+  "atc_code": "J04AB02",
+  "dose_units": ["mg_flat", "mg_kg"],
+  "notes": {
+    "uk": "Лише в комбінації з іншими антибактеріальними. Туберкульоз: 8–12 мг/кг на добу всередину (< 50 кг — 450 мг, ≥ 50 кг — 600 мг), в/в 600 мг 1 раз на добу за 2–3 год. Бруцельоз, легіонельоз, тяжкі стафілококові інфекції: в/в 600–1200 мг на добу за 2–4 введення, всередину 900–1200 мг за 2–3 прийоми (максимум 1200 мг). Всередину за 30 хв до або через 2 год після їди.",
+    "en": "Only combined with other antibacterials. Tuberculosis: 8-12 mg/kg a day by mouth (< 50 kg, 450 mg; ≥ 50 kg, 600 mg), IV 600 mg once daily over 2-3 h. Brucellosis, legionellosis, severe staphylococcal infections: IV 600-1200 mg a day in 2-4 doses, by mouth 900-1200 mg in 2-3 doses (maximum 1200 mg). By mouth 30 min before or 2 h after food."
+  },
+  "infusion_params": [
+    {
+      "key": "glucose",
+      "solvent": "glucose_5",
+      "stock_concentration_mg_ml": 60,
+      "bag_volumes_ml": [500],
+      "duration_min": 120,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "Інструкція для медичного застосування: Рифампін (Державний реєстр лікарських засобів України)",
+          "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/07515C155BBE0B02422588E7003FDEB3/$file/UA115480101_A508.mht",
+          "version": "РП UA/11548/01/01, наказ МОЗ №1886 від 19.10.2022",
+          "checkedOn": "2026-11-20"
+        }
+      ],
+      "notes": {
+        "uk": "Кожні 600 мг розчиняють у 10 мл води для ін’єкцій (60 мг/мл) і змішують з 500 мл 5% глюкози; 60–80 крапель/хв, 600 мг за 2–3 год. Інших розчинників не застосовувати.",
+        "en": "Each 600 mg is dissolved in 10 mL of water for injections (60 mg/mL) and mixed with 500 mL of 5% glucose; 60-80 drops/min, 600 mg over 2-3 h. No other diluents."
+      },
+      "duration_options": [
+        {
+          "duration_min": 120,
+          "extended": false
+        },
+        {
+          "duration_min": 180,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 120
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "hepatic",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Добова доза не більше 8 мг/кг. При помірному порушенні — лише в крайньому разі, під постійним контролем функції печінки (АЛТ); при жовтяниці не рекомендований. Клінічно значні зміни функції печінки — відміна.",
+        "en": "Daily dose no more than 8 mg/kg. In moderate impairment only as a last resort, under constant liver monitoring (ALT); not recommended with jaundice. Clinically significant liver changes: stop."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Рифампін (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/07515C155BBE0B02422588E7003FDEB3/$file/UA115480101_A508.mht",
+        "version": "РП UA/11548/01/01, наказ МОЗ №1886 від 19.10.2022",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "condition": "renal",
+      "level": "caution",
+      "notes": {
+        "uk": "Дози понад 600 мг на добу — контролювати функцію нирок.",
+        "en": "Doses above 600 mg a day: monitor renal function."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Рифампін (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/07515C155BBE0B02422588E7003FDEB3/$file/UA115480101_A508.mht",
+        "version": "РП UA/11548/01/01, наказ МОЗ №1886 від 19.10.2022",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "monitoring": [
+    {
+      "notes": {
+        "uk": "Перед лікуванням: печінкові ферменти, білірубін, креатинін, загальний аналіз крові з тромбоцитами. При ризику кровотечі — контроль коагулопатії (вітамін-К-залежна). Рифампіцин спотворює мікробіологічне визначення фолієвої кислоти й B12.",
+        "en": "Before treatment: liver enzymes, bilirubin, creatinine, blood count with platelets. With a bleeding risk, watch for (vitamin K dependent) coagulopathy. Rifampicin distorts microbiological assays of folate and B12."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Рифампін (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/07515C155BBE0B02422588E7003FDEB3/$file/UA115480101_A508.mht",
+        "version": "РП UA/11548/01/01, наказ МОЗ №1886 від 19.10.2022",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "with": ["clopidogrel"],
+      "level": "avoid",
+      "notes": {
+        "uk": "Сильна індукція CYP2C19 підвищує рівень активного метаболіту клопідогрелю й ризик кровотечі — не рекомендовано.",
+        "en": "Strong CYP2C19 induction raises the active clopidogrel metabolite and the bleeding risk: not recommended."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Рифампін (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/07515C155BBE0B02422588E7003FDEB3/$file/UA115480101_A508.mht",
+        "version": "РП UA/11548/01/01, наказ МОЗ №1886 від 19.10.2022",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "with": ["cefazolin"],
+      "level": "avoid",
+      "notes": {
+        "uk": "Уникати з антибіотиками, що спричиняють вітамін-К-залежну коагулопатію (цефазолін та інші цефалоспорини з N-метилтіотетразольним ланцюгом): тяжкі порушення згортання, можливо летальні.",
+        "en": "Avoid with antibiotics that cause vitamin K dependent coagulopathy (cefazolin and other cephalosporins with an N-methylthiotetrazole chain): severe, possibly fatal, coagulation disorders."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Рифампін (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/07515C155BBE0B02422588E7003FDEB3/$file/UA115480101_A508.mht",
+        "version": "РП UA/11548/01/01, наказ МОЗ №1886 від 19.10.2022",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "with": [
+        "ciclosporin",
+        "tacrolimus",
+        "sirolimus",
+        "fluconazole",
+        "voriconazole",
+        "imatinib",
+        "irinotecan",
+        "ondansetron",
+        "dexamethasone",
+        "prednisolone",
+        "methylprednisolone",
+        "hydrocortisone",
+        "clarithromycin",
+        "doxycycline",
+        "ciprofloxacin",
+        "levofloxacin",
+        "moxifloxacin",
+        "fentanyl-patch"
+      ],
+      "level": "caution",
+      "notes": {
+        "uk": "Потужний індуктор CYP1A2, 2B6, 2C8, 2C9, 2C19, 3A4, UGT і P-gp: знижує рівні й дію імуносупресантів (циклоспорин, сиролімус, такролімус), азолів, іматинібу, іринотекану, ондансетрону, кортикостероїдів, кларитроміцину, доксицикліну, фторхінолонів, наркотичних аналгетиків. Контроль рівнів і ефекту, за потреби корекція дози.",
+        "en": "A potent inducer of CYP1A2, 2B6, 2C8, 2C9, 2C19, 3A4, UGT and P-gp: lowers the levels and effect of immunosuppressants (ciclosporin, sirolimus, tacrolimus), azoles, imatinib, irinotecan, ondansetron, corticosteroids, clarithromycin, doxycycline, fluoroquinolones, opioid analgesics. Monitor levels and effect, adjusting doses when needed."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Рифампін (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/07515C155BBE0B02422588E7003FDEB3/$file/UA115480101_A508.mht",
+        "version": "РП UA/11548/01/01, наказ МОЗ №1886 від 19.10.2022",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Рифампін» кожні 600 мг розчиняють у 10 мл води для ін’єкцій, енергійно струшуючи до повного розчинення, і змішують з 500 мл 5% глюкози; 60–80 крапель/хв. Приготований розчин стабільний 24 год при ≤ 25 °C. Зберігати від світла. Інших розчинників не застосовувати.",
+        "en": "Per the Rifampin label each 600 mg is dissolved in 10 mL of water for injections, shaken hard until fully dissolved, and mixed with 500 mL of 5% glucose; 60-80 drops/min. The prepared solution is stable 24 h at ≤ 25 °C. Keep away from light. No other diluents."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Рифампін (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/07515C155BBE0B02422588E7003FDEB3/$file/UA115480101_A508.mht",
+        "version": "РП UA/11548/01/01, наказ МОЗ №1886 від 19.10.2022",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "routes": ["oral"],
+      "notes": {
+        "uk": "Макокс: капсули за 30 хв до або через 2 год після їди, запиваючи водою; антациди — щонайменше через 1 год після рифампіцину.",
+        "en": "Macox: capsules 30 min before or 2 h after food, with water; antacids at least 1 h after rifampicin."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Макокс 150 (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/B8B9FFF555130B8242258DDB007A5596/$file/UA67960101_DD26.mht",
+        "version": "РП UA/6796/01/01, наказ МОЗ №498 від 13.04.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ]
 }

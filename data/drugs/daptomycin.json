@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Дози, розведення й застереження внесено 2026-11-20 з українських інструкцій (див. sources).",
   "id": "daptomycin",
   "name": {
     "uk": "Даптоміцин",
@@ -17,6 +17,12 @@
       "url": "https://www.drlz.com.ua/dani/api",
       "version": "чинні реєстрації, запит від 14.11.2026",
       "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Даптоміцин-Віста (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/3F55187AD03969FF42258E2E0039FBB7/$file/UA184520101_CD00.mht",
+      "version": "РП UA/18452/01/01, наказ МОЗ №901 від 03.07.2026",
+      "checkedOn": "2026-11-20"
     }
   ],
   "presentations": [
@@ -31,5 +37,98 @@
       "strength_amount": 500
     }
   ],
-  "atc_code": "J01XX09"
+  "atc_code": "J01XX09",
+  "dose_units": ["mg_kg"],
+  "notes": {
+    "uk": "Дорослим: ускладнені інфекції шкіри й м’яких тканин — 4 мг/кг 1 раз на добу 7–14 днів; з бактеріємією S. aureus і правобічний ендокардит S. aureus — 6 мг/кг 1 раз на добу. Не частіше 1 разу на добу. Неефективний при пневмонії.",
+    "en": "Adults: complicated skin and soft tissue infections, 4 mg/kg once daily for 7-14 days; with S. aureus bacteraemia and right-sided S. aureus endocarditis, 6 mg/kg once daily. No more often than once a day. Ineffective in pneumonia."
+  },
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "stock_concentration_mg_ml": 50,
+      "bag_volumes_ml": [50],
+      "duration_min": 30,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "Інструкція для медичного застосування: Даптоміцин-Віста (Державний реєстр лікарських засобів України)",
+          "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/3F55187AD03969FF42258E2E0039FBB7/$file/UA184520101_CD00.mht",
+          "version": "РП UA/18452/01/01, наказ МОЗ №901 від 03.07.2026",
+          "checkedOn": "2026-11-20"
+        }
+      ],
+      "notes": {
+        "uk": "Флакон 350 мг відновлюють 7 мл, 500 мг — 10 мл 0,9% NaCl (50 мг/мл), далі розводять 0,9% NaCl (стандартно 50 мл); інфузія 30 хв. Дорослим можна в/в струминно за 2 хв (без розведення). Розчини з глюкозою несумісні.",
+        "en": "The 350 mg vial is reconstituted with 7 mL, the 500 mg vial with 10 mL of 0.9% NaCl (50 mg/mL), then diluted in 0.9% NaCl (50 mL as standard); infused over 30 min. Adults may also receive a 2 min IV injection (undiluted). Glucose solutions are incompatible."
+      },
+      "duration_options": [
+        {
+          "duration_min": 30,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 30
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "КК ≥ 30 мл/хв — звичайна доза 1 раз на добу; КК < 30, гемодіаліз і ПАПД — та сама доза кожні 48 год (за фармакокінетичними даними), у дні діалізу після сеансу. При КК < 80 застосовувати, лише якщо користь переважає ризик; КФК і функцію нирок контролювати ретельно.",
+        "en": "CrCl ≥ 30 mL/min: the usual dose once daily; CrCl < 30, haemodialysis and CAPD: the same dose every 48 h (from pharmacokinetic data), after the session on dialysis days. With CrCl < 80 use only when the benefit outweighs the risk; watch CK and renal function closely."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Даптоміцин-Віста (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/3F55187AD03969FF42258E2E0039FBB7/$file/UA184520101_CD00.mht",
+        "version": "РП UA/18452/01/01, наказ МОЗ №901 від 03.07.2026",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Child-Pugh A–B — без корекції; Child-Pugh C — даних немає, з обережністю.",
+        "en": "Child-Pugh A-B: no adjustment; Child-Pugh C: no data, use with caution."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Даптоміцин-Віста (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/3F55187AD03969FF42258E2E0039FBB7/$file/UA184520101_CD00.mht",
+        "version": "РП UA/18452/01/01, наказ МОЗ №901 від 03.07.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "monitoring": [
+    {
+      "notes": {
+        "uk": "КФК перед лікуванням і щонайменше щотижня; кожні 2–3 дні перші 2 тижні при КК < 80 мл/хв, діалізі чи з препаратами, що спричиняють міопатію. При нез’ясованих м’язових симптомах — КФК кожні 2 дні; відміна, якщо КФК > 5 × ВМН. Стежити за ознаками нейропатії й еозинофільної пневмонії.",
+        "en": "CK before treatment and at least weekly; every 2-3 days for the first 2 weeks with CrCl < 80 mL/min, on dialysis or with other drugs that cause myopathy. With unexplained muscle symptoms CK every 2 days; stop if CK > 5 × ULN. Watch for neuropathy and eosinophilic pneumonia."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Даптоміцин-Віста (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/3F55187AD03969FF42258E2E0039FBB7/$file/UA184520101_CD00.mht",
+        "version": "РП UA/18452/01/01, наказ МОЗ №901 від 03.07.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion", "iv_bolus"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Даптоміцин-Віста» 7 мл (350 мг) або 10 мл (500 мг) 0,9% NaCl вводять повільно по стінці флакона, обережно обертають і лишають на 10 хв, далі обертають до прозорого розчину без енергійного струшування (піна); розчинення ≈ 15 хв. Воду для ін’єкцій не застосовують. Відновлений розчин стабільний 12 год при 25 °C або 48 год при 2–8 °C, розведений — 12 год при 25 °C або 24 год при 2–8 °C. Сумісний з азтреонамом, цефтазидимом, цефтріаксоном, гентаміцином, флуконазолом, левофлоксацином, гепарином.",
+        "en": "Per the Daptomycin-Vista label, 7 mL (350 mg) or 10 mL (500 mg) of 0.9% NaCl is run slowly down the vial wall, swirled gently and left for 10 min, then turned until clear without vigorous shaking (foam); dissolution takes about 15 min. Water for injections is not used. The reconstituted solution is stable 12 h at 25 °C or 48 h at 2-8 °C, the diluted one 12 h at 25 °C or 24 h at 2-8 °C. Compatible with aztreonam, ceftazidime, ceftriaxone, gentamicin, fluconazole, levofloxacin, heparin."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Даптоміцин-Віста (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/3F55187AD03969FF42258E2E0039FBB7/$file/UA184520101_CD00.mht",
+        "version": "РП UA/18452/01/01, наказ МОЗ №901 від 03.07.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ]
 }

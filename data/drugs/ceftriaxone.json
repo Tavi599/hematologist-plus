@@ -1,5 +1,5 @@
 {
-  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено.",
+  "$comment": "Додано 2026-11-14 до довідника «Антибактеріальна терапія» (MSD Manual Professional). Фасування й код ATC — з чинних реєстрацій Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Дози, розведення й застереження внесено 2026-11-20 з українських інструкцій (див. sources).",
   "id": "ceftriaxone",
   "name": {
     "uk": "Цефтріаксон",
@@ -17,6 +17,18 @@
       "url": "https://www.drlz.com.ua/dani/api",
       "version": "чинні реєстрації, запит від 14.11.2026",
       "checkedOn": "2026-11-14"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Ауроксон (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/CAF7A0A8844A0B3E42258C7B003D037A/$file/UA116240102_DE9F.mht",
+      "version": "РП UA/11624/01/02, наказ МОЗ №699 від 22.04.2025",
+      "checkedOn": "2026-11-20"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Цефорт (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/78C6A2B6E2028BDD42258E7C003E5030/$file/UA188190101_9D6D.mht",
+      "version": "РП UA/18819/01/01, наказ МОЗ №1340 від 11.09.2026",
+      "checkedOn": "2026-11-20"
     }
   ],
   "presentations": [
@@ -36,5 +48,119 @@
       "strength_amount": 2000
     }
   ],
-  "atc_code": "J01DD04"
+  "atc_code": "J01DD04",
+  "dose_units": ["mg_flat"],
+  "notes": {
+    "uk": "Дорослим (≥ 50 кг) 1–2 г 1 раз на добу; госпітальна пневмонія — 2 г; фебрильна нейтропенія, ендокардит, менінгіт — 2–4 г на добу; понад 2 г на добу — розглянути 2 введення з інтервалом 12 год. Дози понад 2 г — лише в/в.",
+    "en": "Adults (≥ 50 kg): 1-2 g once daily; hospital-acquired pneumonia, 2 g; febrile neutropenia, endocarditis, meningitis, 2-4 g a day; above 2 g a day consider two doses 12 h apart. Doses above 2 g IV only."
+  },
+  "infusion_params": [
+    {
+      "key": "nacl",
+      "solvent": "sodium_chloride_0_9",
+      "concentration_max_mg_ml": 50,
+      "bag_volumes_ml": [50, 100, 200, 250],
+      "duration_min": 30,
+      "is_default": true,
+      "sources": [
+        {
+          "name": "Інструкція для медичного застосування: Цефорт (Державний реєстр лікарських засобів України)",
+          "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/78C6A2B6E2028BDD42258E7C003E5030/$file/UA188190101_9D6D.mht",
+          "version": "РП UA/18819/01/01, наказ МОЗ №1340 від 11.09.2026",
+          "checkedOn": "2026-11-20"
+        },
+        {
+          "name": "Інструкція для медичного застосування: Ауроксон (Державний реєстр лікарських засобів України)",
+          "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/CAF7A0A8844A0B3E42258C7B003D037A/$file/UA116240102_DE9F.mht",
+          "version": "РП UA/11624/01/02, наказ МОЗ №699 від 22.04.2025",
+          "checkedOn": "2026-11-20"
+        }
+      ],
+      "notes": {
+        "uk": "Цефорт: для інфузії рекомендована концентрація 50 мг/мл (флакон 2 г — у 40 мл розчинника без кальцію: 0,9% NaCl, 5 або 10% глюкоза); в/в інфузія не менше 30 хв (шлях, якому віддають перевагу), в/в струминно — понад 5 хв. Не розводити розчинами з кальцієм (Рінгер, Гартман). Об’єм обирають у калькуляторі серед флаконів 0,9% NaCl, зареєстрованих в Україні (50, 100, 200, 250, 400, 500 мл); недоступні ті, що виводять концентрацію за межі інструкції.",
+        "en": "Cefort: the recommended infusion concentration is 50 mg/mL (a 2 g vial in 40 mL of a calcium-free diluent: 0.9% NaCl, 5 or 10% glucose); IV infusion over at least 30 min (preferred), IV push over more than 5 min. Never dilute with calcium-containing fluids (Ringer’s, Hartmann’s). The volume is picked in the calculator among the 0.9% saline bottles registered in Ukraine (50, 100, 200, 250, 400, 500 mL); those that take the concentration out of the label range cannot be picked."
+      },
+      "duration_options": [
+        {
+          "duration_min": 30,
+          "extended": false
+        }
+      ],
+      "min_duration_min": 30
+    }
+  ],
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "Корекція не потрібна, поки функція печінки не порушена; лише при КК < 10 мл/хв добова доза не більше 2 г. Діаліз не видаляє цефтріаксон — додаткова доза після нього не потрібна; ретельний клінічний нагляд.",
+        "en": "No adjustment while the liver is normal; only with CrCl < 10 mL/min the daily dose is at most 2 g. Dialysis does not remove ceftriaxone, so no extra dose after it; close clinical monitoring."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Ауроксон (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/CAF7A0A8844A0B3E42258C7B003D037A/$file/UA116240102_DE9F.mht",
+        "version": "РП UA/11624/01/02, наказ МОЗ №699 від 22.04.2025",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "condition": "hepatic",
+      "level": "caution",
+      "notes": {
+        "uk": "Легка й помірна недостатність при нормальних нирках — без корекції; про тяжку даних немає. При одночасній тяжкій нирковій і печінковій недостатності — ретельний нагляд за безпекою й ефективністю.",
+        "en": "Mild and moderate impairment with normal kidneys: no adjustment; no data in severe impairment. With severe renal and hepatic impairment together, close monitoring of safety and efficacy."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Ауроксон (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/CAF7A0A8844A0B3E42258C7B003D037A/$file/UA116240102_DE9F.mht",
+        "version": "РП UA/11624/01/02, наказ МОЗ №699 від 22.04.2025",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "with": ["amikacin", "gentamicin", "tobramycin"],
+      "level": "caution",
+      "notes": {
+        "uk": "Дані про посилення нефротоксичності аміноглікозидів суперечливі: стежити за рівнем аміноглікозиду й функцією нирок. В одній системі не змішувати.",
+        "en": "Evidence on added aminoglycoside nephrotoxicity is conflicting: monitor the aminoglycoside level and renal function. Do not mix in one line."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Ауроксон (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/CAF7A0A8844A0B3E42258C7B003D037A/$file/UA116240102_DE9F.mht",
+        "version": "РП UA/11624/01/02, наказ МОЗ №699 від 22.04.2025",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ],
+  "preparation": [
+    {
+      "routes": ["iv_infusion", "iv_bolus"],
+      "notes": {
+        "uk": "Згідно з інструкцією «Цефорт» флакон 1 г для в/в ін’єкції розчиняють у 10 мл води для ін’єкцій (≈ 93 мг/мл) і вводять за 5 хв; флакон 2 г для інфузії — у 40 мл 0,9% NaCl, 0,45% NaCl + 2,5% глюкози, 5 або 10% глюкози, 6% декстрану в 5% глюкозі чи 6–10% гідроксиетилкрохмалю, інфузія не менше 30 хв. Систему промивають після кожного введення. Ауроксон: розчин зберігається до 6 год при кімнатній температурі, до 24 год при 2–8 °C; несумісний з амсакрином, ванкоміцином, флуконазолом, аміноглікозидами. Не змішувати й не вводити одночасно з розчинами кальцію (у т. ч. парентеральне харчування через Y-систему); дорослим можна послідовно, ретельно промивши систему.",
+        "en": "Per the Cefort label a 1 g vial for IV injection is dissolved in 10 mL of water for injections (≈ 93 mg/mL) and given over 5 min; a 2 g vial for infusion in 40 mL of 0.9% NaCl, 0.45% NaCl + 2.5% glucose, 5 or 10% glucose, 6% dextran in 5% glucose or 6-10% hydroxyethyl starch, infused over at least 30 min. Flush the line after each dose. Auroxon: the solution keeps up to 6 h at room temperature, up to 24 h at 2-8 °C; incompatible with amsacrine, vancomycin, fluconazole and aminoglycosides. Never mix or give at the same time as calcium solutions (including parenteral nutrition through a Y-site); in adults they may follow each other with a thorough flush."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Цефорт (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/78C6A2B6E2028BDD42258E7C003E5030/$file/UA188190101_9D6D.mht",
+        "version": "РП UA/18819/01/01, наказ МОЗ №1340 від 11.09.2026",
+        "checkedOn": "2026-11-20"
+      }
+    },
+    {
+      "routes": ["intramuscular"],
+      "notes": {
+        "uk": "Цефорт: флакон 1 г розчиняють у 3,5 мл 1% лідокаїну (≈ 238 мг/мл), глибоко в/м, не більше 1 г в одне місце. Розчин з лідокаїном ніколи не вводять внутрішньовенно.",
+        "en": "Cefort: a 1 g vial is dissolved in 3.5 mL of 1% lidocaine (≈ 238 mg/mL), deep IM, no more than 1 g per site. A lidocaine solution is never given IV."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Цефорт (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/78C6A2B6E2028BDD42258E7C003E5030/$file/UA188190101_9D6D.mht",
+        "version": "РП UA/18819/01/01, наказ МОЗ №1340 від 11.09.2026",
+        "checkedOn": "2026-11-20"
+      }
+    }
+  ]
 }
