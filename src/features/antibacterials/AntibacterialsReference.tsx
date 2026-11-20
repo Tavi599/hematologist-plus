@@ -16,6 +16,8 @@ import { useState, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { CatalogIndex } from '../../lib/catalog-index'
+import { InteractionsBlock } from './InteractionsBlock'
+import { findInteractions } from './interactions'
 import {
   CHECKED_ON,
   CLASSES,
@@ -281,6 +283,7 @@ export function AntibacterialsReference({
         onChange={(event) => setQuery(event.currentTarget.value)}
       />
       {needle === '' && <HemeSummary />}
+      <InteractionsBlock key={needle === '' ? 'all' : 'found'} needle={needle} />
       {needle === '' && (
         <Fold title={t('antibacterials.spectrum.title')}>
           <SpectrumTable />
@@ -294,7 +297,7 @@ export function AntibacterialsReference({
           forceOpen={needle !== '' || cls.id === linked}
         />
       ))}
-      {needle !== '' && shown.length === 0 && (
+      {needle !== '' && shown.length === 0 && findInteractions(needle).length === 0 && (
         <Text size="sm" c="dimmed">
           {t('antibacterials.searchNone')}
         </Text>
