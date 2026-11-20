@@ -304,6 +304,23 @@ describe('CalculatorPage', { timeout: 60_000 }, () => {
     expect(within(doxorubicin).getByText('ДЕМО примітка до препарату.')).toBeInTheDocument()
   })
 
+  it("shows the regimen's own note under the drug it is written for", async () => {
+    const catalog = demoCatalog()
+    catalog.regimen_items.find((row) => row.id === 'r-chop-21.cyclophosphamide')!.notes = {
+      uk: 'Вводити після ритуксимабу',
+      en: 'Given after rituximab',
+    }
+    fetch.fetchTable.mockImplementation(async (table: keyof typeof catalog) => catalog[table])
+    renderWithProviders(<CalculatorPage />, REGIMEN_ROUTE)
+    await screen.findByRole('combobox', { name: 'Схема' })
+
+    const table = await screen.findByRole('table', { name: 'Дози' })
+    const row = within(table).getByText('ДЕМО Циклофосфамід').closest('tr')!
+    expect(within(row).getByText('Вводити після ритуксимабу')).toBeInTheDocument()
+    const rituximab = within(table).getByText('ДЕМО Ритуксимаб').closest('tr')!
+    expect(within(rituximab).queryByText('Примітка схеми:')).not.toBeInTheDocument()
+  })
+
   it('makes a printable sheet out of lines written by hand, with no regimen at all', async () => {
     renderWithProviders(<CalculatorPage />)
     await screen.findByRole('combobox', { name: 'Схема' })
