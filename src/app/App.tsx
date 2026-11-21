@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router'
 
 import { AntibacterialsPage } from '../pages/AntibacterialsPage/AntibacterialsPage'
+import { AntifungalsAntiviralsPage } from '../pages/AntifungalsAntiviralsPage/AntifungalsAntiviralsPage'
 import { CalculatorPage } from '../pages/CalculatorPage/CalculatorPage'
 import { DiseaseDetailPage } from '../pages/DiseaseDetailPage/DiseaseDetailPage'
 import { PathwayPage } from '../pages/PathwayPage/PathwayPage'
@@ -27,6 +28,7 @@ export function App() {
         <Route path={`${routes.diseases}/:slug/pathways`} element={<PathwayPage />} />
         <Route path={routes.scores} element={<ScoresPage />} />
         <Route path={routes.antibacterials} element={<AntibacterialsPage />} />
+        <Route path={routes.antifungalsAntivirals} element={<AntifungalsAntiviralsPage />} />
         <Route path={routes.handbook} element={<HandbookPage />} />
         <Route path={`${routes.handbook}/:number`} element={<HandbookChapterPage />} />
         <Route path={routes.sources} element={<SourcesPage />} />

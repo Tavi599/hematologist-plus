@@ -14,6 +14,7 @@
     "need": "Drug need",
     "scores": "Scores",
     "antibacterials": "Antibacterial therapy",
+    "antifungalsAntivirals": "Antifungals and antivirals",
     "handbook": "EBMT Handbook"
   },
   "language": {
@@ -1284,6 +1285,29 @@
       "section": "section",
       "abbreviation": "abbreviation"
     }
+  },
+  "afav": {
+    "title": "Antifungal and antiviral drugs",
+    "lead": "A reference by class: spectrum, indications, monitoring, adverse effects, interactions, kidney and liver. These are single facts cut out of the MSD Manual Professional (Ukrainian edition) and the infection sections of NCCN guidelines (B-cell lymphomas, CLL, myeloma, AML), not a retelling; each class links its sources and the date checked. Doses appear only where a source gives a number, otherwise «без розрахунку»: MSD gives no dose for most of these drugs. The NCCN guideline «Prevention and Treatment of Cancer-Related Infections» was not read. The fact text itself is in Ukrainian.",
+    "search": "Search by drug or fact",
+    "searchNone": "Nothing found.",
+    "group": {
+      "antifungal": "Antifungals",
+      "antiviral": "Antivirals"
+    },
+    "hemeTitle": "For a haematology patient: what to look at first",
+    "hemeHint": "Every fact flagged as relevant to neutropenia, kidney and marrow toxicity, prophylaxis and interactions with chemotherapy and immunosuppressants; the details are on the class card.",
+    "discrepanciesTitle": "Where the sources differ from the catalog",
+    "discrepanciesHint": "Nothing was overwritten: both values are shown with their sources. Which one applies to a clinical decision is the physician's call.",
+    "catalogSide": "In the catalog",
+    "inCatalog": "in the catalog",
+    "notInCatalog": "not in the catalog",
+    "unregistered": "not registered in Ukraine",
+    "registeredNoCard": "registered, no catalog card",
+    "register": "State Register of Medicinal Products",
+    "sources": "Sources:",
+    "checkedOn": "checked",
+    "classFacts": "The class as a whole"
   },
   "appearance": {
     "palette": "Palette: {{current}}",
