@@ -30,6 +30,8 @@ import {
   type Fact,
 } from './classes'
 import { SpectrumTable, UnregisteredBadge } from './SpectrumTable'
+import { findTdm } from './tdm'
+import { TdmBlock } from './TdmBlock'
 
 function Fold({
   title,
@@ -300,6 +302,7 @@ export function AntibacterialsReference({
       {needle === '' && <HemeSummary />}
       <InteractionsBlock key={needle === '' ? 'all' : 'found'} needle={needle} />
       <ProphylaxisBlock key={`p-${needle === ''}`} needle={needle} catalog={catalog} />
+      <TdmBlock key={`t-${needle === ''}`} needle={needle} catalog={catalog} />
       {needle === '' && (
         <Fold title={t('antibacterials.spectrum.title')}>
           <SpectrumTable />
@@ -316,7 +319,8 @@ export function AntibacterialsReference({
       {needle !== '' &&
         shown.length === 0 &&
         findInteractions(needle).length === 0 &&
-        findProphylaxis(needle).length === 0 && (
+        findProphylaxis(needle).length === 0 &&
+        findTdm(needle).length === 0 && (
           <Text size="sm" c="dimmed">
             {t('antibacterials.searchNone')}
           </Text>

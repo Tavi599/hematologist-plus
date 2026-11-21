@@ -1076,6 +1076,20 @@
         "discrepancy": "Sources differ"
       }
     },
+    "tdm": {
+      "title": "Therapeutic drug monitoring (TDM): vancomycin, aminoglycosides, teicoplanin",
+      "hint": "Facts cut out of the sources: when to draw the sample, target levels by indication and regimen, what to do outside the range, how often to repeat, kidney and hearing checks. Levels and doses only where the source states them. Sources: MSD Manual Professional (Ukrainian edition), labels from the State Register; for the catalog's side, the SmPC its drug card cites. The department's NCCN guidelines say nothing about antibacterial levels. Where sources differ, it is shown separately; which target to follow is the physician's decision. The points are in Ukrainian.",
+      "inCatalog": "In the catalog",
+      "seeDiscrepancies": "See also «Where MSD differs from the catalog»:",
+      "topic": {
+        "sampling": "When to sample",
+        "target": "Target levels",
+        "outOfRange": "Out of range: what to do",
+        "repeat": "How often to repeat",
+        "toxicity": "Nephro- and ototoxicity, checks",
+        "discrepancy": "Sources differ"
+      }
+    },
     "spectrum": {
       "title": "Spectrum: MRSA, VRE, Pseudomonas, ESBL, CRE, anaerobes, atypicals",
       "hint": "Tap a mark to see what the MSD Manual Professional (Ukrainian edition) says, with a link to the page and the date checked. «Not stated» means the page does not say it outright — it is neither yes nor no.",
