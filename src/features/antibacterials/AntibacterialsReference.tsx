@@ -12,7 +12,7 @@ import {
   Title,
   UnstyledButton,
 } from '@mantine/core'
-import { useState, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import type { CatalogIndex } from '../../lib/catalog-index'
@@ -33,14 +33,16 @@ function Fold({
   title,
   children,
   defaultOpen = false,
+  id,
 }: {
   title: string
   children: ReactNode
   defaultOpen?: boolean
+  id?: string
 }) {
   const [open, setOpen] = useState(defaultOpen)
   return (
-    <Card withBorder component="section">
+    <Card withBorder component="section" id={id} style={{ scrollMarginTop: 60 }}>
       <UnstyledButton
         onClick={() => setOpen((shown) => !shown)}
         aria-expanded={open}
@@ -134,7 +136,7 @@ function ClassCard({
 }) {
   const { t } = useTranslation()
   return (
-    <Fold title={cls.title} defaultOpen={forceOpen}>
+    <Fold title={cls.title} defaultOpen={forceOpen} id={classAnchor(cls.id)}>
       {cls.facts.length > 0 && (
         <Stack gap={4}>
           {cls.drugs.length > 0 && (
@@ -173,6 +175,9 @@ function ClassCard({
     </Fold>
   )
 }
+
+/** The element id of a class card, which a `?class=` link scrolls to. */
+const classAnchor = (id: string) => `abx-class-${id}`
 
 /** Every fact marked as mattering for a haematology patient, by class. */
 function HemeSummary() {
@@ -275,6 +280,12 @@ export function AntibacterialsReference({
     const narrowed = narrow(cls, needle)
     return narrowed ? [narrowed] : []
   })
+
+  // A link from another page (`?class=`) lands on its card, not on the top of a long page.
+  useEffect(() => {
+    if (linked === undefined) return
+    document.getElementById(classAnchor(linked))?.scrollIntoView({ block: 'start' })
+  }, [linked])
 
   return (
     <Stack gap="sm">

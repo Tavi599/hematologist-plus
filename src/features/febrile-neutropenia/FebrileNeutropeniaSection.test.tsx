@@ -21,4 +21,12 @@ describe('FebrileNeutropeniaSection', () => {
     fireEvent.click(stage)
     expect(stage).toHaveAttribute('aria-expanded', 'false')
   })
+
+  it('links a step that names a class to its card in the antibacterial reference', () => {
+    renderWithProviders(<FebrileNeutropeniaSection />)
+
+    fireEvent.click(screen.getByRole('button', { name: /2\. Високий ризик/ }))
+    const link = screen.getAllByRole('link', { name: 'Карбапенеми', hidden: true })[0]
+    expect(link).toHaveAttribute('href', '/antibacterials?class=carbapenems')
+  })
 })

@@ -1,7 +1,8 @@
-import { Stack, Text, Title } from '@mantine/core'
+import { Anchor, Stack, Text, Title } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
-import { useSearchParams } from 'react-router'
+import { Link, useSearchParams } from 'react-router'
 
+import { routes } from '../../app/routes'
 import { AntibacterialsReference } from '../../features/antibacterials/AntibacterialsReference'
 import { CatalogGate } from '../../features/catalog/CatalogGate'
 
@@ -17,7 +18,10 @@ export function AntibacterialsPage() {
     <Stack gap="sm">
       <Title order={1}>{t('antibacterials.title')}</Title>
       <Text size="sm" c="dimmed">
-        {t('antibacterials.lead')}
+        {t('antibacterials.lead')}{' '}
+        <Anchor component={Link} to={`${routes.diseases}?section=febrile-neutropenia`} size="sm">
+          {t('antibacterials.toFn')}
+        </Anchor>
       </Text>
       <CatalogGate>
         {(catalog) => (

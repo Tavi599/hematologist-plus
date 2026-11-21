@@ -19,6 +19,7 @@ import { routes } from '../../app/routes'
 import { currentLanguage } from '../../lib/i18n'
 import { AbbreviationList } from '../abbreviations/AbbreviationList'
 import { FEBRILE_NEUTROPENIA_ABBREVIATIONS } from '../abbreviations/abbreviations'
+import { CLASSES } from '../antibacterials/classes'
 import { CatalogGate } from '../catalog/CatalogGate'
 import { TreatmentTree } from '../catalog/TreatmentTree'
 import {
@@ -28,7 +29,28 @@ import {
   NEUTROPENIA_DEFINITION,
   STAGES,
 } from './algorithm'
+import { AGENT_CLASSES, STEP_CLASSES } from './class-links'
 import { COMPLICATION_STAGES } from './complications'
+
+/** Links to the class cards of the antibacterial reference that a step or a drug names. */
+function ClassLinks({ ids }: { ids: readonly string[] | undefined }) {
+  const { t } = useTranslation()
+  const shown = (ids ?? []).flatMap((id) => CLASSES.filter((cls) => cls.id === id))
+  if (shown.length === 0) return null
+  return (
+    <Text component="span" size="xs" c="dimmed">
+      {t('febrileNeutropenia.classLinks')}{' '}
+      {shown.map((cls, index) => (
+        <span key={cls.id}>
+          {index > 0 && ' · '}
+          <Anchor component={Link} to={`${routes.antibacterials}?class=${cls.id}`} size="xs">
+            {cls.title}
+          </Anchor>
+        </span>
+      ))}
+    </Text>
+  )
+}
 
 /**
  * A card folded to its title: the page is long, and a physician looking for one step opens one
@@ -95,14 +117,15 @@ export function FebrileNeutropeniaSection() {
       {[...STAGES, ...COMPLICATION_STAGES].map((stage) => (
         <FoldCard key={stage.id} title={stage.title[language]}>
           <List size="sm" spacing={4}>
-            {stage.steps.map((step) => (
+            {stage.steps.map((step, index) => (
               <List.Item key={step.text.en}>
                 {step.text[language]}{' '}
                 {step.grade && (
                   <Badge size="xs" variant="light" color="gray" tt="none">
                     {step.grade}
                   </Badge>
-                )}
+                )}{' '}
+                <ClassLinks ids={STEP_CLASSES[stage.id]?.[index]} />
               </List.Item>
             ))}
           </List>
@@ -141,6 +164,7 @@ export function FebrileNeutropeniaSection() {
                   <Table.Tr key={agent.name.en}>
                     <Table.Td>
                       <Text size="sm">{agent.name[language]}</Text>
+                      <ClassLinks ids={AGENT_CLASSES[agent.name.en]} />
                     </Table.Td>
                     <Table.Td>
                       {agent.dose ? (
