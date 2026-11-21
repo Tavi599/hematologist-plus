@@ -1063,6 +1063,19 @@
       "noAction": "the source gives no concrete instruction",
       "seeClass": "See also the class card"
     },
+    "prophylaxis": {
+      "title": "Prophylaxis: fluoroquinolone, Pneumocystis, asplenia, hypogammaglobulinaemia",
+      "hint": "Facts cut out of the sources: who, when to start and stop, a dose only where the source states it, alternatives, cautions. Sources: MSD Manual Professional (Ukrainian edition), labels from the State Register, the infection pages of the NCCN CLL, Multiple Myeloma, B-Cell Lymphomas and ALL guidelines. The NCCN guideline \"Prevention and Treatment of Cancer-Related Infections\" was not read: it opens only after a sign-in. Where sources differ, it is shown separately; which to follow is the physician's decision. The points are in Ukrainian.",
+      "inCatalog": "In the catalog",
+      "topic": {
+        "who": "Who",
+        "timing": "When to start and stop",
+        "dose": "Dose (from the source only)",
+        "alternative": "Alternatives",
+        "caution": "Cautions",
+        "discrepancy": "Sources differ"
+      }
+    },
     "spectrum": {
       "title": "Spectrum: MRSA, VRE, Pseudomonas, ESBL, CRE, anaerobes, atypicals",
       "hint": "Tap a mark to see what the MSD Manual Professional (Ukrainian edition) says, with a link to the page and the date checked. «Not stated» means the page does not say it outright — it is neither yes nor no.",

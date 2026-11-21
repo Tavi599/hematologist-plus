@@ -18,6 +18,8 @@ import { useTranslation } from 'react-i18next'
 import type { CatalogIndex } from '../../lib/catalog-index'
 import { InteractionsBlock } from './InteractionsBlock'
 import { findInteractions } from './interactions'
+import { findProphylaxis } from './prophylaxis'
+import { ProphylaxisBlock } from './ProphylaxisBlock'
 import {
   CHECKED_ON,
   CLASSES,
@@ -297,6 +299,7 @@ export function AntibacterialsReference({
       />
       {needle === '' && <HemeSummary />}
       <InteractionsBlock key={needle === '' ? 'all' : 'found'} needle={needle} />
+      <ProphylaxisBlock key={`p-${needle === ''}`} needle={needle} catalog={catalog} />
       {needle === '' && (
         <Fold title={t('antibacterials.spectrum.title')}>
           <SpectrumTable />
@@ -310,11 +313,14 @@ export function AntibacterialsReference({
           forceOpen={needle !== '' || cls.id === linked}
         />
       ))}
-      {needle !== '' && shown.length === 0 && findInteractions(needle).length === 0 && (
-        <Text size="sm" c="dimmed">
-          {t('antibacterials.searchNone')}
-        </Text>
-      )}
+      {needle !== '' &&
+        shown.length === 0 &&
+        findInteractions(needle).length === 0 &&
+        findProphylaxis(needle).length === 0 && (
+          <Text size="sm" c="dimmed">
+            {t('antibacterials.searchNone')}
+          </Text>
+        )}
       {needle === '' && <Discrepancies />}
     </Stack>
   )
