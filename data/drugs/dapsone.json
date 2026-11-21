@@ -1,0 +1,76 @@
+{
+  "$comment": "Додано 2026-11-21: блок «Профілактика» довідника «Антибактеріальна терапія» називає дапсон альтернативою ко-тримоксазолу для профілактики пневмоцистної пневмонії (MSD). У Державному реєстрі України не знайдено — «недоступний». Фасування й дози — з британської SmPC.",
+  "id": "dapsone",
+  "name": {
+    "uk": "Дапсон",
+    "en": "Dapsone"
+  },
+  "atc_code": "J04BA02",
+  "availability": "unavailable",
+  "dose_units": ["mg_flat"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "вивантаження від 20.11.2026: за МНН і назвами не знайдено",
+      "checkedOn": "2026-11-21"
+    },
+    {
+      "name": "MSD Manual Professional (українська версія): Pneumocystis jirovecii пневмонія",
+      "url": "https://www.msdmanuals.com/uk/professional/pulmonary-disorders/pneumonia/pneumocystis-jirovecii-pneumonia",
+      "checkedOn": "2026-11-21"
+    },
+    {
+      "name": "SmPC Dapsone 100 mg Tablets (Morningside Healthcare, emc)",
+      "url": "https://www.medicines.org.uk/emc/product/100974/smpc",
+      "version": "ред. 28.01.2025, розд. 4.1–4.5, 4.8",
+      "checkedOn": "2026-11-21"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t50",
+      "form": "tablet",
+      "strength_amount": 50
+    },
+    {
+      "key": "t100",
+      "form": "tablet",
+      "strength_amount": 100
+    }
+  ],
+  "notes": {
+    "uk": "В Україні не зареєстрований. Профілактика пневмоцистної пневмонії при непереносимості ко-тримоксазолу (MSD). SmPC (Велика Британія): показання — профілактика пневмоцистної пневмонії в імунодефіцитних хворих; доза при пневмоцистній пневмонії разом із триметопримом — 50–100 мг на добу, 100 мг двічі на тиждень або 200 мг раз на тиждень. Протипоказаний при тяжкій анемії, порфірії, тяжкому дефіциті Г6ФД, алергії на сульфонаміди чи сульфони. Гемоліз і метгемоглобінемія залежать від дози; при дефіциті Г6ФД — уже понад ~50 мг на добу; рідко агранулоцитоз.",
+    "en": "Not registered in Ukraine. Pneumocystis prophylaxis when co-trimoxazole is not tolerated (MSD). UK SmPC: indicated for Pneumocystis pneumonia prophylaxis in immunodeficient patients; for Pneumocystis pneumonia with trimethoprim, 50-100 mg daily, 100 mg twice weekly or 200 mg once weekly. Contraindicated in severe anaemia, porphyria, severe G6PD deficiency, allergy to sulfonamides or sulfones. Haemolysis and methaemoglobinaemia are dose related; with G6PD deficiency from about 50 mg a day; agranulocytosis is rare."
+  },
+  "monitoring": [
+    {
+      "notes": {
+        "uk": "Регулярний загальний аналіз крові; при дефіциті Г6ФД, метгемоглобінредуктази чи гемоглобіні M гемолітична дія сильніша.",
+        "en": "Regular blood counts; haemolysis is stronger with G6PD or methaemoglobin reductase deficiency or haemoglobin M."
+      },
+      "source": {
+        "name": "SmPC Dapsone 100 mg Tablets (Morningside Healthcare, emc)",
+        "url": "https://www.medicines.org.uk/emc/product/100974/smpc",
+        "version": "ред. 28.01.2025, розд. 4.1–4.5, 4.8",
+        "checkedOn": "2026-11-21"
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "with": ["rifampicin"],
+      "level": "caution",
+      "notes": {
+        "uk": "Рифампіцин прискорює плазмовий кліренс дапсону.",
+        "en": "Rifampicin increases the plasma clearance of dapsone."
+      },
+      "source": {
+        "name": "SmPC Dapsone 100 mg Tablets (Morningside Healthcare, emc)",
+        "url": "https://www.medicines.org.uk/emc/product/100974/smpc",
+        "version": "ред. 28.01.2025, розд. 4.1–4.5, 4.8",
+        "checkedOn": "2026-11-21"
+      }
+    }
+  ]
+}

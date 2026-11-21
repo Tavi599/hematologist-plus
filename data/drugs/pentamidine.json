@@ -1,0 +1,63 @@
+{
+  "$comment": "Додано 2026-11-21: MSD і NCCN Multiple Myeloma називають пентамідин (MSD — інгаляційний) альтернативою ко-тримоксазолу для профілактики PJP. У Державному реєстрі України не знайдено — «недоступний». Фасування й дози — з британської SmPC.",
+  "id": "pentamidine",
+  "name": {
+    "uk": "Пентамідину ізетіонат",
+    "en": "Pentamidine isetionate"
+  },
+  "atc_code": "P01CX01",
+  "availability": "unavailable",
+  "dose_units": ["mg_flat", "mg_kg"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "вивантаження від 20.11.2026: за МНН і назвами не знайдено",
+      "checkedOn": "2026-11-21"
+    },
+    {
+      "name": "MSD Manual Professional (українська версія): Pneumocystis jirovecii пневмонія",
+      "url": "https://www.msdmanuals.com/uk/professional/pulmonary-disorders/pneumonia/pneumocystis-jirovecii-pneumonia",
+      "checkedOn": "2026-11-21"
+    },
+    {
+      "name": "NCCN Guidelines: Multiple Myeloma, Management of Infections (MYEL-K)",
+      "url": "https://www.nccn.org/professionals/physician_gls/pdf/myeloma.pdf",
+      "version": "Version 1.2027 від 09.09.2026",
+      "checkedOn": "2026-11-21"
+    },
+    {
+      "name": "SmPC Pentamidine isetionate Tillomed 300 mg powder for solution for injection/infusion (emc)",
+      "url": "https://www.medicines.org.uk/emc/product/14868/smpc",
+      "version": "ред. 27.06.2023, розд. 4.1–4.2",
+      "checkedOn": "2026-11-21"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "v300",
+      "form": "vial",
+      "strength_amount": 300
+    }
+  ],
+  "notes": {
+    "uk": "В Україні не зареєстрований. Профілактика PJP при непереносимості ко-тримоксазолу — інгаляційний пентамідин (MSD). SmPC (Велика Британія): профілактика — інгаляційно 150 мг кожні 2 тижні або 300 мг раз на місяць (небулайзер, звільнене провітрюване приміщення, захист персоналу); лікування — 4 мг/кг в/в 1 раз на добу за 60 хв, зазвичай 14 днів, не довше 21 дня. Токсичність (MSD): гостре ураження нирок, гіпотензія, гіпоглікемія.",
+    "en": "Not registered in Ukraine. PJP prophylaxis when co-trimoxazole is not tolerated: inhaled pentamidine (MSD). UK SmPC: prophylaxis, inhaled 150 mg every 2 weeks or 300 mg once a month (nebuliser, a vacated ventilated room, staff protection); treatment, 4 mg/kg IV once daily over 60 min, usually 14 days and no longer than 21. Toxicity (MSD): acute kidney injury, hypotension, hypoglycaemia."
+  },
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "КлКр < 10 мл/хв: при загрозливій для життя PJP — 4 мг/кг щодня 7–10 днів, далі через день до ≥ 14 доз; при менш тяжкій — 4 мг/кг через день. Легке порушення — між дозами ≥ 36 год.",
+        "en": "CrCl < 10 mL/min: life-threatening PJP, 4 mg/kg daily for 7-10 days, then every other day to at least 14 doses; less severe, 4 mg/kg every other day. Mild impairment: at least 36 h between doses."
+      },
+      "source": {
+        "name": "SmPC Pentamidine isetionate Tillomed 300 mg powder for solution for injection/infusion (emc)",
+        "url": "https://www.medicines.org.uk/emc/product/14868/smpc",
+        "version": "ред. 27.06.2023, розд. 4.1–4.2",
+        "checkedOn": "2026-11-21"
+      }
+    }
+  ]
+}

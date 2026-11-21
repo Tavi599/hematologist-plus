@@ -139,6 +139,39 @@ const LEVAXELA = label(
   'РП UA/15596/02/02, версія реєстру від 22.10.2026',
 )
 
+/** A UK SmPC (emc), for drugs Ukraine has not registered. */
+const smpc = (
+  short: string,
+  title: string,
+  product: number,
+  version: string,
+): ProphylaxisSource => ({
+  short: `SmPC ${short}`,
+  name: `SmPC (Велика Британія, emc): ${title}`,
+  url: `https://www.medicines.org.uk/emc/product/${product}/smpc`,
+  version,
+  checkedOn: CHECKED,
+})
+
+const DAPSONE_SMPC = smpc(
+  'дапсон',
+  'Dapsone 100 mg Tablets',
+  100974,
+  'ред. 28.01.2025, розд. 4.1–4.2',
+)
+const PENTAMIDINE_SMPC = smpc(
+  'пентамідин',
+  'Pentamidine isetionate Tillomed 300 mg',
+  14868,
+  'ред. 27.06.2023, розд. 4.1–4.2',
+)
+const WELLVONE = smpc(
+  'Wellvone',
+  'Wellvone 750 mg/5 ml oral suspension (атоваквон)',
+  952,
+  'ред. 28.07.2026, розд. 4.1–4.4',
+)
+
 const p = (
   topic: ProphylaxisTopic,
   text: string,
@@ -191,7 +224,7 @@ export const PROPHYLAXIS: ProphylaxisSection[] = [
       ),
       p(
         'alternative',
-        'Мієлома: цефдинір 300 мг перорально 2 рази на добу (у каталозі немає) або амоксицилін/клавуланат («аугментин») 875 мг перорально 2 рази на добу',
+        'Мієлома: цефдинір 300 мг перорально 2 рази на добу (в Україні зареєстрований, у каталозі немає) або амоксицилін/клавуланат («аугментин») 875 мг перорально 2 рази на добу',
         NCCN_MM,
       ),
       p(
@@ -234,7 +267,7 @@ export const PROPHYLAXIS: ProphylaxisSection[] = [
   {
     id: 'pneumocystis',
     title: 'Pneumocystis jirovecii: ко-тримоксазол',
-    drugIds: ['co-trimoxazole'],
+    drugIds: ['co-trimoxazole', 'dapsone', 'pentamidine', 'atovaquone'],
     riskDrugIds: [
       'fludarabine',
       'cladribine',
@@ -299,13 +332,23 @@ export const PROPHYLAXIS: ProphylaxisSection[] = [
       ),
       p('dose', 'NCCN CLL і Multiple Myeloma доз ко-тримоксазолу не наводять', NCCN_CLL, NCCN_MM),
       p(
+        'dose',
+        'Дапсон при пневмоцистній пневмонії, разом із триметопримом: 50–100 мг на добу, 100 мг двічі на тиждень або 200 мг раз на тиждень',
+        DAPSONE_SMPC,
+      ),
+      p(
+        'dose',
+        'Пентамідин для профілактики — інгаляційно: 150 мг кожні 2 тижні або 300 мг раз на місяць',
+        PENTAMIDINE_SMPC,
+      ),
+      p(
         'alternative',
-        'При непереносимості ко-тримоксазолу — дапсон або інгаляційний пентамідин (у каталозі немає жодного)',
+        'При непереносимості ко-тримоксазолу — дапсон або інгаляційний пентамідин; в Україні не зареєстровані — у каталозі як «недоступний»',
         MSD_PJP,
       ),
       p(
         'alternative',
-        'Мієлома: ко-тримоксазол, або пентамідин, або атоваквон (у каталозі немає ні пентамідину, ні атоваквону)',
+        'Мієлома: ко-тримоксазол, або пентамідин, або атоваквон; пентамідин і атоваквон в Україні не зареєстровані',
         NCCN_MM,
       ),
       p(
@@ -325,12 +368,18 @@ export const PROPHYLAXIS: ProphylaxisSection[] = [
         MSD_IMMUNODEFICIENCY,
         NCCN_CLL,
       ),
+      p(
+        'discrepancy',
+        'Атоваквон: NCCN Myeloma називає його засобом профілактики PJP; SmPC Wellvone показує його лише для лікування легкої й середньої пневмоцистної пневмонії, ефективність як профілактики систематично не оцінювали, а даних у ВІЛ-негативних імунокомпрометованих немає. Дози профілактики жодне з двох джерел не дає',
+        NCCN_MM,
+        WELLVONE,
+      ),
     ],
   },
   {
     id: 'asplenia',
     title: 'Аспленія',
-    drugIds: [],
+    drugIds: ['amoxicillin'],
     riskDrugIds: [],
     classId: 'penicillins',
     points: [
@@ -356,7 +405,7 @@ export const PROPHYLAXIS: ProphylaxisSection[] = [
       ),
       p(
         'dose',
-        'Пеніцилін чи амоксицилін — дози MSD не наводить: без розрахунку. Перорального пеніциліну й амоксициліну без клавуланату в каталозі немає',
+        'Пеніцилін чи амоксицилін — дози MSD не наводить: без розрахунку. Дози амоксициліну з інструкції — у картці препарату (вони для лікування інфекцій, не для профілактики)',
         MSD_SPLEEN,
       ),
       p(

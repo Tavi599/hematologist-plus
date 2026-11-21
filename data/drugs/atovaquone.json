@@ -1,0 +1,91 @@
+{
+  "$comment": "Додано 2026-11-21: NCCN Multiple Myeloma називає атоваквон серед засобів профілактики PJP. У Державному реєстрі України не знайдено (ні атоваквону, ні атоваквону/прогуанілу) — «недоступний». Фасування й дози — з британської SmPC Wellvone.",
+  "id": "atovaquone",
+  "name": {
+    "uk": "Атоваквон",
+    "en": "Atovaquone"
+  },
+  "atc_code": "P01AX06",
+  "availability": "unavailable",
+  "dose_units": ["mg_flat"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv, data.gov.ua)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "вивантаження від 20.11.2026: за МНН і назвами не знайдено",
+      "checkedOn": "2026-11-21"
+    },
+    {
+      "name": "NCCN Guidelines: Multiple Myeloma, Management of Infections (MYEL-K)",
+      "url": "https://www.nccn.org/professionals/physician_gls/pdf/myeloma.pdf",
+      "version": "Version 1.2027 від 09.09.2026",
+      "checkedOn": "2026-11-21"
+    },
+    {
+      "name": "SmPC Wellvone 750 mg/5 ml oral suspension (GSK, emc)",
+      "url": "https://www.medicines.org.uk/emc/product/952/smpc",
+      "version": "ред. 28.07.2026, розд. 4.1–4.5",
+      "checkedOn": "2026-11-21"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s750",
+      "form": "other",
+      "strength_amount": 750,
+      "volume_ml": 5,
+      "label": {
+        "uk": "суспензія 750 мг/5 мл",
+        "en": "suspension 750 mg/5 mL"
+      }
+    }
+  ],
+  "notes": {
+    "uk": "В Україні не зареєстрований. NCCN (мієлома) — один із засобів профілактики PJP. Розбіжність: SmPC Wellvone (Велика Британія) показує атоваквон лише для лікування легкої й середньої пневмоцистної пневмонії при непереносимості ко-тримоксазолу — 750 мг двічі на добу з їжею 21 день; ефективність як профілактики систематично не оцінювали, даних у ВІЛ-негативних імунокомпрометованих немає. Дози профілактики SmPC не дає — без розрахунку. Всмоктування залежить від їжі (жирна — у 2–3 рази більше); діарея на початку знижує рівні.",
+    "en": "Not registered in Ukraine. NCCN (myeloma) lists it for PJP prophylaxis. Discrepancy: the UK Wellvone SmPC indicates atovaquone only to treat mild to moderate Pneumocystis pneumonia in patients intolerant of co-trimoxazole, 750 mg twice daily with food for 21 days; its efficacy as prophylaxis was not systematically evaluated, and there are no data in non-HIV immunocompromised patients. The SmPC gives no prophylactic dose: no calculation. Absorption depends on food (fatty food raises it 2-3 fold); diarrhoea at the start lowers levels."
+  },
+  "interactions": [
+    {
+      "with": ["etoposide"],
+      "level": "caution",
+      "notes": {
+        "uk": "Атоваквон підвищує AUC етопозиду та його метаболіту (дослідження у дітей з ГЛЛ на профілактиці PJP) — обережно.",
+        "en": "Atovaquone raises the AUC of etoposide and its metabolite (a study in children with ALL on PJP prophylaxis): caution."
+      },
+      "source": {
+        "name": "SmPC Wellvone 750 mg/5 ml oral suspension (GSK, emc)",
+        "url": "https://www.medicines.org.uk/emc/product/952/smpc",
+        "version": "ред. 28.07.2026, розд. 4.1–4.5",
+        "checkedOn": "2026-11-21"
+      }
+    },
+    {
+      "with": ["rifampicin"],
+      "level": "avoid",
+      "notes": {
+        "uk": "Рифампіцин знижує концентрацію атоваквону приблизно на 50 % — разом не рекомендовано.",
+        "en": "Rifampicin lowers atovaquone levels by about 50%: not recommended together."
+      },
+      "source": {
+        "name": "SmPC Wellvone 750 mg/5 ml oral suspension (GSK, emc)",
+        "url": "https://www.medicines.org.uk/emc/product/952/smpc",
+        "version": "ред. 28.07.2026, розд. 4.1–4.5",
+        "checkedOn": "2026-11-21"
+      }
+    },
+    {
+      "with": ["metoclopramide"],
+      "level": "avoid",
+      "notes": {
+        "uk": "Метоклопрамід знижує концентрацію атоваквону приблизно на 50 % — дати інший протиблювотний засіб.",
+        "en": "Metoclopramide lowers atovaquone levels by about 50%: give another antiemetic."
+      },
+      "source": {
+        "name": "SmPC Wellvone 750 mg/5 ml oral suspension (GSK, emc)",
+        "url": "https://www.medicines.org.uk/emc/product/952/smpc",
+        "version": "ред. 28.07.2026, розд. 4.1–4.5",
+        "checkedOn": "2026-11-21"
+      }
+    }
+  ]
+}

@@ -40,7 +40,15 @@ function Section({ section, catalog }: { section: ProphylaxisSection; catalog: C
     section.classId === undefined ? undefined : CLASSES.find((c) => c.id === section.classId)
   const drugs = section.drugIds.flatMap((id) => {
     const row = catalog.drugs.get(id)
-    return row ? [{ id, name: localize(row.name, language) }] : []
+    return row
+      ? [
+          {
+            id,
+            name: localize(row.name, language),
+            unavailable: row.availability === 'unavailable',
+          },
+        ]
+      : []
   })
   return (
     <Card withBorder padding="sm" component="article">
@@ -54,8 +62,15 @@ function Section({ section, catalog }: { section: ProphylaxisSection; catalog: C
               {t('antibacterials.prophylaxis.inCatalog')}:
             </Text>
             {drugs.map((drug) => (
-              <Badge key={drug.id} size="xs" variant="light" tt="none">
+              <Badge
+                key={drug.id}
+                size="xs"
+                variant="light"
+                tt="none"
+                color={drug.unavailable ? 'gray' : undefined}
+              >
                 {drug.name}
+                {drug.unavailable ? ` · ${t('availability.unavailable')}` : ''}
               </Badge>
             ))}
           </Group>

@@ -1,0 +1,103 @@
+{
+  "$comment": "Додано 2026-11-21: MSD називає амоксицилін (або пеніцилін) для щоденної профілактики при аспленії; у каталозі був лише амоксицилін/клавуланат. Фасування — з чинних реєстрацій (reestr-lz.csv), дози — з інструкції Амоксил®.",
+  "id": "amoxicillin",
+  "name": {
+    "uk": "Амоксицилін",
+    "en": "Amoxicillin"
+  },
+  "trade_names": ["Амоксил", "Оспамокс", "Флемоксин Солютаб"],
+  "atc_code": "J01CA04",
+  "availability": "registered",
+  "dose_units": ["mg_flat", "mg_kg"],
+  "sources": [
+    {
+      "name": "Державний реєстр лікарських засобів України (відкриті дані, reestr-lz.csv): таблетки 250, 500, 1000 мг (Амоксил®, Оспамокс®, Флемоксин Солютаб®), капсули 500 мг (Амоксицилін)",
+      "url": "https://data.gov.ua/dataset/fded13b8-4e2c-4c48-bf14-65d0e3106463",
+      "version": "вивантаження від 20.11.2026",
+      "checkedOn": "2026-11-21"
+    },
+    {
+      "name": "MSD Manual Professional (українська версія): Загальні відомості про селезінку",
+      "url": "https://www.msdmanuals.com/uk/professional/hematology/spleen-disorders/overview-of-the-spleen",
+      "checkedOn": "2026-11-21"
+    },
+    {
+      "name": "Інструкція для медичного застосування: Амоксил® 500 мг (Державний реєстр лікарських засобів України)",
+      "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2E006706F14D298B42258C42003EB18A/$file/UA10810102_355E.mht",
+      "version": "РП UA/1081/01/02, версія реєстру від 20.02.2025",
+      "checkedOn": "2026-11-21"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "t250",
+      "form": "tablet",
+      "strength_amount": 250
+    },
+    {
+      "key": "t500",
+      "form": "tablet",
+      "strength_amount": 500
+    },
+    {
+      "key": "t1000",
+      "form": "tablet",
+      "strength_amount": 1000
+    },
+    {
+      "key": "c500",
+      "form": "capsule",
+      "strength_amount": 500
+    }
+  ],
+  "notes": {
+    "uk": "Інструкція Амоксил®: дорослі й діти > 40 кг — 250–500 мг тричі на добу або 500–1000 мг двічі на добу; тяжкі інфекції — 500–1000 мг тричі на добу; максимум 6 г на добу. Аспленія: MSD називає щоденну профілактику амоксициліном чи пеніциліном, але дози не дає — без розрахунку. Протипоказаний при інфекційному мононуклеозі й лейкемоїдних реакціях лімфатичного типу.",
+    "en": "Amoxil label: adults and children > 40 kg, 250-500 mg three times daily or 500-1000 mg twice daily; severe infections, 500-1000 mg three times daily; at most 6 g a day. Asplenia: MSD names daily prophylaxis with amoxicillin or penicillin but gives no dose: no calculation. Contraindicated in infectious mononucleosis and lymphatic leukaemoid reactions."
+  },
+  "cautions": [
+    {
+      "condition": "renal",
+      "level": "dose_reduction",
+      "notes": {
+        "uk": "КлКр < 10 мл/хв: інтервал 12–24 год, дозу зменшити на 15–50 %.",
+        "en": "CrCl < 10 mL/min: every 12-24 h, the dose reduced by 15-50%."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Амоксил® 500 мг (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2E006706F14D298B42258C42003EB18A/$file/UA10810102_355E.mht",
+        "version": "РП UA/1081/01/02, версія реєстру від 20.02.2025",
+        "checkedOn": "2026-11-21"
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "with": ["methotrexate"],
+      "level": "caution",
+      "notes": {
+        "uk": "Амоксицилін зменшує нирковий кліренс метотрексату й посилює його токсичність — контролювати рівень метотрексату в сироватці.",
+        "en": "Amoxicillin lowers the renal clearance of methotrexate and adds to its toxicity: check serum methotrexate levels."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Амоксил® 500 мг (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2E006706F14D298B42258C42003EB18A/$file/UA10810102_355E.mht",
+        "version": "РП UA/1081/01/02, версія реєстру від 20.02.2025",
+        "checkedOn": "2026-11-21"
+      }
+    },
+    {
+      "with": ["allopurinol"],
+      "level": "avoid",
+      "notes": {
+        "uk": "Нерекомендована комбінація: з алопуринолом частіше алергічні шкірні реакції.",
+        "en": "Not a recommended combination: allergic skin reactions are more frequent with allopurinol."
+      },
+      "source": {
+        "name": "Інструкція для медичного застосування: Амоксил® 500 мг (Державний реєстр лікарських засобів України)",
+        "url": "https://www.drlz.com.ua/ibp/lz_www.nsf/id/2E006706F14D298B42258C42003EB18A/$file/UA10810102_355E.mht",
+        "version": "РП UA/1081/01/02, версія реєстру від 20.02.2025",
+        "checkedOn": "2026-11-21"
+      }
+    }
+  ]
+}

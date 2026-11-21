@@ -28,7 +28,7 @@ describe('antimicrobial prophylaxis', () => {
           expect(source.short, point.text).not.toBe('')
           expect(source.name, point.text).not.toBe('')
           expect(source.url, point.text).toMatch(
-            /^https:\/\/www\.(drlz\.com\.ua|msdmanuals\.com|nccn\.org)\//,
+            /^https:\/\/www\.(drlz\.com\.ua|msdmanuals\.com|nccn\.org|medicines\.org\.uk)\//,
           )
           expect(source.checkedOn, point.text).toMatch(/^\d{4}-\d{2}-\d{2}$/)
         }
