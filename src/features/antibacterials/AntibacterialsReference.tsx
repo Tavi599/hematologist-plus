@@ -29,6 +29,8 @@ import {
   type AbxClass,
   type Fact,
 } from './classes'
+import { findResistance } from './resistance'
+import { ResistanceBlock } from './ResistanceBlock'
 import { SpectrumTable, UnregisteredBadge } from './SpectrumTable'
 import { findTdm } from './tdm'
 import { TdmBlock } from './TdmBlock'
@@ -303,6 +305,7 @@ export function AntibacterialsReference({
       <InteractionsBlock key={needle === '' ? 'all' : 'found'} needle={needle} />
       <ProphylaxisBlock key={`p-${needle === ''}`} needle={needle} catalog={catalog} />
       <TdmBlock key={`t-${needle === ''}`} needle={needle} catalog={catalog} />
+      <ResistanceBlock key={`r-${needle === ''}`} needle={needle} catalog={catalog} />
       {needle === '' && (
         <Fold title={t('antibacterials.spectrum.title')}>
           <SpectrumTable />
@@ -320,7 +323,8 @@ export function AntibacterialsReference({
         shown.length === 0 &&
         findInteractions(needle).length === 0 &&
         findProphylaxis(needle).length === 0 &&
-        findTdm(needle).length === 0 && (
+        findTdm(needle).length === 0 &&
+        findResistance(needle).length === 0 && (
           <Text size="sm" c="dimmed">
             {t('antibacterials.searchNone')}
           </Text>

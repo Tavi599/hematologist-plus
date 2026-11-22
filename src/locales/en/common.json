@@ -1077,6 +1077,21 @@
         "discrepancy": "Sources differ"
       }
     },
+    "resistance": {
+      "title": "Targeted therapy by resistance type: ESBL, AmpC, CRE, DTR-PA, CRAB, S. maltophilia, MRSA/VRE",
+      "hint": "Facts cut out of the IDSA 2026 guidance on resistant Gram-negative infections and ECIL-4 (leukaemia and HSCT, 2011): what to choose, alternatives, what to avoid, what the haematology guidelines add. ECIL-4 predates the newer inhibitor combinations — differences are shown apart. Doses only where the source states them. The final choice follows the susceptibility report and the physician.",
+      "inCatalog": "In the catalog",
+      "registeredNotInCatalog": "Registered in Ukraine but not in the catalog",
+      "unregistered": "No current registration in Ukraine",
+      "topic": {
+        "preferred": "Preferred",
+        "alternative": "Alternatives",
+        "avoid": "Avoid",
+        "heme": "Haematology (ECIL)",
+        "dose": "Doses from the source",
+        "discrepancy": "Sources differ"
+      }
+    },
     "tdm": {
       "title": "Therapeutic drug monitoring (TDM): vancomycin, aminoglycosides, teicoplanin",
       "hint": "Facts cut out of the sources: when to draw the sample, target levels by indication and regimen, what to do outside the range, how often to repeat, kidney and hearing checks. Levels and doses only where the source states them. Sources: MSD Manual Professional (Ukrainian edition), labels from the State Register; for the catalog's side, the SmPC its drug card cites. The department's NCCN guidelines say nothing about antibacterial levels. Where sources differ, it is shown separately; which target to follow is the physician's decision. The points are in Ukrainian.",
