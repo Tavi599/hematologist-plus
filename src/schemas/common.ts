@@ -189,6 +189,11 @@ export const pathwayStepRowSchema = z.object({
   label: localizedTextSchema,
   /** The treatment node the step leads to: another page or row of the same pathway. */
   target_id: idSchema.nullable().default(null),
+  /**
+   * Another disease whose pathway the step opens (a transformation that has its own page). Absent
+   * on every other step, so the rows already in the database do not change.
+   */
+  disease_id: idSchema.optional().catch(undefined),
   preference: recommendationPreferenceSchema.nullable().default(null).catch(null),
   category: evidenceCategorySchema.nullable().default(null).catch(null),
   notes: localizedTextSchema.nullable().default(null),

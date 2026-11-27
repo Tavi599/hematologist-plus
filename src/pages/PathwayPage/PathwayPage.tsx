@@ -252,7 +252,18 @@ function StepView({ step, onGo }: { step: PathwayStep; onGo: (targetId: string) 
         </Text>
       )}
       <Group gap={4} wrap="wrap" align="flex-start">
-        {target !== null ? (
+        {step.disease_id !== undefined ? (
+          // Another disease's pathway: a real link, so it opens in a new tab as well.
+          <Anchor
+            component={Link}
+            to={routes.pathways(step.disease_id)}
+            size="sm"
+            ta="left"
+            title={t('pathway.go', { title: label })}
+          >
+            {label} →
+          </Anchor>
+        ) : target !== null ? (
           <Anchor
             component="button"
             type="button"

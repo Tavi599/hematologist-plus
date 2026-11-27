@@ -248,6 +248,8 @@ const pathwayStepFileSchema = z.strictObject({
   column: pathwayColumnSchema,
   label: localizedTextSchema,
   target: keySchema.nullable().default(null),
+  /** Id of another disease whose pathway the step opens. */
+  disease: idSchema.nullable().default(null),
   preference: recommendationPreferenceSchema.nullable().default(null),
   category: evidenceCategorySchema.nullable().default(null),
   notes: optionalLocalized,

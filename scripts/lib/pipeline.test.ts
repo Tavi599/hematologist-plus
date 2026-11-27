@@ -230,6 +230,24 @@ describe('a guideline pathway', () => {
     })
   })
 
+  it('keeps a link to another disease only on the step that has one, and checks it', () => {
+    const parsed = diseaseFileSchema.parse(
+      disease([step, { kind: 'page', column: 'next', label: text, disease: 'dlbcl' }]),
+    )
+    const rows = flattenDataSet({
+      hospitals: [],
+      classificationSystems: [],
+      drugs: [],
+      regimens: [],
+      diseases: [{ ...parsed, article: null }],
+    })
+    const [inner, outer] = rows.treatment_nodes.find((node) => node.id === 'aml.induction')!.steps
+    expect(inner).not.toHaveProperty('disease_id')
+    expect(outer).toMatchObject({ target_id: null, disease_id: 'dlbcl' })
+    const messages = checkCatalog(rows).map((issue) => issue.message)
+    expect(messages).toContain('steps.disease_id "dlbcl" does not exist in diseases')
+  })
+
   it('refuses an arrow into nothing and a pathway that is not at the top', () => {
     const issues = (value: object) =>
       (diseaseFileSchema.safeParse(value).error?.issues ?? []).map((issue) => issue.message)
