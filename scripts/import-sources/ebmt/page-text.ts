@@ -418,18 +418,48 @@ export function openBook(file: string): Book {
     return mapBytes(bytes, font)
   }
 
-  function decodeArray(s: string, font: FontInfo): string {
+  /**
+   * How far a leading kern must move the pen before it is read as a jump
+   * rather than as the space between two words, in thousandths of an em.
+   * A word space in this book runs to about a third of an em.
+   */
+  const KERN_JUMP = 600
+
+  /**
+   * Text of a TJ array, plus the pen advance its leading kerns ask for.
+   *
+   * The book sets the first letter of some captions as a show of its own and
+   * then draws the rest of the word with a leading kern that steps over it:
+   * `[(F)]TJ` at one position, then `[-1241(actors described…)]TJ` back at the
+   * start of the word. Ignoring that kern put the remainder where the letter
+   * stands, so the line sorted into "actors described … mobiF-" — hence the
+   * caption of table 16.3 reading "actors … poor mobiF-lization". The kern is
+   * a position, not a space, so it moves the run instead of adding a blank.
+   */
+  function decodeArray(s: string, font: FontInfo): { text: string; lead: number } {
     let out = ''
+    let lead = 0
+    let shown = false
     const re =
       /\(((?:\\[\s\S]|[^\\()]|\((?:\\[\s\S]|[^\\()])*\))*)\)|<([0-9A-Fa-f\s]+)>|(-?[\d.]+)/g
     let m: RegExpExecArray | null
     while ((m = re.exec(s)) !== null) {
-      if (m[1] !== undefined) out += decodeLiteral(m[1], font)
-      else if (m[2] !== undefined) out += decodeHex(m[2], font)
-      // A big negative kern inside a TJ array is the space between two words.
-      else if (m[3] !== undefined && Number(m[3]) < -180) out += ' '
+      if (m[1] !== undefined) {
+        out += decodeLiteral(m[1], font)
+        shown = true
+      } else if (m[2] !== undefined) {
+        out += decodeHex(m[2], font)
+        shown = true
+      } else if (m[3] !== undefined) {
+        const kern = Number(m[3])
+        // A big negative kern inside a TJ array is the space between two words.
+        if (shown) {
+          if (kern < -180) out += ' '
+        } else lead += -kern
+      }
     }
-    return out
+    if (lead > 180 && lead < KERN_JUMP) out = ' ' + out
+    return { text: out, lead: lead >= KERN_JUMP ? lead : 0 }
   }
 
   const mul = (a: number[], b: number[]): number[] => [
@@ -515,18 +545,19 @@ export function openBook(file: string): Book {
         tlm = tm.slice()
         continue
       }
-      const text =
+      const shown =
         m[15] !== undefined
-          ? decodeLiteral(m[15], font)
+          ? { text: decodeLiteral(m[15], font), lead: 0 }
           : m[16] !== undefined
             ? decodeArray(m[16], font)
             : m[17] !== undefined
-              ? decodeHex(m[17], font)
-              : ''
+              ? { text: decodeHex(m[17], font), lead: 0 }
+              : { text: '', lead: 0 }
+      const text = shown.text
       if (!text) continue
       const scale = Math.hypot(tm[0] ?? 1, tm[1] ?? 0)
       out.push({
-        x: Number((tm[4] ?? 0).toFixed(1)),
+        x: Number(((tm[4] ?? 0) + (shown.lead / 1000) * size * scale).toFixed(1)),
         y: Number((tm[5] ?? 0).toFixed(1)),
         size: Number((size * scale).toFixed(2)),
         font: font.name,

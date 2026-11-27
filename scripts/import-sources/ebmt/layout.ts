@@ -288,6 +288,43 @@ export function looksLikeAffiliation(text: string): boolean {
   )
 }
 
+/**
+ * How many leading lines of a table zone are its caption.
+ *
+ * A caption is set flush with the left edge of its column (51 pt in the left
+ * column, 258 pt in the right), while the body of the table starts about 3 pt
+ * further in, because the cells carry padding. Reading only the first line as
+ * the caption put the rest of a caption that wrapped into the grid, where it
+ * became a first row of its own and took the column anchors with it (found in
+ * chapter 37). Every leading line at the column's own left edge is therefore
+ * the caption; the body begins at the first line set deeper.
+ *
+ * The whole zone can sit at that edge — a table whose grid the geometry does
+ * not give at all — so at least one line is always left for the body.
+ */
+export function captionLines(zone: Zone): number {
+  const leftOf = (g: Baseline): number | null => {
+    const solid = g.runs.filter((r) => r.text.trim())
+    if (!solid.length) return null
+    return Math.min(...solid.map((r) => r.x))
+  }
+  const head = zone.groups[0]
+  const headLeft = head ? leftOf(head) : null
+  if (headLeft === null) return 1
+  const colLeft = COL_LEFT[headLeft < COL_SPLIT ? 0 : 1]
+  let n = 0
+  while (n < zone.groups.length - 1) {
+    const g = zone.groups[n]
+    const x = g ? leftOf(g) : null
+    if (x === null || x - colLeft >= CAPTION_EDGE) break
+    n++
+  }
+  return Math.max(1, n)
+}
+
+/** How far past its column's left edge a line may still be the caption. */
+const CAPTION_EDGE = 1.5
+
 const clusterX = (xs: number[]): number[] => {
   const out: number[] = []
   for (const x of [...xs].sort((a, b) => a - b)) {

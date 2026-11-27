@@ -141,6 +141,13 @@ function TableBlock({
   const rows = view === 'en' ? block.rows_en : (ukRows ?? block.rows_en)
   const header = rows?.[0]
   const body = rows?.slice(1) ?? []
+  // Where the geometry of the PDF gave no grid, the table's own text is all
+  // the original there is, and it must not be dropped from the page: a reader
+  // checking the Ukrainian grid against the book has nothing else to check it
+  // against. It is left out only in the Ukrainian view of a table that already
+  // has a Ukrainian grid, where it would be a wall of English under a table
+  // that says the same.
+  const original = !block.rows_en && block.raw_en && !(view === 'uk' && ukRows)
 
   return (
     <Card withBorder padding="sm" mb="md" radius="md">
@@ -189,6 +196,11 @@ function TableBlock({
           {t('handbook.tableNotRead')}
         </Text>
       )}
+      {original ? (
+        <Text size="xs" c="dimmed" mt={4} lang="en">
+          {block.raw_en}
+        </Text>
+      ) : null}
     </Card>
   )
 }

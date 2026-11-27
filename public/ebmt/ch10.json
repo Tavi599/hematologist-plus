@@ -41,11 +41,53 @@
    "en": "An important example is the development and validation of a population pharmacokinetics model for ATG (Thymoglobuline). It was found that clearance of ATG mainly depends on weight (when patients weigh <40 kg) and the receptor load (represented by absolute lymphocyte count; ALC) before the first dosing (Haanen et al. 2020). Using population PK modeling, a new dosing nomogram was developed, which has been recently validated in a prospective trial (Admiraal et al. 2022). Patients who received individualized dosing were more likely to attain CD4⁺ immune reconstitution, defined as CD4⁺ >50/μl at two consecutive time points before day 100. Importantly, it was confirmed that this definition of CD4⁺ immune reconstitution is a reliable predictor of outcomes in multiple transplantation settings (adults, pediatrics, T-replete, T-deplete, cord blood (CB), bone marrow (BM), and peripheral blood stem cells (PBSCs)) (Admiraal et al. 2022) and is easy to use at all transplant centers. In Table 10.1, optimal exposures of ATG after transplant associated with optimal outcomes are presented (Soiffer et al. 2017; Lakkaraja et al. 2022; Admiraal et al. 2017; Haanen et al. 2020; Admiraal et al. 2022) (Table 10.1). Although no validated population PK model for ATLG has yet been published, data from a post hoc analysis of a randomized controlled trial allowing three different types of regimens showed that ATLG had opposite effects on the outcome parameters of chronic GvHD and leukemia-free survival, resulting in overlapping curves for these primary end points (Soiffer et al. 2017). This study showed that agents used for conditioning had a significant impact on the ALC prior to dosing of ATLG and thus influence immune reconstitution and clinical outcomes, i.e., a similar impact as shown for ATG."
   },
   {
-   "id": "9c1ef4e5a9",
+   "id": "c1639a2d82",
    "type": "table",
    "num": "10.1",
-   "en": "Table 10.1 Suggested novel ATG (Thymoglobuline) dosing nomograms based on PK–PD modeling for (non-)mye-",
-   "raw_en": "Table 10.1 Suggested novel ATG (Thymoglobuline) dosing nomograms based on PK–PD modeling for (non-)mye- loablative settings in pediatrics and adults Dosing Target AUC after HCT (AUad/mL) and Starting Settingondonor sourcedayReferences Pediatrics; myeloablativeWeight<20 for cord blood−9bAdmiraal et al. ALC<50 for bone marrow(2015) Cell source Pediatrics/adults ex vivo <20−12bLakkaradja et al. T cell depletion (TCD)(2022) Adults:ALC60–90 for peripherally mobilized stem −9Admiraal et al. Non-myeloablativecells(2017) Level C evidence (retrospective studies). ALC, absolute lymphocyte count; AUC, area under the curve a Prospective validation trial (PRAISE IR) almost closed to accrual b Confirmed in a prospective validation trial (PARACHUTE) (Admiraal et al. 2022)"
+   "en": "Table 10.1 Suggested novel ATG (Thymoglobuline) dosing nomograms based on PK–PD modeling for (non-)myeloablative settings in pediatrics and adults",
+   "columns": 6,
+   "rows_en": [
+    [
+     "Setting",
+     "Dosing on",
+     "Target AUC after HCT (AU donor source",
+     "ad/mL) and",
+     "Starting day",
+     "References"
+    ],
+    [
+     "Pediatrics; myeloablative",
+     "Weight ALC Cell source",
+     "<20 for cord blood <50 for bone marrow",
+     "",
+     "−9b",
+     "Admiraal et al. (2015)"
+    ],
+    [
+     "Pediatrics/adults ex vivo T cell depletion (TCD)",
+     "",
+     "<20",
+     "",
+     "−12b",
+     "Lakkaradja et al. (2022)"
+    ],
+    [
+     "Adults: Non-myeloablative",
+     "ALC",
+     "60–90 for peripherally mobilized stem cells",
+     "",
+     "−9",
+     "Admiraal et al. (2017)"
+    ],
+    [
+     "Level C evidence (retrospective studies). ALC, absolute lymphocyte count; AUC, area under the curve a Prospective validation trial (PRAISE IR) almost closed to accrual b Confirmed in a prospective validation trial (PARACHUTE) (Admiraal et al.",
+     "",
+     "",
+     "2022)",
+     "",
+     ""
+    ]
+   ]
   },
   {
    "id": "830afb9119",
@@ -116,25 +158,26 @@
    "en": "While the detection of specific cell subsets and proteins offers valuable insights, functional assays can provide additional information to enhance our understanding of the biological mechanisms and assess the effectiveness of a patient’s immune system. For example, the functionality of natural killer (NK) cells and regulatory T cells (Tregs) can be evaluated through assays that measure their ability to induce target cell killing by degranulation as well as by their capacity for proliferation and suppression, respectively. Moreover, recent advancements in single-cell proteomic technologies have enabled the combination of both approaches, wherein the analysis of secreted proteins at the single-cell level generates an immune fitness score. This score has demonstrated its potential in predicting the responsiveness to checkpoint inhibitor therapy (Haanen et al. 2020), but its value in assessing immune fitness post-HCT has still to be assessed."
   },
   {
-   "id": "408e523200",
+   "id": "8936112eae",
    "type": "h3",
    "num": "10.2.3",
-   "en": "mmune Monitoring of Virus- I Specific T-Cell Responses"
+   "en": "Immune Monitoring of Virus- Specific T-Cell Responses"
   },
   {
-   "id": "240d13dd63",
+   "id": "2a7a513fac",
    "type": "table",
    "num": "10.2",
    "en": "Table 10.2 Example of platforms for virus-specific immunological monitoring (i.e., CMV)",
-   "columns": 15,
+   "columns": 16,
    "rows_en": [
     [
      "Characteristics Sample Turnaround time Functional analysis Phenotypic characterization Differentiation CD8 HLA restriction Cost Advantages Limitations",
      "⁺/CD4",
      "⁺",
-     "IFN- Whole blood 24 h Yes No No (only CD8 Yes + Simple to perform and highly standardized (routine) ve to lymphopenia",
+     "IFN- Whole blood 24 h Yes No No (only CD8 Yes + Simple to perform and highly standardized (routine)",
      "• Only measures CD8 cells • Sensiti • HLA-restricted",
      "𝛾 QuantiFERON",
+     "ve to lymphopenia",
      "⁺)",
      "⁺",
      "IFN- PBMCs 24–48 h Yes No Yes No ++ Highly sensitive",
@@ -148,6 +191,7 @@
     [
      "PMBC",
      "peripheral blood mononuclear cell",
+     "",
      "",
      "",
      "",
@@ -187,86 +231,100 @@
    "en": "In Summary"
   },
   {
-   "id": "d9c99ca577",
+   "id": "82b237fdd5",
    "type": "table",
    "num": "10.3",
-   "en": "Table 10.3 anels under consideration in the panel discussion of the CTIWP (Greco et al. P2018). General parameters",
-   "columns": 2,
+   "en": "Table 10.3 Panels under consideration in the panel discussion of the CTIWP (Greco et al. 2018). General parameters that could be included in harmonized immune monitoring protocols across most studies/centers and advanced parameters that may be of great value in specific studies and that can only be performed in specialized immunology laboratories or analyzed in a central laboratory",
+   "columns": 3,
    "rows_en": [
     [
-     "that could be included in harmonized immune monitoring protocols across most studies/centers and advanced param eters that may be of great value in specific studies and that can only be performed in specialized immunology laborato ries or analyzed in a central laboratory",
-     "- -"
+     "",
+     "General",
+     "Advanced"
     ],
     [
-     "GeneralAdvanced",
-     ""
+     "Graft composition",
+     "αβTαβTCR, CD45RO/RA, CD3, CD4, CD8, CD27",
+     "Intracellular cytokines after phorbol myristate acetate (PMA)/ionomycin stimulation"
     ],
     [
-     "Graft compositionαβTαβTCR, CD45RO/RA, CD3, Intracellular cytokines after phorbol CD4, CD8, CD27myristate acetate (PMA)/ionomycin stimulation",
-     ""
+     "",
+     "γδTγδTCR, CD45RO/RA, CD3, CD27",
+     "Specific TCR by multimer approach"
     ],
     [
-     "γδTγδTCR, CD45RO/RA, CD3, Specific TCR by multimer approach CD27",
-     ""
-    ],
-    [
+     "",
      "TregCD45, CD4, CD25, CD127, FoxP3",
      ""
     ],
     [
+     "",
      "BCD45, CD19, CD38, CD27, IgM/G/D, CD21",
      ""
     ],
     [
+     "",
      "NK/NKTCD45, CD3, CD56, TCR24/11)",
      ""
     ],
     [
-     "Cell phenotyping pre- and αβTαβTCR, CD45RO/RA, CD3, Intracellular cytokines after PMA/ posttransplantationCD4, CD8, CD27ionomycin stimulation",
-     ""
+     "Cell phenotyping pre- and posttransplantation",
+     "αβTαβTCR, CD45RO/RA, CD3, CD4, CD8, CD27",
+     "Intracellular cytokines after PMA/ ionomycin stimulation"
     ],
     [
-     "γδTγδTCR, δ2TCR, δ1TCRSpecific TCR by multimer approach",
-     ""
+     "",
+     "γδTγδTCR, δ2TCR, δ1TCR",
+     "Specific TCR by multimer approach"
     ],
     [
+     "",
      "TregCD45RO/RA, CD3, CD27",
      ""
     ],
     [
-     "BCD45, CD4, CD25, CD127, αβTCR and γδTCR repertoire FoxP3",
-     ""
+     "",
+     "BCD45, CD4, CD25, CD127, FoxP3",
+     "αβTCR and γδTCR repertoire"
     ],
     [
+     "",
      "NK/NKTCD45, CD19, CD38, CD27, IgM/G/D, CD21",
      ""
     ],
     [
+     "",
      "DC/monoCD45, CD3, CD56, TCR24/11) CD11c, HLA-DR, CD14, CD16, CD1c, CD141, CD303",
      ""
     ],
     [
-     "Secretome–Multiplex panel (e.g., IL-7, ST2, TNF-α, IL-6, HGF, IL-2R, IL-8, GM-CSF, etc.)",
-     ""
+     "Secretome",
+     "–",
+     "Multiplex panel (e.g., IL-7, ST2, TNF-α, IL-6, HGF, IL-2R, IL-8, GM-CSF, etc.)"
     ],
     [
-     "Cell function–NK cell lyses T-cell proliferation upon antigens and mitogens B-cell maturation",
-     ""
+     "Cell function",
+     "–",
+     "NK cell lyses T-cell proliferation upon antigens and mitogens B-cell maturation"
     ],
     [
-     "PKBusulfan, fludarabine, ATG, Campath (if part Trial drug of conditioning)",
-     ""
+     "PK",
+     "Busulfan, fludarabine, ATG, Campath (if part of conditioning)",
+     "Trial drug"
     ],
     [
-     "Minimal Residual Disease qPCR (targets expressed, flow cytometry)Next-generation sequencing (MRD)",
-     ""
+     "Minimal Residual Disease (MRD)",
+     "qPCR (targets expressed, flow cytometry)",
+     "Next-generation sequencing"
     ],
     [
-     "Viral loadCMV, EBV, HV6, adenovirus–",
-     ""
+     "Viral load",
+     "CMV, EBV, HV6, adenovirus",
+     "–"
     ],
     [
      "qPCR quantitative PCR",
+     "",
      ""
     ]
    ]

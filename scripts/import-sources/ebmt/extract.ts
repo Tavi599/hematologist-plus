@@ -20,11 +20,14 @@ import { openBook, type TextRun } from './page-text'
 import {
   asideIsProse,
   baselines,
+  captionLines,
   COL_LEFT,
+  COL_SPLIT,
   columnLines,
   FOOT_Y,
   HEAD_Y,
   inFrame,
+  lineOf,
   looksLikeAffiliation,
   runText,
   smallZones,
@@ -428,11 +431,30 @@ function run(file: string, out: string): void {
     if (/^(?:Fig\.|Figure)\s*\d+\.\d+/.test(first)) return { type: 'figure', text: flat }
     if (/^Table\s*\d+\.\d+/.test(first)) {
       const num = /^Table\s*(\d+\.\d+)/.exec(first)?.[1]
-      const grid = zone.groups.length > 1 ? tableRows(zone.groups.slice(1)) : null
+      // The caption can run to several lines, all of them at the left edge of
+      // the column; the body of the table starts where the lines move in.
+      const heads = captionLines(zone)
+      // A caption that wraps breaks words with a hyphen like any other text, so
+      // its lines are read as lines — "antifun-" plus "gal treatment" is
+      // "antifungal treatment", not two words. A caption whose last line ends
+      // in such a break keeps the hyphen: the rest of the word is down in the
+      // grid, and dropping it would leave the word silently cut short.
+      const lines = zone.groups
+        .slice(0, heads)
+        .map((g) => lineOf(g, (g.runs.find((r) => r.text.trim())?.x ?? 0) < COL_SPLIT ? 0 : 1))
+        .filter((l): l is NonNullable<typeof l> => l !== null)
+      let caption = ''
+      let soft = false
+      for (const line of lines) {
+        caption += (caption && !soft ? ' ' : '') + line.text.trim()
+        soft = line.soft
+      }
+      caption = tidy(caption) + (soft ? '-' : '')
+      const grid = zone.groups.length > heads ? tableRows(zone.groups.slice(heads)) : null
       return {
         type: 'table',
         ...(num !== undefined ? { num } : {}),
-        text: tidy(first),
+        text: caption,
         ...(grid ? { columns: grid.columns, rows: grid.rows } : { rawText: flat }),
       }
     }
