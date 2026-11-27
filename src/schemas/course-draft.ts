@@ -46,7 +46,7 @@ const rowPlanSchema = z.object({
   days: z.array(z.number().int().nonnegative()).optional(),
 })
 
-const manualRowSchema = z.object({
+export const manualRowSchema = z.object({
   id: z.string(),
   what: z.string(),
   how: z.string(),
@@ -85,7 +85,7 @@ const administrationModeSchema = z.discriminatedUnion('kind', [
   z.object({ kind: z.literal('continuous') }),
 ])
 
-const headerSchema = z.object({
+export const headerSchema = z.object({
   hospitalId: z.string().nullable(),
   institution: z.string(),
   department: z.string(),

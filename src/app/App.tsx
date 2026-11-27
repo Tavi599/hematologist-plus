@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router'
 import { AntibacterialsPage } from '../pages/AntibacterialsPage/AntibacterialsPage'
 import { AntifungalsAntiviralsPage } from '../pages/AntifungalsAntiviralsPage/AntifungalsAntiviralsPage'
 import { CalculatorPage } from '../pages/CalculatorPage/CalculatorPage'
+import { FreeSheetPage } from '../pages/FreeSheetPage/FreeSheetPage'
 import { DiseaseDetailPage } from '../pages/DiseaseDetailPage/DiseaseDetailPage'
 import { PathwayPage } from '../pages/PathwayPage/PathwayPage'
 import { DiseasesPage } from '../pages/DiseasesPage/DiseasesPage'
@@ -22,6 +23,7 @@ export function App() {
       <Route element={<AppLayout />}>
         <Route index element={<Navigate to={routes.calculator} replace />} />
         <Route path={routes.calculator} element={<CalculatorPage />} />
+        <Route path={routes.freeSheet} element={<FreeSheetPage />} />
         <Route path={routes.need} element={<NeedPage />} />
         <Route path={routes.diseases} element={<DiseasesPage />} />
         <Route path={`${routes.diseases}/:slug`} element={<DiseaseDetailPage />} />

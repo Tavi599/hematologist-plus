@@ -13,7 +13,7 @@ Core features:
 4. Regimen designs available for calculation.
 5. Word (.docx) prescription sheets generated from JSON templates stored in the DB.
 
-User-facing pages: calculator (input → calculation → print) and diseases (list → article → treatment hierarchy → regimen → "Calculate"). A guideline algorithm (`treatment_nodes.kind = 'pathway'`) is not in the tree but on its own page `#/diseases/<id>/pathways`: risk group → ranked treatment → next, with clickable arrows (`src/pages/PathwayPage`, layout in `src/features/pathways/pathway.ts`).
+User-facing pages: calculator (input → calculation → print), the free sheet (`#/free-sheet`: hand-written lines only, no regimen and no measurements, printed on the same blanks) and diseases (list → article → treatment hierarchy → regimen → "Calculate"). A guideline algorithm (`treatment_nodes.kind = 'pathway'`) is not in the tree but on its own page `#/diseases/<id>/pathways`: risk group → ranked treatment → next, with clickable arrows (`src/pages/PathwayPage`, layout in `src/features/pathways/pathway.ts`).
 
 Full agreed requirements and open questions: [docs/requirements.md](docs/requirements.md). Read it before changing schema, calculation rules or print forms, and update it when a decision changes.
 
