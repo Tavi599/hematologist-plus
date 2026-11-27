@@ -1,5 +1,6 @@
 export const routes = {
   calculator: '/calculator',
+  freeSheet: '/free-sheet',
   need: '/need',
   diseases: '/diseases',
   sources: '/sources',

@@ -20,6 +20,7 @@ export function AppLayout() {
 
   const navItems = [
     { to: routes.calculator, label: t('nav.calculator') },
+    { to: routes.freeSheet, label: t('nav.freeSheet') },
     { to: routes.need, label: t('nav.need') },
     { to: routes.diseases, label: t('nav.diseases') },
     { to: routes.scores, label: t('nav.scores') },

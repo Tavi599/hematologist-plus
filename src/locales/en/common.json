@@ -8,6 +8,7 @@
     "forward": "Forward",
     "menu": "Sections menu",
     "calculator": "Calculator",
+    "freeSheet": "Free sheet",
     "diseases": "Diseases",
     "sources": "Sources",
     "proposals": "Proposals",
@@ -27,6 +28,18 @@
     "auto": "system",
     "light": "light",
     "dark": "dark"
+  },
+  "freeSheet": {
+    "title": "Free prescription sheet",
+    "lead": "Supportive care, antibiotics, anything you see fit — no regimen, no diagnosis and no patient measurements. Every line is printed as you wrote it, on the same blanks as a course from the calculator; nothing is calculated.",
+    "rows": "Orders",
+    "rowsHint": "Pick a drug from the catalog or write a line yourself, then set the days and the sheet: the hourly sheet (with an hour) or the inpatient sheet №003-4/о.",
+    "patient": "Patient and date",
+    "startDate": "Day 1",
+    "startDateHint": "The days of the lines count from it.",
+    "draftHint": "The sheet is kept on this device for 7 days; without this permission, without the name and record number.",
+    "empty": "Add at least one line, then the sheet can be previewed and saved.",
+    "noDate": "Set day 1: the dates of the sheet count from it."
   },
   "calculator": {
     "title": "Dose calculator",
@@ -382,6 +395,9 @@
       "blockWard": "Inpatient sheet (№003-4/о)",
       "hour": "Hour",
       "hourNone": "no time",
+      "fromCatalog": "Drug from the catalog",
+      "fromCatalogHint": "Adds a line with the drug name; write the dose, route and days yourself.",
+      "fromCatalogPlaceholder": "Start typing a name",
       "add": "Add a line",
       "remove": "Remove the line",
       "byHand": "by hand",
