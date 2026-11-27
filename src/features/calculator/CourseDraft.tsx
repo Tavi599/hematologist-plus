@@ -17,6 +17,7 @@ export function CourseDraft({
   onOpen,
   note,
   saved,
+  kept = true,
 }: {
   personal: boolean
   onPersonal: (allowed: boolean) => void
@@ -26,6 +27,8 @@ export function CourseDraft({
   note: 'opened' | 'invalid' | null
   /** Where the last card was saved. */
   saved: SaveOutcome | null
+  /** False when the browser refused to write the draft on this device. */
+  kept?: boolean
 }) {
   const { t } = useTranslation()
 
@@ -38,6 +41,11 @@ export function CourseDraft({
         <Text size="xs" c="dimmed">
           {t('calculator.draft.hint')}
         </Text>
+        {!kept && (
+          <Text size="xs" c="red.8">
+            {t('calculator.draft.notKept')}
+          </Text>
+        )}
         <Switch
           checked={personal}
           onChange={(event) => onPersonal(event.currentTarget.checked)}

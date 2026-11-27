@@ -101,7 +101,8 @@
       "save": "Save course card (.json)",
       "open": "Open course card",
       "opened": "The course was opened from the card.",
-      "invalid": "This is not a course card of this version — the course is unchanged."
+      "invalid": "This is not a course card of this version — the course is unchanged.",
+      "notKept": "The browser does not let this site keep data, so the draft was not written on this device — it will be gone once you close the page. Save the course card to a file, or allow the site to keep data in the browser settings."
     },
     "saveFolder": {
       "title": "Save folder",
@@ -113,6 +114,7 @@
       "prompt": "Folder: {{name}} — after a browser restart, writing has to be allowed again.",
       "choose": "Choose folder",
       "change": "Change folder",
+      "pickFailed": "The browser would not let this folder be chosen (it keeps system folders, the root of a drive and the home folder to itself) — choose another one, for example a separate «Схеми» folder in Documents.",
       "allow": "Allow writing",
       "forget": "Forget folder",
       "open": "Open folder",

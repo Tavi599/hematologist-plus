@@ -85,7 +85,8 @@ export async function loadFolder(): Promise<FolderHandle | null> {
 }
 
 /**
- * Asks the physician for the folder. Null when they close the dialog. A handle the browser gives
+ * Asks the physician for the folder. Null when they close the dialog; it throws when the browser
+ * would not give a folder at all, which the physician has to be told. A handle the browser gives
  * back from the dialog can already write; it is kept for the next visit.
  */
 export async function pickFolder(): Promise<FolderHandle | null> {
@@ -94,9 +95,9 @@ export async function pickFolder(): Promise<FolderHandle | null> {
   let handle: FolderHandle
   try {
     handle = await choose({ id: 'hematologist-plus-courses', mode: 'readwrite' })
-  } catch {
-    // Closed without choosing (AbortError), or the browser refused a system folder.
-    return null
+  } catch (error) {
+    if (error instanceof DOMException && error.name === 'AbortError') return null
+    throw error
   }
   await withStorageTimeout(set(FOLDER_KEY, handle, store()), undefined)
   return handle

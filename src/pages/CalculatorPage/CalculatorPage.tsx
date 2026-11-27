@@ -262,8 +262,11 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
   // Everything the physician sets is kept on this device as it is set: leaving for the disease
   // pages unmounts this page, and accepting an update of the app reloads the tab — a sheet laid
   // out over four days would otherwise go with either.
+  // A browser that refuses to keep it is said so: the physician would otherwise trust a draft
+  // that is gone the moment the tab closes.
+  const [draftKept, setDraftKept] = useState(true)
   useEffect(() => {
-    saveDraft(regimenId, state, personal)
+    setDraftKept(saveDraft(regimenId, state, personal))
   }, [regimenId, state, personal])
 
   const settings: CourseSettingsValue = { ...courseSettings, regimenId }
@@ -736,6 +739,7 @@ function Calculator({ catalog }: { catalog: CatalogIndex }) {
             onOpen={openCard}
             note={cardNote}
             saved={cardSaved}
+            kept={draftKept}
           />
           <SaveFolderCard />
           {ownItems.length > 0 && (

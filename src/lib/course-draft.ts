@@ -75,17 +75,25 @@ function isBlank(regimenId: string | null, state: CourseState): boolean {
 /**
  * Keeps the course for the next visit. A course nobody has started is not kept — otherwise an
  * empty draft would silently overwrite the one from the morning.
+ *
+ * False when the browser refused to keep it (storage full, or saving site data blocked): the
+ * course still holds for this visit, and the physician has to be told it will not outlive it.
  */
-export function saveDraft(regimenId: string | null, state: CourseState, personal: boolean): void {
+export function saveDraft(
+  regimenId: string | null,
+  state: CourseState,
+  personal: boolean,
+): boolean {
   if (isBlank(regimenId, state)) {
     clearDraft()
-    return
+    return true
   }
   const card = courseCard(regimenId, personal ? state : withoutPersonal(state))
   try {
     window.localStorage.setItem(DRAFT_KEY, JSON.stringify(card))
+    return true
   } catch {
-    // Storage full or blocked: the course still holds for this visit.
+    return false
   }
 }
 

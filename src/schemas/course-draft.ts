@@ -97,8 +97,10 @@ const headerSchema = z.object({
 export const courseStateSchema: z.ZodType<CourseState> = z.object({
   patientForm: patientFormValuesSchema,
   courseSettings: z.object({
-    startDate: z.string().regex(DATE_PATTERN),
-    dayStart: z.string().regex(TIME_PATTERN),
+    // Empty while the field is cleared or half typed: the course is kept as the physician left
+    // it, and the empty field is there to be filled in, never guessed.
+    startDate: z.union([z.literal(''), z.string().regex(DATE_PATTERN)]),
+    dayStart: z.union([z.literal(''), z.string().regex(TIME_PATTERN)]),
     bsaVariant: z.enum(['actual', 'capped', 'entered']),
     bsaM2: z.number().positive().nullable(),
     cycleNumber: z.number().int().positive(),

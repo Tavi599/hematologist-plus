@@ -86,6 +86,18 @@ describe('course draft', () => {
     expect(personalInDraft()).toBe(true)
   })
 
+  it('keeps a course whose start date or hour is cleared, with the field left empty', () => {
+    // A cleared date field used to make the whole draft unreadable: the course was gone after
+    // a reload, and the draft with it.
+    const state = laidOut()
+    const cleared = {
+      ...state,
+      courseSettings: { ...state.courseSettings, startDate: '', dayStart: '' },
+    }
+    expect(saveDraft('r-chop-21', cleared, true)).toBe(true)
+    expect(loadDraft()?.state).toEqual(cleared)
+  })
+
   it('keeps nothing for a course nobody has started', () => {
     saveDraft(null, initialCourseState(), true)
     expect(window.localStorage.getItem('hp.courseDraft')).toBeNull()
@@ -143,7 +155,7 @@ describe('course draft', () => {
     }
     Object.defineProperty(window, 'localStorage', { value: refusing, configurable: true })
     try {
-      expect(() => saveDraft('r-chop-21', laidOut(), true)).not.toThrow()
+      expect(saveDraft('r-chop-21', laidOut(), true)).toBe(false)
       expect(loadDraft()).toBeNull()
       expect(personalInDraft()).toBe(false)
       expect(() => setPersonalInDraft(true)).not.toThrow()

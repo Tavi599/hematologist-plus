@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useSyncExternalStore } from 'react'
 
 import type { CourseFileTarget } from './course-file-name'
+import { withStorageTimeout } from './query-persistence'
 import {
   allowFolder,
   folderSupported,
@@ -31,6 +32,8 @@ export type SaveFolderStatus =
 interface FolderState {
   status: SaveFolderStatus
   handle: FolderHandle | null
+  /** The last attempt to choose a folder failed, rather than being closed. */
+  pickFailed?: boolean
 }
 
 let state: FolderState = { status: 'loading', handle: null }
@@ -45,14 +48,22 @@ function update(next: FolderState): void {
 
 async function statusOf(handle: FolderHandle | null): Promise<FolderState> {
   if (handle === null) return { status: 'none', handle }
-  return { status: (await folderWritable(handle)) ? 'granted' : 'prompt', handle }
+  // A folder on a drive that is gone can leave the browser's answer pending for good; the card
+  // must not wait on it, and writing is asked for again on the next save anyway.
+  const writable = await withStorageTimeout(folderWritable(handle), false)
+  return { status: writable ? 'granted' : 'prompt', handle }
+}
+
+/** The device's answer, unless the physician chose a folder while it was still coming. */
+function settle(next: FolderState): void {
+  if (state.status === 'loading') update(next)
 }
 
 function ensureLoaded(): Promise<void> {
   loaded ??= folderSupported()
     ? loadFolder()
         .then(statusOf)
-        .then(update, () => update({ status: 'none', handle: null }))
+        .then(settle, () => settle({ status: 'none', handle: null }))
     : Promise.resolve(update({ status: 'unsupported', handle: null }))
   return loaded
 }
@@ -73,7 +84,13 @@ export function useSaveFolder() {
   const current = useSyncExternalStore(subscribe, () => state)
 
   const choose = useCallback(async () => {
-    const handle = await pickFolder()
+    let handle: FolderHandle | null
+    try {
+      handle = await pickFolder()
+    } catch {
+      update({ ...state, pickFailed: true })
+      return
+    }
     // Closing the dialog keeps whatever folder there was.
     if (handle !== null) update(await statusOf(handle))
   }, [])
@@ -112,6 +129,7 @@ export function useSaveFolder() {
 
   return {
     status: current.status,
+    pickFailed: current.pickFailed === true,
     folderName: current.handle?.name ?? null,
     choose,
     allow,

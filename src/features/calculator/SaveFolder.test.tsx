@@ -87,6 +87,40 @@ describe('SaveFolderCard', () => {
     expect(await screen.findByText(/Папку не обрано/)).toBeInTheDocument()
   })
 
+  it('offers a folder while the device has not answered yet', async () => {
+    // A browser whose storage never answers left the card at «Перевіряємо папку…» with no button.
+    const idb = await import('idb-keyval')
+    let answer: (value: unknown) => void = () => {}
+    vi.spyOn(idb, 'get').mockReturnValueOnce(new Promise((resolve) => (answer = resolve)))
+    renderWithProviders(<SaveFolderCard />)
+    expect(screen.getByText('Перевіряємо папку…')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: 'Обрати папку' }))
+    expect(await screen.findByText('Папка: Схеми')).toBeInTheDocument()
+    // The device answering late, with no folder, does not take the chosen one away.
+    answer(undefined)
+    await new Promise((resolve) => setTimeout(resolve, 0))
+    expect(screen.getByText('Папка: Схеми')).toBeInTheDocument()
+  })
+
+  it('stops waiting for a permission the browser never answers', async () => {
+    picked.queryPermission = () => new Promise(() => {})
+    stored.set('saveFolder', picked)
+    renderWithProviders(<SaveFolderCard />)
+    expect(
+      await screen.findByText(/запис треба дозволити знову/, undefined, { timeout: 7000 }),
+    ).toBeInTheDocument()
+  }, 10000)
+
+  it('says so when the browser would not give the folder', async () => {
+    vi.stubGlobal(
+      'showDirectoryPicker',
+      vi.fn(() => Promise.reject(new DOMException('system folder', 'SecurityError'))),
+    )
+    renderWithProviders(<SaveFolderCard />)
+    fireEvent.click(await screen.findByRole('button', { name: 'Обрати папку' }))
+    expect(await screen.findByText(/Браузер не дав обрати цю папку/)).toBeInTheDocument()
+  })
+
   it('asks to allow writing again after a browser restart', async () => {
     picked.permission = 'prompt'
     stored.set('saveFolder', picked)

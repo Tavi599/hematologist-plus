@@ -10,7 +10,7 @@ import { useSaveFolder } from '../../lib/use-save-folder'
  */
 export function SaveFolderCard() {
   const { t } = useTranslation()
-  const { status, folderName, choose, allow, forget, open } = useSaveFolder()
+  const { status, pickFailed, folderName, choose, allow, forget, open } = useSaveFolder()
   const name = folderName ?? ''
 
   return (
@@ -25,24 +25,33 @@ export function SaveFolderCard() {
         <Text size="sm" c={status === 'prompt' ? 'orange.8' : undefined}>
           {t(`calculator.saveFolder.${status}`, { name })}
         </Text>
-        {status !== 'unsupported' && status !== 'loading' && (
+        {pickFailed && (
+          <Text size="xs" c="red.8">
+            {t('calculator.saveFolder.pickFailed')}
+          </Text>
+        )}
+        {/* While the device's folder is still being read, choosing one is offered all the same:
+            a browser whose storage never answers must not leave the physician without a folder. */}
+        {status !== 'unsupported' && (
           <Group gap="xs" wrap="wrap">
             {status === 'prompt' && (
               <Button size="xs" onClick={() => void allow()}>
                 {t('calculator.saveFolder.allow')}
               </Button>
             )}
-            {status !== 'none' && (
+            {status !== 'none' && status !== 'loading' && (
               <Button size="xs" variant="light" onClick={() => void open()}>
                 {t('calculator.saveFolder.open')}
               </Button>
             )}
             <Button size="xs" variant="default" onClick={() => void choose()}>
               {t(
-                status === 'none' ? 'calculator.saveFolder.choose' : 'calculator.saveFolder.change',
+                status === 'none' || status === 'loading'
+                  ? 'calculator.saveFolder.choose'
+                  : 'calculator.saveFolder.change',
               )}
             </Button>
-            {status !== 'none' && (
+            {status !== 'none' && status !== 'loading' && (
               <Button size="xs" variant="subtle" color="gray" onClick={() => void forget()}>
                 {t('calculator.saveFolder.forget')}
               </Button>
