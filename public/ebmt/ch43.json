@@ -40,11 +40,49 @@
    "en": "– The administration of the graft to an immunosuppressed host unable to reject the graft cells"
   },
   {
-   "id": "365139fb5d",
+   "id": "ee5627e45c",
    "type": "table",
    "num": "43.1",
-   "en": "Table 43.1 Current classification of acute and chronic",
-   "raw_en": "Table 43.1 Current classification of acute and chronic GvHD Features Features Day after of acute of chronic ClassificationHCTGvHDGvHD Acute GvHD – Classic acute<100 daysYesNo – Persistent, >100 daysYesNo recurrent, or late onset Chronic GvHD – Classic chronicNo time NoYes limit – Overlap No time YesYes syndromelimit"
+   "en": "Table 43.1 Current classification of acute and chronic GvHD",
+   "columns": 4,
+   "rows_en": [
+    [
+     "Classification",
+     "Day after HCT",
+     "Features of acute GvHD",
+     "Features of chronic GvHD"
+    ],
+    [
+     "Acute GvHD –Classic acute",
+     "<100 days",
+     "Yes",
+     "No"
+    ],
+    [
+     "–Persistent, recurrent, or late onset",
+     ">100 days",
+     "Yes",
+     "No"
+    ],
+    [
+     "Chronic GvHD",
+     "",
+     "",
+     ""
+    ],
+    [
+     "–Classic chronic",
+     "No time limit",
+     "No",
+     "Yes"
+    ],
+    [
+     "–Overlap syndrome",
+     "No time limit",
+     "Yes",
+     "Yes"
+    ]
+   ]
   },
   {
    "id": "6bae7f3474",

@@ -100,23 +100,11 @@
    "en": "Treatment and Prognosis"
   },
   {
-   "id": "b47650e41b",
+   "id": "c0e33aa638",
    "type": "table",
    "num": "39.1",
-   "en": "Table 39.1 Selected case series of toxoplasmosis after HCT up to 2021 (see updated detailed information in Aerts",
-   "columns": 3,
-   "rows_en": [
-    [
-     "et al.",
-     "2023",
-     ")"
-    ],
-    [
-     "Author (year) Derouin et al. (1992) Slavin et al. (1994) Bretagne et al. (1995) Maschke et al. (1999) Martino et al. (2003) Small et al. (2000) Aoun et al. (2006) de Medeiros et al. (2001) Mulanovich et al. (2011) Bautista et al. (2012) and Martino et al. (2015) Sumi et al. (2013) Hakko et al. (2017) a Not all in references b Four definite and 16 possible cases of toxoplasmosis",
-     "",
-     "Number of HCT (% Median (range) aCasesfrequency)% of sero (+) pre-HCTday onset 7296 allo (2.4)6574 (55–180) 123.803 allo (0.31)1559 (35–97) 509 auto (0) 2550 allo (0.3)70NS 20b655 (3.1)NS73 (14–689) 414.391 allo (0.93)Variable (multinational 64 (4–516) 7.097 auto (0)study) 10463 allo (2.2)2378 (36–155) 7121 allo (5)6945 (13–140) 204 auto (0.4) 9789 allo-HCT (1.14)NS69 (13–265) 93.626 Allo (0.25)18% US pt56 (12–122) –US pt0.15%>50% non-US pt –Non-US pt1.6% 9148 adult CBT (4%)4539 (7–98) 6279 allo (1.8%)10NS 87 auto (1.1%) 5170 allo (2.9%)7042 (26–119)"
-    ]
-   ]
+   "en": "Table 39.1 Selected case series of toxoplasmosis after HCT up to 2021 (see updated detailed information in Aerts et al. 2023)",
+   "raw_en": "Table 39.1 Selected case series of toxoplasmosis after HCT up to 2021 (see updated detailed information in Aerts et al. 2023) Number of HCT (% Median (range) Author (year)aCasesfrequency)% of sero (+) pre-HCTday onset Derouin et al. (1992)7296 allo (2.4)6574 (55–180) Slavin et al. (1994)123.803 allo (0.31)1559 (35–97) 509 auto (0) Bretagne et al. (1995)2550 allo (0.3)70NS Maschke et al. (1999)20b655 (3.1)NS73 (14–689) Martino et al. (2003)414.391 allo (0.93)Variable (multinational 64 (4–516) 7.097 auto (0)study) Small et al. (2000)10463 allo (2.2)2378 (36–155) Aoun et al. (2006)7121 allo (5)6945 (13–140) 204 auto (0.4) de Medeiros et al. (2001)9789 allo-HCT (1.14)NS69 (13–265) Mulanovich et al. (2011)93.626 Allo (0.25)18% US pt56 (12–122) – US pt0.15%>50% non-US pt – Non-US pt1.6% Bautista et al. (2012) and Martino 9148 adult CBT (4%)4539 (7–98) et al. (2015) Sumi et al. (2013)6279 allo (1.8%)10NS 87 auto (1.1%) Hakko et al. (2017)5170 allo (2.9%)7042 (26–119) a Not all in references b Four definite and 16 possible cases of toxoplasmosis"
   },
   {
    "id": "27d9d02b1c",
@@ -167,11 +155,53 @@
    "en": "TBC, and especially, multidrug-resistant (MDR) TBC, continues to be a worldwide major health problem. This may surprise many EBMT HCT physicians, who may have never seen a case of TBC."
   },
   {
-   "id": "53ed544705",
+   "id": "6831e48875",
    "type": "table",
    "num": "39.2",
-   "en": "Table 39.2 Suggested treatment and prophylaxis for",
-   "raw_en": "Table 39.2 Suggested treatment and prophylaxis for toxoplasmosis in HCT recipients TreatmentDose Pyrimethamine Oral, 200 mg loading dose, then (plus folinic acid)50–75 mg q.d. (folinic acid, oral or IV, 10–15 mg q.d.) + one of the following SulfadiazineOral, 1–1.5 g q6–8h, OR ClindamycinOral or IV, 600 mg q6h ProphylaxisDose TMP/SMXa,b1 double-strength tablet (160/800 mg)/day, 4 day × week, OR 2 double-strength tablets (160/800 mg)/day, 3 day × week, OR 1 standard-dose tablet (80/400 mg) daily, OR Pyrimethamine and 2–3 tables per week sulfadoxine (fansidar)a Dapsoneb100 mg daily Atovaquoneb1500 mg daily a Also effective for PJP prophylaxis, and possibly listerio- sis, nocardiosis, and, in some geographic areas, partly effective in preventing gram-positive cocci and gram- negative bacillary (enterobacterial and nonglucose fer- menting) infections b The dose can be reduced in patients with mild renal insufficiency"
+   "en": "Table 39.2 Suggested treatment and prophylaxis for toxoplasmosis in HCT recipients",
+   "columns": 2,
+   "rows_en": [
+    [
+     "Treatment",
+     "Dose"
+    ],
+    [
+     "Pyrimethamine (plus folinic acid)",
+     "Oral, 200 mg loading dose, then 50–75 mg q.d. (folinic acid, oral or IV, 10–15 mg q.d.) + one of the following"
+    ],
+    [
+     "Sulfadiazine",
+     "Oral, 1–1.5 g q6–8h, OR"
+    ],
+    [
+     "Clindamycin",
+     "Oral or IV, 600 mg q6h"
+    ],
+    [
+     "Prophylaxis",
+     "Dose"
+    ],
+    [
+     "TMP/SMXa,b",
+     "1 double-strength tablet (160/800 mg)/day, 4 day × week, OR 2 double-strength tablets (160/800 mg)/day, 3 day × week, OR 1 standard-dose tablet (80/400 mg) daily, OR"
+    ],
+    [
+     "Pyrimethamine and sulfadoxine (fansidar)a",
+     "2–3 tables per week"
+    ],
+    [
+     "Dapsoneb",
+     "100 mg daily"
+    ],
+    [
+     "Atovaquoneb",
+     "1500 mg daily"
+    ],
+    [
+     "a Also effective for PJP prophylaxis, and possibly listerio sis, nocardiosis, and, in some geographic areas, partly effective in preventing gram-positive cocci and gram- negative bacillary (enterobacterial and nonglucose fer menting) infections b The dose can be reduced in patients with mild renal insufficiency",
+     "- -"
+    ]
+   ]
   },
   {
    "id": "2179b96b40",

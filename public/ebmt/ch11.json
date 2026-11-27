@@ -324,9 +324,9 @@
    "en": "Risk Assessment"
   },
   {
-   "id": "4ceb71ec31",
+   "id": "c553d1ee33",
    "type": "p",
-   "en": "11.1.4.1 ndividual Risk Factors I There are a group of variables that have a prognostic value in all predictive models."
+   "en": "11.1.4.1 Individual Risk Factors There are a group of variables that have a prognostic value in all predictive models."
   },
   {
    "id": "febb4b571f",
@@ -349,49 +349,43 @@
    "en": "The EBMT risk score is also useful for predicting OS and TRM in patients receiving a second HCT (Rezvani et al. 2012) and in those receiving a T-cell depletion (TCD) HCT (Lodewyck et al. 2011)."
   },
   {
-   "id": "e695da0472",
+   "id": "a2f96705c9",
    "type": "table",
    "num": "11.1",
-   "en": "Table 11.1 The disease risk index (Armand et al. 2012, Table 11.2 EBMT risk score (Gratwohl et al. 2009)",
-   "columns": 5,
+   "en": "Table 11.1 The disease risk index (Armand et al. 2012, Table 11.2 EBMT risk score (Gratwohl et al. 2009) 2014)",
+   "columns": 4,
    "rows_en": [
     [
-     "2014",
-     ")",
+     "",
      "Variables",
      "Value of variables",
      "Points"
     ],
     [
-     "Risk",
-     "Disease",
+     "RiskDisease",
      "Age",
      "<20 Years",
      "0"
     ],
     [
-     "Low",
-     "AML with favorable cyt., CLL, CML,",
+     "LowAML with favorable cyt., CLL, CML,",
      "",
      "20–40 Years",
      "1"
     ],
     [
-     "",
      "indolent B-cell NHL",
      "",
      ">40 Years",
      "2"
     ],
     [
-     "Intermediate High",
-     "AML intermediate cyt., MDS intermediate cyt., myeloproliferative neoplasms, MM, HL, DLBCL/ transformed indolent B-NHL, MCL, T-cell lymphoma nodal AML adverse cyt., MDS adverse cyt.,",
+     "IntermediateAML intermediate cyt., MDS intermediate cyt., myeloproliferative neoplasms, MM, HL, DLBCL/ transformed indolent B-NHL, MCL, T-cell lymphoma nodal HighAML adverse cyt., MDS adverse cyt.,",
      "a Disease status Interval diagnosis of HCTb",
      "Early Intermediate Advanced <12 Months ≥12 Months",
      "0 1 2 0 1"
     ],
     [
-     "",
      "T-cell lymphoma extranodal",
      "Donor",
      "HLA-identical",
@@ -400,138 +394,118 @@
     [
      "",
      "",
-     "",
      "sibling",
      ""
     ],
     [
-     "Risk",
-     "Stage",
+     "RiskStage",
      "",
      "Unrelated donor",
      "1"
     ],
     [
-     "Low",
-     "CR1, CR ≥ 2, PR1, untreated, CML CP,",
+     "LowCR1, CR ≥ 2, PR1, untreated, CML CP,",
      "Gender",
      "Female to male",
      "1"
     ],
     [
-     "",
      "PR ≥ 2 (if RIC)",
      "of donor–recipient",
      "Other combinations",
      "0"
     ],
     [
-     "High",
-     "PR ≥ 2 (if MAC), induction failure, active relapse, CML AP or BP",
+     "HighPR ≥ 2 (if MAC), induction failure, active relapse, CML AP or BP",
      "Adapted from Gratwohl et al. (a Does not apply in patients with SAA. Early = AL in",
      "2009)",
      ""
     ],
     [
-     "Disease risk",
-     "Stage riskOverall riskOS at 4 years",
+     "Disease riskStage riskOverall riskOS at 4 years",
      "CR1; MDS in CR1 or untreated; CML in the first chronic",
      "",
      ""
     ],
     [
-     "Low",
-     "LowLow64%",
+     "LowLowLow64%",
      "phase; NHL/MM untreated or in CR1. Intermediate = AL",
      "",
      ""
     ],
     [
-     "",
      "(56–70%)",
      "in CR2; CML with another status than accelerated phase",
      "",
      ""
     ],
     [
-     "Low",
-     "HighIntermediate46%",
+     "LowHighIntermediate46%",
      "or blastic phase; MDS in CR2 or in PR; NHL/MM in",
      "",
      ""
     ],
     [
-     "Intermediate",
-     "Low(42–50%)",
+     "IntermediateLow(42–50%)",
      "CR2, PR, or stable disease. Late = AL in other stages;",
      "",
      ""
     ],
     [
-     "Intermediate High High",
-     "HighHigh26% Low(21–31%) HighVery high6 (0–21%)",
+     "IntermediateHighHigh26% HighLow(21–31%) HighHighVery high6 (0–21%)",
      "CML in blastic crisis; MDS in all other stages; NHL/MM in all other stages b Does not apply to patients in CR1",
      "",
      ""
     ],
     [
-     "Adapted from Armand et al. (",
-     "2012)",
+     "Adapted from Armand et al. (2012)",
      "",
      "",
      ""
     ],
     [
-     "AML",
-     "acute myeloid leukemia, MM multiple leukemia,",
+     "AML acute myeloid leukemia, MM multiple leukemia,",
      "",
      "",
      ""
     ],
     [
-     "cyt. cytogenetics, NHL syndrome,",
-     "CLL chronic lymphocytic leukemia, Non-Hodgkin’s lymphoma, MDS myelodisplastic HL Hodgkin’s lymphoma, DLBCL diffuse",
+     "cyt. cytogenetics, CLL chronic lymphocytic leukemia, NHL Non-Hodgkin’s lymphoma, MDS myelodisplastic syndrome, HL Hodgkin’s lymphoma, DLBCL diffuse",
      "Table 11.3Probability (%) of TRM at 5 years by apply ing the EBMT risk score",
      "",
      "-"
     ],
     [
-     "large B-cell lymphoma,",
-     "MCL mantle cell lymphoma, CR1",
+     "large B-cell lymphoma, MCL mantle cell lymphoma, CR1",
      "Points012",
      "345",
      "6–7"
     ],
     [
-     "first complete remission,",
-     "CR complete remission, PR1",
+     "first complete remission, CR complete remission, PR1",
      "AML142025",
      "303640",
      "41"
     ],
     [
-     "first partial remission,",
-     "RIC reduced-intensity condition-",
+     "first partial remission, RIC reduced-intensity condition-",
      "ALL152324",
      "304047",
      "53"
     ],
     [
-     "ing,",
-     "PR partial response, MAC myeloablative condition-",
+     "ing, PR partial response, MAC myeloablative condition-",
      "CML152230",
      "384552",
      "55"
     ],
     [
-     "ing,",
-     "AP accelerated phase, BP blast phase",
+     "ing, AP accelerated phase, BP blast phase",
      "AA182640",
      "4952",
      ""
     ],
     [
-     "",
      "",
      "MDS252830",
      "353846",
@@ -539,20 +513,17 @@
     ],
     [
      "",
-     "",
      "MM29",
      "354042",
      "52"
     ],
     [
      "",
-     "",
      "NHL152428",
      "303436",
      "38"
     ],
     [
-     "",
      "",
      "Extracted from Gratwohl et al. (",
      "2009)",
@@ -561,11 +532,33 @@
    ]
   },
   {
-   "id": "c900ff0cf1",
+   "id": "bac5230df5",
    "type": "table",
    "num": "11.4",
-   "en": "Table 11.4 Probability (%) of OS at 5 years by applying",
-   "raw_en": "Table 11.4 Probability (%) of OS at 5 years by applying the EBMT risk score Points0123456–7 AML68595238302318 ALL66524338221614 CML76726051392614 AA8172604945 MDS56524640352825 MM4840362217 NHL75595048434038 Extracted from Gratwohl et al. (2009)"
+   "en": "Table 11.4 Probability (%) of OS at 5 years by applying the EBMT risk score",
+   "columns": 8,
+   "rows_en": [
+    [
+     "Points AML ALL CML AA MDS MM NHL",
+     "0 68 66 76 81 56 75",
+     "1 59 52 72 72 52 59",
+     "2 52 43 60 60 46 48 50",
+     "3 38 38 51 49 40 40 48",
+     "4 30 22 39 45 35 36 43",
+     "5 23 16 26 28 22 40",
+     "6–7 18 14 14 25 17 38"
+    ],
+    [
+     "Extracted from Gratwohl et al. (",
+     "",
+     "",
+     "",
+     "2009",
+     ")",
+     "",
+     ""
+    ]
+   ]
   },
   {
    "id": "74ded3679f",
@@ -593,7 +586,7 @@
    "en": "Other authors re-stratified the HCT-CI index (flexible HCT-CI) as low risk: 0–3 points; intermediate risk: 4–5 points; and high risk: >5 points, with this classification being a better predictor of NRM. In an RIC setting, the 100-day and 2-year NRM incidence in these risk categories was 4%, 16%, and 29% and 19%, 33%, and 40%, respectively. The authors found this predictive NRM value using neither the original HCT-CI nor the pre-transplant assessment of mortality (PAM) or Charlson Comorbidity Index (CCI) models. Regarding the 2-year OS, this flexible HCT-CI score was also associated with the highest predictive hazard ratio (Barba et al. 2010)."
   },
   {
-   "id": "086c2ed9ec",
+   "id": "f3344d4f1a",
    "type": "table",
    "num": "11.5",
    "en": "Table 11.5 (continued)",
@@ -625,7 +618,7 @@
      "3"
     ],
     [
-     "Table 11.5 -specific Comorbidity Index, including HCT age variable (Sorror et al. 2005, 2014) Comorbidity/definitionPoints Age≥ 40 years1 Arrhythmia1 Atrial fibrillation, flutter, sick sinus node syndrome, or ventricular arrhythmias Cardiac1 Coronary heart disease, congestive heart failure, IAM, FEVE ≤50%",
+     "Table 11.5HCT-specific Comorbidity Index, including age variable (Sorror et al. 2005, 2014) Comorbidity/definitionPoints Age≥ 40 years1 Arrhythmia1 Atrial fibrillation, flutter, sick sinus node syndrome, or ventricular arrhythmias Cardiac1 Coronary heart disease, congestive heart failure, IAM, FEVE ≤50%",
      "a The most recent version has also included in this cate gory hematological tumors of a different lineage, which motivates transplantation (e.g., lymphoma in an AML patient but not previous MDS in an AML patient) CVT cerebral vein thrombosis, TVA transient ischemic attack, AST aspartate transaminase, ALT alanine transami nase, BMI body mass index, FEVE left ventricular ejec tion fraction, IAM myocardial infarction, UNL normal value",
      "- - - upper"
     ],
@@ -712,10 +705,10 @@
    "en": "11.1.4.3 The Predictive Capacity of these Models Unfortunately, all these models have a limited predictive capacity, and none of them stand out more than the rest."
   },
   {
-   "id": "d51f909a55",
+   "id": "b9ab39ee50",
    "type": "h3",
    "num": "11.1.5",
-   "en": "ractical Applications of Risk P Assessment"
+   "en": "Practical Applications of Risk Assessment"
   },
   {
    "id": "cb662806f2",

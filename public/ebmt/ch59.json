@@ -91,11 +91,76 @@
    "en": "1. A prophylactic DLI is applied in patients with a high risk of relapse but at a stage when there is no evidence of the underlying disease. Usually, prophylactic DLI are given starting from day+90 or +100 after transplantation, provided that the patient is off immunosuppression and free of GVHD for about 1 month. CD3+ doses used for the first infusion depend on donor type and timing and vary between 1 × 10⁵/kg patient and 1 × 10⁶/kg (Table 59.1). In the absence of GvHD, most groups have given prophylactic DLIs as single-shot intervention, but also repetitive DLIs are reported (Table 59.1 (Tsirigotis et al. 2016; Jedlickova et al. 2016)). As with any maintenance therapy, the balance between relapse prevention and toxicity (i.e., GvHD) of prophylactic DLI needs to be acknowledged. Hence, treatment success after DLI has been defined as being alive without relapse and immunosuppression for GVHD by some investigators (Eefting et al. 2016). The optimal number of DLIs and timing between DLIs needed still needs to be defined and might depend on the initial transplantation regimen as discussed."
   },
   {
-   "id": "e5f9e39545",
+   "id": "924f14a7bb",
    "type": "table",
    "num": "59.1",
-   "en": "Table 59.1 Timing and dosing of prophylactic and preemptive DLI. Level C evidence. A DLI can be repeated at on",
-   "raw_en": "Table 59.1 Timing and dosing of prophylactic and preemptive DLI. Level C evidence. A DLI can be repeated at on log higher 6–8 weeks after the first DLI, when, for example, MRD is still present and no GVHD is observed. GVHD as endpoint of repetitive DLIs for preemptive DLIs is in the era of MRD monitoring no longer recommended Timing of first Number of doseMRDMUDMMUD/HaploDLIReferences Prophylactic3 months1 × 10e5/kg1 × 10e5/kg1 × 10e5/kg1–3bSchmid et al. (ex vivo TCD: (2012) any risk; no ex vivo TCD: high-risk disease) 6 monthsa1 × 10e6/kg1 × 10e6/kg5 × 10e5/kgTsirigotis et al. (high-risk (2016) disease) Pre-emptive3 months1–5 × 10e5/1 × 10e5/kg1 × 10e5/kg1–4cDe Witte et al. kg(2021a, b) 6 monthsa1–3 × 10e6/1 × 10e6/kg5 × 10e5/kg kg RelapseAfter 1 × 10e7/kg1 × 10e7/kg1 × 10e6/kg1–4dSantoro et al. chemotherapy(2023) van der Zouwen et al. (2023) Interval between DLI: at least 4–6 weeks a Starting at 4 months, higher doses in the range employed at 6 months can be discussed b Second and third dose: increase each DLI dose 0.5–1 log c Number of DLI: MRD/chimerism guided, consider continuation when MRDneg/full chimerism; in absence of MRD marker: GvHD guided d Second to fourth dose: increase each DLI dose 1 log, to a maximum dose of 1 × 10e8/kg"
+   "en": "Table 59.1 Timing and dosing of prophylactic and preemptive DLI. Level C evidence. A DLI can be repeated at on log higher 6–8 weeks after the first DLI, when, for example, MRD is still present and no GVHD is observed. GVHD as endpoint of repetitive DLIs for preemptive DLIs is in the era of MRD monitoring no longer recommended",
+   "columns": 7,
+   "rows_en": [
+    [
+     "",
+     "Timing of first dose",
+     "MRD",
+     "MUD",
+     "MMUD/Haplo",
+     "Number of DLI",
+     "References"
+    ],
+    [
+     "Prophylactic",
+     "3 months (ex vivo TCD: any risk; no ex vivo TCD: high-risk disease)",
+     "1 × 10e5/kg",
+     "1 × 10e5/kg",
+     "1 × 10e5/kg",
+     "1–3b",
+     "Schmid et al. (2012)"
+    ],
+    [
+     "",
+     "6 monthsa (high-risk disease)",
+     "1 × 10e6/kg",
+     "1 × 10e6/kg",
+     "5 × 10e5/kg",
+     "",
+     "Tsirigotis et al. (2016)"
+    ],
+    [
+     "Pre-emptive",
+     "3 months",
+     "1–5 × 10e5/ kg",
+     "1 × 10e5/kg",
+     "1 × 10e5/kg",
+     "1–4c",
+     "De Witte et al. (2021a, b)"
+    ],
+    [
+     "",
+     "6 monthsa",
+     "1–3 × 10e6/ kg",
+     "1 × 10e6/kg",
+     "5 × 10e5/kg",
+     "",
+     ""
+    ],
+    [
+     "Relapse",
+     "After chemotherapy",
+     "1 × 10e7/kg",
+     "1 × 10e7/kg",
+     "1 × 10e6/kg",
+     "1–4d",
+     "Santoro et al. (2023) van der Zouwen et al. (2023)"
+    ],
+    [
+     "Interval between DLI: at least 4–6 weeks a Starting at 4 months, higher doses in the range employed at 6 months can be discussed b Second and third dose: increase each DLI dose 0.5–1 log c Number of DLI: MRD/chimerism guided, consider continuation when MRDneg/full chimerism; in absence of MRD marker: GvHD guided d Second to fourth dose: increase each DLI dose 1 log, to a maximum dose of 1 × 10e8/kg",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
   },
   {
    "id": "7792294424",
@@ -108,10 +173,10 @@
    "en": "3. For overt relapses, a combination of DLI with chemotherapy is mandatory (Schmid et al. 2012), and cell doses used in that situation are usually one order of magnitude higher than in the prophylactic or preemptive situation (1 × 10⁷/kg). In particular, in acute leukemia, DLI alone may not be the preferred strategy for treatment of relapse. Repetitive DLIs can be considered after overt relapses based, for example, on MRD positivity 6–8 weeks after DLI."
   },
   {
-   "id": "b1d28b2ce1",
+   "id": "9acdc230d2",
    "type": "h3",
    "num": "59.2.3",
-   "en": "actors that May Influence F Timing, Dosing, and Frequency of DLI"
+   "en": "Factors that May Influence Timing, Dosing, and Frequency of DLI"
   },
   {
    "id": "4818124534",
@@ -191,7 +256,7 @@
   "de Witte MA, Janssen A, Nijssen K, Karaiskaki F, Swanenberg L, van Rhenen A, Admiraal R, van der Wagen L, Minnema MC, Petersen E, Raymakers RAP, Westinga K, Straetemans T, Halkes CJM, Boelens JJ, Kuball J. Alphabeta T-cell graft depletion for allogeneic HSCT in adults with hematological malignancies. Blood Adv. 2021a;5:240–9.",
   "de Witte M, Daenen LGM, van der Wagen L, van Rhenen A, Raymakers R, Westinga K, Kuball J. Allogeneic stem cell transplantation platforms with ex vivo and in vivo immune manipulations: count and adjust. Hemasphere. 2021b;5:e580.",
   "de Witte MA, Mooyaart LE, Hoogeboom JD, Chabannon C, Malard F, Ruggeri A, Kuball J. Activity of ex vivo graft and DLI engineering within the last decade increases, a survey from the EBMT cellular therapy & immunobiology working party. Bone Marrow Transplant. 2023;58:719–22.",
-  "Dickinson AM, Norden J, Li S, Hromadnikova I, Schmid C, Schmetzer H, Jochem-Kolb H. Graft-versus- emia effect following hematopoietic stem leuk cell transplantation for leukemia. Front Immunol. 2017;8:496.",
+  "Dickinson AM, Norden J, Li S, Hromadnikova I, Schmid C, Schmetzer H, Jochem-Kolb H. Graft-versus- leukemia effect following hematopoietic stem cell transplantation for leukemia. Front Immunol. 2017;8:496.",
   "Eefting M, de Wreede LC, Halkes CJ, von dem Borne PA, Kersting S, Marijt EW, Veelken H, Putter H, Schetelig J, Falkenburg JH. Multi-state analysis illustrates treatment success after stem cell transplantation for acute myeloid leukemia followed by donor lymphocyte infusion. Haematologica. 2016;101:506–14.",
   "Handgretinger R, Schilbach K. The potential role of gammadelta T cells after allogeneic HCT for leukemia. Blood. 2018;131:1063.",
   "Jedlickova Z, Schmid C, Koenecke C, Hertenstein B, Baurmann H, Schwerdtfeger R, Tischer J, Kolb HJ, Schleuning M. Long-term results of adjuvant donor lymphocyte transfusion in AML after allogeneic stem cell transplantation. Bone Marrow Transplant. 2016;51:663–7.",

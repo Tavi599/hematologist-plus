@@ -35,27 +35,38 @@
    "en": "Noninfectious lung injury following HCT may be mediated by immune or nonimmune mechanisms and accounts for up to 50% of noninfectious mortality after allo-HCT."
   },
   {
-   "id": "ca2e9b7480",
+   "id": "743637967a",
    "type": "table",
    "num": "52.1",
-   "en": "Table 52.1 Noninfectious pulmonary complications",
-   "columns": 2,
+   "en": "Table 52.1 Noninfectious pulmonary complications after HCTa",
+   "columns": 7,
    "rows_en": [
     [
-     "after HCT",
-     "a"
-    ],
-    [
      "Localization Pulmonary parenchyma",
-     "Entity b –Acute interstitial pneumonitis –Acute respiratory distress b syndrome (ARDS) –BCNU pneumonitis –Radiation pneumonitis –Delayed pulmonary toxicity syndromeb –Post-HCT lymphoproliferative disease (see Chap. 45) –Eosinophilic pneumonia –Pulmonary alveolar proteinosis"
+     "Entity – – – – – – – –",
+     "Acute interstitial pneumonitis Acute respiratory distress syndrome (ARDS) BCNU pneumonitis Radiation pneumonitis Delayed pulmonary toxicity syndrome Post-HCT lymphoproliferative disease (see Chap. Eosinophilic pneumonia Pulmonary alveolar proteinosis",
+     "b",
+     "b 45",
+     ")",
+     "b"
     ],
     [
      "Vascular endothelium",
-     "–Peri-engraftment respiratory b distress syndrome (PERDS) –Capillary leak syndrome (CLS)b (see Chap. 42) –Diffuse alveolar hemorrhage (DAH)b –Pulmonary VOD –Transfusion-associated acute lung injury –Pulmonary cytolytic syndrome –Pulmonary arterial hypertension –Pulmonary thromboembolism"
+     "– – – – – – – –",
+     "Peri-engraftment respiratory distress syndrome (PERDS) Capillary leak syndrome (CLS) (see Chap. Diffuse alveolar hemorrhage (DAH)b Pulmonary VOD Transfusion-associated acute lung injury Pulmonary cytolytic syndrome Pulmonary arterial hypertension Pulmonary thromboembolism",
+     "42)",
+     "",
+     "b",
+     "b"
     ],
     [
      "",
-     "(continued)"
+     "",
+     "",
+     "",
+     "",
+     "(continued)",
+     ""
     ]
    ]
   },
@@ -264,7 +275,7 @@
    "en": "Bronchiolitis Obliterans Syndrome (BOS)"
   },
   {
-   "id": "9836d394a0",
+   "id": "e769251fe9",
    "type": "table",
    "num": "52.2",
    "en": "Table 52.2 Main clinical characteristics of BOS",
@@ -311,8 +322,8 @@
     ],
     [
      "Diagnosis",
-     "Chronic GVHD in other locations 2015 – w-onset obstructive ventilatory defect with air trapping (FEV1/VC ratio < 0.7 or Ne the fifth percentile of predicted; FEV1 < 75% of predicted with baseline; residual volume > 120% of predicted) with no response to bronchodilators. •",
-     "; Wolff et al. 2021 Definitive (not required): histologic confirmation by VATS (BO).",
+     "Chronic GVHD in other locations 2015 –Ne the fifth percentile of predicted; FEV1 < 75% of predicted with baseline; residual volume > 120% of predicted) with no response to bronchodilators. •",
+     "; Wolff et al. 2021 w-onset obstructive ventilatory defect with air trapping (FEV1/VC ratio < 0.7 or Definitive (not required): histologic confirmation by VATS (BO).",
      ").",
      "a + PFT impairment (NIH consensus) (Jagasia et al.",
      "",
@@ -445,37 +456,138 @@
    "id": "b34438d906",
    "type": "li",
    "en": "• All of them have specific diagnostic criteria, management, treatment, and prognosis."
+  },
+  {
+   "id": "0852893995",
+   "type": "table",
+   "num": "52.3",
+   "en": "Table 52.3 Comparative characteristics between BOS and ILD",
+   "columns": 2,
+   "rows_en": [
+    [
+     "Median onset",
+     "BOS: 13 months"
+    ],
+    [
+     "after HCT",
+     "a ILD: 15 months"
+    ],
+    [
+     "Extrathoracic",
+     "BOS: >90%"
+    ],
+    [
+     "cGVHD",
+     "ILD: >75%b"
+    ],
+    [
+     "Thoracic CT",
+     "BOS: bronchial abnormalities, air"
+    ],
+    [
+     "scanc",
+     "trapping, no alveolar and/or interstitial"
+    ],
+    [
+     "",
+     "abnormalities"
+    ],
+    [
+     "",
+     "ILD: alveolar and/or interstitial"
+    ],
+    [
+     "",
+     "abnormalities"
+    ],
+    [
+     "PFT patternc",
+     "BOS: obstructive pattern – FEV1/"
+    ],
+    [
+     "",
+     "FVC < 0.7 and TLC > 80%"
+    ],
+    [
+     "",
+     "ILD: normal/restrictive pattern, TLC"
+    ],
+    [
+     "",
+     "<80% and FEV1/FVC > 0.7; mixed"
+    ],
+    [
+     "",
+     "ventilatory defectd, TLC < 80% and"
+    ],
+    [
+     "",
+     "FEV1/FVC < 0.7; DLCO reduced"
+    ],
+    [
+     "Treatment",
+     "Abedin S, Yanik GA, Braun T, et al. Predictive value of BOS: limited"
+    ],
+    [
+     "",
+     "ebronchiolitis obliterans syndrome stage 0p in chronic ILD: usual response to steroids, risk"
+    ],
+    [
+     "",
+     "graft-versus-host disease of the lung. Biol Blood of relapse when steroids are tapered"
+    ],
+    [
+     "",
+     "Marrow Transplant. 2015;21:1127–31. off"
+    ],
+    [
+     "f Prognosis",
+     "Archer G, Berger I, Bondeelle L, et al. Interstitial lung BOS: 3-year OS 79%; 5-year OS 74%"
+    ],
+    [
+     "",
+     "diseases after hematopoietic stem cell transplantation: ILD: 3-year OS 81%; 5-year OS 71%"
+    ],
+    [
+     "",
+     "new pattern of lung chronic graft-versus-host disease?"
+    ],
+    [
+     "PFT pulmonary function testing,",
+     "PPFE pleuro- Bone Marrow Transplant. 2023;58:87–93."
+    ],
+    [
+     "parenchymal fibroelastosis,",
+     "FEV1 forced expiratory vol- Arora M, Cutler CS, Jagasia MH, et al. Late acute and"
+    ],
+    [
+     "ume in 1 s, FVC",
+     "forced vital capacity, TLC total lung chronic graft-versus-host disease after allogeneic"
+    ],
+    [
+     "volume, DLCO diffusion capacity of the lungs for carbon",
+     "hematopoietic cell transplantation. Biol Blood Marrow"
+    ],
+    [
+     "monoxide, OS overall survival a PPFE occurs several years after HCT b Less than 50% in PPFE c The diagnosis of BOS is based on PFT, whereas those of",
+     "Transplant. 2016;22:449–55. Bergeron A, Godet C, Chevret S, et al. Bronchiolitis oblit- erans syndrome after allogeneic hematopoietic SCT: phenotypes and prognosis. Bone Marrow Transplant."
+    ],
+    [
+     "ILD relies on chest imaging d When combined with BOS e Except for PPFE where the treatment is limited",
+     "2013;48:819–24. Bergeron A, Chevret S, Chagnon K, et al. Budesonide/for- moterol for bronchiolitis obliterans after hematopoi-"
+    ],
+    [
+     "f Morbidity is significant including respiratory disabling",
+     "etic stem cell transplantation. Am J Respir Crit Care"
+    ],
+    [
+     "and infections",
+     "Med. 2015;191:1242–9."
+    ]
+   ]
   }
  ],
  "references": [
-  "Table 52.3 ve characteristics between BOS Comparati",
-  "Median onset BOS: 13 months a",
-  "after HCTILD: 15 months",
-  "Extrathoracic BOS: >90%",
-  "cGVHDILD: >75%b",
-  "Thoracic CT BOS: bronchial abnormalities, air",
-  "scanctrapping, no alveolar and/or interstitial abnormalities ILD: alveolar and/or interstitial abnormalities",
-  "PFT patterncBOS: obstructive pattern – FEV1/FVC < 0.7 and TLC > 80% ILD: normal/restrictive pattern, TLC <80% and FEV1/FVC > 0.7; mixed ventilatory defectd, TLC < 80% and FEV1/FVC < 0.7; DLCO reduced",
-  "TreatmentBOS: limited ILD: usual response to steroidse, risk of relapse when steroids are tapered off",
-  "PrognosisfBOS: 3-year OS 79%; 5-year OS 74% ILD: 3-year OS 81%; 5-year OS 71%",
-  "PFT pulmonary function testing, PPFE pleuro-",
-  "parenchymal fibroelastosis, FEV1 forced expiratory vol",
-  "ume in 1 s, FVC forced vital capacity, TLC total lung",
-  "volume, DLCO diffusion capacity of the lungs for carbon",
-  "monoxide, OS overall survival",
-  "PPFE occurs several years after HCT",
-  "Less than 50% in PPFE",
-  "The diagnosis of BOS is based on PFT, whereas those of",
-  "ILD relies on chest imaging",
-  "When combined with BOS",
-  "Except for PPFE where the treatment is limited",
-  "f Morbidity is significant including respiratory disabling",
-  "and infections Key Points",
-  "Abedin S, Yanik GA, Braun T, et al. Predictive value of bronchiolitis obliterans syndrome stage 0p in chronic graft-versus-host disease of the lung. Biol Blood Marrow Transplant. 2015;21:1127–31.",
-  "Archer G, Berger I, Bondeelle L, et al. Interstitial lung diseases after hematopoietic stem cell transplantation: new pattern of lung chronic graft-versus-host disease? Bone Marrow Transplant. 2023;58:87–93.",
-  "Arora M, Cutler CS, Jagasia MH, et al. Late acute and chronic graft-versus-host disease after allogeneic hematopoietic cell transplantation. Biol Blood Marrow Transplant. 2016;22:449–55.",
-  "Bergeron A, Godet C, Chevret S, et al. Bronchiolitis obliterans syndrome after allogeneic hematopoietic SCT: phenotypes and prognosis. Bone Marrow Transplant. 2013;48:819–24.",
-  "Bergeron A, Chevret S, Chagnon K, et al. Budesonide/formoterol for bronchiolitis obliterans after hematopoietic stem cell transplantation. Am J Respir Crit Care Med. 2015;191:1242–9.",
   "Bergeron A, Chevret S, Granata A, et al. Effect of azithromycin on airflow decline-free survival after allogeneic hematopoietic stem cell transplant: the ALLOZITHRO randomized clinical trial. JAMA. 2017;318:557–66.",
   "Bergeron A, Chevret S, de Latour RP, et al. Non-infectious lung complications after allogeneic haematopoietic stem cell transplantation. Eur Respir J. 2018;51:1702617.",
   "Bondeelle L, Gras J, Michonneau D, et al. Pleuroparenchymal fibroelastosis after allogeneic hematopoietic stem cell transplantation. Bone Marrow Transplant. 2020;55:982–6.",
