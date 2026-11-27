@@ -37,6 +37,10 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
+        // The app is one script, and the calculator has to work offline: a script over the
+        // default 2 MiB is left out of the precache and fails the build, so the deploy stops
+        // and the site keeps serving the old version (it did from 22.11.2026 on).
+        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         // Reference data caching is handled in the app (IndexedDB), not by the service worker,
         // so patient input never ends up in a network cache.
         navigateFallback: 'index.html',
