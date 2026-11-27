@@ -1,0 +1,976 @@
+{
+  "id": "transformed-indolent-lymphoma",
+  "name": {
+    "uk": "Гістологічна трансформація індолентних лімфом у ДВКЛ",
+    "en": "Histologic transformation of indolent lymphomas to DLBCL"
+  },
+  "summary": {
+    "uk": "Перехід фолікулярної лімфоми чи лімфоми маргінальної зони в ДВКЛ або HGBL; підтверджується лише біопсією, лікування залежить від попередньої терапії та перебудов MYC/BCL2.",
+    "en": "Progression of follicular or marginal zone lymphoma to DLBCL or HGBL; confirmed only by biopsy, treatment depends on prior therapy and MYC/BCL2 rearrangements."
+  },
+  "clinical_group": "lymphoma",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C83.3",
+      "is_primary": true
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026",
+      "updated": "2026-05-20"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=transformed%20follicular%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=transformed%20lymphoma"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 4.2026 (HTBCEL-1…HTBCEL-A)",
+        "en": "NCCN 4.2026 pathways (HTBCEL-1 to HTBCEL-A)"
+      },
+      "description": {
+        "uk": "Алгоритм NCCN B-Cell Lymphomas 4.2026 для гістологічної трансформації фолікулярної лімфоми (ФЛ) та лімфом маргінальної зони (МЗЛ) у ДВКЛ або HGBL. Трансформацію ХЛЛ (синдром Ріхтера) NCCN описує окремо — на сторінці ХЛЛ. МКХ-10 окремого коду не має: кодують гістологію, що виникла (C83.3 — ДВКЛ), а вихідну лімфому (C82 — ФЛ, C83.0/C88.4 — МЗЛ) вказують у діагнозі як попереднє захворювання. Частота: ФЛ трансформується приблизно у 2–3% хворих на рік, і трансформація — головна причина смерті при ФЛ; при МЗЛ рідше (за 10 років — близько 5% при екстранодальній, 13% при селезінковій і нодальній). Чинники ризику: поширена стадія, високі FLIPI/IPI, підвищена ЛДГ, B-симптоми; при МЗЛ також нодальний підтип, кілька слизових вогнищ, понад 4 нодальні зони, відсутність CR після першого лікування. Діагноз — лише гістологічний: біопсія вузла (бажано ексцизійна) з ділянки з найвищим SUVmax на ПЕТ/КТ; тонкоголкова аспірація недостатня, кор-біопсія (кілька стовпчиків) прийнятна, якщо вузол недоступний. Непропорційно високий SUVmax (>10 чи >20) лише вказує, де брати біопсію. FISH: BCL2 і MYC (після кількох ліній — BCL6 і MYC); мультигенна панель може допомогти з вибором лікування. Розглянути профілактику синдрому лізису пухлини; перед анти-CD20 — скринінг і профілактика реактивації HBV. Рандомізованих досліджень немає — рекомендації перенесено з рецидивної ДВКЛ.",
+        "en": "The NCCN B-Cell Lymphomas 4.2026 algorithm for histologic transformation of follicular lymphoma (FL) and marginal zone lymphomas (MZL) to DLBCL or HGBL. NCCN covers CLL transformation (Richter) separately — on the CLL page. ICD-10 has no code of its own: code the resulting histology (C83.3 — DLBCL) and record the original lymphoma (C82 — FL, C83.0/C88.4 — MZL) in the diagnosis as the preceding disease. Frequency: FL transforms in about 2–3% of patients a year, and transformation is the leading cause of death in FL; in MZL it is rarer (at 10 years about 5% for extranodal, 13% for splenic and nodal). Risk factors: advanced stage, high FLIPI/IPI, raised LDH, B symptoms; in MZL also the nodal subtype, several mucosal sites, more than 4 nodal sites, no CR after first treatment. The diagnosis is histologic only: a node biopsy (excisional preferred) from the site with the highest SUVmax on PET/CT; fine-needle aspiration is not enough, a core biopsy (several cores) is acceptable when the node is not accessible. A disproportionately high SUVmax (over 10 or 20) only shows where to biopsy. FISH: BCL2 and MYC (after several lines — BCL6 and MYC); a multigene panel may help choose treatment. Consider tumor lysis prophylaxis; before anti-CD20 — HBV screening and prophylaxis. There are no randomized trials — the recommendations are extrapolated from relapsed DLBCL."
+      },
+      "children": [
+        {
+          "key": "nccn-diag",
+          "kind": "line",
+          "title": {
+            "uk": "Діагностика й вибір шляху (HTBCEL-1)",
+            "en": "Diagnosis and choice of path (HTBCEL-1)"
+          },
+          "description": {
+            "uk": "Після гістологічного підтвердження — ПЕТ/КТ і FISH. Шлях визначають попереднє лікування індолентної лімфоми та цитогенетика.",
+            "en": "After histologic confirmation — PET/CT and FISH. The path depends on prior treatment of the indolent lymphoma and on cytogenetics."
+          },
+          "children": [
+            {
+              "key": "nccn-diag-min",
+              "kind": "group",
+              "title": {
+                "uk": "Після мінімального лікування або без нього",
+                "en": "After minimal or no prior therapy"
+              },
+              "description": {
+                "uk": "Мінімальне лікування — лише ISRT або один курс монотерапії (зокрема ритуксимабом). FISH на перебудови BCL2 [t(14;18)] і MYC [t(8;14) та варіанти]. Гістологія — ДВКЛ або HGBL з перебудовами MYC і BCL6.",
+                "en": "Minimal therapy means ISRT alone or one course of single-agent therapy (including rituximab). FISH for BCL2 [t(14;18)] and MYC [t(8;14) and variants] rearrangements. Histology — DLBCL or HGBL with MYC and BCL6 rearrangements."
+              },
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Перша лінія: антрациклінова хіміоімунотерапія ± ISRT",
+                    "en": "First line: anthracycline chemoimmunotherapy ± ISRT"
+                  },
+                  "target": "nccn-min"
+                }
+              ]
+            },
+            {
+              "key": "nccn-diag-hgbl",
+              "kind": "group",
+              "title": {
+                "uk": "HGBL з перебудовами MYC і BCL2",
+                "en": "HGBL with MYC and BCL2 rearrangements"
+              },
+              "description": {
+                "uk": "Трансформація в HGBL «double hit» (MYC + BCL2) має гірший прогноз, ніж трансформована ФЛ без неї, і потребує інтенсивнішого лікування — за HGBL-1.",
+                "en": "Transformation to double-hit HGBL (MYC + BCL2) carries a worse outcome than transformed FL without it and needs more intensive treatment — per HGBL-1."
+              },
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Лікування як HGBL (HGBL-1)",
+                    "en": "Treat as HGBL (HGBL-1)"
+                  },
+                  "target": "nccn-hgbl"
+                }
+              ]
+            },
+            {
+              "key": "nccn-diag-multi",
+              "kind": "group",
+              "title": {
+                "uk": "Після кількох ліній попереднього лікування",
+                "en": "After multiple lines of prior therapy"
+              },
+              "description": {
+                "uk": "Кілька ліній — щонайменше дві схеми хіміоімунотерапії індолентної лімфоми до трансформації (наприклад, BR і R-CHOP). FISH на перебудови BCL6 і MYC.",
+                "en": "Multiple lines means at least two chemoimmunotherapy regimens for the indolent lymphoma before transformation (for example BR and R-CHOP). FISH for BCL6 and MYC rearrangements."
+              },
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Лікування після кількох ліній (HTBCEL-3)",
+                    "en": "Treatment after multiple lines (HTBCEL-3)"
+                  },
+                  "target": "nccn-multi"
+                }
+              ]
+            },
+            {
+              "key": "nccn-diag-cll",
+              "kind": "group",
+              "title": {
+                "uk": "Трансформація ХЛЛ/ЛМЛ (синдром Ріхтера)",
+                "en": "CLL/SLL transformation (Richter syndrome)"
+              },
+              "description": {
+                "uk": "До HTBCEL не належить: діагностика й лікування — за окремим алгоритмом настанови NCCN з ХЛЛ (HT-1…HT-A).",
+                "en": "Not part of HTBCEL: diagnosis and treatment follow a separate algorithm of the NCCN CLL guideline (HT-1 to HT-A)."
+              },
+              "steps": [
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Трансформація Ріхтера — шляхи ХЛЛ",
+                    "en": "Richter transformation — CLL pathways"
+                  },
+                  "disease": "cll"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-min",
+          "kind": "line",
+          "title": {
+            "uk": "Перша лінія після мінімального лікування (HTBCEL-1)",
+            "en": "First line after minimal prior therapy (HTBCEL-1)"
+          },
+          "description": {
+            "uk": "Хіміоімунотерапія з антрациклінами — бажано, якщо немає протипоказань; схеми — першої лінії ДВКЛ (BCEL-C 1). При порушеній функції серця будь-який антрациклін — з частішим кардіомоніторингом. ISRT — за локалізованого процесу, об’ємних вогнищ і/або обмеженого ураження кісток. Ретроспективно R-CHOP при трансформованій ФЛ давав 5-річну загальну виживаність близько 66% — подібно до ДВКЛ de novo.",
+            "en": "Anthracycline-based chemoimmunotherapy is preferred unless contraindicated; regimens are the DLBCL first-line ones (BCEL-C 1). With impaired cardiac function any anthracycline needs more frequent cardiac monitoring. ISRT — for localized disease, bulky disease and/or limited bone disease. Retrospectively, R-CHOP in transformed FL gave about 66% 5-year overall survival — similar to de novo DLBCL."
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-chop-21",
+              "notes": {
+                "uk": "CHOP + ритуксимаб — основна антрациклінова схема (BCEL-C 1)",
+                "en": "CHOP + rituximab — the main anthracycline regimen (BCEL-C 1)"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "r-chop-14",
+              "notes": {
+                "uk": "R-CHOP-14 — за рішенням лікаря; у NCCN основний варіант 21-денний",
+                "en": "R-CHOP-14 — physician's choice; NCCN lists the 21-day schedule"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "pola-r-chp-cycle-1",
+              "notes": {
+                "uk": "Pola-R-CHP (першолінійна схема BCEL-C 1). Пацієнтів із відомою трансформацією в POLARIX не було",
+                "en": "Pola-R-CHP (a BCEL-C 1 first-line regimen). Patients with known transformation were not in POLARIX"
+              },
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "pola-r-chp",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "pola-r-chp-cycle-7-8",
+              "preference": "preferred"
+            },
+            {
+              "regimen_id": "da-epoch-r",
+              "notes": {
+                "uk": "DA-EPOCH + ритуксимаб (BCEL-C 1: інша рекомендована для поширених стадій)",
+                "en": "DA-EPOCH + rituximab (BCEL-C 1: other recommended for advanced stage)"
+              },
+              "preference": "other"
+            },
+            {
+              "regimen_id": "ref-dlbcl-r-ceop-nccn",
+              "notes": {
+                "uk": "Якщо антрацикліни протипоказані чи погана функція лівого шлуночка: CEOP + R",
+                "en": "If anthracyclines are contraindicated or LV function is poor: CEOP + R"
+              },
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "r-gcvp",
+              "notes": {
+                "uk": "GCVP + R — погана функція лівого шлуночка",
+                "en": "GCVP + R — poor LV function"
+              },
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "ref-dlbcl-r-comp",
+              "notes": {
+                "uk": "CDOP + R (ліпосомальний доксорубіцин) — погана функція лівого шлуночка; розбіжність джерел щодо типу доксорубіцину — див. картку",
+                "en": "CDOP + R (liposomal doxorubicin) — poor LV function; sources differ on the doxorubicin type — see the card"
+              },
+              "preference": "circumstances"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "± ISRT",
+                "en": "± ISRT"
+              },
+              "preference": "circumstances"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Оцінка відповіді (HTBCEL-2)",
+                "en": "Response assessment (HTBCEL-2)"
+              },
+              "target": "nccn-min-resp"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Перша лінія ДВКЛ — шляхи ДВКЛ",
+                "en": "DLBCL first line — DLBCL pathways"
+              },
+              "disease": "dlbcl"
+            }
+          ]
+        },
+        {
+          "key": "nccn-min-resp",
+          "kind": "line",
+          "title": {
+            "uk": "Відповідь після першої лінії (HTBCEL-2)",
+            "en": "Response after first line (HTBCEL-2)"
+          },
+          "description": {
+            "uk": "Відповідь — за Lugano, ПЕТ/КТ — за 5-бальною шкалою. Перед додатковим лікуванням при PET-позитивності варто повторити біопсію: накопичення може бути післялікувальним запаленням; якщо біопсія негативна — вести як CR. Спостереження — тими самими методами, що й при первинному обстеженні, візуалізація — за клінічними показаннями.",
+            "en": "Response by Lugano, PET/CT by the 5-point scale. Before more treatment of a PET-positive result a repeat biopsy should be considered: uptake may be post-treatment inflammation; if the biopsy is negative, manage as CR. Follow-up uses the same tests as the workup, imaging as clinically indicated."
+          },
+          "children": [
+            {
+              "key": "nccn-min-cr",
+              "kind": "group",
+              "title": {
+                "uk": "CR (ПЕТ-негативна, 5-PS 1–3)",
+                "en": "CR (PET-negative, 5-PS 1–3)"
+              },
+              "description": {
+                "uk": "Якщо трансформація співіснує з поширеною ФЛ — розглянути подовжену (підтримувальну) терапію ритуксимабом, як у FOLL-5. Після тривалої відповіді може повернутися вихідна індолентна лімфома — тоді лікувати її за FOLL-5 (ФЛ) чи NMZL-4 (МЗЛ).",
+                "en": "If transformation coexists with extensive FL, consider extended (maintenance) rituximab as in FOLL-5. After a durable response the original indolent lymphoma may come back — then treat it per FOLL-5 (FL) or NMZL-4 (MZL)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "rituximab-maintenance",
+                  "notes": {
+                    "uk": "Лише при співіснуючій поширеній ФЛ (FOLL-5, подовжена терапія за бажанням)",
+                    "en": "Only with coexisting extensive FL (FOLL-5, optional extended therapy)"
+                  },
+                  "preference": "circumstances"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Активне спостереження",
+                    "en": "Active surveillance"
+                  }
+                },
+                {
+                  "kind": "trial",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Клінічне випробування",
+                    "en": "Clinical trial"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив трансформованої лімфоми — як після кількох ліній (HTBCEL-3)",
+                    "en": "Relapse of the transformed lymphoma — as after multiple lines (HTBCEL-3)"
+                  },
+                  "target": "nccn-multi"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив ФЛ — шляхи фолікулярної лімфоми (FOLL-5)",
+                    "en": "FL relapse — follicular lymphoma pathways (FOLL-5)"
+                  },
+                  "disease": "follicular-lymphoma"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив МЗЛ — шляхи лімфом маргінальної зони (NMZL-4)",
+                    "en": "MZL relapse — marginal zone lymphoma pathways (NMZL-4)"
+                  },
+                  "disease": "marginal-zone-lymphoma"
+                }
+              ]
+            },
+            {
+              "key": "nccn-min-pr",
+              "kind": "group",
+              "title": {
+                "uk": "PR (5-PS 4), відсутність відповіді чи прогресія (5-PS 5)",
+                "en": "PR (5-PS 4), no response or progression (5-PS 5)"
+              },
+              "description": {
+                "uk": "Спершу — повторна біопсія. CAR-T проти CD19 (якщо придатний) — з терапією до/після афереза або без неї; якщо CAR-T неможлива — системні схеми HTBCEL-A, як після кількох ліній.",
+                "en": "First a repeat biopsy. CD19 CAR-T (if eligible) — with or without pre/post-pheresis therapy; if CAR-T is not possible — HTBCEL-A systemic regimens, as after multiple lines."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-car-t-cd19",
+                  "notes": {
+                    "uk": "CAR-T проти CD19 з терапією до/після афереза або без неї",
+                    "en": "CD19 CAR-T with or without pre/post-pheresis therapy"
+                  }
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "assessment",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Повторна біопсія",
+                    "en": "Repeat biopsy"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Не кандидат на CAR-T — системні схеми (HTBCEL-A)",
+                    "en": "Not a CAR-T candidate — systemic regimens (HTBCEL-A)"
+                  },
+                  "target": "nccn-sys"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-hgbl",
+          "kind": "line",
+          "title": {
+            "uk": "HGBL з перебудовами MYC і BCL2 (HGBL-1)",
+            "en": "HGBL with MYC and BCL2 rearrangements (HGBL-1)"
+          },
+          "description": {
+            "uk": "Лікування — як HGBL з перебудовами MYC і BCL2 ± BCL6: рекомендоване клінічне випробування; оптимальна індукція не встановлена; ISRT для консолідації при локалізованому процесі. 2-річна виживаність при трансформації в HGBL «double hit» — близько 50% проти 73% без неї. Повний перелік, консолідація й профілактика ЦНС — на сторінці HGBL.",
+            "en": "Treat as HGBL with MYC and BCL2 ± BCL6 rearrangements: a clinical trial is recommended; the best induction is not established; ISRT as consolidation for localized disease. 2-year survival after transformation to double-hit HGBL is about 50% versus 73% without it. The full list, consolidation and CNS prophylaxis are on the HGBL page."
+          },
+          "regimens": [
+            {
+              "regimen_id": "da-epoch-r",
+              "notes": {
+                "uk": "DA-EPOCH + ритуксимаб — найчастіше застосовувана індукція; стандарт не встановлений",
+                "en": "DA-EPOCH + rituximab — the induction most often used; no standard is established"
+              }
+            },
+            {
+              "regimen_id": "r-chop-21",
+              "notes": {
+                "uk": "CHOP + R може бути недостатнім — розглянути лише при IPI <2",
+                "en": "CHOP + R may be suboptimal — consider only with IPI below 2"
+              }
+            },
+            {
+              "regimen_id": "r-mini-chop",
+              "notes": {
+                "uk": "Для кволих і літніх",
+                "en": "For the frail and older"
+              }
+            },
+            {
+              "regimen_id": "r-codox-m",
+              "notes": {
+                "uk": "CODOX-M, що чергується з IVAC, + R — потенційно токсична",
+                "en": "CODOX-M alternating with IVAC + R — potentially toxic"
+              }
+            },
+            {
+              "regimen_id": "r-ivac"
+            },
+            {
+              "regimen_id": "hyper-cvad-a",
+              "notes": {
+                "uk": "HyperCVAD + R — потенційно токсична",
+                "en": "HyperCVAD + R — potentially toxic"
+              }
+            },
+            {
+              "regimen_id": "hyper-cvad-b"
+            },
+            {
+              "regimen_id": "ref-hgbl-r-hypercvad"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне випробування рекомендоване",
+                "en": "Clinical trial recommended"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "HGBL — шляхи HGBL (HGBL-1)",
+                "en": "HGBL — HGBL pathways (HGBL-1)"
+              },
+              "disease": "hgbl"
+            }
+          ]
+        },
+        {
+          "key": "nccn-multi",
+          "kind": "line",
+          "title": {
+            "uk": "Після кількох ліній попереднього лікування (HTBCEL-3)",
+            "en": "After multiple lines of prior therapy (HTBCEL-3)"
+          },
+          "description": {
+            "uk": "Бажано — клінічне випробування. Інакше — системна терапія HTBCEL-A, підібрана суто індивідуально з урахуванням попереднього лікування (± ISRT), лише ISRT або найкраща підтримувальна терапія (паліативна допомога).",
+            "en": "A clinical trial is preferred. Otherwise — HTBCEL-A systemic therapy chosen strictly individually with regard to prior treatment (± ISRT), ISRT alone, or best supportive care (palliative care)."
+          },
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне випробування",
+                "en": "Clinical trial"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "page",
+              "column": "treatment",
+              "label": {
+                "uk": "Системні схеми (HTBCEL-A) ± ISRT",
+                "en": "Systemic regimens (HTBCEL-A) ± ISRT"
+              },
+              "target": "nccn-sys"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Лише ISRT",
+                "en": "ISRT alone"
+              }
+            },
+            {
+              "kind": "supportive",
+              "column": "treatment",
+              "label": {
+                "uk": "Найкраща підтримувальна терапія",
+                "en": "Best supportive care"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Оцінка відповіді (HTBCEL-3)",
+                "en": "Response assessment (HTBCEL-3)"
+              },
+              "target": "nccn-multi-resp"
+            }
+          ]
+        },
+        {
+          "key": "nccn-multi-resp",
+          "kind": "line",
+          "title": {
+            "uk": "Відповідь після лікування (HTBCEL-3)",
+            "en": "Response after treatment (HTBCEL-3)"
+          },
+          "description": {
+            "uk": "Даних про трансплантацію після CAR-T проти CD19 немає: аутоТГСК після неї не рекомендована, алоТГСК можлива, але лишається експериментальною. ISRT — за локалізованого процесу, об’ємних вогнищ і/або обмеженого ураження кісток.",
+            "en": "There are no data on transplant after CD19 CAR-T: autologous HCT after it is not recommended, allogeneic HCT may be considered but remains investigational. ISRT — for localized disease, bulky disease and/or limited bone disease."
+          },
+          "children": [
+            {
+              "key": "nccn-multi-cr",
+              "kind": "group",
+              "title": {
+                "uk": "CR (ПЕТ-негативна, 5-PS 1–3)",
+                "en": "CR (PET-negative, 5-PS 1–3)"
+              },
+              "steps": [
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Активне спостереження",
+                    "en": "Active surveillance"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Придатним до трансплантації: HDT/ASCR ± ISRT (якщо не опромінювали)",
+                    "en": "Transplant eligible: HDT/ASCR ± ISRT (if not irradiated before)"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "АлоТГСК у відібраних випадках (невдала мобілізація, стійке ураження кісткового мозку) ± ISRT",
+                    "en": "Allogeneic HCT in selected cases (mobilization failure, persistent marrow involvement) ± ISRT"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив чи прогресія — знову HTBCEL-3",
+                    "en": "Relapse or progression — back to HTBCEL-3"
+                  },
+                  "target": "nccn-multi"
+                }
+              ]
+            },
+            {
+              "key": "nccn-multi-pr",
+              "kind": "group",
+              "title": {
+                "uk": "PR (ПЕТ-позитивна, 5-PS 4)",
+                "en": "PR (PET-positive, 5-PS 4)"
+              },
+              "description": {
+                "uk": "Перед додатковим лікуванням — біопсія (PET-позитивність може бути запаленням). Якщо планують трансплантацію — розглянути ще одну системну схему, якої не було (± ISRT), щоб досягти CR.",
+                "en": "Before more treatment — a biopsy (PET positivity may be inflammation). If a transplant is planned, consider another systemic regimen not given before (± ISRT) to reach CR."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-car-t-cd19",
+                  "notes": {
+                    "uk": "Бажано, якщо CAR-T ще не проводили; потрібна принаймні одна антрациклінова схема",
+                    "en": "Preferred if CAR-T was not given before; at least one anthracycline regimen is needed"
+                  },
+                  "preference": "preferred"
+                }
+              ],
+              "steps": [
+                {
+                  "kind": "assessment",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Біопсія",
+                    "en": "Biopsy"
+                  }
+                },
+                {
+                  "kind": "hct",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Придатним до трансплантації: алоТГСК у відібраних випадках ± ISRT",
+                    "en": "Transplant eligible: allogeneic HCT in selected cases ± ISRT"
+                  },
+                  "preference": "circumstances"
+                },
+                {
+                  "kind": "other",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "ISRT на локалізовані залишкові чи FDG-активні вогнища, яких не опромінювали",
+                    "en": "ISRT to localized residual or FDG-avid disease not irradiated before"
+                  }
+                },
+                {
+                  "kind": "surveillance",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Активне спостереження",
+                    "en": "Active surveillance"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Рецидив чи прогресія — знову HTBCEL-3",
+                    "en": "Relapse or progression — back to HTBCEL-3"
+                  },
+                  "target": "nccn-multi"
+                }
+              ]
+            },
+            {
+              "key": "nccn-multi-nr",
+              "kind": "group",
+              "title": {
+                "uk": "Відсутність відповіді чи прогресія (5-PS 5)",
+                "en": "No response or progression (5-PS 5)"
+              },
+              "description": {
+                "uk": "Біопсія. Кандидатам на подальше лікування — будь-яка опція, якої ще не отримували; іншим — найкраща підтримувальна терапія.",
+                "en": "Biopsy. For candidates for further treatment — any option not received before; for others — best supportive care."
+              },
+              "steps": [
+                {
+                  "kind": "assessment",
+                  "column": "treatment",
+                  "label": {
+                    "uk": "Біопсія",
+                    "en": "Biopsy"
+                  }
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Кандидат на подальше лікування — знову HTBCEL-3",
+                    "en": "Candidate for further treatment — back to HTBCEL-3"
+                  },
+                  "target": "nccn-multi"
+                },
+                {
+                  "kind": "supportive",
+                  "column": "next",
+                  "label": {
+                    "uk": "Не кандидат — найкраща підтримувальна терапія",
+                    "en": "Not a candidate — best supportive care"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nccn-sys",
+          "kind": "line",
+          "title": {
+            "uk": "Системні схеми (HTBCEL-A)",
+            "en": "Systemic regimens (HTBCEL-A)"
+          },
+          "description": {
+            "uk": "NCCN наводить лише склад схем; дози — у картках довідника з власними джерелами. Розглянути профілактику синдрому лізису пухлини; анти-CD20 — з профілактикою реактивації вірусів (HBV). Будь-який антрациклін при порушеній функції серця — з частішим кардіомоніторингом. Ритуксимаб можна замінити біосиміляром, а після першої повної внутрішньовенної дози — підшкірною формою. Невідомо, чи погіршують тафаситамаб, лонкастуксимаб чи інша анти-CD19 терапія ефект наступної CAR-T: перед CAR-T за можливості повторно підтвердити експресію CD19 біопсією. Біспецифічні CD3×CD20 при CD20-негативній лімфомі малоефективні — перед ними підтвердити CD20. Кандидатам на CAR-T чи біспецифічні — бендамустин обережно і лише після лейкаферезу.",
+            "en": "NCCN gives only the regimen components; doses are on the catalog cards with their own sources. Consider tumor lysis prophylaxis; anti-CD20 with viral (HBV) reactivation prophylaxis. Any anthracycline with impaired cardiac function needs more frequent cardiac monitoring. Rituximab may be replaced by a biosimilar and, after the first full IV dose, by the subcutaneous form. It is unknown whether tafasitamab, loncastuximab or other CD19-directed therapy reduces the effect of later CAR-T: before CAR-T, re-confirm CD19 by biopsy when feasible. CD3×CD20 bispecifics work poorly in CD20-negative lymphoma — confirm CD20 first. In CAR-T or bispecific candidates use bendamustine with caution and only after leukapheresis."
+          },
+          "children": [
+            {
+              "key": "nccn-sys-tx",
+              "kind": "group",
+              "title": {
+                "uk": "З наміром трансплантації",
+                "en": "Transplant intended"
+              },
+              "description": {
+                "uk": "Бажано: R-CHOP, якщо його не було; після антрациклінової схеми — DHA + платина (карбоплатин, цисплатин чи оксаліплатин) ± R, GDP, ICE ± R.",
+                "en": "Preferred: R-CHOP if not given before; after an anthracycline regimen — DHA + platinum (carboplatin, cisplatin or oxaliplatin) ± R, GDP, ICE ± R."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "r-chop-21",
+                  "notes": {
+                    "uk": "CHOP + ритуксимаб — якщо раніше не отримував",
+                    "en": "CHOP + rituximab — if not given before"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r-chop-14",
+                  "notes": {
+                    "uk": "R-CHOP-14 — за рішенням лікаря; NCCN називає CHOP + R без інтервалу",
+                    "en": "R-CHOP-14 — physician's choice; NCCN names CHOP + R without an interval"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r-dhap",
+                  "notes": {
+                    "uk": "Після антрациклінової схеми: DHA + платина (цисплатин) ± R",
+                    "en": "After an anthracycline regimen: DHA + platinum (cisplatin) ± R"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "dhap",
+                  "notes": {
+                    "uk": "DHAP без ритуксимабу",
+                    "en": "DHAP without rituximab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r-dhaox",
+                  "notes": {
+                    "uk": "DHA + оксаліплатин ± R",
+                    "en": "DHA + oxaliplatin ± R"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r-dhaox-eviq",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "dhaox",
+                  "notes": {
+                    "uk": "DHAOx без ритуксимабу",
+                    "en": "DHAOx without rituximab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-htbcel-dhac",
+                  "notes": {
+                    "uk": "DHA + карбоплатин ± R — лише картка, доз немає",
+                    "en": "DHA + carboplatin ± R — a card only, no doses"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "gdp",
+                  "notes": {
+                    "uk": "Після антрациклінової схеми: GDP (у переліку «з наміром трансплантації» NCCN пише GDP без ритуксимабу)",
+                    "en": "After an anthracycline regimen: GDP (in the \"transplant intended\" list NCCN writes GDP without rituximab)"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r-gdp",
+                  "notes": {
+                    "uk": "GDP + ритуксимаб — варіант R-GDP з довідника",
+                    "en": "GDP + rituximab — the R-GDP variant from the catalog"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r-ice",
+                  "notes": {
+                    "uk": "Після антрациклінової схеми: ICE ± R",
+                    "en": "After an anthracycline regimen: ICE ± R"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ice",
+                  "notes": {
+                    "uk": "ICE без ритуксимабу",
+                    "en": "ICE without rituximab"
+                  },
+                  "preference": "preferred"
+                }
+              ]
+            },
+            {
+              "key": "nccn-sys-notx",
+              "kind": "group",
+              "title": {
+                "uk": "Без наміру трансплантації",
+                "en": "Transplant not intended"
+              },
+              "description": {
+                "uk": "Бажано: R-CHOP, якщо його не було; після антрациклінової схеми — полатузумаб ± бендамустин ± R, леналідомід + тафаситамаб. Інші рекомендовані — CEOP ± R, GDP ± R, GemOx ± R, леналідомід + брентуксимаб + R, лонкастуксимаб, селінексор (лише трансформована ФЛ після ≥2 ліній).",
+                "en": "Preferred: R-CHOP if not given before; after an anthracycline regimen — polatuzumab ± bendamustine ± R, lenalidomide + tafasitamab. Other recommended — CEOP ± R, GDP ± R, GemOx ± R, lenalidomide + brentuximab + R, loncastuximab, selinexor (transformed FL only after at least 2 lines)."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "r-chop-21",
+                  "notes": {
+                    "uk": "CHOP + ритуксимаб — якщо раніше не отримував",
+                    "en": "CHOP + rituximab — if not given before"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "r-chop-14",
+                  "notes": {
+                    "uk": "R-CHOP-14 — за рішенням лікаря; NCCN називає CHOP + R без інтервалу",
+                    "en": "R-CHOP-14 — physician's choice; NCCN names CHOP + R without an interval"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "pbr-cycle-1",
+                  "notes": {
+                    "uk": "Після антрациклінової схеми: полатузумаб ± бендамустин ± ритуксимаб. Пацієнтів із трансформацією в дослідження полатузумабу не включали — рекомендацію перенесено з рецидивної ДВКЛ",
+                    "en": "After an anthracycline regimen: polatuzumab ± bendamustine ± rituximab. Patients with transformation were excluded from the polatuzumab trial — the recommendation is extrapolated from relapsed DLBCL"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "pbr",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-dlbcl-pola-r",
+                  "notes": {
+                    "uk": "Полатузумаб ± ритуксимаб без бендамустину (наприклад, перед CAR-T — бендамустин відкласти до завершення лейкаферезу)",
+                    "en": "Polatuzumab ± rituximab without bendamustine (e.g. before CAR-T — delay bendamustine until after leukapheresis)"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "tafasitamab-len-cycle-1",
+                  "notes": {
+                    "uk": "Після антрациклінової схеми: леналідомід + тафаситамаб",
+                    "en": "After an anthracycline regimen: lenalidomide + tafasitamab"
+                  },
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "tafasitamab-len-cycle-2-3",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "tafasitamab-len",
+                  "preference": "preferred"
+                },
+                {
+                  "regimen_id": "ref-dlbcl-r-ceop-nccn",
+                  "notes": {
+                    "uk": "CEOP ± R",
+                    "en": "CEOP ± R"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "r-gdp",
+                  "notes": {
+                    "uk": "GDP ± R",
+                    "en": "GDP ± R"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "gdp",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "r-gem-ox",
+                  "notes": {
+                    "uk": "GemOx ± R",
+                    "en": "GemOx ± R"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "gem-ox",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "bv-r-len",
+                  "notes": {
+                    "uk": "Леналідомід + брентуксимаб ведотин + ритуксимаб",
+                    "en": "Lenalidomide + brentuximab vedotin + rituximab"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "loncastuximab-cycle-1-2",
+                  "notes": {
+                    "uk": "Лонкастуксимаб тезирин",
+                    "en": "Loncastuximab tesirine"
+                  },
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "loncastuximab",
+                  "preference": "other"
+                },
+                {
+                  "regimen_id": "ref-dlbcl-selinexor",
+                  "notes": {
+                    "uk": "Селінексор — лише трансформована ФЛ і лише після ≥2 ліній системної терапії (зокрема прогресія після трансплантації чи CAR-T)",
+                    "en": "Selinexor — transformed FL only, and only after at least 2 systemic lines (including progression after transplant or CAR-T)"
+                  },
+                  "preference": "other"
+                }
+              ]
+            },
+            {
+              "key": "nccn-sys-tcell",
+              "kind": "group",
+              "title": {
+                "uk": "Терапія, опосередкована Т-клітинами",
+                "en": "T-cell mediated therapy"
+              },
+              "description": {
+                "uk": "CAR-T проти CD19 (аксикабтаген цилолейцел, лізокабтаген маралейцел, тисагенлеклейцел) — незалежно від можливості трансплантації. Біспецифічні антитіла (епкоритамаб, глофітамаб) — лише після щонайменше двох ліній системної терапії, зокрема при прогресії після трансплантації чи CAR-T. Токсичність CAR-T і біспецифічних — за окремою настановою NCCN.",
+                "en": "CD19 CAR-T (axicabtagene ciloleucel, lisocabtagene maraleucel, tisagenlecleucel) — regardless of transplant eligibility. Bispecific antibodies (epcoritamab, glofitamab) — only after at least two systemic lines, including progression after transplant or CAR-T. CAR-T and bispecific toxicity — per a separate NCCN guideline."
+              },
+              "regimens": [
+                {
+                  "regimen_id": "ref-car-t-cd19",
+                  "notes": {
+                    "uk": "CAR-T проти CD19 (аксі-цел, ліко-цел, тиса-цел): потрібна принаймні одна антрациклінова схема, якщо не було протипоказань; за прогресії у відібраних випадках можливий інший CAR-T",
+                    "en": "CD19 CAR-T (axi-cel, liso-cel, tisa-cel): at least one anthracycline regimen is needed unless contraindicated; at progression an alternative CAR-T in selected cases"
+                  }
+                },
+                {
+                  "regimen_id": "epcoritamab-cycle-1",
+                  "notes": {
+                    "uk": "Біспецифічні CD3×CD20 — лише після ≥2 ліній системної терапії (зокрема після трансплантації чи CAR-T). За FDA: епкоритамаб — трансформована ФЛ і МЗЛ",
+                    "en": "CD3×CD20 bispecifics — only after at least 2 systemic lines (including after transplant or CAR-T). FDA: epcoritamab — transformed FL and MZL"
+                  }
+                },
+                {
+                  "regimen_id": "epcoritamab-cycle-2-3"
+                },
+                {
+                  "regimen_id": "epcoritamab-cycle-4-9"
+                },
+                {
+                  "regimen_id": "epcoritamab"
+                },
+                {
+                  "regimen_id": "glofitamab-cycle-1",
+                  "notes": {
+                    "uk": "Глофітамаб — після ≥2 ліній; за FDA — лише трансформована ФЛ",
+                    "en": "Glofitamab — after at least 2 lines; FDA: transformed FL only"
+                  }
+                },
+                {
+                  "regimen_id": "glofitamab"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

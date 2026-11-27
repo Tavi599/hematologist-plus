@@ -153,7 +153,7 @@ GRADE свідомо не використовується: він оцінює 
 |---|---|
 | `regimens[].preference` | `preferred` (бажано), `other` (інші рекомендовані), `circumstances` (за певних обставин); без поля — без рангу |
 | `regimens[].category` | категорія доказовості NCCN: `1`, `2a`, `2b`, `3`; без поля — 2A |
-| `steps[]` | кроки, що не є схемою: `kind` (`hct`, `trial`, `surveillance`, `maintenance`, `assessment`, `supportive`, `page`, `other`), `column` (`treatment` — поруч зі схемами, `next` — стрілка «далі»), `label` (локал.), `target` (ключ вузла цієї ж хвороби — клікабельний перехід), `preference`, `category`, `notes` |
+| `steps[]` | кроки, що не є схемою: `kind` (`hct`, `trial`, `surveillance`, `maintenance`, `assessment`, `supportive`, `page`, `other`), `column` (`treatment` — поруч зі схемами, `next` — стрілка «далі»), `label` (локал.), `target` (ключ вузла цієї ж хвороби — клікабельний перехід), `disease` (id іншої хвороби — посилання на її сторінку «Шляхи NCCN», напр. з ФЛ на трансформацію; у рядку БД `disease_id`, лише коли задано), `preference`, `category`, `notes` |
 
 Валідація відхиляє `pathway` не на верхньому рівні й `target`, якого немає серед ключів хвороби. Усе тут — підписи й посилання: доз і розрахунку кроки не змінюють.
 

@@ -541,6 +541,14 @@ export function checkCatalog(rows: SyncRows): CatalogIssue[] {
       }
     }
     if (hasCycle(node.id, nodes)) error('treatment_nodes', node.id, 'parent chain forms a cycle')
+    for (const step of node.steps) {
+      if (step.disease_id === undefined) continue
+      if (!diseases.has(step.disease_id)) {
+        missing('treatment_nodes', node.id, 'steps.disease_id', 'diseases', step.disease_id)
+      } else if (step.disease_id === node.disease_id) {
+        error('treatment_nodes', node.id, 'a step leads to its own disease: use target instead')
+      }
+    }
   }
 
   const linkKeys = new Set<string>()

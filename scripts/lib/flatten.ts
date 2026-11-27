@@ -153,9 +153,11 @@ function flattenTreatment(
       title: node.title,
       description: node.description,
       sort_order: index,
-      steps: node.steps.map(({ target, ...step }) => ({
+      steps: node.steps.map(({ target, disease, ...step }) => ({
         ...step,
         target_id: target === null ? null : childId(diseaseId, target),
+        // Only a step that leads to another disease carries the key: the others stay as stored.
+        ...(disease === null ? {} : { disease_id: disease }),
       })),
     })
     node.regimens.forEach((link, linkIndex) => {
