@@ -1,0 +1,621 @@
+{
+  "id": "hgbl",
+  "name": {
+    "uk": "В-клітинні лімфоми високого ступеня злоякісності (HGBL)",
+    "en": "High-grade B-cell lymphomas (HGBL)"
+  },
+  "summary": {
+    "uk": "Агресивні В-клітинні лімфоми з перебудовами MYC і BCL2 (± BCL6, «double/triple hit»), з MYC і BCL6 (ICC) або без них (HGBL NOS); стандартної індукції немає, часто застосовують DA-EPOCH-R.",
+    "en": "Aggressive B-cell lymphomas with MYC and BCL2 (± BCL6, \"double/triple hit\") or MYC and BCL6 (ICC) rearrangements, or without them (HGBL NOS); there is no standard induction, DA-EPOCH-R is often used."
+  },
+  "clinical_group": "lymphoma",
+  "codes": [
+    {
+      "system_id": "icd-10",
+      "code": "C83.3",
+      "is_primary": true
+    },
+    {
+      "system_id": "icd-10",
+      "code": "C83.7",
+      "is_primary": false
+    }
+  ],
+  "references": [
+    {
+      "kind": "nccn",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026",
+      "updated": "2026-05-20"
+    },
+    {
+      "kind": "uptodate",
+      "url": "https://www.uptodate.com/contents/search?search=High-grade%20B-cell%20lymphoma"
+    },
+    {
+      "kind": "eviq",
+      "url": "https://www.eviq.org.au/search#/?query=high-grade%20B-cell%20lymphoma"
+    }
+  ],
+  "treatment": [
+    {
+      "key": "nccn",
+      "kind": "pathway",
+      "title": {
+        "uk": "Шляхи NCCN 4.2026 (HGBL-1, HGBL-A)",
+        "en": "NCCN 4.2026 pathways (HGBL-1, HGBL-A)"
+      },
+      "description": {
+        "uk": "Алгоритм настанови NCCN B-cell Lymphomas 4.2026 для В-клітинних лімфом високого ступеня злоякісності. Три варіанти за класифікаціями ICC і ВООЗ-5: (1) HGBL з перебудовами MYC і BCL2 (± BCL6) — «double/triple hit»; у ВООЗ-5 — DLBCL/HGBL з перебудовами MYC і BCL2; (2) HGBL з перебудовами MYC і BCL6 — лише тимчасова категорія ICC (у ВООЗ-5 її скасовано); (3) HGBL NOS — бластоїдні форми або проміжні між ДВКЛ і лімфомою Беркітта без перебудов MYC+BCL2. Перебудови виявляють FISH; IHC-коекспресія MYC і BCL2 без перебудов (double-expressor) — це не HGBL, а ДВКЛ NOS. Обстеження — як при ДВКЛ (BCEL-1, сторінка ДВКЛ). Експресія TdT впливає на прогноз, але не на вибір лікування; при бластоїдній морфології слід виключити лімфобластну лімфому. Оптимальна індукція не встановлена — клінічне випробування рекомендоване для всіх варіантів. Ця сторінка — окрема хвороба; на сторінці ДВКЛ розділ HGBL-1 подано коротко, а лімфома Беркітта посилається сюди для double/triple hit.",
+        "en": "The NCCN B-cell Lymphomas 4.2026 algorithm for high-grade B-cell lymphomas. Three variants under the ICC and WHO5 classifications: (1) HGBL with MYC and BCL2 rearrangements (± BCL6) — \"double/triple hit\"; in WHO5, DLBCL/HGBL with MYC and BCL2 rearrangements; (2) HGBL with MYC and BCL6 rearrangements — a provisional ICC category only (removed in WHO5); (3) HGBL NOS — blastoid cases or cases intermediate between DLBCL and Burkitt lymphoma without MYC+BCL2 rearrangements. Rearrangements are shown by FISH; IHC co-expression of MYC and BCL2 without rearrangements (double expressor) is not HGBL but DLBCL NOS. Workup as for DLBCL (BCEL-1, the DLBCL page). TdT expression affects prognosis but not the choice of treatment; with blastoid morphology, exclude lymphoblastic lymphoma. The optimal induction is not established — a clinical trial is recommended for every variant. This page is a disease of its own; the DLBCL page gives HGBL-1 in brief, and Burkitt lymphoma points here for double/triple hit."
+      },
+      "regimens": [],
+      "children": [
+        {
+          "key": "nccn-dx",
+          "kind": "line",
+          "title": {
+            "uk": "Діагностика й класифікація (HGBL-1, BCEL-1, NHODG-A)",
+            "en": "Diagnosis and classification (HGBL-1, BCEL-1, NHODG-A)"
+          },
+          "description": {
+            "uk": "FISH на перебудови MYC, BCL2 і BCL6 — обов’язкова для розмежування варіантів. Морфологія: дифузний ріст середніх або великих клітин, нерідко «зоряне небо». Схожа на Беркітта чи HGBL пухлина без перебудови MYC — розглянути LBCL з аберацією 11q (ICC) / HGBL з абераціями 11q (ВООЗ-5): хромосомний мікрочіп або FISH; таких хворих найчастіше лікують як лімфому Беркітта. Решта обстеження — як при ДВКЛ: ПЕТ/КТ, ЛДГ, IPI, ВІЛ (позитивний → ВІЛ-асоційовані лімфоми), гепатити B/C, ехокардіографія перед антрациклінами; через часте ураження кісткового мозку й ЦНС — трепанобіопсія та оцінка ЦНС за CNS-IPI. Для типових HGBL з MYC і BCL2 характерні GCB-фенотип, підвищена ЛДГ, ураження кісткового мозку й ЦНС і високий IPI; HGBL NOS здебільшого теж GCB-походження з поширеною стадією.",
+            "en": "FISH for MYC, BCL2 and BCL6 rearrangements is essential to separate the variants. Morphology: diffuse growth of medium or large cells, often with a starry sky. A Burkitt-like or HGBL-like tumour without a MYC rearrangement — consider LBCL with 11q aberration (ICC) / HGBL with 11q aberrations (WHO5): chromosomal microarray or FISH; these patients are most often treated like Burkitt lymphoma. The rest of the workup as for DLBCL: PET/CT, LDH, IPI, HIV (positive → HIV-related lymphomas), hepatitis B/C, echocardiography before anthracyclines; because marrow and CNS involvement is common — bone marrow biopsy and CNS assessment by CNS-IPI. Typical HGBL with MYC and BCL2 is GCB-like with high LDH, marrow and CNS involvement and a high IPI; HGBL NOS is also mostly of GCB origin with advanced stage."
+          },
+          "regimens": [],
+          "steps": [
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "FISH: MYC, BCL2, BCL6",
+                "en": "FISH: MYC, BCL2, BCL6"
+              }
+            },
+            {
+              "kind": "assessment",
+              "column": "treatment",
+              "label": {
+                "uk": "Обстеження як при ДВКЛ (BCEL-1)",
+                "en": "Workup as for DLBCL (BCEL-1)"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "MYC + BCL2 (± BCL6)",
+                "en": "MYC + BCL2 (± BCL6)"
+              },
+              "target": "nccn-dhl-bcl2"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "MYC + BCL6 (ICC)",
+                "en": "MYC + BCL6 (ICC)"
+              },
+              "target": "nccn-dhl-bcl6"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "HGBL NOS",
+                "en": "HGBL NOS"
+              },
+              "target": "nccn-nos"
+            }
+          ]
+        },
+        {
+          "key": "nccn-dhl-bcl2",
+          "kind": "line",
+          "title": {
+            "uk": "HGBL з перебудовами MYC і BCL2 ± BCL6 (HGBL-1)",
+            "en": "HGBL with MYC and BCL2 ± BCL6 rearrangements (HGBL-1)"
+          },
+          "description": {
+            "uk": "Double/triple hit (ICC); DLBCL/HGBL з MYC і BCL2 (ВООЗ-5). Перевага — клінічному випробуванню. Оптимальна індукція не визначена; у ретроспективних даних і метааналізах інтенсивні схеми (DA-EPOCH-R, R-HyperCVAD, R-CODOX-M/IVAC) давали кращу PFS, ніж R-CHOP, без доведеної різниці в загальній виживаності. DA-EPOCH-R — прийнятний варіант для всіх (проспективні дані фази II та контрольна гілка Alliance A051701). R-CHOP може бути субоптимальним — лише при низькому ризику (IPI <2). R-mini-CHOP — для кволих і літніх. R-HyperCVAD і R-CODOX-M/IVAC потенційно токсичні: зважати на загальний стан і коморбідність. Локалізований процес: консолідуюча ISRT бажана. АутоТГСК у першій CR не рекомендована (не покращує виживаність).",
+            "en": "Double/triple hit (ICC); DLBCL/HGBL with MYC and BCL2 (WHO5). A clinical trial is preferred. The optimal induction is not defined; in retrospective data and meta-analyses intensive regimens (DA-EPOCH-R, R-HyperCVAD, R-CODOX-M/IVAC) gave better PFS than R-CHOP, without a proven overall survival difference. DA-EPOCH-R is an appropriate option for all (phase II prospective data and the control arm of Alliance A051701). R-CHOP may be suboptimal — only for low risk (IPI below 2). R-mini-CHOP for the frail and older. R-HyperCVAD and R-CODOX-M/IVAC are potentially toxic: weigh performance status and comorbidities. Localized disease: consolidative ISRT is preferred. Autologous HCT in first CR is not recommended (no survival gain)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "da-epoch-r",
+              "notes": {
+                "uk": "DA-EPOCH + ритуксимаб — прийнятний для всіх хворих",
+                "en": "DA-EPOCH + rituximab — appropriate for all patients"
+              }
+            },
+            {
+              "regimen_id": "r-chop-21",
+              "notes": {
+                "uk": "CHOP + ритуксимаб: може бути субоптимальним; лише при IPI <2",
+                "en": "CHOP + rituximab: may be suboptimal; only for IPI below 2"
+              }
+            },
+            {
+              "regimen_id": "r-mini-chop",
+              "notes": {
+                "uk": "Для кволих і літніх",
+                "en": "For the frail and older"
+              }
+            },
+            {
+              "regimen_id": "hyper-cvad-a",
+              "notes": {
+                "uk": "Потенційно токсична: HyperCVAD + R; блок A чергується з блоком B (метотрексат і цитарабін у високих дозах). Ритуксимаб NCCN тут не дозує — див. картку R-HyperCVAD (HGBL)",
+                "en": "Potentially toxic: HyperCVAD + R; course A alternates with course B (high-dose methotrexate and cytarabine). NCCN gives no rituximab dose here — see the R-HyperCVAD (HGBL) card"
+              }
+            },
+            {
+              "regimen_id": "hyper-cvad-b"
+            },
+            {
+              "regimen_id": "ref-hgbl-r-hypercvad"
+            },
+            {
+              "regimen_id": "r-codox-m",
+              "notes": {
+                "uk": "Потенційно токсична: CODOX-M, що чергується з IVAC, + ритуксимаб",
+                "en": "Potentially toxic: CODOX-M alternating with IVAC, + rituximab"
+              }
+            },
+            {
+              "regimen_id": "r-ivac"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне випробування рекомендоване",
+                "en": "Clinical trial recommended"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Локалізований процес: консолідуюча ISRT — бажано",
+                "en": "Localized disease: consolidative ISRT preferred"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Консолідація й профілактика ЦНС",
+                "en": "Consolidation and CNS prophylaxis"
+              },
+              "target": "nccn-consolidation"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив / рефрактерність",
+                "en": "Relapse / refractory disease"
+              },
+              "target": "nccn-rr"
+            }
+          ]
+        },
+        {
+          "key": "nccn-dhl-bcl6",
+          "kind": "line",
+          "title": {
+            "uk": "HGBL з перебудовами MYC і BCL6 (ICC) (HGBL-1)",
+            "en": "HGBL with MYC and BCL6 rearrangements (ICC) (HGBL-1)"
+          },
+          "description": {
+            "uk": "Тимчасова категорія ICC; у ВООЗ-5 такі випадки класифікують за морфологією (здебільшого як ДВКЛ). Рідше GCB-походження, ніж варіант з BCL2. У ретроспективних серіях виживаність близька до ДВКЛ NOS (2-річні EFS/OS ≈79%/92%), тому NCCN радить лікувати як ДВКЛ (BCEL-1 — сторінка ДВКЛ, «Шляхи NCCN», перша лінія за стадією). Застереження: значна частина цих хворих отримувала DA-EPOCH-R, тож оптимальна хіміоімунотерапія лишається невизначеною.",
+            "en": "A provisional ICC category; in WHO5 these cases are classified by morphology (mostly as DLBCL). Less often of GCB origin than the BCL2 variant. In retrospective series survival is close to DLBCL NOS (2-year EFS/OS about 79%/92%), so NCCN advises managing as DLBCL (BCEL-1 — the DLBCL page, NCCN pathways, first line by stage). Caveat: many of these patients received DA-EPOCH-R, so the optimal chemoimmunotherapy remains uncertain."
+          },
+          "regimens": [
+            {
+              "regimen_id": "r-chop-21",
+              "notes": {
+                "uk": "Як ДВКЛ NOS (BCEL-C 1)",
+                "en": "As DLBCL NOS (BCEL-C 1)"
+              }
+            },
+            {
+              "regimen_id": "pola-r-chp-cycle-1",
+              "notes": {
+                "uk": "Як ДВКЛ NOS (BCEL-C 1): Pola-R-CHP при IPI ≥2",
+                "en": "As DLBCL NOS (BCEL-C 1): Pola-R-CHP for IPI 2 or more"
+              }
+            },
+            {
+              "regimen_id": "pola-r-chp"
+            },
+            {
+              "regimen_id": "pola-r-chp-cycle-7-8"
+            },
+            {
+              "regimen_id": "da-epoch-r",
+              "notes": {
+                "uk": "Багатьох хворих у серіях лікували DA-EPOCH-R",
+                "en": "Many patients in the series received DA-EPOCH-R"
+              }
+            }
+          ],
+          "steps": [
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Лікувати як ДВКЛ — сторінка ДВКЛ, «Шляхи NCCN» (BCEL-1…BCEL-6)",
+                "en": "Manage as DLBCL — the DLBCL page, NCCN pathways (BCEL-1 to BCEL-6)"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив / рефрактерність",
+                "en": "Relapse / refractory disease"
+              },
+              "target": "nccn-rr"
+            }
+          ]
+        },
+        {
+          "key": "nccn-nos",
+          "kind": "line",
+          "title": {
+            "uk": "HGBL NOS (HGBL-1)",
+            "en": "HGBL NOS (HGBL-1)"
+          },
+          "description": {
+            "uk": "Бластоїдні або проміжні між ДВКЛ і лімфомою Беркітта пухлини без перебудов MYC+BCL2 (± BCL6); не включає явну ДВКЛ. Часто поширена стадія, висока ЛДГ, ураження кісткового мозку й ЦНС. Перевага — клінічному випробуванню. Індукція не встановлена; у ретроспективній серії (160 хворих; DA-EPOCH-R 43%, R-CHOP 33%) різниці у відповіді, PFS і OS між схемами не було. Pola-R-CHP — категорія 2B (у POLARIX підгрупа HGBL була малою, тенденція на користь саме HGBL NOS). Mini-CHOP + R — для кволих і літніх; R-HyperCVAD і R-CODOX-M/IVAC — потенційно токсичні. Рання стадія: розглянути консолідуючу ISRT.",
+            "en": "Blastoid tumours or tumours intermediate between DLBCL and Burkitt lymphoma without MYC+BCL2 (± BCL6) rearrangements; excludes clear DLBCL. Often advanced stage, high LDH, marrow and CNS involvement. A clinical trial is preferred. Induction is not established; in a retrospective series (160 patients; DA-EPOCH-R 43%, R-CHOP 33%) response, PFS and OS did not differ between regimens. Pola-R-CHP is category 2B (the HGBL subgroup in POLARIX was small, with a trend in favour of HGBL NOS). Mini-CHOP + R for the frail and older; R-HyperCVAD and R-CODOX-M/IVAC are potentially toxic. Early stage: consider consolidative ISRT."
+          },
+          "regimens": [
+            {
+              "regimen_id": "da-epoch-r",
+              "notes": {
+                "uk": "DA-EPOCH + ритуксимаб",
+                "en": "DA-EPOCH + rituximab"
+              }
+            },
+            {
+              "regimen_id": "pola-r-chp-cycle-1",
+              "notes": {
+                "uk": "Pola-R-CHP (лише HGBL NOS)",
+                "en": "Pola-R-CHP (HGBL NOS only)"
+              },
+              "category": "2b"
+            },
+            {
+              "regimen_id": "pola-r-chp",
+              "category": "2b"
+            },
+            {
+              "regimen_id": "pola-r-chp-cycle-7-8",
+              "category": "2b"
+            },
+            {
+              "regimen_id": "r-chop-21",
+              "notes": {
+                "uk": "CHOP + ритуксимаб; у колонці NOS без обмеження за IPI (розбіжність з MS-179 — див. «Перша лінія»)",
+                "en": "CHOP + rituximab; no IPI limit in the NOS column (differs from MS-179 — see First line)"
+              }
+            },
+            {
+              "regimen_id": "r-mini-chop",
+              "notes": {
+                "uk": "Для кволих і літніх",
+                "en": "For the frail and older"
+              }
+            },
+            {
+              "regimen_id": "hyper-cvad-a",
+              "notes": {
+                "uk": "Потенційно токсична: HyperCVAD + R; блок A чергується з блоком B (метотрексат і цитарабін у високих дозах). Ритуксимаб NCCN тут не дозує — див. картку R-HyperCVAD (HGBL)",
+                "en": "Potentially toxic: HyperCVAD + R; course A alternates with course B (high-dose methotrexate and cytarabine). NCCN gives no rituximab dose here — see the R-HyperCVAD (HGBL) card"
+              }
+            },
+            {
+              "regimen_id": "hyper-cvad-b"
+            },
+            {
+              "regimen_id": "ref-hgbl-r-hypercvad"
+            },
+            {
+              "regimen_id": "r-codox-m",
+              "notes": {
+                "uk": "Потенційно токсична: CODOX-M, що чергується з IVAC, + ритуксимаб",
+                "en": "Potentially toxic: CODOX-M alternating with IVAC, + rituximab"
+              }
+            },
+            {
+              "regimen_id": "r-ivac"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне випробування рекомендоване",
+                "en": "Clinical trial recommended"
+              },
+              "preference": "preferred"
+            },
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Рання стадія: розглянути консолідуючу ISRT",
+                "en": "Early stage: consider consolidative ISRT"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Консолідація й профілактика ЦНС",
+                "en": "Consolidation and CNS prophylaxis"
+              },
+              "target": "nccn-consolidation"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив / рефрактерність",
+                "en": "Relapse / refractory disease"
+              },
+              "target": "nccn-rr"
+            }
+          ]
+        },
+        {
+          "key": "nccn-consolidation",
+          "kind": "line",
+          "title": {
+            "uk": "Консолідація, профілактика ЦНС (NHODG-D, MS-179…180)",
+            "en": "Consolidation, CNS prophylaxis (NHODG-D, MS-179 to 180)"
+          },
+          "description": {
+            "uk": "Променева терапія (NHODG-D, спільно для ДВКЛ/HGBL): консолідуюча ISRT після хіміоімунотерапії при CR (Deauville 1–3) — 20 Гр; при PR (Deauville 4) — 36–50 Гр; первинна ПТ без хіміоімунотерапії — 40 Гр. ISRT покращує частоту відповіді при обмеженій стадії, але не виживаність. АутоТГСК як консолідація першої CR не рекомендована. ЦНС: давні серії вказували на високий ризик рецидиву в ЦНС при MYC+BCL2, але популяційне дослідження (162 хворих, FISH) показало 2-річний ризик ≈6%, тож сама перебудова не вважається чинником ризику. Профілактика (системний метотрексат у високих дозах та/або інтратекально метотрексат/цитарабін під час або після лікування) дискусійна — розглядати за CNS-IPI, як при ДВКЛ (BCEL-A 3).",
+            "en": "Radiation (NHODG-D, shared for DLBCL/HGBL): consolidative ISRT after chemoimmunotherapy in CR (Deauville 1-3) — 20 Gy; in PR (Deauville 4) — 36-50 Gy; primary RT without chemoimmunotherapy — 40 Gy. ISRT improves response in limited stage but not survival. Autologous HCT as consolidation of first CR is not recommended. CNS: older series suggested a high CNS relapse risk with MYC+BCL2, but a population study (162 patients, FISH) found a 2-year risk of about 6%, so the rearrangement alone is not considered a risk factor. Prophylaxis (systemic high-dose methotrexate and/or intrathecal methotrexate/cytarabine during or after treatment) is debated — consider by CNS-IPI, as in DLBCL (BCEL-A 3)."
+          },
+          "regimens": [
+            {
+              "regimen_id": "hd-methotrexate-cns",
+              "notes": {
+                "uk": "Високий ризик за CNS-IPI — за рішенням лікаря",
+                "en": "High CNS-IPI risk — at the physician's discretion"
+              },
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "methotrexate-intrathecal",
+              "preference": "circumstances"
+            },
+            {
+              "regimen_id": "cytarabine-intrathecal",
+              "preference": "circumstances"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "ISRT: CR — 20 Гр; PR — 36–50 Гр",
+                "en": "ISRT: CR — 20 Gy; PR — 36-50 Gy"
+              }
+            },
+            {
+              "kind": "surveillance",
+              "column": "next",
+              "label": {
+                "uk": "CR: спостереження, як при ДВКЛ",
+                "en": "CR: follow-up as for DLBCL"
+              }
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Рецидив / рефрактерність",
+                "en": "Relapse / refractory disease"
+              },
+              "target": "nccn-rr"
+            }
+          ]
+        },
+        {
+          "key": "nccn-rr",
+          "kind": "line",
+          "title": {
+            "uk": "Рецидив / рефрактерність (BCEL-7, BCEL-8, MS-180…181)",
+            "en": "Relapse / refractory disease (BCEL-7, BCEL-8, MS-180 to 181)"
+          },
+          "description": {
+            "uk": "Лікують як рецидив ДВКЛ: <12 міс. або первинна рефрактерність — BCEL-7; >12 міс. — BCEL-8 (сторінка ДВКЛ, «Шляхи NCCN»). CD19 CAR-T (аксикабтаген цилолейцел, лізокабтаген маралейцел) у 2-й лінії при ранньому рецидиві — у ZUMA-7 і TRANSFORM були хворі з HGBL; аксі-цел, ліко-цел і тиса-цел — після ≥2 ліній. Реальні дані: результати CAR-T при HGBL близькі до інших LBCL. Перед CAR-T після попередньої анти-CD19 терапії — повторна біопсія з підтвердженням CD19. Біспецифічні антитіла (епкоритамаб, глофітамаб) — 3-я лінія для некандидатів на CAR-T або після CAR-T; хворих з HGBL у реєстраційних дослідженнях було мало. Даних про аутоТГСК чи алоТГСК після рецидиву HGBL мало.",
+            "en": "Treated as relapsed DLBCL: under 12 months or primary refractory — BCEL-7; over 12 months — BCEL-8 (the DLBCL page, NCCN pathways). CD19 CAR-T (axicabtagene ciloleucel, lisocabtagene maraleucel) in second line for early relapse — ZUMA-7 and TRANSFORM included HGBL patients; axi-cel, liso-cel and tisa-cel after 2 or more lines. Real-world data: CAR-T outcomes in HGBL are close to other LBCL. Before CAR-T after a prior anti-CD19 therapy — re-biopsy to confirm CD19. Bispecific antibodies (epcoritamab, glofitamab) — third line for patients not eligible for CAR-T or after CAR-T; few HGBL patients were in the pivotal trials. Data on autologous or allogeneic HCT after HGBL relapse are limited."
+          },
+          "regimens": [
+            {
+              "regimen_id": "ref-car-t-cd19",
+              "notes": {
+                "uk": "2-а лінія при рецидиві <12 міс.; також після ≥2 ліній",
+                "en": "Second line for relapse under 12 months; also after 2 or more lines"
+              }
+            },
+            {
+              "regimen_id": "epcoritamab-cycle-1",
+              "notes": {
+                "uk": "3-я лінія; дозування в картках — для ДВКЛ",
+                "en": "Third line; card dosing is for DLBCL"
+              }
+            },
+            {
+              "regimen_id": "epcoritamab-cycle-2-3"
+            },
+            {
+              "regimen_id": "epcoritamab-cycle-4-9"
+            },
+            {
+              "regimen_id": "epcoritamab"
+            },
+            {
+              "regimen_id": "glofitamab-cycle-1",
+              "notes": {
+                "uk": "3-я лінія; дозування в картках — для ДВКЛ",
+                "en": "Third line; card dosing is for DLBCL"
+              }
+            },
+            {
+              "regimen_id": "glofitamab"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "other",
+              "column": "treatment",
+              "label": {
+                "uk": "Як ДВКЛ: рецидив <12 міс. — BCEL-7; >12 міс. — BCEL-8 (сторінка ДВКЛ)",
+                "en": "As DLBCL: relapse under 12 months — BCEL-7; over 12 months — BCEL-8 (the DLBCL page)"
+              }
+            },
+            {
+              "kind": "trial",
+              "column": "treatment",
+              "label": {
+                "uk": "Клінічне випробування",
+                "en": "Clinical trial"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "first-line",
+      "kind": "line",
+      "title": {
+        "uk": "Перша лінія",
+        "en": "First line"
+      },
+      "description": {
+        "uk": "Стандарту немає; перевага — клінічному випробуванню. MYC+BCL2 (± BCL6) і HGBL NOS: DA-EPOCH-R для всіх; R-CHOP — з обережністю: для MYC+BCL2 алгоритм HGBL-1 обмежує його IPI <2, у колонці HGBL NOS такого застереження немає, а Discussion (MS-179) застерігає щодо субоптимальності без поділу на варіанти; R-mini-CHOP для кволих; R-HyperCVAD чи R-CODOX-M/IVAC — з урахуванням токсичності; Pola-R-CHP — лише HGBL NOS (2B). MYC+BCL6 — як ДВКЛ NOS.",
+        "en": "No standard; a clinical trial is preferred. MYC+BCL2 (± BCL6) and HGBL NOS: DA-EPOCH-R for all; R-CHOP with caution: for MYC+BCL2 the HGBL-1 algorithm limits it to IPI below 2, the HGBL NOS column has no such caveat, and the Discussion (MS-179) warns of a suboptimal result without splitting by variant; R-mini-CHOP for the frail; R-HyperCVAD or R-CODOX-M/IVAC with toxicity in mind; Pola-R-CHP — HGBL NOS only (2B). MYC+BCL6 — as DLBCL NOS."
+      },
+      "regimens": [
+        {
+          "regimen_id": "da-epoch-r"
+        },
+        {
+          "regimen_id": "r-chop-21",
+          "notes": {
+            "uk": "MYC+BCL2: лише при IPI <2",
+            "en": "MYC+BCL2: only for IPI below 2"
+          }
+        },
+        {
+          "regimen_id": "r-mini-chop",
+          "notes": {
+            "uk": "Кволі й літні",
+            "en": "Frail and older"
+          }
+        },
+        {
+          "regimen_id": "pola-r-chp-cycle-1",
+          "notes": {
+            "uk": "Лише HGBL NOS (категорія 2B) або MYC+BCL6 як ДВКЛ",
+            "en": "HGBL NOS only (category 2B) or MYC+BCL6 as DLBCL"
+          }
+        },
+        {
+          "regimen_id": "pola-r-chp"
+        },
+        {
+          "regimen_id": "pola-r-chp-cycle-7-8"
+        },
+        {
+          "regimen_id": "hyper-cvad-a",
+          "notes": {
+            "uk": "Потенційно токсична: HyperCVAD + R; блок A чергується з блоком B (метотрексат і цитарабін у високих дозах). Ритуксимаб NCCN тут не дозує — див. картку R-HyperCVAD (HGBL)",
+            "en": "Potentially toxic: HyperCVAD + R; course A alternates with course B (high-dose methotrexate and cytarabine). NCCN gives no rituximab dose here — see the R-HyperCVAD (HGBL) card"
+          }
+        },
+        {
+          "regimen_id": "hyper-cvad-b"
+        },
+        {
+          "regimen_id": "ref-hgbl-r-hypercvad"
+        },
+        {
+          "regimen_id": "r-codox-m",
+          "notes": {
+            "uk": "Потенційно токсична: CODOX-M, що чергується з IVAC, + ритуксимаб",
+            "en": "Potentially toxic: CODOX-M alternating with IVAC, + rituximab"
+          }
+        },
+        {
+          "regimen_id": "r-ivac"
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "relapse",
+      "kind": "line",
+      "title": {
+        "uk": "Рецидив",
+        "en": "Relapse"
+      },
+      "description": {
+        "uk": "Як рецидив ДВКЛ (сторінка ДВКЛ). CD19 CAR-T — 2-а лінія при ранньому рецидиві й після ≥2 ліній; біспецифічні антитіла — 3-я лінія.",
+        "en": "As relapsed DLBCL (the DLBCL page). CD19 CAR-T — second line for early relapse and after 2 or more lines; bispecific antibodies — third line."
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-car-t-cd19"
+        },
+        {
+          "regimen_id": "epcoritamab-cycle-1"
+        },
+        {
+          "regimen_id": "epcoritamab-cycle-2-3"
+        },
+        {
+          "regimen_id": "epcoritamab-cycle-4-9"
+        },
+        {
+          "regimen_id": "epcoritamab"
+        },
+        {
+          "regimen_id": "glofitamab-cycle-1"
+        },
+        {
+          "regimen_id": "glofitamab"
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "reference",
+      "kind": "reference",
+      "title": {
+        "uk": "Для ознайомлення (без розрахунку)",
+        "en": "For reference (no calculation)"
+      },
+      "regimens": [
+        {
+          "regimen_id": "ref-hgbl-r-hypercvad"
+        }
+      ],
+      "children": []
+    }
+  ]
+}
