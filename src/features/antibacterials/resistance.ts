@@ -97,11 +97,6 @@ const p = (
 ): ResistancePoint => ({ topic, text, sources })
 
 const unregistered = (name: string): NotInCatalog => ({ name, status: 'unregistered' })
-const registered = (name: string, registration: string): NotInCatalog => ({
-  name,
-  status: 'registered',
-  registration,
-})
 
 const CEFIDEROCOL = unregistered('цефідерокол')
 const MEROPENEM_VABORBACTAM = unregistered('меропенем/ваборбактам')
@@ -111,9 +106,6 @@ const MINOCYCLINE = unregistered('міноциклін')
 const CEFTOLOZANE_TAZOBACTAM = unregistered('цефтолозан/тазобактам')
 const CEFEPIME_ENMETAZOBACTAM = unregistered('цефепім/енметазобактам')
 const SULBACTAM_DURLOBACTAM = unregistered('сульбактам/дурлобактам')
-const AZTREONAM_AVIBACTAM = registered('азтреонам/авібактам', 'UA/21242/01/01 Емблавео')
-const POLYMYXIN_B = registered('поліміксин B', 'UA/18622/01/01 Полі-Мікс Б')
-const AMPICILLIN_SULBACTAM = registered('ампіцилін/сульбактам', 'напр. UA/3858/01/01 Ампісульбін')
 
 export const RESISTANCE: ResistanceSection[] = [
   {
@@ -270,14 +262,9 @@ export const RESISTANCE: ResistanceSection[] = [
       'ertapenem',
       'ceftazidime-avibactam',
       'tigecycline',
+      'aztreonam-avibactam',
     ],
-    notInCatalog: [
-      AZTREONAM_AVIBACTAM,
-      MEROPENEM_VABORBACTAM,
-      IMIPENEM_RELEBACTAM,
-      CEFIDEROCOL,
-      ERAVACYCLINE,
-    ],
+    notInCatalog: [MEROPENEM_VABORBACTAM, IMIPENEM_RELEBACTAM, CEFIDEROCOL, ERAVACYCLINE],
     classIds: ['carbapenems', 'tetracyclines'],
     points: [
       p(
@@ -303,14 +290,9 @@ export const RESISTANCE: ResistanceSection[] = [
       'colistimethate',
       'amikacin',
       'gentamicin',
+      'aztreonam-avibactam',
     ],
-    notInCatalog: [
-      MEROPENEM_VABORBACTAM,
-      IMIPENEM_RELEBACTAM,
-      AZTREONAM_AVIBACTAM,
-      CEFIDEROCOL,
-      ERAVACYCLINE,
-    ],
+    notInCatalog: [MEROPENEM_VABORBACTAM, IMIPENEM_RELEBACTAM, CEFIDEROCOL, ERAVACYCLINE],
     classIds: ['carbapenems', 'polypeptides', 'tetracyclines'],
     discrepancyIds: ['colistin-dose'],
     points: [
@@ -337,14 +319,8 @@ export const RESISTANCE: ResistanceSection[] = [
   {
     id: 'cre-oxa48',
     title: 'CRE: OXA-48-подібні',
-    drugIds: ['ceftazidime-avibactam', 'tigecycline'],
-    notInCatalog: [
-      AZTREONAM_AVIBACTAM,
-      CEFIDEROCOL,
-      ERAVACYCLINE,
-      MEROPENEM_VABORBACTAM,
-      IMIPENEM_RELEBACTAM,
-    ],
+    drugIds: ['ceftazidime-avibactam', 'tigecycline', 'aztreonam-avibactam'],
+    notInCatalog: [CEFIDEROCOL, ERAVACYCLINE, MEROPENEM_VABORBACTAM, IMIPENEM_RELEBACTAM],
     classIds: ['carbapenems'],
     points: [
       p(
@@ -363,8 +339,16 @@ export const RESISTANCE: ResistanceSection[] = [
   {
     id: 'cre-mbl',
     title: 'CRE: NDM та інші металобеталактамази',
-    drugIds: ['ceftazidime-avibactam', 'aztreonam', 'fosfomycin', 'tigecycline', 'colistimethate'],
-    notInCatalog: [AZTREONAM_AVIBACTAM, CEFIDEROCOL, POLYMYXIN_B, ERAVACYCLINE],
+    drugIds: [
+      'ceftazidime-avibactam',
+      'aztreonam',
+      'fosfomycin',
+      'tigecycline',
+      'colistimethate',
+      'aztreonam-avibactam',
+      'polymyxin-b',
+    ],
+    notInCatalog: [CEFIDEROCOL, ERAVACYCLINE],
     classIds: ['monobactams', 'cephalosporins'],
     points: [
       p(
@@ -394,14 +378,10 @@ export const RESISTANCE: ResistanceSection[] = [
       'amikacin',
       'tobramycin',
       'colistimethate',
+      'polymyxin-b',
+      'aztreonam-avibactam',
     ],
-    notInCatalog: [
-      CEFTOLOZANE_TAZOBACTAM,
-      IMIPENEM_RELEBACTAM,
-      CEFIDEROCOL,
-      POLYMYXIN_B,
-      AZTREONAM_AVIBACTAM,
-    ],
+    notInCatalog: [CEFTOLOZANE_TAZOBACTAM, IMIPENEM_RELEBACTAM, CEFIDEROCOL],
     classIds: ['cephalosporins', 'aminoglycosides', 'polypeptides'],
     points: [
       p(
@@ -454,14 +434,15 @@ export const RESISTANCE: ResistanceSection[] = [
   {
     id: 'crab',
     title: 'Карбапенем-резистентний Acinetobacter baumannii (CRAB)',
-    drugIds: ['imipenem-cilastatin', 'meropenem', 'tigecycline', 'colistimethate'],
-    notInCatalog: [
-      SULBACTAM_DURLOBACTAM,
-      AMPICILLIN_SULBACTAM,
-      CEFIDEROCOL,
-      MINOCYCLINE,
-      POLYMYXIN_B,
+    drugIds: [
+      'imipenem-cilastatin',
+      'meropenem',
+      'tigecycline',
+      'colistimethate',
+      'ampicillin-sulbactam',
+      'polymyxin-b',
     ],
+    notInCatalog: [SULBACTAM_DURLOBACTAM, CEFIDEROCOL, MINOCYCLINE],
     classIds: ['carbapenems', 'tetracyclines', 'polypeptides'],
     points: [
       p('preferred', 'Сульбактам/дурлобактам + іміпенем чи меропенем', IDSA),
@@ -506,8 +487,9 @@ export const RESISTANCE: ResistanceSection[] = [
       'ceftazidime-avibactam',
       'aztreonam',
       'ceftazidime',
+      'aztreonam-avibactam',
     ],
-    notInCatalog: [CEFIDEROCOL, AZTREONAM_AVIBACTAM, MINOCYCLINE],
+    notInCatalog: [CEFIDEROCOL, MINOCYCLINE],
     classIds: ['sulfonamides', 'fluoroquinolones'],
     points: [
       p(

@@ -1,0 +1,40 @@
+{
+  "$comment": "Додано 2026-11-27 для блоку «Цільова терапія за типом резистентності» довідника «Антибактеріальна терапія». Фасування й код ATC — з чинної реєстрації Державного реєстру; у переліках відділення препарату немає, тому «зареєстрований». Доз, параметрів розведення й застережень інструкції ще не внесено. Кількість у флаконі — сумарна маса ампіциліну й сульбактаму (1,5 г = 1 г + 0,5 г), як у картці піперациліну/тазобактаму.",
+  "id": "ampicillin-sulbactam",
+  "name": {
+    "uk": "Ампіцилін/сульбактам",
+    "en": "Ampicillin/sulbactam"
+  },
+  "availability": "registered",
+  "sources": [
+    {
+      "name": "MSD Manual Professional (українська версія): антибактеріальні препарати",
+      "url": "https://www.msdmanuals.com/uk/professional/infectious-diseases/bacteria-and-antibacterial-medications/penicillins",
+      "checkedOn": "2026-11-27"
+    },
+    {
+      "name": "IDSA 2026 Guidance on the Treatment of Antimicrobial Resistant Gram-Negative Infections (довідник «Антибактеріальна терапія», блок «Цільова терапія за типом резистентності»)",
+      "url": "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "version": "версія 5.0, 2026",
+      "checkedOn": "2026-11-27"
+    },
+    {
+      "name": "Державний реєстр лікарських засобів України (API drlz.com.ua): порошок для розчину для ін’єкцій 1,5 г у флаконі (UA/3858/01/01 Ампісульбін)",
+      "url": "https://www.drlz.com.ua/dani/api",
+      "version": "чинні реєстрації, запит від 27.11.2026",
+      "checkedOn": "2026-11-27"
+    }
+  ],
+  "presentations": [
+    {
+      "key": "s1500",
+      "form": "vial",
+      "strength_amount": 1500,
+      "label": {
+        "uk": "1 г/0,5 г",
+        "en": "1 g/0.5 g"
+      }
+    }
+  ],
+  "atc_code": "J01CR01"
+}
