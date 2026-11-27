@@ -235,6 +235,15 @@
                     "en": "Advanced nodal MZL (NMZL-3)"
                   },
                   "target": "nccn-nodal-adv"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Великоклітинна трансформація — шляхи HTBCEL",
+                    "en": "Large cell transformation — HTBCEL pathways"
+                  },
+                  "disease": "transformed-indolent-lymphoma"
                 }
               ]
             },
@@ -404,6 +413,15 @@
                     "en": "Second line and later (MZL-A 2-3)"
                   },
                   "target": "nccn-2l"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Трансформація — шляхи HTBCEL",
+                    "en": "Transformation — HTBCEL pathways"
+                  },
+                  "disease": "transformed-indolent-lymphoma"
                 }
               ]
             }
@@ -574,6 +592,15 @@
                 "en": "Second line and later (MZL-A 2-3)"
               },
               "target": "nccn-2l"
+            },
+            {
+              "kind": "page",
+              "column": "next",
+              "label": {
+                "uk": "Трансформація — шляхи HTBCEL",
+                "en": "Transformation — HTBCEL pathways"
+              },
+              "disease": "transformed-indolent-lymphoma"
             }
           ]
         },
@@ -705,6 +732,15 @@
                     "en": "Second line and later (MZL-A 2-3)"
                   },
                   "target": "nccn-2l"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Трансформація — шляхи HTBCEL",
+                    "en": "Transformation — HTBCEL pathways"
+                  },
+                  "disease": "transformed-indolent-lymphoma"
                 }
               ]
             }
@@ -1020,12 +1056,13 @@
               }
             },
             {
-              "kind": "other",
+              "kind": "page",
               "column": "next",
               "label": {
                 "uk": "Трансформація — як ДВКЛ (HTBCEL-1)",
                 "en": "Transformation — treat as DLBCL (HTBCEL-1)"
-              }
+              },
+              "disease": "transformed-indolent-lymphoma"
             }
           ],
           "children": [

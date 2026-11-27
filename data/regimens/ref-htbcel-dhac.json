@@ -1,0 +1,67 @@
+{
+  "id": "ref-htbcel-dhac",
+  "short_name": "DHAC ± R",
+  "name": {
+    "uk": "DHAC ± ритуксимаб (дексаметазон, цитарабін, карбоплатин)",
+    "en": "DHAC ± rituximab (dexamethasone, cytarabine, carboplatin)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-11-27"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Карбоплатиновий варіант схеми «DHA + платина ± ритуксимаб», яку NCCN (HTBCEL-A, а також BCEL-C для рецидивної ДВКЛ) пропонує при трансформованій лімфомі після антрациклінової схеми, якщо планують трансплантацію. Варіанти з цисплатином (DHAP) і оксаліплатином (DHAOx) є в довіднику як розрахункові схеми.",
+      "en": "The carboplatin variant of \"DHA + platinum ± rituximab\", which NCCN (HTBCEL-A, and BCEL-C for relapsed DLBCL) lists for transformed lymphoma after an anthracycline regimen when a transplant is intended. The cisplatin (DHAP) and oxaliplatin (DHAOx) variants are in the catalog as calculated regimens."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      },
+      {
+        "name": {
+          "uk": "Карбоплатин",
+          "en": "Carboplatin"
+        },
+        "drug_id": "carboplatin"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб (за бажанням)",
+          "en": "Rituximab (optional)"
+        },
+        "drug_id": "rituximab"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "NCCN називає лише склад (платина на вибір: карбоплатин, цисплатин або оксаліплатин) і не наводить доз, днів і тривалості циклу.",
+        "en": "NCCN names only the components (platinum of choice: carboplatin, cisplatin or oxaliplatin) and gives no doses, days or cycle length."
+      },
+      {
+        "uk": "Перед трансплантацією при PR NCCN радить розглянути ще одну схему, якої пацієнт не отримував, щоб досягти CR.",
+        "en": "Before a transplant in PR NCCN advises considering one more regimen the patient has not had, to reach CR."
+      }
+    ],
+    "gap": {
+      "uk": "Розрахункової схеми DHAC у довіднику немає, а NCCN доз не дає; дози не вносилися, щоб їх не вигадувати. Для розрахунку потрібне повне джерело (протокол eviQ/NSSG або первинна стаття).",
+      "en": "There is no calculated DHAC regimen in the catalog and NCCN gives no doses; none were entered rather than invent them. A calculation needs a full source (an eviQ/NSSG protocol or the primary paper)."
+    },
+    "availability": "registered"
+  }
+}

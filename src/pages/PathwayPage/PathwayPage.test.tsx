@@ -143,6 +143,27 @@ describe('PathwayPage', () => {
     )
   })
 
+  it('links a step to the pathway of another disease', async () => {
+    const rows = withPathway()
+    rows.treatment_nodes
+      .find((entry) => entry.id === 'dlbcl.p1-row')!
+      .steps.push({
+        kind: 'page',
+        column: 'next',
+        label: text('Трансформація ФЛ'),
+        target_id: null,
+        disease_id: 'follicular-lymphoma',
+        preference: null,
+        category: null,
+        notes: null,
+      })
+    render(rows)
+    expect(await screen.findByRole('link', { name: /Трансформація ФЛ →/ })).toHaveAttribute(
+      'href',
+      expect.stringContaining('/diseases/follicular-lymphoma/pathways'),
+    )
+  })
+
   it('says so when the disease has no pathway', async () => {
     render(demoCatalog())
     expect(await screen.findByText('Для цієї хвороби шляхів настанови немає.')).toBeInTheDocument()

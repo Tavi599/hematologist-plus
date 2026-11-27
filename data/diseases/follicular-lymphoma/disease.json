@@ -586,6 +586,15 @@
                     "en": "Second line (FOLL-B 2)"
                   },
                   "target": "nccn-2l"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Біопсія підтвердила трансформацію — шляхи HTBCEL",
+                    "en": "Biopsy confirms transformation — HTBCEL pathways"
+                  },
+                  "disease": "transformed-indolent-lymphoma"
                 }
               ]
             },
@@ -614,6 +623,15 @@
                     "en": "Third line and later (FOLL-B 3)"
                   },
                   "target": "nccn-3l"
+                },
+                {
+                  "kind": "page",
+                  "column": "next",
+                  "label": {
+                    "uk": "Підтверджена трансформація — шляхи HTBCEL",
+                    "en": "Confirmed transformation — HTBCEL pathways"
+                  },
+                  "disease": "transformed-indolent-lymphoma"
                 }
               ]
             }
