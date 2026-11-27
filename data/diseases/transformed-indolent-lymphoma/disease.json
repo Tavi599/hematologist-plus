@@ -387,8 +387,8 @@
             "en": "HGBL with MYC and BCL2 rearrangements (HGBL-1)"
           },
           "description": {
-            "uk": "Лікування — як HGBL з перебудовами MYC і BCL2 ± BCL6: рекомендоване клінічне випробування; оптимальна індукція не встановлена; ISRT для консолідації при локалізованому процесі. 2-річна виживаність при трансформації в HGBL «double hit» — близько 50% проти 73% без неї. Повний перелік і пояснення — на сторінці ДВКЛ.",
-            "en": "Treat as HGBL with MYC and BCL2 ± BCL6 rearrangements: a clinical trial is recommended; the best induction is not established; ISRT as consolidation for localized disease. 2-year survival after transformation to double-hit HGBL is about 50% versus 73% without it. The full list and comments are on the DLBCL page."
+            "uk": "Лікування — як HGBL з перебудовами MYC і BCL2 ± BCL6: рекомендоване клінічне випробування; оптимальна індукція не встановлена; ISRT для консолідації при локалізованому процесі. 2-річна виживаність при трансформації в HGBL «double hit» — близько 50% проти 73% без неї. Повний перелік, консолідація й профілактика ЦНС — на сторінці HGBL.",
+            "en": "Treat as HGBL with MYC and BCL2 ± BCL6 rearrangements: a clinical trial is recommended; the best induction is not established; ISRT as consolidation for localized disease. 2-year survival after transformation to double-hit HGBL is about 50% versus 73% without it. The full list, consolidation and CNS prophylaxis are on the HGBL page."
           },
           "regimens": [
             {
@@ -431,6 +431,9 @@
             },
             {
               "regimen_id": "hyper-cvad-b"
+            },
+            {
+              "regimen_id": "ref-hgbl-r-hypercvad"
             }
           ],
           "steps": [
@@ -447,10 +450,10 @@
               "kind": "page",
               "column": "next",
               "label": {
-                "uk": "HGBL — шляхи ДВКЛ (HGBL-1)",
-                "en": "HGBL — DLBCL pathways (HGBL-1)"
+                "uk": "HGBL — шляхи HGBL (HGBL-1)",
+                "en": "HGBL — HGBL pathways (HGBL-1)"
               },
-              "disease": "dlbcl"
+              "disease": "hgbl"
             }
           ]
         },
