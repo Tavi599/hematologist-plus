@@ -1,0 +1,89 @@
+{
+  "$comment": "Лише опис за NCCN B-cell 4.2026 (HGBL-1, MS-179): доз ритуксимабу для HyperCVAD тут немає.",
+  "id": "ref-hgbl-r-hypercvad",
+  "short_name": "R-HyperCVAD (HGBL)",
+  "name": {
+    "uk": "HyperCVAD + ритуксимаб, що чергується з метотрексатом і цитарабіном у високих дозах (HGBL)",
+    "en": "HyperCVAD plus rituximab alternating with high-dose methotrexate and cytarabine (HGBL)"
+  },
+  "sources": [
+    {
+      "name": "NCCN Guidelines: B-Cell Lymphomas",
+      "url": "https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1480",
+      "version": "4.2026 від 20.05.2026",
+      "checkedOn": "2026-11-27"
+    }
+  ],
+  "reference": {
+    "summary": {
+      "uk": "Один із варіантів індукції NCCN для HGBL з перебудовами MYC і BCL2 (± BCL6) та HGBL NOS, позначений як потенційно токсичний: обирати з урахуванням загального стану й коморбідності. Блоки HyperCVAD A і B є в довіднику як схеми ГЛЛ; ритуксимаб NCCN для HGBL не дозує.",
+      "en": "One of the NCCN induction options for HGBL with MYC and BCL2 (± BCL6) rearrangements and HGBL NOS, flagged as potentially toxic: choose by performance status and comorbidities. HyperCVAD courses A and B are in the catalog as ALL regimens; NCCN gives no rituximab dose for HGBL."
+    },
+    "drugs": [
+      {
+        "name": {
+          "uk": "Циклофосфамід",
+          "en": "Cyclophosphamide"
+        },
+        "drug_id": "cyclophosphamide"
+      },
+      {
+        "name": {
+          "uk": "Вінкристин",
+          "en": "Vincristine"
+        },
+        "drug_id": "vincristine"
+      },
+      {
+        "name": {
+          "uk": "Доксорубіцин",
+          "en": "Doxorubicin"
+        },
+        "drug_id": "doxorubicin"
+      },
+      {
+        "name": {
+          "uk": "Дексаметазон",
+          "en": "Dexamethasone"
+        },
+        "drug_id": "dexamethasone"
+      },
+      {
+        "name": {
+          "uk": "Ритуксимаб",
+          "en": "Rituximab"
+        },
+        "drug_id": "rituximab"
+      },
+      {
+        "name": {
+          "uk": "Метотрексат",
+          "en": "Methotrexate"
+        },
+        "drug_id": "methotrexate"
+      },
+      {
+        "name": {
+          "uk": "Цитарабін",
+          "en": "Cytarabine"
+        },
+        "drug_id": "cytarabine"
+      }
+    ],
+    "key_info": [
+      {
+        "uk": "У ретроспективних даних інтенсивні схеми (зокрема R-HyperCVAD) давали при double hit кращу PFS, ніж R-CHOP, без різниці в загальній виживаності (NCCN MS-178).",
+        "en": "In retrospective data intensive regimens (including R-HyperCVAD) gave better PFS than R-CHOP in double-hit lymphoma, without an overall survival difference (NCCN MS-178)."
+      },
+      {
+        "uk": "Розбіжність у довіднику: на сторінці ДВКЛ (вузол HGBL-1) і лімфоми Беркітта блоки HyperCVAD подано без окремої картки ритуксимабу (у Беркітта — з карткою ритуксимабу для ГЛЛ, розклад якої прив’язаний до фаз ГЛЛ і для HGBL не перевірений).",
+        "en": "Discrepancy in the catalog: on the DLBCL page (HGBL-1 node) and Burkitt lymphoma the HyperCVAD courses are listed without their own rituximab card (Burkitt uses the ALL rituximab card, whose schedule is tied to ALL phases and is not checked for HGBL)."
+      }
+    ],
+    "gap": {
+      "uk": "NCCN доз ритуксимабу й розкладу для HGBL не наводить, а повне джерело з розкладом ще не зібране, тому розрахунку тут нема. Блоки A і B без ритуксимабу — окремими розрахунковими схемами; ритуксимаб — за першоджерелом і рішенням лікаря.",
+      "en": "NCCN gives no rituximab doses or schedule for HGBL and no complete source with a schedule has been collected yet, so there is no calculation here. Courses A and B without rituximab are separate calculated regimens; rituximab per the primary source and the physician's decision."
+    },
+    "availability": "registered"
+  }
+}
